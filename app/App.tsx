@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import { HelmetProvider } from 'react-helmet-async';
+=======
 "use client";
 
 import { Suspense, lazy } from 'react';
@@ -12,6 +15,7 @@ import CacheManager from "./components/CacheManager";
 import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
 
 // Lazy load pages for better performance
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
 const ContactPage = lazy(() => import("./contact/page"));
@@ -50,11 +54,13 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
-          <PerformanceMonitor>
-            <AccessibilityEnhancer>
-              <CriticalResourcePreloader />
-              <CacheManager />
-              <AdvancedPerformanceMonitor />
+          <PerformanceMonitor showDetails={false}>
+            <div>Performance monitoring active</div>
+          </PerformanceMonitor>
+          <AccessibilityEnhancer>
+            <CriticalResourcePreloader />
+            <CacheManager />
+            <AdvancedPerformanceMonitor />
             <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -106,8 +112,7 @@ function App() {
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             </Routes>
             </Suspense>
-            </AccessibilityEnhancer>
-          </PerformanceMonitor>
+          </AccessibilityEnhancer>
         </ErrorBoundary>
       </BrowserRouter>
     </HelmetProvider>

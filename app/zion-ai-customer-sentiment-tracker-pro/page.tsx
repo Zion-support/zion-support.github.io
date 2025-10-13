@@ -1,10 +1,14 @@
+<<<<<<< HEAD
+import { ArrowRight } from 'lucide-react';
+=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function Zionaicustomersentimenttrackerpro() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Ai Customer Sentiment Tracker Pro - Zion Tech Group</title>
         <meta
@@ -29,6 +33,6 @@ export default function Zionaicustomersentimenttrackerpro() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom';
+import { ArrowRight, FileText, Download, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mail, Smartphone, Globe, Database, BarChart3, Target, Headphones, Layout, CreditCard, Calculator, Play } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIInvoiceGeneratorPage = () => {
+<<<<<<< HEAD
   // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+<<<<<<< HEAD
+  // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+>>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
   const features = [
     {
@@ -78,6 +85,7 @@ const ZionAIInvoiceGeneratorPage = () => {
       included: true
     }
   ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
   const pricingPlans = [
     {
@@ -164,7 +172,7 @@ const ZionAIInvoiceGeneratorPage = () => {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Invoice Generator - Automated Invoice Creation with AI | Zion Tech Group</title>
         <meta
@@ -362,7 +370,7 @@ const ZionAIInvoiceGeneratorPage = () => {
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <span>{feature.title}</span>
                       </div>
                     ))}
                   </div>
@@ -409,7 +417,7 @@ const ZionAIInvoiceGeneratorPage = () => {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -478,7 +486,7 @@ const ZionAIInvoiceGeneratorPage = () => {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 };
 

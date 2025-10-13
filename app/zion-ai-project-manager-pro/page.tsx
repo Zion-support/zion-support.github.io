@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
@@ -5,44 +9,9 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAIProjectManagerProPage = () => {
-  const features = [
-    {
-      title: "AI-Powered Task Management",
-      description: "Intelligent task prioritization, automatic scheduling, and smart resource allocation based on team capacity and project requirements",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast project completion dates, identify potential bottlenecks, and predict resource needs with advanced AI algorithms",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Smart Resource Allocation",
-      description: "Automatically assign tasks to the right team members based on skills, availability, and workload optimization",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Real-time Collaboration",
-      description: "Seamless team communication, file sharing, and collaborative workspace with AI-powered meeting summaries",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate comprehensive project reports, status updates, and stakeholder communications automatically",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Risk Management",
-      description: "AI-powered risk assessment, early warning systems, and automated mitigation strategies",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 
   const pricingPlans = [
     {
@@ -216,19 +185,11 @@ const ZionAIProjectManagerProPage = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
-            >
+              >
               Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              href="#demo"
-              variant="outline"
-              size="lg"
-              icon={<Monitor className="w-5 h-5" />}
-            >
+              >
               Watch Demo
             </FuturisticButton>
           </div>
@@ -410,14 +371,12 @@ const ZionAIProjectManagerProPage = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
+                      <span className="text-sm">{feature.title}</span>
                     </li>
                   ))}
                 </ul>
                 <FuturisticButton
-                  href="/contact"
                   variant={plan.popular ? "primary" : "outline"}
-                  size="lg"
                   className="w-full"
                 >
                   Get Started
@@ -453,7 +412,7 @@ const ZionAIProjectManagerProPage = () => {
                 <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    {testimonial.avatar}
+                    {`/avatars/avatar-${index + 1}.jpg`}
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
@@ -479,19 +438,11 @@ const ZionAIProjectManagerProPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<Sparkles className="w-5 h-5" />}
-              >
+                >
                 Start Free Trial
               </FuturisticButton>
               <FuturisticButton
-                href="/demo"
-                variant="outline"
-                size="lg"
-                icon={<Monitor className="w-5 h-5" />}
-              >
+                >
                 Schedule Demo
               </FuturisticButton>
             </div>

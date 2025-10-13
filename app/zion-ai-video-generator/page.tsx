@@ -1,8 +1,16 @@
 import { Link } from 'react-router-dom';
+import { ArrowRight, Video, Play, Edit, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mic, Palette, Share, Mail, Smartphone, Globe, Cloud, BarChart3, Target, Headphones, Layout } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIVideoGeneratorPage = () => {
+<<<<<<< HEAD
   // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+<<<<<<< HEAD
+  // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
+>>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
   const features = [
     {
@@ -164,7 +172,7 @@ const ZionAIVideoGeneratorPage = () => {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Video Generator Pro - Create Professional Videos with AI | Zion Tech Group</title>
         <meta
@@ -409,7 +417,7 @@ const ZionAIVideoGeneratorPage = () => {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -478,7 +486,7 @@ const ZionAIVideoGeneratorPage = () => {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 };
 

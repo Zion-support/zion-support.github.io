@@ -1,7 +1,49 @@
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CFO",
+      company: "TechCorp",
+      content: "The AI financial analysis platform has revolutionized our decision-making process.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Investment Manager",
+      company: "FinancePro",
+      content: "Incredible accuracy and insights that have improved our portfolio performance.",
+      rating: 5
+    }
+  ];
+=======
 import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function ZionCloudVault() {
   const features = [
     {
@@ -102,7 +144,7 @@ export default function ZionCloudVault() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Cloud Vault - Secure Cloud Storage Platform | Zion Tech Group</title>
         <meta
@@ -216,7 +258,7 @@ export default function ZionCloudVault() {
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+                  <span className="text-gray-300">{feature.title}</span>
                 </div>
               ))}
             </div>
@@ -263,7 +305,7 @@ export default function ZionCloudVault() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                        <span className="text-gray-300">{feature.title}</span>
                       </li>
                     ))}
                   </ul>
@@ -343,6 +385,6 @@ export default function ZionCloudVault() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

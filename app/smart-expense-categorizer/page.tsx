@@ -1,39 +1,12 @@
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import { Receipt, Shield, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe } from 'lucide-react';
 
 const SmartExpenseCategorizerPage = () => {
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Categorization",
-      description: "Advanced machine learning automatically categorizes expenses with 98% accuracy, learning from your patterns and preferences."
-    },
-    {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
-      title: "Smart Receipt Processing",
-      description: "Automatically extract data from receipts, invoices, and bills using OCR technology and AI-powered data extraction."
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Real-time Analytics",
-      description: "Comprehensive expense analytics with spending trends, budget tracking, and financial insights to optimize your finances."
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: "Bank Integration",
-      description: "Securely connect with your bank accounts and credit cards for automatic transaction import and categorization."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: "Automated Workflows",
-      description: "Set up automated rules for expense approval, reimbursement, and reporting to streamline your financial processes."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-      title: "Team Management",
-      description: "Manage team expenses with role-based permissions, approval workflows, and centralized expense reporting."
-    }
-  ];
+  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+
+  const benefits: string[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 
   const pricingPlans = [
     {
@@ -97,8 +70,8 @@ const SmartExpenseCategorizerPage = () => {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -145,8 +118,8 @@ const SmartExpenseCategorizerPage = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 20 }}
+                animate={{ opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
@@ -166,8 +139,8 @@ const SmartExpenseCategorizerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -184,8 +157,8 @@ const SmartExpenseCategorizerPage = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 20 }}
+                animate={{ opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
@@ -208,8 +181,8 @@ const SmartExpenseCategorizerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -226,8 +199,8 @@ const SmartExpenseCategorizerPage = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 20 }}
+                animate={{ opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
               >
@@ -250,8 +223,8 @@ const SmartExpenseCategorizerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -268,8 +241,8 @@ const SmartExpenseCategorizerPage = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 20 }}
+                animate={{ opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
@@ -298,7 +271,7 @@ const SmartExpenseCategorizerPage = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                      <span className="text-gray-300">{feature.title}</span>
                     </li>
                   ))}
                 </ul>
@@ -324,8 +297,8 @@ const SmartExpenseCategorizerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 20 }}
+            animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-12 text-center"
           >

@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 interface FuturisticTextEnhancedProps {
   children: React.ReactNode;
@@ -92,7 +91,7 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
       transition: {
         duration: duration,
         delay: delay,
-        ease: [0.4, 0, 0.2, 1]
+        ease: "easeOut"
       }
     },
     hover: {

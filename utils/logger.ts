@@ -24,6 +24,10 @@ class Logger {
     }
 
     // const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+=======
+    // const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+>>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
     switch (level) {
       case 'error':
@@ -62,7 +66,14 @@ class Logger {
       }
       
       localStorage.setItem('app-logs', JSON.stringify(logs));
+<<<<<<< HEAD
     } catch (e) { console.error(e); }}
+=======
+    } catch {
+      // Error saving logs
+    }
+  }
+>>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
   error(message: string, ...args: any[]): void {
     this.log(LOG_LEVELS.ERROR, message, ...args);

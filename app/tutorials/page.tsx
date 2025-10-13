@@ -1,8 +1,12 @@
+<<<<<<< HEAD
+import { Helmet } from "react-helmet-async";
+=======
 import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 export default function Tutorials() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Tutorials - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Learn from our comprehensive tutorials on AI, cybersecurity, and cloud computing." />
@@ -13,6 +17,6 @@ export default function Tutorials() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+</div>
   );
 }

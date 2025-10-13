@@ -1,5 +1,4 @@
 import { ImageIcon } from 'lucide-react';
-
 interface LazyImageProps {
   src: string;
   alt: string;
@@ -8,7 +7,7 @@ interface LazyImageProps {
   onLoad?: () => void;
   onError?: () => void;
   priority?: boolean;
-  sizes?: string;
+  size?: string;
   quality?: number;
 }
 
@@ -20,7 +19,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   onLoad,
   onError,
   priority = false,
-  sizes = '100vw',
+  size = '100vw',
   quality = 75
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -101,7 +100,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           onLoad={handleLoad}
           onError={handleError}
           loading={priority ? 'eager' : 'lazy'}
-          sizes={sizes}
+          size={size}
         />
       )}
     </div>

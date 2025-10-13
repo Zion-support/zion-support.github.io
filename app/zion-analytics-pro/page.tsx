@@ -1,6 +1,13 @@
-import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign, Star as StarIcon } from 'lucide-react';
+<<<<<<< HEAD
+import React from "react";
+import { ArrowRight, CheckCircle, BarChart3, DollarSign } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+=======
+import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ZionAnalyticsPro() {
@@ -17,6 +24,15 @@ export default function ZionAnalyticsPro() {
     "Mobile app access",
     "API integration",
     "Custom metrics & KPIs"
+  ];
+
+  const _benefits = [
+    "Increase revenue by 25%",
+    "Reduce reporting time by 80%",
+    "Make data-driven decisions",
+    "Scale with your business",
+    "Improve operational efficiency",
+    "Identify growth opportunities"
   ];
 
   const pricing = [
@@ -47,7 +63,7 @@ export default function ZionAnalyticsPro() {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group</title>
         <meta
@@ -60,10 +76,7 @@ export default function ZionAnalyticsPro() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-analytics-pro" />
       </Helmet>
-      <SEOOptimizer
-        title="Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group"
-        description="Transform your business with Zion Analytics Pro - AI-powered business intelligence platform with real-time analytics, predictive insights, and automated reporting. Start your free trial today!"
-      />
+      <SEOOptimizer />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
@@ -245,7 +258,7 @@ export default function ZionAnalyticsPro() {
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div className="ml-4">
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -301,6 +314,6 @@ export default function ZionAnalyticsPro() {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 }

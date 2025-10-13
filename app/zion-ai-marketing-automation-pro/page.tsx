@@ -1,7 +1,25 @@
+<<<<<<< HEAD
+import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, Globe, Play, Address } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { Target, Users, MessageSquare, Brain, Zap, Target, ArrowRight, Play, CheckCircle, CheckCircle, ArrowRight, Mail, Phone, Globe, ArrowRight } from 'lucide-react';
+=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
-export default function ZionAiMarketingAutomationPro() {
+export default function page() {
+  const stats = [
+    { label: "Stat 1", value: "100%" }
+  ];
+  const testimonials = [
+    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", avatar: "/placeholder-avatar.jpg", rating: 5 }
+  ];
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2"
+  ];
   const features = [
     {
       title: "AI-Powered Campaign Optimization",
@@ -95,7 +113,7 @@ export default function ZionAiMarketingAutomationPro() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Marketing Automation Pro - AI-Powered Marketing Platform | Zion Tech Group</title>
         <meta
@@ -294,7 +312,7 @@ export default function ZionAiMarketingAutomationPro() {
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <span>{feature.title}</span>
                       </div>
                     ))}
                   </div>
@@ -342,7 +360,7 @@ export default function ZionAiMarketingAutomationPro() {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -410,6 +428,6 @@ export default function ZionAiMarketingAutomationPro() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

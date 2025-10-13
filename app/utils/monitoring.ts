@@ -1,5 +1,3 @@
-// Monitoring utility functions
-
 export const Monitoring = {
   init: () => {
     },

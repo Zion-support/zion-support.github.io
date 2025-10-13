@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+import React, { useState, useRef, useEffect } from 'react';
+import { ImageIcon, ImageIcon } from 'lucide-react';
+=======
 import { ImageIcon } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 interface ImprovedImageProps {
   src: string;
@@ -10,7 +15,7 @@ interface ImprovedImageProps {
   lazy?: boolean;
   priority?: boolean;
   quality?: number;
-  sizes?: string;
+  size?: string;
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -119,7 +124,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
           alt={alt}
           width={width}
           height={height}
-          sizes={sizes}
+          size={size}
           loading={lazy && !priority ? 'lazy' : 'eager'}
           onLoad={handleLoad}
           onError={handleError}

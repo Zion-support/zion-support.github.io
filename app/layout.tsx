@@ -4,12 +4,14 @@ import { HelmetProvider } from "react-helmet-async";
 import AnalyticsProvider from "./components/AnalyticsProvider";
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
 // import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
-import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./components/ErrorFallback";
 import { Helmet } from "react-helmet-async";
+
+import MobileNavigation from "./components/MobileNavigation";
 import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";
+import { Helmet } from 'react-helmet-async';
 
 interface LayoutProps {
   children: React.ReactNode;

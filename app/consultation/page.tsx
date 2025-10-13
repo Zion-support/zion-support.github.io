@@ -1,6 +1,19 @@
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 export default function ConsultationPage() {
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2"
+  ];
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -76,7 +89,7 @@ export default function ConsultationPage() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Free Consultation - Zion Tech Group | AI & IT Strategy Planning</title>
         <meta
@@ -194,7 +207,7 @@ export default function ConsultationPage() {
                       {type.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          {feature}
+                          {feature.title}
                         </li>
                       ))}
                     </ul>
@@ -424,6 +437,6 @@ export default function ConsultationPage() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

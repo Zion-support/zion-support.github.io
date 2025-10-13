@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -90,7 +94,7 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, []);
 
   return (
-    <>
+    <div>
       {/* Skip to main content link */}
       <a
         href="#main-content"
@@ -111,7 +115,7 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       </button>
 
       {children}
-    </>
+</div>
   );
 };
 

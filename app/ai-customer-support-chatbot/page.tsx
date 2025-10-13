@@ -1,9 +1,78 @@
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CFO",
+      company: "TechCorp",
+      content: "The AI financial analysis platform has revolutionized our decision-making process.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Investment Manager",
+      company: "FinancePro",
+      content: "Incredible accuracy and insights that have improved our portfolio performance.",
+      rating: 5
+    }
+  ];
+=======
 "use client";
 import { Brain, Clock, Target, BarChart3 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function AICustomerSupportChatbot() {
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechSupport Solutions",
+      role: "Customer Success Manager",
+      content: "Our AI chatbot has reduced response time by 80% and increased customer satisfaction by 40%. It handles 90% of inquiries automatically.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      company: "E-commerce Plus",
+      role: "Operations Director",
+      content: "The chatbot understands context perfectly and escalates complex issues to humans seamlessly. Our support team can focus on high-value tasks.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "SaaS Platform Inc",
+      role: "Head of Support",
+      content: "24/7 availability with consistent quality responses. Our customers love the instant help and our team loves the reduced workload.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   const chatbotFeatures = [
     {
       category: "Core Features",
@@ -87,8 +156,35 @@ export default function AICustomerSupportChatbot() {
     },
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Customer Success Manager",
+      company: "TechCorp",
+      content: "The AI chatbot has reduced our support tickets by 70% while improving customer satisfaction. It's incredibly intelligent and handles complex queries perfectly.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "Operations Director",
+      company: "InnovateLabs",
+      content: "Implementation was seamless and the results were immediate. Our customers love the instant responses and our team can focus on more complex issues.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Head of Support",
+      company: "DataFlow Inc",
+      content: "The analytics and insights provided by the chatbot help us understand our customers better. It's been a game-changer for our support operations.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Customer Support Chatbot - Zion Tech Group</title>
         <meta
@@ -205,7 +301,7 @@ export default function AICustomerSupportChatbot() {
                         className="text-gray-300 flex items-center"
                       >
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                        {feature}
+                        {feature.title}
                       </li>
                     ))}
                   </ul>
@@ -282,6 +378,6 @@ export default function AICustomerSupportChatbot() {
           </div>
         </div>
       </div>
-    </>
+</div>
   );
 }

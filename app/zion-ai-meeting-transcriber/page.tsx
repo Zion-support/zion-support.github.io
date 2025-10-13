@@ -1,6 +1,13 @@
-import { ArrowRight, CheckCircle, Star, Mic, Video, Calendar, Star as StarIcon } from 'lucide-react';
+<<<<<<< HEAD
+import React from "react";
+import { ArrowRight, CheckCircle, Mic, Video, Calendar } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+=======
+import { ArrowRight, CheckCircle, Star, Mic, Video, Calendar } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ZionAIMeetingTranscriber() {

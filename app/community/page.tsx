@@ -4,6 +4,13 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe } from 'lucide-react';
 
 export default function Community() {
+  const stats = [
+    { number: "10K+", label: "Active Members", icon: <Users className="w-8 h-8" /> },
+    { number: "500+", label: "Events Hosted", icon: <Calendar className="w-8 h-8" /> },
+    { number: "50+", label: "Countries", icon: <Globe className="w-8 h-8" /> },
+    { number: "24/7", label: "Support", icon: <MessageCircle className="w-8 h-8" /> }
+  ];
+
   const events = [
     {
       title: "AI Innovation Summit 2024",
@@ -59,7 +66,7 @@ export default function Community() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Community - Zion Tech Group | Tech Community & Events</title>
         <meta
@@ -201,7 +208,7 @@ export default function Community() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }
 

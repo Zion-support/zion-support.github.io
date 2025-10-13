@@ -1,46 +1,15 @@
 import { Link } from 'react-router-dom';
 import { Calculator, Brain, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Receipt, BarChart3, CreditCard, PieChart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
+import { Link } from 'react-router-dom';
+import { Brain, ArrowRight, CheckCircle, CheckCircle, ArrowRight } from 'lucide-react';
 
 const ZionAIAccountingSuite = () => {
-  const features = [
-    {
-      title: "AI-Powered Invoice Processing",
-      description: "Automatically extract data from invoices, receipts, and documents with 99.5% accuracy using OCR and machine learning",
-      icon: <Receipt className="w-6 h-6" />,
-      benefit: "Save 90% data entry time"
-    },
-    {
-      title: "Intelligent Expense Categorization",
-      description: "Automatically categorize expenses and transactions using AI pattern recognition and learning algorithms",
-      icon: <PieChart className="w-6 h-6" />,
-      benefit: "95% auto-categorization"
-    },
-    {
-      title: "Real-Time Financial Analytics",
-      description: "Get instant insights into cash flow, profitability, and financial health with AI-driven analytics",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefit: "Real-time insights"
-    },
-    {
-      title: "Automated Tax Preparation",
-      description: "AI-powered tax calculations, deductions optimization, and compliance monitoring for all tax jurisdictions",
-      icon: <Calculator className="w-6 h-6" />,
-      benefit: "Reduce tax prep time by 80%"
-    },
-    {
-      title: "Smart Cash Flow Forecasting",
-      description: "Predict future cash flow with 95% accuracy using machine learning and historical data analysis",
-      icon: <TrendingUp className="w-6 h-6" />,
-      benefit: "95% forecast accuracy"
-    },
-    {
-      title: "Fraud Detection & Prevention",
-      description: "Advanced AI algorithms detect suspicious transactions and potential fraud in real-time",
-      icon: <Shield className="w-6 h-6" />,
-      benefit: "99.9% fraud detection"
-    }
-  ];
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 
   const pricingPlans = [
     {
@@ -299,7 +268,7 @@ const ZionAIAccountingSuite = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>

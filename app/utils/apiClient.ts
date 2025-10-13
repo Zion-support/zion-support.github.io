@@ -1,5 +1,3 @@
-// Apiclient utility functions
-
 export const Apiclient = {
   init: () => {
     },

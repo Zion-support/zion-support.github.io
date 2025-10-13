@@ -1,5 +1,3 @@
-// Accessibilitychecker utility functions
-
 export const Accessibilitychecker = {
   init: () => {
     },

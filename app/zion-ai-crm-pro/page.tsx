@@ -1,7 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Users, ArrowRight, Sparkles, CheckCircle, Star, Target, TrendingUp, Zap, BarChart3, Mail, Phone, MapPin, Play, Watch, Video } from 'lucide-react';
 
 const ZionAICRMProPage = () => {
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const benefits: string[] = [];
+
   const features = [
     {
       title: 'AI Lead Scoring',
@@ -280,7 +285,7 @@ const ZionAICRMProPage = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>
@@ -316,7 +321,7 @@ const ZionAICRMProPage = () => {
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.avatar}
+                    {`/avatars/avatar-${index + 1}.jpg`}
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>

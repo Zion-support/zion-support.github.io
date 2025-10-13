@@ -3,31 +3,55 @@ import { Link } from 'react-router-dom';
 import { Package, BarChart3, ArrowRight, Sparkles, CheckCircle, Target, Shield } from 'lucide-react';
 
 const AssetManagementPage = () => {
+  const benefits = [
+    "Increase asset utilization by 40%",
+    "Reduce maintenance costs by 30%",
+    "Improve asset visibility by 100%",
+    "Automate 80% of tracking tasks",
+    "Prevent asset loss and theft",
+    "Optimize asset lifecycle management"
+  ];
+
   const features = [
     {
-      title: "IT Asset Tracking",
-      description: "Comprehensive tracking and management of all IT assets from procurement to disposal",
       icon: <Package className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      title: "Asset Tracking",
+      description: "Real-time tracking and monitoring of all your digital and physical assets."
     },
     {
-      title: "Asset Lifecycle Management",
-      description: "Complete lifecycle management from planning and procurement to retirement",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Cost Optimization",
-      description: "Reduce costs by optimizing asset utilization and identifying savings opportunities",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      title: "Analytics Dashboard",
+      description: "Comprehensive analytics and reporting for asset performance and utilization."
     },
     {
-      title: "Compliance & Security",
-      description: "Ensure compliance with regulations and maintain security across all assets",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      icon: <Target className="w-8 h-8" />,
+      title: "Lifecycle Management",
+      description: "Complete asset lifecycle management from procurement to disposal."
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Optimization",
+      description: "AI-powered recommendations for asset optimization and cost reduction."
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Team Collaboration",
+      description: "Collaborative tools for teams to manage and share asset information."
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Global Access",
+      description: "Access your assets from anywhere with cloud-based management platform."
     }
+  ];
+
+  const benefits = [
+    "Real-time asset visibility",
+    "Reduced operational costs",
+    "Improved asset utilization",
+    "Automated compliance tracking",
+    "Enhanced security controls",
+    "Scalable management solution"
   ];
 
   return (
@@ -102,7 +126,7 @@ const AssetManagementPage = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                 >
                   {feature.icon}
                 </div>

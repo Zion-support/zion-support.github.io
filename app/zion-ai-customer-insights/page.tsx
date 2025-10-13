@@ -1,8 +1,15 @@
 import { Link } from 'react-router-dom';
+import { ArrowRight, Users, BarChart3, TrendingUp, Target, Eye, Heart, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Cloud, Settings, Headphones, DollarSign, CreditCard, TrendingDown, Play, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAICustomerInsightsPage = () => {
+<<<<<<< HEAD
   // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+<<<<<<< HEAD
+  // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+>>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
   const features = [
     {
@@ -78,6 +85,7 @@ const ZionAICustomerInsightsPage = () => {
       included: true
     }
   ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
   const pricingPlans = [
     {
@@ -164,7 +172,7 @@ const ZionAICustomerInsightsPage = () => {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Customer Insights Pro - Advanced Customer Analytics with AI | Zion Tech Group</title>
         <meta
@@ -362,7 +370,7 @@ const ZionAICustomerInsightsPage = () => {
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <span>{feature.title}</span>
                       </div>
                     ))}
                   </div>
@@ -409,7 +417,7 @@ const ZionAICustomerInsightsPage = () => {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -478,7 +486,7 @@ const ZionAICustomerInsightsPage = () => {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 };
 

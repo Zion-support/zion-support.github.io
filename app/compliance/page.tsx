@@ -2,7 +2,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award } from 'lucide-react';
 
-export default function Compliance() {
+export default function page() {
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
   const complianceFrameworks = [
     {
       name: "SOC 2 Type II",
@@ -66,7 +70,7 @@ export default function Compliance() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Compliance Services - Zion Tech Group | Regulatory Compliance & Security</title>
         <meta
@@ -209,7 +213,7 @@ export default function Compliance() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }
 

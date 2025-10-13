@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+import React from 'react';
+import { 
+=======
 import {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
   Rocket, 
   Satellite, 
   Orbit, 

@@ -1,12 +1,16 @@
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
 import { ArrowRight } from 'lucide-react';
 
 import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function AICloudInfrastructureZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Cloud Infrastructure - Zion Tech Group</title>
       </Helmet>
@@ -27,6 +31,6 @@ export default function AICloudInfrastructureZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

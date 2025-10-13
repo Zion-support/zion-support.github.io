@@ -1,5 +1,3 @@
-// Validators utility functions
-
 export const Validators = {
   init: () => {
     },

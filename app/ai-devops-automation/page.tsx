@@ -1,11 +1,15 @@
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
 import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function AIDevOpsAutomationZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI DevOps Automation - Zion Tech Group</title>
       </Helmet>
@@ -26,6 +30,6 @@ export default function AIDevOpsAutomationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

@@ -1,5 +1,21 @@
 import { Helmet } from 'react-helmet-async';
-
+const services = [
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud infrastructure",
+      icon: "Cloud"
+    },
+    {
+      title: "Security Solutions",
+      description: "Advanced security and compliance",
+      icon: "Shield"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Optimize your cloud performance",
+      icon: "Zap"
+    }
+  ];
 interface SEOOptimizerProps {
   children: React.ReactNode;
 }
@@ -72,7 +88,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
   }, []);
 
   return (
-    <>
+    <div>
       <Helmet>
         {/* Additional meta tags for better SEO */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -95,7 +111,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
       </Helmet>
       {children}
-    </>
+</div>
   );
 };
 
