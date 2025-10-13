@@ -67,12 +67,16 @@ const Footer: React.FC = () => {
   ];
 
   const microSaasServices = [
-    { name: "Zion Analytics Pro", path: "/zion-analytics-pro" },
-    { name: "Zion Security Shield", path: "/zion-security-shield-pro" },
-    { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
-    { name: "Zion Cloud Vault", path: "/zion-cloud-vault-pro" },
-    { name: "Zion AI Marketing", path: "/zion-ai-marketing-automation" },
     { name: "Zion AI Video Generator", path: "/zion-ai-video-generator" },
+    { name: "Zion AI Invoice Generator", path: "/zion-ai-invoice-generator" },
+    { name: "Zion AI Customer Insights", path: "/zion-ai-customer-insights" },
+    { name: "Zion AI Email Analyzer", path: "/zion-ai-email-analyzer" },
+    { name: "Zion Analytics Pro", path: "/zion-analytics-pro" },
+    { name: "Zion Security Shield", path: "/zion-security-shield" },
+    { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
+    { name: "Zion Cloud Vault", path: "/zion-cloud-vault" },
+    { name: "Zion AI Marketing", path: "/zion-ai-marketing-automation" },
+    { name: "Zion AI Project Manager", path: "/zion-ai-project-manager-pro" },
   ];
 
   const fiveGServices = [
@@ -92,17 +96,21 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900/95 backdrop-blur-sm border-t border-cyan-500/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-slate-900/95 backdrop-blur-sm border-t border-cyan-500/20 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent animate-pulse" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <div key={index} className="text-center group">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-cyan-500/25">
                 {stat.icon}
               </div>
-              <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
-              <div className="text-gray-300 text-sm">{stat.label}</div>
+              <div className="text-2xl font-bold text-white mb-1 group-hover:text-cyan-300 transition-colors duration-300">{stat.number}</div>
+              <div className="text-gray-300 text-sm group-hover:text-gray-200 transition-colors duration-300">{stat.label}</div>
             </div>
           ))}
         </div>
@@ -143,9 +151,9 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-all duration-300 flex items-center group/link hover:translate-x-1"
                   >
-                    <ArrowRight className="w-4 h-4 mr-2" />
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover/link:translate-x-1 transition-transform duration-300" />
                     {link.name}
                   </Link>
                 </li>
@@ -161,9 +169,9 @@ const Footer: React.FC = () => {
                 <li key={service.name}>
                   <Link
                     to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-all duration-300 flex items-center group/link hover:translate-x-1"
                   >
-                    <ArrowRight className="w-4 h-4 mr-2" />
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover/link:translate-x-1 transition-transform duration-300" />
                     {service.name}
                   </Link>
                 </li>
@@ -179,9 +187,9 @@ const Footer: React.FC = () => {
                 <li key={service.name}>
                   <Link
                     to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-all duration-300 flex items-center group/link hover:translate-x-1"
                   >
-                    <ArrowRight className="w-4 h-4 mr-2" />
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover/link:translate-x-1 transition-transform duration-300" />
                     {service.name}
                   </Link>
                 </li>
@@ -197,9 +205,9 @@ const Footer: React.FC = () => {
                 <li key={service.name}>
                   <Link
                     to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-all duration-300 flex items-center group/link hover:translate-x-1"
                   >
-                    <ArrowRight className="w-4 h-4 mr-2" />
+                    <ArrowRight className="w-4 h-4 mr-2 group-hover/link:translate-x-1 transition-transform duration-300" />
                     {service.name}
                   </Link>
                 </li>

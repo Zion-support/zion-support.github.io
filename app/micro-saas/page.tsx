@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -15,20 +13,65 @@ import {
   Sparkles,
   Star,
   CheckCircle,
-  TrendingUp
+  TrendingUp,
+  Video,
+  FileText,
+  Mail,
+  Target,
+  Calendar
 } from 'lucide-react';
 
 const MicroSaasPage = () => {
   const microSaasProducts = [
     {
+      name: "Zion AI Video Generator",
+      description: "Create professional videos instantly with AI-powered video generation and editing tools",
+      price: "From $29/month",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      link: "/zion-ai-video-generator",
+      features: ["Text-to-Video", "AI Voice Synthesis", "Auto-Editing", "Multi-Platform Export"],
+      popular: true
+    },
+    {
+      name: "Zion AI Invoice Generator",
+      description: "Automated invoice creation with payment tracking and client portal integration",
+      price: "From $19/month",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      link: "/zion-ai-invoice-generator",
+      features: ["Auto-Generation", "Payment Tracking", "Multi-Currency", "Client Portal"],
+      popular: true
+    },
+    {
+      name: "Zion AI Customer Insights",
+      description: "Advanced customer analytics with behavior analysis and churn prediction",
+      price: "From $39/month",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      link: "/zion-ai-customer-insights",
+      features: ["Behavior Analysis", "Churn Prediction", "Sentiment Tracking", "Custom Dashboards"],
+      popular: true
+    },
+    {
+      name: "Zion AI Email Analyzer",
+      description: "Intelligent email analysis with spam detection and productivity optimization",
+      price: "From $15/month",
+      icon: <Mail className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      link: "/zion-ai-email-analyzer",
+      features: ["Sentiment Analysis", "Spam Detection", "Performance Metrics", "Smart Categorization"],
+      popular: false
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
+      color: "from-indigo-500 to-purple-500",
       link: "/zion-analytics-pro",
       features: ["Real-time Analytics", "Predictive Insights", "Custom Dashboards", "API Integration"],
-      popular: true
+      popular: false
     },
     {
       name: "Zion Security Shield",
@@ -38,14 +81,14 @@ const MicroSaasPage = () => {
       color: "from-red-500 to-orange-500",
       link: "/zion-security-shield",
       features: ["Threat Detection", "Automated Response", "24/7 Monitoring", "Compliance Reports"],
-      popular: true
+      popular: false
     },
     {
       name: "Zion Cloud Vault",
       description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
       price: "From $99/month",
       icon: <Cloud className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
+      color: "from-teal-500 to-cyan-500",
       link: "/zion-cloud-vault",
       features: ["End-to-end Encryption", "Unlimited Storage", "File Sharing", "Version Control"]
     },
@@ -54,7 +97,7 @@ const MicroSaasPage = () => {
       description: "AI-powered customer relationship management with intelligent lead scoring and automation",
       price: "From $199/month",
       icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
+      color: "from-violet-500 to-purple-500",
       link: "/zion-ai-crm-pro",
       features: ["Lead Scoring", "Automated Follow-ups", "Sales Analytics", "Integration Hub"]
     },
@@ -62,8 +105,8 @@ const MicroSaasPage = () => {
       name: "Zion AI Marketing Automation Pro",
       description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
       price: "From $149/month",
-      icon: <Code className="w-8 h-8" />,
-      color: "from-indigo-500 to-purple-500",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
       link: "/zion-ai-marketing-automation-pro",
       features: ["Content Generation", "Multi-channel Campaigns", "A/B Testing", "Performance Analytics"]
     },
@@ -71,7 +114,7 @@ const MicroSaasPage = () => {
       name: "Zion AI Project Manager Pro",
       description: "AI-powered project management with intelligent task prioritization and resource allocation",
       price: "From $99/month",
-      icon: <Database className="w-8 h-8" />,
+      icon: <Calendar className="w-8 h-8" />,
       color: "from-yellow-500 to-orange-500",
       link: "/zion-ai-project-manager-pro",
       features: ["Task Automation", "Resource Optimization", "Progress Tracking", "Team Collaboration"]
@@ -225,4 +268,3 @@ const MicroSaasPage = () => {
 };
 
 export default MicroSaasPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da

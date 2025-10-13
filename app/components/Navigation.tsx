@@ -6,13 +6,8 @@ import {
   Brain, 
   Shield, 
   Zap, 
-<<<<<<< HEAD
-  Globe,
-  ChevronDown,
-=======
   Globe, 
   ChevronDown
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -109,15 +104,21 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
   ];
 
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 sticky top-0 z-50 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-transparent to-purple-500/10 animate-pulse" />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg group-hover:shadow-cyan-500/25">
               <Brain className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
+              Zion Tech Group
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -126,10 +127,10 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
               <div key={item.name} className="relative group">
                 <Link
                   to={item.path}
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 group/nav ${
                     isActive(item.path)
-                      ? 'text-cyan-400 bg-cyan-500/10'
-                      : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
+                      ? 'text-cyan-400 bg-cyan-500/10 shadow-lg shadow-cyan-500/20'
+                      : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 hover:shadow-lg hover:shadow-cyan-500/10'
                   }`}
                 >
                   {item.icon}
@@ -141,15 +142,17 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                 
                 {/* Services Dropdown */}
                 {item.hasDropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                    <div className="p-4">
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+                    {/* Animated Background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
+                    <div className="p-4 relative z-10">
                       <h3 className="text-white font-semibold mb-3 text-sm">Popular Services</h3>
                       <div className="grid grid-cols-1 gap-2">
                         {serviceDropdownItems.map((service) => (
                           <Link
                             key={service.name}
                             to={service.path}
-                            className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-colors group"
+                            className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 group/dropdown hover:shadow-lg hover:shadow-cyan-500/10"
                           >
                             <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
                               {service.name}
