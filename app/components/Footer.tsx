@@ -91,9 +91,26 @@ const Footer = React.memo(() => {
 
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
-      {/* Background Effects */}
+      {/* Enhanced Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent"></div>
+      
+      {/* Animated gradient orbs */}
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      
+      {/* Grid pattern overlay */}
+      <div 
+        className="absolute inset-0 opacity-5"
+        style={{
+          backgroundImage: `
+            linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '50px 50px'
+        }}
+      ></div>
       
       <div className="relative z-10">
         {/* Main Footer Content */}
@@ -461,30 +478,46 @@ const Footer = React.memo(() => {
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className="border-t border-gray-800 pt-8">
+        {/* Enhanced Bottom Footer */}
+        <div className="border-t border-gray-800 pt-8 relative">
+          {/* Animated border effect */}
+          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+          
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="text-center md:text-left mb-4 md:mb-0">
+              <p className="text-gray-400 text-sm mb-2">
+                © {currentYear} Zion Tech Group. All rights reserved.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-4 text-xs text-gray-500">
+                <span>📧 kleber@ziontechgroup.com</span>
+                <span>📞 +1 302 464 0950</span>
+                <span>📍 364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+            <div className="flex flex-wrap justify-center space-x-6">
               <Link
                 to="/privacy"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-gray-400 hover:text-cyan-400 transition-colors text-sm hover:underline"
               >
                 Privacy Policy
               </Link>
               <Link
                 to="/terms"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-gray-400 hover:text-cyan-400 transition-colors text-sm hover:underline"
               >
                 Terms of Service
               </Link>
               <Link
                 to="/cookies"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-gray-400 hover:text-cyan-400 transition-colors text-sm hover:underline"
               >
                 Cookie Policy
+              </Link>
+              <Link
+                to="/sitemap"
+                className="text-gray-400 hover:text-cyan-400 transition-colors text-sm hover:underline"
+              >
+                Sitemap
               </Link>
             </div>
           </div>
