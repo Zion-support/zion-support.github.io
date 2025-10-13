@@ -29,7 +29,10 @@ import {
   TrendingUp,
   Cpu,
   Network,
-  Sparkles
+  Target,
+  Calendar,
+  Clock,
+  FileText
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -133,7 +136,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     },
     {
       name: 'Micro SAAS',
-      path: '/micro-saas-services',
+      path: '/micro-saas',
       icon: <Package className="w-4 h-4" />,
       hasDropdown: true,
       dropdownItems: [

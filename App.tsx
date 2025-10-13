@@ -76,6 +76,14 @@ const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-
 const SmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-inventory-smart/page"));
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/ai-financial-crime-detection-pro/page"));
+
+// Zion Pro Solutions
+const ZionAIAnalyticsProPage = React.lazy(() => import("./app/zion-ai-analytics-pro/page"));
+const ZionSecurityShieldProPage = React.lazy(() => import("./app/zion-security-shield-pro/page"));
+const ZionCloudVaultProPage = React.lazy(() => import("./app/zion-cloud-vault-pro/page"));
+const ZionAICRMProPage = React.lazy(() => import("./app/zion-ai-crm-pro/page"));
+const ZionAIMarketingAutomationProPage = React.lazy(() => import("./app/zion-ai-marketing-automation-pro/page"));
+const ZionAIProjectManagerProPage = React.lazy(() => import("./app/zion-ai-project-manager-pro/page"));
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -158,7 +166,7 @@ function App() {
                                     <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
 
                                     {/* Micro SAAS Services */}
-                                    <Route path="/micro-saas-services" element={<MicroSaaSServicesPage />} />
+                                    <Route path="/micro-saas" element={<MicroSaaSServicesPage />} />
                                     <Route path="/project-management-tool" element={<ProjectManagementToolPage />} />
                                     <Route path="/customer-relationship-manager" element={<CustomerRelationshipManagerPage />} />
                                     <Route path="/inventory-management-system" element={<InventoryManagementSystemPage />} />
@@ -174,6 +182,14 @@ function App() {
                                     <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
                                     <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
                                     <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
+
+                                    {/* Zion Pro Solutions */}
+                                    <Route path="/zion-ai-analytics-pro" element={<ZionAIAnalyticsProPage />} />
+                                    <Route path="/zion-security-shield-pro" element={<ZionSecurityShieldProPage />} />
+                                    <Route path="/zion-cloud-vault-pro" element={<ZionCloudVaultProPage />} />
+                                    <Route path="/zion-ai-crm-pro" element={<ZionAICRMProPage />} />
+                                    <Route path="/zion-ai-marketing-automation-pro" element={<ZionAIMarketingAutomationProPage />} />
+                                    <Route path="/zion-ai-project-manager-pro" element={<ZionAIProjectManagerProPage />} />
 
                                     {/* Catch all route */}
                                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
