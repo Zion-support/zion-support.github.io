@@ -15,11 +15,7 @@ pageFiles.forEach(filePath => {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove the first conflict section (simple version)
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======\n/, '');
-    
-    // Remove the remaining conflict markers
-    content = content.replace(/>>>>>>> cursor\/fix-errors-and-merge-to-main-[a-f0-9]+/g, '');
-    
+    content = content.replace(/    
     fs.writeFileSync(filePath, content);
     console.log(`Fixed: ${filePath}`);
   } catch (error) {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
@@ -11,6 +12,9 @@ const withErrorLogging = (handler) => {
   };
 };
 const handler = async (req, res) => {
+=======
+export default function handler(req, res) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-3792
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -32,11 +36,24 @@ const handler = async (req, res) => {
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
+<<<<<<< HEAD
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       sessionId: `session_${Date.now()}`,
       ...sessionData
+=======
+
+    // Mock session creation
+    const sessionId = 'cs_' + Math.random().toString(36).substr(2, 9);
+    
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+      sessionId,
+      sessionData
+>>>>>>> cursor/fix-errors-and-merge-to-main-3792
     }));
   } catch (error) {
     console.error('Checkout session creation error:', error);
@@ -46,5 +63,9 @@ const handler = async (req, res) => {
       error: 'Failed to create checkout session'
     }));
   }
+<<<<<<< HEAD
 };
 export default withErrorLogging(handler);
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3792

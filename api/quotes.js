@@ -1,10 +1,16 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
   try {
     const { name, email, phone, details, country, service } = req.body || {};
     if (!name || !email || !phone || !details) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
       return;
     }
     // Process quote submission logic here
@@ -23,7 +29,13 @@ export default async function handler(req, res) {
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
+<<<<<<< HEAD
     // // console.log('Quote request received:', quoteData);
+=======
+
+    console.log('Quote request received:', quoteData);
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-3792
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -32,8 +44,14 @@ export default async function handler(req, res) {
       quoteId: `quote_${Date.now()}`,
       data: quoteData
     }));
+<<<<<<< HEAD
   } catch (_error) {
     // console.error('Quote submission error:', error);
+=======
+
+  } catch (error) {
+    console.error('Quote submission error:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-3792
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
