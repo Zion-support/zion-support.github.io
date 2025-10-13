@@ -19,7 +19,6 @@ import {
   Phone,
   Mail,
   MapPin,
-  ExternalLink,
   Star,
   TrendingUp,
   Users,

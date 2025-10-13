@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Cloud, Shield, CheckCircle, Star, Users, Award, Zap, Smartphone, Globe, Mail, Phone, TrendingUp, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Headphones, Sparkles, Target, Calendar, FileText, Code, Bot, Wifi, Heart, Receipt, Package, Clock, Upload, Download, Folder, Archive, Search, Share2, Eye } from 'lucide-react';
+import { ArrowRight, Cloud, Shield, CheckCircle, Star, Users, Award, Smartphone, Globe, Mail, Phone, Database, Lock, Headphones, Sparkles, Clock, Archive }} from 'lucide-react';
 
 export default function ZionCloudVaultPro() {
   const features = [

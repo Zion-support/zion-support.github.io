@@ -2,17 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Shield, 
   Search, 
-  AlertTriangle, 
   ArrowRight,
   Sparkles,
   CheckCircle,
   Target,
-  Brain,
-  Lock,
-  Eye,
-  Settings,
   Zap
 } from 'lucide-react';
 

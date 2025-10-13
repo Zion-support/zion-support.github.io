@@ -6,27 +6,18 @@ import {
   Brain, 
   Shield, 
   Zap, 
-  Globe,
-  ChevronDown,
-  ChevronUp
+  Globe
 } from 'lucide-react';
 
-interface NavigationProps {
-  onSidebarToggle?: () => void;
-}
 
-export default function Navigation({ onSidebarToggle }: NavigationProps) {
+export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
 
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen);
   }, [isOpen]);
 
-  const toggleServices = useCallback(() => {
-    setIsServicesOpen(!isServicesOpen);
-  }, [isServicesOpen]);
 
   const isActive = useCallback((path: string) => {
     return location.pathname === path;
@@ -75,45 +66,8 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     }
   ];
 
-  const aiServices = [
-    { name: 'AI Analytics', path: '/ai-analytics' },
-    { name: 'AI Content Generation', path: '/ai-content-generation' },
-    { name: 'AI Customer Support', path: '/ai-customer-support' },
-    { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-    { name: 'AI Document Processing', path: '/ai-document-processing' },
-    { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
-    { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics' },
-    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Workflow Automation', path: '/ai-workflow-automation' }
-  ];
 
-  const microSaasServices = [
-    { name: 'AI Video Generator', path: '/zion-ai-video-generator' },
-    { name: 'AI Invoice Generator', path: '/zion-ai-invoice-generator' },
-    { name: 'AI Customer Insights', path: '/zion-ai-customer-insights' },
-    { name: 'AI Email Analyzer', path: '/zion-ai-email-analyzer' },
-    { name: 'Smart Inventory Optimizer', path: '/zion-smart-inventory-optimizer' },
-    { name: 'AI Customer Sentiment Tracker', path: '/zion-ai-customer-sentiment-tracker' },
-    { name: 'Smart Expense Categorizer', path: '/zion-smart-expense-categorizer' },
-    { name: 'AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro' },
-    { name: 'AI Code Reviewer', path: '/zion-ai-code-reviewer' },
-    { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' },
-    { name: 'AI Document Analyzer', path: '/zion-ai-document-analyzer' },
-    { name: 'AI Project Manager Pro', path: '/zion-ai-project-manager-pro' },
-    { name: 'AI Cybersecurity Suite Pro', path: '/zion-ai-cybersecurity-suite-pro' }
-  ];
 
-  const fiveGServices = [
-    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
-    { name: '5G Edge Computing', path: '/5g-edge-computing' },
-    { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
-    { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
-    { name: '5G Private Networks', path: '/5g-private-networks' },
-    { name: '5G Security Solutions', path: '/5g-security-solutions' },
-    { name: '5G Performance Monitoring', path: '/5g-performance-monitoring' },
-    { name: '5G Cloud Integration', path: '/5g-cloud-integration' }
-  ];
 
   return (
     <nav className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 shadow-lg sticky top-0 z-50">

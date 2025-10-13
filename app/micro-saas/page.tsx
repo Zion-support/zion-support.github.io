@@ -10,7 +10,6 @@ import {
   Users, 
   Sparkles,
   CheckCircle,
-  Star,
   TrendingUp
 } from 'lucide-react';
 

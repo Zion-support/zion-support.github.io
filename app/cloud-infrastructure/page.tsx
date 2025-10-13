@@ -2,24 +2,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Cloud, 
-  Server, 
-  Database, 
   Shield, 
-  Zap, 
   CheckCircle, 
   ArrowRight,
   Globe,
-  Users,
   BarChart3,
   Settings,
-  Clock,
-  Award,
   Star,
   Activity,
-  Lock,
-  Cpu,
-  HardDrive,
-  Network
+  Lock
 } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe as GlobeIcon } from "lucide-react";
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from "lucide-react";
 
 export default function AboutPage() {
 

@@ -8,17 +8,10 @@ import {
   CheckCircle, 
   ArrowRight,
   Brain,
-  Zap,
-  Globe,
   Users,
-  BarChart3,
-  Settings,
-  Clock,
-  Award,
   Star,
   Activity,
   Database,
-  Network,
   FileText
 } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';

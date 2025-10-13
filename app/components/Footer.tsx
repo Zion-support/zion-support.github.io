@@ -5,11 +5,7 @@ import {
   Mail, 
   Phone, 
   MapPin,
-  Clock, 
   ArrowRight,
-  Shield,
-  Zap,
-  Globe,
   Twitter,
   Linkedin,
   Github

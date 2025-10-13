@@ -6,13 +6,8 @@ import {
   Zap, 
   Globe, 
   ArrowRight, 
-  CheckCircle, 
   BarChart3, 
-  Database, 
-  Lock, 
-  Users, 
-  Settings, 
-  Monitor 
+  Database
 } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {

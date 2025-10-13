@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Users, ArrowRight, Sparkles, CheckCircle, Star, Brain, Target, TrendingUp, Shield, Clock, Zap, BarChart3, Award, Globe, Smartphone, Monitor, Mail, Phone, MapPin, Play, Download, Share, Settings, PieChart, LineChart, Activity, Database, Cloud, Lock, Eye, Filter, Search, RefreshCw, Maximize, Minimize, RotateCcw, RotateCw, ZoomIn, ZoomOut, Move, Copy, Scissors, Save, Folder, File, Archive, Tag, Flag, Bookmark, Bell, AlertCircle, Info, HelpCircle, X, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, MoreHorizontal, MoreVertical, Grid, List, Layout, Sidebar, Navigation, Compass, Map, Home, Building, Store, Factory, Warehouse, School, Hospital, Car, Plane, Train, Ship, Bike, Bus, Package, Box, Gift, ShoppingBag, CreditCard, Wallet, Coins, note, Receipt, Calculator, Percent, TrendingDown, Thermometer, Gauge, Battery, Wifi, Bluetooth, Radio, Tv, Laptop, Tablet, Watch, Headphones, Speaker, Mic, Camera, Video, Image, Music, Film, Book, Newspaper, FileText, Folder as FolderIcon, Archive as ArchiveIcon, HardDrive, Server, Cpu, MemoryStick, Disc } from 'lucide-react';
+import { Users, ArrowRight, Sparkles, CheckCircle, Star, Target, TrendingUp, Zap, BarChart3, Mail, Phone, MapPin, Play, Info, Map, Watch, Mic, Video }} from 'lucide-react';
 
 const ZionAICRMProPage = () => {
   const features = [
