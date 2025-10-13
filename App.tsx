@@ -74,6 +74,8 @@ const WebsiteAnalyticsToolPage = React.lazy(() => import("./app/data-analytics/p
 const TaskAutomationWorkflowPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
 // New Innovative Micro SAAS Services
+const ZionAIAnalyticsProPage = React.lazy(() => import("./app/zion-ai-analytics-pro/page"));
+const ZionAICRMProPage = React.lazy(() => import("./app/zion-ai-crm-pro/page"));
 const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
 const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
 const ZionAICustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
@@ -194,6 +196,8 @@ function App() {
                             <Route path="/ai-workflow-automation" element={<TaskAutomationWorkflowPage />} />
 
                             {/* New Innovative Micro SAAS Services Routes */}
+                            <Route path="/zion-ai-analytics-pro" element={<ZionAIAnalyticsProPage />} />
+                            <Route path="/zion-ai-crm-pro" element={<ZionAICRMProPage />} />
                             <Route path="/zion-ai-video-generator" element={<ZionAIVideoGeneratorPage />} />
                             <Route path="/zion-ai-invoice-generator" element={<ZionAIInvoiceGeneratorPage />} />
                             <Route path="/zion-ai-customer-insights" element={<ZionAICustomerInsightsPage />} />
