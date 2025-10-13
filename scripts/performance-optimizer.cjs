@@ -4,6 +4,9 @@ const path = require('path');
 console.log('Starting performance optimization...');
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9c39
 // Performance optimization script
 const optimizePerformance = () => {
   try {
@@ -13,6 +16,7 @@ const optimizePerformance = () => {
   }
 };
 
+<<<<<<< HEAD
 optimizePerformance();
 =======
 // Optimize images
@@ -151,3 +155,6 @@ console.log('✓ Manifest.json generated');
 
 console.log('Performance optimization completed successfully!');
 >>>>>>> cursor/analyze-improve-and-deploy-application-c573
+=======
+optimizePerformance();
+>>>>>>> cursor/analyze-improve-and-deploy-application-9c39

@@ -37,11 +37,9 @@ function processFile(filePath) {
 const fixedContent = fixMissingClosingDivs(content);
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed missing closing divs: ${filePath}`);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
     return false;
 // Function to recursively find and process TSX files;
 function processDirectory(dirPath) {
@@ -59,6 +57,4 @@ const stat = fs.statSync(fullPath);
   walkDir(dirPath);
   return processedCount;
 // Main execution;
-console.log('Starting missing closing div fixes...');
 const processedCount = processDirectory('./app');
-console.log(`Processed ${processedCount} files.`);

@@ -25,7 +25,9 @@ import {
   Users,
   Award,
   Clock,
-  CheckCircle
+  CheckCircle,
+  DollarSign,
+  Play
 } from 'lucide-react';
 
 const ImprovedNavigation = () => {

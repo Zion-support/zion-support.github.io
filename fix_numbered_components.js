@@ -33,15 +33,12 @@ const numberWords = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seve
         modified = true;
   if (modified) {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed numbered component in: ${filePath}`);
-// Find and fix all page files;
+    // Find and fix all page files;
 const pageFiles = findPageFiles('/workspace/app');
-console.log(`Found ${pageFiles.length} page files`);
 let fixedCount = 0;
 for (const file, of, pageFiles) {
   try {
     fixNumberedComponents(file);
     fixedCount++;
   } catch (error) {
-    console.error(`Error fixing ${file}:`, error.message);
-console.log(`Fixed ${fixedCount} files`);
+    

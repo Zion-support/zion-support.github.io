@@ -8,6 +8,7 @@ export default function Breadcrumb() {
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   if (pathnames.length === 0) {
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
@@ -27,11 +28,12 @@ const Breadcrumb: React.FC = () => {
 
   if (pathSegments.length === 0) {
 >>>>>>> cursor/analyze-improve-and-deploy-application-c573
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9c39
     return null;
   }
 
   return (
-<<<<<<< HEAD
     <nav className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
       <Link
         to="/"
@@ -65,6 +67,7 @@ const Breadcrumb: React.FC = () => {
           </React.Fragment>
         );
       })}
+<<<<<<< HEAD
     </nav>
   );
 }
@@ -100,6 +103,8 @@ const Breadcrumb: React.FC = () => {
           ))}
         </ol>
       </div>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9c39
     </nav>
   );
 };

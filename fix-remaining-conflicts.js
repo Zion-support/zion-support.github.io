@@ -95,12 +95,8 @@ export default function Page() {
 
 for (const file of filesToFix) {
   try {
-    console.log(`Fixing: ${file}`);
     fs.writeFileSync(file, basicComponent);
-    console.log(`Fixed: ${file}`);
-  } catch (error) {
-    console.error(`Error fixing ${file}:`, error.message);
-  }
+    } catch (error) {
+    }
 }
 
-console.log("Finished fixing remaining merge conflicts!");
