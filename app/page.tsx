@@ -183,6 +183,10 @@ const HomePage = () => {
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
             keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
             canonical="https://ziontechgroup.com"
+            ogType="website"
+            ogImage="https://ziontechgroup.com/og-image.jpg"
+            twitterCard="summary_large_image"
+            structuredData={structuredData}
           />
 
       {/* Main Content */}

@@ -108,7 +108,7 @@ function App() {
 
   useEffect(() => {
     // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
       console.log('Zion Tech Group App initialized');
     }
   }, []);
