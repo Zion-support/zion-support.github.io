@@ -7,37 +7,7 @@ import {
   Shield, 
   Zap, 
   Globe, 
-<<<<<<< HEAD
-  ArrowRight, 
-  Star, 
-  Users, 
-  Award, 
-  BarChart3, 
-  Cloud, 
-  Sparkles, 
-  Mail, 
-  Smartphone, 
-  Monitor,
-  Phone,
-  Code,
-  Database,
-  ChevronDown,
-  Menu,
-  X,
-  SidebarIcon,
-  Package,
-  Heart,
-  Receipt,
-  TrendingUp,
-  Cpu,
-  Network,
-  Target,
-  Calendar,
-  Clock,
-  FileText
-=======
   ChevronDown
->>>>>>> cursor/analyze-improve-and-deploy-application-5cc2
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -76,7 +46,13 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       name: 'Services',
       path: '/services',
       icon: <Shield className="w-4 h-4" />,
-      hasDropdown: true
+      hasDropdown: true,
+      subItems: [
+        { name: 'AI Services', path: '/ai-services', icon: <Brain className="w-4 h-4" /> },
+        { name: 'IT Services', path: '/services', icon: <Shield className="w-4 h-4" /> },
+        { name: 'Micro SAAS', path: '/micro-saas', icon: <Zap className="w-4 h-4" /> },
+        { name: '5G Solutions', path: '/5g-solutions', icon: <Globe className="w-4 h-4" /> }
+      ]
     },
     {
       name: 'AI Services',
@@ -115,7 +91,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <div key={item.name} className="relative">
+              <div key={item.name} className="relative group">
                 <Link
                   to={item.path}
                   className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -130,6 +106,26 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                     <ChevronDown className="w-4 h-4" />
                   )}
                 </Link>
+                
+                {/* Dropdown Menu */}
+                {item.hasDropdown && item.subItems && (
+                  <div className="absolute top-full left-0 mt-1 w-48 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-xl border border-cyan-500/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
+                      {item.subItems.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.path}
+                          className={`flex items-center space-x-2 px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors ${
+                            isActive(subItem.path) ? 'text-cyan-400 bg-cyan-500/10' : ''
+                          }`}
+                        >
+                          {subItem.icon}
+                          <span>{subItem.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -151,19 +147,41 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2">
               {navigationItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                    isActive(item.path)
-                      ? 'text-cyan-400 bg-cyan-500/10'
-                      : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
-                  }`}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.icon}
-                  <span>{item.name}</span>
-                </Link>
+                <div key={item.name}>
+                  <Link
+                    to={item.path}
+                    className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                      isActive(item.path)
+                        ? 'text-cyan-400 bg-cyan-500/10'
+                        : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
+                  </Link>
+                  
+                  {/* Mobile Sub-items */}
+                  {item.subItems && (
+                    <div className="ml-6 space-y-1">
+                      {item.subItems.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.path}
+                          className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm transition-colors ${
+                            isActive(subItem.path)
+                              ? 'text-cyan-400 bg-cyan-500/10'
+                              : 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10'
+                          }`}
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {subItem.icon}
+                          <span>{subItem.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>

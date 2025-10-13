@@ -53,13 +53,31 @@ const Footer: React.FC = () => {
     { name: "Contact", path: "/contact" },
   ];
 
-  const services = [
+  const aiServices = [
+    { name: "AI Video Generator", path: "/zion-ai-video-generator" },
+    { name: "AI Invoice Generator", path: "/zion-ai-invoice-generator" },
+    { name: "AI Customer Insights", path: "/zion-ai-customer-insights" },
+    { name: "AI Email Analyzer", path: "/zion-ai-email-analyzer" },
     { name: "AI Analytics", path: "/ai-analytics" },
-    { name: "Cybersecurity", path: "/ai-cybersecurity" },
+    { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
+  ];
+
+  const microSaasServices = [
+    { name: "Zion Analytics Pro", path: "/zion-analytics-pro" },
+    { name: "Zion Security Shield", path: "/zion-security-shield" },
+    { name: "Zion Cloud Vault", path: "/zion-cloud-vault" },
+    { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
+    { name: "Zion AI Marketing Pro", path: "/zion-ai-marketing-automation-pro" },
+    { name: "Zion AI Project Manager", path: "/zion-ai-project-manager-pro" },
+  ];
+
+  const itServices = [
     { name: "Cloud Migration", path: "/cloud-migration" },
     { name: "Web Development", path: "/web-development" },
     { name: "DevOps", path: "/devops" },
     { name: "IT Consulting", path: "/it-consulting" },
+    { name: "Network Security", path: "/network-security" },
+    { name: "System Integration", path: "/system-integration" },
   ];
 
   const stats = [
@@ -85,7 +103,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="md:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -131,17 +149,35 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">AI Services</h3>
             <ul className="space-y-2">
-              {services.map((service) => (
+              {aiServices.map((service) => (
                 <li key={service.name}>
                   <Link
                     to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
                   >
-                    <ArrowRight className="w-4 h-4 mr-2" />
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Micro SAAS Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Micro SAAS</h3>
+            <ul className="space-y-2">
+              {microSaasServices.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
                   </Link>
                 </li>

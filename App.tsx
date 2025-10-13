@@ -14,13 +14,6 @@ import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-<<<<<<< HEAD
-=======
-import LoadingPage from "./app/components/Loading";
-import EnhancedSEO from "./app/components/EnhancedSEO";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
->>>>>>> cursor/analyze-improve-and-deploy-application-5cc2
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -100,6 +93,18 @@ const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translato
 const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
+
+// Additional New Micro SAAS Services
+const ZionAIDocumentProcessorPage = React.lazy(() => import("./app/zion-ai-document-processor/page"));
+const ZionAIMarketingAutomationProPage = React.lazy(() => import("./app/zion-ai-marketing-automation-pro/page"));
+const ZionAISalesPredictorPage = React.lazy(() => import("./app/zion-ai-sales-predictor/page"));
+const ZionAIContentOptimizerPage = React.lazy(() => import("./app/zion-ai-content-optimizer/page"));
+const ZionAICustomerServiceProPage = React.lazy(() => import("./app/zion-ai-customer-service-pro/page"));
+const ZionAIFinancialPlannerPage = React.lazy(() => import("./app/zion-ai-financial-planner/page"));
+const ZionAITeamCollaborationPage = React.lazy(() => import("./app/zion-ai-team-collaboration/page"));
+const ZionAIDataVisualizationPage = React.lazy(() => import("./app/zion-ai-data-visualization/page"));
+const ZionAICybersecurityProPage = React.lazy(() => import("./app/zion-ai-cybersecurity-pro/page"));
+const ZionAIBusinessIntelligencePage = React.lazy(() => import("./app/zion-ai-business-intelligence/page"));
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -220,6 +225,18 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+
+                            {/* Additional New Micro SAAS Services Routes */}
+                            <Route path="/zion-ai-document-processor" element={<ZionAIDocumentProcessorPage />} />
+                            <Route path="/zion-ai-marketing-automation-pro" element={<ZionAIMarketingAutomationProPage />} />
+                            <Route path="/zion-ai-sales-predictor" element={<ZionAISalesPredictorPage />} />
+                            <Route path="/zion-ai-content-optimizer" element={<ZionAIContentOptimizerPage />} />
+                            <Route path="/zion-ai-customer-service-pro" element={<ZionAICustomerServiceProPage />} />
+                            <Route path="/zion-ai-financial-planner" element={<ZionAIFinancialPlannerPage />} />
+                            <Route path="/zion-ai-team-collaboration" element={<ZionAITeamCollaborationPage />} />
+                            <Route path="/zion-ai-data-visualization" element={<ZionAIDataVisualizationPage />} />
+                            <Route path="/zion-ai-cybersecurity-pro" element={<ZionAICybersecurityProPage />} />
+                            <Route path="/zion-ai-business-intelligence" element={<ZionAIBusinessIntelligencePage />} />
                           </Routes>
                         </Suspense>
                       </main>

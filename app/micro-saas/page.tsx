@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from "react"; export default function MicroSaasPage() { return <div>Micro SAAS Page</div>; }
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -22,14 +19,51 @@ import {
 const MicroSaasPage = () => {
   const microSaasProducts = [
     {
+      name: "Zion AI Video Generator",
+      description: "Create professional videos in minutes with AI-powered script generation, voice synthesis, and smart editing",
+      price: "From $29/month",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      link: "/zion-ai-video-generator",
+      features: ["AI Script Generation", "Multi-language Voice", "Smart Editing", "Stock Footage"],
+      popular: true
+    },
+    {
+      name: "Zion AI Invoice Generator",
+      description: "Generate professional invoices automatically with AI-powered creation, payment tracking, and analytics",
+      price: "From $19/month",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      link: "/zion-ai-invoice-generator",
+      features: ["Auto Invoice Creation", "Payment Tracking", "Multi-currency", "Client Portal"],
+      popular: true
+    },
+    {
+      name: "Zion AI Customer Insights",
+      description: "Unlock deep customer insights with AI-powered analytics, sentiment analysis, and behavioral prediction",
+      price: "From $99/month",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      link: "/zion-ai-customer-insights",
+      features: ["Sentiment Analysis", "Behavioral Analytics", "Predictive Scoring", "Journey Mapping"]
+    },
+    {
+      name: "Zion AI Email Analyzer",
+      description: "Transform email management with AI-powered analysis, spam detection, and priority scoring",
+      price: "From $19/month",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      link: "/zion-ai-email-analyzer",
+      features: ["Spam Detection", "Priority Scoring", "Sentiment Analysis", "Response Suggestions"]
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
       icon: <BarChart3 className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
       link: "/zion-analytics-pro",
-      features: ["Real-time Analytics", "Predictive Insights", "Custom Dashboards", "API Integration"],
-      popular: true
+      features: ["Real-time Analytics", "Predictive Insights", "Custom Dashboards", "API Integration"]
     },
     {
       name: "Zion Security Shield",
@@ -38,8 +72,7 @@ const MicroSaasPage = () => {
       icon: <Shield className="w-8 h-8" />,
       color: "from-red-500 to-orange-500",
       link: "/zion-security-shield",
-      features: ["Threat Detection", "Automated Response", "24/7 Monitoring", "Compliance Reports"],
-      popular: true
+      features: ["Threat Detection", "Automated Response", "24/7 Monitoring", "Compliance Reports"]
     },
     {
       name: "Zion Cloud Vault",
@@ -226,4 +259,3 @@ const MicroSaasPage = () => {
 };
 
 export default MicroSaasPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-5cc2
