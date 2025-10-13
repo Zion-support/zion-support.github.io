@@ -7,7 +7,6 @@ const HomePage: React.FC = () => {
   const features = [
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
-<<<<<<< HEAD
       title: 'AI-Powered Solutions',
       description: 'Transform your business with our comprehensive AI services including content generation, chatbots, analytics, and automation.',
       benefits: ['AI Content Generator - $29/month', 'AI Chatbot Builder - $49/month', 'AI Analytics Dashboard - $79/month', 'AI Automation Suite - $99/month'],
@@ -18,23 +17,10 @@ const HomePage: React.FC = () => {
       title: 'IT Services & Solutions',
       description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
       benefits: ['Cloud Migration - Starting at $2,500', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000', 'Data Analytics - $2,000/month'],
-=======
-      title: 'Micro SAAS Services',
-      description: 'Powerful AI-driven micro software solutions designed to streamline your business operations and boost productivity.',
-      benefits: ['AI Content Writer Pro', 'Analytics Dashboard', 'Email Assistant', 'Lead Generation'],
-      link: '/micro-saas-services'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including infrastructure management, cybersecurity, and 24/7 support.',
-      benefits: ['Infrastructure Management', 'Cybersecurity Solutions', 'Cloud Migration', 'Database Administration'],
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
       link: '/it-services'
     },
     {
       icon: <Globe className="w-8 h-8 text-purple-500" />,
-<<<<<<< HEAD
       title: 'Micro SAAS Applications',
       description: 'Powerful, affordable micro applications designed to solve specific business problems with AI intelligence.',
       benefits: ['AI Task Manager - $19/month', 'AI Expense Tracker - $15/month', 'AI Password Manager - $12/month', 'AI Invoice Generator - $25/month'],
@@ -46,33 +32,6 @@ const HomePage: React.FC = () => {
       description: 'Next-generation connectivity solutions to power your digital transformation with ultra-fast speeds and low latency.',
       benefits: ['Ultra-Fast Speeds - 10+ Gbps', 'Low Latency - 1ms', 'IoT Integration - 1M+ devices/km²', 'Edge Computing Solutions'],
       link: '/5g-implementation'
-=======
-      title: 'Cloud Services',
-      description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
-      benefits: ['Cloud Migration', 'Infrastructure Setup', 'Security Solutions', 'Cost Optimization'],
-      link: '/cloud-services'
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-orange-500" />,
-      title: 'Digital Transformation',
-      description: 'Transform your business for the digital age with comprehensive digital transformation services.',
-      benefits: ['Process Automation', 'Digital Workforce', 'Customer Experience', 'Data Strategy'],
-      link: '/digital-transformation'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: '5G Implementation',
-      description: 'Next-generation connectivity solutions to power your digital transformation.',
-      benefits: ['Ultra-Fast Speeds', 'Low Latency', 'IoT Integration', 'Edge Computing'],
-      link: '/5g-implementation'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-yellow-500" />,
-      title: 'AI Solutions',
-      description: 'Advanced AI-powered solutions to automate processes and gain competitive advantages.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      link: '/ai-services'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d668
     }
   ];
 
