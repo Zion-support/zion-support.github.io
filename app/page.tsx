@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEO from './components/SEO';
