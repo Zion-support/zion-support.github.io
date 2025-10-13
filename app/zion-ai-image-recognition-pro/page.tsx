@@ -1,132 +1,145 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Mic, Volume2, Headphones, Smartphone, Globe, Clock, DollarSign, Mail, Users, Award, Shield, Settings, Target, Database, Headphones as HeadphonesIcon, Mic as MicIcon, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Camera, Image, Eye, Search, Shield, Clock, DollarSign, Mail, Users, Award, Settings, Target, Database, Headphones, Mic, Video, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
-export default function ZionAIVoiceAssistantPro() {
+export default function ZionAIImageRecognitionPro() {
   const features = [
-    "Natural language processing (NLP)",
-    "Multi-language support (50+ languages)",
-    "Voice command automation",
-    "Real-time transcription",
-    "Smart scheduling & calendar management",
-    "Email composition & sending",
-    "Document creation & editing",
-    "Meeting notes & summaries",
-    "Task management & reminders",
-    "Customer service automation",
-    "API integration capabilities",
-    "Custom voice training",
-    "Offline voice recognition",
-    "Voice biometric authentication",
-    "Multi-device synchronization",
-    "Advanced analytics & insights"
+    "Advanced computer vision algorithms",
+    "Real-time image processing",
+    "Object detection & classification",
+    "Facial recognition & analysis",
+    "Text extraction (OCR)",
+    "Brand logo detection",
+    "Scene understanding",
+    "Quality assessment",
+    "Content moderation",
+    "Medical image analysis",
+    "Retail product recognition",
+    "Security surveillance",
+    "API integration",
+    "Custom model training",
+    "Batch processing",
+    "Cloud & edge deployment"
   ];
 
   const benefits = [
-    "Increase productivity by 40%",
-    "Reduce manual tasks by 60%",
-    "Improve accessibility for all users",
-    "Enable hands-free operations",
-    "Scale customer service 24/7",
-    "Enhance user experience"
+    "Automate visual content analysis",
+    "Improve accuracy by 95%",
+    "Reduce manual inspection time",
+    "Enhance security & safety",
+    "Enable smart retail solutions",
+    "Scale visual processing"
   ];
 
   const pricing = [
     {
       name: "Starter",
-      price: "$39",
+      price: "$49",
       period: "month",
-      description: "Perfect for small teams",
-      features: ["Up to 5 users", "Basic voice commands", "Email support", "10 integrations"],
+      description: "Perfect for small businesses",
+      features: ["1,000 images/month", "Basic recognition", "Email support", "5 API calls/min"],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$149",
       period: "month",
-      description: "Ideal for growing businesses",
-      features: ["Up to 25 users", "Advanced AI features", "Priority support", "50 integrations", "Custom training"],
+      description: "Ideal for growing companies",
+      features: ["10,000 images/month", "Advanced AI models", "Priority support", "50 API calls/min", "Custom training"],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$249",
+      price: "$399",
       period: "month",
       description: "For large organizations",
-      features: ["Unlimited users", "Full AI capabilities", "24/7 support", "Unlimited integrations", "White-label options"],
+      features: ["Unlimited images", "Full AI capabilities", "24/7 support", "Unlimited API calls", "White-label options"],
       popular: false
     }
   ];
 
   const useCases = [
     {
-      title: "Customer Service",
-      description: "Handle customer inquiries 24/7 with natural voice interactions",
-      icon: <Headphones className="w-8 h-8" />
+      title: "Retail & E-commerce",
+      description: "Automated product recognition, inventory management, and visual search",
+      icon: <ShoppingCart className="w-8 h-8" />
     },
     {
-      title: "Meeting Assistant",
-      description: "Transcribe meetings, create summaries, and manage follow-ups",
-      icon: <Mic className="w-8 h-8" />
+      title: "Security & Surveillance",
+      description: "Facial recognition, object detection, and threat identification",
+      icon: <Shield className="w-8 h-8" />
     },
     {
-      title: "Content Creation",
-      description: "Generate content through voice commands and dictation",
-      icon: <BookOpen className="w-8 h-8" />
+      title: "Healthcare & Medical",
+      description: "Medical image analysis, diagnosis assistance, and patient monitoring",
+      icon: <Target className="w-8 h-8" />
     },
     {
-      title: "Task Automation",
-      description: "Automate repetitive tasks with voice commands",
-      icon: <Settings className="w-8 h-8" />
+      title: "Content Moderation",
+      description: "Automated content filtering, inappropriate image detection",
+      icon: <Eye className="w-8 h-8" />
     }
+  ];
+
+  const industries = [
+    "Retail & E-commerce",
+    "Healthcare & Medical",
+    "Security & Surveillance",
+    "Manufacturing",
+    "Automotive",
+    "Agriculture",
+    "Real Estate",
+    "Media & Entertainment",
+    "Education",
+    "Financial Services"
   ];
 
   const testimonials = [
     {
-      name: "David Martinez",
-      company: "CustomerFirst Solutions",
-      role: "Operations Manager",
-      content: "Zion AI Voice Assistant Pro has revolutionized our customer service. We can handle 3x more calls with better quality responses.",
+      name: "Dr. Sarah Kim",
+      company: "MedTech Solutions",
+      role: "Chief Medical Officer",
+      content: "Zion AI Image Recognition Pro has revolutionized our medical imaging analysis. We can process X-rays and MRIs 10x faster with higher accuracy.",
       rating: 5,
-      avatar: "DM"
+      avatar: "SK"
     },
     {
-      name: "Lisa Thompson",
-      company: "Tech Innovations Inc.",
-      role: "CEO",
-      content: "The voice automation features have saved us countless hours. Our team can focus on strategic work while the AI handles routine tasks.",
+      name: "Robert Chen",
+      company: "SmartRetail Inc.",
+      role: "CTO",
+      content: "The product recognition capabilities have transformed our inventory management. We've reduced stock discrepancies by 90%.",
       rating: 5,
-      avatar: "LT"
+      avatar: "RC"
     },
     {
-      name: "James Wilson",
-      company: "Global Enterprises",
-      role: "IT Director",
-      content: "The multi-language support and API integrations make this the perfect solution for our international operations.",
+      name: "Maria Rodriguez",
+      company: "SecureGuard Systems",
+      role: "Security Director",
+      content: "The facial recognition and object detection features have significantly improved our security operations. Response time is now instant.",
       rating: 5,
-      avatar: "JW"
+      avatar: "MR"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Voice Assistant Pro - Advanced Voice AI Platform | Zion Tech Group</title>
+        <title>Zion AI Image Recognition Pro - Advanced Computer Vision Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your business with Zion AI Voice Assistant Pro - advanced voice AI platform with natural language processing, multi-language support, and intelligent automation. Start your free trial today!"
+          content="Transform your business with Zion AI Image Recognition Pro - advanced computer vision platform with object detection, facial recognition, OCR, and medical image analysis. Start your free trial today!"
         />
         <meta
           name="keywords"
-          content="voice AI, voice assistant, natural language processing, voice automation, AI voice, voice recognition, speech to text, voice commands, Zion AI Voice Assistant Pro"
+          content="image recognition, computer vision, object detection, facial recognition, OCR, medical imaging, visual AI, image analysis, Zion AI Image Recognition Pro"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-voice-assistant-pro" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-image-recognition-pro" />
       </Helmet>
       <SEOOptimizer
-        title="Zion AI Voice Assistant Pro - Advanced Voice AI Platform | Zion Tech Group"
-        description="Transform your business with Zion AI Voice Assistant Pro - advanced voice AI platform with natural language processing, multi-language support, and intelligent automation. Start your free trial today!"
+        title="Zion AI Image Recognition Pro - Advanced Computer Vision Platform | Zion Tech Group"
+        description="Transform your business with Zion AI Image Recognition Pro - advanced computer vision platform with object detection, facial recognition, OCR, and medical image analysis. Start your free trial today!"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -139,19 +152,19 @@ export default function ZionAIVoiceAssistantPro() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 Voice AI Platform</span>
+                <Camera className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">#1 Computer Vision Platform</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion AI Voice Assistant Pro
+                  Zion AI Image Recognition Pro
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Advanced voice AI platform with natural language processing, multi-language support, and intelligent automation. 
-                Transform your business operations with cutting-edge voice technology.
+                Advanced computer vision platform with object detection, facial recognition, OCR, and medical image analysis. 
+                Transform visual data into actionable insights with cutting-edge AI technology.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -167,23 +180,23 @@ export default function ZionAIVoiceAssistantPro() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <Camera className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
               
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">40%</div>
-                  <div className="text-gray-300 text-sm">Productivity Boost</div>
+                  <div className="text-3xl font-bold text-white mb-2">95%</div>
+                  <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-2">10x</div>
+                  <div className="text-gray-300 text-sm">Faster Processing</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-white mb-2">50+</div>
-                  <div className="text-gray-300 text-sm">Languages Supported</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-                  <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                  <div className="text-gray-300 text-sm">Object Categories</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-white mb-2">24/7</div>
@@ -199,10 +212,10 @@ export default function ZionAIVoiceAssistantPro() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Powerful Use Cases
+                Industry Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Discover how Zion AI Voice Assistant Pro can transform your business operations
+                Discover how Zion AI Image Recognition Pro transforms various industries
               </p>
             </div>
             
@@ -229,15 +242,40 @@ export default function ZionAIVoiceAssistantPro() {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Industries Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Trusted by Leading Industries
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Our image recognition technology powers solutions across diverse sectors
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+              {industries.map((industry, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"
+                >
+                  <span className="text-white font-medium text-sm">{industry}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Advanced Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to implement voice AI in your business
+                Everything you need to implement computer vision in your business
               </p>
             </div>
             
@@ -260,7 +298,7 @@ export default function ZionAIVoiceAssistantPro() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -332,7 +370,7 @@ export default function ZionAIVoiceAssistantPro() {
                 What Our Customers Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses using Zion AI Voice Assistant Pro
+                Join thousands of businesses using Zion AI Image Recognition Pro
               </p>
             </div>
             
@@ -369,11 +407,11 @@ export default function ZionAIVoiceAssistantPro() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Voice Operations?
+              Ready to Transform Your Visual Data?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               Start your free 14-day trial today. No credit card required. 
-              Experience the power of AI voice technology.
+              Experience the power of AI image recognition.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
