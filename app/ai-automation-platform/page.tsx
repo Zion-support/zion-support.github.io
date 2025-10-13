@@ -1,7 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, CheckCircle, TrendingUp, Settings, Sparkles, Target, BarChart3, Cloud, Workflow } from 'lucide-react';
+import { 
+  ArrowRight,
+  Users,
+  Star,
+  CheckCircle,
+  TrendingUp,
+  Settings,
+  Sparkles,
+  Target,
+  BarChart3,
+  Cloud,
+  Workflow
+} from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
   const features = [
@@ -31,15 +43,6 @@ const AIAutomationPlatformPage = () => {
     }
   ];
 
-  const benefits = [
-    "80% reduction in manual processes",
-    "95% accuracy in process automation",
-    "60% faster task completion",
-    "Real-time process optimization",
-    "Seamless system integration",
-    "Predictive maintenance alerts"
-  ];
-
   const useCases = [
     {
       industry: "Finance",
@@ -61,6 +64,19 @@ const AIAutomationPlatformPage = () => {
       description: "Quality control, supply chain optimization, and predictive maintenance",
       icon: <Settings className="w-6 h-6" />
     }
+  ];
+
+  const benefits = [
+    "Reduce manual work by 80%",
+    "Improve process efficiency by 300%",
+    "Eliminate human errors completely",
+    "Scale operations without additional staff",
+    "24/7 automated monitoring",
+    "Real-time process optimization",
+    "Seamless system integration",
+    "Predictive maintenance alerts",
+    "Compliance automation",
+    "Cost reduction up to 60%"
   ];
 
   return (
