@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowRight, CheckCircle, Star, FileText, Calculator, CreditCard, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Users, Award, Shield, Mail, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard as CreditCardIcon, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator as CalculatorIcon, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../components/SEOOptimizer";
+import EnhancedSEO from "../components/EnhancedSEO";
 
 export default function ZionAIInvoiceGenerator() {
   const features = [
@@ -97,7 +97,7 @@ export default function ZionAIInvoiceGenerator() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-invoice-generator" />
       </Helmet>
-      <SEOOptimizer
+      <EnhancedSEO
         title="Zion AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
         description="Automate your invoicing with Zion AI Invoice Generator. AI-powered invoice creation, payment tracking, and financial management. Start your free trial today!"
       />

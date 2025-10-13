@@ -1,95 +1,86 @@
-import { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import React, { useEffect } from 'react';
 
 interface WebVitalsData {
   name: string;
   value: number;
   delta: number;
   id: string;
-  navigationType: string;
 }
 
 const WebVitalsTracker: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
     const sendToAnalytics = (metric: WebVitalsData) => {
       // Send to Google Analytics or other analytics service
       if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', metric.name, {
+        (window as any).gtag('event', 'web_vitals', {
           event_category: 'Web Vitals',
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          event_label: metric.name,
+          value: Math.round(metric.value),
           non_interaction: true,
         });
       }
-
-      // Send to custom analytics endpoint
-      if (process.env.NODE_ENV === 'production') {
-        fetch('/api/analytics/web-vitals', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(metric),
-        }).catch(console.error);
-      }
-
+      
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
+        console.log('Web Vital:', metric.name, metric.value);
       }
     };
 
     // Track Core Web Vitals
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics); // INP replaces FID in newer versions
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
-
-    // Track additional performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Track page load time
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          sendToAnalytics({
-            name: 'LOAD_TIME',
-            value: loadTime,
-            delta: loadTime,
-            id: 'load-time',
-            navigationType: navigation.type,
-          });
-        }
-      });
-
-      // Track memory usage (if available)
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      // LCP
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
         sendToAnalytics({
-          name: 'MEMORY_USAGE',
-          value: memoryUsage,
-          delta: memoryUsage,
-          id: 'memory-usage',
-          navigationType: 'reload',
+          name: 'LCP',
+          value: lastEntry.startTime,
+          delta: lastEntry.startTime,
+          id: lastEntry.id
         });
-      }
-    }
-=======
-    // Track Core Web Vitals
-    const trackWebVitals = () => {
-      // This is a placeholder for web vitals tracking
-      // In a real implementation, you would use libraries like web-vitals
-      console.log('Web Vitals tracking initialized');
-    };
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    trackWebVitals();
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
+      // FID
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          sendToAnalytics({
+            name: 'FID',
+            value: entry.processingStart - entry.startTime,
+            delta: entry.processingStart - entry.startTime,
+            id: entry.id
+          });
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // CLS
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        sendToAnalytics({
+          name: 'CLS',
+          value: clsValue,
+          delta: clsValue,
+          id: 'cls'
+        });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      return () => {
+        lcpObserver.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    }
   }, []);
 
-  return null;
+  return null; // This component doesn't render anything
 };
 
 export default WebVitalsTracker;

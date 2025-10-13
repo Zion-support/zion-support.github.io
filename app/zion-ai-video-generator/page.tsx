@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowRight, CheckCircle, Star, Video, Play, Camera, Mic, Image, Zap, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Users, Award, Shield, Mail, Headphones, Mic as MicIcon, Video as VideoIcon, Image as ImageIcon, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play as PlayIcon, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../components/SEOOptimizer";
+import EnhancedSEO from "../components/EnhancedSEO";
 
 export default function ZionAIVideoGenerator() {
   const features = [
@@ -97,7 +97,7 @@ export default function ZionAIVideoGenerator() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-generator" />
       </Helmet>
-      <SEOOptimizer
+      <EnhancedSEO
         title="Zion AI Video Generator - AI-Powered Video Creation | Zion Tech Group"
         description="Create professional videos instantly with Zion AI Video Generator. AI-powered video creation from text prompts, voice synthesis, and automated editing. Start your free trial today!"
       />
