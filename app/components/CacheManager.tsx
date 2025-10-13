@@ -16,9 +16,12 @@ const CacheManager = () => {
           // Service Worker registered successfully
         } catch (error) {
           console.error('Service Worker registration failed:', error);
+<<<<<<< HEAD
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-462b
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b10
         }
       }
     }
@@ -48,9 +51,12 @@ const CacheManager = () => {
           // Static assets cached successfully
         } catch (error) {
           console.error('Failed to cache static assets:', error);
+<<<<<<< HEAD
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-462b
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b10
         }
       }
 
@@ -65,8 +71,13 @@ const CacheManager = () => {
           }
           
           return response
+<<<<<<< HEAD
         } catch {
 
+=======
+        } catch (error) {
+          console.error('Cache API error:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b10
           return fetch(request);
         }
       }

@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 >>>>>>> cursor/analyze-improve-and-deploy-application-462b
 
+<<<<<<< HEAD
 interface BlogPost {
   id: string;
   title: string;
@@ -28,6 +29,20 @@ const BlogPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const blogPosts: BlogPost[] = [
+=======
+export default function Blog() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  const categories = [
+    { id: "all", name: "All Posts", count: 12 },
+    { id: "ai", name: "Artificial Intelligence", count: 5 },
+    { id: "technology", name: "Technology", count: 4 },
+    { id: "business", name: "Business", count: 3 }
+  ];
+
+  const blogPosts = [
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b10
     {
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
