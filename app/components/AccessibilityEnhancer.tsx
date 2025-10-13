@@ -172,13 +172,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     applyAccessibilitySettings(defaultSettings);
   };
 
-  // const toggleLargeText = () => {
-  //   updateSetting('largeText', !settings.largeText);
-  // };
-
-  // const toggleHighContrast = () => {
-  //   updateSetting('highContrast', !settings.highContrast);
-  // };
+  // Removed unused functions - functionality is handled by updateSetting directly
 
   return (
     <>

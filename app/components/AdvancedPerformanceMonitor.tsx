@@ -53,7 +53,7 @@ const AdvancedPerformanceMonitor = () => {
           reportMetric('TTFB', metric.value)
         })
       } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
+        console.warn('Performance monitoring error:', error);
       }
     }
 
@@ -98,7 +98,7 @@ const AdvancedPerformanceMonitor = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log(`Performance metric ${name}:`, value);
+        console.log('Performance metric:', { name, value, timestamp: Date.now() });
       }
     }
 

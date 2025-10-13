@@ -72,6 +72,9 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify(errorData)
     // });
+    
+    // For now, just log to console
+    console.error('Error data:', errorData);
   };
 
   handleReset = () => {

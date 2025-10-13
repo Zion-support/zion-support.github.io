@@ -5,12 +5,11 @@ import LoadingSpinner from '../app/components/LoadingSpinner';
 
 describe('LoadingSpinner', () => {
   it('renders with default props', () => {
-    const { container } = render(<LoadingSpinner />);
+    render(<LoadingSpinner />);
     
-    // Check that the spinner container is rendered
-    const spinnerContainer = container.querySelector('.flex.flex-col.items-center.justify-center.space-y-2');
-    expect(spinnerContainer).toBeInTheDocument();
-    expect(spinnerContainer).toHaveClass('flex', 'flex-col', 'items-center', 'justify-center', 'space-y-2');
+    // Should render the spinner icon but no text by default
+    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
+    expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
   });
 
   it('renders with custom text', () => {
@@ -20,15 +19,15 @@ describe('LoadingSpinner', () => {
   });
 
   it('renders with different sizes', () => {
-    const { container, rerender } = render(<LoadingSpinner size="sm" />);
-    const spinner = container.querySelector('svg');
-    expect(spinner).toHaveClass('w-4', 'h-4');
+    const { rerender } = render(<LoadingSpinner size="sm" />);
+    const spinner = screen.getByTestId('loading-spinner');
+    expect(spinner).toHaveClass('w-4 h-4');
 
     rerender(<LoadingSpinner size="md" />);
-    expect(spinner).toHaveClass('w-6', 'h-6');
+    expect(spinner).toHaveClass('w-6 h-6');
 
     rerender(<LoadingSpinner size="lg" />);
-    expect(spinner).toHaveClass('w-8', 'h-8');
+    expect(spinner).toHaveClass('w-8 h-8');
   });
 
   it('renders without text when text is empty', () => {
@@ -38,9 +37,9 @@ describe('LoadingSpinner', () => {
   });
 
   it('applies custom className', () => {
-    const { container } = render(<LoadingSpinner className="custom-class" />);
+    render(<LoadingSpinner className="custom-class" />);
     
-    const spinnerContainer = container.querySelector('.flex.flex-col.items-center.justify-center.space-y-2');
-    expect(spinnerContainer).toHaveClass('custom-class');
+    const container = screen.getByTestId('loading-spinner').parentElement;
+    expect(container).toHaveClass('custom-class');
   });
 });

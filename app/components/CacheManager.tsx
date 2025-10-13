@@ -51,7 +51,7 @@ const CacheManager = () => {
           return response
         } catch (error) {
           console.warn('Cache API error:', error);
-          return fetch(request)
+          return fetch(request);
         }
       }
 

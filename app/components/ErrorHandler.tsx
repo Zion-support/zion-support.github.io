@@ -59,10 +59,10 @@ class ErrorHandler extends Component<Props, State> {
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString()
       };
-      console.error('Production error:', errorData);
       // Send to your error reporting service here
+      console.log('Error data for reporting:', errorData);
     } catch (reportingError) {
-      console.warn('Failed to report error:', reportingError);
+      console.warn('Error reporting failed:', reportingError);
     }
   }
 
