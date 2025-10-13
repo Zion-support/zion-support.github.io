@@ -1,8 +1,17 @@
-import { ArrowRight, TrendingUp, Globe, CheckCircle, MessageSquare, Target, BarChart3 } from 'lucide-react';
+import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
+import { ArrowRight } from 'lucide-react';
+// import { Star } from 'lucide-react'; // Unused import
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+// import { Globe } from 'lucide-react'; // Unused import
+// import { Monitor } from 'lucide-react'; // Unused import
+import { Target } from 'lucide-react';
+// import { BarChart3 } from 'lucide-react'; // Unused import
+// import { MessageSquare } from 'lucide-react'; // Unused import
 
 const AISentimentAnalysisPro = () => {
   const features = [

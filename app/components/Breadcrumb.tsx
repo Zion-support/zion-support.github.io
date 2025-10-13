@@ -1,31 +1,21 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+// import { Home } from 'lucide-react'; // Unused import
 
-interface BreadcrumbProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+const Breadcrumb: React.FC = () => {
+  const location = useLocation();
+  const pathnames = location.pathname.split('/').filter((x) => x);
 
-export default function Breadcrumb({ className = '', children, ...props }: BreadcrumbProps) {
   return (
-<<<<<<< HEAD
-    <div className={`breadcrumb-component ${className}`} {...props}>
-      {children}
-    </div>
-=======
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 py-2 px-4">
       <div className="max-w-7xl mx-auto">
         <ol className="flex items-center space-x-2 text-sm">
-//           <li>
+          <li>
             <Link to="/" className="text-cyan-400 hover:text-cyan-300 flex items-center">
               <Home className="w-4 h-4 mr-1" />
-//               Home
-</Link>
-//           </li>
+              Home
+            </Link>
+          </li>
           {pathnames.map((name, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1;
@@ -39,14 +29,15 @@ export default function Breadcrumb({ className = '', children, ...props }: Bread
                 ) : (
                   <Link to={routeTo} className="text-cyan-400 hover:text-cyan-300">
                     {displayName}
-</Link>
+                  </Link>
                 )}
-//               </li>
+              </li>
             );
           })}
-//         </ol>
-</div>
-//     </nav>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+        </ol>
+      </div>
+    </nav>
   );
-}
+};
+
+export default Breadcrumb;

@@ -1,8 +1,9 @@
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+// import { Helmet } from 'react-helmet-async'; // Unused import
 
 export default function Privacy() {
   return (
-    <div>
+    <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Privacy policy for Zion Tech Group services." />
@@ -13,6 +14,6 @@ export default function Privacy() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-</div>
+    </>
   );
 }

@@ -1,10 +1,13 @@
 import React from "react";
+import { Settings, ArrowRight, Star, Zap, BarChart3, Database, Target, Smartphone, Headphones, Code, Network } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
+// import { Shield } from 'lucide-react'; // Unused import
 import { Database } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Settings } from 'lucide-react';
@@ -15,7 +18,7 @@ import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Headphones } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
-import { Cloud } from 'lucide-react';
+// import { Cloud } from 'lucide-react'; // Unused import
 
 export default function ITServices() {
   const itServices = [

@@ -1,64 +1,55 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import StructuredData from "../components/StructuredData";
-import { Search, Code } from 'lucide-react';
+// import { Search, Code } from 'lucide-react'; // Unused import
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+// import { Search } from 'lucide-react'; // Unused import
+// import { Code } from 'lucide-react'; // Unused import
 
-interface StructureddataProps {
-  className?: string;
-  children?: React.ReactNode;
+interface StructuredDataProps {
+  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
+  data: any;
 }
 
-<<<<<<< HEAD
-export default function Structureddata({ className = '', children, ...props }: StructureddataProps) {
-  return (
-    <div className={`structureddata-component ${className}`} {...props}>
-      {children}
-    </div>
-=======
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
   const getStructuredData = () => {
     const baseData = {
-//       "@context": "https://schema.org",
+      "@context": "https://schema.org",
       "@type": type,
-//       ...data
+      ...data
     };
 
     switch (type) {
-//       case 'Organization':
+      case 'Organization':
         return {
-//           ...baseData,
-//           "name": data.name || "Zion Tech Group",
-//           "url": data.url || "https://ziontechgroup.com",
-//           "logo": data.logo || "https://ziontechgroup.com/logo.svg",
-//           "description": data.description || "Leading provider of AI and IT solutions",
+          ...baseData,
+          "name": data.name || "Zion Tech Group",
+          "url": data.url || "https://ziontechgroup.com",
+          "logo": data.logo || "https://ziontechgroup.com/logo.svg",
+          "description": data.description || "Leading provider of AI and IT solutions",
           "address": data.address || {
             "@type": "PostalAddress",
-//             "streetAddress": "364 E Main St STE 1008",
+            "streetAddress": "364 E Main St STE 1008",
             "addressLocality": "Middletown",
-//             "addressRegion": "DE",
-//             "postalCode": "19709",
-//             "addressCountry": "US"
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
           },
           "contactPoint": data.contactPoint || {
             "@type": "ContactPoint",
-//             "telephone": "+1-302-464-0950",
-//             "contactType": "customer service",
-//             "email": "kleber@ziontechgroup.com"
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
           },
-//           "sameAs": data.sameAs || [
-//             "https://twitter.com/ziontechgroup",
-//             "https://linkedin.com/company/ziontechgroup"
-//           ]
+          "sameAs": data.sameAs || [
+            "https://twitter.com/ziontechgroup",
+            "https://linkedin.com/company/ziontechgroup"
+          ]
         };
 
-//       case 'WebSite':
+      case 'WebSite':
         return {
-//           ...baseData,
-//           "name": data.name || "Zion Tech Group",
-//           "url": data.url || "https://ziontechgroup.com",
+          ...baseData,
+          "name": data.name || "Zion Tech Group",
+          "url": data.url || "https://ziontechgroup.com",
           "potentialAction": data.potentialAction || {
             "@type": "SearchAction",
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
@@ -66,56 +57,57 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           }
         };
 
-//       case 'WebPage':
+      case 'WebPage':
         return {
-//           ...baseData,
-//           "name": data.name,
-//           "description": data.description,
-//           "url": data.url,
+          ...baseData,
+          "name": data.name,
+          "description": data.description,
+          "url": data.url,
           "isPartOf": data.isPartOf || {
             "@type": "WebSite",
-//             "name": "Zion Tech Group",
-//             "url": "https://ziontechgroup.com"
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com"
           },
-//           "breadcrumb": data.breadcrumb
+          "breadcrumb": data.breadcrumb
         };
 
-//       case 'Service':
+      case 'Service':
         return {
-//           ...baseData,
-//           "name": data.name,
-//           "description": data.description,
+          ...baseData,
+          "name": data.name,
+          "description": data.description,
           "provider": data.provider || {
             "@type": "Organization",
-//             "name": "Zion Tech Group"
+            "name": "Zion Tech Group"
           },
-//           "areaServed": data.areaServed || "US",
-//           "hasOfferCatalog": data.hasOfferCatalog
+          "areaServed": data.areaServed || "US",
+          "hasOfferCatalog": data.hasOfferCatalog
         };
 
-//       case 'FAQPage':
+      case 'FAQPage':
         return {
-//           ...baseData,
-//           "mainEntity": data.mainEntity || []
+          ...baseData,
+          "mainEntity": data.mainEntity || []
         };
 
-//       case 'BreadcrumbList':
+      case 'BreadcrumbList':
         return {
-//           ...baseData,
-//           "itemListElement": data.itemListElement || []
+          ...baseData,
+          "itemListElement": data.itemListElement || []
         };
 
-//       default:
+      default:
         return baseData;
     }
   };
 
   return (
-//     <Helmet>
+    <Helmet>
       <script type="application/ld+json">
         {JSON.stringify(getStructuredData(), null, 2)}
-//       </script>
-//     </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+      </script>
+    </Helmet>
   );
-}
+};
+
+export default StructuredData;

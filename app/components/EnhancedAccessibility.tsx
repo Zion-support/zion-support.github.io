@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react';
+// import { Link } from 'react-router-dom'; // Unused import
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -90,7 +92,7 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, []);
 
   return (
-    <div>
+    <>
       {/* Skip to main content link */}
       <a
         href="#main-content"
@@ -111,7 +113,7 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       </button>
 
       {children}
-</div>
+    </>
   );
 };
 

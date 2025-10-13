@@ -1,198 +1,362 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from "react-router-dom";
-import { Brain, FileText, Zap, Shield, CheckCircle, ArrowRight, Star, Globe, Sparkles } from "lucide-react";
+import EnhancedSEO from "../components/EnhancedSEO";
+import StructuredData from "../components/StructuredData";
+import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
+import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
+import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
+import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
+import ResponsiveContainer from "../components/ResponsiveContainer";
+import EnhancedAccessibility from "../components/EnhancedAccessibility";
+import PerformanceOptimizer from "../components/PerformanceOptimizer";
+// import { ArrowRight } from 'lucide-react'; // Unused import
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { FileText } from 'lucide-react';
 
-const AIContentStudioPage = () => {
+const AIContentStudioZionTechGroup = () => {
   const testimonials = [
     {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
       name: "Sarah Johnson",
-      company: "Content Marketing Pro",
-      role: "Content Director",
-      content: "Zion's AI Content Studio has transformed our content creation process. We're producing 3x more content with higher quality.",
-      rating: 5,
-      avatar: "SJ"
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
     },
     {
-      name: "Michael Chen",
-      company: "Digital Agency Inc",
-      role: "Creative Director",
-      content: "The AI understands our brand voice perfectly and creates content that resonates with our audience.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "E-commerce Solutions",
-      role: "Marketing Manager",
-      content: "From blog posts to product descriptions, the AI generates content that converts. Our engagement rates have doubled.",
-      rating: 5,
-      avatar: "ER"
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Zion AI Content Studio Pro",
+    "description": "AI-powered content creation platform with automated writing, design, and video generation",
+    "url": "https://ziontechgroup.com/ai-content-studio",
+    "applicationCategory": "ContentCreationApplication",
+    "operatingSystem": "Web, Windows, macOS, Linux",
+    "offers": {
+      "@type": "Offer",
+      "price": "149",
+      "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "149",
+        "priceCurrency": "USD",
+        "unitText": "MONTH"
+      }
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com"
+    }
+  };
+
   const features = [
     {
-      title: "Multi-Format Content",
-      description: "Generate blog posts, articles, social media content, product descriptions, and more in any format you need.",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Brand Voice Training",
-      description: "Train the AI to understand and maintain your unique brand voice across all content types.",
-      icon: <Brain className="w-8 h-8" />,
+      title: "AI Writing Assistant",
+      description: "Generate high-quality articles, blogs, and marketing copy with advanced AI writing models",
+      icon: <PenTool className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "SEO Optimization",
-      description: "Automatically optimize content for search engines with keyword integration and meta descriptions.",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Video Generation",
+      description: "Create professional videos from text prompts with AI-powered video generation technology",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Image Creation",
+      description: "Generate stunning visuals, graphics, and artwork using cutting-edge AI image models",
+      icon: <Image className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Content Planning",
-      description: "AI-powered content calendars and topic suggestions based on trending keywords and audience interests.",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500"
+      title: "Content Optimization",
+      description: "Optimize content for SEO, engagement, and conversion with AI-powered analysis",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Creator",
+      price: "$79",
+      period: "month",
+      description: "Perfect for individual content creators",
+      features: [
+        "100 AI-generated articles per month",
+        "50 AI-generated images per month",
+        "10 AI-generated videos per month",
+        "Basic SEO optimization",
+        "Email support",
+        "Standard templates"
+      ],
+      popular: false
+    },
+    {
+      name: "Studio Pro",
+      price: "$149",
+      period: "month",
+      description: "Ideal for content teams and agencies",
+      features: [
+        "Unlimited AI-generated content",
+        "Advanced video generation",
+        "Premium image creation",
+        "Advanced SEO optimization",
+        "Priority support",
+        "Team collaboration",
+        "Custom brand templates",
+        "API access"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$299",
+      period: "month",
+      description: "For large content operations",
+      features: [
+        "Everything in Studio Pro",
+        "Custom AI model training",
+        "White-label solution",
+        "Dedicated support team",
+        "SLA guarantee",
+        "Custom integrations",
+        "Advanced analytics",
+        "On-premise deployment"
+      ],
+      popular: false
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <Helmet>
-        <title>AI Content Studio - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered content creation platform for blogs, social media, marketing copy, and more." />
-        <meta name="keywords" content="AI content creation, content marketing, blog writing, social media content" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-content-studio" />
-      </Helmet>
+    <PerformanceOptimizer>
+      <EnhancedAccessibility>
+        <FuturisticBackgroundEnhanced>
+          <EnhancedSEO
+            title="Zion AI Content Studio Pro - AI-Powered Content Creation Platform | Zion Tech Group"
+            description="Advanced AI-powered content creation platform with automated writing, design, and video generation. Create professional content at scale with cutting-edge AI technology."
+            keywords="AI content creation, content generation, AI writing, video generation, image creation, content marketing, AI content studio"
+            canonical="https://ziontechgroup.com/ai-content-studio"
+            structuredData={structuredData}
+          />
+          
+          <StructuredData type="SoftwareApplication" data={structuredData} />
 
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Content</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Content Studio
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Create compelling content at scale with our AI-powered content creation platform. 
-            From blog posts to social media, generate high-quality content that resonates with your audience.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/demo" 
-              className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300"
-            >
-              View Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Content Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to create, optimize, and scale your content marketing efforts
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="group">
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/50 transition-all duration-300">
-                  <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${feature.color} mb-4`}>
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-                </div>
+          <main id="main-content" role="main" aria-label="Zion AI Content Studio Pro">
+            {/* Hero Section */}
+            <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+              <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              
+              <ResponsiveContainer className="text-center relative z-10">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
+                  <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
+                  <span className="text-purple-400 text-sm font-medium">AI-Powered Content Creation</span>
+                </div>
+                
+                <FuturisticTextEnhanced
+                  variant="display"
+                  size="5xl"
+                  gradient={true}
+                  glow={true}
+                  className="mb-6 leading-tight">
+                  Zion AI Content Studio Pro
+                </FuturisticTextEnhanced>
+                
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
+                  Create professional content at scale with AI-powered writing, design, and video generation. 
+                  Transform your content strategy with cutting-edge artificial intelligence.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                  <FuturisticButtonEnhanced
+                    href="#pricing"
+                    variant="primary"
+                    size="lg"
+                    icon={Sparkles}
+                    iconPosition="left">
+                    Start Free Trial
+                  </FuturisticButtonEnhanced>
+                  <FuturisticButtonEnhanced
+                    href="#demo"
+                    variant="outline"
+                    size="lg"
+                    icon={ArrowRight}
+                    iconPosition="left">
+                    Watch Demo
+                  </FuturisticButtonEnhanced>
+                </div>
+              </ResponsiveContainer>
+            </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What Content Creators Say
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of content creators who have transformed their workflow with our AI tools
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+            {/* Features Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8">
+              <ResponsiveContainer>
+                <div className="text-center mb-16">
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                    Powerful Content Creation Features
+                  </h2>
+                  <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                    Harness the power of AI to create stunning content across all formats and channels.
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {features.map((feature, index) => (
+                    <FuturisticCardEnhanced
+                      key={index}
+                      className="text-center">
+                      <div
+                        className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                        aria-hidden="true">
+                        {feature.icon}
+                      </div>
+                      <h3 className="text-lg md:text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+                        {feature.description}
+                      </p>
+                    </FuturisticCardEnhanced>
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 leading-relaxed">"{testimonial.content}"</p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="text-white font-semibold">{testimonial.name}</div>
-                    <div className="text-gray-400 text-sm">{testimonial.role} at {testimonial.company}</div>
-                  </div>
+              </ResponsiveContainer>
+            </section>
+
+            {/* Pricing Section */}
+            <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+              <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-16">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Choose Your Content Plan
+                  </h2>
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Flexible pricing options to fit your content creation needs
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {pricingPlans.map((plan, index) => (
+                    <FuturisticCardEnhanced
+                      key={index}
+                      className={`relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
+                      {plan.popular && (
+                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                          <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                            Most Popular
+                          </span>
+                        </div>
+                      )}
+                      <div className="text-center mb-6">
+                        <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                        <div className="text-4xl font-bold text-purple-400 mb-2">
+                          {plan.price}<span className="text-lg text-gray-400">/{plan.period}</span>
+                        </div>
+                        <p className="text-gray-300">{plan.description}</p>
+                      </div>
+                      <ul className="space-y-3 mb-8">
+                        {plan.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-gray-300">
+                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                      <FuturisticButtonEnhanced
+                        href="/contact"
+                        variant={plan.popular ? "primary" : "outline"}
+                        size="lg"
+                        icon={ArrowRight}
+                        iconPosition="right"
+                        className="w-full">
+                        Get Started
+                      </FuturisticButtonEnhanced>
+                    </FuturisticCardEnhanced>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Content?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of content creators using our AI Content Studio to produce better content faster
-          </p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-          >
-            Start Your Free Trial
-            <Zap className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </section>
-    </div>
+            {/* Testimonials Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8">
+              <div className="max-w-7xl mx-auto">
+                <div className="text-center mb-16">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Trusted by Content Creators
+                  </h2>
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                    See what content creators are saying about Zion AI Content Studio Pro
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {testimonials.map((testimonial, index) => (
+                    <div
+                      key={index}
+                      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden">
+                      <div className="flex items-center mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                        ))}
+                      </div>
+                      <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                      <div>
+                        <div className="font-semibold text-white">{testimonial.name}</div>
+                        <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
+              <div className="max-w-4xl mx-auto text-center">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                  Ready to Create Amazing Content?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                  Join thousands of content creators using Zion AI Content Studio Pro to produce 
+                  professional content at scale. Start your free trial today.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <FuturisticButtonEnhanced
+                    href="/contact"
+                    variant="primary"
+                    size="lg"
+                    icon={ArrowRight}
+                    iconPosition="right">
+                    Start Free Trial
+                  </FuturisticButtonEnhanced>
+                  <FuturisticButtonEnhanced
+                    href="/demo"
+                    variant="outline"
+                    size="lg"
+                    icon={Sparkles}
+                    iconPosition="right">
+                    Schedule Demo
+                  </FuturisticButtonEnhanced>
+                </div>
+              </div>
+            </section>
+          </main>
+        </FuturisticBackgroundEnhanced>
+      </EnhancedAccessibility>
+    </PerformanceOptimizer>
   );
 };
 
-export default AIContentStudioPage;
+export default AIContentStudioZionTechGroup;

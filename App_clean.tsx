@@ -1,10 +1,27 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { Suspense, useEffect, useState, useCallback } from "react";
-import FuturisticBackground from "../components/FuturisticBackground";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Unused import
+// import { HelmetProvider } from "react-helmet-async"; // Unused import
+import "./app/styles/futuristic.css";
+import "./app/styles/futuristic-enhanced.css";
+import "./app/styles/accessibility-enhanced.css";
+import Navigation from "./app/components/Navigation";
+import Footer from "./app/components/Footer";
+import Sidebar from "./app/components/Sidebar";
+import HomePage from "./app/page";
+// import { LoadingPage } from "./app/components/LoadingStates"; // Unused import
+// import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback"; // Unused import
+import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import CoreWebVitals from "./app/components/CoreWebVitals";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+// import LoadingPageEnhanced from "./app/components/EnhancedLoading";
+// import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+// import EnhancedSEO from "./app/components/EnhancedSEO";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -109,35 +126,27 @@ function App() {
       console.log('Zion Tech Group App initialized');
     }
   }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
-export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
-//     <GlobalErrorBoundary>
-//       <EnhancedErrorBoundary>
-//         <HelmetProvider>
-//           <AnalyticsProvider>
+    <GlobalErrorBoundary>
+      <EnhancedErrorBoundary>
+        <HelmetProvider>
+          <AnalyticsProvider>
             <PerformanceMonitor>
-//               <WebVitalsTracker>
-//                 <EnhancedAccessibility>
-//                   <AccessibilityEnhancer>
-//                     <CoreWebVitals>
-//                       <Router>
+              <WebVitalsTracker>
+                <EnhancedAccessibility>
+                  <AccessibilityEnhancer>
+                    <CoreWebVitals>
+                      <Router>
                         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-//                           <FuturisticBackground>
+                          <FuturisticBackground>
                             <Navigation onSidebarToggle={toggleSidebar} />
                             <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-//                             <Breadcrumb />
+                            <Breadcrumb />
                             
                             <main className="relative z-10" id="main-content" role="main">
                               <Suspense fallback={<LoadingPage />}>
-//                                 <Routes>
+                                <Routes>
                                   {/* Main Pages */}
                                   <Route path="/" element={<HomePage />} />
                                   <Route path="/about" element={<AboutPage />} />
@@ -231,27 +240,28 @@ export default function Component() {
                                       <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
                                       <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
                                       <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-//                                         Go Home
-</a>
-</div>
+                                        Go Home
+                                      </a>
+                                    </div>
                                   </div>} />
-//                                 </Routes>
-//                               </Suspense>
-//                             </main>
+                                </Routes>
+                              </Suspense>
+                            </main>
                             
-//                             <Footer />
-//                           </FuturisticBackground>
-</div>
-//                       </Router>
-//                     </CoreWebVitals>
-//                   </AccessibilityEnhancer>
-//                 </EnhancedAccessibility>
-//               </WebVitalsTracker>
+                            <Footer />
+                          </FuturisticBackground>
+                        </div>
+                      </Router>
+                    </CoreWebVitals>
+                  </AccessibilityEnhancer>
+                </EnhancedAccessibility>
+              </WebVitalsTracker>
             </PerformanceMonitor>
-//           </AnalyticsProvider>
-//         </HelmetProvider>
-//       </EnhancedErrorBoundary>
-//     </GlobalErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+          </AnalyticsProvider>
+        </HelmetProvider>
+      </EnhancedErrorBoundary>
+    </GlobalErrorBoundary>
   );
 }
+
+export default App;

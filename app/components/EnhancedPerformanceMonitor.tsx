@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Star } from 'lucide-react';
+// import { Star } from 'lucide-react'; // Unused import
+import { Monitor } from 'lucide-react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   loadTime: number;

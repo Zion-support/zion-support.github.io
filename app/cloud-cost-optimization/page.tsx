@@ -1,11 +1,13 @@
-import { ArrowRight } from 'lucide-react';
-
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+// import { Cloud } from 'lucide-react'; // Unused import
+
+
 
 export default function CloudCostOptimizationZionTechGroup() {
   return (
-    <div>
+    <>
       <Helmet>
         <title>CloudCostOptimization - Zion Tech Group</title>
       </Helmet>
@@ -26,6 +28,6 @@ export default function CloudCostOptimizationZionTechGroup() {
           </Link>
         </div>
       </div>
-</div>
+    </>
   );
 }

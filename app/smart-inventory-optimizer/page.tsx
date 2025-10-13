@@ -1,5 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
+import { Users } from 'lucide-react';
+// import { Star } from 'lucide-react'; // Unused import
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Package } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Package, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, Shield } from 'lucide-react';
 
 const SmartInventoryOptimizerPage = () => {
   const benefits = [

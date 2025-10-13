@@ -1,7 +1,13 @@
-import { ArrowRight, CheckCircle, Star, Mic, Video, Calendar } from 'lucide-react';
+import React from "react";
+import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import SEOOptimizer from "../components/SEOOptimizer";
+import { ArrowRight } from 'lucide-react';
+// import { Search } from 'lucide-react'; // Unused import
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Mic } from 'lucide-react';
 
 export default function ZionAIMeetingTranscriber() {
   const features = [

@@ -1,10 +1,12 @@
-import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+// import { Monitor } from 'lucide-react'; // Unused import
+
 
 export default function AiCybersecurityMonitorProZionTechGroup() {
   return (
-    <div>
+    <>
       <Helmet>
         <title>AiCybersecurityMonitorPro - Zion Tech Group</title>
       </Helmet>
@@ -25,6 +27,6 @@ export default function AiCybersecurityMonitorProZionTechGroup() {
           </Link>
         </div>
       </div>
-</div>
+    </>
   );
 }

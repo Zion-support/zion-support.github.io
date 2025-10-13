@@ -1,6 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Shield } from 'lucide-react';
+// import { Brain } from 'lucide-react'; // Unused import
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Play } from 'lucide-react';
+// import { Mic } from 'lucide-react'; // Unused import
+import { Cloud } from 'lucide-react';
+import { ArrowRight, Sparkles, Globe, Shield, Play } from 'lucide-react';
 
 const WebinarsPage = () => {
   const upcomingWebinars = [

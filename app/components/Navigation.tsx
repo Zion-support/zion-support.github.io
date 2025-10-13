@@ -1,4 +1,35 @@
 import React, { useState, useCallback, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+// import { ArrowRight } from 'lucide-react'; // Unused import
+// import { Home } from 'lucide-react'; // Unused import
+// import { Clock } from 'lucide-react'; // Unused import
+import { Users } from 'lucide-react';
+// import { Award } from 'lucide-react'; // Unused import
+import { Star } from 'lucide-react';
+// import { Cpu } from 'lucide-react'; // Unused import
+// import { MapPin } from 'lucide-react'; // Unused import
+import { Shield } from 'lucide-react';
+import { Database } from 'lucide-react';
+// import { TrendingUp } from 'lucide-react'; // Unused import
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Network } from 'lucide-react';
+// import { Code } from 'lucide-react'; // Unused import
+import { Monitor } from 'lucide-react';
+// import { BarChart3 } from 'lucide-react'; // Unused import
+import { Mail } from 'lucide-react';
+// import { Phone } from 'lucide-react'; // Unused import
+// import { Smartphone } from 'lucide-react'; // Unused import
+// import { FileText } from 'lucide-react'; // Unused import
+// import { Mic } from 'lucide-react'; // Unused import
+import { Cloud } from 'lucide-react';
+// import { Package } from 'lucide-react'; // Unused import
+// import { Heart } from 'lucide-react'; // Unused import
+// import { Receipt } from 'lucide-react'; // Unused import
+import { Link, useLocation } from 'react-router-dom';
+import { Brain, Shield, Zap, Globe, Star, Users, Cloud, Sparkles, Mail, Monitor, Database, ChevronDown, Menu, X, Network } from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle: () => void;
@@ -13,6 +44,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setIsMenuOpen(prev => !prev);
   }, []);
 
+  const toggleDropdown = useCallback((dropdown: string) => {
+    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
+  }, []);
 
   const closeDropdowns = useCallback(() => {
     setActiveDropdown(null);

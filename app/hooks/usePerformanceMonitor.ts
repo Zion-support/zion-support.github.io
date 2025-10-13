@@ -1,4 +1,6 @@
-import { useEffect, useRef } from 'react';
+// import { Star } from 'lucide-react'; // Unused import
+import { Monitor } from 'lucide-react';
+
 
 interface PerformanceMetrics {
   loadTime: number
@@ -49,7 +51,7 @@ export const usePerformanceMonitor = () => {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
           entries.forEach((entry: any) => {
-            metricsRef.current.firstInputDelay = entry.startTime - entry.startTime
+            metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime
           })
         })
         fidObserver.observe({ entryTypes: ['first-input'] })

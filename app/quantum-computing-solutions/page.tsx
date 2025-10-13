@@ -1,12 +1,20 @@
-import {
+import React from 'react';
+import { 
   Cpu, 
   Zap, 
   Shield, 
   Brain, 
   Target, 
   CheckCircle, 
+  ArrowRight,
   Globe,
+  Clock,
+  Users,
+  Award,
+  Star,
   Activity,
+  PieChart,
+  Database,
   Lock,
   Gauge
 } from 'lucide-react';
@@ -14,6 +22,23 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+// import { ArrowRight } from 'lucide-react'; // Unused import
+// import { Clock } from 'lucide-react'; // Unused import
+// import { Users } from 'lucide-react'; // Unused import
+// import { Award } from 'lucide-react'; // Unused import
+// import { Star } from 'lucide-react'; // Unused import
+import { Cpu } from 'lucide-react';
+// import { PieChart } from 'lucide-react'; // Unused import
+import { Shield } from 'lucide-react';
+// import { Database } from 'lucide-react'; // Unused import
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Lock } from 'lucide-react';
+// import { Monitor } from 'lucide-react'; // Unused import
+// import { Target } from 'lucide-react'; // Unused import
+import { Activity } from 'lucide-react';
 
 const QuantumComputingSolutionsPage = () => {
   const features = [

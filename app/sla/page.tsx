@@ -1,3 +1,10 @@
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+// import { Star } from 'lucide-react'; // Unused import
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from 'lucide-react';
 
 const SLAPage = () => {
   return (

@@ -9,6 +9,9 @@ import { Brain } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 
 "use client";
+import { Brain, Zap, CheckCircle, Star, BarChart3, TrendingUp, Search } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 export default function AIEcommerceOptimizerPro() {
   const features = [

@@ -1,8 +1,9 @@
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+// import { Helmet } from 'react-helmet-async'; // Unused import
 
 export default function Sitemap() {
   return (
-    <div>
+    <>
       <Helmet>
         <title>Sitemap - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Sitemap for Zion Tech Group website." />
@@ -13,6 +14,6 @@ export default function Sitemap() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-</div>
+    </>
   );
 }

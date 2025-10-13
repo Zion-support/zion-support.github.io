@@ -1,6 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+// import { Star } from 'lucide-react'; // Unused import
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { FileText } from 'lucide-react';
+import { Target, ArrowRight, Sparkles, CheckCircle, FileText, TrendingUp, Shield } from 'lucide-react';
 
 const AIHRRecruitmentProPage = () => {
   const benefits = [

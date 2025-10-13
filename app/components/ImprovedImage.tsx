@@ -1,4 +1,5 @@
-import { ImageIcon } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+// import { Cloud } from 'lucide-react'; // Unused import
 
 interface ImprovedImageProps {
   src: string;
@@ -10,7 +11,7 @@ interface ImprovedImageProps {
   lazy?: boolean;
   priority?: boolean;
   quality?: number;
-  size?: string;
+  sizes?: string;
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -24,6 +25,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
   placeholder,
   lazy = true,
   priority = false,
+  quality = 75,
   sizes,
   onLoad,
   onError
@@ -119,7 +121,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
           alt={alt}
           width={width}
           height={height}
-          size={size}
+          sizes={sizes}
           loading={lazy && !priority ? 'lazy' : 'eager'}
           onLoad={handleLoad}
           onError={handleError}
