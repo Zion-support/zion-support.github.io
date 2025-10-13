@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
-import { Loader2, AlertCircle } from 'lucide-react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface OptimizedImageProps {
   src: string;
@@ -7,13 +8,12 @@ interface OptimizedImageProps {
   width?: number;
   height?: number;
   className?: string;
-  priority?: boolean;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-  sizes?: string;
-  loading?: 'lazy' | 'eager';
+  placeholder?: string;
+  effect?: 'blur' | 'opacity' | 'black-and-white';
+  threshold?: number;
   onLoad?: () => void;
   onError?: () => void;
+  priority?: boolean;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -22,85 +22,95 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   width,
   height,
   className = '',
-  priority = false,
-  placeholder = 'empty',
-  blurDataURL = '',
-  sizes = '100vw',
-  loading = 'lazy',
+  placeholder,
+  effect = 'blur',
+  threshold = 100,
   onLoad,
-  onError
+  onError,
+  priority = false,
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleLoad = useCallback(() => {
-    setIsLoading(false);
-    setImageLoaded(true);
+    setIsLoaded(true);
     onLoad?.();
   }, [onLoad]);
 
   const handleError = useCallback(() => {
-    setIsLoading(false);
     setHasError(true);
     onError?.();
   }, [onError]);
 
+  // Generate optimized src with WebP support
+  const getOptimizedSrc = (originalSrc: string) => {
+    if (originalSrc.startsWith('http') || originalSrc.startsWith('data:')) {
+      return originalSrc;
+    }
+    
+    // Add width/height parameters for responsive images
+    const params = new URLSearchParams();
+    if (width) params.set('w', width.toString());
+    if (height) params.set('h', height.toString());
+    params.set('q', '80'); // Quality
+    params.set('f', 'webp'); // Format
+    
+    const separator = originalSrc.includes('?') ? '&' : '?';
+    return `${originalSrc}${separator}${params.toString()}`;
+  };
+
+  // Generate placeholder
+  const getPlaceholder = () => {
+    if (placeholder) return placeholder;
+    
+    // Generate a simple gradient placeholder
+    const canvas = document.createElement('canvas');
+    canvas.width = width || 300;
+    canvas.height = height || 200;
+    const ctx = canvas.getContext('2d');
+    
+    if (ctx) {
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      gradient.addColorStop(0, '#f3f4f6');
+      gradient.addColorStop(1, '#e5e7eb');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+    
+    return canvas.toDataURL();
+  };
+
   if (hasError) {
     return (
       <div 
-        className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
-        role="img"
-        aria-label={alt}
       >
-        <div className="text-center">
-          <AlertCircle className="w-8 h-8 mx-auto mb-2" />
-          <p className="text-sm">Failed to load image</p>
-        </div>
+        <div className="text-gray-400 text-sm">Failed to load image</div>
       </div>
     );
   }
 
   return (
-    <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
-      {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
-          {placeholder === 'blur' && blurDataURL ? (
-            <img 
-              src={blurDataURL} 
-              alt="" 
-              className="w-full h-full object-cover filter blur-sm"
-            />
-          ) : (
-            <div className="text-center">
-              <Loader2 className="w-6 h-6 animate-spin text-cyan-500 mx-auto mb-2" />
-              <p className="text-xs text-gray-500">Loading...</p>
-            </div>
-          )}
-        </div>
-      )}
-
-      <img
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        loading={priority ? 'eager' : loading}
-        sizes={sizes}
-        className={`transition-opacity duration-300 ${
-          imageLoaded ? 'opacity-100' : 'opacity-0'
-        } ${className}`}
-        onLoad={handleLoad}
-        onError={handleError}
-        style={{
-          width: width ? `${width}px` : '100%',
-          height: height ? `${height}px` : 'auto',
-          objectFit: 'cover'
-        }}
-        decoding="async"
-      />
-    </div>
+    <LazyLoadImage
+      src={getOptimizedSrc(src)}
+      alt={alt}
+      width={width}
+      height={height}
+      className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
+      placeholderSrc={getPlaceholder()}
+      effect={effect}
+      threshold={threshold}
+      onLoad={handleLoad}
+      onError={handleError}
+      loading={priority ? 'eager' : 'lazy'}
+      decoding="async"
+      // Additional performance optimizations
+      style={{
+        willChange: 'opacity',
+        transform: 'translateZ(0)', // Hardware acceleration
+      }}
+    />
   );
 };
 

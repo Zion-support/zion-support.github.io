@@ -1,0 +1,219 @@
+/* Accessibility Enhancements */
+
+/* High Contrast Mode */
+.high-contrast {
+  --bg-primary: #000000;
+  --bg-secondary: #1a1a1a;
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --accent: #ffff00;
+  --border: #ffffff;
+}
+
+.high-contrast * {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border) !important;
+}
+
+.high-contrast .bg-gradient-to-br {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%) !important;
+}
+
+.high-contrast .text-transparent {
+  color: var(--text-primary) !important;
+}
+
+/* Reduced Motion */
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Screen Reader Optimizations */
+.screen-reader-optimized .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Focus Management */
+.focus-visible *:focus {
+  outline: 3px solid #0066cc !important;
+  outline-offset: 2px !important;
+}
+
+.focus-visible button:focus,
+.focus-visible a:focus,
+.focus-visible input:focus,
+.focus-visible select:focus,
+.focus-visible textarea:focus {
+  outline: 3px solid #0066cc !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3) !important;
+}
+
+/* Keyboard Navigation */
+.keyboard-navigation *:focus {
+  outline: 3px solid #0066cc !important;
+  outline-offset: 2px !important;
+}
+
+/* Skip Links */
+.skip-links-enabled .skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000000;
+  color: #ffffff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.skip-links-enabled .skip-link:focus {
+  top: 6px;
+}
+
+/* Color Blind Support */
+.protanopia {
+  filter: hue-rotate(90deg) saturate(1.2);
+}
+
+.deuteranopia {
+  filter: hue-rotate(180deg) saturate(1.2);
+}
+
+.tritanopia {
+  filter: hue-rotate(270deg) saturate(1.2);
+}
+
+/* Font Size Adjustments */
+:root {
+  --base-font-size: 16px;
+}
+
+html {
+  font-size: var(--base-font-size);
+}
+
+/* Improved Contrast for Links */
+a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #004499;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #6600cc;
+}
+
+/* Button Accessibility */
+button {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Form Accessibility */
+input, select, textarea {
+  min-height: 44px;
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3);
+}
+
+/* Error States */
+.error {
+  border-color: #cc0000 !important;
+  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.3) !important;
+}
+
+/* Success States */
+.success {
+  border-color: #00cc00 !important;
+  box-shadow: 0 0 0 3px rgba(0, 204, 0, 0.3) !important;
+}
+
+/* Loading States */
+.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #cccccc;
+  border-top: 2px solid #0066cc;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ARIA Live Regions */
+[aria-live] {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* High Contrast Images */
+.high-contrast img {
+  filter: contrast(1.5) brightness(1.2);
+}
+
+/* Reduced Motion for Videos */
+.reduced-motion video {
+  animation: none !important;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  
+  .sr-only {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+  }
+}

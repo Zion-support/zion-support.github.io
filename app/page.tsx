@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
-import SEOOptimizer from "./components/SEOOptimizer";
+import EnhancedSEO from "./components/EnhancedSEO";
 
 const HomePage = () => {
   const features = [
@@ -93,13 +93,42 @@ const HomePage = () => {
     }
   ];
 
+  const faqData = [
+    {
+      question: "What services does Zion Tech Group offer?",
+      answer: "Zion Tech Group offers comprehensive AI solutions, IT services, micro SAAS applications, and 5G technology solutions. We specialize in digital transformation, cybersecurity, cloud computing, and business automation."
+    },
+    {
+      question: "How can AI solutions benefit my business?",
+      answer: "Our AI solutions can increase productivity by up to 60%, automate repetitive tasks, provide predictive analytics, enhance customer service with chatbots, and optimize business processes for better efficiency and cost savings."
+    },
+    {
+      question: "What is the uptime guarantee for your services?",
+      answer: "We provide a 99.9% uptime SLA for all our services, backed by 24/7 monitoring and support to ensure your business operations run smoothly without interruption."
+    },
+    {
+      question: "Do you offer custom development services?",
+      answer: "Yes, we provide custom AI and IT solutions tailored to your specific business needs. Our team works closely with clients to develop bespoke applications and integrations."
+    },
+    {
+      question: "What makes your micro SAAS solutions different?",
+      answer: "Our micro SAAS solutions are ready-to-deploy, cost-effective, and designed for immediate business impact. They include analytics tools, security solutions, and productivity applications that can be implemented quickly."
+    }
+  ];
+
+  const breadcrumbs = [
+    { name: "Home", url: "https://ziontechgroup.com" }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer
+      <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
         canonical="https://ziontechgroup.com"
+        faq={faqData}
+        breadcrumbs={breadcrumbs}
       />
 
       {/* Hero Section */}

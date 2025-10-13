@@ -4,12 +4,11 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import ErrorBoundary from "./components/ErrorBoundary";
-import PerformanceMonitor from "./components/PerformanceMonitor";
-import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
+import PerformanceTracker from "./components/PerformanceTracker";
+import AccessibilityManager from "./components/AccessibilityManager";
 import LoadingSpinner from "./components/LoadingSpinner";
 import CriticalResourcePreloader from "./components/CriticalResourcePreloader";
 import CacheManager from "./components/CacheManager";
-import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"));
@@ -50,11 +49,13 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
-          <PerformanceMonitor />
-          <AccessibilityEnhancer>
+          <PerformanceTracker 
+            reportToAnalytics={true}
+            debugMode={process.env.NODE_ENV === 'development'}
+          />
+          <AccessibilityManager>
             <CriticalResourcePreloader />
             <CacheManager />
-            <AdvancedPerformanceMonitor />
             <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -106,7 +107,7 @@ function App() {
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             </Routes>
             </Suspense>
-          </AccessibilityEnhancer>
+          </AccessibilityManager>
         </ErrorBoundary>
       </BrowserRouter>
     </HelmetProvider>

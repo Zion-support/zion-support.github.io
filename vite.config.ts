@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 500,
-    assetsInlineLimit: 2048,
+    chunkSizeWarningLimit: 300,
+    assetsInlineLimit: 1024,
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -44,58 +44,112 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
+        passes: 2,
+      },
+      mangle: {
+        safari10: true,
       },
     },
+    // Additional optimizations
+    cssMinify: true,
+    minifyInternalExports: true,
+    emptyOutDir: true,
     
     
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          // Core React libraries - split into smaller chunks
+          if (id.includes('react-dom/client')) {
+            return 'react-dom'
           }
-          // Router
+          if (id.includes('react/') && !id.includes('react-dom')) {
+            return 'react-core'
+          }
+          if (id.includes('react-dom/') && !id.includes('react-dom/client')) {
+            return 'react-dom-utils'
+          }
+          
+          // Router - separate chunk
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          
+          // UI libraries - split by size
           if (id.includes('framer-motion')) {
             return 'animations'
           }
           if (id.includes('lucide-react')) {
             return 'icons'
           }
-          // SEO and meta
+          if (id.includes('@heroicons/react')) {
+            return 'heroicons'
+          }
+          
+          // SEO and meta - lightweight
           if (id.includes('react-helmet')) {
             return 'seo'
           }
-          // Charts and data visualization
+          
+          // Charts and data visualization - heavy
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries
+          
+          // Utility libraries - lightweight
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
-          // Performance monitoring
+          
+          // Performance monitoring - separate
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // Error handling
+          
+          // Error handling - lightweight
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // Large page components (lazy load)
+          
+          // Large page components (lazy load) - split by category
           if (id.includes('/app/') && id.includes('/page.tsx')) {
-            return 'pages'
+            if (id.includes('/ai-')) {
+              return 'ai-pages'
+            }
+            if (id.includes('/5g-')) {
+              return '5g-pages'
+            }
+            if (id.includes('/zion-')) {
+              return 'zion-pages'
+            }
+            return 'main-pages'
           }
-          // Service pages
+          
+          // Service pages - split by category
           if (id.includes('/ai-') || id.includes('/zion-')) {
-            return 'services'
+            if (id.includes('/ai-cyber')) {
+              return 'ai-cyber-services'
+            }
+            if (id.includes('/ai-content')) {
+              return 'ai-content-services'
+            }
+            if (id.includes('/ai-customer')) {
+              return 'ai-customer-services'
+            }
+            return 'ai-services'
           }
+          
+          // Node modules - split by size
+          if (id.includes('node_modules')) {
+            if (id.includes('lodash') || id.includes('moment')) {
+              return 'heavy-utils'
+            }
+            return 'vendor'
+          }
+          
           // Default chunk for other modules
-          return 'vendor'
+          return 'misc'
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
