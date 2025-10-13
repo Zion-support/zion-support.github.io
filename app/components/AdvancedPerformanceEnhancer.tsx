@@ -157,21 +157,21 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
     if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => {
-          // Track CLS
+      import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+        onCLS((metric: any) => {
+          console.log('CLS:', metric.value);
         });
-        getFID((metric) => {
-          // Track FID
+        onINP((metric: any) => {
+          console.log('INP:', metric.value);
         });
-        getFCP((metric) => {
-          // Track FCP
+        onFCP((metric: any) => {
+          console.log('FCP:', metric.value);
         });
-        getLCP((metric) => {
-          // Track LCP
+        onLCP((metric: any) => {
+          console.log('LCP:', metric.value);
         });
-        getTTFB((metric) => {
-          // Track TTFB
+        onTTFB((metric: any) => {
+          console.log('TTFB:', metric.value);
         });
       });
     }
