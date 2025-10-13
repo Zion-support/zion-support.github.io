@@ -1,66 +1,14 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T09:02:12.194Z",
-=======
-  "timestamp": "2025-10-13T09:23:16.492Z",
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
-  "buildStats": {
-    "totalFiles": 20,
-    "totalSize": 590033,
-    "jsFiles": 14,
-<<<<<<< HEAD
-    "jsSize": 522390,
-=======
-  "timestamp": "2025-10-13T09:04:40.055Z",
-=======
-  "timestamp": "2025-10-13T09:34:20.801Z",
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-  "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 580301,
-    "jsFiles": 14,
-<<<<<<< HEAD
-    "jsSize": 555173,
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
-=======
-  "timestamp": "2025-10-13T09:11:05.548Z",
-  "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 621614,
-    "jsFiles": 14,
-    "jsSize": 600029,
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
-=======
-    "jsSize": 564892,
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
-=======
-    "jsSize": 557304,
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
-  "timestamp": "2025-10-13T09:36:31.239Z",
-  "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 696556,
-    "jsFiles": 15,
-    "jsSize": 687513,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
-=======
-  "timestamp": "2025-10-13T09:40:10.236Z",
+  "timestamp": "2025-10-13T09:59:18.434Z",
   "buildStats": {
     "totalFiles": 17,
-    "totalSize": 627480,
+    "totalSize": 672666,
     "jsFiles": 14,
-    "jsSize": 618518,
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
+    "jsSize": 663784,
     "cssFiles": 1,
     "cssSize": 1811,
-    "imageFiles": 1,
-    "imageSize": 392
+    "imageFiles": 0,
+    "imageSize": 0
   },
   "recommendations": [
     {

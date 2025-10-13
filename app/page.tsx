@@ -1,18 +1,11 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
-<<<<<<< HEAD
 import StructuredData from "./components/StructuredData";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";
-=======
-import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
-import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
-import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
@@ -102,27 +95,27 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
+      name: "Zion AI Video Generator Pro",
+      description: "Create professional videos from text prompts using advanced AI technology. Perfect for marketing, training, and social media content.",
+      price: "From $399/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-video-generator",
+      featured: true
+    },
+    {
+      name: "Zion AI Invoice Generator Pro",
+      description: "Automated invoice generation with AI-powered data extraction, smart categorization, and seamless accounting integration.",
+      price: "From $199/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-ai-invoice-generator",
+      featured: true
+    },
+    {
+      name: "Zion AI Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
-      featured: true
-    },
-    {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
-      price: "From $499/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
-      featured: true
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
-      price: "From $99/month",
       icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
+      link: "/zion-ai-analytics-pro",
       featured: true
     },
     {
@@ -136,9 +129,9 @@ const HomePage = () => {
     {
       name: "Zion AI Marketing Automation Pro",
       description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
+      price: "From $199/month",
       icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
+      link: "/zion-ai-marketing-automation",
       featured: true
     },
     {
@@ -146,7 +139,7 @@ const HomePage = () => {
       description: "AI-powered project management with intelligent task prioritization and resource allocation",
       price: "From $99/month",
       icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
+      link: "/project-management-pro",
       featured: true
     }
   ];
@@ -185,7 +178,7 @@ const HomePage = () => {
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
-        <FuturisticBackgroundEnhanced>
+        <FuturisticBackground>
           <EnhancedSEO
             title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -225,7 +218,7 @@ const HomePage = () => {
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <FuturisticTextEnhanced
+          <FuturisticText
             variant="display"
             size="6xl"
             gradient={true}
@@ -235,7 +228,7 @@ const HomePage = () => {
             className="mb-6 leading-tight"
           >
             Welcome to Zion Tech Group
-          </FuturisticTextEnhanced>
+          </FuturisticText>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
             Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
@@ -243,7 +236,7 @@ const HomePage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButtonEnhanced
+            <FuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
@@ -254,8 +247,8 @@ const HomePage = () => {
               animated={true}
             >
               Get Started Today
-            </FuturisticButtonEnhanced>
-            <FuturisticButtonEnhanced
+            </FuturisticButton>
+            <FuturisticButton
               href="/demo"
               variant="outline"
               size="lg"
@@ -266,7 +259,7 @@ const HomePage = () => {
               animated={true}
             >
               Watch Demo
-            </FuturisticButtonEnhanced>
+            </FuturisticButton>
           </div>
           
           {/* Stats */}
@@ -298,7 +291,7 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <FuturisticCardEnhanced
+              <FuturisticCard
                 key={index}
                 glowColor={index % 2 === 0 ? 'cyan' : 'purple'}
                 hoverEffect={true}
@@ -329,7 +322,7 @@ const HomePage = () => {
                     </span>
                   </div>
                 </Link>
-              </FuturisticCardEnhanced>
+              </FuturisticCard>
             ))}
           </div>
         </ResponsiveContainer>
@@ -348,7 +341,7 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
-              <FuturisticCardEnhanced
+              <FuturisticCard
                 key={index}
                 glowColor={index % 3 === 0 ? 'cyan' : index % 3 === 1 ? 'purple' : 'pink'}
                 hoverEffect={true}
@@ -386,7 +379,7 @@ const HomePage = () => {
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
-              </FuturisticCardEnhanced>
+              </FuturisticCard>
             ))}
           </div>
           <div className="text-center mt-12">
@@ -471,7 +464,7 @@ const HomePage = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <FuturisticButtonEnhanced
+            <FuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
@@ -482,8 +475,8 @@ const HomePage = () => {
               animated={true}
             >
               Start Your Journey
-            </FuturisticButtonEnhanced>
-            <FuturisticButtonEnhanced
+            </FuturisticButton>
+            <FuturisticButton
               href="/services"
               variant="outline"
               size="lg"
@@ -494,21 +487,12 @@ const HomePage = () => {
               animated={true}
             >
               Explore Services
-            </FuturisticButtonEnhanced>
+            </FuturisticButton>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       </main>
-<<<<<<< HEAD
-      </div>
-=======
-          </main>
-        </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
-        </FuturisticBackgroundEnhanced>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
+        </FuturisticBackground>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );

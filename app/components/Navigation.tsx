@@ -6,26 +6,9 @@ import {
   Brain, 
   Shield, 
   Zap, 
-<<<<<<< HEAD
   Globe, 
-<<<<<<< HEAD
-  ChevronDown
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
-=======
   ChevronDown,
   ChevronUp
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
-  Globe,
-  ChevronDown,
-  ChevronUp
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -105,7 +88,17 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: 'Smart Expense Categorizer', path: '/zion-smart-expense-categorizer' },
         { name: 'AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro' },
         { name: 'AI Code Reviewer', path: '/zion-ai-code-reviewer' },
-        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' }
+        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' },
+        { name: 'AI Contract Analyzer', path: '/zion-ai-contract-analyzer' },
+        { name: 'AI Performance Optimizer', path: '/zion-ai-performance-optimizer' },
+        { name: 'AI Customer Churn Predictor', path: '/zion-ai-customer-churn-predictor' },
+        { name: 'AI Supply Chain Optimizer', path: '/zion-ai-supply-chain-optimizer' },
+        { name: 'AI Financial Forecaster', path: '/zion-ai-financial-forecaster' },
+        { name: 'AI Content Moderator', path: '/zion-ai-content-moderator' },
+        { name: 'AI Translator Pro', path: '/zion-ai-translator-pro' },
+        { name: 'AI Data Cleaner', path: '/zion-ai-data-cleaner' },
+        { name: 'AI Task Scheduler', path: '/zion-ai-task-scheduler' },
+        { name: 'AI Customer Support Pro', path: '/zion-ai-customer-support-pro' }
       ]
     },
     {
@@ -139,7 +132,8 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: 'AI CRM Pro', path: '/zion-ai-crm-pro', description: 'Intelligent customer relationship management' },
         { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI-powered content creation' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security solutions' },
-        { name: 'AI Video Generator', path: '/zion-ai-video-generator', description: 'Create videos with AI' }
+        { name: 'AI Video Generator', path: '/zion-ai-video-generator', description: 'Create videos with AI' },
+        { name: 'AI Invoice Generator', path: '/zion-ai-invoice-generator', description: 'Automated invoice creation' }
       ]
     },
     {
@@ -149,7 +143,8 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: 'Web Development', path: '/web-development', description: 'Custom web applications' },
         { name: 'DevOps', path: '/devops', description: 'CI/CD and automation' },
         { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic technology guidance' },
-        { name: 'System Integration', path: '/system-integration', description: 'Connect your systems' }
+        { name: 'System Integration', path: '/system-integration', description: 'Connect your systems' },
+        { name: 'Network Security', path: '/network-security', description: 'Advanced security solutions' }
       ]
     },
     {
@@ -158,7 +153,9 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: 'Zion Analytics Pro', path: '/zion-ai-analytics-pro', description: 'Business intelligence platform' },
         { name: 'Zion Security Shield', path: '/zion-security-shield', description: 'Advanced cybersecurity' },
         { name: 'Zion AI Marketing', path: '/zion-ai-marketing-automation', description: 'Marketing automation' },
-        { name: 'Zion E-commerce Suite', path: '/zion-ecommerce-suite', description: 'Complete e-commerce platform' }
+        { name: 'Zion E-commerce Suite', path: '/zion-ecommerce-suite', description: 'Complete e-commerce platform' },
+        { name: 'Zion AI Video Generator', path: '/zion-ai-video-generator', description: 'AI video creation' },
+        { name: 'Zion AI Invoice Generator', path: '/zion-ai-invoice-generator', description: 'Automated invoicing' }
       ]
     }
   ];
