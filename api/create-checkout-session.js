@@ -1,3 +1,6 @@
+export default function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
@@ -13,18 +16,27 @@
   }
 
   try {
-    // Basic checkout session creation logic
-    const sessionData = {
+    // Create checkout session logic here
+    const checkoutSession = {
+      id: `cs_${Date.now()}`,
       productId,
-      userId: userId || null,
-      timestamp: new Date().toISOString(),
-      status: 'pending'
+      userId,
+      status: 'pending',
+      createdAt: new Date().toISOString()
+    };
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      checkoutSession 
+    }));
+  } catch (error) {
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      error: 'Failed to create checkout session',
+      error: 'Internal server error',
+      message: error.message 
     }));
   }
 }
-
-export default withErrorLogging(handler);

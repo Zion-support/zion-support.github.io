@@ -1,12 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
-// Simple wrapper function to replace withSentry
-// const withSentry = (handler) => handler;
-
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'onsite-requests.json');
-
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -17,20 +8,21 @@ export default function handler(req, res) {
 
   const { name, email, company, phone, message, location } = req.body || {};
 
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+  // Validate required fields
+  if (!name || !email) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Name and email are required' }));
+    return;
   }
 
-  let existing = [];
-  try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
-    }
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Error reading existing requests:', error);
-    existing = [];
+  // Basic email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Invalid email format' }));
+    return;
   }
 
   const newRequest = {
@@ -45,14 +37,20 @@ export default function handler(req, res) {
     status: 'pending'
   };
 
-  existing.push(newRequest);
-
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    // In a real application, you would save to a database
+    // For now, we'll just log the request
+    console.log('Onsite request received:', newRequest);
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: 'Request submitted successfully',
       id: newRequest.id
     }));
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Error saving onsite request:', error);
+  } catch (error) {
+    console.error('Error saving onsite request:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));

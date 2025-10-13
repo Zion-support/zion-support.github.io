@@ -15,7 +15,9 @@ interface AnalyticsProviderProps {
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const track = (event: string, properties?: Record<string, any>) => {
     // Analytics tracking implementation
-    console.log('Analytics Event:', event, properties);
+    if (typeof console !== 'undefined') {
+      console.log('Analytics Event:', event, properties);
+    }
     
     // In a real implementation, you would send this to your analytics service
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -24,7 +26,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   const identify = (userId: string, traits?: Record<string, any>) => {
-    console.log('Analytics Identify:', userId, traits);
+    if (typeof console !== 'undefined') {
+      console.log('Analytics Identify:', userId, traits);
+    }
     
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
@@ -35,7 +39,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   const page = (name: string, properties?: Record<string, any>) => {
-    console.log('Analytics Page:', name, properties);
+    if (typeof console !== 'undefined') {
+      console.log('Analytics Page:', name, properties);
+    }
     
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, User, Settings, HelpCircle, X } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3f37
 
 interface SidebarNavigationProps {
   isOpen: boolean;
@@ -20,8 +17,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
 
   return (
     <div className={`fixed inset-0 z-50 ${isOpen ? 'block' : 'hidden'}`}>
-<<<<<<< HEAD
-=======
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>
       <div className="fixed top-0 left-0 h-full w-64 bg-white shadow-xl">
         <div className="flex items-center justify-between p-4 border-b">
@@ -48,7 +43,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
               </Link>
             );
           })}
->>>>>>> cursor/fix-errors-and-merge-to-main-3f37
         </nav>
       </div>
     </div>

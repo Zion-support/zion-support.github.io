@@ -1,6 +1,4 @@
-import { withErrorLogging } from './withErrorLogging.cjs';
-
-async function handler(req, res) {
+export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -8,11 +6,34 @@ async function handler(req, res) {
     return;
   }
 
+  const { amount, currency = 'usd', paymentMethodId } = req.body || {};
+
+  if (!amount) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Amount is required' }));
+    return;
+  }
+
+  try {
+    // Create payment intent logic here
+    const paymentIntent = {
+      id: `pi_${Date.now()}`,
+      amount: amount * 100, // Convert to cents
+      currency,
+      status: 'requires_payment_method',
+      client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`,
+      createdAt: new Date().toISOString()
     };
 
     res.statusCode = 200;
     res.json({ paymentIntent });
-  } catch (_err) { // eslint-disable-line no-unused-vars
-    // console.error("Error:", err);
+  } catch (error) {
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      error: 'Internal server error',
+      message: error.message 
+    }));
+  }
+}

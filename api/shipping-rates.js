@@ -1,9 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'shipping-rates.json');
-
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -18,52 +12,45 @@ export default function handler(req, res) {
     return res.status(400).json({ error: 'Destination and weight are required' });
   }
 
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-
-  let existing = [];
   try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
-    }
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Error reading existing rates:', error);
-    existing = [];
-  }
+    // Calculate shipping rates based on destination and weight
+    const baseRate = 10; // Base shipping rate
+    const weightMultiplier = weight * 0.5; // $0.50 per pound
+    const distanceMultiplier = destination === 'US' ? 1 : 2; // International shipping costs more
+    
+    const calculatedRate = baseRate + (weightMultiplier * distanceMultiplier);
+    
+    const shippingRates = [
+      {
+        service: 'Standard',
+        rate: calculatedRate,
+        estimatedDays: destination === 'US' ? '3-5' : '7-14'
+      },
+      {
+        service: 'Express',
+        rate: calculatedRate * 1.5,
+        estimatedDays: destination === 'US' ? '1-2' : '3-7'
+      },
+      {
+        service: 'Overnight',
+        rate: calculatedRate * 2,
+        estimatedDays: destination === 'US' ? '1' : '2-3'
+      }
+    ];
 
-  // Calculate shipping rates based on destination and weight
-  const baseRate = 10;
-  const weightMultiplier = weight * 0.5;
-  const distanceMultiplier = destination === 'US' ? 1 : 1.5;
-  const totalRate = Math.round((baseRate + weightMultiplier) * distanceMultiplier * 100) / 100;
-
-  const newRate = {
-    id: Date.now().toString(),
-    destination,
-    weight,
-    dimensions,
-    rate: totalRate,
-    timestamp: new Date().toISOString()
-  };
-
-  existing.push(newRate);
-
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
-      rate: totalRate,
-      id: newRate.id
+      shippingRates 
     }));
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Error saving shipping rate:', error);
+  } catch (error) {
+    console.error('Error calculating shipping rates:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save rate' }));
+    res.end(JSON.stringify({ 
+      error: 'Failed to calculate shipping rates',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
   }
 }

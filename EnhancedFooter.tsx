@@ -23,3 +23,21 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </section>
 
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              Enhanced Footer Component
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              This is a placeholder for the enhanced footer component.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default EnhancedFooter;
