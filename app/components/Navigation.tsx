@@ -22,8 +22,6 @@ import {
   ChevronDown,
   Menu,
   X,
-<<<<<<< HEAD
-<<<<<<< HEAD
   SidebarIcon,
   Package,
   Heart,
@@ -34,46 +32,19 @@ import {
   FileText,
   Clock
 } from 'lucide-react';
-<<<<<<< HEAD
 import FuturisticButton from './FuturisticButton';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
-} from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
-  Sidebar as SidebarIcon
-} from 'lucide-react'
-import FuturisticButton from './FuturisticButton'
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 
 interface NavigationProps {
   onSidebarToggle?: () => void
 }
 
-<<<<<<< HEAD
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-=======
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
   const [isItServicesOpen, setIsItServicesOpen] = useState(false);
   const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
   const location = useLocation();
-
-=======
-const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
-  const [isItServicesOpen, setIsItServicesOpen] = useState(false)
-  
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
   }, [isOpen])
@@ -87,24 +58,19 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   }, [isMicroSaasOpen])
 
   const toggleItServices = useCallback(() => {
-<<<<<<< HEAD
     setIsItServicesOpen(!isItServicesOpen);
   }, [isItServicesOpen]);
 
   const toggle5GServices = useCallback(() => {
     setIs5GServicesOpen(!is5GServicesOpen);
   }, [is5GServicesOpen]);
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
-<<<<<<< HEAD
   const isActive = useCallback((path: string) => {
     return location.pathname === path;
   }, [location.pathname]);
 
   const navigationItems = useMemo(() => [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: 'Home',
       path: '/',
       icon: <Globe className="w-4 h-4" />
@@ -122,12 +88,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     {
       name: 'Contact',
       path: '/contact',
-<<<<<<< HEAD
       icon: <Phone className="w-4 h-4" />
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
-=======
   const closeAllMenus = useCallback(() => {
     setIsOpen(false);
     setIsServicesOpen(false);
@@ -138,7 +99,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
 
   const navigationItems = useMemo(() => [
     {
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
       label: 'Home',
       href: '/',
       icon: <Star className="w-4 h-4" />
@@ -187,13 +147,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
         { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
-<<<<<<< HEAD
         { label: 'Zion Content Studio', href: '/zion-content-studio' }
-=======
         { label: 'Zion AI CRM Pro', href: '/zion-ai-crm-pro' },
         { label: 'Zion AI Marketing Automation Pro', href: '/zion-ai-marketing-automation-pro' },
         { label: 'Zion AI Project Manager Pro', href: '/zion-ai-project-manager-pro' }
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
       ]
     },
     {
@@ -220,14 +177,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
       label: 'Contact',
       href: '/contact',
       icon: <Mail className="w-4 h-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
       icon: <Mail className="w-4 h-4" />
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
     }
   ], []);
 
@@ -241,10 +191,8 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', icon: <Brain className="w-4 h-4" /> },
     { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: <Zap className="w-4 h-4" /> }
   ], []);
-=======
     setIsItServicesOpen(!isItServicesOpen)
   }, [isItServicesOpen])
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 
   const itServices = useMemo(() => [
     { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
@@ -346,7 +294,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                   kleber@ziontechgroup.com
                 </a>
               </div>
-<<<<<<< HEAD
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
@@ -354,12 +301,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           </div>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
-<<<<<<< HEAD
                 <div key={item.name} className="relative group">
                   <Link
                     to={item.path}
@@ -431,10 +375,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             <button
               onClick={onSidebarToggle}
               className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
-=======
     }
   ], []);
 
@@ -458,25 +398,21 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           </Link>
 
           {/* Desktop Navigation */}
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <div key={item.label} className="relative group">
                 <Link
                   to={item.href}
-<<<<<<< HEAD
                   className={`flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors py-2 ${
                     isActive(item.href) ? 'text-cyan-400' : ''
                   }`}
                   onMouseEnter={() => item.dropdown && setActiveDropdown(item.label)}
                   onMouseLeave={() => item.dropdown && setActiveDropdown(null)}
-=======
                   className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     isActive(item.href)
                       ? 'text-blue-400 bg-blue-900 bg-opacity-50'
                       : 'text-gray-300 hover:text-white hover:bg-gray-800'
                   }`}
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
                 >
                   {item.icon}
                   <span>{item.label}</span>
@@ -505,7 +441,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <FuturisticButton
@@ -540,9 +475,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               className="p-2 text-gray-300 hover:text-cyan-400 transition-colors"
               aria-label="Toggle menu"
             >
-<<<<<<< HEAD
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-=======
                 <Link
                   key={item.name}
                   to={item.path}
@@ -687,11 +620,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               ) : (
                 <Menu className="block h-6 w-6" />
               )}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
-=======
           {/* Mobile menu button */}
           <div className="lg:hidden">
             <button
@@ -700,9 +629,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
             </button>
-=======
               <div className="flex items-center text-cyan-400">
                 <MapPin className="w-4 h-4 mr-2" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
@@ -718,7 +645,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                 Get Quote
               </FuturisticButton>
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
           </div>
         </div>
       </div>
@@ -732,11 +658,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             Zion Tech Group
           </Link>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
@@ -766,36 +687,28 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                   Get Started
                 </Link>
               </div>
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden border-t border-white/10 mt-4 pt-4 pb-4">
             <div className="space-y-2">
-=======
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900 rounded-lg mt-2">
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
               {navigationItems.map((item) => (
                 <div key={item.label}>
                   <Link
                     to={item.href}
-<<<<<<< HEAD
                     className={`flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg hover:bg-white/5 ${
                       isActive(item.href) ? 'text-cyan-400' : ''
                     }`}
                     onClick={() => setIsMenuOpen(false)}
-=======
                     className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium ${
                       isActive(item.href)
                         ? 'text-blue-400 bg-blue-900 bg-opacity-50'
                         : 'text-gray-300 hover:text-white hover:bg-gray-800'
                     }`}
                     onClick={closeAllMenus}
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
                   >
                     {item.icon}
                     <span>{item.label}</span>
@@ -823,14 +736,11 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
-=======
       {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900/95 backdrop-blur-md border-t border-cyan-500/20">
             {navigationItems.map((item) => (
-=======
           <div className="hidden lg:flex space-x-8 items-center">
             {/* Sidebar Toggle Button */}
             <button
@@ -842,7 +752,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             </button>
             
             {mainNavItems.map((item) => (
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
               <Link
                 key={item.name}
                 to={item.path}
@@ -977,7 +886,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               )}
             </div>
 
-<<<<<<< HEAD
             {/* Mobile 5G Solutions */}
             <div className="pt-2">
               <button
@@ -1008,13 +916,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                   ))}
                 </div>
               )}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
             </div>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
@@ -1032,7 +934,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
           </div>
         </div>
 
@@ -1176,32 +1077,17 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
         )}
       </div>
     </nav>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 });
 
 Navigation.displayName = 'Navigation';
-=======
 };
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
 };
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
 };
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
-=======
 };
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
   )
 })
 
 Navigation.displayName = 'Navigation'
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 
 export default Navigation
