@@ -13,6 +13,8 @@ import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import EnhancedSEO from "./app/components/EnhancedSEO";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -70,6 +72,12 @@ function App() {
                   </main>
                   <Footer />
                 </FuturisticBackground>
+                <PerformanceMonitor />
+                <EnhancedSEO 
+                  title="Zion Tech Group - Advanced AI and IT Solutions"
+                  description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
+                  keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
+                />
               </div>
             </Router>
           </AccessibilityEnhancer>
