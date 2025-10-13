@@ -23,8 +23,9 @@ describe('OptimizedImage Component', () => {
   });
 
   it('renders with custom className', () => {
-    const { container } = render(<OptimizedImage {...defaultProps} className="test-class" />);
-    expect(container.firstChild).toHaveClass('test-class');
+    render(<OptimizedImage {...defaultProps} className="test-class" />);
+    const img = screen.getByAltText('Test image');
+    expect(img).toHaveClass('test-class');
   });
 
   it('renders with width and height', () => {
