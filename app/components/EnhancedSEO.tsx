@@ -31,6 +31,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 };
 
 export default EnhancedSEO;
+<<<<<<< HEAD
 =======
   children?: React.ReactNode;
 }
@@ -45,3 +46,5 @@ export default function EnhancedSEO({ title, description, keywords, children }: 
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-0bb0
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-16fc

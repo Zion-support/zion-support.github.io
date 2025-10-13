@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-16fc
 
 <<<<<<< HEAD
 const AccessibilityEnhancer: React.FC = () => {
@@ -166,7 +170,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-0bb0
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-16fc
 };
 
 export default AccessibilityEnhancer;

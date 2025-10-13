@@ -13,4 +13,8 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AdvancedPerformanceMonitor;
+=======
+export default AdvancedPerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-16fc

@@ -14,6 +14,7 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Page Components
+<<<<<<< HEAD
 import HomePage from './src/pages/HomePage';
 import ContactPage from './src/pages/ContactPage';
 import BlogPage from './src/pages/BlogPage';
@@ -28,6 +29,20 @@ const SupportPage = () => <div className="min-h-screen flex items-center justify
 const PrivacyPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Privacy Page</h1></div>;
 const TermsPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Terms Page</h1></div>;
 const PricingPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Pricing Page</h1></div>;
+=======
+import HomePage from './app/pages/HomePage';
+import AboutPage from './app/pages/AboutPage';
+import ContactPage from './app/pages/ContactPage';
+import ServicesPage from './app/pages/ServicesPage';
+import BlogPage from './app/pages/BlogPage';
+import TutorialsPage from './app/pages/TutorialsPage';
+import DemoPage from './app/pages/DemoPage';
+import SupportPage from './app/pages/SupportPage';
+import PrivacyPage from './app/pages/PrivacyPage';
+import TermsPage from './app/pages/TermsPage';
+import PricingPage from './app/pages/PricingPage';
+import SolutionsPage from './app/pages/SolutionsPage';
+>>>>>>> cursor/fix-errors-and-merge-to-main-16fc
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -86,7 +101,7 @@ function App() {
                       <div className="min-h-screen flex items-center justify-center">
                         <div className="text-center">
                           <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                          <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
+                          <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
                           <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                             Go Home
                           </a>
