@@ -70,6 +70,24 @@ const MobileNavigation: React.FC = () => {
                   <span className="font-medium">Our Services</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+
+                <Link
+                  to="/ai-services"
+                  onClick={closeMenu}
+                  className="flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-all duration-300 group"
+                >
+                  <span className="font-medium">AI Solutions</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+
+                <Link
+                  to="/micro-saas"
+                  onClick={closeMenu}
+                  className="flex items-center justify-between p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-white/10 transition-all duration-300 group"
+                >
+                  <span className="font-medium">Micro SAAS</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
                 
                 <Link
                   to="/contact"
@@ -95,11 +113,11 @@ const MobileNavigation: React.FC = () => {
                     AI Business Intelligence
                   </Link>
                   <Link
-                    to="/ai-customer-support"
+                    to="/ai-customer-service"
                     onClick={closeMenu}
                     className="block p-2 rounded-lg text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors duration-300"
                   >
-                    AI Customer Support
+                    AI Customer Service
                   </Link>
                   <Link
                     to="/ai-cybersecurity"
