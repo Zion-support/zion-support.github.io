@@ -1,71 +1,67 @@
 import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Receipt, Download, Share, Zap, Clock, Users, Award, Brain, Sparkles, Calculator, CreditCard, Banknote, Coins, Wallet, FileText, Mail, Phone, MapPin, BarChart3, Target, Shield, Cloud, Database, Code, Globe, Smartphone, Monitor, Settings } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Heart, TrendingUp, Clock, Users, Award, Brain, Sparkles, BarChart3, Target, Shield, Cloud, Database, Code, Globe, Smartphone, Monitor, Settings, Mail, Phone, MapPin } from 'lucide-react';
 import EnhancedSEO from '../../components/EnhancedSEO';
 import FuturisticBackground from '../../components/FuturisticBackground';
 
-const ZionAIInvoiceGeneratorPage = () => {
+const ZionAICustomerSentimentTrackerPage = () => {
   const features = [
-    "AI-powered invoice generation from templates",
-    "Automated billing and payment tracking",
-    "Multi-currency support with real-time rates",
-    "Tax calculations and compliance reporting",
-    "Client portal for invoice management",
-    "Payment gateway integration",
-    "Automated follow-up reminders",
-    "Financial insights and analytics",
-    "Custom branding and templates",
+    "Real-time sentiment monitoring across all channels",
+    "Multi-channel tracking (social media, email, reviews)",
+    "Automated alerts for negative sentiment spikes",
+    "Response recommendations and templates",
+    "Trend analysis and historical reporting",
+    "Competitor sentiment comparison",
+    "Custom dashboards and widgets",
     "API integration for workflow automation"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
-      originalPrice: "$99",
+      price: "$69",
+      originalPrice: "$139",
       period: "month",
       features: [
-        "50 invoices per month",
-        "Basic templates",
-        "Single currency",
-        "Email support",
-        "Payment tracking",
-        "Basic reporting"
+        "3 channels monitored",
+        "Basic sentiment analysis",
+        "Email alerts",
+        "Standard reporting",
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
-      originalPrice: "$199",
+      price: "$149",
+      originalPrice: "$299",
       period: "month",
       features: [
-        "200 invoices per month",
-        "Premium templates",
-        "Multi-currency support",
+        "10 channels monitored",
+        "Advanced sentiment analysis",
+        "Real-time alerts",
+        "Custom dashboards",
         "Priority support",
-        "Advanced analytics",
-        "Client portal",
-        "Custom branding",
-        "API access"
+        "API access",
+        "Competitor analysis",
+        "Response recommendations"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
-      originalPrice: "$399",
+      price: "$299",
+      originalPrice: "$599",
       period: "month",
       features: [
-        "Unlimited invoices",
-        "All templates + custom",
-        "All currencies",
-        "24/7 dedicated support",
+        "Unlimited channels",
+        "AI-powered insights",
+        "Custom alerts",
         "Advanced analytics",
-        "Full client portal",
-        "White-label options",
+        "24/7 dedicated support",
         "Full API access",
+        "White-label options",
         "Custom integrations",
         "Dedicated account manager"
       ],
@@ -75,46 +71,46 @@ const ZionAIInvoiceGeneratorPage = () => {
 
   const testimonials = [
     {
-      name: "David Martinez",
-      company: "Freelance Design Studio",
-      role: "Owner",
-      content: "Zion AI Invoice Generator has streamlined my billing process completely. I save 10+ hours per week on invoicing and payment tracking.",
+      name: "Jennifer Adams",
+      company: "E-commerce Platform",
+      role: "Customer Experience Manager",
+      content: "Zion AI Customer Sentiment Tracker helped us identify and resolve customer issues 3x faster. Our satisfaction scores improved dramatically.",
       rating: 5,
-      avatar: "DM"
+      avatar: "JA"
     },
     {
-      name: "Lisa Thompson",
-      company: "Consulting Firm",
-      role: "Finance Director",
-      content: "The multi-currency support and automated tax calculations are game-changers for our international clients. Highly recommended!",
+      name: "Robert Kim",
+      company: "SaaS Company",
+      role: "VP of Customer Success",
+      content: "The real-time alerts and response recommendations are game-changers. We can now proactively address customer concerns before they escalate.",
       rating: 5,
-      avatar: "LT"
+      avatar: "RK"
     },
     {
-      name: "James Wilson",
-      company: "Digital Agency",
-      role: "CEO",
-      content: "Our payment collection rate increased by 40% since using Zion AI Invoice Generator. The automated reminders are incredibly effective.",
+      name: "Maria Garcia",
+      company: "Retail Chain",
+      role: "Brand Manager",
+      content: "The competitor analysis feature gives us valuable insights into market sentiment. It's become an essential tool for our brand strategy.",
       rating: 5,
-      avatar: "JW"
+      avatar: "MG"
     }
   ];
 
   const stats = [
-    { number: "25,000+", label: "Invoices Generated", icon: <Receipt className="w-6 h-6" /> },
-    { number: "150+", label: "Countries Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "85%", label: "Faster Payment Collection", icon: <Clock className="w-6 h-6" /> },
-    { number: "4.8/5", label: "Customer Rating", icon: <Star className="w-6 h-6" /> }
+    { number: "500+", label: "Brands Monitored", icon: <Heart className="w-6 h-6" /> },
+    { number: "1M+", label: "Sentiment Data Points", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "95%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
+    { number: "4.7/5", label: "Customer Rating", icon: <Star className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <EnhancedSEO
-        title="Zion AI Invoice Generator - Intelligent Billing & Payment Management | Zion Tech Group"
-        description="Automate your invoicing with AI-powered invoice generation, multi-currency support, payment tracking, and financial analytics. Streamline your billing process today!"
-        keywords="AI invoice generator, automated billing, payment tracking, multi-currency invoicing, financial management, invoice templates, payment collection"
-        canonical="https://ziontechgroup.com/zion-ai-invoice-generator"
+        title="Zion AI Customer Sentiment Tracker - Real-time Sentiment Monitoring | Zion Tech Group"
+        description="Monitor customer sentiment across all channels with AI-powered analysis, real-time alerts, and response recommendations. Improve customer satisfaction and brand reputation."
+        keywords="customer sentiment tracking, sentiment analysis, brand monitoring, customer satisfaction, social media monitoring, reputation management"
+        canonical="https://ziontechgroup.com/zion-ai-customer-sentiment-tracker"
       />
 
       {/* Hero Section */}
@@ -122,19 +118,19 @@ const ZionAIInvoiceGeneratorPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Receipt className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Invoice Management</span>
+              <Heart className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Sentiment Analysis</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Invoice Generator
+                Zion AI Customer Sentiment Tracker
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Automate your invoicing with AI-powered generation, multi-currency support, 
-              payment tracking, and financial analytics. Streamline your billing process completely.
+              Monitor customer sentiment across all channels with AI-powered analysis, real-time alerts, 
+              and response recommendations. Improve customer satisfaction and brand reputation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -176,11 +172,11 @@ const ZionAIInvoiceGeneratorPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Intelligent Invoice Management Features
+                Advanced Sentiment Monitoring Features
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate and optimize your billing process with AI-powered intelligence.
+              Everything you need to monitor, analyze, and respond to customer sentiment across all touchpoints.
             </p>
           </div>
 
@@ -216,7 +212,7 @@ const ZionAIInvoiceGeneratorPage = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your invoicing needs. All plans include our core AI features.
+              Choose the plan that fits your sentiment monitoring needs. All plans include our core AI features.
             </p>
           </div>
 
@@ -285,7 +281,7 @@ const ZionAIInvoiceGeneratorPage = () => {
               What Our Customers Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of businesses who trust Zion AI Invoice Generator for their billing needs.
+              Join hundreds of brands who trust Zion AI Customer Sentiment Tracker for their reputation management.
             </p>
           </div>
 
@@ -323,10 +319,10 @@ const ZionAIInvoiceGeneratorPage = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Invoicing?
+              Ready to Monitor Customer Sentiment?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the power of AI-driven invoice management. 
+              Start your free trial today and experience the power of AI-driven sentiment monitoring. 
               No credit card required, cancel anytime.
             </p>
             
@@ -386,4 +382,4 @@ const ZionAIInvoiceGeneratorPage = () => {
   );
 };
 
-export default ZionAIInvoiceGeneratorPage;
+export default ZionAICustomerSentimentTrackerPage;

@@ -1,71 +1,67 @@
 import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Receipt, Download, Share, Zap, Clock, Users, Award, Brain, Sparkles, Calculator, CreditCard, Banknote, Coins, Wallet, FileText, Mail, Phone, MapPin, BarChart3, Target, Shield, Cloud, Database, Code, Globe, Smartphone, Monitor, Settings } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Package, TrendingUp, Clock, Users, Award, Brain, Sparkles, BarChart3, Target, Shield, Cloud, Database, Code, Globe, Smartphone, Monitor, Settings, Mail, Phone, MapPin } from 'lucide-react';
 import EnhancedSEO from '../../components/EnhancedSEO';
 import FuturisticBackground from '../../components/FuturisticBackground';
 
-const ZionAIInvoiceGeneratorPage = () => {
+const ZionSmartInventoryOptimizerPage = () => {
   const features = [
-    "AI-powered invoice generation from templates",
-    "Automated billing and payment tracking",
-    "Multi-currency support with real-time rates",
-    "Tax calculations and compliance reporting",
-    "Client portal for invoice management",
-    "Payment gateway integration",
-    "Automated follow-up reminders",
-    "Financial insights and analytics",
-    "Custom branding and templates",
-    "API integration for workflow automation"
+    "AI-powered demand forecasting",
+    "Automated reorder point optimization",
+    "Cost optimization algorithms",
+    "Real-time stock level monitoring",
+    "Supplier performance analytics",
+    "Waste reduction recommendations",
+    "Mobile app for inventory management",
+    "API integration for ERP systems"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
-      originalPrice: "$99",
+      price: "$89",
+      originalPrice: "$179",
       period: "month",
       features: [
-        "50 invoices per month",
-        "Basic templates",
-        "Single currency",
-        "Email support",
-        "Payment tracking",
-        "Basic reporting"
+        "Up to 1,000 SKUs",
+        "Basic forecasting",
+        "Email alerts",
+        "Standard reporting",
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
-      originalPrice: "$199",
+      price: "$179",
+      originalPrice: "$359",
       period: "month",
       features: [
-        "200 invoices per month",
-        "Premium templates",
-        "Multi-currency support",
+        "Up to 10,000 SKUs",
+        "Advanced forecasting",
+        "Real-time alerts",
+        "Custom dashboards",
         "Priority support",
-        "Advanced analytics",
-        "Client portal",
-        "Custom branding",
-        "API access"
+        "API access",
+        "Supplier analytics",
+        "Cost optimization"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
-      originalPrice: "$399",
+      price: "$359",
+      originalPrice: "$719",
       period: "month",
       features: [
-        "Unlimited invoices",
-        "All templates + custom",
-        "All currencies",
-        "24/7 dedicated support",
+        "Unlimited SKUs",
+        "AI-powered insights",
+        "Custom alerts",
         "Advanced analytics",
-        "Full client portal",
-        "White-label options",
+        "24/7 dedicated support",
         "Full API access",
+        "White-label options",
         "Custom integrations",
         "Dedicated account manager"
       ],
@@ -75,35 +71,35 @@ const ZionAIInvoiceGeneratorPage = () => {
 
   const testimonials = [
     {
-      name: "David Martinez",
-      company: "Freelance Design Studio",
-      role: "Owner",
-      content: "Zion AI Invoice Generator has streamlined my billing process completely. I save 10+ hours per week on invoicing and payment tracking.",
+      name: "David Chen",
+      company: "Retail Chain",
+      role: "Operations Manager",
+      content: "Zion Smart Inventory Optimizer reduced our stockouts by 80% and cut carrying costs by 30%. The AI forecasting is incredibly accurate.",
       rating: 5,
-      avatar: "DM"
+      avatar: "DC"
     },
     {
-      name: "Lisa Thompson",
-      company: "Consulting Firm",
-      role: "Finance Director",
-      content: "The multi-currency support and automated tax calculations are game-changers for our international clients. Highly recommended!",
+      name: "Sarah Williams",
+      company: "E-commerce Platform",
+      role: "Supply Chain Director",
+      content: "The automated reorder recommendations have saved us countless hours. Our inventory turnover improved significantly.",
       rating: 5,
-      avatar: "LT"
+      avatar: "SW"
     },
     {
-      name: "James Wilson",
-      company: "Digital Agency",
-      role: "CEO",
-      content: "Our payment collection rate increased by 40% since using Zion AI Invoice Generator. The automated reminders are incredibly effective.",
+      name: "Michael Brown",
+      company: "Manufacturing Company",
+      role: "Procurement Manager",
+      content: "The supplier analytics help us make better purchasing decisions. We've reduced costs while maintaining quality.",
       rating: 5,
-      avatar: "JW"
+      avatar: "MB"
     }
   ];
 
   const stats = [
-    { number: "25,000+", label: "Invoices Generated", icon: <Receipt className="w-6 h-6" /> },
-    { number: "150+", label: "Countries Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "85%", label: "Faster Payment Collection", icon: <Clock className="w-6 h-6" /> },
+    { number: "500+", label: "Companies Optimized", icon: <Package className="w-6 h-6" /> },
+    { number: "30%", label: "Average Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "80%", label: "Stockout Reduction", icon: <Award className="w-6 h-6" /> },
     { number: "4.8/5", label: "Customer Rating", icon: <Star className="w-6 h-6" /> }
   ];
 
@@ -111,10 +107,10 @@ const ZionAIInvoiceGeneratorPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <EnhancedSEO
-        title="Zion AI Invoice Generator - Intelligent Billing & Payment Management | Zion Tech Group"
-        description="Automate your invoicing with AI-powered invoice generation, multi-currency support, payment tracking, and financial analytics. Streamline your billing process today!"
-        keywords="AI invoice generator, automated billing, payment tracking, multi-currency invoicing, financial management, invoice templates, payment collection"
-        canonical="https://ziontechgroup.com/zion-ai-invoice-generator"
+        title="Zion Smart Inventory Optimizer - AI-Powered Inventory Management | Zion Tech Group"
+        description="Optimize your inventory with AI-powered demand forecasting, automated reordering, and cost optimization. Reduce stockouts and carrying costs with intelligent inventory management."
+        keywords="inventory optimization, demand forecasting, stock management, supply chain, inventory analytics, cost optimization, automated reordering"
+        canonical="https://ziontechgroup.com/zion-smart-inventory-optimizer"
       />
 
       {/* Hero Section */}
@@ -122,19 +118,19 @@ const ZionAIInvoiceGeneratorPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Receipt className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Invoice Management</span>
+              <Package className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Management</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Invoice Generator
+                Zion Smart Inventory Optimizer
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Automate your invoicing with AI-powered generation, multi-currency support, 
-              payment tracking, and financial analytics. Streamline your billing process completely.
+              Optimize your inventory with AI-powered demand forecasting, automated reordering, 
+              and cost optimization. Reduce stockouts and carrying costs with intelligent inventory management.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -176,11 +172,11 @@ const ZionAIInvoiceGeneratorPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Intelligent Invoice Management Features
+                Intelligent Inventory Management Features
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate and optimize your billing process with AI-powered intelligence.
+              Everything you need to optimize your inventory with AI-powered intelligence and automation.
             </p>
           </div>
 
@@ -216,7 +212,7 @@ const ZionAIInvoiceGeneratorPage = () => {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your invoicing needs. All plans include our core AI features.
+              Choose the plan that fits your inventory management needs. All plans include our core AI features.
             </p>
           </div>
 
@@ -285,7 +281,7 @@ const ZionAIInvoiceGeneratorPage = () => {
               What Our Customers Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of businesses who trust Zion AI Invoice Generator for their billing needs.
+              Join hundreds of companies who trust Zion Smart Inventory Optimizer for their supply chain management.
             </p>
           </div>
 
@@ -323,10 +319,10 @@ const ZionAIInvoiceGeneratorPage = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Invoicing?
+              Ready to Optimize Your Inventory?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the power of AI-driven invoice management. 
+              Start your free trial today and experience the power of AI-driven inventory optimization. 
               No credit card required, cancel anytime.
             </p>
             
@@ -386,4 +382,4 @@ const ZionAIInvoiceGeneratorPage = () => {
   );
 };
 
-export default ZionAIInvoiceGeneratorPage;
+export default ZionSmartInventoryOptimizerPage;
