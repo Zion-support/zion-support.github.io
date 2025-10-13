@@ -6,6 +6,7 @@ const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
+  const [is5GSolutionsOpen, setIs5GSolutionsOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -18,6 +19,10 @@ const Navigation = React.memo(() => {
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
+
+  const toggle5GSolutions = useCallback(() => {
+    setIs5GSolutionsOpen(!is5GSolutionsOpen)
+  }, [is5GSolutionsOpen])
 
   const aiServices = useMemo(() => [
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
@@ -39,10 +44,24 @@ const Navigation = React.memo(() => {
     { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
   ], [])
 
+  const fiveGSolutions = useMemo(() => [
+    { name: '5G Data Analytics', path: '/5g-data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Cloud className="w-4 h-4" /> },
+    { name: '5G Implementation', path: '/5g-implementation', icon: <Code className="w-4 h-4" /> },
+    { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Zap className="w-4 h-4" /> },
+    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure', icon: <Database className="w-4 h-4" /> },
+    { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },
+    { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions', icon: <Brain className="w-4 h-4" /> }
+  ], [])
+
   const mainNavItems = useMemo(() => [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
+    { name: 'AI Services', path: '/ai-services' },
+    { name: 'IT Services', path: '/it-services' },
+    { name: 'Micro SAAS', path: '/micro-saas' },
+    { name: '5G Solutions', path: '/5g-solutions' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Blog', path: '/blog' },
@@ -151,6 +170,38 @@ const Navigation = React.memo(() => {
               )}
             </div>
 
+            {/* 5G Solutions Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggle5GSolutions}
+                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
+              >
+                <span>5G Solutions</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${is5GSolutionsOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {is5GSolutionsOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20">
+                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
+                    <h3 className="text-sm font-semibold text-green-400 uppercase tracking-wider">5G Solutions</h3>
+                  </div>
+                  {fiveGSolutions.map((solution) => (
+                    <Link
+                      key={solution.name}
+                      to={solution.path}
+                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 group"
+                      onClick={() => setIs5GSolutionsOpen(false)}
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
+                        {solution.icon}
+                      </div>
+                      <span className="font-medium">{solution.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link
               to="/consultation"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
@@ -241,6 +292,36 @@ const Navigation = React.memo(() => {
                         {service.icon}
                         <span>{service.name}</span>
                         {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile 5G Solutions */}
+              <div>
+                <button
+                  onClick={toggle5GSolutions}
+                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium"
+                >
+                  <span>5G Solutions</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${is5GSolutionsOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {is5GSolutionsOpen && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    {fiveGSolutions.map((solution) => (
+                      <Link
+                        key={solution.name}
+                        to={solution.path}
+                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-green-400 transition-colors rounded-lg hover:bg-green-500/10"
+                        onClick={() => {
+                          setIs5GSolutionsOpen(false)
+                          toggleMenu()
+                        }}
+                      >
+                        {solution.icon}
+                        <span>{solution.name}</span>
                       </Link>
                     ))}
                   </div>

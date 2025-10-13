@@ -30,6 +30,8 @@ const BlogPage = React.lazy(() => import("./app/blog/page"));
 const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
 const CareersPage = React.lazy(() => import("./app/careers/page"));
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const ITServicesPage = React.lazy(() => import("./app/it-services/page"));
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
@@ -41,10 +43,16 @@ const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
+const AiAnalyticsDashboardProPage = React.lazy(() => import("./app/ai-analytics-dashboard-pro/page"));
 const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
 const AiBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
+const AiBusinessIntelligenceProPage = React.lazy(() => import("./app/ai-business-intelligence-pro/page"));
+const AiCodeAssistantProPage = React.lazy(() => import("./app/ai-code-assistant-pro/page"));
 const AiContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
+const AiContentGeneratorPage = React.lazy(() => import("./app/ai-content-generator/page"));
 const AiCustomerServicePage = React.lazy(() => import("./app/ai-customer-service/page"));
+const AiCustomerSupportChatbotPage = React.lazy(() => import("./app/ai-customer-support-chatbot/page"));
+const AiCybersecuritySuiteProPage = React.lazy(() => import("./app/ai-cybersecurity-suite-pro/page"));
 const AiDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics/page"));
 const AiEmailAutomationPage = React.lazy(() => import("./app/ai-email-automation/page"));
 const AiFraudDetectionPage = React.lazy(() => import("./app/ai-fraud-detection/page"));
@@ -60,8 +68,14 @@ const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-auto
 const CloudInfrastructurePage = React.lazy(
   () => import("./app/cloud-infrastructure/page"),
 );
+const CloudServicesPage = React.lazy(
+  () => import("./app/cloud-services/page"),
+);
 const CybersecuritySolutionsPage = React.lazy(
   () => import("./app/cybersecurity-solutions/page"),
+);
+const CybersecurityPage = React.lazy(
+  () => import("./app/cybersecurity/page"),
 );
 const WebDevelopmentPage = React.lazy(
   () => import("./app/web-development/page"),
@@ -74,6 +88,9 @@ const DatabaseManagementPage = React.lazy(
 );
 const CustomSoftwarePage = React.lazy(
   () => import("./app/custom-software/page"),
+);
+const CustomDevelopmentPage = React.lazy(
+  () => import("./app/custom-development/page"),
 );
 const NetworkInfrastructurePage = React.lazy(
   () => import("./app/network-infrastructure/page"),
@@ -223,8 +240,8 @@ function App() {
                   <Route path="/case-studies" element={<CaseStudiesPage />} />
                   <Route path="/careers" element={<CareersPage />} />
                   <Route path="/ai-services" element={<AIServicesPage />} />
-                  <Route path="/it-services" element={<ServicesPage />} />
-                  <Route path="/micro-saas" element={<ServicesPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
                   <Route path="/tutorials" element={<TutorialsPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/demo" element={<DemoPage />} />
@@ -236,10 +253,16 @@ function App() {
 
                   {/* AI Service Routes */}
                   <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+                  <Route path="/ai-analytics-dashboard-pro" element={<AiAnalyticsDashboardProPage />} />
                   <Route path="/ai-automation" element={<AiAutomationPage />} />
                   <Route path="/ai-business-intelligence" element={<AiBusinessIntelligencePage />} />
+                  <Route path="/ai-business-intelligence-pro" element={<AiBusinessIntelligenceProPage />} />
+                  <Route path="/ai-code-assistant-pro" element={<AiCodeAssistantProPage />} />
                   <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
+                  <Route path="/ai-content-generator" element={<AiContentGeneratorPage />} />
                   <Route path="/ai-customer-service" element={<AiCustomerServicePage />} />
+                  <Route path="/ai-customer-support-chatbot" element={<AiCustomerSupportChatbotPage />} />
+                  <Route path="/ai-cybersecurity-suite-pro" element={<AiCybersecuritySuiteProPage />} />
                   <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
                   <Route path="/ai-email-automation" element={<AiEmailAutomationPage />} />
                   <Route path="/ai-fraud-detection" element={<AiFraudDetectionPage />} />
@@ -257,8 +280,16 @@ function App() {
                     element={<CloudInfrastructurePage />}
                   />
                   <Route
+                    path="/cloud-services"
+                    element={<CloudServicesPage />}
+                  />
+                  <Route
                     path="/cybersecurity-solutions"
                     element={<CybersecuritySolutionsPage />}
+                  />
+                  <Route
+                    path="/cybersecurity"
+                    element={<CybersecurityPage />}
                   />
                   <Route
                     path="/web-development"
@@ -275,6 +306,10 @@ function App() {
                   <Route
                     path="/custom-software"
                     element={<CustomSoftwarePage />}
+                  />
+                  <Route
+                    path="/custom-development"
+                    element={<CustomDevelopmentPage />}
                   />
                   <Route
                     path="/network-infrastructure"
