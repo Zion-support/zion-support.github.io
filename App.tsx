@@ -39,6 +39,14 @@ const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
+// Additional Core Pages
+const AccessibilityPage = React.lazy(() => import("./app/accessibility/page"));
+const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
+const CybersecurityPage = React.lazy(() => import("./app/cybersecurity/page"));
+const CustomDevelopmentPage = React.lazy(() => import("./app/custom-development/page"));
+const ItServicesPage = React.lazy(() => import("./app/it-services/page"));
+const MicroSaasServicesPage = React.lazy(() => import("./app/micro-saas-services/page"));
+
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
@@ -233,6 +241,12 @@ function App() {
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/cookies" element={<CookiesPage />} />
                   <Route path="/sitemap" element={<SitemapPage />} />
+                  <Route path="/accessibility" element={<AccessibilityPage />} />
+                  <Route path="/cloud-services" element={<CloudServicesPage />} />
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/custom-development" element={<CustomDevelopmentPage />} />
+                  <Route path="/it-services" element={<ItServicesPage />} />
+                  <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
 
                   {/* AI Service Routes */}
                   <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
