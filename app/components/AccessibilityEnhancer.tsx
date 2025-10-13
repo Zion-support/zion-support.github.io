@@ -12,7 +12,7 @@ const AccessibilityEnhancer: React.FC = () => {
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-// Focus management for keyboard navigation
+    // Focus management for keyboard navigation
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
@@ -50,20 +50,43 @@ const AccessibilityEnhancer: React.FC = () => {
         main.setAttribute('role', 'main');
       }
 
-    // Reduced motion mode
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+      }
 
-    // Font size adjustment
-    root.style.setProperty('--font-size-multiplier', 
-      fontSize === 'large' ? '1.2' : 
-      fontSize === 'extra-large' ? '1.4' : 
-      fontSize === 'small' ? '0.9' : '1'
-    );
-  }, [isHighContrast, isReducedMotion, fontSize]);
+      const footer = document.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo');
+      }
+    };
+
+    // Add alt text to images without alt attributes
+    const addAltText = () => {
+      const images = document.querySelectorAll('img:not([alt])');
+      images.forEach((img, index) => {
+        if (!img.getAttribute('alt')) {
+          img.setAttribute('alt', `Image ${index + 1}`);
+        }
+      });
+    };
+
+    // Initialize accessibility enhancements
+    addSkipLink();
+    addFocusStyles();
+    addAriaLandmarks();
+    addAltText();
+
+    // Add event listeners
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, []);
 
   // Keyboard navigation enhancement
   useEffect(() => {
@@ -108,54 +131,14 @@ const AccessibilityEnhancer: React.FC = () => {
 
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
-<<<<<<< HEAD
     return () => {
-<<<<<<< HEAD
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
-
-    // Add alt text to images without alt attributes
-    const addAltText = () => {
-      const images = document.querySelectorAll('img:not([alt])');
-      images.forEach((img, index) => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', `Image ${index + 1}`);
-        }
-
-      });
-    };
-
-    // Initialize accessibility enhancements
-    addSkipLink();
-    addFocusStyles();
-    addAriaLandmarks();
-    addAltText();
-
-    // Add event listeners
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
     };
   }, []);
 
-return null;
+  return null;
 };
 
 export default AccessibilityEnhancer;

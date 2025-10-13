@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
-error: Error | null;
+  error: Error | null;
   errorInfo: ErrorInfo | null;
 }
 
@@ -33,15 +34,17 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-<<<<<<< HEAD
     
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
+    }
+    
     this.setState({
       error,
       errorInfo
     });
-// Log error to console in development
+
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
@@ -71,7 +74,7 @@ class ErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
-<AlertTriangle className="w-8 h-8 text-red-400" />
+              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
@@ -79,18 +82,13 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
               We're sorry, but something unexpected happened. Please try refreshing the page.
-=======
-              We're sorry, but something unexpected happened. Please try refreshing the page.
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
                 <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-Error Details (Development Only)
+                  Error Details (Development Only)
                 </summary>
                 <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
                   <div className="mb-2">
@@ -119,7 +117,7 @@ Error Details (Development Only)
               
               <Link
                 to="/"
-className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+                className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
                 <Home className="w-4 h-4" />
                 Go Home
