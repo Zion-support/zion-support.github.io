@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin, Twitter, Github, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
@@ -27,11 +27,11 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
@@ -40,6 +40,23 @@ const Footer = React.memo(() => {
               Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-2">
+              <div className="flex items-center space-x-2 text-sm text-gray-400">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-gray-400">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm text-gray-400">
+                <MapPin className="w-4 h-4" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+            
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -47,7 +64,7 @@ const Footer = React.memo(() => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                   aria-label={link.name}
                 >
                   {link.icon}
@@ -56,22 +73,61 @@ const Footer = React.memo(() => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4">AI Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/ai-services"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
-                  AI Services
+                  AI Services Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-content-generation"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Content Generation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-cybersecurity"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-business-intelligence"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Business Intelligence
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">IT Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  IT Services Overview
                 </Link>
               </li>
               <li>
                 <Link
                   to="/cloud-infrastructure"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   Cloud Infrastructure
                 </Link>
@@ -79,17 +135,56 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/cybersecurity-solutions"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   Cybersecurity
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/5g-implementation"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  to="/web-development"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
-                  5G Implementation
+                  Web Development
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Micro SAAS</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/zion-analytics-pro"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  Zion Analytics Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-security-shield"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  Zion Security Shield
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-cloud-vault"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  Zion Cloud Vault
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-content-studio"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  Zion Content Studio
                 </Link>
               </li>
             </ul>
@@ -102,7 +197,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   About Us
                 </Link>
@@ -110,7 +205,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/careers"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   Careers
                 </Link>
@@ -118,7 +213,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/case-studies"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   Case Studies
                 </Link>
@@ -126,7 +221,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/blog"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   Blog
                 </Link>
@@ -141,7 +236,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   Contact
                 </Link>
@@ -149,7 +244,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/support"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   Help Center
                 </Link>
@@ -157,7 +252,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/pricing"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   Pricing
                 </Link>
@@ -165,7 +260,7 @@ const Footer = React.memo(() => {
               <li>
                 <Link
                   to="/consultation"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   Consultation
                 </Link>
@@ -183,19 +278,19 @@ const Footer = React.memo(() => {
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 to="/privacy"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
               >
                 Privacy Policy
               </Link>
               <Link
                 to="/terms"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
               >
                 Terms of Service
               </Link>
               <Link
                 to="/cookies"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
               >
                 Cookie Policy
               </Link>
