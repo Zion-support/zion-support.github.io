@@ -127,11 +127,18 @@ export default function CaseStudies() {
     { number: "60%", label: "Average Efficiency Gain", icon: <Zap className="w-6 h-6" /> }
   ];
 
-              </Link>
-            </div>
-          </div>
-        </section>
+  return (
+    <>
+      <Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore our successful AI and IT solutions case studies and client success stories." />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white text-center mb-8">Case Studies</h1>
+          <p className="text-xl text-gray-300 text-center mb-12">Discover how we've helped businesses transform with our AI and IT solutions.</p>
+        </div>
       </div>
     </>
   );
-}
+};

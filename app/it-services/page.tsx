@@ -432,8 +432,7 @@ export default function ITServices() {
     }
   ];
 
-export default function ItServices() {
-  const itServices = [
+  const additionalServices = [
     {
       title: "Cloud Infrastructure Management",
       description: "Comprehensive cloud solutions with automated scaling, backup, disaster recovery, and multi-cloud support for enterprise-grade reliability.",
@@ -966,7 +965,12 @@ export default function ItServices() {
                   </div>
                   
                   <p className="text-gray-300 italic">"{testimonial.content}"</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
-}
+};

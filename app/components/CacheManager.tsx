@@ -19,13 +19,18 @@ const CacheManager = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    const registerServiceWorker = async () => {
+      if ('serviceWorker' in navigator) {
+        try {
+          const registration = await navigator.serviceWorker.register('/sw.js');
           console.log('Service Worker registered:', registration);
-
         } catch (error) {
           console.error('Service Worker registration failed:', error);
         }
       }
-    }
+    };
+
+    registerServiceWorker();
 
     // Cache API for dynamic caching
     const setupCacheStrategy = () => {
@@ -44,39 +49,48 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
+        } catch (error) {
+          console.error('Cache static assets error:', error);
         }
-      }
+      };
 
       // Cache API responses
       const cacheAPIResponses = async (request: Request) => {
         try {
-          const cache = await caches.open(CACHE_NAME)
-          const response = await fetch(request)
+          const cache = await caches.open(CACHE_NAME);
+          const response = await fetch(request);
           
           if (response.ok) {
-            cache.put(request, response.clone())
+            cache.put(request, response.clone());
           }
           
-          return response
+          return response;
+        } catch (error) {
+          console.error('Cache API error:', error);
           return fetch(request);
         }
-      }
+      };
 
       // Initialize caching
       cacheStaticAssets()
 
       // Intercept fetch requests for caching
-      const originalFetch = window.fetch
+      const originalFetch = window.fetch;
       window.fetch = async (input, init) => {
-        const request = new Request(input, init)
-        
-        // Check if request should be cached
-        if (request.url.includes('/api/') || request.url.includes('/data/')) {
-          return cacheAPIResponses(request)
+        try {
+          const request = new Request(input, init);
+          
+          // Check if request should be cached
+          if (request.url.includes('/api/') || request.url.includes('/data/')) {
+            return cacheAPIResponses(request);
+          }
+          
+          return originalFetch(input, init);
+        } catch (error) {
+          console.error('Fetch interception error:', error);
+          return originalFetch(input, init);
         }
-        
-        return originalFetch(input, init)
-      }
+      };
     }
 
     // Memory management for large objects
@@ -115,8 +129,12 @@ const CacheManager = () => {
               imageObserver.unobserve(img)
             }
           }
+        });
+      });
+    };
+
     // Only run in development
-    if (process.env.NODE_ENV !== 'development') return
+    if (process.env.NODE_ENV !== 'development') return;
 
     const updateStats = () => {
       if ('caches' in window) {
@@ -249,4 +267,4 @@ const CacheManager = () => {
   )
 }
 
-export default CacheManager
+export default CacheManager;
