@@ -1,1 +1,0 @@
-const res = spawnSync('node', [abs, ...args]) {' stdio: 'pipe'' encoding: 'utf8' }); return {' stdout: res && res.stdout || ''}' stderr: res && res.stderr || ''; };' exports && exports.config = { schedule: '*/10 * * * *' }; exports && exports.handler = async () => { '

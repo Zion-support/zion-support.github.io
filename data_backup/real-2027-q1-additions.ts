@@ -1,1 +1,0 @@
-export: interface Real2027Q1Addition {id: string}

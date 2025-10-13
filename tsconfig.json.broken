@@ -226,14 +226,5 @@
     {
       "path": "./tsconfig.node.json"
     }
-=======
-    "netlify/**",
-    "pages_disabled/**",
-    "services/**",
-    "src.disabled/**",
-    "fix-*.jsx",
-    "fix-*.ts",
-    "jest.setup.*"
->>>>>>> origin/main
   ]
 }

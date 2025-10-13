@@ -1,59 +1,81 @@
 #!/bin/bash
 
-# Script to merge remaining open PRs
-set -e
+# Merge remaining PRs
+echo "Merging remaining open PRs..."
 
-echo "Starting remaining PR merge process..."
-
-# Remaining PR branches to process
-REMAINING_BRANCHES=(
-    "cursor/fix-errors-and-merge-to-main-fa9f"
-    "cursor/fix-errors-and-merge-to-main-c540"
-    "cursor/fix-errors-and-merge-to-main-b96d"
-    "cursor/fix-errors-and-merge-to-main-c83a"
-    "cursor/fix-errors-and-merge-to-main-6e85"
+# List of remaining PR branches to merge
+REMAINING_PR_BRANCHES=(
+    "cursor/fix-errors-and-merge-to-main-4987"
+    "cursor/fix-errors-and-merge-to-main-ece3"
+    "cursor/fix-errors-and-merge-to-main-0e67"
+    "cursor/fix-errors-and-merge-to-main-e9ed"
+    "cursor/fix-errors-and-merge-to-main-65e3"
+    "cursor/fix-errors-and-merge-to-main-2efe"
+    "cursor/fix-errors-and-merge-to-main-1ce9"
+    "cursor/fix-errors-and-merge-to-main-fdda"
+    "cursor/fix-errors-and-merge-to-main-1839"
+    "cursor/fix-errors-and-merge-to-main-0218"
+    "cursor/fix-errors-and-merge-to-main-4ae3"
+    "cursor/fix-broken-links-bd16"
+    "cursor/fix-errors-and-merge-to-main-3135"
+    "cursor/bc-55068a87-b241-4eb0-be98-1760f86759b6-550b"
+    "cursor/bc-f02feaa1-11f4-4075-8e68-f1f9dc768e1b-4f5f"
+    "cursor/fix-errors-and-merge-to-main-fd29"
+    "cursor/fix-errors-and-merge-to-main-faf1"
+    "cursor/fix-errors-and-merge-to-main-f5eb"
+    "cursor/fix-errors-and-merge-to-main-dfae"
+    "cursor/fix-errors-and-merge-to-main-f9be"
 )
 
-# Process each remaining PR branch
-for branch in "${REMAINING_BRANCHES[@]}"; do
+success_count=0
+fail_count=0
+
+for branch in "${REMAINING_PR_BRANCHES[@]}"; do
+    echo ""
     echo "Processing branch: $branch"
+    echo "=================================="
     
-    # Check if branch exists
-    if git show-ref --verify --quiet refs/remotes/origin/$branch; then
-        echo "Merging $branch into main..."
-        
-        # Try to merge the branch
-        if git merge origin/$branch --no-ff -m "Merge $branch into main"; then
-            echo "Successfully merged $branch"
-        else
-            echo "Merge conflict detected in $branch, resolving..."
-            
-            # Check for conflict markers
-            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-                echo "Resolving conflicts in $branch..."
-                
-                # Auto-resolve conflicts by accepting incoming changes for most files
-                git status --porcelain | grep "^UU\|^AA\|^DD" | while read status file; do
-                    echo "Resolving conflict in $file"
-                    # For most cases, accept the incoming change (theirs)
-                    git checkout --theirs "$file" 2>/dev/null || true
-                    git add "$file" 2>/dev/null || true
-                done
-                
-                # Complete the merge
-                git commit --no-edit || git commit -m "Resolve merge conflicts in $branch"
-                echo "Resolved conflicts and merged $branch"
-            else
-                echo "No conflicts found, completing merge..."
-                git commit --no-edit || git commit -m "Merge $branch into main"
-            fi
-        fi
+    # Fetch the branch
+    echo "Fetching branch $branch..."
+    if git fetch origin "$branch" 2>/dev/null; then
+        echo "✅ Successfully fetched $branch"
     else
-        echo "Branch $branch not found, skipping..."
+        echo "❌ Failed to fetch $branch (branch may not exist)"
+        ((fail_count++))
+        continue
     fi
+    
+    # Attempt to merge
+    echo "Attempting to merge $branch..."
+    if git merge "origin/$branch" --no-ff -m "Merge branch $branch" 2>/dev/null; then
+        echo "✅ Successfully merged $branch"
+        ((success_count++))
+    else
+        echo "⚠️  Merge failed for $branch, attempting conflict resolution..."
+        
+        # Try to resolve conflicts
+        if python3 fix_merge_conflicts.py 2>/dev/null; then
+            echo "✅ Conflicts resolved for $branch"
+            if git add . && git commit -m "Merge branch $branch (conflicts resolved)" 2>/dev/null; then
+                echo "✅ Successfully merged $branch with conflicts resolved"
+                ((success_count++))
+            else
+                echo "❌ Failed to commit resolved conflicts for $branch"
+                ((fail_count++))
+            fi
+        else
+            echo "❌ Failed to resolve conflicts for $branch"
+            ((fail_count++))
+        fi
+    fi
+    
+    echo "Waiting 1 second before next merge..."
+    sleep 1
 done
 
-echo "All remaining PRs processed. Pushing changes to main..."
-git push origin main
-
-echo "Remaining PR merge process completed!"
+echo ""
+echo "=================================="
+echo "Remaining PRs merge completed!"
+echo "✅ Successfully merged: $success_count"
+echo "❌ Failed to merge: $fail_count"
+echo "📊 Total processed: $((success_count + fail_count))"

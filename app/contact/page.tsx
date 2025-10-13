@@ -1,88 +1,129 @@
-import React from 'react';
-// import { Metadata } from 'next'; // Removed for Vite
+import React from "react";
+import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-// export const metadata: Metadata = { // Removed for Vite
-//   title: 'Contact Us - Zion Tech Group',
-//   description:
-//     'Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support.',
-// };
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
 
-const ContactPage: React.FC = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically send the form data to your backend
+    setIsSubmitted(true);
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    }, 3000);
+  };
+
+  const contactInfo = [
+    {
+      icon: <Mail className="w-6 h-6" />,
+      title: "Email",
+      details: "kleber@ziontechgroup.com",
+      description: "Send us an email anytime"
+    },
+    {
+      icon: <Smartphone className="w-6 h-6" />,
+      title: "Phone",
+      details: "+1 302 464 0950",
+      description: "Call us during business hours"
+    },
+    {
+      icon: <MapPin className="w-6 h-6" />,
+      title: "Address",
+      details: "364 E Main St STE 1008",
+      description: "Middletown DE 19709"
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: "Business Hours",
+      details: "Mon - Fri: 9:00 AM - 6:00 PM",
+      description: "EST Time Zone"
+    }
+  ];
+
+  const services = [
+    "AI Business Intelligence",
+    "AI Customer Support",
+    "AI Content Generation",
+    "AI Cybersecurity",
+    "5G Solutions",
+    "Cloud Infrastructure",
+    "Data Analytics",
+    "Code Assistant",
+    "Marketing Automation",
+    "Document Processing",
+    "CRM Assistant",
+    "Financial Analytics"
+  ];
+
+export default function ContactPage() {
   return (
-    <div className='min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='text-center mb-12'>
-          <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-            Contact Us
-          </h1>
-          <p className='text-xl text-gray-600'>
-            Get in touch with our team of experts
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Contact - Zion Tech Group</title>
+        <meta name="description" content="Contact solutions by Zion Tech Group" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Contact</h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-xl text-gray-300 mb-8">
+            Discover our comprehensive contact solutions designed to meet your business needs.
           </p>
-        </div>
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
-            <div className='bg-white rounded-lg shadow-lg p-8'>
-              <h2 className='text-2xl font-bold text-gray-900 mb-6'>
-                Get In Touch
-              </h2>
-              <div className='space-y-6'>
-                <div>
-                  <h3 className='text-lg font-semibold text-gray-900 mb-2'>
-                    Address
-                  </h3>
-                  <p className='text-gray-600'>
-                    364 E Main St STE 1008<br />
-                    Middletown, DE 19709<br />
-                    United States
-                  </p>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
+              <p className="text-gray-300">
+                Our team of experts delivers tailored solutions for your specific requirements.
+              </p>
             </div>
-          </div>
 
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Send us a Message
-            </h2>
-            <form className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
+              <p className="text-gray-300">
+                We use the latest technologies and best practices to ensure optimal performance.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-300">
+                Get round-the-clock support from our dedicated team of professionals.
+              </p>
+            </div>
           </div>
         </div>
       </div>
+    </div>
   );
-};
+}
 
-export default ContactPage;
+}

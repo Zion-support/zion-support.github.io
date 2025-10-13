@@ -1,93 +1,44 @@
-import React from 'react';
-// import { Metadata } from 'next'; // Removed for Vite
 
-const metadata: Metadata = {
-  title: 'Our Team - Zion Tech Group',
-  description:
-    'Meet the talented team of AI and IT experts at Zion Tech Group, driving innovation in enterprise technology solutions.',
-};
-
-export { metadata };
-
-const TeamPage: React.FC = () => {
-  const teamMembers = [
-    {
-      name: 'Dr. Sarah Johnson',
-      role: 'Chief Executive Officer',
-      bio: 'AI researcher with 15+ years of experience in machine learning and quantum computing.',
-      image: '👩‍💼',
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Chief Technology Officer',
-      bio: 'Expert in autonomous systems and enterprise architecture with a focus on scalability.',
-      image: '👨‍💻',
-    },
-    {
-      name: 'Dr. Emily Rodriguez',
-      role: 'Head of AI Research',
-      bio: 'Leading researcher in natural language processing and computer vision applications.',
-      image: '👩‍🔬',
-    },
-    {
-      name: 'David Kim',
-      role: 'Head of Engineering',
-      bio: 'Full-stack engineer specializing in cloud infrastructure and distributed systems.',
-      image: '👨‍🔧',
-    },
-  ];
-
+import { Helmet } from 'react-helmet-async';
+export default function TeamZionTechGroup() {
   return (
-    <>
-      <div className='min-h-screen bg-slate-50 py-16'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-6xl mx-auto'>
-            <div className='text-center mb-16'>
-              <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-                Our Team
-              </h1>
-              <p className='text-xl text-gray-600'>
-                Meet the experts behind our innovative AI and IT solutions
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Team - Zion Tech Group</title>
+        <meta name="description" content="Team solutions by Zion Tech Group" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Team</h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-xl text-gray-300 mb-8">
+            Discover our comprehensive team solutions designed to meet your business needs.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
+              <p className="text-gray-300">
+                Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {teamMembers.map((member, index) => (
-                <div
-                  key={index}
-                  className='bg-white rounded-lg shadow-lg p-6 text-center'
-                >
-                  <div className='text-6xl mb-4'>{member.image}</div>
-                  <h3 className='text-xl font-bold text-gray-900 mb-2'>
-                    {member.name}
-                  </h3>
-                  <p className='text-blue-600 font-semibold mb-3'>
-                    {member.role}
-                  </p>
-                  <p className='text-gray-600 text-sm'>{member.bio}</p>
-                </div>
-              ))}
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
+              <p className="text-gray-300">
+                We use the latest technologies and best practices to ensure optimal performance.
+              </p>
             </div>
 
-            <div className='mt-16 bg-white rounded-lg shadow-lg p-8'>
-              <h2 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
-                Join Our Team
-              </h2>
-              <p className='text-gray-600 text-center mb-6'>
-                We&apos;re always looking for talented individuals to join our
-                mission of advancing AI and IT solutions.
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-300">
+                Get round-the-clock support from our dedicated team of professionals.
               </p>
-              <div className='text-center'>
-                <button className='bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
-                  View Open Positions
-                </button>
-              </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-};
-
-export default TeamPage;
+}

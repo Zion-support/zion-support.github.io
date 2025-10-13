@@ -1,30 +1,23 @@
 #!/bin/bash
 
-# Script to fix merge conflicts by choosing HEAD version and cleaning up markers
-
-echo "Fixing merge conflicts in TypeScript/React files..."
-
 # Find all files with merge conflicts
-files=$(find /workspace -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \;)
+files_with_conflicts=$(find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
-for file in $files; do
-    echo "Processing: $file"
+echo "Found files with merge conflicts:"
+echo "$files_with_conflicts"
+
+# For each file, remove merge conflict markers and keep the HEAD version
+for file in $files_with_conflicts; do
+    echo "Fixing merge conflicts in: $file"
     
-    # Create a temporary file
-    temp_file="${file}.tmp"
+    # Create a backup
+    cp "$file" "$file.backup"
     
-    # Process the file to resolve conflicts
-    awk '
-    /^<<<<<<< HEAD/ { in_head = 1; next }
-    /^=======/ { in_head = 0; in_other = 1; next }
-    /^>>>>>>> / { in_other = 0; next }
-    in_head { print; next }
-    in_other { next }
-    { print }
-    ' "$file" > "$temp_file"
+    # Remove merge conflict markers and keep HEAD version
+    sed -i '/^<<<<<<< HEAD/,/^=======/!d; /^=======/d; /^>>>>>>> .*/d' "$file"
     
-    # Replace the original file
-    mv "$temp_file" "$file"
+    # Remove any remaining conflict markers
+    sed -i '/^<<<<<<< HEAD/d; /^=======/d; /^>>>>>>> .*/d' "$file"
     
     echo "Fixed: $file"
 done

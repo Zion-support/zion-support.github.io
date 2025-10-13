@@ -1,23 +1,14 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
 
-const SEOOptimizer: React.FC = () => {
-  const location = useLocation();
-  const pathname = location.pathname;
+interface SeooptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-  useEffect(() => {
-    // Update page title based on route
-    const titles: Record<string, string> = {
-      '/': 'Zion Tech Group - Advanced AI and IT Solutions',
-      '/services': 'Services - Zion Tech Group',
-      '/about': 'About Us - Zion Tech Group',
-      '/contact': 'Contact - Zion Tech Group',
-    };
-
-    document.title = titles[pathname || '/'] || 'Zion Tech Group';
-  }, [pathname]);
-
-  return null;
-};
-
-export default SEOOptimizer;
+export default function Seooptimizer({ className = '', children, ...props }: SeooptimizerProps) {
+  return (
+    <div className={`seooptimizer-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}

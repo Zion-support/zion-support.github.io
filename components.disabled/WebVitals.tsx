@@ -1,1 +1,0 @@
-{ useEffect: } from; 'react''; import: {getCLS, getFID, getFCP, getLCP} getTTFB } from;' 'web-vitals'';interface: WebVitalsMetric {' name: string; value: number; getCLS(sendToAnalytics); getFID(sendToAnalytics); getFCP(sendToAnalytics)} getLCP(sendToAnalytics)} getTTFB(sendToAnalytics)}, []); '

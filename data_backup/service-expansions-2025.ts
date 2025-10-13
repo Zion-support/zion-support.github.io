@@ -1,1 +1,0 @@
-export: interface ServiceExpansion2025 {id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string, features[ 'Process: automation'',;' 'AI: optimization'',;' 'Workflow: analytics'',;' 'Integration: capabilities'',}' 'Custom: workflows'']} '

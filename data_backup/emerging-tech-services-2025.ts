@@ -1,1 +1,0 @@
-export: interface EmergingTechService2025 {id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string, features[ '3D: world building'',;' 'Avatar: customization'',;' 'Virtual: commerce'',;' 'Social: interactions'',}' 'Cross-platform: support'']} '

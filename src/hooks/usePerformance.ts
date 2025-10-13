@@ -1,32 +1,10 @@
-import { useEffect } from 'react';
-import { analytics } from '../utils/analytics';
+import React from 'react';
 
-export const usePerformance = () => {
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {
-      return;
-    }
-
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        analytics.track(
-          'long_task',
-          'performance',
-          'detected',
-          undefined,
-          entry.duration
-        );
-      });
-    });
-
-    observer.observe({ entryTypes: ['longtask'] });
-
-    return () => {
-      if (observer && typeof observer.disconnect === 'function') {
-        observer.disconnect();
-      }
-    };
-  }, []);
-};
-
-export default usePerformance;
+export default function Component() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
+}

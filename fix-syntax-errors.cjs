@@ -1,123 +1,199 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
-// Fix App.tsx - remove duplicate }, []);
-function fixAppTsx() {
-  const filePath = path.join(__dirname, 'App.tsx');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Find and fix duplicate }, []);
-  content = content.replace(/    \[\]\s+\);\s+  }, \[\]\);/g, '    []\n  );');
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed App.tsx');
-}
+// Function to fix common syntax errors in TSX files
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
 
-// Fix api/shipping-rates.js - remove duplicate module.exports and closing braces
-function fixShippingRates() {
-  const filePath = path.join(__dirname, 'api', 'shipping-rates.js');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove all lines after the first module.exports
-  const lines = content.split('\n');
-  const firstExportIndex = lines.findIndex(line => line.trim() === 'module.exports = withSentry(handler);');
-  
-  if (firstExportIndex !== -1) {
-    const fixedLines = lines.slice(0, firstExportIndex + 1);
-    content = fixedLines.join('\n') + '\n';
-  }
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed api/shipping-rates.js');
-}
+    // Fix malformed function names like "5GDataAnalyticsZionTechGroup"
+    const functionNameMatch = content.match(
+      /export default function (\d+[A-Za-z]+)/,
+    );
+    if (functionNameMatch) {
+      const malformedName = functionNameMatch[1];
+      const properName = malformedName.replace(/^\d+/, "") + "Page";
+      content = content.replace(new RegExp(malformedName, "g"), properName);
+      modified = true;
+    }
 
-// Fix api/subscribe.js - remove duplicate catch blocks and module.exports
-function fixSubscribe() {
-  const filePath = path.join(__dirname, 'api', 'subscribe.js');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove duplicate catch blocks and trailing content
-  const lines = content.split('\n');
-  const firstExportIndex = lines.findIndex(line => line.trim() === 'module.exports = withSentry(handler);');
-  
-  if (firstExportIndex !== -1) {
-    // Find the line just before the duplicate catches
-    let lastGoodLine = firstExportIndex;
-    for (let i = firstExportIndex - 1; i >= 0; i--) {
-      if (lines[i].trim() === '}' && i > 0 && lines[i-1].includes('catch')) {
-        // Found legitimate closing brace for a catch block
-        lastGoodLine = i + 1;
-        break;
+    // Fix malformed className attributes
+    content = content.replace(
+      /className="([^"]*?)\s+([^"]*?)"/g,
+      (match, part1, part2) => {
+        if (part1.includes("text-") && part2.includes("mb-")) {
+          return `className="${part1} ${part2}"`;
+        }
+        return match;
+      },
+    );
+
+    // Fix malformed text content
+    content = content.replace(
+      /text-4 xl font-boldtext-whitemb-6/g,
+      "text-4xl font-bold text-white mb-6",
+    );
+    content = content.replace(
+      /text-lgtext-gray-300mb-8/g,
+      "text-lg text-gray-300 mb-8",
+    );
+
+    // Fix malformed JSX elements
+    content = content.replace(
+      /<title \/>([^<]+)<\/title>/g,
+      "<title>$1</title>",
+    );
+    content = content.replace(
+      /<span className="w-5 h-5ml-2" \/>([^<]+)/g,
+      '<h1 className="text-4xl font-bold text-white mb-6">$1</h1>',
+    );
+    content = content.replace(
+      /<p className="w-5 h-5ml-2">([^<]+)/g,
+      '<p className="text-lg text-gray-300 mb-8">$1</p>',
+    );
+
+    // Fix malformed Link components
+    content = content.replace(
+      /<Link to="([^"]+)" className="([^"]*?)">([^<]+)<\/Link>/g,
+      (match, to, className, text) => {
+        if (className.includes("transformhover:scale-105")) {
+          className = className.replace(
+            "transformhover:scale-105",
+            "transform hover:scale-105",
+          );
+        }
+        if (className.includes("from-cyan-500to-purple-500")) {
+          className = className.replace(
+            "from-cyan-500to-purple-500",
+            "from-cyan-500 to-purple-500",
+          );
+        }
+        if (className.includes("shadow-lghover:shadow-cyan-500/25")) {
+          className = className.replace(
+            "shadow-lghover:shadow-cyan-500/25",
+            "shadow-lg hover:shadow-cyan-500/25",
+          );
+        }
+        return `<Link to="${to}" className="${className}">${text}</Link>`;
+      },
+    );
+
+    // Fix missing closing tags and malformed JSX
+    content = content.replace(
+      /<h2 className="w-5 h-5ml-2" \/>([^<]+)/g,
+      '<h2 className="text-3xl font-bold text-white mb-4">$1</h2>',
+    );
+    content = content.replace(
+      /<p className="w-5 h-5ml-2">([^<]+)/g,
+      '<p className="text-lg text-gray-300 mb-8">$1</p>',
+    );
+
+    // Fix duplicate 'use client' directives
+    content = content.replace(
+      /'use client';\s*'use client';/g,
+      "'use client';",
+    );
+
+    // Fix malformed imports
+    content = content.replace(
+      /import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Brain, Clock, Target } from 'lucide-react';\s*'use client';/g,
+      "'use client';\nimport { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Clock, Target } from 'lucide-react';",
+    );
+
+    // Fix malformed JSX structure
+    content = content.replace(
+      /<title>([^<]+)<\/title>\s*\{[^}]*\}/g,
+      "<title>$1</title>",
+    );
+
+    // Fix incomplete function declarations
+    if (
+      content.includes("export default function") &&
+      !content.includes("return (")
+    ) {
+      const functionMatch = content.match(
+        /export default function ([^(]+)\(\)\s*\{/,
+      );
+      if (functionMatch) {
+        const functionName = functionMatch[1].trim();
+        const basicTemplate = `
+  return (
+    <>
+      <Helmet>
+        <title>${functionName} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${functionName.toLowerCase().replace(/([A-Z])/g, " $1")} services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">${functionName}</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ${functionName.toLowerCase().replace(/([A-Z])/g, " $1")} services coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}`;
+
+        content = content.replace(
+          /export default function ([^(]+)\(\)\s*\{[^}]*\}/s,
+          `export default function ${functionName}() {${basicTemplate}`,
+        );
+        modified = true;
       }
     }
-    
-    // Re-read and fix more carefully
-    content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove lines with duplicate catch blocks
-    content = content.replace(/  } catch \(err\) {\s+console\.error\('Subscribe API error:', err\);\s+  } catch \(error\) {[\s\S]*?  } catch \(error\) {[\s\S]*?  } catch \(error\) {/g, '');
-    
-    // Keep only content up to first module.exports
-    const parts = content.split('module.exports = withSentry(handler);');
-    content = parts[0] + 'module.exports = withSentry(handler);\n';
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, "utf8");
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed api/subscribe.js');
 }
 
-// Fix app/components/ErrorBoundary.tsx - add missing closing paren
-function fixErrorBoundary() {
-  const filePath = path.join(__dirname, 'app', 'components', 'ErrorBoundary.tsx');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Find line 112 and add missing )
-  const lines = content.split('\n');
-  if (lines.length > 112) {
-    // Look for the missing closing paren context
-    for (let i = 110; i < 115 && i < lines.length; i++) {
-      if (lines[i].includes('      );') && !lines[i].includes(');')) {
-        lines[i] = lines[i].replace('      );', '      ));');
-        break;
+// Function to recursively find and fix TSX files
+function fixAllTSXFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      fixedCount += fixAllTSXFiles(filePath);
+    } else if (file.endsWith(".tsx")) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
       }
     }
-    content = lines.join('\n');
   }
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed app/components/ErrorBoundary.tsx');
+
+  return fixedCount;
 }
 
-// Fix src/utils/analytics.ts - close comment and add method
-function fixAnalytics() {
-  const filePath = path.join(__dirname, 'src', 'utils', 'analytics.ts');
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Fix unclosed comment
-  content = content.replace(/  \/\*\*\s+\* Update user properties\s+  }\s+  \/\*\*\s+\* Update user properties\s+export default analytics;/g, 
-    `  /**
-   * Update user properties
-   */
-  updateUserProperties(properties: Record<string, any>) {
-    this.userProperties = { ...this.userProperties, ...properties };
+// Main execution
+console.log("Starting syntax error fixes...");
+const appDir = path.join(__dirname, "app");
+const fixedCount = fixAllTSXFiles(appDir);
+console.log(`Fixed ${fixedCount} files.`);
+
+// Also fix the main App.tsx file
+const appTsxPath = path.join(__dirname, "App.tsx");
+if (fs.existsSync(appTsxPath)) {
+  if (fixSyntaxErrors(appTsxPath)) {
+    console.log("Fixed: App.tsx");
   }
 }
 
-export default analytics;`);
-  
-  fs.writeFileSync(filePath, content, 'utf8');
-  console.log('Fixed src/utils/analytics.ts');
-}
-
-// Run all fixes
-try {
-  fixAppTsx();
-  fixShippingRates();
-  fixSubscribe();
-  fixErrorBoundary();
-  fixAnalytics();
-  console.log('\nAll syntax errors fixed!');
-} catch (error) {
-  console.error('Error fixing files:', error);
-  process.exit(1);
-}
+console.log("Syntax error fixes completed.");

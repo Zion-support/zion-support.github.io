@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
@@ -14,51 +10,38 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "strict": false,
+    "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": false,
+    "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/pages/*": [
-        "src/pages/*"
-      ],
-      "@/utils/*": [
-        "src/utils/*"
-      ],
-      "@/types/*": [
-        "src/types/*"
-      ],
-      "@/hooks/*": [
-        "src/hooks/*"
-      ],
-      "@/config/*": [
-        "src/config/*"
-      ],
-      "@/data/*": [
-        "src/data/*"
-      ],
-      "@/content/*": [
-        "src/content/*"
-      ]
+      "@/*": ["./app/*"],
+      "@/components/*": ["./app/components/*"],
+      "@/pages/*": ["./app/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/types/*": ["./types/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/config/*": ["./config/*"],
+      "@/data/*": ["./data/*"],
+      "@/content/*": ["./content/*"]
     },
     "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
     "exactOptionalPropertyTypes": false,
     "noImplicitOverride": false,
     "noPropertyAccessFromIndexSignature": false,
@@ -66,23 +49,32 @@
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": false,
-    "tsBuildInfoFile": ".tsbuildinfo"
+    "tsBuildInfoFile": ".next/cache/tsconfig.tsbuildinfo"
   },
   "include": [
-    "src/**/*",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     "App.tsx",
-    "components/**/*",
-    "api/**/*.ts",
     "api/**/*.js",
-    "*.ts",
-    "*.tsx"
+    "api/**/*.ts",
+    "utils/**/*.ts",
+    "utils/**/*.tsx",
+    "types/**/*.ts",
+    "hooks/**/*.ts",
+    "hooks/**/*.tsx",
+    "config/**/*.ts",
+    "data/**/*.ts",
+    "content/**/*.ts",
+    "content/**/*.tsx",
+    "vite.config.ts"
   ],
   "exclude": [
     "node_modules",
     ".next",
     "out",
     "dist",
-    "app/**/*",
+    "vite.config.ts",
+    "vite.config.d.ts",
     "_app_disabled/**/*",
     "app_disabled/**",
     "_conflicted_disabled/**/*",
@@ -145,11 +137,14 @@
     "lint-target/**",
     "marketing-index.ts",
     "middleware.security.ts",
+    "middleware.ts",
     "netlify/**",
     "pages_disabled/**",
     "src.disabled/**",
     "utils.disabled/**",
     "vite.config.performance.ts",
+    "vite.config.ts",
+    "vite.config.d.ts",
     "dao/**",
     "deployments/**",
     "e2e/**",
@@ -157,11 +152,6 @@
     "src/pages/blog-disabled/**",
     "hooks/**",
     "middleware/**",
-    "app/page-optimized.tsx",
-    "app/services/**/*",
-    "app/case-studies/**/*",
-    "app/guides/**/*",
-    "app/components/**/*",
     "src/components/disabled-corrupted/**",
     "EnhancedFooter.tsx",
     "EnhancedHeader.tsx",

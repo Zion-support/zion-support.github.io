@@ -1,33 +1,45 @@
 #!/bin/bash
 
-# List of files with conflicts
-files=(
-  "app/components/ImprovedErrorBoundary.tsx"
-  "app/components/NewestContent2025Banner.tsx"
-  "app/enterprise/page.tsx"
-  "app/hooks/useEnhancedPerformance.ts"
-  "app/not-found.tsx"
-  "app/page-optimized.tsx"
-  "app/utils/enhancedErrorHandler.ts"
-  "app/utils/performanceMonitor.ts"
-  "src/components/PerformanceMonitor.tsx"
-  "src/data/bannerConfigurations.ts"
-  "src/hooks/useBannerRotation.tsx"
-  "src/hooks/usePerformance.ts"
-  "src/utils/analytics.ts"
-  "src/utils/codeSplitting.ts"
-  "src/utils/errorHandler.ts"
-)
+# Script to fix merge conflicts by keeping the HEAD version
+echo "Fixing merge conflicts..."
 
-for file in "${files[@]}"; do
-  if [ -f "$file" ]; then
-    echo "Fixing conflicts in $file..."
-    # Use git merge-file with ours strategy or manually remove conflict markers
-    # Remove conflict markers and keep the incoming version (after =======)
-    perl -i -0777 -pe 's/<<<<<<< HEAD\n.*?\n=======\n(.*?)\n>>>>>>> origin\/cursor\/fix-errors-and-merge-to-main-[a-z0-9]+/\1/gs' "$file"
-    # Also handle nested conflicts
-    perl -i -0777 -pe 's/<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> origin\/cursor\/fix-errors-and-merge-to-main-[a-z0-9]+/\1/gs' "$file"
+# Find all files with merge conflicts
+find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | while read file; do
+  if grep -q "<<<<<<< HEAD" "$file"; then
+    echo "Fixing merge conflicts in: $file"
+    
+    # Create a temporary file
+    temp_file=$(mktemp)
+    
+    # Process the file line by line
+    in_head=false
+    in_other=false
+    
+    while IFS= read -r line; do
+      if [[ "$line" == "<<<<<<< HEAD" ]]; then
+        in_head=true
+        in_other=false
+        continue
+      elif [[ "$line" == "=======" ]]; then
+        in_head=false
+        in_other=true
+        continue
+      elif [[ "$line" == ">>>>>>>"* ]]; then
+        in_head=false
+        in_other=false
+        continue
+      fi
+      
+      if [[ "$in_head" == true ]]; then
+        echo "$line" >> "$temp_file"
+      elif [[ "$in_other" == false ]]; then
+        echo "$line" >> "$temp_file"
+      fi
+    done < "$file"
+    
+    # Replace the original file
+    mv "$temp_file" "$file"
   fi
 done
 
-echo "Done fixing conflicts!"
+echo "Merge conflicts fixed!"

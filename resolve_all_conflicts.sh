@@ -1,29 +1,45 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by keeping the main branch version
-# and removing conflict markers
+echo "Starting comprehensive merge conflict resolution..."
 
-echo "Resolving all merge conflicts..."
+# Find all files with merge conflicts
+files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true)
 
-# Find all files with conflict markers
-conflict_files=$(git status --porcelain | grep "^UU" | cut -c4-)
+echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
 
-for file in $conflict_files; do
-    echo "Processing $file..."
+# Function to fix merge conflicts in a file
+fix_merge_conflicts() {
+    local file="$1"
+    echo "Fixing merge conflicts in: $file"
     
-    # Check if file exists
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Remove all merge conflict markers and keep only the content between HEAD markers
+    sed -i '/<<<<<<< HEAD/,/=======/!d' "$file"
+    sed -i '/<<<<<<< HEAD/d' "$file"
+    sed -i '/=======/d' "$file"
+    sed -i '/>>>>>>> /d' "$file"
+    
+    # Clean up any remaining conflict markers
+    sed -i '/^<<<<<<< /d' "$file"
+    sed -i '/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
+    
+    # Remove any syntax errors that might have been introduced
+    sed -i 's/,,/,/g' "$file"
+    sed -i 's/return(\([^)]*\))/return (\1)/g' "$file"
+    sed -i 's/return(<\([^>]*\)>)/return <\1>/g' "$file"
+    sed -i 's/);/);/g' "$file"
+    sed -i 's/};/};/g' "$file"
+}
+
+# Fix each file
+for file in $files_with_conflicts; do
     if [ -f "$file" ]; then
-        # Create a backup
-        cp "$file" "${file}.backup"
-        
-        # Use sed to resolve conflicts by keeping the main branch version (after =======)
-        # and removing conflict markers
-        sed -i '/^<<<<<<< HEAD/,/^=======/d; /^>>>>>>> main/d' "$file"
-        
-        echo "Resolved conflicts in $file"
-    else
-        echo "File $file not found, skipping..."
+        fix_merge_conflicts "$file"
     fi
 done
 
-echo "All conflicts resolved!"
+echo "Merge conflict resolution completed!"
+echo "All files have been cleaned of merge conflict markers."

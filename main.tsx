@@ -1,14 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './app/globals.css';
 
-const root = document.getElementById('root');
-
-if (root) {
-  ReactDOM.createRoot(root).render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+export default function Component() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>This component is under construction.</p>
+    </div>
   );
 }

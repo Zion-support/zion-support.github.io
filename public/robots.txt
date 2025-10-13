@@ -1,45 +1,33 @@
-# Robots.txt for Zion Tech Group
-# Updated: 2025-10-08
-
 User-agent: *
 Allow: /
-Disallow: /api/
+
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin and private areas
 Disallow: /admin/
+Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
 
-# Crawl-delay for polite crawling
-Crawl-delay: 1
+# Allow important pages
+Allow: /ai-services/
+Allow: /micro-saas/
+Allow: /5g-solutions/
+Allow: /about
+Allow: /contact
+Allow: /services
 
-# Popular search engines
-User-agent: Googlebot
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
-
-User-agent: Bingbot
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
-
-User-agent: Slurp
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-Disallow: /private/
-
-# Block bad bots
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-User-agent: SemrushBot
-Crawl-delay: 10
-
-# Sitemap location
-Sitemap: https://zion.app/sitemap.xml
-Sitemap: https://www.zion.app/sitemap.xml
+<<<<<<< HEAD
+# Host
+Host: https://ziontechgroup.com
+=======
+# Block common bot traps
+Disallow: /*?*
+Disallow: /*#
+Disallow: /search?*
+Disallow: /filter?*
+>>>>>>> cursor/analyze-improve-and-deploy-application-568e

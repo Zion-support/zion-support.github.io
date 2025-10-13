@@ -4,10 +4,7 @@
   "errorTracking": {
     "enabled": true,
     "sampleRate": 1,
-    "ignoreErrors": [
-      "ChunkLoadError",
-      "NetworkError"
-    ]
+    "ignoreErrors": ["ChunkLoadError", "NetworkError"]
   },
   "performanceMonitoring": {
     "enabled": true,
