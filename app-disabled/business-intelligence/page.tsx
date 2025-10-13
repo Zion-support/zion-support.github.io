@@ -1,1 +1,7 @@
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import React from 'react';
+
+const Component: React.FC = () => {
+  return <div>Component</div>;
+};
+
+export default Component;

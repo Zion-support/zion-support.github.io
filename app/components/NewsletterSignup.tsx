@@ -1,69 +1,23 @@
-import React, { useState } from "react".
-import React, { Helmet } from 'react-helmet-async'.
-import React, { Link } from 'react-router-dom'.
-import React, { ArrowRight, Mail } from 'lucide-react'.";
-export default function NewsletterSignup() {;""
-  const [email, setEmail] = useState("");
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle newsletter signup;
-    };
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+const Page: React.FC = () => {
   return (
-<<<<<<< HEAD
-              <Mail className="w-5 h-5" />
-              <input
-=======
-    <div>
-  );
-    </div>
-  );
-  );
-  );
     <>
       <Helmet>
-        <title>Newsletter Signup - Zion Tech Group</title>"
-      </Helmet>""
-      <div className="newsletter-signup-container">"""
-        <div className="newsletter-content">
-          <h2>Stay Updated</h2>"
-          <p>Subscribe to our newsletter for the latest updates</p>""
-          <form onSubmit={handleSubmit} className="newsletter-form">"""
-            <div className="input-group">"""
-              <Mail className="w-5 h-5" />"
-              <input""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
-                type="email"
-                value={email};"
-                onChange={(e) => setEmail(e.target.value)};""
-                placeholder="Enter your email"
-<<<<<<< HEAD
-                required.
-              />
-              <button type="submit">Subscribe
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-}
-=======
-                required."
-              />""
-              <button type="submit">Subscribe</button>
-            </div>
-          </form>
-        </div>"
-        <Link""
-          to="/contact"""
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >,"
-          Contact Us""
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
+        </div>
       </div>
     </>
-  );"
-};""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+  );
+};
+
+export default Page;

@@ -1,89 +1,23 @@
-'use client;
-
-import React, { useEffect } from react;
-
-interface SecurityEnhancerProps {}
-  enableCSP?: boolean;
-
-  enableHSTS?: boolean;
-
-  enableXSSProtection?: boolean;
-
-  enableClickjackingProtection?: boolean;
-
-  enableContentTypeSniffing?: boolean;
-
-}
-
-;
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
-  useEffect(() => {
-    if (typeof window === 'undefined) {
-import React from 'react';
 'use client';
-import React, {useEffect}from 'react';
-interface SecurityEnhancerProps {children: React.ReactNode;,}}}
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({children ,}) => {useEffect(() => {
-    // Security enhancement logic;
-    const enhanceSecurity = (;
-      // Add security headers;
-      const securityHeaders = {
-        'X-Content-Type-Options': 'nosniff',
-        'X-Frame-Options': 'DENY',
-        'X-XSS-Protection': '1; mode=block',) => {
-  return($3;)
-  )}'Referrer-Policy': 'strict-origin-when-cross-origin';}
-      }
-// Add CSP meta tag;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-    }
+const Page: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
+        </div>
+      </div>
+    </>
+  );
+};
 
-    // Content Security Policy
-    if ($1) { const cspMeta = document.createElement(meta);;
-
-      cspMeta.httpEquiv = Content-Security-Policy;
-
-    if ($1) { const xssMeta = document.createElement(meta);;
-
-      xssMeta.httpEquiv = X-XSS-Protection;
-
-      xssMeta.content = 1; mode=block;
-
-    if ($1) { const frameOptionsMeta = document.createElement(meta);;
-
-      frameOptionsMeta.httpEquiv = X-Frame-Options;
-
-      frameOptionsMeta.content = DENY;
-
-    if ($1) { const contentTypeMeta = document.createElement(meta);;
-
-      contentTypeMeta.httpEquiv = X-Content-Type-Options;
-
-      contentTypeMeta.content = nosniff;
-
-
-const originalFetch = window.fetch;;
-
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {;
-
-const headers = new Headers(init?.headers);;
-
-      // Add security headers
-      headers.set('X-Requested-With', XMLHttpRequest);
-
-      headers.set('X-Content-Type-Options', nosniff);
-
-      return originalFetch(input, {
-
-const sanitizeInput = (input: string): string => {;;
-
-
-const inputs = document.querySelectorAll(input, textarea, select);;
-
-    inputs.forEach(input => {
-      input.addEventListener(input, (e) => {;
-
-const target = e.target as HTMLInputElement;;
-
-        if (target.value !== sanitizeInput(target.value)) {
+export default Page;

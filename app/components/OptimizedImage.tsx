@@ -1,55 +1,23 @@
-import React, { useState } from 'react';
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-
-export default function OptimizedImage({ 
-  src, 
-  alt, 
-  className = '', 
-  width, 
-  height,
-  priority = false,
-  onLoad,
-  onError;
-}: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-
-  const handleLoad = () => {
-  
-    setIsLoading(false);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-  
-    setIsLoading(false);
-    setHasError(true);
-    onError?.();
-  };
-
-  if (hasError) {
-    return (
-    <div className={`optimized-image-error ${className}`}>
-        <div className="flex items-center justify-center w-full h-full bg-gray-100 text-gray-500">
-          Failed to load image
-        className="optimized-image"
-        width={width}
-        height={height}
-        loading={priority ? "eager" : "lazy"}"
-        onLoad={handleLoad}
-        onError={handleError}
-        style={{ opacity: isLoading ? 0 : 1 }}
-      />
-    </div>
+const Page: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
+        </div>
+      </div>
+    </>
   );
-}
+};
+
+export default Page;

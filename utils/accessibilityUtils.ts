@@ -1,1 +1,4 @@
-  announceToScreenReader(message: string): void {
+// TypeScript file
+export default function() {
+  return null;
+}

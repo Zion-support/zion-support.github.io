@@ -1,111 +1,90 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 // Function to fix merge conflicts in HTML files
 function fixHTMLConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
+    let content = fs.readFileSync(filePath, 'utf8')
     // Check if file has merge conflicts
     if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false;
+      return false
     }
-    
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-    
+    console.log(`Fixing merge conflicts in: ${filePath}`)
     // Split by merge conflict markers
-    const lines = content.split('\n');
-    const result = [];
-    let inConflict = false;
-    let headContent = [];
-    let separatorFound = false;
-    
+    const lines = content.split('\n')
+    const result = []
+    let inConflict = false
+    let headContent = []
+    let separatorFound = false
     for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
+      const line = lines[i]
       if (line.startsWith('<<<<<<<')) {
-        inConflict = true;
-        headContent = [];
-        separatorFound = false;
-        continue;
+        inConflict = true
+        headContent = []
+        separatorFound = false
+        continue
       }
-      
       if (line.startsWith('=======')) {
-        separatorFound = true;
-        continue;
+        separatorFound = true
+        continue
       }
-      
       if (line.startsWith('>>>>>>>')) {
-        inConflict = false;
+        inConflict = false
         // Use HEAD content (before =======)
-        result.push(...headContent);
-        continue;
+        result.push(...headContent)
+        continue
       }
-      
       if (inConflict) {
         if (!separatorFound) {
-          headContent.push(line);
+          headContent.push(line)
         }
         // Skip lines after ======= until >>>>>>>
       } else {
-        result.push(line);
+        result.push(line)
       }
     }
-    
     // Write the fixed content
-    fs.writeFileSync(filePath, result.join('\n'), 'utf8');
-    return true;
+    fs.writeFileSync(filePath, result.join('\n'), 'utf8')
+    return true
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
   }
 }
-
 // Find all HTML files
 function findHTMLFiles(dir) {
-  const files = [];
-  
+  const files = []
   function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
+    const items = fs.readdirSync(currentDir)
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
+      const fullPath = path.join(currentDir, item)
+      const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          scanDirectory(fullPath);
+          scanDirectory(fullPath)
         }
       } else if (stat.isFile()) {
-        const ext = path.extname(item);
+        const ext = path.extname(item)
         if (['.html', '.htm'].includes(ext)) {
-          files.push(fullPath);
+          files.push(fullPath)
         }
       }
     }
   }
-  
-  scanDirectory(dir);
-  return files;
+  scanDirectory(dir)
+  return files
 }
-
 // Main execution
-const workspaceDir = process.cwd();
-const files = findHTMLFiles(workspaceDir);
-
-console.log(`Found ${files.length} HTML files to check for merge conflicts...`);
-
-let fixedCount = 0;
+const workspaceDir = process.cwd()
+const files = findHTMLFiles(workspaceDir)
+console.log(`Found ${files.length} HTML files to check for merge conflicts...`)
+let fixedCount = 0
 for (const file of files) {
   if (fixHTMLConflicts(file)) {
-    fixedCount++;
+    fixedCount++
   }
 }
-
-console.log(`Fixed merge conflicts in ${fixedCount} HTML files.`);
+console.log(`Fixed merge conflicts in ${fixedCount} HTML files.`)

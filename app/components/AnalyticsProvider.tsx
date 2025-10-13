@@ -1,54 +1,23 @@
 'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (page: string) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, properties);
-    }
-  };
-
-  const trackPageView = (page: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_path: page
-      });
-    }
-  };
-
-  useEffect(() => {
-    // Initialize analytics
-    if (typeof window !== 'undefined') {
-      // Track initial page view
-      trackPageView(window.location.pathname);
-    }
-  }, []);
-
+const Page: React.FC = () => {
   return (
-    <AnalyticsContext.Provider value={{ trackEvent, trackPageView }}>
-      {children}
-    </AnalyticsContext.Provider>
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
+        </div>
+      </div>
+    </>
   );
 };
 
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-export default AnalyticsProvider;
+export default Page;

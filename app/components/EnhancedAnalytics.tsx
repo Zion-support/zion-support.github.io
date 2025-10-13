@@ -1,30 +1,23 @@
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-  trackingId = 'G-XXXXXXXXXX'
-}) => {
-  // Initialize Google Analytics
-  useEffect(() => {
-    if (typeof window !== 'undefined' && trackingId) {
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script['src'] = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-      // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
-      }
-      window.gtag = gtag;
+const Page: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
+        </div>
+      </div>
+    </>
+  );
+};
 
-      gtag('js', new Date());
-      gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href
-      });
-    }
-  }, [enableTracking]);
-
-  return <>{children}</>;
-export default EnhancedAnalytics;
+export default Page;

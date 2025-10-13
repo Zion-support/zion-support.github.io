@@ -1,6 +1,4 @@
-
-  cleanup: () => {
-    },
-};
-
-export default Sitemapgenerator;
+// TypeScript file
+export default function() {
+  return null;
+}

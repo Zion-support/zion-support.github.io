@@ -1,69 +1,23 @@
 'use client';
-import React, { Helmet } from 'react-helmet-async'.;
-import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const AdvancedAccessibilityEnhancerPage: React.FC = () => {
-  const features = [
-    {,
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-        document.body.classList.add('keyboard-navigation')}},
-    const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')}document.addEventListener('keydown', handleKeyDown);'
-    document.addEventListener('mousedown', handleMouseDown);
-    return () => {document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown)}}, [isHighContrast, isReducedMotion]);
-  const toggleHighContrast = () => {setIsHighContrast(!isHighContrast);
-    document.documentElement.classList.toggle('high-contrast')}const changeFontSize = (size: string) => {,
-<<<<<<< HEAD
-        <div className="font-size-controls">
-          <button.
-            onClick={() =>changeFontSize('small')</button>}className="accessibility-button"
-=======
-    document.documentElement.setAttribute('data-font-size', size)}return (<div className="accessibility-enhanced">)</div>"""
-      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 ,}}>'"
-        <button.""
-          onClick={toggleHighContrast}className="accessibility-button"""
-          aria-label="Toggle high contrast""
-        >{isHighContrast ? 'Normal Contrast' : 'High Contrast'</button>} </button>'""
-        <div className="font-size-controls">"
-          <button.""
-            onClick={() =>changeFontSize('small')</button>}className="accessibility-button"""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
-            aria-label="Small font size"
-          >
-            A.
-  </"
-          <button.""
-            onClick={() =>changeFontSize('medium')</button>}className="accessibility-button"""
-            aria-label="Medium font size"
-          >
-            A.
-  </"
-          <button.""
-            onClick={() =>changeFontSize('large')</button>}className="accessibility-button"""
-            aria-label="Large font size"
-          >
-            A;
-  </
-<<<<<<< HEAD
-=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const Page: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
         </div>
       </div>
-  );"
-      {children} </div>""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+    </>
+  );
+};
+
+export default Page;

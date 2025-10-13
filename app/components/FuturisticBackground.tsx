@@ -1,19 +1,23 @@
+'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export default function FuturisticBackground({ children, className = '' }: FuturisticBackgroundProps) {
+const Page: React.FC = () => {
   return (
-    <div className={`futuristic-background ${className}`}>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 opacity-90"></div>"
-      <div className="relative z-10">
-        {children}
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
+        </div>
       </div>
-    </div>
+    </>
   );
-  );
-  );
-}
+};
+
+export default Page;

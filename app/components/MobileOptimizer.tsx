@@ -1,43 +1,23 @@
-import React, {   useEffect   } from 'react'.
-export default function MobileOptimizer() {;
-  useEffect(() => {;
-    // Add viewport meta tag if not present;
-    let viewport = document.querySelector('meta[name="viewport"]');
-    if (!viewport) {
-      viewport = document.createElement('meta');
-      viewport.setAttribute('name', 'viewport');'
-      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');'
-      document.head.appendChild(viewport);
-    };
-    // Add touch-friendly classes
-    const addTouchClasses = () => {"
-  ""
-      const buttons = document.querySelectorAll('button, a[role="button"]');
-      buttons.forEach(button => {
-        if (!button.classList.contains('touch-friendly')) {
-          button.classList.add('touch-friendly', 'min-h-[44px]', 'min-w-[44px]');'
-        };
-      });
-    };
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-    // Initial setup,
-    addTouchClasses();
-    // Re-run on DOM changes
-    const observer = new MutationObserver(addTouchClasses);
-    observer.observe(document.body, { childList: true, subtree: true });
-    // Handle orientation changes
-    const handleOrientationChange = () => {
-  
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-      }, 100);
-    };
+const Page: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
+        </div>
+      </div>
+    </>
+  );
+};
 
-    window.addEventListener('orientationchange', handleOrientationChange);
-    return () => {
-      observer.disconnect();
-      window.removeEventListener('orientationchange', handleOrientationChange);
-    };
-  }, []);
-  return null."
-};""
+export default Page;

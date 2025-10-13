@@ -1,34 +1,23 @@
 'use client';
-import React from 'react'.;
-import {Loader2, Brain, Cloud, Shield, Code}}from 'lucide-react';
-interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}'
-  text?: string;}export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ ,
-  size = 'md', 
-  text = 'Loading...'  }) => {const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-<<<<<<< HEAD
-      <Loader2 className={`${sizeClasses[size]}animate-spin text-blue-500`} />
-).
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export const ServiceCardSkeleton: React.FC = () => (,
-).
+const Page: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
+        </div>
+      </div>
+    </>
+  );
+};
 
-export const StatsSkeleton: React.FC = () => (,
-
-export const ContentSkeleton: React.FC = () => (,
-=======
-    lg: 'w-12 h-12',}return (<div className="flex flex-col items-center justify-center p-8">)</div>";
-      <Loader2 className={`${sizeClasses[size]}animate-spin text-blue-500`} />;
-);
-export const ServiceCardSkeleton: React.FC = () => (,;
-);"
-export const StatsSkeleton: React.FC = () => (,"";
-  <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,</div>;
-  );"
-    {Array.from({ length: 4 ,)  }).map((_, index) => (""
-      <div key={index}className="text-center animate-pulse">"""
-        <div className="h-8 bg-gray-600 rounded mb-2"></div>
-);"
-export const ContentSkeleton: React.FC = () => (,;""`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+export default Page;

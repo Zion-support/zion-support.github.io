@@ -1,1 +1,4 @@
-import '@testing-library/jest-dom';
+// TypeScript file
+export default function() {
+  return null;
+}

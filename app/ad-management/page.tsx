@@ -1,46 +1,23 @@
-<<<<<<< HEAD
+'use client';
 import React from 'react';
-import { Metadata } from 'next';
-import AdDashboard from '../components/AdDashboard';
+import { Helmet } from 'react-helmet-async';
 
-export const metadata: Metadata = {
-=======
-import React from 'react'.;
-import { Metadata } from 'next'.;
-import AdDashboard from '../components/AdDashboard';
-export const metadata: Metadata = {,
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
-  title: 'Ad Management System | Zion Tech Group',
-  description: 'Comprehensive advertising management system with campaign creation, analytics, scheduling, and template management.',
-  keywords: 'ad management, advertising, campaigns, analytics, scheduling, templates, marketing',
-  openGraph: {,
-    title: 'Ad Management System | Zion Tech Group',
-    description: 'Comprehensive advertising management system with campaign creation, analytics, scheduling, and template management.',
-    type: 'website',;
-  },;
-};
-
-const AdManagementPage: React.FC = () => {
+const Page: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        <AdDashboard />
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
-export default AdManagementPage;
-=======
-    <div className="min-h-screen bg-gray-50">"""
-      <div className="container mx-auto px-4 py-8">
-        <AdDashboard />
-      </div>
-    </div>,
-  );
-  );
-};
-"
-export default AdManagementPage;""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+export default Page;

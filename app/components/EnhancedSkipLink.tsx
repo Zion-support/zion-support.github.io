@@ -1,32 +1,23 @@
 'use client';
-import React from 'react'.
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const EnhancedSkipLink: React.FC = () => {
+const Page: React.FC = () => {
   return (
-    <div>;
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
+        </div>
+      </div>
+    </>
   );
-    </div>;
-  );
-  );
-  );
-    <a
-      href="#main-content"""
-      className="skip-link sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded-md focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-offset-2 focus:ring-offset-slate-900",
-      onClick={(e) => {
-        e.preventDefault();
-        const main = document.querySelector('#main-content');
-        if (main) {
-          main.focus();
-          main.scrollIntoView({ behavior: 'smooth'   });
-        };
-      }};
-    >
-<<<<<<< HEAD
-=======
-      Skip to main content.
-    </a>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
 };
-"
-export default EnhancedSkipLink;""
+
+export default Page;

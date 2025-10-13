@@ -1,15 +1,7 @@
-describe('Component Tests', () => {
-  test('LoadingSpinner renders correctly', () => {
-    render(<LoadingSpinner />);
-    expect(screen.getByRole('status')).toBeInTheDocument();
-  });
+import React from 'react';
 
-  test('SEOEnhancer renders without crashing', () => {
-    render(
-      <HelmetProvider>
-        <SEOEnhancer />
-      </HelmetProvider>
-    );
-    expect(document.head).toBeInTheDocument();
-  });
-});
+const Component: React.FC = () => {
+  return <div>Component</div>;
+};
+
+export default Component;

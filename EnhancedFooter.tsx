@@ -1,6 +1,7 @@
+import React from 'react';
 
+const Component: React.FC = () => {
+  return <div>Component</div>;
+};
 
-// import React from "react";
-
-// import React from "react";
-
+export default Component;

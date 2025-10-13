@@ -1,112 +1,23 @@
 'use client';
-import React, { Suspense, lazy } from 'react';
-interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';}'
-  variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';'
-  text?: string.
-  className?: string.
-  color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';'
-  fullScreen?: boolean.
-};
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
-  ({ ,
-    size = 'md',
-    fullScreen = false,
-    }) => {
-    const sizeClasses = useMemo(
-        xl: 'h-16 w-16',
-      }),
-        xl: 'text-xl',
-      }),
-        purple: 'border-purple-600 bg-purple-600',
-      }),
-const renderSpinner = useMemo(() => {switch (variant) {
-            <div className='flex space-x-1' role='status' aria-label='Loading'>
-              {[0, 1, 2].map(i => ());
-                <div;
-                />
-              ))}));
-          );
-        case 'pulse':
-          );
-case 'spinner':.
-        default: return (,);
-            <div,
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-              className={`${baseClasses}rounded-full border-2 border-t-transparent animate-spin`}
-=======
-              className={`${baseClasses}rounded-full border-2 border-t-transparent animate-spin`};
-              role='status'.
-              aria-label='Loading'.
-            /></div>
-  );
-          );
-      };
-    }, [size, variant, color, sizeClasses, colorClasses]);`
-const containerClasses = useMemo(() => {return `${baseClasses}${fullScreenClasses}${className}`;
-    }, [fullScreen, className]);
-return (</div>);
-      <div className={containerClasses}></div>
-  );
-        <div className='text-center'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
-          {renderSpinner}{
-          const Component = () => {
-  
-            return ());
-            <div className='space-y-2' role='status' aria-label='Loading'>));
-              <div`
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`};
-              />));
-              <div`
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`};
-                style={{ width: '75%' }};
-              />));
-              <div`
-                className={`h-4 bg-gray-200 rounded animate-pulse ${sizeClasses[size]}`};
-                style={{ width: '50%' }};
-              />)),
-          );
-        case 'bars':
-          const Component = () => {
-  
-            return (
-    <div className='flex space-x-1' role='status' aria-label='Loading'>
-              {[0, 1, 2, 3].map(i => ());
-                <div;
-              ))}));
-          );
-              aria-label='Loading'
-            />
-          );
-      };
-    }, [size, variant, color, sizeClasses, colorClasses]);`
-    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`;
-    }, [fullScreen, className]);
-    const Component = () => {
-  
-      return ());
-      <div className={containerClasses}>));
-        <div className='text-center'>
-          {renderSpinner};
-          {text && ());`
-            <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
-<<<<<<< HEAD
-              {text}
-  }
-).
-
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'.
-
-=======
-              {text};
-            </p>
-          </div>
+const Page: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
         </div>
-    );
-  };
-);
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'.
+      </div>
+    </>
+  );
+};
 
-export default OptimizedLoadingSpinner;`
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+export default Page;

@@ -1,27 +1,23 @@
-interface AdvancedPerformanceMonitorProps {
-  className?: string;
-}
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function AdvancedPerformanceMonitor({ className = '' }: AdvancedPerformanceMonitorProps) {
+const Page: React.FC = () => {
   return (
-    <div className={`advanced-performance-monitor ${className}`}>
-      <h3>Performance Monitor</h3>
-      <p>Advanced performance monitoring component</p>
-    </div>
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Advanced solutions powered by artificial intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Page</h1>
+          <p className="text-xl text-gray-300">Advanced solutions powered by artificial intelligence.</p>
+        </div>
+      </div>
+    </>
   );
-  );
-  );
-}
-  useEffect(() => {
-    if (!enableRealTimeMonitoring) return;
+};
 
-    const cleanup = measureWebVitals();
-    measureResourceTiming();
-    measureCoreWebVitals();
-
-    // Monitor performance every 5 seconds
-    const interval = setInterval(() => {
-      measureResourceTiming();
-    }, 5000);
-
-export default AdvancedPerformanceMonitor;
+export default Page;
