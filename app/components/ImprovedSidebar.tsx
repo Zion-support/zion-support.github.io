@@ -1,13 +1,14 @@
+import React from 'react';
 
 interface ImprovedSidebarProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props here
 }
 
-export default function ImprovedSidebar({ className = '', children }: ImprovedSidebarProps) {
+export default function ImprovedSidebar({}: ImprovedSidebarProps) {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className="improvedsidebar">
+      <h2>ImprovedSidebar</h2>
+      <p>Component under development.</p>
     </div>
   );
 }

@@ -1,22 +1,14 @@
-<<<<<<< HEAD
-=======
-  children?: React.ReactNode;
-  className?: string;
-  onClick?: () => void;
-}
-
+import React from 'react';
 
 interface FuturisticButtonProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props here
 }
 
-export default function FuturisticButton({ className = '', children }: FuturisticButtonProps) {
+export default function FuturisticButton({}: FuturisticButtonProps) {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className="futuristicbutton">
+      <h2>FuturisticButton</h2>
+      <p>Component under development.</p>
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-// import React from 'react';

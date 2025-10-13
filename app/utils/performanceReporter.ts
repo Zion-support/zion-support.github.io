@@ -1,5 +1,5 @@
-'use client''
-/**
- * Performance Reporter
- * Comprehensive performance monitoring and reporting
- */
+// performanceReporter utility functions
+
+export const performanceReporter = {
+  // Add utility functions here
+};

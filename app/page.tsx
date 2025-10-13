@@ -1,58 +1,29 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
-export default function HomePage() {
+export default function PagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced page solutions by Zion Tech Group." />
       </Helmet>
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold text-white mb-6">
-            Zion Tech Group
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Page
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services.
+            Advanced page solutions by Zion Tech Group.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/services"
-              className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-            >
-              Our Services
-            </Link>
-          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">AI Solutions</h3>
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
             <p className="text-gray-300">
-              Advanced artificial intelligence solutions for modern businesses.
-            </p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
-            <p className="text-gray-300">
-              Comprehensive security solutions to protect your digital assets.
-            </p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">Cloud Infrastructure</h3>
-            <p className="text-gray-300">
-              Scalable cloud solutions for enterprise needs.
+              This page is under development. Please check back later for updates.
             </p>
           </div>
         </div>

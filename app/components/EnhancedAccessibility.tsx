@@ -1,14 +1,14 @@
 import React from 'react';
 
 interface EnhancedAccessibilityProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props here
 }
 
-export default function EnhancedAccessibility({ className = '', children }: EnhancedAccessibilityProps) {
+export default function EnhancedAccessibility({}: EnhancedAccessibilityProps) {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className="enhancedaccessibility">
+      <h2>EnhancedAccessibility</h2>
+      <p>Component under development.</p>
     </div>
   );
 }

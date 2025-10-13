@@ -1,9 +1,14 @@
 import React from 'react';
 
-export const PageLoader = () => {
+interface LoadingStatesProps {
+  // Add props here
+}
+
+export default function LoadingStates({}: LoadingStatesProps) {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
+    <div className="loadingstates">
+      <h2>LoadingStates</h2>
+      <p>Component under development.</p>
     </div>
   );
-};
+}

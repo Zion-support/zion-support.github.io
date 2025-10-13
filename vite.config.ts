@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { resolve } from "path";
-=======
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
+ cursor/fix-errors-and-merge-to-main-c832
 
 export default defineConfig({
   plugins: [
@@ -19,13 +11,7 @@ export default defineConfig({
     alias: {
       "@": resolve(__dirname, "./app"),
       "@/components": resolve(__dirname, "./app/components"),
-<<<<<<< HEAD
-      "@/utils": resolve(__dirname, "./app/utils"),
-=======
-      "@/pages": resolve(__dirname, "./app"),
-      "@/utils": resolve(__dirname, "./app/utils"),
-      "@/types": resolve(__dirname, "./types"),
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
+ cursor/fix-errors-and-merge-to-main-c832
       "@/hooks": resolve(__dirname, "./hooks"),
     },
   },
@@ -136,36 +122,7 @@ export default defineConfig({
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
           }
-<<<<<<< HEAD
-          // Default chunk for other modules
-          return 'vendor'
-        },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
-      },
-    },
-<<<<<<< HEAD
-    // Enable tree shaking
-    treeshake: true,
-=======
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ["react", "react-dom"],
-          router: ["react-router-dom"],
-          ui: ["framer-motion", "lucide-react"],
-        },
-      },
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
+ cursor/fix-errors-and-merge-to-main-48ac
 =======
         }
       }
@@ -177,34 +134,21 @@ export default defineConfig({
   server: {
     port: 3000,
     open: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+ cursor/fix-errors-and-merge-to-main-4aee
     host: true,
     // Enable HMR
     hmr: {
       overlay: true,
     },
     cors: true,
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
-=======
-    cors: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
+ cursor/fix-errors-and-merge-to-main-c832
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4aee
   },
   preview: {
     port: 4173,
     open: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    host: true,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
+ cursor/fix-errors-and-merge-to-main-48ac
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-c832
 =======
@@ -223,12 +167,7 @@ export default defineConfig({
   // CSS optimization
   css: {
     devSourcemap: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  },
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+ cursor/fix-errors-and-merge-to-main-4aee
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
   },

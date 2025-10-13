@@ -1,14 +1,14 @@
 import React from 'react';
 
 interface CacheManagerProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props here
 }
 
-export default function CacheManager({ className = '', children }: CacheManagerProps) {
+export default function CacheManager({}: CacheManagerProps) {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className="cachemanager">
+      <h2>CacheManager</h2>
+      <p>Component under development.</p>
     </div>
   );
 }

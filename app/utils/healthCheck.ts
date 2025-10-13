@@ -1,5 +1,5 @@
-'use client''
-/**
- * Application Health Check Utility
- * Monitors application health and provides diagnostic information
- */
+// healthCheck utility functions
+
+export const healthCheck = {
+  // Add utility functions here
+};

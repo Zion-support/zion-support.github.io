@@ -1,9 +1,14 @@
+import React from 'react';
 
-export default function EnhancedLoadingPage() {
+interface EnhancedLoadingProps {
+  // Add props here
+}
+
+export default function EnhancedLoading({}: EnhancedLoadingProps) {
   return (
-
-    <div className={`${className}`}>
-      {children}
+    <div className="enhancedloading">
+      <h2>EnhancedLoading</h2>
+      <p>Component under development.</p>
     </div>
   );
 }

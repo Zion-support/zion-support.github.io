@@ -1,13 +1,14 @@
+import React from 'react';
 
 interface MobileNavigationProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props here
 }
 
-export default function MobileNavigation({ className = '', children }: MobileNavigationProps) {
+export default function MobileNavigation({}: MobileNavigationProps) {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className="mobilenavigation">
+      <h2>MobileNavigation</h2>
+      <p>Component under development.</p>
     </div>
   );
 }
