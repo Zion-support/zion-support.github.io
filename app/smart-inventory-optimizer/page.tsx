@@ -1,24 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { 
-  Package, 
-  TrendingUp, 
-  AlertTriangle, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  DollarSign,
-  Truck,
-  Shield
-} from 'lucide-react';
+
+import { AlertTriangle, DollarSign, Truck } from 'lucide-react';
 
 const SmartInventoryOptimizerPage = () => {
   const features = [
@@ -155,14 +136,14 @@ const SmartInventoryOptimizerPage = () => {
               <Package className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Inventory Intelligence</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Optimize Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Inventory Management</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your inventory operations with AI-powered demand forecasting, smart reorder points, 
+              Transform your inventory operations with AI-powered demand forecasting, smart reorder points,
               and real-time analytics that reduce costs and improve efficiency.
             </p>
 
@@ -224,7 +205,7 @@ const SmartInventoryOptimizerPage = () => {
               Transform Your Inventory Operations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform delivers measurable results that directly impact your bottom line 
+              Our AI-powered platform delivers measurable results that directly impact your bottom line
               and operational efficiency.
             </p>
           </motion.div>
@@ -307,7 +288,7 @@ const SmartInventoryOptimizerPage = () => {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business size and inventory complexity. 
+              Choose the perfect plan for your business size and inventory complexity.
               All plans include our core AI features with no setup fees.
             </p>
           </motion.div>
@@ -320,8 +301,8 @@ const SmartInventoryOptimizerPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
+                  plan.popular
+                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent'
                     : 'border-white/10'
                 }`}
               >
@@ -381,7 +362,7 @@ const SmartInventoryOptimizerPage = () => {
               Ready to Optimize Your Inventory?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already using our Smart Inventory Optimizer 
+              Join thousands of businesses already using our Smart Inventory Optimizer
               to reduce costs, improve efficiency, and boost profitability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

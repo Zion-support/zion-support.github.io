@@ -1,24 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { 
-  Receipt, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  DollarSign,
-  FileText,
-  CreditCard
-} from 'lucide-react';
+
+import { DollarSign, CreditCard } from 'lucide-react';
 
 const SmartExpenseCategorizerPage = () => {
   const features = [
@@ -155,14 +136,14 @@ const SmartExpenseCategorizerPage = () => {
               <Receipt className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Expense Intelligence</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Automate Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Expense Management</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your expense management with AI-powered categorization, automated receipt processing, 
+              Transform your expense management with AI-powered categorization, automated receipt processing,
               and real-time financial insights that save time and money.
             </p>
 
@@ -224,7 +205,7 @@ const SmartExpenseCategorizerPage = () => {
               Transform Your Financial Management
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered expense management delivers measurable improvements in efficiency, 
+              Our AI-powered expense management delivers measurable improvements in efficiency,
               accuracy, and financial control.
             </p>
           </motion.div>
@@ -266,7 +247,7 @@ const SmartExpenseCategorizerPage = () => {
               Advanced AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge artificial intelligence to automate and optimize every aspect 
+              Leverage cutting-edge artificial intelligence to automate and optimize every aspect
               of your expense management process.
             </p>
           </motion.div>
@@ -308,7 +289,7 @@ const SmartExpenseCategorizerPage = () => {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business size and expense volume. 
+              Choose the perfect plan for your business size and expense volume.
               All plans include our core AI features with no setup fees.
             </p>
           </motion.div>
@@ -321,8 +302,8 @@ const SmartExpenseCategorizerPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
+                  plan.popular
+                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent'
                     : 'border-white/10'
                 }`}
               >
@@ -382,7 +363,7 @@ const SmartExpenseCategorizerPage = () => {
               Ready to Automate Your Expenses?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already using our Smart Expense Categorizer 
+              Join thousands of businesses already using our Smart Expense Categorizer
               to streamline their financial management and save time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

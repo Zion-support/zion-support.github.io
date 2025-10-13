@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -44,7 +43,7 @@ const ModernLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           }}
         />
       </div>
-      
+
       {text && (
         <div className="text-center">
           <p className={`text-sm font-medium ${colorClasses[color]} animate-pulse`}>

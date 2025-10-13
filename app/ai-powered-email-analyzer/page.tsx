@@ -1,21 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe
-} from 'lucide-react';
+
 
 const AIPoweredEmailAnalyzerPage = () => {
   const features = [
@@ -129,14 +112,14 @@ const AIPoweredEmailAnalyzerPage = () => {
               <Mail className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Email Intelligence</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Transform Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Email Communication</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leverage advanced AI to analyze, optimize, and enhance your email communications with intelligent insights, 
+              Leverage advanced AI to analyze, optimize, and enhance your email communications with intelligent insights,
               sentiment analysis, and smart response suggestions.
             </p>
 
@@ -198,7 +181,7 @@ const AIPoweredEmailAnalyzerPage = () => {
               Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advanced AI technology provides comprehensive email analysis and optimization tools 
+              Our advanced AI technology provides comprehensive email analysis and optimization tools
               to enhance your communication effectiveness.
             </p>
           </motion.div>
@@ -240,7 +223,7 @@ const AIPoweredEmailAnalyzerPage = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include our core AI features 
+              Choose the perfect plan for your business needs. All plans include our core AI features
               with no hidden fees or long-term contracts.
             </p>
           </motion.div>
@@ -253,8 +236,8 @@ const AIPoweredEmailAnalyzerPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
+                  plan.popular
+                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent'
                     : 'border-white/10'
                 }`}
               >
@@ -314,7 +297,7 @@ const AIPoweredEmailAnalyzerPage = () => {
               Ready to Transform Your Email Communication?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already using our AI-powered email analyzer 
+              Join thousands of businesses already using our AI-powered email analyzer
               to improve their communication effectiveness and drive better results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

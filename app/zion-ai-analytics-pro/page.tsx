@@ -1,42 +1,4 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  BarChart3, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Award, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Smartphone, 
-  Globe, 
-  Mail, 
-  Phone, 
-  TrendingUp,
-  Database,
-  Settings,
-  Monitor,
-  Lock,
-  Server,
-  Cpu,
-  Network,
-  HardDrive,
-  Headphones,
-  Sparkles,
-  Target,
-  Calendar,
-  FileText,
-  Code,
-  Bot,
-  Wifi,
-  Heart,
-  Receipt,
-  Package,
-  Clock
-} from "lucide-react";
+
 
 export default function ZionAiAnalyticsPro() {
   const features = [
@@ -181,7 +143,7 @@ export default function ZionAiAnalyticsPro() {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
+
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -191,18 +153,18 @@ export default function ZionAiAnalyticsPro() {
                   <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
                   <span className="text-cyan-400 text-sm font-medium">#1 AI Analytics Platform 2024</span>
                 </div>
-                
+
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                     Zion AI Analytics Pro
                   </span>
                 </h1>
-                
+
                 <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-                  Transform your business with advanced AI-powered business intelligence. Get real-time insights, 
+                  Transform your business with advanced AI-powered business intelligence. Get real-time insights,
                   predictive analytics, and automated reporting that drives growth and efficiency.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
                     to="/contact"
@@ -219,7 +181,7 @@ export default function ZionAiAnalyticsPro() {
                     <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                   </Link>
                 </div>
-                
+
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-6">
                   {stats.map((stat, index) => (
@@ -233,7 +195,7 @@ export default function ZionAiAnalyticsPro() {
                   ))}
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <div className="text-center mb-6">
@@ -243,7 +205,7 @@ export default function ZionAiAnalyticsPro() {
                     <h3 className="text-2xl font-bold text-white mb-2">Starting at $299/month</h3>
                     <p className="text-gray-300">Advanced AI analytics for your business</p>
                   </div>
-                  
+
                   <div className="space-y-4">
                     <div className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
@@ -262,7 +224,7 @@ export default function ZionAiAnalyticsPro() {
                       <span>100+ integrations</span>
                     </div>
                   </div>
-                  
+
                   <div className="mt-6">
                     <Link
                       to="/contact"
@@ -291,7 +253,7 @@ export default function ZionAiAnalyticsPro() {
                 Everything you need to transform your data into actionable business insights
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -334,14 +296,14 @@ export default function ZionAiAnalyticsPro() {
                 Choose the plan that fits your business needs. All plans include our core AI analytics features.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                    plan.popular 
-                      ? 'border-cyan-500/50 shadow-cyan-500/25' 
+                    plan.popular
+                      ? 'border-cyan-500/50 shadow-cyan-500/25'
                       : 'border-white/20 hover:border-cyan-500/30'
                   }`}
                 >
@@ -352,7 +314,7 @@ export default function ZionAiAnalyticsPro() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
@@ -361,7 +323,7 @@ export default function ZionAiAnalyticsPro() {
                       <span className="text-gray-300 ml-1">/{plan.period}</span>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
@@ -370,7 +332,7 @@ export default function ZionAiAnalyticsPro() {
                       </div>
                     ))}
                   </div>
-                  
+
                   <Link
                     to="/contact"
                     className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${
@@ -401,7 +363,7 @@ export default function ZionAiAnalyticsPro() {
                 See what our clients say about Zion AI Analytics Pro
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -439,7 +401,7 @@ export default function ZionAiAnalyticsPro() {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of businesses already using Zion AI Analytics Pro to drive growth and make data-driven decisions.
               </p>
-              
+
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -464,7 +426,7 @@ export default function ZionAiAnalyticsPro() {
                   <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"

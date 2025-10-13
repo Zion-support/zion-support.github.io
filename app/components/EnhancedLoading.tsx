@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface EnhancedLoadingProps {
   message?: string;
@@ -33,7 +32,7 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
         {showProgress && (
           <div className="w-64 mx-auto mb-4">
             <div className="bg-slate-700 rounded-full h-2 overflow-hidden">
-              <div 
+              <div
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
                 style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
               ></div>

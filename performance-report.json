@@ -1,20 +1,16 @@
 {
-  "timestamp": "2025-10-13T08:49:02.077Z",
+  "timestamp": "2025-10-13T09:17:16.098Z",
   "buildStats": {
-    "totalFiles": 17,
-    "totalSize": 525367,
-    "jsFiles": 14,
-    "jsSize": 516860,
+    "totalFiles": 8,
+    "totalSize": 292293,
+    "jsFiles": 4,
+    "jsSize": 269378,
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 0,
     "imageSize": 0
   },
   "recommendations": [
-    {
-      "type": "warning",
-      "message": "JavaScript bundle size is large. Consider code splitting or tree shaking."
-    },
     {
       "type": "success",
       "message": "Build size is optimized! Great job!"

@@ -1,127 +1,91 @@
 import React from 'react';
-import { Loader2, Brain, Zap, Shield } from 'lucide-react';
+import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
 
-interface LoadingSpinnerProps {
+interface ImprovedLoadingStatesProps {
+  type?: 'spinner' | 'icons' | 'pulse' | 'wave';
+  message?: string;
   size?: 'sm' | 'md' | 'lg';
-  className?: string;
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  className = '' 
+const ImprovedLoadingStates: React.FC<ImprovedLoadingStatesProps> = ({ 
+  type = 'spinner',
+  message = 'Loading...',
+  size = 'md'
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
+    sm: 'w-6 h-6',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
   };
 
-  return (
-    <div className={`flex items-center justify-center ${className}`}>
-      <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
-    </div>
-  );
-};
-
-interface LoadingPageProps {
-  message?: string;
-  showIcon?: boolean;
-}
-
-export const LoadingPage: React.FC<LoadingPageProps> = ({ 
-  message = 'Loading...', 
-  showIcon = true 
-}) => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        {showIcon && (
-          <div className="mb-6">
-            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Brain className="w-8 h-8 text-white animate-pulse" />
+  const renderLoadingContent = () => {
+    switch (type) {
+      case 'icons':
+        return (
+          <div className="flex justify-center space-x-4 mb-6">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center animate-bounce">
+              <Brain className="w-4 h-4 text-white" />
+            </div>
+            <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center animate-bounce" style={{ animationDelay: '0.2s' }}>
+              <Shield className="w-4 h-4 text-white" />
+            </div>
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center animate-bounce" style={{ animationDelay: '0.4s' }}>
+              <Zap className="w-4 h-4 text-white" />
+            </div>
+            <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center animate-bounce" style={{ animationDelay: '0.6s' }}>
+              <Globe className="w-4 h-4 text-white" />
             </div>
           </div>
-        )}
-        <LoadingSpinner size="lg" />
-        <p className="mt-4 text-white text-lg">{message}</p>
-      </div>
-    </div>
-  );
-};
+        );
 
-interface LoadingCardProps {
-  title?: string;
-  description?: string;
-  icon?: React.ReactNode;
-}
+      case 'pulse':
+        return (
+          <div className="flex justify-center space-x-2 mb-6">
+            {[0, 1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"
+                style={{ animationDelay: `${i * 0.1}s` }}
+              />
+            ))}
+          </div>
+        );
 
-export const LoadingCard: React.FC<LoadingCardProps> = ({ 
-  title = 'Loading...',
-  description = 'Please wait while we load the content.',
-  icon
-}) => {
-  return (
-    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center">
-      {icon && (
-        <div className="mb-4">
-          {icon}
-        </div>
-      )}
-      <LoadingSpinner size="md" className="mb-4" />
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-gray-300">{description}</p>
-    </div>
-  );
-};
+      case 'wave':
+        return (
+          <div className="flex justify-center space-x-1 mb-6">
+            {[0, 1, 2, 3, 4].map((i) => (
+              <div
+                key={i}
+                className="w-1 bg-cyan-400 rounded-full animate-pulse"
+                style={{ 
+                  height: `${20 + i * 4}px`,
+                  animationDelay: `${i * 0.1}s`
+                }}
+              />
+            ))}
+          </div>
+        );
 
-interface SkeletonLoaderProps {
-  lines?: number;
-  className?: string;
-}
-
-export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ 
-  lines = 3, 
-  className = '' 
-}) => {
-  return (
-    <div className={`animate-pulse ${className}`}>
-      {Array.from({ length: lines }).map((_, index) => (
-        <div
-          key={index}
-          className={`h-4 bg-white/10 rounded mb-2 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'
-          }`}
-        />
-      ))}
-    </div>
-  );
-};
-
-interface ServiceLoadingProps {
-  serviceName: string;
-}
-
-export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) => {
-  const getServiceIcon = (service: string) => {
-    if (service.toLowerCase().includes('ai')) return <Brain className="w-8 h-8 text-cyan-400" />;
-    if (service.toLowerCase().includes('security')) return <Shield className="w-8 h-8 text-purple-400" />;
-    return <Zap className="w-8 h-8 text-blue-400" />;
+      default:
+        return (
+          <div className="flex items-center justify-center mb-6">
+            <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
+          </div>
+        );
+    }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center max-w-md mx-auto px-6">
-        <div className="mb-6">
-          <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-            {getServiceIcon(serviceName)}
-          </div>
-        </div>
-        <LoadingSpinner size="lg" />
-        <h2 className="text-2xl font-bold text-white mb-2 mt-4">Loading {serviceName}</h2>
-        <p className="text-gray-300">Preparing your personalized experience...</p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+      <div className="text-center">
+        {renderLoadingContent()}
+        <p className="text-gray-400 text-sm">
+          {message}
+        </p>
       </div>
     </div>
   );
 };
 
-export default LoadingPage;
+export default ImprovedLoadingStates;

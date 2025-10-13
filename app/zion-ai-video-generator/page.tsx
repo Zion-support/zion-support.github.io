@@ -1,18 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Video, 
-  Play, 
-  Download, 
-  Upload, 
-  Sparkles, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Zap
-} from 'lucide-react';
+
+import { Video, Play, Upload } from 'lucide-react';
 
 const ZionAIVideoGeneratorPage = () => {
   const features = [
@@ -77,15 +64,15 @@ const ZionAIVideoGeneratorPage = () => {
             <Video className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI Video Generation</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Zion AI Video Generator
             </span>
           </h1>
-          
+
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Transform your ideas into professional videos with our AI-powered video generator. 
+            Transform your ideas into professional videos with our AI-powered video generator.
             Create stunning content in minutes, not hours.
           </p>
         </div>
@@ -113,8 +100,8 @@ const ZionAIVideoGeneratorPage = () => {
               <div
                 key={index}
                 className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
+                  plan.popular
+                    ? 'border-cyan-500/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10'
                     : 'border-white/20'
                 } relative`}
               >
@@ -126,7 +113,7 @@ const ZionAIVideoGeneratorPage = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
@@ -134,7 +121,7 @@ const ZionAIVideoGeneratorPage = () => {
                     <span className="text-lg text-gray-300 font-normal">/{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -143,7 +130,7 @@ const ZionAIVideoGeneratorPage = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
@@ -166,7 +153,7 @@ const ZionAIVideoGeneratorPage = () => {
               Ready to Create Amazing Videos?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of creators who are already using our AI video generator 
+              Join thousands of creators who are already using our AI video generator
               to create professional content in minutes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

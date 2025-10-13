@@ -1,18 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Brain,
-  Eye,
-  Zap
-} from 'lucide-react';
+
+import { Eye } from 'lucide-react';
 
 const ZionAICustomerInsightsPage = () => {
   const features = [
@@ -77,15 +64,15 @@ const ZionAICustomerInsightsPage = () => {
             <Brain className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI Customer Analytics</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Zion AI Customer Insights
             </span>
           </h1>
-          
+
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Understand your customers like never before with our AI-powered analytics platform. 
+            Understand your customers like never before with our AI-powered analytics platform.
             Gain deep insights, predict behavior, and boost engagement.
           </p>
         </div>
@@ -113,8 +100,8 @@ const ZionAICustomerInsightsPage = () => {
               <div
                 key={index}
                 className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
+                  plan.popular
+                    ? 'border-cyan-500/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10'
                     : 'border-white/20'
                 } relative`}
               >
@@ -126,7 +113,7 @@ const ZionAICustomerInsightsPage = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
@@ -134,7 +121,7 @@ const ZionAICustomerInsightsPage = () => {
                     <span className="text-lg text-gray-300 font-normal">/{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -143,7 +130,7 @@ const ZionAICustomerInsightsPage = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
@@ -166,7 +153,7 @@ const ZionAICustomerInsightsPage = () => {
               Ready to Understand Your Customers Better?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Start gaining deep insights into your customer behavior and boost your 
+              Start gaining deep insights into your customer behavior and boost your
               engagement with our AI-powered analytics platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

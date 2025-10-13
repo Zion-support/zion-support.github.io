@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface FuturisticTextProps {
   children: React.ReactNode;
@@ -14,7 +13,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
   gradient = false
 }) => {
   const baseClasses = 'transition-all duration-300';
-  
+
   const variantClasses = {
     heading: 'text-4xl md:text-6xl font-bold',
     subheading: 'text-2xl md:text-4xl font-semibold',
@@ -22,7 +21,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
     caption: 'text-sm md:text-base'
   };
 
-  const gradientClasses = gradient 
+  const gradientClasses = gradient
     ? 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400'
     : 'text-white';
 

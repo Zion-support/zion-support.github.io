@@ -1,17 +1,5 @@
 "use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import {
-  MessageSquare,
-  Brain,
-  Shield,
-  Zap,
-  Star,
-  Mail,
-  BarChart3,
-  Settings,
-  Users,
-} from "lucide-react";
+import { MessageSquare } from 'lucide-react';
 
 export default function AIEmailAssistant() {
   const features = [

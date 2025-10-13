@@ -1,30 +1,4 @@
-import React, { useState, useCallback, useMemo, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Zap, 
-  Cloud, 
-  Shield, 
-  Database, 
-  Code, 
-  Brain, 
-  BarChart3, 
-  Star, 
-  ArrowRight, 
-  Globe, 
-  Cpu, 
-  Link as LinkIcon, 
-  Sidebar as SidebarIcon,
-  Video,
-  Users,
-  Target,
-  Settings,
-  Search,
-  Bell,
-  User
-} from 'lucide-react'
+import { X, Link as LinkIcon, Sidebar as SidebarIcon, Video, Search, Bell, User } from 'lucide-react';
 import FuturisticButton from './FuturisticButton'
 
 interface NavigationEnhancedProps {
@@ -157,7 +131,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
   ], [])
 
   return (
-    <nav 
+    <nav
       className="bg-gradient-to-r from-slate-900/95 via-purple-900/95 to-slate-900/95 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md sticky top-0 z-50"
       role="navigation"
       aria-label="Main navigation"
@@ -201,8 +175,8 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
             aria-label="Zion Tech Group - Go to homepage"
           >
@@ -228,7 +202,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
             >
               <SidebarIcon className="w-5 h-5" />
             </button>
-            
+
             {mainNavItems.map((item) => (
               <Link
                 key={item.name}
@@ -243,7 +217,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 }`}></span>
               </Link>
             ))}
-            
+
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
@@ -253,7 +227,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 <span>AI Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isAiServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
@@ -295,7 +269,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 <span>IT Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isItServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
@@ -327,7 +301,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                 <span>Micro SAAS</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isMicroSaasOpen && (
                 <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
@@ -406,8 +380,8 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   key={item.name}
                   to={item.path}
                   className={`px-4 py-3 rounded-lg transition-all duration-300 font-medium ${
-                    location.pathname === item.path 
-                      ? 'bg-cyan-500/20 text-cyan-400' 
+                    location.pathname === item.path
+                      ? 'bg-cyan-500/20 text-cyan-400'
                       : 'hover:bg-cyan-500/10 hover:text-cyan-400'
                   }`}
                   onClick={toggleMenu}
@@ -415,7 +389,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   {item.name}
                 </Link>
               ))}
-              
+
               {/* Mobile AI Services */}
               <div>
                 <button
@@ -425,7 +399,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   <span>AI Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 {isAiServicesOpen && (
                   <div className="ml-4 mt-2 space-y-1">
                     {aiServices.map((service) => (
@@ -456,7 +430,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   <span>IT Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 {isItServicesOpen && (
                   <div className="ml-4 mt-2 space-y-1">
                     {itServices.map((service) => (
@@ -486,7 +460,7 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
                   <span>Micro SAAS</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 {isMicroSaasOpen && (
                   <div className="ml-4 mt-2 space-y-1">
                     {microSaasServices.map((service) => (

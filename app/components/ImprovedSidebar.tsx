@@ -1,40 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  ChevronDown, 
-  ChevronRight,
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  Cloud, 
-  Settings,
-  Search,
-  Star,
-  TrendingUp,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  HelpCircle,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  X,
-  Menu,
-  Home,
-  BookOpen,
-  FileText,
-  MessageSquare,
-  Calendar,
-  DollarSign,
-  Play,
-  Download,
-  Share2
-} from 'lucide-react';
+import { ChevronRight, Search, X, Home, BookOpen, MessageSquare, DollarSign, Play } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -52,8 +16,8 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   }, [location, onClose]);
 
   const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
+    setExpandedSections(prev =>
+      prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
@@ -187,7 +151,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const filteredSections = navigationSections.map(section => ({
     ...section,
-    items: section.items.filter(item => 
+    items: section.items.filter(item =>
       item.label.toLowerCase().includes(searchQuery.toLowerCase())
     )
   })).filter(section => section.items.length > 0 || searchQuery === '');

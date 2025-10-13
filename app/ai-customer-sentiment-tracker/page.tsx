@@ -1,21 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  TrendingUp, 
-  MessageSquare, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  Smile,
-  AlertCircle
-} from 'lucide-react';
+
+import { MessageSquare, Smile, AlertCircle } from 'lucide-react';
 
 const AICustomerSentimentTrackerPage = () => {
   const features = [
@@ -152,14 +136,14 @@ const AICustomerSentimentTrackerPage = () => {
               <Heart className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Customer Intelligence</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Understand Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Customers Better</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Monitor customer sentiment across all channels with AI-powered analysis, real-time alerts, 
+              Monitor customer sentiment across all channels with AI-powered analysis, real-time alerts,
               and actionable insights to improve customer satisfaction and loyalty.
             </p>
 
@@ -220,7 +204,7 @@ const AICustomerSentimentTrackerPage = () => {
               Transform Your Customer Experience
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered sentiment tracking delivers measurable improvements in customer satisfaction, 
+              Our AI-powered sentiment tracking delivers measurable improvements in customer satisfaction,
               loyalty, and business growth.
             </p>
           </motion.div>
@@ -262,7 +246,7 @@ const AICustomerSentimentTrackerPage = () => {
               Advanced AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge artificial intelligence to understand and respond to customer sentiment 
+              Leverage cutting-edge artificial intelligence to understand and respond to customer sentiment
               across all touchpoints.
             </p>
           </motion.div>
@@ -304,7 +288,7 @@ const AICustomerSentimentTrackerPage = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include our core AI features 
+              Choose the perfect plan for your business needs. All plans include our core AI features
               with no hidden fees or long-term contracts.
             </p>
           </motion.div>
@@ -317,8 +301,8 @@ const AICustomerSentimentTrackerPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
+                  plan.popular
+                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent'
                     : 'border-white/10'
                 }`}
               >
@@ -378,7 +362,7 @@ const AICustomerSentimentTrackerPage = () => {
               Ready to Understand Your Customers Better?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already using our AI Customer Sentiment Tracker 
+              Join thousands of businesses already using our AI Customer Sentiment Tracker
               to improve customer satisfaction and drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

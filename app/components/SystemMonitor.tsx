@@ -1,4 +1,3 @@
-import React from "react";
 
 interface SystemMonitorProps {
   children?: React.ReactNode;

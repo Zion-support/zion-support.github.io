@@ -1,58 +1,4 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  Users, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  Award, 
-  Zap, 
-  Shield, 
-  Cloud, 
-  Smartphone, 
-  Globe, 
-  Mail, 
-  Phone, 
-  TrendingUp,
-  Database,
-  Settings,
-  Monitor,
-  Lock,
-  Server,
-  Cpu,
-  Network,
-  HardDrive,
-  Headphones,
-  Sparkles,
-  Target,
-  Calendar,
-  FileText,
-  Code,
-  Bot,
-  Wifi,
-  Heart,
-  Receipt,
-  Package,
-  Clock,
-  BarChart3,
-  PieChart,
-  Activity,
-  UserCheck,
-  MessageSquare,
-  PhoneCall,
-  Mail as EmailIcon,
-  Calendar as CalendarIcon,
-  DollarSign,
-  TrendingUp as TrendingUpIcon,
-  Filter,
-  Search,
-  Plus,
-  Edit,
-  Trash2,
-  Eye,
-  Download
-} from "lucide-react";
+import { PieChart, Activity, UserCheck, MessageSquare, PhoneCall, DollarSign, Filter, Search, Plus, Edit, Trash2, Eye } from 'lucide-react';
 
 export default function ZionAiCrmPro() {
   const features = [
@@ -199,7 +145,7 @@ export default function ZionAiCrmPro() {
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.3),transparent_50%)]"></div>
-        
+
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -209,18 +155,18 @@ export default function ZionAiCrmPro() {
                   <Users className="w-4 h-4 text-green-400 mr-2" />
                   <span className="text-green-400 text-sm font-medium">#1 AI CRM Platform 2024</span>
                 </div>
-                
+
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400">
                     Zion AI CRM Pro
                   </span>
                 </h1>
-                
+
                 <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-                  Transform your sales process with AI-powered customer relationship management. 
+                  Transform your sales process with AI-powered customer relationship management.
                   Get intelligent lead scoring, automated follow-ups, and predictive analytics that drive results.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
                     to="/contact"
@@ -237,7 +183,7 @@ export default function ZionAiCrmPro() {
                     <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                   </Link>
                 </div>
-                
+
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-6">
                   {crmStats.map((stat, index) => (
@@ -251,7 +197,7 @@ export default function ZionAiCrmPro() {
                   ))}
                 </div>
               </div>
-              
+
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <div className="text-center mb-6">
@@ -261,7 +207,7 @@ export default function ZionAiCrmPro() {
                     <h3 className="text-2xl font-bold text-white mb-2">Starting at $199/month</h3>
                     <p className="text-gray-300">AI-powered CRM for your sales team</p>
                   </div>
-                  
+
                   <div className="space-y-4">
                     <div className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
@@ -280,7 +226,7 @@ export default function ZionAiCrmPro() {
                       <span>Multi-channel communication</span>
                     </div>
                   </div>
-                  
+
                   <div className="mt-6">
                     <Link
                       to="/contact"
@@ -309,7 +255,7 @@ export default function ZionAiCrmPro() {
                 Everything you need to manage customer relationships and drive sales growth
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -352,14 +298,14 @@ export default function ZionAiCrmPro() {
                 Choose the CRM plan that fits your sales team's needs and budget
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                    plan.popular 
-                      ? 'border-green-500/50 shadow-green-500/25' 
+                    plan.popular
+                      ? 'border-green-500/50 shadow-green-500/25'
                       : 'border-white/20 hover:border-green-500/30'
                   }`}
                 >
@@ -370,7 +316,7 @@ export default function ZionAiCrmPro() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
@@ -379,7 +325,7 @@ export default function ZionAiCrmPro() {
                       <span className="text-gray-300 ml-1">/{plan.period}</span>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
@@ -388,7 +334,7 @@ export default function ZionAiCrmPro() {
                       </div>
                     ))}
                   </div>
-                  
+
                   <Link
                     to="/contact"
                     className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${
@@ -419,7 +365,7 @@ export default function ZionAiCrmPro() {
                 See what sales professionals say about Zion AI CRM Pro
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -455,10 +401,10 @@ export default function ZionAiCrmPro() {
                 Ready to Transform Your Sales?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of sales teams already using Zion AI CRM Pro to drive growth and close more deals. 
+                Join thousands of sales teams already using Zion AI CRM Pro to drive growth and close more deals.
                 Start your free trial today.
               </p>
-              
+
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -483,7 +429,7 @@ export default function ZionAiCrmPro() {
                   <p className="text-green-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"

@@ -1,20 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Cloud, 
-  Code, 
-  Database, 
-  Users, 
-  ArrowRight,
-  Sparkles,
-  Target,
-  TrendingUp
-} from 'lucide-react';
+
 
 const AIServicesPage = () => {
   const aiServices = [
@@ -104,15 +88,15 @@ const AIServicesPage = () => {
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Solutions</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               AI Services
             </span>
           </h1>
-          
+
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with cutting-edge artificial intelligence solutions. 
+            Transform your business with cutting-edge artificial intelligence solutions.
             From analytics to automation, we provide comprehensive AI services that drive growth and innovation.
           </p>
         </div>
@@ -142,15 +126,15 @@ const AIServicesPage = () => {
               <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 {service.icon}
               </div>
-              
+
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                 {service.title}
               </h3>
-              
+
               <p className="text-gray-300 mb-4 leading-relaxed">
                 {service.description}
               </p>
-              
+
               <ul className="space-y-2 mb-4">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -159,7 +143,7 @@ const AIServicesPage = () => {
                   </li>
                 ))}
               </ul>
-              
+
               <div className="flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -175,7 +159,7 @@ const AIServicesPage = () => {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let our AI experts help you identify the best opportunities for your business 
+              Let our AI experts help you identify the best opportunities for your business
               and implement solutions that drive real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

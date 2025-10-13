@@ -1,20 +1,4 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  Play, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Clock, 
-  Shield,
-  Brain,
-  BarChart3,
-  Zap,
-  Mail,
-  Phone
-} from "lucide-react";
+import { Play } from 'lucide-react';
 
 export default function DemoPage() {
   const [selectedDemo, setSelectedDemo] = useState("ai-analytics");
@@ -103,7 +87,7 @@ export default function DemoPage() {
                 Experience Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Solutions</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                See our AI and technology solutions in action. Choose from interactive demos designed to showcase 
+                See our AI and technology solutions in action. Choose from interactive demos designed to showcase
                 the power and potential of our cutting-edge technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -134,7 +118,7 @@ export default function DemoPage() {
                 Select from our range of interactive demonstrations to see how our solutions can benefit your business.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {demos.map((demo) => (
                 <button
@@ -192,7 +176,7 @@ export default function DemoPage() {
                       </Link>
                     </div>
                   </div>
-                  
+
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-8 text-center">
                     <div className="text-cyan-400 mb-4">
                       {selectedDemoData.icon}
@@ -229,7 +213,7 @@ export default function DemoPage() {
                 See how our demos have helped businesses make informed decisions about our solutions.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div

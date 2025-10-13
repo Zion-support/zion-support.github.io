@@ -1,32 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Twitter, 
-  Linkedin, 
-  Github, 
-  Facebook, 
-  Instagram,
-  Youtube,
-  Star,
-  Award,
-  Users,
-  Shield,
-  Zap,
-  Brain,
-  BarChart3,
-  Cloud,
-  Settings,
-  HelpCircle,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Clock
-} from 'lucide-react';
+
+import { Twitter, Linkedin, Github, Facebook, Instagram, Youtube } from 'lucide-react';
 
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();
@@ -219,8 +192,8 @@ const ImprovedFooter = () => {
                     key={linkIndex}
                     to={link.href}
                     className={`block text-sm transition-colors duration-300 group ${
-                      link.featured 
-                        ? 'text-cyan-400 hover:text-cyan-300 font-medium' 
+                      link.featured
+                        ? 'text-cyan-400 hover:text-cyan-300 font-medium'
                         : 'text-gray-300 hover:text-cyan-400'
                     }`}
                   >
@@ -260,7 +233,7 @@ const ImprovedFooter = () => {
                 Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology.
               </p>
             </div>
-            
+
             {/* Social Links */}
             <div>
               <h4 className="text-white font-semibold mb-4">Follow Us</h4>
