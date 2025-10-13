@@ -127,11 +127,13 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
                       stat.changeType === 'positive' ? 'text-green-600' : 'text-red-600'
                     }`}>
                       {stat.change}
-                    <span className="text-sm text-gray-500">vs last month
+                    </span>
+                    <span className="text-sm text-gray-500">vs last month</span>
+                  </div>
               ))}
             {/* Quick Actions */}
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <button
                   onClick={() => setActiveTab('management')}
@@ -140,8 +142,13 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-blue-100 rounded-lg">
                       <Settings className="w-5 h-5 text-blue-600" />
-                      <div className="font-medium text-gray-900">Create Ad
-                      <div className="text-sm text-gray-600">Start a new campaign
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">Create Ad</div>
+                      <div className="text-sm text-gray-600">Start a new campaign</div>
+                    </div>
+                  </div>
+                </button>
                 <button
                   onClick={() => setActiveTab('templates')}
                   className="p-4 border border-gray-200 rounded-lg hover:border-purple-500 hover:bg-purple-50 transition-colors text-left"
@@ -149,8 +156,13 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-purple-100 rounded-lg">
                       <Palette className="w-5 h-5 text-purple-600" />
-                      <div className="font-medium text-gray-900">Browse Templates
-                      <div className="text-sm text-gray-600">Use pre-made designs
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">Browse Templates</div>
+                      <div className="text-sm text-gray-600">Use pre-made designs</div>
+                    </div>
+                  </div>
+                </button>
                 <button
                   onClick={() => setActiveTab('scheduler')}
                   className="p-4 border border-gray-200 rounded-lg hover:border-green-500 hover:bg-green-50 transition-colors text-left"
@@ -158,8 +170,13 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-green-100 rounded-lg">
                       <Calendar className="w-5 h-5 text-green-600" />
-                      <div className="font-medium text-gray-900">Schedule Campaign
-                      <div className="text-sm text-gray-600">Plan future ads
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">Schedule Campaign</div>
+                      <div className="text-sm text-gray-600">Plan future ads</div>
+                    </div>
+                  </div>
+                </button>
                 <button
                   onClick={() => setActiveTab('analytics')}
                   className="p-4 border border-gray-200 rounded-lg hover:border-orange-500 hover:bg-orange-50 transition-colors text-left"
@@ -167,11 +184,18 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-orange-100 rounded-lg">
                       <TrendingUp className="w-5 h-5 text-orange-600" />
-                      <div className="font-medium text-gray-900">View Analytics
-                      <div className="text-sm text-gray-600">Track performance
+                    </div>
+                    <div>
+                      <div className="font-medium text-gray-900">View Analytics</div>
+                      <div className="text-sm text-gray-600">Track performance</div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
             {/* Recent Activity */}
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Activity
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Activity</h3>
               <div className="space-y-4">
                 {[
                   { action: 'Created new campaign', time: '2 hours ago', type: 'create' },
@@ -180,11 +204,15 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
                   { action: 'Updated "Holiday Special" template', time: '2 days ago', type: 'update' }
                 ].map((activity, index) => (
                   <div key={index} className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                     <div className="flex-1">
-                      <div className="text-sm font-medium text-gray-900">{activity.action}
-                      <div className="text-xs text-gray-500">{activity.time}
+                      <div className="text-sm font-medium text-gray-900">{activity.action}</div>
+                      <div className="text-xs text-gray-500">{activity.time}</div>
+                    </div>
+                  </div>
                 ))}
+              </div>
+            </div>
         );
       case 'management':
         return <AdManagementSystem />;
@@ -198,9 +226,10 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
         return (
           <div className="space-y-8">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Ad Component Preview
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Ad Component Preview</h3>
               <div className="space-y-6">
-                  <h4 className="text-md font-medium text-gray-700 mb-3">Basic Advertising Banner
+                <div>
+                  <h4 className="text-md font-medium text-gray-700 mb-3">Basic Advertising Banner</h4>
                   <AdvertisingBanner
                     title="Revolutionary AI Solutions"
                     description="Transform your business with cutting-edge artificial intelligence technology"
@@ -211,10 +240,18 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
                     variant="gradient"
                     size="medium"
                   />
-                  <h4 className="text-md font-medium text-gray-700 mb-3">New Content Advertising Banner
+                </div>
+                <div>
+                  <h4 className="text-md font-medium text-gray-700 mb-3">New Content Advertising Banner</h4>
                   <NewContentAdvertisingBanner />
-                  <h4 className="text-md font-medium text-gray-700 mb-3">Ultimate Content Advertising Banner
+                </div>
+                <div>
+                  <h4 className="text-md font-medium text-gray-700 mb-3">Ultimate Content Advertising Banner</h4>
                   <UltimateContentAdvertisingBanner />
+                </div>
+              </div>
+            </div>
+          </div>
         );
       default:
         return null;
@@ -226,11 +263,16 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
       {/* Header */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
         <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold text-gray-900">Ad Management Dashboard
-            <p className="text-gray-600 mt-1">Manage, analyze, and optimize your advertising campaigns
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900">Ad Management Dashboard</h1>
+            <p className="text-gray-600 mt-1">Manage, analyze, and optimize your advertising campaigns</p>
+          </div>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors">
             <Plus className="w-5 h-5" />
             Quick Create
+          </button>
+        </div>
+      </div>
       {/* Navigation Tabs */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 mb-6">
         <div className="border-b border-gray-200">
@@ -247,7 +289,11 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
               >
                 <tab.icon className="w-4 h-4" />
                 {tab.label}
+              </button>
             ))}
+          </nav>
+        </div>
+      </div>
       {/* Tab Content */}
       <motion.div
         key={activeTab}
@@ -256,6 +302,8 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
         transition={{ duration: 0.3 }}
       >
         {renderTabContent()}
+      </motion.div>
+    </div>
   );
 };
 
