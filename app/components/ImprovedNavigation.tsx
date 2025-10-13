@@ -25,7 +25,9 @@ import {
   Users,
   Award,
   Clock,
-  CheckCircle
+  CheckCircle,
+  Play,
+  DollarSign
 } from 'lucide-react';
 
 const ImprovedNavigation = () => {
@@ -579,7 +581,7 @@ const ImprovedNavigation = () => {
   const Sidebar = () => (
     <div className={`fixed inset-0 z-50 lg:hidden ${isSidebarOpen ? 'block' : 'hidden'}`}>
       <div className="fixed inset-0 bg-black/50" onClick={() => setIsSidebarOpen(false)} />
-      <div className="fixed right-0 top-0 h-full w-80 bg-slate-900/95 backdrop-blur-sm border-l border-white/10">
+      <div className="fixed right-0 top-0 h-full w-80 bg-slate-900/95 backdrop-blur-sm border-l border-cyan-500/20 hologram-effect">
         <div className="p-6">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-xl font-bold text-white">Menu</h2>
@@ -600,7 +602,7 @@ const ImprovedNavigation = () => {
                 placeholder="Search services..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                className="w-full pl-10 pr-4 py-2 cyber-input"
               />
             </div>
           </div>
@@ -611,7 +613,7 @@ const ImprovedNavigation = () => {
               <div key={item.label}>
                 <Link
                   to={item.href}
-                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors"
+                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 hover:border hover:border-cyan-500/30 futuristic-card"
                   onClick={() => setIsSidebarOpen(false)}
                 >
                   <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center`}>
@@ -634,7 +636,7 @@ const ImprovedNavigation = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
+                  className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-all duration-300 hover:animate-neon-glow"
                   onClick={() => setIsSidebarOpen(false)}
                 >
                   {link.icon}
@@ -648,16 +650,16 @@ const ImprovedNavigation = () => {
           <div className="mt-8 pt-6 border-t border-white/10">
             <h3 className="text-white font-medium mb-4">Contact</h3>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-cyan-400" />
+              <div className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-300">
+                <Phone className="w-4 h-4 text-cyan-400 animate-pulse" />
                 <span className="text-gray-300 text-sm">{contactInfo.phone}</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-4 h-4 text-cyan-400" />
+              <div className="flex items-center space-x-3 hover:text-cyan-400 transition-colors duration-300">
+                <Mail className="w-4 h-4 text-cyan-400 animate-pulse" />
                 <span className="text-gray-300 text-sm">{contactInfo.email}</span>
               </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
+              <div className="flex items-start space-x-3 hover:text-cyan-400 transition-colors duration-300">
+                <MapPin className="w-4 h-4 text-cyan-400 mt-0.5 animate-pulse" />
                 <span className="text-gray-300 text-sm">{contactInfo.address}</span>
               </div>
             </div>
@@ -669,12 +671,12 @@ const ImprovedNavigation = () => {
 
   return (
     <>
-      <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
+      <header className="bg-black/20 backdrop-blur-sm border-b border-cyan-500/20 relative z-50 cyber-grid">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link to="/" className="text-2xl font-bold text-white group">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:from-cyan-300 group-hover:to-purple-300 transition-all duration-300">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:from-cyan-300 group-hover:to-purple-300 transition-all duration-300 animate-neon-glow">
                 Zion Tech Group
               </span>
             </Link>
@@ -699,7 +701,7 @@ const ImprovedNavigation = () => {
                   
                   {/* Enhanced Dropdown Menu */}
                   {activeDropdown === item.label && (
-                    <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-xl shadow-2xl z-50">
+                    <div className="absolute top-full left-0 mt-2 w-80 futuristic-card border-cyan-500/30 shadow-2xl z-50 animate-fade-in-up">
                       <div className="p-4">
                         <div className="flex items-center space-x-3 mb-4">
                           <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center`}>
@@ -755,7 +757,7 @@ const ImprovedNavigation = () => {
               </div>
               <Link
                 to="/contact"
-                className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105 flex"
+                className="group glow-button flex items-center justify-center"
               >
                 Contact Us
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -766,7 +768,7 @@ const ImprovedNavigation = () => {
             <div className="lg:hidden flex items-center space-x-2">
               <button
                 onClick={() => setIsSidebarOpen(true)}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 p-2"
+                className="text-gray-300 hover:text-cyan-400 transition-all duration-300 p-2 hover:animate-neon-glow"
               >
                 <Menu className="w-6 h-6" />
               </button>
@@ -775,7 +777,7 @@ const ImprovedNavigation = () => {
 
           {/* Mobile Navigation */}
           {isOpen && (
-            <div className="lg:hidden py-4 border-t border-white/10">
+            <div className="lg:hidden py-4 border-t border-cyan-500/20 matrix-bg">
               <div className="space-y-4">
                 {navigationItems.map((item) => (
                   <div key={item.label}>
