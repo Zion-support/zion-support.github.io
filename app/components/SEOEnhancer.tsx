@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -129,10 +123,3 @@ export const defaultStructuredData = {
 };
 
 export default SEOEnhancer;
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93

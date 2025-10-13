@@ -38,12 +38,7 @@ export default async function handler(req, res) {
       quoteId: `quote_${Date.now()}`,
       data: quoteData
     }));
-
-<<<<<<< HEAD
-  } catch {
-=======
-  } catch (_error) {  
->>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
+  } catch (_error) {
     // console.error('Quote submission error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

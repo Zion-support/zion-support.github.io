@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 // Simple email validation function
 const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
 
-async function handler(req, res) {
-=======
 export default async function handler(req, res) {
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -45,13 +41,6 @@ export default async function handler(req, res) {
       email: req.body.email,
       timestamp: new Date().toISOString()
     });
-<<<<<<< HEAD
-=======
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ success: true, message: 'Successfully subscribed to newsletter' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -70,8 +59,3 @@ export default async function handler(req, res) {
     }));
   }
 }
-<<<<<<< HEAD
-
-export default handler;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 // Next.js type declarations
 declare module 'next' {
   interface NextApiRequest {
@@ -21,9 +16,3 @@ export const nextUtil = () => {
 };
 
 export default nextUtil;
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
