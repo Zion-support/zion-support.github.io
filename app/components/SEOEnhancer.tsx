@@ -7,7 +7,7 @@ interface SEOEnhancerProps {
   image?: string;
   url?: string;
   type?: string;
-  structuredData?: any;
+  structuredData?: unknown;
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin, Clock, MessageSquare, BookOpen, HelpCircle, Users, Zap } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
   const supportOptions = [
