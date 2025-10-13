@@ -1,56 +1,47 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { 
-  Receipt, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  DollarSign,
-  FileText,
-  CreditCard
-} from 'lucide-react';
+import { Receipt, Brain, BarChart3, Zap, Star, CheckCircle, ArrowRight, Users, TrendingUp, Clock, Award, DollarSign, PieChart } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
 
 const SmartExpenseCategorizerPage = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: "AI-Powered Categorization",
-      description: "Advanced machine learning automatically categorizes expenses with 98% accuracy, learning from your patterns and preferences."
+      description: "Automatically categorize expenses using machine learning to understand spending patterns and merchant types",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
     },
     {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
-      title: "Smart Receipt Processing",
-      description: "Automatically extract data from receipts, invoices, and bills using OCR technology and AI-powered data extraction."
+      title: "Receipt OCR Scanning",
+      description: "Extract data from receipts using advanced OCR technology and automatically categorize expenses",
+      icon: <Receipt className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+      title: "Smart Learning",
+      description: "The system learns from your categorization patterns and improves accuracy over time",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Tax Optimization",
+      description: "Automatically identify tax-deductible expenses and optimize your tax preparation process",
+      icon: <DollarSign className="w-8 h-8" />,
+      color: "from-yellow-500 to-amber-500"
+    },
+    {
       title: "Real-time Analytics",
-      description: "Comprehensive expense analytics with spending trends, budget tracking, and financial insights to optimize your finances."
+      description: "Get instant insights into your spending patterns with comprehensive dashboards and reports",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500"
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: "Bank Integration",
-      description: "Securely connect with your bank accounts and credit cards for automatic transaction import and categorization."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: "Automated Workflows",
-      description: "Set up automated rules for expense approval, reimbursement, and reporting to streamline your financial processes."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-      title: "Team Management",
-      description: "Manage team expenses with role-based permissions, approval workflows, and centralized expense reporting."
+      title: "Multi-Currency Support",
+      description: "Handle expenses in multiple currencies with automatic conversion and categorization",
+      icon: <PieChart className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500"
     }
   ];
 
@@ -58,13 +49,13 @@ const SmartExpenseCategorizerPage = () => {
     {
       name: "Personal",
       price: "$19",
-      period: "/month",
-      description: "Perfect for individuals",
+      period: "per month",
+      description: "Perfect for individuals and freelancers",
       features: [
-        "Up to 500 transactions/month",
+        "Up to 500 expenses per month",
         "Basic AI categorization",
-        "Receipt scanning",
-        "Basic analytics",
+        "Receipt OCR scanning",
+        "Basic analytics dashboard",
         "Email support",
         "1 user account"
       ],
@@ -73,355 +64,300 @@ const SmartExpenseCategorizerPage = () => {
     {
       name: "Business",
       price: "$59",
-      period: "/month",
+      period: "per month",
       description: "Ideal for small businesses",
       features: [
-        "Up to 5,000 transactions/month",
+        "Up to 2,000 expenses per month",
         "Advanced AI categorization",
-        "Bank integration",
+        "Tax optimization features",
         "Advanced analytics",
         "Priority support",
-        "5 user accounts",
-        "API access"
+        "API access",
+        "Up to 5 user accounts"
       ],
       popular: true
     },
     {
       name: "Enterprise",
       price: "$149",
-      period: "/month",
+      period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited transactions",
-        "Custom AI models",
-        "White-label solution",
-        "Advanced security",
+        "Unlimited expenses",
+        "Custom categorization rules",
+        "Advanced reporting",
         "Dedicated support",
-        "Unlimited users",
-        "Custom integrations"
+        "Custom integrations",
+        "SLA guarantee",
+        "Unlimited user accounts",
+        "White-label options"
       ],
       popular: false
     }
   ];
 
-  const benefits = [
+  const testimonials = [
     {
-      icon: <DollarSign className="w-12 h-12 text-green-400" />,
-      title: "Save Time & Money",
-      description: "Reduce expense processing time by 80% and eliminate manual data entry errors that cost businesses thousands."
+      name: "Alex Thompson",
+      company: "Freelance Consultant",
+      role: "Independent Contractor",
+      content: "The Smart Expense Categorizer saved me hours every week. It automatically categorizes all my business expenses and even identifies tax deductions I missed.",
+      rating: 5
     },
     {
-      icon: <FileText className="w-12 h-12 text-blue-400" />,
-      title: "Automated Compliance",
-      description: "Ensure tax compliance with automated categorization and detailed expense reports for easy filing and auditing."
+      name: "Sarah Chen",
+      company: "Small Business Owner",
+      role: "CEO",
+      content: "The receipt scanning feature is incredible. I just take a photo and it automatically extracts all the details and categorizes the expense perfectly.",
+      rating: 5
     },
     {
-      icon: <CreditCard className="w-12 h-12 text-purple-400" />,
-      title: "Better Financial Control",
-      description: "Gain better control over spending with real-time insights and automated budget tracking and alerts."
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-red-400" />,
-      title: "Improved Cash Flow",
-      description: "Optimize cash flow with better expense visibility and automated reimbursement processes."
+      name: "Michael Rodriguez",
+      company: "Accounting Firm",
+      role: "Senior Accountant",
+      content: "This tool has revolutionized how we handle client expense categorization. The AI accuracy is impressive and saves us significant time.",
+      rating: 5
     }
-  ];
-
-  const stats = [
-    { number: "80%", label: "Time Saved" },
-    { number: "98%", label: "Accuracy Rate" },
-    { number: "50%", label: "Error Reduction" },
-    { number: "3x", label: "Faster Processing" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Smart Expense Categorizer | Zion Tech Group</title>
-        <meta name="description" content="Automate expense categorization with AI-powered receipt processing, bank integration, and real-time analytics." />
-        <meta name="keywords" content="expense management, receipt scanning, expense categorization, financial automation, AI expenses" />
-      </Helmet>
+      <EnhancedSEO
+        title="Smart Expense Categorizer | Zion Tech Group"
+        description="Automatically categorize expenses with AI-powered analysis. OCR receipt scanning, tax optimization, and real-time analytics for better financial management."
+        keywords="expense categorization, receipt OCR, expense tracking, tax optimization, financial management, AI expense analysis"
+        canonical="https://ziontechgroup.com/smart-expense-categorizer"
+      />
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">
-              <Receipt className="w-5 h-5 text-cyan-400 mr-2" />
-              <span className="text-cyan-300 font-medium">AI-Powered Expense Intelligence</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Automate Your
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Expense Management</span>
-            </h1>
-            
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your expense management with AI-powered categorization, automated receipt processing, 
-              and real-time financial insights that save time and money.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
-                View Demo
-              </motion.button>
-            </div>
-          </motion.div>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-400 font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
+        
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
+            <Receipt className="w-4 h-4 text-green-400 mr-2" />
+            <span className="text-green-400 text-sm font-medium">AI-Powered Financial Intelligence</span>
           </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transform Your Financial Management
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered expense management delivers measurable improvements in efficiency, 
-              accuracy, and financial control.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="mb-6 flex justify-center">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </motion.div>
-            ))}
+          
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400">
+              Smart Expense Categorizer
+            </span>
+          </h1>
+          
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Automatically categorize expenses with AI-powered analysis. OCR receipt scanning, tax optimization, 
+            and real-time analytics to streamline your financial management and save hours every week.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <FuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<Zap className="w-5 h-5" />}
+            >
+              Start Free Trial
+            </FuturisticButton>
+            <FuturisticButton
+              href="#demo"
+              variant="outline"
+              size="lg"
+              icon={<BarChart3 className="w-5 h-5" />}
+            >
+              Watch Demo
+            </FuturisticButton>
+          </div>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="text-center group">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Receipt className="w-6 h-6 text-green-400" />
+              </div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">98%</div>
+              <div className="text-gray-300 text-xs md:text-sm">Accuracy Rate</div>
+            </div>
+            <div className="text-center group">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Clock className="w-6 h-6 text-blue-400" />
+              </div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">90%</div>
+              <div className="text-gray-300 text-xs md:text-sm">Time Saved</div>
+            </div>
+            <div className="text-center group">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Users className="w-6 h-6 text-purple-400" />
+              </div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">8,000+</div>
+              <div className="text-gray-300 text-xs md:text-sm">Happy Users</div>
+            </div>
+            <div className="text-center group">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-yellow-500/20 to-amber-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Award className="w-6 h-6 text-yellow-400" />
+              </div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">$2M+</div>
+              <div className="text-gray-300 text-xs md:text-sm">Expenses Processed</div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Advanced AI Features
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Intelligent Expense Management
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge artificial intelligence to automate and optimize every aspect 
-              of your expense management process.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Our AI-powered expense categorizer uses advanced machine learning to understand your spending patterns 
+              and automatically organize your financial data for better insights and tax optimization.
             </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <FuturisticCard
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
+                className="group hover:scale-105 transition-all duration-300"
               >
-                <div className="mb-6">
+                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
                   {feature.description}
                 </p>
-              </motion.div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Flexible Pricing Plans
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Simple Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business size and expense volume. 
-              All plans include our core AI features with no setup fees.
+              Choose the plan that fits your expense volume and business needs. All plans include our core AI features.
             </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
+                className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
-                    : 'border-white/10'
-                }`}
+                    ? 'border-green-500/50 ring-2 ring-green-500/20' 
+                    : 'border-white/20'
+                } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
-                    </div>
+                    </span>
                   </div>
                 )}
-
-                <div className="text-center mb-8">
+                <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-300 ml-2">{plan.period}</span>
                   </div>
                 </div>
-
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
+                    <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                      {feature}
                     </li>
                   ))}
                 </ul>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:shadow-lg hover:shadow-cyan-500/25'
-                      : 'border border-gray-600 text-white hover:bg-white/10'
-                  }`}
+                <FuturisticButton
+                  href="/contact"
+                  variant={plan.popular ? "primary" : "outline"}
+                  size="lg"
+                  className="w-full"
+                  icon={<ArrowRight className="w-5 h-5" />}
                 >
                   Get Started
-                </motion.button>
-              </motion.div>
+                </FuturisticButton>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Trusted by Finance Professionals
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See what our customers say about the Smart Expense Categorizer
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 relative overflow-hidden"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                <div>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-12 text-center"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your Expenses?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already using our Smart Expense Categorizer 
-              to streamline their financial management and save time.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-              >
-                Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Contact Sales
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 px-4 bg-black/20">
-        <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-          <p className="text-gray-300 mb-6">
-            Contact us today to learn more about our Smart Expense Categorizer and how it can transform your financial management.
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-blue-900/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to Streamline Your Expense Management?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Join thousands of professionals who have already transformed their financial management with our AI-powered expense categorizer.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-300">
-            <div className="flex items-center">
-              <Receipt className="w-5 h-5 mr-2 text-cyan-400" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-cyan-400" />
-              <span>https://ziontechgroup.com</span>
-            </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <FuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<Zap className="w-5 h-5" />}
+            >
+              Start Your Free Trial
+            </FuturisticButton>
+            <FuturisticButton
+              href="/demo"
+              variant="outline"
+              size="lg"
+              icon={<BarChart3 className="w-5 h-5" />}
+            >
+              Schedule Demo
+            </FuturisticButton>
           </div>
         </div>
       </section>
