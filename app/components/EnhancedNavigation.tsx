@@ -151,7 +151,9 @@ const EnhancedNavigation = () => {
     { label: 'Pricing', href: '/pricing' },
     { label: 'Demo', href: '/demo' },
     { label: 'Support', href: '/support' },
-    { label: 'Consultation', href: '/consultation' }
+    { label: 'Consultation', href: '/consultation' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Case Studies', href: '/case-studies' }
   ];
 
   return (
@@ -236,36 +238,36 @@ const EnhancedNavigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-white/10">
+          <div className="lg:hidden py-4 border-t border-white/10 max-h-96 overflow-y-auto">
             <div className="space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.label}>
                   <Link
                     to={item.href}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                    className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.icon}
-                    <span className="font-medium">{item.label}</span>
+                    <span>{item.label}</span>
                   </Link>
-                  <div className="ml-6 space-y-2">
-                    {item.dropdown.slice(0, 4).map((dropdownItem) => (
+                  <div className="ml-6 space-y-1">
+                    {item.dropdown.slice(0, 6).map((dropdownItem) => (
                       <Link
                         key={dropdownItem.href}
                         to={dropdownItem.href}
-                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1"
+                        className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300 py-1 pl-2 border-l border-gray-600 hover:border-cyan-400"
                         onClick={() => setIsOpen(false)}
                       >
                         {dropdownItem.label}
                       </Link>
                     ))}
-                    {item.dropdown.length > 4 && (
+                    {item.dropdown.length > 6 && (
                       <Link
                         to={item.href}
-                        className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
+                        className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium pl-2 border-l border-cyan-400"
                         onClick={() => setIsOpen(false)}
                       >
-                        View All →
+                        View All {item.label} →
                       </Link>
                     )}
                   </div>
@@ -273,18 +275,30 @@ const EnhancedNavigation = () => {
               ))}
               
               <div className="pt-4 border-t border-white/10">
-                <div className="space-y-2">
+                <h4 className="text-sm font-semibold text-white mb-3">Quick Links</h4>
+                <div className="grid grid-cols-2 gap-2">
                   {quickLinks.map((link) => (
                     <Link
                       key={link.href}
                       to={link.href}
-                      className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
+                      className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-white/5 text-sm"
                       onClick={() => setIsOpen(false)}
                     >
                       {link.label}
                     </Link>
                   ))}
                 </div>
+              </div>
+              
+              <div className="pt-4 border-t border-white/10">
+                <Link
+                  to="/contact"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           </div>
