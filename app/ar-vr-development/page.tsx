@@ -6,29 +6,44 @@ import { Eye, Box, ArrowRight, Sparkles, CheckCircle, Brain, Globe } from 'lucid
 const ARVRDevelopmentPage = () => {
   const features = [
     {
-      title: "Immersive AR Experiences",
-      description: "Create stunning augmented reality applications that blend digital content with the real world",
       icon: <Eye className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      title: "AR Development",
+      description: "Create immersive augmented reality experiences for mobile and web platforms."
     },
     {
-      title: "Virtual Reality Worlds",
-      description: "Build immersive VR environments and experiences for training, entertainment, and business",
       icon: <Box className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      title: "VR Development",
+      description: "Build virtual reality applications for Oculus, HTC Vive, and other VR headsets."
     },
     {
-      title: "Mixed Reality Solutions",
-      description: "Combine AR and VR technologies for next-generation mixed reality experiences",
+      icon: <Target className="w-8 h-8" />,
+      title: "Mixed Reality",
+      description: "Develop mixed reality solutions that blend physical and digital worlds."
+    },
+    {
       icon: <Brain className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      title: "AI Integration",
+      description: "Integrate AI and machine learning for intelligent AR/VR experiences."
     },
     {
-      title: "Cross-Platform Development",
-      description: "Deploy across all major AR/VR platforms including Meta, Apple, and Microsoft",
+      icon: <Users className="w-8 h-8" />,
+      title: "Multi-user Experiences",
+      description: "Create collaborative AR/VR experiences for teams and communities."
+    },
+    {
       icon: <Globe className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      title: "Cross-platform",
+      description: "Deploy across multiple platforms and devices with consistent performance."
     }
+  ];
+
+  const benefits = [
+    "Immersive user experiences",
+    "Increased engagement",
+    "Real-time 3D rendering",
+    "Cross-platform compatibility",
+    "AI-powered interactions",
+    "Scalable solutions"
   ];
 
   return (
@@ -103,7 +118,7 @@ const ARVRDevelopmentPage = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                 >
                   {feature.icon}
                 </div>

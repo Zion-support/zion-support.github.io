@@ -4,36 +4,19 @@ import { Cloud, Shield, Zap, Globe, ArrowRight, CheckCircle, BarChart3, Database
 
 const CloudServicesPage: React.FC = () => {
   const services = [
-    {
-      title: "Cloud Migration",
-      description: "Seamlessly migrate your applications and data to the cloud with zero downtime and maximum security.",
-      icon: <Cloud className="w-6 h-6" />
-    },
-    {
-      title: "Cloud Security",
-      description: "Comprehensive security solutions including encryption, access control, and threat monitoring.",
-      icon: <Shield className="w-6 h-6" />
-    },
-    {
-      title: "Cloud Optimization",
-      description: "Optimize your cloud infrastructure for performance, cost, and scalability.",
-      icon: <Zap className="w-6 h-6" />
-    },
-    {
-      title: "Multi-Cloud Strategy",
-      description: "Design and implement multi-cloud architectures for maximum flexibility and resilience.",
-      icon: <Globe className="w-6 h-6" />
-    },
-    {
-      title: "Cloud Analytics",
-      description: "Advanced analytics and monitoring solutions for your cloud infrastructure and applications.",
-      icon: <BarChart3 className="w-6 h-6" />
-    },
-    {
-      title: "Database Services",
-      description: "Managed database services with automated backups, scaling, and performance optimization.",
-      icon: <Database className="w-6 h-6" />
-    }
+    { name: "Cloud Migration", path: "/cloud-migration" },
+    { name: "Cloud Security", path: "/cloud-security" },
+    { name: "Cloud Monitoring", path: "/cloud-monitoring" },
+    { name: "Cloud Optimization", path: "/cloud-optimization" }
+  ];
+
+  const benefits = [
+    "Scalable infrastructure",
+    "Cost-effective solutions",
+    "Enhanced security",
+    "24/7 monitoring",
+    "Global availability",
+    "Automated backups"
   ];
 
   return (

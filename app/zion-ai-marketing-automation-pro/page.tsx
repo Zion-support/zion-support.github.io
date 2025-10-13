@@ -1,7 +1,18 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
-export default function ZionAiMarketingAutomationPro() {
+export default function page() {
+  const stats = [
+    { label: "Stat 1", value: "100%" }
+  ];
+  const testimonials = [
+    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5 }
+  ];
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2"
+  ];
   const features = [
     {
       title: "AI-Powered Campaign Optimization",

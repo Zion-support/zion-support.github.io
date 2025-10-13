@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   BarChart3, 
   Cloud, 
@@ -13,31 +11,33 @@ import {
   ArrowRight,
   CheckCircle
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const AIAutomationPlatformPage = () => {
   const features = [
     {
+      icon: <Zap className="w-8 h-8" />,
       title: "Intelligent Workflow Automation",
-      description: "AI-powered workflow automation that learns from your business processes and optimizes them automatically",
-      icon: <Workflow className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      description: "Automate complex business processes with AI that learns and adapts to your specific needs",
+      color: "from-cyan-500 to-blue-500"
     },
     {
-      title: "Smart Process Discovery",
-      description: "Automatically discover and map your business processes using AI analysis",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Predictive Automation",
-      description: "Anticipate needs and trigger automated actions before issues arise",
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Predictive Analytics",
+      description: "Make data-driven decisions with AI-powered insights and forecasting capabilities",
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Multi-System Integration",
-      description: "Seamlessly connect and automate across all your business systems",
-      icon: <Settings className="w-8 h-8" />,
+      icon: <Shield className="w-8 h-8" />,
+      title: "Enterprise Security",
+      description: "Bank-level security with end-to-end encryption and compliance with industry standards",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Integration",
+      description: "Seamlessly integrate with your existing cloud infrastructure and third-party services",
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -53,24 +53,28 @@ const AIAutomationPlatformPage = () => {
 
   const useCases = [
     {
-      industry: "Finance",
-      description: "Automated invoice processing, fraud detection, and compliance reporting",
-      icon: <BarChart3 className="w-6 h-6" />
+      title: "Customer Service Automation",
+      description: "Automate ticket routing, response generation, and escalation processes",
+      icon: <Users className="w-6 h-6" />,
+      industry: "Customer Service"
     },
     {
-      industry: "Healthcare",
-      description: "Patient data management, appointment scheduling, and medical record processing",
-      icon: <Users className="w-6 h-6" />
+      title: "Financial Process Automation",
+      description: "Automate invoice processing, expense management, and financial reporting",
+      icon: <Database className="w-6 h-6" />,
+      industry: "Finance"
     },
     {
-      industry: "E-commerce",
-      description: "Inventory management, order processing, and customer service automation",
-      icon: <Cloud className="w-6 h-6" />
+      title: "HR & Recruitment",
+      description: "Streamline candidate screening, onboarding, and employee management",
+      icon: <Code className="w-6 h-6" />,
+      industry: "Human Resources"
     },
     {
-      industry: "Manufacturing",
-      description: "Quality control, supply chain optimization, and predictive maintenance",
-      icon: <Settings className="w-6 h-6" />
+      title: "Marketing Automation",
+      description: "Automate campaign management, lead scoring, and customer segmentation",
+      icon: <Target className="w-6 h-6" />,
+      industry: "Marketing"
     }
   ];
 

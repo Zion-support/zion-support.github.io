@@ -280,7 +280,7 @@ const AIContentStudioZionTechGroup = () => {
                         href="/contact"
                         variant={plan.popular ? "primary" : "outline"}
                         size="lg"
-                        icon={ArrowRight}
+                        icon={<ArrowRight className="w-5 h-5" />}
                         iconPosition="right"
                         className="w-full">
                         Get Started

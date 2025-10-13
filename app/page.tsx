@@ -93,21 +93,6 @@ const HomePage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechCorp Inc.",
-      content: "Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      company: "InnovateLabs",
-      content: "Outstanding support and cutting-edge technology. Zion Tech Group is our trusted partner for all digital transformation needs.",
-      rating: 5
-    }
-  ];
-
   return (
     <>
       <Helmet>

@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
@@ -12,13 +13,37 @@ import {
   Phone, 
   Database,
   Settings,
-  Monitor,
   Sparkles,
-  Lightbulb,
-  TrendingDown
+  Lightbulb
 } from "lucide-react";
 
-export default function AiAnalytics() {
+export default function page() {
+  const analyticsStats = [
+    { label: "Data Points Processed", value: "2.5M+", icon: <BarChart3 className="w-6 h-6" /> },
+    { label: "Real-time Updates", value: "99.9%", icon: <Zap className="w-6 h-6" /> },
+    { label: "Accuracy Rate", value: "98.5%", icon: <CheckCircle className="w-6 h-6" /> },
+    { label: "Processing Speed", value: "50ms", icon: <TrendingUp className="w-6 h-6" /> }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Data Scientist",
+      company: "TechCorp",
+      content: "Zion's AI analytics platform has revolutionized our data processing capabilities.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "CTO",
+      company: "DataFlow Inc",
+      content: "The real-time insights and predictive analytics are game-changing for our business.",
+      rating: 5,
+      avatar: "MC"
+    }
+  ];
+
   const features = [
     {
       title: "Real-time Data Processing",
@@ -209,7 +234,7 @@ export default function AiAnalytics() {
                       <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         {stat.icon}
                       </div>
-                      <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
+                      <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                       <div className="text-gray-300 text-sm">{stat.label}</div>
                     </div>
                   ))}

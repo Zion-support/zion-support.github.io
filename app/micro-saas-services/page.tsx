@@ -1,8 +1,11 @@
-import { Helmet } from "react-helmet-async";
+import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Code, Globe as WebIcon, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon } from 'lucide-react';
 
-export default function MicroSaasServices() {
+export default function page() {
+  const stats = [
+    { label: "Stat 1", value: "100%" }
+  ];
   const microSaasServices = [
     {
       id: "zion-ai-analytics-pro",

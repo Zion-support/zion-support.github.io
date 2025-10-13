@@ -5,29 +5,44 @@ import { Link } from 'react-router-dom';
 const AIFinancialAnalysisPage = () => {
   const features = [
     {
-      title: "Predictive Financial Modeling",
-      description: "AI-powered financial forecasting with 95% accuracy for better investment decisions",
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models predict market trends and investment opportunities with 95% accuracy."
+    },
+    {
       icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis using AI to identify potential threats and opportunities in real-time."
     },
     {
-      title: "Risk Assessment & Management",
-      description: "Advanced risk analysis and automated portfolio optimization using machine learning",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      icon: <DollarSign className="w-8 h-8" />,
+      title: "Portfolio Optimization",
+      description: "AI-driven portfolio management that automatically rebalances investments for maximum returns."
     },
     {
-      title: "Real-time Market Analysis",
-      description: "Continuous monitoring of market trends and instant financial insights",
-      icon: <Activity className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      icon: <Target className="w-8 h-8" />,
+      title: "Goal Tracking",
+      description: "Set financial goals and track progress with AI-powered insights and recommendations."
     },
     {
-      title: "Automated Reporting",
-      description: "Generate comprehensive financial reports and insights automatically",
-      icon: <PieChart className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      icon: <Zap className="w-8 h-8" />,
+      title: "Real-time Alerts",
+      description: "Instant notifications for market changes, opportunities, and potential risks."
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "Smart Insights",
+      description: "AI-generated insights and recommendations based on your financial data and market conditions."
     }
+  ];
+
+  const benefits = [
+    "95% accuracy in financial predictions",
+    "Real-time market analysis and alerts",
+    "Automated portfolio optimization",
+    "Comprehensive risk assessment",
+    "Personalized investment recommendations",
+    "Advanced fraud detection and prevention"
   ];
 
   return (
@@ -102,7 +117,7 @@ const AIFinancialAnalysisPage = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                 >
                   {feature.icon}
                 </div>

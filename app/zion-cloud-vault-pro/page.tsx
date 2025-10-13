@@ -1,7 +1,12 @@
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionCloudVaultPro() {
+export default function page() {
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2"
+  ];
   const features = [
     {
       title: "End-to-End Encryption",

@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function ConsultationPage() {
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2"
+  ];
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
   const [formData, setFormData] = useState({
     name: '',
     email: '',

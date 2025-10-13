@@ -6,29 +6,44 @@ import { Target, ArrowRight, Sparkles, CheckCircle, FileText, TrendingUp, Shield
 const AIHRRecruitmentProPage = () => {
   const features = [
     {
-      title: "Intelligent Candidate Matching",
-      description: "AI-powered matching that finds the perfect candidates based on skills, experience, and cultural fit",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      icon: <UserCheck className="w-8 h-8" />,
+      title: "Smart Candidate Matching",
+      description: "AI-powered matching algorithm that finds the perfect candidates for your roles."
     },
     {
-      title: "Automated Resume Screening",
-      description: "Instantly screen and rank thousands of resumes using advanced AI algorithms",
       icon: <FileText className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      title: "Automated Screening",
+      description: "Intelligent resume screening and initial candidate assessment."
     },
     {
-      title: "Predictive Hiring Analytics",
-      description: "Predict candidate success and retention with 90% accuracy using machine learning",
+      icon: <Calendar className="w-8 h-8" />,
+      title: "Interview Scheduling",
+      description: "Automated interview scheduling and calendar management."
+    },
+    {
       icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      title: "Performance Analytics",
+      description: "Track recruitment metrics and optimize your hiring process."
     },
     {
-      title: "Bias-Free Recruitment",
-      description: "Eliminate unconscious bias and ensure fair, diverse hiring practices",
       icon: <Shield className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      title: "Compliance Management",
+      description: "Ensure compliance with employment laws and regulations."
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Real-time Updates",
+      description: "Get instant notifications and updates on candidate progress."
     }
+  ];
+
+  const benefits = [
+    "50% faster time-to-hire",
+    "90% reduction in manual screening",
+    "Improved candidate quality",
+    "Automated compliance tracking",
+    "Real-time analytics dashboard",
+    "Seamless integration with existing systems"
   ];
 
   return (
@@ -103,7 +118,7 @@ const AIHRRecruitmentProPage = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                 >
                   {feature.icon}
                 </div>

@@ -2,24 +2,43 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Cpu, Brain, Atom, Users, Award, Globe, Lock, TrendingUp, Monitor, MessageSquare, Phone } from 'lucide-react';
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../../components/SEOOptimizer";
+import { Helmet } from "react-helmet-async";
+import { 
+  Atom, 
+  ArrowRight, 
+  Monitor, 
+  Cpu, 
+  Users, 
+  Award, 
+  CheckCircle,
+  MessageSquare,
+  Phone,
+  Globe,
+  Star
+} from 'lucide-react';
 
-export default function AiQuantumComputing() {
+export default function AIQuantumComputingPage() {
+  const testimonials = [
+    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5, avatar: "/api/placeholder/64/64" }
+  ];
   const features = [
-    "Quantum machine learning algorithms for complex optimization",
-    "Quantum simulation for drug discovery and materials science",
-    "Quantum cryptography for ultra-secure communications",
-    "Quantum annealing for combinatorial optimization problems",
-    "Quantum neural networks for pattern recognition",
-    "Quantum error correction and fault tolerance",
-    "Hybrid quantum-classical computing workflows",
-    "Quantum cloud access with real quantum hardware",
-    "Advanced quantum algorithm development",
-    "Quantum state preparation and manipulation",
-    "Quantum entanglement and teleportation protocols",
-    "Custom quantum circuit design and optimization"
+    "Quantum Algorithm Development",
+    "Quantum Circuit Optimization",
+    "Quantum Error Correction",
+    "Quantum Machine Learning",
+    "Quantum Cryptography",
+    "Quantum Simulation"
   ];
 
+  const applications = [
+    "Drug Discovery & Molecular Simulation",
+    "Financial Modeling & Risk Analysis",
+    "Cryptography & Security",
+    "Optimization Problems",
+    "Machine Learning & AI",
+    "Climate Modeling"
+  ];
+  
   const pricingPlans = [
     {
       name: "Research",
@@ -120,10 +139,9 @@ export default function AiQuantumComputing() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing" />
       </Helmet>
-      <SEOOptimizer
-        title="AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group"
-        description="Harness the power of quantum computing with AI. Zion's quantum platform offers quantum machine learning, simulation, and optimization for breakthrough discoveries and solutions."
-      />
+      <SEOOptimizer>
+        <div>AI Quantum Computing Content</div>
+      </SEOOptimizer>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -249,16 +267,13 @@ export default function AiQuantumComputing() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${application.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                   >
-                    {application.icon}
+                    <Atom className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {application.title}
+                    {application}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {application.description}
-                  </p>
                 </div>
               ))}
             </div>

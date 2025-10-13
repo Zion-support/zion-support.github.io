@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   TrendingUp, 
   Zap, 
@@ -10,31 +8,33 @@ import {
   ArrowRight,
   CheckCircle
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const AIDataAnalyticsProPage = () => {
   const features = [
     {
-      title: "Advanced Predictive Analytics",
-      description: "AI-powered predictive models that forecast trends and outcomes with 95% accuracy",
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive data analysis with machine learning algorithms",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-time Data Processing",
-      description: "Process and analyze massive datasets in real-time with lightning-fast performance",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Intelligent Insights",
-      description: "AI automatically discovers hidden patterns and generates actionable business insights",
-      icon: <Brain className="w-8 h-8" />,
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Predictive Modeling",
+      description: "Forecast trends and patterns with AI-powered predictions",
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Interactive Dashboards",
-      description: "Beautiful, interactive dashboards that make complex data easy to understand",
-      icon: <PieChart className="w-8 h-8" />,
+      icon: <Database className="w-8 h-8" />,
+      title: "Real-time Processing",
+      description: "Process and analyze data streams in real-time",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Insights",
+      description: "Get intelligent recommendations and automated insights",
       color: "from-orange-500 to-red-500"
     }
   ];

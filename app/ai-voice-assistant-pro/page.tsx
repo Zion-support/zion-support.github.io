@@ -6,29 +6,44 @@ import { Mic, ArrowRight, Sparkles, CheckCircle, MessageSquare, Settings, Globe 
 const AIVoiceAssistantProPage = () => {
   const features = [
     {
-      title: "Natural Voice Recognition",
-      description: "Advanced speech recognition that understands context, accents, and natural conversation",
       icon: <Mic className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      title: "Voice Recognition",
+      description: "Advanced speech-to-text with 99% accuracy in multiple languages."
     },
     {
-      title: "Intelligent Conversations",
-      description: "AI-powered conversations that feel natural and human-like with emotional intelligence",
+      icon: <Brain className="w-8 h-8" />,
+      title: "Natural Language Processing",
+      description: "Understand context and intent for more natural conversations."
+    },
+    {
+      icon: <Volume2 className="w-8 h-8" />,
+      title: "Text-to-Speech",
+      description: "High-quality voice synthesis with customizable voices."
+    },
+    {
       icon: <MessageSquare className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      title: "Conversational AI",
+      description: "Engage in natural, context-aware conversations."
     },
     {
-      title: "Multi-Language Support",
-      description: "Seamlessly communicate in 50+ languages with real-time translation capabilities",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Custom Voice Training",
-      description: "Train the assistant with your specific voice patterns and business terminology",
       icon: <Settings className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      title: "Customizable Commands",
+      description: "Create custom voice commands for your specific needs."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Privacy & Security",
+      description: "Enterprise-grade security with data encryption and privacy controls."
     }
+  ];
+
+  const benefits = [
+    "95% accuracy in voice recognition",
+    "Multi-language support",
+    "Real-time processing",
+    "Custom voice training",
+    "Integration with existing systems",
+    "24/7 availability"
   ];
 
   return (
@@ -103,7 +118,7 @@ const AIVoiceAssistantProPage = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                 >
                   {feature.icon}
                 </div>

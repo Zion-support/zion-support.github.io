@@ -93,31 +93,24 @@ const CloudInfrastructure = () => {
     }
   ];
 
+  const stats = [
+    { label: "Uptime", value: "99.9%", icon: <Activity className="w-6 h-6" /> },
+    { label: "Cost Savings", value: "40%", icon: <BarChart3 className="w-6 h-6" /> },
+    { label: "Deployment Speed", value: "10x", icon: <Zap className="w-6 h-6" /> },
+    { label: "Security Score", value: "A+", icon: <Shield className="w-6 h-6" /> }
+  ];
+
   const capabilities = [
-    {
-      title: "Multi-Cloud Strategy",
-      description: "Design and implement hybrid and multi-cloud architectures for maximum flexibility and redundancy",
-      icon: <Globe className="w-6 h-6" />,
-      stats: "99.99% uptime"
-    },
-    {
-      title: "Cost Optimization",
-      description: "Reduce cloud costs by up to 40% through intelligent resource management and optimization",
-      icon: <BarChart3 className="w-6 h-6" />,
-      stats: "40% cost reduction"
-    },
-    {
-      title: "Security First",
-      description: "Implement enterprise-grade security measures to protect your cloud infrastructure",
-      icon: <Lock className="w-6 h-6" />,
-      stats: "Zero security incidents"
-    },
-    {
-      title: "24/7 Monitoring",
-      description: "Continuous monitoring and alerting to ensure optimal performance and availability",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "Sub-second response"
-    }
+    "Multi-cloud deployment and management",
+    "Automated scaling and load balancing",
+    "Advanced monitoring and alerting",
+    "Disaster recovery and backup solutions",
+    "Security compliance and auditing",
+    "Cost optimization and resource management"
+  ];
+
+  const testimonials = [
+    { name: "Sarah Johnson", role: "CTO", company: "TechCorp", content: "Zion's cloud infrastructure transformed our operations completely.", rating: 5, avatar: "/api/placeholder/64/64" }
   ];
 
   return (
@@ -179,7 +172,7 @@ const CloudInfrastructure = () => {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
@@ -206,19 +199,11 @@ const CloudInfrastructure = () => {
                 className="group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {capability.icon}
+                  <Cloud className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
-                  {capability.title}
+                  {capability}
                 </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed">
-                  {capability.description}
-                </p>
-                <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400">
-                    {capability.stats}
-                  </span>
-                </div>
               </FuturisticCard>
             ))}
           </div>

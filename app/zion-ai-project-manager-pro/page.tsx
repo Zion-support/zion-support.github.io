@@ -7,45 +7,7 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAIProjectManagerProPage = () => {
-  const features = [
-    {
-      title: "AI-Powered Task Management",
-      description: "Intelligent task prioritization, automatic scheduling, and smart resource allocation based on team capacity and project requirements",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast project completion dates, identify potential bottlenecks, and predict resource needs with advanced AI algorithms",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Smart Resource Allocation",
-      description: "Automatically assign tasks to the right team members based on skills, availability, and workload optimization",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Real-time Collaboration",
-      description: "Seamless team communication, file sharing, and collaborative workspace with AI-powered meeting summaries",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate comprehensive project reports, status updates, and stakeholder communications automatically",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Risk Management",
-      description: "AI-powered risk assessment, early warning systems, and automated mitigation strategies",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
+  
   const pricingPlans = [
     {
       name: "Starter",

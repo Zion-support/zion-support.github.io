@@ -1,38 +1,50 @@
 import React from 'react';
+import { 
+  Mail, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
+  BarChart3, 
+  Users, 
+  Clock, 
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Brain,
+  Target,
+  Globe
+} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
 const AIPoweredEmailAnalyzerPage = () => {
+  const stats = [
+    { label: "Emails Analyzed", value: "1M+", icon: <Mail className="w-6 h-6" /> },
+    { label: "Accuracy Rate", value: "99.5%", icon: <Target className="w-6 h-6" /> },
+    { label: "Time Saved", value: "80%", icon: <Clock className="w-6 h-6" /> },
+    { label: "Cost Reduction", value: "60%", icon: <TrendingUp className="w-6 h-6" /> }
+  ];
+
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Sentiment Analysis",
-      description: "Advanced machine learning algorithms analyze email tone, sentiment, and emotional context to help you craft perfect responses."
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI-Powered Analysis",
+      description: "Advanced machine learning algorithms analyze email content, sentiment, and intent with 99.5% accuracy."
     },
     {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
-      title: "Smart Response Suggestions",
-      description: "Get intelligent, context-aware response suggestions that match your communication style and business objectives."
+      icon: <Shield className="w-8 h-8" />,
+      title: "Security Detection",
+      description: "Automatically detect phishing attempts, spam, and malicious content to protect your organization."
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Email Performance Analytics",
-      description: "Track open rates, response times, and engagement metrics with detailed analytics and actionable insights."
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Analytics Dashboard",
+      description: "Comprehensive analytics and reporting to track email performance and communication trends."
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with GDPR compliance, data encryption, and secure cloud storage for all email data."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      icon: <Zap className="w-8 h-8" />,
       title: "Real-time Processing",
-      description: "Instant analysis and suggestions as you type, with lightning-fast processing powered by advanced AI models."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-      title: "Team Collaboration",
-      description: "Share insights across teams, set up approval workflows, and maintain consistent communication standards."
+      description: "Process and analyze emails in real-time with instant notifications and alerts."
     }
   ];
 
@@ -152,7 +164,7 @@ const AIPoweredEmailAnalyzerPage = () => {
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
+                  {stat.value}
                 </div>
                 <div className="text-gray-400 font-medium">
                   {stat.label}

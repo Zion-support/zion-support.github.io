@@ -1,4 +1,5 @@
 import React from "react";
+import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from "react-helmet-async";
 
 export default function ZionAIVoiceAssistantPro() {
