@@ -487,9 +487,16 @@ interface AdvancedPerformanceMonitorProps {
 
 export default function AdvancedPerformanceMonitor({ className = '', children }: AdvancedPerformanceMonitorProps) {
   return (
+<<<<<<< HEAD
     <div className={className}>
+=======
+    <div className={`performance-monitor ${className}`}>
+>>>>>>> cursor/fix-errors-and-merge-to-main-234b
       {children}
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-234b

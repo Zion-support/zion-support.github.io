@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { 
   Mail, 
   BarChart3, 
@@ -14,6 +15,9 @@ import {
   MousePointer,
   Shield
 } from 'lucide-react';
+=======
+import { Mail, BarChart3, Target, ArrowRight, CheckCircle, Star, Clock, Zap, Sparkles, TrendingUp, Cpu, Send, Heart, MousePointer, Shield } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-234b
 
 const ZionAIEmailMarketingProPage: React.FC = () => {
   const features = [

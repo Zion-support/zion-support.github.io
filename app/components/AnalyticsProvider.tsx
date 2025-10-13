@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const useAnalytics = () => {const context = useContext(AnalyticsContext);
   if (!context) {
   // TODO: Add properties
@@ -23,6 +24,10 @@ const context = useContext(AnalyticsContext);
 import React, { useEffect, ReactNode } from 'react';
 import { AnalyticsContext } from '../contexts/AnalyticsContext';
 
+=======
+import React, { useEffect, ReactNode } from 'react';
+import { AnalyticsContext } from '../contexts/AnalyticsContext';
+>>>>>>> cursor/fix-errors-and-merge-to-main-234b
 
 interface AnalyticsProviderProps {
   children: ReactNode;

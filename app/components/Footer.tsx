@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -86,6 +87,8 @@ export default Footer;
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-234b
 import { Brain, Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer = () => {

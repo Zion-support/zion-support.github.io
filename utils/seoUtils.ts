@@ -124,7 +124,7 @@ export default seoUtils;
     return {};
   }
 
-  generateStructuredData(data: any): string {
+  generateStructuredData(data: Record<string, unknown>): string {
     if (this.config.structuredData) {
       return JSON.stringify(data);
     }

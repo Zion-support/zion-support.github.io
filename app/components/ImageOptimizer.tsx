@@ -19,10 +19,13 @@ export default function ImageOptimizer({
   className = '',
   lazy = true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   quality = 80,
   format = 'webp',
 >>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-234b
   placeholder
 }: ImageOptimizerProps) {
   return (
