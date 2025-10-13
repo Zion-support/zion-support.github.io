@@ -1,13 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import {
-  CheckCircle,
-  Globe,
-  Zap,
-  Shield,
-  Star,
-  ArrowRight,
-} from "lucide-react";
+  CheckCircle, Globe, Zap, Shield, Star, ArrowRight} from "lucide-react";
 
 const AITranslationServicePage = () => {
   const features = [

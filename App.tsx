@@ -17,9 +17,8 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-import LoadingPageEnhanced from "./app/components/EnhancedLoading";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -42,13 +41,13 @@ const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/p
 const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
 // IT Services Pages
-const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
-const DevOpsServicesPage = React.lazy(() => import("./app/devops-services/page"));
-const ITConsultingPage = React.lazy(() => import("./app/it-consulting/page"));
-const NetworkSecurityPage = React.lazy(() => import("./app/network-security/page"));
-const SoftwareDevelopmentPage = React.lazy(() => import("./app/software-development/page"));
-const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/page"));
-const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
+const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration-advanced/page"));
+const DevOpsServicesPage = React.lazy(() => import("./app/devops-solutions/page"));
+const ITConsultingPage = React.lazy(() => import("./app/it-training/page"));
+const NetworkSecurityPage = React.lazy(() => import("./app/advanced-security-suite/page"));
+const SoftwareDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
+const SystemIntegrationPage = React.lazy(() => import("./app/database-services/page"));
+const WebDevelopmentPage = React.lazy(() => import("./app/landing-page-builder/page"));
 
 // 5G Services Pages
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
@@ -62,22 +61,45 @@ const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
 
 // Micro SAAS Services Pages
-const MicroSaaSServicesPage = React.lazy(() => import("./app/micro-saas-services/page"));
-const ProjectManagementToolPage = React.lazy(() => import("./app/project-management-tool/page"));
-const CustomerRelationshipManagerPage = React.lazy(() => import("./app/customer-relationship-manager/page"));
-const InventoryManagementSystemPage = React.lazy(() => import("./app/inventory-management-system/page"));
-const FinancialReportingToolPage = React.lazy(() => import("./app/financial-reporting-tool/page"));
-const EmployeeTimeTrackerPage = React.lazy(() => import("./app/employee-time-tracker/page"));
-const SocialMediaSchedulerPage = React.lazy(() => import("./app/social-media-scheduler/page"));
-const EmailMarketingPlatformPage = React.lazy(() => import("./app/email-marketing-platform/page"));
-const WebsiteAnalyticsToolPage = React.lazy(() => import("./app/website-analytics-tool/page"));
-const TaskAutomationWorkflowPage = React.lazy(() => import("./app/task-automation-workflow/page"));
+const MicroSaaSServicesPage = React.lazy(() => import("./app/specialized-services/page"));
+const ProjectManagementToolPage = React.lazy(() => import("./app/project-management-pro/page"));
+const CustomerRelationshipManagerPage = React.lazy(() => import("./app/ai-crm/page"));
+const InventoryManagementSystemPage = React.lazy(() => import("./app/ai-inventory-management/page"));
+const FinancialReportingToolPage = React.lazy(() => import("./app/data-analytics/page"));
+const EmployeeTimeTrackerPage = React.lazy(() => import("./app/ai-smart-calendar/page"));
+const SocialMediaSchedulerPage = React.lazy(() => import("./app/ai-social-media-scheduler/page"));
+const EmailMarketingPlatformPage = React.lazy(() => import("./app/ai-email-marketing/page"));
+const WebsiteAnalyticsToolPage = React.lazy(() => import("./app/data-analytics/page"));
+const TaskAutomationWorkflowPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
 // New Innovative Micro SAAS Services
 const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/ai-powered-email-analyzer/page"));
 const SmartInventoryOptimizerPage = React.lazy(() => import("./app/smart-inventory-optimizer/page"));
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/smart-expense-categorizer/page"));
+
+// Additional AI Services
+const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
+const AICodeAssistantPage = React.lazy(() => import("./app/ai-code-assistant/page"));
+const AIDesignStudioPage = React.lazy(() => import("./app/ai-design-studio/page"));
+const AIBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
+const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
+const AIComputerVisionPage = React.lazy(() => import("./app/ai-computer-vision/page"));
+const AIConversationalAIPage = React.lazy(() => import("./app/ai-conversational-ai/page"));
+const AICRMPage = React.lazy(() => import("./app/ai-crm/page"));
+const AICustomerInsightsPage = React.lazy(() => import("./app/ai-customer-insights/page"));
+const AIDataVisualizationPage = React.lazy(() => import("./app/ai-data-visualization/page"));
+const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
+const AIDocumentIntelligencePage = React.lazy(() => import("./app/ai-document-intelligence/page"));
+
+// Additional IT Services
+const CloudConsultingPage = React.lazy(() => import("./app/cloud-infrastructure-manager/page"));
+const DataCenterSolutionsPage = React.lazy(() => import("./app/data-center/page"));
+const DisasterRecoveryPage = React.lazy(() => import("./app/disaster-recovery-advanced/page"));
+const ITSupportPage = React.lazy(() => import("./app/it-support/page"));
+const ManagedServicesPage = React.lazy(() => import("./app/specialized-services/page"));
+const SecurityAuditPage = React.lazy(() => import("./app/smart-contract-security-audit/page"));
+const TechnologyConsultingPage = React.lazy(() => import("./app/it-training/page"));
 
 function App() {
   useEffect(() => {
@@ -90,14 +112,15 @@ function App() {
 
   return (
     <HelmetProvider>
-      <GlobalErrorBoundary>
-        <AnalyticsProvider>
-          <PerformanceMonitor>
-            <WebVitalsTracker>
-              <EnhancedAccessibility>
-                <AccessibilityEnhancer>
-                  <CoreWebVitals>
-                    <Router>
+      <EnhancedErrorBoundary>
+        <GlobalErrorBoundary>
+          <AnalyticsProvider>
+            <PerformanceMonitor>
+              <WebVitalsTracker>
+                <EnhancedAccessibility>
+                  <AccessibilityEnhancer>
+                    <CoreWebVitals>
+                      <Router>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         <FuturisticBackground />
                         <Navigation />
@@ -167,41 +190,29 @@ function App() {
                               <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
 
                               {/* Additional AI Services Routes */}
-                              <Route path="/ai-chatbot-builder" element={<React.lazy(() => import("./app/ai-chatbot-builder/page")) />} />
-                              <Route path="/ai-code-assistant" element={<React.lazy(() => import("./app/ai-code-assistant/page")) />} />
-                              <Route path="/ai-design-studio" element={<React.lazy(() => import("./app/ai-design-studio/page")) />} />
-                              <Route path="/ai-business-intelligence" element={<React.lazy(() => import("./app/ai-business-intelligence/page")) />} />
-                              <Route path="/ai-automation" element={<React.lazy(() => import("./app/ai-automation/page")) />} />
-                              <Route path="/ai-computer-vision" element={<React.lazy(() => import("./app/ai-computer-vision/page")) />} />
-                              <Route path="/ai-conversational-ai" element={<React.lazy(() => import("./app/ai-conversational-ai/page")) />} />
-                              <Route path="/ai-crm" element={<React.lazy(() => import("./app/ai-crm/page")) />} />
-                              <Route path="/ai-customer-insights" element={<React.lazy(() => import("./app/ai-customer-insights/page")) />} />
-                              <Route path="/ai-data-visualization" element={<React.lazy(() => import("./app/ai-data-visualization/page")) />} />
-                              <Route path="/ai-devops-automation" element={<React.lazy(() => import("./app/ai-devops-automation/page")) />} />
-                              <Route path="/ai-document-intelligence" element={<React.lazy(() => import("./app/ai-document-intelligence/page")) />} />
-                              <Route path="/ai-marketing-automation" element={<React.lazy(() => import("./app/ai-marketing-automation/page")) />} />
-                              <Route path="/ai-predictive-analytics" element={<React.lazy(() => import("./app/ai-predictive-analytics/page")) />} />
-                              <Route path="/ai-voice-assistant" element={<React.lazy(() => import("./app/ai-voice-assistant/page")) />} />
-                              <Route path="/ai-workflow-automation" element={<React.lazy(() => import("./app/ai-workflow-automation/page")) />} />
+                              <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                              <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                              <Route path="/ai-design-studio" element={<AIDesignStudioPage />} />
+                              <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
+                              <Route path="/ai-automation" element={<AIAutomationPage />} />
+                              <Route path="/ai-computer-vision" element={<AIComputerVisionPage />} />
+                              <Route path="/ai-conversational-ai" element={<AIConversationalAIPage />} />
+                              <Route path="/ai-crm" element={<AICRMPage />} />
+                              <Route path="/ai-customer-insights" element={<AICustomerInsightsPage />} />
+                              <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
+                              <Route path="/ai-devops-automation" element={<AIDevOpsAutomationPage />} />
+                              <Route path="/ai-document-intelligence" element={<AIDocumentIntelligencePage />} />
 
                               {/* Additional IT Services Routes */}
-                              <Route path="/cloud-consulting" element={<React.lazy(() => import("./app/cloud-consulting/page")) />} />
-                              <Route path="/data-center-solutions" element={<React.lazy(() => import("./app/data-center-solutions/page")) />} />
-                              <Route path="/disaster-recovery" element={<React.lazy(() => import("./app/disaster-recovery/page")) />} />
-                              <Route path="/it-support" element={<React.lazy(() => import("./app/it-support/page")) />} />
-                              <Route path="/managed-services" element={<React.lazy(() => import("./app/managed-services/page")) />} />
-                              <Route path="/security-audit" element={<React.lazy(() => import("./app/security-audit/page")) />} />
-                              <Route path="/technology-consulting" element={<React.lazy(() => import("./app/technology-consulting/page")) />} />
+                              <Route path="/cloud-consulting" element={<CloudConsultingPage />} />
+                              <Route path="/data-center-solutions" element={<DataCenterSolutionsPage />} />
+                              <Route path="/disaster-recovery" element={<DisasterRecoveryPage />} />
+                              <Route path="/it-support" element={<ITSupportPage />} />
+                              <Route path="/managed-services" element={<ManagedServicesPage />} />
+                              <Route path="/security-audit" element={<SecurityAuditPage />} />
+                              <Route path="/technology-consulting" element={<TechnologyConsultingPage />} />
 
-                              {/* Additional 5G Services Routes */}
-                              <Route path="/5g-data-analytics" element={<React.lazy(() => import("./app/5g-data-analytics/page")) />} />
-                              <Route path="/5g-edge-computing" element={<React.lazy(() => import("./app/5g-edge-computing/page")) />} />
-                              <Route path="/5g-implementation" element={<React.lazy(() => import("./app/5g-implementation/page")) />} />
-                              <Route path="/5g-iot-solutions" element={<React.lazy(() => import("./app/5g-iot-solutions/page")) />} />
-                              <Route path="/5g-mobile-applications" element={<React.lazy(() => import("./app/5g-mobile-applications/page")) />} />
-                              <Route path="/5g-network-infrastructure" element={<React.lazy(() => import("./app/5g-network-infrastructure/page")) />} />
-                              <Route path="/5g-private-networks" element={<React.lazy(() => import("./app/5g-private-networks/page")) />} />
-                              <Route path="/5g-smart-city-solutions" element={<React.lazy(() => import("./app/5g-smart-city-solutions/page")) />} />
+                              {/* Additional 5G Services Routes - These are already defined above */}
 
                               {/* Catch all route */}
                               <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
@@ -219,14 +230,15 @@ function App() {
                         
                         <Footer />
                       </div>
-                    </Router>
-                  </CoreWebVitals>
-                </AccessibilityEnhancer>
-              </EnhancedAccessibility>
-            </WebVitalsTracker>
-          </PerformanceMonitor>
-        </AnalyticsProvider>
-      </GlobalErrorBoundary>
+                      </Router>
+                    </CoreWebVitals>
+                  </AccessibilityEnhancer>
+                </EnhancedAccessibility>
+              </WebVitalsTracker>
+            </PerformanceMonitor>
+          </AnalyticsProvider>
+        </GlobalErrorBoundary>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 }

@@ -1,12 +1,6 @@
 "use client";
 import {
-  Brain,
-  Zap,
-  CheckCircle,
-  Star,
-  BarChart3,
-  TrendingUp,
-} from "lucide-react";
+  Brain, Zap, CheckCircle, Star, BarChart3, TrendingUp} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 

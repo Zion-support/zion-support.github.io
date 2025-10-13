@@ -28,7 +28,9 @@ import {
   Receipt,
   TrendingUp,
   Cpu,
-  Network
+  Network,
+  Clock,
+  FileText
 } from 'lucide-react';
 
 interface NavigationProps {

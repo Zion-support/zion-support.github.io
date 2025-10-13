@@ -1,13 +1,6 @@
 import { Link } from "react-router-dom";
 import {
-  Cloud,
-  Shield,
-  TrendingUp,
-  Server,
-  Zap,
-  BarChart3,
-  ArrowRight,
-} from "lucide-react";
+  Cloud, Shield, TrendingUp, Server, Zap, BarChart3, ArrowRight} from "lucide-react";
 import Layout from "../layout";
 
 export default function CloudInfrastructureManagement() {

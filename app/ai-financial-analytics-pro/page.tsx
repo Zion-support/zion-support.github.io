@@ -1,12 +1,6 @@
 "use client";
 import {
-  Brain,
-  Shield,
-  CheckCircle,
-  Star,
-  Target,
-  BarChart3,
-} from "lucide-react";
+  Brain, Shield, CheckCircle, Star, Target, BarChart3} from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
