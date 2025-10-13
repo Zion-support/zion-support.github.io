@@ -1,8 +1,4 @@
 import React, { Suspense, lazy } from 'react';
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -13,47 +9,31 @@ import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
 import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
-import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
-=======
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 
 // Page Components
-import HomePage from './app/page';'
-import AboutPage from './app/pages/AboutPage';'
-import ContactPage from './app/pages/ContactPage';'
-import ServicesPage from './app/pages/ServicesPage';'
-import BlogPage from './app/pages/BlogPage';'
-import TutorialsPage from './app/pages/TutorialsPage';'
-import DemoPage from './app/pages/DemoPage';'
-import SupportPage from './app/pages/SupportPage';'
-import PrivacyPage from './app/pages/PrivacyPage';'
-import TermsPage from './app/pages/TermsPage';'
-import PricingPage from './app/pages/PricingPage';'
-import SolutionsPage from './app/pages/SolutionsPage';'
-import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';'
-import AISolutionsPage from './app/ai-solutions/page';'
+import HomePage from './app/page';
+import AboutPage from './app/pages/AboutPage';
+import ContactPage from './app/pages/ContactPage';
+import ServicesPage from './app/pages/ServicesPage';
+import BlogPage from './app/pages/BlogPage';
+import TutorialsPage from './app/pages/TutorialsPage';
+import DemoPage from './app/pages/DemoPage';
+import SupportPage from './app/pages/SupportPage';
+import PrivacyPage from './app/pages/PrivacyPage';
+import TermsPage from './app/pages/TermsPage';
+import PricingPage from './app/pages/PricingPage';
+import SolutionsPage from './app/pages/SolutionsPage';
+import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
+import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
 
-// Service Pages'
-import AIServicesPage from './app/pages/AIServicesPage';'
-import ITServicesPage from './app/pages/ITServicesPage';'
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';'
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';'
-import CaseStudiesPage from './app/pages/CaseStudiesPage';'
+// Service Pages
+import AIServicesPage from './app/pages/AIServicesPage';
+import ITServicesPage from './app/pages/ITServicesPage';
+import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
+import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
+import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
 
 // Additional Pages
@@ -104,60 +84,6 @@ function App() {
               <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
               <main className="relative z-10 flex-1" id="main-content" role="main">
               <ErrorBoundary>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <Routes>
-=======
-                <Routes>}
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
-                  {/* Main Pages */}
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
-                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
-                  <Route path="/it-solutions" element={<ITSolutionsPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/tutorials" element={<TutorialsPage />} />
-                  <Route path="/demo" element={<DemoPage />} />
-                  <Route path="/support" element={<SupportPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/solutions" element={<SolutionsPage />} />
-                  
-                  {/* Service Pages */}
-                  <Route path="/ai-services" element={<AIServicesPage />} />
-                  <Route path="/it-services" element={<ITServicesPage />} />
-                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                  <Route path="/case-studies" element={<CaseStudiesPage />} />
-                  <Route path="/careers" element={<CareersPage />} />
-                  
-<<<<<<< HEAD
-=======
-                  {/* Additional Service Pages */}
-                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                  <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
-                  <Route path="/micro-saas" element={<MicroSaaSPage />} />
-                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                  
-                  {/* Additional Pages */}
-                  <Route path="/team" element={<TeamPage />} />
-                  <Route path="/docs" element={<DocumentationPage />} />
-                  
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-                  {/* Catch all route */}
-                  <Route path="*" element={
-                    <div className="min-h-screen flex items-center justify-center bg-slate-900">
-                      <div className="text-center">
-                        <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                        <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                        <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
-                          Go Home
-                        </a>
-=======
                 <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
                   <Routes>
                     {/* Main Pages */}
@@ -185,6 +111,16 @@ function App() {
                     <Route path="/case-studies" element={<CaseStudiesPage />} />
                     <Route path="/careers" element={<CareersPage />} />
                     
+                    {/* Additional Service Pages */}
+                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                    <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
+                    <Route path="/micro-saas" element={<MicroSaaSPage />} />
+                    <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                    
+                    {/* Additional Pages */}
+                    <Route path="/team" element={<TeamPage />} />
+                    <Route path="/docs" element={<DocumentationPage />} />
+                    
                     {/* Catch all route */}
                     <Route path="*" element={
                       <div className="min-h-screen flex items-center justify-center bg-slate-900">
@@ -195,44 +131,20 @@ function App() {
                             Go Home
                           </a>
                         </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
                       </div>
-                    </div>}
-                  } />
-                </Routes>
+                    } />
+                  </Routes>
+                </Suspense>
               </ErrorBoundary>
-<<<<<<< HEAD
-              </main>
-              <Footer />
-              <PerformanceMonitor />
-              <AccessibilityEnhancer />
-            </div>
-=======
             </main>
             <Footer />
             <PerformanceMonitor />
             <AccessibilityEnhancer />
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
           </div>
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
->>>>>>> origin/main
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
   );
 }
 
-export default App;'
+export default App;
