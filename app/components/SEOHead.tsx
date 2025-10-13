@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 interface SEOHeadProps {
   title?: string;
@@ -9,38 +9,38 @@ interface SEOHeadProps {
 }
 
 export default function SEOHead({
-  title = 'Zion Tech Group - AI & IT Solutions',
-  description = 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
-  keywords = 'AI solutions, IT services, digital transformation, artificial intelligence, technology consulting',
-  image = 'https://ziontechgroup.com/logo.png',
-  url = 'https://ziontechgroup.com'
+  title = "Zion Tech Group - AI & IT Solutions",
+  description = "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+  keywords = "AI solutions, IT services, digital transformation, artificial intelligence, technology consulting",
+  image = "https://ziontechgroup.com/logo.png",
+  url = "https://ziontechgroup.com",
 }: SEOHeadProps) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": description,
-    "url": url,
-    "logo": image,
-    "contactPoint": {
+    name: "Zion Tech Group",
+    description: description,
+    url: url,
+    logo: image,
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      telephone: "+1-302-464-0950",
+      contactType: "customer service",
+      email: "kleber@ziontechgroup.com",
     },
-    "address": {
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+      streetAddress: "364 E Main St STE 1008",
+      addressLocality: "Middletown",
+      addressRegion: "DE",
+      postalCode: "19709",
+      addressCountry: "US",
     },
-    "sameAs": [
+    sameAs: [
       "https://github.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
-    ]
+      "https://twitter.com/ziontechgroup",
+    ],
   };
 
   return (

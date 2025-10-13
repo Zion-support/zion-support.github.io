@@ -1,44 +1,69 @@
-import { Link } from 'react-router-dom';
-import { Shield, Zap, Globe, Lock, ArrowRight } from 'lucide-react';
-import Layout from '../layout';
+import { Link } from "react-router-dom";
+import { Shield, Zap, Globe, Lock, ArrowRight } from "lucide-react";
+import Layout from "../layout";
 
 export default function BlockchainWeb3() {
   const features = [
     {
       icon: <Shield className="w-6 h-6 text-cyan-400" />,
-      title: 'Decentralized Security',
-      description: 'Immutable blockchain technology ensures maximum security and transparency'
+      title: "Decentralized Security",
+      description:
+        "Immutable blockchain technology ensures maximum security and transparency",
     },
     {
       icon: <Zap className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Contracts',
-      description: 'Automated, self-executing contracts that eliminate intermediaries'
+      title: "Smart Contracts",
+      description:
+        "Automated, self-executing contracts that eliminate intermediaries",
     },
     {
       icon: <Globe className="w-6 h-6 text-yellow-400" />,
-      title: 'Web3 Integration',
-      description: 'Seamless integration with decentralized applications and protocols'
+      title: "Web3 Integration",
+      description:
+        "Seamless integration with decentralized applications and protocols",
     },
     {
       icon: <Lock className="w-6 h-6 text-green-400" />,
-      title: 'Cryptocurrency Solutions',
-      description: 'Custom token development and cryptocurrency integration services'
-    }
+      title: "Cryptocurrency Solutions",
+      description:
+        "Custom token development and cryptocurrency integration services",
+    },
   ];
 
   const services = [
     {
-      category: 'Development',
-      items: ['Smart Contract Development', 'DApp Development', 'Token Creation', 'DeFi Protocols', 'NFT Marketplaces', 'Cross-Chain Solutions']
+      category: "Development",
+      items: [
+        "Smart Contract Development",
+        "DApp Development",
+        "Token Creation",
+        "DeFi Protocols",
+        "NFT Marketplaces",
+        "Cross-Chain Solutions",
+      ],
     },
     {
-      category: 'Security & Audit',
-      items: ['Smart Contract Audits', 'Security Testing', 'Penetration Testing', 'Code Review', 'Vulnerability Assessment', 'Compliance Check']
+      category: "Security & Audit",
+      items: [
+        "Smart Contract Audits",
+        "Security Testing",
+        "Penetration Testing",
+        "Code Review",
+        "Vulnerability Assessment",
+        "Compliance Check",
+      ],
     },
     {
-      category: 'Consulting',
-      items: ['Blockchain Strategy', 'Technology Selection', 'Architecture Design', 'Implementation Planning', 'Training & Support', 'Maintenance']
-    }
+      category: "Consulting",
+      items: [
+        "Blockchain Strategy",
+        "Technology Selection",
+        "Architecture Design",
+        "Implementation Planning",
+        "Training & Support",
+        "Maintenance",
+      ],
+    },
   ];
 
   return (
@@ -50,29 +75,42 @@ export default function BlockchainWeb3() {
               Blockchain & Web3 Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge blockchain technology and Web3 solutions
+              Transform your business with cutting-edge blockchain technology
+              and Web3 solutions
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">
+              <div
+                key={index}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20"
+              >
                 {feature.icon}
-                <h3 className="text-xl font-semibold text-white mb-2 mt-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2 mt-4">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
 
           <div className="bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Services</h2>
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">
+              Our Services
+            </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <div key={index} className="text-center">
-                  <h3 className="text-xl font-semibold text-purple-400 mb-4">{service.category}</h3>
+                  <h3 className="text-xl font-semibold text-purple-400 mb-4">
+                    {service.category}
+                  </h3>
                   <ul className="space-y-2">
                     {service.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="text-gray-300 flex items-center justify-center">
+                      <li
+                        key={itemIndex}
+                        className="text-gray-300 flex items-center justify-center"
+                      >
                         <ArrowRight className="w-4 h-4 text-purple-400 mr-2" />
                         {item}
                       </li>
@@ -84,7 +122,9 @@ export default function BlockchainWeb3() {
           </div>
 
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-8">Ready to Build the Future?</h2>
+            <h2 className="text-3xl font-bold text-white mb-8">
+              Ready to Build the Future?
+            </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Let's discuss how blockchain and Web3 can transform your business
             </p>

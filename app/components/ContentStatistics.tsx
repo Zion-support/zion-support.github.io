@@ -1,5 +1,5 @@
-import React from 'react';
-import { TrendingUp, Users, Award, Zap } from 'lucide-react';
+import React from "react";
+import { TrendingUp, Users, Award, Zap } from "lucide-react";
 
 interface StatItem {
   value: string;
@@ -13,34 +13,34 @@ interface ContentStatisticsProps {
   className?: string;
 }
 
-const ContentStatistics: React.FC<ContentStatisticsProps> = ({ 
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({
   stats = [
     {
-      value: '500+',
-      label: 'Happy Clients',
+      value: "500+",
+      label: "Happy Clients",
       icon: <Users className="w-8 h-8" />,
-      color: 'text-blue-400'
+      color: "text-blue-400",
     },
     {
-      value: '99.9%',
-      label: 'Uptime',
+      value: "99.9%",
+      label: "Uptime",
       icon: <Zap className="w-8 h-8" />,
-      color: 'text-green-400'
+      color: "text-green-400",
     },
     {
-      value: '50+',
-      label: 'Awards Won',
+      value: "50+",
+      label: "Awards Won",
       icon: <Award className="w-8 h-8" />,
-      color: 'text-yellow-400'
+      color: "text-yellow-400",
     },
     {
-      value: '40%',
-      label: 'Cost Savings',
+      value: "40%",
+      label: "Cost Savings",
       icon: <TrendingUp className="w-8 h-8" />,
-      color: 'text-purple-400'
-    }
+      color: "text-purple-400",
+    },
   ],
-  className = ''
+  className = "",
 }) => {
   return (
     <div className={`py-16 ${className}`}>
@@ -53,7 +53,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
             Our solutions deliver measurable results across all industries
           </p>
         </div>
-        
+
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
@@ -63,9 +63,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
               <div className="text-4xl font-bold text-white mb-2">
                 {stat.value}
               </div>
-              <div className="text-gray-300 text-lg">
-                {stat.label}
-              </div>
+              <div className="text-gray-300 text-lg">{stat.label}</div>
             </div>
           ))}
         </div>

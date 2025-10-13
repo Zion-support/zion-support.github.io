@@ -1,6 +1,6 @@
-import { Component, ErrorInfo, ReactNode } from 'react';
-import { Home, RefreshCw, AlertTriangle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Component, ErrorInfo, ReactNode } from "react";
+import { Home, RefreshCw, AlertTriangle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Props {
   children: ReactNode;
@@ -26,14 +26,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
-    
+
     // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
-    
+    console.error("Error caught by boundary:", error, errorInfo);
+
     // In production, send to error reporting service
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === "production") {
       // Example: sendErrorToService(error, errorInfo);
     }
   }
@@ -50,18 +50,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="flex justify-center mb-6">
               <AlertTriangle className="w-16 h-16 text-red-400" />
             </div>
-            
+
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            
+
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+              We're sorry, but something unexpected happened. Our team has been
+              notified and is working to fix it.
             </p>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === "development" && this.state.error && (
               <div className="bg-red-900/50 border border-red-500 rounded-lg p-4 mb-6 text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                <h3 className="text-red-400 font-semibold mb-2">
+                  Error Details:
+                </h3>
                 <pre className="text-red-300 text-sm overflow-auto">
                   {this.state.error.toString()}
                 </pre>
@@ -81,7 +84,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-5 h-5 mr-2" />
                 Try Again
               </button>
-              
+
               <Link
                 to="/"
                 className="flex items-center justify-center border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"

@@ -1,13 +1,16 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const HealthPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Health Tech | Zion Tech Group</title>
-        <meta name="description" content="Innovative health technology solutions for modern healthcare" />
+        <meta
+          name="description"
+          content="Innovative health technology solutions for modern healthcare"
+        />
       </Helmet>
 
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
