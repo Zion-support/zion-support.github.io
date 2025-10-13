@@ -370,8 +370,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
+<<<<<<< HEAD
       console.log('Error Report:', errorReport);
       
+=======
+       
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -442,8 +446,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         }
       })
       .catch(() => {
+<<<<<<< HEAD
         console.warn('Failed to copy error details');
       });
+=======
+         
+        });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
   };
 
   render() {

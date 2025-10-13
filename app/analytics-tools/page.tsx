@@ -8,8 +8,12 @@ const AnalyticsToolsPage: React.FC = () => {,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
 const AnalyticsToolsPage: React.FC = () => {
   const features = [
     {
@@ -493,6 +497,10 @@ export default AnalyticsToolsPage
     </div>)
   );
 };
+<<<<<<< HEAD
 export default PagePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+export default AnalyticsToolsPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256

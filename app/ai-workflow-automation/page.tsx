@@ -160,6 +160,7 @@ import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
+<<<<<<< HEAD
 import { Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users } from 'lucide-react';
 
 const AIWorkflowAutomation: React.FC = () => {
@@ -217,6 +218,9 @@ const AIWorkflowAutomation: React.FC = () => {
     {number: '500+', label: 'Integrations' ,},
     {number: '24/7', label: 'Automation' ,}];
 
+=======
+const WorkflowAutomationPage: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
   return (
     <>
   <SEOOptimizer;
@@ -235,8 +239,33 @@ const AIWorkflowAutomation: React.FC = () => {
               <p className="text-xl md: text-2xl text-yellow-400 mb-8">,</p>
                 Automate any business process with intelligent workflows;
               </p>
+<<<<<<< HEAD
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">Our AI-powered workflow automation platform helps businesses eliminate manual tasks,</p>
                 reduce errors by 75%, and save 90% of processing time with intelligent automation.
+=======
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="/contact"
+                  className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+                >
+                  Get Started Today
+                </a>
+                <a
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </section>
+          {/* CTA Section */}
+          <section className="text-center py-16">
+            <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-gray-300 mb-6 text-lg">
+                Contact us for a free consultation and discover how our services can help your business.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
               </p>
               
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">,</div>
@@ -268,6 +297,7 @@ const AIWorkflowAutomation: React.FC = () => {
               </div>
             </div>
           </section>
+<<<<<<< HEAD
 
           {/* Features Section */} <section className="py-16">
             <div className="container mx-auto px-4">
@@ -485,3 +515,12 @@ export default AiWorkflowAutomationPage
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
+export default WorkflowAutomationPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256

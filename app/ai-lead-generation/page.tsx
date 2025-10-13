@@ -5,10 +5,16 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import Navigation from '../components/Navigation';
+<<<<<<< HEAD
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiLeadGenerationPage: React.FC = () => {
 <<<<<<< HEAD
+=======
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+const AILeadGenerationPage: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
   const features = [
 =======
 const features = [

@@ -9,9 +9,12 @@ import { Helmet } from 'react-helmet-async'
 import React from 'react';
 <<<<<<< HEAD
 import Link from 'next/link';
+<<<<<<< HEAD
 import { ArrowRight, MapPin, Clock, Users, Award, Zap } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
 const CareersPage: React.FC = () => {
   return (
     <>
@@ -486,6 +489,7 @@ const CareersPage: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 import React from 'react';
@@ -1187,3 +1191,6 @@ const CareersPage: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
 export default CareersPage
+=======
+export default CareersPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256

@@ -14,12 +14,15 @@ import Footer from '../components/Footer';
 import React, { useState } from 'react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
 import Link from 'next/link';
+<<<<<<< HEAD
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
 =======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const copyToClipboard = (code: string, id: string) => {
@@ -200,6 +203,7 @@ export default function APIDocsPage() {
     }
 <<<<<<< HEAD
   ];
+<<<<<<< HEAD
 =======
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -460,12 +464,56 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
 <<<<<<< HEAD
                     <category.icon className="w-6 h-6 text-white" />
+=======
+  return (
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
+        <Navigation />
+        <div className="container mx-auto px-4 py-8">
+          {/* Hero Section */}
+          <section className="text-center mb-16 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
+            <div className="relative z-10 py-16 px-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  API Documentation
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Integrate with our powerful AI and IT services through our comprehensive REST API.
+              </p>
+            </div>
+          </section>
+          {/* API Endpoints */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">API Endpoints</h2>
+            <div className="space-y-6">
+              {apiEndpoints.map((endpoint) => (
+                <div key={endpoint.id} className="bg-gray-800 rounded-lg p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-4">
+                      <span className={`px-3 py-1 rounded text-sm font-semibold ${
+                        endpoint.method === 'POST' ? 'bg-green-600 text-white' : 'bg-blue-600 text-white'
+                      }`}>
+                        {endpoint.method}
+                      </span>
+                      <code className="text-cyan-400 font-mono">{endpoint.endpoint}</code>
+                    </div>
+                    <button
+                      onClick={() => copyToClipboard(endpoint.example, endpoint.id)}
+                      className="flex items-center space-x-2 px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-sm transition-colors"
+                    >
+                      {copiedCode === endpoint.id ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                      <span>{copiedCode === endpoint.id ? 'Copied!' : 'Copy'}</span>
+                    </button>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">{category.description</p>}</p>
                   </div>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div className="space-y-6">{category.endpoints.map((endpoint, endpointIndex) => (</div>
                     <div key={endpointIndex}className="bg-white/5 rounded-xl p-6 border border-white/10">
@@ -594,6 +642,33 @@ const filteredEndpoints = apiEndpoints.map(category => ({
                     </div>
                   ))}
                 </div>
+=======
+              ))}
+            </div>
+          </section>
+          {/* CTA Section */}
+          <section className="text-center py-16">
+            <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-gray-300 mb-6 text-lg">
+                Contact us for API access and integration support.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="tel:+13024640950"
+                  className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  <Key className="w-5 h-5" />
+                  +1 302 464 0950
+                </a>
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  <Code className="w-5 h-5" />
+                  kleber@ziontechgroup.com
+                </a>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
               </div>
             ))}
           </div>
@@ -735,6 +810,7 @@ const ApiDocsPage: React.FC = () => {
     </>
   );
 };
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
 export default ApiDocsPage;
@@ -781,3 +857,6 @@ export default ApiDocsPage
     </div>);
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+export default ApiDocsPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256

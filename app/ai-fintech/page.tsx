@@ -143,6 +143,7 @@ const AIFintechPage: React.FC = () => {
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
@@ -215,6 +216,9 @@ return (
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       <Navigation />
       <main>
+=======
+        <Navigation />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>
@@ -623,6 +627,7 @@ return (
     </div>
   );
 };
+<<<<<<< HEAD
 export default AIFintechPage;
 =======
 import React from 'react'
@@ -666,3 +671,6 @@ export default AiFintechPage
 export default AiFintechPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+export default AIFintechPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256

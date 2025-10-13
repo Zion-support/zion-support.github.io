@@ -11,9 +11,14 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 =======
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Zap, Globe, Brain, Target, BarChart, MessageSquare, Eye, ArrowRight } from 'lucide-react';
 
+=======
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
 const AIContentGenerationPage: React.FC = () => {
   const contentServices = [
     {

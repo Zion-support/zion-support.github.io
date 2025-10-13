@@ -1,11 +1,136 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function AiDocumentProcessingZionTechGroup() {
+=======
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+const AIDocumentProcessingPage: React.FC = () => {
+  const features = [
+    {
+      icon: Eye,
+      title: 'Advanced OCR',
+      description: 'State-of-the-art optical character recognition that extracts text from any document with 99.9% accuracy.',
+      benefits: ['99.9% accuracy', 'Multi-language support', 'Handwriting recognition']
+    },
+    {
+      icon: Brain,
+      title: 'AI Data Extraction',
+      description: 'Intelligent data extraction that understands document structure and extracts relevant information automatically.',
+      benefits: ['Smart parsing', 'Context understanding', 'Field mapping']
+    },
+    {
+      icon: Zap,
+      title: 'Automated Processing',
+      description: 'Fully automated document processing workflows that handle large volumes of documents without human intervention.',
+      benefits: ['Batch processing', 'Real-time processing', 'Error handling']
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics & Insights',
+      description: 'Comprehensive analytics on document processing performance, accuracy rates, and processing times.',
+      benefits: ['Performance metrics', 'Accuracy tracking', 'Cost analysis']
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption, audit logs, and compliance with GDPR, HIPAA, and other standards.',
+      benefits: ['Data encryption', 'Audit trails', 'Compliance ready']
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Collaborative features that allow teams to review, approve, and manage document processing workflows.',
+      benefits: ['Review workflows', 'Approval processes', 'Team management']
+    }
+  ];
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$149',
+      period: '/month',
+      description: 'Perfect for small businesses',
+      features: [
+        'Up to 1,000 pages/month',
+        'Basic OCR',
+        'Standard templates',
+        'Email support',
+        'Basic analytics',
+        'Standard security'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$399',
+      period: '/month',
+      description: 'Ideal for growing companies',
+      features: [
+        'Up to 10,000 pages/month',
+        'Advanced AI extraction',
+        'Custom templates',
+        'Priority support',
+        'Advanced analytics',
+        'Enhanced security',
+        'API access'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$999',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited pages',
+        'Custom AI models',
+        'All features',
+        'Dedicated support',
+        'Custom development',
+        'Advanced compliance',
+        'On-premise option',
+        'SLA guarantee'
+      ],
+      popular: false
+    }
+  ];
+  const stats = [
+    { number: '99.9%', label: 'Accuracy Rate' },
+    { number: '90%', label: 'Time Savings' },
+    { number: '50+', label: 'Document Types' },
+    { number: '24/7', label: 'Processing' }
+  ];
+  const useCases = [
+    {
+      title: 'Invoice Processing',
+      description: 'Automatically extract data from invoices, validate information, and integrate with accounting systems.',
+      icon: FileText
+    },
+    {
+      title: 'Contract Analysis',
+      description: 'Analyze contracts to extract key terms, dates, and clauses with AI-powered natural language processing.',
+      icon: FileImage
+    },
+    {
+      title: 'Form Processing',
+      description: 'Process application forms, surveys, and other structured documents with intelligent data extraction.',
+      icon: Search
+    },
+    {
+      title: 'Medical Records',
+      description: 'Extract patient information from medical records while maintaining HIPAA compliance and data security.',
+      icon: Shield
+    }
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
   return (
     <>
       <Helmet>

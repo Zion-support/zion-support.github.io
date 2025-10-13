@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client;
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
@@ -69,6 +70,18 @@ const ItServicesPage: React.FC = () => {const itServices = [;
   const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { Phone, Mail, MapPin, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
+
+const ITServicesPage: React.FC = () => {
+  const itServices = [
+    // Infrastructure & Cloud Services
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
     {
       titl,
     e: 'Cloud Infrastructure Management,
@@ -661,6 +674,7 @@ const ItServicesPage: React.FC = () => {const itServices = [;
     { id: 'communication', name: 'Communication', icon: Phone },
     { id: 'compliance', name: 'Compliance', icon: FileText }
   ];
+<<<<<<< HEAD
 
   const filteredServices = useMemo(() => {
     let filtered = itServices;
@@ -722,6 +736,8 @@ import { ArrowRight, CheckCircle, Cloud, Shield, Server, Database, Code, Network
 
 const ITServicesPage: React.FC = () => {
   const services = [
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
@@ -793,6 +809,7 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
@@ -964,6 +981,72 @@ const itServices = [
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               IT <span className="text-cyan-400">Services</span>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation />
+      <main className="container mx-auto px-4 py-16 pt-24">
+        <section className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
+            IT Services
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive IT solutions to keep your business running smoothly and securely
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button inline-flex items-center space-x-2"
+            >
+              <Phone className="w-4 h-4" />
+              <span>Call: (302) 464-0950</span>
+            </a>
+            <a
+              href="/contact"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              Get Free Consultation
+            </a>
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+            Our IT Services
+          </h2>
+          
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {categories.map((category, index) => (
+              <button
+                key={index}
+                className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg text-white hover:bg-cyan-600 transition-colors duration-200"
+              >
+                {category.name} ({category.count})
+              </button>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {itServices.map((service, index) => (
+              <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="text-cyan-400 mb-4">
+                  <service.icon className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
+                  <ul className="text-sm text-gray-400 space-y-1">
+                    {service.features.slice(0, 4).map((feature, idx) => (
+                      <li key={idx} className="flex items-center">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <section className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
+              IT Services
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth.
@@ -1063,8 +1146,13 @@ const itServices = [
                   </p>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
+<<<<<<< HEAD
                       <li key={featureIndex} className="flex items-center text-gray-400 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+=======
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
                         {feature}
                       </li>
                     ))}
@@ -1077,7 +1165,75 @@ const itServices = [
                     Learn More →
                   </Link>
                 </div>
+<<<<<<< HEAD
               ))}
+=======
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your IT Infrastructure?</h2>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Contact us today for a free consultation and discover how our IT services can help your business grow and succeed.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button inline-flex items-center space-x-2"
+            >
+              <Phone className="w-4 h-4" />
+              <span>Call: (302) 464-0950</span>
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center space-x-2"
+            >
+              <Mail className="w-4 h-4" />
+              <span>Email Us</span>
+            </a>
+          </div>
+        </section>
+  return (
+    <>
+      <SEOOptimizer
+        title="Service - Zion Tech Group"
+        description="Professional AI and IT it-servicess for your business transformation."
+        keywords={['AI services', 'IT solutions', 'business transformation']}
+        canonicalUrl="https://ziontechgroup.com/service"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
+        <Navigation />
+        <div className="container mx-auto px-4 py-8">
+          {/* Hero Section */}
+          <section className="text-center mb-16 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
+            <div className="relative z-10 py-16 px-4">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Service
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Professional AI and IT services designed to transform your business operations.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="/contact"
+                  className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105"
+                >
+                  Get Started Today
+                </a>
+                <a
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
+                >
+                  Contact Us
+                </a>
+              </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
             </div>
           </div>
         </section>
@@ -1139,11 +1295,19 @@ const itServices = [
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
           </div>
 <<<<<<< HEAD
         </section>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
       </div>
+=======
+          </section>
+        </div>
+      </main>
+      </div>
+      <Footer />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
     </>
   );
 };

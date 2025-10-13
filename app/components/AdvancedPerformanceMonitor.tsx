@@ -112,8 +112,13 @@ interface PerformanceMetrics {fcp: number | null;,}
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
+<<<<<<< HEAD
         console.warn('LCP observer not supported:', error);
       }
+=======
+         
+        }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
     }
 
     // Measure First Input Delay (FID)
@@ -138,8 +143,13 @@ interface PerformanceMetrics {fcp: number | null;,}
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
+<<<<<<< HEAD
         console.warn('FID observer not supported:', error);
       }
+=======
+         
+        }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
     }
 
     // Measure Cumulative Layout Shift (CLS)
@@ -165,8 +175,13 @@ interface PerformanceMetrics {fcp: number | null;,}
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
+<<<<<<< HEAD
         console.warn('CLS observer not supported:', error);
       }
+=======
+         
+        }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
     }
 
     // Measure Time to First Byte (TTFB)
@@ -189,17 +204,27 @@ interface PerformanceMetrics {fcp: number | null;,}
         memory,
       }));
     } catch (error) {
+<<<<<<< HEAD
       console.warn('Performance measurement failed:', error);
     }
 
+=======
+       
+      }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
     // Cleanup observers
     return () => {
       observers.forEach(observer => {
         try {
           observer.disconnect();
         } catch (error) {
+<<<<<<< HEAD
           console.warn('Error disconnecting observer:', error);
         }
+=======
+           
+          }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
       });
     };
   }, []);
@@ -213,10 +238,15 @@ interface PerformanceMetrics {fcp: number | null;,}
     );
 
     if (slowResources.length > 0) {
+<<<<<<< HEAD
        
       console.warn(
         'Slow resources detected:',
         slowResources.map((r: PerformanceResourceTiming) => ({
+=======
+      // eslint-disable-next-line no-console
+      console.log('Slow resources:', slowResources.map(r => ({
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
           name: r.name,
           duration: r.duration,
           size: r.transferSize,

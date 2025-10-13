@@ -2,6 +2,7 @@
 =======
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import Navigation from '../components/Navigation';
@@ -23,6 +24,40 @@ const features = [
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+const AIFitnessCoachPage: React.FC = () => {
+  const features = [
+    'AI form analysis',
+    'Personalized workout plans',
+    'Real-time feedback',
+    'Progress tracking',
+    'Injury prevention',
+    'Nutrition guidance',
+    'Wearable integration',
+    'Social challenges'
+  ];
+  const benefits = [
+    'Improve workout effectiveness by 40%',
+    'Prevent injuries with AI monitoring',
+    'Personalize fitness plans',
+    'Track progress automatically',
+    'Motivate with AI coaching',
+    'Integrate with fitness devices'
+  ];
+  const useCases = [
+    'Home workouts',
+    'Gym training',
+    'Rehabilitation',
+    'Athletic performance',
+    'Weight loss',
+    'Muscle building',
+    'Flexibility training',
+    'Group fitness'
+  ];
+  const pricing = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -98,6 +133,7 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
@@ -159,6 +195,75 @@ return (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
                     <feature.icon className="w-8 h-8 text-white" />
+=======
+        {/* Features Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+            AI-Powered Fitness Features
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index) => (
+              <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Dumbbell className="w-6 h-6 text-green-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
+              </div>
+            ))}
+          </div>
+        </section>
+        {/* Benefits Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+            Why Choose Our AI Fitness Coach?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{benefit}</h3>
+                  <p className="text-gray-300 text-sm">
+                    Transform your fitness journey with AI technology that adapts to your needs and goals.
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+        {/* Use Cases Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+            Perfect For Every Fitness Goal
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                <div className="w-10 h-10 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">
+                  <Target className="w-5 h-5 text-blue-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{useCase}</h3>
+                <p className="text-gray-300 text-sm">
+                  Achieve your specific fitness goals with personalized AI coaching.
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+        {/* Pricing Section */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+            Choose Your Plan
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-green-500' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -346,6 +451,7 @@ return (
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </div>
 <<<<<<< HEAD
       <Footer>
@@ -367,3 +473,50 @@ export default AiFitnessCoachPage
 export default AiFitnessCoachPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+        {/* Technology Stack */}
+        <section className="mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
+            Technology Stack
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {['Computer Vision', 'Motion Analysis', 'Wearable APIs', 'Mobile Apps', 'Cloud AI', 'Health APIs'].map((tech, index) => (
+              <div key={index} className="cyber-card p-4 text-center">
+                <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center mx-auto mb-2">
+                  <Shield className="w-4 h-4 text-cyan-400" />
+                </div>
+                <span className="text-sm text-gray-300">{tech}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+        {/* Contact Section */}
+        <section className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-lg p-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your Fitness?</h2>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Contact us today to learn more about our AI fitness coaching technology and start your personalized fitness journey.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button inline-flex items-center space-x-2"
+            >
+              <Phone className="w-4 h-4" />
+              <span>Call: (302) 464-0950</span>
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-green-400 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center space-x-2"
+            >
+              <Mail className="w-4 h-4" />
+              <span>Email Us</span>
+            </a>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+export default AIFitnessCoachPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256

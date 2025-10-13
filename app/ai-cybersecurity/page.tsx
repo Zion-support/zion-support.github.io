@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
@@ -11,6 +12,133 @@ import { Link } from "react-router-dom";
 
 export default function AiCybersecurityZionTechGroup() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+'use client';
+import React from 'react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+const AICybersecurityPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI Threat Detection',
+      description: 'Advanced AI algorithms that detect and prevent cyber threats in real-time, including zero-day attacks and advanced persistent threats.',
+      benefits: ['Real-time detection', 'Zero-day protection', '99.9% accuracy']
+    },
+    {
+      icon: Shield,
+      title: 'Automated Response',
+      description: 'Intelligent automated response system that instantly contains threats, isolates affected systems, and initiates recovery procedures.',
+      benefits: ['Instant containment', 'Auto-recovery', 'Minimal downtime']
+    },
+    {
+      icon: Eye,
+      title: 'Continuous Monitoring',
+      description: '24/7 monitoring of your entire infrastructure with AI-powered analysis of network traffic, user behavior, and system activities.',
+      benefits: ['24/7 surveillance', 'Behavioral analysis', 'Anomaly detection']
+    },
+    {
+      icon: BarChart,
+      title: 'Security Analytics',
+      description: 'Comprehensive security analytics and reporting with threat intelligence, risk assessment, and compliance monitoring.',
+      benefits: ['Threat intelligence', 'Risk scoring', 'Compliance reports']
+    },
+    {
+      icon: Zap,
+      title: 'Vulnerability Management',
+      description: 'Automated vulnerability scanning, prioritization, and patching with AI-powered risk assessment and remediation guidance.',
+      benefits: ['Auto-scanning', 'Risk prioritization', 'Patch management']
+    },
+    {
+      icon: Lock,
+      title: 'Zero Trust Architecture',
+      description: 'Implement zero trust security model with identity verification, device trust, and least privilege access controls.',
+      benefits: ['Identity verification', 'Device trust', 'Least privilege']
+    }
+  ];
+  const pricingPlans = [
+    {
+      name: 'Essential',
+      price: '$799',
+      period: '/month',
+      description: 'Perfect for small businesses',
+      features: [
+        'Up to 50 endpoints',
+        'Basic threat detection',
+        'Email security',
+        '24/7 monitoring',
+        'Email support',
+        'Basic reporting',
+        'Standard compliance'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$1,999',
+      period: '/month',
+      description: 'Ideal for growing companies',
+      features: [
+        'Up to 500 endpoints',
+        'Advanced AI detection',
+        'All security modules',
+        'Real-time response',
+        'Priority support',
+        'Advanced analytics',
+        'Custom compliance',
+        'Incident response'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$4,999',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited endpoints',
+        'Custom AI models',
+        'Full security suite',
+        'Dedicated SOC team',
+        'Dedicated support',
+        'Custom development',
+        'Advanced compliance',
+        'Penetration testing',
+        'SLA guarantee'
+      ],
+      popular: false
+    }
+  ];
+  const stats = [
+    { number: '99.9%', label: 'Threat Detection' },
+    { number: '24/7', label: 'Monitoring' },
+    { number: '60%', label: 'Faster Response' },
+    { number: '100%', label: 'Compliance' }
+  ];
+  const threats = [
+    {
+      title: 'Ransomware Protection',
+      description: 'Advanced AI detection and prevention of ransomware attacks with automated backup and recovery systems.',
+      icon: Shield
+    },
+    {
+      title: 'Phishing Detection',
+      description: 'AI-powered email security that detects and blocks sophisticated phishing attempts and social engineering attacks.',
+      icon: Eye
+    },
+    {
+      title: 'Insider Threat Detection',
+      description: 'Behavioral analysis to identify and prevent insider threats, data exfiltration, and unauthorized access.',
+      icon: Users
+    },
+    {
+      title: 'Network Security',
+      description: 'Comprehensive network monitoring and protection with AI-powered intrusion detection and prevention systems.',
+      icon: Globe
+    }
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
   return (
     <>
       <Helmet>
