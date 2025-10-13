@@ -2,20 +2,10 @@ export interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-
-
-  canonicalUrl?: string;
-  ogImage?: string;
-
   canonicalUrl: string;
   ogImage?: string;
   ogType?: string;
-
   twitterCard?: string;
-
-  canonical?: string;
-  ogImage?: string;
-
 }
 
 export class SEOUtils {
@@ -46,7 +36,7 @@ export class SEOUtils {
     };
   }
 
-  generateStructuredData() {
+  generateOrganizationSchema() {
     return {
       '@context': 'https://schema.org',
       '@type': 'Organization',
@@ -54,6 +44,7 @@ export class SEOUtils {
       description: this.config.description,
       url: this.config.canonicalUrl,
     };
+  }
 
   updateTitle(title: string) {
     document.title = title;
@@ -147,16 +138,7 @@ export class SEOUtils {
     this.updateOpenGraphTags();
     this.updateTwitterCard();
     this.generateStructuredData();
-
   }
-
-      canonical: this.config.canonical,
-      'og:title': this.config.title,
-      'og:description': this.config.description,
-      'og:image': this.config.ogImage,
-    };
-  }
-
 }
 
 export default SEOUtils;
