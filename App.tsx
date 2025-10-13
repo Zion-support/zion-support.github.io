@@ -152,6 +152,12 @@ const ZionComplianceManagerPage = React.lazy(
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
+const ZionAICodeAssistantProPage = React.lazy(
+  () => import("./app/zion-ai-code-assistant-pro/page"),
+);
+const ZionAIMarketingAutomationProPage = React.lazy(
+  () => import("./app/zion-ai-marketing-automation-pro/page"),
+);
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
@@ -362,6 +368,14 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-code-assistant-pro"
+                    element={<ZionAICodeAssistantProPage />}
+                  />
+                  <Route
+                    path="/zion-ai-marketing-automation-pro"
+                    element={<ZionAIMarketingAutomationProPage />}
                   />
 
                   {/* 5G Solutions Routes */}
