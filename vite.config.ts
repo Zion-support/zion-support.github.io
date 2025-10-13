@@ -40,6 +40,7 @@ export default defineConfig({
     // Enable compression
     reportCompressedSize: true,
     
+    
     rollupOptions: {
       output: {
         manualChunks: (id) => {

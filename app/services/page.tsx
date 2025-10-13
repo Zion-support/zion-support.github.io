@@ -1,57 +1,50 @@
-import { ArrowRight, Brain, Shield, Zap, Globe, Database, Code, Smartphone } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Database, Code, Smartphone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function Services() {
   const services = [
     {
-      title: "AI & Machine Learning",
-      description: "Cutting-edge artificial intelligence solutions to transform your business operations",
+      title: "AI Services",
+      description: "Transform your business with cutting-edge artificial intelligence solutions.",
       icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      path: "/ai-services"
+      path: "/ai-services",
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and migration services",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      path: "/cloud-services"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets",
+      title: "Cybersecurity Solutions",
+      description: "Protect your business with comprehensive cybersecurity services.",
       icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500",
-      path: "/cybersecurity"
+      path: "/cybersecurity-solutions",
+      color: "from-green-500 to-emerald-500"
     },
     {
-      title: "5G Implementation",
-      description: "Next-generation connectivity and infrastructure services",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-500 to-yellow-500",
-      path: "/5g-implementation"
+      title: "5G Solutions",
+      description: "Next-generation connectivity and infrastructure services.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/5g-solutions",
+      color: "from-orange-500 to-red-500"
     },
     {
       title: "Data Analytics",
-      description: "Advanced data analysis and business intelligence solutions",
+      description: "Turn your data into actionable business insights.",
       icon: <Database className="w-8 h-8" />,
-      color: "from-purple-500 to-indigo-500",
-      path: "/data-analytics"
+      path: "/data-analytics",
+      color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Custom Development",
-      description: "Tailored software solutions for your specific business needs",
+      title: "Web Development",
+      description: "Custom web applications and digital solutions.",
       icon: <Code className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500",
-      path: "/custom-development"
+      path: "/web-development",
+      color: "from-teal-500 to-cyan-500"
     },
     {
-      title: "Mobile Solutions",
-      description: "Native and cross-platform mobile applications",
+      title: "Mobile Development",
+      description: "Native and cross-platform mobile applications.",
       icon: <Smartphone className="w-8 h-8" />,
-      color: "from-pink-500 to-rose-500",
-      path: "/mobile-development"
+      path: "/mobile-development",
+      color: "from-pink-500 to-rose-500"
     }
   ];
 
@@ -61,7 +54,11 @@ export default function Services() {
         <title>Services - Zion Tech Group</title>
         <meta
           name="description"
-          content="Comprehensive technology services including AI solutions, cloud computing, cybersecurity, and digital transformation for modern businesses."
+          content="Comprehensive technology services including AI, cloud infrastructure, cybersecurity, 5G solutions, data analytics, and custom development."
+        />
+        <meta
+          name="keywords"
+          content="technology services, AI services, cloud infrastructure, cybersecurity, 5G solutions, data analytics, web development, mobile development"
         />
       </Helmet>
 
@@ -78,12 +75,35 @@ export default function Services() {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/consultation"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Free Consultation
+              </Link>
+            </div>
           </div>
         </section>
 
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Technology Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive technology services designed to accelerate your business growth and digital transformation.
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <Link
@@ -115,21 +135,21 @@ export default function Services() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our services can help you achieve your goals.
+              Join thousands of businesses already using our solutions to drive growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/consultation"
+                to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
-                Schedule Consultation
+                Start Your Journey
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/contact"
+                to="/pricing"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-                Contact Us
+                View Pricing
               </Link>
             </div>
           </div>

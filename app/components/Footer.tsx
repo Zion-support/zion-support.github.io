@@ -86,10 +86,73 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/5g-implementation"
+                  to="/5g-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  5G Implementation
+                  5G Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/data-analytics"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/web-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Web Development
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/ai-analytics"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Analytics
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-automation"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Automation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-content-generation"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Content Generation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-customer-service"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Customer Service
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-marketing"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Marketing
                 </Link>
               </li>
               <li>
