@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Zap, Shield, Globe, Database, Code, Smartphone } from "lucide-react";
+import { ArrowRight, Zap, Shield, Globe, Database, Code, Smartphone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
