@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -16,6 +13,7 @@ import {
   EnvelopeIcon,
   MapPinIcon
 } from '@heroicons/react/24/outline';
+import { OrganizationStructuredData, WebSiteStructuredData } from './components/StructuredData';
 
 export default function HomePage() {
   return (
@@ -24,6 +22,32 @@ export default function HomePage() {
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." />
         <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://ziontechgroup.com/" />
+        <meta property="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="twitter:description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." />
+        <meta property="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        
+        {/* Additional SEO */}
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://ziontechgroup.com/" />
+        
+        {/* Structured Data */}
+        <OrganizationStructuredData />
+        <WebSiteStructuredData />
       </Helmet>
       
       {/* Hero Section */}

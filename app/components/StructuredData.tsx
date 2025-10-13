@@ -1,89 +1,125 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const StructuredData: React.FC = () => {
+interface StructuredDataProps {
+  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'BreadcrumbList';
+  data: any;
+}
+
+const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
+  const getStructuredData = () => {
+    const baseData = {
+      '@context': 'https://schema.org',
+      '@type': type,
+      ...data,
+    };
+
+    return baseData;
+  };
+
   return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Structured Data - Zion Tech Group</title>
-        <meta name="description" content="Professional structured data services by Zion Tech Group." />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Structured Data
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional structured data services 
-            designed to help your business grow and succeed.
-          </p>
-        </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                We provide comprehensive structured data 
-                solutions tailored to your specific needs and requirements.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Custom solutions
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Expert consultation
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support
-                </li>
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p className="mb-6">
-                Ready to transform your business with our structured data services?
-              </p>
-              <a
-                href="/contact"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our structured data 
-            services can help you achieve your goals.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            Get Started Today
-          </a>
-        </div>
-      </section>
-    </div>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(getStructuredData(), null, 2),
+      }}
+    />
   );
 };
+
+// Predefined structured data components
+export const OrganizationStructuredData: React.FC = () => (
+  <StructuredData
+    type="Organization"
+    data={{
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
+      description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '364 E Main St STE 1008',
+        addressLocality: 'Middletown',
+        addressRegion: 'DE',
+        postalCode: '19709',
+        addressCountry: 'US',
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-302-464-0950',
+        contactType: 'customer service',
+        email: 'kleber@ziontechgroup.com',
+      },
+      sameAs: [
+        'https://linkedin.com/company/ziontechgroup',
+        'https://twitter.com/ziontechgroup',
+        'https://github.com/ziontechgroup',
+      ],
+      foundingDate: '2020',
+      numberOfEmployees: '10-50',
+      industry: 'Information Technology',
+      services: [
+        'AI Solutions',
+        'Cybersecurity',
+        'Cloud Infrastructure',
+        'Digital Transformation',
+        'Micro SaaS',
+        '5G Solutions',
+      ],
+    }}
+  />
+);
+
+export const WebSiteStructuredData: React.FC = () => (
+  <StructuredData
+    type="WebSite"
+    data={{
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      description: 'Advanced AI and IT Solutions for Modern Businesses',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://ziontechgroup.com/search?q={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    }}
+  />
+);
+
+export const ServiceStructuredData: React.FC<{ service: any }> = ({ service }) => (
+  <StructuredData
+    type="Service"
+    data={{
+      name: service.name,
+      description: service.description,
+      provider: {
+        '@type': 'Organization',
+        name: 'Zion Tech Group',
+        url: 'https://ziontechgroup.com',
+      },
+      areaServed: 'Worldwide',
+      serviceType: service.category,
+      offers: service.price ? {
+        '@type': 'Offer',
+        price: service.price,
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
+      } : undefined,
+    }}
+  />
+);
+
+export const BreadcrumbStructuredData: React.FC<{ items: Array<{ name: string; url: string }> }> = ({ items }) => (
+  <StructuredData
+    type="BreadcrumbList"
+    data={{
+      itemListElement: items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        item: item.url,
+      })),
+    }}
+  />
+);
 
 export default StructuredData;

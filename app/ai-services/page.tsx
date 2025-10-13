@@ -1,14 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
-=======
-import { Right, Star, Zap } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
 import FuturisticBackground from '../components/FuturisticBackground';
 
 const AiServicesPage: React.FC = () => {

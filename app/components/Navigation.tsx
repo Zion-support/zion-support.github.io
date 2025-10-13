@@ -48,41 +48,57 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
+    <nav 
+      className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50"
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link 
+            to="/" 
+            className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-lg p-1"
+            aria-label="Zion Tech Group - Go to homepage"
+          >
             <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
+              <span className="text-white font-bold text-lg" aria-hidden="true">Z</span>
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8" role="menubar">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
                   to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
                   onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                   onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
+                  role="menuitem"
+                  aria-haspopup={item.submenu ? "true" : "false"}
+                  aria-expanded={item.submenu && isServicesOpen ? "true" : "false"}
                 >
-                  <item.icon className="w-4 h-4" />
+                  <item.icon className="w-4 h-4" aria-hidden="true" />
                   <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
+                  {item.submenu && <ChevronDownIcon className="w-4 h-4" aria-hidden="true" />}
                 </Link>
                 
                 {/* Dropdown Menu */}
                 {item.submenu && isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
+                  <div 
+                    className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700"
+                    role="menu"
+                    aria-label={`${item.name} submenu`}
+                  >
                     {item.submenu.map((subItem) => (
                       <Link
                         key={subItem.name}
                         to={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
+                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-inset"
                         onClick={() => setIsServicesOpen(false)}
+                        role="menuitem"
                       >
                         {subItem.name}
                       </Link>
@@ -97,7 +113,8 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+              aria-label="Get started with our services"
             >
               Get Started
             </Link>
@@ -107,37 +124,42 @@ const Navigation = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2"
+              className="text-gray-300 hover:text-white p-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-lg"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
-              {isOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
+              {isOpen ? <XMarkIcon className="w-6 h-6" aria-hidden="true" /> : <Bars3Icon className="w-6 h-6" aria-hidden="true" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
+          <div className="lg:hidden" id="mobile-menu">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2" role="menu">
               {navigation.map((item) => {
                 const Icon = item.icon;
                 return (
                   <div key={item.name}>
                     <Link
                       to={item.href}
-                      className="flex items-center space-x-3 text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className="flex items-center space-x-3 text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-inset"
                       onClick={() => setIsOpen(false)}
+                      role="menuitem"
                     >
-                      <Icon className="w-5 h-5" />
+                      <Icon className="w-5 h-5" aria-hidden="true" />
                       <span>{item.name}</span>
                     </Link>
                     {item.submenu && (
-                      <div className="ml-8 space-y-1">
+                      <div className="ml-8 space-y-1" role="menu" aria-label={`${item.name} submenu`}>
                         {item.submenu.map((subItem) => (
                           <Link
                             key={subItem.name}
                             to={subItem.href}
-                            className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
+                            className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-inset"
                             onClick={() => setIsOpen(false)}
+                            role="menuitem"
                           >
                             {subItem.name}
                           </Link>
@@ -150,8 +172,10 @@ const Navigation = () => {
               <div className="pt-4 border-t border-slate-700">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
+                  className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-inset"
                   onClick={() => setIsOpen(false)}
+                  role="menuitem"
+                  aria-label="Get started with our services"
                 >
                   Get Started
                 </Link>

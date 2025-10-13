@@ -1,60 +1,45 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-export default function Page() {
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  color?: 'primary' | 'secondary' | 'white';
+  text?: string;
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  color = 'primary', 
+  text,
+  className = ''
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  const colorClasses = {
+    primary: 'border-purple-500 border-t-transparent',
+    secondary: 'border-cyan-500 border-t-transparent',
+    white: 'border-white border-t-transparent'
+  };
+
   return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>LoadingSpinner - Zion Tech Group</title>
-        <meta name="description" content="Professional loadingspinner services by Zion Tech Group." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            LoadingSpinner
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Professional loadingspinner solutions tailored to your business needs.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                Expert Solutions
-              </h3>
-              <p className="text-blue-700">
-                Our team of experts delivers cutting-edge loadingspinner solutions.
-              </p>
-            </div>
-            
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-green-900 mb-2">
-                Custom Implementation
-              </h3>
-              <p className="text-green-700">
-                Tailored loadingspinner implementations for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                24/7 Support
-              </h3>
-              <p className="text-purple-700">
-                Round-the-clock support for all your loadingspinner needs.
-              </p>
-            </div>
-          </div>
-          
-          <div className="mt-12">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started Today
-            </button>
-          </div>
-        </div>
-      </div>
+    <div className={`flex flex-col items-center justify-center space-y-3 ${className}`}>
+      <div 
+        className={`${sizeClasses[size]} border-4 ${colorClasses[color]} rounded-full animate-spin`}
+        role="status"
+        aria-label="Loading"
+      />
+      {text && (
+        <p className="text-gray-300 text-sm animate-pulse">
+          {text}
+        </p>
+      )}
     </div>
   );
-}
+};
+
+export default LoadingSpinner;
