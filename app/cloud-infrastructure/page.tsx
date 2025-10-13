@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
-import { Cloud, Server, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Clock, Award, Star, Activity, Lock, Network, Code } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+import { Cloud, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Star, Activity, Lock, Network } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -16,8 +13,8 @@ import { Settings } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Network } from 'lucide-react';
 import { Lock } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Monitor } from 'lucide-react';
+// import { Code } from 'lucide-react'; // Unused import
+// import { Monitor } from 'lucide-react'; // Unused import
 import { BarChart3 } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { Cloud } from 'lucide-react';

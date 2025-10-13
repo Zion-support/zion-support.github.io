@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -10,14 +9,11 @@ import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
-import { Filter } from 'lucide-react';
+// import { Filter } from 'lucide-react'; // Unused import
 import { Cloud } from 'lucide-react';
-
-=======
-import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database, Search, Filter } from 'lucide-react';
+import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database, Search } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function ZionCloudVault() {
   const features = [

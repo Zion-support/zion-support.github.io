@@ -1,11 +1,8 @@
 import React from "react";
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Code } from 'lucide-react';
-=======
-import { Code } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+// import { Helmet } from 'react-helmet-async'; // Unused import
+// import { Code } from 'lucide-react'; // Unused import
+// import { Code } from 'lucide-react'; // Unused import
+// import { Helmet } from "react-helmet-async"; // Unused import
 
 export default function ZionAICodeReviewer() {
   return (

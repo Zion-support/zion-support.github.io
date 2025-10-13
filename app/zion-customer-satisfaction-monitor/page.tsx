@@ -1,6 +1,6 @@
 import React from "react";
-import { Helmet } from 'react-helmet-async';
-import { Monitor } from 'lucide-react';
+// import { Helmet } from 'react-helmet-async'; // Unused import
+// import { Monitor } from 'lucide-react'; // Unused import
 
 export default function ZionCustomerSatisfactionMonitor() {
   return (

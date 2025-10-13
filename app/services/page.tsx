@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Search } from 'lucide-react';
 import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
+// import { Star } from 'lucide-react'; // Unused import
 import { Cpu } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Database } from 'lucide-react';
@@ -16,7 +15,7 @@ import { Globe } from 'lucide-react';
 import { Server } from 'lucide-react';
 import { Network } from 'lucide-react';
 import { Lock } from 'lucide-react';
-import { Calendar } from 'lucide-react';
+// import { Calendar } from 'lucide-react'; // Unused import
 import { Code } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
@@ -27,14 +26,11 @@ import { Headphones } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { FileText } from 'lucide-react';
-import { Hand } from 'lucide-react';
+// import { Hand } from 'lucide-react'; // Unused import
 import { Cloud } from 'lucide-react';
-
-=======
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones, Star, Hand, Search, Calendar, Phone } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones, Search, Phone } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function Services() {
   const services = [

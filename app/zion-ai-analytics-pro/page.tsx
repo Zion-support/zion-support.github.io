@@ -1,9 +1,9 @@
 import React from 'react';
-import { Settings, Users, Sparkles, ArrowRight, CheckCircle, Star, Zap, Brain, BarChart3, Database, Target, Mic, FileText, Mail, Play, MapPin, Phone } from 'lucide-react';
+import { Settings, Sparkles, ArrowRight, CheckCircle, Star, Zap, Brain, BarChart3, Database, Target, FileText, Mail, Play, MapPin, Phone } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
+// import { Users } from 'lucide-react'; // Unused import
 import { Star } from 'lucide-react';
 import { MapPin } from 'lucide-react';
 import { Database } from 'lucide-react';
@@ -18,8 +18,8 @@ import { Mail } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { FileText } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
+// import { Mic } from 'lucide-react'; // Unused import
+// import { Cloud } from 'lucide-react'; // Unused import
 
 const ZionAIAnalyticsProPage = () => {
   const benefits = [

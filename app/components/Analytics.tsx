@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
-import { Star } from 'lucide-react';
-<<<<<<< HEAD
-=======
+// import { Star } from 'lucide-react'; // Unused import
 import { useLocation } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 declare global {
   interface Window {

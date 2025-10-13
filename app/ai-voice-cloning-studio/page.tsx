@@ -22,19 +22,19 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-import { ArrowRight } from 'lucide-react';
-import { Clock } from 'lucide-react';
+// import { ArrowRight } from 'lucide-react'; // Unused import
+// import { Clock } from 'lucide-react'; // Unused import
 import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Pause } from 'lucide-react';
-import { Download } from 'lucide-react';
-import { Upload } from 'lucide-react';
-import { Shield } from 'lucide-react';
+// import { Star } from 'lucide-react'; // Unused import
+// import { Pause } from 'lucide-react'; // Unused import
+// import { Download } from 'lucide-react'; // Unused import
+// import { Upload } from 'lucide-react'; // Unused import
+// import { Shield } from 'lucide-react'; // Unused import
 import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Settings } from 'lucide-react';
-import { Globe } from 'lucide-react';
+// import { Globe } from 'lucide-react'; // Unused import
 import { Play } from 'lucide-react';
 import { Volume2 } from 'lucide-react';
 import { Mic } from 'lucide-react';

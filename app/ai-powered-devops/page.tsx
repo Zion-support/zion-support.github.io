@@ -1,10 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
-=======
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone, Plus } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
 import { Link } from "react-router-dom";
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 import SEOOptimizer from "../../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -19,10 +16,10 @@ import { Globe } from 'lucide-react';
 import { Rocket } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
-import { Plus } from 'lucide-react';
+// import { Plus } from 'lucide-react'; // Unused import
 import { DollarSign } from 'lucide-react';
 import { Phone } from 'lucide-react';
-import { Cloud } from 'lucide-react';
+// import { Cloud } from 'lucide-react'; // Unused import
 
 export default function AiPoweredDevops() {
   const features = [

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { Code } from 'lucide-react';
+// import { Code } from 'lucide-react'; // Unused import
 import { Helmet } from 'react-helmet-async';
-import { Code } from 'lucide-react';
+// import { Code } from 'lucide-react'; // Unused import
 import { Cloud } from 'lucide-react';
 
 interface SEOOptimizerProps {

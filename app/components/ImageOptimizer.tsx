@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Box } from 'lucide-react';
+// import { Box } from 'lucide-react'; // Unused import
 
 interface ImageOptimizerProps {
   src: string;

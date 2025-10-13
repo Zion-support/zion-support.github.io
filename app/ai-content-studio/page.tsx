@@ -7,7 +7,7 @@ import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
-import { ArrowRight } from 'lucide-react';
+// import { ArrowRight } from 'lucide-react'; // Unused import
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Sparkles } from 'lucide-react';

@@ -10,7 +10,7 @@ import { Shield } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
 import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
+// import { Brain } from 'lucide-react'; // Unused import
 import { Sparkles } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import { Monitor } from 'lucide-react';

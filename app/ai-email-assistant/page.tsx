@@ -9,15 +9,12 @@ import { Settings } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
-import { Hand } from 'lucide-react';
+// import { Hand } from 'lucide-react'; // Unused import
 
 "use client";
-<<<<<<< HEAD
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { MessageSquare, Brain, Shield, Zap, Star, Mail, BarChart3, Settings, Users, Hand } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+import { MessageSquare, Brain, Shield, Zap, Star, Mail, BarChart3, Settings, Users } from 'lucide-react';
 
 export default function AIEmailAssistant() {
   const features = [

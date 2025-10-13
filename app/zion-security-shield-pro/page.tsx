@@ -10,7 +10,7 @@ import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
+// import { Monitor } from 'lucide-react'; // Unused import
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { FileText } from 'lucide-react';

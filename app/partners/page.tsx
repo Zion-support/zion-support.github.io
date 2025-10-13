@@ -1,13 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Database } from 'lucide-react';
-import { Mic } from 'lucide-react';
+// import { Mic } from 'lucide-react'; // Unused import
 import { Cloud } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-import { Users, Globe, Shield, Zap, Database, Mic } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+// import { Link } from 'react-router-dom'; // Unused import
+import { Database } from 'lucide-react';
 
 export default function Partners() {
   const partners = [

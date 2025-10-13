@@ -1,23 +1,19 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
+// import { Star } from 'lucide-react'; // Unused import
 import { Shield } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
+// import { Phone } from 'lucide-react'; // Unused import
 import { Smartphone } from 'lucide-react';
-import { Globe as GlobeIcon } from 'lucide-react';
-
-=======
+// import { Globe as GlobeIcon } from 'lucide-react'; // Unused import
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Star, Globe, Phone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
 
 export default function AboutPage() {
 

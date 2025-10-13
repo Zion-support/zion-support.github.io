@@ -1,9 +1,9 @@
 import React from 'react';
-import { Users, ArrowRight, CheckCircle, Star, Globe, Shield, Zap, Brain, BarChart3, Target, Mail } from 'lucide-react';
+import { Users, ArrowRight, CheckCircle, Globe, Shield, Zap, Brain, BarChart3, Target, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
+// import { Star } from 'lucide-react'; // Unused import
 import { Shield } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';

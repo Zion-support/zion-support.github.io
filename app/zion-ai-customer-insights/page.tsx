@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-import { TrendingUp, Settings, Users, Sparkles, ArrowRight, CheckCircle, Star, Globe, Zap, BarChart3, Target, DollarSign, Smartphone, Mail, Headphones, Play, Phone, Heart } from 'lucide-react';
+import { TrendingUp, Settings, Users, Sparkles, ArrowRight, CheckCircle, Star, Globe, Zap, BarChart3, Target, DollarSign, Smartphone, Mail, Headphones, Play, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -21,7 +18,7 @@ import { Mail } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Headphones } from 'lucide-react';
 import { DollarSign } from 'lucide-react';
-import { Phone } from 'lucide-react';
+// import { Phone } from 'lucide-react'; // Unused import
 import { Smartphone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import { Heart } from 'lucide-react';

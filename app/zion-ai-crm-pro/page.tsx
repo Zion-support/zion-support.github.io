@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, Users, Sparkles, ArrowRight, CheckCircle, Star, Zap, BarChart3, Target, Mic, Mail, Play, MapPin, Phone } from 'lucide-react';
+import { TrendingUp, Users, Sparkles, ArrowRight, CheckCircle, Star, Zap, BarChart3, Target, Mail, Play, MapPin, Phone } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -15,7 +15,7 @@ import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Phone } from 'lucide-react';
-import { Mic } from 'lucide-react';
+// import { Mic } from 'lucide-react'; // Unused import
 
 const ZionAICRMProPage = () => {
   const benefits = [

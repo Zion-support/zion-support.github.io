@@ -10,7 +10,7 @@ import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Target } from 'lucide-react';
-import { Hand } from 'lucide-react';
+// import { Hand } from 'lucide-react'; // Unused import
 
 const ZionAINeuralInterface = () => {
   const features = [

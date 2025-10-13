@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Users, Sparkles, CheckCircle, Award, Star, Globe, Shield, Zap, Brain, BarChart3, Smartphone, Lock, Network, AlertTriangle } from 'lucide-react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+import { Users, Sparkles, CheckCircle, Award, Star, Globe, Shield, Zap, BarChart3, Smartphone, Lock, Network, AlertTriangle } from 'lucide-react';
+// import { Link } from 'react-router-dom'; // Unused import
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -15,7 +12,7 @@ import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
+// import { Brain } from 'lucide-react'; // Unused import
 import { Sparkles } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Network } from 'lucide-react';

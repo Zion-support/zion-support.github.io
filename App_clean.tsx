@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect, useState, useCallback } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Unused import
+// import { HelmetProvider } from "react-helmet-async"; // Unused import
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
 import "./app/styles/accessibility-enhanced.css";
@@ -8,8 +8,8 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+// import { LoadingPage } from "./app/components/LoadingStates"; // Unused import
+// import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback"; // Unused import
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -19,9 +19,9 @@ import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-import LoadingPageEnhanced from "./app/components/EnhancedLoading";
-import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
-import EnhancedSEO from "./app/components/EnhancedSEO";
+// import LoadingPageEnhanced from "./app/components/EnhancedLoading";
+// import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+// import EnhancedSEO from "./app/components/EnhancedSEO";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));

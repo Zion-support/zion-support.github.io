@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle, Star, Hand, Play, Pause, Calendar, Network } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Play, Pause, Calendar, Network } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -8,9 +8,9 @@ import { Pause } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Network } from 'lucide-react';
 import { Calendar } from 'lucide-react';
-import { Monitor } from 'lucide-react';
+// import { Monitor } from 'lucide-react'; // Unused import
 import { Play } from 'lucide-react';
-import { Hand } from 'lucide-react';
+// import { Hand } from 'lucide-react'; // Unused import
 import { Cloud } from 'lucide-react';
 
 export default function DemoPage() {

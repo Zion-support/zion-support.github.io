@@ -1,9 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { TrendingUp, Users, ArrowRight, CheckCircle, Star, Globe, Zap, Brain, BarChart3, Database, Plus, Activity } from 'lucide-react';
+import { TrendingUp, Users, ArrowRight, CheckCircle, Star, Globe, Zap, Brain, BarChart3, Database, Activity } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -20,7 +17,7 @@ import { Globe } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Activity } from 'lucide-react';
-import { Plus } from 'lucide-react';
+// import { Plus } from 'lucide-react'; // Unused import
 
 const ZionAiBusinessIntelligencePro = () => {
   const testimonials = [

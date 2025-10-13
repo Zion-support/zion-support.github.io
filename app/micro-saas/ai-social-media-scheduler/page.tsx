@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-
-=======
+// import { Star } from 'lucide-react'; // Unused import
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+import { ArrowRight } from 'lucide-react';
 
 const Page = () => {
   return (

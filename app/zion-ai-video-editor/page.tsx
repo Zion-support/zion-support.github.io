@@ -1,13 +1,8 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Edit } from 'lucide-react';
-
-=======
-import { ArrowRight, Edit } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
-
+// import { Edit } from 'lucide-react'; // Unused import
+import { ArrowRight } from 'lucide-react';
 
 export default function ZionAiVideoEditorZionTechGroup() {
   return (

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -16,13 +15,11 @@ import { Code } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
-import { Mic } from 'lucide-react';
+// import { Mic } from 'lucide-react'; // Unused import
 import { Cloud } from 'lucide-react';
-=======
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { X, ChevronDown, ChevronRight, Home, Users, Settings, BarChart3, Shield, Cloud, Code, Brain, Zap, Database, Star, ArrowRight, Phone, Mail, MapPin, Mic, Network } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+import { X, ChevronDown, ChevronRight, Home, Users, Settings, BarChart3, Shield, Cloud, Code, Brain, Zap, Database, Star, ArrowRight, Phone, Mail, MapPin, Network } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean

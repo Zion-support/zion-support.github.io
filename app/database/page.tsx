@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
+// import { Star } from 'lucide-react'; // Unused import
 import { Database } from 'lucide-react';
-
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Star, Database } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+import { ArrowRight, Database } from 'lucide-react';
 
 const DatabasePage = () => {
   return (

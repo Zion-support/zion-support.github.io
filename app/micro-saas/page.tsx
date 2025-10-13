@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Mic } from 'lucide-react';
-
+// import { Mic } from 'lucide-react'; // Unused import
 export default function MicroSaasZionTechGroup() {
   return (
     <>
@@ -31,11 +29,9 @@ export default function MicroSaasZionTechGroup() {
     </>
   );
 }
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Smartphone, Globe, Database, ArrowRight, CheckCircle, Clock, Award, Users, Zap, Shield, BarChart3, Star, Mic } from 'lucide-react';
-
+import { Globe, Database, ArrowRight, Users, Zap, Shield, BarChart3 } from 'lucide-react';
 const MicroSaasPage: React.FC = () => {
   const services = [
     {
@@ -69,7 +65,6 @@ const MicroSaasPage: React.FC = () => {
       icon: <Globe className="w-6 h-6" />
     }
   ];
-
   const benefits = [
     {
       title: "Easy Setup",
@@ -92,7 +87,6 @@ const MicroSaasPage: React.FC = () => {
       icon: <Shield className="w-8 h-8" />
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -122,7 +116,6 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -134,7 +127,6 @@ const MicroSaasPage: React.FC = () => {
               Focused, powerful tools designed specifically for small and medium businesses.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -152,7 +144,6 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -164,7 +155,6 @@ const MicroSaasPage: React.FC = () => {
               Simple, powerful tools that help your business grow without the complexity.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -182,7 +172,6 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -211,6 +200,3 @@ const MicroSaasPage: React.FC = () => {
     </div>
   );
 };
-
-export default MicroSaasPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e

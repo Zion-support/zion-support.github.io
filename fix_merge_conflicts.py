@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Script to automatically fix merge conflicts in the codebase
+Script to fix merge conflict markers in TypeScript/JavaScript files
 """
 import os
 import re
@@ -12,76 +12,90 @@ def fix_merge_conflicts(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
+        # Check if file has merge conflict markers
+        if '<<<<<<<' not in content:
             return False
+            
+        # Split by merge conflict markers
+        lines = content.split('\n')
+        fixed_lines = []
+        in_conflict = False
+        conflict_section = []
         
-        print(f"Fixing merge conflicts in: {file_path}")
+        for line in lines:
+            if line.strip().startswith('<<<<<<<'):
+                in_conflict = True
+                conflict_section = []
+            elif line.strip().startswith('======='):
+                # Middle of conflict - continue collecting
+                continue
+            elif line.strip().startswith('>>>>>>>'):
+                # End of conflict - choose the best content
+                if conflict_section:
+                    # Remove empty lines and keep the content
+                    clean_content = [l for l in conflict_section if l.strip()]
+                    if clean_content:
+                        fixed_lines.extend(clean_content)
+                in_conflict = False
+                conflict_section = []
+            elif in_conflict:
+                conflict_section.append(line)
+            else:
+                fixed_lines.append(line)
         
-        # Split content by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
+        # Write the fixed content back
+        fixed_content = '\n'.join(fixed_lines)
         
-        if len(parts) < 3:
-            # Try alternative pattern
-            parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> cursor', content, flags=re.DOTALL)
+        # Clean up any remaining issues
+        # Remove any remaining conflict markers
+        fixed_content = re.sub(r'^<<<<<<<.*$', '', fixed_content, flags=re.MULTILINE)
+        fixed_content = re.sub(r'^=======.*$', '', fixed_content, flags=re.MULTILINE)
+        fixed_content = re.sub(r'^>>>>>>>.*$', '', fixed_content, flags=re.MULTILINE)
         
-        if len(parts) >= 3:
-            # Take the HEAD version (first part) and clean it up
-            fixed_content = parts[0] + parts[1] + ''.join(parts[2:])
-            
-            # Clean up any remaining merge conflict markers
-            fixed_content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+\n?', '', fixed_content, flags=re.DOTALL)
-            
-            # Write the fixed content back
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(fixed_content)
-            
-            return True
-        else:
-            # If we can't parse it properly, try a simpler approach
-            # Remove all merge conflict markers and keep the content
-            fixed_content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
-            
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(fixed_content)
-            
-            return True
-            
+        # Remove multiple empty lines
+        fixed_content = re.sub(r'\n\s*\n\s*\n', '\n\n', fixed_content)
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(fixed_content)
+        
+        return True
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
     """Main function to fix all merge conflicts"""
-    # Find all files with merge conflicts
+    # Find all TypeScript and JavaScript files
     patterns = [
-        '**/*.tsx',
-        '**/*.ts',
-        '**/*.js',
-        '**/*.jsx',
-        '**/*.json',
-        '**/*.md'
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts',
+        'utils/**/*.ts',
+        'utils/**/*.tsx',
+        'lib/**/*.ts',
+        'lib/**/*.tsx',
+        'hooks/**/*.ts',
+        'hooks/**/*.tsx',
+        'src/**/*.ts',
+        'src/**/*.tsx',
+        '*.tsx',
+        '*.ts'
     ]
     
-    files_with_conflicts = []
-    for pattern in patterns:
-        files_with_conflicts.extend(glob.glob(pattern, recursive=True))
-    
-    # Filter out node_modules and other directories we don't want to touch
-    files_to_fix = []
-    for file_path in files_with_conflicts:
-        if any(exclude in file_path for exclude in ['node_modules', '.git', 'dist', '.next', 'out']):
-            continue
-        files_to_fix.append(file_path)
-    
-    print(f"Found {len(files_to_fix)} files to check for merge conflicts")
-    
     fixed_count = 0
-    for file_path in files_to_fix:
-        if fix_merge_conflicts(file_path):
-            fixed_count += 1
+    total_files = 0
     
-    print(f"Fixed merge conflicts in {fixed_count} files")
+    for pattern in patterns:
+        files = glob.glob(pattern, recursive=True)
+        for file_path in files:
+            if os.path.isfile(file_path):
+                total_files += 1
+                if fix_merge_conflicts(file_path):
+                    fixed_count += 1
+                    print(f"Fixed: {file_path}")
+    
+    print(f"\nFixed {fixed_count} out of {total_files} files")
 
 if __name__ == "__main__":
     main()

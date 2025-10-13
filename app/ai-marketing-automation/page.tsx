@@ -1,24 +1,20 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
+// import { Star } from 'lucide-react'; // Unused import
 import { Zap } from 'lucide-react';
 import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
+// import { Monitor } from 'lucide-react'; // Unused import
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Share2 } from 'lucide-react';
-import { Phone } from 'lucide-react';
+// import { Phone } from 'lucide-react'; // Unused import
 import { Smartphone } from 'lucide-react';
-
-=======
-import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Mail as Email, Smartphone, Globe, Star, Phone } from 'lucide-react';
+import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Smartphone, Globe } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function AIMarketingAutomation() {
   const features = [

@@ -22,23 +22,23 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-import { ArrowRight } from 'lucide-react';
+// import { ArrowRight } from 'lucide-react'; // Unused import
 import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
+// import { Users } from 'lucide-react'; // Unused import
+// import { Award } from 'lucide-react'; // Unused import
+// import { Star } from 'lucide-react'; // Unused import
 import { Cpu } from 'lucide-react';
-import { PieChart } from 'lucide-react';
+// import { PieChart } from 'lucide-react'; // Unused import
 import { Shield } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
+// import { Monitor } from 'lucide-react'; // Unused import
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
-import { Activity } from 'lucide-react';
+// import { Activity } from 'lucide-react'; // Unused import
 import { DollarSign } from 'lucide-react';
 
 const AIQuantumFinancialOraclePage = () => {

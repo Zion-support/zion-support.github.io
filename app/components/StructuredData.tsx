@@ -1,8 +1,8 @@
 import React from 'react';
-import { Search, Code } from 'lucide-react';
+// import { Search, Code } from 'lucide-react'; // Unused import
 import { Helmet } from 'react-helmet-async';
-import { Search } from 'lucide-react';
-import { Code } from 'lucide-react';
+// import { Search } from 'lucide-react'; // Unused import
+// import { Code } from 'lucide-react'; // Unused import
 
 interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';

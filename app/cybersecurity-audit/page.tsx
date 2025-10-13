@@ -1,17 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Search } from 'lucide-react';
-import { Star } from 'lucide-react';
+// import { Star } from 'lucide-react'; // Unused import
 import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { Target } from 'lucide-react';
-=======
-import { Search, ArrowRight, Sparkles, CheckCircle, Target, Zap, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
+import { Search, ArrowRight, Sparkles, CheckCircle, Target, Zap } from 'lucide-react';
 
 const CybersecurityAuditPage = () => {
   const benefits = [
