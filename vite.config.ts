@@ -35,10 +35,17 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 1000,
-    assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 500,
+    assetsInlineLimit: 2048,
     // Enable compression
     reportCompressedSize: true,
+    // Optimize for production
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
     
     
     rollupOptions: {
@@ -75,9 +82,17 @@ export default defineConfig({
           if (id.includes('web-vitals')) {
             return 'performance'
           }
+          // Error handling
+          if (id.includes('react-error-boundary')) {
+            return 'error-handling'
+          }
           // Large page components (lazy load)
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
+          }
+          // Service pages
+          if (id.includes('/ai-') || id.includes('/zion-')) {
+            return 'services'
           }
           // Default chunk for other modules
           return 'vendor'

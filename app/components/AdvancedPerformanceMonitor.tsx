@@ -53,8 +53,7 @@ const AdvancedPerformanceMonitor = () => {
           reportMetric('TTFB', metric.value)
         })
       } catch (error) {
-        console.log('Failed to load web-vitals:', error)
-      }
+        }
     }
 
     // Measure memory usage
@@ -98,8 +97,7 @@ const AdvancedPerformanceMonitor = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log(`Performance Metric - ${name}:`, value)
-      }
+        }
     }
 
     // Monitor resource loading performance
@@ -113,12 +111,7 @@ const AdvancedPerformanceMonitor = () => {
             // Report slow resources
             if (loadTime > 1000) {
               reportMetric('Slow Resource', loadTime)
-              console.warn('Slow resource detected:', {
-                name: resourceEntry.name,
-                duration: loadTime,
-                size: resourceEntry.transferSize
-              })
-            }
+              }
           }
         })
       })
@@ -133,11 +126,7 @@ const AdvancedPerformanceMonitor = () => {
           const longTask = entry as PerformanceEntry
           if (longTask.duration > 50) {
             reportMetric('Long Task', longTask.duration)
-            console.warn('Long task detected:', {
-              duration: longTask.duration,
-              startTime: longTask.startTime
-            })
-          }
+            }
         })
       })
 

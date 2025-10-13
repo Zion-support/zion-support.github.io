@@ -2,12 +2,14 @@ import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AnalyticsProvider } from "./components/AnalyticsProvider";
-import PerformanceMonitor from "./components/PerformanceMonitor";
+import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
+import LoadingSpinner from "./components/LoadingSpinner";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./components/ErrorFallback";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import MobileNavigation from "./components/MobileNavigation";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -19,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <HelmetProvider>
         <BrowserRouter>
           <AnalyticsProvider>
-            <PerformanceMonitor />
+            <EnhancedPerformanceMonitor showInProduction={false} />
             <Helmet>
               <title>Zion Tech Group - Advanced AI and IT Solutions</title>
               <meta
@@ -68,13 +70,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
                     </nav>
-                    <Link
-                      to="/contact"
-                      className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-                    >
-                      Contact Us
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </Link>
+                    <div className="flex items-center space-x-4">
+                      <Link
+                        to="/contact"
+                        className="hidden sm:flex group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+                      >
+                        Contact Us
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                      <MobileNavigation />
+                    </div>
                   </div>
                 </div>
               </header>

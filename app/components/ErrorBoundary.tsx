@@ -32,8 +32,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+      }
 
     // Call custom error handler if provided
     this.props.onError?.(error, errorInfo);
@@ -41,8 +40,7 @@ class ErrorBoundary extends Component<Props, State> {
     // Log to error reporting service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send the error to a service like Sentry
-      console.error('Production error:', error);
-    }
+      }
   }
 
   handleRetry = () => {

@@ -51,8 +51,7 @@ const ContactForm: React.FC = () => {
         service: "",
       });
     } catch (error) {
-      console.error("Error submitting form:", error);
-    } finally {
+      } finally {
       setIsSubmitting(false);
     }
   };
