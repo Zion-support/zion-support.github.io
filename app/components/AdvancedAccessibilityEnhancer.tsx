@@ -1,61 +1,89 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const AdvancedAccessibilityEnhancerPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-        document.body.classList.add('keyboard-navigation')}}
-    const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')}document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-    return () => {document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown)}}, [isHighContrast, isReducedMotion]);
-  const toggleHighContrast = () => {setIsHighContrast(!isHighContrast);
-    document.documentElement.classList.toggle('high-contrast')}const changeFontSize = (size: string) => {,
-    document.documentElement.setAttribute('data-font-size', size)}return(<div className="accessibility-enhanced">)</div>
-      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 ,}}>
-        <button;
-          onClick={toggleHighContrast}className="accessibility-button"
-          aria-label="Toggle high contrast"
-        >{isHighContrast ? 'Normal Contrast' : 'High Contrast'</button>} </button>
-        <div className="font-size-controls">
-          <button;
-            onClick={() =>changeFontSize('small')</button>}className="accessibility-button"
-            aria-label="Small font size"
-          >
-            A;
-  </
-          <button;
-            onClick={() =>changeFontSize('medium')</button>}className="accessibility-button"
-            aria-label="Medium font size"
-          >
-            A;
-  </
-          <button;
-            onClick={() =>changeFontSize('large')</button>}className="accessibility-button"
-            aria-label="Large font size"
-          >
-            A;
-  </
+const AdvancedAccessibilityEnhancer: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Advanced Accessibility Enhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional advanced accessibility enhancer services by Zion Tech Group." />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Advanced Accessibility Enhancer
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional advanced accessibility enhancer services 
+            designed to help your business grow and succeed.
+          </p>
         </div>
-      </div>
-      {children} </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive advanced accessibility enhancer 
+                solutions tailored to your specific needs and requirements.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our advanced accessibility enhancer services?
+              </p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our advanced accessibility enhancer 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default AdvancedAccessibilityEnhancer;

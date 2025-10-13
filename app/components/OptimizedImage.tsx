@@ -1,149 +1,89 @@
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
-=======
-import React, { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-
-<<<<<<< HEAD
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-=======
-export default function OptimizedImage({ 
-  src, 
-  alt, 
-  className = '', 
-  width, 
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
-  height,
-  className = '',
-  priority = false,
-  onLoad,
-<<<<<<< HEAD
-  onError,
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-=======
-  onError
-}: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true);
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  const handleLoad = () => {
-<<<<<<< HEAD
-    setIsLoaded(true);
-=======
-    setIsLoading(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
-    onLoad?.();
-  };
-
-  const handleError = () => {
-<<<<<<< HEAD
-=======
-    setIsLoading(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
-    setHasError(true);
-    onError?.();
-  };
-
-  if (hasError) {
-    return (
-<<<<<<< HEAD
-      <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      >
-        <span className="text-gray-500">Failed to load image</span>
-=======
-      <div className={`optimized-image-error ${className}`}>
-        <div className="flex items-center justify-center w-full h-full bg-gray-100 text-gray-500">
-          Failed to load image
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
-      </div>
-    );
-  }
-
+const OptimizedImage: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <motion.div
-      className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
-    >
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
-      )}
-      <img
-        ref={imgRef}
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        onLoad={handleLoad}
-        onError={handleError}
-        loading={priority ? 'eager' : 'lazy'}
-        className={`transition-opacity duration-300 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
-        }`}
-=======
-    <div className={`relative ${className}`}>
-      {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
-      )}
-      <img
-        src={src}
-        alt={alt}
-        className="optimized-image"
-        width={width}
-        height={height}
-        loading={priority ? "eager" : "lazy"}
-        onLoad={handleLoad}
-        onError={handleError}
-        style={{ opacity: isLoading ? 0 : 1 }}
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
-      />
-    </motion.div>
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Optimized Image - Zion Tech Group</title>
+        <meta name="description" content="Professional optimized image services by Zion Tech Group." />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Optimized Image
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional optimized image services 
+            designed to help your business grow and succeed.
+          </p>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive optimized image 
+                solutions tailored to your specific needs and requirements.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our optimized image services?
+              </p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our optimized image 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today
+          </a>
+        </div>
+      </section>
+    </div>
   );
-<<<<<<< HEAD
 };
 
 export default OptimizedImage;
-=======
-        width={width}
-        height={height}
-        loading={priority ? 'eager' : 'lazy'}
-        decoding="async"
-        onLoad={handleLoad}
-        onError={handleError}
-        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
-        style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover'
-        }}
-      />
-    </div>
-  )
-}
-
-export default OptimizedImage
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea

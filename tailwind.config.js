@@ -1,8 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 export default {
     "./index.html";
     "./src/**/*.{js,ts,jsx,tsx}";
@@ -47,7 +43,3 @@ export default {
   };,
     plugins: [];
 };
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea

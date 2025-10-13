@@ -1,114 +1,89 @@
-import React from 'react';
-
-<<<<<<< HEAD
-export default function TermsPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Terms</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
-}
-=======
-export default function Terms() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Terms of Service - Zion Tech Group</title>
-        <meta name="description" content="Terms of service of Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Terms of Service
-          </h1>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-gray-600 mb-6">
-              These terms of service govern your use of Zion Tech Group's services and website.
-            </p>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Acceptance of Terms</h2>
-            <p className="text-gray-600 mb-6">
-              By accessing and using our services, you accept and agree to be bound by the terms
-              and provision of this agreement.
-            </p>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Use License</h2>
-            <p className="text-gray-600 mb-6">
-              Permission is granted to temporarily download one copy of the materials on our website
-              for personal, non-commercial transitory viewing only.
-            </p>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Information</h2>
-            <p className="text-gray-600 mb-6">
-              If you have any questions about these terms, please contact us at legal@ziontechgroup.com.
-            </p>
-          </div>
 'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const TermsPage: React.FC = () => {
-          <div></div>
-            <Calendar className="h-4 w-4 mr-2" />
-            Last updated: {lastUpdated}
+const Page: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional page services 
+            designed to help your business grow and succeed.
+          </p>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive page 
+                solutions tailored to your specific needs and requirements.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our page services?
+              </p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div></div>
-        <div></div>
-          <div></div>
-            <div className="space-y-8"></div>
-              {sections.map((section, index) => (</div>
-                <div></div>
-                  <div></div>
-                    <div></div>
-                      <section.icon className="h-6 w-6 text-blue-600" />
-        </section>
-                    </div>
-                    <div></div>
-                      <h2 className="text-2xl font-bold text-gray-900 mb-3"></h2>
-                        {index + 1}. {section.title}
-                      </h2>
-                      <p className="text-gray-700 leading-relaxed"></p>
-                        {section.content}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ));
-            </div>
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our page 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today
+          </a>
+        </div>
+      </section>
+    </div>
+  );
+};
 
-            <div></div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4"></h>Contact Information</h3>
-              <p className="text-gray-700 mb-6"></p>
-                If you have any questions about these Terms of Service, please contact us:
-              </p>
-              <div></div>
-                <div></div>
-                  <Mail className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>legal@ziontechgroup.com</span>
-                </div>
-                <div></div>
-                  <Phone className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>(302) 464-0950</span>
-                </div>
-                <div></div>
-                  <Globe className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>ziontechgroup.com</span>
-                </div>
-                <div></div>
-                  <User className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700"></spa>Zion Tech Group Legal Team</span>
-                </div>
-              </div>
-            </div>
-
-            <div></div>
-              <p className="text-sm text-gray-500"></p>
-                By using our services, you acknowledge that you have read and understood these terms.
-              </p>
-            </div>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
+export default Page;

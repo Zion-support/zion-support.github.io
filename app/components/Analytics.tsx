@@ -1,170 +1,89 @@
-    }
-    (window as any).gtag = gtag;
-gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID', {)
-    page_title: document.title,
-      page_location: window.location.href,
-      send_page_view: true;,}})
-  }
-const initializePerformanceMonitoring = (;
-    if ('PerformanceObserver' in window) {// Monitor Core Web Vitals;
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {) => {
-  return($3;)
-  )}trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}
-          } else if (entry.entryType === 'first-input') {const fid = (entry as any).processingStart - entry.startTime;
-            trackEvent('web_vitals', 'FID', Math.round(fid))}} else if (entry.entryType === 'layout-shift') {if (!(entry as any).hadRecentInput) {
-              trackEvent('web_vitals', 'CLS', (entry as any).value)}}
-observer.observe({entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'])})
-// Monitor page load time;
-      window.addEventListener('load', () => {const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-const initializeErrorTracking = (;
-    // Track JavaScript errors;
-    window.addEventListener('error', (event) => {trackEvent('error', 'javascript_error', {)
-        message: event.message,
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno,) => {
-  return($3;)
-  )}error: event.error?.stack,}
-      })
-    })
-// Track unhandled promise rejections;
-    window.addEventListener('unhandledrejection', (event) => {trackEvent('error', 'unhandled_promise_rejection', {)
-        reason: event.reason,
-        promise: event.promise;,}})
-    })
-// Track resource loading errors;
-    window.addEventListener('error', (event) => {if (event.target !== window) {
-        trackEvent('error', 'resource_error', {)
-const initializeUserBehaviorTracking = (;
-    // Track page views;
-    trackEvent('page_view', 'page_view', {)
-    page_title: document.title,
-      page_location: window.location.href,) => {
-  return($3;)
-  )}page_path: window.location.pathname,}
-    })
-// Track scroll depth;
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-    let maxScroll = 0;
-    window.addEventListener('scroll', () => {const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      if (scrollPercent > maxScroll) {
-        maxScroll = scrollPercent;
-        if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%;
-          trackEvent('engagement', 'scroll_depth', maxScroll)}}
-      }
-    })
-// Track time on page;
+const Analytics: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional analytics services by Zion Tech Group." />
+      </Helmet>
 
-    const startTime = Date.now();
-    window.addEventListener('beforeunload', () => {const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-      trackEvent('engagement', 'time_on_page', timeOnPage)}})
-// Track clicks on important elements;
-    document.addEventListener('click', (event) => {const target = event.target as HTMLElement;
-      const tagName = target.tagName.toLowerCase();
-if (tagName === 'a') {
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Analytics
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional analytics services 
+            designed to help your business grow and succeed.
+          </p>
+        </div>
+      </section>
 
-        const href = (target as HTMLAnchorElement).href;
-        trackEvent('engagement', 'link_click', {)
-          link_url: href,
-          link_text: target.textContent?.trim(),}})
-      } else if (tagName === 'button') {trackEvent('engagement', 'button_click', {)
-// Track form submissions;
-    document.addEventListener('submit', (event) => {const form = event.target as HTMLFormElement;
-      trackEvent('engagement', 'form_submit', {)
-        form_id: form.id,
-        form_class: form.className,
-        form_action: form.action;,}})
-    })
-  }
-const trackEvent = (;
-    if (typeof window !== 'undefined' && 'gtag' in window) {(window as any).gtag('event', action, {)
-        event_category: category,
-        event_label: typeof value === 'object' ? JSON.stringify(value) : value,) => {
-  return($3;)
-  )}value: typeof value === 'number' ? value : undefined,}
-// Extend Window interface for gtag;
-declare global {interface Window {}
-    dataLayer: any[],
-    gtag: (...args: any[]) => void;,}}
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive analytics 
+                solutions tailored to your specific needs and requirements.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our analytics services?
+              </p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our analytics 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today
+          </a>
+        </div>
+      </section>
+    </div>
+  );
 };
 
 export default Analytics;
-// Analytics Provider for context;
-export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return(<>)
-      <Analytics />}{children}
-      {children}
-
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
-  }
-}
-
-export default function Analytics() {
-  const location = useLocation();
-
-  useEffect(() => {
-    // Initialize Google Analytics
-    if (typeof window !== 'undefined' && !window.gtag) {
-      const script = document.createElement('script');
-      script.async = true;
-      script['src'] = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
-      document.head.appendChild(script);
-
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = function() {
-        window.dataLayer.push(arguments);
-      };
-      window.gtag('js', new Date());
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
-    }
-  }, []);
-
-  useEffect(() => {
-    // Track page views
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_path: location.pathname,
-        page_title: document.title,
-      });
-    }
-  }, [location]);
-
-  // Track custom events
-  const trackEvent = (action: string, category: string, label?: string, value?: number) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', action, {
-        event_category: category,
-        event_label: label,
-        value: value,
-      });
-    }
-  };
-
-  // Track performance
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            trackEvent('page_load_time', 'Performance', 'navigation', navEntry.loadEventEnd - navEntry.navigationStart);
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['navigation'] });
-    }
-  }, []);
-
-  return null;
-}

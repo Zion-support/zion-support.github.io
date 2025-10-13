@@ -1,188 +1,89 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  const getMetricColor = useCallback((value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-600';
-    if (value <= thresholds.poor) return 'text-yellow-600';
-    return 'text-red-600';
-  }, []);
-
-  const formatMetric = useCallback((value: number | undefined, suffix = 'ms') => {
-    if (value === undefined || value === null) return 'N/A';
-    return `${value.toFixed(0)}${suffix}`;
-  }, []);
-
-  const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics): number => {
-    let score = 100;
-    
-    // LCP scoring (0-100)
-    if (metrics.largestContentfulPaint) {
-      if (metrics.largestContentfulPaint > 4000) score -= 30;
-      else if (metrics.largestContentfulPaint > 2500) score -= 15;
-    }
-    
-    // FID scoring (0-100)
-    if (metrics.firstInputDelay) {
-      if (metrics.firstInputDelay > 300) score -= 25;
-      else if (metrics.firstInputDelay > 100) score -= 10;
-    }
-    
-    // CLS scoring (0-100)
-    if (metrics.cumulativeLayoutShift !== undefined) {
-      if (metrics.cumulativeLayoutShift > 0.25) score -= 20;
-      else if (metrics.cumulativeLayoutShift > 0.1) score -= 10;
-    }
-    
-    // TTFB scoring (0-100)
-    if (metrics.timeToFirstByte) {
-      if (metrics.timeToFirstByte > 1800) score -= 15;
-      else if (metrics.timeToFirstByte > 800) score -= 5;
-    }
-    
-    return Math.max(0, score);
-  }, []);
-
-  const updateMetrics = useCallback(() => {
-    const newMetrics: PerformanceMetrics = {};
-
-    // Load time
-    if (performance.timing) {
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      if (loadTime > 0) newMetrics.loadTime = loadTime;
-    }
-
-    // Memory usage
-    if (enableMemoryMonitoring && 'memory' in performance) {
-      const memory = (performance as any).memory;
-      if (memory) {
-        newMetrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-      }
-    }
-
-    // Network information
-    if (enableNetworkMonitoring && 'connection' in navigator) {
-      const connection = (navigator as any).connection;
-      if (connection) {
-        console.log('Network type:', connection.effectiveType);
-        console.log('Downlink speed:', connection.downlink, 'Mbps');
-      }
-    }
-
-    setMetrics(prev => {
-      const updated = { ...prev, ...newMetrics };
-      const score = calculatePerformanceScore(updated);
-      setPerformanceScore(score);
-      
-      if (onMetricsUpdate) {
-        onMetricsUpdate(updated);
-      }
-      
-      return updated;
-    });
-  }, [enableMemoryMonitoring, enableNetworkMonitoring, calculatePerformanceScore, onMetricsUpdate]);
-
-  // Web Vitals monitoring
-  useEffect(() => {
-    if (!enableWebVitals) return;
-
-
-  const benefits = [
+const EnhancedPerformanceMonitor: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>EnhancedPerformanceMonitor | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedPerformanceMonitor services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="EnhancedPerformanceMonitor, AI solutions, IT services, Zion Tech Group, enhancedperformancemonitor" />
+        <title>Enhanced Performance Monitor - Zion Tech Group</title>
+        <meta name="description" content="Professional enhanced performance monitor services by Zion Tech Group." />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                EnhancedPerformanceMonitor
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced enhancedperformancemonitor solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Enhanced Performance Monitor
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional enhanced performance monitor services 
+            designed to help your business grow and succeed.
+          </p>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive enhanced performance monitor 
+                solutions tailored to your specific needs and requirements.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our enhanced performance monitor services?
+              </p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Contact Us
+              </a>
             </div>
           </div>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            ×
-          </button>
         </div>
       </section>
 
-    'Proven track record of success'
-  ]
-return(</div>)
-      {/* Features Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-          ))
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>Key Benefits;</h2>
-            </h2>
-            <p>Experience the power of our enhancedperformancemonitor solutions for your business.,</p>
-                <div key={index}className="flex items-start space-x-3"></div>
-                <CheckCircle />
-                <p className="text-gray-300 text-lg">{benefit</p>}</p>
-            </p>
-          ))
-
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
-            <h2>Ready to Get Started?</h2>
-            </h2>
-            <p>Contact our experts to discuss your enhancedperformancemonitor needs and get a customized solution.</p>
-                <Phone>
-                Call Now;
-              </button>
-              <button>
-                <Mail>
-                Email Us;
-              </button>
-            </div>
-          </div>
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our enhanced performance monitor 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today
+          </a>
         </div>
       </section>
     </div>
   );
 };
 
-export default EnhancedPerformanceMonitorPage;
+export default EnhancedPerformanceMonitor;

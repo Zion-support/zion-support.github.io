@@ -1,147 +1,89 @@
 'use client';
-
-    }
-
-    // Content Security Policy
-    if ($1) { const cspMeta = document.createElement(meta);;
-
-      cspMeta.httpEquiv = Content-Security-Policy;
-
-      cspMeta.content = [
-        "default-src 'self',
-        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com,
-        "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com,
-        "img-src 'self' data: https: blob:,
-        "font-src 'self' data: https://fonts.gstatic.com,
-        "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com,
-        "frame-ancestors 'none',
-        "base-uri 'self',
-        "form-action 'self',
-        "object-src 'none',
-        "media-src 'self',
-        "worker-src 'self' blob:
-      ].join(; );
-
-      document.head.appendChild(cspMeta);
-
-    }
-
-    // XSS Protection
-    if ($1) { const xssMeta = document.createElement(meta);;
-
-      xssMeta.httpEquiv = X-XSS-Protection;
-
-      xssMeta.content = 1; mode=block;
-
-      document.head.appendChild(xssMeta);
-
-    }
-
-    // Clickjacking Protection
-    if ($1) { const frameOptionsMeta = document.createElement(meta);;
-
-      frameOptionsMeta.httpEquiv = X-Frame-Options;
-
-      frameOptionsMeta.content = DENY;
-
-      document.head.appendChild(frameOptionsMeta);
-
-    }
-
-    // Content Type Sniffing Protection
-    if ($1) { const contentTypeMeta = document.createElement(meta);;
-
-      contentTypeMeta.httpEquiv = X-Content-Type-Options;
-
-      contentTypeMeta.content = nosniff;
-
-      document.head.appendChild(contentTypeMeta);
-
-    }
-
-    // Referrer Policy;
-
-const referrerMeta = document.createElement(meta);;
-
-    referrerMeta.name = referrer;
-
-    referrerMeta.content = strict-origin-when-cross-origin;
-
-    document.head.appendChild(referrerMeta);
-
-    // Permissions Policy;
-
-const permissionsMeta = document.createElement(meta);;
-
-    permissionsMeta.httpEquiv = Permissions-Policy;
-
-    permissionsMeta.content = camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=();
-
-    document.head.appendChild(permissionsMeta);
-
-    // Security headers for API calls;
-
-const originalFetch = window.fetch;;
-
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {;
-
-const headers = new Headers(init?.headers);;
-
-      // Add security headers
-      headers.set('X-Requested-With', XMLHttpRequest);
-
-      headers.set('X-Content-Type-Options', nosniff);
-
-      return originalFetch(input, {
-        ...init,
-        headers,
-        credentials: 'same-origin
-      })    };
-
-    // Input sanitization for forms;
-
-const sanitizeInput = (input: string): string => {;;
-
-      return input
-        .replace(/[<>]/g, ') // Remove potential HTML tags
-        .replace(/javascript:/gi, ') // Remove javascript: protocol
-        .replace(/on\w+=/gi, ') // Remove event handlers
-        .trim();
-
-    };
-
-    // Apply input sanitization to all form inputs;
-
-const inputs = document.querySelectorAll(input, textarea, select);;
-
-    inputs.forEach(input => {
-      input.addEventListener(input, (e) => {;
-
-const target = e.target as HTMLInputElement;;
-
-        if (target.value !== sanitizeInput(target.value)) {
-          target.value = sanitizeInput(target.value);
-
-        }
-
-      })
-    })
-    // Console warning for security
-    // console.log removed for production
-// console.log removed for production
-}, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing]);
-
-  return <React.Fragment>{children}</React.Fragment>;
-
 import React from 'react';
-import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface SecurityEnhancerProps {
-  children: React.ReactNode;
-}
+const SecurityEnhancer: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Security Enhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional security enhancer services by Zion Tech Group." />
+      </Helmet>
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
-  return <>{children}</>;
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Security Enhancer
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional security enhancer services 
+            designed to help your business grow and succeed.
+          </p>
+        </div>
+      </section>
+
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive security enhancer 
+                solutions tailored to your specific needs and requirements.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our security enhancer services?
+              </p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our security enhancer 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today
+          </a>
+        </div>
+      </section>
+    </div>
+  );
 };
 
 export default SecurityEnhancer;

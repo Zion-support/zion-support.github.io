@@ -1,238 +1,89 @@
-import React, { useEffect } from 'react';
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import React, { useEffect, useState, useCallback } from 'react;
+const PerformanceOptimizer: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Performance Optimizer - Zion Tech Group</title>
+        <meta name="description" content="Professional performance optimizer services by Zion Tech Group." />
+      </Helmet>
 
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react;
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Performance Optimizer
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional performance optimizer services 
+            designed to help your business grow and succeed.
+          </p>
+        </div>
+      </section>
 
-interface PerformanceOptimizerProps {}
-  enableImageOptimization?: boolean;
+      {/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive performance optimizer 
+                solutions tailored to your specific needs and requirements.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our performance optimizer services?
+              </p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  enableLazyLoading?: boolean;
-
-  enablePreloading?: boolean;
-
-  enableCodeSplitting?: boolean;
-
-}
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  useEffect(() => {
-    // Performance optimization logic
-    const optimizePerformance = () => {
-      // Preload critical resources
-      const criticalResources = [
-        '/fonts/inter-var.woff2',
-        '/images/hero-bg.jpg',
-        '/icons/sprite.svg'
-      ];
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        
-        // Set proper 'as' attribute based on file type
-        if (resource.endsWith('.woff2')) {
-          link.as = 'font';
-          link.crossOrigin = 'anonymous';
-        } else if (resource.endsWith('.jpg') || resource.endsWith('.jpeg') || resource.endsWith('.png') || resource.endsWith('.webp')) {
-          link.as = 'image';
-        } else if (resource.endsWith('.svg')) {
-          link.as = 'image';
-        } else {
-          link.as = 'fetch';
-        }
-        
-        document.head.appendChild(link);
-      });
-      // Optimize images
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img['src'] = img.dataset['src'] || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
-      images.forEach(img => imageObserver.observe(img));
-      // Add performance monitoring
-      if ('performance' in window) {
-        window.addEventListener('load', () => {
-          const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-          // Send performance data to analytics instead of console logging
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'page_load_time', {
-              value: Math.round(perfData.loadEventEnd - perfData.loadEventStart),
-              custom_parameter: 'performance_optimizer'
-            });
-          }
-        });
-      }
-    };
-    optimizePerformance();
-    return () => {
-      // Cleanup if needed
-    };
-  }, []);
-  return <>{children}</>;
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  useEffect(() => {
-    // Performance optimization logic
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {
-        if (!img.hasAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
-        }
-};
-export default PerformanceOptimizer;
-    // Initial optimization
-    optimizeImages();
-    
-    // Re-optimize on route changes
-    const observer = new MutationObserver(optimizeImages);
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    return () => observer.disconnect();
-  }, [optimizeImages]);
-
-  return <>{children}</>;
-};
-
-export default PerformanceOptimizer;
-  const optimizeMemory = useCallback(() => {if ('memory' in performance) {
-  const runOptimizations = useCallback(async () => {setIsOptimizing(true);
-    const newOptimizations: string[] = [],
-    // Optimize images;
-  return(<div className="performance-optimizer">)</div>
-      {children}{/* Performance Status Indicator (only in development) */}
-      {process.env['NODE_ENV'] === 'development' && (
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our performance optimizer 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today
+          </a>
+        </div>
+      </section>
+    </div>
   );
+};
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true;}) => {useEffect(() => {
-    // Preload critical resources;
-    if (enablePreloading && typeof window !== 'undefined') {
-      // Preload critical fonts;
-      const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
-      fontPreload.href = 'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-      fontPreload.as = 'style'
-      document.head.appendChild(fontPreload),
-
-      // Preload critical images;
-      const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png'
-      ]
-
-        
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.setAttribute('decoding', 'async');
-        }
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = resource
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image'
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous'
-        }
-        document.head.appendChild(link)
-      })
-    }
-
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]')
-      images.forEach(img => {
-        const imageElement = img as HTMLImageElement
-        if (imageElement.dataset['src']) {
-          imageElement['src'] = imageElement.dataset['src']
-          imageElement.removeAttribute('data-src')
-        }
-      })
-    }
-
-    // Lazy load non-critical components
-    const lazyLoadComponents = () => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const element = entry.target as HTMLElement
-              element.classList.add('loaded')
-              observer.unobserve(element)
-            }
-          })
-        },
-        { threshold: 0.1 }
-      )
-
-      const lazyElements = document.querySelectorAll('[data-lazy]')
-      lazyElements.forEach(el => observer.observe(el))
-    }
-
-    // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
-      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
-        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
-        onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
-        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
-        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
-        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
-      }).catch(() => {
-        // Silently fail if web-vitals is not available
-      })
-    }
-
-      }
-
-        // Add error handling
-        img.addEventListener('error', () => {
-          img['src'] = '/placeholder-image.jpg';
-        });
-      });
-    };
-
-    // Optimize third-party scripts
-    const optimizeThirdPartyScripts = () => {
-      // Defer non-critical scripts
-      const scripts = document.querySelectorAll('script[src]');
-      scripts.forEach(script => {
-        if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
-          script.setAttribute('defer', '');
-        }
-      });
-    };
-
-    // Initialize optimizations
-    preloadCriticalResources();
-    optimizeImages();
-    optimizeThirdPartyScripts();
-
-    // Re-run optimizations on DOM changes
-    const observer = new MutationObserver(() => {
-      optimizeImages();
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  return null;
-}
+export default PerformanceOptimizer;
