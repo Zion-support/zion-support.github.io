@@ -1,104 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ArrowRightIcon,
-  HeartIcon
-} from '@heroicons/react/24/outline';
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
-=======
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-<<<<<<< HEAD
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: '5G Solutions', href: '/5g-solutions' },
-  ];
-=======
-  const footerLinks = {
-    services: [
-      { name: 'AI Solutions', href: '/ai-solutions' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-      { name: 'Digital Transformation', href: '/digital-transformation' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: '5G Solutions', href: '/5g-solutions' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Solutions', href: '/solutions' },
-      { name: 'Pricing', href: '/pricing' },
-      { name: 'Blog', href: '/blog' }
-    ],
-    support: [
-      { name: 'Contact', href: '/contact' },
-      { name: 'Support', href: '/support' },
-      { name: 'Tutorials', href: '/tutorials' },
-      { name: 'Demo', href: '/demo' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' }
-    ]
-  };
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  const services = [
-    { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
   ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -124,41 +43,6 @@ const Footer: React.FC = () => {
     { name: 'GDPR', href: '/gdpr' },
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github }
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-=======
-  ];
-
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Twitter', href: '#', icon: 'twitter' },
-    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-    { name: 'GitHub', href: '#', icon: 'github' }
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
-  ];
-
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: 'Facebook' },
-    { name: 'Twitter', href: '#', icon: 'Twitter' },
-    { name: 'LinkedIn', href: '#', icon: 'LinkedIn' },
-    { name: 'GitHub', href: '#', icon: 'GitHub' }
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
   ];
 
   return (
@@ -173,16 +57,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Link to="/" className="flex items-center space-x-3 mb-6 group">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-            <Link to="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
               <span className="text-white font-bold text-2xl">Zion Tech Group</span>
@@ -191,7 +67,22 @@ const Footer: React.FC = () => {
               Transforming businesses through cutting-edge AI and IT solutions. 
               We help companies innovate and grow in the digital age with real, proven results.
             </p>
-<<<<<<< HEAD
+            
+            {/* Contact Info */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-3 text-gray-300">
+                <PhoneIcon className="w-5 h-5 text-purple-400" />
+                <span>+1-302-464-0950</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <EnvelopeIcon className="w-5 h-5 text-purple-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <MapPinIcon className="w-5 h-5 text-purple-400" />
+                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+              </div>
+            </div>
             
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
