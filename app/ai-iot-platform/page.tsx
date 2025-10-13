@@ -1,165 +1,166 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Cloud, Shield, Zap, BarChart3, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Cpu, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function CloudMigrationServices() {
+export default function AIIoTPlatform() {
   const features = [
-    "Comprehensive cloud assessment",
-    "Multi-cloud migration strategy",
-    "Zero-downtime migration",
-    "Data security & compliance",
-    "Cost optimization analysis",
-    "Performance monitoring",
-    "Disaster recovery planning",
-    "Cloud-native architecture design",
-    "Legacy system modernization",
-    "24/7 migration support",
-    "Post-migration optimization",
-    "Training & documentation"
+    "AI-powered device management",
+    "Real-time data processing & analytics",
+    "Predictive maintenance algorithms",
+    "Edge computing capabilities",
+    "Multi-protocol device support",
+    "Advanced security & encryption",
+    "Custom AI model training",
+    "Scalable cloud infrastructure",
+    "Device provisioning & onboarding",
+    "Remote monitoring & control",
+    "Integration with 500+ platforms",
+    "White-label solutions"
   ];
 
   const benefits = [
-    "Reduce infrastructure costs by 40%",
-    "Improve scalability & flexibility",
-    "Enhance security & compliance",
-    "Increase system reliability by 99.9%",
-    "Accelerate time-to-market by 50%",
-    "Enable remote work capabilities"
+    "Reduce maintenance costs by 60%",
+    "Improve operational efficiency by 45%",
+    "Predict failures before they happen",
+    "Scale IoT deployments 10x faster",
+    "Reduce energy consumption by 30%",
+    "Enable real-time decision making"
   ];
 
   const pricingPlans = [
     {
-      name: "Small Business",
-      price: "$2,999/month",
-      description: "Perfect for small to medium businesses",
+      name: "Starter",
+      price: "$199/month",
+      description: "Perfect for small IoT projects",
       features: [
-        "Up to 50 servers migration",
-        "Basic cloud assessment",
-        "Standard migration support",
+        "Up to 100 devices",
+        "Basic AI analytics",
+        "Standard protocols",
         "Email support",
-        "Basic security implementation",
-        "30-day post-migration support"
+        "Basic security",
+        "Cloud storage (10GB)"
       ],
       popular: false
     },
     {
-      name: "Enterprise",
-      price: "$9,999/month",
-      description: "Ideal for large organizations",
+      name: "Professional",
+      price: "$799/month",
+      description: "Ideal for growing businesses",
       features: [
-        "Unlimited server migration",
-        "Comprehensive cloud assessment",
-        "Priority migration support",
-        "24/7 dedicated support",
-        "Advanced security implementation",
-        "90-day post-migration support",
-        "Custom cloud architecture",
-        "SLA guarantee"
+        "Up to 1,000 devices",
+        "Advanced AI analytics",
+        "All protocols supported",
+        "Priority support",
+        "Advanced security",
+        "Cloud storage (100GB)",
+        "Custom AI models",
+        "API access"
       ],
       popular: true
     },
     {
-      name: "Custom",
-      price: "Contact Us",
-      description: "Tailored migration solutions",
+      name: "Enterprise",
+      price: "$2,999/month",
+      description: "For large-scale deployments",
       features: [
-        "Custom migration strategy",
-        "Dedicated migration team",
-        "On-premise to cloud",
-        "Multi-cloud deployment",
-        "Legacy system integration",
-        "Custom security requirements",
-        "Extended support periods",
-        "Custom pricing"
+        "Unlimited devices",
+        "Premium AI analytics",
+        "Custom protocols",
+        "24/7 dedicated support",
+        "Enterprise security",
+        "Unlimited cloud storage",
+        "Custom AI training",
+        "White-label options",
+        "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const migrationTypes = [
+  const useCases = [
     {
-      title: "Lift & Shift",
-      description: "Move applications to cloud with minimal changes for quick migration",
-      icon: <Upload className="w-8 h-8" />,
+      title: "Smart Manufacturing",
+      description: "Optimize production lines with AI-powered predictive maintenance and quality control",
+      icon: <Settings className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Replatforming",
-      description: "Optimize applications for cloud-native features and performance",
-      icon: <Settings className="w-8 h-8" />,
+      title: "Smart Cities",
+      description: "Build intelligent urban infrastructure with connected sensors and AI analytics",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Refactoring",
-      description: "Completely redesign applications for cloud-native architecture",
-      icon: <Code className="w-8 h-8" />,
+      title: "Healthcare IoT",
+      description: "Monitor patients and medical equipment with AI-enhanced health analytics",
+      icon: <Heart className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Hybrid Cloud",
-      description: "Maintain on-premise and cloud infrastructure for optimal flexibility",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Agriculture",
+      description: "Optimize crop yields with smart farming sensors and AI-driven insights",
+      icon: <Sun className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Multi-Cloud",
-      description: "Distribute workloads across multiple cloud providers for redundancy",
-      icon: <Layers className="w-8 h-8" />,
-      color: "from-indigo-500 to-blue-500"
+      title: "Energy Management",
+      description: "Monitor and optimize energy consumption across buildings and facilities",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500"
     },
     {
-      title: "Cloud-to-Cloud",
-      description: "Migrate between different cloud providers for better optimization",
-      icon: <ArrowRight className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500"
+      title: "Fleet Management",
+      description: "Track and optimize vehicle performance with real-time AI analytics",
+      icon: <Navigation className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500"
     }
   ];
 
   const testimonials = [
     {
-      name: "David Johnson",
-      company: "TechCorp Solutions",
-      role: "Chief Information Officer",
-      content: "The cloud migration was seamless and exceeded our expectations. We reduced costs by 45% and improved system performance significantly.",
+      name: "Dr. Jennifer Liu",
+      company: "Smart Manufacturing Corp",
+      role: "Chief Technology Officer",
+      content: "The AI IoT platform has revolutionized our manufacturing operations. We've reduced downtime by 70% and improved efficiency significantly.",
       rating: 5,
-      avatar: "DJ"
+      avatar: "JL"
     },
     {
-      name: "Sarah Williams",
-      company: "Global Manufacturing Inc",
-      role: "IT Director",
-      content: "Zion Tech Group's migration team was professional and efficient. Our systems are now more scalable and secure than ever before.",
+      name: "Robert Martinez",
+      company: "Urban Solutions Inc",
+      role: "Smart City Director",
+      content: "Implementing the AI IoT platform was seamless. Our smart city infrastructure is now more efficient and responsive than ever.",
       rating: 5,
-      avatar: "SW"
+      avatar: "RM"
     },
     {
-      name: "Michael Brown",
-      company: "Financial Services Ltd",
+      name: "Dr. Sarah Thompson",
+      company: "HealthTech Innovations",
       role: "VP of Technology",
-      content: "The zero-downtime migration was impressive. Our business operations continued uninterrupted while we moved to the cloud.",
+      content: "The healthcare IoT capabilities are outstanding. We can now monitor patients more effectively and predict health issues before they occur.",
       rating: 5,
-      avatar: "MB"
+      avatar: "ST"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Cloud Migration Services - Zion Tech Group | Expert Cloud Migration Solutions</title>
+        <title>AI IoT Platform - Zion Tech Group | Intelligent Internet of Things Solutions</title>
         <meta
           name="description"
-          content="Professional cloud migration services with zero-downtime migration, multi-cloud strategy, and comprehensive security. Transform your infrastructure with expert cloud migration solutions."
+          content="Revolutionary AI-powered IoT platform with device management, predictive analytics, and edge computing. Transform your business with intelligent Internet of Things solutions."
         />
         <meta
           name="keywords"
-          content="cloud migration, cloud migration services, AWS migration, Azure migration, Google Cloud migration, cloud consulting, infrastructure migration, cloud transformation"
+          content="AI IoT platform, Internet of Things, IoT solutions, smart devices, edge computing, IoT analytics, predictive maintenance, IoT security, smart manufacturing"
         />
       </Helmet>
       <SEOOptimizer
-        title="Cloud Migration Services - Zion Tech Group | Expert Cloud Migration Solutions"
-        description="Professional cloud migration services with zero-downtime migration, multi-cloud strategy, and comprehensive security. Transform your infrastructure with expert cloud migration solutions."
+        title="AI IoT Platform - Zion Tech Group | Intelligent Internet of Things Solutions"
+        description="Revolutionary AI-powered IoT platform with device management, predictive analytics, and edge computing. Transform your business with intelligent Internet of Things solutions."
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -176,30 +177,30 @@ export default function CloudMigrationServices() {
             <div className="text-center">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Cloud Migration Services
+                  AI IoT Platform
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Professional cloud migration services with zero-downtime migration, multi-cloud strategy, 
-                and comprehensive security. Transform your infrastructure with expert cloud migration solutions.
+                Revolutionary AI-powered IoT platform with device management, predictive analytics, 
+                and edge computing. Transform your business with intelligent Internet of Things solutions.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">Zero-downtime migration</span>
+                  <span className="text-sm">Unlimited device support</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">40% cost reduction</span>
+                  <span className="text-sm">60% cost reduction</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">99.9% uptime guarantee</span>
+                  <span className="text-sm">Real-time analytics</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">24/7 expert support</span>
+                  <span className="text-sm">Predictive maintenance</span>
                 </div>
               </div>
 
@@ -208,7 +209,7 @@ export default function CloudMigrationServices() {
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Get Migration Assessment
+                  Get IoT Demo
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <Link
@@ -229,11 +230,11 @@ export default function CloudMigrationServices() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Migration Services
+                  AI IoT Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive cloud migration solutions designed for seamless infrastructure transformation
+                Comprehensive IoT platform with advanced AI capabilities for intelligent device management
               </p>
             </div>
 
@@ -245,7 +246,7 @@ export default function CloudMigrationServices() {
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
-                      <Cloud className="w-6 h-6 text-white" />
+                      <Cpu className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-lg font-semibold text-white">{feature}</h3>
                   </div>
@@ -255,31 +256,31 @@ export default function CloudMigrationServices() {
           </div>
         </div>
 
-        {/* Migration Types */}
+        {/* Use Cases */}
         <div className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Migration Strategies
+                  IoT Applications
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the right migration approach for your business needs
+                Discover how our AI IoT platform can transform your industry
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {migrationTypes.map((type, index) => (
+              {useCases.map((useCase, index) => (
                 <div
                   key={index}
                   className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
                 >
-                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${type.color} rounded-xl mb-6`}>
-                    <div className="text-white">{type.icon}</div>
+                  <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl mb-6`}>
+                    <div className="text-white">{useCase.icon}</div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{type.title}</h3>
-                  <p className="text-gray-300">{type.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
                 </div>
               ))}
             </div>
@@ -296,7 +297,7 @@ export default function CloudMigrationServices() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your business with cloud migration advantages
+                Transform your operations with AI-powered IoT solutions
               </p>
             </div>
 
@@ -324,11 +325,11 @@ export default function CloudMigrationServices() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Migration Pricing
+                  IoT Platform Pricing
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect migration plan for your infrastructure
+                Choose the perfect IoT platform plan for your needs
               </p>
             </div>
 
@@ -389,11 +390,11 @@ export default function CloudMigrationServices() {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Migration Success Stories
+                  IoT Success Stories
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how our cloud migration services have transformed businesses
+                See how our AI IoT platform has transformed businesses across industries
               </p>
             </div>
 
@@ -430,10 +431,10 @@ export default function CloudMigrationServices() {
         <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Migrate to the Cloud?
+              Ready to Transform Your Business with AI IoT?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Transform your infrastructure with our expert cloud migration services. Get a free assessment and discover how cloud migration can benefit your business.
+              Experience the power of intelligent IoT solutions. Get a free consultation and discover how our AI IoT platform can revolutionize your operations.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -441,7 +442,7 @@ export default function CloudMigrationServices() {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Get Migration Assessment
+                Get IoT Demo
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link

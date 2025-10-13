@@ -12,6 +12,10 @@ const EnhancedNavigation = () => {
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       dropdown: [
+        { label: 'Voice Assistant', href: '/ai-voice-assistant' },
+        { label: 'Blockchain Smart Contracts', href: '/ai-blockchain-smart-contracts' },
+        { label: 'Quantum Computing', href: '/ai-quantum-computing' },
+        { label: 'IoT Platform', href: '/ai-iot-platform' },
         { label: 'Business Intelligence', href: '/ai-business-intelligence' },
         { label: 'Content Generation', href: '/ai-content-generation' },
         { label: 'Customer Support', href: '/ai-customer-support' },
@@ -28,6 +32,7 @@ const EnhancedNavigation = () => {
       href: '/services',
       icon: <Shield className="w-4 h-4" />,
       dropdown: [
+        { label: 'Cloud Migration Services', href: '/cloud-migration-services' },
         { label: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
         { label: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
         { label: 'Web Development', href: '/web-development' },

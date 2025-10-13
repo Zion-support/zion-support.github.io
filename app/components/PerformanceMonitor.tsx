@@ -21,6 +21,11 @@ const PerformanceMonitor: React.FC = () => {
     return 'text-red-600';
   }, []);
 
+  const formatMetric = useCallback((value: number | undefined, unit: string = 'ms') => {
+    if (value === undefined || value === null) return 'N/A';
+    return `${value.toFixed(0)}${unit}`;
+  }, []);
+
   const updateMetrics = useCallback(() => {
     const newMetrics: PerformanceMetrics = {};
 
@@ -36,93 +41,68 @@ const PerformanceMonitor: React.FC = () => {
       // For now, we'll use placeholder values
     }
 
-      {isVisible && (
-        <div className="absolute bottom-12 left-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80">
-          <h3 className="text-lg font-semibold mb-4 text-gray-800">Performance Metrics</h3>
-          
-          <div className="space-y-3 text-sm">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">Load Time:</span>
-              <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">FCP:</span>
-              <span className={`font-mono ${metrics.firstContentfulPaint ? getMetricColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">LCP:</span>
-              <span className={`font-mono ${metrics.largestContentfulPaint ? getMetricColor(metrics.largestContentfulPaint, { good: 2500, poor: 4000 }) : 'text-gray-400'}`}>
-                {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">FID:</span>
-              <span className={`font-mono ${metrics.firstInputDelay ? getMetricColor(metrics.firstInputDelay, { good: 100, poor: 300 }) : 'text-gray-400'}`}>
-                {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">CLS:</span>
-              <span className={`font-mono ${metrics.cumulativeLayoutShift ? getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, poor: 0.25 }) : 'text-gray-400'}`}>
-                {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">TTFB:</span>
-              <span className={`font-mono ${metrics.timeToFirstByte ? getMetricColor(metrics.timeToFirstByte, { good: 800, poor: 1800 }) : 'text-gray-400'}`}>
-                {metrics.timeToFirstByte ? `${metrics.timeToFirstByte.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            </div>
-          </div>
+    setMetrics(newMetrics);
+  }, []);
+
+  useEffect(() => {
+    updateMetrics();
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        setIsVisible(!isVisible);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isVisible, updateMetrics]);
+
+  if (!isVisible) return null;
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl p-4 min-w-80 z-50">
+      <h3 className="text-lg font-semibold mb-4 text-white">Performance Metrics</h3>
+      
       <div className="space-y-2">
         <div className="flex justify-between">
           <span className="text-gray-300">Load Time:</span>
-          <span className={getMetricColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>
+          <span className={getMetricColor(metrics.loadTime || 0, { good: 2000, poor: 4000 })}>
             {formatMetric(metrics.loadTime)}
           </span>
         </div>
         
         <div className="flex justify-between">
           <span className="text-gray-300">FCP:</span>
-          <span className={getMetricColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>
+          <span className={getMetricColor(metrics.firstContentfulPaint || 0, { good: 1800, poor: 3000 })}>
             {formatMetric(metrics.firstContentfulPaint)}
           </span>
         </div>
         
         <div className="flex justify-between">
           <span className="text-gray-300">LCP:</span>
-          <span className={getMetricColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>
+          <span className={getMetricColor(metrics.largestContentfulPaint || 0, { good: 2500, poor: 4000 })}>
             {formatMetric(metrics.largestContentfulPaint)}
           </span>
         </div>
         
         <div className="flex justify-between">
           <span className="text-gray-300">FID:</span>
-          <span className={getMetricColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}>
+          <span className={getMetricColor(metrics.firstInputDelay || 0, { good: 100, poor: 300 })}>
             {formatMetric(metrics.firstInputDelay)}
           </span>
         </div>
         
         <div className="flex justify-between">
           <span className="text-gray-300">CLS:</span>
-          <span className={getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}>
+          <span className={getMetricColor(metrics.cumulativeLayoutShift || 0, { good: 0.1, poor: 0.25 })}>
             {formatMetric(metrics.cumulativeLayoutShift, '')}
           </span>
         </div>
         
         <div className="flex justify-between">
           <span className="text-gray-300">TTFB:</span>
-          <span className={getMetricColor(metrics.timeToFirstByte, { good: 200, needsImprovement: 600 })}>
+          <span className={getMetricColor(metrics.timeToFirstByte || 0, { good: 200, poor: 600 })}>
             {formatMetric(metrics.timeToFirstByte)}
           </span>
         </div>
@@ -130,7 +110,7 @@ const PerformanceMonitor: React.FC = () => {
         {metrics.memoryUsage !== null && (
           <div className="flex justify-between">
             <span className="text-gray-300">Memory:</span>
-            <span className={getMetricColor(metrics.memoryUsage, { good: 50, needsImprovement: 100 })}>
+            <span className={getMetricColor(metrics.memoryUsage, { good: 50, poor: 100 })}>
               {formatMetric(metrics.memoryUsage, 'MB')}
             </span>
           </div>

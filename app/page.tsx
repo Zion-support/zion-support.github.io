@@ -155,10 +155,18 @@ const HomePage = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Enhanced Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-spin-slow"></div>
+          {/* Neon grid overlay */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+          {/* Floating particles */}
+          <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full animate-bounce delay-300"></div>
+          <div className="absolute top-40 right-32 w-1 h-1 bg-purple-400 rounded-full animate-bounce delay-700"></div>
+          <div className="absolute bottom-32 left-40 w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce delay-1000"></div>
+          <div className="absolute top-60 right-20 w-1 h-1 bg-cyan-300 rounded-full animate-bounce delay-500"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
@@ -172,14 +180,14 @@ const HomePage = () => {
             size="7xl"
             weight="bold"
             color="white"
-            className="mb-6 leading-tight"
+            className="mb-6 leading-tight animate-slide-up"
           >
             <FuturisticText text="Welcome to " delay={0} speed={100} />
             <FuturisticText 
               text="Zion Tech Group" 
               delay={1000} 
               speed={150} 
-              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"
+              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-neon-pulse"
             />
           </ResponsiveText>
           
@@ -188,18 +196,20 @@ const HomePage = () => {
             size="2xl"
             color="gray"
             align="center"
-            className="mb-8 max-w-4xl mx-auto leading-relaxed"
+            className="mb-8 max-w-4xl mx-auto leading-relaxed animate-slide-up"
+            style={{ animationDelay: '0.3s' }}
           >
             Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
             Transform your operations with cutting-edge technology and innovative solutions.
           </ResponsiveText>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-slide-up" style={{ animationDelay: '0.6s' }}>
             <FuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
+              className="animate-glow"
             >
               Get Started Today
             </FuturisticButton>
@@ -208,6 +218,7 @@ const HomePage = () => {
               variant="outline"
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
+              className="hover:animate-glow"
             >
               Watch Demo
             </FuturisticButton>
@@ -244,7 +255,8 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <FuturisticCard
                 key={index}
-                className="group cursor-pointer"
+                className="group cursor-pointer animate-slide-up hover:animate-float"
+                style={{ animationDelay: `${index * 0.1}s` }}
                 glowColor={feature.color.includes('blue') ? 'cyan' : feature.color.includes('green') ? 'green' : feature.color.includes('purple') ? 'purple' : 'pink'}
               >
                 <Link
@@ -410,8 +422,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      </div>
-    </>
+    </div>
   );
 };
 
