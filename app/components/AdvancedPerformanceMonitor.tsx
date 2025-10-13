@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-'use client'
-import { useEffect, useState } from 'react'
-=======
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Activity, Zap, AlertTriangle, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
 
 interface PerformanceMetrics {
   fcp: number | null
@@ -17,9 +12,6 @@ interface PerformanceMetrics {
   loadTime: number | null
 }
 
-<<<<<<< HEAD
-const AdvancedPerformanceMonitor = () => {
-=======
 interface PerformanceRecommendation {
   type: 'warning' | 'error' | 'info';
   message: string;
@@ -27,63 +19,20 @@ interface PerformanceRecommendation {
 }
 
 const AdvancedPerformanceMonitor: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-<<<<<<< HEAD
-    memoryUsage: null,
-    loadTime: null
-  })
+  };
 
-  useEffect(() => {
-    // Import web-vitals dynamically
-    const measureWebVitals = async () => {
-      try {
-        const { onCLS, onINP, onFCP, onLCP, onTTFB } = await import('web-vitals')
+  const logError = (error: Error) => {
+    console.warn('Performance monitoring error:', error);
+  };
 
-        onCLS((metric: any) => {
-          setMetrics(prev => ({ ...prev, cls: metric.value }))
-          reportMetric('CLS', metric.value)
-        })
-
-        onINP((metric: any) => {
-          setMetrics(prev => ({ ...prev, fid: metric.value }))
-          reportMetric('INP', metric.value)
-        })
-
-        onFCP((metric: any) => {
-          setMetrics(prev => ({ ...prev, fcp: metric.value }))
-          reportMetric('FCP', metric.value)
-        })
-
-        onLCP((metric: any) => {
-          setMetrics(prev => ({ ...prev, lcp: metric.value }))
-          reportMetric('LCP', metric.value)
-        })
-
-        onTTFB((metric: any) => {
-          setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-          reportMetric('TTFB', metric.value)
-        })
-      } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        console.error('Failed to measure web vitals:', error);
-=======
-        console.warn('Performance monitoring error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
-=======
-        console.warn('Performance monitoring error:', error);
->>>>>>> cursor/website-audit-and-update-with-deployment-6e33
-      }
-    }
-
-    // Measure memory usage
-    const measureMemoryUsage = () => {
+  // Measure memory usage
+  const measureMemoryUsage = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory
         const memoryUsage = (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
@@ -123,15 +72,10 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        console.log(`Performance Metric: ${name} = ${value}`);
-=======
+console.log('Performance metric:', { name, value, timestamp: Date.now() });
+
         console.log('Performance metric:', { name, value, timestamp: Date.now() });
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
-=======
-        console.log('Performance metric:', { name, value, timestamp: Date.now() });
->>>>>>> cursor/website-audit-and-update-with-deployment-6e33
+
       }
     }
 
@@ -180,9 +124,9 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
     // Cleanup
     return () => {
-      clearInterval(memoryInterval)
-    }
-  }, [])
+      clearInterval(memoryInterval);
+    };
+  }, []);
 
   // Performance score calculation
   const calculatePerformanceScore = () => {
@@ -234,7 +178,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 }
 
 export default AdvancedPerformanceMonitor
-=======
+
     memory: null
   });
 
@@ -533,4 +477,4 @@ export default AdvancedPerformanceMonitor
 };
 
 export default AdvancedPerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
+
