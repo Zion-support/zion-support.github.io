@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Zap, Globe, Database, Code, Smartphone } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Database, Code, Smartphone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -54,15 +54,11 @@ export default function Services() {
         <title>Services - Zion Tech Group</title>
         <meta
           name="description"
-<<<<<<< HEAD
           content="Comprehensive technology services including AI, cloud infrastructure, cybersecurity, 5G solutions, data analytics, and custom development."
         />
         <meta
           name="keywords"
           content="technology services, AI services, cloud infrastructure, cybersecurity, 5G solutions, data analytics, web development, mobile development"
-=======
-          content="Comprehensive technology services including AI solutions, cloud computing, cybersecurity, and digital transformation for modern businesses."
->>>>>>> 90b0ec354292ea5b55b8e9f582fa1cad8dcd0363
         />
       </Helmet>
 
@@ -71,12 +67,13 @@ export default function Services() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-              Our Services
+              Our
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                {" "}Services
+              </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation. 
-              From AI to cloud infrastructure, we provide end-to-end services.
+              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -93,23 +90,12 @@ export default function Services() {
                 Free Consultation
               </Link>
             </div>
-=======
-              Our
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                {" "}Services
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
-            </p>
->>>>>>> 90b0ec354292ea5b55b8e9f582fa1cad8dcd0363
           </div>
         </section>
 
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Technology Solutions
@@ -118,26 +104,11 @@ export default function Services() {
                 Comprehensive technology services designed to accelerate your business growth and digital transformation.
               </p>
             </div>
-=======
->>>>>>> 90b0ec354292ea5b55b8e9f582fa1cad8dcd0363
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <Link
                   key={index}
                   to={service.path}
-<<<<<<< HEAD
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-                >
-                  <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300">
-=======
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
                   <div
@@ -149,7 +120,6 @@ export default function Services() {
                     {service.title}
                   </h3>
                   <p className="text-gray-300 text-center">
->>>>>>> 90b0ec354292ea5b55b8e9f582fa1cad8dcd0363
                     {service.description}
                   </p>
                 </Link>
@@ -165,7 +135,6 @@ export default function Services() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
               Join thousands of businesses already using our solutions to drive growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -181,23 +150,6 @@ export default function Services() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 View Pricing
-=======
-              Let's discuss how our services can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/consultation"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Schedule Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/contact"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Contact Us
->>>>>>> 90b0ec354292ea5b55b8e9f582fa1cad8dcd0363
               </Link>
             </div>
           </div>
