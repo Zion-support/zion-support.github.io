@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom';
 
-'use client'
-
 interface CriticalresourcepreloaderProps {
   className?: string;
   children?: React.ReactNode;
