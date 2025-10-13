@@ -183,8 +183,10 @@ const HomePage = () => {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse-glow"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse-glow delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-pink-500/15 to-cyan-500/15 rounded-full blur-2xl animate-rotate-slow"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
@@ -254,7 +256,13 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer animate-slide-in-up ${
+                  index === 0 ? 'animate-slide-in-left' : 
+                  index === 1 ? 'animate-slide-in-right' : 
+                  index === 2 ? 'animate-slide-in-up' : 
+                  'animate-slide-in-down'
+                }`}
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <Link
                   to={feature.link}
@@ -301,7 +309,10 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden animate-zoom-in ${
+                  index % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right'
+                }`}
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 {saas.featured && (
                   <div className="absolute top-4 right-4">

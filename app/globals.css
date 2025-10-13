@@ -107,6 +107,171 @@
   .animate-bounce-slow {
     animation: bounce 2s infinite;
   }
+
+  /* Futuristic animations */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-rotate-slow {
+    animation: rotateSlow 10s linear infinite;
+  }
+  
+  .animate-scale-pulse {
+    animation: scalePulse 2s ease-in-out infinite;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out;
+  }
+  
+  .animate-slide-in-up {
+    animation: slideInUp 0.6s ease-out;
+  }
+  
+  .animate-slide-in-down {
+    animation: slideInDown 0.6s ease-out;
+  }
+  
+  .animate-zoom-in {
+    animation: zoomIn 0.5s ease-out;
+  }
+  
+  .animate-flip-in {
+    animation: flipIn 0.6s ease-out;
+  }
+  
+  .animate-rotate-in {
+    animation: rotateIn 0.6s ease-out;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 0.8s ease-out;
+  }
+  
+  .animate-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  .animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+  
+  .animate-cyber-scan {
+    animation: cyberScan 3s linear infinite;
+  }
+  
+  .animate-matrix-rain {
+    animation: matrixRain 20s linear infinite;
+  }
+  
+  .animate-hologram {
+    animation: hologram 4s ease-in-out infinite;
+  }
+  
+  .animate-quantum {
+    animation: quantum 2s ease-in-out infinite;
+  }
+  
+  .animate-neon-flicker {
+    animation: neonFlicker 0.1s ease-in-out infinite alternate;
+  }
+  
+  .animate-energy-pulse {
+    animation: energyPulse 1.5s ease-in-out infinite;
+  }
+  
+  .animate-data-stream {
+    animation: dataStream 2s linear infinite;
+  }
+  
+  .animate-circuit-board {
+    animation: circuitBoard 3s ease-in-out infinite;
+  }
+  
+  .animate-holographic {
+    animation: holographic 2s ease-in-out infinite;
+  }
+  
+  .animate-cyber-grid {
+    animation: cyberGrid 4s linear infinite;
+  }
+  
+  .animate-neural-network {
+    animation: neuralNetwork 3s ease-in-out infinite;
+  }
+  
+  .animate-quantum-field {
+    animation: quantumField 2s ease-in-out infinite;
+  }
+  
+  .animate-digital-wave {
+    animation: digitalWave 1.5s ease-in-out infinite;
+  }
+  
+  .animate-cyber-core {
+    animation: cyberCore 2s ease-in-out infinite;
+  }
+  
+  .animate-hologram-scan {
+    animation: hologramScan 3s linear infinite;
+  }
+  
+  .animate-quantum-tunnel {
+    animation: quantumTunnel 2s ease-in-out infinite;
+  }
+  
+  .animate-cyber-matrix {
+    animation: cyberMatrix 4s linear infinite;
+  }
+  
+  .animate-neural-pulse {
+    animation: neuralPulse 1.5s ease-in-out infinite;
+  }
+  
+  .animate-digital-core {
+    animation: digitalCore 2s ease-in-out infinite;
+  }
+  
+  .animate-holographic-grid {
+    animation: holographicGrid 3s linear infinite;
+  }
+  
+  .animate-quantum-mesh {
+    animation: quantumMesh 2s ease-in-out infinite;
+  }
+  
+  .animate-cyber-sync {
+    animation: cyberSync 1.5s ease-in-out infinite;
+  }
+  
+  .animate-neural-sync {
+    animation: neuralSync 2s ease-in-out infinite;
+  }
+  
+  .animate-digital-sync {
+    animation: digitalSync 1.5s ease-in-out infinite;
+  }
+  
+  .animate-holographic-sync {
+    animation: holographicSync 2s ease-in-out infinite;
+  }
+  
+  .animate-quantum-sync {
+    animation: quantumSync 1.5s ease-in-out infinite;
+  }
 }
 
 @keyframes fadeIn {
@@ -126,6 +291,459 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+/* Futuristic keyframe animations */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px #06b6d4, 0 0 30px #06b6d4, 0 0 40px #06b6d4;
+  }
+  to {
+    box-shadow: 0 0 30px #06b6d4, 0 0 40px #06b6d4, 0 0 50px #06b6d4;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scalePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateY(-90deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(-180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px #06b6d4;
+  }
+  50% {
+    box-shadow: 0 0 40px #06b6d4, 0 0 60px #06b6d4;
+  }
+}
+
+@keyframes cyberScan {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes matrixRain {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes hologram {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes quantum {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes neonFlicker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes energyPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px #06b6d4;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #06b6d4, 0 0 60px #06b6d4;
+  }
+}
+
+@keyframes dataStream {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes circuitBoard {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes holographic {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+    transform: scale(1);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes cyberGrid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+@keyframes neuralNetwork {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes quantumField {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05) rotate(90deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes digitalWave {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes cyberCore {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px #06b6d4;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px #06b6d4, 0 0 60px #06b6d4;
+  }
+}
+
+@keyframes hologramScan {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes quantumTunnel {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes cyberMatrix {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+@keyframes neuralPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+@keyframes digitalCore {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px #06b6d4;
+  }
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 30px #06b6d4, 0 0 40px #06b6d4;
+  }
+}
+
+@keyframes holographicGrid {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+@keyframes quantumMesh {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1) rotate(45deg);
+    opacity: 0.9;
+  }
+}
+
+@keyframes cyberSync {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.95;
+  }
+}
+
+@keyframes neuralSync {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 0.9;
+  }
+}
+
+@keyframes digitalSync {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.01);
+    opacity: 0.95;
+  }
+}
+
+@keyframes holographicSync {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 0.9;
+  }
+}
+
+@keyframes quantumSync {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 0.95;
   }
 }
 
