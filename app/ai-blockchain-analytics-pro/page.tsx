@@ -1,101 +1,101 @@
-import { ArrowRight, Target, Zap, BarChart3, Mail, Users, CheckCircle, Star, Brain, TrendingUp } from "lucide-react";
+import { ArrowRight, Link, Brain, Zap, Shield, BarChart3, CheckCircle, Star, TrendingUp, Database } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 
-export default function ZionAiMarketingAutomation() {
+export default function AiBlockchainAnalyticsPro() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Campaigns",
-      description: "Machine learning algorithms automatically optimize campaigns for maximum ROI and engagement"
+      title: "AI-Powered Transaction Analysis",
+      description: "Advanced machine learning algorithms analyze blockchain transactions with 99.9% accuracy for fraud detection"
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Smart Audience Segmentation",
-      description: "Automatically segment audiences based on behavior, demographics, and engagement patterns"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Real-time Market Intelligence",
+      description: "Live cryptocurrency market analysis with predictive modeling and trend forecasting"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Create complex marketing workflows that trigger based on customer actions and behaviors"
+      title: "Smart Contract Monitoring",
+      description: "Automated monitoring and analysis of smart contracts for security vulnerabilities and performance optimization"
+    },
+    {
+      icon: <Database className="w-6 h-6" />,
+      title: "Multi-Chain Support",
+      description: "Support for 50+ blockchain networks including Ethereum, Bitcoin, Polygon, and Solana"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Analytics",
-      description: "Comprehensive dashboards with live campaign performance, conversion tracking, and ROI analysis"
+      title: "Advanced Analytics Dashboard",
+      description: "Comprehensive blockchain analytics with custom dashboards and real-time reporting"
     },
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Multi-Channel Marketing",
-      description: "Email, SMS, social media, and web push notifications from one unified platform"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Lead Nurturing",
-      description: "Automated lead nurturing sequences that guide prospects through the sales funnel"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Security & Compliance",
+      description: "Built-in security features with compliance reporting for regulatory requirements"
     }
   ];
 
-  const marketingFeatures = [
-    "Email Marketing Automation",
-    "SMS & Push Notifications",
-    "Social Media Management",
-    "Landing Page Builder",
-    "A/B Testing Tools",
-    "Lead Scoring & Qualification",
-    "Customer Journey Mapping",
-    "Personalization Engine",
-    "Integration with 200+ Apps",
-    "Advanced Analytics & Reporting",
-    "White-label Solutions",
-    "24/7 Campaign Monitoring"
+  const blockchainFeatures = [
+    "Transaction Analysis & Tracking",
+    "DeFi Protocol Monitoring",
+    "NFT Market Analysis",
+    "Smart Contract Auditing",
+    "Wallet Address Clustering",
+    "Risk Assessment & Scoring",
+    "Compliance Reporting",
+    "Real-time Alerts & Notifications",
+    "Custom Analytics Queries",
+    "API & SDK Integration",
+    "Multi-Chain Data Aggregation",
+    "Advanced Visualization Tools"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$99",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small projects",
       features: [
-        "Up to 5,000 contacts",
-        "Basic automation",
-        "Email campaigns",
+        "Up to 5 chains",
+        "Basic analytics",
+        "Standard reports",
         "Email support",
-        "Standard templates",
-        "Basic analytics"
+        "1M transactions/month",
+        "Basic API access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$299",
       period: "/month",
       description: "Most popular for growing businesses",
       features: [
-        "Up to 25,000 contacts",
-        "Advanced automation",
-        "Multi-channel campaigns",
+        "Up to 20 chains",
+        "Advanced AI analytics",
+        "Custom dashboards",
         "Priority support",
-        "Custom templates",
-        "Advanced analytics",
-        "A/B testing"
+        "10M transactions/month",
+        "Full API access",
+        "Real-time alerts"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited contacts",
-        "AI-powered campaigns",
+        "Unlimited chains",
+        "Full AI suite",
         "Custom integrations",
         "24/7 phone support",
+        "Unlimited transactions",
         "White-label solution",
-        "Dedicated account manager",
-        "Advanced personalization"
+        "Dedicated account manager"
       ],
       popular: false
     }
@@ -103,24 +103,24 @@ export default function ZionAiMarketingAutomation() {
 
   const testimonials = [
     {
-      name: "Jessica Martinez",
-      company: "Digital Marketing Agency",
-      role: "Marketing Director",
-      content: "Zion AI Marketing Automation increased our campaign ROI by 300%. The AI optimization is incredible and saves us hours of manual work.",
+      name: "Alex Thompson",
+      company: "Crypto Investment Fund",
+      role: "Head of Analytics",
+      content: "Zion AI Blockchain Analytics Pro has revolutionized our investment strategy. We can now identify profitable opportunities with 95% accuracy.",
       rating: 5
     },
     {
-      name: "Kevin Park",
-      company: "E-commerce Platform",
-      role: "Growth Manager",
-      content: "The automated workflows are game-changing. We can now nurture leads 24/7 without any manual intervention.",
+      name: "Sarah Martinez",
+      company: "DeFi Protocol",
+      role: "Security Director",
+      content: "The smart contract monitoring is incredible. We've prevented several potential exploits and improved our security posture significantly.",
       rating: 5
     },
     {
-      name: "Lisa Thompson",
-      company: "SaaS Startup",
-      role: "Head of Marketing",
-      content: "Outstanding platform with excellent AI capabilities. Our conversion rates have increased by 150% since implementation.",
+      name: "David Chen",
+      company: "Blockchain Consulting",
+      role: "Principal Analyst",
+      content: "Outstanding platform with excellent multi-chain support. Our analysis capabilities have increased by 300% since implementation.",
       rating: 5
     }
   ];
@@ -128,63 +128,64 @@ export default function ZionAiMarketingAutomation() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Marketing Automation - Intelligent Marketing Platform | Zion Tech Group</title>
+        <title>Zion AI Blockchain Analytics Pro - Advanced Blockchain Intelligence | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your marketing with Zion AI Marketing Automation - the ultimate AI-powered marketing platform. Automated campaigns, smart segmentation, and multi-channel marketing."
+          content="Transform your blockchain analysis with Zion AI Blockchain Analytics Pro - the ultimate blockchain intelligence platform. AI-powered transaction analysis, DeFi monitoring, and multi-chain support."
         />
         <meta
           name="keywords"
-          content="marketing automation, AI marketing, email marketing, campaign automation, lead nurturing, marketing analytics, digital marketing platform"
+          content="blockchain analytics, cryptocurrency analysis, DeFi monitoring, smart contract auditing, blockchain intelligence, crypto analytics, blockchain data"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
+      <div className="min-h-screen gradient-animated cyber-grid">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 mb-6">
-              <Brain className="w-4 h-4 text-pink-400 mr-2" />
-              <span className="text-pink-400 text-sm font-medium">AI-Powered Marketing Platform</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 mb-6">
+              <Link className="w-4 h-4 text-orange-400 mr-2" />
+              <span className="text-orange-400 text-sm font-medium">Advanced Blockchain Intelligence Platform</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
-                Zion AI Marketing Automation
+              <span className="holographic-text text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                Zion AI Blockchain Analytics Pro
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your marketing with the world's most intelligent automation platform. 
-              AI-powered campaigns, smart segmentation, and multi-channel marketing for modern businesses.
+              Revolutionize your blockchain analysis with the world's most advanced intelligence platform. 
+              AI-powered transaction analysis, DeFi monitoring, and multi-chain support for modern enterprises.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
+              <RouterLink
                 to="/contact"
-                className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+                className="cyber-button text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-orange-500/25 hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
+              </RouterLink>
+              <RouterLink
                 to="/demo"
-                className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-              </Link>
+                <TrendingUp className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              </RouterLink>
             </div>
             
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">300%</div>
-                <div className="text-gray-300">Average ROI Increase</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Analysis Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">85%</div>
-                <div className="text-gray-300">Time Saved</div>
+                <div className="text-3xl font-bold text-red-400 mb-2">50+</div>
+                <div className="text-gray-300">Blockchain Networks</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50,000+</div>
-                <div className="text-gray-300">Marketing Teams</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">1B+</div>
+                <div className="text-gray-300">Transactions Analyzed</div>
               </div>
             </div>
           </div>
@@ -195,19 +196,19 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Intelligent Marketing Features
+                Advanced Blockchain Intelligence Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create, manage, and optimize your marketing campaigns.
+                Everything you need to analyze and understand blockchain data.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
+                  className="holographic-card rounded-xl p-6 hover:scale-105 transition-all duration-300 pulse-glow group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -222,19 +223,19 @@ export default function ZionAiMarketingAutomation() {
           </div>
         </section>
 
-        {/* Marketing Features List */}
+        {/* Blockchain Features List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Marketing Suite
+                Complete Blockchain Analytics Suite
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the tools you need to execute successful marketing campaigns.
+                All the tools you need to analyze blockchain data effectively.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {marketingFeatures.map((feature, index) => (
+              {blockchainFeatures.map((feature, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
@@ -255,22 +256,22 @@ export default function ZionAiMarketingAutomation() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your marketing needs. All plans include 14-day free trial.
+                Choose the plan that fits your blockchain analytics needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  className={`relative holographic-card rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-pink-400 bg-gradient-to-br from-pink-500/10 to-purple-500/10'
-                      : 'border-white/20 hover:border-pink-400'
+                      ? 'border-orange-400 bg-gradient-to-br from-orange-500/10 to-red-500/10'
+                      : 'border-white/20 hover:border-orange-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -291,16 +292,16 @@ export default function ZionAiMarketingAutomation() {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <RouterLink
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
-                        : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
+                        ? 'cyber-button text-white hover:from-orange-600 hover:to-red-700'
+                        : 'border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
-                  </Link>
+                  </RouterLink>
                 </div>
               ))}
             </div>
@@ -312,17 +313,17 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Marketing Teams
+                Trusted by Blockchain Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what marketing professionals say about Zion AI Marketing Automation
+                See what blockchain professionals say about Zion AI Blockchain Analytics Pro
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  className="holographic-card rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -344,25 +345,25 @@ export default function ZionAiMarketingAutomation() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Marketing?
+              Ready to Transform Your Blockchain Analysis?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of marketing teams using Zion AI Marketing Automation to grow faster and smarter.
+              Join thousands of businesses using Zion AI Blockchain Analytics Pro to gain deep blockchain insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <RouterLink
                 to="/contact"
-                className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                className="cyber-button text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
+              </RouterLink>
+              <RouterLink
                 to="/demo"
-                className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
-              </Link>
+              </RouterLink>
             </div>
           </div>
         </section>

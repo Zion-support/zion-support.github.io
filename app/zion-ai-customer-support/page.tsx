@@ -1,54 +1,54 @@
-import { ArrowRight, Target, Zap, BarChart3, Mail, Users, CheckCircle, Star, Brain, TrendingUp } from "lucide-react";
+import { ArrowRight, MessageCircle, Brain, Zap, Users, Shield, CheckCircle, Star, Target, BarChart3 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAiMarketingAutomation() {
+export default function ZionAiCustomerSupport() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Campaigns",
-      description: "Machine learning algorithms automatically optimize campaigns for maximum ROI and engagement"
+      title: "AI-Powered Chatbots",
+      description: "Intelligent chatbots that understand context and provide accurate responses 24/7"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Smart Audience Segmentation",
-      description: "Automatically segment audiences based on behavior, demographics, and engagement patterns"
+      title: "Smart Ticket Routing",
+      description: "Automatically route tickets to the right agent based on issue type and expertise"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Create complex marketing workflows that trigger based on customer actions and behaviors"
+      title: "Automated Responses",
+      description: "Pre-built response templates and automated solutions for common customer issues"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Real-time Analytics",
-      description: "Comprehensive dashboards with live campaign performance, conversion tracking, and ROI analysis"
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Multi-Channel Marketing",
-      description: "Email, SMS, social media, and web push notifications from one unified platform"
+      description: "Comprehensive dashboards with live support metrics, customer satisfaction, and performance tracking"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Lead Nurturing",
-      description: "Automated lead nurturing sequences that guide prospects through the sales funnel"
+      title: "Multi-channel Support",
+      description: "Unified support across email, chat, phone, and social media platforms"
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Knowledge Management",
+      description: "Centralized knowledge base with AI-powered search and content recommendations"
     }
   ];
 
-  const marketingFeatures = [
-    "Email Marketing Automation",
-    "SMS & Push Notifications",
-    "Social Media Management",
-    "Landing Page Builder",
-    "A/B Testing Tools",
-    "Lead Scoring & Qualification",
-    "Customer Journey Mapping",
-    "Personalization Engine",
-    "Integration with 200+ Apps",
-    "Advanced Analytics & Reporting",
-    "White-label Solutions",
-    "24/7 Campaign Monitoring"
+  const supportFeatures = [
+    "Live Chat & Messaging",
+    "Email Support Management",
+    "Phone Support Integration",
+    "Social Media Monitoring",
+    "Ticket Management System",
+    "Customer Satisfaction Surveys",
+    "Escalation Management",
+    "SLA Tracking & Alerts",
+    "Team Collaboration Tools",
+    "Integration with CRM Systems",
+    "Mobile Support App",
+    "Custom Workflows & Automation"
   ];
 
   const pricingPlans = [
@@ -56,11 +56,11 @@ export default function ZionAiMarketingAutomation() {
       name: "Starter",
       price: "$49",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
-        "Up to 5,000 contacts",
-        "Basic automation",
-        "Email campaigns",
+        "Up to 3 agents",
+        "Basic AI chatbot",
+        "Email & chat support",
         "Email support",
         "Standard templates",
         "Basic analytics"
@@ -71,15 +71,15 @@ export default function ZionAiMarketingAutomation() {
       name: "Professional",
       price: "$149",
       period: "/month",
-      description: "Most popular for growing businesses",
+      description: "Most popular for growing teams",
       features: [
-        "Up to 25,000 contacts",
-        "Advanced automation",
-        "Multi-channel campaigns",
+        "Up to 10 agents",
+        "Advanced AI features",
+        "Multi-channel support",
         "Priority support",
-        "Custom templates",
+        "Custom workflows",
         "Advanced analytics",
-        "A/B testing"
+        "API access"
       ],
       popular: true
     },
@@ -89,13 +89,13 @@ export default function ZionAiMarketingAutomation() {
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited contacts",
-        "AI-powered campaigns",
+        "Unlimited agents",
+        "Full AI suite",
         "Custom integrations",
         "24/7 phone support",
         "White-label solution",
         "Dedicated account manager",
-        "Advanced personalization"
+        "Advanced security"
       ],
       popular: false
     }
@@ -103,24 +103,24 @@ export default function ZionAiMarketingAutomation() {
 
   const testimonials = [
     {
-      name: "Jessica Martinez",
-      company: "Digital Marketing Agency",
-      role: "Marketing Director",
-      content: "Zion AI Marketing Automation increased our campaign ROI by 300%. The AI optimization is incredible and saves us hours of manual work.",
-      rating: 5
-    },
-    {
-      name: "Kevin Park",
+      name: "Rachel Thompson",
       company: "E-commerce Platform",
-      role: "Growth Manager",
-      content: "The automated workflows are game-changing. We can now nurture leads 24/7 without any manual intervention.",
+      role: "Customer Success Manager",
+      content: "Zion AI Customer Support has transformed our support operations. Response times decreased by 70% and customer satisfaction increased to 95%.",
       rating: 5
     },
     {
-      name: "Lisa Thompson",
-      company: "SaaS Startup",
-      role: "Head of Marketing",
-      content: "Outstanding platform with excellent AI capabilities. Our conversion rates have increased by 150% since implementation.",
+      name: "Mark Davis",
+      company: "SaaS Company",
+      role: "Support Director",
+      content: "The AI chatbot handles 80% of our inquiries automatically. Our team can now focus on complex issues that require human expertise.",
+      rating: 5
+    },
+    {
+      name: "Sarah Johnson",
+      company: "Online Retailer",
+      role: "Head of Customer Experience",
+      content: "Outstanding platform with excellent automation features. Our support team productivity has increased by 60% since implementation.",
       rating: 5
     }
   ];
@@ -128,45 +128,45 @@ export default function ZionAiMarketingAutomation() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Marketing Automation - Intelligent Marketing Platform | Zion Tech Group</title>
+        <title>Zion AI Customer Support - Intelligent Support Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your marketing with Zion AI Marketing Automation - the ultimate AI-powered marketing platform. Automated campaigns, smart segmentation, and multi-channel marketing."
+          content="Transform your customer support with Zion AI Customer Support - the ultimate AI-powered support platform. Smart chatbots, automated workflows, and multi-channel support."
         />
         <meta
           name="keywords"
-          content="marketing automation, AI marketing, email marketing, campaign automation, lead nurturing, marketing analytics, digital marketing platform"
+          content="customer support, AI chatbot, support automation, help desk, ticket management, customer service, support analytics"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 mb-6">
-              <Brain className="w-4 h-4 text-pink-400 mr-2" />
-              <span className="text-pink-400 text-sm font-medium">AI-Powered Marketing Platform</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
+              <MessageCircle className="w-4 h-4 text-blue-400 mr-2" />
+              <span className="text-blue-400 text-sm font-medium">AI-Powered Support Platform</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
-                Zion AI Marketing Automation
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Zion AI Customer Support
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your marketing with the world's most intelligent automation platform. 
-              AI-powered campaigns, smart segmentation, and multi-channel marketing for modern businesses.
+              Revolutionize your customer support with the world's most intelligent platform. 
+              AI-powered chatbots, automated workflows, and multi-channel support for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -175,16 +175,16 @@ export default function ZionAiMarketingAutomation() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">300%</div>
-                <div className="text-gray-300">Average ROI Increase</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">70%</div>
+                <div className="text-gray-300">Faster Response</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">85%</div>
-                <div className="text-gray-300">Time Saved</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
+                <div className="text-gray-300">Customer Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50,000+</div>
-                <div className="text-gray-300">Marketing Teams</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">12,000+</div>
+                <div className="text-gray-300">Support Teams</div>
               </div>
             </div>
           </div>
@@ -195,10 +195,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Intelligent Marketing Features
+                Intelligent Support Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create, manage, and optimize your marketing campaigns.
+                Everything you need to provide exceptional customer support.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -207,7 +207,7 @@ export default function ZionAiMarketingAutomation() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -222,19 +222,19 @@ export default function ZionAiMarketingAutomation() {
           </div>
         </section>
 
-        {/* Marketing Features List */}
+        {/* Support Features List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Marketing Suite
+                Complete Support Suite
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the tools you need to execute successful marketing campaigns.
+                All the tools you need to deliver outstanding customer support.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {marketingFeatures.map((feature, index) => (
+              {supportFeatures.map((feature, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
@@ -255,7 +255,7 @@ export default function ZionAiMarketingAutomation() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your marketing needs. All plans include 14-day free trial.
+                Choose the plan that fits your support team size and needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -264,13 +264,13 @@ export default function ZionAiMarketingAutomation() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-pink-400 bg-gradient-to-br from-pink-500/10 to-purple-500/10'
-                      : 'border-white/20 hover:border-pink-400'
+                      ? 'border-blue-400 bg-gradient-to-br from-blue-500/10 to-cyan-500/10'
+                      : 'border-white/20 hover:border-blue-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -295,8 +295,8 @@ export default function ZionAiMarketingAutomation() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
-                        : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
+                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -312,10 +312,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Marketing Teams
+                Trusted by Support Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what marketing professionals say about Zion AI Marketing Automation
+                See what support professionals say about Zion AI Customer Support
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -344,22 +344,22 @@ export default function ZionAiMarketingAutomation() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Marketing?
+              Ready to Transform Your Support?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of marketing teams using Zion AI Marketing Automation to grow faster and smarter.
+              Join thousands of support teams using Zion AI Customer Support to deliver exceptional service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>
