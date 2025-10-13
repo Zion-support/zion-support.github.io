@@ -1,14 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-interface EnhancedSEOProps {
-  children: React.ReactNode;
-}
-
-export default function EnhancedSEO({ children }: EnhancedSEOProps) {
-  return <>{children}</>;
-}
-=======
 import { Helmet } from 'react-helmet-async';
 
 interface EnhancedSEOProps {
@@ -40,4 +30,3 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 };
 
 export default EnhancedSEO;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9

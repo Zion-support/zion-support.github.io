@@ -14,19 +14,6 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Page Components
-<<<<<<< HEAD
-import HomePage from './app/pages/HomePage';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import BlogPage from './app/pages/BlogPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-=======
 import HomePage from './src/pages/HomePage';
 import ContactPage from './src/pages/ContactPage';
 import BlogPage from './src/pages/BlogPage';
@@ -41,7 +28,6 @@ const SupportPage = () => <div className="min-h-screen flex items-center justify
 const PrivacyPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Privacy Page</h1></div>;
 const TermsPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Terms Page</h1></div>;
 const PricingPage = () => <div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl font-bold text-white">Pricing Page</h1></div>;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (

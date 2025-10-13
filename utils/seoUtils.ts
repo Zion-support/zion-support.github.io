@@ -2,23 +2,6 @@ interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-<<<<<<< HEAD
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  robots?: string;
-  viewport?: string;
-  charset?: string;
-  author?: string;
-  publisher?: string;
-  language?: string;
-=======
   canonicalUrl: string;
   ogImage: string;
   ogType: string;
@@ -38,7 +21,6 @@ interface SEOConfig {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
   geo?: {
     latitude?: string;
     longitude?: string;
@@ -46,13 +28,8 @@ interface SEOConfig {
     placename?: string;
   };
   alternate?: Array<{
-<<<<<<< HEAD
-    hreflang: string;
-    href: string;
-=======
     href: string;
     hreflang: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
   }>;
   structuredData?: any;
 }
@@ -77,159 +54,109 @@ export const defaultSEOConfig: SEOConfig = {
   ogType: 'website',
   twitterCard: 'summary_large_image',
   robots: 'index, follow',
-  viewport: 'width=device-width, initial-scale=1',
-  charset: 'utf-8',
   author: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
-  language: 'en-US'
+  language: 'en-US',
+  viewport: 'width=device-width, initial-scale=1.0',
+  charset: 'UTF-8',
+  ogTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+  ogDescription: 'Leading provider of advanced AI and IT solutions for businesses worldwide.',
+  twitterTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+  twitterDescription: 'Leading provider of advanced AI and IT solutions for businesses worldwide.',
+  twitterImage: '/images/og-image.jpg',
+  geo: {
+    latitude: '40.7128',
+    longitude: '-74.0060',
+    region: 'US-NY',
+    placename: 'New York'
+  },
+  alternate: [
+    { href: 'https://zion.app/en', hreflang: 'en' },
+    { href: 'https://zion.app/es', hreflang: 'es' }
+  ],
+  structuredData: {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://zion.app',
+    logo: 'https://zion.app/images/logo.png'
+  }
 };
 
-export const generateMetaTags = (config: SEOConfig): string => {
-  const tags = [
-    `<title>${config.title}</title>`,
-    `<meta name="description" content="${config.description}" />`,
-    `<meta name="keywords" content="${config.keywords.join(', ')}" />`,
-    `<meta name="robots" content="${config.robots || 'index, follow'}" />`,
-    `<meta name="viewport" content="${config.viewport || 'width=device-width, initial-scale=1'}" />`,
-    `<meta charset="${config.charset || 'utf-8'}" />`,
-    `<meta name="author" content="${config.author || 'Zion Tech Group'}" />`,
-    `<meta name="publisher" content="${config.publisher || 'Zion Tech Group'}" />`,
-    `<meta name="language" content="${config.language || 'en-US'}" />`,
-    `<link rel="canonical" href="${config.canonicalUrl || 'https://zion.app'}" />`
-  ];
-
-  // Open Graph tags
-  if (config.ogTitle || config.title) {
-    tags.push(`<meta property="og:title" content="${config.ogTitle || config.title}" />`);
-  }
-  if (config.ogDescription || config.description) {
-    tags.push(`<meta property="og:description" content="${config.ogDescription || config.description}" />`);
-  }
-  if (config.ogImage) {
-    tags.push(`<meta property="og:image" content="${config.ogImage}" />`);
-  }
-  if (config.ogType) {
-    tags.push(`<meta property="og:type" content="${config.ogType}" />`);
-  }
-  if (config.canonicalUrl) {
-    tags.push(`<meta property="og:url" content="${config.canonicalUrl}" />`);
-  }
-
-  // Twitter Card tags
-  if (config.twitterCard) {
-    tags.push(`<meta name="twitter:card" content="${config.twitterCard}" />`);
-  }
-  if (config.twitterTitle || config.title) {
-    tags.push(`<meta name="twitter:title" content="${config.twitterTitle || config.title}" />`);
-  }
-  if (config.twitterDescription || config.description) {
-    tags.push(`<meta name="twitter:description" content="${config.twitterDescription || config.description}" />`);
-  }
-  if (config.twitterImage || config.ogImage) {
-    tags.push(`<meta name="twitter:image" content="${config.twitterImage || config.ogImage}" />`);
-  }
-
-  // Geo tags
-  if (config.geo) {
-    if (config.geo.latitude && config.geo.longitude) {
-      tags.push(`<meta name="geo.position" content="${config.geo.latitude};${config.geo.longitude}" />`);
-    }
-    if (config.geo.region) {
-      tags.push(`<meta name="geo.region" content="${config.geo.region}" />`);
-    }
-    if (config.geo.placename) {
-      tags.push(`<meta name="geo.placename" content="${config.geo.placename}" />`);
-    }
-  }
-
-  // Alternate language tags
-  if (config.alternate && config.alternate.length > 0) {
-    config.alternate.forEach(alt => {
-      tags.push(`<link rel="alternate" hreflang="${alt.hreflang}" href="${alt.href}" />`);
-    });
-  }
-
-  // Structured data
-  if (config.structuredData) {
-    tags.push(`<script type="application/ld+json">${JSON.stringify(config.structuredData)}</script>`);
-  }
-
-  return tags.join('\n');
-};
-
-export const generateStructuredData = (config: SEOConfig): any => {
+export const generateSEOMeta = (config: SEOConfig) => {
   return {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": config.description,
-    "url": config.canonicalUrl || "https://zion.app",
-    "logo": config.ogImage || "/images/logo.png",
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/zion-tech-group"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
-      "contactType": "customer service",
-      "areaServed": "US",
-      "availableLanguage": "English"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA",
-      "postalCode": "94105",
-      "addressCountry": "US"
-    }
+    title: config.title,
+    description: config.description,
+    keywords: config.keywords.join(', '),
+    robots: config.robots,
+    viewport: config.viewport,
+    charset: config.charset,
+    author: config.author,
+    publisher: config.publisher,
+    language: config.language,
+    'og:title': config.ogTitle || config.title,
+    'og:description': config.ogDescription || config.description,
+    'og:image': config.ogImage,
+    'og:type': config.ogType,
+    'og:url': config.canonicalUrl,
+    'twitter:card': config.twitterCard,
+    'twitter:title': config.twitterTitle || config.title,
+    'twitter:description': config.twitterDescription || config.description,
+    'twitter:image': config.twitterImage || config.ogImage,
+    'geo.region': config.geo?.region,
+    'geo.placename': config.geo?.placename,
+    'geo.position': config.geo?.latitude && config.geo?.longitude 
+      ? `${config.geo.latitude};${config.geo.longitude}` 
+      : undefined,
+    'canonical': config.canonicalUrl,
+    'alternate': config.alternate?.map(alt => ({
+      rel: 'alternate',
+      hreflang: alt.hreflang,
+      href: alt.href
+    }))
   };
 };
 
-export const validateSEOConfig = (config: SEOConfig): string[] => {
-  const errors: string[] = [];
-
-  if (!config.title || config.title.length < 10) {
-    errors.push('Title should be at least 10 characters long');
-  }
-
-  if (!config.description || config.description.length < 120) {
-    errors.push('Description should be at least 120 characters long');
-  }
-
-  if (!config.keywords || config.keywords.length === 0) {
-    errors.push('Keywords should not be empty');
-  }
-
-  if (config.title && config.title.length > 60) {
-    errors.push('Title should be less than 60 characters for optimal SEO');
-  }
-
-  if (config.description && config.description.length > 160) {
-    errors.push('Description should be less than 160 characters for optimal SEO');
-  }
-
-  return errors;
+export const generateStructuredData = (config: SEOConfig) => {
+  return config.structuredData ? JSON.stringify(config.structuredData) : '';
 };
 
-export const optimizeSEOConfig = (config: SEOConfig): SEOConfig => {
-  const optimized = { ...config };
+export const generateImageAlt = (imagePath: string, alt: string) => {
+  return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0] || 'image'}`;
+};
 
-  // Ensure title is within optimal length
-  if (optimized.title && optimized.title.length > 60) {
-    optimized.title = optimized.title.substring(0, 57) + '...';
-  }
+export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {
+  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
+};
 
-  // Ensure description is within optimal length
-  if (optimized.description && optimized.description.length > 160) {
-    optimized.description = optimized.description.substring(0, 157) + '...';
-  }
+export const generateSitemap = (pages: Array<{ path: string; lastmod?: string; priority?: number }>) => {
+  const baseUrl = 'https://zion.app';
+  
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${pages.map(page => `
+    <url>
+      <loc>${baseUrl}${page.path}</loc>
+      <lastmod>${page.lastmod || new Date().toISOString().split('T')[0]}</lastmod>
+      <priority>${page.priority || 0.5}</priority>
+    </url>
+  `).join('')}
+</urlset>`;
+};
 
-  // Ensure keywords are unique and lowercase
-  if (optimized.keywords) {
-    optimized.keywords = [...new Set(optimized.keywords.map(k => k.toLowerCase()))];
-  }
+export const generateRobotsTxt = (config: SEOConfig) => {
+  return `User-agent: *
+Allow: /
 
-  return optimized;
+Sitemap: ${config.canonicalUrl}/sitemap.xml`;
+};
+
+export default {
+  defaultSEOConfig,
+  generateSEOMeta,
+  generateStructuredData,
+  generateImageAlt,
+  generateCanonicalUrl,
+  generateSitemap,
+  generateRobotsTxt
 };
