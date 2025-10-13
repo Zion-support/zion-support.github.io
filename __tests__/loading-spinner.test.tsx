@@ -7,21 +7,9 @@ describe('LoadingSpinner', () => {
   it('renders with default props', () => {
     render(<LoadingSpinner />);
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Check that the spinner icon is rendered
-    const spinner = screen.getByTestId('loading-spinner');
-    expect(spinner).toBeInTheDocument();
-=======
     // Should render the spinner icon but no text by default
     expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
     expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
-=======
-    // Should render the spinner icon but no text by default
-    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
-    expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
->>>>>>> cursor/website-audit-and-update-with-deployment-6e33
   });
 
   it('renders with custom text', () => {
