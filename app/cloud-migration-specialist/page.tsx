@@ -4,7 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  UserGroupIcon,
+  CloudIcon,
   ChartBarIcon,
   ClockIcon,
   CheckCircleIcon,
@@ -13,112 +13,92 @@ import {
   RocketLaunchIcon,
   LightBulbIcon,
   CogIcon,
-  EyeIcon,
-  ChatBubbleLeftRightIcon,
-  HeartIcon
+  ShieldCheckIcon,
+  ServerIcon
 } from '@heroicons/react/24/outline';
 
-export default function AICustomerInsightsPage() {
+export default function CloudMigrationSpecialistPage() {
   const features = [
-    "Real-time customer sentiment analysis",
-    "Behavioral pattern recognition",
-    "Customer lifetime value prediction",
-    "Churn prediction and prevention",
-    "Personalized recommendation engine",
-    "Customer segmentation with AI",
-    "Purchase intent scoring",
-    "Customer journey mapping",
-    "Feedback analysis and insights",
-    "Competitive analysis",
-    "Market trend identification",
-    "ROI tracking and attribution"
+    "Comprehensive cloud assessment and planning",
+    "Multi-cloud migration strategies",
+    "Zero-downtime migration execution",
+    "Cost optimization and monitoring",
+    "Security and compliance implementation",
+    "Performance optimization",
+    "Disaster recovery planning",
+    "24/7 migration support",
+    "Post-migration optimization",
+    "Training and documentation",
+    "Custom integration solutions",
+    "Ongoing cloud management"
   ];
 
   const benefits = [
-    "35% increase in customer retention",
-    "50% improvement in conversion rates",
-    "25% boost in average order value",
-    "Predictive insights for better decisions",
-    "Automated customer segmentation",
-    "Real-time performance monitoring"
+    "50% reduction in infrastructure costs",
+    "99.9% uptime guarantee",
+    "40% improvement in performance",
+    "Enhanced security and compliance",
+    "Scalable and flexible infrastructure",
+    "Reduced operational overhead"
   ];
 
   const useCases = [
-    "E-commerce customer analysis",
-    "SaaS customer success",
-    "Retail customer insights",
-    "Subscription business optimization",
-    "Customer support optimization",
-    "Marketing campaign personalization"
+    "Legacy system modernization",
+    "Multi-cloud strategy implementation",
+    "Disaster recovery setup",
+    "Cost optimization initiatives",
+    "Security compliance projects",
+    "Performance improvement programs"
   ];
 
-  const insights = [
-    {
-      title: "Customer Sentiment Analysis",
-      description: "Understand how customers feel about your brand, products, and services in real-time",
-      icon: HeartIcon,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Behavioral Analytics",
-      description: "Track customer behavior patterns to identify opportunities and optimize experiences",
-      icon: EyeIcon,
-      color: "from-blue-500 to-indigo-500"
-    },
-    {
-      title: "Predictive Modeling",
-      description: "Predict customer actions, churn risk, and lifetime value with machine learning",
-      icon: ChartBarIcon,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Personalization Engine",
-      description: "Deliver personalized experiences based on individual customer preferences and behavior",
-      icon: CogIcon,
-      color: "from-purple-500 to-pink-500"
-    }
+  const cloudProviders = [
+    { name: "AWS", icon: "☁️", color: "from-orange-500 to-yellow-500" },
+    { name: "Azure", icon: "🔷", color: "from-blue-500 to-indigo-500" },
+    { name: "Google Cloud", icon: "🌐", color: "from-green-500 to-emerald-500" },
+    { name: "IBM Cloud", icon: "🔵", color: "from-blue-600 to-blue-700" },
+    { name: "Oracle Cloud", icon: "🔴", color: "from-red-500 to-pink-500" },
+    { name: "Alibaba Cloud", icon: "🟡", color: "from-yellow-500 to-orange-500" }
   ];
 
   const pricing = {
-    starter: {
-      price: "$199",
-      period: "month",
+    assessment: {
+      price: "$2,500",
+      period: "one-time",
       features: [
-        "Up to 10,000 customers",
-        "Basic sentiment analysis",
-        "Customer segmentation",
-        "Monthly reports",
-        "Email support",
-        "Basic analytics dashboard"
+        "Comprehensive cloud assessment",
+        "Migration strategy planning",
+        "Cost analysis and optimization",
+        "Security evaluation",
+        "Performance baseline",
+        "Migration roadmap"
       ]
     },
-    professional: {
-      price: "$499",
-      period: "month",
+    migration: {
+      price: "$15,000",
+      period: "project",
       features: [
-        "Up to 50,000 customers",
-        "Advanced sentiment analysis",
-        "Predictive modeling",
-        "Real-time insights",
-        "Priority support",
-        "Advanced analytics",
-        "Custom integrations",
-        "API access"
+        "Complete migration execution",
+        "Zero-downtime migration",
+        "Data migration and validation",
+        "Application modernization",
+        "Security implementation",
+        "Testing and validation",
+        "Go-live support",
+        "30 days post-migration support"
       ]
     },
-    enterprise: {
-      price: "$1,299",
+    managed: {
+      price: "$3,500",
       period: "month",
       features: [
-        "Unlimited customers",
-        "Premium AI insights",
-        "Custom models",
-        "Real-time processing",
-        "Dedicated support",
-        "Enterprise analytics",
-        "White-label options",
-        "Custom development",
-        "SLA guarantee"
+        "Ongoing cloud management",
+        "24/7 monitoring and support",
+        "Performance optimization",
+        "Cost monitoring and optimization",
+        "Security updates and patches",
+        "Backup and disaster recovery",
+        "Monthly reporting",
+        "Dedicated account manager"
       ]
     }
   };
@@ -126,9 +106,9 @@ export default function AICustomerInsightsPage() {
   return (
     <>
       <Helmet>
-        <title>AI Customer Insights - Zion Tech Group</title>
-        <meta name="description" content="AI-powered customer insights platform that increases retention by 35% and conversion by 50%. Advanced analytics, sentiment analysis, and predictive modeling." />
-        <meta name="keywords" content="customer insights, AI analytics, customer behavior, sentiment analysis, predictive modeling, customer segmentation" />
+        <title>Cloud Migration Specialist - Zion Tech Group</title>
+        <meta name="description" content="Expert cloud migration services that reduce costs by 50% and improve performance by 40%. Zero-downtime migration with 99.9% uptime guarantee." />
+        <meta name="keywords" content="cloud migration, AWS migration, Azure migration, Google Cloud, cloud consulting, infrastructure modernization" />
       </Helmet>
       
       {/* Hero Section */}
@@ -136,17 +116,17 @@ export default function AICustomerInsightsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-8">
-              <UserGroupIcon className="w-10 h-10 text-white" />
+              <CloudIcon className="w-10 h-10 text-white" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Insights
+              Cloud Migration Specialist
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Understand your customers like never before with AI-powered insights
+              Expert cloud migration services for modern businesses
             </p>
             <p className="text-lg text-gray-400 max-w-3xl mx-auto mb-12">
-              Our AI Customer Insights platform analyzes customer behavior, sentiment, and preferences 
-              to help you make data-driven decisions that increase retention by 35% and conversion by 50%.
+              Our certified cloud migration specialists help businesses transition to the cloud with 
+              zero downtime, reducing costs by 50% and improving performance by 40% while ensuring 99.9% uptime.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -154,14 +134,14 @@ export default function AICustomerInsightsPage() {
                 to="/contact" 
                 className="group bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
               >
-                Start Free Trial
+                Get Free Assessment
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
                 to="#demo" 
                 className="group border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center gap-2"
               >
-                Watch Demo
+                View Case Studies
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -177,63 +157,59 @@ export default function AICustomerInsightsPage() {
               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Customer Insights platform delivers measurable improvements to your customer metrics
+              Our cloud migration services deliver measurable improvements to your infrastructure
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ChartBarIcon className="w-10 h-10 text-white" />
+                <CurrencyDollarIcon className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-blue-400 mb-2">35%</h3>
-              <p className="text-xl text-gray-300">Increase in Retention</p>
+              <h3 className="text-3xl font-bold text-blue-400 mb-2">50%</h3>
+              <p className="text-xl text-gray-300">Reduction in Costs</p>
             </div>
             
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <RocketLaunchIcon className="w-10 h-10 text-white" />
+                <ChartBarIcon className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-green-400 mb-2">50%</h3>
-              <p className="text-xl text-gray-300">Improvement in Conversion</p>
+              <h3 className="text-3xl font-bold text-green-400 mb-2">40%</h3>
+              <p className="text-xl text-gray-300">Improvement in Performance</p>
             </div>
             
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CurrencyDollarIcon className="w-10 h-10 text-white" />
+                <ShieldCheckIcon className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-purple-400 mb-2">25%</h3>
-              <p className="text-xl text-gray-300">Boost in Order Value</p>
+              <h3 className="text-3xl font-bold text-purple-400 mb-2">99.9%</h3>
+              <p className="text-xl text-gray-300">Uptime Guarantee</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Key Insights */}
+      {/* Cloud Providers */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Key Insights
+              Multi-Cloud Expertise
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Unlock powerful insights about your customers with advanced AI analytics
+              Certified experts in all major cloud platforms
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {insights.map((insight, index) => {
-              const Icon = insight.icon;
-              return (
-                <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${insight.color} rounded-lg flex items-center justify-center mb-6`}>
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{insight.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{insight.description}</p>
+          <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-6xl mx-auto">
+            {cloudProviders.map((provider, index) => (
+              <div key={index} className="text-center">
+                <div className={`w-20 h-20 bg-gradient-to-r ${provider.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <span className="text-3xl">{provider.icon}</span>
                 </div>
-              );
-            })}
+                <h3 className="text-lg font-bold text-white">{provider.name}</h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -243,10 +219,10 @@ export default function AICustomerInsightsPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Powerful Features
+              Comprehensive Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to understand and engage your customers better
+              End-to-end cloud migration services from assessment to ongoing management
             </p>
           </div>
           
@@ -266,10 +242,10 @@ export default function AICustomerInsightsPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Simple, Transparent Pricing
+              Flexible Pricing Options
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your customer base and business needs
+              Choose the service level that fits your migration needs
             </p>
           </div>
           
@@ -278,10 +254,10 @@ export default function AICustomerInsightsPage() {
               <div 
                 key={plan}
                 className={`bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border ${
-                  plan === 'professional' ? 'border-blue-500 relative' : 'border-slate-600'
+                  plan === 'migration' ? 'border-blue-500 relative' : 'border-slate-600'
                 }`}
               >
-                {plan === 'professional' && (
+                {plan === 'migration' && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
@@ -307,7 +283,7 @@ export default function AICustomerInsightsPage() {
                 <Link 
                   to="/contact" 
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all ${
-                    plan === 'professional'
+                    plan === 'migration'
                       ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700'
                       : 'border-2 border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-white'
                   }`}
@@ -328,7 +304,7 @@ export default function AICustomerInsightsPage() {
               Perfect For
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ideal for businesses looking to understand and optimize their customer relationships
+              Ideal for businesses looking to modernize their infrastructure and reduce costs
             </p>
           </div>
           
@@ -350,10 +326,10 @@ export default function AICustomerInsightsPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Ready to Understand Your Customers Better?
+              Ready to Migrate to the Cloud?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Join thousands of businesses already using AI Customer Insights to optimize their customer relationships
+              Join hundreds of businesses already using our cloud migration services to modernize their infrastructure
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -361,13 +337,13 @@ export default function AICustomerInsightsPage() {
                 to="/contact" 
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300"
               >
-                Start Free Trial
+                Get Free Assessment
               </Link>
               <Link 
                 to="/demo" 
                 className="border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
-                Schedule Demo
+                View Case Studies
               </Link>
             </div>
           </div>
