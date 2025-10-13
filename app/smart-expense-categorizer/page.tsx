@@ -1,431 +1,433 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
 import { 
   Receipt, 
   TrendingUp, 
-  Shield, 
-  Zap, 
   BarChart3, 
-  Users, 
+  Zap, 
+  Brain, 
+  DollarSign, 
   Clock, 
   CheckCircle,
   Star,
   ArrowRight,
-  Brain,
+  Sparkles,
   Target,
-  Globe,
-  DollarSign,
-  FileText,
-  CreditCard
+  AlertTriangle,
+  CreditCard,
+  PieChart
 } from 'lucide-react';
 
 const SmartExpenseCategorizerPage = () => {
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Categorization",
-      description: "Advanced machine learning automatically categorizes expenses with 98% accuracy, learning from your patterns and preferences."
-    },
-    {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
-      title: "Smart Receipt Processing",
-      description: "Automatically extract data from receipts, invoices, and bills using OCR technology and AI-powered data extraction."
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Real-time Analytics",
-      description: "Comprehensive expense analytics with spending trends, budget tracking, and financial insights to optimize your finances."
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: "Bank Integration",
-      description: "Securely connect with your bank accounts and credit cards for automatic transaction import and categorization."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: "Automated Workflows",
-      description: "Set up automated rules for expense approval, reimbursement, and reporting to streamline your financial processes."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-      title: "Team Management",
-      description: "Manage team expenses with role-based permissions, approval workflows, and centralized expense reporting."
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Personal",
-      price: "$19",
-      period: "/month",
-      description: "Perfect for individuals",
-      features: [
-        "Up to 500 transactions/month",
-        "Basic AI categorization",
-        "Receipt scanning",
-        "Basic analytics",
-        "Email support",
-        "1 user account"
-      ],
-      popular: false
-    },
-    {
-      name: "Business",
-      price: "$59",
-      period: "/month",
-      description: "Ideal for small businesses",
-      features: [
-        "Up to 5,000 transactions/month",
-        "Advanced AI categorization",
-        "Bank integration",
-        "Advanced analytics",
-        "Priority support",
-        "5 user accounts",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$149",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited transactions",
-        "Custom AI models",
-        "White-label solution",
-        "Advanced security",
-        "Dedicated support",
-        "Unlimited users",
-        "Custom integrations"
-      ],
-      popular: false
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <DollarSign className="w-12 h-12 text-green-400" />,
-      title: "Save Time & Money",
-      description: "Reduce expense processing time by 80% and eliminate manual data entry errors that cost businesses thousands."
-    },
-    {
-      icon: <FileText className="w-12 h-12 text-blue-400" />,
-      title: "Automated Compliance",
-      description: "Ensure tax compliance with automated categorization and detailed expense reports for easy filing and auditing."
-    },
-    {
-      icon: <CreditCard className="w-12 h-12 text-purple-400" />,
-      title: "Better Financial Control",
-      description: "Gain better control over spending with real-time insights and automated budget tracking and alerts."
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-red-400" />,
-      title: "Improved Cash Flow",
-      description: "Optimize cash flow with better expense visibility and automated reimbursement processes."
-    }
-  ];
-
-  const stats = [
-    { number: "80%", label: "Time Saved" },
-    { number: "98%", label: "Accuracy Rate" },
-    { number: "50%", label: "Error Reduction" },
-    { number: "3x", label: "Faster Processing" }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Smart Expense Categorizer | Zion Tech Group</title>
-        <meta name="description" content="Automate expense categorization with AI-powered receipt processing, bank integration, and real-time analytics." />
-        <meta name="keywords" content="expense management, receipt scanning, expense categorization, financial automation, AI expenses" />
+        <meta name="description" content="AI-powered expense categorization tool that automatically sorts and analyzes business expenses for better financial management and tax compliance." />
+        <meta name="keywords" content="expense categorization, AI expense tracking, financial management, tax compliance, expense analytics" />
+        <link rel="canonical" href="https://ziontechgroup.com/smart-expense-categorizer" />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">
-              <Receipt className="w-5 h-5 text-cyan-400 mr-2" />
-              <span className="text-cyan-300 font-medium">AI-Powered Expense Intelligence</span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20 animate-pulse"></div>
+          <div className="relative max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-emerald-500/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+              <Sparkles className="w-5 h-5 text-emerald-400" />
+              <span className="text-emerald-300 font-medium">AI-Powered Solution</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Automate Your
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Expense Management</span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Smart Expense Categorizer
             </h1>
             
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your expense management with AI-powered categorization, automated receipt processing, 
-              and real-time financial insights that save time and money.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Automate expense categorization with AI-powered intelligence that learns from your patterns, ensures tax compliance, and provides detailed financial insights.
             </p>
-
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-              >
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              <button className="border border-emerald-400 text-emerald-300 hover:bg-emerald-400/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300">
                 View Demo
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-400 font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transform Your Financial Management
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered expense management delivers measurable improvements in efficiency, 
-              accuracy, and financial control.
-            </p>
-          </motion.div>
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Intelligent Expense Management
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Transform your expense management with AI that automatically categorizes, analyzes, and optimizes your financial data.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="mb-6 flex justify-center">
-                  {benefit.icon}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Feature 1 */}
+              <div className="bg-gradient-to-br from-emerald-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 hover:border-emerald-400/40 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+                  <Brain className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {benefit.description}
+                <h3 className="text-2xl font-bold mb-4">AI-Powered Categorization</h3>
+                <p className="text-gray-300 mb-4">
+                  Automatically categorize expenses using machine learning that learns from your patterns and improves over time.
                 </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Advanced AI Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge artificial intelligence to automate and optimize every aspect 
-              of your expense management process.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="mb-6">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Flexible Pricing Plans
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business size and expense volume. 
-              All plans include our core AI features with no setup fees.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
-                    : 'border-white/10'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </div>
-                  </div>
-                )}
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
-                  </div>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Smart auto-categorization
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Learning algorithms
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Pattern recognition
+                  </li>
                 </ul>
+              </div>
 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:shadow-lg hover:shadow-cyan-500/25'
-                      : 'border border-gray-600 text-white hover:bg-white/10'
-                  }`}
-                >
-                  Get Started
-                </motion.button>
-              </motion.div>
-            ))}
+              {/* Feature 2 */}
+              <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                  <Receipt className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Receipt Processing</h3>
+                <p className="text-gray-300 mb-4">
+                  Automatically extract data from receipts and invoices using OCR technology and AI-powered text recognition.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    OCR technology
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Data extraction
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Receipt validation
+                  </li>
+                </ul>
+              </div>
+
+              {/* Feature 3 */}
+              <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Tax Compliance</h3>
+                <p className="text-gray-300 mb-4">
+                  Ensure tax compliance with automatic categorization according to tax rules and regulations.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Tax rule compliance
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Deductible tracking
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Audit preparation
+                  </li>
+                </ul>
+              </div>
+
+              {/* Feature 4 */}
+              <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20 hover:border-orange-400/40 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl flex items-center justify-center mb-6">
+                  <BarChart3 className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Financial Analytics</h3>
+                <p className="text-gray-300 mb-4">
+                  Get detailed insights into your spending patterns with comprehensive analytics and reporting.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Spending analysis
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Budget tracking
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Trend identification
+                  </li>
+                </ul>
+              </div>
+
+              {/* Feature 5 */}
+              <div className="bg-gradient-to-br from-cyan-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-teal-600 rounded-xl flex items-center justify-center mb-6">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Automation</h3>
+                <p className="text-gray-300 mb-4">
+                  Automate expense workflows with smart rules and integrations to save time and reduce errors.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Workflow automation
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Smart rules
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Integration APIs
+                  </li>
+                </ul>
+              </div>
+
+              {/* Feature 6 */}
+              <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                  <CreditCard className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">Multi-Source Integration</h3>
+                <p className="text-gray-300 mb-4">
+                  Connect with banks, credit cards, and accounting software for seamless expense tracking.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Bank integration
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Credit card sync
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="w-4 h-4 text-green-400" />
+                    Accounting software
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-12 text-center"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your Expenses?
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-emerald-900/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Proven Results
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our customers save time and money with intelligent expense management.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Clock className="w-10 h-10 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-emerald-400 mb-2">85%</div>
+                <p className="text-gray-300">Time saved on expense management</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="w-10 h-10 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-blue-400 mb-2">95%</div>
+                <p className="text-gray-300">Categorization accuracy</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <DollarSign className="w-10 h-10 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-purple-400 mb-2">$50K</div>
+                <p className="text-gray-300">Average annual savings</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <PieChart className="w-10 h-10 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-orange-400 mb-2">99%</div>
+                <p className="text-gray-300">Tax compliance rate</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Simple Pricing
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the plan that fits your business needs and start saving time on expense management.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Starter Plan */}
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/50">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold mb-4">Starter</h3>
+                  <div className="text-4xl font-bold mb-2">$29<span className="text-lg text-gray-400">/month</span></div>
+                  <p className="text-gray-400">For small businesses</p>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Up to 500 expenses/month</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Basic categorization</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Receipt scanning</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Basic reporting</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Email support</span>
+                  </li>
+                </ul>
+                <button className="w-full bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white py-3 rounded-xl font-semibold transition-all duration-300">
+                  Start Free Trial
+                </button>
+              </div>
+
+              {/* Professional Plan */}
+              <div className="bg-gradient-to-br from-emerald-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/50 relative">
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <span className="bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    Most Popular
+                  </span>
+                </div>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold mb-4">Professional</h3>
+                  <div className="text-4xl font-bold mb-2">$79<span className="text-lg text-gray-400">/month</span></div>
+                  <p className="text-gray-400">For growing businesses</p>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Up to 5,000 expenses/month</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>AI-powered categorization</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Advanced receipt processing</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Tax compliance features</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Advanced analytics</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Bank integration</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Priority support</span>
+                  </li>
+                </ul>
+                <button className="w-full bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white py-3 rounded-xl font-semibold transition-all duration-300">
+                  Start Free Trial
+                </button>
+              </div>
+
+              {/* Enterprise Plan */}
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-600/50">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold mb-4">Enterprise</h3>
+                  <div className="text-4xl font-bold mb-2">$199<span className="text-lg text-gray-400">/month</span></div>
+                  <p className="text-gray-400">For large organizations</p>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Unlimited expenses</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Custom AI models</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Full automation</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Custom integrations</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>White-label options</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <span>Dedicated support</span>
+                  </li>
+                </ul>
+                <button className="w-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-700 hover:to-gray-800 text-white py-3 rounded-xl font-semibold transition-all duration-300">
+                  Contact Sales
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-slate-800/50 to-emerald-900/50">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Start Automating Your Expenses Today
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already using our Smart Expense Categorizer 
-              to streamline their financial management and save time.
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses that have streamlined their expense management with our AI-powered categorizer.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-              >
+              <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Contact Sales
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 px-4 bg-black/20">
-        <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-          <p className="text-gray-300 mb-6">
-            Contact us today to learn more about our Smart Expense Categorizer and how it can transform your financial management.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-300">
-            <div className="flex items-center">
-              <Receipt className="w-5 h-5 mr-2 text-cyan-400" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-cyan-400" />
-              <span>https://ziontechgroup.com</span>
+              </button>
+              <button className="border border-emerald-400 text-emerald-300 hover:bg-emerald-400/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300">
+                Schedule Demo
+              </button>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 
