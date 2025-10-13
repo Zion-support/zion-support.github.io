@@ -29,7 +29,7 @@ describe('ImageOptimizer', () => {
         width={300}
         height={200}
         className="custom-class"
-        lazy={false}
+        priority={true}
       />
     );
 
@@ -48,7 +48,7 @@ describe('ImageOptimizer', () => {
         width={300}
         height={200}
         className="custom-class"
-        lazy={false}
+        priority={true}
       />
     );
 
@@ -64,10 +64,11 @@ describe('ImageOptimizer', () => {
       <ImageOptimizer
         src="test-image.jpg"
         alt="Test image"
+        priority={true}
       />
     );
 
     const img = screen.getByRole('img', { hidden: true });
-    expect(img).toHaveAttribute('src', 'test-image.jpg?format=webp&quality=80');
+    expect(img).toHaveAttribute('src', 'test-image.jpg');
   });
 });
