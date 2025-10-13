@@ -1,169 +1,169 @@
 #!/usr/bin/env python3
 """
-Comprehensive script to fix all remaining parsing errors.
+Comprehensive script to fix all merge conflicts and syntax errors in the codebase.
 """
 
 import os
-import glob
 import re
+import glob
+from pathlib import Path
 
-def fix_parsing_errors(file_path):
-    """Fix common parsing errors in a file."""
+def find_all_tsx_files():
+    """Find all TypeScript/JavaScript files"""
+    patterns = [
+        "**/*.tsx",
+        "**/*.ts", 
+        "**/*.jsx",
+        "**/*.js"
+    ]
+    
+    files = []
+    for pattern in patterns:
+        files.extend(glob.glob(pattern, recursive=True))
+    
+    # Filter out node_modules and other excluded directories
+    filtered_files = []
+    for file_path in files:
+        if not any(excluded in file_path for excluded in ['node_modules', '.next', 'dist', 'out']):
+            filtered_files.append(file_path)
+    
+    return filtered_files
+
+def clean_merge_conflicts(content):
+    """Remove all merge conflict markers and keep the HEAD version"""
+    lines = content.split('\n')
+    cleaned_lines = []
+    i = 0
+    
+    while i < len(lines):
+        line = lines[i]
+        
+        if line.strip() == '<<<<<<< HEAD':
+            # Skip until separator
+            i += 1
+            while i < len(lines) and lines[i].strip() != '=======':
+                cleaned_lines.append(lines[i])
+                i += 1
+            # Skip separator and everything until end marker
+            if i < len(lines):
+                i += 1
+            while i < len(lines) and not lines[i].strip().startswith('>>>>>>>'):
+                i += 1
+            # Skip end marker
+            if i < len(lines):
+                i += 1
+        else:
+            cleaned_lines.append(line)
+            i += 1
+    
+    return '\n'.join(cleaned_lines)
+
+def fix_jsx_syntax(content):
+    """Fix common JSX syntax issues"""
+    # Fix self-closing tags
+    content = re.sub(r'<(\w+)([^>]*?)(?<!/)>$', r'<\1\2 />', content, flags=re.MULTILINE)
+    
+    # Fix broken JSX expressions
+    content = re.sub(r'\{[^}]*$', '', content, flags=re.MULTILINE)
+    
+    # Fix malformed JSX tags
+    content = re.sub(r'<(\w+)([^>]*?)></\1>', r'<\1\2 />', content)
+    
+    return content
+
+def fix_import_statements(content):
+    """Fix import statements"""
+    # Fix missing React import
+    if 'import React' not in content and ('<div' in content or '<span' in content or '<h1' in content):
+        content = "import React from 'react';\n" + content
+    
+    # Fix missing imports for common components
+    if 'Helmet' in content and 'import { Helmet }' not in content:
+        content = "import { Helmet } from 'react-helmet-async';\n" + content
+    
+    if 'Link' in content and 'import { Link }' not in content:
+        content = "import { Link } from 'react-router-dom';\n" + content
+    
+    return content
+
+def fix_export_statements(content):
+    """Fix export statements"""
+    # Ensure there's a default export
+    if 'export default' not in content and 'function ' in content:
+        # Find the function name and add export
+        match = re.search(r'function\s+(\w+)', content)
+        if match:
+            function_name = match.group(1)
+            content += f'\n\nexport default {function_name};'
+    
+    return content
+
+def clean_file_content(content):
+    """Clean up file content"""
+    # Remove merge conflicts
+    content = clean_merge_conflicts(content)
+    
+    # Fix JSX syntax
+    content = fix_jsx_syntax(content)
+    
+    # Fix imports
+    content = fix_import_statements(content)
+    
+    # Fix exports
+    content = fix_export_statements(content)
+    
+    # Remove empty lines at the end
+    content = content.rstrip() + '\n'
+    
+    return content
+
+def process_file(file_path):
+    """Process a single file"""
     try:
+        print(f"Processing: {file_path}")
+        
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        original_content = content
+        # Check if file has conflicts or issues
+        has_conflicts = any(marker in content for marker in ['<<<<<<< HEAD', '=======', '>>>>>>>'])
+        has_jsx_issues = '<div' in content and 'import React' not in content
         
-        # Fix missing closing parentheses in lazy imports
-        content = re.sub(r"lazy\(\(\) => import\('([^']+)'\);", r"lazy(() => import('\1'));", content)
-        
-        # Fix malformed JSX structure
-        content = re.sub(r'<([^>]+)>\s*<([^>]+)>\s*</\2>\s*</\1>', r'<\1><\2></\2></\1>', content)
-        
-        # Fix incomplete function declarations
-        content = re.sub(r'export default function\s+(\w+)\s*\(\s*\)\s*{\s*$', r'export default function \1() {\n  return (\n    <div>Component content</div>\n  );\n}', content, flags=re.MULTILINE)
-        
-        # Fix malformed const declarations
-        content = re.sub(r'const\s+(\w+)\s*=\s*([^;]+);\s*const\s+(\w+)\s*=\s*([^;]+);', r'const \1 = \2;\nconst \3 = \4;', content)
-        
-        # Fix incomplete JSX elements
-        content = re.sub(r'<(\w+)\s*([^>]*?)\s*>\s*$', r'<\1 \2>', content, flags=re.MULTILINE)
-        
-        # Fix missing semicolons
-        content = re.sub(r'(\w+)\s*=\s*([^;]+)\s*$', r'\1 = \2;', content, flags=re.MULTILINE)
-        
-        # Fix malformed return statements
-        content = re.sub(r'return\s*\(\s*$', r'return (\n    <div>Content</div>\n  );', content, flags=re.MULTILINE)
-        
-        # Only write if content changed
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed {file_path}")
+        if not has_conflicts and not has_jsx_issues:
+            print(f"No issues found in {file_path}")
             return True
         
-        return False
+        # Clean the content
+        cleaned_content = clean_file_content(content)
+        
+        # Write back to file
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(cleaned_content)
+        
+        print(f"Successfully cleaned {file_path}")
+        return True
         
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
-def fix_specific_files():
-    """Fix specific known problematic files."""
-    fixes = {
-        '/workspace/app/accessibility-page/page.tsx': '''import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AccessibilityPage() {
-  return (
-    <>
-      <Helmet>
-        <title>Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Accessibility services and solutions for inclusive web development." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Accessibility</h1>
-          <p className="text-lg text-gray-300">Accessibility services coming soon.</p>
-        </div>
-      </div>
-    </>
-  );
-}''',
-        '/workspace/app/accessibility/page.tsx': '''import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Accessibility() {
-  return (
-    <>
-      <Helmet>
-        <title>Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Accessibility services and solutions for inclusive web development." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Accessibility</h1>
-          <p className="text-lg text-gray-300">Accessibility services coming soon.</p>
-        </div>
-      </div>
-    </>
-  );
-}''',
-        '/workspace/app/advanced-security-suite/page.tsx': '''import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AdvancedSecuritySuite() {
-  return (
-    <>
-      <Helmet>
-        <title>Advanced Security Suite - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive security solutions for enterprise protection." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Advanced Security Suite</h1>
-          <p className="text-lg text-gray-300">Advanced security solutions coming soon.</p>
-        </div>
-      </div>
-    </>
-  );
-}''',
-        '/workspace/app/ai-3d-generation/page.tsx': '''import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AI3DGeneration() {
-  return (
-    <>
-      <Helmet>
-        <title>AI 3D Generation - Zion Tech Group</title>
-        <meta name="description" content="AI-powered 3D content generation and modeling solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">AI 3D Generation</h1>
-          <p className="text-lg text-gray-300">AI 3D generation services coming soon.</p>
-        </div>
-      </div>
-    </>
-  );
-}'''
-    }
-    
-    for file_path, content in fixes.items():
-        try:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed {file_path}")
-        except Exception as e:
-            print(f"Error fixing {file_path}: {e}")
-
 def main():
-    """Main function to fix all parsing errors."""
-    print("Fixing parsing errors...")
+    """Main function"""
+    print("Starting comprehensive file cleanup...")
     
-    # Fix specific problematic files first
-    fix_specific_files()
+    # Find all files
+    files = find_all_tsx_files()
     
-    # Find all TypeScript/JavaScript files
-    files = glob.glob('**/*.tsx', recursive=True) + glob.glob('**/*.ts', recursive=True) + glob.glob('**/*.js', recursive=True) + glob.glob('**/*.jsx', recursive=True)
+    print(f"Found {len(files)} files to process")
     
-    # Filter out node_modules
-    files = [f for f in files if 'node_modules' not in f]
-    
-    fixed_count = 0
-    error_count = 0
-    
+    # Process each file
+    success_count = 0
     for file_path in files:
-        try:
-            if fix_parsing_errors(file_path):
-                fixed_count += 1
-        except Exception as e:
-            print(f"Error processing {file_path}: {e}")
-            error_count += 1
+        if process_file(file_path):
+            success_count += 1
     
-    print(f"Fixed {fixed_count} files")
-    print(f"Errors: {error_count} files")
+    print(f"\nCleanup complete!")
+    print(f"Successfully processed: {success_count}/{len(files)} files")
 
 if __name__ == "__main__":
     main()

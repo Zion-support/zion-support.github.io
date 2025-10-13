@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
-export default function WebDevelopment() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Web Development - Zion Tech Group</title>
-        <meta name="description" content="Web Development page coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Web Development</h1>
-        <p className="text-xl text-gray-300">Coming Soon</p>
-      </div>
-    </div>
-  );
+export default function WebDevelopment() 
 }

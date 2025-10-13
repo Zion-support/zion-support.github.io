@@ -1,41 +1,21 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const services = [
-    {
-      title: "Cloud Migration",
-      description: "Seamless migration to cloud infrastructure",
-      icon: "Cloud"
+    
     },
-    {
-      title: "Security Solutions",
-      description: "Advanced security and compliance",
-      icon: "Shield"
+    
     },
-    {
-      title: "Performance Optimization",
-      description: "Optimize your cloud performance",
-      icon: "Zap"
+    
     }
   ];
-interface SEOOptimizerProps {
-  children: React.ReactNode;
+interface SEOOptimizerProps 
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
-  useEffect(() => {
-    // Add structured data for better SEO
-    const addStructuredData = () => {
-      const existingScript = document.querySelector('script[type="application/ld+json"]');
-      if (existingScript) return;
-
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => 
     };
 
     // Add meta tags for better social sharing
-    const addSocialMetaTags = () => {
-      const metaTags = [
+    const addSocialMetaTags = () => 
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@ziontechgroup' },
         { name: 'twitter:creator', content: '@ziontechgroup' },
@@ -48,35 +28,24 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         { property: 'og:image:alt', content: 'Zion Tech Group - Advanced AI and IT Solutions' }
       ];
 
-      metaTags.forEach(tag => {
+      metaTags.forEach(tag => 
         const existingTag = document.querySelector(`meta[name="${tag.name}"], meta[property="${tag.property}"]`);
-        if (!existingTag) {
-          const meta = document.createElement('meta');
-          if (tag.name) meta.setAttribute('name', tag.name);
-          if (tag.property) meta.setAttribute('property', tag.property);
-          meta.setAttribute('content', tag.content);
-          document.head.appendChild(meta);
+        if (!existingTag) 
         }
       });
     };
 
     // Add performance hints
-    const addPerformanceHints = () => {
-      const hints = [
+    const addPerformanceHints = () => 
         { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
         { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
       ];
 
-      hints.forEach(hint => {
+      hints.forEach(hint => 
         const existingHint = document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`);
-        if (!existingHint) {
-          const link = document.createElement('link');
-          link.rel = hint.rel;
-          link.href = hint.href;
-          if (hint.crossorigin) link.crossOrigin = hint.crossorigin;
-          document.head.appendChild(link);
+        if (!existingHint) 
         }
       });
     };
@@ -88,8 +57,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
   }, []);
 
   return (
-    <div>
-      <Helmet>
+    <div />
+      <Helmet />
         {/* Additional meta tags for better SEO */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />

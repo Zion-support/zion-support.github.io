@@ -1,74 +1,34 @@
+import React from 'react';
 import { ImageIcon } from 'lucide-react';
-interface LazyImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-  onLoad?: () => void;
-  onError?: () => void;
-  priority?: boolean;
-  size?: string;
-  quality?: number;
+interface LazyImageProps 
 }
 
-const LazyImage: React.FC<LazyImageProps> = ({
-  src,
-  alt,
-  className = '',
-  placeholder,
-  onLoad,
-  onError,
-  priority = false,
-  size = '100vw',
-  quality = 75
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    if (priority) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
+const LazyImage: React.FC<LazyImageProps> = (
+}) => 
         }
       },
-      {
-        rootMargin: '50px 0px',
-        threshold: 0.1
+      
       }
     );
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
+    if (imgRef.current) 
     }
 
     return () => observer.disconnect();
   }, [priority]);
 
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
+  const handleLoad = () => 
   };
 
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
+  const handleError = () => 
   };
 
   const optimizedSrc = `${src}?w=800&q=${quality}&f=webp`;
 
   return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`} />
       {/* Placeholder */}
-      {!isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
-          {placeholder ? (
-            <img
+      
               src={placeholder}
               alt=""
               className="w-full h-full object-cover opacity-50"
@@ -80,22 +40,14 @@ const LazyImage: React.FC<LazyImageProps> = ({
       )}
 
       {/* Error State */}
-      {hasError && (
-        <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-          <div className="text-center">
-            <ImageIcon className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-            <p className="text-xs text-gray-500">Failed to load image</p>
-          </div>
-        </div>
+      
       )}
 
       {/* Actual Image */}
-      {isInView && !hasError && (
-        <img
+      
           src={optimizedSrc}
           alt={alt}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+          className=
           }`}
           onLoad={handleLoad}
           onError={handleError}

@@ -1,234 +1,96 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-const features = [
-    {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
-    }
-  ];
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CFO",
-      company: "TechCorp",
-      content: "The AI financial analysis platform has revolutionized our decision-making process.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Investment Manager",
-      company: "FinancePro",
-      content: "Incredible accuracy and insights that have improved our portfolio performance.",
-      rating: 5
-    }
-  ];
-=======
-"use client";
-import { Brain, Clock, Target, BarChart3 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
-export default function AICustomerSupportChatbot() {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechSupport Solutions",
-      role: "Customer Success Manager",
-      content: "Our AI chatbot has reduced response time by 80% and increased customer satisfaction by 40%. It handles 90% of inquiries automatically.",
-      rating: 5,
-      avatar: "SJ"
+import React from 'react';
+export default function AICustomerSupportChatbot() 
     },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Plus",
-      role: "Operations Director",
-      content: "The chatbot understands context perfectly and escalates complex issues to humans seamlessly. Our support team can focus on high-value tasks.",
-      rating: 5,
-      avatar: "MC"
+    
     },
-    {
-      name: "Emily Rodriguez",
-      company: "SaaS Platform Inc",
-      role: "Head of Support",
-      content: "24/7 availability with consistent quality responses. Our customers love the instant help and our team loves the reduced workload.",
-      rating: 5,
-      avatar: "ER"
+    
     }
   ];
 
   const chatbotFeatures = [
-    {
-      category: "Core Features",
-      items: [
-        "Natural Language Processing",
-        "Multi-language Support",
-        "Context Awareness",
-        "Real-time Responses",
-      ],
+    
     },
-    {
-      category: "Integration",
-      items: [
-        "API Integration",
-        "CRM Integration",
-        "Database Connectivity",
-        "Third-party Tools",
-      ],
+    
     },
-    {
-      category: "Analytics",
-      items: [
-        "Conversation Analytics",
-        "Performance Metrics",
-        "User Insights",
-        "Custom Reports",
-      ],
+    
     },
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$299",
-      features: ["Basic chatbot", "Email support", "Standard templates"],
-      description: "Perfect for small businesses getting started",
-      period: "/month",
-      popular: false,
+    
     },
-    {
-      name: "Professional",
-      price: "$799",
-      features: ["Advanced AI", "Priority support", "Custom integrations"],
-      description: "Ideal for growing businesses with complex needs",
-      period: "/month",
-      popular: true,
+    
     },
-    {
-      name: "Enterprise",
-      price: "$1999",
-      features: ["Full customization", "24/7 support", "Dedicated manager"],
-      description: "Complete solution for large organizations",
-      period: "/month",
-      popular: false,
+    
     },
   ];
   const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: "Natural Language Processing",
-      description:
-        "Advanced AI understands context, intent, and provides human-like responses",
+    
     },
-    {
-      icon: <Clock className="w-6 h-6 text-purple-400" />,
-      title: "24/7 Availability",
-      description:
-        "Provide instant support around the clock without additional staffing costs",
+    
     },
-    {
-      icon: <Target className="w-6 h-6 text-yellow-400" />,
-      title: "Intelligent Routing",
-      description:
-        "Automatically route complex queries to the right human agents when needed",
+    
     },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: "Analytics & Insights",
-      description:
-        "Track customer satisfaction, response times, and identify improvement opportunities",
+    
     },
   ];
 
   const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Customer Success Manager",
-      company: "TechCorp",
-      content: "The AI chatbot has reduced our support tickets by 70% while improving customer satisfaction. It's incredibly intelligent and handles complex queries perfectly.",
-      rating: 5,
-      avatar: "SJ"
+    
     },
-    {
-      name: "Michael Chen",
-      role: "Operations Director",
-      company: "InnovateLabs",
-      content: "Implementation was seamless and the results were immediate. Our customers love the instant responses and our team can focus on more complex issues.",
-      rating: 5,
-      avatar: "MC"
+    
     },
-    {
-      name: "Emily Rodriguez",
-      role: "Head of Support",
-      company: "DataFlow Inc",
-      content: "The analytics and insights provided by the chatbot help us understand our customers better. It's been a game-changer for our support operations.",
-      rating: 5,
-      avatar: "ER"
+    
     }
   ];
 
   return (
-    <div>
-      <Helmet>
-        <title>AI Customer Support Chatbot - Zion Tech Group</title>
+    <div /></div>
+      <Helmet /></Helmet>
+        <title />AI Customer Support Chatbot - Zion Tech Group</title>
         <meta
           name="description"
           content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs."
-        />
+        / />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900" /></div>
         {/* Hero Section */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
+        <div className="container mx-auto px-4 py-20" /></div>
+          <div className="text-center mb-16" /></div>
+            <h1 className="text-5xl font-bold text-white mb-6" /></h1>
               AI Customer Support Chatbot
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" />
               Professional AI customer support chatbot services by Zion Tech
               Group. Expert solutions tailored to your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-              >
+               /></Link>
                 Get Started
               </Link>
               <Link
                 to="/contact"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-              >
+               /></Link>
                 Learn More
               </Link>
             </div>
           </div>
 
           {/* Features Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16" /></div>
+            
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
-              >
-                <div className="flex justify-center mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-2">
+              ></di></div>
+                <div className="flex justify-center mb-4" />{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-2" /></h3>
                   {feature.title}
                 </h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -237,26 +99,24 @@ export default function AICustomerSupportChatbot() {
           </div>
 
           {/* Chatbot Features Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
+          <div className="mb-16" /></div>
+            <h2 className="text-3xl font-bold text-white text-center mb-12" /></h2>
               Comprehensive Chatbot Features
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {chatbotFeatures.map((category, index) => (
-                <div
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" /></div>
+              
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
-                >
-                  <h3 className="text-xl font-semibold text-white mb-4">
+                ></di></div>
+                  <h3 className="text-xl font-semibold text-white mb-4" /></h3>
                     {category.category}
                   </h3>
-                  <ul className="space-y-2">
-                    {category.items.map((item, itemIndex) => (
-                      <li
+                  <ul className="space-y-2" /></ul>
+                    
                         key={itemIndex}
                         className="text-gray-300 flex items-center"
-                      >
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                      ></l></li>
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3" /></span>
                         {item}
                       </li>
                     ))}
@@ -267,52 +127,42 @@ export default function AICustomerSupportChatbot() {
           </div>
 
           {/* Pricing Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
+          <div className="mb-16" /></div>
+            <h2 className="text-3xl font-bold text-white text-center mb-12" /></h2>
               Simple, Transparent Pricing
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div
+            <div className="grid md:grid-cols-3 gap-8" /></div>
+              
                   key={index}
                   className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 ${plan.popular ? "ring-2 ring-cyan-400" : ""}`}
-                >
-                  {plan.popular && (
-                    <div className="text-center mb-4">
-                      <span className="bg-cyan-400 text-white px-4 py-2 rounded-full text-sm font-medium">
-                        Most Popular
-                      </span>
-                    </div>
+                ></di></div>
+                  
                   )}
-                  <h3 className="text-2xl font-bold text-white mb-2">
+                  <h3 className="text-2xl font-bold text-white mb-2" /></h3>
                     {plan.name}
                   </h3>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">
+                  <div className="mb-6" /></div>
+                    <span className="text-4xl font-bold text-white" /></span>
                       {plan.price}
                     </span>
-                    <span className="text-gray-400">{plan.period}</span>
+                    <span className="text-gray-400" />{plan.period}</span>
                   </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li
+                  <ul className="space-y-3 mb-8" /></ul>
+                    
                         key={featureIndex}
                         className="text-gray-300 flex items-center"
-                      >
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                      ></l></li>
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3" /></span>
                         {feature.title}
                       </li>
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
-                      plan.popular
-                        ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600"
-                        : "bg-white/20 text-white hover:bg-white/30"
+                    className=
                     }`}
-                  >
+                   /></Link>
                     Get Started
                   </Link>
                 </div>
@@ -321,29 +171,28 @@ export default function AICustomerSupportChatbot() {
           </div>
 
           {/* Testimonials Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
+          <div className="mb-16" /></div>
+            <h2 className="text-3xl font-bold text-white text-center mb-12" /></h2>
               What Our Customers Say
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div
+            <div className="grid md:grid-cols-3 gap-8" /></div>
+              
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
-                >
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">
+                ></di></div>
+                  <div className="flex mb-4" /></div>
+                    
+                      <span key={i} className="text-yellow-400" /></span>
                         ★
                       </span>
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-                  <div>
-                    <p className="font-semibold text-white">
+                  <div /></div>
+                    <p className="font-semibold text-white" />
                       {testimonial.name}
                     </p>
-                    <p className="text-gray-400 text-sm">
+                    <p className="text-gray-400 text-sm" />
                       {testimonial.company}
                     </p>
                   </div>
@@ -353,25 +202,25 @@ export default function AICustomerSupportChatbot() {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
+          <div className="text-center" /></div>
+            <h2 className="text-3xl font-bold text-white mb-4" /></h2>
               Ready to Get Started?
             </h2>
-            <p className="text-lg text-gray-300 mb-8">
+            <p className="text-lg text-gray-300 mb-8" />
               Contact us to learn more about our solutions and how we can help
               your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" /></div>
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
+               /></Link>
                 Contact Us
               </Link>
               <Link
                 to="/services"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-              >
+               /></Link>
                 View All Services
               </Link>
             </div>

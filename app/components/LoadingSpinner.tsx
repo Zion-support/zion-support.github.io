@@ -1,33 +1,16 @@
+import React from 'react';
+
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  className?: string;
+  message?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  text, 
-  className = '' 
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8'
-  };
-
+export default function LoadingSpinner({ message = "Loading..." }: LoadingSpinnerProps) {
   return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div 
-        data-testid="loading-spinner"
-        className={`${sizeClasses[size]} border-2 border-cyan-500/20 border-t-cyan-500 rounded-full animate-spin`}
-      />
-      {text && (
-        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-          {text}
-        </p>
-      )}
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-400 mx-auto mb-4"></div>
+        <p className="text-white text-lg">{message}</p>
+      </div>
     </div>
   );
-};
-
-export default LoadingSpinner;
+}
