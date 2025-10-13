@@ -13,15 +13,7 @@ import { Helmet } from 'react-helmet-async';import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-export default function AboutPage()    {
-return (    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission and team" />
-      </Helmet>
-    }
-  ];
-
+export default function AboutPage() {
   const stats = [
     { number: '50+', label: 'Projects Completed' },
     { number: '25+', label: 'Happy Clients' },
@@ -31,12 +23,11 @@ return (    <>
 
   return (
     <>
-<SEO 
-        title="About Us - Zion Tech Group"
-        description="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions."
-        keywords="about us, team, mission, values, AI company, IT solutions"
-        url="/about"
-      />
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions." />
+        <meta name="keywords" content="about us, team, mission, values, AI company, IT solutions" />
+      </Helmet>
 
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">

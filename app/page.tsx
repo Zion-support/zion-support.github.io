@@ -250,8 +250,10 @@ const HomePage: React.FC = () => {
                 <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
                 <div className="text-gray-300">Success Rate</div>
               </div>
-      
-      <div className="min-h-screen bg-slate-900 text-white">
+            </div>
+          </div>
+        </section>
+      </div>
         {/* Hero Section */}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
@@ -384,5 +386,5 @@ const HomePage: React.FC = () => {
       </div>
     </>
   );
-}
+};
 export default HomePage;
