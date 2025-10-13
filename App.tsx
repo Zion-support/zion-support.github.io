@@ -39,6 +39,19 @@ const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
 // AI Service Pages
+const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
+const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
+const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
+const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
+const AICybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
+const AIDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics/page"));
+const AICustomerSupportPage = React.lazy(() => import("./app/ai-customer-support/page"));
+const AIBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
+const AIComputerVisionPage = React.lazy(() => import("./app/ai-computer-vision/page"));
+const AIConversationalAIPage = React.lazy(() => import("./app/ai-conversational-ai/page"));
+const AICRMPage = React.lazy(() => import("./app/ai-crm/page"));
+const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
+const AIDocumentProcessingPage = React.lazy(() => import("./app/ai-document-processing/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -211,6 +224,66 @@ function App() {
                   <Route path="/sitemap" element={<SitemapPage />} />
 
                   {/* AI Service Routes */}
+                  <Route
+                    path="/ai-services"
+                    element={<AIServicesPage />}
+                  />
+                  <Route
+                    path="/ai-analytics"
+                    element={<AIAnalyticsPage />}
+                  />
+                  <Route
+                    path="/ai-automation"
+                    element={<AIAutomationPage />}
+                  />
+                  <Route
+                    path="/ai-chatbot-builder"
+                    element={<AIChatbotBuilderPage />}
+                  />
+                  <Route
+                    path="/ai-content-generation"
+                    element={<AIContentGenerationPage />}
+                  />
+                  <Route
+                    path="/ai-cybersecurity"
+                    element={<AICybersecurityPage />}
+                  />
+                  <Route
+                    path="/ai-data-analytics"
+                    element={<AIDataAnalyticsPage />}
+                  />
+                  <Route
+                    path="/ai-customer-support"
+                    element={<AICustomerSupportPage />}
+                  />
+                  <Route
+                    path="/ai-business-intelligence"
+                    element={<AIBusinessIntelligencePage />}
+                  />
+                  <Route
+                    path="/ai-computer-vision"
+                    element={<AIComputerVisionPage />}
+                  />
+                  <Route
+                    path="/ai-conversational-ai"
+                    element={<AIConversationalAIPage />}
+                  />
+                  <Route
+                    path="/ai-crm"
+                    element={<AICRMPage />}
+                  />
+                  <Route
+                    path="/ai-devops-automation"
+                    element={<AIDevOpsAutomationPage />}
+                  />
+                  <Route
+                    path="/ai-document-processing"
+                    element={<AIDocumentProcessingPage />}
+                  />
+                  <Route
+                    path="/ai-workflow-automation"
+                    element={<WorkflowAutomationPage />}
+                  />
 
                   {/* IT Service Routes */}
                   <Route

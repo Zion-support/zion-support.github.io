@@ -34,15 +34,91 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <title>Zion Tech Group - Advanced AI and IT Solutions | Transform Your Business</title>
         <meta
           name="description"
-          content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses."
+          content="Leading provider of AI-powered solutions, cloud infrastructure, cybersecurity, and digital transformation services. 500+ successful projects, 24/7 support. Get your free consultation today!"
         />
         <meta
           name="keywords"
-          content="AI solutions, IT services, digital transformation, business automation, technology consulting"
+          content="AI solutions, cloud infrastructure, cybersecurity, digital transformation, business automation, technology consulting, 5G implementation, data analytics, custom software development"
         />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Transform your business with cutting-edge AI and IT solutions. 500+ successful projects, enterprise-grade security, 24/7 support." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Transform your business with cutting-edge AI and IT solutions. 500+ successful projects, enterprise-grade security, 24/7 support." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "foundingDate": "2019",
+            "numberOfEmployees": "50-100",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-302-464-0950",
+              "contactType": "customer service",
+              "email": "kleber@ziontechgroup.com",
+              "availableLanguage": "English"
+            },
+            "sameAs": [
+              "https://twitter.com/ziontechgroup",
+              "https://linkedin.com/company/ziontechgroup",
+              "https://github.com/ziontechgroup"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Technology Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI & Machine Learning Solutions"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cloud Infrastructure Services"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Cybersecurity Solutions"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "5G Implementation Services"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
 
       {/* Hero Section */}
