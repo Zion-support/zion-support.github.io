@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function ZionCustomerSatisfactionMonitorPage() {
   return (
@@ -12,14 +7,14 @@ export default function ZionCustomerSatisfactionMonitorPage() {
         <title>Zion Customer Satisfaction Monitor - Zion Tech Group</title>
         <meta name="description" content="Zion Customer Satisfaction Monitor solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Zion Customer Satisfaction Monitor</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive zion customer satisfaction monitor solutions designed to meet your business needs.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -27,14 +22,14 @@ export default function ZionCustomerSatisfactionMonitorPage() {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-300">
                 We use the latest technologies and best practices to ensure optimal performance.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
               <p className="text-gray-300">

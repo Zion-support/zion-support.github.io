@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 interface EnhancedperformancemonitorProps {
   className?: string;
@@ -15,9 +11,4 @@ export default function Enhancedperformancemonitor({ className = '', children, .
       {children}
     </div>
   );
-<<<<<<< HEAD
 };
-
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

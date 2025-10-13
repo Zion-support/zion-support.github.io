@@ -1,26 +1,20 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-export default function AiPredictiveModelingZionTechGroup() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-export default function AiPredictiveModelingPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
+import { Helmet } from 'react-helmet-async';
+export default function AiPredictiveModelingZionTechGroup() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Predictive Modeling - Zion Tech Group</title>
         <meta name="description" content="Ai Predictive Modeling solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Ai Predictive Modeling</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai predictive modeling solutions designed to meet your business needs.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -28,14 +22,14 @@ export default function AiPredictiveModelingPage() {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-300">
                 We use the latest technologies and best practices to ensure optimal performance.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
               <p className="text-gray-300">

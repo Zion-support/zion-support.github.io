@@ -2,16 +2,15 @@ import { useState, useEffect } from 'react';
 
 export function usePerformanceMonitor() {
   const [state, setState] = useState(null);
-  
+
   useEffect(() => {
     // Implementation here
     setState('initialized');
   }, []);
-  
+
   return state;
 }
 
-<<<<<<< HEAD
 export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
   const {
     enableLazyLoading = true,
@@ -29,7 +28,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if (!enableLazyLoading || typeof window === 'undefined') return;
 
     const images = document.querySelectorAll('img[data-src]');
-    
+
     if (observerRef.current) {
       observerRef.current.disconnect();
     }
@@ -74,7 +73,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
-      
+
       if (resource.endsWith('.woff2')) {
         link.as = 'font';
         link.type = 'font/woff2';
@@ -82,7 +81,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
         link.as = 'image';
       }
-      
+
       document.head.appendChild(link);
     });
   }, [enablePreloading]);
@@ -92,18 +91,18 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if (!enableImageOptimization || typeof window === 'undefined') return;
 
     const images = document.querySelectorAll('img');
-    
+
     images.forEach((img) => {
       // Add loading="lazy" for non-critical images
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
       }
-      
+
       // Add decoding="async" for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
       }
-      
+
       // Add proper alt text if missing
       if (!img.hasAttribute('alt')) {
         img.setAttribute('alt', '');
@@ -139,7 +138,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
           }
         }
       });
-      
+
       try {
         observer.observe({ entryTypes: ['longtask'] });
       } catch {
@@ -153,12 +152,12 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         const memory = (performance as any).memory;
         const usedMB = Math.round(memory.usedJSHeapSize / 1048576);
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
-        
+
         if (usedMB / totalMB > 0.8) {
           // Handle high memory usage
         }
       };
-      
+
       setInterval(checkMemory, 30000); // Check every 30 seconds
     }
   }, []);
@@ -218,6 +217,3 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     registerServiceWorker,
     setupPerformanceMonitoring,
   };
-=======
-export default usePerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

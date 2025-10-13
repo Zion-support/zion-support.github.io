@@ -1,10 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-import { ArrowRight, TrendingUp, Globe, CheckCircle, MessageSquare, Target, BarChart3 } from 'lucide-react';
+import { TrendingUp, Globe, MessageSquare, BarChart3 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
+import { Helmet } from 'react-helmet-async';
 
 const AISentimentAnalysisPro = () => {
   const features = [
@@ -42,9 +42,6 @@ const AISentimentAnalysisPro = () => {
     "Trend analysis",
     "Actionable insights"
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiSentimentAnalysisProPage() {
   return (
@@ -53,14 +50,14 @@ export default function AiSentimentAnalysisProPage() {
         <title>Ai Sentiment Analysis Pro - Zion Tech Group</title>
         <meta name="description" content="Ai Sentiment Analysis Pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Ai Sentiment Analysis Pro</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai sentiment analysis pro solutions designed to meet your business needs.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -68,14 +65,14 @@ export default function AiSentimentAnalysisProPage() {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-300">
                 We use the latest technologies and best practices to ensure optimal performance.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
               <p className="text-gray-300">
@@ -87,9 +84,6 @@ export default function AiSentimentAnalysisProPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

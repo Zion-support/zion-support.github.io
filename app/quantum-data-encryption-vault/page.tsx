@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Shield, ArrowRight, CheckCircle, Lock, Award, Globe, Eye, Key } from 'lucide-react';
+
+import { Shield, Lock, Award, Globe, Key } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
+import { Helmet } from 'react-helmet-async';
 
 const QuantumDataEncryptionVault = () => {
   const features = [
@@ -131,10 +131,6 @@ const QuantumDataEncryptionVault = () => {
     { number: "Zero", label: "Data Breaches", icon: <Lock className="w-6 h-6" /> },
     { number: "50+", label: "Compliance Standards", icon: <Award className="w-6 h-6" /> }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function QuantumDataEncryptionVaultPage() {
   return (
@@ -143,14 +139,14 @@ export default function QuantumDataEncryptionVaultPage() {
         <title>Quantum Data Encryption Vault - Zion Tech Group</title>
         <meta name="description" content="Quantum Data Encryption Vault solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Quantum Data Encryption Vault</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive quantum data encryption vault solutions designed to meet your business needs.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -158,14 +154,14 @@ export default function QuantumDataEncryptionVaultPage() {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-300">
                 We use the latest technologies and best practices to ensure optimal performance.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
               <p className="text-gray-300">
@@ -177,9 +173,6 @@ export default function QuantumDataEncryptionVaultPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

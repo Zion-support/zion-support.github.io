@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Shield, Zap, Users, Award, Shield, User, Users } from 'lucide-react';
 
 interface ImprovedfooterProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
+const ImprovedFooter: React.FC<ImprovedfooterProps> = ({ className = '', children, ...props }) => {
   const currentYear = new Date().getFullYear();
 
   const companyLinks = [
@@ -61,17 +63,11 @@ interface ImprovedfooterProps {
     address: '364 E Main St STE 1008, Middletown DE 19709'
   };
 
-=======
-export default function Improvedfooter({ className = '', children, ...props }: ImprovedfooterProps) {
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
   return (
     <div className={`improvedfooter-component ${className}`} {...props}>
       {children}
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
+export default ImprovedFooter;

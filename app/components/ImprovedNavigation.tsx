@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles, Search, User, Settings, HelpCircle, Phone, Mail, MapPin, Star, TrendingUp, Users, Award, Clock, CheckCircle, DollarSign, Play } from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
+import { ArrowRight, ChevronDown, Menu } from 'lucide-react';
 
 interface ImprovednavigationProps {
   className?: string;
@@ -16,7 +12,6 @@ export default function Improvednavigation({ className = '', children, ...props 
       {children}
     </div>
   );
-<<<<<<< HEAD
 
   return (
     <div>
@@ -47,7 +42,7 @@ export default function Improvednavigation({ className = '', children, ...props 
                     <span>{item.label}</span>
                     <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                   </Link>
-                  
+
                   {/* Enhanced Dropdown Menu */}
                   {activeDropdown === item.label && (
                     <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-xl shadow-2xl z-50">
@@ -161,7 +156,7 @@ export default function Improvednavigation({ className = '', children, ...props 
                     </div>
                   </div>
                 ))}
-                
+
                 <div className="pt-4 border-t border-white/10">
                   <div className="space-y-2">
                     {quickLinks.map((link) => (
@@ -187,7 +182,3 @@ export default function Improvednavigation({ className = '', children, ...props 
 </div>
   );
 };
-
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

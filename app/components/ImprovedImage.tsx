@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
-import { ImageIcon, ImageIcon } from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 interface ImprovedimageProps {
   className?: string;
@@ -16,13 +11,12 @@ export default function Improvedimage({ className = '', children, ...props }: Im
       {children}
     </div>
   );
-<<<<<<< HEAD
 };
 
 // Preload component for critical images
-export const PreloadImage: React.FC<{ src: string; as?: string }> = ({ 
-  src, 
-  as = 'image' 
+export const PreloadImage: React.FC<{ src: string; as?: string }> = ({
+  src,
+  as = 'image'
 }) => {
   useEffect(() => {
     const link = document.createElement('link');
@@ -51,7 +45,3 @@ export const BlurImage: React.FC<ImprovedImageProps & { blurDataURL?: string }> 
     />
   );
 };
-
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

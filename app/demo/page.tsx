@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar, Users, Award } from 'lucide-react';
+
+import { Play, Users, Award } from 'lucide-react';
 
 export default function Page() {
   const [currentDemo, setCurrentDemo] = useState(0);
@@ -114,10 +113,6 @@ export default function Page() {
     setCurrentDemo((prev) => (prev - 1 + demos.length) % demos.length);
     setIsPlaying(false);
   };
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function DemoPage() {
   return (
@@ -126,14 +121,14 @@ export default function DemoPage() {
         <title>Demo - Zion Tech Group</title>
         <meta name="description" content="Demo solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Demo</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive demo solutions designed to meet your business needs.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -141,14 +136,14 @@ export default function DemoPage() {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-300">
                 We use the latest technologies and best practices to ensure optimal performance.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
               <p className="text-gray-300">
@@ -160,4 +155,6 @@ export default function DemoPage() {
       </div>
     </div>
   );
+}
+
 }

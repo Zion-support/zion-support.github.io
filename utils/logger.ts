@@ -4,7 +4,6 @@ export function logger(message: string, level: 'info' | 'warn' | 'error' = 'info
   console[level](message);
 }
 
-<<<<<<< HEAD
 const LOG_LEVELS: LogLevel = {
   ERROR: 'error',
   WARN: 'warn',
@@ -55,12 +54,12 @@ class Logger {
         url: window.location.href,
         userAgent: navigator.userAgent,
       });
-      
+
       // Keep only the last 100 logs
       if (logs.length > 100) {
         logs.splice(0, logs.length - 100);
       }
-      
+
       localStorage.setItem('app-logs', JSON.stringify(logs));
     } catch (e) { console.error(e); }}
 
@@ -96,6 +95,3 @@ class Logger {
 }
 
 const logger = new Logger();
-=======
-export default logger;
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

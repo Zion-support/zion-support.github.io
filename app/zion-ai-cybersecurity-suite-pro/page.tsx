@@ -1,10 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Shield, Brain, Lock, Zap, ArrowRight, CheckCircle, Star, Award, BarChart3, Clock, Target, Sparkles, TrendingUp, Globe, Smartphone, Monitor, AlertTriangle, Eye, Search, Database, Network, Shield as FileShield, Key, Bug, Activity, Server, Wifi, HardDrive, Cloud, Settings, Users, Bell, FileText, Download, Upload } from 'lucide-react';
+import { Shield, Lock, BarChart3, Globe, AlertTriangle, Eye, Network, Key, Bug, Cloud, Users } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { Helmet } from 'react-helmet-async';
 
 const ZionAICybersecuritySuiteProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -149,9 +149,6 @@ const ZionAICybersecuritySuiteProPage = () => {
       color: "from-cyan-500 to-blue-500"
     }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function ZionAiCybersecuritySuiteProPage() {
   return (
@@ -160,14 +157,14 @@ export default function ZionAiCybersecuritySuiteProPage() {
         <title>Zion Ai Cybersecurity Suite Pro - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Cybersecurity Suite Pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Zion Ai Cybersecurity Suite Pro</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive zion ai cybersecurity suite pro solutions designed to meet your business needs.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -175,14 +172,14 @@ export default function ZionAiCybersecuritySuiteProPage() {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-300">
                 We use the latest technologies and best practices to ensure optimal performance.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
               <p className="text-gray-300">
@@ -194,9 +191,6 @@ export default function ZionAiCybersecuritySuiteProPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

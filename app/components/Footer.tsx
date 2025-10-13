@@ -1,12 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Mail, 
-  Phone, 
+import {
+  Brain,
+  Mail,
+  Phone,
   MapPin,
-  Clock, 
+  Clock,
   ArrowRight,
   Shield,
   Zap,
@@ -84,17 +83,9 @@ const Footer: React.FC = () => {
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-5 h-5" /> },
     { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
   ];
-=======
-
-interface FooterProps {
-  className?: string;
-  children?: React.ReactNode;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function Footer({ className = '', children, ...props }: FooterProps) {
   return (
-<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
@@ -128,7 +119,7 @@ export default function Footer({ className = '', children, ...props }: FooterPro
               <p className="text-gray-300 mb-6 max-w-md">
                 Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-3 mb-6">
                 <div className="flex items-center space-x-3">
@@ -252,10 +243,5 @@ export default function Footer({ className = '', children, ...props }: FooterPro
 };
 
 export default Footer;
-=======
-    <div className={`footer-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

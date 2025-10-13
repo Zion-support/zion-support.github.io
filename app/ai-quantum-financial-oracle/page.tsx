@@ -1,14 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-import { 
-  Brain, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  DollarSign, 
-  Target, 
-  CheckCircle, 
+import { Helmet } from 'react-helmet-async';
+import {
+  Brain,
+  TrendingUp,
+  Shield,
+  Zap,
+  BarChart3,
+  DollarSign,
+  Target,
+  CheckCircle,
   Cpu,
   Globe,
   Clock,
@@ -135,9 +135,6 @@ const AIQuantumFinancialOraclePage = () => {
     { number: "10M+", label: "Data Points Analyzed", icon: <BarChart3 className="w-6 h-6" /> },
     { number: "24/7", label: "Market Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiQuantumFinancialOraclePage() {
   return (
@@ -146,14 +143,14 @@ export default function AiQuantumFinancialOraclePage() {
         <title>Ai Quantum Financial Oracle - Zion Tech Group</title>
         <meta name="description" content="Ai Quantum Financial Oracle solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Ai Quantum Financial Oracle</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai quantum financial oracle solutions designed to meet your business needs.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -161,14 +158,14 @@ export default function AiQuantumFinancialOraclePage() {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-300">
                 We use the latest technologies and best practices to ensure optimal performance.
               </p>
             </div>
-            
+
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
               <p className="text-gray-300">
@@ -180,9 +177,6 @@ export default function AiQuantumFinancialOraclePage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

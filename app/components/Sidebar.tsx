@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import React, { useState, useCallback, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  X, 
-  ChevronDown, 
+import {
+  X,
+  ChevronDown,
   ChevronRight,
   Home,
   Users,
@@ -32,8 +31,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
   const toggleExpanded = useCallback((item: string) => {
-    setExpandedItems(prev => 
-      prev.includes(item) 
+    setExpandedItems(prev =>
+      prev.includes(item)
         ? prev.filter(i => i !== item)
         : [...prev, item]
     );
@@ -108,7 +107,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               <X className="w-6 h-6" />
             </button>
           </div>
-          
+
           <nav className="p-4 space-y-2">
             {menuItems.map((item) => (
               <div key={item.name}>
@@ -125,7 +124,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                     {item.icon}
                     <span>{item.name}</span>
                   </Link>
-                  
+
                   {item.children.length > 0 && (
                     <button
                       onClick={() => toggleExpanded(item.name)}
@@ -139,7 +138,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                     </button>
                   )}
                 </div>
-                
+
                 {item.children.length > 0 && expandedItems.includes(item.name) && (
                   <div className="ml-6 mt-2 space-y-1">
                     {item.children.map((child) => (
@@ -166,19 +165,3 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     </div>
   );
 }
-=======
-import React from 'react';
-
-interface SidebarProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Sidebar({ className = '', children, ...props }: SidebarProps) {
-  return (
-    <div className={`sidebar-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from 'lucide-react';
 import EnhancedSEO from "./components/EnhancedSEO";
@@ -124,9 +123,6 @@ const HomePage = () => {
       rating: 5
     }
   ];
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function PageClean() {
   return (

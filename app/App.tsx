@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import React, { lazy } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
@@ -101,13 +101,6 @@ function App() {
       </BrowserRouter>
     </HelmetProvider>
   );
-=======
-import React from 'react';
-
-interface AppProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 }
 
 export default function App({ className = '', children, ...props }: AppProps) {
