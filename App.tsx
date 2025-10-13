@@ -41,6 +41,11 @@ const AIMarketingAutomationPage = React.lazy(() => import("./app/ai-marketing-au
 const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
 const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
 const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AI3DGenerationPage = React.lazy(() => import("./app/ai-3d-generation/page"));
+const AIBlockchainAnalyticsPage = React.lazy(() => import("./app/ai-blockchain-analytics/page"));
+const AIComputerVisionPage = React.lazy(() => import("./app/ai-computer-vision/page"));
+const AIConversationalAIPage = React.lazy(() => import("./app/ai-conversational-ai/page"));
+const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
 
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
@@ -161,6 +166,11 @@ function App() {
                             <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
                             <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
                             <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+                            <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
+                            <Route path="/ai-blockchain-analytics" element={<AIBlockchainAnalyticsPage />} />
+                            <Route path="/ai-computer-vision" element={<AIComputerVisionPage />} />
+                            <Route path="/ai-conversational-ai" element={<AIConversationalAIPage />} />
+                            <Route path="/ai-devops-automation" element={<AIDevOpsAutomationPage />} />
 
                             {/* IT Services Routes */}
                             <Route path="/cloud-migration" element={<CloudMigrationPage />} />
