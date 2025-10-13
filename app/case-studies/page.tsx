@@ -19,10 +19,9 @@ export default function CaseStudies() {
         "80% faster response times",
         "35% increase in sales"
       ],
-      image: "/images/case-studies/ecommerce-ai.jpg",
+      image: "/api/placeholder/600/400",
       duration: "6 months",
       services: ["AI Analytics", "AI Customer Support", "Data Analytics"],
-      image: "/api/placeholder/600/400",
       featured: true
     },
     {

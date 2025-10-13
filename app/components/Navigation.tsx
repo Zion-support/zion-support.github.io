@@ -462,7 +462,6 @@ import {
   Electric,
   Hybrid,
   Solar,
-  Wind,
   Hydro,
   Nuclear,
   Fossil,
@@ -472,7 +471,6 @@ import {
   Biomass,
   Geothermal,
   Tidal,
-  Wave,
   Fusion,
   Fission,
   Plasma,
@@ -807,6 +805,54 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
               >
                 Blog
               </Link>
+
+              {/* Careers */}
+              <Link
+                to="/careers"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                  isActive('/careers') 
+                    ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                    : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+                }`}
+              >
+                Careers
+              </Link>
+
+              {/* Case Studies */}
+              <Link
+                to="/case-studies"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                  isActive('/case-studies') 
+                    ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                    : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+                }`}
+              >
+                Case Studies
+              </Link>
+
+              {/* Community */}
+              <Link
+                to="/community"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                  isActive('/community') 
+                    ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                    : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+                }`}
+              >
+                Community
+              </Link>
+
+              {/* Docs */}
+              <Link
+                to="/docs"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                  isActive('/docs') 
+                    ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                    : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+                }`}
+              >
+                Docs
+              </Link>
             </div>
           </div>
 
@@ -885,6 +931,50 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
               onClick={toggleMenu}
             >
               Blog
+            </Link>
+            <Link
+              to="/careers"
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                isActive('/careers') 
+                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+              }`}
+              onClick={toggleMenu}
+            >
+              Careers
+            </Link>
+            <Link
+              to="/case-studies"
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                isActive('/case-studies') 
+                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+              }`}
+              onClick={toggleMenu}
+            >
+              Case Studies
+            </Link>
+            <Link
+              to="/community"
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                isActive('/community') 
+                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+              }`}
+              onClick={toggleMenu}
+            >
+              Community
+            </Link>
+            <Link
+              to="/docs"
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                isActive('/docs') 
+                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+              }`}
+              onClick={toggleMenu}
+            >
+              Docs
             </Link>
           </div>
         </div>

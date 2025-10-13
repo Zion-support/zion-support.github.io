@@ -30,6 +30,12 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
+const CareersPage = React.lazy(() => import("./app/careers/page"));
+const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
+const CommunityPage = React.lazy(() => import("./app/community/page"));
+const DocsPage = React.lazy(() => import("./app/docs/page"));
+const PressPage = React.lazy(() => import("./app/press/page"));
+const AccessibilityPage = React.lazy(() => import("./app/accessibility/page"));
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -111,6 +117,12 @@ function App() {
                     <Route path="/tutorials" element={<TutorialsPage />} />
                     <Route path="/demo" element={<DemoPage />} />
                     <Route path="/support" element={<SupportPage />} />
+                    <Route path="/careers" element={<CareersPage />} />
+                    <Route path="/case-studies" element={<CaseStudiesPage />} />
+                    <Route path="/community" element={<CommunityPage />} />
+                    <Route path="/docs" element={<DocsPage />} />
+                    <Route path="/press" element={<PressPage />} />
+                    <Route path="/accessibility" element={<AccessibilityPage />} />
                     
                     {/* AI Services Routes */}
                     <Route path="/ai-analytics" element={<AIAnalyticsPage />} />

@@ -451,7 +451,6 @@ import {
   Electric,
   Hybrid,
   Solar,
-  Wind,
   Hydro,
   Nuclear,
   Fossil,
@@ -461,7 +460,6 @@ import {
   Biomass,
   Geothermal,
   Tidal,
-  Wave,
   Fusion,
   Fission,
   Plasma,
@@ -481,7 +479,6 @@ import {
   Mineral,
   Rock,
   Stone,
-  Gem,
   Pearl,
   Diamond as DiamondIcon,
   Ruby,
@@ -745,7 +742,7 @@ const Footer = () => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             
-            <div className="flex space-x-6">
+            <div className="flex flex-wrap justify-center space-x-4 md:space-x-6">
               <Link to="/privacy" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">
                 Privacy Policy
               </Link>
@@ -754,6 +751,21 @@ const Footer = () => {
               </Link>
               <Link to="/accessibility" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">
                 Accessibility
+              </Link>
+              <Link to="/careers" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">
+                Careers
+              </Link>
+              <Link to="/case-studies" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">
+                Case Studies
+              </Link>
+              <Link to="/community" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">
+                Community
+              </Link>
+              <Link to="/docs" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">
+                Documentation
+              </Link>
+              <Link to="/press" className="text-gray-400 hover:text-purple-400 transition-colors duration-300 text-sm">
+                Press
               </Link>
             </div>
           </div>
