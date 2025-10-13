@@ -1,4 +1,3 @@
-
 interface AccessibilityConfig {
   enabled: boolean;
   highContrast: boolean;
@@ -39,8 +38,3 @@ class AccessibilityEnhancer {
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 export default accessibilityEnhancer;
-
-
-
-
-

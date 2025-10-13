@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 interface WebVitalsTrackerProps {
   className?: string;
@@ -6,13 +6,8 @@ interface WebVitalsTrackerProps {
 }
 
 export default function WebVitalsTracker({ className = '', children }: WebVitalsTrackerProps) {
-  useEffect(() => {
-    // Web Vitals tracking logic can be added here
-    console.log('Web Vitals Tracker initialized');
-  }, []);
-
   return (
-    <div className={`${className}`}>
+    <div className={`web-vitals-tracker ${className}`}>
       {children}
     </div>
   );

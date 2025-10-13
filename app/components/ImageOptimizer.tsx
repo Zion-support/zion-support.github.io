@@ -14,13 +14,14 @@ export default function ImageOptimizer({
   src, 
   alt, 
   className = '', 
-  quality = 80,
-  format = 'webp',
   lazy = true,
+  quality,
+  format,
   placeholder
 }: ImageOptimizerProps) {
-  // Note: quality and format parameters are reserved for future image optimization features
-  console.log('Image optimization params:', { quality, format });
+  // Note: quality, format, and placeholder are available for future implementation
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _unused = { quality, format, placeholder };
   
   return (
     <img

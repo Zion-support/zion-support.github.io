@@ -6,6 +6,7 @@ export interface SEOConfig {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
+<<<<<<< HEAD
   canonical?: string;
   ogTitle?: string;
   ogDescription?: string;
@@ -29,6 +30,8 @@ export interface SEOConfig {
     hreflang: string;
     href: string;
   }>;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6995
 }
 
 export interface PageSEOProps {
@@ -63,6 +66,7 @@ export const defaultSEOConfig: SEOConfig = {
   language: 'en-US'
 };
 
+<<<<<<< HEAD
 export function generateStructuredData(config: SEOConfig) {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -132,9 +136,39 @@ export function generateMetaTags(config: SEOConfig) {
     }
     if (config.geo.placename) {
       tags.push({ name: 'geo.placename', content: config.geo.placename });
+=======
+  generateMetaTags() {
+    return {
+      title: this.config.title,
+      description: this.config.description,
+      keywords: this.config.keywords.join(', '),
+      canonical: this.config.canonicalUrl,
+      'og:title': this.config.title,
+      'og:description': this.config.description,
+      'og:image': this.config.ogImage,
+      'og:type': this.config.ogType || 'website',
+      'twitter:card': this.config.twitterCard || 'summary_large_image',
+      'twitter:title': this.config.title,
+      'twitter:description': this.config.description,
+      'twitter:image': this.config.ogImage,
+    };
+  }
+
+  updateTitle(title: string): void {
+    document.title = title;
+  }
+
+  updateMetaDescription(description: string): void {
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6995
     }
   }
 
+<<<<<<< HEAD
   // Add alternate language tags if provided
   if (config.alternate) {
     config.alternate.forEach(alt => {
@@ -176,4 +210,60 @@ export function validateSEOConfig(config: SEOConfig): string[] {
   }
   
   return errors;
+=======
+  updateMetaKeywords(keywords: string[]): void {
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', keywords.join(', '));
+  }
+
+  updateCanonicalUrl(url: string): void {
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', url);
+  }
+
+  updateOpenGraphTags(tags: Record<string, string>): void {
+    Object.entries(tags).forEach(([property, content]) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    });
+  }
+
+  updateTwitterCardTags(tags: Record<string, string>): void {
+    Object.entries(tags).forEach(([name, content]) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    });
+  }
+
+  generateStructuredData(data: Record<string, any>): void {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
+    document.head.appendChild(script);
+  }
+
+  getConfig(): SEOConfig {
+    return { ...this.config };
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-6995
 }

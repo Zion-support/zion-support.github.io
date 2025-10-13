@@ -7,7 +7,7 @@ interface CoreWebVitalsProps {
 
 export default function CoreWebVitals({ className = '', children }: CoreWebVitalsProps) {
   return (
-    <div className={`${className}`}>
+    <div className={`core-web-vitals ${className}`}>
       {children}
     </div>
   );
