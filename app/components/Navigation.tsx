@@ -16,12 +16,21 @@ const Navigation = React.memo(() => {
 
   const services = useMemo(() => [
     { name: 'AI & Machine Learning', path: '/ai-services', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Cloud Solutions', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
     { name: '5G Implementation', path: '/5g-implementation', icon: <Globe className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <Database className="w-4 h-4" /> },
     { name: 'Custom Development', path: '/custom-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Solutions', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
+    { name: 'Mobile Development', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
+  ], [])
+
+  const mainNavItems = useMemo(() => [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Contact', path: '/contact' }
   ], [])
 
   return (
@@ -33,12 +42,15 @@ const Navigation = React.memo(() => {
           </Link>
 
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="hover:text-blue-400 transition-colors">
-              Home
-            </Link>
-            <Link to="/about" className="hover:text-blue-400 transition-colors">
-              About
-            </Link>
+            {mainNavItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className="hover:text-blue-400 transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
             
             {/* Services Dropdown */}
             <div className="relative">
@@ -67,6 +79,12 @@ const Navigation = React.memo(() => {
               )}
             </div>
 
+            <Link to="/team" className="hover:text-blue-400 transition-colors">
+              Team
+            </Link>
+            <Link to="/careers" className="hover:text-blue-400 transition-colors">
+              Careers
+            </Link>
             <Link to="/case-studies" className="hover:text-blue-400 transition-colors">
               Case Studies
             </Link>
@@ -99,20 +117,16 @@ const Navigation = React.memo(() => {
         {isOpen && (
           <div className="md:hidden py-4 border-t border-gray-700">
             <div className="flex flex-col space-y-4">
-              <Link
-                to="/"
-                className="hover:text-blue-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                Home
-              </Link>
-              <Link
-                to="/about"
-                className="hover:text-blue-400 transition-colors"
-                onClick={toggleMenu}
-              >
-                About
-              </Link>
+              {mainNavItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className="hover:text-blue-400 transition-colors"
+                  onClick={toggleMenu}
+                >
+                  {item.name}
+                </Link>
+              ))}
               
               {/* Mobile Services */}
               <div>
@@ -144,6 +158,20 @@ const Navigation = React.memo(() => {
                 )}
               </div>
 
+              <Link
+                to="/team"
+                className="hover:text-blue-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                Team
+              </Link>
+              <Link
+                to="/careers"
+                className="hover:text-blue-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                Careers
+              </Link>
               <Link
                 to="/case-studies"
                 className="hover:text-blue-400 transition-colors"

@@ -39,47 +39,51 @@ export default defineConfig({
     assetsInlineLimit: 4096,
     // Enable compression
     reportCompressedSize: true,
+    
     rollupOptions: {
       output: {
         manualChunks: (id) => {
           // Core React libraries
-          if (id.includes("react") || id.includes("react-dom")) {
-            return "react-vendor";
+          if (id.includes('react') || id.includes('react-dom')) {
+            return 'react-vendor'
           }
           // Router
-          if (id.includes("react-router")) {
-            return "router";
+          if (id.includes('react-router')) {
+            return 'router'
           }
           // UI libraries
-          if (id.includes("framer-motion")) {
-            return "animations";
+          if (id.includes('framer-motion')) {
+            return 'animations'
           }
-          if (id.includes("lucide-react")) {
-            return "icons";
+          if (id.includes('lucide-react')) {
+            return 'icons'
           }
           // SEO and meta
-          if (id.includes("react-helmet")) {
-            return "seo";
+          if (id.includes('react-helmet')) {
+            return 'seo'
           }
           // Charts and data visualization
-          if (id.includes("recharts")) {
-            return "charts";
+          if (id.includes('recharts')) {
+            return 'charts'
           }
           // Utility libraries
-          if (id.includes("clsx") || id.includes("tailwind-merge")) {
-            return "utils";
+          if (id.includes('clsx') || id.includes('tailwind-merge')) {
+            return 'utils'
           }
           // Performance monitoring
-          if (id.includes("web-vitals")) {
-            return "performance";
+          if (id.includes('web-vitals')) {
+            return 'performance'
           }
           // Large page components (lazy load)
-          if (id.includes("/app/") && id.includes("/page.tsx")) {
-            return "pages";
+          if (id.includes('/app/') && id.includes('/page.tsx')) {
+            return 'pages'
           }
           // Default chunk for other modules
-          return "vendor";
+          return 'vendor'
         },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
     // Enable tree shaking

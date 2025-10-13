@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+=======
+import { ArrowRight, Brain, Shield, Zap, Globe, Database, Code, Smartphone } from "lucide-react";
+>>>>>>> origin/main
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Cloud, Shield, Globe, Database, Code, Smartphone, Zap, CheckCircle } from "lucide-react";
 
 export default function Services() {
+<<<<<<< HEAD
   const serviceCategories = [
     {
       title: "AI & Machine Learning",
@@ -116,6 +121,57 @@ export default function Services() {
       name: "Zion Content Studio",
       description: "AI-powered content creation and management platform",
       link: "/zion-content-studio"
+=======
+  const services = [
+    {
+      title: "AI & Machine Learning",
+      description: "Cutting-edge artificial intelligence solutions to transform your business operations",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      path: "/ai-services"
+    },
+    {
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure and migration services",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      path: "/cloud-services"
+    },
+    {
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions to protect your digital assets",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      path: "/cybersecurity"
+    },
+    {
+      title: "5G Implementation",
+      description: "Next-generation connectivity and infrastructure services",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-orange-500 to-yellow-500",
+      path: "/5g-implementation"
+    },
+    {
+      title: "Data Analytics",
+      description: "Advanced data analysis and business intelligence solutions",
+      icon: <Database className="w-8 h-8" />,
+      color: "from-purple-500 to-indigo-500",
+      path: "/data-analytics"
+    },
+    {
+      title: "Custom Development",
+      description: "Tailored software solutions for your specific business needs",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      path: "/custom-development"
+    },
+    {
+      title: "Mobile Solutions",
+      description: "Native and cross-platform mobile applications",
+      icon: <Smartphone className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      path: "/mobile-development"
+>>>>>>> origin/main
     }
   ];
 
@@ -125,11 +181,15 @@ export default function Services() {
         <title>Services - Zion Tech Group | AI, Cloud, Cybersecurity & 5G Solutions</title>
         <meta
           name="description"
+<<<<<<< HEAD
           content="Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, 5G implementation, data analytics, and custom development. Transform your business with our expertise."
         />
         <meta
           name="keywords"
           content="AI services, cloud solutions, cybersecurity, 5G implementation, data analytics, custom development, IT consulting, digital transformation"
+=======
+          content="Comprehensive technology services including AI solutions, cloud computing, cybersecurity, and digital transformation for modern businesses."
+>>>>>>> origin/main
         />
       </Helmet>
 
@@ -143,6 +203,7 @@ export default function Services() {
                 {" "}Services
               </span>
             </h1>
+<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Comprehensive technology solutions designed to accelerate your business growth and digital transformation. 
               From AI and machine learning to cloud infrastructure and cybersecurity, we provide end-to-end technology services.
@@ -279,6 +340,36 @@ export default function Services() {
                     {phase.description}
                   </p>
                 </div>
+=======
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
+            </p>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <Link
+                  key={index}
+                  to={service.path}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                >
+                  <div
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 text-center">
+                    {service.description}
+                  </p>
+                </Link>
+>>>>>>> origin/main
               ))}
             </div>
           </div>
@@ -287,6 +378,7 @@ export default function Services() {
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD
             <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -309,6 +401,28 @@ export default function Services() {
                   Schedule Consultation
                 </Link>
               </div>
+=======
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our services can help you achieve your goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/consultation"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Schedule Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/contact"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Contact Us
+              </Link>
+>>>>>>> origin/main
             </div>
           </div>
         </section>
