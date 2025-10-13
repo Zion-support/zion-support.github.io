@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
@@ -11,10 +12,14 @@ import {
 =======
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 >>>>>>> cursor/analyze-improve-and-deploy-application-c97f
+=======
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-936a
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+<<<<<<< HEAD
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
@@ -23,6 +28,34 @@ const Footer: React.FC = () => {
     { name: 'Micro SaaS', href: '/micro-saas' },
     { name: '5G Solutions', href: '/5g-solutions' },
   ];
+=======
+  const footerLinks = {
+    services: [
+      { name: 'AI Solutions', href: '/ai-solutions' },
+      { name: 'Cybersecurity', href: '/cybersecurity' },
+      { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+      { name: 'Digital Transformation', href: '/digital-transformation' },
+      { name: 'Micro SaaS', href: '/micro-saas' },
+      { name: '5G Solutions', href: '/5g-solutions' }
+    ],
+    company: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Solutions', href: '/solutions' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Blog', href: '/blog' }
+    ],
+    support: [
+      { name: 'Contact', href: '/contact' },
+      { name: 'Support', href: '/support' },
+      { name: 'Tutorials', href: '/tutorials' },
+      { name: 'Demo', href: '/demo' }
+    ],
+    legal: [
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' }
+    ]
+  };
+>>>>>>> cursor/website-audit-and-update-with-deployment-936a
 
 <<<<<<< HEAD
   const company = [
