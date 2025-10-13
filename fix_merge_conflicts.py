@@ -4,7 +4,7 @@ import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts by keeping the newer version (after =======)"""
+    """Fix merge conflicts by choosing the HEAD version"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -13,29 +13,21 @@ def fix_merge_conflicts(file_path):
         if '<<<<<<< HEAD' not in content:
             return False
             
-        # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD.*?=======.*?>>>>>>> .*?\n', content, flags=re.DOTALL)
+        # Remove all merge conflict markers and choose HEAD version
+        # Pattern to match: <<<<<<< HEAD ... ======= ... >>>>>>> branch-name
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [^\n]+'
         
-        if len(parts) < 2:
-            return False
-            
-        # Keep the first part (before first conflict) and the parts after =======
-        fixed_content = parts[0]
+        # Replace with just the HEAD content
+        new_content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
         
-        # Process each conflict section
-        conflict_sections = re.findall(r'<<<<<<< HEAD(.*?)=======(.*?)>>>>>>> .*?\n', content, flags=re.DOTALL)
+        # Clean up any remaining conflict markers
+        new_content = re.sub(r'<<<<<<< HEAD\n?', '', new_content)
+        new_content = re.sub(r'=======\n?', '', new_content)
+        new_content = re.sub(r'>>>>>>> [^\n]+\n?', '', new_content)
         
-        for i, (head_part, new_part) in enumerate(conflict_sections):
-            # Use the newer version (after =======)
-            fixed_content += new_part
-            
-            # Add the part between conflicts if it exists
-            if i + 1 < len(parts):
-                fixed_content += parts[i + 1]
-        
-        # Write the fixed content back
+        # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(fixed_content)
+            f.write(new_content)
             
         print(f"Fixed merge conflicts in: {file_path}")
         return True
@@ -56,10 +48,14 @@ def main():
     fixed_count = 0
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and other directories
+            if 'node_modules' in file_path or '.git' in file_path:
+                continue
+                
             if fix_merge_conflicts(file_path):
                 fixed_count += 1
     
-    print(f"Fixed merge conflicts in {fixed_count} files")
+    print(f"\nFixed merge conflicts in {fixed_count} files")
 
 if __name__ == "__main__":
     main()
