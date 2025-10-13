@@ -7,5 +7,8 @@ interface EnhancedErrorBoundaryProps {
 
 export default function EnhancedErrorBoundary({ className = '', children }: EnhancedErrorBoundaryProps) {
   return (
+    <div className={className}>
+      {children}
+    </div>
   );
 }

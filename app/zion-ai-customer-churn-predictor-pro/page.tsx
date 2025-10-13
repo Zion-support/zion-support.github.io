@@ -10,17 +10,12 @@ import {
   Star, 
   Clock, 
   Users, 
-  Zap, 
   Sparkles,
   AlertTriangle,
-  Database,
   Cpu,
   Globe,
-  Heart,
-  MessageCircle,
-  ThumbsUp,
-  Eye,
-  MousePointer
+  MousePointer,
+  Heart
 } from 'lucide-react';
 
 const ZionAICustomerChurnPredictorProPage: React.FC = () => {

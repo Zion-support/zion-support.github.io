@@ -7,5 +7,8 @@ interface InteractiveAIROICalculatorProps {
 
 export default function InteractiveAIROICalculator({ className = '', children }: InteractiveAIROICalculatorProps) {
   return (
+    <div className={className}>
+      {children}
+    </div>
   );
 }

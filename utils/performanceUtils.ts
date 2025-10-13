@@ -31,9 +31,12 @@ export class PerformanceUtils {
   }
 
   measureMemoryUsage() {
-    if (typeof window !== 'undefined' && (window as { performance?: { memory?: { usedJSHeapSize: number } } }).performance?.memory) {
-      const memory = (window as { performance: { memory: { usedJSHeapSize: number } } }).performance.memory;
-      this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const performance = window.performance as Performance & { memory?: { usedJSHeapSize: number } };
+      if (performance.memory) {
+        const memory = performance.memory;
+        this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      }
     }
   }
 

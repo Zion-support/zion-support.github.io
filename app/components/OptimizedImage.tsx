@@ -1,1 +1,65 @@
+import React, { useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
 
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  onLoad?: () => void;
+  onError?: () => void;
+}
+
+export default function OptimizedImage({
+  src,
+  alt,
+  className = '',
+  width,
+  height,
+  priority = false,
+  onLoad,
+  onError
+}: OptimizedImageProps) {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  const handleLoad = useCallback(() => {
+    setIsLoaded(true);
+    onLoad?.();
+  }, [onLoad]);
+
+  const handleError = useCallback(() => {
+    setHasError(true);
+    onError?.();
+  }, [onError]);
+
+  if (hasError) {
+    return (
+      <div className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`} style={{ width, height }}>
+        <span>Failed to load image</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className={`relative ${className}`} style={{ width, height }}>
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
+      )}
+      <motion.img
+        src={src}
+        alt={alt}
+        loading={priority ? 'eager' : 'lazy'}
+        onLoad={handleLoad}
+        onError={handleError}
+        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        style={{ width, height }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: isLoaded ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      />
+    </div>
+  );
+}
