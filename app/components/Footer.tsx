@@ -237,6 +237,38 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
+                  to="/zion-ai-workflow-automator-pro"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Workflow Automator Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-social-scheduler-pro"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Social Scheduler Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-email-marketing-pro"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Email Marketing Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-inventory-optimizer-pro"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Inventory Optimizer Pro
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/zion-analytics-pro"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
@@ -249,22 +281,6 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
                   Zion Security Shield
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-cloud-vault"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Cloud Vault
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-content-studio"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Content Studio
                 </Link>
               </li>
             </ul>

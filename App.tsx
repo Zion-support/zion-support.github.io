@@ -72,7 +72,7 @@ const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-ge
 const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
 const ZionAICustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
 const ZionAIEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-analyzer/page"));
-const ZionSmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-smart-inventory-optimizer/page"));
+const ZionSmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-ai-inventory-optimizer-pro/page"));
 const ZionAICustomerSentimentTrackerPage = React.lazy(() => import("./app/zion-ai-customer-sentiment-tracker/page"));
 const ZionSmartExpenseCategorizerPage = React.lazy(() => import("./app/zion-smart-expense-categorizer/page"));
 const ZionAIVoiceAssistantProPage = React.lazy(() => import("./app/zion-ai-voice-assistant-pro/page"));
@@ -88,6 +88,13 @@ const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translato
 const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
+
+// Additional New Micro SAAS Services
+const ZionAIWorkflowAutomatorProPage = React.lazy(() => import("./app/zion-ai-workflow-automator-pro/page"));
+const ZionAISocialSchedulerProPage = React.lazy(() => import("./app/zion-ai-social-scheduler-pro/page"));
+const ZionAIEmailMarketingProPage = React.lazy(() => import("./app/zion-ai-email-marketing-pro/page"));
+const ZionAIInventoryOptimizerProPage = React.lazy(() => import("./app/zion-ai-inventory-optimizer-pro/page"));
+const ZionAICustomerChurnPredictorProPage = React.lazy(() => import("./app/zion-ai-customer-churn-predictor-pro/page"));
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
@@ -205,6 +212,13 @@ function App() {
                                 <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                                 <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                                 <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+
+                                {/* Additional New Micro SAAS Services */}
+                                <Route path="/zion-ai-workflow-automator-pro" element={<ZionAIWorkflowAutomatorProPage />} />
+                                <Route path="/zion-ai-social-scheduler-pro" element={<ZionAISocialSchedulerProPage />} />
+                                <Route path="/zion-ai-email-marketing-pro" element={<ZionAIEmailMarketingProPage />} />
+                                <Route path="/zion-ai-inventory-optimizer-pro" element={<ZionAIInventoryOptimizerProPage />} />
+                                <Route path="/zion-ai-customer-churn-predictor-pro" element={<ZionAICustomerChurnPredictorProPage />} />
 
                                 {/* 5G Services */}
                                 <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
