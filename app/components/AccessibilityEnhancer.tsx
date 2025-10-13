@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, ReactNode } from 'react'
 
 interface AccessibilityEnhancerProps {
@@ -121,15 +120,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         })
       }
 
-<<<<<<< HEAD
       // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
-      const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
-=======
-      // Initialize all enhancements
-      enhanceFocusManagement()
-      enhanceKeyboardNavigation()
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
+      const modalElements = document.querySelectorAll('[role="dialog"], [role="menu"]');
+      const cleanupFunctions = Array.from(modalElements).map(modal => trapFocus(modal as HTMLElement));
 
       // Re-run enhancements when DOM changes
       const observer = new MutationObserver(() => {
@@ -144,7 +137,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
       // Cleanup function
       return () => {
-<<<<<<< HEAD
         cleanupFunctions.forEach(cleanup => cleanup());
       };
     };
@@ -271,24 +263,18 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root.classList.add('large-text');
     } else {
       root.classList.remove('large-text');
-=======
-        observer.disconnect()
-        skipLink.remove()
-      }
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
     }
 
     // Initialize accessibility features
     const cleanup = initAccessibility()
 
     // Cleanup on unmount
-    return cleanup
+    return cleanup;
   }, [])
 
   return <>{children}</>
 }
 
-<<<<<<< HEAD
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
@@ -379,19 +365,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       `}</style>
     </>
   );
-=======
-import React from 'react';
-
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-da10
 };
 
 export default AccessibilityEnhancer;
-=======
-export default AccessibilityEnhancer
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
