@@ -12,6 +12,8 @@ export default defineConfig({
       jsxRuntime: "automatic",
     }),
   ],
+  root: ".",
+  publicDir: "public",
   resolve: {
     alias: {
       "@": resolve(__dirname, "./app"),
@@ -83,9 +85,12 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          // Core React libraries - split further
+          if (id.includes('react/') && !id.includes('react-dom')) {
+            return 'react-core'
+          }
+          if (id.includes('react-dom')) {
+            return 'react-dom'
           }
           // Router
           if (id.includes('react-router')) {
@@ -117,6 +122,19 @@ export default defineConfig({
           // Error handling
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
+          }
+          // Split large vendor libraries
+          if (id.includes('node_modules')) {
+            if (id.includes('@types/') || id.includes('typescript')) {
+              return 'types'
+            }
+            if (id.includes('eslint') || id.includes('prettier')) {
+              return 'dev-tools'
+            }
+            if (id.includes('jest') || id.includes('testing')) {
+              return 'testing'
+            }
+            return 'vendor'
           }
           // AI service pages - split into smaller chunks
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
