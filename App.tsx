@@ -184,17 +184,39 @@ function App() {
                                     <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
                                     <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
 
-                                    {/* Micro SAAS Services */}
-                                    <Route path="/micro-saas-services" element={<MicroSaaSServicesPage />} />
-                                    <Route path="/project-management-tool" element={<ProjectManagementToolPage />} />
-                                    <Route path="/customer-relationship-manager" element={<CustomerRelationshipManagerPage />} />
-                                    <Route path="/inventory-management-system" element={<InventoryManagementSystemPage />} />
-                                    <Route path="/financial-reporting-tool" element={<FinancialReportingToolPage />} />
-                                    <Route path="/employee-time-tracker" element={<EmployeeTimeTrackerPage />} />
-                                    <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
-                                    <Route path="/email-marketing-platform" element={<EmailMarketingPlatformPage />} />
-                                    <Route path="/website-analytics-tool" element={<WebsiteAnalyticsToolPage />} />
-                                    <Route path="/task-automation-workflow" element={<TaskAutomationWorkflowPage />} />
+                                {/* Micro SAAS Services */}
+                                <Route path="/micro-saas-services" element={<MicroSaaSServicesPage />} />
+                                <Route path="/project-management-tool" element={<ProjectManagementToolPage />} />
+                                <Route path="/customer-relationship-manager" element={<CustomerRelationshipManagerPage />} />
+                                <Route path="/inventory-management-system" element={<InventoryManagementSystemPage />} />
+                                <Route path="/financial-reporting-tool" element={<FinancialReportingToolPage />} />
+                                <Route path="/employee-time-tracker" element={<EmployeeTimeTrackerPage />} />
+                                <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
+                                <Route path="/email-marketing-platform" element={<EmailMarketingPlatformPage />} />
+                                <Route path="/website-analytics-tool" element={<WebsiteAnalyticsToolPage />} />
+                                <Route path="/task-automation-workflow" element={<TaskAutomationWorkflowPage />} />
+
+                                {/* New Innovative Micro SAAS Services */}
+                                <Route path="/zion-ai-video-generator" element={<ZionAIVideoGeneratorPage />} />
+                                <Route path="/zion-ai-invoice-generator" element={<ZionAIInvoiceGeneratorPage />} />
+                                <Route path="/zion-ai-customer-insights" element={<ZionAICustomerInsightsPage />} />
+                                <Route path="/zion-ai-email-analyzer" element={<ZionAIEmailAnalyzerPage />} />
+                                <Route path="/zion-smart-inventory-optimizer" element={<ZionSmartInventoryOptimizerPage />} />
+                                <Route path="/zion-ai-customer-sentiment-tracker" element={<ZionAICustomerSentimentTrackerPage />} />
+                                <Route path="/zion-smart-expense-categorizer" element={<ZionSmartExpenseCategorizerPage />} />
+                                <Route path="/zion-ai-voice-assistant-pro" element={<ZionAIVoiceAssistantProPage />} />
+                                <Route path="/zion-ai-code-reviewer" element={<ZionAICodeReviewerPage />} />
+                                <Route path="/zion-ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
+                                <Route path="/zion-ai-contract-analyzer" element={<ZionAIContractAnalyzerPage />} />
+                                <Route path="/zion-ai-performance-optimizer" element={<ZionAIPerformanceOptimizerPage />} />
+                                <Route path="/zion-ai-customer-churn-predictor" element={<ZionAICustomerChurnPredictorPage />} />
+                                <Route path="/zion-ai-supply-chain-optimizer" element={<ZionAISupplyChainOptimizerPage />} />
+                                <Route path="/zion-ai-financial-forecaster" element={<ZionAIFinancialForecasterPage />} />
+                                <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
+                                <Route path="/zion-ai-translator-pro" element={<ZionAITranslatorProPage />} />
+                                <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
+                                <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
+                                <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
 
                                 {/* 5G Services */}
                                 <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
