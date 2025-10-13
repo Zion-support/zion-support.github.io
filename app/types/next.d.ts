@@ -1,7 +1,9 @@
-// next.d utility
-export const next.d = () => {
-  // Implementation
-  return true;
-};
+// Next.js type declarations
+declare module 'next' {
+  interface NextPageProps {
+    params?: { [key: string]: string | string[] | undefined };
+    searchParams?: { [key: string]: string | string[] | undefined };
+  }
+}
 
-export default next.d;
+export {};

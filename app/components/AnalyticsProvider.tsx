@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
@@ -76,3 +77,20 @@ export const useAnalytics = (): AnalyticsContextType => {
 };
 
 export default AnalyticsProvider;
+=======
+'use client';
+import React from 'react';
+import { AnalyticsProvider as AnalyticsProviderContext } from '../contexts/AnalyticsContext';
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  return (
+    <AnalyticsProviderContext>
+      {children}
+    </AnalyticsProviderContext>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe68

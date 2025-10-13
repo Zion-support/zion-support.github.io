@@ -1,6 +1,21 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+<<<<<<< HEAD
 import path from 'path';
+=======
+
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: 'dist',
+    sourcemap: true,
+  },
+  server: {
+    port: 3000,
+    open: true,
+  },
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-fe68
 
 export default defineConfig({
   plugins: [react()],
