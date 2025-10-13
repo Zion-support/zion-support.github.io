@@ -1,66 +1,9 @@
 "use client";
-import {
-  Brain,
-  Shield,
-  CheckCircle,
-  Star,
-  Target,
-  BarChart3,
-} from "lucide-react";
+import { CheckCircle, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function AiFinancialAnalyticsProPage() {
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Insights",
-      description:
-        "Advanced machine learning algorithms analyze your financial data to provide actionable insights",
-      benefits: [
-        "Predictive analytics",
-        "Risk assessment",
-        "Trend identification",
-        "Anomaly detection",
-      ],
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Real-time Analytics",
-      description:
-        "Monitor your financial performance in real-time with comprehensive dashboards and reports",
-      benefits: [
-        "Live data updates",
-        "Custom dashboards",
-        "Interactive charts",
-        "Export capabilities",
-      ],
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
-      title: "Risk Management",
-      description:
-        "Identify and mitigate financial risks with advanced risk assessment and monitoring tools",
-      benefits: [
-        "Risk scoring",
-        "Early warning systems",
-        "Compliance monitoring",
-        "Audit trails",
-      ],
-    },
-    {
-      icon: <Target className="w-8 h-8 text-yellow-400" />,
-      title: "Goal Tracking",
-      description:
-        "Set and track financial goals with intelligent recommendations and progress monitoring",
-      benefits: [
-        "Goal setting",
-        "Progress tracking",
-        "Smart recommendations",
-        "Achievement rewards",
-      ],
-    },
-  ];
 
   const analyticsFeatures = [
     {

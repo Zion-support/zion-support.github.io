@@ -1,42 +1,8 @@
 "use client";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import {
-  CheckCircle,
-  Star,
-  Brain,
-  Clock,
-  Target,
-  BarChart3,
-} from "lucide-react";
-
+import { CheckCircle, Star } from "lucide-react";
 export default function AIProjectManagementPro() {
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: "AI-Powered Planning",
-      description:
-        "Intelligent project planning with automated task breakdown and resource allocation",
-    },
-    {
-      icon: <Clock className="w-6 h-6 text-purple-400" />,
-      title: "Smart Scheduling",
-      description:
-        "Automated scheduling that considers dependencies, resources, and deadlines",
-    },
-    {
-      icon: <Target className="w-6 h-6 text-yellow-400" />,
-      title: "Progress Tracking",
-      description:
-        "Real-time project monitoring with predictive analytics and risk assessment",
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: "Analytics & Insights",
-      description:
-        "Comprehensive reporting and analytics to optimize project performance",
-    },
-  ];
 
   const projectFeatures = [
     {

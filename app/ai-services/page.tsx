@@ -1,21 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Cloud, 
-  Code, 
-  Database, 
-  Users, 
-  ArrowRight,
-  Sparkles,
-  Target,
-  TrendingUp
-} from 'lucide-react';
-
+import { ArrowRight, Zap } from "lucide-react";
 const AIServicesPage = () => {
   const aiServices = [
     {
@@ -65,27 +51,6 @@ const AIServicesPage = () => {
       color: "from-yellow-500 to-orange-500",
       link: "/ai-workflow-automation",
       features: ["Process Optimization", "Task Automation", "Smart Routing"]
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Increased Efficiency",
-      description: "Automate repetitive tasks and focus on strategic initiatives",
-      icon: <TrendingUp className="w-6 h-6" />,
-      stat: "40% efficiency boost"
-    },
-    {
-      title: "Cost Reduction",
-      description: "Reduce operational costs through intelligent automation",
-      icon: <Target className="w-6 h-6" />,
-      stat: "30% cost savings"
-    },
-    {
-      title: "Better Insights",
-      description: "Gain deeper insights into your business with AI analytics",
-      icon: <BarChart3 className="w-6 h-6" />,
-      stat: "90% accuracy"
     }
   ];
 

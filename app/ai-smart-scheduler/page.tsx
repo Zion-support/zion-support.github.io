@@ -1,33 +1,8 @@
 import { Link } from "react-router-dom";
-import { Brain, Users, Zap, Globe, Clock, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import Layout from "../layout";
 
 export default function AISmartScheduler() {
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: "AI-Powered Scheduling",
-      description:
-        "Intelligent scheduling that learns from your patterns and preferences",
-    },
-    {
-      icon: <Users className="w-6 h-6 text-purple-400" />,
-      title: "Team Coordination",
-      description:
-        "Seamlessly coordinate meetings across multiple time zones and schedules",
-    },
-    {
-      icon: <Zap className="w-6 h-6 text-yellow-400" />,
-      title: "Auto-Optimization",
-      description:
-        "Automatically finds the best meeting times for maximum productivity",
-    },
-    {
-      icon: <Globe className="w-6 h-6 text-green-400" />,
-      title: "Global Integration",
-      description: "Works with all major calendar platforms and time zones",
-    },
-  ];
 
   const pricingPlans = [
     {

@@ -1,40 +1,8 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from "lucide-react";
+import { ArrowRight, CheckCircle, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function ZionSecurityShield() {
-  const features = [
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Advanced Threat Detection",
-      description: "AI-powered threat detection with 99.9% accuracy using machine learning algorithms"
-    },
-    {
-      icon: <Lock className="w-6 h-6" />,
-      title: "Zero-Trust Architecture",
-      description: "Implement zero-trust security model with continuous verification and monitoring"
-    },
-    {
-      icon: <Eye className="w-6 h-6" />,
-      title: "Real-time Monitoring",
-      description: "24/7 security monitoring with instant alerts and automated response systems"
-    },
-    {
-      icon: <AlertTriangle className="w-6 h-6" />,
-      title: "Vulnerability Assessment",
-      description: "Comprehensive security audits and vulnerability scanning for all your assets"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Incident Response",
-      description: "AI-driven incident response with automated containment and recovery procedures"
-    },
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Behavioral Analytics",
-      description: "Advanced user behavior analysis to detect insider threats and anomalies"
-    }
-  ];
 
   const securityFeatures = [
     "Multi-factor Authentication (MFA)",

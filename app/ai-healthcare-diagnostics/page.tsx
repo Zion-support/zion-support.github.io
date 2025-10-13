@@ -1,34 +1,8 @@
-import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from "lucide-react";
+import { ArrowRight, CheckCircle, Globe } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function AIHealthcareDiagnostics() {
-  const features = [
-    {
-      title: "Medical Imaging Analysis",
-      description: "Advanced AI algorithms analyze X-rays, MRIs, CT scans, and ultrasounds with 99.2% accuracy",
-      icon: <Brain className="w-6 h-6" />,
-      benefits: ["Early Disease Detection", "Reduced False Positives", "Faster Diagnosis", "Cost Savings"]
-    },
-    {
-      title: "Symptom Assessment Engine",
-      description: "Intelligent symptom analysis with differential diagnosis and treatment recommendations",
-      icon: <Users className="w-6 h-6" />,
-      benefits: ["Comprehensive Analysis", "Risk Stratification", "Treatment Guidance", "Patient Education"]
-    },
-    {
-      title: "Drug Interaction Checker",
-      description: "Real-time medication interaction analysis and allergy detection for patient safety",
-      icon: <Shield className="w-6 h-6" />,
-      benefits: ["Safety Alerts", "Allergy Detection", "Dosage Optimization", "Compliance Tracking"]
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Machine learning models predict disease progression and treatment outcomes",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Prognosis Prediction", "Treatment Optimization", "Risk Assessment", "Resource Planning"]
-    }
-  ];
 
   const useCases = [
     {

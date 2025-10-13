@@ -1,57 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Brain, 
-  Target, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight,
-  PieChart,
-  LineChart,
-  Activity,
-  Users,
-  DollarSign,
-  Globe,
-  Clock,
-  Award,
-  Star,
-  Database,
-  Eye,
-  Settings
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Brain, Globe, TrendingUp } from "lucide-react";
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAiBusinessIntelligencePro = () => {
-  const features = [
-    {
-      title: "AI-Powered Insights",
-      description: "Automatically generate actionable business insights using advanced machine learning and natural language processing",
-      icon: <Brain className="w-6 h-6" />,
-      stats: "95% accuracy"
-    },
-    {
-      title: "Real-Time Analytics",
-      description: "Monitor key performance indicators and business metrics in real-time with instant updates and alerts",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "Sub-second response"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast future trends, customer behavior, and business outcomes with AI-powered predictive models",
-      icon: <TrendingUp className="w-6 h-6" />,
-      stats: "85% prediction accuracy"
-    },
-    {
-      title: "Natural Language Queries",
-      description: "Ask questions about your data in plain English and get instant answers with visualizations",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "50+ languages"
-    }
-  ];
 
   const pricingPlans = [
     {

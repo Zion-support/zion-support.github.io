@@ -60,7 +60,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   const fullOgImage = ogImage || 'https://ziontechgroup.com/api/placeholder/1200/630';
   const fullTwitterImage = twitterImage || fullOgImage;
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-  const currentDate = new Date().toISOString();
 
   // Default structured data for organization
   const defaultStructuredData = {

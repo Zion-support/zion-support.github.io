@@ -1,42 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Video, 
-  Play, 
-  Download, 
-  Upload, 
-  Sparkles, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Zap
-} from 'lucide-react';
-
+import { ArrowRight, CheckCircle, Star } from "lucide-react";
 const ZionAIVideoGeneratorPage = () => {
-  const features = [
-    {
-      title: "AI-Powered Generation",
-      description: "Create professional videos using advanced AI algorithms",
-      icon: <Sparkles className="w-6 h-6" />
-    },
-    {
-      title: "Multiple Formats",
-      description: "Support for various video formats and resolutions",
-      icon: <Video className="w-6 h-6" />
-    },
-    {
-      title: "Real-time Preview",
-      description: "Preview your videos before finalizing",
-      icon: <Play className="w-6 h-6" />
-    },
-    {
-      title: "Easy Export",
-      description: "Download videos in your preferred format",
-      icon: <Download className="w-6 h-6" />
-    }
-  ];
 
   const pricingPlans = [
     {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, MessageCircle, Phone, Mail, Clock, CheckCircle, Star, Users, Shield, Zap, Globe, BarChart3, Settings, HelpCircle, BookOpen, FileText, Calendar, Award, Target } from "lucide-react";
+import { ArrowRight, Star, Zap, Globe, Target, Phone } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const SupportPage = () => {

@@ -1,45 +1,8 @@
 "use client";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import {
-  Receipt,
-  Bot,
-  Brain,
-  Shield,
-  CheckCircle,
-  Star,
-  BarChart3,
-  TrendingUp,
-  DollarSign,
-} from "lucide-react";
-
+import { CheckCircle, Star, Brain } from "lucide-react";
 export default function AIExpenseTracker() {
-  const features = [
-    {
-      icon: <Brain className="w-12 h-12 text-cyan-400" />,
-      title: "AI-Powered Analysis",
-      description:
-        "Advanced AI algorithms analyze your spending patterns and provide intelligent insights.",
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-purple-400" />,
-      title: "Real-time Tracking",
-      description:
-        "Track your expenses in real-time with automatic categorization and smart notifications.",
-    },
-    {
-      icon: <Shield className="w-12 h-12 text-green-400" />,
-      title: "Secure & Private",
-      description:
-        "Bank-level security ensures your financial data is protected and private.",
-    },
-    {
-      icon: <BarChart3 className="w-12 h-12 text-yellow-400" />,
-      title: "Smart Reports",
-      description:
-        "Generate detailed reports and visualizations to understand your spending habits.",
-    },
-  ];
 
   const capabilities = [
     {

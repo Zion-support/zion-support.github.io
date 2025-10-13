@@ -1,40 +1,8 @@
-import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database } from "lucide-react";
+import { ArrowRight, CheckCircle, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function ZionCloudVault() {
-  const features = [
-    {
-      icon: <Cloud className="w-6 h-6" />,
-      title: "Secure Cloud Storage",
-      description: "Enterprise-grade cloud storage with 99.999999999% durability and 99.9% availability"
-    },
-    {
-      icon: <Lock className="w-6 h-6" />,
-      title: "End-to-End Encryption",
-      description: "Military-grade AES-256 encryption for data at rest and in transit"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Advanced Security",
-      description: "Multi-factor authentication, zero-knowledge architecture, and SOC 2 compliance"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Lightning Fast Sync",
-      description: "Real-time file synchronization across all your devices with intelligent caching"
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Global CDN",
-      description: "Worldwide content delivery network for fast access from anywhere"
-    },
-    {
-      icon: <Database className="w-6 h-6" />,
-      title: "Unlimited Storage",
-      description: "Scale from GB to PB with no storage limits and automatic scaling"
-    }
-  ];
 
   const storageFeatures = [
     "File Versioning & History",

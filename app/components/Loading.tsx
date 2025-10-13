@@ -1,5 +1,4 @@
 import React from 'react';
-import { Brain, Zap, Shield, Globe } from 'lucide-react';
 
 interface LoadingProps {
   message?: string;

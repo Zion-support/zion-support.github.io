@@ -1,45 +1,8 @@
 "use client";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import {
-  MessageSquare,
-  Brain,
-  Shield,
-  Zap,
-  Star,
-  Mail,
-  BarChart3,
-  Settings,
-  Users,
-} from "lucide-react";
-
+import { Star, Zap } from "lucide-react";
 export default function AIEmailAssistant() {
-  const features = [
-    {
-      icon: <Mail className="w-6 h-6 text-cyan-400" />,
-      title: "Smart Classification",
-      description:
-        "Automatically categorize and prioritize emails based on content and sender.",
-    },
-    {
-      icon: <MessageSquare className="w-6 h-6 text-purple-400" />,
-      title: "Auto-Responses",
-      description:
-        "Generate intelligent responses using AI to handle common inquiries.",
-    },
-    {
-      icon: <Brain className="w-6 h-6 text-yellow-400" />,
-      title: "Sentiment Analysis",
-      description:
-        "Analyze email tone and sentiment to provide better customer service.",
-    },
-    {
-      icon: <Settings className="w-6 h-6 text-green-400" />,
-      title: "Workflow Automation",
-      description:
-        "Create automated workflows to streamline your email management.",
-    },
-  ];
 
   const useCases = [
     {

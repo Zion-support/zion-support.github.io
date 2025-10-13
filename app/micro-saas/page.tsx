@@ -1,21 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Zap, 
-  BarChart3, 
-  Shield, 
-  Cloud, 
-  Users, 
-  Code, 
-  Database, 
-  ArrowRight,
-  Sparkles,
-  Star,
-  CheckCircle,
-  TrendingUp
-} from 'lucide-react';
-
+import { ArrowRight, CheckCircle, Star } from "lucide-react";
 const MicroSaasPage = () => {
   const microSaasProducts = [
     {
@@ -73,27 +59,6 @@ const MicroSaasPage = () => {
       color: "from-yellow-500 to-orange-500",
       link: "/zion-ai-project-manager-pro",
       features: ["Task Automation", "Resource Optimization", "Progress Tracking", "Team Collaboration"]
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Ready to Use",
-      description: "Deploy immediately with pre-configured solutions",
-      icon: <Zap className="w-6 h-6" />,
-      stat: "Instant deployment"
-    },
-    {
-      title: "Cost Effective",
-      description: "Affordable pricing with no hidden costs",
-      icon: <TrendingUp className="w-6 h-6" />,
-      stat: "Up to 70% savings"
-    },
-    {
-      title: "Scalable",
-      description: "Grow with your business needs",
-      icon: <Cloud className="w-6 h-6" />,
-      stat: "Unlimited scaling"
     }
   ];
 

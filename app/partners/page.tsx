@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
 
 export default function Partners() {
   const partners = [
@@ -46,29 +45,6 @@ export default function Partners() {
       description: "Database and enterprise software solutions",
       category: "Database Partner",
       tier: "Silver"
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Joint Marketing",
-      description: "Collaborative marketing campaigns and co-branded content"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global Reach",
-      description: "Access to our worldwide network of clients and opportunities"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Technical Support",
-      description: "Dedicated technical resources and training programs"
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Innovation Labs",
-      description: "Joint innovation initiatives and R&D projects"
     }
   ];
 

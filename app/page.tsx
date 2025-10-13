@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { ArrowRight, Star, Brain, Zap, Globe } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -101,29 +101,6 @@ const HomePage = () => {
       description: "Comprehensive IT consulting and system integration",
       link: "/services",
       color: "from-yellow-500 to-orange-500"
-    }
-  ];
-
-  const features = [
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Custom Solutions",
-      description: "Tailored technology solutions for your specific business needs"
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Expert Team",
-      description: "Experienced professionals with deep industry knowledge"
-    },
-    {
-      icon: <Award className="w-6 h-6" />,
-      title: "Proven Results",
-      description: "Track record of successful implementations and satisfied clients"
-    },
-    {
-      icon: <Calendar className="w-6 h-6" />,
-      title: "24/7 Support",
-      description: "Round-the-clock technical support and maintenance"
     }
   ];
 

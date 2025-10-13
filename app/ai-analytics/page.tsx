@@ -1,63 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  BarChart3, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Globe, 
-  Mail, 
-  Phone, 
-  TrendingUp,
-  Database,
-  Settings,
-  Monitor,
-  Sparkles,
-  Lightbulb,
-  TrendingDown
-} from "lucide-react";
-
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Globe, Monitor, Phone } from "lucide-react";
 export default function AiAnalytics() {
-  const features = [
-    {
-      title: "Real-time Data Processing",
-      description: "Process and analyze data in real-time with our advanced AI algorithms that provide instant insights and actionable intelligence.",
-      icon: <Zap className="w-8 h-8" />,
-      benefits: ["Instant data processing", "Real-time dashboards", "Live monitoring", "Immediate alerts"]
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Leverage machine learning models to predict future trends, behaviors, and outcomes with high accuracy.",
-      icon: <Brain className="w-8 h-8" />,
-      benefits: ["Trend forecasting", "Behavior prediction", "Risk assessment", "Opportunity identification"]
-    },
-    {
-      title: "Advanced Data Visualization",
-      description: "Transform complex data into intuitive, interactive visualizations that make insights accessible to everyone.",
-      icon: <BarChart3 className="w-8 h-8" />,
-      benefits: ["Interactive charts", "Custom dashboards", "Mobile-responsive", "Export capabilities"]
-    },
-    {
-      title: "Automated Insights Generation",
-      description: "AI automatically generates insights and recommendations based on your data patterns and business context.",
-      icon: <Lightbulb className="w-8 h-8" />,
-      benefits: ["Smart recommendations", "Pattern recognition", "Anomaly detection", "Automated reporting"]
-    },
-    {
-      title: "Multi-source Data Integration",
-      description: "Connect and analyze data from multiple sources including databases, APIs, files, and cloud services.",
-      icon: <Database className="w-8 h-8" />,
-      benefits: ["100+ integrations", "Data transformation", "Real-time sync", "Unified data model"]
-    },
-    {
-      title: "Custom AI Models",
-      description: "Build and deploy custom machine learning models tailored to your specific business needs and data patterns.",
-      icon: <Settings className="w-8 h-8" />,
-      benefits: ["Custom model training", "Model deployment", "Performance monitoring", "Continuous learning"]
-    }
-  ];
 
   const analyticsStats = [
     { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },

@@ -1,42 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Brain,
-  Eye,
-  Zap
-} from 'lucide-react';
-
+import { ArrowRight, CheckCircle, Star, Brain } from "lucide-react";
 const ZionAICustomerInsightsPage = () => {
-  const features = [
-    {
-      title: "Customer Segmentation",
-      description: "Automatically segment customers based on behavior and preferences",
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Predict customer behavior and lifetime value",
-      icon: <TrendingUp className="w-6 h-6" />
-    },
-    {
-      title: "Real-time Insights",
-      description: "Get instant insights into customer interactions",
-      icon: <Eye className="w-6 h-6" />
-    },
-    {
-      title: "AI Recommendations",
-      description: "Receive AI-powered recommendations for customer engagement",
-      icon: <Brain className="w-6 h-6" />
-    }
-  ];
 
   const pricingPlans = [
     {

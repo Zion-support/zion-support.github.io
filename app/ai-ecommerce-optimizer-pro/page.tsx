@@ -1,42 +1,9 @@
 "use client";
-import {
-  Brain,
-  Zap,
-  CheckCircle,
-  Star,
-  BarChart3,
-  TrendingUp,
-} from "lucide-react";
+import { CheckCircle, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function AIEcommerceOptimizerPro() {
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: "AI-Powered Optimization",
-      description:
-        "Advanced machine learning algorithms analyze customer behavior and optimize your store automatically",
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
-      title: "Conversion Rate Optimization",
-      description:
-        "Increase your conversion rates by up to 40% with intelligent product recommendations and layout optimization",
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
-      title: "Real-time Analytics",
-      description:
-        "Get detailed insights into customer behavior, sales patterns, and performance metrics",
-    },
-    {
-      icon: <Zap className="w-6 h-6 text-yellow-400" />,
-      title: "Automated A/B Testing",
-      description:
-        "Continuously test and optimize your store elements for maximum performance",
-    },
-  ];
 
   const optimizationFeatures = [
     {

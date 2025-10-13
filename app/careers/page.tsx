@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Zap, Shield, Globe, Mail, MapPin, Clock, CheckCircle, Star, Award, Brain, BarChart3, Settings, Code, Database, Cloud, Smartphone, Target, Calendar, DollarSign, Briefcase, GraduationCap, Heart, Coffee, Gamepad2 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { ArrowRight, Star, Brain, Globe, Target } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const CareersPage = () => {
@@ -137,39 +136,6 @@ const CareersPage = () => {
       benefits: ["Health Insurance", "401k Matching", "Design Tools", "Creative Freedom"],
       posted: "4 days ago",
       featured: false
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Health & Wellness",
-      description: "Comprehensive health insurance, dental, vision, and mental health support",
-      icon: <Heart className="w-8 h-8" />
-    },
-    {
-      title: "Learning & Development",
-      description: "Annual learning budget, conference attendance, and certification support",
-      icon: <GraduationCap className="w-8 h-8" />
-    },
-    {
-      title: "Work-Life Balance",
-      description: "Flexible hours, remote work options, and unlimited PTO",
-      icon: <Coffee className="w-8 h-8" />
-    },
-    {
-      title: "Growth Opportunities",
-      description: "Clear career paths, mentorship programs, and internal mobility",
-      icon: <Target className="w-8 h-8" />
-    },
-    {
-      title: "Modern Tools",
-      description: "Latest technology stack, top-tier equipment, and home office setup",
-      icon: <Settings className="w-8 h-8" />
-    },
-    {
-      title: "Team Culture",
-      description: "Collaborative environment, team events, and innovation time",
-      icon: <Users className="w-8 h-8" />
     }
   ];
 

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
-
+import { ArrowRight, Star, Globe } from "lucide-react";
 export default function Community() {
   const events = [
     {

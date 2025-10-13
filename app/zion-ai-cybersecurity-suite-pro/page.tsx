@@ -1,57 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  CheckCircle, 
-  ArrowRight,
-  Brain,
-  Zap,
-  Globe,
-  Users,
-  BarChart3,
-  Clock,
-  Award,
-  Star,
-  Activity,
-  Database,
-  Network,
-  FileText,
-  Settings
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Globe } from "lucide-react";
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAiCybersecuritySuitePro = () => {
-  const features = [
-    {
-      title: "AI-Powered Threat Detection",
-      description: "Advanced machine learning algorithms detect and prevent sophisticated cyber threats in real-time",
-      icon: <Brain className="w-6 h-6" />,
-      stats: "99.9% accuracy"
-    },
-    {
-      title: "Zero-Trust Architecture",
-      description: "Implement comprehensive zero-trust security model with continuous verification and monitoring",
-      icon: <Lock className="w-6 h-6" />,
-      stats: "100% coverage"
-    },
-    {
-      title: "Automated Incident Response",
-      description: "AI-driven incident response that automatically contains and remediates security breaches",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "2-minute response"
-    },
-    {
-      title: "Compliance Automation",
-      description: "Automated compliance monitoring and reporting for GDPR, HIPAA, SOX, and other regulations",
-      icon: <FileText className="w-6 h-6" />,
-      stats: "50+ frameworks"
-    }
-  ];
 
   const pricingPlans = [
     {

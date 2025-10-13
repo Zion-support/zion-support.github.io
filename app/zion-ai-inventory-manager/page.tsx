@@ -1,47 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BarChart3, Package, TrendingUp, AlertTriangle, Users, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Smartphone, Globe, Database, Settings } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Zap, TrendingUp } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ZionAIInventoryManager = () => {
-  const features = [
-    {
-      title: "AI-Powered Demand Forecasting",
-      description: "Predict inventory needs with 95% accuracy using machine learning algorithms",
-      icon: <TrendingUp className="w-6 h-6" />,
-      benefit: "Reduce stockouts by 60%"
-    },
-    {
-      title: "Real-Time Inventory Tracking",
-      description: "Monitor stock levels across multiple locations with live updates",
-      icon: <Package className="w-6 h-6" />,
-      benefit: "99.9% accuracy"
-    },
-    {
-      title: "Automated Reorder Points",
-      description: "Set intelligent reorder triggers based on sales velocity and lead times",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      benefit: "Never run out of stock"
-    },
-    {
-      title: "Multi-Channel Integration",
-      description: "Sync inventory across e-commerce, retail, and warehouse systems",
-      icon: <Globe className="w-6 h-6" />,
-      benefit: "Unified inventory view"
-    },
-    {
-      title: "Advanced Analytics Dashboard",
-      description: "Comprehensive reports on inventory turnover, costs, and performance",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefit: "Data-driven decisions"
-    },
-    {
-      title: "Mobile App Access",
-      description: "Manage inventory on-the-go with our intuitive mobile application",
-      icon: <Smartphone className="w-6 h-6" />,
-      benefit: "24/7 access"
-    }
-  ];
 
   const pricingPlans = [
     {

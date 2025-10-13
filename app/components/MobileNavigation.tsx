@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ArrowRight } from 'lucide-react';
-
+import { ArrowRight } from "lucide-react";
 const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 

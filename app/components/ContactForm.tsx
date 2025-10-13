@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { MessageSquare } from "lucide-react";
-
 interface FormData {
   name: string;
   email: string;

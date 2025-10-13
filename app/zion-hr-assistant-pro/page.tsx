@@ -1,47 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Brain, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Smartphone, Globe, Database, Settings, FileText, TrendingUp, AlertCircle, Calendar, Heart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Brain, TrendingUp } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ZionHRAssistantPro = () => {
-  const features = [
-    {
-      title: "AI-Powered Resume Screening",
-      description: "Automatically screen and rank candidates with 95% accuracy using advanced NLP and machine learning",
-      icon: <FileText className="w-6 h-6" />,
-      benefit: "Save 80% screening time"
-    },
-    {
-      title: "Intelligent Interview Scheduling",
-      description: "Automatically coordinate interview times across multiple time zones and calendars",
-      icon: <Clock className="w-6 h-6" />,
-      benefit: "Zero scheduling conflicts"
-    },
-    {
-      title: "Employee Performance Analytics",
-      description: "Track and analyze employee performance with AI-driven insights and recommendations",
-      icon: <TrendingUp className="w-6 h-6" />,
-      benefit: "Data-driven HR decisions"
-    },
-    {
-      title: "Automated Onboarding",
-      description: "Streamline new employee onboarding with personalized workflows and task automation",
-      icon: <Users className="w-6 h-6" />,
-      benefit: "50% faster onboarding"
-    },
-    {
-      title: "Smart Leave Management",
-      description: "Intelligent leave balance tracking, approval workflows, and conflict resolution",
-      icon: <Calendar className="w-6 h-6" />,
-      benefit: "Automated compliance"
-    },
-    {
-      title: "Employee Sentiment Analysis",
-      description: "Monitor employee satisfaction and engagement through AI-powered sentiment analysis",
-      icon: <Brain className="w-6 h-6" />,
-      benefit: "Proactive engagement"
-    }
-  ];
 
   const pricingPlans = [
     {
