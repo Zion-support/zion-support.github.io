@@ -39,6 +39,24 @@ const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
 // AI Service Pages
+const AIAnalyticsDashboardPage = React.lazy(
+  () => import("./app/ai-analytics-dashboard/page"),
+);
+const AIContentGenerationPage = React.lazy(
+  () => import("./app/ai-content-generation/page"),
+);
+const AICybersecuritySuitePage = React.lazy(
+  () => import("./app/ai-cybersecurity-suite/page"),
+);
+const AICodeAssistantPage = React.lazy(
+  () => import("./app/ai-code-assistant/page"),
+);
+const AICustomerSupportPage = React.lazy(
+  () => import("./app/ai-customer-support/page"),
+);
+const AIBusinessIntelligencePage = React.lazy(
+  () => import("./app/ai-business-intelligence/page"),
+);
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -211,6 +229,30 @@ function App() {
                   <Route path="/sitemap" element={<SitemapPage />} />
 
                   {/* AI Service Routes */}
+                  <Route
+                    path="/ai-analytics-dashboard"
+                    element={<AIAnalyticsDashboardPage />}
+                  />
+                  <Route
+                    path="/ai-content-generation"
+                    element={<AIContentGenerationPage />}
+                  />
+                  <Route
+                    path="/ai-cybersecurity-suite"
+                    element={<AICybersecuritySuitePage />}
+                  />
+                  <Route
+                    path="/ai-code-assistant"
+                    element={<AICodeAssistantPage />}
+                  />
+                  <Route
+                    path="/ai-customer-support"
+                    element={<AICustomerSupportPage />}
+                  />
+                  <Route
+                    path="/ai-business-intelligence"
+                    element={<AIBusinessIntelligencePage />}
+                  />
 
                   {/* IT Service Routes */}
                   <Route
