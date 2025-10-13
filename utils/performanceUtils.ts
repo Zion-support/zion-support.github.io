@@ -5,6 +5,12 @@ export interface PerformanceMetrics {
   fps: number;
 }
 
+export interface PerformanceConfig {
+  enabled: boolean;
+  monitoring: boolean;
+  optimization: boolean;
+}
+
 export class PerformanceUtils {
   private metrics: PerformanceMetrics = {
     loadTime: 0,
@@ -12,6 +18,17 @@ export class PerformanceUtils {
     memoryUsage: 0,
     fps: 0
   };
+
+  private config: PerformanceConfig;
+
+  constructor(config: Partial<PerformanceConfig> = {}) {
+    this.config = {
+      enabled: true,
+      monitoring: true,
+      optimization: true,
+      ...config
+    };
+  }
 
   measureLoadTime() {
     if (typeof window !== 'undefined' && window.performance) {
@@ -69,6 +86,16 @@ export class PerformanceUtils {
       fps: 0
     };
   }
+<<<<<<< HEAD
 }
 
 export default PerformanceUtils;
+=======
+
+  init(): void {
+    if (this.config.enabled) {
+      console.log('Performance utils initialized');
+    }
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-062f

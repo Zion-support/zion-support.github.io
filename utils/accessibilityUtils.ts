@@ -60,11 +60,18 @@ export class AccessibilityUtils {
       document.body.classList.remove('reduced-motion');
     }
   }
+<<<<<<< HEAD
 
   setFontSize(size: number) {
     this.config.fontSize = size;
     document.documentElement.style.fontSize = `${size}px`;
   }
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-062f
 
-export default AccessibilityUtils;
+  setFontSize(size: number) {
+    this.config.fontSize = size;
+    document.documentElement.style.fontSize = `${size}px`;
+  }
+}

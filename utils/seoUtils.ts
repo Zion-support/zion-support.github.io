@@ -6,6 +6,15 @@ export interface SEOConfig {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
+<<<<<<< HEAD
+=======
+}
+
+export interface SeoConfig {
+  enabled: boolean;
+  metaTags: boolean;
+  structuredData: boolean;
+>>>>>>> cursor/fix-errors-and-merge-to-main-062f
 }
 
 export class SEOUtils {
@@ -39,6 +48,7 @@ export class SEOUtils {
       "description": this.config.description,
       "url": this.config.canonicalUrl || '',
     };
+  }
 
     const script = document.createElement('script');
     script.type = 'application/ld+json';
@@ -79,6 +89,7 @@ export class SEOUtils {
     }
     canonical.setAttribute('href', url);
   }
+<<<<<<< HEAD
 
   updateOpenGraphTags() {
     const ogTags = [
@@ -129,3 +140,6 @@ export class SEOUtils {
 }
 
 export default SEOUtils;
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-062f

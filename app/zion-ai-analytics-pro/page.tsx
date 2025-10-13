@@ -20,6 +20,7 @@ export default function ZionAiAnalyticsPro() {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-md p-6">
+<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
               <p className="text-gray-600">
                 Description of the first feature.
@@ -29,6 +30,17 @@ export default function ZionAiAnalyticsPro() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
               <p className="text-gray-600">
                 Description of the second feature.
+=======
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Predictive Analytics</h3>
+              <p className="text-gray-600">
+                Leverage AI to predict future trends and make informed business decisions.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Insights</h3>
+              <p className="text-gray-600">
+                Get real-time analytics and insights from your business data.
+>>>>>>> cursor/fix-errors-and-merge-to-main-062f
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">

@@ -20,21 +20,21 @@ export default function AiChatbotBuilder() {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Easy Setup</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Natural Language Processing</h3>
               <p className="text-gray-600">
-                Build and deploy chatbots quickly with our intuitive interface.
+                Advanced NLP capabilities to understand and respond to user queries naturally.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Natural Language</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Custom Training</h3>
               <p className="text-gray-600">
-                Advanced NLP capabilities for natural conversations.
+                Train your chatbot with your specific business data and knowledge base.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Multi-Platform</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Multi-Platform Integration</h3>
               <p className="text-gray-600">
-                Deploy across websites, mobile apps, and messaging platforms.
+                Deploy your chatbot across websites, mobile apps, and messaging platforms.
               </p>
             </div>
           </div>
