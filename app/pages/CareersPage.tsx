@@ -1,74 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;
+=======
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 const CareersPage: React.FC = () => {
-  const benefits = [{
-      icon: Heart,
-      title: 'Health & Wellness',';
-      description: 'Comprehensive health insurance, mental health support, and wellness programs.'';
-    },
-    {
-      icon: Zap,
-      title: 'Learning & Development',';
-      description: 'Continuous learning opportunities, conferences, and professional development budget.'';
-    },
-    {
-      icon: Users,
-      title: 'Collaborative Culture',';
-      description: 'Work with talented professionals in an inclusive and innovative environment.'';
-    },
-    {
-      icon: Target,
-      title: 'Career Growth',';
-      description: 'Clear career paths, mentorship programs, and opportunities for advancement.'';
-    }
-  ];
-
-  const openPositions = [{
-      title: 'Senior AI Engineer',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Engineering',';
-      description: 'Lead AI model development and implementation for enterprise clients.'';
-    },
-    {
-      title: 'Cloud Solutions Architect',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Engineering',';
-      description: 'Design and implement scalable cloud infrastructure solutions.'';
-    },
-    {
-      title: 'Cybersecurity Specialist',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Security',';
-      description: 'Protect client systems and data with advanced security measures.'';
-    },
-    {
-      title: 'Product Manager',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Product',';
-      description: 'Drive product strategy and roadmap for our AI and IT solutions.'';
-    },
-    {
-      title: 'Sales Engineer',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Sales',';
-      description: 'Help clients understand and implement our technology solutions.'';
-    },
-    {
-      title: 'UX/UI Designer',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Design',';
-      description: 'Create intuitive and engaging user experiences for our products.'';
-    }
-  ];
-
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">;
       <Helmet>
         <title>Careers | Zion Tech Group</title>
@@ -171,7 +111,40 @@ const CareersPage: React.FC = () => {
         </div>;
       </div>;
     </div>;
+=======
+    <>
+      <Helmet>
+        <title>CareersPage - Zion Tech Group</title>
+        <meta name="description" content="CareersPage page for Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white p-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold mb-8">CareersPage</h1>
+          <p className="text-lg text-gray-300">
+            This is the CareersPage page for Zion Tech Group.
+          </p>
+        </div>
+      </div>
+    </>
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
   );
 };
 
 export default CareersPage;
+=======
+
+export default function CareersPage() {
+  return (
+    <div className="min-h-screen bg-slate-900 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          CareersPage
+        </h1>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          This page is coming soon. Please check back later.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
