@@ -56,7 +56,8 @@ export default function AiPoweredDevops() {
     "rating": 5
   }
 ];
-},
+
+  const additionalItems = [
     {
       name: "Enterprise",
       price: "$1,999",

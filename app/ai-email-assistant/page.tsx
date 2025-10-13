@@ -30,7 +30,8 @@ export default function AIEmailAssistant() {
     "rating": 5
   }
 ];
-},
+
+  const additionalItems = [
     {
       icon: <MessageSquare className="w-6 h-6 text-purple-400" />,
       title: "Auto-Responses",

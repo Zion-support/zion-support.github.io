@@ -33,7 +33,8 @@ export default function AICustomerSupportChatbot() {
     "rating": 5
   }
 ];
-},
+
+  const additionalItems = [
     {
       category: "Integration",
       items: [

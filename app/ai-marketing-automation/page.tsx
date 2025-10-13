@@ -8,7 +8,8 @@ export default function AIMarketingAutomation() {
       icon: <Mail className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
       benefits: ["Personalized Content", "Behavioral Triggers", "A/B Testing", "Analytics Dashboard"]
-    
+    }
+  ];
 
   const benefits = [
   {
@@ -32,7 +33,8 @@ export default function AIMarketingAutomation() {
     "description": "Optimize your systems for maximum speed and reliability."
   }
 ];
-},
+
+  const additionalItems = [
     {
       title: "Social Media Management",
       description: "Automated social media posting, content scheduling, and engagement tracking across all major platforms with AI-powered content optimization.",

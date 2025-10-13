@@ -30,7 +30,8 @@ export default function AIProjectManagementPro() {
     "rating": 5
   }
 ];
-},
+
+  const additionalItems = [
     {
       icon: <Clock className="w-6 h-6 text-purple-400" />,
       title: "Smart Scheduling",

@@ -14,7 +14,8 @@ export default function AiFinancialAnalyticsProPage() {
         "Trend identification",
         "Anomaly detection",
       ],
-    
+    }
+  ];
 
   const testimonials = [
   {
@@ -58,7 +59,8 @@ export default function AiFinancialAnalyticsProPage() {
     "description": "Optimize your systems for maximum speed and reliability."
   }
 ];
-},
+
+  const additionalItems = [
     {
       icon: <BarChart3 className="w-8 h-8 text-green-400" />,
       title: "Real-time Analytics",

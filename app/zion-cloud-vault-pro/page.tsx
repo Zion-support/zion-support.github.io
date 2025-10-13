@@ -51,7 +51,8 @@ export default function ZionCloudVaultPro() {
     "description": "Optimize your systems for maximum speed and reliability."
   }
 ];
-},
+
+  const additionalItems = [
     {
       title: "Unlimited Storage Capacity",
       description: "Store unlimited files and data without worrying about storage limits or additional costs.",

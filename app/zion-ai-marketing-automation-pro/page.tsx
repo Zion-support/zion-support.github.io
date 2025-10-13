@@ -53,23 +53,24 @@ export default function ZionAiMarketingAutomationPro() {
 ];
   const stats = [
   {
-    "number": "500+",
-    "label": "Projects Completed"
+    number: "500+",
+    label: "Projects Completed"
   },
   {
-    "number": "50+",
-    "label": "Happy Clients"
+    number: "50+",
+    label: "Happy Clients"
   },
   {
-    "number": "5+",
-    "label": "Years Experience"
+    number: "5+",
+    label: "Years Experience"
   },
   {
-    "number": "24/7",
-    "label": "Support Available"
+    number: "24/7",
+    label: "Support Available"
   }
 ];
-},
+
+  const additionalItems = [
     {
       title: "Intelligent Audience Segmentation",
       description: "AI-driven audience segmentation that automatically groups customers based on behavior, preferences, and engagement patterns for highly targeted campaigns.",

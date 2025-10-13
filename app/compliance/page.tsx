@@ -32,7 +32,8 @@ export default function Compliance() {
     "description": "Optimize your systems for maximum speed and reliability."
   }
 ];
-},
+
+  const additionalItems = [
     {
       name: "ISO 27001",
       description: "Information security management system certification",

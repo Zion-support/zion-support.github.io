@@ -31,7 +31,8 @@ export default function AIHealthcareDiagnostics() {
     "description": "Optimize your systems for maximum speed and reliability."
   }
 ];
-},
+
+  const additionalItems = [
     {
       title: "Symptom Assessment Engine",
       description: "Intelligent symptom analysis with differential diagnosis and treatment recommendations",

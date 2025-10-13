@@ -28,7 +28,8 @@ export default function ZionSecurityShield() {
     "rating": 5
   }
 ];
-},
+
+  const additionalItems = [
     {
       icon: <Lock className="w-6 h-6" />,
       title: "Zero-Trust Architecture",

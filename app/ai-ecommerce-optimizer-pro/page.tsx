@@ -30,7 +30,8 @@ export default function AIEcommerceOptimizerPro() {
     "rating": 5
   }
 ];
-},
+
+  const additionalItems = [
     {
       icon: <TrendingUp className="w-6 h-6 text-green-400" />,
       title: "Conversion Rate Optimization",

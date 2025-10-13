@@ -30,7 +30,8 @@ export default function AIExpenseTracker() {
     "rating": 5
   }
 ];
-},
+
+  const additionalItems = [
     {
       icon: <TrendingUp className="w-12 h-12 text-purple-400" />,
       title: "Real-time Tracking",

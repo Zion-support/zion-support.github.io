@@ -32,23 +32,24 @@ export default function MicroSaasServices() {
 
   const stats = [
   {
-    "number": "500+",
-    "label": "Projects Completed"
+    number: "500+",
+    label: "Projects Completed"
   },
   {
-    "number": "50+",
-    "label": "Happy Clients"
+    number: "50+",
+    label: "Happy Clients"
   },
   {
-    "number": "5+",
-    "label": "Years Experience"
+    number: "5+",
+    label: "Years Experience"
   },
   {
-    "number": "24/7",
-    "label": "Support Available"
+    number: "24/7",
+    label: "Support Available"
   }
 ];
-},
+
+  const additionalItems = [
     {
       id: "zion-security-shield-pro",
       name: "Zion Security Shield Pro",

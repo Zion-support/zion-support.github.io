@@ -79,7 +79,8 @@ export default function ZionAISalesPredictor() {
     "description": "Optimize your systems for maximum speed and reliability."
   }
 ];
-},
+
+  const additionalItems = [
     {
       name: "Professional",
       price: "$99",

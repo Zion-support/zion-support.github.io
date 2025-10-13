@@ -74,9 +74,9 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           "name": data.name,
           "description": data.description,
           "provider": data.provider || {
-            "@type": "Organization",
-            "name": "Zion Tech Group"
-          },
+    @type: "Organization",
+    name: "Zion Tech Group"
+  },
           "areaServed": data.areaServed || "US",
           "hasOfferCatalog": data.hasOfferCatalog
         };

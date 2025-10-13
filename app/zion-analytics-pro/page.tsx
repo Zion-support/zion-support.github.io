@@ -48,7 +48,8 @@ export default function ZionAnalyticsPro() {
     "rating": 5
   }
 ];
-},
+
+  const additionalItems = [
     {
       name: "Professional",
       price: "$79",

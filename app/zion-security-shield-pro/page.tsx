@@ -51,7 +51,8 @@ export default function ZionSecurityShieldPro() {
     "description": "Optimize your systems for maximum speed and reliability."
   }
 ];
-},
+
+  const additionalItems = [
     {
       title: "24/7 Security Monitoring",
       description: "Round-the-clock monitoring by our expert security team ensures your systems are protected at all times, with immediate response to any threats.",

@@ -28,7 +28,8 @@ export default function ZionCloudVault() {
     "rating": 5
   }
 ];
-},
+
+  const additionalItems = [
     {
       icon: <Lock className="w-6 h-6" />,
       title: "End-to-End Encryption",

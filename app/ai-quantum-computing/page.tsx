@@ -56,7 +56,8 @@ export default function AiQuantumComputing() {
     "rating": 5
   }
 ];
-},
+
+  const additionalItems = [
     {
       name: "Enterprise",
       price: "$9,999",

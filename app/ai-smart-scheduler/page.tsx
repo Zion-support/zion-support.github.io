@@ -30,7 +30,8 @@ export default function AISmartScheduler() {
     "rating": 5
   }
 ];
-},
+
+  const additionalItems = [
     {
       icon: <Users className="w-6 h-6 text-purple-400" />,
       title: "Team Coordination",
