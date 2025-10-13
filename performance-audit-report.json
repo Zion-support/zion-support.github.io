@@ -1,0 +1,112 @@
+{
+  "timestamp": "2025-10-13T01:48:41.806Z",
+  "issues": [
+    {
+      "type": "Potentially Unused Import",
+      "file": "app/components/AccessibilityEnhancer.tsx",
+      "line": 2,
+      "import": "EyeOff",
+      "severity": "low"
+    },
+    {
+      "type": "Potentially Unused Import",
+      "file": "app/components/AccessibilityEnhancer.tsx",
+      "line": 2,
+      "import": "Type",
+      "severity": "low"
+    },
+    {
+      "type": "Potentially Unused Import",
+      "file": "app/components/AccessibilityEnhancer.tsx",
+      "line": 2,
+      "import": "Volume2",
+      "severity": "low"
+    },
+    {
+      "type": "Potentially Unused Import",
+      "file": "app/components/AccessibilityEnhancer.tsx",
+      "line": 2,
+      "import": "VolumeX",
+      "severity": "low"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "Lazy Loading",
+      "file": "app/components/ContentCarousel.tsx",
+      "suggestion": "Consider using React.lazy() for this large component"
+    },
+    {
+      "type": "Lazy Loading",
+      "file": "app/components/Footer.tsx",
+      "suggestion": "Consider using React.lazy() for this large component"
+    },
+    {
+      "type": "Lazy Loading",
+      "file": "app/components/Navigation.tsx",
+      "suggestion": "Consider using React.lazy() for this large component"
+    },
+    {
+      "type": "Lazy Loading",
+      "file": "app/components/SEOHead.tsx",
+      "suggestion": "Consider using React.lazy() for this large component"
+    },
+    {
+      "type": "Memoization",
+      "file": "app/components/AccessibilityEnhancer.tsx",
+      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
+    },
+    {
+      "type": "Memoization",
+      "file": "app/components/AnimatedCounter.tsx",
+      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
+    },
+    {
+      "type": "Memoization",
+      "file": "app/components/AnimatedText.tsx",
+      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
+    },
+    {
+      "type": "Memoization",
+      "file": "app/components/ContentCarousel.tsx",
+      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
+    },
+    {
+      "type": "Memoization",
+      "file": "app/components/CookieConsent.tsx",
+      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
+    },
+    {
+      "type": "Memoization",
+      "file": "app/components/DynamicContentShowcase.tsx",
+      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
+    },
+    {
+      "type": "Memoization",
+      "file": "app/components/EnhancedPerformanceMonitor.tsx",
+      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
+    },
+    {
+      "type": "Memoization",
+      "file": "app/components/PerformanceMonitor.tsx",
+      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
+    },
+    {
+      "type": "Memoization",
+      "file": "app/components/Sidebar.tsx",
+      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
+    },
+    {
+      "type": "Memoization",
+      "file": "app/hooks/useEnhancedPerformance.ts",
+      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
+    }
+  ],
+  "summary": {
+    "totalIssues": 4,
+    "highSeverity": 0,
+    "mediumSeverity": 0,
+    "lowSeverity": 4,
+    "totalRecommendations": 14
+  }
+}
