@@ -38,10 +38,7 @@ const Navigation = () => {
         { name: 'Micro SaaS', href: '/micro-saas' },
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
-    },
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+    }
   ];
 
   const isActive = (path: string) => {

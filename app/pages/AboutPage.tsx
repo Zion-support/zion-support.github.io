@@ -14,17 +14,7 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-export default function AboutPage()   {
-return (
-    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and expertise in AI and IT solutions. Discover our team and company culture." />
-        <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" />
-      </Helmet>
-    }
-  ];
-
+export default function AboutPage() {
   const stats = [
     { number: '50+', label: 'Projects Completed' },
     { number: '25+', label: 'Happy Clients' },
@@ -34,14 +24,11 @@ return (
 
   return (
     <>
-<SEO 
-        title="About Us - Zion Tech Group"
-        description="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions."
-        keywords="about us, team, mission, values, AI company, IT solutions"
-        url="/about"
-      />
-
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and expertise in AI and IT solutions. Discover our team and company culture." />
+        <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
@@ -54,9 +41,8 @@ return (
               About Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-Empowering businesses through innovative technology solutions
+              Empowering businesses through innovative technology solutions
             </p>
-<<<<<<< HEAD
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
               Founded in 2020, we've been at the forefront of digital transformation, 
               helping companies leverage the power of artificial intelligence, cybersecurity, 
@@ -125,7 +111,7 @@ Empowering businesses through innovative technology solutions
                 </div>
               );
             })}
-</div>
+          </div>
         </div>
       </section>
 
@@ -154,6 +140,11 @@ Empowering businesses through innovative technology solutions
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -165,7 +156,7 @@ Empowering businesses through innovative technology solutions
             </p>
           </div>
           
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {team.map((member, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -173,7 +164,7 @@ Empowering businesses through innovative technology solutions
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </span>
                 </div>
-<h3 className="text-xl font-bold text-white mb-2 text-center">
+                <h3 className="text-xl font-bold text-white mb-2 text-center">
                   {member.name}
                 </h3>
                 <p className="text-purple-400 text-center mb-4">
@@ -196,7 +187,7 @@ Empowering businesses through innovative technology solutions
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-Let's discuss how we can help transform your business with our innovative solutions
+              Let's discuss how we can help transform your business with our innovative solutions
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
