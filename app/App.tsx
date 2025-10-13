@@ -1,15 +1,9 @@
 "use client";
 
 import { Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-import ErrorBoundary from "./components/ErrorBoundary";
-import PerformanceMonitor from "./components/PerformanceMonitor";
-import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./layout";
 import LoadingSpinner from "./components/LoadingSpinner";
-import CriticalResourcePreloader from "./components/CriticalResourcePreloader";
-import CacheManager from "./components/CacheManager";
-import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"));
@@ -24,6 +18,12 @@ const CareersPage = lazy(() => import("./careers/page"));
 const PrivacyPage = lazy(() => import("./privacy/page"));
 const TermsPage = lazy(() => import("./terms/page"));
 const CookiesPage = lazy(() => import("./cookies/page"));
+const DemoPage = lazy(() => import("./demo/page"));
+const ConsultationPage = lazy(() => import("./consultation/page"));
+const SupportPage = lazy(() => import("./support/page"));
+const TutorialsPage = lazy(() => import("./tutorials/page"));
+const SitemapPage = lazy(() => import("./sitemap/page"));
+const AIServicesPage = lazy(() => import("./ai-services/page"));
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
@@ -47,16 +47,9 @@ const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 // Main App Component
 function App() {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <ErrorBoundary>
-          <PerformanceMonitor />
-          <AccessibilityEnhancer />
-          <CriticalResourcePreloader />
-          <CacheManager />
-          <AdvancedPerformanceMonitor />
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+    <Layout>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
@@ -69,6 +62,12 @@ function App() {
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/cookies" element={<CookiesPage />} />
+              <Route path="/demo" element={<DemoPage />} />
+              <Route path="/consultation" element={<ConsultationPage />} />
+              <Route path="/support" element={<SupportPage />} />
+              <Route path="/tutorials" element={<TutorialsPage />} />
+              <Route path="/sitemap" element={<SitemapPage />} />
+              <Route path="/ai-services" element={<AIServicesPage />} />
 
               {/* 5G Solutions Routes */}
               <Route
@@ -104,11 +103,9 @@ function App() {
                 element={<FiveGSmartCitySolutionsPage />}
               />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-            </Routes>
-          </Suspense>
-        </ErrorBoundary>
-      </BrowserRouter>
-    </HelmetProvider>
+        </Routes>
+      </Suspense>
+    </Layout>
   );
 }
 

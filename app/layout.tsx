@@ -45,7 +45,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         Zion Tech Group
                       </span>
                     </Link>
-                    <nav className="hidden md:flex space-x-8">
+                    <nav className="hidden lg:flex space-x-8">
                       <Link
                         to="/about"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
@@ -58,6 +58,27 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                       >
                         Services
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                      </Link>
+                      <Link
+                        to="/ai-services"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                      >
+                        AI Services
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                      </Link>
+                      <Link
+                        to="/pricing"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                      >
+                        Pricing
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                      </Link>
+                      <Link
+                        to="/demo"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                      >
+                        Demo
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
                       <Link
@@ -83,9 +104,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-12 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
                     {/* Company Info */}
-                    <div className="space-y-4">
+                    <div className="lg:col-span-2 space-y-4">
                       <h3 className="text-xl font-bold text-white mb-4">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                           Zion Tech Group
@@ -111,19 +132,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                           Our Services
                         </Link>
+                        <Link to="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          Pricing
+                        </Link>
+                        <Link to="/demo" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          Demo
+                        </Link>
                         <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                           Contact
-                        </Link>
-                        <Link to="/consultation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
-                          Free Consultation
                         </Link>
                       </div>
                     </div>
 
-                    {/* Services */}
+                    {/* AI Services */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Services</h4>
+                      <h4 className="text-lg font-semibold text-white">AI Services</h4>
                       <div className="space-y-2">
+                        <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          All AI Services
+                        </Link>
                         <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Business Intelligence
                         </Link>
@@ -135,6 +162,28 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </Link>
                         <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Cybersecurity
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Resources */}
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-white">Resources</h4>
+                      <div className="space-y-2">
+                        <Link to="/tutorials" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Tutorials
+                        </Link>
+                        <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Blog
+                        </Link>
+                        <Link to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Case Studies
+                        </Link>
+                        <Link to="/support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Support
+                        </Link>
+                        <Link to="/sitemap" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Sitemap
                         </Link>
                       </div>
                     </div>
