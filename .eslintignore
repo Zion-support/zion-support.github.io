@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+coverage/
+backup/
+backup-*/
+backup-problematic/
+backup-unused-components/
+*.cjs
+*.js
+!vite.config.ts
+!jest.config.js
