@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
@@ -8,16 +7,10 @@ import {
   ArrowRightIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'IT Solutions', href: '/it-solutions' },
@@ -27,15 +20,6 @@ const Footer: React.FC = () => {
     { name: 'Digital Transformation', href: '/digital-transformation' },
     { name: '5G Solutions', href: '/5g-solutions' },
   ];
-=======
-
-<<<<<<< HEAD
-    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-    { name: '5G Solutions', href: '/5g-solutions' },
-  ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -61,7 +45,6 @@ const Footer: React.FC = () => {
     { name: 'GDPR', href: '/gdpr' },
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
-<<<<<<< HEAD
   ];
 
   const socialLinks = [
@@ -69,16 +52,6 @@ const Footer: React.FC = () => {
     { name: 'Twitter', href: '#', icon: 'twitter' },
     { name: 'LinkedIn', href: '#', icon: 'linkedin' },
     { name: 'GitHub', href: '#', icon: 'github' }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github }
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
->>>>>>> origin/main
   ];
 
   return (
@@ -95,12 +68,6 @@ const Footer: React.FC = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-6 group">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-<<<<<<< HEAD
-=======
-            <Link to="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
               <span className="text-white font-bold text-2xl">Zion Tech Group</span>
@@ -109,12 +76,8 @@ const Footer: React.FC = () => {
               Transforming businesses through cutting-edge AI and IT solutions. 
               We help companies innovate and grow in the digital age with real, proven results.
             </p>
-<<<<<<< HEAD
             
             {/* Contact Info */}
-=======
-{/* Contact Info */}
->>>>>>> origin/main
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-300">
                 <PhoneIcon className="w-5 h-5 text-purple-400" />
@@ -128,7 +91,6 @@ const Footer: React.FC = () => {
                 <MapPinIcon className="w-5 h-5 text-purple-400" />
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
-<<<<<<< HEAD
             </div>
 
             {/* Social Links */}
@@ -146,19 +108,12 @@ const Footer: React.FC = () => {
                   {social.icon === 'github' && '🐙'}
                 </a>
               ))}
-=======
->>>>>>> origin/main
             </div>
           </div>
 
           {/* Services */}
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>
-<<<<<<< HEAD
-=======
-            <h3 className="text-white font-semibold text-lg mb-6">Services</h3>
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
@@ -177,11 +132,6 @@ const Footer: React.FC = () => {
           {/* Company */}
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>
-<<<<<<< HEAD
-=======
-            <h3 className="text-white font-semibold text-lg mb-6">Company</h3>
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
             <ul className="space-y-3">
               {company.map((item) => (
                 <li key={item.name}>
@@ -200,11 +150,6 @@ const Footer: React.FC = () => {
           {/* Resources & Legal */}
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
-<<<<<<< HEAD
-=======
-            <h3 className="text-white font-semibold text-lg mb-6">Resources</h3>
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
             <ul className="space-y-3 mb-8">
               {resources.map((resource) => (
                 <li key={resource.name}>
@@ -247,11 +192,7 @@ const Footer: React.FC = () => {
               <input
                 type="email"
                 placeholder="Enter your email"
-<<<<<<< HEAD
                 className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-=======
-className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
->>>>>>> origin/main
               />
               <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center font-semibold">
                 Subscribe
@@ -267,20 +208,6 @@ className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text
             <span>Made with</span>
             <HeartIcon className="w-4 h-4 text-red-400" />
             <span>by Zion Tech Group</span>
-<<<<<<< HEAD
-=======
-          <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
-            {legal.map((link) => (
-              <Link
-                key={link.name}
-                to={link.href}
-                className="text-gray-400 hover:text-purple-400 transition-colors text-sm"
-              >
-                {link.name}
-              </Link>
-            ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
           </div>
           <p className="text-gray-400 text-sm">
             © {currentYear} Zion Tech Group. All rights reserved.
