@@ -35,8 +35,13 @@ export default defineConfig({
 <<<<<<< HEAD
 =======
     // Performance optimizations
+<<<<<<< HEAD
     chunkSizeWarningLimit: 500,
     assetsInlineLimit: 2048,
+=======
+    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-031e
     // Enable compression
     reportCompressedSize: true,
     // Additional optimizations for production
