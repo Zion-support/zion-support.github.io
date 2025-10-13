@@ -61,111 +61,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
   const navigationItems = useMemo(() => [
     {
-<<<<<<< HEAD
-      name: 'Home',
-      path: '/',
-      icon: <Globe className="w-4 h-4" />
-    },
-    {
-      name: 'About',
-      path: '/about',
-      icon: <Users className="w-4 h-4" />
-    },
-    {
-      name: 'Services',
-      path: '/services',
-      icon: <Award className="w-4 h-4" />,
-      hasDropdown: true,
-      dropdownItems: [
-        {
-          name: 'AI Services',
-          icon: <Brain className="w-4 h-4" />,
-          items: [
-            { name: 'AI Analytics', path: '/ai-analytics', icon: <BarChart3 className="w-4 h-4" /> },
-            { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Code className="w-4 h-4" /> },
-            { name: 'AI Customer Support', path: '/ai-customer-support', icon: <Users className="w-4 h-4" /> },
-            { name: 'AI Cybersecurity', path: '/ai-cybersecurity', icon: <Shield className="w-4 h-4" /> },
-            { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> },
-            { name: 'AI Document Processing', path: '/ai-document-processing', icon: <FileText className="w-4 h-4" /> },
-            { name: 'AI Marketing Automation', path: '/ai-marketing-automation', icon: <TrendingUp className="w-4 h-4" /> },
-            { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', icon: <BarChart3 className="w-4 h-4" /> },
-            { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Smartphone className="w-4 h-4" /> },
-            { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: <Zap className="w-4 h-4" /> }
-          ]
-        },
-        {
-          name: 'IT Services',
-          icon: <Monitor className="w-4 h-4" />,
-          items: [
-            { name: 'Cloud Migration', path: '/cloud-migration', icon: <Cloud className="w-4 h-4" /> },
-            { name: 'DevOps Services', path: '/devops-services', icon: <Code className="w-4 h-4" /> },
-            { name: 'IT Consulting', path: '/it-consulting', icon: <Users className="w-4 h-4" /> },
-            { name: 'Network Security', path: '/network-security', icon: <Shield className="w-4 h-4" /> },
-            { name: 'Software Development', path: '/software-development', icon: <Code className="w-4 h-4" /> },
-            { name: 'System Integration', path: '/system-integration', icon: <Database className="w-4 h-4" /> },
-            { name: 'Web Development', path: '/web-development', icon: <Globe className="w-4 h-4" /> }
-          ]
-        },
-        {
-          name: '5G Solutions',
-          icon: <Network className="w-4 h-4" />,
-          items: [
-            { name: '5G Solutions', path: '/5g-solutions', icon: <Network className="w-4 h-4" /> },
-            { name: '5G Network Infrastructure', path: '/5g-network-infrastructure', icon: <Cpu className="w-4 h-4" /> },
-            { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Cloud className="w-4 h-4" /> },
-            { name: '5G IoT Solutions', path: '/5g-iot-solutions', icon: <Smartphone className="w-4 h-4" /> },
-            { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions', icon: <Globe className="w-4 h-4" /> },
-            { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },
-            { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Smartphone className="w-4 h-4" /> },
-            { name: '5G Data Analytics', path: '/5g-data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
-            { name: '5G Implementation', path: '/5g-implementation', icon: <Zap className="w-4 h-4" /> }
-          ]
-        }
-      ]
-    },
-    {
-      name: 'Micro SAAS',
-      path: '/micro-saas-services',
-      icon: <Package className="w-4 h-4" />,
-      hasDropdown: true,
-      dropdownItems: [
-        {
-          name: 'AI-Powered Tools',
-          icon: <Brain className="w-4 h-4" />,
-          items: [
-            { name: 'AI Email Analyzer', path: '/ai-powered-email-analyzer', icon: <Mail className="w-4 h-4" /> },
-            { name: 'Customer Sentiment Tracker', path: '/ai-customer-sentiment-tracker', icon: <Heart className="w-4 h-4" /> },
-            { name: 'Smart Expense Categorizer', path: '/smart-expense-categorizer', icon: <Receipt className="w-4 h-4" /> },
-            { name: 'Smart Inventory Optimizer', path: '/smart-inventory-optimizer', icon: <Package className="w-4 h-4" /> }
-          ]
-        },
-        {
-          name: 'Business Tools',
-          icon: <BarChart3 className="w-4 h-4" />,
-          items: [
-            { name: 'Project Management Tool', path: '/project-management-tool', icon: <Award className="w-4 h-4" /> },
-            { name: 'Customer Relationship Manager', path: '/customer-relationship-manager', icon: <Users className="w-4 h-4" /> },
-            { name: 'Inventory Management System', path: '/inventory-management-system', icon: <Package className="w-4 h-4" /> },
-            { name: 'Financial Reporting Tool', path: '/financial-reporting-tool', icon: <BarChart3 className="w-4 h-4" /> },
-            { name: 'Employee Time Tracker', path: '/employee-time-tracker', icon: <Clock className="w-4 h-4" /> },
-            { name: 'Social Media Scheduler', path: '/social-media-scheduler', icon: <Globe className="w-4 h-4" /> },
-            { name: 'Email Marketing Platform', path: '/email-marketing-platform', icon: <Mail className="w-4 h-4" /> },
-            { name: 'Website Analytics Tool', path: '/website-analytics-tool', icon: <BarChart3 className="w-4 h-4" /> },
-            { name: 'Task Automation Workflow', path: '/task-automation-workflow', icon: <Zap className="w-4 h-4" /> }
-          ]
-        }
-      ]
-    },
-    {
-      name: 'Blog',
-      path: '/blog',
-      icon: <Code className="w-4 h-4" />
-    },
-    {
-      name: 'Contact',
-      path: '/contact',
-      icon: <Phone className="w-4 h-4" />
-=======
       label: 'Home',
       href: '/',
       icon: <Star className="w-4 h-4" />
@@ -241,23 +136,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       label: 'Contact',
       href: '/contact',
       icon: <Mail className="w-4 h-4" />
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
     }
   ], []);
 
   return (
-<<<<<<< HEAD
-    <nav className="relative z-50 bg-black/20 backdrop-blur-md border-b border-cyan-500/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-=======
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -271,7 +153,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
                 Zion Tech Group
               </span>
             </Link>
