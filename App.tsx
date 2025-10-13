@@ -6,6 +6,7 @@ import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
+import SidebarNavigation from "./app/components/SidebarNavigation";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
@@ -220,9 +221,10 @@ function App() {
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground>
+                  <SidebarNavigation />
                   <Navigation />
                   <Breadcrumb />
-                  <main id="main-content" role="main">
+                  <main id="main-content" role="main" className="lg:ml-80">
                     <Suspense fallback={<LoadingPage />}>
                       <Routes>
                   <Route path="/" element={<HomePage />} />

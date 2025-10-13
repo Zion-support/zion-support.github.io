@@ -27,7 +27,7 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -70,6 +70,14 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
+                  to="/services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  IT Services
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/cloud-services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
@@ -94,18 +102,10 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  to="/micro-saas"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/web-development"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Web Development
+                  Micro SAAS
                 </Link>
               </li>
             </ul>
@@ -169,6 +169,14 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Custom Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/web-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Web Development
                 </Link>
               </li>
             </ul>
@@ -247,6 +255,53 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Consultation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Micro SAAS</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/zion-analytics-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Analytics Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-security-shield"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Security Shield
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-cloud-vault"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cloud Vault
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-content-studio"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Content Studio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-project-master"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Project Master
                 </Link>
               </li>
             </ul>
