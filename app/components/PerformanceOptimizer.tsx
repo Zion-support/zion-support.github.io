@@ -1,6 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
+=======
+'use client';
+
+import React, { useEffect, useState, useCallback } from 'react';
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;

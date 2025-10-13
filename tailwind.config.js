@@ -6,11 +6,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "./App.tsx",
     "./main.tsx"
 =======
     "./components/**/*.{js,ts,jsx,tsx}"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
+=======
+    "./components/**/*.{js,ts,jsx,tsx}"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
   ],
   theme: {
     extend: {
@@ -82,7 +86,14 @@ export default {
         'fade-in': 'fadeIn 0.6s ease-out forwards',
         'slide-in': 'slideIn 0.6s ease-out forwards',
         'scale-in': 'scaleIn 0.6s ease-out forwards',
+<<<<<<< HEAD
         'loading': 'loading 1.5s infinite'
+=======
+        'loading': 'loading 1.5s infinite',
+        'bounce-slow': 'bounce 2s infinite',
+        'pulse-slow': 'pulse 3s infinite',
+        'spin-slow': 'spin 3s linear infinite'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
       },
       keyframes: {
         'neon-glow': {
@@ -180,7 +191,12 @@ export default {
           linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
         `,
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+<<<<<<< HEAD
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
+=======
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hero-pattern': 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
       },
       backgroundSize: {
         'grid': '20px 20px'
@@ -191,7 +207,13 @@ export default {
       boxShadow: {
         'neon': '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
         'neon-lg': '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor',
+<<<<<<< HEAD
         'cyber': '0 20px 40px rgba(0, 255, 255, 0.2)'
+=======
+        'cyber': '0 20px 40px rgba(0, 255, 255, 0.2)',
+        'glow': '0 0 20px rgba(139, 92, 246, 0.3)',
+        'glow-lg': '0 0 40px rgba(139, 92, 246, 0.4)'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
       },
       textShadow: {
         'neon': '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
@@ -301,6 +323,7 @@ export default {
           overflow: 'visible',
           clip: 'auto',
           whiteSpace: 'normal'
+<<<<<<< HEAD
         }
       }
       addUtilities(newUtilities)
@@ -308,3 +331,15 @@ export default {
   ]
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
+=======
+        },
+        '.focus-visible': {
+          outline: '2px solid #8b5cf6',
+          outlineOffset: '2px'
+        }
+      };
+      addUtilities(newUtilities);
+    }
+  ]
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac

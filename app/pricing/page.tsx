@@ -125,8 +125,21 @@ const PricingPage: React.FC = () => {
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
       </Helmet>
+<<<<<<< HEAD
   );
 };
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Pricing</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the perfect plan for your business needs. All plans include our core AI and IT solutions with transparent, no-hidden-fees pricing.
+            </p>
+          </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
 
 export default PricingPage;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -208,6 +221,7 @@ export default PricingPage;
               </ul>
             </div>
           </div>
+<<<<<<< HEAD
 }
 
   );  ));)
@@ -404,6 +418,8 @@ const PricingPage: React.FC = () => {
               Coming soon - Advanced Pricing solutions by Zion Tech Group
             </p>
           </div>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
         </div>
       </div>
     </>

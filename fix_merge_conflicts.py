@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """
+<<<<<<< HEAD
 Script to fix merge conflicts in the codebase
+=======
+Script to automatically resolve merge conflicts by keeping the HEAD version
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
 """
 import os
 import re
@@ -25,6 +29,7 @@ def fix_merge_conflict(file_path):
         if '<<<<<<< HEAD' not in content:
             return False
         
+<<<<<<< HEAD
 <<<<<<< HEAD
         # Split content by merge conflict markers
         lines = content.split('\n')
@@ -75,6 +80,21 @@ def fix_merge_conflict(file_path):
             else:
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
                 new_lines.append(line)
+=======
+        # Remove merge conflict markers and keep HEAD version
+        # Pattern to match from <<<<<<< HEAD to ======= (keep this part)
+        pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [^\n]+\n'
+        content = re.sub(pattern1, r'\1\n', content, flags=re.DOTALL)
+        
+        # Pattern to match from ======= to >>>>>>> (remove this part)
+        pattern2 = r'=======\n.*?\n>>>>>>> [^\n]+\n'
+        content = re.sub(pattern2, '', content, flags=re.DOTALL)
+        
+        # Clean up any remaining conflict markers
+        content = re.sub(r'<<<<<<< HEAD\n', '', content)
+        content = re.sub(r'=======\n', '', content)
+        content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
         
         # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
@@ -82,11 +102,13 @@ def fix_merge_conflict(file_path):
         
         print(f"Fixed merge conflicts in: {file_path}")
         return True
+        
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     # Find all TypeScript/JavaScript files with merge conflicts
@@ -111,10 +133,22 @@ def main():
         '*.tsx',
         '*.ts'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
+=======
+    """Main function to fix all merge conflicts"""
+    # Find all TypeScript/JavaScript files
+    patterns = [
+        '/workspace/**/*.tsx',
+        '/workspace/**/*.ts',
+        '/workspace/**/*.jsx',
+        '/workspace/**/*.js'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
     ]
     
-    files_to_fix = []
+    files_fixed = 0
+    total_files = 0
+    
     for pattern in patterns:
+<<<<<<< HEAD
 <<<<<<< HEAD
         for file_path in glob.glob(pattern, recursive=True):
             # Skip node_modules and other directories
@@ -159,6 +193,14 @@ def main():
                     fixed_count += 1
     
     print(f"\nFixed merge conflicts in {fixed_count} out of {total_files} files")
+=======
+        for file_path in glob.glob(pattern, recursive=True):
+            total_files += 1
+            if fix_merge_conflicts(file_path):
+                files_fixed += 1
+    
+    print(f"\nFixed merge conflicts in {files_fixed} out of {total_files} files")
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
 
 if __name__ == "__main__":
     main()

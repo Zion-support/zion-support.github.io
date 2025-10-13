@@ -1,10 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 'use client;
 
 import React, { useEffect } from 'react;
+=======
+'use client';
+
+import React, { useEffect } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
 
 interface AccessibilityEnhancerProps {}
   enableKeyboardNavigation?: boolean;

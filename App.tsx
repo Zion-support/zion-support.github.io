@@ -38,8 +38,12 @@ import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+<<<<<<< HEAD
 import FuturisticBackground from './app/components/FuturisticBackground';
 import AnalyticsProvider from './app/components/AnalyticsProvider';
+=======
+import AdvancedPerformanceOptimizer from './app/components/AdvancedPerformanceOptimizer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 <<<<<<< HEAD
@@ -185,12 +189,23 @@ const App: React.FC = () => {
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
+<<<<<<< HEAD
           <AnalyticsProvider>
             <PerformanceOptimizer>
               <EnhancedAccessibility>
                 <AccessibilityEnhancer>
                   <div className="min-h-screen bg-gray-900 text-white">
                     <FuturisticBackground>
+=======
+          <AppWithPerformanceMonitoring>
+            <AnalyticsProvider>
+              <PerformanceOptimizer>
+                <AdvancedPerformanceOptimizer>
+                  <EnhancedAccessibility>
+                    <AccessibilityEnhancer>
+                      <PerformanceMonitor />
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
                       <Navigation />
                       <main className="relative z-10">
                         <Suspense fallback={<LoadingSpinner />}>
@@ -331,6 +346,7 @@ function App() {
                         Go Home
                       </a>
                     </div>
+<<<<<<< HEAD
                   </div>
                 } />
               </Routes>
@@ -338,6 +354,14 @@ function App() {
             <Footer />
             <PerformanceMonitor />
           </div>
+=======
+                    </AccessibilityEnhancer>
+                  </EnhancedAccessibility>
+                </AdvancedPerformanceOptimizer>
+              </PerformanceOptimizer>
+            </AnalyticsProvider>
+          </AppWithPerformanceMonitoring>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
         </Router>
       </HelmetProvider>
     </ErrorBoundary>

@@ -103,6 +103,7 @@ const ContentStatistics: React.FC = React.memo((props) => {
                 <div className="text-gray-300 text-lg">{stat.label</div>}</div>
               </div>
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentStatistics | Zion Tech Group</title>
@@ -150,6 +151,12 @@ const ContentStatistics: React.FC = React.memo((props) => {
 export default ContentStatistics;
           ))
         </div>
+=======
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
           </h2>
@@ -168,8 +175,13 @@ export default ContentStatistics;
               <div className={`text-3xl md:text-4xl font-bold ${stat.color} mb-2`}>
                 {stat.value.toLocaleString()}{stat.suffix}
               </div>
+<<<<<<< HEAD
               <div className="text-white font-semibold mb-1">{stat.label}</div>
               <div className="text-gray-300 text-sm">{stat.description}</div>
+=======
+              <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
+              <div className="text-gray-400 text-sm">{stat.description}</div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
             </div>
           ))}
         </div>
@@ -213,3 +225,15 @@ export default ContentStatistics;
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
+<<<<<<< HEAD
+=======
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContentStatistics;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac

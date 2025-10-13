@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -16,12 +17,53 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
       },
       image: '🛒',
       description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
+=======
+'use client';
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
+
+interface CaseStudy {
+  id: string;
+  title: string;
+  client: string;
+  industry: string;
+  challenge: string;
+  solution: string;
+  results: string[];
+  image: string;
+  duration: string;
+  team: string;
+}
+
+const CaseStudiesPage: React.FC = () => {
+  const caseStudies: CaseStudy[] = [
+    {
+      id: '1',
+      title: 'AI-Powered Customer Service Transformation',
+      client: 'TechCorp Solutions',
+      industry: 'Technology',
+      challenge: 'High customer service costs and long response times affecting customer satisfaction.',
+      solution: 'Implemented AI-powered chatbots and automated ticket routing system with natural language processing.',
+      results: [
+        '75% reduction in response time',
+        '60% decrease in support costs',
+        '90% customer satisfaction rate',
+        '24/7 automated support coverage'
+      ],
+      image: '/images/case-studies/ai-customer-service.jpg',
+      duration: '3 months',
+      team: '8 specialists'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
     },
     {
       id: 2,
       title: 'Financial Services Automation',
       company: 'FinTech Solutions',
       industry: 'Financial Services',
+<<<<<<< HEAD
       challenge: 'Manual processes causing delays and errors in loan processing',
       solution: 'AI-powered document processing and risk assessment automation',
       results: {
@@ -32,12 +74,26 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
       },
       image: '🏦',
       description: 'Automated complex financial processes using advanced AI algorithms for document processing and risk assessment.'
+=======
+      challenge: 'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.',
+      solution: 'Complete cloud migration to AWS with microservices architecture and automated scaling.',
+      results: [
+        '99.9% uptime achieved',
+        '50% reduction in infrastructure costs',
+        '300% improvement in deployment speed',
+        'Enhanced security compliance'
+      ],
+      image: '/images/case-studies/cloud-migration.jpg',
+      duration: '6 months',
+      team: '12 specialists'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
     },
     {
       id: 3,
       title: 'Healthcare Data Analytics',
       company: 'MedTech Innovations',
       industry: 'Healthcare',
+<<<<<<< HEAD
       challenge: 'Fragmented patient data and inefficient treatment planning',
       solution: 'AI-powered data integration and predictive analytics for treatment optimization',
       results: {
@@ -48,12 +104,26 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
       },
       image: '🏥',
       description: 'Revolutionized healthcare data management with AI-driven analytics and predictive treatment models.'
+=======
+      challenge: 'Increasing cyber threats and need for HIPAA compliance in patient data protection.',
+      solution: 'Comprehensive security audit and implementation of zero-trust architecture with advanced threat detection.',
+      results: [
+        '100% HIPAA compliance achieved',
+        'Zero security breaches in 12 months',
+        'Real-time threat detection and response',
+        'Automated compliance reporting'
+      ],
+      image: '/images/case-studies/cybersecurity-healthcare.jpg',
+      duration: '4 months',
+      team: '10 specialists'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
     },
     {
       id: 4,
       title: 'Manufacturing Optimization',
       company: 'AutoParts Manufacturing',
       industry: 'Manufacturing',
+<<<<<<< HEAD
       challenge: 'Production inefficiencies and quality control issues',
       solution: 'AI-powered predictive maintenance and quality control automation',
       results: {
@@ -66,6 +136,46 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
     }
   ];
+=======
+      challenge: 'Manual processes and lack of real-time visibility into production efficiency.',
+      solution: 'IoT integration with AI-powered analytics dashboard and automated quality control.',
+      results: [
+        '30% increase in production efficiency',
+        '50% reduction in quality defects',
+        'Real-time production monitoring',
+        'Predictive maintenance implementation'
+      ],
+      image: '/images/case-studies/digital-transformation.jpg',
+      duration: '8 months',
+      team: '15 specialists'
+    },
+    {
+      id: '6',
+      title: 'Blockchain Integration for Supply Chain',
+      client: 'GlobalLogistics',
+      industry: 'Logistics',
+      challenge: 'Lack of transparency and traceability in complex supply chain operations.',
+      solution: 'Blockchain-based supply chain tracking system with smart contracts and real-time verification.',
+      results: [
+        'Complete supply chain transparency',
+        '60% reduction in disputes',
+        'Real-time shipment tracking',
+        'Automated compliance verification'
+      ],
+      image: '/images/case-studies/blockchain-supply-chain.jpg',
+      duration: '7 months',
+      team: '11 specialists'
+    }
+  ];
+
+  const stats = [
+    { label: 'Projects Completed', value: '150+', icon: CheckCircle },
+    { label: 'Client Satisfaction', value: '98%', icon: TrendingUp },
+    { label: 'Team Members', value: '50+', icon: Users },
+    { label: 'Industry Awards', value: '25+', icon: Award }
+  ];
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
   return (
     <>
 <<<<<<< HEAD
@@ -213,6 +323,15 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Discover how we've helped businesses across industries transform their operations with cutting-edge AI and IT solutions.
+<<<<<<< HEAD
+=======
+            </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-4">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
@@ -286,6 +405,7 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
                       </button>
                     </div>
                   </div>
+<<<<<<< HEAD
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>
                   <p className="text-gray-400 mb-2">{study.client}</p>
@@ -294,6 +414,8 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
                     Read More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </button>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
                 </div>
               ))}
             </div>
