@@ -9,20 +9,23 @@ const Footer: React.FC = () => {
     services: [
       { name: 'AI Services', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
-      { name: 'Solutions', href: '/cloud-infrastructure' },
-      { name: 'Digital Transformation', href: '/digital-transformation' }
+      { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+      { name: 'Digital Transformation', href: '/digital-transformation' },
+      { name: 'All Services', href: '/services' }
     ],
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'Blog', href: '/blog' },
-      { name: 'Careers', href: '/careers' }
+      { name: 'Careers', href: '/careers' },
+      { name: 'Solutions', href: '/solutions' }
     ],
     support: [
       { name: 'Contact', href: '/contact' },
       { name: 'Support', href: '/support' },
       { name: 'Documentation', href: '/docs' },
-      { name: 'Tutorials', href: '/tutorials' }
+      { name: 'Tutorials', href: '/tutorials' },
+      { name: 'Demo', href: '/demo' }
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },

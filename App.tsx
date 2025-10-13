@@ -19,6 +19,14 @@ import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
 import SolutionsPage from './app/pages/SolutionsPage';
+import AIServicesPage from './app/pages/AIServicesPage';
+import ITServicesPage from './app/pages/ITServicesPage';
+import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
+import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
+import CaseStudiesPage from './app/pages/CaseStudiesPage';
+import CareersPage from './app/pages/CareersPage';
+import DocumentationPage from './app/pages/DocumentationPage';
+import CookiePolicyPage from './app/pages/CookiePolicyPage';
 
 // Error fallback component
 
@@ -43,6 +51,18 @@ function App() {
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/solutions" element={<SolutionsPage />} />
+              
+              {/* Service Pages */}
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+              
+              {/* Company Pages */}
+              <Route path="/case-studies" element={<CaseStudiesPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/docs" element={<DocumentationPage />} />
+              <Route path="/cookies" element={<CookiePolicyPage />} />
               
               {/* Catch all route */}
               <Route path="*" element={
