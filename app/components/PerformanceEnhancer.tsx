@@ -1,83 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useCallback } from 'react';
 
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  loadTime: number;
+interface PerformanceEnhancerProps {
+  children?: React.ReactNode;
 }
 
-const PerformanceEnhancer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Only run in browser environment
-    if (typeof window === 'undefined') return;
-
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
-      
-      const metrics: PerformanceMetrics = {
-        fcp: fcp ? fcp.startTime : 0,
-        lcp: lcp ? lcp.startTime : 0,
-        fid: 0, // Would need PerformanceObserver
-        cls: 0, // Would need PerformanceObserver
-        ttfb: navigation.responseStart - navigation.requestStart,
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-      };
-
-      setMetrics(metrics);
-
-      // Log performance metrics
-      };
-
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('load', measurePerformance);
-    };
-  }, []);
-
+const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) => {
   // Preload critical resources
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical CSS
-      const criticalCSS = document.createElement('link');
-      criticalCSS.rel = 'preload';
-      criticalCSS.href = '/critical.css';
-      criticalCSS.as = 'style';
-      document.head.appendChild(criticalCSS);
+  const preloadCriticalResources = useCallback(() => {
+    const criticalResources = [
+      '/app/styles/futuristic.css',
+      '/app/styles/futuristic-enhanced.css',
+    ];
 
-      // Preload critical fonts
-      const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
-      fontPreload.href = '/fonts/inter-var.woff2';
-      fontPreload.as = 'font';
-      fontPreload.type = 'font/woff2';
-      fontPreload.crossOrigin = 'anonymous';
-      document.head.appendChild(fontPreload);
-    };
-
-    preloadCriticalResources();
+    criticalResources.forEach((resource) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = 'style';
+      document.head.appendChild(link);
+    });
   }, []);
 
-  // Optimize images
-  useEffect(() => {
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
+  // Optimize images with lazy loading
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img[data-src]');
+    
+    if ('IntersectionObserver' in window) {
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -90,51 +38,93 @@ const PerformanceEnhancer: React.FC = () => {
       });
 
       images.forEach((img) => imageObserver.observe(img));
-    };
-
-    optimizeImages();
+    } else {
+      // Fallback for older browsers
+      images.forEach((img) => {
+        const imgElement = img as HTMLImageElement;
+        imgElement.src = imgElement.dataset.src || '';
+      });
+    }
   }, []);
 
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development' || !metrics) {
-    return null;
-  }
+  // Implement service worker for caching
+  const registerServiceWorker = useCallback(async () => {
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      try {
+        const registration = await navigator.serviceWorker.register('/sw.js');
+        console.log('Service Worker registered successfully:', registration);
+      } catch (error) {
+        console.warn('Service Worker registration failed:', error);
+      }
+    }
+  }, []);
 
-  return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
-        aria-label="Toggle performance metrics"
-      >
-        Performance
-      </button>
-      
-      {isVisible && (
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
-          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
-              <span className="text-gray-600">FCP:</span>
-              <span className="font-mono">{metrics.fcp.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">LCP:</span>
-              <span className="font-mono">{metrics.lcp.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">TTFB:</span>
-              <span className="font-mono">{metrics.ttfb.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">Load Time:</span>
-              <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
+  // Optimize bundle loading
+  const optimizeBundleLoading = useCallback(() => {
+    // Preload next likely pages
+    const nextPages = ['/about', '/services', '/contact'];
+    
+    nextPages.forEach((page) => {
+      const link = document.createElement('link');
+      link.rel = 'prefetch';
+      link.href = page;
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  // Implement resource hints
+  const addResourceHints = useCallback(() => {
+    // DNS prefetch for external resources
+    const dnsPrefetchDomains = [
+      'fonts.googleapis.com',
+      'fonts.gstatic.com',
+    ];
+
+    dnsPrefetchDomains.forEach((domain) => {
+      const link = document.createElement('link');
+      link.rel = 'dns-prefetch';
+      link.href = `//${domain}`;
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  // Monitor and report performance metrics
+  const monitorPerformance = useCallback(() => {
+    if ('performance' in window) {
+      // Monitor Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
+            console.log('Navigation timing:', {
+              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
+              totalTime: navEntry.loadEventEnd - navEntry.fetchStart,
+            });
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+    }
+  }, []);
+
+  useEffect(() => {
+    // Run optimizations after component mount
+    preloadCriticalResources();
+    optimizeImages();
+    registerServiceWorker();
+    optimizeBundleLoading();
+    addResourceHints();
+    monitorPerformance();
+
+    // Cleanup
+    return () => {
+      // Cleanup any observers or timers if needed
+    };
+  }, [preloadCriticalResources, optimizeImages, registerServiceWorker, optimizeBundleLoading, addResourceHints, monitorPerformance]);
+
+  return <>{children}</>;
 };
 
 export default PerformanceEnhancer;

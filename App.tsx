@@ -9,11 +9,13 @@ import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import ErrorBoundary from "./app/components/ErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import EnhancedSEO from "./app/components/EnhancedSEO";
+import SEOEnhancer from "./app/components/SEOEnhancer";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
@@ -203,17 +205,19 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 function App() {
   return (
     <ErrorHandler>
-      <ErrorBoundary>
+      <EnhancedErrorBoundary>
         <HelmetProvider>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <FuturisticBackground>
-                  <Navigation />
-                  <Breadcrumb />
-                  <main id="main-content" role="main">
-                    <Suspense fallback={<LoadingPage />}>
-                      <Routes>
+          <SEOEnhancer>
+            <AccessibilityEnhancer>
+              <PerformanceEnhancer>
+                <Router>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    <FuturisticBackground>
+                      <Navigation />
+                      <Breadcrumb />
+                      <main id="main-content" role="main">
+                        <Suspense fallback={<LoadingPage />}>
+                          <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
@@ -443,28 +447,29 @@ function App() {
                     path="/5g-solutions"
                     element={<FiveGSolutionsPage />}
                   />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
-                  <EnhancedPerformanceOptimizer />
-                  <EnhancedAccessibility>
-                    <div></div>
-                  </EnhancedAccessibility>
-                </FuturisticBackground>
-                <AnalyticsProvider>
-                  <div>
-                    <PerformanceMonitor />
-                    <PerformanceEnhancer />
-                    <SEOOptimizer />
-                    <EnhancedSEO />
+                          </Routes>
+                        </Suspense>
+                      </main>
+                      <Footer />
+                      <EnhancedPerformanceOptimizer />
+                      <EnhancedAccessibility>
+                        <div></div>
+                      </EnhancedAccessibility>
+                    </FuturisticBackground>
+                    <AnalyticsProvider>
+                      <div>
+                        <PerformanceMonitor />
+                        <SEOOptimizer />
+                        <EnhancedSEO />
+                      </div>
+                    </AnalyticsProvider>
                   </div>
-                </AnalyticsProvider>
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
+                </Router>
+              </PerformanceEnhancer>
+            </AccessibilityEnhancer>
+          </SEOEnhancer>
         </HelmetProvider>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </ErrorHandler>
   );
 }
