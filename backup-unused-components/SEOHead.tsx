@@ -21,20 +21,27 @@ const SEOHead: React.FC<SEOHeadProps> = (
   url = 'https://ziontechgroup.com',
   type = 'website',
   author = 'Zion Tech Group',
-  publishedTime,
+//   publishedTime,
   modifiedTime,
-  section,
+//   section,
   tags = []
+<<<<<<< HEAD
 ) => 
   const structuredData = 
     '@context': 'https://schema.org',
+=======
+}) => {
+  const structuredData = {
+//     '@context': 'https://schema.org',
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
     '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+//     name: 'Zion Tech Group',
+//     url: 'https://ziontechgroup.com',
+//     logo: 'https://ziontechgroup.com/logo.png',
     description: 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
     address: 
       '@type': 'PostalAddress',
+<<<<<<< HEAD
       addressCountry: 'US'
 ,
     sameAs: [
@@ -45,6 +52,19 @@ const SEOHead: React.FC<SEOHeadProps> = (
 ;
   return (
     <Helmet></Helmet>
+=======
+//       addressCountry: 'US'
+    },
+//     sameAs: [
+//       'https://twitter.com/ziontechgroup',
+//       'https://linkedin.com/company/ziontechgroup',
+//       'https://github.com/ziontechgroup'
+//     ]
+  };
+
+  return (
+//     <Helmet>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content="{description}" />
@@ -79,8 +99,8 @@ const SEOHead: React.FC<SEOHeadProps> = (
       {/* Structured Data */}
       <script type="application/ld+json"></script>
         {JSON.stringify(structuredData)}
-      </script>
-    </Helmet>
+//       </script>
+//     </Helmet>
   );
 ;
 export default SEOHead;

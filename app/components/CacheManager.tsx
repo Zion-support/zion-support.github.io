@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface CachemanagerProps {
@@ -12,3 +13,5 @@ export default function Cachemanager({ className = '', children, ...props }: Cac
     </div>
   );
 }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

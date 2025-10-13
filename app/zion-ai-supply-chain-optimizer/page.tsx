@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 import { Helmet } from 'react-helmet-async';
 
 export default function ZionAiSupplyChainOptimizerPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Zion Ai Supply Chain Optimizer - Zion Tech Group</title>
@@ -41,5 +45,17 @@ export default function ZionAiSupplyChainOptimizerPage() {
         </div>
       </div>
     </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+//       <Helmet>
+//         <title>ZionAISupplyChainOptimizer - Coming Soon | Zion Tech Group</title>
+        <meta name="description" content="AI-powered service coming soon." />
+//       </Helmet>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">ZionAISupplyChainOptimizer</h1>
+        <p className="text-xl text-gray-300">Coming Soon</p>
+</div>
+</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

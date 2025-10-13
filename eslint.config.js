@@ -6,6 +6,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
+<<<<<<< HEAD
     ignores: [
       "dist",
       ".next",
@@ -22,22 +23,43 @@ export default tseslint.config(
       "resolve-all-conflicts.js",
       "fix-unused-imports.cjs",
     ],
+=======
+//     ignores: [
+//       "dist",
+//       ".next",
+//       "backup-problematic/**",
+//       "corrupted-src-backup/**",
+//       "src/**",
+//       "*.js",
+//       "scripts/**",
+//       "public/sw.js",
+      "identify_missing_pages.js",
+//       "merge-with-conflict-resolution.js",
+//       "resolve-all-conflicts.js",
+//     ],
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   },
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+//     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
+//       ecmaVersion: 2020,
+//       globals: globals.browser,
     },
     plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
+//       "react-hooks": reactHooks,
+//       "react-refresh": reactRefresh,
     },
     rules: {
+<<<<<<< HEAD
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": "off",
       "@typescript-eslint/no-unused-vars": "warn",
+=======
+//       ...reactHooks.configs.recommended.rules,
+//       "react-refresh/only-export-components": "off",
+      "@typescript-eslint/no-unused-vars": "error",
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       "@typescript-eslint/no-explicit-any": "off",
     },
   },

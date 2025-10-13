@@ -1,3 +1,5 @@
+import { Monitor } from 'lucide-react';
+
 // Monitoring utility functions
 
 export function monitoring() {

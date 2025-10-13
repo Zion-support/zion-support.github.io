@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React, { useEffect, useRef } from 'react';
+import FuturisticBackground from "../components/FuturisticBackground";
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface FuturisticbackgroundProps {
   className?: string;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -8,3 +9,8 @@ export default function Component() {
     </div>
   );
 }
+=======
+#!/usr/bin/env node;
+// console.log('🔧 Resolving remaining merge conflicts...\n')
+// Function to resolve merge conflicts in a file;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
