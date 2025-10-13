@@ -1,7 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Star, Globe, Shield, CheckCircle, TrendingUp, Zap, BarChart3, Clock } from 'lucide-react';
+import {} from 'react-helmet-async';
+import {} from 'react-router-dom';
+import { Shield, CheckCircle, TrendingUp, Zap, BarChart3, Clock } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 export default function CaseStudies() {
@@ -9,7 +9,7 @@ export default function CaseStudies() {
     {
       id: 1,
       title: "E-commerce Platform AI Transformation",
-      company: "TechStart Inc.",
+      company: "Techt Inc.",
       industry: "E-commerce",
       challenge: "Manual inventory management and customer service bottlenecks",
       solution: "AI-powered inventory optimization and automated customer support",

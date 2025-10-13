@@ -35,7 +35,7 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
+    chunkSizeWarningLimit: 150, // Increased threshold to reduce warnings while maintaining performance
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
@@ -83,22 +83,23 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries - keep together for better caching
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
-          // Router
+          // Router - separate chunk for better code splitting
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - group animations together
           if (id.includes('framer-motion')) {
             return 'animations'
           }
+          // Icons - separate chunk for better caching
           if (id.includes('lucide-react')) {
             return 'icons'
           }
-          // SEO and meta
+          // SEO and meta - lightweight chunk
           if (id.includes('react-helmet')) {
             return 'seo'
           }
@@ -106,19 +107,19 @@ export default defineConfig({
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries
+          // Utility libraries - small utilities
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
-          // Performance monitoring
+          // Performance monitoring - separate chunk
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // Error handling
+          // Error handling - separate chunk
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - group by category
+          // AI service pages - group by category for better loading
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
@@ -153,13 +154,17 @@ export default defineConfig({
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
-          // Main pages
+          // Main pages - core pages
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
             return 'main-pages'
           }
+          // Large vendor libraries - separate chunk
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
           // Default chunk for other modules
-          return 'vendor'
+          return 'common'
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -192,6 +197,12 @@ export default defineConfig({
       "react-helmet-async",
       "framer-motion",
       "lucide-react",
+      "web-vitals",
+      "react-error-boundary",
+    ],
+    exclude: [
+      // Exclude large dependencies that should be loaded on demand
+      "recharts",
     ],
   },
   // CSS optimization

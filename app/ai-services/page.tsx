@@ -1,25 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   Brain, 
-  Zap, 
   Shield, 
   BarChart3, 
   Users, 
   Target, 
-  Globe, 
   ArrowRight, 
   Star, 
   CheckCircle,
   Video,
   MessageSquare,
   TrendingUp,
-  Database,
   Eye,
-  Settings,
-  Award,
-  Clock
+  Award
 } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

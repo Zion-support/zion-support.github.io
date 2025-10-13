@@ -40,20 +40,15 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       errorInfo
     })
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo)
-    }
-
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
     }
 
-    // Log to external service in production
+    // Log to external service in production (remove console.error)
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
-      console.error('Production error:', error, errorInfo)
+      // Example: errorReportingService.captureException(error, errorInfo)
     }
   }
 

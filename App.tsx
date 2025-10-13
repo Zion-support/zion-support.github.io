@@ -91,7 +91,7 @@ function App() {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
       // Add any global initialization logic here
-      console.log('Zion Tech Group App initialized');
+      // App initialized successfully
     }
   }, []);
 
