@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
-
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Performance optimization logic
@@ -14,7 +12,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         '/images/hero-bg.jpg',
         '/icons/sprite.svg'
       ];
-
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -25,7 +22,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         }
         document.head.appendChild(link);
       });
-
       // Optimize images
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
@@ -38,9 +34,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           }
         });
       });
-
       images.forEach(img => imageObserver.observe(img));
-
       // Add performance monitoring
       if ('performance' in window) {
         window.addEventListener('load', () => {
@@ -49,15 +43,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         });
       }
     };
-
     optimizePerformance();
-
     return () => {
       // Cleanup if needed
     };
   }, []);
-
   return <>{children}</>;
 };
-
 export default PerformanceOptimizer;

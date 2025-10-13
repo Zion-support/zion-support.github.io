@@ -10,12 +10,25 @@ interface ImageOptimizerProps {
   placeholder?: string;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d86d082fc493e5b136e1baa1e02a40320c4cbc61
 export default function ImageOptimizer({ 
   src, 
   alt, 
   className = '', 
   quality = 80,
   format = 'webp',
+<<<<<<< HEAD
+=======
+=======
+export default function ImageOptimizer({
+  src,
+  alt,
+  className = '',
+>>>>>>> cursor/fix-errors-and-merge-to-main-82b8
+>>>>>>> d86d082fc493e5b136e1baa1e02a40320c4cbc61
   lazy = true,
   placeholder
 }: ImageOptimizerProps) {
