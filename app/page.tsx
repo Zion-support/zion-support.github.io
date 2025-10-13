@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, FileText, Bot } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
+import EnhancedFuturisticCard from "./components/EnhancedFuturisticCard";
+import EnhancedFuturisticButton from "./components/EnhancedFuturisticButton";
+import EnhancedFuturisticBackground from "./components/EnhancedFuturisticBackground";
 import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
@@ -54,18 +57,39 @@ const HomePage = () => {
       link: "/zion-analytics-pro"
     },
     {
+      name: "Zion AI Invoice Generator",
+      description: "Smart invoice automation with AI",
+      price: "From $19/month",
+      icon: <FileText className="w-6 h-6" />,
+      link: "/zion-ai-invoice-generator"
+    },
+    {
+      name: "Zion AI Social Scheduler",
+      description: "AI-powered social media management",
+      price: "From $29/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-social-scheduler"
+    },
+    {
+      name: "Zion AI Expense Tracker",
+      description: "Smart expense management with AI",
+      price: "From $9/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-expense-tracker"
+    },
+    {
+      name: "Zion AI Customer Support Chatbot",
+      description: "Intelligent customer service automation",
+      price: "From $49/month",
+      icon: <Bot className="w-6 h-6" />,
+      link: "/zion-ai-customer-support-chatbot"
+    },
+    {
       name: "Zion Security Shield",
       description: "Advanced cybersecurity protection",
       price: "From $49/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield"
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
     }
   ];
 
@@ -102,7 +126,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <FuturisticBackground />
+      <EnhancedFuturisticBackground />
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -152,22 +176,26 @@ const HomePage = () => {
           </ResponsiveText>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButton
+            <EnhancedFuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
+              animated={true}
+              glowEffect={true}
             >
               Get Started Today
-            </FuturisticButton>
-            <FuturisticButton
+            </EnhancedFuturisticButton>
+            <EnhancedFuturisticButton
               href="/demo"
               variant="outline"
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
+              animated={true}
+              glowEffect={true}
             >
               Watch Demo
-            </FuturisticButton>
+            </EnhancedFuturisticButton>
           </div>
           
           {/* Stats */}
@@ -199,10 +227,12 @@ const HomePage = () => {
           </div>
           <ResponsiveGrid cols={{ default: 1, sm: 2, lg: 4 }}>
             {features.map((feature, index) => (
-              <FuturisticCard
+              <EnhancedFuturisticCard
                 key={index}
                 className="group cursor-pointer"
                 glowColor={feature.color.includes('blue') ? 'cyan' : feature.color.includes('green') ? 'green' : feature.color.includes('purple') ? 'purple' : 'pink'}
+                hoverEffect={true}
+                animated={true}
               >
                 <Link
                   to={feature.link}
@@ -227,7 +257,7 @@ const HomePage = () => {
                     </span>
                   </div>
                 </Link>
-              </FuturisticCard>
+              </EnhancedFuturisticCard>
             ))}
           </ResponsiveGrid>
         </ResponsiveContainer>
@@ -244,7 +274,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
@@ -350,20 +380,26 @@ const HomePage = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            <EnhancedFuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<ArrowRight className="w-5 h-5" />}
+              animated={true}
+              glowEffect={true}
             >
               Start Your Journey
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            </EnhancedFuturisticButton>
+            <EnhancedFuturisticButton
+              href="/services"
+              variant="outline"
+              size="lg"
+              icon={<Sparkles className="w-5 h-5" />}
+              animated={true}
+              glowEffect={true}
             >
               Explore Services
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
+            </EnhancedFuturisticButton>
           </div>
         </div>
       </section>

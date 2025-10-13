@@ -27,9 +27,10 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
+const CareersPage = React.lazy(() => import("./app/careers/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 
-<<<<<<< HEAD
-=======
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
@@ -164,6 +165,20 @@ const ZionComplianceManagerPage = React.lazy(
 );
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
+);
+
+// New Micro SAAS Services
+const ZionAiInvoiceGeneratorPage = React.lazy(
+  () => import("./app/zion-ai-invoice-generator/page"),
+);
+const ZionAiSocialSchedulerPage = React.lazy(
+  () => import("./app/zion-ai-social-scheduler/page"),
+);
+const ZionAiExpenseTrackerPage = React.lazy(
+  () => import("./app/zion-ai-expense-tracker/page"),
+);
+const ZionAiCustomerSupportChatbotPage = React.lazy(
+  () => import("./app/zion-ai-customer-support-chatbot/page"),
 );
 
 // 5G Solutions Pages
@@ -556,7 +571,6 @@ const ZionCrmIntelligencePage = React.lazy(() => import("./app/zion-crm-intellig
 const ZionCustomerInsightsPage = React.lazy(() => import("./app/zion-customer-insights/page"));
 
 
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
 // Main App Component
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
@@ -569,7 +583,6 @@ function App() {
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
         <HelmetProvider>
-<<<<<<< HEAD
           <Router>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
               <FuturisticBackground>
@@ -585,50 +598,19 @@ function App() {
                       <Route path="/services" element={<ServicesPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
                       <Route path="/blog" element={<BlogPage />} />
+                      <Route path="/case-studies" element={<CaseStudiesPage />} />
+                      <Route path="/careers" element={<CareersPage />} />
                       <Route path="/ai-services" element={<AIServicesPage />} />
+                      <Route path="/it-services" element={<ServicesPage />} />
+                      <Route path="/micro-saas" element={<ServicesPage />} />
                       <Route path="/tutorials" element={<TutorialsPage />} />
+                      <Route path="/consultation" element={<ConsultationPage />} />
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/support" element={<SupportPage />} />
                       <Route path="/privacy" element={<PrivacyPage />} />
                       <Route path="/terms" element={<TermsPage />} />
                       <Route path="/cookies" element={<CookiesPage />} />
                       <Route path="/sitemap" element={<SitemapPage />} />
-                    </Routes>
-                  </Suspense>
-                </main>
-                <Footer />
-              </FuturisticBackground>
-            </div>
-          </Router>
-=======
-          <AccessibilityEnhancer>
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <FuturisticBackground>
-                  <Navigation />
-                  <Breadcrumb />
-                  <main id="main-content" role="main">
-                    <Suspense fallback={<LoadingPage />}>
-                      <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/case-studies" element={<CaseStudiesPage />} />
-                  <Route path="/careers" element={<CareersPage />} />
-                  <Route path="/ai-services" element={<AIServicesPage />} />
-                  <Route path="/it-services" element={<ServicesPage />} />
-                  <Route path="/micro-saas" element={<ServicesPage />} />
-                  <Route path="/tutorials" element={<TutorialsPage />} />
-                  <Route path="/consultation" element={<ConsultationPage />} />
-                  <Route path="/demo" element={<DemoPage />} />
-                  <Route path="/support" element={<SupportPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/cookies" element={<CookiesPage />} />
-                  <Route path="/sitemap" element={<SitemapPage />} />
 
                   {/* AI Service Routes */}
                   <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
@@ -810,6 +792,22 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-invoice-generator"
+                    element={<ZionAiInvoiceGeneratorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-social-scheduler"
+                    element={<ZionAiSocialSchedulerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-expense-tracker"
+                    element={<ZionAiExpenseTrackerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-customer-support-chatbot"
+                    element={<ZionAiCustomerSupportChatbotPage />}
                   />
 
                   {/* 5G Solutions Routes */}
@@ -1211,29 +1209,13 @@ function App() {
                   <Route path="/zion-chat-ai" element={<ZionChatAiPage />} />
                   <Route path="/zion-crm-intelligence" element={<ZionCrmIntelligencePage />} />
                   <Route path="/zion-customer-insights" element={<ZionCustomerInsightsPage />} />
-</Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
-                  <EnhancedPerformanceOptimizer />
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
-                  <EnhancedAccessibility>
-                    <div></div>
-                  </EnhancedAccessibility>
-                </FuturisticBackground>
-                <AnalyticsProvider>
-                  <div>
-                    <PerformanceMonitor />
-                    <WebVitalsTracker />
-                    <PerformanceEnhancer />
-                    <SEOOptimizer />
-                    <EnhancedSEO />
-                    <EnhancedSEOOptimizer />
-                  </div>
-                </AnalyticsProvider>
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
+                    </Routes>
+                  </Suspense>
+                </main>
+                <Footer />
+              </FuturisticBackground>
+            </div>
+          </Router>
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>

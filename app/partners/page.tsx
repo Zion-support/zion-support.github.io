@@ -58,11 +58,9 @@ export default function Partners() {
           name="keywords"
           content="partnerships, technology partners, solution partners, channel partners, strategic alliances, business partnerships, technology integration"
         />
-      </Helmet>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+        </Helmet>
+  
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -91,10 +89,7 @@ export default function Partners() {
               </Link>
             </div>
           </div>
-        </section>
-=======
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
+          </section>
 
         {/* Partner Types Section */}
         <section className="py-20 px-4">
@@ -104,10 +99,9 @@ export default function Partners() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the partnership model that best fits your business goals and capabilities
               </p>
-            </div>
-
-<<<<<<< HEAD
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              </div>
+  
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partnerTypes.map((type, index) => (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
                   <div className="text-cyan-400 mb-4">
@@ -192,13 +186,7 @@ export default function Partners() {
             </Link>
           </div>
         </section>
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
-      </div>
-    </>
+        </div>
+      </>
   );
 }

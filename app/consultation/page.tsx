@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function Consultation() {
+function Consultation() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -475,4 +475,4 @@ export default function Consultation() {
   );
 };
 
-export default ConsultationPage;
+export default Consultation;
