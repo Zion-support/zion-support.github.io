@@ -32,12 +32,7 @@ export default async function handler(req, res) {
       quoteId: `quote_${Date.now()}`,
       data: quoteData
     }));
-<<<<<<< HEAD
-
   } catch (_error) {
-=======
-  } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
     // console.error('Quote submission error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

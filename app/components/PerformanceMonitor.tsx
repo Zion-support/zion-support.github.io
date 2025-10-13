@@ -1,39 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
 import React, { useEffect, useState } from 'react';
-
 // Type definitions for browser APIs
 declare global {
   interface PerformanceObserver {
     observe(options: { entryTypes: string[] }): void;
     disconnect(): void;
   }
-  
   interface PerformanceNavigationTiming extends PerformanceEntry {
     requestStart: number;
     responseStart: number;
   }
-  
   const PerformanceObserver: {
     new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
   };
-  
   const performance: {
     getEntriesByType(type: string): PerformanceEntry[];
   };
 }
-
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -62,23 +45,12 @@ const PerformanceMonitor: React.FC = () => {
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
           } else if (entry.entryType === 'first-input') {
             const inputEntry = entry as any;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
-
-=======
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
           } else if (entry.entryType === 'layout-shift') {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
           }
@@ -112,16 +84,3 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 export default PerformanceMonitor;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
