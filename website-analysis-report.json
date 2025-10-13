@@ -3,11 +3,336 @@
     "totalLinks": 0,
     "workingLinks": 1,
     "brokenLinks": 0,
-    "successRate": "Infinity%"
+    "missingPages": 59,
+    "analysisTime": 106,
+    "errors": []
   },
   "brokenLinks": [],
-  "workingLinks": [
-    "https://ziontechgroup.com"
+  "missingPages": [
+    {
+      "url": "https://ziontechgroup.com/about",
+      "path": "/about",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/contact",
+      "path": "/contact",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/services",
+      "path": "/services",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-services",
+      "path": "/ai-services",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/micro-saas",
+      "path": "/micro-saas",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/5g-solutions",
+      "path": "/5g-solutions",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/blog",
+      "path": "/blog",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/tutorials",
+      "path": "/tutorials",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/demo",
+      "path": "/demo",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/consultation",
+      "path": "/consultation",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/support",
+      "path": "/support",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/privacy",
+      "path": "/privacy",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/terms",
+      "path": "/terms",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/accessibility",
+      "path": "/accessibility",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-analytics",
+      "path": "/ai-analytics",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-content-generation",
+      "path": "/ai-content-generation",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-customer-support",
+      "path": "/ai-customer-support",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-cybersecurity",
+      "path": "/ai-cybersecurity",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-data-analytics",
+      "path": "/ai-data-analytics",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-document-processing",
+      "path": "/ai-document-processing",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-marketing-automation",
+      "path": "/ai-marketing-automation",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-predictive-analytics",
+      "path": "/ai-predictive-analytics",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-voice-assistant",
+      "path": "/ai-voice-assistant",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/ai-workflow-automation",
+      "path": "/ai-workflow-automation",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/5g-network-infrastructure",
+      "path": "/5g-network-infrastructure",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/5g-edge-computing",
+      "path": "/5g-edge-computing",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/5g-iot-solutions",
+      "path": "/5g-iot-solutions",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/5g-smart-city-solutions",
+      "path": "/5g-smart-city-solutions",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/5g-private-networks",
+      "path": "/5g-private-networks",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/5g-mobile-applications",
+      "path": "/5g-mobile-applications",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/5g-data-analytics",
+      "path": "/5g-data-analytics",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/5g-implementation",
+      "path": "/5g-implementation",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-video-generator",
+      "path": "/zion-ai-video-generator",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-invoice-generator",
+      "path": "/zion-ai-invoice-generator",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-customer-insights",
+      "path": "/zion-ai-customer-insights",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-email-analyzer",
+      "path": "/zion-ai-email-analyzer",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-smart-inventory-optimizer",
+      "path": "/zion-smart-inventory-optimizer",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-customer-sentiment-tracker",
+      "path": "/zion-ai-customer-sentiment-tracker",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-smart-expense-categorizer",
+      "path": "/zion-smart-expense-categorizer",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-voice-assistant-pro",
+      "path": "/zion-ai-voice-assistant-pro",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-code-reviewer",
+      "path": "/zion-ai-code-reviewer",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-social-media-manager",
+      "path": "/zion-ai-social-media-manager",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-contract-analyzer",
+      "path": "/zion-ai-contract-analyzer",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-performance-optimizer",
+      "path": "/zion-ai-performance-optimizer",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-customer-churn-predictor",
+      "path": "/zion-ai-customer-churn-predictor",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-supply-chain-optimizer",
+      "path": "/zion-ai-supply-chain-optimizer",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-financial-forecaster",
+      "path": "/zion-ai-financial-forecaster",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-content-moderator",
+      "path": "/zion-ai-content-moderator",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-translator-pro",
+      "path": "/zion-ai-translator-pro",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-data-cleaner",
+      "path": "/zion-ai-data-cleaner",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-task-scheduler",
+      "path": "/zion-ai-task-scheduler",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/zion-ai-customer-support-pro",
+      "path": "/zion-ai-customer-support-pro",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/cloud-migration",
+      "path": "/cloud-migration",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/devops",
+      "path": "/devops",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/it-consulting",
+      "path": "/it-consulting",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/network-security",
+      "path": "/network-security",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/custom-software",
+      "path": "/custom-software",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/system-integration",
+      "path": "/system-integration",
+      "type": "missing_page"
+    },
+    {
+      "url": "https://ziontechgroup.com/web-development",
+      "path": "/web-development",
+      "type": "missing_page"
+    }
   ],
-  "recommendations": []
+  "workingLinks": [
+    {
+      "url": "https://ziontechgroup.com",
+      "statusCode": 200,
+      "depth": 0
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "category": "missing_pages",
+      "title": "Create Missing Pages",
+      "description": "Found 59 expected pages that are missing.",
+      "action": "Create the missing pages or update navigation to remove references to them."
+    },
+    {
+      "priority": "medium",
+      "category": "performance",
+      "title": "Optimize Page Load Times",
+      "description": "Consider implementing lazy loading and optimizing images.",
+      "action": "Implement performance optimizations for better user experience."
+    },
+    {
+      "priority": "low",
+      "category": "seo",
+      "title": "Improve SEO",
+      "description": "Add meta descriptions, alt tags, and structured data.",
+      "action": "Enhance SEO elements across all pages."
+    }
+  ]
 }

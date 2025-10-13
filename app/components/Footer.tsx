@@ -51,24 +51,15 @@ const Footer: React.FC = () => {
     { name: "Micro SAAS", path: "/micro-saas" },
     { name: "5G Solutions", path: "/5g-solutions" },
     { name: "Contact", path: "/contact" },
-<<<<<<< HEAD
-    { name: "Demo", path: "/demo" },
-    { name: "Consultation", path: "/consultation" },
-=======
     { name: "Blog", path: "/blog" },
     { name: "Tutorials", path: "/tutorials" },
     { name: "Demo", path: "/demo" },
+    { name: "Consultation", path: "/consultation" },
     { name: "Support", path: "/support" },
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
   ];
 
   const aiServices = [
     { name: "AI Analytics", path: "/ai-analytics" },
-<<<<<<< HEAD
-    { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
-    { name: "AI Content Generation", path: "/ai-content-generation" },
-    { name: "AI Customer Support", path: "/ai-customer-support" },
-=======
     { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
@@ -94,7 +85,6 @@ const Footer: React.FC = () => {
   ];
 
   const itServices = [
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
     { name: "Cloud Migration", path: "/cloud-migration" },
     { name: "Web Development", path: "/web-development" },
     { name: "DevOps", path: "/devops" },
@@ -156,15 +146,9 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-<<<<<<< HEAD
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
-=======
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
@@ -278,19 +262,50 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-<<<<<<< HEAD
           {/* Micro SAAS */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Micro SAAS</h3>
             <ul className="space-y-2">
-              {microSaasServices.map((service) => (
+              {microSaasServices.slice(0, 6).map((service) => (
                 <li key={service.name}>
                   <Link
                     to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
                   >
-                    <ArrowRight className="w-4 h-4 mr-2" />
-=======
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  to="/micro-saas"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
+                >
+                  View All Micro SAAS →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
+            <ul className="space-y-2">
+              {itServices.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* 5G Solutions */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">5G Solutions</h3>
@@ -302,27 +317,106 @@ const Footer: React.FC = () => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
                     {service.name}
                   </Link>
                 </li>
               ))}
-<<<<<<< HEAD
+              <li>
+                <Link
+                  to="/5g-solutions"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
+                >
+                  View All 5G Solutions →
+                </Link>
+              </li>
             </ul>
           </div>
+        </div>
 
-          {/* 5G Solutions & Contact */}
-          <div>
-            <h3 className="text-lg font-semibold text-white mb-4">5G Solutions</h3>
-            <ul className="space-y-2 mb-6">
-              {fiveGServices.map((service) => (
-                <li key={service.name}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-4 h-4 mr-2" />
-                    {service.name}
+        {/* Contact Info Section */}
+        <div className="mt-12 pt-8 border-t border-cyan-500/20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Contact Information</h3>
+              <div className="space-y-3">
+                <div className="flex items-center text-gray-300">
+                  <Mail className="w-5 h-5 mr-3 text-cyan-400" />
+                  <span>kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <Phone className="w-5 h-5 mr-3 text-cyan-400" />
+                  <span>+1 302 464 0950</span>
+                </div>
+                <div className="flex items-start text-gray-300">
+                  <MapPin className="w-5 h-5 mr-3 text-cyan-400 mt-0.5" />
+                  <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Business Hours</h3>
+              <div className="space-y-2 text-gray-300">
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-2 text-cyan-400" />
+                  <span>Monday - Friday: 9:00 AM - 6:00 PM EST</span>
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-2 text-cyan-400" />
+                  <span>Saturday: 10:00 AM - 4:00 PM EST</span>
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-2 text-cyan-400" />
+                  <span>Sunday: Closed</span>
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-2 text-cyan-400" />
+                  <span>24/7 Emergency Support Available</span>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold text-white mb-4">Newsletter</h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                Stay updated with the latest AI and technology trends, product updates, and industry insights.
+              </p>
+              <div className="flex">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-3 py-2 bg-slate-800 border border-cyan-500/30 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400"
+                />
+                <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-r-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-cyan-500/20 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-gray-300 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-300 hover:text-cyan-400 text-sm transition-colors">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
                   </Link>
                 </li>
               ))}
