@@ -1,43 +1,43 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mic, Brain, Zap, Star, CheckCircle, Users, TrendingUp, Clock, Shield, Globe, BarChart3 } from "lucide-react";
+import { ArrowRight, Brain, FileText, Zap, Star, CheckCircle, Users, TrendingUp, Clock, Shield, Globe, BarChart3 } from "lucide-react";
 
-export default function AIVoiceAssistant() {
+export default function ZionAIWriterPro() {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities for understanding context, intent, and complex conversations",
+      title: "AI Content Generation",
+      description: "Generate high-quality articles, blog posts, product descriptions, and marketing copy using advanced AI models",
       icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with native-level pronunciation and accent recognition",
-      icon: <Globe className="w-6 h-6" />,
+      title: "SEO Optimization",
+      description: "Automatically optimize content for search engines with keyword suggestions and meta descriptions",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom Voice Training",
-      description: "Train the assistant with your brand voice, tone, and specific terminology",
-      icon: <Mic className="w-6 h-6" />,
+      title: "Multi-Language Support",
+      description: "Create content in 50+ languages with native-level quality and cultural adaptation",
+      icon: <Globe className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Integration Hub",
-      description: "Connect with CRM, calendar, email, and other business tools for seamless automation",
+      title: "Brand Voice Training",
+      description: "Train AI to match your brand's unique tone, style, and personality across all content",
       icon: <Shield className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Analytics Dashboard",
-      description: "Track conversation metrics, user satisfaction, and performance insights",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Content Templates",
+      description: "Access 100+ professional templates for blogs, emails, social media, and business documents",
+      icon: <FileText className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "24/7 Availability",
-      description: "Round-the-clock availability with instant response times and continuous learning",
-      icon: <Clock className="w-6 h-6" />,
+      title: "Real-time Collaboration",
+      description: "Work with your team in real-time with comments, suggestions, and version control",
+      icon: <Users className="w-6 h-6" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
@@ -45,47 +45,47 @@ export default function AIVoiceAssistant() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individuals and small teams",
       features: [
-        "1,000 conversations/month",
-        "Basic voice recognition",
-        "Email integration",
-        "Standard analytics",
-        "Email support"
+        "10,000 words/month",
+        "5 AI models access",
+        "Basic templates",
+        "Email support",
+        "1 brand voice profile"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$79",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Ideal for growing businesses",
       features: [
-        "10,000 conversations/month",
-        "Advanced NLP",
-        "Full integrations",
-        "Custom voice training",
+        "50,000 words/month",
+        "All AI models access",
+        "Premium templates",
         "Priority support",
-        "API access",
-        "Advanced analytics"
+        "5 brand voice profiles",
+        "Team collaboration",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$999",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited conversations",
+        "Unlimited words",
         "Custom AI models",
         "White-label solution",
         "Dedicated support",
-        "Multi-tenant support",
-        "Custom integrations",
-        "SLA guarantee"
+        "Unlimited brand voices",
+        "Advanced analytics",
+        "Custom integrations"
       ],
       popular: false
     }
@@ -93,51 +93,51 @@ export default function AIVoiceAssistant() {
 
   const testimonials = [
     {
-      name: "Jennifer Lee",
-      company: "Customer Service Corp",
-      role: "VP of Operations",
-      content: "Our AI voice assistant handles 80% of customer inquiries automatically. Customer satisfaction has increased by 45%.",
+      name: "Sarah Chen",
+      company: "Content Marketing Agency",
+      role: "Content Director",
+      content: "Zion AI Writer Pro has revolutionized our content creation process. We're producing 3x more content with better quality and consistency.",
       rating: 5,
-      avatar: "JL"
+      avatar: "SC"
     },
     {
-      name: "Robert Chen",
+      name: "Michael Rodriguez",
+      company: "E-commerce Store",
+      role: "Marketing Manager",
+      content: "The brand voice training feature is incredible. Our AI-generated content now perfectly matches our brand personality.",
+      rating: 5,
+      avatar: "MR"
+    },
+    {
+      name: "Emily Johnson",
       company: "Tech Startup",
-      role: "CTO",
-      content: "The voice recognition is incredibly accurate. It understands our technical terminology perfectly.",
+      role: "CEO",
+      content: "We've saved thousands of hours and dollars with this tool. The ROI is immediate and substantial.",
       rating: 5,
-      avatar: "RC"
-    },
-    {
-      name: "Amanda Rodriguez",
-      company: "Healthcare Group",
-      role: "Operations Director",
-      content: "24/7 availability with consistent quality. Our patients love the instant, helpful responses.",
-      rating: 5,
-      avatar: "AR"
+      avatar: "EJ"
     }
   ];
 
   const stats = [
-    { number: "5,000+", label: "Active Deployments", icon: <Users className="w-6 h-6" /> },
-    { number: "95%", label: "Accuracy Rate", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Availability", icon: <Clock className="w-6 h-6" /> }
+    { number: "50,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "10M+", label: "Words Generated", icon: <FileText className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
+    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Advanced Conversational AI Platform | Zion Tech Group</title>
+        <title>Zion AI Writer Pro - Advanced AI Content Generation Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Advanced AI voice assistant with natural language processing, multi-language support, custom voice training, and seamless business integrations. Transform customer interactions."
+          content="Professional AI-powered content generation platform with SEO optimization, multi-language support, brand voice training, and real-time collaboration. Create high-quality content at scale."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, conversational AI, natural language processing, voice recognition, customer service automation, multi-language support, voice training"
+          content="AI content generation, content writing, SEO optimization, brand voice training, multi-language content, content templates, team collaboration, content marketing"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-writer-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -149,20 +149,20 @@ export default function AIVoiceAssistant() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Advanced Conversational AI</span>
+              <Brain className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Content Generation</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              AI Voice
+              Zion AI Writer
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Assistant
+                {" "}Pro
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform customer interactions with our advanced AI voice assistant. Natural conversations, 
-              multi-language support, and seamless business integrations for superior customer experience.
+              Create high-quality, SEO-optimized content at scale with our advanced AI writing platform. 
+              Generate articles, blog posts, marketing copy, and more in 50+ languages.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -178,7 +178,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Zap className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
             
@@ -202,10 +202,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Voice AI Features
+                Powerful Features for Content Creation
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Everything you need to create intelligent, natural voice interactions with your customers.
+                Everything you need to create, optimize, and manage content at scale with AI-powered tools.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -239,7 +239,7 @@ export default function AIVoiceAssistant() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing plans designed to scale with your voice AI needs.
+                Flexible pricing plans designed to scale with your content needs.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -296,10 +296,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                Trusted by Content Creators
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our users say about our AI Voice Assistant
+                See what our users say about Zion AI Writer Pro
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -333,11 +333,11 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Customer Interactions?
+              Ready to Transform Your Content Creation?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using our AI Voice Assistant to provide 
-              superior customer service and improve operational efficiency.
+              Join thousands of content creators, marketers, and businesses using Zion AI Writer Pro 
+              to create better content faster.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

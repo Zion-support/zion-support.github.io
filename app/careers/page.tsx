@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Users, MapPin, Clock, Briefcase, Star, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
 
 export default function Careers() {
   const jobOpenings = [

@@ -36,7 +36,8 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
     { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
     { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Brain className="w-4 h-4" /> }
   ], [])
 
   const itServices = useMemo(() => [
@@ -47,13 +48,17 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
     { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
     { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Cloud Native Architecture', path: '/cloud-native-architecture', icon: <Cloud className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Writer Pro', path: '/zion-ai-writer-pro', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion CRM Intelligence', path: '/zion-crm-intelligence', icon: <Users className="w-4 h-4" />, featured: true },
+    { name: 'Zion Social Media Manager', path: '/zion-social-media-manager', icon: <Zap className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },

@@ -22,6 +22,7 @@ import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import AdvancedFuturisticBackground from "./app/components/AdvancedFuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
@@ -61,6 +62,7 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AiVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -132,6 +134,9 @@ const WorkflowAutomationPage = React.lazy(
 const CloudNativeSecurityPage = React.lazy(
   () => import("./app/cloud-native-security/page"),
 );
+const CloudNativeArchitecturePage = React.lazy(
+  () => import("./app/cloud-native-architecture/page"),
+);
 const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
 const IotSolutionsPage = React.lazy(() => import("./app/iot-solutions/page"));
 const DevopsSolutionsPage = React.lazy(() => import("./app/devops-solutions/page"));
@@ -179,6 +184,15 @@ const ZionComplianceManagerPage = React.lazy(
 );
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
+);
+const ZionAIWriterProPage = React.lazy(
+  () => import("./app/zion-ai-writer-pro/page"),
+);
+const ZionCRMIntelligencePage = React.lazy(
+  () => import("./app/zion-crm-intelligence/page"),
+);
+const ZionSocialMediaManagerPage = React.lazy(
+  () => import("./app/zion-social-media-manager/page"),
 );
 
 // 5G Solutions Pages
@@ -229,7 +243,7 @@ function App() {
           <AccessibilityEnhancer>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <FuturisticBackground>
+                <AdvancedFuturisticBackground>
                   <Navigation onSidebarToggle={toggleSidebar} />
                   <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
                   <Breadcrumb />
@@ -272,6 +286,7 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                  <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -366,6 +381,10 @@ function App() {
                     path="/cloud-native-security"
                     element={<CloudNativeSecurityPage />}
                   />
+                  <Route
+                    path="/cloud-native-architecture"
+                    element={<CloudNativeArchitecturePage />}
+                  />
                   <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                   <Route path="/iot-solutions" element={<IotSolutionsPage />} />
                   <Route path="/devops-solutions" element={<DevopsSolutionsPage />} />
@@ -431,6 +450,18 @@ function App() {
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
                   />
+                  <Route
+                    path="/zion-ai-writer-pro"
+                    element={<ZionAIWriterProPage />}
+                  />
+                  <Route
+                    path="/zion-crm-intelligence"
+                    element={<ZionCRMIntelligencePage />}
+                  />
+                  <Route
+                    path="/zion-social-media-manager"
+                    element={<ZionSocialMediaManagerPage />}
+                  />
 
                   {/* 5G Solutions Routes */}
                   <Route
@@ -485,7 +516,7 @@ function App() {
                   <EnhancedAccessibility>
                     <div></div>
                   </EnhancedAccessibility>
-                </FuturisticBackground>
+                </AdvancedFuturisticBackground>
                 <AnalyticsProvider>
                   <div>
                     <PerformanceMonitor />
@@ -501,7 +532,6 @@ function App() {
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </ErrorHandler>
-    </GlobalErrorBoundary>
   );
 }
 

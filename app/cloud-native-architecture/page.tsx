@@ -1,91 +1,91 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mic, Brain, Zap, Star, CheckCircle, Users, TrendingUp, Clock, Shield, Globe, BarChart3 } from "lucide-react";
+import { ArrowRight, Cloud, Shield, Zap, Star, CheckCircle, Users, TrendingUp, Clock, Database, Globe, BarChart3 } from "lucide-react";
 
-export default function AIVoiceAssistant() {
+export default function CloudNativeArchitecture() {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities for understanding context, intent, and complex conversations",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Microservices Architecture",
+      description: "Design and implement scalable microservices with container orchestration and service mesh",
+      icon: <Cloud className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with native-level pronunciation and accent recognition",
-      icon: <Globe className="w-6 h-6" />,
+      title: "Kubernetes Orchestration",
+      description: "Deploy and manage containerized applications with enterprise-grade Kubernetes clusters",
+      icon: <Database className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom Voice Training",
-      description: "Train the assistant with your brand voice, tone, and specific terminology",
-      icon: <Mic className="w-6 h-6" />,
+      title: "Serverless Computing",
+      description: "Build event-driven applications with serverless functions and managed services",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Integration Hub",
-      description: "Connect with CRM, calendar, email, and other business tools for seamless automation",
+      title: "DevOps Automation",
+      description: "Implement CI/CD pipelines, infrastructure as code, and automated deployment strategies",
       icon: <Shield className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Analytics Dashboard",
-      description: "Track conversation metrics, user satisfaction, and performance insights",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Cloud Security",
+      description: "Implement zero-trust security, encryption, and compliance frameworks for cloud environments",
+      icon: <Shield className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "24/7 Availability",
-      description: "Round-the-clock availability with instant response times and continuous learning",
-      icon: <Clock className="w-6 h-6" />,
+      title: "Monitoring & Observability",
+      description: "Set up comprehensive monitoring, logging, and tracing for cloud-native applications",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small businesses",
+      name: "Consultation",
+      price: "$299",
+      period: "/hour",
+      description: "Expert cloud architecture consulting",
       features: [
-        "1,000 conversations/month",
-        "Basic voice recognition",
-        "Email integration",
-        "Standard analytics",
-        "Email support"
+        "Architecture assessment",
+        "Migration planning",
+        "Best practices review",
+        "Technology recommendations",
+        "Implementation roadmap"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$499",
-      period: "/month",
-      description: "Ideal for growing companies",
+      name: "Implementation",
+      price: "$15,000",
+      period: "/project",
+      description: "Complete cloud-native implementation",
       features: [
-        "10,000 conversations/month",
-        "Advanced NLP",
-        "Full integrations",
-        "Custom voice training",
-        "Priority support",
-        "API access",
-        "Advanced analytics"
+        "Full architecture design",
+        "Microservices development",
+        "Kubernetes deployment",
+        "CI/CD pipeline setup",
+        "Security implementation",
+        "Monitoring setup",
+        "Documentation & training"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$999",
+      name: "Managed Services",
+      price: "$5,000",
       period: "/month",
-      description: "For large organizations",
+      description: "Ongoing cloud-native management",
       features: [
-        "Unlimited conversations",
-        "Custom AI models",
-        "White-label solution",
-        "Dedicated support",
-        "Multi-tenant support",
-        "Custom integrations",
-        "SLA guarantee"
+        "24/7 monitoring",
+        "Performance optimization",
+        "Security updates",
+        "Scaling management",
+        "Backup & recovery",
+        "SLA guarantee",
+        "Dedicated support"
       ],
       popular: false
     }
@@ -93,51 +93,51 @@ export default function AIVoiceAssistant() {
 
   const testimonials = [
     {
-      name: "Jennifer Lee",
-      company: "Customer Service Corp",
-      role: "VP of Operations",
-      content: "Our AI voice assistant handles 80% of customer inquiries automatically. Customer satisfaction has increased by 45%.",
-      rating: 5,
-      avatar: "JL"
-    },
-    {
-      name: "Robert Chen",
-      company: "Tech Startup",
+      name: "Michael Chen",
+      company: "FinTech Solutions",
       role: "CTO",
-      content: "The voice recognition is incredibly accurate. It understands our technical terminology perfectly.",
+      content: "Zion Tech Group transformed our monolithic application into a scalable cloud-native architecture. Performance improved by 300%.",
       rating: 5,
-      avatar: "RC"
+      avatar: "MC"
     },
     {
-      name: "Amanda Rodriguez",
-      company: "Healthcare Group",
-      role: "Operations Director",
-      content: "24/7 availability with consistent quality. Our patients love the instant, helpful responses.",
+      name: "Sarah Johnson",
+      company: "E-commerce Platform",
+      role: "VP of Engineering",
+      content: "The Kubernetes implementation was flawless. We can now scale our services automatically based on demand.",
       rating: 5,
-      avatar: "AR"
+      avatar: "SJ"
+    },
+    {
+      name: "David Rodriguez",
+      company: "Healthcare Tech",
+      role: "IT Director",
+      content: "Their cloud security implementation exceeded our compliance requirements. Highly recommended for enterprise projects.",
+      rating: 5,
+      avatar: "DR"
     }
   ];
 
   const stats = [
-    { number: "5,000+", label: "Active Deployments", icon: <Users className="w-6 h-6" /> },
-    { number: "95%", label: "Accuracy Rate", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Availability", icon: <Clock className="w-6 h-6" /> }
+    { number: "200+", label: "Projects Delivered", icon: <Cloud className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
+    { number: "300%", label: "Average Performance Gain", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Advanced Conversational AI Platform | Zion Tech Group</title>
+        <title>Cloud Native Architecture - Scalable Cloud Solutions | Zion Tech Group</title>
         <meta
           name="description"
-          content="Advanced AI voice assistant with natural language processing, multi-language support, custom voice training, and seamless business integrations. Transform customer interactions."
+          content="Expert cloud native architecture services including microservices, Kubernetes, serverless computing, DevOps automation, and cloud security. Scale your applications with modern cloud technologies."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, conversational AI, natural language processing, voice recognition, customer service automation, multi-language support, voice training"
+          content="cloud native architecture, microservices, Kubernetes, serverless computing, DevOps automation, cloud security, container orchestration, cloud migration"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/cloud-native-architecture" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -149,20 +149,20 @@ export default function AIVoiceAssistant() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Advanced Conversational AI</span>
+              <Cloud className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">Cloud Native Solutions</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              AI Voice
+              Cloud Native
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Assistant
+                {" "}Architecture
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform customer interactions with our advanced AI voice assistant. Natural conversations, 
-              multi-language support, and seamless business integrations for superior customer experience.
+              Build scalable, resilient, and efficient cloud-native applications with microservices, 
+              Kubernetes, and modern DevOps practices. Transform your infrastructure for the cloud era.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -170,7 +170,7 @@ export default function AIVoiceAssistant() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Get Started
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -178,7 +178,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Cloud className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
             
@@ -202,10 +202,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Voice AI Features
+                Cloud Native Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Everything you need to create intelligent, natural voice interactions with your customers.
+                Comprehensive cloud native services to modernize your infrastructure and applications.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -236,10 +236,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Plan
+                Service Packages
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing plans designed to scale with your voice AI needs.
+                Flexible service packages designed to meet your cloud native transformation needs.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -296,10 +296,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                Trusted by Technology Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our users say about our AI Voice Assistant
+                See what our clients say about our cloud native architecture services
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -333,11 +333,11 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Customer Interactions?
+              Ready to Modernize Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using our AI Voice Assistant to provide 
-              superior customer service and improve operational efficiency.
+              Join hundreds of companies using our cloud native architecture services to build 
+              scalable, resilient, and efficient applications.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -345,14 +345,14 @@ export default function AIVoiceAssistant() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Start Your Project
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Schedule Demo
+                Schedule Consultation
                 <Clock className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
