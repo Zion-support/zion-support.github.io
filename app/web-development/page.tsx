@@ -1,20 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import EnhancedSEO from '../components/EnhancedSEO';
-
-const WebDevelopmentPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="Web Development - Custom Web Solutions"
-        description="Build modern, responsive, and scalable web applications with our expert web development services."
-        keywords="web development, custom web applications, responsive design, web solutions, modern websites"
-        canonical="/web-development"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Code, Cloud, Shield, Zap, Users, Award, BarChart3 } from 'lucide-react';
@@ -31,23 +15,11 @@ const WebDevelopmentPage = () => {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Web Development
             </span>
           </h1>
-<<<<<<< HEAD
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Build modern, responsive, and scalable web applications with our expert web development services.
-          </p>
-        </div>
-        
-        <div className="text-center">
-          <p className="text-gray-300 text-lg">Service details coming soon. Contact us for more information.</p>
-        </div>
-      </div>
-=======
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Professional web development services and solutions. Expert implementation and support for your business needs.
           </p>
@@ -120,13 +92,8 @@ const WebDevelopmentPage = () => {
           </Link>
         </div>
       </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default WebDevelopmentPage;
-=======
-export default WebDevelopmentPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
