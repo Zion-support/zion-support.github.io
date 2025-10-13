@@ -1,5 +1,3 @@
-// Performancemonitoring utility functions
-
 export const Performancemonitoring = {
   init: () => {
     },

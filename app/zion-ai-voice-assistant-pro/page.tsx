@@ -1,9 +1,53 @@
-import React from "react";
-import SEOOptimizer from "../components/SEOOptimizer";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Star, Mic, Brain, Zap, Shield, Users, Clock, DollarSign, Globe, Smartphone, Headphones, Volume2, MessageSquare, Bot, Cpu, Wifi, Battery, Camera, Video, Phone, Mail, Calendar, FileText, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Settings, Monitor, BarChart3, TrendingUp, Target, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Voicemail, Headset, Speaker, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, Workflow, FileSignature, Bot as BotIcon } from "lucide-react";
+import React from 'react';
+import SEOOptimizer from '../components/SEOOptimizer';
+import { ArrowRight, CheckCircle, Star, Mic, Brain, Zap, Shield, Users, Clock, DollarSign, Globe, Smartphone, Headphones, Volume2, MessageSquare, Bot, Cpu, Wifi, Battery, Camera, Video, Phone, Mail, Calendar, FileText, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Settings, Monitor, BarChart3, TrendingUp, Target, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Voicemail, Headset, Speaker, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, Workflow, FileSignature, Bot as BotIcon  } from 'lucide-react';
 
+const benefits = [
+    "Advanced AI algorithms for accurate predictions",
+    "Real-time risk assessment and monitoring",
+    "Automated report generation and insights",
+    "Seamless integration with existing systems",
+    "24/7 monitoring and alert system",
+    "Scalable cloud-based infrastructure"
+  ];
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CFO",
+      company: "TechCorp",
+      content: "The AI financial analysis platform has revolutionized our decision-making process.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Investment Manager",
+      company: "FinancePro",
+      content: "Incredible accuracy and insights that have improved our portfolio performance.",
+      rating: 5
+    }
+  ];
 export default function ZionAIVoiceAssistantPro() {
   const features = [
     "Natural language processing (NLP)",
@@ -156,10 +200,7 @@ export default function ZionAIVoiceAssistantPro() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-voice-assistant-pro" />
       </Helmet>
-      <SEOOptimizer
-        title="Zion AI Voice Assistant Pro - Advanced Voice AI Solution | Zion Tech Group"
-        description="Transform your business with Zion AI Voice Assistant Pro. Advanced voice AI with natural language processing, multi-language support, and seamless integrations. Start your free trial today!"
-      />
+      <SEOOptimizer />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -404,7 +445,7 @@ export default function ZionAIVoiceAssistantPro() {
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div className="ml-4">
                       <div className="font-semibold text-white">{testimonial.name}</div>

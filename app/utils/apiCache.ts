@@ -1,5 +1,3 @@
-// Apicache utility functions
-
 export const Apicache = {
   init: () => {
     },

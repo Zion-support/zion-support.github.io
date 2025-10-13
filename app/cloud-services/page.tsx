@@ -1,5 +1,30 @@
 import React from 'react';
-import { 
+import { Link, } from 'react-router-dom';
+const benefits = [
+    "Advanced AI algorithms for accurate predictions",
+    "Real-time risk assessment and monitoring",
+    "Automated report generation and insights",
+    "Seamless integration with existing systems",
+    "24/7 monitoring and alert system",
+    "Scalable cloud-based infrastructure"
+  ];
+const services = [
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud infrastructure",
+      icon: "Cloud"
+    },
+    {
+      title: "Security Solutions",
+      description: "Advanced security and compliance",
+      icon: "Shield"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Optimize your cloud performance",
+      icon: "Zap"
+    }
+  ];
   Cloud, 
   Shield, 
   Zap, 

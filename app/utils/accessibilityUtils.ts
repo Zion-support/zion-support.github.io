@@ -1,5 +1,3 @@
-// Accessibilityutils utility functions
-
 export const Accessibilityutils = {
   init: () => {
     },

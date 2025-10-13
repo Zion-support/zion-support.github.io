@@ -1,8 +1,12 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe as GlobeIcon } from "lucide-react";
+import React from 'react';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe as GlobeIcon  } from 'lucide-react';
 
+const stats = [
+    { label: "Accuracy Rate", value: "95%", icon: "Target" },
+    { label: "Time Saved", value: "80%", icon: "Clock" },
+    { label: "Risk Reduction", value: "70%", icon: "Shield" },
+    { label: "Client Satisfaction", value: "98%", icon: "Star" }
+  ];
 export default function AboutPage() {
   const stats = [
     { number: "500+", label: "Projects Completed" },

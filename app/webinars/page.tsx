@@ -1,5 +1,5 @@
 import React from 'react';
-import { 
+import { Helmet } from 'react-helmet-async';
   Video, 
   Calendar, 
   Users, 

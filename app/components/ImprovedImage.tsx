@@ -1,5 +1,3 @@
-import React, { useState, useRef, useEffect } from 'react';
-
 interface ImprovedImageProps {
   src: string;
   alt: string;
@@ -10,7 +8,7 @@ interface ImprovedImageProps {
   lazy?: boolean;
   priority?: boolean;
   quality?: number;
-  sizes?: string;
+  size?: string;
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -25,7 +23,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
   lazy = true,
   priority = false,
   quality = 75,
-  sizes,
+  size,
   onLoad,
   onError
 }) => {
@@ -120,7 +118,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
           alt={alt}
           width={width}
           height={height}
-          sizes={sizes}
+          size={size}
           loading={lazy && !priority ? 'lazy' : 'eager'}
           onLoad={handleLoad}
           onError={handleError}

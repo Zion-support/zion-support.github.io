@@ -1,4 +1,16 @@
-import { 
+import React from 'react';
+import { Link, } from 'react-router-dom';
+const stats = [
+    { label: "Accuracy Rate", value: "95%", icon: "Target" },
+    { label: "Time Saved", value: "80%", icon: "Clock" },
+    { label: "Risk Reduction", value: "70%", icon: "Shield" },
+    { label: "Client Satisfaction", value: "98%", icon: "Star" }
+  ];
+const socialLinks = [
+    { name: "Twitter", href: "#", icon: "Twitter" },
+    { name: "LinkedIn", href: "#", icon: "Linkedin" },
+    { name: "GitHub", href: "#", icon: "Github" }
+  ];
   ArrowRight, 
   Mail, 
   Phone, 

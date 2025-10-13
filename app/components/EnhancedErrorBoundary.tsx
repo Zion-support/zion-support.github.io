@@ -1,5 +1,3 @@
-import React, { Component, ReactNode, ErrorInfo } from 'react';
-
 interface EnhancedErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;

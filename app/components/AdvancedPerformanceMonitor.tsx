@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-
 interface PerformanceMetrics {
   fcp: number;
   lcp: number;
@@ -96,7 +94,7 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
     const k = 1024;
     
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + size[i];
   };
 
   const formatTime = (ms: number) => {

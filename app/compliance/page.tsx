@@ -1,9 +1,54 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock } from 'lucide-react';
+import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock  } from 'lucide-react';
 
-export default function page() {
+const benefits = [
+    "Advanced AI algorithms for accurate predictions",
+    "Real-time risk assessment and monitoring",
+    "Automated report generation and insights",
+    "Seamless integration with existing systems",
+    "24/7 monitoring and alert system",
+    "Scalable cloud-based infrastructure"
+  ];
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+const services = [
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud infrastructure",
+      icon: "Cloud"
+    },
+    {
+      title: "Security Solutions",
+      description: "Advanced security and compliance",
+      icon: "Shield"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Optimize your cloud performance",
+      icon: "Zap"
+    }
+  ];
+export default function Page() {
   const features = [
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }

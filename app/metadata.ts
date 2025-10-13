@@ -1,5 +1,3 @@
-// Metadata configuration for Zion Tech Group
-
 export const siteMetadata = {
   title: "Zion Tech Group - Advanced AI and IT Solutions",
   description:

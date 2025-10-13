@@ -1,5 +1,3 @@
-// Logger utility functions
-
 export const Logger = {
   init: () => {
     },

@@ -1,5 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { 
+import { Link, useLocation, } from 'react-router-dom';
+const services = [
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud infrastructure",
+      icon: "Cloud"
+    },
+    {
+      title: "Security Solutions",
+      description: "Advanced security and compliance",
+      icon: "Shield"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Optimize your cloud performance",
+      icon: "Zap"
+    }
+  ];
   ArrowRight, 
   ChevronDown, 
   ChevronRight,

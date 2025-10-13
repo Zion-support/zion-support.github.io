@@ -1,5 +1,3 @@
-// Advancedanalytics utility functions
-
 export const Advancedanalytics = {
   init: () => {
     },

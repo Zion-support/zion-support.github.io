@@ -1,7 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, User, Tag } from 'lucide-react';
+import { ArrowRight, Calendar, User, Tag  } from 'lucide-react';
 
 const BlogPage = () => {
   const blogPosts = [

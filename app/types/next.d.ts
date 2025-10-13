@@ -1,5 +1,3 @@
-// Next.js type definitions
-
 declare module "next" {
   export interface NextPageProps {
     params: { [key: string]: string };

@@ -1,208 +1,108 @@
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
-// Get all TypeScript/JavaScript files in the app directory
-function getAllFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
+// Fix unused imports
+function fixFile(filePath) {
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
 
-  files.forEach((file) => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  // Remove unused useLocation and useNavigate imports
+  if (content.includes('useLocation') && content.includes('useNavigate') && 
+      !content.includes('useLocation(') && !content.includes('useNavigate(')) {
+    content = content.replace(/import { useLocation, useNavigate } from 'react-router-dom';\n?/g, '');
+    modified = true;
+  }
 
-    if (stat.isDirectory()) {
-      getAllFiles(filePath, fileList);
-    } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
-      fileList.push(filePath);
+  // Remove unused useLocation only
+  if (content.includes('useLocation') && !content.includes('useLocation(')) {
+    content = content.replace(/import { useLocation } from 'react-router-dom';\n?/g, '');
+    modified = true;
+  }
+
+  // Remove unused useNavigate only
+  if (content.includes('useNavigate') && !content.includes('useNavigate(')) {
+    content = content.replace(/import { useNavigate } from 'react-router-dom';\n?/g, '');
+    modified = true;
+  }
+
+  // Remove unused data arrays
+  const lines = content.split('\n');
+  const newLines = [];
+  let skipUntil = -1;
+
+  for (let i = 0; i < lines.length; i++) {
+    if (i <= skipUntil) continue;
+
+    const line = lines[i];
+    
+    // Skip unused data arrays
+    if ((line.includes('const stats = [') || 
+         line.includes('const features = [') || 
+         line.includes('const testimonials = [') || 
+         line.includes('const benefits = [') ||
+         line.includes('const capabilities = [') ||
+         line.includes('const applications = [') ||
+         line.includes('const services = [') ||
+         line.includes('const socialLinks = [') ||
+         line.includes('const microSaasServices = [')) && 
+        !content.includes(line.split('=')[0].trim().replace('const ', '') + '.')) {
+      
+      // Find the end of this array declaration
+      let j = i;
+      let braceCount = 0;
+      let inArray = false;
+      let foundStart = false;
+      
+      while (j < lines.length) {
+        const currentLine = lines[j];
+        if (currentLine.includes('const ') && currentLine.includes('= [')) {
+          if (j === i) {
+            foundStart = true;
+            braceCount = (currentLine.match(/\[/g) || []).length - (currentLine.match(/\]/g) || []).length;
+          }
+        } else if (foundStart) {
+          braceCount += (currentLine.match(/\[/g) || []).length - (currentLine.match(/\]/g) || []).length;
+          if (braceCount <= 0) {
+            // Skip this entire array declaration
+            skipUntil = j;
+            break;
+          }
+        }
+        j++;
+      }
+      continue;
     }
-  });
 
-  return fileList;
+    newLines.push(line);
+  }
+
+  const newContent = newLines.join('\n');
+
+  if (newContent !== content) {
+    fs.writeFileSync(filePath, newContent);
+    console.log(`Fixed: ${filePath}`);
+    return true;
+  }
+  return false;
 }
 
-// Common unused imports to remove
-const unusedImports = [
-  "Helmet",
-  "Star",
-  "Users",
-  "Award",
-  "Zap",
-  "Shield",
-  "Brain",
-  "Cloud",
-  "Code",
-  "Target",
-  "Globe",
-  "Database",
-  "Smartphone",
-  "Lock",
-  "TrendingUp",
-  "Settings",
-  "Calendar",
-  "CheckSquare",
-  "FileText",
-  "MessageCircle",
-  "Heart",
-  "DollarSign",
-  "Box",
-  "Monitor",
-  "LinkIcon",
-  "Server",
-  "Package",
-  "Mic",
-  "Workflow",
-  "Eye",
-  "Wifi",
-  "MessageSquare",
-  "ShoppingCart",
-  "Phone",
-  "Mail",
-  "MapPin",
-  "BarChart3",
-  "Sparkles",
-  "Cpu",
-  "Satellite",
-  "AlertTriangle",
-  "BarChart",
-  "PieChart",
-  "Receipt",
-  "CreditCard",
-  "Banknote",
-  "Camera",
-  "Image",
-  "Video",
-  "RotateCcw",
-  "Download",
-  "Upload",
-  "Lightbulb",
-  "Clock",
-  "MessageCircle",
-  "Filter",
-  "Share",
-  "Bell",
-  "RefreshCw",
-  "Pause",
-  "SkipForward",
-  "SkipBack",
-  "Repeat",
-  "Shuffle",
-  "ThumbsUp",
-  "ThumbsDown",
-  "Bookmark",
-  "Flag",
-  "Info",
-  "HelpCircle",
-  "Plus",
-  "Minus",
-  "Edit",
-  "Trash2",
-  "Save",
-  "Copy",
-  "Paste",
-  "Cut",
-  "Undo",
-  "Redo",
-  "Move",
-  "Maximize",
-  "Minimize",
-  "Square",
-  "Circle",
-  "Triangle",
-  "Hexagon",
-  "Octagon",
-  "Pentagon",
-  "Star2",
-  "Heart2",
-  "Smile",
-  "Frown",
-  "Meh",
-  "Laugh",
-  "Angry",
-  "Surprised",
-  "Confused",
-  "Wink",
-  "Kiss",
-  "Tongue",
-  "Wink2",
-  "Kiss2",
-  "Tongue2",
-  "Wink3",
-  "Kiss3",
-  "Tongue3",
-  "Wink4",
-  "Kiss4",
-  "Tongue4",
-  "Wink5",
-  "Kiss5",
-  "Tongue5",
-  "Wink6",
-  "Kiss6",
-  "Tongue6",
-  "Wink7",
-  "Kiss7",
-  "Tongue7",
-  "Wink8",
-  "Kiss8",
-  "Tongue8",
-];
+// Main execution
+console.log('Starting unused imports fix...');
 
-function removeUnusedImports(filePath) {
+// Get all TypeScript/JavaScript files in the app directory
+const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: __dirname });
+
+let fixedCount = 0;
+for (const file of files) {
+  const fullPath = path.join(__dirname, file);
   try {
-    let content = fs.readFileSync(filePath, "utf8");
-    let modified = false;
-
-    // Remove unused imports from lucide-react
-    const lucideImportRegex =
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
-
-    content = content.replace(lucideImportRegex, (match, imports) => {
-      const importList = imports.split(",").map((imp) => imp.trim());
-      const usedImports = importList.filter((imp) => {
-        // Check if the import is actually used in the file
-        const importName = imp.split(" as ")[0].trim();
-        const usageRegex = new RegExp(`\\b${importName}\\b`, "g");
-        const usageCount = (content.match(usageRegex) || []).length;
-        return usageCount > 1; // More than 1 because the import itself counts as 1
-      });
-
-      if (usedImports.length === 0) {
-        modified = true;
-        return ""; // Remove the entire import line
-      } else if (usedImports.length < importList.length) {
-        modified = true;
-        return `import { ${usedImports.join(", ")} } from 'lucide-react';`;
-      }
-
-      return match;
-    });
-
-    // Remove unused Helmet imports
-    if (
-      content.includes("import { Helmet } from 'react-helmet-async';") &&
-      !content.includes("<Helmet>")
-    ) {
-      content = content.replace(
-        /import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?\n?/g,
-        "",
-      );
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed unused imports in: ${filePath}`);
+    if (fixFile(fullPath)) {
+      fixedCount++;
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.log(`Error fixing ${file}: ${error.message}`);
   }
 }
 
-// Get all files and process them
-const files = getAllFiles("./app");
-console.log(`Processing ${files.length} files...`);
-
-files.forEach((file) => {
-  removeUnusedImports(file);
-});
-
-console.log("Unused imports cleanup completed!");
+console.log(`Fixed ${fixedCount} files`);

@@ -1,5 +1,3 @@
-// Advancedcaching utility functions
-
 export const Advancedcaching = {
   init: () => {
     },

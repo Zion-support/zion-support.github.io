@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface EnhancedLoadingProps {
   message?: string;
   showProgress?: boolean;

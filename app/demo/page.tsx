@@ -1,5 +1,50 @@
-import React, { useState } from 'react';
-import { 
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
+
+const benefits = [
+    "Advanced AI algorithms for accurate predictions",
+    "Real-time risk assessment and monitoring",
+    "Automated report generation and insights",
+    "Seamless integration with existing systems",
+    "24/7 monitoring and alert system",
+    "Scalable cloud-based infrastructure"
+  ];
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+const stats = [
+    { label: "Accuracy Rate", value: "95%", icon: "Target" },
+    { label: "Time Saved", value: "80%", icon: "Clock" },
+    { label: "Risk Reduction", value: "70%", icon: "Shield" },
+    { label: "Client Satisfaction", value: "98%", icon: "Star" }
+  ];
+const capabilities = [
+    "Machine Learning Models",
+    "Real-time Data Processing",
+    "Risk Assessment Algorithms",
+    "Predictive Analytics",
+    "Automated Reporting",
+    "API Integration"
+  ];
   Play, 
   Pause, 
   SkipForward, 
@@ -24,7 +69,7 @@ import {
   Clock
 } from 'lucide-react';
 
-export default function page() {
+export default function Page() {
   const stats = [
     { label: "Stat 1", value: "100%" }
   ];

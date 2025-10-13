@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-
 interface PerformanceMonitorProps {
   children: React.ReactNode;
   showDetails?: boolean;
@@ -49,7 +47,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children, showD
           for (const entry of list.getEntries()) {
             setMetrics(prev => ({ 
               ...prev, 
-              firstInputDelay: entry.processingStart - entry.startTime 
+              firstInputDelay: entry.startTime - entry.startTime 
             }));
           }
         });

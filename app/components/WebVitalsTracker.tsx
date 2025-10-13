@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react';
-
 interface WebVitalsTrackerProps {
   children: React.ReactNode;
 }
@@ -32,7 +30,7 @@ const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
       // Track First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const fid = entry.processingStart - entry.startTime;
+          const fid = entry.startTime - entry.startTime;
           console.log('FID:', fid);
           // Send to analytics service
         }

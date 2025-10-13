@@ -1,5 +1,41 @@
 import React from 'react';
-import { 
+import { Helmet  } from 'react-helmet-async';
+
+const benefits = [
+    "Advanced AI algorithms for accurate predictions",
+    "Real-time risk assessment and monitoring",
+    "Automated report generation and insights",
+    "Seamless integration with existing systems",
+    "24/7 monitoring and alert system",
+    "Scalable cloud-based infrastructure"
+  ];
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+const microSaasServices = [
+    { name: "AI Analytics", href: "/ai-services" },
+    { name: "Cloud Solutions", href: "/cloud-services" },
+    { name: "DevOps", href: "/devops" }
+  ];
   ArrowRight, 
   Brain, 
   Shield, 
@@ -12,7 +48,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-export default function page() {
+export default function Page() {
   const benefits = [
     "Benefit 1",
     "Benefit 2"

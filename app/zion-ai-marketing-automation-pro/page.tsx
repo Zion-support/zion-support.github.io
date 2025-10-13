@@ -1,8 +1,59 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export default function page() {
+const benefits = [
+    "Advanced AI algorithms for accurate predictions",
+    "Real-time risk assessment and monitoring",
+    "Automated report generation and insights",
+    "Seamless integration with existing systems",
+    "24/7 monitoring and alert system",
+    "Scalable cloud-based infrastructure"
+  ];
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+const stats = [
+    { label: "Accuracy Rate", value: "95%", icon: "Target" },
+    { label: "Time Saved", value: "80%", icon: "Clock" },
+    { label: "Risk Reduction", value: "70%", icon: "Shield" },
+    { label: "Client Satisfaction", value: "98%", icon: "Star" }
+  ];
+const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CFO",
+      company: "TechCorp",
+      content: "The AI financial analysis platform has revolutionized our decision-making process.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Investment Manager",
+      company: "FinancePro",
+      content: "Incredible accuracy and insights that have improved our portfolio performance.",
+      rating: 5
+    }
+  ];
+export default function Page() {
   const stats = [
     { label: "Stat 1", value: "100%" }
   ];
@@ -355,7 +406,7 @@ export default function page() {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

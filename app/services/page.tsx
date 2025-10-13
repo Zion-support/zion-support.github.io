@@ -1,7 +1,61 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+const capabilities = [
+    "Machine Learning Models",
+    "Real-time Data Processing",
+    "Risk Assessment Algorithms",
+    "Predictive Analytics",
+    "Automated Reporting",
+    "API Integration"
+  ];
+const applications = [
+    "Financial Forecasting",
+    "Risk Management",
+    "Investment Analysis",
+    "Portfolio Optimization",
+    "Market Analysis",
+    "Compliance Monitoring"
+  ];
+const services = [
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud infrastructure",
+      icon: "Cloud"
+    },
+    {
+      title: "Security Solutions",
+      description: "Advanced security and compliance",
+      icon: "Shield"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Optimize your cloud performance",
+      icon: "Zap"
+    }
+  ];
 export default function Services() {
   const services = [
     {

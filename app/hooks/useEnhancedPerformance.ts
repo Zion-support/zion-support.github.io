@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-
+import React, { useState, useEffect } from 'react';
 export const useEnhancedPerformance = () => {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(false);

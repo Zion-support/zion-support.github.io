@@ -1,6 +1,53 @@
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
-
+import { Link, } from 'react-router-dom';
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+const applications = [
+    "Financial Forecasting",
+    "Risk Management",
+    "Investment Analysis",
+    "Portfolio Optimization",
+    "Market Analysis",
+    "Compliance Monitoring"
+  ];
+const services = [
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud infrastructure",
+      icon: "Cloud"
+    },
+    {
+      title: "Security Solutions",
+      description: "Advanced security and compliance",
+      icon: "Shield"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Optimize your cloud performance",
+      icon: "Zap"
+    }
+  ];
 const WebDevelopmentPage = () => {
   const services = [
     {

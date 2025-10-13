@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface ResponsiveGridProps {
   children: React.ReactNode;
   cols?: {

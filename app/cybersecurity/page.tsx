@@ -1,9 +1,54 @@
-import React from "react";
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, Users, Database, Mail, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function page() {
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+const capabilities = [
+    "Machine Learning Models",
+    "Real-time Data Processing",
+    "Risk Assessment Algorithms",
+    "Predictive Analytics",
+    "Automated Reporting",
+    "API Integration"
+  ];
+const services = [
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud infrastructure",
+      icon: "Cloud"
+    },
+    {
+      title: "Security Solutions",
+      description: "Advanced security and compliance",
+      icon: "Shield"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Optimize your cloud performance",
+      icon: "Zap"
+    }
+  ];
+export default function Page() {
   const features = [
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }

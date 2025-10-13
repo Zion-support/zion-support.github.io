@@ -1,5 +1,3 @@
-import React, { useEffect, useState } from 'react';
-
 interface CoreWebVitalsProps {
   children: React.ReactNode;
 }
@@ -38,7 +36,7 @@ const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
       // Measure First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const fid = entry.processingStart - entry.startTime;
+          const fid = entry.startTime - entry.startTime;
           setVitals(prev => ({ ...prev, fid }));
         }
       });

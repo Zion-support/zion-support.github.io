@@ -1,9 +1,44 @@
-import React from "react";
-import { ArrowRight, CheckCircle, Star, BarChart3, TrendingUp, Users, Award, Shield, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Database, Mail, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import SEOOptimizer from "../components/SEOOptimizer";
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import SEOOptimizer from '../components/SEOOptimizer';
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CFO",
+      company: "TechCorp",
+      content: "The AI financial analysis platform has revolutionized our decision-making process.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Investment Manager",
+      company: "FinancePro",
+      content: "Incredible accuracy and insights that have improved our portfolio performance.",
+      rating: 5
+    }
+  ];
 export default function ZionAnalyticsPro() {
   const features = [
     "Real-time dashboard analytics",
@@ -20,14 +55,6 @@ export default function ZionAnalyticsPro() {
     "Custom metrics & KPIs"
   ];
 
-  const benefits = [
-    "Increase revenue by 25%",
-    "Reduce reporting time by 80%",
-    "Make data-driven decisions",
-    "Scale with your business",
-    "Improve operational efficiency",
-    "Identify growth opportunities"
-  ];
 
   const pricing = [
     {
@@ -97,10 +124,7 @@ export default function ZionAnalyticsPro() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-analytics-pro" />
       </Helmet>
-      <SEOOptimizer
-        title="Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group"
-        description="Transform your business with Zion Analytics Pro - AI-powered business intelligence platform with real-time analytics, predictive insights, and automated reporting. Start your free trial today!"
-      />
+      <SEOOptimizer />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
@@ -282,7 +306,7 @@ export default function ZionAnalyticsPro() {
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div className="ml-4">
                       <div className="font-semibold text-white">{testimonial.name}</div>
