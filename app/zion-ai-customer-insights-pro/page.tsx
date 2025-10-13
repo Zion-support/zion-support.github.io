@@ -1,103 +1,103 @@
-import { ArrowRight, Video, Brain, Scissors, Play, CheckCircle, Star, Zap, Target, Camera } from "lucide-react";
+import { ArrowRight, Users, Brain, TrendingUp, BarChart3, CheckCircle, Star, Zap, Target, MessageSquare } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAIVideoEditor() {
+export default function ZionAICustomerInsightsPro() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Auto-Editing",
-      description: "Automatically edit videos with AI that understands content, pacing, and visual appeal for professional results"
+      title: "AI-Powered Customer Segmentation",
+      description: "Automatically segment customers based on behavior, preferences, and value using advanced machine learning algorithms"
     },
     {
-      icon: <Scissors className="w-6 h-6" />,
-      title: "Smart Cut & Trim",
-      description: "Intelligent scene detection and automatic trimming to remove dead air, filler words, and unwanted content"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Predictive Customer Analytics",
+      description: "Forecast customer lifetime value, churn probability, and purchase likelihood with 95% accuracy"
     },
     {
-      icon: <Play className="w-6 h-6" />,
-      title: "Auto Color Correction",
-      description: "AI-powered color grading and correction that adapts to different lighting conditions and styles automatically"
+      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Sentiment Analysis Engine",
+      description: "Analyze customer feedback, reviews, and social media mentions to understand sentiment and satisfaction levels"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Smart Object Tracking",
-      description: "Automatically track and follow objects, faces, and subjects throughout your video with precision"
+      title: "Personalized Recommendations",
+      description: "Generate personalized product recommendations and marketing campaigns based on individual customer profiles"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Real-time Customer Dashboards",
+      description: "Monitor customer health scores, engagement metrics, and satisfaction trends in real-time"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Auto Subtitle Generation",
-      description: "Generate accurate subtitles and captions automatically with AI speech recognition and timing"
-    },
-    {
-      icon: <Camera className="w-6 h-6" />,
-      title: "Background Removal & Replacement",
-      description: "Remove or replace backgrounds automatically with AI-powered green screen technology"
+      title: "Automated Customer Journey Mapping",
+      description: "Track and visualize customer journeys across all touchpoints with automated insights and optimization suggestions"
     }
   ];
 
-  const capabilities = [
-    "Auto Video Editing",
-    "Smart Scene Detection",
-    "Color Correction & Grading",
-    "Object & Face Tracking",
-    "Background Removal",
-    "Auto Subtitle Generation",
-    "Audio Enhancement",
-    "Motion Graphics",
-    "Text Overlay & Titles",
-    "Video Stabilization",
-    "Speed Adjustment",
-    "Format Conversion"
+  const insights = [
+    "Customer Lifetime Value Prediction",
+    "Churn Risk Assessment",
+    "Purchase Behavior Analysis",
+    "Customer Satisfaction Scoring",
+    "Cross-sell & Upsell Opportunities",
+    "Customer Segmentation & Personas",
+    "Sentiment & Emotion Analysis",
+    "Customer Journey Optimization",
+    "Retention Strategy Recommendations",
+    "Personalization Engine",
+    "A/B Testing Insights",
+    "Customer Health Monitoring"
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$29",
+      name: "Starter",
+      price: "$99",
       period: "/month",
-      description: "Perfect for content creators",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 10 hours of video",
-        "Basic AI editing",
-        "Auto color correction",
-        "Subtitle generation",
+        "Up to 1,000 customers",
+        "Basic customer segmentation",
+        "Sentiment analysis",
+        "Standard dashboards",
         "Email support",
-        "HD export"
+        "Monthly reports"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$299",
       period: "/month",
-      description: "Most popular for professionals",
+      description: "Most popular for growing businesses",
       features: [
-        "Up to 50 hours of video",
-        "Advanced AI editing",
-        "Object tracking",
-        "Background removal",
+        "Up to 10,000 customers",
+        "Advanced AI insights",
+        "Predictive analytics",
+        "Custom dashboards",
         "Priority support",
-        "4K export",
+        "Real-time monitoring",
         "API access",
-        "Custom templates"
+        "Advanced segmentation"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$799",
       period: "/month",
-      description: "For large teams",
+      description: "For large organizations",
       features: [
-        "Unlimited video hours",
-        "Custom AI models",
-        "White-label platform",
+        "Unlimited customers",
+        "AI-powered recommendations",
+        "Custom ML models",
+        "White-label dashboards",
         "24/7 dedicated support",
         "Advanced integrations",
-        "8K export",
-        "Team collaboration",
-        "Custom branding"
+        "Custom reporting",
+        "Data science consulting"
       ],
       popular: false
     }
@@ -105,24 +105,24 @@ export default function ZionAIVideoEditor() {
 
   const testimonials = [
     {
-      name: "Jessica Martinez",
-      company: "Digital Marketing Agency",
-      role: "Video Producer",
-      content: "Zion AI Video Editor has revolutionized our video production. We can now create professional videos 5x faster with better quality than before.",
+      name: "Jennifer Adams",
+      company: "Retail Innovations",
+      role: "VP of Marketing",
+      content: "Zion AI Customer Insights Pro helped us increase customer retention by 35% and boost average order value by 28%. The predictive analytics are incredibly accurate.",
       rating: 5
     },
     {
-      name: "Alex Thompson",
-      company: "YouTube Creator",
-      role: "Content Creator",
-      content: "The auto-editing feature is incredible. It understands my content style and creates engaging videos that my audience loves. My engagement has increased by 60%.",
+      name: "Robert Kim",
+      company: "SaaS Solutions Inc",
+      role: "Head of Customer Success",
+      content: "The customer segmentation feature is game-changing. We can now personalize our approach for each customer segment, resulting in 40% higher engagement rates.",
       rating: 5
     },
     {
-      name: "Maria Rodriguez",
-      company: "Corporate Communications",
-      role: "Video Manager",
-      content: "The subtitle generation and background removal features have saved us countless hours. The quality is professional-grade and our team productivity has doubled.",
+      name: "Maria Garcia",
+      company: "E-commerce Platform",
+      role: "Customer Experience Director",
+      content: "The sentiment analysis and customer journey mapping have transformed how we understand our customers. Our satisfaction scores have improved by 45%.",
       rating: 5
     }
   ];
@@ -130,45 +130,45 @@ export default function ZionAIVideoEditor() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Video Editor - Intelligent Video Editing Platform | Zion Tech Group</title>
+        <title>Zion AI Customer Insights Pro - Advanced Customer Analytics Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Create professional videos with Zion AI Video Editor. AI-powered auto-editing, smart cuts, color correction, object tracking, and automated subtitles for modern content creators."
+          content="Transform customer data into actionable insights with Zion AI Customer Insights Pro. AI-powered segmentation, predictive analytics, and personalized recommendations for modern businesses."
         />
         <meta
           name="keywords"
-          content="AI video editing, auto video editing, video production, color correction, object tracking, subtitle generation, background removal, video automation"
+          content="customer insights, customer analytics, AI segmentation, predictive analytics, customer lifetime value, churn prediction, sentiment analysis, customer journey mapping"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-              <Video className="w-4 h-4 text-purple-400 mr-2" />
-              <span className="text-purple-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
+              <Brain className="w-4 h-4 text-indigo-400 mr-2" />
+              <span className="text-indigo-400 text-sm font-medium">AI-Powered Customer Intelligence</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                Zion AI Video Editor
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                Zion AI Customer Insights Pro
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Create professional videos effortlessly with AI-powered editing, smart cuts, 
-              color correction, and automated features that understand your content.
+              Unlock the full potential of your customer data with AI-powered insights, predictive analytics, 
+              and personalized recommendations that drive growth and customer satisfaction.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -177,16 +177,16 @@ export default function ZionAIVideoEditor() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">5x</div>
-                <div className="text-gray-300">Faster Editing</div>
+                <div className="text-3xl font-bold text-indigo-400 mb-2">95%</div>
+                <div className="text-gray-300">Prediction Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">95%</div>
-                <div className="text-gray-300">Time Savings</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">35%</div>
+                <div className="text-gray-300">Average Retention Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">10,000+</div>
-                <div className="text-gray-300">Videos Created</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">2,500+</div>
+                <div className="text-gray-300">Businesses Transformed</div>
               </div>
             </div>
           </div>
@@ -197,10 +197,10 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Video Editing Features
+                Advanced Customer Intelligence Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create professional videos with AI intelligence.
+                Everything you need to understand, predict, and optimize customer behavior.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -209,7 +209,7 @@ export default function ZionAIVideoEditor() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -224,25 +224,25 @@ export default function ZionAIVideoEditor() {
           </div>
         </section>
 
-        {/* Capabilities List */}
+        {/* Insights List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Video Production Suite
+                Comprehensive Customer Insights
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the video editing tools you need in one intelligent platform.
+                Get deep insights into every aspect of your customer relationships.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {capabilities.map((capability, index) => (
+              {insights.map((insight, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
-                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{capability}</span>
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-gray-300">{insight}</span>
                 </div>
               ))}
             </div>
@@ -254,10 +254,10 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Video Editing Plans
+                Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video production needs. All plans include 14-day free trial.
+                Choose the plan that fits your customer base and analytics needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -266,13 +266,13 @@ export default function ZionAIVideoEditor() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-purple-400 bg-gradient-to-br from-purple-500/10 to-pink-500/10'
-                      : 'border-white/20 hover:border-purple-400'
+                      ? 'border-indigo-400 bg-gradient-to-br from-indigo-500/10 to-purple-500/10'
+                      : 'border-white/20 hover:border-indigo-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -288,7 +288,7 @@ export default function ZionAIVideoEditor() {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
@@ -297,8 +297,8 @@ export default function ZionAIVideoEditor() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
-                        : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
+                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -314,10 +314,10 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Content Creators
+                Trusted by Customer Success Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what video creators say about Zion AI Video Editor
+                See what customer success professionals say about Zion AI Customer Insights Pro
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -346,24 +346,24 @@ export default function ZionAIVideoEditor() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Create Amazing Videos?
+              Ready to Transform Your Customer Understanding?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of creators using Zion AI Video Editor to produce professional content effortlessly.
+              Join thousands of businesses using Zion AI Customer Insights Pro to build stronger customer relationships.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
               >
-                Watch Demo
+                Schedule Demo
               </Link>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Users, Heart } from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,13 +25,19 @@ const Navigation = React.memo(() => {
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Healthcare Diagnostics', path: '/ai-healthcare-diagnostics', icon: <Heart className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Customer Insights Pro', path: '/zion-ai-customer-insights-pro', icon: <Users className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Finance Manager', path: '/zion-ai-finance-manager', icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI HR Assistant', path: '/zion-ai-hr-assistant', icon: <Users className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Supply Chain Optimizer', path: '/zion-ai-supply-chain-optimizer', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Video Editor', path: '/zion-ai-video-editor', icon: <Brain className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
@@ -46,6 +52,7 @@ const Navigation = React.memo(() => {
     { name: 'Pricing', path: '/pricing' },
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Support', path: '/support' },
     { name: 'Contact', path: '/contact' }
   ], [])
 
@@ -185,6 +192,36 @@ const Navigation = React.memo(() => {
                   {item.name}
                 </Link>
               ))}
+              
+              {/* Mobile Quick Links */}
+              <div className="border-t border-gray-700 mt-4 pt-4">
+                <div className="px-4 py-2">
+                  <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-2">Quick Links</h3>
+                  <div className="space-y-1">
+                    <Link
+                      to="/demo"
+                      className="block px-2 py-1 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                      onClick={toggleMenu}
+                    >
+                      Watch Demo
+                    </Link>
+                    <Link
+                      to="/consultation"
+                      className="block px-2 py-1 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                      onClick={toggleMenu}
+                    >
+                      Free Consultation
+                    </Link>
+                    <Link
+                      to="/tutorials"
+                      className="block px-2 py-1 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
+                      onClick={toggleMenu}
+                    >
+                      Tutorials
+                    </Link>
+                  </div>
+                </div>
+              </div>
               
               {/* Mobile AI Services */}
               <div>

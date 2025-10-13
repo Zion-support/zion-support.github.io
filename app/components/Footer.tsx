@@ -70,15 +70,23 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/micro-saas"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Solutions
+                  Micro SAAS
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity"
+                  to="/cloud-infrastructure"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cloud Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cybersecurity-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Cybersecurity
@@ -90,14 +98,6 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   5G Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/data-analytics"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Data Analytics
                 </Link>
               </li>
               <li>
@@ -169,6 +169,61 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Custom Development
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Micro SAAS</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/zion-analytics-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Analytics Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-security-shield"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Security Shield
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-customer-insights-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Customer Insights Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-finance-manager"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Finance Manager
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-hr-assistant"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  HR Assistant
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-video-editor"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Video Editor
                 </Link>
               </li>
             </ul>
@@ -289,6 +344,46 @@ const Footer = React.memo(() => {
                 </Link>
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="border-t border-gray-800 pt-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center md:text-left">
+              <h4 className="text-lg font-semibold mb-4 text-white">Contact Information</h4>
+              <div className="space-y-2 text-gray-400">
+                <p><strong>Phone:</strong> +1 302 464 0950</p>
+                <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
+                <p><strong>Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
+            <div className="text-center md:text-left">
+              <h4 className="text-lg font-semibold mb-4 text-white">Business Hours</h4>
+              <div className="space-y-2 text-gray-400">
+                <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM EST</p>
+                <p><strong>Saturday:</strong> 10:00 AM - 4:00 PM EST</p>
+                <p><strong>Sunday:</strong> Closed</p>
+                <p><strong>24/7 Support:</strong> Available for Enterprise clients</p>
+              </div>
+            </div>
+            <div className="text-center md:text-left">
+              <h4 className="text-lg font-semibold mb-4 text-white">Quick Actions</h4>
+              <div className="space-y-2">
+                <Link
+                  to="/contact"
+                  className="block bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center"
+                >
+                  Get Started Today
+                </Link>
+                <Link
+                  to="/demo"
+                  className="block border border-cyan-400 text-cyan-400 px-4 py-2 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 text-center"
+                >
+                  Schedule Demo
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 

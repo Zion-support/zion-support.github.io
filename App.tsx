@@ -55,6 +55,7 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AiHealthcareDiagnosticsPage = React.lazy(() => import("./app/ai-healthcare-diagnostics/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -132,6 +133,7 @@ const DevopsSolutionsPage = React.lazy(() => import("./app/devops-solutions/page
 const MachineLearningPage = React.lazy(() => import("./app/machine-learning/page"));
 const QuantumComputingPage = React.lazy(() => import("./app/quantum-computing/page"));
 const RoboticsPage = React.lazy(() => import("./app/robotics/page"));
+const EnterpriseAISolutionsPage = React.lazy(() => import("./app/enterprise-ai-solutions/page"));
 
 // Micro SAAS Pages
 const ZionAnalyticsProPage = React.lazy(
@@ -173,6 +175,23 @@ const ZionComplianceManagerPage = React.lazy(
 );
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
+);
+
+// New Micro SAAS Pages
+const ZionAICustomerInsightsProPage = React.lazy(
+  () => import("./app/zion-ai-customer-insights-pro/page"),
+);
+const ZionAIFinanceManagerPage = React.lazy(
+  () => import("./app/zion-ai-finance-manager/page"),
+);
+const ZionAIHRAssistantPage = React.lazy(
+  () => import("./app/zion-ai-hr-assistant/page"),
+);
+const ZionAISupplyChainOptimizerPage = React.lazy(
+  () => import("./app/zion-ai-supply-chain-optimizer/page"),
+);
+const ZionAIVideoEditorPage = React.lazy(
+  () => import("./app/zion-ai-video-editor/page"),
 );
 
 // 5G Solutions Pages
@@ -250,6 +269,7 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                  <Route path="/ai-healthcare-diagnostics" element={<AiHealthcareDiagnosticsPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -351,6 +371,7 @@ function App() {
                   <Route path="/machine-learning" element={<MachineLearningPage />} />
                   <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                   <Route path="/robotics" element={<RoboticsPage />} />
+                  <Route path="/enterprise-ai-solutions" element={<EnterpriseAISolutionsPage />} />
 
                   {/* Micro SAAS Routes */}
                   <Route
@@ -408,6 +429,28 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-customer-insights-pro"
+                    element={<ZionAICustomerInsightsProPage />}
+                  />
+                  <Route
+                    path="/zion-ai-finance-manager"
+                    element={<ZionAIFinanceManagerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-hr-assistant"
+                    element={<ZionAIHRAssistantPage />}
+                  />
+                  <Route
+                    path="/zion-ai-supply-chain-optimizer"
+                    element={<ZionAISupplyChainOptimizerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-video-editor"
+                    element={<ZionAIVideoEditorPage />}
                   />
 
                   {/* 5G Solutions Routes */}

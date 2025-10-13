@@ -1,103 +1,103 @@
-import { ArrowRight, Video, Brain, Scissors, Play, CheckCircle, Star, Zap, Target, Camera } from "lucide-react";
+import { ArrowRight, DollarSign, TrendingUp, PieChart, Calculator, CheckCircle, Star, Zap, Shield, BarChart3 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAIVideoEditor() {
+export default function ZionAIFinanceManager() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Auto-Editing",
-      description: "Automatically edit videos with AI that understands content, pacing, and visual appeal for professional results"
+      icon: <Calculator className="w-6 h-6" />,
+      title: "AI-Powered Financial Forecasting",
+      description: "Predict cash flow, revenue, and expenses with 98% accuracy using advanced machine learning algorithms"
     },
     {
-      icon: <Scissors className="w-6 h-6" />,
-      title: "Smart Cut & Trim",
-      description: "Intelligent scene detection and automatic trimming to remove dead air, filler words, and unwanted content"
+      icon: <PieChart className="w-6 h-6" />,
+      title: "Automated Budget Management",
+      description: "Create, monitor, and optimize budgets automatically with real-time tracking and intelligent recommendations"
     },
     {
-      icon: <Play className="w-6 h-6" />,
-      title: "Auto Color Correction",
-      description: "AI-powered color grading and correction that adapts to different lighting conditions and styles automatically"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Investment Analysis & Optimization",
+      description: "Analyze investment opportunities, portfolio performance, and risk assessment with AI-driven insights"
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Smart Object Tracking",
-      description: "Automatically track and follow objects, faces, and subjects throughout your video with precision"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Fraud Detection & Prevention",
+      description: "Advanced fraud detection system that identifies suspicious transactions and prevents financial losses"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Real-time Financial Dashboards",
+      description: "Monitor key financial metrics, KPIs, and performance indicators with interactive, customizable dashboards"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Auto Subtitle Generation",
-      description: "Generate accurate subtitles and captions automatically with AI speech recognition and timing"
-    },
-    {
-      icon: <Camera className="w-6 h-6" />,
-      title: "Background Removal & Replacement",
-      description: "Remove or replace backgrounds automatically with AI-powered green screen technology"
+      title: "Automated Financial Reporting",
+      description: "Generate comprehensive financial reports, tax documents, and compliance reports automatically"
     }
   ];
 
   const capabilities = [
-    "Auto Video Editing",
-    "Smart Scene Detection",
-    "Color Correction & Grading",
-    "Object & Face Tracking",
-    "Background Removal",
-    "Auto Subtitle Generation",
-    "Audio Enhancement",
-    "Motion Graphics",
-    "Text Overlay & Titles",
-    "Video Stabilization",
-    "Speed Adjustment",
-    "Format Conversion"
+    "Cash Flow Forecasting",
+    "Budget Planning & Tracking",
+    "Expense Management",
+    "Revenue Optimization",
+    "Investment Portfolio Analysis",
+    "Risk Assessment & Management",
+    "Tax Planning & Optimization",
+    "Financial Goal Setting",
+    "Debt Management",
+    "Credit Score Monitoring",
+    "Invoice & Payment Processing",
+    "Financial Compliance Reporting"
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$29",
+      name: "Basic",
+      price: "$79",
       period: "/month",
-      description: "Perfect for content creators",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 10 hours of video",
-        "Basic AI editing",
-        "Auto color correction",
-        "Subtitle generation",
+        "Basic financial forecasting",
+        "Expense tracking",
+        "Simple budgeting tools",
+        "Monthly financial reports",
         "Email support",
-        "HD export"
+        "Up to 5 bank accounts"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$199",
       period: "/month",
-      description: "Most popular for professionals",
+      description: "Most popular for growing businesses",
       features: [
-        "Up to 50 hours of video",
-        "Advanced AI editing",
-        "Object tracking",
-        "Background removal",
+        "Advanced AI forecasting",
+        "Investment analysis",
+        "Fraud detection",
+        "Custom dashboards",
         "Priority support",
-        "4K export",
-        "API access",
-        "Custom templates"
+        "Up to 25 bank accounts",
+        "Tax optimization",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$499",
       period: "/month",
-      description: "For large teams",
+      description: "For large organizations",
       features: [
-        "Unlimited video hours",
         "Custom AI models",
-        "White-label platform",
+        "Advanced analytics",
+        "White-label reporting",
         "24/7 dedicated support",
-        "Advanced integrations",
-        "8K export",
-        "Team collaboration",
-        "Custom branding"
+        "Unlimited accounts",
+        "Custom integrations",
+        "Financial consulting",
+        "Compliance management"
       ],
       popular: false
     }
@@ -105,24 +105,24 @@ export default function ZionAIVideoEditor() {
 
   const testimonials = [
     {
-      name: "Jessica Martinez",
-      company: "Digital Marketing Agency",
-      role: "Video Producer",
-      content: "Zion AI Video Editor has revolutionized our video production. We can now create professional videos 5x faster with better quality than before.",
+      name: "Michael Thompson",
+      company: "Thompson & Associates",
+      role: "CFO",
+      content: "Zion AI Finance Manager has revolutionized our financial planning. The forecasting accuracy is incredible, and we've reduced financial planning time by 70%.",
       rating: 5
     },
     {
-      name: "Alex Thompson",
-      company: "YouTube Creator",
-      role: "Content Creator",
-      content: "The auto-editing feature is incredible. It understands my content style and creates engaging videos that my audience loves. My engagement has increased by 60%.",
+      name: "Sarah Williams",
+      company: "TechStart Ventures",
+      role: "Financial Director",
+      content: "The fraud detection feature has saved us thousands of dollars. The AI caught several suspicious transactions that our previous system missed.",
       rating: 5
     },
     {
-      name: "Maria Rodriguez",
-      company: "Corporate Communications",
-      role: "Video Manager",
-      content: "The subtitle generation and background removal features have saved us countless hours. The quality is professional-grade and our team productivity has doubled.",
+      name: "David Chen",
+      company: "Investment Group LLC",
+      role: "Portfolio Manager",
+      content: "The investment analysis tools are outstanding. We've improved our portfolio performance by 25% using the AI recommendations.",
       rating: 5
     }
   ];
@@ -130,45 +130,45 @@ export default function ZionAIVideoEditor() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Video Editor - Intelligent Video Editing Platform | Zion Tech Group</title>
+        <title>Zion AI Finance Manager - Intelligent Financial Management Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Create professional videos with Zion AI Video Editor. AI-powered auto-editing, smart cuts, color correction, object tracking, and automated subtitles for modern content creators."
+          content="Transform your financial management with Zion AI Finance Manager. AI-powered forecasting, automated budgeting, investment analysis, and fraud detection for modern businesses."
         />
         <meta
           name="keywords"
-          content="AI video editing, auto video editing, video production, color correction, object tracking, subtitle generation, background removal, video automation"
+          content="financial management, AI forecasting, budget management, investment analysis, fraud detection, financial planning, cash flow, portfolio management"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-              <Video className="w-4 h-4 text-purple-400 mr-2" />
-              <span className="text-purple-400 text-sm font-medium">AI-Powered Video Intelligence</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
+              <DollarSign className="w-4 h-4 text-green-400 mr-2" />
+              <span className="text-green-400 text-sm font-medium">AI-Powered Financial Intelligence</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                Zion AI Video Editor
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                Zion AI Finance Manager
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Create professional videos effortlessly with AI-powered editing, smart cuts, 
-              color correction, and automated features that understand your content.
+              Take control of your finances with AI-powered forecasting, automated budgeting, 
+              investment analysis, and advanced fraud detection for complete financial management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -177,16 +177,16 @@ export default function ZionAIVideoEditor() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">5x</div>
-                <div className="text-gray-300">Faster Editing</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">98%</div>
+                <div className="text-gray-300">Forecasting Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">95%</div>
+                <div className="text-3xl font-bold text-emerald-400 mb-2">70%</div>
                 <div className="text-gray-300">Time Savings</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">10,000+</div>
-                <div className="text-gray-300">Videos Created</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">$2M+</div>
+                <div className="text-gray-300">Fraud Prevention</div>
               </div>
             </div>
           </div>
@@ -197,10 +197,10 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Video Editing Features
+                Comprehensive Financial Management
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create professional videos with AI intelligence.
+                Everything you need to manage, analyze, and optimize your finances with AI intelligence.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -209,7 +209,7 @@ export default function ZionAIVideoEditor() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -229,10 +229,10 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Video Production Suite
+                Complete Financial Suite
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the video editing tools you need in one intelligent platform.
+                All the financial tools you need in one intelligent platform.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -241,7 +241,7 @@ export default function ZionAIVideoEditor() {
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
-                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span className="text-gray-300">{capability}</span>
                 </div>
               ))}
@@ -254,10 +254,10 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Video Editing Plans
+                Flexible Financial Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your video production needs. All plans include 14-day free trial.
+                Choose the plan that fits your financial management needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -266,13 +266,13 @@ export default function ZionAIVideoEditor() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-purple-400 bg-gradient-to-br from-purple-500/10 to-pink-500/10'
-                      : 'border-white/20 hover:border-purple-400'
+                      ? 'border-green-400 bg-gradient-to-br from-green-500/10 to-emerald-500/10'
+                      : 'border-white/20 hover:border-green-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -288,7 +288,7 @@ export default function ZionAIVideoEditor() {
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
@@ -297,8 +297,8 @@ export default function ZionAIVideoEditor() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
-                        : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
+                        : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -314,10 +314,10 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Content Creators
+                Trusted by Financial Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what video creators say about Zion AI Video Editor
+                See what finance professionals say about Zion AI Finance Manager
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -346,24 +346,24 @@ export default function ZionAIVideoEditor() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Create Amazing Videos?
+              Ready to Transform Your Financial Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of creators using Zion AI Video Editor to produce professional content effortlessly.
+              Join thousands of businesses using Zion AI Finance Manager to optimize their financial performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
               >
-                Watch Demo
+                Schedule Demo
               </Link>
             </div>
           </div>
