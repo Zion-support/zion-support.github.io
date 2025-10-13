@@ -642,6 +642,18 @@ const Footer = () => {
                   AI Workflow Automation
                 </Link>
               </li>
+              <li>
+                <Link to="/ai-blockchain-solutions" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  AI Blockchain Solutions
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-autonomous-systems" className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  AI Autonomous Systems
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -714,6 +726,24 @@ const Footer = () => {
                 <Link to="/analytics-dashboard" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
                   Analytics Dashboard
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-powered-email-marketing" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  AI Email Marketing
+                </Link>
+              </li>
+              <li>
+                <Link to="/smart-inventory-management" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  Smart Inventory Management
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-customer-insights-platform" className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm flex items-center">
+                  <ArrowRight className="w-3 h-3 mr-2" />
+                  AI Customer Insights
                 </Link>
               </li>
               <li>

@@ -674,6 +674,12 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                             <Link to="/ai-workflow-automation" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
                               AI Workflow Automation
                             </Link>
+                            <Link to="/ai-blockchain-solutions" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Blockchain Solutions
+                            </Link>
+                            <Link to="/ai-autonomous-systems" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Autonomous Systems
+                            </Link>
                           </div>
                         )}
                       </div>
@@ -741,6 +747,15 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                             </Link>
                             <Link to="/financial-tracking" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
                               Financial Tracking
+                            </Link>
+                            <Link to="/ai-powered-email-marketing" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Email Marketing
+                            </Link>
+                            <Link to="/smart-inventory-management" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Smart Inventory Management
+                            </Link>
+                            <Link to="/ai-customer-insights-platform" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Customer Insights
                             </Link>
                           </div>
                         )}

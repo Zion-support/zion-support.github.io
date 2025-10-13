@@ -1,24 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Zap, BarChart3, Target, TrendingUp, ArrowRight, Star, CheckCircle, Clock, DollarSign, Globe, Smartphone, Monitor, Bot, Brain, Sparkles, Lock, Key, Database } from 'lucide-react';
+import { Users, BarChart3, Zap, Target, TrendingUp, ArrowRight, Star, CheckCircle, Clock, DollarSign, Globe, Smartphone, Monitor, Bot, Brain, Sparkles, Eye, MessageSquare, Heart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import FuturisticText from '../components/FuturisticText';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const AIBlockchainSolutionsPage = () => {
+const AICustomerInsightsPlatformPage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "AI-Powered Blockchain Solutions",
-    "description": "Revolutionary blockchain solutions enhanced with AI for smart contracts, DeFi protocols, and secure digital transactions.",
-    "url": "https://ziontechgroup.com/ai-blockchain-solutions",
+    "name": "AI Customer Insights Platform",
+    "description": "Advanced customer analytics platform with AI-powered insights, sentiment analysis, and predictive customer behavior modeling.",
+    "url": "https://ziontechgroup.com/ai-customer-insights-platform",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web-based",
     "offers": {
       "@type": "Offer",
-      "price": "199",
+      "price": "79",
       "priceCurrency": "USD",
       "priceValidUntil": "2024-12-31"
     },
@@ -32,83 +32,83 @@ const AIBlockchainSolutionsPage = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Smart Contracts",
-      description: "Self-executing contracts with AI-powered decision making and automated compliance"
+      title: "AI Sentiment Analysis",
+      description: "Analyze customer emotions and sentiment across all touchpoints with 98% accuracy"
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enhanced Security",
-      description: "Advanced cryptographic security with AI threat detection and prevention"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "DeFi Protocols",
-      description: "Decentralized finance solutions with AI-driven liquidity optimization"
+      icon: <Target className="w-6 h-6" />,
+      title: "Customer Segmentation",
+      description: "AI-powered customer segmentation for personalized marketing and experiences"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
       title: "Predictive Analytics",
-      description: "AI-powered market analysis and trading insights for blockchain assets"
+      description: "Predict customer behavior, churn risk, and lifetime value with machine learning"
     },
     {
-      icon: <Database className="w-6 h-6" />,
-      title: "Data Integrity",
-      description: "Immutable data storage with AI verification and validation systems"
+      icon: <Eye className="w-6 h-6" />,
+      title: "Real-time Monitoring",
+      description: "Monitor customer satisfaction and engagement in real-time across all channels"
     },
     {
-      icon: <Key className="w-6 h-6" />,
-      title: "Digital Identity",
-      description: "AI-enhanced digital identity management with biometric verification"
+      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Conversation Analytics",
+      description: "Analyze customer conversations to extract actionable insights and trends"
+    },
+    {
+      icon: <Heart className="w-6 h-6" />,
+      title: "Customer Journey Mapping",
+      description: "Visualize and optimize the complete customer journey with AI insights"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$79",
       period: "/month",
-      description: "Perfect for small projects",
+      description: "Perfect for small businesses",
       features: [
-        "Basic smart contracts",
-        "AI security monitoring",
-        "Standard DeFi protocols",
+        "Up to 10,000 customers",
+        "Basic sentiment analysis",
+        "Customer segmentation",
         "Basic analytics",
         "Email support",
-        "Up to 1,000 transactions"
+        "Standard reports"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$149",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Advanced smart contracts",
-        "AI threat detection",
-        "Custom DeFi protocols",
-        "Advanced analytics",
+        "Up to 100,000 customers",
+        "Advanced AI features",
+        "Predictive analytics",
+        "Real-time monitoring",
         "Priority support",
-        "Up to 10,000 transactions",
+        "Custom dashboards",
         "API access",
-        "Custom integrations"
+        "Advanced reporting"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$999",
+      price: "$299",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Full AI blockchain suite",
-        "Custom protocols",
-        "White-label solutions",
+        "Unlimited customers",
+        "Full AI suite",
+        "Custom models",
+        "White-label options",
         "Dedicated support",
-        "Unlimited transactions",
-        "Custom development",
-        "Advanced security",
-        "24/7 monitoring"
+        "Custom integrations",
+        "Advanced analytics",
+        "24/7 support"
       ],
       popular: false
     }
@@ -116,44 +116,44 @@ const AIBlockchainSolutionsPage = () => {
 
   const benefits = [
     {
-      title: "Enhanced Security",
-      description: "AI-powered threat detection prevents 99.9% of blockchain attacks",
-      icon: <Shield className="w-8 h-8" />
+      title: "Increase Customer Retention",
+      description: "Identify at-risk customers and take proactive action to improve retention by 40%",
+      icon: <Users className="w-8 h-8" />
     },
     {
-      title: "Cost Efficiency",
-      description: "Reduce transaction costs by up to 60% with AI optimization",
-      icon: <DollarSign className="w-8 h-8" />
+      title: "Boost Customer Satisfaction",
+      description: "Real-time insights help you address issues before they impact satisfaction",
+      icon: <Heart className="w-8 h-8" />
     },
     {
-      title: "Smart Automation",
-      description: "Automate complex blockchain operations with AI decision making",
-      icon: <Bot className="w-8 h-8" />
+      title: "Improve Marketing ROI",
+      description: "Target the right customers with personalized campaigns that convert 3x better",
+      icon: <Target className="w-8 h-8" />
     },
     {
-      title: "Scalability",
-      description: "Handle millions of transactions with AI-optimized blockchain networks",
+      title: "Reduce Churn Rate",
+      description: "Predict and prevent customer churn with AI-powered early warning systems",
       icon: <TrendingUp className="w-8 h-8" />
     }
   ];
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      company: "Crypto Exchange",
-      content: "The AI security features prevented multiple attacks. Our platform is now 100% secure!",
+      name: "Jennifer Lee",
+      company: "E-commerce Platform",
+      content: "Our customer retention increased by 45% after implementing AI insights. Game changer!",
       rating: 5
     },
     {
-      name: "Sarah Williams",
-      company: "DeFi Protocol",
-      content: "AI optimization reduced our gas fees by 70%. Incredible cost savings!",
+      name: "Robert Kim",
+      company: "SaaS Company",
+      content: "The predictive analytics helped us identify churn risks early and save 200+ customers.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      company: "Blockchain Startup",
-      content: "The smart contract automation saved us months of development time.",
+      name: "Maria Garcia",
+      company: "Retail Chain",
+      content: "Customer satisfaction scores improved by 30% with real-time sentiment monitoring.",
       rating: 5
     }
   ];
@@ -161,10 +161,10 @@ const AIBlockchainSolutionsPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="AI-Powered Blockchain Solutions | Zion Tech Group"
-        description="Revolutionary blockchain solutions enhanced with AI for smart contracts, DeFi protocols, and secure digital transactions. Enhanced security and cost efficiency."
-        keywords="AI blockchain, smart contracts, DeFi protocols, blockchain security, cryptocurrency, digital transactions, AI optimization"
-        canonical="https://ziontechgroup.com/ai-blockchain-solutions"
+        title="AI Customer Insights Platform | Zion Tech Group"
+        description="Advanced customer analytics with AI-powered insights, sentiment analysis, and predictive behavior modeling. Increase retention by 40%."
+        keywords="customer insights, AI analytics, sentiment analysis, customer segmentation, predictive analytics, customer retention"
+        canonical="https://ziontechgroup.com/ai-customer-insights-platform"
         structuredData={structuredData}
       />
       
@@ -174,16 +174,16 @@ const AIBlockchainSolutionsPage = () => {
           <ResponsiveContainer>
             <div className="text-center">
               <FuturisticText className="text-4xl md:text-6xl font-bold mb-6">
-                AI-Powered Blockchain Solutions
+                AI Customer Insights Platform
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                  The Future of Digital Finance
+                  Know Your Customers Better
                 </span>
               </FuturisticText>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Revolutionize your blockchain operations with AI-enhanced smart contracts, 
-                DeFi protocols, and advanced security that reduces costs by 60% and 
-                prevents 99.9% of attacks.
+                Transform customer data into actionable insights with AI-powered analytics, 
+                sentiment analysis, and predictive modeling that increases retention by 40% 
+                and boosts satisfaction scores.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -209,20 +209,20 @@ const AIBlockchainSolutionsPage = () => {
               {/* Stats */}
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
-                  <div className="text-gray-300">Attack Prevention</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
+                  <div className="text-gray-300">Retention Increase</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-                  <div className="text-gray-300">Cost Reduction</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">98%</div>
+                  <div className="text-gray-300">Sentiment Accuracy</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">10x</div>
-                  <div className="text-gray-300">Faster Processing</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">3x</div>
+                  <div className="text-gray-300">Better Conversion</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-                  <div className="text-gray-300">AI Monitoring</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">30%</div>
+                  <div className="text-gray-300">Satisfaction Boost</div>
                 </div>
               </div>
             </div>
@@ -234,10 +234,10 @@ const AIBlockchainSolutionsPage = () => {
           <ResponsiveContainer>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our AI Blockchain Solutions?
+                Why Choose Our AI Customer Insights Platform?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your blockchain operations with cutting-edge AI technology
+                Transform your customer relationships with cutting-edge AI technology
               </p>
             </div>
             
@@ -263,7 +263,7 @@ const AIBlockchainSolutionsPage = () => {
                 Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to build secure, efficient blockchain solutions
+                Everything you need to understand and engage your customers better
               </p>
             </div>
             
@@ -289,7 +289,7 @@ const AIBlockchainSolutionsPage = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your blockchain needs. All plans include our core AI features.
+                Choose the plan that fits your business needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -352,7 +352,7 @@ const AIBlockchainSolutionsPage = () => {
                 What Our Customers Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join leading blockchain companies using our AI-powered solutions
+                Join thousands of businesses already using our AI customer insights platform
               </p>
             </div>
             
@@ -381,10 +381,10 @@ const AIBlockchainSolutionsPage = () => {
             <div className="text-center">
               <FuturisticCard className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Ready to Revolutionize Your Blockchain?
+                  Ready to Understand Your Customers Better?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Start your free trial today and experience the future of blockchain technology
+                  Start your free trial today and see the difference AI insights can make
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButton
@@ -414,4 +414,4 @@ const AIBlockchainSolutionsPage = () => {
   );
 };
 
-export default AIBlockchainSolutionsPage;
+export default AICustomerInsightsPlatformPage;

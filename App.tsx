@@ -42,6 +42,8 @@ const AIMarketingAutomationPage = React.lazy(() => import("./app/ai-marketing-au
 const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
 const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
 const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AIBlockchainSolutionsPage = React.lazy(() => import("./app/ai-blockchain-solutions/page"));
+const AIAutonomousSystemsPage = React.lazy(() => import("./app/ai-autonomous-systems/page"));
 
 // Micro SAAS Pages
 const ProjectManagementToolPage = React.lazy(() => import("./app/project-management-tool/page"));
@@ -50,6 +52,9 @@ const AnalyticsDashboardPage = React.lazy(() => import("./app/analytics-dashboar
 const CustomerRelationshipPage = React.lazy(() => import("./app/customer-relationship/page"));
 const InventoryManagementPage = React.lazy(() => import("./app/inventory-management/page"));
 const FinancialTrackingPage = React.lazy(() => import("./app/financial-tracking/page"));
+const AIPoweredEmailMarketingPage = React.lazy(() => import("./app/ai-powered-email-marketing/page"));
+const SmartInventoryManagementPage = React.lazy(() => import("./app/smart-inventory-management/page"));
+const AICustomerInsightsPlatformPage = React.lazy(() => import("./app/ai-customer-insights-platform/page"));
 
 // IT Services Pages
 const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
@@ -123,6 +128,8 @@ function App() {
                     <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
                     <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
                     <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+                    <Route path="/ai-blockchain-solutions" element={<AIBlockchainSolutionsPage />} />
+                    <Route path="/ai-autonomous-systems" element={<AIAutonomousSystemsPage />} />
                     
                     {/* Micro SAAS Routes */}
                     <Route path="/project-management-tool" element={<ProjectManagementToolPage />} />
@@ -131,6 +138,9 @@ function App() {
                     <Route path="/customer-relationship" element={<CustomerRelationshipPage />} />
                     <Route path="/inventory-management" element={<InventoryManagementPage />} />
                     <Route path="/financial-tracking" element={<FinancialTrackingPage />} />
+                    <Route path="/ai-powered-email-marketing" element={<AIPoweredEmailMarketingPage />} />
+                    <Route path="/smart-inventory-management" element={<SmartInventoryManagementPage />} />
+                    <Route path="/ai-customer-insights-platform" element={<AICustomerInsightsPlatformPage />} />
                     
                     {/* IT Services Routes */}
                     <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
