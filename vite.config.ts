@@ -83,22 +83,22 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries - keep together for better caching
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
-          // Router
+          // Router and navigation
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - split by size
           if (id.includes('framer-motion')) {
             return 'animations'
           }
           if (id.includes('lucide-react')) {
             return 'icons'
           }
-          // SEO and meta
+          // SEO and meta - lightweight
           if (id.includes('react-helmet')) {
             return 'seo'
           }
@@ -135,28 +135,35 @@ export default defineConfig({
             }
             return 'ai-other'
           }
-          // Zion service pages - group by category
+          // Zion service pages - group together
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/zion-')[1]?.split('/')[0];
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'zion-analytics'
-            }
-            if (serviceName?.includes('ai-')) {
-              return 'zion-ai'
-            }
-            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
-              return 'zion-security'
-            }
-            return 'zion-other'
+            return 'zion-services'
           }
-          // 5G service pages
+          // 5G service pages - group together
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
-          // Other service pages
+          // IT service pages - group together
           if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
-            return 'pages'
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
+              (id.includes('devops') || id.includes('cloud') || id.includes('network') || 
+               id.includes('software') || id.includes('web') || id.includes('it-'))) {
+            return 'it-services'
+          }
+          // Micro SAAS pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('micro-saas') || id.includes('project-management') || 
+               id.includes('customer-relationship') || id.includes('inventory') ||
+               id.includes('financial') || id.includes('employee') || id.includes('social') ||
+               id.includes('email') || id.includes('website') || id.includes('task') ||
+               id.includes('smart-') || id.includes('ai-powered'))) {
+            return 'micro-saas'
+          }
+          // Main pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('about') || id.includes('contact') || id.includes('services') || 
+               id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
+            return 'main-pages'
           }
           // Default chunk for other modules
           return 'vendor'
