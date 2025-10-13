@@ -12,17 +12,6 @@ import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-<<<<<<< HEAD
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
-import SEOOptimizer from "./app/components/SEOOptimizer";
-import EnhancedSEO from "./app/components/EnhancedSEO";
-import EnhancedSEOOptimizer from "./app/components/EnhancedSEOOptimizer";
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 
 // Lazy load pages for better performance
@@ -39,6 +28,26 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
+const CareersPage = React.lazy(() => import("./app/careers/page"));
+const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
+const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
+const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
+const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
+const AICustomerServicePage = React.lazy(() => import("./app/ai-customer-service/page"));
+const AICybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
+const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
+const CybersecuritySolutionsPage = React.lazy(() => import("./app/cybersecurity-solutions/page"));
+const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
+const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
+const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
+const CustomSoftwarePage = React.lazy(() => import("./app/custom-software/page"));
+const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
+const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
+const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio/page"));
+const ZionDataSyncPage = React.lazy(() => import("./app/zion-data-sync/page"));
+const ZionProjectMasterPage = React.lazy(() => import("./app/zion-project-master/page"));
 
 // Main App Component
 function App() {
@@ -76,27 +85,31 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        <Route path="/consultation" element={<ConsultationPage />} />
+                        <Route path="/careers" element={<CareersPage />} />
+                        <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
+                        <Route path="/ai-automation" element={<AIAutomationPage />} />
+                        <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
+                        <Route path="/ai-customer-service" element={<AICustomerServicePage />} />
+                        <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
+                        <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                        <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+                        <Route path="/web-development" element={<WebDevelopmentPage />} />
+                        <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                        <Route path="/database-management" element={<DatabaseManagementPage />} />
+                        <Route path="/custom-software" element={<CustomSoftwarePage />} />
+                        <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                        <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                        <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
+                        <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
+                        <Route path="/zion-data-sync" element={<ZionDataSyncPage />} />
+                        <Route path="/zion-project-master" element={<ZionProjectMasterPage />} />
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
                 </FuturisticBackground>
-<<<<<<< HEAD
-                <EnhancedAccessibility>
-                  <div></div>
-                </EnhancedAccessibility>
-                <AnalyticsProvider>
-                  <div>
-                    <PerformanceMonitor />
-                    <WebVitalsTracker />
-                    <PerformanceEnhancer />
-                    <SEOOptimizer />
-                    <EnhancedSEO title="Zion Tech Group" description="Advanced AI and IT Solutions" />
-                    <EnhancedSEOOptimizer />
-                  </div>
-                </AnalyticsProvider>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
               </div>
             </Router>
           </AccessibilityEnhancer>
