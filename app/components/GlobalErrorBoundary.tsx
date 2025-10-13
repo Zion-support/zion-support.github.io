@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -105,7 +100,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
               <button>
                 <Mail>
                 Email Us;
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 import { logger } from '../../src/utils/logger';
@@ -147,7 +141,6 @@ export class GlobalErrorBoundary extends Component<Props, State> {
     };
   }
 
-<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     // Log error details
     logger.error('Error caught by boundary', {
@@ -155,15 +148,6 @@ export class GlobalErrorBoundary extends Component<Props, State> {
       stack: error.stack,
       componentStack: errorInfo.componentStack,
     });
-=======
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-    
-    // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-
-    }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 
     // Update state
     this.setState((prevState) => ({
@@ -269,7 +253,6 @@ export class GlobalErrorBoundary extends Component<Props, State> {
                 className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 transition-colors duration-200"
               >
                 Go to Homepage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
               </button>
             </div>
 
@@ -280,29 +263,12 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default GlobalErrorBoundaryPage;
-=======
-              </button>
-              
-              <Link
-                to="/"
-                className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
-              </Link>
-            </div>
-          </div>
-        </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
-=======
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -311,23 +277,12 @@ export default GlobalErrorBoundaryPage;
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-<<<<<<< HEAD
   ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-=======
-  ];
-
-  return (
-    <>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       <Helmet>
         <title>GlobalErrorBoundary | Zion Tech Group</title>
         <meta name="description" content="Professional GlobalErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="GlobalErrorBoundary, AI solutions, IT services, Zion Tech Group, globalerrorboundary" />
       </Helmet>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -394,22 +349,10 @@ export default GlobalErrorBoundaryPage;
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
       </section>
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
-      );
-    }
-=======
-    </div>
-    </>
-  );
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 
     return this.props.children;
   }
 }
 
 export default GlobalErrorBoundary;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

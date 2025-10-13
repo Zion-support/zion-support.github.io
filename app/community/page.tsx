@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
-=======
-'use client';
-=======
-'use client'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async'
 import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react'
@@ -69,18 +61,11 @@ const CommunityPage: React.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
   <Helmet />
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
         <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
         <link rel="canonical" href="https: //ziontechgroup.com/community" />,
-=======
-      <Helmet>
-        <title>Community | Zion Tech Group</title>
-        <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts." />
-        <meta name="keywords" content="community, developers, tech community, networking, Zion Tech Group" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -127,7 +112,6 @@ const CommunityPage: React.FC = () => {
               </div>
             ))}
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 export default PagePage;
           {/* Tabs */} <div className="mb-8">
@@ -156,7 +140,6 @@ export default PagePage;
                         <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                         Keep discussions relevant and constructive;
           )}
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -188,7 +171,6 @@ export default function Community() {
       attendees: 25
     }
   ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
           {/* Events Tab */}{activeTab === 'events' && (
                           <span className="px-3 py-1 bg-cyan-600 text-white text-xs font-semibold rounded">{event.type</span>} </span>
@@ -212,7 +194,6 @@ export default function Community() {
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300",
               >
-<<<<<<< HEAD
                 Learn More;
           {/* Contact Information */} <div className="cyber-card-enhanced p-8 mt-8">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2>
@@ -226,28 +207,6 @@ export default function Community() {
                   <div className="text-white font-semibold">Phone</div>
                   <a href="tel: +13024640950" className="text-cyan-400 hover:text-cyan-300">,
                     +1 (302) 464-0950;
-=======
-                Join Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/events"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                View Events
-              </Link>
-            </div>
-          </div>
-<<<<<<< HEAD
-        </section>
-=======
-        </div>
-      </div>
-    </div>
-    </>
-  );
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 
         {/* Stats Section */}
         <section className="py-16 px-4 bg-gray-800/30">
@@ -348,16 +307,7 @@ export default function Community() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
   )
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
-=======
-
-export default CommunityPage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-=======
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2

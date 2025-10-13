@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package } from 'lucide-react'
 const Navigation: React.FC = () => {
-<<<<<<< HEAD
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
@@ -16,32 +15,6 @@ const Navigation: React.FC = () => {
 
     return () => {window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll)}}, []);
-=======
-    const [isOpen, setIsOpen] = useState(false)
-  const [servicesOpen, setServicesOpen] = useState(false)
-  const [aiServicesOpen, setAiServicesOpen] = useState(false)
-  const [itServicesOpen, setItServicesOpen] = useState(false)
-  const [microSaasOpen, setMicroSaasOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false)
-  }
-    }
-
-    const handleScroll = () => {
-    setIsScrolled(window.scrollY > 50)
-  }
-
-    window.addEventListener('resize', handleResize)
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-    window.removeEventListener('resize', handleResize)
-      window.removeEventListener('scroll', handleScroll)
-  }
-  }, []);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleServices = () => setServicesOpen(!servicesOpen);
@@ -49,7 +22,6 @@ const Navigation: React.FC = () => {
   const toggleItServices = () => setItServicesOpen(!itServicesOpen);
   const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen);
 
-<<<<<<< HEAD
   const closeAllMenus = () => {setServicesOpen(false);
     {name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' ,},
     {name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' ,},
@@ -60,28 +32,6 @@ const Navigation: React.FC = () => {
     {name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' ,},
     {name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' ,}];
   ];];];
-=======
-  const closeAllMenus = () => {
-    setServicesOpen(false);
-    setAiServicesOpen(false)
-    setItServicesOpen(false)
-    setMicroSaasOpen(false)
-    setIsOpen(false)
-  }
-
-  // Service data
-  const aiServices = [
-    { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
-    { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
-    { name: 'AI CRM', href: '/ai-crm', icon: Users, description: 'Customer relationship management' },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'Advanced threat protection' },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' },
-    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
-    { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' }
-  ]
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   const itServices = [
     {name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' ,},
     {name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' ,},
@@ -337,25 +287,4 @@ const Navigation: React.FC = () => {
                 </a>
                 <a href="mailto: kleber@ziontechgroup.com" className="flex items-center text-cyan-400 hover:text-cyan-300 px-3 py-2 rounded-md text-base font-medium">,
                   <Mail className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
                   kleber@ziontechgroup.com;
-=======
-                  kleber@ziontechgroup.com
-                </a>
-                <div className="flex items-center text-gray-400 px-3 py-2 text-sm">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  364 E Main St STE 1008<br />
-                  Middletown DE 19709
-
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
-  )
-}
-
-export default Navigation
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

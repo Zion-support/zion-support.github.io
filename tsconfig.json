@@ -14,58 +14,36 @@
     "jsxImportSource": "react",
     "strict": true,
     "strictNullChecks": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-=======
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
     "noFallthroughCasesInSwitch": true,
-=======
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": false,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
-    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "noUncheckedIndexedAccess": false,
+    "exactOptionalPropertyTypes": false,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./app/*"],
       "@/components/*": ["./app/components/*"],
-      "@/utils/*": ["./app/utils/*"],
-      "@/hooks/*": ["./hooks/*"]
-    },
-    "incremental": true,
-    "allowJs": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "verbatimModuleSyntax": false
+      "@/lib/*": ["./lib/*"],
+      "@/hooks/*": ["./app/hooks/*"],
+      "@/data/*": ["./app/data/*"]
+    }
   },
   "include": [
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "App.tsx",
-    "main.tsx",
-    "utils/**/*.ts",
-    "hooks/**/*.ts",
-    "vite.config.ts"
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx"
+    ".next",
+    "out"
   ]
 }

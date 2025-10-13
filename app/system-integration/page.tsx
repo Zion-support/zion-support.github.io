@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    </div>
-  );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -32,4 +24,3 @@ const SystemIntegrationPage = () => {
 };
 
 export default SystemIntegrationPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3

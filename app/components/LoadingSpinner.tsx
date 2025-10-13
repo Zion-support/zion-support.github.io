@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react'
-import { Zap } from 'lucide-react'
-=======
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
@@ -16,100 +5,47 @@ interface LoadingSpinnerProps {
   fullScreen?: boolean
 }
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   text = 'Loading...', 
   fullScreen = false 
 }) => {
   const sizeClasses = {
-<<<<<<< HEAD
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     <div className="flex flex-col items-center justify-center space-y-2" role="status" aria-label="Loading">
       )}
   className = '',
-=======
-import React from 'react';
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'primary' | 'secondary' | 'white';
-=======
-
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'indigo' | 'blue' | 'green' | 'purple';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   text?: string;
   fullScreen?: boolean;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-<<<<<<< HEAD
-<<<<<<< HEAD
   color = 'primary',
   text,
   className = ''
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
-=======
-  color = 'indigo',
-  text,
-  className = '',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-=======
   text = 'Loading...',
   fullScreen = false,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     lg: 'w-12 h-12',
     xl: 'w-16 h-16',
-=======
-    lg: 'w-12 h-12'
   };
-
-  const colorClasses = {
-    primary: 'text-indigo-600',
-    secondary: 'text-gray-600',
-    white: 'text-white'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
-  };
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
 
 const LoadingSpinner: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className={`flex flex-col items-center justify-center ${className}`}>
-<<<<<<< HEAD
       <Loader2 className={`${sizeClasses[size]} text-purple-600 animate-spin`} />
       {text && (
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{text}</p>
-=======
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16',
-  };
-
-  const spinner = (
-    <div className="flex flex-col items-center justify-center">
-      <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />
-      {text && (
-        <p className="mt-4 text-gray-300 text-sm font-medium">{text}</p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
       )}
     white: 'text-white',}return(<div className="flex flex-col items-center justify-center space-y-2" role="status" aria-label="Loading">)</div>
       <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]}${colorClasses[color]}`}></div>
       {text && (
         <p className={`text-sm ${colorClasses[color]}animate-pulse`}>{text</p>} </p>
-=======
     sm: 'h-4 w-4',
     md: 'h-8 w-8',
     lg: 'h-12 w-12',
@@ -141,7 +77,6 @@ const LoadingSpinner: React.FC = () => {
           {text}
         </p>
       )}
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <div className="relative">
@@ -155,7 +90,6 @@ const LoadingSpinner: React.FC = () => {
         </h2>
         <p className="text-gray-300">Loading amazing technology solutions...</p>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
     </div>
   )
 
@@ -171,8 +105,6 @@ const LoadingSpinner: React.FC = () => {
 }
 
 export default LoadingSpinner
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
       <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}>
         <span className="sr-only">Loading...</span>
       </div>
@@ -181,7 +113,6 @@ export default LoadingSpinner
           {text}
         </p>
       )}
-=======
     lg: 'w-12 h-12',
   };
 
@@ -199,7 +130,6 @@ export default LoadingSpinner
         aria-hidden="true"
       />
       {text && <p className="mt-2 text-sm text-gray-600">{text}</p>}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     </div>
     </>
   );
@@ -218,7 +148,3 @@ export default LoadingSpinner
 };
 
 export default LoadingSpinner;
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

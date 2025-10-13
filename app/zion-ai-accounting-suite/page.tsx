@@ -1,117 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight, Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, Sparkles, Monitor, Mic, Mail, Smartphone, Globe } from 'lucide-react';
-=======
-import { ArrowRight, CheckCircle, Star, Brain } from "lucide-react";
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-<<<<<<< HEAD
 const ZionaiaccountingsuitePage = () => {
   const features = [
     {
       title: "AI-Powered Intelligence",
       description: "Advanced artificial intelligence algorithms that learn and adapt to your business needs",
       icon: <Brain className="w-8 h-8" />,
-=======
-const ZionAIAccountingSuite = () => {
-
-  const pricingPlans = [
-    {
-      name: "Solo",
-      price: "$79",
-      period: "/month",
-      description: "Perfect for freelancers",
-      features: [
-        "Up to 100 transactions/month",
-        "Basic AI categorization",
-        "Invoice processing",
-        "Tax preparation",
-        "Email support",
-        "Mobile app access",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Business",
-      price: "$199",
-      period: "/month",
-      description: "Ideal for small businesses",
-      features: [
-        "Up to 1,000 transactions/month",
-        "Advanced AI features",
-        "Multi-user access",
-        "Advanced analytics",
-        "Priority support",
-        "API integration",
-        "Custom reporting",
-        "Bank reconciliation"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$499",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited transactions",
-        "Premium AI features",
-        "Custom AI training",
-        "White-label options",
-        "24/7 phone support",
-        "Dedicated account manager",
-        "Custom integrations",
-        "Advanced security"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Robert Kim",
-      company: "Digital Marketing Agency",
-      role: "CFO",
-      content: "Zion AI Accounting Suite reduced our bookkeeping time by 85%. The AI categorization is incredibly accurate and saves us hours every week.",
-      rating: 5,
-      savings: "85% time saved"
-    },
-    {
-      name: "Maria Gonzalez",
-      company: "E-commerce Solutions",
-      role: "Owner",
-      content: "The fraud detection feature caught a suspicious transaction that would have cost us $5,000. The AI insights help us make better financial decisions.",
-      rating: 5,
-      savings: "$5,000 fraud prevented"
-    },
-    {
-      name: "James Wilson",
-      company: "Consulting Firm",
-      role: "Managing Partner",
-      content: "The automated tax preparation is a game-changer. We went from spending weeks on tax prep to just reviewing AI-generated reports.",
-      rating: 5,
-      savings: "80% faster tax prep"
-    }
-  ];
-
-  const stats = [
-    { number: "99.5%", label: "Invoice Accuracy", icon: <Receipt className="w-6 h-6" /> },
-    { number: "90%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
-    { number: "95%", label: "Auto-Categorization", icon: <PieChart className="w-6 h-6" /> },
-    { number: "99.9%", label: "Fraud Detection", icon: <Shield className="w-6 h-6" /> }
-  ];
-
-  const accountingModules = [
-    {
-      title: "Invoice Management",
-      description: "Automated invoice creation, processing, and payment tracking with AI-powered data extraction",
-      icon: <FileText className="w-8 h-8" />,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
       color: "from-blue-500 to-cyan-500"
     },
     {

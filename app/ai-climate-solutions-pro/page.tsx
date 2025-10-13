@@ -1,63 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
-import { Link } from "react-router-dom";
-
-export default function AIClimateSolutionsProZionTechGroup() {
-  return (
-    <>
-      <Helmet>
-        <title>AI Climate Solutions Pro - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            AI Climate Solutions Pro
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional AI climate solutions pro services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiClimateSolutionsProPage: React.FC = () => {,
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-=======
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 const AiClimateSolutionsProPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
   const features = [
     {
       icon: Brain,
@@ -77,56 +28,17 @@ const AiClimateSolutionsProPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
   ]
-<<<<<<< HEAD
-<<<<<<< HEAD
   return(<React.Fragment>)</React.Fragment>
       <Helmet />
-=======
-=======
-import { CheckCircle, ArrowRight } from 'lucide-react';
-;
-const PagePage: React.FC = () => {
-const features = [
-];
-};
-    {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
-    };
-  ];
-const benefits = [
-];
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
     <React.Fragment>
       <Helmet>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <title>AI Climate Solutions Pro - Zion Tech Group</title>
         <meta name="description" content="Professional climate solutions powered by advanced AI technology." />
         <meta name="keywords" content="AI climate solutions, artificial intelligence, climate technology, AI solutions, environmental AI" />
       </Helmet>
-<<<<<<< HEAD
       <Navigation />
-<<<<<<< HEAD
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
-=======
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        {/* Hero Section */};
-        <section className="pt-20 pb-16 px-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
@@ -139,7 +51,6 @@ const benefits = [
                   Get Started;
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
-=======
   return (
     <React.Fragment></React>
       <Helmet></Helmet>
@@ -159,21 +70,13 @@ const benefits = [
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"></p>
                 Transform your business with intelligent solutions powered by cutting-edge AI technology.
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                   Get Started
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"></button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                   Learn More,
   </
-=======
                 <a href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
                   <span>Get Started</span>
@@ -184,18 +87,11 @@ const benefits = [
                   <span>Learn More</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
-=======
-        {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
@@ -217,7 +113,6 @@ const benefits = [
                       <li key={benefitIndex}className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit} </li>
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -243,7 +138,6 @@ const benefits = [
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                         {benefit}
                       </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                     ))}
                   </ul>
                 </div>
@@ -251,7 +145,6 @@ const benefits = [
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
@@ -261,51 +154,21 @@ const benefits = [
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
               Start Your Free Trial;
-=======
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8"></p>
-              Join thousands of businesses already using our AI platform.
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"></button>
-              Start Your Free Trial
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
   </
           </div>
         </section>
       </main>
       <Footer /></Footer>
     </React.Fragment>
-<<<<<<< HEAD
   ),
 };
 
 export default AiClimateSolutionsProPage;
-=======
-  )
-}
-export default AiClimateSolutionsProPage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </button>
   </h2>
   </button>
   </button>
   </h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
-=======
         {/* Features Section */};
         <section id="features" className="py-20">
           <div className="container mx-auto px-4">
@@ -526,7 +389,3 @@ export default AiClimateSolutionsProPage;    'Benefit 1',
 };
 export default PagePage;
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

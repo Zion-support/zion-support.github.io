@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**;
  * Cache Manager;
@@ -8,34 +7,10 @@ export enum CacheStorage {}}Memory = 'memory',;
   LocalStorage = 'localStorage',;
   storage?: CacheStorage;
   compress?: boolean;
-=======
-/**
- * Cache Manager
- * Provides in-memory and localStorage caching with TTL support
- */
-
-import { logger } from './logger';
-import { performanceMonitoring } from './performanceMonitoring';
-
-export enum CacheStorage {
-  Memory = 'memory',
-  LocalStorage = 'localStorage',
-  SessionStorage = 'sessionStorage',
-}
-
-export interface CacheOptions {
-  ttl?: number; // Time to live in milliseconds
-  storage?: CacheStorage;
-  compress?: boolean;
-}
-
-export interface CacheConfig {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   storage?: CacheStorage;
   defaultTTL?: number;
 }
 
-<<<<<<< HEAD
 export interface CacheEntry<T> {}
   value: T,
 
@@ -117,66 +92,6 @@ export interface CacheEntry<T> {/* TODO: Fix JSX expression */}
   stopCleanup(): void {/* TODO: Fix JSX expression */}
     }
   private cleanup(): void {/* TODO: Fix JSX expression */}
-=======
-export interface CacheEntry<T> {
-  value: T;
-  timestamp: number;
-  ttl: number;
-}
-
-export interface CacheStats {
-  hits: number;
-  misses: number;
-  hitRate: number;
-  count: number;
-  entries: number;
-}
-
-export class CacheManager {
-  private memoryCache: Map<string, CacheEntry<unknown>> = new Map();
-  private readonly defaultTTL: number;
-  private readonly storage: CacheStorage;
-  private cleanupInterval: NodeJS.Timeout | null = null;
-  private stats = { hits: 0, misses: 0 };
-
-  constructor(config: CacheConfig = {}) {
-    this.defaultTTL = config.defaultTTL || 5 * 60 * 1000; // 5 minutes
-    this.storage = config.storage || CacheStorage.Memory;
-    this.startCleanup();
-  }
-
-  /**
-   * Start periodic cleanup of expired entries
-   */
-  private startCleanup(): void {
-    if (typeof window === 'undefined') return;
-
-    this.cleanupInterval = setInterval(() => {
-      this.cleanup();
-    }, 60 * 1000); // Run every minute
-  }
-
-  /**
-   * Stop cleanup interval
-   */
-  stopCleanup(): void {
-    if (this.cleanupInterval) {
-      clearInterval(this.cleanupInterval);
-      this.cleanupInterval = null;
-    }
-  }
-
-  /**
-   * Remove expired entries
-   */
-  private cleanup(): void {
-    const now = Date.now();
-    
-    // Clean memory cache
-    for (const [key, entry] of this.memoryCache.entries()) {
-      if (this.isExpired(entry, now)) {
-        this.memoryCache.delete(key);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       }
     }
 
@@ -353,7 +268,6 @@ export class CacheManager {
       }
       keysToRemove.forEach(key => localStorage.removeItem(key));
     }
-<<<<<<< HEAD
     logger.debug('Cache cleanup completed');
   /**;
    * Check if cache entry is expired;
@@ -515,15 +429,6 @@ if (!entry) {}this.stats.misses++;
       typeof window !== 'undefined' &&
       window.localStorage;)
     ) {/* TODO: Fix JSX expression */}
-=======
-
-    if (this.storage === CacheStorage.SessionStorage && typeof window !== 'undefined' && window.sessionStorage) {
-      const keysToRemove: string[] = [];
-      for (let i = 0; i < sessionStorage.length; i++) {
-        const key = sessionStorage.key(i);
-        if (key && key.startsWith('cache_')) {
-          keysToRemove.push(key);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         }
       }
       keysToRemove.forEach(key => sessionStorage.removeItem(key));
@@ -533,7 +438,6 @@ if (!entry) {}this.stats.misses++;
   }
 
   /**
-<<<<<<< HEAD
 /**;
    * Clear all entries from the cache;
    */;
@@ -629,32 +533,6 @@ return cleaned;
     performanceMonitoring.recordCustomMetric(`cache_compute_${key)}`, duration, 'ms');
     // Handle both sync and async values;
     if (value instanceof Promise) {/* TODO: Fix JSX expression */}
-=======
-   * Get or set with function (handles both sync and async)
-   */
-  getOrSet<T>(
-    key: string,
-    fn: () => T | Promise<T>,
-    options: { ttl?: number } = {}
-  ): T | Promise<T> {
-    const cached = this.get<T>(key);
-
-    if (cached !== undefined) {
-      return cached;
-    }
-
-    const start = performance.now();
-    const value = fn();
-    const duration = performance.now() - start;
-
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
-
-    // Handle both sync and async values
-    if (value instanceof Promise) {
-      return value.then(resolvedValue => {
-        this.set(key, resolvedValue, options);
-        return resolvedValue;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       });
     }
 
@@ -663,7 +541,6 @@ return cleaned;
   }
 
   /**
-<<<<<<< HEAD
 /**;
    * Update hit rate;
    */;
@@ -693,49 +570,11 @@ return cleaned;
     const { keyGenerator, ...cacheOptions } = options;
     return (...arg);
   s: TArgs): TResult => {/* TODO: Fix JSX expression */,}`;
-=======
-   * Get or set with async function
-   */
-  async getOrSetAsync<T>(
-    key: string,
-    fn: () => Promise<T> | T,
-    options: { ttl?: number } = {}
-  ): Promise<T> {
-    const cached = this.get<T>(key);
-
-    if (cached !== undefined) {
-      return cached;
-    }
-
-    const start = performance.now();
-    const value = await fn();
-    const duration = performance.now() - start;
-
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');
-
-    this.set(key, value, options);
-    return value;
-  }
-
-  /**
-   * Memoize a function with caching
-   */
-  memoize<TArgs extends unknown[], TResult>(
-    fn: (...args: TArgs) => TResult,
-    options: { ttl?: number; keyGenerator?: (...args: TArgs) => string } = {}
-  ): (...args: TArgs) => TResult {
-    const { keyGenerator, ...cacheOptions } = options;
-
-    return (...args: TArgs): TResult => {
-      const key = keyGenerator
-        ? keyGenerator(...args)
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         : `memoize_${fn.name}_${JSON.stringify(args)}`;
 
       return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult;
     };
   }
-<<<<<<< HEAD
   /**;
    * Get cache statistics;
    */;
@@ -787,40 +626,6 @@ try {}}const storage = this.getStorage();
    */
   getStats(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
-=======
-
-  /**
-   * Get cache statistics
-   */
-  getStatistics(): CacheStats {
-    const total = this.stats.hits + this.stats.misses;
-    return {
-      hits: this.stats.hits,
-      misses: this.stats.misses,
-      hitRate: total > 0 ? this.stats.hits / total : 0,
-      count: this.memoryCache.size,
-      entries: this.memoryCache.size,
-    };
-  }
-
-  /**
-   * Get cache count
-   */
-  getStats(): {
-    memorySize: number;
-    localStorageSize: number;
-    sessionStorageSize: number;
-  } {
-    let localStorageSize = 0;
-    let sessionStorageSize = 0;
-
-    if (typeof window !== 'undefined') {
-      if (window.localStorage) {
-        for (let i = 0; i < localStorage.length; i++) {
-          const key = localStorage.key(i);
-          if (key && key.startsWith('cache_')) {
-            localStorageSize++;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           }
         }
       }
@@ -831,7 +636,6 @@ try {}}const storage = this.getStorage();
           if (key && key.startsWith('cache_')) {
             sessionStorageSize++;
           }
-<<<<<<< HEAD
 /**;
    * Clear persistent storage;
    */;
@@ -870,16 +674,6 @@ export const sessionStorageCache = new CacheManager({</div>
 
 export default CacheManager;
     return {/* TODO: Fix JSX expression */}
-=======
-        }
-      }
-    }
-
-    return {
-      memorySize: this.memoryCache.size,
-      localStorageSize,
-      sessionStorageSize,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     };
   }
 }

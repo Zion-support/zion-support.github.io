@@ -1,84 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star } from "lucide-react";
-const ZionAIVideoGeneratorPage = () => {
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "per month",
-      features: ["5 videos/month", "HD quality", "Basic templates", "Email support"],
-      popular: false
-=======
-import { 
-  Play, 
-  Download, 
-  Upload, 
-  Settings, 
-  Sparkles, 
-  Zap, 
-  Star, 
-  CheckCircle, 
-  ArrowRight,
-  Video,
-  Image,
-  Music,
-  Palette,
-  Clock,
-  Users,
-  Award,
-  Shield,
-  Globe,
-  BarChart3
-} from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-
-const ZionAiVideoGenerator = () => {
-  const features = [
-    {
-      title: "AI-Powered Script Generation",
-      description: "Generate compelling video scripts using advanced AI that understands your brand voice and target audience",
-      icon: <Sparkles className="w-6 h-6" />,
-      stats: "95% accuracy rate"
-    },
-    {
-      title: "Auto Voice Synthesis",
-      description: "Convert text to natural-sounding voiceovers in 50+ languages with emotion and tone control",
-      icon: <Music className="w-6 h-6" />,
-      stats: "50+ languages"
-    },
-    {
-      title: "Smart Video Editing",
-      description: "AI automatically cuts, transitions, and optimizes your videos for maximum engagement",
-      icon: <Settings className="w-6 h-6" />,
-      stats: "10x faster editing"
-    },
-    {
-      title: "Brand Consistency",
-      description: "Maintain consistent branding across all videos with automatic logo placement and color schemes",
-      icon: <Palette className="w-6 h-6" />,
-      stats: "100% brand compliance"
-      period: "/month",
-      description: "Perfect for small businesses and content creators",
-      features: [
-        "10 videos per month",
-        "HD quality (1080p)",
-        "5 voice options",
-        "Basic templates",
-        "Email support",
-        "Watermark included"
-      ],
-      popular: false,
-      cta: "Start Free Trial"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
     },
     {
       name: "Professional",
@@ -90,7 +10,6 @@ const ZionAiVideoGenerator = () => {
     {
       name: "Enterprise",
       price: "$299",
-<<<<<<< HEAD
       period: "per month",
       features: ["Unlimited videos", "8K quality", "Custom templates", "24/7 support"],
       popular: false
@@ -103,56 +22,6 @@ const ZionAiVideoGenerator = () => {
         <title>Zion AI Video Generator - Create Professional Videos with AI</title>
         <meta name="description" content="Transform your ideas into professional videos with our AI-powered video generator. Create stunning content in minutes." />
         <meta name="keywords" content="AI video generator, video creation, AI content, video automation, professional videos" />
-=======
-      period: "/month",
-      description: "For large organizations with high-volume needs",
-      features: [
-        "Unlimited videos",
-        "4K & 8K quality",
-        "50+ voice options",
-        "Custom templates",
-        "24/7 phone support",
-        "White-label solution",
-        "API access",
-        "Advanced analytics",
-        "Dedicated account manager"
-      ],
-      popular: false,
-      cta: "Contact Sales"
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Marketing Videos",
-      description: "Create engaging promotional content for social media, websites, and advertising campaigns",
-      icon: <BarChart3 className="w-8 h-8" />,
-      examples: ["Product demos", "Social media ads", "Website banners", "Email campaigns"]
-    },
-    {
-      title: "Educational Content",
-      description: "Produce training videos, tutorials, and educational content for your audience",
-      icon: <Users className="w-8 h-8" />,
-      examples: ["How-to guides", "Training modules", "Course content", "Documentation"]
-    },
-    {
-      title: "Corporate Communications",
-      description: "Generate professional videos for internal communications and external presentations",
-      icon: <Award className="w-8 h-8" />,
-      examples: ["Company updates", "Investor presentations", "Team announcements", "Recruitment videos"]
-      name: "Sarah Chen",
-      company: "Digital Marketing Pro",
-      role: "Marketing Director",
-      content: "Zion AI Video Generator has revolutionized our content creation process. We've increased our video output by 300% while reducing production time by 80%.",
-      name: "Emily Johnson",
-      company: "StartupXYZ",
-      role: "Founder",
-      content: "As a startup, we needed professional videos without the budget. This tool gave us enterprise-quality content at a fraction of the cost.",
-        <title>Zion AI Video Generator - AI-Powered Video Creation Platform | Zion Tech Group</title>
-        <meta name="description" content="Create professional videos in minutes with Zion AI Video Generator. AI-powered script generation, voice synthesis, and smart editing. Start your free trial today!" />
-        <meta name="keywords" content="AI video generator, video creation, automated video, voice synthesis, video editing, content creation, marketing videos" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-generator" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -185,7 +54,6 @@ const ZionAiVideoGenerator = () => {
               <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
-<<<<<<< HEAD
           ))}
         </div>
 
@@ -195,111 +63,6 @@ const ZionAiVideoGenerator = () => {
             Choose Your Plan
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-=======
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300 text-sm">Languages</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">95%</div>
-              <div className="text-gray-300 text-sm">Accuracy Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-white mb-2">10x</div>
-              <div className="text-gray-300 text-sm">Faster Creation</div>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful AI Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our advanced AI technology handles every aspect of video creation, from script writing to final editing
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <FuturisticCard
-                key={index}
-                className="group hover:scale-105 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-purple-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed">
-                  {feature.description}
-                </p>
-                <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-400">
-                    {feature.stats}
-                  </span>
-                </div>
-              </FuturisticCard>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Use Case
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Whether you're creating marketing content, educational videos, or corporate communications
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <FuturisticCard
-                key={index}
-                className="group hover:scale-105 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {useCase.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-purple-400 transition-colors">
-                  {useCase.title}
-                </h3>
-                <p className="text-gray-300 text-center mb-6 leading-relaxed">
-                  {useCase.description}
-                </p>
-                <div className="space-y-2">
-                  {useCase.examples.map((example, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {example}
-                    </div>
-                  ))}
-                </div>
-              </FuturisticCard>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your needs. All plans include a 14-day free trial.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
@@ -343,7 +106,6 @@ const ZionAiVideoGenerator = () => {
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}
                 >
-<<<<<<< HEAD
                   Get Started
                 </Link>
               </div>
@@ -385,45 +147,3 @@ const ZionAiVideoGenerator = () => {
 };
 
 export default ZionAIVideoGeneratorPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
-                  {plan.cta}
-                </FuturisticButton>
-              </FuturisticCard>
-            ))}
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Content Creators Worldwide
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about Zion AI Video Generator
-            </p>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
-        <ResponsiveContainer>
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Create Amazing Videos?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of content creators who are already using Zion AI Video Generator to produce professional videos in minutes.
-                href="#signup"
-                variant="primary"
-                size="lg"
-                icon={<Play className="w-5 h-5" />}
-                href="/contact"
-                variant="outline"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
-                Contact Sales
-              </FuturisticButton>
-            </div>
-            
-            <div className="mt-8 text-sm text-gray-400">
-              <p>14-day free trial • No credit card required • Cancel anytime</p>
-export default ZionAiVideoGenerator;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091

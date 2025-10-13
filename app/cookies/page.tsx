@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-
-const CookiesPage: React.FC = () => {
-  return (
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
     <>
   </>
       <Helmet>
         <title>Cookie Policy - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." />
       </Helmet>
       
@@ -58,54 +44,22 @@ const CookiesPage: React.FC = () => {
 
   );
 };
-=======
-        <meta name="description" content="Cookie Policy services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Cookie Policy
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Coming soon - Advanced Cookie Policy solutions by Zion Tech Group
-            </p>
-          </div>
-        </div>
-=======
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {Helmet}}from 'react-helmet-async';
-import {Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info}}from 'lucide-react';
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 import { Helmet } from 'react-helmet-async';
 import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
 import { Helmet } from 'react-helmet-async';
 import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
 
 const CookiesPage: React.FC = () => {,
   const lastUpdated = 'January 1, 2024';
   
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react'
 const CookiesPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   const cookieTypes = [
     {
       type: 'Essential Cookies',
@@ -162,26 +116,17 @@ const CookiesPage: React.FC = () => {
       description: 'Deliver relevant content and advertisements',
       icon: Eye;,}]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   return(<>)
       <Helmet />
         <title>Cookie Policy - Zion Tech Group</title>
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
   return (
     <>
       <Helmet></Helmet>
         <title></titl>Cookie Policy - Zion Tech Group</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                 </div>
               </div>
             </div>
           </div>
-=======
   return (
     <>
       <Helmet>
@@ -466,23 +411,12 @@ const CookiesPage: React.FC = () => {
         </div>
         
         <Footer />
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </div>
     </>
   )
 }
 
 export default CookiesPage
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import React from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -503,38 +437,11 @@ const CookiesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               This page is under construction. Please check back soon.
             </p>
-<<<<<<< HEAD
           </div>
         </div>
         <Footer />
       </div>
     </>
-=======
-
-            <h2 className="text-2xl font-semibold text-white mb-4">How We Use Cookies</h2>
-            <p className="text-gray-300 mb-6">
-              We use cookies to improve your browsing experience, analyze site traffic, and personalize content. 
-              We also use cookies for security purposes and to remember your preferences.
-            </p>
-
-            <h2 className="text-2xl font-semibold text-white mb-4">Managing Cookies</h2>
-            <p className="text-gray-300 mb-6">
-              You can control and manage cookies through your browser settings. However, disabling cookies may 
-              affect the functionality of our website.
-            </p>
-
-            <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
-            <p className="text-gray-300 mb-6">
-              If you have any questions about our cookie policy, please contact us at kleber@ziontechgroup.com
-            </p>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -568,21 +475,10 @@ const CookiesPage = () => {
         </section>
       </div>
     </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
   );
 };
 
 export default CookiesPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
-=======
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -626,7 +522,3 @@ const CookiesPage: React.FC = () => {
   );
 };
 export default CookiesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2

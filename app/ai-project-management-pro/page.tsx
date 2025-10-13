@@ -1,60 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-"use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { CheckCircle, Star } from "lucide-react";
-export default function AIProjectManagementPro() {
-
-  const projectFeatures = [
-    {
-      category: "Project Planning",
-      items: [
-        "AI Task Breakdown",
-        "Resource Optimization",
-        "Timeline Generation",
-        "Risk Assessment",
-        "Dependency Mapping",
-        "Milestone Tracking",
-      ],
-    },
-    {
-      category: "Team Management",
-      items: [
-        "Team Collaboration",
-        "Role Assignment",
-        "Workload Balancing",
-        "Communication Tools",
-        "Progress Updates",
-        "Performance Tracking",
-      ],
-    },
-    {
-      category: "Automation",
-      items: [
-        "Workflow Automation",
-        "Notification System",
-        "Report Generation",
-        "Status Updates",
-        "Deadline Alerts",
-        "Quality Checks",
-      ],
-    },
-    {
-      category: "Integration",
-      items: [
-        "Tool Integration",
-        "API Connectivity",
-        "Data Synchronization",
-        "Third-party Apps",
-        "Cloud Storage",
-        "Version Control",
-      ],
-    },
-  ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
   const pricingPlans = [
     {
@@ -95,4 +38,3 @@ export default function AIProjectManagementPro() {
         </section>
       </div>
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37

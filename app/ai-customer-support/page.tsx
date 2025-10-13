@@ -1,51 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
 const AiCustomerSupportPage: React.FC = () => {
-=======
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
-import { Link } from "react-router-dom";
-
-export default function AICustomerSupportZionTechGroup() {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <>
       <Helmet>
         <title>AI Customer Support - Zion Tech Group</title>
         <meta name="description" content="AI Customer Support services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiCustomerSupportPage: React.FC = () => {
-<<<<<<< HEAD
   const features = [
-=======
-const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-;
-const AiCustomerSupportPage: React.FC = () => {
-const features = [
-];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -61,29 +30,16 @@ const features = [
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
     {icon: TrendingUp,
       title: 'Growth Optimization',
-<<<<<<< HEAD
       description: 'Optimize your business growth with data-driven strategies.',      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   }];
 
-=======
-      description: 'Optimize your business growth with data-driven strategies.',
-<<<<<<< HEAD
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-=======
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    };
-  ];
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-<<<<<<< HEAD
     'Gain competitive advantage with advanced technology';
   ]
 return (
@@ -92,7 +48,6 @@ return (
         <title>Ai Customer Support - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -105,21 +60,9 @@ return (
               Coming soon - Advanced AI Customer Support solutions by Zion Tech Group
             </p>
           </div>
-=======
-'use client';
-import React from 'react';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
-=======
-import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
@@ -167,13 +110,6 @@ const AICustomerSupportPage: React.FC = () => {
       features: ['Unlimited conversations', 'Custom AI training', '24/7 human support', 'Custom integrations', 'Advanced analytics', 'Dedicated account manager']
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
@@ -223,7 +159,6 @@ const AICustomerSupportPage: React.FC = () => {
                   Call Now
                 </a>
               </div>
-<<<<<<< HEAD
             </div>
           </section>
           {/* Stats Section */}
@@ -235,49 +170,6 @@ const AICustomerSupportPage: React.FC = () => {
                   <div className="text-gray-300 text-sm md:text-base">{stat.label}</div>
                 </div>
               ))}
-=======
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-                {stats.map((stat, index) => (
-                  <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 neon-text">
-                      {stat.number}
-                    </div>
-                    <div className="text-gray-300 font-medium">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      <Navigation />
-      
-      <main className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-              AI Customer Support
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
-              smart ticket routing, and predictive analytics.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center space-x-2"
-              >
-                <MessageCircle className="w-4 h-4" />
-                <span>Get Started</span>
-              </a>
-              <a
-                href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Learn More
-              </a>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
             </div>
           </section>
           {/* Features Section */}
@@ -312,26 +204,12 @@ const AICustomerSupportPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans
             </h2>
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-slate-800/50 rounded-xl p-8 border ${index === 1 ? 'border-cyan-500' : 'border-slate-700'} relative`}>
                   {index === 1 && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-=======
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricingPlans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`cyber-card p-8 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-400 scale-105' : ''
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
                         Most Popular
                       </span>
                     </div>
@@ -357,23 +235,12 @@ const AICustomerSupportPage: React.FC = () => {
               ))}
             </div>
           </section>
-<<<<<<< HEAD
           {/* Contact Section */}
           <section className="mb-16">
             <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
               <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Customer Support?</h2>
               <p className="text-gray-300 mb-6 text-lg">
                 Contact us today for a free consultation and discover how AI can revolutionize your customer service.
-=======
-          {/* CTA Section */}
-          <section className="container mx-auto px-4 py-16 text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
-                Ready to Transform Your Customer Support?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join 500+ companies already using our AI customer support solutions
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
@@ -391,42 +258,23 @@ const AICustomerSupportPage: React.FC = () => {
                   kleber@ziontechgroup.com
                 </a>
               </div>
-<<<<<<< HEAD
               <div className="mt-6 text-sm text-gray-400">
                 <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
             </div>
           </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
         </div>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
 
 export default AiCustomerSupportPage
-=======
-    'Gain competitive advantage with advanced technology'
-<<<<<<< HEAD
-  ]
-return (
-    <>
-=======
-  ];
-  return (
-    <React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Helmet>
         <title>Ai Customer Support - Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-<<<<<<< HEAD
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-sky-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -492,76 +340,6 @@ return (
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-=======
-        {/* Hero Section *
-        <section className="relative py-20 px-4 overflow-hidden">)
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }};
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Customer Support
-            <
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai customer support solution for modern businesses.
-            <
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              <
-              <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              <
-            <
-          <
-        <
-        {/* Features Section *
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              <
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              <
-            <
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-8">
-              {features.map((feature), index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white
-                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,
-    r:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" 
-                  <
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}<
-                  <p className="text-gray-300 mb-4">{feature.description}<
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit};
-                        </li>
-                      ))
-                    </ul>
-                </div>
-              ))
-            </div>
-          </div>
-        </section>
-        {/* Benefits Section */};
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              <
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              <
-            <
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
@@ -573,7 +351,6 @@ return (
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -584,25 +361,6 @@ return (
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Contact Us
                 </button>
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Learn More
-=======
-        {/* CTA Section *
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white
-              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              <
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                <
-                <button className="border border-sky-400 text-sky-400 hover:bg-sky-400 hove,
-    r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 </button>
               </div>
             </div>
@@ -610,21 +368,9 @@ return (
         </section>
       </div>
       <Footer />
-<<<<<<< HEAD
   )
 }
 export default AiCustomerSupportPage
-=======
-    </React.Fragment>)
-export default AiCustomerSupportPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
   );
 };
 export default AICustomerSupportPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256

@@ -1,35 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
-=======
-'use client';
-<<<<<<< HEAD
-=======
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 import React, { useEffect, useState, useCallback } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
-=======
 import React, { useEffect, useState, useCallback } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
-=======
 import React, { useEffect, useState } from 'react'
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
   useEffect(() => {
     // Performance optimization logic
     if (typeof window !== 'undefined') {
@@ -45,53 +26,24 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   }, []);
 
   return <>{children}</>;
-=======
-  const [isOptimized, setIsOptimized] = useState(false);
-=======
-import React, { useEffect, useCallback } from 'react';
-
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
-
-<<<<<<< HEAD
-const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
-  children,
-}) => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   // Preload critical resources
-=======
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   const [isOptimized, setIsOptimized] = useState(false);
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-15ad
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       // Preload critical fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preload';
-<<<<<<< HEAD
       fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
-=======
-      fontLink.href =
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
 
       // Preload critical images
       const criticalImages = [
-<<<<<<< HEAD
         '/logo.svg',
-<<<<<<< HEAD
         '/og-image.svg'
-=======
-        '/og-image.svg',
-        '/api/placeholder/1200/630', // Hero image
-        '/api/placeholder/800/600',  // Service images
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-15ad
       ];
 
       criticalImages.forEach(src => {
@@ -179,7 +131,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     }
   }, []);
 
-=======
         '/images/hero-bg.jpg',
         '/images/logo.png',
         '/images/og-image.jpg',
@@ -210,13 +161,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     }
   }, []);
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
-<<<<<<< HEAD
   // Optimize resize performance
   const handleResize = useCallback(() => {
     let ticking = false;
@@ -359,82 +308,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       `}</style>
     </>
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-15ad
 };
 
-<<<<<<< HEAD
 export default PerformanceOptimizer;
-=======
-    // Lazy load non-critical components
-    const lazyLoadComponents = () => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const element = entry.target as HTMLElement
-              element.classList.add('loaded')
-              observer.unobserve(element)
-            }
-          })
-        },
-        { threshold: 0.1 }
-      )
-
-      const lazyElements = document.querySelectorAll('[data-lazy]')
-      lazyElements.forEach(el => observer.observe(el))
-    }
-
-    // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
-      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
-        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
-        onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
-        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
-        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
-        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
-      }).catch(() => {
-        // Silently fail if web-vitals is not available
-      })
-    }
-
-      }
-
-      window.addEventListener('scroll', updateScrollPosition, { passive: true })
-      
-      return () => window.removeEventListener('scroll', updateScrollPosition)
-    }
-
-    // Initialize optimizations
-    preloadCriticalResources()
-    optimizeImages()
-    lazyLoadComponents()
-    monitorWebVitals()
-    const cleanupScroll = optimizeScroll()
-
-    // Cleanup
-    return () => {
-      cleanupScroll()
-    }
-  }, [])
-
-  // Log performance metrics in development
-  useEffect(() => {
-    if (process.env['NODE_ENV'] === 'development' && Object.values(metrics).some(val => val !== null)) {
-      console.log('Performance Metrics:', metrics)
-    }
-  }, [metrics])
-
-  return null
-}
-
-export default PerformanceOptimizer
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
-=======
 interface PerformanceMetrics {
   lcp: number | null
   fid: number | null
@@ -454,8 +330,6 @@ interface PerformanceMetrics {
           })
           ticking = true
         }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
   // Add performance monitoring
   useEffect(() => {
     if ('performance' in window) {
@@ -482,4 +356,3 @@ interface PerformanceMetrics {
 };
 
 export default PerformanceOptimizerComponent;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

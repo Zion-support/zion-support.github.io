@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -24,9 +21,6 @@ const LoadingSkeletonPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-=======
-'use client';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
   const benefits = [
     'Advanced AI technology integration',
@@ -47,26 +41,17 @@ const LoadingSkeletonPage: React.FC = () => {
   const roundedClasses = rounded ? 'rounded-full' : 'rounded';
   const animateClasses = animate ? 'animate-pulse' : '';
   
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 export default function LoadingSkeleton() {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <div
       className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`}
       style={{ width, height }}
       aria-hidden="true"
 export default LoadingSkeletonPage;
-=======
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 interface SkeletonProps {
   className?: string;
@@ -75,7 +60,6 @@ interface SkeletonProps {
   rounded?: boolean;
 }
 
-<<<<<<< HEAD
 const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '', 
   width, 
@@ -189,27 +173,7 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
 );
 
 export default Skeleton;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
-=======
-const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
-  className = '',
-  lines = 3
-          className={`h-4 bg-gray-700 rounded mb-2 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'
-          }`}
-        />
-      ))}
-    </div>
-  </div>);
-};
-
-export default LoadingSkeleton;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

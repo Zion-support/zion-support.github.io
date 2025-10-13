@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -32,11 +27,7 @@ export default function DevOpsServices() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-<<<<<<< HEAD
       </div>
     </>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091

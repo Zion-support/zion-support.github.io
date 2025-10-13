@@ -1,46 +1,64 @@
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-export default function NewsletterSignup() {
-  const [email, setEmail] = useState("");
+import React, { useState } from 'react';
+import { Mail, ArrowRight } from 'lucide-react';
+
+const NewsletterSignup: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter signup
-    };
+    // Handle newsletter subscription logic here
+    setIsSubscribed(true);
+    setEmail('');
+  };
 
   return (
-    <>
-      <Helmet>
-        <title>Newsletter Signup - Zion Tech Group</title>
-      </Helmet>
-      <div className="newsletter-signup-container">
-        <div className="newsletter-content">
-          <h2>Stay Updated</h2>
-          <p>Subscribe to our newsletter for the latest updates</p>
-          <form onSubmit={handleSubmit} className="newsletter-form">
-            <div className="input-group">
-              <Mail className="w-5 h-5" />
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-              />
-              <button type="submit">Subscribe</button>
+    <section className="py-20 px-4">
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-gradient-to-r from-purple-600/20 to-cyan-500/20 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 md:p-12 text-center">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Stay Updated with <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Latest Tech</span>
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Get the latest insights on AI, cybersecurity, and technology trends delivered to your inbox.
+          </p>
+          
+          {isSubscribed ? (
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">Thank you for subscribing!</h3>
+              <p className="text-gray-300">You'll receive our latest updates soon.</p>
             </div>
-          </form>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <div className="flex-1 relative">
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Enter your email"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"
+                  required
+                />
+              </div>
+              <button
+                type="submit"
+                className="bg-gradient-to-r from-purple-600 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center"
+              >
+                Subscribe
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </button>
+            </form>
+          )}
         </div>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
       </div>
-    </>
+    </section>
   );
-}
+};
+
+export default NewsletterSignup;

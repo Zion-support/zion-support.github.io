@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { CheckCircle } from 'lucide-react';
 const BlockchainWeb3Page: React.FC = () => {
@@ -160,39 +158,12 @@ const BlockchainWeb3Page: React.FC = () => {
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
                   Schedule Consultation
                 </button>
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const BlockchainWeb3Page: React.FC = () => {
-  const features = [
-=======
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-const BlockchainWeb3Page: React.FC = () => {
-    const features = [
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const BlockchainWeb3Page: React.FC = () => {
-const features = [
-];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     {
       icon: Zap,
       title: 'Smart Contracts',
       description: 'Automated, self-executing contracts with the terms directly written into code.',
-<<<<<<< HEAD
       benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security']},
     {icon: Shield,
-=======
-      benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security']
-  },
-    {
-    icon: Shield,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       title: 'Decentralized Security',
       description: 'Enhanced security through decentralized architecture and cryptographic protection.',
       benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data']},
@@ -203,39 +174,20 @@ const features = [
     {icon: Globe,
       title: 'Global Access',
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
-<<<<<<< HEAD
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']}]
 return (
     <>
   <Helmet />
-=======
-<<<<<<< HEAD
-      benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']
-  }
-    }
-  ]
-return (
-    <>
-=======
-      benefits: ['24
-    };
-  ];
-  return (
-    <React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Helmet>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
         <div className="container mx-auto px-4 py-16"></div>
           <div className="text-center mb-16"></div>
             <h1>
               Blockchain & <span className="text-cyan-400">Web3</span>
             </h1>
-<<<<<<< HEAD
             <p>Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.</p>
             </p>
           </div>
@@ -245,19 +197,6 @@ return (
                 <div className="flex items-start space-x-4 mb-6"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
                     <feature />
-=======
-            <p>
-              Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300"></div>
-                <div className="flex items-start space-x-4 mb-6"></div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0"></div>
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                   <div />
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description</p>}</p>
@@ -267,43 +206,10 @@ return (
                   {feature.benefits.map((benefit, benefitIndex) => (} <li>
                       <CheckCircle />
 
-<<<<<<< HEAD
                       {benefit} </li>
-=======
-                      {benefit}
-=======
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Blockchain & <span className="text-cyan-400">Web3<
-            <
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced blockchain and Web3 solutions for modern businesses. Smart contracts, DeFi, NFTs, and more.
-            <
-          <
-          <div className="grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-4 gap-8">)
-            {features.map((feature), index) => (<div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature .icon className="w-6 h-6 text-white" 
-                  <
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{feature.title}<
-                    <p className="text-gray-300 mb-4">{feature.description}<
-                  <
-                <
-                <ul className="space-y-2">)
-                  {feature.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" 
-                      {benefit};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     </li>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                   ))}
                 </ul>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
               </div>
             </div>
           </div>
@@ -495,18 +401,7 @@ return (
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </>
-<<<<<<< HEAD
   );
 };
 export default BlockchainWeb3Page;
-=======
-  )
-}
-export default BlockchainWeb3Page
-=======
-    </React.Fragment>)
-export default BlockchainWeb3Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

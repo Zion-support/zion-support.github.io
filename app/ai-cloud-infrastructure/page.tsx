@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
@@ -30,31 +29,12 @@ export default function AICloudInfrastructureZionTechGroup() {
     </>
   );
 }
-=======
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiCloudInfrastructurePage: React.FC = () => {,
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 const AiCloudInfrastructurePage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
   const features = [
     {
       icon: Brain,
@@ -74,7 +54,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
   ]
-<<<<<<< HEAD
   return(<React.Fragment>)</React.Fragment>
       <Helmet />
         <title>AI Cloud Infrastructure - Zion Tech Group</title>
@@ -95,35 +74,8 @@ const AiCloudInfrastructurePage: React.FC = () => {
                   Get Started;
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
-=======
-  return (
-    <React.Fragment></React>
-      <Helmet></Helmet>
-        <title></titl>AI Cloud Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Scalable cloud infrastructure enhanced with AI capabilities." /></meta>
-        <meta name="keywords" content="AI cloud infrastructure, artificial intelligence, cloud computing, AI solutions, intelligent infrastructure" /></meta>
-      </Helmet>
-      <Navigation /></Navigation>
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></main>
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center"></div>
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"></h1>
-                AI Cloud Infrastructure
-  </
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"></p>
-                Transform your business with intelligent solutions powered by cutting-edge AI technology.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
-                  Get Started
-  </
-                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"></button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                   Learn More,
   </
-=======
 import Navigation from '../components
 import Footer from '../components
 import { CheckCircle, ArrowRight } from 'lucide-react';
@@ -169,18 +121,11 @@ const benefits = [
   );
 };
 export default AiCloudInfrastructurePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
-=======
-        {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
@@ -204,7 +149,6 @@ export default AiCloudInfrastructurePage;
                         {benefit} </li>
                     ))}
                   </ul>
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -232,17 +176,12 @@ export default AiCloudInfrastructurePage;
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
@@ -252,51 +191,21 @@ export default AiCloudInfrastructurePage;
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
               Start Your Free Trial;
-=======
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8"></p>
-              Join thousands of businesses already using our AI platform.
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"></button>
-              Start Your Free Trial
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
   </
           </div>
 </section>
       </main>
       <Footer /></Footer>
     </React.Fragment>
-<<<<<<< HEAD
   ),
 };
 
 export default AiCloudInfrastructurePage;
-=======
-  )
-}
-export default AiCloudInfrastructurePage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </button>
   </h2>
   </button>
   </button>
   </h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
-=======
       </div>
       {/* Benefits Section */};
       </div>      {/* Benefits Section */};
@@ -313,8 +222,6 @@ export default AiCloudInfrastructurePage
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
@@ -336,22 +243,13 @@ export default AiCloudInfrastructurePage
               Contact Sales
             </button>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       <Footer />
     </div>
   );
 };
-<<<<<<< HEAD
     </div>)
 export default PagePage;
 export default AiCloudInfrastructurePage;
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-=======
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

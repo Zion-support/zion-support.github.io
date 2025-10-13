@@ -1,54 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-const NotFoundPage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page Not Found | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="The page you are looking for could not be found"
-        />
-      </Helmet>
-
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Page Not Found
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            The page you are looking for could not be found
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              Learn More
-            </Link>
-=======
-import Link from 'next/link';
-import { Home, ArrowLeft, RefreshCw } from 'lucide-react';
-export default function NotFound() {return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>)
-      <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center"></div>
-        <div className="flex justify-center mb-6"></div>
-          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center"></div>
-            <span className="text-4xl">404</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
           </div>
         </div>
       </div>
@@ -57,8 +6,6 @@ export default function NotFound() {return(<div className="min-h-screen bg-gradi
 };
 
 export default NotFoundPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Home, Search, BookOpen, Users, Phone } from 'lucide-react';
@@ -165,4 +112,3 @@ export default function NotFound() {
     </div>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 /**;
  * Comprehensive validation utilities for forms and data;
  * Provides all validation functions expected by tests;
@@ -188,22 +184,14 @@ export {isValidEmail,;}
   isValidUrl,;
   isRequired,;
   isValidPassword,;
-<<<<<<< HEAD
-<<<<<<< HEAD
   sanitizeInput;}} from './validators';
 export {/* TODO: Fix JSX expression */,}}} from './validators';"`;
 } from './validators';"`;
-=======
-  sanitizeInput;} from './validators';
-export {/* TODO: Fix JSX expression */,}} from './validators';"`;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
   sanitizeInput
   }
 } from './validators';
 export {/* TODO: Fix JSX expression */}
 } from './validators';"`;
-=======
 /**
  * Comprehensive validation utilities for forms and data
  * Provides all validation functions expected by tests
@@ -317,5 +305,3 @@ export function validateFormData(data: Record<string, any>): ValidationResult {
     errors: errors.length > 0 ? errors : undefined
   };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

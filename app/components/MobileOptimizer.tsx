@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect } from 'react';
 
-=======
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 export default function MobileOptimizer() {
   useEffect(() => {
     // Add viewport meta tag if not present
@@ -52,7 +45,6 @@ export default function MobileOptimizer() {
 
   return null;
 }
-=======
 import React, { useEffect, useState } from 'react';
 
 interface MobileOptimizerProps {
@@ -283,4 +275,3 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({ children }) => {
 };
 
 export default MobileOptimizer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb

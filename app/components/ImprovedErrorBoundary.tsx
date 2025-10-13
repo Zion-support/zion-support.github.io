@@ -1,46 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-import { Link } from 'react-router-dom';
-=======
-/**
- * Improved Error Boundary
- * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
- */
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import monitoring from '../utils/monitoring';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-<<<<<<< HEAD
-=======
-  resetKeys?: Array<string | number>;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 }
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
   error?: Error;
   errorInfo?: ErrorInfo;
-=======
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorCount: number;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 }
 
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-<<<<<<< HEAD
     this.state = { hasError: false };
   }
 
@@ -53,12 +26,9 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
       console.error('Error caught by boundary:', error, errorInfo);
     }
     
-=======
     this.state = {
       hasError: false,
       error: null,
@@ -85,16 +55,13 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
     });
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-<<<<<<< HEAD
     
     // In production, you might want to send this to an error reporting service
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
-<<<<<<< HEAD
   }
 
   handleRetry = () => {
@@ -104,69 +71,10 @@ class ImprovedErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
-=======
-
-    // Update state with error details
-    this.setState((prevState) => ({
-      errorInfo,
-      errorCount: prevState.errorCount + 1,
-    }));
-
-    // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error Boundary caught an error:', error, errorInfo);
-    }
-
-    // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as any).Sentry) {
-      (window as any).Sentry.captureException(error, {
-        contexts: {
-          react: {
-            componentStack: errorInfo.componentStack,
-          },
-        },
-      });
-    }
-  }
-
-  componentDidUpdate(prevProps: Props): void {
-    // Reset error state if resetKeys changed
-    if (this.props.resetKeys && prevProps.resetKeys) {
-      const resetKeysChanged = this.props.resetKeys.some(
-        (key, index) => key !== prevProps.resetKeys![index]
-      );
-      
-      if (resetKeysChanged && this.state.hasError) {
-        this.resetErrorBoundary();
-      }
-    }
-  }
-
-  resetErrorBoundary = (): void => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-    });
-  };
-
-  handleReload = (): void => {
-    window.location.reload();
-  };
-
-  handleGoHome = (): void => {
-    window.location.href = '/';
-  };
-
-  render(): ReactNode {
-    if (this.state.hasError) {
-      // Use custom fallback if provided
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
-<<<<<<< HEAD
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <div className="max-w-md mx-auto px-6 text-center">
@@ -211,41 +119,10 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                     {this.state.error.toString()}
                     {this.state.errorInfo?.componentStack}
                   </pre>
-=======
-      // Default error UI
-      return (
-        <div className="error-boundary-container" style={styles.container}>
-          <div style={styles.content}>
-            <div style={styles.icon}>⚠️</div>
-            <h1 style={styles.title}>Oops! Something went wrong</h1>
-            <p style={styles.message}>
-              We're sorry for the inconvenience. The application encountered an unexpected error.
-            </p>
-            
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
-              <details style={styles.details}>
-                <summary style={styles.summary}>Error Details (Development Only)</summary>
-                <div style={styles.errorDetails}>
-                  <p style={styles.errorMessage}>
-                    <strong>Error:</strong> {this.state.error.message}
-                  </p>
-                  {this.state.error.stack && (
-                    <pre style={styles.stack}>
-                      {this.state.error.stack}
-                    </pre>
-                  )}
-                  {this.state.errorInfo?.componentStack && (
-                    <pre style={styles.stack}>
-                      <strong>Component Stack:</strong>
-                      {this.state.errorInfo.componentStack}
-                    </pre>
-                  )}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                 </div>
               </details>
             )}
 
-<<<<<<< HEAD
             {/* Contact Support */}
             <div className="mt-8 pt-6 border-t border-white/10">
               <p className="text-gray-400 text-sm mb-4">
@@ -259,37 +136,6 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 Get Support
               </Link>
             </div>
-=======
-            <div style={styles.actions}>
-              <button
-                onClick={this.resetErrorBoundary}
-                style={styles.button}
-                aria-label="Try Again"
-              >
-                Try Again
-              </button>
-              <button
-                onClick={this.handleReload}
-                style={{...styles.button, ...styles.secondaryButton}}
-                aria-label="Reload Page"
-              >
-                Reload Page
-              </button>
-              <button
-                onClick={this.handleGoHome}
-                style={{...styles.button, ...styles.secondaryButton}}
-                aria-label="Go to Homepage"
-              >
-                Go Home
-              </button>
-            </div>
-
-            {this.state.errorCount > 1 && (
-              <p style={styles.errorCount}>
-                This error has occurred {this.state.errorCount} times
-              </p>
-            )}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           </div>
         </div>
       );
@@ -299,7 +145,6 @@ class ImprovedErrorBoundary extends Component<Props, State> {
   }
 }
 
-<<<<<<< HEAD
 // Higher-order component for easier usage
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
@@ -327,10 +172,6 @@ export const useErrorHandler = () => {
 };
 
 export default ImprovedErrorBoundary;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
-=======
 const styles = {
   container: {
     minHeight: '100vh',
@@ -425,4 +266,3 @@ const styles = {
 };
 
 export default ImprovedErrorBoundary;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

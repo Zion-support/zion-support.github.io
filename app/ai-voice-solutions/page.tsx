@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function AiVoiceSolutionsZionTechGroup() {
-  return (
-    <>
-      <Helmet>
-        <title>AiVoiceSolutions - Zion Tech Group</title>
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async'
-const AiVoiceSolutionsPage: React.FC = () => {
-  return (
-    <>
-  <Helmet />
-        <title>AI Voice Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI voice solutions including speech recognition, text-to-speech, voice assistants, and conversational AI for enhanced customer experiences." />
-        <meta name="keywords" content="AI voice solutions, speech recognition, text-to-speech, voice assistants, conversational AI, voice technology" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
@@ -42,9 +19,3 @@ const AiVoiceSolutionsPage: React.FC = () => {
     </>
   )
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
-
-export default AiVoiceSolutionsPage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

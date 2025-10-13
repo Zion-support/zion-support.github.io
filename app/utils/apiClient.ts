@@ -1,23 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 interface RequestConfig {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   headers?: Record<string, string>;
   body?: any;
-=======
-/**;
- * API Client Utility;
- * Provides a centralized API client with error handling and caching;
- */;
-import { apiCache } from './apiCache';
-interface RequestConfig {}}method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string /></<<<string>body</string></string>?: any;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   cache?: boolean;
   cacheTTL?: number;
 }
-=======
 /**
  * Enhanced API Client with retry logic, caching, and error handling
  */
@@ -365,4 +353,3 @@ const apiClient = new ApiClient({
 // Export both the class and default instance
 export { apiClient };
 export default ApiClient;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

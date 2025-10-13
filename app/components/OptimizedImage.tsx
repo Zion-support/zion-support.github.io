@@ -1,36 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-'use client';
-<<<<<<< HEAD
-import React, { useState, useCallback } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
-<<<<<<< HEAD
   className?: string;
   width?: number;
   height?: number;
   priority?: boolean;
-=======
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-  sizes?: string;
-  loading?: 'lazy' | 'eager';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
   onLoad?: () => void;
   onError?: () => void;
 }
 
-<<<<<<< HEAD
 export default function OptimizedImage({ 
   src, 
   alt, 
@@ -68,19 +48,6 @@ export default function OptimizedImage({
         onError={handleError}
         style={{ opacity: isLoading ? 0 : 1 }}
       />
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
-=======
-
-  return (
-    <>
-      <Helmet>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
         <title>OptimizedImage | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -193,11 +160,9 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
     </div>
   );
 }
-=======
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -217,7 +182,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
 
-=======
 import React, { useState, useCallback, memo } from 'react';
 
 interface OptimizedImageProps {
@@ -246,7 +210,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   const handleLoad = useCallback(() => {
     setIsLoaded(true);
     onLoad?.();
@@ -257,7 +220,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
     onError?.();
   }, [onError]);
 
-<<<<<<< HEAD
   // Intersection Observer for lazy loading
   React.useEffect(() => {
     if (priority || isInView) return;
@@ -369,47 +331,3 @@ const OptimizedImage: React.FC<OptimizedImageProps> = memo(({
 };
 
 export default OptimizedImage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
-=======
-  return (
-    <div className={`relative overflow-hidden ${className}`}>
-      {!isLoaded && !hasError && (
-        <div 
-          className="absolute inset-0 bg-gray-200 animate-pulse"
-          style={{ width, height }}
-        />
-      )}
-      
-      {hasError ? (
-        <div 
-          className="flex items-center justify-center bg-gray-200 text-gray-500"
-          style={{ width, height }}
-        >
-          <span className="text-sm">Failed to load image</span>
-        </div>
-      ) : (
-        <img
-          src={src}
-          alt={alt}
-          width={width || 200}
-          height={height || 200}
-          onLoad={handleLoad}
-          onError={handleError}
-          className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          style={{
-            width: width ? `${width}px` : 'auto',
-            height: height ? `${height}px` : 'auto'
-          }}
-          loading={priority ? 'eager' : 'lazy'}
-        />
-      )}
-    </div>
-  );
-});
-
-OptimizedImage.displayName = 'OptimizedImage';
-
-export default OptimizedImage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

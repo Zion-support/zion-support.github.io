@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import React from 'react'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
 }
   ]
 const benefits = [
@@ -18,7 +9,6 @@ const benefits = [
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 const PWAInstallerPage: React.FC = () => {
   const features = [
@@ -49,7 +39,6 @@ const PWAInstallerPage: React.FC = () => {
   ]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -62,7 +51,6 @@ export default function ComponentsPage() {
           name="description"
           content="Professional components services by Zion Tech Group. Transform your business with our expert solutions."
         />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
       </Helmet>
 
       {/* Hero Section */}
@@ -117,7 +105,6 @@ export default function ComponentsPage() {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Benefits Section */}
@@ -166,119 +153,6 @@ export default function ComponentsPage() {
           </div>
         </div>
       </section>
-=======
-import React, { useEffect, useState } from 'react';
-
-/**
- * PWA Installer Component
- * Handles service worker registration and install prompts
- */
-
-interface BeforeInstallPromptEvent extends Event {
-  prompt: () => Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
-}
-
-const PWAInstaller: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [isInstallable, setIsInstallable] = useState(false);
-  const [isInstalled, setIsInstalled] = useState(false);
-  const [showPrompt, setShowPrompt] = useState(false);
-
-  useEffect(() => {
-    // Check if already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      setIsInstalled(true);
-      return;
-    }
-
-    // Register service worker
-    if ('serviceWorker' in navigator && process.env['NODE_ENV'] === 'production') {
-      navigator.serviceWorker
-        .register('/service-worker.js')
-        .then((registration) => {
-          console.log('Service Worker registered:', registration);
-
-          // Check for updates periodically
-          setInterval(() => {
-            registration.update();
-          }, 60 * 60 * 1000); // Check every hour
-
-          // Listen for updates
-          registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (newWorker) {
-              newWorker.addEventListener('statechange', () => {
-                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // New service worker available
-                  if (confirm('New version available! Reload to update?')) {
-                    newWorker.postMessage({ type: 'SKIP_WAITING' });
-                    window.location.reload();
-                  }
-                }
-              });
-            }
-          });
-        })
-        .catch((error) => {
-          console.error('Service Worker registration failed:', error);
-        });
-
-      // Listen for controller change
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        window.location.reload();
-      });
-    }
-
-    // Listen for beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault();
-      setDeferredPrompt(e as BeforeInstallPromptEvent);
-      setIsInstallable(true);
-      
-      // Show prompt after a delay
-      setTimeout(() => {
-        setShowPrompt(true);
-      }, 3000);
-    };
-
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-
-    // Listen for successful installation
-    window.addEventListener('appinstalled', () => {
-      console.log('PWA installed successfully');
-      setIsInstalled(true);
-      setShowPrompt(false);
-      setDeferredPrompt(null);
-    });
-
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    };
-  }, []);
-
-  const handleInstallClick = async () => {
-<<<<<<< HEAD
-    if (!deferredPrompt) {
-      return;
-=======
-    if (!deferredPrompt) return;
-
-    try {
-      await deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      
-      if (outcome === 'accepted') {
-
-      } else {
-
-      }
-      
-      setDeferredPrompt(null);
-      setShowInstallButton(false);
-    } catch (error) {
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
     }
 
     // Show the install prompt
@@ -380,19 +254,10 @@ const PWAInstaller: React.FC = () => {
           </button>
         </div>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default PWAInstallerPage;
-=======
-'use client'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
-=======
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
 export default PWAInstaller;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

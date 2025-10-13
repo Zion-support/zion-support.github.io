@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const ItConsultingPage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>It Consulting - Zion Tech Group</title>
-        <meta name="description" content="Advanced it consulting solutions and services" />
-      </Helmet>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            It Consulting
-=======
-'use client';
-import React, { Suspense, lazy } from 'react';
-import { Link } from 'react-router-dom';
-import {Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,}
-=======
-'use client'
-import React, { Suspense, lazy } from 'react';
-import { Link } from 'react-router-dom'
-import {
-    Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,
   TrendingUp, Star, Settings, Calendar, CheckSquare, FileText,
   Mail, Phone, DollarSign, Clock, Award, CheckCircle,
@@ -97,21 +66,11 @@ import {
   Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
   Tablet as TabletIcon, Headphones as HeadphonesIcon2,
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
-<<<<<<< HEAD
   Webcam as WebcamIcon, Speaker as SpeakerIcon;} from 'lucide-react';
 const ITConsultingPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-=======
-  Webcam as WebcamIcon, Speaker as SpeakerIcon
-  }
-} from 'lucide-react'
-const ITConsultingPage: React.FC = () => {
-    const [selectedCategory, setSelectedCategory] = useState('all')
-const [searchTerm, setSearchTerm] = useState('')
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 const itServices = [
-=======
   Webcam as WebcamIcon, Speaker as SpeakerIcon;)
 } from 'lucide-react';
 ;
@@ -130,7 +89,6 @@ const ITConsultingPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const itServices = [
 ];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // IT Infrastructure Services
     {
       id: 'it-infrastructure-design',
@@ -144,7 +102,6 @@ const ITConsultingPage: React.FC = () => {
         'Server deployment and configuration',
         'Storage solutions implementation',
         'Backup and disaster recovery setup',
-<<<<<<< HEAD
 
         'Security infrastructure deployment',
 
@@ -152,16 +109,10 @@ const ITConsultingPage: React.FC = () => {
 
         'Documentation and training',
 
-=======
-        'Security infrastructure deployment',
-        'Monitoring and management tools',
-        'Documentation and training',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Ongoing support and maintenance'
       ],
       benefits: [,
         'Scalable and reliable infrastructure',
-<<<<<<< HEAD
 
         'Improved system performance',
 
@@ -169,11 +120,6 @@ const ITConsultingPage: React.FC = () => {
 
         'Reduced downtime and outages',
 
-=======
-        'Improved system performance',
-        'Enhanced security posture',
-        'Reduced downtime and outages',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Future-proof technology stack'
       ],
       targetAudience: 'Small to large businesses, Startups, Enterprises',
@@ -194,7 +140,6 @@ const ITConsultingPage: React.FC = () => {
         'Migration strategy development',
         'Data and application migration',
         'Cloud security implementation',
-<<<<<<< HEAD
 
         'Cost optimization analysis',
 
@@ -202,16 +147,10 @@ const ITConsultingPage: React.FC = () => {
 
         'Disaster recovery setup',
 
-=======
-        'Cost optimization analysis',
-        'Performance tuning',
-        'Disaster recovery setup',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Training and documentation'
       ],
       benefits: [,
         'Reduce IT costs by 30-50%',
-<<<<<<< HEAD
 
         'Improve scalability and flexibility',
 
@@ -219,11 +158,6 @@ const ITConsultingPage: React.FC = () => {
 
         'Better disaster recovery capabilities',
 
-=======
-        'Improve scalability and flexibility',
-        'Enhanced security and compliance',
-        'Better disaster recovery capabilities',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Access to latest technologies'
       ],
       targetAudience: 'Businesses looking to modernize IT infrastructure',
@@ -244,7 +178,6 @@ const ITConsultingPage: React.FC = () => {
         'Penetration testing',
         'Security policy development',
         'Firewall and endpoint protection',
-<<<<<<< HEAD
 
         'Email security implementation',
 
@@ -252,16 +185,10 @@ const ITConsultingPage: React.FC = () => {
 
         'Compliance auditing',
 
-=======
-        'Email security implementation',
-        'Security awareness training',
-        'Compliance auditing',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Incident response planning'
       ],
       benefits: [,
         'Protect against cyber threats',
-<<<<<<< HEAD
 
         'Ensure regulatory compliance',
 
@@ -269,11 +196,6 @@ const ITConsultingPage: React.FC = () => {
 
         'Improve incident response time',
 
-=======
-        'Ensure regulatory compliance',
-        'Reduce security risks by 90%',
-        'Improve incident response time',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Maintain customer trust'
       ],
       targetAudience: 'All businesses handling sensitive data',
@@ -294,7 +216,6 @@ const ITConsultingPage: React.FC = () => {
         'Bandwidth optimization',
         'Quality of Service (QoS) setup',
         'Wireless network deployment',
-<<<<<<< HEAD
 
         'Network monitoring implementation',
 
@@ -302,16 +223,10 @@ const ITConsultingPage: React.FC = () => {
 
         'Redundancy and failover setup',
 
-=======
-        'Network monitoring implementation',
-        'Traffic analysis and optimization',
-        'Redundancy and failover setup',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Performance tuning'
       ],
       benefits: [,
         'Improve network performance by 200%',
-<<<<<<< HEAD
 
         'Reduce network downtime',
 
@@ -319,11 +234,6 @@ const ITConsultingPage: React.FC = () => {
 
         'Enhance user experience',
 
-=======
-        'Reduce network downtime',
-        'Optimize bandwidth usage',
-        'Enhance user experience',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Future-proof network design'
       ],
       targetAudience: 'Businesses with complex networking needs',
@@ -344,7 +254,6 @@ const ITConsultingPage: React.FC = () => {
         'Performance optimization',
         'Backup and recovery setup',
         'Security implementation',
-<<<<<<< HEAD
 
         'Monitoring and alerting',
 
@@ -352,16 +261,10 @@ const ITConsultingPage: React.FC = () => {
 
         'Capacity planning',
 
-=======
-        'Monitoring and alerting',
-        'Query optimization',
-        'Capacity planning',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Maintenance and updates'
       ],
       benefits: [,
         'Improve database performance by 150%',
-<<<<<<< HEAD
 
         'Ensure data integrity and security',
 
@@ -369,11 +272,6 @@ const ITConsultingPage: React.FC = () => {
 
         'Optimize storage usage',
 
-=======
-        'Ensure data integrity and security',
-        'Reduce maintenance overhead',
-        'Optimize storage usage',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Minimize downtime'
       ],
       targetAudience: 'Businesses with critical data requirements',
@@ -394,7 +292,6 @@ const ITConsultingPage: React.FC = () => {
         'Remote monitoring and management',
         'Proactive maintenance',
         'Software updates and patches',
-<<<<<<< HEAD
 
         'Hardware support and replacement',
 
@@ -402,16 +299,10 @@ const ITConsultingPage: React.FC = () => {
 
         'IT asset management',
 
-=======
-        'Hardware support and replacement',
-        'User training and onboarding',
-        'IT asset management',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Help desk services'
       ],
       benefits: [,
         'Reduce IT downtime by 80%',
-<<<<<<< HEAD
 
         'Lower IT support costs',
 
@@ -419,11 +310,6 @@ const ITConsultingPage: React.FC = () => {
 
         'Proactive issue resolution',
 
-=======
-        'Lower IT support costs',
-        'Improve user productivity',
-        'Proactive issue resolution',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Focus on core business activities'
       ],
       targetAudience: 'Small to medium businesses without dedicated IT staff',
@@ -444,7 +330,6 @@ const ITConsultingPage: React.FC = () => {
         'Custom application development',
         'Web and mobile app development',
         'API development and integration',
-<<<<<<< HEAD
 
         'Database design and implementation',
 
@@ -452,16 +337,10 @@ const ITConsultingPage: React.FC = () => {
 
         'Deployment and maintenance',
 
-=======
-        'Database design and implementation',
-        'Testing and quality assurance',
-        'Deployment and maintenance',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'User training and documentation'
       ],
       benefits: [,
         'Streamline business processes',
-<<<<<<< HEAD
 
         'Improve operational efficiency',
 
@@ -469,11 +348,6 @@ const ITConsultingPage: React.FC = () => {
 
         'Reduce manual work',
 
-=======
-        'Improve operational efficiency',
-        'Gain competitive advantage',
-        'Reduce manual work',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Scale with business growth'
       ],
       targetAudience: 'Businesses needing custom software solutions',
@@ -494,7 +368,6 @@ const ITConsultingPage: React.FC = () => {
         'Technology roadmap planning',
         'Digital transformation consulting',
         'Vendor evaluation and selection',
-<<<<<<< HEAD
 
         'Cost-benefit analysis',
 
@@ -502,16 +375,10 @@ const ITConsultingPage: React.FC = () => {
 
         'Change management planning',
 
-=======
-        'Cost-benefit analysis',
-        'Risk assessment and mitigation',
-        'Change management planning',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Implementation guidance'
       ],
       benefits: [,
         'Align IT with business goals',
-<<<<<<< HEAD
 
         'Optimize technology investments',
 
@@ -519,11 +386,6 @@ const ITConsultingPage: React.FC = () => {
 
         'Accelerate digital transformation',
 
-=======
-        'Optimize technology investments',
-        'Reduce implementation risks',
-        'Accelerate digital transformation',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Improve ROI on technology'
       ],
       targetAudience: 'Businesses planning technology initiatives',
@@ -544,7 +406,6 @@ const ITConsultingPage: React.FC = () => {
         'Recovery time objective planning',
         'Backup strategy implementation',
         'Disaster recovery testing',
-<<<<<<< HEAD
 
         'Business continuity planning',
 
@@ -552,16 +413,10 @@ const ITConsultingPage: React.FC = () => {
 
         'Documentation and procedures',
 
-=======
-        'Business continuity planning',
-        'Cloud-based recovery solutions',
-        'Documentation and procedures',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Regular testing and updates'
       ],
       benefits: [,
         'Minimize business disruption',
-<<<<<<< HEAD
 
         'Ensure rapid recovery',
 
@@ -569,11 +424,6 @@ const ITConsultingPage: React.FC = () => {
 
         'Maintain customer service',
 
-=======
-        'Ensure rapid recovery',
-        'Protect critical data',
-        'Maintain customer service',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Comply with regulations'
       ],
       targetAudience: 'Businesses requiring high availability',
@@ -594,7 +444,6 @@ const ITConsultingPage: React.FC = () => {
         'Policy and procedure development',
         'Security control implementation',
         'Audit preparation and support',
-<<<<<<< HEAD
 
         'Training and awareness programs',
 
@@ -602,16 +451,10 @@ const ITConsultingPage: React.FC = () => {
 
         'Documentation and reporting',
 
-=======
-        'Training and awareness programs',
-        'Ongoing compliance monitoring',
-        'Documentation and reporting',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Remediation planning'
       ],
       benefits: [,
         'Ensure regulatory compliance',
-<<<<<<< HEAD
 
         'Reduce audit findings',
 
@@ -619,11 +462,6 @@ const ITConsultingPage: React.FC = () => {
 
         'Avoid penalties and fines',
 
-=======
-        'Reduce audit findings',
-        'Improve security posture',
-        'Avoid penalties and fines',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         'Build customer trust'
       ],
       targetAudience: 'Healthcare, Finance, Government, Education sectors',
@@ -632,7 +470,6 @@ const ITConsultingPage: React.FC = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-<<<<<<< HEAD
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits',}}
   ]
 const categories = [
@@ -653,63 +490,7 @@ const filteredServices = itServices.filter(service => {)
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;}})
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-=======
-<<<<<<< HEAD
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
-  }
-    }
-  ]
-const categories = [
-    { id: 'all', name: 'All IT Services', icon: Grid3X3 },
-    { id: 'infrastructure', name: 'Infrastructure', icon: Server },
-    { id: 'cloud', name: 'Cloud Services', icon: Cloud },
-    { id: 'security', name: 'Cybersecurity', icon: Shield },
-    { id: 'networking', name: 'Networking', icon: Network },
-    { id: 'database', name: 'Database', icon: Database },
-    { id: 'support', name: 'IT Support', icon: Headphones },
-    { id: 'development', name: 'Development', icon: Code },
-    { id: 'consulting', name: 'Consulting', icon: Briefcase },
-    { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
-    { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ]
-const filteredServices = itServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesCategory && matchesSearch
-  }
-  })
-return (
-=======
-caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits']
-    };
-  ];
-;
-const categories = [
-[
-        { id: 'all', name: 'All IT Services', icon: Grid3X3 },
-        { id: 'infrastructure', name: 'Infrastructure', icon: Server },
-        { id: 'cloud', name: 'Cloud Services', icon: Cloud },
-        { id: 'security', name: 'Cybersecurity', icon: Shield },
-        { id: 'networking', name: 'Networking', icon: Network },
-        { id: 'database', name: 'Database', icon: Database },
-        { id: 'support', name: 'IT Support', icon: Headphones },
-        { id: 'development', name: 'Development', icon: Code },
-        { id: 'consulting', name: 'Consulting', icon: Briefcase },
-        { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
-        { id: 'compliance', name: 'Compliance', icon: CheckSquare };
-  ];
-;
-const filteredServices = itServices.filter(service => {;
-const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch]
-    });;
-  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       {/* Hero Section */}</div>
       <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -723,80 +504,17 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
         <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>,
             Professional <span className="holographic-text">IT Services</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
           </h1>
-<<<<<<< HEAD
           <p className="text-xl text-gray-300 mb-8">
             Coming Soon - Advanced it consulting solutions and services
-=======
-          <p>
-            Comprehensive IT solutions designed to optimize your technology infrastructure,
-            enhance security, and drive business growth. Expert consulting and implementation.
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           </p>
         </div>
-<<<<<<< HEAD
       </div>
     </div>
   );
 };
 
 export default ItConsultingPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
-      </section>
-      {/* Search and Filter Section */};
-      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
-            {/* Search */}</div>
-            <div className="flex-1"></div>
-              <div className="relative"></div>
-                <Search>
-                <input
-                  type="text"
-                  placeholder="Search IT services..."
-<<<<<<< HEAD
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                />,
-              </div>
-            </div>
-
-            {/* Category Filter */}
-            <div className="lg: w-64"></div>
-              <select,
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-              >,
-                {
-    categories.map((category) => (
-  }
-                  <option>
-
-                    {category.name}
-=======
-                  value={searchTerm};
-                  onChange={(e) => setSearchTerm(e.target.value);
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                />
-              </div>
-            </div>
-            {/* Category Filter */};
-            <div>
-              <select
-                value={selectedCategory};
-                onChange={(e) =></select> setSelectedCategory(e.target.value);
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-              >
-                {categories.map((category) => (
-                  <option key={category.id} value={category.id}></option>
-                    {category.name};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   </option>
                 ))}
 
@@ -808,7 +526,6 @@ export default ItConsultingPage;
             {
     categories.map((category) => (</div>
               <button
-<<<<<<< HEAD
   }
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -819,15 +536,6 @@ export default ItConsultingPage;
                     : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'
   }
                 }`}
-=======
-                key={category.id};
-                onClick={() =></button> setSelectedCategory(category.id);
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400']
-    }`};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               >
                 {category.name};
               </button>
@@ -836,15 +544,10 @@ export default ItConsultingPage;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Services Grid */}
-=======
-      {/* Services Grid */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-<<<<<<< HEAD
             {
     filteredServices.map((service) => (</div>
   }
@@ -852,20 +555,12 @@ export default ItConsultingPage;
                 <div className="flex items-start justify-between mb-4"></div>
                   <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
                     <service>
-=======
-            {filteredServices.map((service) => (</div>
-              <div>
-                <div>
-                  <div>
-                    <service .icon className="w-12 h-12" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   </div>
                   <div className="text-right"></div>
                     <div className="text-2xl font-bold text-white">{service.price}</div>
                     <div className="text-sm text-gray-400">starting price</div>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="space-y-3 mb-6"></div>
@@ -877,23 +572,11 @@ export default ItConsultingPage;
   }
                         <li>
                           <CheckCircle>
-=======
-                <h3 className="text-xl font-bold text-white mb-3 neon-glow"></h>{service.name}</h3>
-                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                <div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Key Features:</h4>
-                    <ul className="space-y-1"></ul>
-                      {service.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300"></li>
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                           <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
                   <div />
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
                     <ul>
@@ -902,31 +585,16 @@ export default ItConsultingPage;
   }
                         <li>
                           <TrendingUp>
-=======
-                  <div>
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2"></h>Benefits:</h4>
-                    <ul className="space-y-1"></ul>
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-300"></li>
-                          <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                           <span>{benefit}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <div className="space-y-2 mb-6 text-sm"></div>
                   <div className="flex justify-between"></div>
                     <span className="text-gray-400">Setup Time:</span>
                     <span className="text-white">{service.setupTime}</span>
-=======
-                <div>
-                  <div>
-                    <span className="text-gray-400"></spa>Setup Time:</span>
-                    <span className="text-white"></spa>{service.setupTime}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                   </div>
                   <div className="flex justify-between"></div>
                     <span className="text-gray-400">Free Consultation:</span>
@@ -937,7 +605,6 @@ export default ItConsultingPage;
                     <span className="text-white">{service.targetAudience}</span>
                   </div>
                 </div>
-<<<<<<< HEAD
                 {
     service.caseStudy && (
                   <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>
@@ -947,20 +614,6 @@ export default ItConsultingPage;
                 )}
 <div className="space-y-3"></div>
                   <a>
-=======
-                {service.caseStudy && (
-                  <div>
-                    <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
-                  </div>
-                );
-                <div>
-                  <a
-                    href={service.link};
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                  ></a>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                     Get Free Consultation
                   </a>
                   <a>
@@ -973,19 +626,11 @@ export default ItConsultingPage;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 cyber-scan-effect"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2>
             Ready to Optimize Your IT Infrastructure?,
-=======
-      {/* CTA Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>
-        <div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse"></h2>
-            Ready to Optimize Your IT Infrastructure?
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           </h2>
           <p>
             Our certified IT professionals deliver reliable, secure, and scalable solutions.;
@@ -1004,21 +649,11 @@ export default ItConsultingPage;
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
 export default ITConsultingPage
-=======
-)]
-    };
-export default ITConsultingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-=======
     </>
   );
 };
 
 export default ITConsultingPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507

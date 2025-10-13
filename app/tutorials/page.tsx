@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
-=======
-'use client';
-=======
-'use client'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async'
 import { Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download } from 'lucide-react'
@@ -143,17 +136,11 @@ const TutorialsPage: React.FC = () => {
   ]
 
   const filteredTutorials = selectedCategory === 'all' 
-<<<<<<< HEAD
     ? tutorials;
     : tutorials.filter(tutorial => tutorial.category === selectedCategory);
 
   const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3);
 
-=======
-    ? tutorials 
-    : tutorials.filter(tutorial => tutorial.category === selectedCategory)
-  const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3)
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   return (
     <>
   <Helmet />
@@ -464,14 +451,8 @@ const TutorialsPage: React.FC = () => {
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* CTA */} <section className="mb-16">
             <div className="cyber-card-enhanced p-8 text-center">
-=======
-          {/* CTA */}
-          <section className="mb-16">
-          <div className="cyber-card-enhanced p-8 text-center">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
               <h2 className="text-2xl font-bold text-white mb-4">Ready to Start Learning?</h2>
               <p className="text-gray-300 mb-6">Join thousands of developers who are already building amazing applications with our services.</p>
               </p>
@@ -494,15 +475,7 @@ const TutorialsPage: React.FC = () => {
         </div>
       </div>
     </>
-<<<<<<< HEAD
   );
 };
 
 export default TutorialsPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
-  )
-}
-
-export default TutorialsPage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

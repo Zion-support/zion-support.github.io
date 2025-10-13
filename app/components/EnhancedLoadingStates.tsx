@@ -1,17 +1,9 @@
 'use client';
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Loader2, Brain, Cloud, Shield, Code}}from 'lucide-react';
-=======
-
-import { Loader2, Brain, Cloud, Shield, Code } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}
   text?: string;}export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
-=======
 import React from 'react'
 import { Loader2, Brain, Cloud, Shield, Code } from 'lucide-react'
 interface LoadingSpinnerProps {
@@ -20,54 +12,15 @@ interface LoadingSpinnerProps {
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   size = 'md', 
   text = 'Loading...'}) => {const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-<<<<<<< HEAD
     lg: 'w-12 h-12',}return(<div className="flex flex-col items-center justify-center p-8">)</div>
       <Loader2 className={`${sizeClasses[size]}animate-spin text-blue-500`} />
 );
-=======
-import { Brain, Zap, Globe } from "lucide-react";
-interface LoadingPageProps {
-  message?: string;
-  showProgress?: boolean;
-  progress?: number;
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 export const ServiceCardSkeleton: React.FC = () => (,
-<<<<<<< HEAD
-=======
-=======
-    lg: 'w-12 h-12'
-  }
-
-  return (
-    <div className="flex flex-col items-center justify-center p-8">
-      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />
-      {text && (
-        <p className="mt-2 text-sm text-gray-500">{text}</p>
-      )}
-    </div>
-  )
-}
-
-export const PageLoader: React.FC = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
-      <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 mx-auto animate-pulse">
-        <Brain className="w-8 h-8 text-white" />
-      </div>
-      <h2 className="text-xl font-semibold text-white mb-2">Zion Tech Group</h2>
-      <p className="text-gray-300">Loading amazing content...</p>
-    </div>
-  </div>
-)
-export const ServiceCardSkeleton: React.FC = () => (
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 animate-pulse">
     <div className="w-16 h-16 bg-gray-600 rounded-2xl mb-6"></div>
     <div className="h-6 bg-gray-600 rounded mb-4"></div>
@@ -97,8 +50,6 @@ export const ServiceCardSkeleton: React.FC = () => (
 
     </div>
   </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 );
 
 
@@ -110,22 +61,6 @@ export const StatsSkeleton: React.FC = () => (,
 );
 
 export const ContentSkeleton: React.FC = () => (,
-<<<<<<< HEAD
-=======
-=======
-)
-export const StatsSkeleton: React.FC = () => (
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-    {Array.from({ length: 4 }).map((_, index) => (
-      <div key={index} className="text-center animate-pulse">
-        <div className="h-8 bg-gray-600 rounded mb-2"></div>
-        <div className="h-4 bg-gray-600 rounded w-3/4 mx-auto"></div>
-      </div>
-    ))}
-  </div>
-)
-export const ContentSkeleton: React.FC = () => (
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   <div className="space-y-6 animate-pulse">
     <div className="h-8 bg-gray-600 rounded w-3/4"></div>
 
@@ -152,7 +87,6 @@ export const BlogCardSkeleton: React.FC = () => (
       </div>
     </div>
   </div>
-<<<<<<< HEAD
 );
 
 export const TestimonialSkeleton: React.FC = () => (
@@ -217,7 +151,3 @@ export const ErrorBoundaryFallback: React.FC<{ error?: Error }> = ({ error }) =>
     </div>
   </div>
 );
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
-)
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

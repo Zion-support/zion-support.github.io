@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -8,115 +7,81 @@ import tseslint from "typescript-eslint";
 export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
-=======
-import globals from 'globals';
-import js from '@eslint/js';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
-import reactHooks from 'eslint-plugin-react-hooks';
-import reactRefresh from 'eslint-plugin-react-refresh';
-export default [
-  // Global ignores
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   {
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
-<<<<<<< HEAD
       ecmaVersion: 2020,
-      globals: {
-        ...globals.browser,
-        ...globals.node,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
-=======
-      globals: { ...globals.browser, ...globals.node },
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        };
-      };
     },
-    rules: {
-      ...js.configs.recommended.rules,
-      'no-unused-vars': 'warn',
-<<<<<<< HEAD
-      'no-console': 'off'
-    }
-=======
-      'no-console': 'warn'
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  },
-  // TypeScript configuration
-  {
-    files: ['**/*.{ts,tsx}'],
-    languageOptions: {
-      globals: { ...globals.browser, ...globals.node },
-      parser: tsParser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        };
-      };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+    settings: {
+      react: {
+        version: "detect",
+      },
     },
     plugins: {
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
     },
     rules: {
-<<<<<<< HEAD
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },
       ],
+      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "warn",
+      "prefer-const": "warn",
+      "no-var": "error",
+    },
+  },
+  {
+    files: ["**/*.{js,jsx}"],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true },
+      ],
+      "no-unused-vars": "warn",
+      "prefer-const": "warn",
+      "no-var": "error",
     },
   },
   {
     ignores: [
-      "dist", 
-      "node_modules", 
+      "dist/**",
+      "node_modules/**",
       "*.config.js",
-      "backup*/**",
-      "backup-problematic*/**",
-      "backup-unused-components/**",
-      "corrupted-src-backup/**",
-      "*.js",
-      "*.py",
-      "*.sh",
-      "*.md",
-      "*.txt",
-      "*.json",
-      "*.html",
-      "*.original",
-      "*.backup*",
-      "__tests__/**",
-      "api/**",
-      "analysis/**",
-      "ci-cd-reports/**",
-      "content/**",
-      "contracts/**"
+      "*.config.cjs",
+      "scripts/**",
+      "netlify/functions-backup/**",
     ],
   }
 );
-=======
-      ...tseslint.configs.recommended.rules,
-...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true };
-      ],
-      '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'off',
-      'no-console': 'off',
-      'no-unused-vars': 'off'
-    };
-  };
-];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

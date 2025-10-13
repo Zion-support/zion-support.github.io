@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { X, Globe, Users, Code, Mail, Brain, Shield, Zap } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
 
   const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section);
-=======
 'use client'
 import React, { Suspense, lazy } from 'react'
 import { Link, useLocation } from 'react-router-dom'
@@ -28,7 +20,6 @@ import {
   Code,
   BarChart,
   ChevronDown,
-=======
 'use client';
 import React from 'react';
 import React, { memo, useState, useEffect } from 'react';
@@ -45,12 +36,10 @@ import {
   Code, 
   BarChart, 
   ChevronDown, 
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   ChevronRight,
   Phone,
   Mail,
   MapPin,
-<<<<<<< HEAD
   Clock
   }
 } from 'lucide-react'
@@ -80,76 +69,20 @@ const toggleSection = (
   )
   }
       newExpanded.delete(section);}
-=======
-} from 'lucide-react';
-;
-const Sidebar: React.FC = () => {
-const [isOpen, setIsOpen] = useState(false);
-}
-const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']))
-const location = useLocation();
-  useEffect(() => {;
-const handleResize = () => {
-}
-      if (window.innerWidth >= 1024) {
-        setIsOpen(false););
-    }
-    window.addEventListener('resize', handleResize);
-    return (<div>)
-      {) => window.removeEventListener('resize', handleResize}
-    </div>)
-  );
-  }, []);
-  const toggleSection = (section: string) => {
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(section)) {
-      newExpanded.delete(section)]
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     } else {
       newExpanded.add(section);
     }
-<<<<<<< HEAD
     setExpandedSections(newExpanded);
   };
-=======
-import { Brain, Zap, Globe } from "lucide-react";
-=======
-'use client';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { X, Home, Users, Settings, DollarSign, FileText, MessageCircle, Brain } from 'lucide-react';
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
-<<<<<<< HEAD
   const navigationSections = [
-=======
-<<<<<<< HEAD
-    setExpandedSections(newExpanded)
-  }
-const navigationSections = [
-=======
-    setExpandedSections(newExpanded)]
-    };
-  const navigationSections = [
-[
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     {
       title: 'Main',
       items: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         { name: 'Home', path: '/', icon: Home },
         { name: 'About', path: '/about', icon: Users },
         { name: 'Services', path: '/services', icon: Settings },
@@ -162,10 +95,6 @@ const navigationSections = [
       title: 'AI Services',
       key: 'ai-services',
       items: [
-<<<<<<< HEAD
-=======
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         { name: 'AI Services Overview', path: '/ai-services', icon: Brain },
         { name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart },
         { name: 'Document Processing', path: '/ai-services/document-processing', icon: Settings },
@@ -185,10 +114,6 @@ const navigationSections = [
       title: 'Micro SaaS',
       key: 'micro-saas',
       items: [
-<<<<<<< HEAD
-=======
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings },
         { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart },
         { name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users },
@@ -202,18 +127,8 @@ const navigationSections = [
         { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },
         { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },
         { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
-<<<<<<< HEAD
       key: 'it-services',
       items: [
-=======
-      ]
-    },
-    {
-    title: 'IT Services',
-      key: 'it-services',
-      items: [
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         { name: 'IT Services Overview', path: '/it-services', icon: Code },
         { name: 'IT Consulting', path: '/it-consulting', icon: Users },
         { name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings },
@@ -228,10 +143,6 @@ const navigationSections = [
     {
       title: 'Company',
       items: [
-<<<<<<< HEAD
-=======
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         { name: 'Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Users },
         { name: 'Consultation', path: '/consultation', icon: Phone },
@@ -241,15 +152,10 @@ const navigationSections = [
     {
       title: 'Resources',
       items: [
-<<<<<<< HEAD
-=======
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         { name: 'Documentation', path: '/docs', icon: Settings },
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
         { name: 'Status', path: '/status', icon: Settings },
-<<<<<<< HEAD
   const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
@@ -276,142 +182,6 @@ const navigationSections = [
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-5 h-5 text-white" />
-=======
-      ]
-    }
-  ]
-=======
-            { nam,
-    e: 'Home', path: '
-            { nam,
-    e: 'About', path: '
-            { nam,
-    e: 'Services', path: '
-            { nam,
-    e: 'Contact', path: '
-            { nam,
-    e: 'Blog', path: '
-            { nam,
-    e: 'Case Studies', path: '
-      ]
-    },
-        {
-      title: 'AI Services',
-      key: 'ai-services',
-      items: [
-            { nam,
-    e: 'AI Services Overview', path: '
-            { nam,
-    e: 'Business Intelligence', path: '/ai-services
-            { nam,
-    e: 'Document Processing', path: '/ai-services
-            { nam,
-    e: 'Customer Experience', path: '/ai-services
-            { nam,
-    e: 'Marketing Automation', path: '/ai-services
-            { nam,
-    e: 'Predictive Maintenance', path: '/ai-services
-            { nam,
-    e: 'Supply Chain', path: '/ai-services
-            { nam,
-    e: 'Fraud Detection', path: '/ai-services
-            { nam,
-    e: 'Content Generation', path: '/ai-services
-            { nam,
-    e: 'HR Analytics', path: '/ai-services
-            { nam,
-    e: 'Process Automation', path: '/ai-services
-            { nam,
-    e: 'Quality Assurance', path: '/ai-services
-            { nam,
-    e: 'Energy Management', path: '/ai-services
-      ]
-    },
-        {
-      title: 'Micro SaaS',
-      key: 'micro-saas',
-      items: [
-            { nam,
-    e: 'Micro SaaS Overview', path: '
-            { nam,
-    e: 'Analytics Dashboard', path: '/micro-saas
-            { nam,
-    e: 'Support Bot', path: '/micro-saas
-            { nam,
-    e: 'Social Manager', path: '/micro-saas
-            { nam,
-    e: 'Email Marketing', path: '/micro-saas
-            { nam,
-    e: 'Inventory Management', path: '/micro-saas
-            { nam,
-    e: 'Lead Scoring', path: '/micro-saas
-            { nam,
-    e: 'Document Processor', path: '/micro-saas
-            { nam,
-    e: 'SEO Optimizer', path: '/micro-saas
-            { nam,
-    e: 'Appointment Scheduler', path: '/micro-saas
-            { nam,
-    e: 'Chat Analytics', path: '/micro-saas
-            { nam,
-    e: 'Expense Tracker', path: '/micro-saas
-            { nam,
-    e: 'Content Generator', path: '/micro-saas
-      ]
-    },
-        {
-      title: 'IT Services',
-      key: 'it-services',
-      items: [
-            { nam,
-    e: 'IT Services Overview', path: '
-            { nam,
-    e: 'IT Consulting', path: '
-            { nam,
-    e: 'IT Infrastructure', path: '
-            { nam,
-    e: 'IT Support', path: '
-            { nam,
-    e: 'Cloud Infrastructure', path: '
-            { nam,
-    e: 'Cloud Migration', path: '
-            { nam,
-    e: 'Cybersecurity', path: '
-            { nam,
-    e: 'Database Management', path: '
-            { nam,
-    e: 'Managed IT', path: '
-      ]
-    },
-        {
-      title: 'Company',
-      items: [
-            { nam,
-    e: 'Team', path: '
-            { nam,
-    e: 'Careers', path: '
-            { nam,
-    e: 'Consultation', path: '
-            { nam,
-    e: 'Pricing', path: '
-      ]
-    },
-        {
-      title: 'Resources',
-      items: [
-            { nam,
-    e: 'Documentation', path: '
-            { nam,
-    e: 'API Docs', path: '
-            { nam,
-    e: 'Support', path: '
-            { nam,
-    e: 'Status', path: '
-      ]
-    }
-];;
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const contactInfo = {
 };
 };
@@ -420,7 +190,6 @@ const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-<<<<<<< HEAD
     hours: 'Mon-Fri 9AM-6PM EST'
   }
   }
@@ -454,7 +223,6 @@ return (
             <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
                 <Brain>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </div>
@@ -562,192 +330,18 @@ return (
                 <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
-=======
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const navigationItems = [
-    { name: 'Home', path: '/', icon: <Globe className="w-5 h-5" /> },
-    { name: 'AI Services', path: '/ai-services', icon: <Brain className="w-5 h-5" /> },
-    { name: 'IT Services', path: '/services', icon: <Shield className="w-5 h-5" /> },
-    { name: 'Micro SAAS', path: '/micro-saas', icon: <Zap className="w-5 h-5" /> },
-    { name: '5G Solutions', path: '/5g-solutions', icon: <Globe className="w-5 h-5" /> },
-    { name: 'About', path: '/about', icon: <Users className="w-5 h-5" /> },
-    { name: 'Contact', path: '/contact', icon: <Mail className="w-5 h-5" /> }
-  ];
-
-  if (!isOpen) return null;
-
-  return (
-    <>
-      {/* Overlay */}
-      <div 
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
-        onClick={onClose}
-      />
-      
-      {/* Sidebar */}
-      <div className="fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-md border-r border-white/10 z-50 transform transition-transform duration-300 ease-in-out">
-        <div className="flex items-center justify-between p-6 border-b border-white/10">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Z</span>
-            </div>
-            <span className="text-white font-bold text-xl">Zion Tech Group</span>
-          </div>
-          <button
-            onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        
-        <nav className="p-6">
-          <ul className="space-y-2">
-            {navigationItems.map((item) => (
-              <li key={item.name}>
-                <Link
-                  to={item.path}
-                  onClick={onClose}
-                  className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-                >
-                  {item.icon}
-                  <span>{item.name}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-=======
-
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
-
-  return (
-    <>
-      <div className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden" onClick={onClose} />
-      <div className="fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-xl border-r border-cyan-500/20 z-50 overflow-y-auto">
-        <div className="p-6">
-          <div className="flex items-center justify-between mb-8">
-            <Link to="/" className="flex items-center space-x-3 group" onClick={onClose}>
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-white">Zion Tech Group</span>
-                <span className="text-xs text-cyan-400 font-medium tracking-wider">AI & IT SOLUTIONS</span>
-              </div>
-            </Link>
-<<<<<<< HEAD
-            <button onClick={onClose} className="text-gray-400 hover:text-white transition-colors duration-300 p-2 rounded-lg">
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-
-          <div className="space-y-2">
-            <Link to="/" className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors duration-300" onClick={onClose}>
-              <Home className="w-5 h-5" />
-              <span>Home</span>
-            </Link>
-            <Link to="/about" className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors duration-300" onClick={onClose}>
-              <Users className="w-5 h-5" />
-              <span>About</span>
-            </Link>
-            <Link to="/services" className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors duration-300" onClick={onClose}>
-              <Settings className="w-5 h-5" />
-              <span>Services</span>
-            </Link>
-            <Link to="/pricing" className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors duration-300" onClick={onClose}>
-              <DollarSign className="w-5 h-5" />
-              <span>Pricing</span>
-            </Link>
-            <Link to="/blog" className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors duration-300" onClick={onClose}>
-              <FileText className="w-5 h-5" />
-              <span>Blog</span>
-            </Link>
-            <Link to="/contact" className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 transition-colors duration-300" onClick={onClose}>
-              <MessageCircle className="w-5 h-5" />
-              <span>Contact</span>
-            </Link>
-=======
-            <button
-              onClick={() => setIsOpen(false)}
-              className="lg: hidden text-gray-400 hover:text-white transition-colors"
-              aria-label="Close sidebar"
-            >,
-              <X>
-            </button>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex-1 overflow-y-auto py-6"></div>
-            <nav>
-              {
-    navigationSections.map((section, sectionIndex) => (
-  }
-                <div key={sectionIndex} className="space-y-1"></div>
-                  <button
-                    onClick={() => section.key && toggleSection(section.key)}
-
-                    className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover: text-cyan-300 transition-colors"
-                  >,
-                    <span>{section.title}</span>
-                    {
-    section.key && (;
-                      expandedSections.has(section.key) ?
-                        <ChevronDown className="w-4 h-4" /> :
-                        <ChevronRight className="w-4 h-4" />
-  }
-                    )}
-                  </button>
-                  {
-    (!section.key || expandedSections.has(section.key)) && (
-                    <div className="ml-4 space-y-1"></div>
-                      {section.items.map((item, itemIndex) => (</div>
-                        <Link
-  }
-
-                          key={itemIndex}
-                          to={item.path}
-                          onClick={() => setIsOpen(false)}
-                          className={
-    `flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${
-                            location.pathname === item.path;
-                              ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30';
-                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50'
-  }
-                          }`}
-                        >;
-                          <item>
-                          <span>{item.name}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-
-            </nav>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           </div>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </div>
     </>
-<<<<<<< HEAD
   );
 };
 
 export default Sidebar;
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
   )
 }
 Sidebar.displayName = 'Sidebar'
 export default Sidebar
-=======
 hours: 'Mon-Fri 9AM-6PM EST']
     };
   return (
@@ -849,5 +443,3 @@ hours: 'Mon-Fri 9AM-6PM EST']
 };
 Sidebar.displayName = 'Sidebar';
 export default Sidebar;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

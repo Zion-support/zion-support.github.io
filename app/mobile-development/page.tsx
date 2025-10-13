@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function MobileDevelopment() {
-=======
-
-const MobileDevelopmentPage: React.FC = () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -26,26 +20,15 @@ const MobileDevelopmentPage: React.FC = () => {
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - MobileDevelopment Solutions</p>
 
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 </div>
-=======
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 </div>
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           </div>
         </div>
       </section>
@@ -55,7 +38,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -67,22 +49,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Key Benefits;</h2>
-=======
-<<<<<<< HEAD
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>
-=======
-      {/* Benefits Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               Key Benefits
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
             </h2>
             <p>Experience the power of our page solutions for your business.</p>
             </p>
@@ -91,20 +58,11 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),
-=======
-    </>
-  );
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 };
 
 export default PagePage;
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
   )
 }
 export default PagePage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

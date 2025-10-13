@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
       .toISOString()
       })
     } catch (reportingError) {
       }
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
-=======
-'use client'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 interface Props {
   children: ReactNode;
@@ -72,14 +63,6 @@ class ErrorHandler extends Component<Props, State> {
         userAgent: navigator.userAgent,
         url: window.location.href,
       };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      // Send to your error reporting service here
-    } catch (reportingError) {
-      console.warn('Error reporting failed:', reportingError);
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
 
       console.error('Production error logged:', errorData);
       
@@ -91,15 +74,12 @@ class ErrorHandler extends Component<Props, State> {
       // });
     } catch (logError) {
       console.error('Failed to log error:', logError);
-=======
       console.log('Error logged:', errorData);
       // Send to your error reporting service here
 
       console.log('Error data prepared for reporting:', errorData);
     } catch (reportingError) {
       console.error('Failed to prepare error data for reporting:', reportingError);
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
     }
   };
 
@@ -221,4 +201,3 @@ class ErrorHandler extends Component<Props, State> {
 }
 
 export default ErrorHandler;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4

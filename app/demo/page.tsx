@@ -1,19 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client;
 
 import React from 'react;
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star } from "lucide-react";
-export default function DemoPage() {
-  const [currentDemo, setCurrentDemo] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 import { Helmet } from 'react-helmet-async;
 
@@ -44,7 +33,6 @@ const DemoPage: React.FC = () => {
   };
 
   const demoFeatures = [
-=======
 import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
 
 interface Demo {
@@ -58,7 +46,6 @@ interface Demo {
 
 const DemoPage: React.FC = () => {
   const demos: Demo[] = [
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     {
       icon: Brain,
       title: 'AI Solutions Demo',
@@ -93,18 +80,12 @@ const DemoPage: React.FC = () => {
       duration: '4 min,
       features: ['Blog posts', 'Social media content', 'Product descriptions]
 import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
-=======
 import { Play, ArrowRight, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 
-<<<<<<< HEAD
 const $1Page: React.FC = () => {}
-=======
-const DemoPage: React.FC = () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   const demos = [
 
 const DemoPage: React.FC = () => {}
@@ -117,7 +98,6 @@ const DemoPage: React.FC = () => {}
       category: 'Analytics',
       icon: BarChart
     },
-<<<<<<< HEAD
     {}
       id: 'ai-chatbot',
       title: 'AI Customer Service Bot',
@@ -134,18 +114,6 @@ const DemoPage: React.FC = () => {}
     },
     {}
       title: 'AI Content Generation',
-=======
-    {
-      title: 'AI Customer Support Bot',
-      description: 'Experience our intelligent customer service automation',
-      duration: '3 min',
-      features: ['Natural language processing', 'Multi-language support', '24/7 availability'],
-      category: 'Customer Service',
-      icon: Users
-    },
-    {
-      title: 'AI Content Generator',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       description: 'Watch our AI create high-quality content in seconds',
       duration: '2 min',
       features: ['Blog posts', 'Social media content', 'Product descriptions'],
@@ -160,61 +128,11 @@ const DemoPage: React.FC = () => {}
       category: 'Security',
       icon: Shield
     }
-<<<<<<< HEAD
-=======
+
   ];
 
-  const categories = ['all', 'Analytics', 'Customer Service', 'Content', 'Security'];
-
-  const features = [
-    {
-      icon: Play,
-      title: 'Interactive Demos',
-      description: 'Hands-on experience with our AI solutions'
-    },
-    {
-      icon: Star,
-      title: 'Expert Guidance',
-      description: 'Walkthroughs led by our AI specialists'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Real Results',
-      description: 'See actual performance metrics and outcomes'
-    }
-  ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-
-<<<<<<< HEAD
-  ];
-
-<<<<<<< HEAD
 export default function Demo() {
-=======
-  const stats = [
-    { number: '50+', label: 'Live Demos Available' },
-    { number: '1000+', label: 'Businesses Transformed' },
-    { number: '99.9%', label: 'Customer Satisfaction' },
-    { number: '24/7', label: 'Demo Access' }
-  ];
-
-  const handlePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  const handleNextDemo = () => {
-    setCurrentDemo((prev) => (prev + 1) % demos.length);
-    setIsPlaying(false);
-  };
-
-  const handlePrevDemo = () => {
-    setCurrentDemo((prev) => (prev - 1 + demos.length) % demos.length);
-    setIsPlaying(false);
-  };
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 
         </div>
@@ -226,30 +144,10 @@ export default function Demo() {
       <section className="py-20 px-4>
         <div className="max-w-4xl mx-auto text-center>
           <h2 className="text-4xl font-bold text-white mb-6>
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const DemoPage: React.FC = () => {
-  return (
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
     <>
       <Helmet>
         <title>Demo - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Zion Tech Group - Demo page" />
-=======
-  return (
-    <>
-  <Helmet />
-        <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />
@@ -264,7 +162,6 @@ const DemoPage: React.FC = () => {
           </div>
         </div>
         <Footer />
-=======
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how we can transform your business." />
         <meta name="keywords" content="demo, AI solutions, interactive, experience, showcase" />
       </Helmet>
@@ -424,23 +321,10 @@ const DemoPage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       </div>
-=======
-        </div>
-      </section>
-
-      <Footer />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
     </>
   );
 };
 
-<<<<<<< HEAD
 export default DemoPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
-=======
-export default DemoPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

@@ -1,152 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { DollarSign, TrendingUp, PieChart, BarChart3, Receipt, CreditCard, Smartphone, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Clock, Globe, Award, Target, Lightbulb, Bot, Brain, Cpu, Database, Cloud, Lock, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package } from 'lucide-react'
-import { Link } from 'react-router-dom'
-  )
-=======
-"use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { CheckCircle, Star, Brain } from "lucide-react";
-export default function AIExpenseTracker() {
-
-  const capabilities = [
-    {
-      title: "Automatic Categorization",
-      description:
-        "AI automatically categorizes your expenses into predefined categories like food, transportation, entertainment, etc.",
-      icon: <Bot className="w-8 h-8 text-blue-400" />,
-    },
-    {
-      title: "Receipt Scanning",
-      description:
-        "Simply take a photo of your receipt and let AI extract all the relevant information automatically.",
-      icon: <Receipt className="w-8 h-8 text-green-400" />,
-    },
-    {
-      title: "Budget Management",
-      description:
-        "Set budgets for different categories and get alerts when you're approaching your limits.",
-      icon: <DollarSign className="w-8 h-8 text-yellow-400" />,
-    },
-    {
-      title: "Expense Insights",
-      description:
-        "Get personalized insights and recommendations to help you save money and manage finances better.",
-      icon: <Brain className="w-8 h-8 text-purple-400" />,
-    },
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Basic",
-      price: "$9.99",
-      period: "/month",
-      description: "Perfect for personal use",
-      features: [
-        "Unlimited expense tracking",
-        "Basic AI categorization",
-        "Receipt scanning (50/month)",
-        "Basic reports",
-        "Mobile app access",
-        "Email support",
-      ],
-      popular: false,
-    },
-    {
-      name: "Pro",
-      price: "$19.99",
-      period: "/month",
-      description: "Ideal for professionals",
-      features: [
-        "Everything in Basic",
-        "Advanced AI insights",
-        "Unlimited receipt scanning",
-        "Advanced analytics",
-        "Budget management",
-        "Priority support",
-        "API access",
-      ],
-      popular: true,
-    },
-    {
-      name: "Business",
-      price: "$49.99",
-      period: "/month",
-      description: "For small businesses",
-      features: [
-        "Everything in Pro",
-        "Team collaboration",
-        "Multi-user accounts",
-        "Advanced reporting",
-        "Integration with accounting software",
-        "Dedicated support",
-        "Custom categories",
-      ],
-      popular: false,
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Freelance Designer",
-      content:
-        "AI Expense Tracker has completely transformed how I manage my finances. The automatic categorization saves me hours every week.",
-      rating: 5,
-    },
-    {
-      name: "Michael Chen",
-      company: "Small Business Owner",
-      content:
-        "The receipt scanning feature is incredible. I just take a photo and everything is automatically entered and categorized.",
-      rating: 5,
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Marketing Manager",
-      content:
-        "The insights and reports help me understand my spending patterns and make better financial decisions.",
-      rating: 5,
-    },
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Expense Tracker - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Smart expense tracking with AI-powered categorization, receipt scanning, and financial insights."
-        />
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-const AiExpenseTrackerPage: React.FC = () => {
-<<<<<<< HEAD
-  const features = [
-=======
-const features = [
-=======
-import Navigation from '../components
-import Footer from '../components
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-;
-const AiExpenseTrackerPage: React.FC = () => {
-const features = [
-];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -162,29 +13,16 @@ const features = [
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
     {icon: TrendingUp,
       title: 'Growth Optimization',
-<<<<<<< HEAD
       description: 'Optimize your business growth with data-driven strategies.',      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
   }];
 
-=======
-      description: 'Optimize your business growth with data-driven strategies.',
-<<<<<<< HEAD
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-=======
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    };
-  ];
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-<<<<<<< HEAD
     'Gain competitive advantage with advanced technology';
   ]
 return (
@@ -193,7 +31,6 @@ return (
         <title>Ai Expense Tracker - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -236,23 +73,11 @@ return (
                   {feature.title}
                 </h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
-    'Gain competitive advantage with advanced technology'
-<<<<<<< HEAD
-  ]
-return (
-    <>
-=======
-  ];
-  return (
-    <React .Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Helmet>
         <title>Ai Expense Tracker - Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-<<<<<<< HEAD
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900"></div>
         {/* Hero Section */}
@@ -318,76 +143,6 @@ return (
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-=======
-        {/* Hero Section *
-        <section className="relative py-20 px-4 overflow-hidden">)
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }};
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Expense Tracker
-            <
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai expense tracker solution for modern businesses.
-            <
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              <
-              <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              <
-            <
-          <
-        <
-        {/* Features Section *
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              <
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              <
-            <
-            <div className="grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-8">
-              {features.map((feature), index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hove,
-    r:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" 
-                  <
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}<
-                  <p className="text-gray-300 mb-4">{feature.description}<
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit};
-                        </li>
-                      ))
-                    </ul>
-                </div>
-              ))
-            </div>
-          </div>
-        </section>
-        {/* Benefits Section */};
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              <
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              <
-            <
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
@@ -399,7 +154,6 @@ return (
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -410,27 +164,7 @@ return (
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Contact Us
                 </button>
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Learn More
-=======
-        {/* CTA Section *
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white
-              <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              <
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                <
-                <button className="border border-orange-400 text-orange-400 hover:bg-orange-400 hove,
-    r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
                 </button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
               </div>
             ))}
           </div>
@@ -457,7 +191,6 @@ return (
               ))}
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Pricing Section */}
           <div className="mb-16">
@@ -578,21 +311,6 @@ return (
       </div>
     </>
   );
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 }
 
 export default AIExpenseTrackerPage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
-=======
-        </section>
-      </div>
-      <Footer />
-<<<<<<< HEAD
-  )
-}
-export default AiExpenseTrackerPage
-=======
-    </React.Fragment>)
-export default AiExpenseTrackerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

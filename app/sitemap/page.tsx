@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
@@ -110,7 +105,6 @@ const SitemapPage: React.FC = () => {
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                 <Map className="w-8 h-8 text-white" />
-=======
 import React from 'react';
 ;
 const SitemapPage: React.FC = () => {
@@ -171,7 +165,6 @@ const pages = [
                 <p className="text-xs text-gray-500"></p>
                   {page.path};
                 </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               </div>
               <h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced">,</h1>
                 Sitemap;
@@ -187,7 +180,6 @@ const pages = [
               <span>{totalPages</span>}pages</span>
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Quick Stats */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-16">,</div>
             <div className="cyber-card-enhanced p-6 text-center">
@@ -284,54 +276,20 @@ const pages = [
               <Code className="w-4 h-4 mr-2" />
               View XML Sitemap;
               <ExternalLink className="w-4 h-4 ml-2" />
-=======
-        </div>
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4"></h2>
-            Need Help Finding Something?
-          </h2>
-          <p className="text-gray-600 mb-6"></p>
-            If you can't find what you're looking for, feel free to contact us directly.
-          </p>
-          <div>
-            <a 
-              href="/contact"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
-            ></a>
-              Contact Us
-            </a>
-            <a 
-              href="tel:+13024640950"
-              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
-            ></a>
-              Call Us: (302) 464-0950
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </a>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>
-<<<<<<< HEAD
-=======
-    </div>
-    </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 };
 
 export default SitemapPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
   )
 }
 
 export default SitemapPage
-=======
     </div>
 )]
     };
 export default SitemapPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

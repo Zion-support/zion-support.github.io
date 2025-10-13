@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { describe, it, expect, beforeEach } from '@jest/globals';
-=======
-import { describe, it, expect } from '@jest/globals';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 describe('Performance Monitoring', () => {
   it('should be implemented', () => {
@@ -15,7 +10,6 @@ import { usePerformanceMonitor } from '../usePerformanceMonitor';
 describe('Performance Monitoring', () => {
   it('should be defined', () => {
     expect(usePerformanceMonitor).toBeDefined();
-=======
 import { describe, it, expect, beforeEach, jest } from '@jest/globals';
 import {
   recordMetric,
@@ -265,6 +259,5 @@ describe('performanceMonitoring', () => {
       recordMetric('CLS', 0.3); // Poor
       expect(getMetrics()['CLS'].rating).toBe('poor');
     });
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   });
 });

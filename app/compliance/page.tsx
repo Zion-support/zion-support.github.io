@@ -1,58 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react'
-const CompliancePage: React.FC = () => {
-  const features = [
-    {
-      icon: FileCheck,
-      title: 'Compliance Management',
-      description: 'Comprehensive compliance management solutions for various industry standards',},
-    {icon: Lock,
-      title: 'Security Compliance',
-      description: 'Ensure your systems meet the highest security and compliance standards',},
-    {icon: Award,
-      title: 'Certification Support',
-      description: 'Get support for achieving and maintaining industry certifications',},
-    {icon: Shield,
-      title: 'Audit Readiness',
-      description: 'Stay audit-ready with continuous compliance monitoring and reporting',}];
-  const benefits = [
-    'Advanced compliance technology integration',
-    'Real-time compliance monitoring',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible compliance solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-<<<<<<< HEAD
-  ]
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
-      <Helmet />
-=======
-  ];
-
-  return (
-    <>
-      <Helmet>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
         <title>Compliance | Zion Tech Group</title>
         <meta name="description" content="Professional Compliance services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="compliance, regulatory compliance, IT services, Zion Tech Group, compliance management" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-<<<<<<< HEAD
           <h1 className="text-5xl font-bold text-white mb-6">Compliance;</h1>
-=======
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Compliance
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Ensure your business meets all regulatory and compliance requirements.</p>
             Powered by advanced AI technology and industry expertise.
@@ -99,63 +51,13 @@ const CompliancePage: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   ),
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
-    </>
-  );
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 };
-=======
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
-=======
-const CompliancePage: React.FC = () => {
-  const certifications = [
-    { name: 'SOC 2 Type II', status: 'Certified' },
-    { name: 'ISO 27001', status: 'Certified' },
-    { name: 'GDPR', status: 'Compliant' },
-    { name: 'HIPAA', status: 'Compliant' },
-    { name: 'PCI DSS', status: 'Compliant' }
-  ];
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <section className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center">
-            <Link 
-              to="/privacy" 
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Privacy Policy
-            </Link>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Compliance</h1>
-              <p className="text-gray-600 mt-1">
-                Our commitment to regulatory compliance and industry standards
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
 
-<<<<<<< HEAD
 export default CompliancePage;
-=======
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Globe } from "lucide-react";
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 export default function Compliance() {
   const complianceFrameworks = [
     {
@@ -362,64 +264,15 @@ export default function Compliance() {
             </Link>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
     </>
-<<<<<<< HEAD
-=======
-        {/* Security Features */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Security Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <Shield className="w-12 h-12 text-cyan-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Data Encryption</h3>
-              <p className="text-gray-300">All data is encrypted in transit and at rest using industry-standard encryption protocols.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <CheckCircle className="w-12 h-12 text-green-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Regular Audits</h3>
-              <p className="text-gray-300">We conduct regular security audits and penetration testing to ensure our systems remain secure.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20">
-              <Award className="w-12 h-12 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Compliance Monitoring</h3>
-              <p className="text-gray-300">Continuous monitoring and reporting to ensure ongoing compliance with all relevant regulations.</p>
-            </div>
-          </div>
-        </section>
-        {/* Contact Section */}
-        <section className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Questions About Our Compliance?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Our compliance team is available to answer any questions about our security measures and certifications.
-          </p>
-          <a
-            href="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-          >
-            Contact Compliance Team
-          </a>
-          <div className="mt-8 text-sm text-blue-200">
-            <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
-=======
   )
 }
 export default CompliancePage
   </button>
   </button>
   </h1>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-=======
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2

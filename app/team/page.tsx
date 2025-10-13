@@ -1,29 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
 
 const TeamPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-=======
-const TeamPage: React.FC = () => {
-  return (
-    <>
-  <Helmet />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
         <title>Our Team - Zion Tech Group</title>
         <meta name="description" content="Our Team services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
@@ -39,7 +20,6 @@ const TeamPage: React.FC = () => {
             </p>
           </div>
         </div>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -71,11 +51,9 @@ const TeamPage = () => {
             </Link>
           </div>
         </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
       </div>
     </>
   )
-=======
 import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -235,7 +213,6 @@ export default function TeamPage() {
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-=======
 import React from 'react';
 // import { Metadata } from 'next'; // Removed for Vite
 
@@ -319,7 +296,6 @@ const TeamPage: React.FC = () => {
                 <button className='bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
                   View Open Positions
                 </button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
               </div>
             ))}
           </div>
@@ -496,43 +472,18 @@ const TeamPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
     </div>
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 }
 
 export default TeamPage
-=======
-        <title>Team - Zion Tech Group</title>
-        <meta name="description" content="Zion Tech Group - Team page" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <div className="pt-24 pb-16">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Team
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              This page is under construction. Please check back soon.
-            </p>
-          </div>
-        </div>
-        <Footer />
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       </div>
     </>
   );
 };
 
 export default TeamPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
-=======
 };
 
 export default TeamPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2

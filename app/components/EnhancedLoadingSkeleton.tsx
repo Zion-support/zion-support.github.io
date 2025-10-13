@@ -1,7 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 const EnhancedLoadingSkeletonPage: React.FC = () => {,
@@ -133,26 +131,6 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {,
 };
 
 export default EnhancedLoadingSkeletonPage;
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const EnhancedLoadingSkeletonPage: React.FC = () => {
-  const features = [
-=======
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-const EnhancedLoadingSkeletonPage: React.FC = () => {
-    const features = [
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const EnhancedLoadingSkeletonPage: React.FC = () => {
-const features = [
-];
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -165,18 +143,6 @@ const features = [
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       description: 'Worldwide deployment and support for international businesses',}}
   ]
   ];
-=======
-      description: 'Worldwide deployment and support for international businesses'
-  }
-    }
-<<<<<<< HEAD
-  ]
-=======
-];;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const SEOEnhancerPage: React.FC = () => {
-=======
-'use client';
-import React from 'react';
-=======
-import React, { ReactNode } from 'react';
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const SEOEnhancer: React.FC = () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   const features = [
     {
       icon: Brain,
@@ -51,12 +38,7 @@ const SEOEnhancer: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-  return (
-    <>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       <Helmet>
         <title>SEOEnhancer | Zion Tech Group</title>
         <meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -111,7 +93,6 @@ const SEOEnhancer: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
     <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-3">
@@ -191,12 +172,10 @@ const SEOEnhancer: React.FC = () => {
               <div key={index} className="flex items-start text-gray-300 text-sm">
                 <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
                 {recommendation}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* Benefits Section */}
@@ -279,29 +258,14 @@ import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
-<<<<<<< HEAD
-=======
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 };
 
 export default SEOEnhancerPage;
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
-=======
       )}
     </div>
   )
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
 interface SEOEnhancerProps {
   children?: ReactNode;
   title?: string;
@@ -440,4 +404,3 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 };
 
 export default SEOEnhancer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
