@@ -1,12 +1,6 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 export default function FiveGSolutionsPage() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Solutions5GPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <Helmet>

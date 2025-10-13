@@ -1,12 +1,6 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 export default function AIAccountingAssistantZionTechGroup() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiAccountingAssistantPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

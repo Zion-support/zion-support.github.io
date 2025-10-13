@@ -1,24 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { 
-  Heart, 
-  Zap, 
-  BarChart3, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Target, 
-  Brain, 
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  AlertCircle,
-  Clock
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
 
 const AICustomerSentimentTrackerPage = () => {
   const stats = [
@@ -159,8 +142,6 @@ const AICustomerSentimentTrackerPage = () => {
       popular: false
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiCustomerSentimentTrackerPage() {
   return (
@@ -203,4 +184,6 @@ export default function AiCustomerSentimentTrackerPage() {
       </div>
     </div>
   );
+}
+
 }

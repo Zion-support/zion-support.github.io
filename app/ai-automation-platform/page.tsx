@@ -1,28 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { 
-  BarChart3, 
-  Cloud, 
-  Users, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  TrendingUp,
-  Settings,
-  Workflow,
-  Target,
-  TrendingUp,
-  Settings,
-  Users,
-  Sparkles,
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { BarChart3, Cloud, Users, ArrowRight, Sparkles, CheckCircle, TrendingUp, Settings, Workflow, Target } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiAutomationPlatformPage() {
   return (

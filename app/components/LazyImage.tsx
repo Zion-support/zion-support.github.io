@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import React from 'react';
 
 interface LazyimageProps {

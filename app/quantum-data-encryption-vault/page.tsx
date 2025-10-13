@@ -1,6 +1,7 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Shield, ArrowRight, CheckCircle, Lock, Award, Globe, Eye, Key } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const QuantumDataEncryptionVault = () => {
@@ -131,10 +132,6 @@ const QuantumDataEncryptionVault = () => {
     { number: "Zero", label: "Data Breaches", icon: <Lock className="w-6 h-6" /> },
     { number: "50+", label: "Compliance Standards", icon: <Award className="w-6 h-6" /> }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function QuantumDataEncryptionVaultPage() {
   return (
@@ -177,9 +174,7 @@ export default function QuantumDataEncryptionVaultPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

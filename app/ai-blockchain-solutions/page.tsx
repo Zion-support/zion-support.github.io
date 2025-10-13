@@ -1,12 +1,6 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 export default function AiBlockchainSolutionsZionTechGroup() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AiBlockchainSolutionsPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

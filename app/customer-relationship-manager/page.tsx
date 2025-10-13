@@ -1,12 +1,6 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 export default function Customerrelationshipmanager() {
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function CustomerRelationshipManagerPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -47,7 +41,4 @@ export default function CustomerRelationshipManagerPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

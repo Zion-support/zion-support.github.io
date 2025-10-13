@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const ZionAIVideoGeneratorPage = () => {
   // const [selectedPlan, setSelectedPlan] = useState('pro');
   // const [selectedPlan, setSelectedPlan] = useState('pro');
@@ -165,9 +165,6 @@ const ZionAIVideoGeneratorPage = () => {
     }
   ];
 
-=======
-export default function ZionAiVideoGeneratorPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -208,9 +205,5 @@ export default function ZionAiVideoGeneratorPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

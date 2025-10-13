@@ -1,9 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
+import { Helmet } from 'react-helmet-async';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAIProjectManagerProPage = () => {
@@ -147,9 +147,6 @@ const ZionAIProjectManagerProPage = () => {
       color: "from-cyan-500 to-blue-500"
     }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function ZionAiProjectManagerProPage() {
   return (
@@ -192,9 +189,7 @@ export default function ZionAiProjectManagerProPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

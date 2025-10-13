@@ -1,9 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import { ArrowRight, Camera, Users, CheckCircle, Eye, Image, Target, Scan } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
 import FuturisticButton from '../components/FuturisticButton';
 
 const AIImageRecognitionPro = () => {
@@ -42,9 +43,6 @@ const AIImageRecognitionPro = () => {
     "Scalable infrastructure",
     "Easy integration"
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiImageRecognitionProPage() {
   return (
@@ -87,9 +85,7 @@ export default function AiImageRecognitionProPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

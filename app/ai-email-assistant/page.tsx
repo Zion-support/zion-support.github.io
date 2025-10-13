@@ -1,7 +1,8 @@
-<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { MessageSquare, Brain, Shield, Zap, Star, Mail, BarChart3, Settings, Users } from 'lucide-react';
 
 export default function AIEmailAssistant() {
@@ -108,10 +109,6 @@ export default function AIEmailAssistant() {
       popular: false,
     },
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiEmailAssistantPage() {
   return (
@@ -154,4 +151,6 @@ export default function AiEmailAssistantPage() {
       </div>
     </div>
   );
+}
+
 }

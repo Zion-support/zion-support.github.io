@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-=======
-import React from 'react';
-
-interface ImprovederrorboundaryProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 }
 
 export default function Improvederrorboundary({ className = '', children, ...props }: ImprovederrorboundaryProps) {
@@ -19,7 +11,6 @@ export default function Improvederrorboundary({ className = '', children, ...pro
       {children}
     </div>
   );
-<<<<<<< HEAD
   
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
   
@@ -36,6 +27,3 @@ export const _useErrorHandler = () => {
   };
 };
 
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

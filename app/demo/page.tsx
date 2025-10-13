@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar, Users, Award } from 'lucide-react';
 
 export default function Page() {
@@ -114,10 +114,6 @@ export default function Page() {
     setCurrentDemo((prev) => (prev - 1 + demos.length) % demos.length);
     setIsPlaying(false);
   };
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function DemoPage() {
   return (
@@ -160,4 +156,6 @@ export default function DemoPage() {
       </div>
     </div>
   );
+}
+
 }

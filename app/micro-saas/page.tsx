@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 export default function Page() {
@@ -101,8 +100,6 @@ export default function Page() {
       rating: 5
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function MicroSaasPage() {
   return (
@@ -145,4 +142,6 @@ export default function MicroSaasPage() {
       </div>
     </div>
   );
+}
+
 }

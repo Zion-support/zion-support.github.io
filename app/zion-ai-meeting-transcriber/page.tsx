@@ -1,8 +1,10 @@
-<<<<<<< HEAD
 import React from "react";
 import { ArrowRight, CheckCircle, Mic, Video, Calendar } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ZionAIMeetingTranscriber() {
@@ -80,10 +82,6 @@ export default function ZionAIMeetingTranscriber() {
       rating: 5
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function ZionAiMeetingTranscriberPage() {
   return (
@@ -126,4 +124,6 @@ export default function ZionAiMeetingTranscriberPage() {
       </div>
     </div>
   );
+}
+
 }

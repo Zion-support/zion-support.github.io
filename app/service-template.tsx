@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 const features = [
     {
@@ -22,10 +21,6 @@ const features = [
       icon: "FileText"
     }
   ];
-=======
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 interface ServiceTemplateProps {
   className?: string;
   children?: React.ReactNode;

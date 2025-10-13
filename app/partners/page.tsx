@@ -1,9 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function Partners() {
-  // const partners = [
+  const partners = [
     {
       name: "Microsoft",
       logo: "/images/partners/microsoft.png",
@@ -48,7 +47,7 @@ export default function Partners() {
     }
   ];
 
-  // const tiers = [
+  const tiers = [
     {
       name: "Platinum",
       color: "from-gray-400 to-gray-600",
@@ -69,9 +68,6 @@ export default function Partners() {
     }
   ];
 
-=======
-export default function PartnersPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -112,7 +108,4 @@ export default function PartnersPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

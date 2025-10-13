@@ -1,7 +1,9 @@
-<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { ArrowRight, Shield, Brain, CheckCircle, Star, Award, Zap, Globe, Mail, Phone, Sparkles, FileText, Eye, Fingerprint, Search } from 'lucide-react';
 
 export default function Page() {
@@ -104,10 +106,6 @@ export default function Page() {
       popular: false
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function ZionSecurityShieldProPage() {
   return (
@@ -150,7 +148,6 @@ export default function ZionSecurityShieldProPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
+
+}

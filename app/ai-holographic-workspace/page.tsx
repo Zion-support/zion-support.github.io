@@ -1,6 +1,7 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Monitor, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const AIHolographicWorkspace = () => {
@@ -131,10 +132,6 @@ const AIHolographicWorkspace = () => {
     { number: "50+", label: "Concurrent Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiHolographicWorkspacePage() {
   return (
@@ -177,9 +174,7 @@ export default function AiHolographicWorkspacePage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

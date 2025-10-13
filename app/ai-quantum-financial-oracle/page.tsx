@@ -1,20 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { 
-  Brain, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  DollarSign, 
-  Target, 
-  CheckCircle, 
-  Cpu,
-  Globe,
-  Clock,
-  Activity,
-  PieChart
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, TrendingUp, Shield, Zap, BarChart3, DollarSign, Target, CheckCircle, Cpu, Globe, Clock, Activity, PieChart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -135,9 +121,6 @@ const AIQuantumFinancialOraclePage = () => {
     { number: "10M+", label: "Data Points Analyzed", icon: <BarChart3 className="w-6 h-6" /> },
     { number: "24/7", label: "Market Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiQuantumFinancialOraclePage() {
   return (
@@ -180,9 +163,7 @@ export default function AiQuantumFinancialOraclePage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

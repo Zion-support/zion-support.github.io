@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
@@ -8,6 +7,8 @@ import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AIContentStudioZionTechGroup = () => {
@@ -117,10 +118,6 @@ const AIContentStudioZionTechGroup = () => {
       avatar: "MG"
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiContentStudioPage() {
   return (
@@ -163,4 +160,6 @@ export default function AiContentStudioPage() {
       </div>
     </div>
   );
+}
+
 }

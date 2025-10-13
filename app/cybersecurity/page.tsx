@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 const features = [
     {
@@ -108,10 +108,6 @@ export default function Page() {
       features: ["Vulnerability Scanning", "Patch Management", "Policy Enforcement", "Compliance Automation"]
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function CybersecurityPage() {
   return (
@@ -154,7 +150,6 @@ export default function CybersecurityPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
+
+}

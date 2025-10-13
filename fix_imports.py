@@ -1,65 +1,98 @@
 #!/usr/bin/env python3
+"""
+Script to fix missing imports in TypeScript/React files.
+"""
+
 import os
 import re
-import glob
+import sys
+from pathlib import Path
 
 def fix_imports(file_path):
-    """Fix malformed import statements in React/TypeScript files"""
+    """Fix missing imports in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        original_content = content
+        # Check if file needs fixing
+        needs_fixing = False
+        missing_imports = []
         
-        # Fix malformed import statements
-        # Fix: import {'Link'} from 'react-router-dom'
-        content = re.sub(r"import \{'([^']+)'\} from '([^']+)'", r"import { \1 } from '\2'", content)
+        # Check for common missing imports
+        if 'Helmet' in content and 'import.*Helmet' not in content:
+            missing_imports.append("import { Helmet } from 'react-helmet-async';")
+            needs_fixing = True
         
-        # Fix: import { Helmet } from 'react-helmet-async', { useState } from 'react';
-        content = re.sub(r"import \{ Helmet \} from 'react-helmet-async', \{ ([^}]+) \} from '([^']+)';", r"import { Helmet } from 'react-helmet-async';\nimport { \1 } from '\2';", content)
+        if 'Link' in content and 'import.*Link' not in content:
+            missing_imports.append("import { Link } from 'react-router-dom';")
+            needs_fixing = True
         
-        # Fix: import { Helmet } from 'react-helmet-async' from 'react'
-        content = re.sub(r"import \{ Helmet \} from 'react-helmet-async' from 'react'", "import { Helmet } from 'react-helmet-async'", content)
+        if 'ArrowRight' in content and 'import.*ArrowRight' not in content:
+            missing_imports.append("import { ArrowRight } from 'lucide-react';")
+            needs_fixing = True
         
-        # Fix: import React\nimport { ... } from '...'
-        content = re.sub(r'import React\nimport', 'import React\nimport', content)
+        if 'lazy' in content and 'import.*lazy' not in content:
+            missing_imports.append("import { lazy } from 'react';")
+            needs_fixing = True
         
-        # Fix missing semicolons
-        content = re.sub(r"import \{ ([^}]+) \} from '([^']+)'$", r"import { \1 } from '\2';", content, flags=re.MULTILINE)
+        if 'Suspense' in content and 'import.*Suspense' not in content:
+            missing_imports.append("import { Suspense } from 'react';")
+            needs_fixing = True
         
-        # Clean up multiple empty lines
-        content = re.sub(r'\n\n\n+', '\n\n', content)
+        if not needs_fixing:
+            return False
         
-        # Remove trailing whitespace
-        content = re.sub(r'[ \t]+$', '', content, flags=re.MULTILINE)
+        # Find the first import statement or add at the beginning
+        lines = content.split('\n')
+        insert_index = 0
         
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed imports in: {file_path}")
-            return True
+        # Find where to insert imports
+        for i, line in enumerate(lines):
+            if line.strip().startswith('import '):
+                insert_index = i
+            elif line.strip() and not line.strip().startswith('//') and not line.strip().startswith('/*'):
+                break
         
-        return False
+        # Add missing imports
+        for import_stmt in missing_imports:
+            if import_stmt not in content:
+                lines.insert(insert_index, import_stmt)
+                insert_index += 1
+        
+        # Write the fixed content back
+        new_content = '\n'.join(lines)
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        
+        return True
+        
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/JavaScript files
-    patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'app/**/*.js',
-        'app/**/*.jsx'
-    ]
+    """Main function to process all files with missing imports."""
+    workspace = Path('/workspace')
+    app_dir = workspace / 'app'
+    
+    if not app_dir.exists():
+        print("App directory not found!")
+        return
+    
+    # Find all .tsx files
+    files_to_check = []
+    for file_path in app_dir.rglob('*.tsx'):
+        files_to_check.append(file_path)
+    
+    print(f"Checking {len(files_to_check)} files for missing imports")
     
     fixed_count = 0
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if fix_imports(file_path):
-                fixed_count += 1
+    for file_path in files_to_check:
+        if fix_imports(file_path):
+            fixed_count += 1
+            print(f"Fixed: {file_path.relative_to(workspace)}")
     
-    print(f"Fixed imports in {fixed_count} files")
+    print(f"\nFixed {fixed_count} files")
 
 if __name__ == "__main__":
     main()

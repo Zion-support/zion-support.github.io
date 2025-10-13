@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 const features = [
     {
@@ -137,10 +137,6 @@ export default function ZionSecurityShield() {
       popular: false
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function ZionSecurityShieldPage() {
   return (
@@ -183,4 +179,6 @@ export default function ZionSecurityShieldPage() {
       </div>
     </div>
   );
+}
+
 }

@@ -1,17 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { 
-  Rocket, 
-  Satellite, 
-  Orbit, 
-  Zap, 
-  Target, 
-  CheckCircle, 
-  Globe,
-  Activity,
-  Navigation,
-  Gauge
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Rocket, Satellite, Orbit, Zap, Target, CheckCircle, Globe, Activity, Navigation, Gauge } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -132,9 +121,6 @@ const AISpaceMissionOptimizerPage = () => {
     { number: "10,000+", label: "Satellites Tracked", icon: <Satellite className="w-6 h-6" /> },
     { number: "24/7", label: "Mission Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiSpaceMissionOptimizerPage() {
   return (
@@ -177,9 +163,7 @@ export default function AiSpaceMissionOptimizerPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

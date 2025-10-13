@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 const benefits = [
     "Advanced AI algorithms for accurate predictions",
@@ -126,10 +126,6 @@ export default function Page() {
       popular: false
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiMarketingAutomationPage() {
   return (
@@ -172,7 +168,6 @@ export default function AiMarketingAutomationPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
+
+}

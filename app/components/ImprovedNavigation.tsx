@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles, Search, User, Settings, HelpCircle, Phone, Mail, MapPin, Star, TrendingUp, Users, Award, Clock, CheckCircle, DollarSign, Play } from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 interface ImprovednavigationProps {
   className?: string;
@@ -16,7 +13,6 @@ export default function Improvednavigation({ className = '', children, ...props 
       {children}
     </div>
   );
-<<<<<<< HEAD
 
   return (
     <div>
@@ -188,6 +184,3 @@ export default function Improvednavigation({ className = '', children, ...props 
   );
 };
 
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

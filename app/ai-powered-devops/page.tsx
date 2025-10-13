@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { 
-  Brain, 
-  ArrowRight, 
-  Monitor, 
-  Zap, 
-  CheckCircle, 
-  Award, 
-  DollarSign,
-  MessageSquare,
-  Phone,
-  Globe,
-  Star
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Brain, ArrowRight, Monitor, Zap, CheckCircle, Award, DollarSign, MessageSquare, Phone, Globe, Star } from 'lucide-react';
 
 export default function AIPoweredDevOpsPage() {
   const testimonials = [
@@ -124,10 +113,6 @@ export default function AIPoweredDevOpsPage() {
       color: "from-orange-500 to-red-500"
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiPoweredDevopsPage() {
   return (
@@ -170,7 +155,6 @@ export default function AiPoweredDevopsPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
+
+}

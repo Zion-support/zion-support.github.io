@@ -1,6 +1,8 @@
-<<<<<<< HEAD
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Sparkles, Heart, Receipt, Package, Code } from 'lucide-react';
 
 export default function Page() {
@@ -333,10 +335,6 @@ export default function Page() {
       ]
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function MicroSaasServicesPage() {
   return (
@@ -379,7 +377,6 @@ export default function MicroSaasServicesPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
+
+}

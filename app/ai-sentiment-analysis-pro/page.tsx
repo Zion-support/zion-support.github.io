@@ -1,9 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 import { ArrowRight, TrendingUp, Globe, CheckCircle, MessageSquare, Target, BarChart3 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
 import FuturisticButton from '../components/FuturisticButton';
 
 const AISentimentAnalysisPro = () => {
@@ -42,9 +43,6 @@ const AISentimentAnalysisPro = () => {
     "Trend analysis",
     "Actionable insights"
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiSentimentAnalysisProPage() {
   return (
@@ -87,9 +85,7 @@ export default function AiSentimentAnalysisProPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

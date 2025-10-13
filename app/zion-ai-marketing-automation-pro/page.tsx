@@ -1,9 +1,10 @@
-<<<<<<< HEAD
 import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, Globe, Play, Address } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { Target, Users, MessageSquare, Brain, Zap, Target, ArrowRight, Play, CheckCircle, CheckCircle, ArrowRight, Mail, Phone, Globe, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Target, Users, MessageSquare, Brain, Zap, ArrowRight, Play, CheckCircle, Mail, Phone, Globe } from 'lucide-react';
 
 export default function page() {
   const stats = [
@@ -107,10 +108,6 @@ export default function page() {
       popular: false
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function ZionAiMarketingAutomationProPage() {
   return (
@@ -153,7 +150,6 @@ export default function ZionAiMarketingAutomationProPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
+
+}

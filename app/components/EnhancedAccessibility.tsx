@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -85,18 +84,6 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   return (
     <div className="accessibility-enhanced">
-=======
-import React from 'react';
-
-interface EnhancedaccessibilityProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Enhancedaccessibility({ className = '', children, ...props }: EnhancedaccessibilityProps) {
-  return (
-    <div className={`enhancedaccessibility-component ${className}`} {...props}>
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
       {children}
     </div>
   );

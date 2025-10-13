@@ -1,16 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { 
-  TrendingUp, 
-  Zap, 
-  Brain, 
-  PieChart, 
-  Sparkles, 
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
+import { ArrowRight } from 'lucide-react';
+import { TrendingUp, Zap, Brain, PieChart, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 export default function AiDataAnalyticsProPage() {

@@ -1,6 +1,9 @@
-<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-const features = [
+
+export default function Pricing() {
+  const features = [
     {
       title: "Predictive Analytics",
       description: "Advanced machine learning models for accurate financial forecasting",
@@ -211,10 +214,6 @@ export default function Page() {
       answer: "We'll notify you before you reach your limits and offer options to upgrade or purchase additional capacity."
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function PricingPage() {
   return (

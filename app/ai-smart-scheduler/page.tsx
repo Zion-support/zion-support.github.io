@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
 const features = [
     {
@@ -138,10 +138,6 @@ export default function AISmartScheduler() {
       popular: false,
     },
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiSmartSchedulerPage() {
   return (
@@ -184,4 +180,6 @@ export default function AiSmartSchedulerPage() {
       </div>
     </div>
   );
+}
+
 }

@@ -1,16 +1,8 @@
-<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
 import { HelmetProvider } from 'react-helmet-async';
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
 );
-=======
-import React from 'react';
-
-interface MainProps {
-  className?: string;
-  children?: React.ReactNode;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function Main({ className = '', children, ...props }: MainProps) {
   return (

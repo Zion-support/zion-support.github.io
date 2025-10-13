@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useMemo, useCallback, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Home,
-  Users,
-  Settings,
-  BarChart3,
-  Shield,
-  Cloud,
-  Code,
-  Brain,
-  Zap,
-  Database,
-  Star,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { X, ChevronDown, ChevronRight, Home, Users, Settings, BarChart3, Shield, Cloud, Code, Brain, Zap, Database, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -166,19 +148,3 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     </div>
   );
 }
-=======
-import React from 'react';
-
-interface SidebarProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Sidebar({ className = '', children, ...props }: SidebarProps) {
-  return (
-    <div className={`sidebar-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

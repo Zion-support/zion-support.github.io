@@ -1,17 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-import { 
-  Mic, 
-  Play, 
-  Settings, 
-  Users, 
-  Zap, 
-  CheckCircle, 
-  Brain,
-  Volume2,
-  FileAudio,
-  Globe
-} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Mic, Play, Settings, Users, Zap, CheckCircle, Brain, Volume2, FileAudio, Globe } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -118,9 +107,6 @@ const AIVoiceCloningStudioPage = () => {
       icon: <Brain className="w-6 h-6" />
     }
   ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AiVoiceCloningStudioPage() {
   return (
@@ -163,9 +149,7 @@ export default function AiVoiceCloningStudioPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
+
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

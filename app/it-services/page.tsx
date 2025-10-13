@@ -1,11 +1,12 @@
-<<<<<<< HEAD
 import React from "react";
 import { ArrowRight, Star, Shield, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Settings, Zap, BarChart3, Target, HardDrive, Minimize } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 import SEOOptimizer from "../components/SEOOptimizer";
-import { Cloud, Shield, Network, Database, Code, Headphones, Smartphone, Monitor, Target, HardDrive, Settings, ArrowRight, Star, ArrowRight, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Cloud, Shield, Network, Database, Code, Headphones, Smartphone, Monitor, Target, HardDrive, Settings, ArrowRight, Star } from 'lucide-react';
 
 export default function ITServices() {
   const itServices = [
@@ -385,10 +386,6 @@ export default function ITServices() {
       icon: <Monitor className="w-8 h-8" />
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function ItServicesPage() {
   return (
@@ -431,4 +428,6 @@ export default function ItServicesPage() {
       </div>
     </div>
   );
+}
+
 }
