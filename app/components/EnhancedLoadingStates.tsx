@@ -1,5 +1,28 @@
 import React from 'react';
-import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
+import { Loader2, Brain, Zap, Shield, Globe } from 'lucide-react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  className?: string;
+}
+
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12'
+  };
+
+  return (
+    <Loader2 
+      className={`animate-spin text-cyan-400 ${sizeClasses[size]} ${className}`} 
+    />
+  );
+};
 
 interface LoadingPageProps {
   message?: string;
@@ -8,276 +31,165 @@ interface LoadingPageProps {
 }
 
 export const LoadingPage: React.FC<LoadingPageProps> = ({ 
-  message = "Loading...", 
-  showProgress = false, 
-  progress = 0 
+  message = 'Loading...', 
+  showProgress = false,
+  progress = 0
 }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="relative mb-8">
-          <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center animate-pulse">
-            <Loader2 className="w-12 h-12 text-white animate-spin" />
-          </div>
-          <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full animate-bounce"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+      <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+          <Brain className="w-8 h-8 text-white animate-pulse" />
         </div>
         
-        <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
+        <h2 className="text-2xl font-bold text-white mb-4">
+          {message}
+        </h2>
         
+        <div className="mb-6">
+          <LoadingSpinner size="lg" className="mx-auto" />
+        </div>
+
         {showProgress && (
-          <div className="w-64 mx-auto mb-4">
-            <div className="bg-gray-700 rounded-full h-2">
+          <div className="mb-6">
+            <div className="flex justify-between text-sm text-gray-300 mb-2">
+              <span>Loading</span>
+              <span>{Math.round(progress)}%</span>
+            </div>
+            <div className="w-full bg-white/20 rounded-full h-2">
               <div 
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${progress}%` }}
-              ></div>
+              />
             </div>
-            <p className="text-sm text-gray-300 mt-2">{progress}% complete</p>
           </div>
         )}
-        
-        <div className="flex justify-center space-x-2">
-          <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
-          <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-          <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+
+        <div className="flex justify-center gap-4 text-gray-400">
+          <div className="flex items-center gap-1">
+            <Zap className="w-4 h-4" />
+            <span className="text-sm">AI Solutions</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Shield className="w-4 h-4" />
+            <span className="text-sm">Security</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Globe className="w-4 h-4" />
+            <span className="text-sm">Global</span>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-interface ServiceLoadingProps {
-  serviceType: 'ai' | 'it' | 'saas' | '5g';
-  message?: string;
+interface LoadingCardProps {
+  className?: string;
+  height?: string;
 }
 
-export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ 
-  serviceType, 
-  message 
+export const LoadingCard: React.FC<LoadingCardProps> = ({ 
+  className = '',
+  height = 'h-48'
 }) => {
-  const getServiceIcon = () => {
-    switch (serviceType) {
-      case 'ai':
-        return <Brain className="w-16 h-16 text-cyan-400" />;
-      case 'it':
-        return <Shield className="w-16 h-16 text-green-400" />;
-      case 'saas':
-        return <Zap className="w-16 h-16 text-purple-400" />;
-      case '5g':
-        return <Globe className="w-16 h-16 text-orange-400" />;
-      default:
-        return <Loader2 className="w-16 h-16 text-white" />;
-    }
-  };
-
-  const getServiceMessage = () => {
-    if (message) return message;
-    
-    switch (serviceType) {
-      case 'ai':
-        return "Initializing AI Solutions...";
-      case 'it':
-        return "Loading IT Services...";
-      case 'saas':
-        return "Preparing Micro SaaS...";
-      case '5g':
-        return "Connecting to 5G Network...";
-      default:
-        return "Loading...";
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="relative mb-8">
-          <div className="w-32 h-32 mx-auto rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
-            <div className="animate-spin">
-              {getServiceIcon()}
-            </div>
-          </div>
-          <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-400 animate-spin"></div>
+    <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse ${height} ${className}`}>
+      <div className="flex items-center gap-4 mb-4">
+        <div className="w-12 h-12 bg-white/20 rounded-lg"></div>
+        <div className="flex-1">
+          <div className="h-4 bg-white/20 rounded w-3/4 mb-2"></div>
+          <div className="h-3 bg-white/20 rounded w-1/2"></div>
         </div>
-        
-        <h2 className="text-3xl font-bold text-white mb-4">{getServiceMessage()}</h2>
-        
-        <div className="max-w-md mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
-                <span className="text-gray-300">Optimizing performance...</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                <span className="text-gray-300">Loading components...</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
-                <span className="text-gray-300">Preparing interface...</span>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div className="space-y-2">
+        <div className="h-3 bg-white/20 rounded"></div>
+        <div className="h-3 bg-white/20 rounded w-5/6"></div>
+        <div className="h-3 bg-white/20 rounded w-4/6"></div>
       </div>
     </div>
   );
 };
 
-interface SkeletonLoadingProps {
-  type: 'card' | 'list' | 'text' | 'image';
+interface LoadingGridProps {
   count?: number;
+  className?: string;
 }
 
-export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({ 
-  type, 
-  count = 1 
+export const LoadingGrid: React.FC<LoadingGridProps> = ({ 
+  count = 6,
+  className = ''
 }) => {
-  const renderSkeleton = () => {
-    switch (type) {
-      case 'card':
-        return (
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
-            <div className="w-16 h-16 bg-gray-600 rounded-lg mb-4"></div>
-            <div className="h-6 bg-gray-600 rounded mb-3"></div>
-            <div className="h-4 bg-gray-600 rounded mb-2"></div>
-            <div className="h-4 bg-gray-600 rounded w-3/4"></div>
-          </div>
-        );
-      
-      case 'list':
-        return (
-          <div className="space-y-4">
-            {Array.from({ length: count }).map((_, index) => (
-              <div key={index} className="flex items-center space-x-4 animate-pulse">
-                <div className="w-12 h-12 bg-gray-600 rounded-full"></div>
-                <div className="flex-1 space-y-2">
-                  <div className="h-4 bg-gray-600 rounded w-3/4"></div>
-                  <div className="h-3 bg-gray-600 rounded w-1/2"></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        );
-      
-      case 'text':
-        return (
-          <div className="space-y-3 animate-pulse">
-            {Array.from({ length: count }).map((_, index) => (
-              <div key={index} className="space-y-2">
-                <div className="h-4 bg-gray-600 rounded"></div>
-                <div className="h-4 bg-gray-600 rounded w-5/6"></div>
-                <div className="h-4 bg-gray-600 rounded w-4/6"></div>
-              </div>
-            ))}
-          </div>
-        );
-      
-      case 'image':
-        return (
-          <div className="animate-pulse">
-            <div className="w-full h-64 bg-gray-600 rounded-lg"></div>
-          </div>
-        );
-      
-      default:
-        return <div className="animate-pulse bg-gray-600 rounded h-4"></div>;
-    }
-  };
-
   return (
-    <div className="space-y-4">
+    <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ${className}`}>
       {Array.from({ length: count }).map((_, index) => (
-        <div key={index}>
-          {renderSkeleton()}
-        </div>
+        <LoadingCard key={index} />
       ))}
     </div>
   );
 };
 
-interface ErrorLoadingProps {
-  error: string;
-  onRetry?: () => void;
+interface LoadingButtonProps {
+  loading?: boolean;
+  children: React.ReactNode;
+  className?: string;
+  disabled?: boolean;
+  onClick?: () => void;
 }
 
-export const ErrorLoading: React.FC<ErrorLoadingProps> = ({ 
-  error, 
-  onRetry 
+export const LoadingButton: React.FC<LoadingButtonProps> = ({
+  loading = false,
+  children,
+  className = '',
+  disabled = false,
+  onClick
 }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-red-500/20 flex items-center justify-center">
-          <Loader2 className="w-12 h-12 text-red-400 animate-spin" />
-        </div>
-        
-        <h2 className="text-2xl font-bold text-white mb-4">Loading Error</h2>
-        <p className="text-gray-300 mb-6 max-w-md mx-auto">{error}</p>
-        
-        {onRetry && (
-          <button
-            onClick={onRetry}
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-          >
-            Try Again
-          </button>
-        )}
+    <button
+      onClick={onClick}
+      disabled={disabled || loading}
+      className={`relative flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+        loading || disabled 
+          ? 'opacity-50 cursor-not-allowed' 
+          : 'hover:scale-105'
+      } ${className}`}
+    >
+      {loading && <LoadingSpinner size="sm" />}
+      {children}
+    </button>
+  );
+};
+
+interface LoadingOverlayProps {
+  isVisible: boolean;
+  message?: string;
+  transparent?: boolean;
+}
+
+export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
+  isVisible,
+  message = 'Loading...',
+  transparent = false
+}) => {
+  if (!isVisible) return null;
+
+  return (
+    <div className={`fixed inset-0 z-50 flex items-center justify-center ${
+      transparent ? 'bg-black/20' : 'bg-slate-900/80'
+    } backdrop-blur-sm`}>
+      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+        <LoadingSpinner size="lg" className="mx-auto mb-4" />
+        <p className="text-white font-medium">{message}</p>
       </div>
     </div>
   );
 };
 
-interface ProgressLoadingProps {
-  progress: number;
-  message: string;
-  subMessage?: string;
-}
-
-export const ProgressLoading: React.FC<ProgressLoadingProps> = ({ 
-  progress, 
-  message, 
-  subMessage 
-}) => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center max-w-md mx-auto">
-        <div className="relative mb-8">
-          <div className="w-32 h-32 mx-auto rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
-            <span className="text-2xl font-bold text-white">{progress}%</span>
-          </div>
-          <div 
-            className="absolute inset-0 rounded-full border-4 border-transparent border-t-cyan-400 animate-spin"
-            style={{ animationDuration: '2s' }}
-          ></div>
-        </div>
-        
-        <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
-        {subMessage && (
-          <p className="text-gray-300 mb-6">{subMessage}</p>
-        )}
-        
-        <div className="w-full bg-gray-700 rounded-full h-3 mb-4">
-          <div 
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full transition-all duration-500 ease-out"
-            style={{ width: `${progress}%` }}
-          ></div>
-        </div>
-        
-        <div className="flex justify-center space-x-1">
-          {Array.from({ length: 10 }).map((_, index) => (
-            <div
-              key={index}
-              className={`w-2 h-2 rounded-full animate-pulse ${
-                index < (progress / 10) ? 'bg-cyan-400' : 'bg-gray-600'
-              }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            ></div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+export default {
+  LoadingSpinner,
+  LoadingPage,
+  LoadingCard,
+  LoadingGrid,
+  LoadingButton,
+  LoadingOverlay
 };
-
-export default LoadingPage;

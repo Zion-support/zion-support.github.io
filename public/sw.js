@@ -1,34 +1,44 @@
-// Service Worker for Zion Tech Group
-const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'static-v1';
-const DYNAMIC_CACHE = 'dynamic-v1';
+// Service Worker for Zion Tech Group Website
+const CACHE_NAME = 'zion-tech-group-v1.0.0';
+const STATIC_CACHE = 'static-v1.0.0';
+const DYNAMIC_CACHE = 'dynamic-v1.0.0';
 
-// Assets to cache immediately
+// Static assets to cache
 const STATIC_ASSETS = [
   '/',
-  '/index.html',
+  '/about',
+  '/contact',
+  '/services',
+  '/ai-services',
+  '/micro-saas',
+  '/5g-solutions',
+  '/blog',
   '/manifest.json',
-  '/favicon.ico',
-  '/images/icon-192x192.png',
-  '/images/icon-512x512.png'
+  '/favicon.ico'
 ];
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
+  console.log('Service Worker installing...');
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static assets');
+        console.log('Caching static assets...');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
+        console.log('Static assets cached successfully');
         return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Error caching static assets:', error);
       })
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker activating...');
   event.waitUntil(
     caches.keys()
       .then((cacheNames) => {
@@ -42,12 +52,13 @@ self.addEventListener('activate', (event) => {
         );
       })
       .then(() => {
+        console.log('Service Worker activated');
         return self.clients.claim();
       })
   );
 });
 
-// Fetch event - serve from cache with network fallback
+// Fetch event - serve from cache or network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -67,6 +78,7 @@ self.addEventListener('fetch', (event) => {
       .then((cachedResponse) => {
         // Return cached version if available
         if (cachedResponse) {
+          console.log('Serving from cache:', request.url);
           return cachedResponse;
         }
 
@@ -78,7 +90,7 @@ self.addEventListener('fetch', (event) => {
               return response;
             }
 
-            // Clone the response
+            // Clone the response for caching
             const responseToCache = response.clone();
 
             // Cache dynamic content
@@ -89,11 +101,18 @@ self.addEventListener('fetch', (event) => {
 
             return response;
           })
-          .catch(() => {
+          .catch((error) => {
+            console.error('Fetch failed:', error);
+            
             // Return offline page for navigation requests
             if (request.mode === 'navigate') {
-              return caches.match('/index.html');
+              return caches.match('/') || new Response('Offline', {
+                status: 503,
+                statusText: 'Service Unavailable'
+              });
             }
+            
+            throw error;
           });
       })
   );
@@ -101,58 +120,83 @@ self.addEventListener('fetch', (event) => {
 
 // Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'contact-form') {
+  if (event.tag === 'background-sync') {
+    console.log('Background sync triggered');
     event.waitUntil(
-      // Handle offline form submissions
-      handleOfflineFormSubmissions()
+      // Handle offline form submissions here
+      handleOfflineSubmissions()
     );
   }
 });
 
 // Push notifications
 self.addEventListener('push', (event) => {
-  const options = {
-    body: event.data ? event.data.text() : 'New update from Zion Tech Group',
-    icon: '/images/icon-192x192.png',
-    badge: '/images/icon-192x192.png',
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'Explore',
-        icon: '/images/icon-192x192.png'
-      },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/images/icon-192x192.png'
-      }
-    ]
-  };
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: '/favicon.ico',
+      badge: '/favicon.ico',
+      vibrate: [100, 50, 100],
+      data: data.data,
+      actions: [
+        {
+          action: 'explore',
+          title: 'Explore',
+          icon: '/favicon.ico'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/favicon.ico'
+        }
+      ]
+    };
 
-  event.waitUntil(
-    self.registration.showNotification('Zion Tech Group', options)
-  );
-});
-
-// Notification click handler
-self.addEventListener('notificationclick', (event) => {
-  event.notification.close();
-
-  if (event.action === 'explore') {
     event.waitUntil(
-      clients.openWindow('/')
+      self.registration.showNotification(data.title, options)
     );
   }
 });
 
-// Helper function for offline form submissions
-async function handleOfflineFormSubmissions() {
-  // This would typically involve storing form data in IndexedDB
-  // and syncing when back online
-  console.log('Handling offline form submissions');
+// Handle offline form submissions
+async function handleOfflineSubmissions() {
+  try {
+    // Get offline submissions from IndexedDB
+    const submissions = await getOfflineSubmissions();
+    
+    for (const submission of submissions) {
+      try {
+        // Submit to server
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(submission)
+        });
+
+        if (response.ok) {
+          // Remove from offline storage
+          await removeOfflineSubmission(submission.id);
+          console.log('Offline submission synced:', submission.id);
+        }
+      } catch (error) {
+        console.error('Failed to sync submission:', error);
+      }
+    }
+  } catch (error) {
+    console.error('Error handling offline submissions:', error);
+  }
+}
+
+// IndexedDB helpers (simplified)
+async function getOfflineSubmissions() {
+  // Implementation would go here
+  return [];
+}
+
+async function removeOfflineSubmission(id) {
+  // Implementation would go here
+  console.log('Removing offline submission:', id);
 }
