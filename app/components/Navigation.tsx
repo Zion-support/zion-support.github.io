@@ -13,14 +13,19 @@ const Navigation: React.FC = () => {
       name: 'Services', 
       href: '/services',
       submenu: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Solutions', href: '/cloud-infrastructure' },
-        { name: 'Digital Transformation', href: '/digital-transformation' }
+        { name: 'AI Solutions', href: '/ai-solutions' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'Support', href: '/support' },
     { name: 'Contact', href: '/contact' }
   ];
 

@@ -1,48 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
-=======
-import { Right, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Solutions', href: '/cloud-infrastructure' },
-      { name: 'Digital Transformation', href: '/digital-transformation' }
+      { name: 'AI Solutions', href: '/ai-solutions' },
+      { name: 'Cybersecurity', href: '/cybersecurity' },
+      { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+      { name: 'Digital Transformation', href: '/digital-transformation' },
+      { name: 'Micro SaaS', href: '/micro-saas' },
+      { name: '5G Solutions', href: '/5g-solutions' }
     ],
     company: [
       { name: 'About Us', href: '/about' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Careers', href: '/careers' }
+      { name: 'Solutions', href: '/solutions' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Blog', href: '/blog' }
     ],
     support: [
       { name: 'Contact', href: '/contact' },
       { name: 'Support', href: '/support' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Tutorials', href: '/tutorials' }
+      { name: 'Tutorials', href: '/tutorials' },
+      { name: 'Demo', href: '/demo' }
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' }
+      { name: 'Terms of Service', href: '/terms' }
     ]
   };
 
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
-<<<<<<< HEAD
     { name: 'LinkedIn', href: '#', icon: Linkedin },
-=======
-      { name: 'LinkedIn', href: '#', icon: Linkedin },
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
     { name: 'GitHub', href: '#', icon: Github }
   ];
 
