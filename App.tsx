@@ -101,7 +101,11 @@ import SEOHead from './app/components/SEOHead';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
 // Lazy load pages for better performance
 <<<<<<< HEAD
+<<<<<<< HEAD
 const HomePage = React.lazy(() => import('./app/page'));
+=======
+const HomePage = React.lazy(() => import('./app/home/page'));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 <<<<<<< HEAD
@@ -294,6 +298,7 @@ import MicroSAASServicesPage from './app/micro-saas-services/page'
 function App() {
   return (
     <ErrorBoundary>
+<<<<<<< HEAD
       <HelmetProvider>
         <BrowserRouter>
           <div className="App">
@@ -366,6 +371,36 @@ function App() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
         </Router>
       </HelmetProvider>
+=======
+      <Router>
+        <div className="App">
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/micro-saas" element={<MicroSaasPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/case-studies" element={<CaseStudiesPage />} />
+              <Route path="/team" element={<TeamPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/cookies" element={<CookiesPage />} />
+              <Route path="/docs" element={<DocsPage />} />
+              <Route path="/api-docs" element={<ApiDocsPage />} />
+              <Route path="/support" element={<SupportPage />} />
+              <Route path="/status" element={<StatusPage />} />
+              <Route path="/demo" element={<DemoPage />} />
+              <Route path="/consultation" element={<ConsultationPage />} />
+            </Routes>
+          </Suspense>
+        </div>
+      </Router>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
     </ErrorBoundary>
   );
 };

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -39,6 +40,13 @@ import Footer from ../components
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
 
 const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(');
@@ -208,6 +216,7 @@ const PagePage: React.FC = () => {}
   );
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -930,8 +939,33 @@ const SupportPage = () => {
         </div>
       </section>
     </div>
+=======
+    <>
+      <Helmet>
+        <title>Support - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Support page" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <div className="pt-24 pb-16">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+              Support
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              This page is under construction. Please check back soon.
+            </p>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
   );
 };
 
 export default SupportPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009

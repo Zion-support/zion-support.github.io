@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 'use client';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
 =======
@@ -956,10 +957,18 @@ export default MicroSaasPage
       icon: <Clock className="w-6 h-6" />
     }
   ];
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
 
+const MicroSaasPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
+<<<<<<< HEAD
         <title>Micro SAAS Solutions - Zion Tech Group | Ready-to-Use Software</title>
         <meta name="description" content="Discover our comprehensive collection of Micro SAAS solutions. Ready-to-use software for analytics, security, AI, and business automation. Start instantly with our pre-configured solutions." />
         <meta name="keywords" content="micro saas, ready-to-use software, business automation, AI solutions, analytics, security, instant deployment" />
@@ -1192,14 +1201,31 @@ export default MicroSaasPage
               Explore All Services
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
+=======
+        <title>Micro-saas - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Micro-saas page" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <div className="pt-24 pb-16">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+              Micro-saas
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              This page is under construction. Please check back soon.
+            </p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
           </div>
         </div>
-      </section>
-    </div>
+        <Footer />
+      </div>
+    </>
   );
 };
 
 export default MicroSaasPage;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
@@ -1207,3 +1233,5 @@ export default MicroSaasPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009

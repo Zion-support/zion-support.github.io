@@ -19,6 +19,7 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
       description: 'Transformed a struggling e-commerce platform using AI-driven personalization and dynamic pricing strategies.'
 =======
 'use client';
+<<<<<<< HEAD
 
 import React from 'react';
 <<<<<<< HEAD
@@ -517,3 +518,36 @@ export default CaseStudiesPage
   );
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const CaseStudiesPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Case-studies - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Case-studies page" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
+        <div className="pt-24 pb-16">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+              Case-studies
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              This page is under construction. Please check back soon.
+            </p>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    </>
+  );
+};
+
+export default CaseStudiesPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009

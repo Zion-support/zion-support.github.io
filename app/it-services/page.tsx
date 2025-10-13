@@ -847,6 +847,7 @@ import { Helmet } from 'react-helmet-async'
                     to="/contact"
                     className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-block"
                   >
+<<<<<<< HEAD
                     Learn More →
                   </Link>
                 </div>
@@ -1003,3 +1004,54 @@ export default ITServicesPage;
 
 export default ItServicesPage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+                    Learn More
+                  </a>
+                  <a
+                    href="tel:+13024640950"
+                    className="cyber-button py-3 px-4 rounded-lg font-semibold transition-all duration-300"
+                  >
+                    <Phone className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to Optimize Your IT Infrastructure?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Our IT experts are ready to help you implement the perfect solution for your business needs. 
+            Get a free consultation and see how we can transform your IT operations.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call (302) 464-0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg"
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Email Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+};
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
