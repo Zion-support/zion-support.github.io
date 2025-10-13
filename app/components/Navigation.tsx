@@ -1,5 +1,21 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { 
+  ChevronDown, 
+  Menu, 
+  X, 
+  ArrowRight, 
+  Brain, 
+  Shield, 
+  Globe, 
+  Code, 
+  Cloud, 
+  Database, 
+  BarChart3, 
+  Zap, 
+  Star,
+  SidebarIcon
+} from 'lucide-react'
 
 interface NavigationProps {
   onSidebarToggle?: () => void
