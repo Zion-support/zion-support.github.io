@@ -12,7 +12,6 @@ import {
 const CloudMigrationProPage = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: <Cloud className="w-6 h-6 text-cyan-400" />,
       title: 'Seamless Migration',
       description: 'Zero-downtime migration to cloud platforms with minimal business disruption'
@@ -20,20 +19,7 @@ const CloudMigrationProPage = () => {
     {
       icon: <Shield className="w-6 h-6 text-purple-400" />,
       title: 'Security First',
-      description: 'Enterprise-grade security protocols throughout the migration process'
-=======
-      icon: Cloud,
-      title: "Seamless Migration",
-      description:
-        "Zero-downtime migration to cloud infrastructure with minimal disruption",
-    },
-    {
-      icon: Zap,
-      title: "Performance Optimization",
-      description:
-        "Optimize your cloud resources for maximum performance and cost efficiency",
->>>>>>> origin/main
-    },
+      description: 'Enterprise-grade security protocols throughout the migration process'    },
     {
       icon: Shield,
       title: "Security First",
@@ -84,7 +70,6 @@ const CloudMigrationProPage = () => {
         "Custom reporting",
         "24/7 monitoring",
       ],
-<<<<<<< HEAD
       popular: false
     }
   ];
@@ -93,11 +78,7 @@ const CloudMigrationProPage = () => {
     {
       icon: <Database className="w-6 h-6 text-green-400" />,
       title: 'Data Migration',
-      description: 'Safe and secure migration of databases and data warehouses'
-=======
-      popular: false,
->>>>>>> origin/main
-    },
+      description: 'Safe and secure migration of databases and data warehouses'    },
   ];
 
   const testimonials = [
@@ -192,7 +173,6 @@ const CloudMigrationProPage = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
 
           {/* Migration Process Section */}
           <div className="mb-16">
@@ -207,11 +187,6 @@ const CloudMigrationProPage = () => {
               ))}
             </div>
           </div>
-=======
-        </div>
-      </section>
->>>>>>> origin/main
-
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
