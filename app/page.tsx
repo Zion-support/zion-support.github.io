@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Navigation from './components/Navigation';
@@ -5,6 +6,12 @@ import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import React, { useState, useEffect, Suspense, memo } from 'react;
+=======
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
 
 import { Navigation } from './components/Navigation;
 

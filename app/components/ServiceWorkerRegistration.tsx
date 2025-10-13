@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -78,3 +79,51 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
     </div>
   );
 };
+=======
+import React, { useEffect, useState } from 'react';
+
+const ServiceWorkerRegistration: React.FC = () => {
+  const [isSupported, setIsSupported] = useState(false);
+  const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null);
+
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      setIsSupported(true);
+      
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((reg) => {
+            console.log('Service Worker registered successfully:', reg);
+            setRegistration(reg);
+          })
+          .catch((error) => {
+            console.log('Service Worker registration failed:', error);
+          });
+      });
+
+      // Listen for updates
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+      });
+    }
+  }, []);
+
+  const updateServiceWorker = () => {
+    if (registration && registration.waiting) {
+      registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+    }
+  };
+
+  if (!isSupported) {
+    return null;
+  }
+
+  return (
+    <div className="service-worker-registration">
+      {/* Service worker registration happens automatically */}
+    </div>
+  );
+};
+
+export default ServiceWorkerRegistration;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const Header: React.FC = () => {,
   return(<React.Fragment>)</React.Fragment>
       <Navigation />
@@ -23,3 +24,11 @@ export default Header;
 };
 
 export default Header;
+=======
+import React from 'react'
+import Navigation from './Navigation'
+
+  return (
+    <header>
+      <Navigation />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37

@@ -35,6 +35,7 @@ const SEOEnhancerPage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>SEOEnhancer | Zion Tech Group</title>
@@ -180,3 +181,5 @@ import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}
 };
 
 export default SEOEnhancerPage;
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
