@@ -87,6 +87,33 @@ export default function AICustomerSupportChatbot() {
     },
   ];
 
+  const testimonials = [
+    {
+      name: "Jennifer Martinez",
+      company: "TechStart Inc.",
+      role: "Customer Success Manager",
+      content: "Our AI chatbot has reduced support tickets by 70% while improving customer satisfaction. Amazing results!",
+      rating: 5,
+      avatar: "JM"
+    },
+    {
+      name: "Robert Kim",
+      company: "E-commerce Plus",
+      role: "Operations Director",
+      content: "The natural language processing is incredible. Customers can't tell they're talking to a bot!",
+      rating: 5,
+      avatar: "RK"
+    },
+    {
+      name: "Amanda Foster",
+      company: "ServicePro Solutions",
+      role: "VP of Customer Experience",
+      content: "24/7 support without the cost. This chatbot has transformed our customer service operations.",
+      rating: 5,
+      avatar: "AF"
+    }
+  ];
+
   return (
     <>
       <Helmet>

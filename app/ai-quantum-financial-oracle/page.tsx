@@ -7,13 +7,9 @@ import {
   DollarSign, 
   Target, 
   CheckCircle, 
-  ArrowRight,
   Cpu,
   Globe,
   Clock,
-  Users,
-  Award,
-  Star,
   Activity,
   PieChart
 } from 'lucide-react';

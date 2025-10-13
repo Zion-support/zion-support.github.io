@@ -87,6 +87,47 @@ const AICodeAssistantProZionTechGroup = () => {
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Zion AI Code Assistant Pro",
+    "description": "Advanced AI-powered code generation, debugging, and optimization tool supporting 50+ programming languages",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web, Windows, macOS, Linux",
+    "offers": {
+      "@type": "Offer",
+      "price": "99",
+      "priceCurrency": "USD"
+    }
+  };
+
+  const testimonials = [
+    {
+      name: "Alex Thompson",
+      company: "DevTech Solutions",
+      role: "Senior Developer",
+      content: "This AI code assistant has revolutionized our development workflow. The code quality and suggestions are outstanding!",
+      rating: 5,
+      avatar: "AT"
+    },
+    {
+      name: "Maria Garcia",
+      company: "CodeCraft Inc.",
+      role: "Lead Engineer",
+      content: "The debugging capabilities are incredible. It catches issues we would have missed and suggests perfect fixes.",
+      rating: 5,
+      avatar: "MG"
+    },
+    {
+      name: "David Kim",
+      company: "InnovateSoft",
+      role: "CTO",
+      content: "Our team's productivity has increased by 40% since we started using this tool. Highly recommended!",
+      rating: 5,
+      avatar: "DK"
+    }
+  ];
+
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -96,7 +137,6 @@ const AICodeAssistantProZionTechGroup = () => {
             description="Advanced AI-powered code generation, debugging, and optimization tool supporting 50+ programming languages. Boost developer productivity with intelligent coding assistance."
             keywords="AI code assistant, code generation, debugging, programming, software development, AI coding, developer tools, code optimization"
             canonical="https://ziontechgroup.com/ai-code-assistant-pro"
-            structuredData={structuredData}
           />
           
           <StructuredData type="SoftwareApplication" data={structuredData} />

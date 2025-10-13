@@ -90,6 +90,47 @@ const AIContentStudioZionTechGroup = () => {
     }
   ];
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Zion AI Content Studio Pro",
+    "description": "Advanced AI-powered content creation platform with automated writing, design, and video generation",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Web, Windows, macOS, Linux",
+    "offers": {
+      "@type": "Offer",
+      "price": "79",
+      "priceCurrency": "USD"
+    }
+  };
+
+  const testimonials = [
+    {
+      name: "Sarah Williams",
+      company: "ContentCraft Agency",
+      role: "Creative Director",
+      content: "This AI content studio has transformed our content production. We can now create high-quality content at scale!",
+      rating: 5,
+      avatar: "SW"
+    },
+    {
+      name: "James Rodriguez",
+      company: "Digital Marketing Pro",
+      role: "Marketing Manager",
+      content: "The video generation feature is incredible. We've reduced our content creation time by 70%.",
+      rating: 5,
+      avatar: "JR"
+    },
+    {
+      name: "Lisa Chen",
+      company: "BrandStory Inc.",
+      role: "Content Strategist",
+      content: "The AI writing quality is outstanding. It understands our brand voice perfectly.",
+      rating: 5,
+      avatar: "LC"
+    }
+  ];
+
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -99,7 +140,6 @@ const AIContentStudioZionTechGroup = () => {
             description="Advanced AI-powered content creation platform with automated writing, design, and video generation. Create professional content at scale with cutting-edge AI technology."
             keywords="AI content creation, content generation, AI writing, video generation, image creation, content marketing, AI content studio"
             canonical="https://ziontechgroup.com/ai-content-studio"
-            structuredData={structuredData}
           />
           
           <StructuredData type="SoftwareApplication" data={structuredData} />

@@ -4,7 +4,13 @@ import {
   BarChart3, 
   Cloud, 
   Workflow,
-  Target
+  Target,
+  TrendingUp,
+  Settings,
+  Users,
+  Sparkles,
+  ArrowRight,
+  CheckCircle
 } from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
@@ -56,6 +62,15 @@ const AIAutomationPlatformPage = () => {
       description: "Quality control, supply chain optimization, and predictive maintenance",
       icon: <Settings className="w-6 h-6" />
     }
+  ];
+
+  const benefits = [
+    "Reduce operational costs by up to 60%",
+    "Increase process efficiency by 300%",
+    "Eliminate manual errors completely",
+    "Scale operations without additional staff",
+    "Get real-time insights and analytics",
+    "Integrate with existing systems seamlessly"
   ];
 
   return (

@@ -1,5 +1,14 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import {
+  TrendingUp,
+  Zap,
+  Brain,
+  PieChart,
+  Sparkles,
+  ArrowRight,
+  CheckCircle
+} from 'lucide-react';
 
 const AIDataAnalyticsProPage = () => {
   const features = [

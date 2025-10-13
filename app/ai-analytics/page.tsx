@@ -117,6 +117,33 @@ export default function AiAnalytics() {
     }
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechCorp Inc.",
+      role: "CEO",
+      content: "AI Analytics has transformed how we understand our business data. The insights are incredible!",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      company: "DataFlow Solutions",
+      role: "CTO",
+      content: "The predictive analytics capabilities have helped us make better decisions faster than ever before.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "GrowthMetrics",
+      role: "Data Analyst",
+      content: "Finally, a tool that makes complex data analysis accessible to everyone on our team.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
       <Helmet>

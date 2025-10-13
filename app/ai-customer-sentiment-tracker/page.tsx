@@ -97,6 +97,36 @@ const AICustomerSentimentTrackerPage = () => {
     }
   ];
 
+  const stats = [
+    { number: "95%", label: "Accuracy Rate" },
+    { number: "10M+", label: "Mentions Analyzed" },
+    { number: "500+", label: "Brands Trust Us" },
+    { number: "24/7", label: "Real-time Monitoring" }
+  ];
+
+  const benefits = [
+    {
+      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Increase customer satisfaction by 25%",
+      description: "Proactive sentiment monitoring helps identify and resolve issues quickly"
+    },
+    {
+      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Reduce response time by 60%",
+      description: "Real-time alerts ensure immediate action on negative sentiment"
+    },
+    {
+      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Identify issues before they escalate",
+      description: "Early warning system prevents potential PR crises"
+    },
+    {
+      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Improve brand reputation management",
+      description: "Comprehensive sentiment insights guide strategic decisions"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

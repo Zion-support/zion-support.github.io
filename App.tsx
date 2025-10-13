@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import React, { useState, useCallback, useEffect, Suspense } from 'react';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
@@ -134,10 +135,10 @@ function App() {
                       <Router>
                         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         <FuturisticBackground>
-                          <PerformanceOptimizer />
-                          <Navigation onSidebarToggle={toggleSidebar} />
-                          <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                          <Breadcrumb />
+                          <PerformanceOptimizer>
+                            <Navigation onSidebarToggle={toggleSidebar} />
+                            <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                            <Breadcrumb />
                             
                             <main className="relative z-10" id="main-content" role="main">
                               <Suspense fallback={<LoadingPage />}>
@@ -244,6 +245,7 @@ function App() {
                             </main>
                             
                             <Footer />
+                          </PerformanceOptimizer>
                           </FuturisticBackground>
                         </div>
                       </Router>

@@ -46,6 +46,7 @@ export default function Partners() {
     }
   ];
 
+  const partnershipTiers = [
     {
       name: "Platinum",
       color: "from-gray-400 to-gray-600",
@@ -84,6 +85,42 @@ export default function Partners() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Strategic partnerships that drive innovation and deliver exceptional value to our clients.
             </p>
+          </div>
+          
+          {/* Partners Grid */}
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {partners.map((partner, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
+                <p className="text-gray-300 mb-2">{partner.description}</p>
+                <span className="inline-block px-3 py-1 bg-purple-600 text-white text-sm rounded-full">
+                  {partner.category}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Partnership Tiers */}
+          <div className="mt-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-8">
+              Partnership Tiers
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {partnershipTiers.map((tier, index) => (
+                <div key={index} className={`bg-gradient-to-br ${tier.color} rounded-lg p-6`}>
+                  <h3 className="text-xl font-semibold text-white mb-4">{tier.name}</h3>
+                  <p className="text-white/90 mb-4">{tier.requirements}</p>
+                  <ul className="space-y-2">
+                    {tier.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="text-white/80 flex items-center">
+                        <span className="w-2 h-2 bg-white rounded-full mr-3"></span>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -1,7 +1,11 @@
 import React from 'react';
 
-const WebVitalsTracker: React.FC = () => {
-  return null;
+interface WebVitalsTrackerProps {
+  children: React.ReactNode;
+}
+
+const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
+  return <>{children}</>;
 };
 
 export default WebVitalsTracker;

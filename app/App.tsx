@@ -53,8 +53,8 @@ function App() {
           <PerformanceMonitor>
             <AccessibilityEnhancer>
               <CriticalResourcePreloader />
-              <CacheManager />
-              <AdvancedPerformanceMonitor />
+              <CacheManager>
+                <AdvancedPerformanceMonitor />
             <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -106,6 +106,7 @@ function App() {
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             </Routes>
             </Suspense>
+              </CacheManager>
             </AccessibilityEnhancer>
           </PerformanceMonitor>
         </ErrorBoundary>
