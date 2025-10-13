@@ -219,13 +219,7 @@ const AIContentStudioZionTechGroup = () => {
                 </div>
                 
                 <FuturisticTextEnhanced
-                  variant="display"
-                  size="5xl"
-                  gradient={true}
-                  animated={true}
-                  glow={true}
-                  neon={true}
-                  className="mb-6 leading-tight"
+                  className="mb-6 leading-tight text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"
                 >
                   Zion AI Content Studio Pro
                 </FuturisticTextEnhanced>

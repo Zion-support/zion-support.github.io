@@ -1,3 +1,4 @@
+import React from 'react';
 import { 
   Brain, 
   Zap, 
@@ -12,6 +13,8 @@ import {
   Target,
   TrendingUp
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const AIServicesPage = () => {
   const aiServices = [
@@ -65,7 +68,15 @@ const AIServicesPage = () => {
     }
   ];
 
-  
+  const benefits = [
+    "Increased Efficiency & Productivity",
+    "Cost Reduction & ROI Improvement",
+    "Enhanced Decision Making",
+    "Automated Processes",
+    "Scalable Solutions",
+    "24/7 Support & Monitoring"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -99,11 +110,9 @@ const AIServicesPage = () => {
           {benefits.map((benefit, index) => (
             <div key={index} className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                {benefit.icon}
+                <Brain className="w-8 h-8 text-cyan-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-              <p className="text-gray-300 mb-3">{benefit.description}</p>
-              <div className="text-2xl font-bold text-cyan-400">{benefit.stat}</div>
+              <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
             </div>
           ))}
         </div>

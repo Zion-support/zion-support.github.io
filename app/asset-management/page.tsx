@@ -1,3 +1,4 @@
+import React from 'react';
 import { 
   Package, 
   BarChart3, 
@@ -12,10 +13,52 @@ import {
   Settings,
   Shield
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const AssetManagementPage = () => {
-  
-  
+  const features = [
+    {
+      icon: <Package className="w-8 h-8" />,
+      title: "Asset Tracking",
+      description: "Real-time tracking and monitoring of all your digital and physical assets."
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Analytics Dashboard",
+      description: "Comprehensive analytics and reporting for asset performance and utilization."
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "Lifecycle Management",
+      description: "Complete asset lifecycle management from procurement to disposal."
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Optimization",
+      description: "AI-powered recommendations for asset optimization and cost reduction."
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Team Collaboration",
+      description: "Collaborative tools for teams to manage and share asset information."
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Global Access",
+      description: "Access your assets from anywhere with cloud-based management platform."
+    }
+  ];
+
+  const benefits = [
+    "Real-time asset visibility",
+    "Reduced operational costs",
+    "Improved asset utilization",
+    "Automated compliance tracking",
+    "Enhanced security controls",
+    "Scalable management solution"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -88,7 +131,7 @@ const AssetManagementPage = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                 >
                   {feature.icon}
                 </div>

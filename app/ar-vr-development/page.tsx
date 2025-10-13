@@ -1,3 +1,4 @@
+import React from 'react';
 import { 
   Eye, 
   Box, 
@@ -12,10 +13,52 @@ import {
   Settings,
   Shield
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const ARVRDevelopmentPage = () => {
-  
-  
+  const features = [
+    {
+      icon: <Eye className="w-8 h-8" />,
+      title: "AR Development",
+      description: "Create immersive augmented reality experiences for mobile and web platforms."
+    },
+    {
+      icon: <Box className="w-8 h-8" />,
+      title: "VR Development",
+      description: "Build virtual reality applications for Oculus, HTC Vive, and other VR headsets."
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "Mixed Reality",
+      description: "Develop mixed reality solutions that blend physical and digital worlds."
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Integration",
+      description: "Integrate AI and machine learning for intelligent AR/VR experiences."
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Multi-user Experiences",
+      description: "Create collaborative AR/VR experiences for teams and communities."
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Cross-platform",
+      description: "Deploy across multiple platforms and devices with consistent performance."
+    }
+  ];
+
+  const benefits = [
+    "Immersive user experiences",
+    "Increased engagement",
+    "Real-time 3D rendering",
+    "Cross-platform compatibility",
+    "AI-powered interactions",
+    "Scalable solutions"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -88,7 +131,7 @@ const ARVRDevelopmentPage = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                 >
                   {feature.icon}
                 </div>

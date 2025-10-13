@@ -2,16 +2,41 @@ import React from "react";
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { 
+  Brain, 
+  ArrowRight, 
+  Monitor, 
+  Zap, 
+  CheckCircle, 
+  Award, 
+  DollarSign,
+  MessageSquare,
+  Phone,
+  Globe,
+  Star
+} from 'lucide-react';
 
-export default function page() {
+export default function AIPoweredDevOpsPage() {
   const testimonials = [
-    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5 }
+    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5, avatar: "/api/placeholder/64/64" }
   ];
   const features = [
-    { title: "Feature 1", description: "Description 1" },
-    { title: "Feature 2", description: "Description 2" }
+    "Automated CI/CD Pipeline Setup",
+    "Intelligent Monitoring & Alerting",
+    "Auto-scaling Infrastructure",
+    "Security Vulnerability Scanning",
+    "Performance Optimization",
+    "Cost Optimization"
   ];
-  
+
+  const capabilities = [
+    "Automated CI/CD pipeline setup",
+    "Intelligent monitoring and alerting",
+    "Auto-scaling infrastructure management",
+    "Security vulnerability scanning",
+    "Performance optimization",
+    "Cost optimization recommendations"
+  ];
   
   const pricingPlans = [
     {
@@ -88,10 +113,9 @@ export default function page() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
       </Helmet>
-      <SEOOptimizer
-        title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
-        description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
-      />
+      <SEOOptimizer>
+        <div>AI-Powered DevOps Content</div>
+      </SEOOptimizer>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -216,16 +240,13 @@ export default function page() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${capability.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                   >
-                    {capability.icon}
+                    <Zap className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {capability.title}
+                    {capability}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {capability.description}
-                  </p>
                 </div>
               ))}
             </div>

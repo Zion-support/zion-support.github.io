@@ -1,3 +1,4 @@
+import React from 'react';
 import { 
   Mic, 
   Brain, 
@@ -12,10 +13,52 @@ import {
   Users,
   Globe
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const AIVoiceAssistantProPage = () => {
-  
-  
+  const features = [
+    {
+      icon: <Mic className="w-8 h-8" />,
+      title: "Voice Recognition",
+      description: "Advanced speech-to-text with 99% accuracy in multiple languages."
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "Natural Language Processing",
+      description: "Understand context and intent for more natural conversations."
+    },
+    {
+      icon: <Volume2 className="w-8 h-8" />,
+      title: "Text-to-Speech",
+      description: "High-quality voice synthesis with customizable voices."
+    },
+    {
+      icon: <MessageSquare className="w-8 h-8" />,
+      title: "Conversational AI",
+      description: "Engage in natural, context-aware conversations."
+    },
+    {
+      icon: <Settings className="w-8 h-8" />,
+      title: "Customizable Commands",
+      description: "Create custom voice commands for your specific needs."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Privacy & Security",
+      description: "Enterprise-grade security with data encryption and privacy controls."
+    }
+  ];
+
+  const benefits = [
+    "95% accuracy in voice recognition",
+    "Multi-language support",
+    "Real-time processing",
+    "Custom voice training",
+    "Integration with existing systems",
+    "24/7 availability"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -88,7 +131,7 @@ const AIVoiceAssistantProPage = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                 >
                   {feature.icon}
                 </div>

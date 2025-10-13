@@ -38,7 +38,8 @@ const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
       // Measure First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          const fid = entry.processingStart - entry.startTime;
+          const fidEntry = entry as any; // Type assertion for FID entry
+          const fid = fidEntry.processingStart - entry.startTime;
           setVitals(prev => ({ ...prev, fid }));
         }
       });

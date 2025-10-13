@@ -1,3 +1,4 @@
+import React from 'react';
 import { 
   Users, 
   Target, 
@@ -12,10 +13,52 @@ import {
   Shield,
   Zap
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const AIHRRecruitmentProPage = () => {
-  
-  
+  const features = [
+    {
+      icon: <UserCheck className="w-8 h-8" />,
+      title: "Smart Candidate Matching",
+      description: "AI-powered matching algorithm that finds the perfect candidates for your roles."
+    },
+    {
+      icon: <FileText className="w-8 h-8" />,
+      title: "Automated Screening",
+      description: "Intelligent resume screening and initial candidate assessment."
+    },
+    {
+      icon: <Calendar className="w-8 h-8" />,
+      title: "Interview Scheduling",
+      description: "Automated interview scheduling and calendar management."
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Performance Analytics",
+      description: "Track recruitment metrics and optimize your hiring process."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Compliance Management",
+      description: "Ensure compliance with employment laws and regulations."
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Real-time Updates",
+      description: "Get instant notifications and updates on candidate progress."
+    }
+  ];
+
+  const benefits = [
+    "50% faster time-to-hire",
+    "90% reduction in manual screening",
+    "Improved candidate quality",
+    "Automated compliance tracking",
+    "Real-time analytics dashboard",
+    "Seamless integration with existing systems"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -88,7 +131,7 @@ const AIHRRecruitmentProPage = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                 >
                   {feature.icon}
                 </div>

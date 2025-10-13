@@ -13,10 +13,25 @@ import {
   Settings, 
   Monitor 
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CloudServicesPage: React.FC = () => {
-  
-  
+  const services = [
+    { name: "Cloud Migration", path: "/cloud-migration" },
+    { name: "Cloud Security", path: "/cloud-security" },
+    { name: "Cloud Monitoring", path: "/cloud-monitoring" },
+    { name: "Cloud Optimization", path: "/cloud-optimization" }
+  ];
+
+  const benefits = [
+    "Scalable infrastructure",
+    "Cost-effective solutions",
+    "Enhanced security",
+    "24/7 monitoring",
+    "Global availability",
+    "Automated backups"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}

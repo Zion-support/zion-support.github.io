@@ -13,19 +13,26 @@ import {
   Linkedin,
   Github
 } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  const socialLinks = [
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> }
+  ];
+
+  const microSaasServices = [
+    { name: 'AI Code Assistant Pro', path: '/ai-code-assistant-pro' },
+    { name: 'AI Content Studio', path: '/ai-content-studio' },
+    { name: 'AI Data Analytics Pro', path: '/ai-data-analytics-pro' },
+    { name: 'AI Financial Analysis', path: '/ai-financial-analysis' },
+    { name: 'AI HR Recruitment Pro', path: '/ai-hr-recruitment-pro' },
+    { name: 'AI Voice Assistant Pro', path: '/ai-voice-assistant-pro' }
+  ];
+
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

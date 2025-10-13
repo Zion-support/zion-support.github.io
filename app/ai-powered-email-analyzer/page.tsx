@@ -1,3 +1,4 @@
+import React from 'react';
 import { 
   Mail, 
   TrendingUp, 
@@ -13,9 +14,40 @@ import {
   Target,
   Globe
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 
 const AIPoweredEmailAnalyzerPage = () => {
-  
+  const stats = [
+    { label: "Emails Analyzed", value: "1M+", icon: <Mail className="w-6 h-6" /> },
+    { label: "Accuracy Rate", value: "99.5%", icon: <Target className="w-6 h-6" /> },
+    { label: "Time Saved", value: "80%", icon: <Clock className="w-6 h-6" /> },
+    { label: "Cost Reduction", value: "60%", icon: <TrendingUp className="w-6 h-6" /> }
+  ];
+
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI-Powered Analysis",
+      description: "Advanced machine learning algorithms analyze email content, sentiment, and intent with 99.5% accuracy."
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Security Detection",
+      description: "Automatically detect phishing attempts, spam, and malicious content to protect your organization."
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Analytics Dashboard",
+      description: "Comprehensive analytics and reporting to track email performance and communication trends."
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Real-time Processing",
+      description: "Process and analyze emails in real-time with instant notifications and alerts."
+    }
+  ];
+
   const pricingPlans = [
     {
       name: "Starter",
@@ -133,7 +165,7 @@ const AIPoweredEmailAnalyzerPage = () => {
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
+                  {stat.value}
                 </div>
                 <div className="text-gray-400 font-medium">
                   {stat.label}
