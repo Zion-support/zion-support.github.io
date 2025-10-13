@@ -102,7 +102,7 @@ const SoftwareDevelopmentPage: React.FC = () => {
             >
               View Portfolio
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -140,7 +140,7 @@ const SoftwareDevelopmentPage: React.FC = () => {
                 </ul>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -166,7 +166,7 @@ const SoftwareDevelopmentPage: React.FC = () => {
                 <p className="text-xs text-gray-400">{tech.category}</p>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -196,7 +196,7 @@ const SoftwareDevelopmentPage: React.FC = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -222,7 +222,7 @@ const SoftwareDevelopmentPage: React.FC = () => {
             >
               Free Consultation
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
     </div>

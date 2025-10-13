@@ -145,10 +145,7 @@ export default function AIPoweredDevOpsPage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-          
-          <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"> <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"> <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Brain className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">AI-Powered Development Operations</span>
@@ -191,29 +188,25 @@ export default function AIPoweredDevOpsPage() {
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">80%</div>
                 <div className="text-gray-300 text-sm">Faster Deployments</div>
-              </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <CheckCircle className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">95%</div>
                 <div className="text-gray-300 text-sm">Task Automation</div>
-              </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Award className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">99.9%</div>
                 <div className="text-gray-300 text-sm">System Uptime</div>
-              </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <DollarSign className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">40%</div>
                 <div className="text-gray-300 text-sm">Cost Reduction</div>
-              </div>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -242,7 +235,7 @@ export default function AIPoweredDevOpsPage() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -274,7 +267,7 @@ export default function AIPoweredDevOpsPage() {
                   </h3>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -337,7 +330,7 @@ export default function AIPoweredDevOpsPage() {
                   </Link>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -372,11 +365,10 @@ export default function AIPoweredDevOpsPage() {
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -431,7 +423,7 @@ export default function AIPoweredDevOpsPage() {
                 View Demo
                 <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

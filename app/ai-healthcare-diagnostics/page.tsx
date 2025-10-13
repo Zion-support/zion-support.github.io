@@ -126,9 +126,7 @@ export default function Page() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"> <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"> </div>
 
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -165,7 +163,7 @@ export default function Page() {
                 Free Consultation
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -211,7 +209,7 @@ export default function Page() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -239,12 +237,10 @@ export default function Page() {
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                     {useCase.description}
                   </p>
-                  <div className="text-rose-400 text-sm font-medium">
-                    {useCase.impact}
+                  <div className="text-rose-400 text-sm font-medium">{useCase.impact}
                   </div>
-                </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -308,7 +304,7 @@ export default function Page() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -363,7 +359,7 @@ export default function Page() {
                 Free Consultation
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

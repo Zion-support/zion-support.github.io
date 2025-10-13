@@ -350,10 +350,7 @@ export default function Page() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
-        {/* Hero Section */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"> <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]">{/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
@@ -398,9 +395,8 @@ export default function Page() {
                   </div>
                   <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-                </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -428,7 +424,7 @@ export default function Page() {
                   </span>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -461,9 +457,7 @@ export default function Page() {
                   )}
                   
                   {/* Animated background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  <div className="relative z-10">
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"> <div className="relative z-10">
                     <div className="flex items-center mb-4">
                       <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
                         {service.icon}
@@ -515,8 +509,7 @@ export default function Page() {
                       <div className="space-y-1">
                         {service.benefits.slice(0, 2).map((benefit, idx) => (
                           <div key={idx} className="text-xs text-gray-300 flex items-center">
-                            <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></div>
-                            <span>{benefit}</span>
+                            <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0"> <span>{benefit}</span>
                           </div>
                         ))}
                       </div>
@@ -534,7 +527,7 @@ export default function Page() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -590,7 +583,7 @@ export default function Page() {
                   Schedule Demo
                 </Link>
               </div>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

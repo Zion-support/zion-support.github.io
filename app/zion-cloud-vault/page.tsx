@@ -188,16 +188,13 @@ export default function ZionCloudVault() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-blue-400 mb-2">99.999999999%</div>
                 <div className="text-gray-300">Data Durability</div>
-              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">AES-256</div>
                 <div className="text-gray-300">Encryption Standard</div>
-              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">50,000+</div>
                 <div className="text-gray-300">Businesses Trust Us</div>
-              </div>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -229,7 +226,7 @@ export default function ZionCloudVault() {
                   </p>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -254,7 +251,7 @@ export default function ZionCloudVault() {
                   <span className="text-gray-300">{feature.title}</span>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -314,7 +311,7 @@ export default function ZionCloudVault() {
                   </Link>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -344,10 +341,9 @@ export default function ZionCloudVault() {
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -374,7 +370,7 @@ export default function ZionCloudVault() {
               >
                 Schedule Demo
               </Link>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

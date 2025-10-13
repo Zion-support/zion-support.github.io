@@ -227,10 +227,7 @@ export default function Page() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
-        {/* Hero Section */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"> <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]">{/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-block">
@@ -240,8 +237,7 @@ export default function Page() {
                   {" "}Transparent
                 </span>
                 <br />Pricing
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
-              </h1>
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"> </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Choose the perfect plan for your business. All plans include 14-day free trials, 
@@ -262,7 +258,7 @@ export default function Page() {
                 Free Consultation
                 <Zap className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -327,7 +323,7 @@ export default function Page() {
                   </Link>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -392,7 +388,7 @@ export default function Page() {
                   </Link>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -457,7 +453,7 @@ export default function Page() {
                   </Link>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -482,7 +478,7 @@ export default function Page() {
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -536,7 +532,7 @@ export default function Page() {
                 Free Consultation
                 <Zap className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

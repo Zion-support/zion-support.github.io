@@ -131,7 +131,7 @@ const SmartInventoryOptimizerPage = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -173,7 +173,7 @@ const SmartInventoryOptimizerPage = () => {
                 </p>
               </motion.div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -214,7 +214,7 @@ const SmartInventoryOptimizerPage = () => {
                 </p>
               </motion.div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -251,10 +251,8 @@ const SmartInventoryOptimizerPage = () => {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular
                     </div>
-                  </div>
                 )}
 
                 <div className="text-center mb-8">
@@ -288,7 +286,7 @@ const SmartInventoryOptimizerPage = () => {
                 </motion.button>
               </motion.div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -345,7 +343,7 @@ const SmartInventoryOptimizerPage = () => {
               <Globe className="w-5 h-5 mr-2 text-cyan-400" />
               <span>https://ziontechgroup.com</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </section>
     </div>

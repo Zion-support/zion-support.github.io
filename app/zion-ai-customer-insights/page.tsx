@@ -105,10 +105,7 @@ const ZionAICustomerInsightsPage = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)]"></div>
-        
-        {/* Hero Section */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10 animate-pulse"> <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)]">{/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
@@ -153,9 +150,8 @@ const ZionAICustomerInsightsPage = () => {
                   </div>
                   <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-                </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -179,9 +175,7 @@ const ZionAICustomerInsightsPage = () => {
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  <div className="relative z-10">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"> <div className="relative z-10">
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       {feature.icon}
                     </div>
@@ -195,7 +189,7 @@ const ZionAICustomerInsightsPage = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -238,7 +232,7 @@ const ZionAICustomerInsightsPage = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -305,7 +299,7 @@ const ZionAICustomerInsightsPage = () => {
                   </Link>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -340,11 +334,10 @@ const ZionAICustomerInsightsPage = () => {
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -400,7 +393,7 @@ const ZionAICustomerInsightsPage = () => {
                   Watch Demo
                 </Link>
               </div>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

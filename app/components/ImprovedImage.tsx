@@ -137,8 +137,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
       {/* Loading Spinner */}
       {isInView && !isLoaded && !hasError && (
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-6 h-6 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
-        </div>
+          <div className="w-6 h-6 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"> </div>
       )}
     </div>
   );

@@ -91,7 +91,7 @@ const DevOpsServicesPage: React.FC = () => {
             >
               View Demo
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -129,7 +129,7 @@ const DevOpsServicesPage: React.FC = () => {
                 </ul>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -159,7 +159,7 @@ const DevOpsServicesPage: React.FC = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -185,7 +185,7 @@ const DevOpsServicesPage: React.FC = () => {
             >
               Free Consultation
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
     </div>

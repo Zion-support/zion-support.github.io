@@ -123,10 +123,7 @@ export default function page() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-indigo-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3),transparent_50%)]"></div>
-        
-        {/* Hero Section */}
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-indigo-500/10 animate-pulse"> <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3),transparent_50%)]">{/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -174,7 +171,6 @@ export default function page() {
                       </div>
                       <div className="text-xl font-bold text-white mb-1">{stat.number}</div>
                       <div className="text-gray-300 text-sm">{stat.label}</div>
-                    </div>
                   ))}
                 </div>
               </div>
@@ -194,17 +190,14 @@ export default function page() {
                         <span className="text-green-400 text-sm">+67%</span>
                       </div>
                       <div className="text-2xl font-bold text-white">$45,230</div>
-                    </div>
                     
                     <div className="grid grid-cols-2 gap-4">
                       <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-lg p-4">
                         <div className="text-white font-semibold text-sm mb-1">Open Rate</div>
                         <div className="text-xl font-bold text-white">34.2%</div>
-                      </div>
                       <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-4">
                         <div className="text-white font-semibold text-sm mb-1">Click Rate</div>
                         <div className="text-xl font-bold text-white">8.7%</div>
-                      </div>
                     </div>
                     
                     <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg p-4">
@@ -213,11 +206,10 @@ export default function page() {
                         <span className="text-yellow-400 text-sm">Live</span>
                       </div>
                       <div className="text-sm text-gray-300">Optimal send time: 2:30 PM</div>
-                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -260,7 +252,7 @@ export default function page() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -325,7 +317,7 @@ export default function page() {
                   </Link>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -360,11 +352,10 @@ export default function page() {
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -419,7 +410,7 @@ export default function page() {
                   Schedule Demo
                 </Link>
               </div>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

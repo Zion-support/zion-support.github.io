@@ -134,8 +134,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         onClick={() => setIsVisible(!isVisible)}
         className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 flex items-center space-x-2"
       >
-        <div className={`w-2 h-2 rounded-full ${isLoading ? 'bg-yellow-400 animate-pulse' : 'bg-green-400'}`}></div>
-        <span>Performance</span>
+        <div className={`w-2 h-2 rounded-full ${isLoading ? 'bg-yellow-400 animate-pulse' : 'bg-green-400'}`}> <span>Performance</span>
       </button>
       
       {isVisible && (
@@ -159,10 +158,8 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   {metrics.largestContentfulPaint.toFixed(0)}ms
                 </span>
               </div>
-              <div className="text-xs text-gray-500">
-                {getScoreText(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}
+              <div className="text-xs text-gray-500">{getScoreText(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}
               </div>
-            </div>
 
             {/* FID */}
             <div className="space-y-1">
@@ -172,10 +169,8 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   {metrics.firstInputDelay.toFixed(0)}ms
                 </span>
               </div>
-              <div className="text-xs text-gray-500">
-                {getScoreText(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}
+              <div className="text-xs text-gray-500">{getScoreText(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}
               </div>
-            </div>
 
             {/* CLS */}
             <div className="space-y-1">
@@ -185,10 +180,8 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   {metrics.cumulativeLayoutShift.toFixed(3)}
                 </span>
               </div>
-              <div className="text-xs text-gray-500">
-                {getScoreText(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}
+              <div className="text-xs text-gray-500">{getScoreText(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}
               </div>
-            </div>
 
             {/* FCP */}
             <div className="space-y-1">
@@ -198,10 +191,8 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   {metrics.firstContentfulPaint.toFixed(0)}ms
                 </span>
               </div>
-              <div className="text-xs text-gray-500">
-                {getScoreText(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}
+              <div className="text-xs text-gray-500">{getScoreText(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}
               </div>
-            </div>
 
             {/* TTFB */}
             <div className="space-y-1">
@@ -211,10 +202,8 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   {metrics.timeToFirstByte.toFixed(0)}ms
                 </span>
               </div>
-              <div className="text-xs text-gray-500">
-                {getScoreText(metrics.timeToFirstByte, { good: 800, needsImprovement: 1800 })}
+              <div className="text-xs text-gray-500">{getScoreText(metrics.timeToFirstByte, { good: 800, needsImprovement: 1800 })}
               </div>
-            </div>
 
             {/* Additional Metrics */}
             <div className="border-t pt-3 space-y-2">

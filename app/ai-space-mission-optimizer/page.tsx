@@ -152,9 +152,7 @@ const AISpaceMissionOptimizerPage = () => {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"> <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"> </div>
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
@@ -201,7 +199,6 @@ const AISpaceMissionOptimizerPage = () => {
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-              </div>
             ))}
           </div>
         </ResponsiveContainer>
@@ -267,10 +264,8 @@ const AISpaceMissionOptimizerPage = () => {
                 <p className="text-gray-300 text-sm leading-relaxed mb-3">
                   {capability.description}
                 </p>
-                <div className="text-2xl font-bold text-blue-400">
-                  {capability.accuracy}
+                <div className="text-2xl font-bold text-blue-400">{capability.accuracy}
                 </div>
-              </div>
             ))}
           </div>
         </ResponsiveContainer>
@@ -361,7 +356,7 @@ const AISpaceMissionOptimizerPage = () => {
             >
               View Pricing
             </FuturisticButton>
-          </div>
+          </div></div>
         </div>
       </section>
     </div>

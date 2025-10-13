@@ -1,19 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar } from 'lucide-react';
+import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar, Users } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Page() {
-  const stats = [
-    { label: "Stat 1", value: "100%" }
-  ];
-  const benefits = [
-    "Benefit 1",
-    "Benefit 2"
-  ];
-  const features = [
-    { title: "Feature 1", description: "Description 1" },
-    { title: "Feature 2", description: "Description 2" }
-  ];
   const [currentDemo, setCurrentDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -140,10 +130,7 @@ export default function Page() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
-        {/* Hero Section */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"> <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]">{/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
@@ -173,12 +160,10 @@ export default function Page() {
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-300 text-sm md:text-base">
-                    {stat.label}
+                  <div className="text-gray-300 text-sm md:text-base">{stat.label}
                   </div>
-                </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -206,7 +191,7 @@ export default function Page() {
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -281,7 +266,6 @@ export default function Page() {
                   <div className="text-right">
                     <div className="text-cyan-400 font-semibold">{demos[currentDemo].category}</div>
                     <div className="text-gray-400 text-sm">{demos[currentDemo].duration}</div>
-                  </div>
                 </div>
 
                 {/* Features */}
@@ -314,10 +298,8 @@ export default function Page() {
                         <Play className="w-6 h-6 text-white ml-1" />
                       </div>
                     </div>
-                    <div className="absolute top-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">
-                      {demo.duration}
+                    <div className="absolute top-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">{demo.duration}
                     </div>
-                  </div>
                   
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30">
@@ -340,7 +322,7 @@ export default function Page() {
                   </p>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -373,7 +355,7 @@ export default function Page() {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

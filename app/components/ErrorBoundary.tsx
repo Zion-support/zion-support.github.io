@@ -1,4 +1,9 @@
+import React, { Component, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+
+interface ErrorInfo {
+  componentStack: string;
+}
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;

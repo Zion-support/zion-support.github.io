@@ -121,7 +121,6 @@ const ImprovedFooter = () => {
               </div>
               <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-            </div>
           ))}
         </div>
 

@@ -203,7 +203,6 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     <div className="text-left">
                       <div className="text-white font-medium">{section.title}</div>
                       <div className="text-gray-400 text-sm">{section.items.length} services</div>
-                    </div>
                   </div>
                   {expandedSections.includes(section.id) ? (
                     <ChevronDown className="w-4 h-4 text-gray-400" />

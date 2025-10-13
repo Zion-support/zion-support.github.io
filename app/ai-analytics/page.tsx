@@ -1,6 +1,8 @@
 import { Helmet } from 'react-helmet-async';
+import {
   BarChart3, 
   TrendingUp, 
+  TrendingDown,
   Zap, 
   Shield, 
   Target, 
@@ -12,39 +14,13 @@ import { Helmet } from 'react-helmet-async';
   Database,
   Settings,
   Sparkles,
-  Lightbulb
+  Lightbulb,
+  CheckCircle,
+  Monitor
 } from "lucide-react";
 
 export default function page() {
   const benefits: string[] = [];
-  
-  const analyticsStats = [
-    {
-      label: "Data Points Processed", value: "2.5M+", icon: <BarChart3 className="w-6 h-6" />
-    },
-    { label: "Real-time Updates", value: "99.9%", icon: <Zap className="w-6 h-6" /> },
-    { label: "Accuracy Rate", value: "98.5%", icon: <CheckCircle className="w-6 h-6" /> },
-    { label: "Processing Speed", value: "50ms", icon: <TrendingUp className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Data Scientist",
-      company: "TechCorp",
-      content: "Zion's AI analytics platform has revolutionized our data processing capabilities.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO",
-      company: "DataFlow Inc",
-      content: "The real-time insights and predictive analytics are game-changing for our business.",
-      rating: 5,
-      avatar: "MC"
-    }
-  ];
 
   const features = [
     {
@@ -172,7 +148,7 @@ export default function page() {
   ];
 
   return (
-    <div></div>
+    <div>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI analytics platform with real-time insights and predictive modeling." />
@@ -182,13 +158,11 @@ export default function page() {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"> <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"> </div>
         
-        <div className="max-w-7xl mx-auto text-center relative z-10"></div>
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"></div>
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Analytics</span>
           </div>
@@ -204,7 +178,7 @@ export default function page() {
             Get real-time predictions, automated reporting, and intelligent recommendations.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
@@ -219,15 +193,13 @@ export default function page() {
               View Demo
               <Target className="w-5 h-5 ml-2" />
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-7xl mx-auto"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful Analytics Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -235,10 +207,7 @@ export default function page() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6"></div>
-                <BarChart3 className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"> <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6"> <BarChart3 className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Real-time Analytics</h3>
               <p className="text-gray-300">
@@ -246,9 +215,7 @@ export default function page() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6"></div>
-                <Brain className="w-6 h-6 text-white" />
+            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"> <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6"> <Brain className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">AI Predictions</h3>
               <p className="text-gray-300">
@@ -256,15 +223,13 @@ export default function page() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6"></div>
-                <Shield className="w-6 h-6 text-white" />
+            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"> <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6"> <Shield className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Secure & Compliant</h3>
               <p className="text-gray-300">
                 Enterprise-grade security with full compliance and data protection
               </p>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

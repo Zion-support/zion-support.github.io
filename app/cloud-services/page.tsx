@@ -77,7 +77,7 @@ const CloudServicesPage: React.FC = () => {
             >
               View Demo
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -107,7 +107,7 @@ const CloudServicesPage: React.FC = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -137,7 +137,7 @@ const CloudServicesPage: React.FC = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -163,7 +163,7 @@ const CloudServicesPage: React.FC = () => {
             >
               Free Consultation
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
     </div>

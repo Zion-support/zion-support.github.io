@@ -189,16 +189,13 @@ export default function ZionSecurityShield() {
               <div className="text-center">
                 <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div>
                 <div className="text-gray-300">Threat Detection Accuracy</div>
-              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
                 <div className="text-gray-300">Security Monitoring</div>
-              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">5,000+</div>
                 <div className="text-gray-300">Protected Organizations</div>
-              </div>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -230,7 +227,7 @@ export default function ZionSecurityShield() {
                   </p>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -255,7 +252,7 @@ export default function ZionSecurityShield() {
                   <span className="text-gray-300">{feature.title}</span>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -315,7 +312,7 @@ export default function ZionSecurityShield() {
                   </Link>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -345,10 +342,9 @@ export default function ZionSecurityShield() {
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -375,7 +371,7 @@ export default function ZionSecurityShield() {
               >
                 Schedule Security Demo
               </Link>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

@@ -106,7 +106,7 @@ export default function Community() {
               >
                 View Events
               </Link>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -121,9 +121,8 @@ export default function Community() {
                   </div>
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
-                </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -162,7 +161,7 @@ export default function Community() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -185,9 +184,8 @@ export default function Community() {
                   <h3 className="text-xl font-semibold mb-3">{initiative.title}</h3>
                   <p className="text-gray-300 mb-4">{initiative.description}</p>
                   <div className="text-cyan-400 font-semibold">{initiative.participants}</div>
-                </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 

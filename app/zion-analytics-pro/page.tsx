@@ -74,10 +74,7 @@ export default function ZionAnalyticsPro() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-        
-        {/* Hero Section */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"> <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]">{/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -119,21 +116,17 @@ export default function ZionAnalyticsPro() {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-white mb-2">25%</div>
                   <div className="text-gray-300 text-sm">Revenue Increase</div>
-                </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-white mb-2">80%</div>
                   <div className="text-gray-300 text-sm">Time Saved</div>
-                </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-white mb-2">99.9%</div>
                   <div className="text-gray-300 text-sm">Accuracy Rate</div>
-                </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-white mb-2">24/7</div>
                   <div className="text-gray-300 text-sm">Support</div>
-                </div>
               </div>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -163,7 +156,7 @@ export default function ZionAnalyticsPro() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -228,7 +221,7 @@ export default function ZionAnalyticsPro() {
                   </Link>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -257,7 +250,6 @@ export default function ZionAnalyticsPro() {
                     <div className="ml-4">
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
                   </div>
                   
                   <div className="flex items-center mb-3">
@@ -269,7 +261,7 @@ export default function ZionAnalyticsPro() {
                   <p className="text-gray-300 italic">"{testimonial.content}"</p>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -304,7 +296,7 @@ export default function ZionAnalyticsPro() {
             <div className="mt-8 text-sm text-gray-400">
               <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
               <p className="mt-2">Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

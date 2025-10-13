@@ -110,7 +110,7 @@ export default function page() {
               >
                 Free Assessment
               </Link>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -139,7 +139,7 @@ export default function page() {
                   <p className="text-gray-300">{framework.description}</p>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -168,7 +168,7 @@ export default function page() {
                   </ul>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -192,7 +192,7 @@ export default function page() {
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 

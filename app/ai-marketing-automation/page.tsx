@@ -142,10 +142,7 @@ export default function Page() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-cyan-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3),transparent_50%)]"></div>
-        
-        {/* Hero Section */}
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-cyan-500/10 animate-pulse"> <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3),transparent_50%)]">{/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-block">
@@ -154,8 +151,7 @@ export default function Page() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 animate-pulse">
                   {" "}Automation
                 </span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 rounded-lg blur opacity-30 animate-pulse"></div>
-              </h1>
+                <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 rounded-lg blur opacity-30 animate-pulse"> </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your marketing with AI-powered automation. From intelligent email campaigns to social media management, 
@@ -175,7 +171,7 @@ export default function Page() {
               >
                 Watch Demo
               </Link>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -199,9 +195,7 @@ export default function Page() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 relative overflow-hidden"
                 >
                   {/* Animated background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  <div className="relative z-10">
+                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"> <div className="relative z-10">
                     <div
                       className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
@@ -218,15 +212,14 @@ export default function Page() {
                     <div className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <div key={idx} className="flex items-center text-sm text-gray-300">
-                          <div className="w-2 h-2 bg-pink-400 rounded-full mr-3"></div>
-                          {benefit}
+                          <div className="w-2 h-2 bg-pink-400 rounded-full mr-3">{benefit}
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -272,8 +265,7 @@ export default function Page() {
                       {plan.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-gray-300">
                           <div className="w-5 h-5 bg-pink-400 rounded-full flex items-center justify-center mr-3">
-                            <div className="w-2 h-2 bg-white rounded-full"></div>
-                          </div>
+                            <div className="w-2 h-2 bg-white rounded-full"> </div>
                           {feature}
                         </li>
                       ))}
@@ -292,7 +284,7 @@ export default function Page() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -347,7 +339,7 @@ export default function Page() {
                   Watch Demo
                 </Link>
               </div>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

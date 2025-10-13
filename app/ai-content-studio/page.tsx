@@ -170,8 +170,7 @@ const AIContentStudioZionTechGroup = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"> <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI analytics platform with real-time insights and predictive modeling." />
         <meta name="keywords" content="AI analytics, data analysis, business intelligence, machine learning" />
@@ -180,14 +179,9 @@ const AIContentStudioZionTechGroup = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden"></section>
-        <div className="absolute inset-0 overflow-hidden"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
+        <div className="absolute inset-0 overflow-hidden"> <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"> <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"> </div>
         
-        <div className="max-w-7xl mx-auto text-center relative z-10"></div>
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"></div>
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+        <div className="max-w-7xl mx-auto text-center relative z-10"> <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"> <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Analytics</span>
           </div>
           
@@ -202,8 +196,7 @@ const AIContentStudioZionTechGroup = () => {
             Get real-time predictions, automated reporting, and intelligent recommendations.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link 
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"> <Link 
               to="/contact" 
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
@@ -217,15 +210,13 @@ const AIContentStudioZionTechGroup = () => {
               View Demo
               <Target className="w-5 h-5 ml-2" />
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-7xl mx-auto"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful Analytics Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -233,15 +224,11 @@ const AIContentStudioZionTechGroup = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6"></div>
-                <BarChart3 className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"> <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6"> <BarChart3 className="w-6 h-6 text-white" />
               </div>
               
               <ResponsiveContainer className="text-center relative z-10">
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"></div>
-                  <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6"> <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
                   <span className="text-purple-400 text-sm font-medium">AI-Powered Content Creation</span>
                 </div>
                 
@@ -259,8 +246,7 @@ const AIContentStudioZionTechGroup = () => {
                   Transform your content strategy with cutting-edge artificial intelligence.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16"></div>
-                  <FuturisticButtonEnhanced
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16"> <FuturisticButtonEnhanced
                     href="#pricing"
                     variant="primary"
                     size="lg"
@@ -283,23 +269,20 @@ const AIContentStudioZionTechGroup = () => {
             {/* Features Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
               <ResponsiveContainer>
-                <div className="text-center mb-16"></div>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                     Powerful Content Creation Features
                   </h2>
                   <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                     Harness the power of AI to create stunning content across all formats and channels.
                   </p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-                  {features.map((feature, index) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">{features.map((feature, index) => (
                     <FuturisticCardEnhanced
                       key={index}
                       className="text-center">
                       <div
                         className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                        aria-hidden="true"></div>
-                        {feature.icon}
+                        aria-hidden="true">{feature.icon}
                       </div>
                       <h3 className="text-lg md:text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
                         {feature.title}
@@ -315,31 +298,25 @@ const AIContentStudioZionTechGroup = () => {
 
             {/* Pricing Section */}
             <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
-              <div className="max-w-7xl mx-auto"></div>
-                <div className="text-center mb-16"></div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <div className="max-w-7xl mx-auto"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     Choose Your Content Plan
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                     Flexible pricing options to fit your content creation needs
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-                  {pricingPlans.map((plan, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (
                     <FuturisticCardEnhanced
                       key={index}
                       className={`relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
                       {plan.popular && (
-                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                          <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"> <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                             Most Popular
                           </span>
                         </div>
                       )}
-                      <div className="text-center mb-6"></div>
-                        <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                        <div className="text-4xl font-bold text-purple-400 mb-2"></div>
-                          {plan.price}<span className="text-lg text-gray-400">/{plan.period}</span>
+                      <div className="text-center mb-6"> <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                        <div className="text-4xl font-bold text-purple-400 mb-2">{plan.price}<span className="text-lg text-gray-400">/{plan.period}</span>
                         </div>
                         <p className="text-gray-300">{plan.description}</p>
                       </div>
@@ -371,30 +348,23 @@ const AIContentStudioZionTechGroup = () => {
 
             {/* Testimonials Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-              <div className="max-w-7xl mx-auto"></div>
-                <div className="text-center mb-16"></div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <div className="max-w-7xl mx-auto"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     Trusted by Content Creators
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                     See what content creators are saying about Zion AI Content Studio Pro
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
-                  {testimonials.map((testimonial, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (
                     <div
                       key={index}
-                      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden"></div>
-                      <div className="flex items-center mb-4"></div>
-                        {[...Array(testimonial.rating)].map((_, i) => (
+                      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden"> <div className="flex items-center mb-4">{[...Array(testimonial.rating)].map((_, i) => (
                           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                         ))}
                       </div>
                       <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
-                      <div></div>
-                        <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div> <div className="font-semibold text-white">{testimonial.name}</div>
                         <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                      </div>
                     </div>
                   ))}
                 </div>
@@ -404,14 +374,13 @@ const AIContentStudioZionTechGroup = () => {
                 Enterprise-grade security with full compliance and data protection
               </p>
             </div>
-          </div>
+          </div></div>
         </div>
       </section>
 
             {/* CTA Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30"></section>
-              <div className="max-w-4xl mx-auto text-center"></div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              <div className="max-w-4xl mx-auto text-center"> <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                   Ready to Create Amazing Content?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -419,8 +388,7 @@ const AIContentStudioZionTechGroup = () => {
                   professional content at scale. Start your free trial today.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                  <FuturisticButtonEnhanced
+                <div className="flex flex-col sm:flex-row gap-4 justify-center"> <FuturisticButtonEnhanced
                     href="/contact"
                     variant="primary"
                     size="lg"
@@ -436,7 +404,7 @@ const AIContentStudioZionTechGroup = () => {
                     iconPosition="right">
                     Schedule Demo
                   </FuturisticButtonEnhanced>
-                </div>
+                </div></div>
               </div>
             </section>
           </main>

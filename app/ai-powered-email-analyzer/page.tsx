@@ -107,8 +107,7 @@ const AIPoweredEmailAnalyzerPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"> <Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI services with cutting-edge technology and expert solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation" />
@@ -117,15 +116,13 @@ const AIPoweredEmailAnalyzerPage = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <motion.div
+        <div className="max-w-7xl mx-auto"> <motion.div
             initial={{ opacity: 20 }}
             animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6"></div>
-              <Mail className="w-5 h-5 text-cyan-400 mr-2" />
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6"> <Mail className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Email Intelligence</span>
             </div>
             
@@ -139,8 +136,7 @@ const AIPoweredEmailAnalyzerPage = () => {
               sentiment analysis, and smart response suggestions.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <motion.button
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"> <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
@@ -159,9 +155,7 @@ const AIPoweredEmailAnalyzerPage = () => {
           </motion.div>
         </div>
         
-        <div className="max-w-7xl mx-auto text-center relative z-10"></div>
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"></div>
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+        <div className="max-w-7xl mx-auto text-center relative z-10"> <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"> <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Solutions</span>
           </div>
           
@@ -178,9 +172,7 @@ const AIPoweredEmailAnalyzerPage = () => {
 
       {/* Stats Section */}
       <section className="py-16 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-            {stats.map((stat, index) => (
+        <div className="max-w-7xl mx-auto"> <div className="grid grid-cols-2 md:grid-cols-4 gap-8">{stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 20 }}
@@ -188,22 +180,19 @@ const AIPoweredEmailAnalyzerPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2"></div>
-                  {stat.value}
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.value}
                 </div>
-                <div className="text-gray-400 font-medium"></div>
-                  {stat.label}
+                <div className="text-gray-400 font-medium">{stat.label}
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <motion.div
+        <div className="max-w-7xl mx-auto"> <motion.div
             initial={{ opacity: 20 }}
             animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
@@ -217,8 +206,7 @@ const AIPoweredEmailAnalyzerPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {features.map((feature, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 20 }}
@@ -226,8 +214,7 @@ const AIPoweredEmailAnalyzerPage = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
               >
-                <div className="mb-6"></div>
-                  {feature.icon}
+                <div className="mb-6">{feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {feature.title}
@@ -241,8 +228,7 @@ const AIPoweredEmailAnalyzerPage = () => {
 
       {/* Pricing Section */}
       <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <motion.div
+        <div className="max-w-7xl mx-auto"> <motion.div
             initial={{ opacity: 20 }}
             animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
@@ -257,8 +243,7 @@ const AIPoweredEmailAnalyzerPage = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8"></div>
-            {pricingPlans.map((plan, index) => (
+          <div className="grid md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 20 }}
@@ -271,17 +256,12 @@ const AIPoweredEmailAnalyzerPage = () => {
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold"></div>
-                      Most Popular
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"> <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular
                     </div>
-                  </div>
                 )}
-                <div className="text-center mb-8"></div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                <div className="text-center mb-8"> <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center"></div>
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
+                  <div className="flex items-baseline justify-center"> <span className="text-5xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
@@ -308,14 +288,13 @@ const AIPoweredEmailAnalyzerPage = () => {
                 </motion.button>
               </motion.div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <motion.div
+        <div className="max-w-7xl mx-auto"> <motion.div
             initial={{ opacity: 20 }}
             animate={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
@@ -328,8 +307,7 @@ const AIPoweredEmailAnalyzerPage = () => {
               Join thousands of businesses already using our AI-powered email analyzer 
               to improve their communication effectiveness and drive better results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <motion.button
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"> <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
@@ -351,8 +329,7 @@ const AIPoweredEmailAnalyzerPage = () => {
 
       {/* Contact Information */}
       <section className="py-16 px-4 bg-black/20"></section>
-        <div className="max-w-7xl mx-auto text-center"></div>
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
+        <div className="max-w-7xl mx-auto text-center"> <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
           <p className="text-gray-300 mb-6">
             Contact us today to learn more about our AI-Powered Email Analyzer and how it can transform your business communication.
           </p>

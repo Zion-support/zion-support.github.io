@@ -131,7 +131,7 @@ const SmartExpenseCategorizerPage = () => {
                 </div>
               </motion.div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -173,7 +173,7 @@ const SmartExpenseCategorizerPage = () => {
                 </p>
               </motion.div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -215,7 +215,7 @@ const SmartExpenseCategorizerPage = () => {
                 </p>
               </motion.div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -252,10 +252,8 @@ const SmartExpenseCategorizerPage = () => {
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular
                     </div>
-                  </div>
                 )}
 
                 <div className="text-center mb-8">
@@ -289,7 +287,7 @@ const SmartExpenseCategorizerPage = () => {
                 </motion.button>
               </motion.div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -346,7 +344,7 @@ const SmartExpenseCategorizerPage = () => {
               <Globe className="w-5 h-5 mr-2 text-cyan-400" />
               <span>https://ziontechgroup.com</span>
             </div>
-          </div>
+          </div></div>
         </div>
       </section>
     </div>

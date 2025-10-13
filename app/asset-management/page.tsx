@@ -66,9 +66,7 @@ const AssetManagementPage = () => {
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"> <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"> </div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
@@ -102,7 +100,7 @@ const AssetManagementPage = () => {
               Watch Demo
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -138,7 +136,7 @@ const AssetManagementPage = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -161,7 +159,7 @@ const AssetManagementPage = () => {
                 <span className="text-gray-300 font-medium">{benefit}</span>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -191,7 +189,7 @@ const AssetManagementPage = () => {
               Schedule Demo
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
     </div>

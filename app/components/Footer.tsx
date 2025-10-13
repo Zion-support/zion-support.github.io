@@ -1,4 +1,17 @@
 import { Link } from 'react-router-dom';
+import {
+  Brain, 
+  Mail, 
+  Phone, 
+  MapPin,
+  ArrowRight,
+  Twitter,
+  Linkedin,
+  Github,
+  Award,
+  Users
+} from "lucide-react";
+
 const services = [
     {
       title: "Cloud Migration",
@@ -16,28 +29,18 @@ const services = [
       icon: "Zap"
     }
   ];
+
 const socialLinks = [
     { name: "Twitter", href: "#", icon: "Twitter" },
     { name: "LinkedIn", href: "#", icon: "Linkedin" },
     { name: "GitHub", href: "#", icon: "Github" }
   ];
+
 const microSaasServices = [
     { name: "AI Analytics", href: "/ai-services" },
     { name: "Cloud Solutions", href: "/cloud-services" },
     { name: "DevOps", href: "/devops" }
   ];
-  Brain, 
-  Mail, 
-  Phone, 
-  MapPin,
-  ArrowRight,
-  Twitter,
-  Linkedin,
-  Github,
-  Award,
-  Users
-} from "lucide-react";
-import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -136,8 +139,8 @@ const Footer: React.FC = () => {
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-3xl" />
       </div>
 
       <div className="relative z-10">

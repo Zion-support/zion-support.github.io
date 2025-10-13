@@ -121,10 +121,7 @@ export default function Page() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>
-        
-        {/* Hero Section */}
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"> <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]">{/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -171,7 +168,6 @@ export default function Page() {
                       </div>
                       <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
                       <div className="text-gray-300 text-sm">{stat.label}</div>
-                    </div>
                   ))}
                 </div>
               </div>
@@ -216,7 +212,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -252,14 +248,13 @@ export default function Page() {
                   <div className="space-y-2">
                     {feature.benefits.map((benefit, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-300">
-                        <div className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 flex-shrink-0"></div>
-                        <span>{benefit}</span>
+                        <div className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 flex-shrink-0"> <span>{benefit}</span>
                       </div>
                     ))}
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -326,7 +321,7 @@ export default function Page() {
                   </Link>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -363,11 +358,10 @@ export default function Page() {
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
                       <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -423,7 +417,7 @@ export default function Page() {
                   Schedule Demo
                 </Link>
               </div>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

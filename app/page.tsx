@@ -113,8 +113,8 @@ const HomePage = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse" />
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
           </div>
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -153,7 +153,7 @@ const HomePage = () => {
                 View Demo
                 <ArrowRight className="w-5 h-5" />
               </Link>
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -204,7 +204,7 @@ const HomePage = () => {
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0" />
                         {feature.title}
                       </li>
                     ))}
@@ -218,7 +218,7 @@ const HomePage = () => {
                   </Link>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -256,7 +256,7 @@ const HomePage = () => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div></div>
           </div>
         </section>
 
@@ -286,7 +286,7 @@ const HomePage = () => {
                 Explore Services
                 <ArrowRight className="w-5 h-5" />
               </Link>
-            </div>
+            </div></div>
           </div>
         </section>
       </div>

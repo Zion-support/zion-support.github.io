@@ -55,8 +55,7 @@ const ARVRDevelopmentPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"> <Helmet></Helmet>
         <title>AR/VR Development - Zion Tech Group</title>
         <meta name="description" content="Professional AR/VR development services creating immersive experiences for training, entertainment, and business applications across all major platforms." /></meta>
         <meta name="keywords" content="AR development, VR development, mixed reality, immersive experiences, virtual reality, augmented reality" /></meta>
@@ -65,14 +64,9 @@ const ARVRDevelopmentPage = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden"></section>
-        <div className="absolute inset-0 overflow-hidden"></div>
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
+        <div className="absolute inset-0 overflow-hidden"> <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"> <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"> </div>
         
-        <div className="max-w-7xl mx-auto text-center relative z-10"></div>
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"></div>
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" /></Sparkles>
+        <div className="max-w-7xl mx-auto text-center relative z-10"> <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"> <Sparkles className="w-4 h-4 text-cyan-400 mr-2" /></Sparkles>
             <span className="text-cyan-400 text-sm font-medium">Immersive Technology</span>
           </div>
           
@@ -87,8 +81,7 @@ const ARVRDevelopmentPage = () => {
             From training simulations to entertainment, we bring your vision to life.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16"></div>
-            <Link)
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16"> <Link)
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             ></Link>
@@ -102,15 +95,13 @@ const ARVRDevelopmentPage = () => {
               Watch Demo)
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" /></Sparkles>
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
+        <div className="max-w-7xl mx-auto"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
               Immersive Development Services)
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
@@ -119,16 +110,13 @@ const ARVRDevelopmentPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (
               <div)
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              ></div>
-                <div)
+              > <div)
                   className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
-                ></div>
-                  {feature.icon}
+                >{feature.icon}
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors"></h3>
                   {feature.title}
@@ -138,15 +126,13 @@ const ARVRDevelopmentPage = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+        <div className="max-w-7xl mx-auto"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Transform Your Business with Immersive Tech)
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
@@ -154,21 +140,18 @@ const ARVRDevelopmentPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20"></div>
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" /></CheckCircle>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20"> <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" /></CheckCircle>
                 <span className="text-gray-300 font-medium">{benefit}</span>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
+        <div className="max-w-4xl mx-auto text-center"> <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
             Ready to Go Immersive?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
@@ -176,8 +159,7 @@ const ARVRDevelopmentPage = () => {
             that engage your audience and drive business growth.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link)
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"> <Link)
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             ></Link>
@@ -191,7 +173,7 @@ const ARVRDevelopmentPage = () => {
               Schedule Demo)
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" /></Sparkles>
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
     </div>

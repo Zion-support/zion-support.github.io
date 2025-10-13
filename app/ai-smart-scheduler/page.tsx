@@ -166,7 +166,7 @@ export default function AISmartScheduler() {
                 Watch Demo
               </Link>
             </div>
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -193,7 +193,7 @@ export default function AISmartScheduler() {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -254,7 +254,7 @@ export default function AISmartScheduler() {
                 </Link>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -281,12 +281,10 @@ export default function AISmartScheduler() {
                 <div className="font-semibold text-white">
                   {testimonial.name}
                 </div>
-                <div className="text-sm text-gray-400">
-                  {testimonial.company}
+                <div className="text-sm text-gray-400">{testimonial.company}
                 </div>
-              </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -313,7 +311,7 @@ export default function AISmartScheduler() {
             >
               Learn More
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
     </Layout>

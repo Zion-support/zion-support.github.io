@@ -158,19 +158,15 @@ const ZionAICRMProPage = () => {
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>
               <div className="text-gray-300 text-sm">Productivity Increase</div>
-            </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div>
               <div className="text-gray-300 text-sm">Higher Conversion</div>
-            </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">1,800+</div>
               <div className="text-gray-300 text-sm">Active Users</div>
-            </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
               <div className="text-gray-300 text-sm">AI Support</div>
-            </div>
           </div>
         </div>
 
@@ -238,7 +234,6 @@ const ZionAICRMProPage = () => {
                 </div>
                 <div className="text-white font-medium text-sm mb-1">{integration.name}</div>
                 <div className="text-gray-400 text-xs">{integration.category}</div>
-              </div>
             ))}
           </div>
         </div>
@@ -326,7 +321,6 @@ const ZionAICRMProPage = () => {
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
                 </div>
                 
                 <div className="flex items-center mb-4">
@@ -337,10 +331,8 @@ const ZionAICRMProPage = () => {
                 
                 <p className="text-gray-300 italic leading-relaxed mb-4">"{testimonial.content}"</p>
                 
-                <div className="text-cyan-400 font-semibold text-sm">
-                  {testimonial.results}
+                <div className="text-cyan-400 font-semibold text-sm">{testimonial.results}
                 </div>
-              </div>
             ))}
           </div>
         </div>

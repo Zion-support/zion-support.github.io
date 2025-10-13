@@ -15,11 +15,8 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
         {/* Animated Logo/Icon */}
         <div className="mb-8">
           <div className="w-20 h-20 mx-auto relative">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 animate-spin"></div>
-            <div className="absolute inset-2 rounded-full bg-slate-900 flex items-center justify-center">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse"></div>
-            </div>
-          </div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 animate-spin"> <div className="absolute inset-2 rounded-full bg-slate-900 flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse"> </div>
         </div>
 
         {/* Loading Message */}
@@ -34,8 +31,7 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
               <div 
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
                 style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-              ></div>
-            </div>
+              > </div>
             <p className="text-sm text-gray-400 mt-2">
               {Math.round(progress)}% Complete
             </p>
@@ -52,8 +48,7 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
                 animationDelay: `${i * 0.1}s`,
                 animationDuration: '1s'
               }}
-            ></div>
-          ))}
+            >))}
         </div>
 
         {/* Additional Info */}

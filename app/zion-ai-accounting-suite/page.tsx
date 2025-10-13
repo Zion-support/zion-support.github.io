@@ -145,10 +145,9 @@ const ZionAIAccountingSuite = () => {
                   </div>
                   <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300 text-sm">{stat.label}</div>
-                </div>
               ))}
             </div>
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -182,7 +181,7 @@ const ZionAIAccountingSuite = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -220,7 +219,7 @@ const ZionAIAccountingSuite = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -285,7 +284,7 @@ const ZionAIAccountingSuite = () => {
                 </Link>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -317,14 +316,11 @@ const ZionAIAccountingSuite = () => {
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  <div className="text-cyan-400 text-sm font-medium bg-cyan-400/10 px-3 py-1 rounded-full">{testimonial.savings}
                   </div>
-                  <div className="text-cyan-400 text-sm font-medium bg-cyan-400/10 px-3 py-1 rounded-full">
-                    {testimonial.savings}
-                  </div>
-                </div>
               </div>
             ))}
-          </div>
+          </div></div>
         </div>
       </section>
 
@@ -353,7 +349,7 @@ const ZionAIAccountingSuite = () => {
             >
               Schedule Demo
             </Link>
-          </div>
+          </div></div>
         </div>
       </section>
     </div>

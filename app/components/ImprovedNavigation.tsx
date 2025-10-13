@@ -580,7 +580,6 @@ const ImprovedNavigation = () => {
                   <div>
                     <div className="text-white font-medium">{item.label}</div>
                     <div className="text-gray-400 text-sm">{item.description}</div>
-                  </div>
                 </Link>
               </div>
             ))}
@@ -684,10 +683,8 @@ const ImprovedNavigation = () => {
                                 <div className="text-sm text-gray-300 group-hover:text-cyan-400 transition-colors">
                                   {dropdownItem.label}
                                 </div>
-                                <div className="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">
-                                  {dropdownItem.description}
+                                <div className="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">{dropdownItem.description}
                                 </div>
-                              </div>
                               <ArrowRight className="w-3 h-3 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
                             </Link>
                           ))}

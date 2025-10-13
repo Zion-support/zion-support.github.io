@@ -30,9 +30,7 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 1 }}
       />
-      <div className="relative" style={{ zIndex: 2 }}>
-        {children}
-      </div>
+      <div className="relative" style={{ zIndex: 2 }}>{children}</div>
     </div>
   );
 };
