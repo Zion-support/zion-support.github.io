@@ -17,7 +17,7 @@ import {
   BarChart3
 } from 'lucide-react';
 
-export default function page() {
+export default function ConsultationPage() {
   const benefits = [
     "Benefit 1",
     "Benefit 2"
