@@ -11,19 +11,15 @@ function fixSyntaxErrors(filePath) {
       // Fix extra semicolons in object properties
       { pattern: /',\s*;$/gm, replacement: "'," },
       { pattern: /",\s*;$/gm, replacement: '",' },
+      // Fix missing quotes in imports
+      { pattern: /from 'react-router-dom;$/gm, replacement: "from 'react-router-dom';" },
+      { pattern: /from 'lucide-react;$/gm, replacement: "from 'lucide-react';" },
+      { pattern: /from 'lucide-react';$/gm, replacement: "from 'lucide-react';" },
       // Fix array syntax
       { pattern: /\[\s*'([^']+)',\s*'([^']+)',\s*'([^']+)',\s*'([^']+)'\s*\]\s*;$/gm, replacement: "['$1', '$2', '$3', '$4']" },
       // Fix object syntax
       { pattern: /:\s*'([^']+)',\s*;$/gm, replacement: ": '$1'," },
       { pattern: /:\s*"([^"]+)",\s*;$/gm, replacement: ': "$1",' },
-      // Fix missing quotes in imports
-      { pattern: /from 'lucide-react;$/gm, replacement: "from 'lucide-react';" },
-      { pattern: /from 'lucide-react';$/gm, replacement: "from 'lucide-react';" },
-      // Fix unterminated strings
-      { pattern: /title: '([^']+)',\s*;$/gm, replacement: "title: '$1'," },
-      { pattern: /description: '([^']+)',\s*;$/gm, replacement: "description: '$1'," },
-      { pattern: /title: "([^"]+)",\s*;$/gm, replacement: 'title: "$1",' },
-      { pattern: /description: "([^"]+)",\s*;$/gm, replacement: 'description: "$1",' },
     ];
     
     for (const fix of fixes) {
@@ -66,6 +62,6 @@ function findAndFixSyntaxErrors(dir) {
   return fixedCount;
 }
 
-console.log('Starting comprehensive syntax error fixes...');
+console.log('Starting final comprehensive syntax error fixes...');
 const fixedCount = findAndFixSyntaxErrors('.');
 console.log(`Fixed syntax errors in ${fixedCount} files.`);

@@ -4,12 +4,12 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
 const CareersPage: React.FC = () => {
   const benefits = [{
       icon: Heart,
-      title: 'Health & Wellness',';
-      description: 'Comprehensive health insurance, mental health support, and wellness programs.'';
+      title: 'Health & Wellness',
+      description: 'Comprehensive health insurance, mental health support, and wellness programs.'
     },
     {
       icon: Zap,
-      title: 'Learning & Development',';
+      title: 'Learning & Development',
       description: 'Continuous learning opportunities, conferences, and professional development budget.'';
     },
     {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react;
-import { } from 'react-router-dom;
+import { } from 'react-router-dom';
 import { ChevronDown, Menu, X, Right, Star, Square, } from 'lucide-react';
 const : React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
