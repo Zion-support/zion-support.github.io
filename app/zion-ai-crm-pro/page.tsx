@@ -6,11 +6,7 @@ export default function ZionAiCrmPro() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Zion AI CRM Pro - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Advanced zion ai crm pro solutions by Zion Tech Group" />
-=======
         <meta name="description" content="Customer relationship management enhanced with AI." />
->>>>>>> cursor/fix-errors-and-merge-to-main-6995
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -18,17 +14,6 @@ export default function ZionAiCrmPro() {
             Zion AI CRM Pro
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            Advanced zion ai crm pro solutions by Zion Tech Group
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
-            <p className="text-gray-600">
-              This page is under development. Please check back later for updates.
-            </p>
-=======
             Customer relationship management enhanced with AI.
           </p>
         </div>
@@ -52,7 +37,6 @@ export default function ZionAiCrmPro() {
                 Get deep insights into customer behavior and preferences.
               </p>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6995
           </div>
         </div>
       </div>

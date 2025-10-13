@@ -1,30 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { 
-  Mail, 
-  BarChart3, 
-  Target, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  Sparkles,
-  Cpu,
-  Send,
-  Heart,
-  MousePointer,
-  Shield,
-  Zap,
-  TrendingUp
-=======
 import {
   Mail,
   BarChart3,
   CheckCircle,
   Zap
->>>>>>> cursor/fix-errors-and-merge-to-main-6995
 } from 'lucide-react';
 
 const ZionAIEmailMarketingProPage: React.FC = () => {

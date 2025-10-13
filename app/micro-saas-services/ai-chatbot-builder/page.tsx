@@ -6,11 +6,7 @@ export default function AiChatbotBuilder() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>AI Chatbot Builder - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Advanced ai chatbot builder solutions by Zion Tech Group" />
-=======
         <meta name="description" content="Build intelligent chatbots for your micro-SaaS business." />
->>>>>>> cursor/fix-errors-and-merge-to-main-6995
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -18,17 +14,6 @@ export default function AiChatbotBuilder() {
             AI Chatbot Builder
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            Advanced ai chatbot builder solutions by Zion Tech Group
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
-            <p className="text-gray-600">
-              This page is under development. Please check back later for updates.
-            </p>
-=======
             Build intelligent chatbots for your micro-SaaS business.
           </p>
         </div>
@@ -52,7 +37,6 @@ export default function AiChatbotBuilder() {
                 Track performance and optimize your chatbot with detailed analytics.
               </p>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6995
           </div>
         </div>
       </div>

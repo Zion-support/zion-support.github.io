@@ -14,17 +14,6 @@ export default function CloudInfrastructureManagement() {
             Cloud Infrastructure Management
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            Advanced cloud infrastructure management solutions by Zion Tech Group
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
-            <p className="text-gray-600">
-              This page is under development. Please check back later for updates.
-            </p>
-=======
             Manage and optimize your cloud infrastructure with our solutions.
           </p>
         </div>
@@ -48,7 +37,6 @@ export default function CloudInfrastructureManagement() {
                 Comprehensive security management and compliance monitoring.
               </p>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6995
           </div>
         </div>
       </div>
