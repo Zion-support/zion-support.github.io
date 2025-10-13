@@ -7,7 +7,6 @@ import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor"
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./components/ErrorFallback";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 import MobileNavigation from "./components/MobileNavigation";
 import ImprovedNavigation from "./components/ImprovedNavigation";

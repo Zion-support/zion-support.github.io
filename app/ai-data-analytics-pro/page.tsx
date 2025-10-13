@@ -1,6 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { 
+  TrendingUp, 
+  Zap, 
+  Brain, 
+  PieChart, 
+  Sparkles, 
+  ArrowRight,
+  CheckCircle
+} from 'lucide-react';
 
 const AIDataAnalyticsProPage = () => {
   const features = [
@@ -28,6 +37,15 @@ const AIDataAnalyticsProPage = () => {
       icon: <PieChart className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
+  ];
+
+  const benefits = [
+    "Increase data processing speed by 10x",
+    "Reduce analysis time by 80%",
+    "Improve prediction accuracy by 95%",
+    "Automate reporting and insights",
+    "Scale to handle any data volume",
+    "Integrate with existing systems"
   ];
 
   return (

@@ -129,15 +129,15 @@ function App() {
       <EnhancedErrorBoundary>
         <HelmetProvider>
           <AnalyticsProvider>
-            <PerformanceMonitor>
-              <WebVitalsTracker>
-                <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
-                    <CoreWebVitals>
-                      <Router>
+            <PerformanceMonitor />
+            <WebVitalsTracker />
+            <EnhancedAccessibility>
+              <AccessibilityEnhancer>
+                <CoreWebVitals />
+                <Router>
                         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         <FuturisticBackground>
-                          <PerformanceOptimizer />
+                          <PerformanceOptimizer>
                           <Navigation onSidebarToggle={toggleSidebar} />
                           <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                           <Breadcrumb />
@@ -247,14 +247,12 @@ function App() {
                             </main>
                             
                             <Footer />
-                          </FuturisticBackground>
+                          </PerformanceOptimizer>
+                        </FuturisticBackground>
                         </div>
-                      </Router>
-                    </CoreWebVitals>
-                  </AccessibilityEnhancer>
-                </EnhancedAccessibility>
-              </WebVitalsTracker>
-            </PerformanceMonitor>
+                  </Router>
+              </AccessibilityEnhancer>
+            </EnhancedAccessibility>
           </AnalyticsProvider>
         </HelmetProvider>
       </EnhancedErrorBoundary>

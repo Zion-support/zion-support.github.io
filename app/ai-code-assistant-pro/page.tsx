@@ -1,4 +1,4 @@
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -109,6 +109,33 @@ const AICodeAssistantProZionTechGroup = () => {
         "Advanced analytics"
       ],
       popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Chen",
+      role: "Senior Developer",
+      company: "TechCorp",
+      content: "Zion AI Code Assistant Pro has revolutionized our development workflow. The code generation is incredibly accurate and saves us hours every day.",
+      rating: 5,
+      avatar: "SC"
+    },
+    {
+      name: "Michael Rodriguez",
+      role: "Lead Engineer",
+      company: "InnovateLabs",
+      content: "The debugging capabilities are outstanding. It catches issues we would have missed and provides clear explanations for fixes.",
+      rating: 5,
+      avatar: "MR"
+    },
+    {
+      name: "Emily Johnson",
+      role: "Full Stack Developer",
+      company: "DataFlow Inc",
+      content: "Multi-language support is fantastic. We can work across different tech stacks seamlessly with this tool.",
+      rating: 5,
+      avatar: "EJ"
     }
   ];
 

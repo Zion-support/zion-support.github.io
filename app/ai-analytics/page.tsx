@@ -65,6 +65,33 @@ export default function AiAnalytics() {
     { number: "24/7", label: "Automated Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Data Scientist",
+      company: "TechCorp",
+      content: "Zion's AI analytics platform has revolutionized how we process and understand our data. The insights are incredible!",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      role: "CTO",
+      company: "InnovateLabs",
+      content: "The predictive analytics capabilities have helped us make better business decisions and reduce costs significantly.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Analytics Director",
+      company: "DataFlow Inc",
+      content: "Outstanding platform with real-time processing and intuitive dashboards. Highly recommended!",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   const pricingPlans = [
     {
       name: "Starter",

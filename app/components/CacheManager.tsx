@@ -1,1 +1,11 @@
-import React from "react"; export default function CacheManager() { return <div>Cache Manager</div>; }
+import React from 'react';
+
+interface CacheManagerProps {
+  children?: React.ReactNode;
+}
+
+const CacheManager: React.FC<CacheManagerProps> = ({ children }) => {
+  return <>{children}</>;
+};
+
+export default CacheManager;
