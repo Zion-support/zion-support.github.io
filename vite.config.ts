@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,70 +9,69 @@ export default defineConfig({
       // Enable React Fast Refresh
       fastRefresh: true,
       // Enable JSX runtime
-      jsxRuntime: 'automatic',
-    })
+      jsxRuntime: "automatic",
+    }),
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './app'),
-      '@/components': resolve(__dirname, './app/components'),
-      '@/pages': resolve(__dirname, './app'),
-      '@/utils': resolve(__dirname, './utils'),
-      '@/types': resolve(__dirname, './types'),
-      '@/hooks': resolve(__dirname, './hooks'),
-      '@/config': resolve(__dirname, './config'),
-      '@/data': resolve(__dirname, './data'),
-      '@/content': resolve(__dirname, './content'),
+      "@": resolve(__dirname, "./app"),
+      "@/components": resolve(__dirname, "./app/components"),
+      "@/pages": resolve(__dirname, "./app"),
+      "@/utils": resolve(__dirname, "./utils"),
+      "@/types": resolve(__dirname, "./types"),
+      "@/hooks": resolve(__dirname, "./hooks"),
+      "@/config": resolve(__dirname, "./config"),
+      "@/data": resolve(__dirname, "./data"),
+      "@/content": resolve(__dirname, "./content"),
     },
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     sourcemap: false,
-    minify: 'esbuild',
-    target: 'es2020',
+    minify: "esbuild",
+    target: "es2020",
     cssCodeSplit: true,
-    
-    
+
     rollupOptions: {
       output: {
         manualChunks: (id) => {
           // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          if (id.includes("react") || id.includes("react-dom")) {
+            return "react-vendor";
           }
           // Router
-          if (id.includes('react-router')) {
-            return 'router'
+          if (id.includes("react-router")) {
+            return "router";
           }
           // UI libraries
-          if (id.includes('framer-motion')) {
-            return 'animations'
+          if (id.includes("framer-motion")) {
+            return "animations";
           }
-          if (id.includes('lucide-react')) {
-            return 'icons'
+          if (id.includes("lucide-react")) {
+            return "icons";
           }
           // SEO and meta
-          if (id.includes('react-helmet')) {
-            return 'seo'
+          if (id.includes("react-helmet")) {
+            return "seo";
           }
           // Charts and data visualization
-          if (id.includes('recharts')) {
-            return 'charts'
+          if (id.includes("recharts")) {
+            return "charts";
           }
           // Utility libraries
-          if (id.includes('clsx') || id.includes('tailwind-merge')) {
-            return 'utils'
+          if (id.includes("clsx") || id.includes("tailwind-merge")) {
+            return "utils";
           }
           // Performance monitoring
-          if (id.includes('web-vitals')) {
-            return 'performance'
+          if (id.includes("web-vitals")) {
+            return "performance";
           }
           // Large page components (lazy load)
-          if (id.includes('/app/') && id.includes('/page.tsx')) {
-            return 'pages'
+          if (id.includes("/app/") && id.includes("/page.tsx")) {
+            return "pages";
           }
           // Default chunk for other modules
-          return 'vendor'
+          return "vendor";
         },
       },
     },
@@ -100,16 +99,16 @@ export default defineConfig({
   // Optimize dependencies
   optimizeDeps: {
     include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'react-helmet-async',
-      'framer-motion',
-      'lucide-react',
+      "react",
+      "react-dom",
+      "react-router-dom",
+      "react-helmet-async",
+      "framer-motion",
+      "lucide-react",
     ],
   },
   // CSS optimization
   css: {
     devSourcemap: true,
   },
-})
+});

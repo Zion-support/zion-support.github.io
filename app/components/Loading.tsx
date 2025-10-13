@@ -1,10 +1,10 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
 interface LoadingProps {
   message?: string;
 }
 
-export default function Loading({ message = 'Loading...' }: LoadingProps) {
+export default function Loading({ message = "Loading..." }: LoadingProps) {
   return (
     <>
       <Helmet>
@@ -15,7 +15,9 @@ export default function Loading({ message = 'Loading...' }: LoadingProps) {
         <div className="text-center">
           <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500 mx-auto mb-8"></div>
           <h2 className="text-2xl font-semibold text-white mb-4">{message}</h2>
-          <p className="text-gray-300">Please wait while we load your content...</p>
+          <p className="text-gray-300">
+            Please wait while we load your content...
+          </p>
         </div>
       </div>
     </>

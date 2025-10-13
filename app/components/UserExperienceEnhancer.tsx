@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface UserExperienceEnhancerProps {
   children?: React.ReactNode;
@@ -9,9 +9,9 @@ interface UserExperienceEnhancerProps {
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   children,
-  className = '',
+  className = "",
   title,
-  description
+  description,
 }) => {
   return (
     <div className={`enhanced-component ${className}`}>

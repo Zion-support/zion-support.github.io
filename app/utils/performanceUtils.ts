@@ -2,16 +2,16 @@
 
 export const Performanceutils = {
   init: () => {
-    console.log('Performanceutils initialized');
+    console.log("Performanceutils initialized");
   },
-  
+
   process: (data: any) => {
     return data;
   },
-  
+
   cleanup: () => {
-    console.log('Performanceutils cleaned up');
-  }
+    console.log("Performanceutils cleaned up");
+  },
 };
 
 export default Performanceutils;

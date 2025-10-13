@@ -2,16 +2,16 @@
 
 export const Performanceenhancer = {
   init: () => {
-    console.log('Performanceenhancer initialized');
+    console.log("Performanceenhancer initialized");
   },
-  
+
   process: (data: any) => {
     return data;
   },
-  
+
   cleanup: () => {
-    console.log('Performanceenhancer cleaned up');
-  }
+    console.log("Performanceenhancer cleaned up");
+  },
 };
 
 export default Performanceenhancer;

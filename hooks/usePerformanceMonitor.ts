@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export const usePerformanceMonitor = () => {
   const [data, setData] = useState<any>(null);
@@ -18,7 +18,7 @@ export const usePerformanceMonitor = () => {
       setData(input);
       setError(null);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
+      setError(err instanceof Error ? err.message : "An error occurred");
     } finally {
       setLoading(false);
     }
@@ -28,7 +28,7 @@ export const usePerformanceMonitor = () => {
     data,
     loading,
     error,
-    processData
+    processData,
   };
 };
 

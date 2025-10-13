@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SidebarProps {
   children?: React.ReactNode;
@@ -9,9 +9,9 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({
   children,
-  className = '',
+  className = "",
   title,
-  description
+  description,
 }) => {
   return (
     <div className={`enhanced-component ${className}`}>

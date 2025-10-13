@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface PerformanceOptimizerProps {
   children?: React.ReactNode;
@@ -9,9 +9,9 @@ interface PerformanceOptimizerProps {
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
-  className = '',
+  className = "",
   title,
-  description
+  description,
 }) => {
   return (
     <div className={`enhanced-component ${className}`}>

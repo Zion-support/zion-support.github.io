@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SEOEnhancerProps {
   children?: React.ReactNode;
@@ -9,9 +9,9 @@ interface SEOEnhancerProps {
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   children,
-  className = '',
+  className = "",
   title,
-  description
+  description,
 }) => {
   return (
     <div className={`enhanced-component ${className}`}>

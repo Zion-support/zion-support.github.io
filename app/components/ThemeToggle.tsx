@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ThemeToggleProps {
   children?: React.ReactNode;
@@ -9,9 +9,9 @@ interface ThemeToggleProps {
 
 const ThemeToggle: React.FC<ThemeToggleProps> = ({
   children,
-  className = '',
+  className = "",
   title,
-  description
+  description,
 }) => {
   return (
     <div className={`enhanced-component ${className}`}>

@@ -1,13 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 interface LazyWrapperProps {
   children: React.ReactNode;
   className?: string;
 }
 
-export default function LazyWrapper({ children, className = '' }: LazyWrapperProps) {
+export default function LazyWrapper({
+  children,
+  className = "",
+}: LazyWrapperProps) {
   return (
     <>
       <div className={`lazy-wrapper ${className}`}>

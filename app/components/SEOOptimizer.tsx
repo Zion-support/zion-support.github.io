@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SEOOptimizerProps {
   children?: React.ReactNode;
@@ -7,13 +7,9 @@ interface SEOOptimizerProps {
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   children,
-  className = ''
+  className = "",
 }) => {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
+  return <div className={className}>{children}</div>;
 };
 
 export default SEOOptimizer;
