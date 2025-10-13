@@ -1,149 +1,87 @@
 #!/usr/bin/env python3
 """
-Fix final TypeScript errors.
+Fix the final remaining parsing errors.
 """
 
 import os
+import re
+import glob
+from pathlib import Path
 
-def fix_5g_pages():
-    """Fix all 5G pages."""
-    pages = [
+def fix_numeric_function_names():
+    """Fix function names that start with numbers."""
+    print("Fixing function names that start with numbers...")
+    
+    # Files that have numeric function names
+    problematic_files = [
+        'app/404/page.tsx',
+        'app/5g-data-analytics/page.tsx',
+        'app/5g-edge-computing/page.tsx',
         'app/5g-implementation/page.tsx',
         'app/5g-iot-solutions/page.tsx',
         'app/5g-mobile-applications/page.tsx',
         'app/5g-network-infrastructure/page.tsx',
         'app/5g-private-networks/page.tsx',
         'app/5g-smart-city-solutions/page.tsx',
-        'app/5g-solutions/page.tsx'
+        'app/5g-solutions/page.tsx',
+        'app/page.tsx',
+        'app/sitemap.xml/page.tsx'
     ]
     
-    for page in pages:
-        page_name = page.split('/')[-2].replace('-', ' ').title()
-        component_name = page_name.replace(' ', '') + 'Page'
-        
-        content = f'''import React from 'react';
-import {{ Helmet }} from 'react-helmet-async';
+    for file_path in problematic_files:
+        if os.path.exists(file_path):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # Extract the service name from the path
+                service_name = file_path.replace('app/', '').replace('/page.tsx', '')
+                
+                # Create a valid function name
+                if service_name.startswith('5g'):
+                    function_name = 'FiveG' + service_name[2:].replace('-', '').replace('/', '').title()
+                elif service_name == '404':
+                    function_name = 'NotFound'
+                elif service_name == 'page':
+                    function_name = 'Home'
+                elif service_name == 'sitemap.xml':
+                    function_name = 'Sitemap'
+                else:
+                    function_name = service_name.replace('-', '').replace('/', '').title()
+                
+                # Update the function name in the content
+                old_pattern = r'export default function [^(]+\(\)'
+                new_function = f'export default function {function_name}Page()'
+                content = re.sub(old_pattern, new_function, content)
+                
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                
+                print(f"Fixed function name in: {file_path}")
+                
+            except Exception as e:
+                print(f"Error fixing {file_path}: {e}")
 
-export default function {component_name}() {{
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
-      <Helmet>
-        <title>{page_name} - Zion Tech Group</title>
-        <meta name="description" content="Advanced {page_name.lower()} solutions for next-generation connectivity and performance." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">{page_name}</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive {page_name.lower()} solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}}
-'''
-        
-        with open(page, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print(f"Fixed: {page}")
-
-def fix_utility_files():
-    """Fix utility files."""
-    files = [
-        'app/sitemap.xml/page.tsx',
-        'app/types/next.d.ts',
-        'utils/cn.ts',
-        'utils/logger.ts'
-    ]
+def fix_remaining_files():
+    """Fix remaining problematic files."""
+    print("Fixing remaining files...")
     
-    for file_path in files:
-        if file_path.endswith('page.tsx'):
-            content = '''import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function SitemapPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Sitemap - Zion Tech Group</title>
-        <meta name="description" content="Sitemap for Zion Tech Group website" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Sitemap</h1>
-        <p className="text-gray-300">This is the sitemap page.</p>
-      </div>
-    </div>
-  );
-}
-'''
-        elif file_path.endswith('next.d.ts'):
-            content = '''// Next.js type definitions
-
-declare module 'next' {
-  interface NextConfig {
-    experimental?: {
-      appDir?: boolean;
-    };
-  }
-}
-
-export {};
-'''
-        elif file_path.endswith('cn.ts'):
-            content = '''// Utility function for combining class names
-
-export function cn(...classes: (string | undefined | null | false)[]): string {
-  return classes.filter(Boolean).join(' ');
-}
-
-export default cn;
-'''
-        elif file_path.endswith('logger.ts'):
-            content = '''// Logger utility
-
-export function logger(message: string, level: 'info' | 'warn' | 'error' = 'info') {
-  console[level](message);
-}
-
-export default logger;
-'''
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print(f"Fixed: {file_path}")
+    # Fix fix-imports.cjs
+    if os.path.exists('fix-imports.cjs'):
+        os.remove('fix-imports.cjs')
+        print("Removed fix-imports.cjs")
+    
+    # Fix page_clean.tsx
+    if os.path.exists('page_clean.tsx'):
+        os.remove('page_clean.tsx')
+        print("Removed page_clean.tsx")
 
 def main():
-    """Main function."""
-    print("Fixing final errors...")
+    """Main function to fix final errors."""
+    print("Starting final error fixes...")
     
-    fix_5g_pages()
-    fix_utility_files()
+    fix_numeric_function_names()
+    fix_remaining_files()
     
     print("Final error fixes complete!")
 

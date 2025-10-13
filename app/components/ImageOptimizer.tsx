@@ -1,14 +1,35 @@
 import React from 'react';
 
-interface ImageoptimizerProps {
+interface ImageOptimizerProps {
+  src: string;
+  alt: string;
   className?: string;
-  children?: React.ReactNode;
+  lazy?: boolean;
+  quality?: number;
+  format?: 'webp' | 'jpeg' | 'png';
+  placeholder?: string;
 }
 
-export default function Imageoptimizer({ className = '', children, ...props }: ImageoptimizerProps) {
+export default function ImageOptimizer({
+  src,
+  alt,
+  className = '',
+  lazy = true,
+  quality = 80,
+  format = 'webp',
+  placeholder
+}: ImageOptimizerProps) {
   return (
-    <div className={`imageoptimizer-component ${className}`} {...props}>
-      {children}
-    </div>
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      loading={lazy ? 'lazy' : 'eager'}
+      style={{
+        backgroundImage: placeholder ? `url(${placeholder})` : undefined,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    />
   );
 }

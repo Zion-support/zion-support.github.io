@@ -1,10 +1,9 @@
-import React from 'react';
+interface ImprovedAccessibilityProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-export default function Component() {
+export default function ImprovedAccessibility({ className = '', children }: ImprovedAccessibilityProps) {
   return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
   );
 }

@@ -1,10 +1,9 @@
-import React from 'react';
+interface AnimatedCounterProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-export default function Component() {
+export default function AnimatedCounter({ className = '', children }: AnimatedCounterProps) {
   return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
   );
 }

@@ -1,16 +1,9 @@
-export const Icon = (
-  name,
-  className = "",
-  ...props
-: 
-  name: string;
+...props
+: ,
+    name: string;
   className?: string;
-  [key: string]: any;
-) => 
+  children?: React.ReactNode;
+}
+
+export default function Icons({ className = '', children }: IconsProps) {
   return (
-    <span className="{`icon" ${className}`} {...props}></span>
-      {name}
-    </span>
-  );
-;
-export default Icon;

@@ -1,10 +1,9 @@
-import React from 'react';
+interface ImprovedPerformanceMonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-export default function Component() {
+export default function ImprovedPerformanceMonitor({ className = '', children }: ImprovedPerformanceMonitorProps) {
   return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
   );
 }

@@ -1,6 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import ImageOptimizer from '../app/components/ImageOptimizer';
+import { render, screen } from '@testing-library/react';
 
 describe('ImageOptimizer', () => {
   it('renders without crashing', () => {

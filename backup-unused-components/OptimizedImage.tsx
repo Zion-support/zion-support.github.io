@@ -1,10 +1,9 @@
-import React from 'react';
+interface OptimizedImageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-export default function Component() {
+export default function OptimizedImage({ className = '', children }: OptimizedImageProps) {
   return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
   );
 }

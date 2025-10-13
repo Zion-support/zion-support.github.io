@@ -6,22 +6,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    ignores: [
-      "dist",
-      ".next",
-      "backup-problematic/**",
-      "backup-unused-components/**",
-      "corrupted-src-backup/**",
-      "backup-unused-components/**",
-      "src/**",
-      "*.js",
-      "scripts/**",
-      "public/sw.js",
-      "identify_missing_pages.js",
-      "merge-with-conflict-resolution.js",
-      "resolve-all-conflicts.js",
-      "fix-unused-imports.cjs",
-    ],
+    ignores: ["dist/**", "node_modules/**", "*.config.js", "*.config.cjs"]
   },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
@@ -29,16 +14,24 @@ export default tseslint.config(
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: "latest",
+        ecmaFeatures: { jsx: true },
+        sourceType: "module"
+      }
     },
     plugins: {
       "react-hooks": reactHooks,
-      "react-refresh": reactRefresh,
+      "react-refresh": reactRefresh
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": "off",
+      "react-refresh/only-export-components": [
+        "warn",
+        { allowConstantExport: true }
+      ],
       "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "off",
-    },
-  },
+      "@typescript-eslint/no-explicit-any": "warn"
+    }
+  }
 );

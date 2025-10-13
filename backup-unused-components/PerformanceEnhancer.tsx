@@ -1,10 +1,9 @@
-import React from 'react';
+interface PerformanceEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-export default function Component() {
+export default function PerformanceEnhancer({ className = '', children }: PerformanceEnhancerProps) {
   return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
   );
 }
