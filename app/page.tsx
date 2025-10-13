@@ -1,15 +1,7 @@
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import SEO from './components/SEO';
-=======
-import EnhancedSEO from './components/EnhancedSEO';
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
 import SEOHead from './components/SEOHead';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -56,28 +48,11 @@ export default function HomePage() {
 
   return (
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <SEO 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        url="/"
-=======
-      <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        canonicalUrl="/"
-        ogImage="/api/placeholder/1200/630"
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group"
         structuredData={structuredData}
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
       />
       
       {/* Hero Section */}

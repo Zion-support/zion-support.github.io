@@ -1,104 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ArrowRightIcon,
-  HeartIcon
-} from '@heroicons/react/24/outline';
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
-=======
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-<<<<<<< HEAD
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: '5G Solutions', href: '/5g-solutions' },
-  ];
-=======
-  const footerLinks = {
-    services: [
-      { name: 'AI Solutions', href: '/ai-solutions' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-      { name: 'Digital Transformation', href: '/digital-transformation' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: '5G Solutions', href: '/5g-solutions' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Solutions', href: '/solutions' },
-      { name: 'Pricing', href: '/pricing' },
-      { name: 'Blog', href: '/blog' }
-    ],
-    support: [
-      { name: 'Contact', href: '/contact' },
-      { name: 'Support', href: '/support' },
-      { name: 'Tutorials', href: '/tutorials' },
-      { name: 'Demo', href: '/demo' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' }
-    ]
-  };
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  const services = [
-    { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
   ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -124,41 +43,6 @@ const Footer: React.FC = () => {
     { name: 'GDPR', href: '/gdpr' },
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github }
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-=======
-  ];
-
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: 'facebook' },
-    { name: 'Twitter', href: '#', icon: 'twitter' },
-    { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-    { name: 'GitHub', href: '#', icon: 'github' }
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
-  ];
-
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: 'Facebook' },
-    { name: 'Twitter', href: '#', icon: 'Twitter' },
-    { name: 'LinkedIn', href: '#', icon: 'LinkedIn' },
-    { name: 'GitHub', href: '#', icon: 'GitHub' }
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
   ];
 
   return (
