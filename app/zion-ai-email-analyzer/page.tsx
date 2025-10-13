@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Code, 
+  Mail, 
   BarChart3, 
   TrendingUp, 
   Sparkles, 
@@ -34,86 +34,79 @@ import {
   Filter,
   Search,
   AlertTriangle,
-  CheckCircle2,
-  DollarSign,
-  TrendingDown,
-  FileText,
-  Calculator,
-  Bug,
-  GitBranch,
-  Terminal
+  CheckCircle2
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAICodeReviewerPage = () => {
+const ZionAIEmailAnalyzerPage = () => {
   const features = [
     {
-      title: "AI-Powered Code Analysis",
-      description: "Automatically review code for bugs, security vulnerabilities, and best practices",
+      title: "AI-Powered Email Analysis",
+      description: "Analyze email content, sentiment, and effectiveness using advanced natural language processing",
       icon: <Brain className="w-6 h-6" />,
       stats: "99% accuracy"
     },
     {
-      title: "Security Vulnerability Detection",
-      description: "Identify security issues and potential exploits in your codebase",
+      title: "Sentiment & Tone Detection",
+      description: "Automatically detect email sentiment and tone to improve communication effectiveness",
+      icon: <Heart className="w-6 h-6" />,
+      stats: "Real-time analysis"
+    },
+    {
+      title: "Spam & Phishing Detection",
+      description: "Advanced AI algorithms to detect spam, phishing, and malicious emails automatically",
       icon: <Shield className="w-6 h-6" />,
-      stats: "Zero false positives"
+      stats: "99.9% detection rate"
     },
     {
-      title: "Performance Optimization",
-      description: "Suggest performance improvements and optimization opportunities",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "30% faster code"
-    },
-    {
-      title: "Code Quality Metrics",
-      description: "Track code quality, maintainability, and technical debt over time",
+      title: "Email Performance Analytics",
+      description: "Track open rates, response times, and engagement metrics across all email communications",
       icon: <BarChart3 className="w-6 h-6" />,
-      stats: "Real-time metrics"
+      stats: "40% better performance"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 20+ programming languages and frameworks",
-      icon: <Code className="w-6 h-6" />,
-      stats: "20+ languages"
+      title: "Smart Categorization",
+      description: "Automatically categorize emails by type, priority, and action required",
+      icon: <Filter className="w-6 h-6" />,
+      stats: "95% accuracy"
     },
     {
-      title: "Integration Ready",
-      description: "Seamlessly integrate with GitHub, GitLab, and other development tools",
-      icon: <GitBranch className="w-6 h-6" />,
-      stats: "10+ integrations"
+      title: "Response Suggestions",
+      description: "AI-powered suggestions for email responses based on content analysis and context",
+      icon: <MessageSquare className="w-6 h-6" />,
+      stats: "60% time saved"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Developer",
-      price: "$49",
+      name: "Personal",
+      price: "$29",
       period: "/month",
-      description: "Perfect for individual developers and small teams",
+      description: "Perfect for individuals and small teams",
       features: [
-        "Up to 10,000 lines/month",
-        "Basic code analysis",
-        "Security scanning",
+        "Up to 10,000 emails/month",
+        "Basic sentiment analysis",
+        "Spam detection",
         "Email support",
-        "Basic reports",
+        "Basic analytics",
         "30-day data retention"
       ],
       popular: false,
       cta: "Start Free Trial"
     },
     {
-      name: "Team",
-      price: "$199",
+      name: "Professional",
+      price: "$99",
       period: "/month",
-      description: "Ideal for growing development teams",
+      description: "Ideal for growing businesses and teams",
       features: [
-        "Up to 100,000 lines/month",
-        "Advanced AI analysis",
-        "Performance optimization",
+        "Up to 100,000 emails/month",
+        "Advanced sentiment analysis",
+        "Phishing detection",
         "Priority support",
         "Advanced analytics",
         "1-year data retention",
@@ -125,18 +118,18 @@ const ZionAICodeReviewerPage = () => {
     },
     {
       name: "Enterprise",
-      price: "$599",
+      price: "$299",
       period: "/month",
-      description: "For large organizations with complex codebases",
+      description: "For large organizations with high email volume",
       features: [
-        "Unlimited lines",
+        "Unlimited emails",
         "Custom AI models",
-        "Advanced integrations",
+        "Advanced security features",
         "24/7 phone support",
         "White-label options",
         "Unlimited data retention",
         "Dedicated account manager",
-        "Custom reporting"
+        "Custom integrations"
       ],
       popular: false,
       cta: "Contact Sales"
@@ -145,93 +138,93 @@ const ZionAICodeReviewerPage = () => {
 
   const testimonials = [
     {
-      name: "David Kim",
-      company: "Tech Startup",
-      role: "Lead Developer",
-      content: "Zion AI Code Reviewer has caught bugs that would have taken us days to find manually. It's like having a senior developer reviewing every line of code.",
+      name: "Jennifer Adams",
+      company: "Marketing Agency",
+      role: "Email Marketing Manager",
+      content: "Zion AI Email Analyzer has revolutionized our email campaigns. We've improved open rates by 45% and reduced spam complaints by 80% since implementing it.",
       rating: 5,
-      avatar: "DK"
+      avatar: "JA"
     },
     {
-      name: "Sarah Chen",
-      company: "Software Company",
-      role: "Engineering Manager",
-      content: "The security vulnerability detection is incredible. We've prevented several potential security issues before they made it to production.",
+      name: "Robert Kim",
+      company: "Customer Support",
+      role: "Support Manager",
+      content: "The sentiment analysis feature is incredibly accurate. We can now identify frustrated customers before they escalate, leading to much better customer satisfaction.",
       rating: 5,
-      avatar: "SC"
+      avatar: "RK"
     },
     {
-      name: "Michael Rodriguez",
+      name: "Maria Garcia",
       company: "E-commerce Platform",
-      role: "Senior Engineer",
-      content: "The performance optimization suggestions have helped us improve our application speed by 40%. The AI really understands our codebase.",
+      role: "Communications Director",
+      content: "The spam detection has been a lifesaver. We've caught several phishing attempts that would have compromised our entire system. Highly recommended!",
       rating: 5,
-      avatar: "MR"
+      avatar: "MG"
+    }
+  ];
+
+  const analytics = [
+    {
+      title: "Email Performance",
+      description: "Track open rates, click-through rates, and response times",
+      icon: <TrendingUp className="w-8 h-8" />,
+      metrics: ["Open rates", "Click rates", "Response times", "Engagement scores"]
+    },
+    {
+      title: "Sentiment Analysis",
+      description: "Understand the emotional tone of your email communications",
+      icon: <Heart className="w-8 h-8" />,
+      metrics: ["Positive sentiment", "Negative sentiment", "Neutral tone", "Emotional trends"]
+    },
+    {
+      title: "Security Monitoring",
+      description: "Detect and prevent spam, phishing, and malicious emails",
+      icon: <Shield className="w-8 h-8" />,
+      metrics: ["Spam detection", "Phishing alerts", "Threat levels", "Security scores"]
+    },
+    {
+      title: "Content Optimization",
+      description: "Get suggestions to improve email content and effectiveness",
+      icon: <Target className="w-8 h-8" />,
+      metrics: ["Subject line scores", "Content readability", "Call-to-action effectiveness", "Optimization suggestions"]
     }
   ];
 
   const benefits = [
-    {
-      title: "Bug Prevention",
-      description: "Catch bugs before they reach production",
-      icon: <Bug className="w-8 h-8" />,
-      stat: "90% fewer bugs"
-    },
-    {
-      title: "Security",
-      description: "Identify security vulnerabilities automatically",
-      icon: <Shield className="w-8 h-8" />,
-      stat: "Zero vulnerabilities"
-    },
-    {
-      title: "Code Quality",
-      description: "Improve code maintainability and readability",
-      icon: <Code className="w-8 h-8" />,
-      stat: "40% better quality"
-    },
-    {
-      title: "Time Savings",
-      description: "Reduce code review time significantly",
-      icon: <Clock className="w-8 h-8" />,
-      stat: "70% time saved"
-    }
-  ];
-
-  const metrics = [
-    { label: "Bug Detection", value: "95%", improvement: "+25%" },
-    { label: "Review Time", value: "5 min", improvement: "-70%" },
-    { label: "Code Quality", value: "8.5/10", improvement: "+2.1" },
-    { label: "Security Score", value: "A+", improvement: "+2 grades" }
+    { label: "Email Open Rate", value: "34%", improvement: "+12%" },
+    { label: "Response Time", value: "2.3 hours", improvement: "-60%" },
+    { label: "Spam Detection", value: "99.9%", improvement: "+15%" },
+    { label: "Customer Satisfaction", value: "4.7/5", improvement: "+0.8" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Code Reviewer - Automated Code Analysis & Review | Zion Tech Group"
-        description="Automatically review code with AI. Detect bugs, security vulnerabilities, and optimize performance. Support for 20+ languages. Perfect for development teams. Start free trial today!"
-        keywords="AI code review, automated code analysis, code quality, security scanning, bug detection, code optimization, development tools, code metrics"
-        canonical="https://ziontechgroup.com/zion-ai-code-reviewer"
+        title="Zion AI Email Analyzer - Advanced Email Intelligence & Analytics | Zion Tech Group"
+        description="Analyze email performance, detect sentiment, and prevent spam with AI. Advanced email intelligence for better communication and security. Start free trial today!"
+        keywords="AI email analyzer, email analytics, sentiment analysis, spam detection, email performance, email intelligence, phishing detection, email optimization"
+        canonical="https://ziontechgroup.com/zion-ai-email-analyzer"
       />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer className="text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Code className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI Code Intelligence Platform</span>
+            <Mail className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI Email Intelligence Platform</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI-Powered Code Review
+              Master Email Communication
             </span>
             <br />
-            <span className="text-white">for Better Software</span>
+            <span className="text-white">with AI Intelligence</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Automatically review code for bugs, security vulnerabilities, and performance issues. 
-            Support for 20+ programming languages with 99% accuracy and real-time analysis.
+            Analyze email performance, detect sentiment, prevent spam, and optimize your email communications 
+            with advanced AI-powered email intelligence and analytics.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -239,7 +232,7 @@ const ZionAICodeReviewerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              icon={<Mail className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -256,19 +249,19 @@ const ZionAICodeReviewerPage = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-              <div className="text-gray-300 text-sm">Accuracy Rate</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div>
+              <div className="text-gray-300 text-sm">Higher Open Rates</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">20+</div>
-              <div className="text-gray-300 text-sm">Languages</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+              <div className="text-gray-300 text-sm">Spam Detection</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400 mb-2">90%</div>
-              <div className="text-gray-300 text-sm">Fewer Bugs</div>
+              <div className="text-3xl font-bold text-pink-400 mb-2">60%</div>
+              <div className="text-gray-300 text-sm">Time Saved</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">4.9/5</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">4.8/5</div>
               <div className="text-gray-300 text-sm">User Rating</div>
             </div>
           </div>
@@ -280,10 +273,10 @@ const ZionAICodeReviewerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced Code Intelligence
+              Advanced Email Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Powerful AI-driven features to improve your code quality
+              Powerful AI-driven features to analyze, optimize, and secure your email communications
             </p>
           </div>
           
@@ -306,34 +299,38 @@ const ZionAICodeReviewerPage = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Benefits Section */}
+      {/* Analytics Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Key Benefits
+              Comprehensive Email Analytics
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your development process with measurable results
+              Get deep insights into your email performance and communication effectiveness
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {analytics.map((analytic, index) => (
               <div key={index} className="text-center group">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {benefit.icon}
+                  {analytic.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 mb-2">{benefit.description}</p>
-                <div className="text-2xl font-bold text-cyan-400">{benefit.stat}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{analytic.title}</h3>
+                <p className="text-gray-300 mb-4">{analytic.description}</p>
+                <ul className="text-sm text-gray-400 space-y-1">
+                  {analytic.metrics.map((metric, idx) => (
+                    <li key={idx}>• {metric}</li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* Metrics Section */}
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
@@ -341,19 +338,19 @@ const ZionAICodeReviewerPage = () => {
               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the impact of AI-powered code review on development teams
+              See the impact of AI-powered email analysis on communication effectiveness
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {metrics.map((metric, index) => (
+            {benefits.map((benefit, index) => (
               <div key={index} className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Activity className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
-                <div className="text-gray-300 text-sm mb-1">{metric.label}</div>
-                <div className="text-green-400 text-sm font-medium">{metric.improvement}</div>
+                <div className="text-3xl font-bold text-white mb-2">{benefit.value}</div>
+                <div className="text-gray-300 text-sm mb-1">{benefit.label}</div>
+                <div className="text-green-400 text-sm font-medium">{benefit.improvement}</div>
               </div>
             ))}
           </div>
@@ -368,7 +365,7 @@ const ZionAICodeReviewerPage = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Scale your code review as your team grows
+              Scale your email intelligence as your communication needs grow
             </p>
           </div>
           
@@ -427,10 +424,10 @@ const ZionAICodeReviewerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Trusted by Development Teams
+              Trusted by Communication Teams
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how teams are improving code quality with AI
+              See how businesses are improving their email communications with AI
             </p>
           </div>
           
@@ -462,11 +459,11 @@ const ZionAICodeReviewerPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <ResponsiveContainer className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Improve Code Quality?
+            Ready to Master Email Communication?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of development teams who are already using Zion AI Code Reviewer 
-            to build better software.
+            Join thousands of businesses who are already using Zion AI Email Analyzer 
+            to improve their email communications and security.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -474,7 +471,7 @@ const ZionAICodeReviewerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              icon={<Mail className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -493,4 +490,4 @@ const ZionAICodeReviewerPage = () => {
   );
 };
 
-export default ZionAICodeReviewerPage;
+export default ZionAIEmailAnalyzerPage;

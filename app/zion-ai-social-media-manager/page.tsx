@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Code, 
+  Share2, 
   BarChart3, 
   TrendingUp, 
   Sparkles, 
@@ -41,79 +41,83 @@ import {
   Calculator,
   Bug,
   GitBranch,
-  Terminal
+  Terminal,
+  Users,
+  Camera,
+  Image,
+  Video
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAICodeReviewerPage = () => {
+const ZionAISocialMediaManagerPage = () => {
   const features = [
     {
-      title: "AI-Powered Code Analysis",
-      description: "Automatically review code for bugs, security vulnerabilities, and best practices",
+      title: "AI Content Generation",
+      description: "Generate engaging social media posts automatically using advanced AI",
       icon: <Brain className="w-6 h-6" />,
-      stats: "99% accuracy"
+      stats: "95% engagement boost"
     },
     {
-      title: "Security Vulnerability Detection",
-      description: "Identify security issues and potential exploits in your codebase",
-      icon: <Shield className="w-6 h-6" />,
-      stats: "Zero false positives"
+      title: "Multi-Platform Management",
+      description: "Manage all social media accounts from one unified dashboard",
+      icon: <Globe className="w-6 h-6" />,
+      stats: "15+ platforms"
     },
     {
-      title: "Performance Optimization",
-      description: "Suggest performance improvements and optimization opportunities",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "30% faster code"
+      title: "Optimal Posting Times",
+      description: "AI determines the best times to post for maximum engagement",
+      icon: <Clock className="w-6 h-6" />,
+      stats: "40% more reach"
     },
     {
-      title: "Code Quality Metrics",
-      description: "Track code quality, maintainability, and technical debt over time",
+      title: "Hashtag Optimization",
+      description: "Automatically suggest trending and relevant hashtags",
+      icon: <Target className="w-6 h-6" />,
+      stats: "60% more visibility"
+    },
+    {
+      title: "Content Calendar",
+      description: "Plan and schedule posts weeks in advance with AI suggestions",
+      icon: <Calendar className="w-6 h-6" />,
+      stats: "Automated scheduling"
+    },
+    {
+      title: "Analytics & Insights",
+      description: "Track performance and get actionable insights for improvement",
       icon: <BarChart3 className="w-6 h-6" />,
-      stats: "Real-time metrics"
-    },
-    {
-      title: "Multi-Language Support",
-      description: "Support for 20+ programming languages and frameworks",
-      icon: <Code className="w-6 h-6" />,
-      stats: "20+ languages"
-    },
-    {
-      title: "Integration Ready",
-      description: "Seamlessly integrate with GitHub, GitLab, and other development tools",
-      icon: <GitBranch className="w-6 h-6" />,
-      stats: "10+ integrations"
+      stats: "Real-time analytics"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Developer",
-      price: "$49",
+      name: "Starter",
+      price: "$79",
       period: "/month",
-      description: "Perfect for individual developers and small teams",
+      description: "Perfect for small businesses and influencers",
       features: [
-        "Up to 10,000 lines/month",
-        "Basic code analysis",
-        "Security scanning",
+        "Up to 5 social accounts",
+        "Basic AI content generation",
+        "5 platforms",
         "Email support",
-        "Basic reports",
+        "Basic analytics",
         "30-day data retention"
       ],
       popular: false,
       cta: "Start Free Trial"
     },
     {
-      name: "Team",
+      name: "Professional",
       price: "$199",
       period: "/month",
-      description: "Ideal for growing development teams",
+      description: "Ideal for growing businesses and agencies",
       features: [
-        "Up to 100,000 lines/month",
-        "Advanced AI analysis",
-        "Performance optimization",
+        "Up to 20 social accounts",
+        "Advanced AI content generation",
+        "All platforms",
         "Priority support",
         "Advanced analytics",
         "1-year data retention",
@@ -125,11 +129,11 @@ const ZionAICodeReviewerPage = () => {
     },
     {
       name: "Enterprise",
-      price: "$599",
+      price: "$499",
       period: "/month",
-      description: "For large organizations with complex codebases",
+      description: "For large organizations with complex social media needs",
       features: [
-        "Unlimited lines",
+        "Unlimited accounts",
         "Custom AI models",
         "Advanced integrations",
         "24/7 phone support",
@@ -145,93 +149,93 @@ const ZionAICodeReviewerPage = () => {
 
   const testimonials = [
     {
-      name: "David Kim",
-      company: "Tech Startup",
-      role: "Lead Developer",
-      content: "Zion AI Code Reviewer has caught bugs that would have taken us days to find manually. It's like having a senior developer reviewing every line of code.",
+      name: "Jessica Martinez",
+      company: "Digital Marketing Agency",
+      role: "Social Media Manager",
+      content: "Zion AI Social Media Manager has transformed our social media strategy. We've increased engagement by 150% and saved 20 hours per week on content creation.",
       rating: 5,
-      avatar: "DK"
+      avatar: "JM"
     },
     {
-      name: "Sarah Chen",
-      company: "Software Company",
-      role: "Engineering Manager",
-      content: "The security vulnerability detection is incredible. We've prevented several potential security issues before they made it to production.",
+      name: "Ryan Chen",
+      company: "E-commerce Brand",
+      role: "Marketing Director",
+      content: "The AI content generation is incredible. It understands our brand voice perfectly and creates posts that consistently perform well across all platforms.",
       rating: 5,
-      avatar: "SC"
+      avatar: "RC"
     },
     {
-      name: "Michael Rodriguez",
-      company: "E-commerce Platform",
-      role: "Senior Engineer",
-      content: "The performance optimization suggestions have helped us improve our application speed by 40%. The AI really understands our codebase.",
+      name: "Amanda Wilson",
+      company: "Personal Brand",
+      role: "Influencer",
+      content: "As a content creator, this tool has been a game-changer. The optimal posting times feature alone has doubled my reach and engagement rates.",
       rating: 5,
-      avatar: "MR"
+      avatar: "AW"
     }
   ];
 
   const benefits = [
     {
-      title: "Bug Prevention",
-      description: "Catch bugs before they reach production",
-      icon: <Bug className="w-8 h-8" />,
-      stat: "90% fewer bugs"
-    },
-    {
-      title: "Security",
-      description: "Identify security vulnerabilities automatically",
-      icon: <Shield className="w-8 h-8" />,
-      stat: "Zero vulnerabilities"
-    },
-    {
-      title: "Code Quality",
-      description: "Improve code maintainability and readability",
-      icon: <Code className="w-8 h-8" />,
-      stat: "40% better quality"
+      title: "Engagement Boost",
+      description: "Increase social media engagement significantly",
+      icon: <Heart className="w-8 h-8" />,
+      stat: "150% increase"
     },
     {
       title: "Time Savings",
-      description: "Reduce code review time significantly",
+      description: "Automate content creation and scheduling",
       icon: <Clock className="w-8 h-8" />,
-      stat: "70% time saved"
+      stat: "20 hours/week saved"
+    },
+    {
+      title: "Reach Expansion",
+      description: "Expand your social media reach and visibility",
+      icon: <Globe className="w-8 h-8" />,
+      stat: "40% more reach"
+    },
+    {
+      title: "ROI Improvement",
+      description: "Improve return on investment for social media",
+      icon: <DollarSign className="w-8 h-8" />,
+      stat: "200% better ROI"
     }
   ];
 
   const metrics = [
-    { label: "Bug Detection", value: "95%", improvement: "+25%" },
-    { label: "Review Time", value: "5 min", improvement: "-70%" },
-    { label: "Code Quality", value: "8.5/10", improvement: "+2.1" },
-    { label: "Security Score", value: "A+", improvement: "+2 grades" }
+    { label: "Engagement Rate", value: "8.5%", improvement: "+150%" },
+    { label: "Content Creation", value: "50 posts", improvement: "+300%" },
+    { label: "Reach", value: "2.5M", improvement: "+40%" },
+    { label: "Time Saved", value: "20h/week", improvement: "+80%" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Code Reviewer - Automated Code Analysis & Review | Zion Tech Group"
-        description="Automatically review code with AI. Detect bugs, security vulnerabilities, and optimize performance. Support for 20+ languages. Perfect for development teams. Start free trial today!"
-        keywords="AI code review, automated code analysis, code quality, security scanning, bug detection, code optimization, development tools, code metrics"
-        canonical="https://ziontechgroup.com/zion-ai-code-reviewer"
+        title="Zion AI Social Media Manager - Automated Social Media Management | Zion Tech Group"
+        description="Manage all social media accounts with AI. Generate content, schedule posts, and optimize engagement across 15+ platforms. Perfect for businesses and influencers. Start free trial today!"
+        keywords="AI social media management, social media automation, content generation, social media scheduling, social media analytics, multi-platform management"
+        canonical="https://ziontechgroup.com/zion-ai-social-media-manager"
       />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer className="text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Code className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI Code Intelligence Platform</span>
+            <Share2 className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI Social Media Management Platform</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI-Powered Code Review
+              AI-Powered Social Media
             </span>
             <br />
-            <span className="text-white">for Better Software</span>
+            <span className="text-white">Management</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Automatically review code for bugs, security vulnerabilities, and performance issues. 
-            Support for 20+ programming languages with 99% accuracy and real-time analysis.
+            Automate your social media strategy with AI. Generate engaging content, schedule posts, 
+            and optimize engagement across 15+ platforms from one unified dashboard.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -239,7 +243,7 @@ const ZionAICodeReviewerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              icon={<Share2 className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -256,16 +260,16 @@ const ZionAICodeReviewerPage = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-              <div className="text-gray-300 text-sm">Accuracy Rate</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">150%</div>
+              <div className="text-gray-300 text-sm">Engagement Boost</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">20+</div>
-              <div className="text-gray-300 text-sm">Languages</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">15+</div>
+              <div className="text-gray-300 text-sm">Platforms</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400 mb-2">90%</div>
-              <div className="text-gray-300 text-sm">Fewer Bugs</div>
+              <div className="text-3xl font-bold text-pink-400 mb-2">20h</div>
+              <div className="text-gray-300 text-sm">Time Saved/Week</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">4.9/5</div>
@@ -280,10 +284,10 @@ const ZionAICodeReviewerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced Code Intelligence
+              Advanced Social Media Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Powerful AI-driven features to improve your code quality
+              Powerful AI-driven features to optimize your social media presence
             </p>
           </div>
           
@@ -314,7 +318,7 @@ const ZionAICodeReviewerPage = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your development process with measurable results
+              Transform your social media strategy with measurable results
             </p>
           </div>
           
@@ -341,7 +345,7 @@ const ZionAICodeReviewerPage = () => {
               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the impact of AI-powered code review on development teams
+              See the impact of AI-powered social media management
             </p>
           </div>
           
@@ -368,7 +372,7 @@ const ZionAICodeReviewerPage = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Scale your code review as your team grows
+              Scale your social media management as your presence grows
             </p>
           </div>
           
@@ -427,10 +431,10 @@ const ZionAICodeReviewerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Trusted by Development Teams
+              Trusted by Social Media Teams
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how teams are improving code quality with AI
+              See how businesses are transforming their social media with AI
             </p>
           </div>
           
@@ -462,11 +466,11 @@ const ZionAICodeReviewerPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <ResponsiveContainer className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Improve Code Quality?
+            Ready to Transform Your Social Media?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of development teams who are already using Zion AI Code Reviewer 
-            to build better software.
+            Join thousands of businesses who are already using Zion AI Social Media Manager 
+            to grow their social media presence.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -474,7 +478,7 @@ const ZionAICodeReviewerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              icon={<Share2 className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -493,4 +497,4 @@ const ZionAICodeReviewerPage = () => {
   );
 };
 
-export default ZionAICodeReviewerPage;
+export default ZionAISocialMediaManagerPage;

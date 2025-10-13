@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Code, 
+  Package, 
   BarChart3, 
   TrendingUp, 
   Sparkles, 
@@ -35,101 +35,98 @@ import {
   Search,
   AlertTriangle,
   CheckCircle2,
+  Truck,
+  Warehouse,
   DollarSign,
-  TrendingDown,
-  FileText,
-  Calculator,
-  Bug,
-  GitBranch,
-  Terminal
+  TrendingDown
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAICodeReviewerPage = () => {
+const ZionSmartInventoryOptimizerPage = () => {
   const features = [
     {
-      title: "AI-Powered Code Analysis",
-      description: "Automatically review code for bugs, security vulnerabilities, and best practices",
+      title: "AI Demand Forecasting",
+      description: "Predict future demand with 95% accuracy using machine learning and historical data analysis",
       icon: <Brain className="w-6 h-6" />,
-      stats: "99% accuracy"
+      stats: "95% accuracy"
     },
     {
-      title: "Security Vulnerability Detection",
-      description: "Identify security issues and potential exploits in your codebase",
-      icon: <Shield className="w-6 h-6" />,
-      stats: "Zero false positives"
+      title: "Automated Reorder Points",
+      description: "Set intelligent reorder points that automatically trigger purchase orders when stock runs low",
+      icon: <Bell className="w-6 h-6" />,
+      stats: "Never run out"
     },
     {
-      title: "Performance Optimization",
-      description: "Suggest performance improvements and optimization opportunities",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "30% faster code"
+      title: "Multi-Location Optimization",
+      description: "Optimize inventory across multiple warehouses and distribution centers",
+      icon: <Warehouse className="w-6 h-6" />,
+      stats: "30% cost reduction"
     },
     {
-      title: "Code Quality Metrics",
-      description: "Track code quality, maintainability, and technical debt over time",
-      icon: <BarChart3 className="w-6 h-6" />,
-      stats: "Real-time metrics"
+      title: "Seasonal Trend Analysis",
+      description: "Identify seasonal patterns and adjust inventory levels accordingly",
+      icon: <TrendingUp className="w-6 h-6" />,
+      stats: "40% better planning"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 20+ programming languages and frameworks",
-      icon: <Code className="w-6 h-6" />,
-      stats: "20+ languages"
+      title: "Supplier Performance Tracking",
+      description: "Monitor supplier reliability and optimize procurement based on performance data",
+      icon: <Truck className="w-6 h-6" />,
+      stats: "25% faster delivery"
     },
     {
-      title: "Integration Ready",
-      description: "Seamlessly integrate with GitHub, GitLab, and other development tools",
-      icon: <GitBranch className="w-6 h-6" />,
-      stats: "10+ integrations"
+      title: "Real-Time Inventory Tracking",
+      description: "Monitor inventory levels across all channels in real-time with automated updates",
+      icon: <Activity className="w-6 h-6" />,
+      stats: "Real-time visibility"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Developer",
-      price: "$49",
+      name: "Small Business",
+      price: "$79",
       period: "/month",
-      description: "Perfect for individual developers and small teams",
+      description: "Perfect for small retailers and e-commerce stores",
       features: [
-        "Up to 10,000 lines/month",
-        "Basic code analysis",
-        "Security scanning",
+        "Up to 1,000 SKUs",
+        "Basic demand forecasting",
+        "Reorder point automation",
         "Email support",
-        "Basic reports",
+        "Basic reporting",
         "30-day data retention"
       ],
       popular: false,
       cta: "Start Free Trial"
     },
     {
-      name: "Team",
+      name: "Professional",
       price: "$199",
       period: "/month",
-      description: "Ideal for growing development teams",
+      description: "Ideal for growing businesses with complex inventory",
       features: [
-        "Up to 100,000 lines/month",
-        "Advanced AI analysis",
-        "Performance optimization",
+        "Up to 10,000 SKUs",
+        "Advanced AI forecasting",
+        "Multi-location support",
         "Priority support",
         "Advanced analytics",
         "1-year data retention",
         "API access",
-        "Team collaboration"
+        "Supplier tracking"
       ],
       popular: true,
       cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$599",
+      price: "$499",
       period: "/month",
-      description: "For large organizations with complex codebases",
+      description: "For large organizations with complex supply chains",
       features: [
-        "Unlimited lines",
+        "Unlimited SKUs",
         "Custom AI models",
         "Advanced integrations",
         "24/7 phone support",
@@ -145,26 +142,26 @@ const ZionAICodeReviewerPage = () => {
 
   const testimonials = [
     {
-      name: "David Kim",
-      company: "Tech Startup",
-      role: "Lead Developer",
-      content: "Zion AI Code Reviewer has caught bugs that would have taken us days to find manually. It's like having a senior developer reviewing every line of code.",
+      name: "Alex Thompson",
+      company: "E-commerce Retailer",
+      role: "Operations Manager",
+      content: "Zion Smart Inventory Optimizer has reduced our inventory costs by 35% while improving stock availability. The AI forecasting is incredibly accurate!",
       rating: 5,
-      avatar: "DK"
+      avatar: "AT"
     },
     {
       name: "Sarah Chen",
-      company: "Software Company",
-      role: "Engineering Manager",
-      content: "The security vulnerability detection is incredible. We've prevented several potential security issues before they made it to production.",
+      company: "Manufacturing Company",
+      role: "Supply Chain Director",
+      content: "The multi-location optimization feature has been a game-changer. We've eliminated stockouts across all our warehouses and reduced carrying costs significantly.",
       rating: 5,
       avatar: "SC"
     },
     {
       name: "Michael Rodriguez",
-      company: "E-commerce Platform",
-      role: "Senior Engineer",
-      content: "The performance optimization suggestions have helped us improve our application speed by 40%. The AI really understands our codebase.",
+      company: "Fashion Retailer",
+      role: "Inventory Manager",
+      content: "The seasonal trend analysis helped us prepare for peak seasons perfectly. We had 40% less excess inventory and 60% fewer stockouts during the holiday season.",
       rating: 5,
       avatar: "MR"
     }
@@ -172,66 +169,66 @@ const ZionAICodeReviewerPage = () => {
 
   const benefits = [
     {
-      title: "Bug Prevention",
-      description: "Catch bugs before they reach production",
-      icon: <Bug className="w-8 h-8" />,
-      stat: "90% fewer bugs"
+      title: "Cost Reduction",
+      description: "Reduce inventory carrying costs and eliminate waste",
+      icon: <DollarSign className="w-8 h-8" />,
+      stat: "35% cost reduction"
     },
     {
-      title: "Security",
-      description: "Identify security vulnerabilities automatically",
-      icon: <Shield className="w-8 h-8" />,
-      stat: "Zero vulnerabilities"
+      title: "Stock Availability",
+      description: "Ensure products are always available when customers need them",
+      icon: <Package className="w-8 h-8" />,
+      stat: "99.5% availability"
     },
     {
-      title: "Code Quality",
-      description: "Improve code maintainability and readability",
-      icon: <Code className="w-8 h-8" />,
-      stat: "40% better quality"
+      title: "Cash Flow",
+      description: "Optimize cash flow by reducing excess inventory",
+      icon: <TrendingUp className="w-8 h-8" />,
+      stat: "25% better cash flow"
     },
     {
-      title: "Time Savings",
-      description: "Reduce code review time significantly",
-      icon: <Clock className="w-8 h-8" />,
-      stat: "70% time saved"
+      title: "Efficiency",
+      description: "Streamline operations with automated inventory management",
+      icon: <Zap className="w-8 h-8" />,
+      stat: "50% time saved"
     }
   ];
 
   const metrics = [
-    { label: "Bug Detection", value: "95%", improvement: "+25%" },
-    { label: "Review Time", value: "5 min", improvement: "-70%" },
-    { label: "Code Quality", value: "8.5/10", improvement: "+2.1" },
-    { label: "Security Score", value: "A+", improvement: "+2 grades" }
+    { label: "Inventory Turnover", value: "8.5x", improvement: "+2.3x" },
+    { label: "Stockout Rate", value: "0.5%", improvement: "-75%" },
+    { label: "Carrying Costs", value: "$45K", improvement: "-35%" },
+    { label: "Forecast Accuracy", value: "95%", improvement: "+20%" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Code Reviewer - Automated Code Analysis & Review | Zion Tech Group"
-        description="Automatically review code with AI. Detect bugs, security vulnerabilities, and optimize performance. Support for 20+ languages. Perfect for development teams. Start free trial today!"
-        keywords="AI code review, automated code analysis, code quality, security scanning, bug detection, code optimization, development tools, code metrics"
-        canonical="https://ziontechgroup.com/zion-ai-code-reviewer"
+        title="Zion Smart Inventory Optimizer - AI-Powered Inventory Management | Zion Tech Group"
+        description="Optimize inventory with AI-powered forecasting and automation. Reduce costs, prevent stockouts, and improve cash flow. Advanced inventory intelligence for modern businesses."
+        keywords="AI inventory management, inventory optimization, demand forecasting, supply chain optimization, inventory automation, stock management, warehouse optimization"
+        canonical="https://ziontechgroup.com/zion-smart-inventory-optimizer"
       />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer className="text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Code className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI Code Intelligence Platform</span>
+            <Package className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI Inventory Optimization Platform</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI-Powered Code Review
+              Optimize Your Inventory
             </span>
             <br />
-            <span className="text-white">for Better Software</span>
+            <span className="text-white">with AI Intelligence</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Automatically review code for bugs, security vulnerabilities, and performance issues. 
-            Support for 20+ programming languages with 99% accuracy and real-time analysis.
+            Reduce inventory costs by 35%, prevent stockouts, and improve cash flow with AI-powered 
+            demand forecasting and automated inventory optimization.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -239,7 +236,7 @@ const ZionAICodeReviewerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              icon={<Package className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -256,16 +253,16 @@ const ZionAICodeReviewerPage = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-              <div className="text-gray-300 text-sm">Accuracy Rate</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">35%</div>
+              <div className="text-gray-300 text-sm">Cost Reduction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">20+</div>
-              <div className="text-gray-300 text-sm">Languages</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+              <div className="text-gray-300 text-sm">Forecast Accuracy</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400 mb-2">90%</div>
-              <div className="text-gray-300 text-sm">Fewer Bugs</div>
+              <div className="text-3xl font-bold text-pink-400 mb-2">99.5%</div>
+              <div className="text-gray-300 text-sm">Stock Availability</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">4.9/5</div>
@@ -280,10 +277,10 @@ const ZionAICodeReviewerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced Code Intelligence
+              Advanced Inventory Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Powerful AI-driven features to improve your code quality
+              Powerful AI-driven features to optimize your inventory management
             </p>
           </div>
           
@@ -314,7 +311,7 @@ const ZionAICodeReviewerPage = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your development process with measurable results
+              Transform your inventory management with measurable results
             </p>
           </div>
           
@@ -341,7 +338,7 @@ const ZionAICodeReviewerPage = () => {
               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the impact of AI-powered code review on development teams
+              See the impact of AI-powered inventory optimization
             </p>
           </div>
           
@@ -368,7 +365,7 @@ const ZionAICodeReviewerPage = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Scale your code review as your team grows
+              Scale your inventory optimization as your business grows
             </p>
           </div>
           
@@ -427,10 +424,10 @@ const ZionAICodeReviewerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Trusted by Development Teams
+              Trusted by Supply Chain Teams
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how teams are improving code quality with AI
+              See how businesses are optimizing their inventory with AI
             </p>
           </div>
           
@@ -462,11 +459,11 @@ const ZionAICodeReviewerPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <ResponsiveContainer className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Improve Code Quality?
+            Ready to Optimize Your Inventory?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of development teams who are already using Zion AI Code Reviewer 
-            to build better software.
+            Join thousands of businesses who are already using Zion Smart Inventory Optimizer 
+            to reduce costs and improve efficiency.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -474,7 +471,7 @@ const ZionAICodeReviewerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              icon={<Package className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -493,4 +490,4 @@ const ZionAICodeReviewerPage = () => {
   );
 };
 
-export default ZionAICodeReviewerPage;
+export default ZionSmartInventoryOptimizerPage;

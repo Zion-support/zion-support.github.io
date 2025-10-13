@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Code, 
+  Receipt, 
   BarChart3, 
   TrendingUp, 
   Sparkles, 
@@ -38,66 +38,63 @@ import {
   DollarSign,
   TrendingDown,
   FileText,
-  Calculator,
-  Bug,
-  GitBranch,
-  Terminal
+  Calculator
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAICodeReviewerPage = () => {
+const ZionSmartExpenseCategorizerPage = () => {
   const features = [
     {
-      title: "AI-Powered Code Analysis",
-      description: "Automatically review code for bugs, security vulnerabilities, and best practices",
+      title: "AI-Powered Categorization",
+      description: "Automatically categorize expenses with 95% accuracy using machine learning",
       icon: <Brain className="w-6 h-6" />,
-      stats: "99% accuracy"
+      stats: "95% accuracy"
     },
     {
-      title: "Security Vulnerability Detection",
-      description: "Identify security issues and potential exploits in your codebase",
-      icon: <Shield className="w-6 h-6" />,
-      stats: "Zero false positives"
+      title: "Smart Receipt Processing",
+      description: "Extract data from receipts and invoices automatically using OCR technology",
+      icon: <Receipt className="w-6 h-6" />,
+      stats: "OCR processing"
     },
     {
-      title: "Performance Optimization",
-      description: "Suggest performance improvements and optimization opportunities",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "30% faster code"
+      title: "Multi-Currency Support",
+      description: "Handle expenses in multiple currencies with real-time exchange rates",
+      icon: <Globe className="w-6 h-6" />,
+      stats: "150+ currencies"
     },
     {
-      title: "Code Quality Metrics",
-      description: "Track code quality, maintainability, and technical debt over time",
-      icon: <BarChart3 className="w-6 h-6" />,
-      stats: "Real-time metrics"
-    },
-    {
-      title: "Multi-Language Support",
-      description: "Support for 20+ programming languages and frameworks",
-      icon: <Code className="w-6 h-6" />,
-      stats: "20+ languages"
+      title: "Custom Categories",
+      description: "Create and train custom expense categories for your business needs",
+      icon: <Settings className="w-6 h-6" />,
+      stats: "Unlimited categories"
     },
     {
       title: "Integration Ready",
-      description: "Seamlessly integrate with GitHub, GitLab, and other development tools",
-      icon: <GitBranch className="w-6 h-6" />,
-      stats: "10+ integrations"
+      description: "Connect with accounting software, banks, and financial platforms",
+      icon: <Shield className="w-6 h-6" />,
+      stats: "50+ integrations"
+    },
+    {
+      title: "Expense Analytics",
+      description: "Get detailed insights and reports on your spending patterns",
+      icon: <BarChart3 className="w-6 h-6" />,
+      stats: "Real-time analytics"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Developer",
-      price: "$49",
+      name: "Personal",
+      price: "$29",
       period: "/month",
-      description: "Perfect for individual developers and small teams",
+      description: "Perfect for individuals and freelancers",
       features: [
-        "Up to 10,000 lines/month",
-        "Basic code analysis",
-        "Security scanning",
+        "Up to 500 expenses/month",
+        "Basic categorization",
+        "Receipt scanning",
         "Email support",
         "Basic reports",
         "30-day data retention"
@@ -106,30 +103,30 @@ const ZionAICodeReviewerPage = () => {
       cta: "Start Free Trial"
     },
     {
-      name: "Team",
-      price: "$199",
+      name: "Business",
+      price: "$99",
       period: "/month",
-      description: "Ideal for growing development teams",
+      description: "Ideal for small to medium businesses",
       features: [
-        "Up to 100,000 lines/month",
-        "Advanced AI analysis",
-        "Performance optimization",
+        "Up to 5,000 expenses/month",
+        "Advanced AI categorization",
+        "Multi-currency support",
         "Priority support",
         "Advanced analytics",
         "1-year data retention",
         "API access",
-        "Team collaboration"
+        "Custom categories"
       ],
       popular: true,
       cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$599",
+      price: "$299",
       period: "/month",
-      description: "For large organizations with complex codebases",
+      description: "For large organizations with high expense volume",
       features: [
-        "Unlimited lines",
+        "Unlimited expenses",
         "Custom AI models",
         "Advanced integrations",
         "24/7 phone support",
@@ -145,26 +142,26 @@ const ZionAICodeReviewerPage = () => {
 
   const testimonials = [
     {
-      name: "David Kim",
-      company: "Tech Startup",
-      role: "Lead Developer",
-      content: "Zion AI Code Reviewer has caught bugs that would have taken us days to find manually. It's like having a senior developer reviewing every line of code.",
+      name: "Alex Thompson",
+      company: "Small Business Owner",
+      role: "Founder",
+      content: "Zion Smart Expense Categorizer has saved me hours every week. The AI categorization is incredibly accurate and the receipt scanning feature is a game-changer.",
       rating: 5,
-      avatar: "DK"
+      avatar: "AT"
     },
     {
       name: "Sarah Chen",
-      company: "Software Company",
-      role: "Engineering Manager",
-      content: "The security vulnerability detection is incredible. We've prevented several potential security issues before they made it to production.",
+      company: "Accounting Firm",
+      role: "Senior Accountant",
+      content: "This tool has revolutionized how we handle client expenses. The multi-currency support and custom categories make it perfect for our international clients.",
       rating: 5,
       avatar: "SC"
     },
     {
       name: "Michael Rodriguez",
-      company: "E-commerce Platform",
-      role: "Senior Engineer",
-      content: "The performance optimization suggestions have helped us improve our application speed by 40%. The AI really understands our codebase.",
+      company: "Freelance Consultant",
+      role: "Independent Contractor",
+      content: "As a freelancer, tracking expenses is crucial for tax purposes. This AI tool makes it effortless and ensures I never miss a deductible expense.",
       rating: 5,
       avatar: "MR"
     }
@@ -172,66 +169,66 @@ const ZionAICodeReviewerPage = () => {
 
   const benefits = [
     {
-      title: "Bug Prevention",
-      description: "Catch bugs before they reach production",
-      icon: <Bug className="w-8 h-8" />,
-      stat: "90% fewer bugs"
-    },
-    {
-      title: "Security",
-      description: "Identify security vulnerabilities automatically",
-      icon: <Shield className="w-8 h-8" />,
-      stat: "Zero vulnerabilities"
-    },
-    {
-      title: "Code Quality",
-      description: "Improve code maintainability and readability",
-      icon: <Code className="w-8 h-8" />,
-      stat: "40% better quality"
-    },
-    {
       title: "Time Savings",
-      description: "Reduce code review time significantly",
+      description: "Reduce expense processing time by 80% with AI automation",
       icon: <Clock className="w-8 h-8" />,
-      stat: "70% time saved"
+      stat: "80% time saved"
+    },
+    {
+      title: "Accuracy",
+      description: "Eliminate human errors in expense categorization",
+      icon: <Target className="w-8 h-8" />,
+      stat: "95% accuracy"
+    },
+    {
+      title: "Cost Reduction",
+      description: "Reduce accounting costs and improve efficiency",
+      icon: <DollarSign className="w-8 h-8" />,
+      stat: "60% cost reduction"
+    },
+    {
+      title: "Compliance",
+      description: "Ensure tax compliance with proper expense categorization",
+      icon: <Shield className="w-8 h-8" />,
+      stat: "100% compliant"
     }
   ];
 
   const metrics = [
-    { label: "Bug Detection", value: "95%", improvement: "+25%" },
-    { label: "Review Time", value: "5 min", improvement: "-70%" },
-    { label: "Code Quality", value: "8.5/10", improvement: "+2.1" },
-    { label: "Security Score", value: "A+", improvement: "+2 grades" }
+    { label: "Processing Time", value: "2 min", improvement: "-80%" },
+    { label: "Categorization Accuracy", value: "95%", improvement: "+25%" },
+    { label: "Cost Savings", value: "$2,400", improvement: "+60%" },
+    { label: "User Satisfaction", value: "4.8/5", improvement: "+0.9" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Code Reviewer - Automated Code Analysis & Review | Zion Tech Group"
-        description="Automatically review code with AI. Detect bugs, security vulnerabilities, and optimize performance. Support for 20+ languages. Perfect for development teams. Start free trial today!"
-        keywords="AI code review, automated code analysis, code quality, security scanning, bug detection, code optimization, development tools, code metrics"
-        canonical="https://ziontechgroup.com/zion-ai-code-reviewer"
+        title="Zion Smart Expense Categorizer - AI-Powered Expense Management | Zion Tech Group"
+        description="Automatically categorize expenses with AI. Smart receipt processing, multi-currency support, and detailed analytics. Perfect for businesses and individuals. Start free trial today!"
+        keywords="AI expense categorization, expense management, receipt scanning, expense tracking, financial automation, accounting software, expense analytics"
+        canonical="https://ziontechgroup.com/zion-smart-expense-categorizer"
       />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer className="text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Code className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI Code Intelligence Platform</span>
+            <Receipt className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI Expense Management Platform</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI-Powered Code Review
+              Smart Expense Categorization
             </span>
             <br />
-            <span className="text-white">for Better Software</span>
+            <span className="text-white">with AI Intelligence</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Automatically review code for bugs, security vulnerabilities, and performance issues. 
-            Support for 20+ programming languages with 99% accuracy and real-time analysis.
+            Automatically categorize expenses with 95% accuracy using AI. Process receipts, 
+            handle multi-currency transactions, and get detailed analytics on your spending patterns.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -239,7 +236,7 @@ const ZionAICodeReviewerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              icon={<Receipt className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -256,19 +253,19 @@ const ZionAICodeReviewerPage = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
               <div className="text-gray-300 text-sm">Accuracy Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">20+</div>
-              <div className="text-gray-300 text-sm">Languages</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
+              <div className="text-gray-300 text-sm">Time Saved</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400 mb-2">90%</div>
-              <div className="text-gray-300 text-sm">Fewer Bugs</div>
+              <div className="text-3xl font-bold text-pink-400 mb-2">150+</div>
+              <div className="text-gray-300 text-sm">Currencies</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">4.9/5</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">4.8/5</div>
               <div className="text-gray-300 text-sm">User Rating</div>
             </div>
           </div>
@@ -280,10 +277,10 @@ const ZionAICodeReviewerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced Code Intelligence
+              Advanced Expense Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Powerful AI-driven features to improve your code quality
+              Powerful AI-driven features to automate expense management
             </p>
           </div>
           
@@ -314,7 +311,7 @@ const ZionAICodeReviewerPage = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your development process with measurable results
+              Transform your expense management with measurable results
             </p>
           </div>
           
@@ -341,7 +338,7 @@ const ZionAICodeReviewerPage = () => {
               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the impact of AI-powered code review on development teams
+              See the impact of AI-powered expense categorization
             </p>
           </div>
           
@@ -368,7 +365,7 @@ const ZionAICodeReviewerPage = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Scale your code review as your team grows
+              Scale your expense management as your business grows
             </p>
           </div>
           
@@ -427,10 +424,10 @@ const ZionAICodeReviewerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Trusted by Development Teams
+              Trusted by Finance Teams
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how teams are improving code quality with AI
+              See how businesses are automating expense management with AI
             </p>
           </div>
           
@@ -462,11 +459,11 @@ const ZionAICodeReviewerPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <ResponsiveContainer className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Improve Code Quality?
+            Ready to Automate Expense Management?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of development teams who are already using Zion AI Code Reviewer 
-            to build better software.
+            Join thousands of businesses who are already using Zion Smart Expense Categorizer 
+            to streamline their financial processes.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -474,7 +471,7 @@ const ZionAICodeReviewerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              icon={<Receipt className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -493,4 +490,4 @@ const ZionAICodeReviewerPage = () => {
   );
 };
 
-export default ZionAICodeReviewerPage;
+export default ZionSmartExpenseCategorizerPage;

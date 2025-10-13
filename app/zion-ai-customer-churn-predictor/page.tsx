@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Code, 
+  TrendingDown, 
   BarChart3, 
   TrendingUp, 
   Sparkles, 
@@ -36,68 +36,73 @@ import {
   AlertTriangle,
   CheckCircle2,
   DollarSign,
-  TrendingDown,
+  Users,
   FileText,
   Calculator,
   Bug,
   GitBranch,
-  Terminal
+  Terminal,
+  Camera,
+  Image,
+  Video,
+  Cpu,
+  HardDrive
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAICodeReviewerPage = () => {
+const ZionAICustomerChurnPredictorPage = () => {
   const features = [
     {
-      title: "AI-Powered Code Analysis",
-      description: "Automatically review code for bugs, security vulnerabilities, and best practices",
+      title: "AI Churn Prediction",
+      description: "Predict customer churn with 95% accuracy using advanced machine learning",
       icon: <Brain className="w-6 h-6" />,
-      stats: "99% accuracy"
+      stats: "95% accuracy"
     },
     {
-      title: "Security Vulnerability Detection",
-      description: "Identify security issues and potential exploits in your codebase",
-      icon: <Shield className="w-6 h-6" />,
-      stats: "Zero false positives"
+      title: "Real-Time Alerts",
+      description: "Get instant alerts when customers show churn risk indicators",
+      icon: <Bell className="w-6 h-6" />,
+      stats: "Real-time alerts"
     },
     {
-      title: "Performance Optimization",
-      description: "Suggest performance improvements and optimization opportunities",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "30% faster code"
+      title: "Behavioral Analysis",
+      description: "Analyze customer behavior patterns to identify churn signals",
+      icon: <Activity className="w-6 h-6" />,
+      stats: "Pattern recognition"
     },
     {
-      title: "Code Quality Metrics",
-      description: "Track code quality, maintainability, and technical debt over time",
+      title: "Retention Strategies",
+      description: "Get AI-powered recommendations for customer retention campaigns",
+      icon: <Target className="w-6 h-6" />,
+      stats: "Personalized strategies"
+    },
+    {
+      title: "Risk Scoring",
+      description: "Assign churn risk scores to customers for prioritized action",
+      icon: <AlertTriangle className="w-6 h-6" />,
+      stats: "Risk scoring"
+    },
+    {
+      title: "Success Tracking",
+      description: "Track the effectiveness of retention efforts and campaigns",
       icon: <BarChart3 className="w-6 h-6" />,
-      stats: "Real-time metrics"
-    },
-    {
-      title: "Multi-Language Support",
-      description: "Support for 20+ programming languages and frameworks",
-      icon: <Code className="w-6 h-6" />,
-      stats: "20+ languages"
-    },
-    {
-      title: "Integration Ready",
-      description: "Seamlessly integrate with GitHub, GitLab, and other development tools",
-      icon: <GitBranch className="w-6 h-6" />,
-      stats: "10+ integrations"
+      stats: "Campaign analytics"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Developer",
-      price: "$49",
+      name: "Starter",
+      price: "$99",
       period: "/month",
-      description: "Perfect for individual developers and small teams",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 10,000 lines/month",
-        "Basic code analysis",
-        "Security scanning",
+        "Up to 1,000 customers",
+        "Basic churn prediction",
+        "Email alerts",
         "Email support",
         "Basic reports",
         "30-day data retention"
@@ -106,14 +111,14 @@ const ZionAICodeReviewerPage = () => {
       cta: "Start Free Trial"
     },
     {
-      name: "Team",
-      price: "$199",
+      name: "Professional",
+      price: "$299",
       period: "/month",
-      description: "Ideal for growing development teams",
+      description: "Ideal for growing businesses and teams",
       features: [
-        "Up to 100,000 lines/month",
-        "Advanced AI analysis",
-        "Performance optimization",
+        "Up to 10,000 customers",
+        "Advanced AI prediction",
+        "Real-time alerts",
         "Priority support",
         "Advanced analytics",
         "1-year data retention",
@@ -125,11 +130,11 @@ const ZionAICodeReviewerPage = () => {
     },
     {
       name: "Enterprise",
-      price: "$599",
+      price: "$799",
       period: "/month",
-      description: "For large organizations with complex codebases",
+      description: "For large organizations with high customer volume",
       features: [
-        "Unlimited lines",
+        "Unlimited customers",
         "Custom AI models",
         "Advanced integrations",
         "24/7 phone support",
@@ -145,26 +150,26 @@ const ZionAICodeReviewerPage = () => {
 
   const testimonials = [
     {
-      name: "David Kim",
-      company: "Tech Startup",
-      role: "Lead Developer",
-      content: "Zion AI Code Reviewer has caught bugs that would have taken us days to find manually. It's like having a senior developer reviewing every line of code.",
+      name: "Lisa Chen",
+      company: "SaaS Company",
+      role: "Head of Customer Success",
+      content: "Zion AI Customer Churn Predictor has helped us reduce churn by 40% and increase customer lifetime value by 25%. The predictions are incredibly accurate.",
       rating: 5,
-      avatar: "DK"
+      avatar: "LC"
     },
     {
-      name: "Sarah Chen",
-      company: "Software Company",
-      role: "Engineering Manager",
-      content: "The security vulnerability detection is incredible. We've prevented several potential security issues before they made it to production.",
-      rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "Michael Rodriguez",
+      name: "David Park",
       company: "E-commerce Platform",
-      role: "Senior Engineer",
-      content: "The performance optimization suggestions have helped us improve our application speed by 40%. The AI really understands our codebase.",
+      role: "VP of Growth",
+      content: "The real-time alerts have been a game-changer. We can now intervene with at-risk customers before they churn, leading to much better retention rates.",
+      rating: 5,
+      avatar: "DP"
+    },
+    {
+      name: "Maria Rodriguez",
+      company: "Subscription Service",
+      role: "Customer Success Manager",
+      content: "The behavioral analysis feature is amazing. It helps us understand exactly why customers are at risk and what actions we can take to retain them.",
       rating: 5,
       avatar: "MR"
     }
@@ -172,66 +177,66 @@ const ZionAICodeReviewerPage = () => {
 
   const benefits = [
     {
-      title: "Bug Prevention",
-      description: "Catch bugs before they reach production",
-      icon: <Bug className="w-8 h-8" />,
-      stat: "90% fewer bugs"
+      title: "Churn Reduction",
+      description: "Reduce customer churn by 40% with proactive intervention",
+      icon: <TrendingDown className="w-8 h-8" />,
+      stat: "40% less churn"
     },
     {
-      title: "Security",
-      description: "Identify security vulnerabilities automatically",
-      icon: <Shield className="w-8 h-8" />,
-      stat: "Zero vulnerabilities"
+      title: "Revenue Protection",
+      description: "Protect revenue by retaining high-value customers",
+      icon: <DollarSign className="w-8 h-8" />,
+      stat: "25% more revenue"
     },
     {
-      title: "Code Quality",
-      description: "Improve code maintainability and readability",
-      icon: <Code className="w-8 h-8" />,
-      stat: "40% better quality"
+      title: "Customer Lifetime Value",
+      description: "Increase customer lifetime value through better retention",
+      icon: <Users className="w-8 h-8" />,
+      stat: "30% higher LTV"
     },
     {
-      title: "Time Savings",
-      description: "Reduce code review time significantly",
-      icon: <Clock className="w-8 h-8" />,
-      stat: "70% time saved"
+      title: "Retention Efficiency",
+      description: "Improve retention campaign effectiveness with AI insights",
+      icon: <Target className="w-8 h-8" />,
+      stat: "60% better campaigns"
     }
   ];
 
   const metrics = [
-    { label: "Bug Detection", value: "95%", improvement: "+25%" },
-    { label: "Review Time", value: "5 min", improvement: "-70%" },
-    { label: "Code Quality", value: "8.5/10", improvement: "+2.1" },
-    { label: "Security Score", value: "A+", improvement: "+2 grades" }
+    { label: "Churn Rate", value: "3.2%", improvement: "-40%" },
+    { label: "Prediction Accuracy", value: "95%", improvement: "+25%" },
+    { label: "Customer LTV", value: "$2,400", improvement: "+30%" },
+    { label: "Retention Rate", value: "96.8%", improvement: "+15%" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Code Reviewer - Automated Code Analysis & Review | Zion Tech Group"
-        description="Automatically review code with AI. Detect bugs, security vulnerabilities, and optimize performance. Support for 20+ languages. Perfect for development teams. Start free trial today!"
-        keywords="AI code review, automated code analysis, code quality, security scanning, bug detection, code optimization, development tools, code metrics"
-        canonical="https://ziontechgroup.com/zion-ai-code-reviewer"
+        title="Zion AI Customer Churn Predictor - Predict & Prevent Customer Churn | Zion Tech Group"
+        description="Predict customer churn with 95% accuracy using AI. Real-time alerts, behavioral analysis, and retention strategies. Perfect for customer success teams. Start free trial today!"
+        keywords="AI churn prediction, customer churn, churn prevention, customer retention, behavioral analysis, churn analytics, customer success, retention strategies"
+        canonical="https://ziontechgroup.com/zion-ai-customer-churn-predictor"
       />
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer className="text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Code className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI Code Intelligence Platform</span>
+            <TrendingDown className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI Churn Prediction Platform</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI-Powered Code Review
+              Predict & Prevent
             </span>
             <br />
-            <span className="text-white">for Better Software</span>
+            <span className="text-white">Customer Churn</span>
           </h1>
           
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Automatically review code for bugs, security vulnerabilities, and performance issues. 
-            Support for 20+ programming languages with 99% accuracy and real-time analysis.
+            Predict customer churn with 95% accuracy using AI. Get real-time alerts, 
+            behavioral insights, and personalized retention strategies to keep your customers.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -239,7 +244,7 @@ const ZionAICodeReviewerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              icon={<TrendingDown className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -256,16 +261,16 @@ const ZionAICodeReviewerPage = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-              <div className="text-gray-300 text-sm">Accuracy Rate</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
+              <div className="text-gray-300 text-sm">Prediction Accuracy</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">20+</div>
-              <div className="text-gray-300 text-sm">Languages</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
+              <div className="text-gray-300 text-sm">Churn Reduction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400 mb-2">90%</div>
-              <div className="text-gray-300 text-sm">Fewer Bugs</div>
+              <div className="text-3xl font-bold text-pink-400 mb-2">25%</div>
+              <div className="text-gray-300 text-sm">Revenue Increase</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">4.9/5</div>
@@ -280,10 +285,10 @@ const ZionAICodeReviewerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced Code Intelligence
+              Advanced Churn Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Powerful AI-driven features to improve your code quality
+              Powerful AI-driven features to predict and prevent customer churn
             </p>
           </div>
           
@@ -314,7 +319,7 @@ const ZionAICodeReviewerPage = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your development process with measurable results
+              Transform your customer retention with measurable results
             </p>
           </div>
           
@@ -341,7 +346,7 @@ const ZionAICodeReviewerPage = () => {
               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See the impact of AI-powered code review on development teams
+              See the impact of AI-powered churn prediction on customer retention
             </p>
           </div>
           
@@ -368,7 +373,7 @@ const ZionAICodeReviewerPage = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Scale your code review as your team grows
+              Scale your churn prediction as your customer base grows
             </p>
           </div>
           
@@ -427,10 +432,10 @@ const ZionAICodeReviewerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Trusted by Development Teams
+              Trusted by Customer Success Teams
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how teams are improving code quality with AI
+              See how teams are improving retention with AI churn prediction
             </p>
           </div>
           
@@ -462,11 +467,11 @@ const ZionAICodeReviewerPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <ResponsiveContainer className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Improve Code Quality?
+            Ready to Predict & Prevent Churn?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join thousands of development teams who are already using Zion AI Code Reviewer 
-            to build better software.
+            Join thousands of customer success teams who are already using Zion AI Customer Churn Predictor 
+            to improve retention and grow revenue.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -474,7 +479,7 @@ const ZionAICodeReviewerPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Code className="w-5 h-5" />}
+              icon={<TrendingDown className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -493,4 +498,4 @@ const ZionAICodeReviewerPage = () => {
   );
 };
 
-export default ZionAICodeReviewerPage;
+export default ZionAICustomerChurnPredictorPage;
