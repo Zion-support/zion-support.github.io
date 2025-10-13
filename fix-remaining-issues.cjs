@@ -1,100 +1,121 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const glob = require('glob');
 
-// Function to recursively find all .tsx and .ts files
-function findFiles(dir, extensions = ['.tsx', '.ts']) {
-  let results = [];
-  const list = fs.readdirSync(dir);
+// Function to clean merge conflict markers
+function cleanMergeConflicts(content) {
+  // Remove merge conflict markers
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
   
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat && stat.isDirectory()) {
-      results = results.concat(findFiles(filePath, extensions));
-    } else if (extensions.some(ext => file.endsWith(ext))) {
-      results.push(filePath);
-    }
-  });
+  // Clean up any remaining conflict markers
+  content = content.replace(/^<<<<<<< HEAD$/gm, '');
+  content = content.replace(/^=======$/gm, '');
+  content = content.replace(/^>>>>>>> [^\n]+$/gm, '');
   
-  return results;
+  return content;
 }
 
-// Function to fix remaining issues
-function fixRemainingIssues(filePath) {
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  // Fix unterminated string literals
+  content = content.replace(/import\s+React\s+from\s+'react';'[^']*$/gm, "import React from 'react';");
+  content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+'[^']*$/gm, "import { $1 } from 'lucide-react';");
+  
+  // Fix extra quotes and semicolons
+  content = content.replace(/';'$/gm, "';");
+  content = content.replace(/';$/gm, "';");
+  content = content.replace(/';$/gm, "';");
+  
+  // Fix JSX syntax
+  content = content.replace(/<div className="App">;$/gm, '<div className="App">');
+  content = content.replace(/<h1>Test App<\/h1>;$/gm, '<h1>Test App</h1>');
+  content = content.replace(/<\/div>;$/gm, '</div>');
+  
+  // Fix missing closing parentheses
+  content = content.replace(/return\s*\(\s*<div[^>]*>;$/gm, (match) => {
+    return match.replace(';', '');
+  });
+  
+  // Fix unterminated strings in JSX
+  content = content.replace(/className="([^"]*)$/gm, (match, p1) => {
+    if (!p1.endsWith('"')) {
+      return `className="${p1}"`;
+    }
+    return match;
+  });
+  
+  return content;
+}
+
+// Function to fix a single file
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let originalContent = content;
     
-    // Fix merge conflict markers
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      const lines = content.split('\n');
-      const cleanedLines = [];
-      let inConflict = false;
-      
-      for (const line of lines) {
-        if (line.includes('<<<<<<< HEAD') || line.includes('=======') || line.includes('>>>>>>>')) {
-          inConflict = !inConflict;
-          continue;
-        }
-        if (!inConflict) {
-          cleanedLines.push(line);
-        }
-      }
-      
-      content = cleanedLines.join('\n');
-      modified = true;
+    // Apply fixes
+    content = cleanMergeConflicts(content);
+    content = fixSyntaxErrors(content);
+    
+    // Additional specific fixes
+    if (filePath.includes('App.tsx')) {
+      // Clean up App.tsx specifically
+      content = content.replace(/import React, { Suspense, lazy } from 'react';\s*<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, 
+        "import React, { Suspense } from 'react';");
+      content = content.replace(/import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';\s*import { HelmetProvider } from 'react-helmet-async';\s*<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g,
+        "import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';\nimport { HelmetProvider } from 'react-helmet-async';");
     }
     
-    // Fix origin/ references
-    if (content.includes('origin/')) {
-      content = content.replace(/origin\/[a-zA-Z0-9-]+/g, '');
-      modified = true;
-    }
-    
-    // Remove metadata export from client components
-    if (content.includes("'use client'") && content.includes('export const metadata')) {
-      // Remove the entire metadata export
-      content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '');
-      modified = true;
-    }
-    
-    // Fix duplicate export default issues
-    const exportDefaultMatches = content.match(/export default/g);
-    if (exportDefaultMatches && exportDefaultMatches.length > 1) {
-      // Keep only the first export default
-      const lines = content.split('\n');
-      let foundFirst = false;
-      for (let i = lines.length - 1; i >= 0; i--) {
-        if (lines[i].includes('export default') && !lines[i].includes('function') && !lines[i].includes('const')) {
-          if (foundFirst) {
-            lines.splice(i, 1);
-            modified = true;
-          } else {
-            foundFirst = true;
-          }
-        }
-      }
-      content = lines.join('\n');
-    }
-    
-    if (modified) {
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
+      return true;
     }
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const files = findFiles(appDir);
+function main() {
+  const patterns = [
+    '**/*.tsx',
+    '**/*.ts',
+    '*.tsx',
+    '*.ts'
+  ];
+  
+  let totalFixed = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, { 
+      ignore: [
+        'node_modules/**',
+        'dist/**',
+        'app-broken/**',
+        'app-disabled/**',
+        '**/*.test.*',
+        '**/*.spec.*'
+      ]
+    });
+    
+    files.forEach(file => {
+      if (fixFile(file)) {
+        totalFixed++;
+      }
+    });
+  });
+  
+  console.log(`\nFixed ${totalFixed} files`);
+}
 
-console.log(`Found ${files.length} files to check...`);
+if (require.main === module) {
+  main();
+}
 
-files.forEach(file => {
-  fixRemainingIssues(file);
-});
-
-console.log('Remaining issues fixes completed!');
+module.exports = { fixFile, cleanMergeConflicts, fixSyntaxErrors };

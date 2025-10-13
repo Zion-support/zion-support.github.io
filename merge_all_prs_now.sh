@@ -21,9 +21,9 @@ merge_branch() {
     local branch=$1
     local pr_number=$2
     
-    echo "================================"
+    echo "===="
     echo "Merging PR #$pr_number: $branch"
-    echo "================================"
+    echo "===="
     
     # Try to merge
     if git merge --no-ff origin/$branch -m "Merge PR #$pr_number: $branch"; then
@@ -57,9 +57,9 @@ merge_branch "cursor/fix-errors-and-merge-to-main-9733" "26206"
 merge_branch "cursor/fix-errors-and-merge-to-main-872b" "26207"
 
 echo ""
-echo "================================"
+echo "===="
 echo "✅ All PRs merged successfully!"
-echo "================================"
+echo "===="
 echo ""
 echo "Current status:"
 git log --oneline -10

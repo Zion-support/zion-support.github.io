@@ -1,227 +1,284 @@
-const fs = require('fs');
-const path = require('path');
-
-console.log('Running performance optimizations...');
-
-// Create critical CSS file
-const criticalCSS = `
-/* Critical CSS for above-the-fold content */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
-  color: #ffffff;
-  line-height: 1.6;
-}
-
-/* Navigation styles */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
-}
-
-/* Hero section styles */
-.hero-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.hero-title {
-  font-size: clamp(2.5rem, 8vw, 6rem);
-  font-weight: 700;
-  background: linear-gradient(135deg, #22d3ee, #a855f7, #ec4899);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-}
-
-.hero-subtitle {
-  font-size: clamp(1.125rem, 4vw, 1.5rem);
-  color: #d1d5db;
-  margin-bottom: 2rem;
-  max-width: 48rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Button styles */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, #22d3ee, #a855f7);
-  color: white;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 10px 25px rgba(34, 211, 238, 0.25);
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.4);
-}
-
-/* Card styles */
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(16px);
-  border-radius: 1rem;
-  padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  border-color: rgba(34, 211, 238, 0.3);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(34, 211, 238, 0.1);
-}
-
-/* Loading states */
-.loading {
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.125rem;
-  }
-  
-  .btn-primary {
-    padding: 0.875rem 1.5rem;
-    font-size: 0.875rem;
-  }
-}
-
-/* Animation keyframes */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-/* Performance optimizations */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-`;
-
-// Write critical CSS to public directory
-const publicDir = path.join(__dirname, '..', 'public');
-if (!fs.existsSync(publicDir)) {
-  fs.mkdirSync(publicDir, { recursive: true });
-}
-
-fs.writeFileSync(path.join(publicDir, 'critical.css'), criticalCSS);
-
-// Create a simple performance monitoring script
-const performanceScript = `
-// Performance monitoring
-(function() {
-  'use strict';
-  
-  // Monitor Core Web Vitals
-  function measureWebVitals() {
-    if ('performance' in window && 'getEntriesByType' in performance) {
-      // First Contentful Paint
-      const fcp = performance.getEntriesByName('first-contentful-paint')[0];
-      if (fcp) {
-        console.log('FCP:', fcp.startTime);
-      }
-      
-      // Largest Contentful Paint
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0];
-      if (lcp) {
-        console.log('LCP:', lcp.startTime);
-      }
-      
-      // First Input Delay
-      const fid = performance.getEntriesByType('first-input')[0];
-      if (fid) {
-        console.log('FID:', fid.processingStart - fid.startTime);
-      }
-    }
-  }
-  
-  // Run after page load
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', measureWebVitals);
-  } else {
-    measureWebVitals();
-  }
-  
-  // Image lazy loading
-  function lazyLoadImages() {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.classList.remove('lazy');
-          observer.unobserve(img);
-        }
-      });
-    });
+const fs = require('fs');';
+const _path = require('_path');';
+const { execSync } = require('child_process');';
+// Performance optimization script;
+function optimizePerformance() {
+  global.console.log('🚀 Starting comprehensive performance optimization...');';
+  try {
+    // 1. Optimize HTML _files;
+    optimizeHTML();
     
-    images.forEach(img => imageObserver.observe(img));
+    // 2. Optimize CSS _files;
+    optimizeCSS();
+    
+    // 3. Optimize JavaScript _files;
+    optimizeJavaScript();
+    
+    // 4. Optimize images;
+    optimizeImages();
+    
+    // 5. Generate critical CSS;
+    generateCriticalCSS();
+    
+    // 6. Optimize fonts;
+    optimizeFonts();
+    
+    // 7. Generate performance report;
+    generatePerformanceReport();
+    
+    global.console.log('✅ Performance optimization completed successfully!');';
+  } catch (_error) {
+    global.console._error('❌ Performance optimization failed:', _error.message);';
+    process.exit(1);
+  }
+}
+
+function optimizeHTML() {
+  global.console.log('📄 Optimizing HTML _files...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const htmlFiles = findFiles(distPath, '.html');';
+  htmlFiles.forEach(file => {
+    let content = fs.readFileSync(file, 'utf8');';
+    // Remove unnecessary whitespace;
+    content = content.replace(/>\s+</g, '><');';
+    // Remove comments (except important ones)
+    content = content.replace(/<!--(?!\s*(?:\[if [^\]]+]|<!|>))(?:(?!-->).)*-->/g, '');';
+    // Optimize meta tags;
+    content = content.replace(/\s+/g, ' ');';
+    // Add preload hints for critical resources;
+    if (content.includes('<head>')) {';
+      const preloadHints = `;
+    <!-- Preload critical resources -->;
+    <link rel="preload" href="/assets/css/index.css" as="style">;
+    <link rel="preload" href="/assets/js/index.js" as="script">;
+    <link rel="preload" href="/assets/js/vendor.js" as="script">`;
+      
+      content = content.replace('<head>', `<head>${preloadHints}`);';
+    }
+    
+    fs.writeFileSync(file, content);
+  });
+  
+  global.console.log(`✅ Optimized ${htmlFiles.length} HTML _files`);
+}
+
+function optimizeCSS() {
+  global.console.log('🎨 Optimizing CSS _files...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const cssFiles = findFiles(distPath, '.css');';
+  cssFiles.forEach(file => {
+    let content = fs.readFileSync(file, 'utf8');';
+    // Remove unnecessary whitespace;
+    content = content.replace(/\s+/g, ' ');';
+    // Remove comments;
+    content = content.replace(/\/\*[\s\S]*?\*\//g, '');';
+    // Remove empty rules;
+    content = content.replace(/[^{}]+{\s*}/g, '');';
+    // Optimize selectors;
+    content = content.replace(/\s*{\s*/g, '{');';
+    content = content.replace(/;\s*/g, ';');';
+    content = content.replace(/}\s*/g, '}');';
+    fs.writeFileSync(file, content);
+  });
+  
+  global.console.log(`✅ Optimized ${cssFiles.length} CSS _files`);
+}
+
+function optimizeJavaScript() {
+  global.console.log('⚡ Optimizing JavaScript _files...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const jsFiles = findFiles(distPath, '.js');';
+  jsFiles.forEach(file => {
+    let content = fs.readFileSync(file, 'utf8');';
+    // Remove global.console.log statements in production;
+    if (process.env.NODE_ENV === 'production') {';
+      content = content.replace(/console\.(log|debug|info|warn|_error)\([^)]*\);?/g, '');';
+    }
+    
+    // Remove unnecessary whitespace;
+    content = content.replace(/\s+/g, ' ');';
+    // Remove comments;
+    content = content.replace(/\/\*[\s\S]*?\*\//g, '');';
+    content = content.replace(/\/\/.*$/gm, '');';
+    fs.writeFileSync(file, content);
+  });
+  
+  global.console.log(`✅ Optimized ${jsFiles.length} JavaScript _files`);
+}
+
+function optimizeImages() {
+  global.console.log('🖼️ Optimizing images...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const imageFiles = findFiles(distPath, ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp']);';
+  imageFiles.forEach(file => {
+    try {
+      // Use sharp for image optimization if available;
+      if (require.resolve('sharp')) {';
+        const sharp = require('sharp');';
+        const input = sharp(file);
+        
+        // Get image metadata;
+        input.metadata().then(metadata => {
+          if (metadata.format === 'png' || metadata.format === 'jpeg') {';
+            // Optimize based on file size;
+            if (metadata.size > 100000) { // 100KB;
+              return input;
+                .resize(metadata.width > 1920 ? 1920 : metadata.width)
+                .jpeg({ quality: 85, progressive: true })
+                .png({ compressionLevel: 9 })
+                .toFile(file);
+            }
+          }
+        });
+      }
+    } catch (_error) {
+      // Sharp not available, skip optimization;
+      global.console.log(`⚠️ Skipping image optimization for ${file} (sharp not available)`);
+    }
+  });
+  
+  global.console.log(`✅ Optimized ${imageFiles.length} image _files`);
+}
+
+function generateCriticalCSS() {
+  global.console.log('🎯 Generating critical CSS...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const cssFiles = findFiles(distPath, '.css');';
+  if (cssFiles.length > 0) {
+    const mainCSS = cssFiles.find(file => file.includes('index')) || cssFiles[0];';
+    let content = fs.readFileSync(mainCSS, 'utf8');';
+    // Extract critical CSS (above-the-fold styles)
+    const criticalCSS = extractCriticalCSS(content);
+    
+    // Write critical CSS to a separate file;
+    const criticalPath = _path.join(distPath, 'critical.css');';
+    fs.writeFileSync(criticalPath, criticalCSS);
+    
+    global.console.log('✅ Generated critical CSS');';
+  }
+}
+
+function extractCriticalCSS(css) {
+  // Extract critical CSS rules (simplified version)
+  const criticalSelectors = [;
+    'body', 'html', '#root', '.loading', '.spinner',';
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',';
+    'p', 'a', 'button', 'input', 'form',';
+    '.container', '.header', '.nav', '.main', '.footer'';
+  ];
+  
+  const rules = css.match(/([^{}]+)\s*{[^{}]*}/g) || [];
+  const criticalRules = rules.filter(rule => {
+    return criticalSelectors.some(selector =>;
+      rule.includes(selector)
+    );
+  });
+  
+  return criticalRules.join('\n');';
+}
+
+function optimizeFonts() {
+  global.console.log('🔤 Optimizing fonts...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const fontFiles = findFiles(distPath, ['.woff', '.woff2', '.ttf', '.otf', '.eot']);';
+  // Add font-display: swap to CSS;
+  const cssFiles = findFiles(distPath, '.css');';
+  cssFiles.forEach(file => {
+    let content = fs.readFileSync(file, 'utf8');';
+    // Add font-display: swap to @font-face rules;
+    content = content.replace(
+      /@font-face\s*{([^}]*)}/g,
+      (match, declarations) => {
+        if (!declarations.includes('font-display')) {';
+          return `@font-face {${declarations}font-display: swap;}`;
+        }
+        return match;
+      }
+    );
+    
+    fs.writeFileSync(file, content);
+  });
+  
+  global.console.log(`✅ Optimized ${fontFiles.length} font _files`);
+}
+
+function generatePerformanceReport() {
+  global.console.log('📊 Generating performance report...');';
+  const distPath = _path.join(process.cwd(), 'dist');';
+  const report = {
+    timestamp: new Date().toISOString(),
+    buildSize: getDirectorySize(distPath),
+    fileCounts: {
+      html: findFiles(distPath, '.html').length,';
+      css: findFiles(distPath, '.css').length,';
+      js: findFiles(distPath, '.js').length,';
+      images: findFiles(distPath, ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp']).length,';
+      fonts: findFiles(distPath, ['.woff', '.woff2', '.ttf', '.otf', '.eot']).length,';
+    },
+    optimizations: [;
+      'HTML minification',';
+      'CSS optimization',';
+      'JavaScript minification',';
+      'Image optimization',';
+      'Critical CSS generation',';
+      'Font optimization'';
+    ];
+  };
+  
+  const reportPath = _path.join(distPath, 'performance-report.json');';
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  
+  global.console.log(`✅ Performance report generated: ${reportPath}`);
+  global.console.log(`📈 Build size: ${(report.buildSize / 1024 / 1024).toFixed(2)} MB`);
+}
+
+function findFiles(dir, extensions) {
+  const _files = [];
+  const extArray = Array.isArray(extensions) ? extensions : [extensions];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    items.forEach(item => {
+      const fullPath = _path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else if (stat.isFile()) {
+        const ext = _path.extname(item).toLowerCase();
+        if (extArray.includes(ext)) {
+          _files.push(fullPath);
+        }
+      }
+    });
   }
   
-  // Initialize lazy loading
-  if ('IntersectionObserver' in window) {
-    lazyLoadImages();
+  traverse(dir);
+  return _files;
+}
+
+function getDirectorySize(dir) {
+  let size = 0;
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    items.forEach(item => {
+      const fullPath = _path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else {
+        size += stat.size;
+      }
+    });
   }
-})();
-`;
+  
+  traverse(dir);
+  return size;
+}
 
-fs.writeFileSync(path.join(publicDir, 'performance.js'), performanceScript);
-
-console.log('Performance optimizations completed');
+// Run optimization;
+optimizePerformance();

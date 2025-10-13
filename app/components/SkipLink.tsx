@@ -1,35 +1,42 @@
-'use client'
-import React from 'react'
-
-<<<<<<< HEAD
-interface SkipLinkProps {
-  to: string;
-  children: React.ReactNode;
-}
-
-const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {
-  return (
-    <a
-      href={to}
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-lg font-semibold z-50"
-=======
-const SkipLink: React.FC = () => {,
-  return(<a;)
-      href="#main-content"
-<<<<<<< HEAD
-      className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-600 text-white px-4 py-2 rounded-md z-50 font-medium transition-all duration-200 hover:bg-cyan-700",
-=======
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50 transition-all duration-200"
->>>>>>> origin/main
->>>>>>> origin/main
-    >
-      Skip to main content;
-    </a>
-<<<<<<< HEAD
-  );};
-=======
-  )
-}
->>>>>>> origin/main
-
-export default SkipLink
+import React from 'react';
+'use client';
+      {/* Content Section */}
+      <section className="py-16 px-4">;
+        <div className="max-w-6xl mx-auto">;
+          <div className="grid md:grid-cols-2 gap-12 items-center">;
+            <div>;
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>;
+              <p className="text-lg text-gray-600 mb-6">;
+                We provide comprehensive skip link;
+                solutions tailored to your specific needs and requirements.;
+              </p>;
+              <ul className="space-y-3">;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Custom solutions;
+                </li>;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Expert consultation;
+                </li>;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Ongoing support;
+                </li>;
+              </ul>;
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
+              <p className="mb-6">;
+                Ready to transform your business with our skip link services?;
+              </p>;
+              <a;
+                href="/contact";
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
+              >;
+                Contact Us;
+              </a>;
+            </div>
+          </div>
+        </div>
+      </section>;'

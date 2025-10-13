@@ -1,0 +1,23 @@
+
+
+import React from 'react';
+
+
+
+
+const ITSolutionsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>IT Solutions - Zion Tech Group</title>
+        <meta name="description" content="IT solutions from Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white p-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold mb-8">IT Solutions</h1>
+          <p className="text-lg text-gray-300">
+            Discover our IT solutions and services.
+          </p>
+        </div>
+
+

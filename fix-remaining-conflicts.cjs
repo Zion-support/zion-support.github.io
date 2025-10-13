@@ -1,94 +1,88 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
+const fs = require('fs');';
+const _path = require('_path');';
+// Function to fix remaining merge conflicts;
+function fixRemainingConflicts(content) {
+  // Remove merge conflict markers and keep the content after =======;
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');';
+  content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');';
+  // Fix specific syntax issues;
+  content = content.replace(/\}\s*\)\s*}/g, '})}');';
+  content = content.replace(/\}\s*\)\s*\)/g, '}))');';
+  content = content.replace(/\}\s*\)\s*\)\s*\)/g, '})))');';
+  content = content.replace(/\}\s*\)\s*\)\s*\)\s*\)/g, '}))))');';
+  // Fix missing semicolons;
+  content = content.replace(/import[^;]+from[^;]+(?=\n)/g, (match) => {
+    if (!match.endsWith(';')) {';
+      return match + ';';';
+    }
+    return match;
+  });
+  
+  // Fix JSX syntax;
+  content = content.replace(/>\s*}/g, '>}');';
+  content = content.replace(/>\s*\)/g, '>)');';
+  // Remove extra whitespace;
+  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';
+  return content;
+}
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-// Function to fix merge conflict markers in a file
-function fixMergeConflicts(filePath) {
+// Function to process a file;
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');';
+    const fixedContent = fixRemainingConflicts(content);
     
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/\n/g, '');
-    content = content.replace(/
-    
-    // Remove any remaining merge conflict markers
-    content = content.replace(/<<<<<<< [^\n]+\n/g, '');
-    content = content.replace(/
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed merge conflicts in: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');';
+      global.console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (_error) {
+    global.console._error(`Error processing ${filePath}:`, _error.message);
     return false;
   }
 }
 
-// Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let files = [];
-  
-  try {
-    const items = fs.readdirSync(dir);
-    
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        files = files.concat(findFiles(fullPath, extensions));
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
-    }
-  } catch (error) {
-    // Ignore permission errors
-  }
-  
-  return files;
-}
-
-// Main execution
-console.log('Fixing remaining merge conflict markers...');
-
-const srcDir = path.join(__dirname, 'src');
-const files = findFiles(srcDir);
+// Main execution;
+global.console.log('Fixing remaining merge conflicts...');';
+const filesWithConflicts = [;
+  './api/subscribe.js',';
+  './api/shipping-rates.js',';
+  './api/wallet.js',';
+  './api/onsite-request.js',';
+  './utils/seoUtils.ts',';
+  './app/types/next.d.ts',';
+  './app/cloud-infrastructure/page.tsx',';
+  './app/components/SEOEnhancer.tsx',';
+  './app/components/EnhancedSEO.tsx',';
+  './app/components/AdvancedPerformanceMonitor.tsx',';
+  './app/components/PerformanceMonitor.tsx',';
+  './app/components/AccessibilityEnhancer.tsx',';
+  './app/contact/page.tsx',';
+  './app/contexts/AnalyticsContext.tsx',';
+  './app/zion-ai-voice-assistant-pro/page.tsx',';
+  './app/zion-smart-expense-categorizer/page.tsx',';
+  './app/zion-ai-inventory-manager/page.tsx',';
+  './app/components/ErrorFallback.tsx',';
+  './app/zion-ai-performance-optimizer/page.tsx',';
+  './app/zion-smart-inventory-optimizer/page.tsx',';
+  './app/zion-ai-social-media-manager/page.tsx',';
+  './app/zion-ai-email-analyzer/page.tsx',';
+  './api/newsletter/subscribe.js',';
+  './api/quotes.js',';
+  './api/_error-report.js'';
+];
 
 let fixedCount = 0;
-let errorCount = 0;
-
-for (const file of files) {
-  try {
-    const content = fs.readFileSync(file, 'utf8');
-    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
-      if (fixMergeConflicts(file)) {
-        fixedCount++;
-      } else {
-        errorCount++;
-      }
+for (const file of filesWithConflicts) {
+  if (fs.existsSync(file)) {
+    if (processFile(file)) {
+      fixedCount++;
     }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
-    errorCount++;
   }
 }
 
-console.log(`\nFixed ${fixedCount} files with merge conflicts`);
-if (errorCount > 0) {
-  console.log(`Encountered errors in ${errorCount} files`);
-}
-
-// Also check for any remaining conflicts
-try {
-  const result = execSync('git status --porcelain', { encoding: 'utf8' });
-  if (result.trim()) {
-    console.log('\nRemaining uncommitted changes:');
-    console.log(result);
-  }
-} catch (error) {
-  console.log('Could not check git status');
-}
-
-console.log('\nDone!');
+global.console.log(`Fixed ${fixedCount} files`);
+global.console.log('Remaining conflicts resolution complete!');';

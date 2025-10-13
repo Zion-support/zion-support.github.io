@@ -1,76 +1,71 @@
-const fs = require('fs')
-const path = require('path')
-const dir = path.join(process.cwd(), 'data')
-const file = path.join(dir, 'subscribers.json')
-export default function handler(req, res) {
+import fs from 'fs';
+import path from 'path';
+
+const dir = path.join(process.cwd(), 'data');
+const file = path.join(dir, 'subscribers.json');
+
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
   }
 
-  const { email, name, preferences } = req.body || {}
+<<<<<<< HEAD
+  const { email, name } = req.body;
+
+=======
+const { email, name } = req.body;
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   if (!email) {
-    res.statusCode = 400
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Email is required' }))
-    return
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Email is required' }));
+    return;
   }
 
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })
-  }
-
-  let existing = []
+<<<<<<< HEAD
+  let subscribers = [];
+=======
+let subscribers = [];
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8')
-      existing = JSON.parse(data)
-      if (!Array.isArray(existing)) existing = []
-    }
+    const data = fs.readFileSync(file, 'utf8');
+    subscribers = JSON.parse(data);
   } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error reading existing subscribers:', error)
-    }
-    existing = []
+    console.error('Error:', error);
+    console.error('Error reading existing subscribers:', error);
   }
 
-  // Check if email already exists
-  const existingSubscriber = existing.find(sub => sub.email === email)
-  if (existingSubscriber) {
-    res.statusCode = 400
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Email already subscribed' }))
-    return
+  if (subscribers.find(sub => sub.email === email)) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Email already subscribed' }));
+    return;
   }
 
   const newSubscriber = {
     id: Date.now().toString(),
     email,
     name: name || '',
-    preferences: preferences || {},
-    timestamp: new Date().toISOString(),
-    status: 'active'
-  }
-  existing.push(newSubscriber)
+    status: 'active',
+    subscribedAt: new Date().toISOString()
+  };
+
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2))
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')
+    subscribers.push(newSubscriber);
+    fs.writeFileSync(file, JSON.stringify(subscribers, null, 2));
+
+    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Successfully subscribed to newsletter',
-      id: newSubscriber.id
-    }))
+      success: true,
+<<<<<<< HEAD
+
+=======
+      message: 'Successfully subscribed to newsletter' 
+    }));
   } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error saving subscriber:', error)
-    }
-    res.statusCode = 500
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Failed to save subscription' }))
+    console.error('Error:', error);
+    res.setHeader('Content-Type', 'application/json');
+res.end(JSON.stringify({ error: 'Failed to save subscription' }));
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   }
 }

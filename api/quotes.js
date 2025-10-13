@@ -1,75 +1,52 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-    res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
-=======
-    return
->>>>>>> origin/main
+  }
+
+  const { name, email, phone, details, country, service } = req.body;
+  
+  if (!name || !email || !phone || !details) {
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
+    return;
   }
 
   try {
-    const { name, email, phone, details, country, service } = req.body || {}
-    if (!name || !email || !phone || !details) {
 <<<<<<< HEAD
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
-      return;
+
+    // Process the quote request
 =======
-      return
->>>>>>> origin/main
-    }
-
-    // Process quote submission logic here
-    // In a real application, you would:
-    // 1. Save to your database
-    // 2. Send notification to your sales team
-    // 3. Send confirmation email to the customer
-    // 4. Integrate with your CRM
-
-    const quoteData = {
+// Process the quote request
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+    const quote = {
+      id: Date.now().toString(),
       name,
       email,
       phone,
       details,
-      country: req.body.country || 'Not specified',
-      service: req.body.service || 'General inquiry',
-      timestamp: new Date().toISOString(),
-      status: 'pending'
-    }
-    // Log quote request for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Quote request received:', quoteData)
-    }
+      country: country || 'Not specified',
+      service: service || 'General inquiry',
+      status: 'pending',
+      createdAt: new Date().toISOString()
+    };
+    
+    // Here you would typically save the quote to a database
+    console.log('Quote request processed:', quote.id);
 
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Quote request submitted successfully',
-      quoteId: `quote_${Date.now()}`,
-      data: quoteData
-    }))
-  } catch (error) {
-<<<<<<< HEAD
-    console.error('Quote submission error:', error);
-    res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-      error: 'Failed to submit quote request',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      success: true,
+      message: 'Quote request submitted successfully' 
     }));
+  } catch (error) {
+    console.error('Quote submission error:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+<<<<<<< HEAD
+
 =======
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Quote submission error:', error)
-    }
-    res.statusCode = 500
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Internal server error' }))
->>>>>>> origin/main
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   }
 }

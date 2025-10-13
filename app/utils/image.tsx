@@ -1,300 +1,85 @@
-<<<<<<< HEAD
-'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
-import React, {useState, useCallback}from 'react';
-interface ImageProps {src: string,}
-    alt: string;,}interface ImageProps {}}src: string;,
-  alt: string;,
-
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-=======
-'use client'
-import React from 'react'
-'use client'
-import React, { useState, useCallback } from 'react'
-interface ImageProps {
-    src: string,
-    alt: string
-  }
-interface ImageProps {}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
->>>>>>> origin/main
-  _quality?: number,
-  src: string,
-  alt: string,
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  _quality?: number
-  _placeholder?: 'blur' | 'empty'
-<<<<<<< HEAD
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;}
-}
-export const Image: React.FC<ImageProps>= ({
-export const Image: React.FC<ImageProps> = ({}
-  src,
-export const Image: React.FC<ImageProps> = ({,
-  src;
-=======
-  _blurDataURL?: string
-  fill?: boolean
-  sizes?: string
-  style?: React.CSSProperties
-  onLoad?: () => void
-  onError?: () => void;}
-}
-<<<<<<< HEAD
-export const Image: React.FC<ImageProps>= ({,}export const Image: React.FC<ImageProps> = ({,}src,
-export const Image: React.FC<ImageProps> = ({,
-=======
-export const Image: React.FC<ImageProps>= ({}
-export const Image: React.FC</ImageProps><ImageProps> = ({}
-  src,
-export const Image: React.FC</ImageProps><ImageProps> = ({
->>>>>>> origin/main
-    ,
-  src
->>>>>>> origin/main
-  alt,
-  width,
-  height,
-  className,
-  priority = false,
-  quality = 75,
-  placeholder = 'empty',
-  blurDataURL,
-  fill = false,
-  sizes,
-  style,
-  onLoad,
-<<<<<<< HEAD
-  onError,
-  ...props}
-}) => {}
-  const [, setIsLoaded] = useState(false)
-  const [hasError, setHasError] = useState(false)
-  const handleLoad = useCallback(() => {}
-    setIsLoaded(true)
-    if (onLoad) onLoad();}
-  }, [onLoad])
-  const handleError = useCallback(() => {}
-    setHasError(true)
-    if (onError) onError();}
-  }, [onError])
-  const imageStyle: React.CSSProperties = {
-    ...style;
-    ...(fill && {
-      position: 'absolute'
-      top: 0,
-      left: 0,
-  const imageStyle: React.CSSProperties = {}
-    ...style,
-    ...(fill && {}
-      position: 'absolute',
-=======
-<<<<<<< HEAD
-  onError,}...props}
-}) => {}const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const handleLoad = useCallback(() => {}setIsLoaded(true);
-    if (onLoad) onLoad();}
-  }, [onLoad]);
-  const handleError = useCallback(() => {}setHasError(true);
-    if (onError) onError();}
-  }, [onError]);
-  const imageStyle: React.CSSProperties = {,
-    ...style;
-    ...(fill && {
-      position: 'absolute',
-      top: 0,
-      left: 0,}const imageStyle: React.CSSProperties = {,}...style,
-    ...(fill && {}position: 'absolute',
->>>>>>> origin/main
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-<<<<<<< HEAD
-      objectFit: 'cover'}
-=======
-      objectFit: 'cover',}
->>>>>>> origin/main
-    })
-  }
-  if (hasError) {</ImageProps>
-    return(</ImageProps>)}if (hasError) {}return(<div)}
-  if (hasError) {}return(<div)}
-'use client';
-<<<<<<< HEAD
-import React, { useState, useCallback } from 'react';
-interface ImageProps {/* TODO: Fix JSX expression */}
-}
-export const,
-  Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  }, [onLoad]);
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
-  }, [onError]);
-  const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
-    })
-  };
-  if (hasError) {/* TODO: Fix JSX expression */}
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}
-        {...props})
-      >))}
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-      </div>)
-    ),
-        {...props}
-      ></div>
-        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
-      </div>
-    )
-  }
-  return(<img;
-  return (<img></img>
-=======
-import React, {useState, useCallback}from 'react';
-interface ImageProps {/* TODO: Fix JSX expression */,}}}
-export const,
-  Image: React.FC<ImageProps>= ({/* TODO: Fix JSX expression */,</div>})
-}) => {/* TODO: Fix JSX expression */,}}, [onLoad]);
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */,}}, [onError]);
-=======
-  onError,
-  }
-  ...props}
-export const Image: React.FC<ImageProps>= ()
-}) => {}
-  const [, setIsLoaded] = useState(false)
-  const [hasError, setHasError] = useState(false)
-  const handleLoad = useCallback(() => {}
-    setIsLoaded(true)
-    if (onLoad) onLoad();}
-  }, [onLoad])
-  const handleError = useCallback(() => {}
-    setHasError(true)
-    if (onError) onError();}
-  }, [onError])
-  const imageStyle: React.CSSProperties = {
-    ...style
-    ...()
-    })
-  }
-  if (hasError) {
-    </ImageProps>
-    return ()
-  if (hasError) {}
-    return ()
-  if (hasError) {}
-    return()
-  Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  }, [onLoad])
-  const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
-  }, [onError])
->>>>>>> origin/main
-  const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */,}})
-  }
-<<<<<<< HEAD
-  if (hasError) {/* TODO: Fix JSX expression */,}className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle}{...props})
-=======
-  if (hasError) {/* TODO: Fix JSX expression */}
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={imageStyle},
-    {...props})
->>>>>>> origin/main
-      >)</div>
-<<<<<<< HEAD
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>),
-      </div>),
-    ),
-        {...props}></div>
-        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>,
-      </div>
-    ),
-  }
-<<<<<<< HEAD
-  return(<img;)
-  return(<img />)
-      src={src}alt={alt}width={width}height={height}className={className}style={imageStyle}sizes={sizes}loading={priority ? 'eager' : 'lazy'}onLoad={handleLoad}onError={handleError}{...props}
-=======
-  return(<img;
-  return (<img />
->>>>>>> origin/main
-      src={src}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      style={imageStyle}
-      sizes={sizes}
-      loading={priority ? 'eager' : 'lazy'}
-      onLoad={handleLoad}
-<<<<<<< HEAD
-      onError={handleError}
-      {...props}
-=======
-      onError={handleError},
-    {...props}
->>>>>>> origin/main
-=======
-        <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>)
-      </div>),
-    ),
-        {...props}
-      ></div>
-        <span className="text-gray-500 text-sm" /><span className="sr-only">Screen reader: </span>Failed to load image</span>
-      </div>
-    ),
-  }
-  return()
->>>>>>> origin/main
->>>>>>> origin/main
-    >)</img>
-}</img>
-export default Image</img>
-      loading={priority ? 'eager' : 'lazy'})
-      onLoad={handleLoad})
-      onError={handleError})
-      {...props})
-    />)
-<<<<<<< HEAD
-  )
-}
-export default Image;
-    />)
+const Image: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Image - Zion Tech Group</title>
+        <meta name="description" content="Professional image services by Zion Tech Group." />
+      </Helmet>}
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;
+        <div className="max-w-6xl mx-auto text-center">;
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">;
+            Image;
+          </h1>;
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+            Professional image services;
+            designed to help your business grow and succeed.;
+          </p>;
+        </div>
+      </section>;
+      {/* Content Section */}
+      <section className="py-16 px-4">;
+        <div className="max-w-6xl mx-auto">;
+          <div className="grid md:grid-cols-2 gap-12 items-center">;
+            <div>;
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>;
+              <p className="text-lg text-gray-600 mb-6">;
+                We provide comprehensive image;
+                solutions tailored to your specific needs and requirements.;
+              </p>;
+              <ul className="space-y-3">;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Custom solutions;
+                </li>;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Expert consultation;
+                </li>;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Ongoing support;
+                </li>;
+              </ul>;
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
+              <p className="mb-6">;
+                Ready to transform your business with our image services?;
+              </p>;
+              <a;
+                href="/contact";
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
+              >;
+                Contact Us;
+              </a>;
+            </div>
+          </div>
+        </div>
+      </section>;
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <h2 className="text-3xl font-bold text-white mb-6">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text-xl text-blue-100 mb-8">;'
+            Let's discuss how our image';
+            services can help you achieve your goals.;
+          </p>;
+          <a;
+            href="/contact";
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
+          >;
+            Get Started Today;
+          </a>;
+        </div>
+      </section>;
+    </div>
   );
 };
-export default Image;
-"`
-=======
-}
-export default Image/>)
-}
-export default Image
-"`
->>>>>>> origin/main
+
+export default Image;'

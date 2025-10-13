@@ -1,70 +1,50 @@
-const fs = require('fs');
-
-// Read the Footer component
-const footerContent = fs.readFileSync('app/components/Footer.tsx', 'utf8');
-
-// Extract all href values from the Footer
-const footerLinks = [];
-const hrefMatches = footerContent.match(/href:\s*'([^']+)'/g);
-if (hrefMatches) {
-  hrefMatches.forEach(match => {
-    const href = match.match(/href:\s*'([^']+)'/)[1];
-    if (href.startsWith('/')) {
-      footerLinks.push(href.substring(1)); // Remove leading slash
-    }
-  });
+const fs = require('fs');';
+const _path = require('_path');';
+// Extract all href values from navigation files;
+const navigationFile = '/workspace/app/components/ImprovedNavigation.tsx';';
+const footerFile = '/workspace/app/components/ImprovedFooter.tsx';';
+function extractHrefs(filePath) {
+  const content = fs.readFileSync(filePath, 'utf8');';
+  const hrefMatches = content.match(/href:\s*'([^']+)'/g) || [];';
+  return hrefMatches.map(match => match.match(/href:\s*'([^']+)'/)[1]);';
 }
 
-// Read the Navigation component
-const navContent = fs.readFileSync('app/components/Navigation.tsx', 'utf8');
+// Get all hrefs from both files;
+const navHrefs = extractHrefs(navigationFile);
+const footerHrefs = extractHrefs(footerFile);
+const allHrefs = [...new Set([...navHrefs, ...footerHrefs])];
 
-// Extract all path values from the Navigation
-const navLinks = [];
-const pathMatches = navContent.match(/path:\s*'([^']+)'/g);
-if (pathMatches) {
-  pathMatches.forEach(match => {
-    const path = match.match(/path:\s*'([^']+)'/)[1];
-    if (path.startsWith('/')) {
-      navLinks.push(path.substring(1)); // Remove leading slash
-    }
-  });
+// Filter out external links and get only internal paths;
+const internalPaths = allHrefs.filter(href => href.startsWith('/') && !href.startsWith('http'));';
+global.console.log('All internal paths found in navigation:');';
+global.console.log(internalPaths);
+
+// Check which pages exist;
+const appDir = '/workspace/app';';
+const _existingPages = [];
+
+function checkPageExists(_path) {
+  const pagePath = _path === '/' ? '/workspace/app/page.tsx' : `${appDir}${_path}/page.tsx`;';
+  return fs.existsSync(pagePath);
 }
 
-// Get all existing pages
-const existingPages = [];
-const { execSync } = require('child_process');
-try {
-  const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8' });
-  existingPages.push(...result.trim().split('\n').filter(Boolean));
-} catch (error) {
-  console.error('Error getting existing pages:', error.message);
-}
+const missingPages = [];
+const existingPagesList = [];
 
-// Combine all links
-const allLinks = [...new Set([...footerLinks, ...navLinks])].sort();
-const existingPagesSet = new Set(existingPages);
-
-// Find missing pages
-const missingPages = allLinks.filter(link => !existingPagesSet.has(link));
-
-console.log('=== MISSING PAGES ANALYSIS ===');
-console.log(`Total links found: ${allLinks.length}`);
-console.log(`Existing pages: ${existingPages.length}`);
-console.log(`Missing pages: ${missingPages.length}`);
-
-if (missingPages.length > 0) {
-  console.log('\n=== MISSING PAGES ===');
-  missingPages.forEach(page => console.log(`- ${page}`));
-} else {
-  console.log('\n✅ All navigation and footer links have corresponding pages!');
-}
-
-// Check for pages that exist but aren't linked
-const unlinkedPages = existingPages.filter(page => !allLinks.includes(page));
-console.log(`\n=== UNLINKED PAGES (${unlinkedPages.length}) ===`);
-if (unlinkedPages.length > 0) {
-  unlinkedPages.slice(0, 20).forEach(page => console.log(`- ${page}`));
-  if (unlinkedPages.length > 20) {
-    console.log(`... and ${unlinkedPages.length - 20} more`);
+internalPaths.forEach(_path => {
+  if (checkPageExists(_path)) {
+    existingPagesList.push(_path);
+  } else {
+    missingPages.push(_path);
   }
-}
+});
+
+global.console.log('\n=== EXISTING PAGES ===');';
+existingPagesList.forEach(page => global.console.log(`✓ ${page}`));
+
+global.console.log('\n=== MISSING PAGES ===');';
+missingPages.forEach(page => global.console.log(`✗ ${page}`));
+
+global.console.log(`\nTotal internal paths: ${internalPaths.length}`);
+global.console.log(`Existing pages: ${existingPagesList.length}`);
+global.console.log(`Missing pages: ${missingPages.length}`);

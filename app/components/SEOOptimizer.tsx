@@ -1,286 +1,54 @@
-<<<<<<< HEAD
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client';
-interface SEOOptimizerProps {title: string;,}
-  description: string;,
-  keywords?: string[]
-  canonicalUrl?: string;
-  structuredData?: object;}const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
-  title,
-  description,
-  keywords = [],
-  canonicalUrl,
-  structuredData;}) => {
-  const keywordsString = keywords.join(', ');
-
-  return(<Helmet />)
-      <title>{title}</title>
-      <meta name="description" content={description}/>
-      <meta name="keywords" content={keywordsString}/>
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={canonicalUrl}/>
-      
-      {/* Open Graph */} <meta property="og: title" content={title,}/>
-      <meta property="og: description" content={description,}/>
-      <meta property="og: type" content="website" />,
-      <meta property="og: url" content={canonicalUrl,}/>
-      
-      {/* Twitter Card */} <meta name="twitter: card" content="summary_large_image" />,
-      <meta name="twitter: title" content={title,}/>
-      <meta name="twitter: description" content={description,}/>
-=======
-<<<<<<< HEAD
-'use client';
-
-import React, { useEffect } from 'react';
-import Head from 'next/head';
-
-interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  structuredData?: Record<string, unknown>;
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
-}) => {
-  useEffect(() => {
-    // Update document title
-    if (typeof document !== 'undefined') {
-      document.title = title;
-    }
-
-    // Update meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-
-    // Update meta keywords
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', keywords.join(', '));
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'keywords';
-      meta.content = keywords.join(', ');
-      document.head.appendChild(meta);
-    }
-
-    // Update canonical URL
-    const canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (canonicalLink) {
-      canonicalLink.setAttribute('href', canonicalUrl);
-    } else {
-      const link = document.createElement('link');
-      link.rel = 'canonical';
-      link.href = canonicalUrl;
-      document.head.appendChild(link);
-    }
-
-    // Update Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute('content', title);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:title');
-      meta.content = title;
-      document.head.appendChild(meta);
-    }
-
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:description');
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-
-    const ogImage = document.querySelector('meta[property="og:image"]');
-    if (ogImage) {
-      ogImage.setAttribute('content', ogImage);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:image');
-      meta.content = ogImage;
-      document.head.appendChild(meta);
-    }
-
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) {
-      ogUrl.setAttribute('content', canonicalUrl);
-    } else {
-      const meta = document.createElement('meta');
-      meta.setAttribute('property', 'og:url');
-      meta.content = canonicalUrl;
-      document.head.appendChild(meta);
-    }
-
-    // Update Twitter Card tags
-    const twitterCard = document.querySelector('meta[name="twitter:card"]');
-    if (twitterCard) {
-      twitterCard.setAttribute('content', 'summary_large_image');
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:card';
-      meta.content = 'summary_large_image';
-      document.head.appendChild(meta);
-    }
-
-    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-    if (twitterTitle) {
-      twitterTitle.setAttribute('content', title);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:title';
-      meta.content = title;
-      document.head.appendChild(meta);
-    }
-
-    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-    if (twitterDescription) {
-      twitterDescription.setAttribute('content', description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:description';
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-
-    const twitterImage = document.querySelector('meta[name="twitter:image"]');
-    if (twitterImage) {
-      twitterImage.setAttribute('content', ogImage);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'twitter:image';
-      meta.content = ogImage;
-      document.head.appendChild(meta);
-    }
-
-    // Add structured data
-    if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-    }
-
-    // Add viewport meta tag if not present
-    const viewport = document.querySelector('meta[name="viewport"]');
-    if (!viewport) {
-      const meta = document.createElement('meta');
-      meta.name = 'viewport';
-      meta.content = 'width=device-width, initial-scale=1.0';
-      document.head.appendChild(meta);
-    }
-
-    // Add charset if not present
-    const charset = document.querySelector('meta[charset]');
-    if (!charset) {
-      const meta = document.createElement('meta');
-      meta.setAttribute('charset', 'UTF-8');
-      document.head.insertBefore(meta, document.head.firstChild);
-    }
-
-    // Add language attribute to html tag
-    if (document.documentElement && !document.documentElement.getAttribute('lang')) {
-      document.documentElement.setAttribute('lang', 'en');
-    }
-
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
-
+export default function Page() {
   return (
-    <Head>
-      <title>{title}</title>
-=======
-'use client'
-interface SEOOptimizerProps {
-  title: string
-  description: string
-  keywords?: string[]
-  canonicalUrl?: string
-  structuredData?: object
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ()
-}) => {
-  const keywordsString = keywords.join(', ')
-  return (
-    </SEOOptimizerProps><Helmet>
-      </Helmet><title>{title}</title>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-    </Helmet>
-  )
-}
-export default SEOOptimizer
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO meta tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-<<<<<<< HEAD
-      <meta name="theme-color" content="#1e40af" />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)
-          }}
-        />
-      )}
-    </Head>
-  );
-};
-
-export default SEOOptimizer;
-=======
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-      )}
-  )
-}
-export default SEOOptimizer
-</li>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>SEOOptimizer - Zion Tech Group</title>
+        <meta name="description" content="Professional seooptimizer services by Zion Tech Group." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">;
+        <div className="text-center">;
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">;
+            SEOOptimizer;
+          </h1>;
+          <p className="text-xl text-gray-600 mb-8">;
+            Professional seooptimizer solutions tailored to your business needs.;
+          </p>;
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">;
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">;
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">;
+                Expert Solutions;
+              </h3>;
+              <p className="text-blue-700">;
+                Our team of experts delivers cutting-edge seooptimizer solutions.;
+              </p>;
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;
+              <h3 className="text-lg font-semibold text-green-900 mb-2">;
+                Custom Implementation;
+              </h3>;
+              <p className="text-green-700">;
+                Tailored seooptimizer implementations for your specific requirements.;
+              </p>;
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">;
+                24/7 Support;
+              </h3>;
+              <p className="text-purple-700">;
+                Round-the-clock support for all your seooptimizer needs.;
+              </p>;
+            </div>
+          </div>
+          <div className="mt-12">;
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
+              Get Started Today;
+            </button>;
+          </div>
+        </div>
+      </div>
+    </div>
+  );}
+}'

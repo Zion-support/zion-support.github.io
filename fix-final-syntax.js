@@ -1,82 +1,84 @@
 #!/usr/bin/env node
-import fs from 'fs'
-// List of files that still have syntax issues
-const filesToFix = [
-  '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
-  '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx',
-  '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx',
-  '/workspace/app/guides/ai-2027-implementation-roadmap/page.tsx',
-  '/workspace/app/offline/page.tsx',
-  '/workspace/app/page-minimal.tsx',
-  '/workspace/app/page-optimized.tsx',
-  '/workspace/app/privacy/page.tsx',
-  '/workspace/app/team/page.tsx',
-  '/workspace/app/terms/page.tsx']
-// // Function to process a single file
-function processFile(filePath) {
+
+import fs from 'fs;
+import path from 'path;
+function fixFile(filePath) {
   try {
-    // Remove any remaining metadata exports
-    content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '')
-    // Remove any broken metadata lines
-    for (let i = 0; i < lines.length; i++) {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-      // Skip lines that look like broken metadata
-      if (
-        line.includes('export const metadata') ||
-        (line.includes('title: ') && !line.includes('<title>') && !line.includes('//')) ||
-        (line.includes('description:') && !line.includes('<meta') && !line.includes('//')) ||
-        (line.includes('type:') && !line.includes('<meta') && !line.includes('//')) ||
-        (line.includes('url:') && !line.includes('<meta') && !line.includes('//')) ||
-        (line.includes('keywords:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.includes('openGraph:') && !line.includes('//')) ||,
-        (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-    content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '')
-    // Remove any broken metadata lines
-    for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
-        (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||
-        (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))
-      ) {/* TODO: Fix JSX expression */}
+    // Fix import statements with extra quotes
+    content = content.replace(/import\s+.*?from\s+['"]([^'"]*?)['"];?'/g, (match, moduleName) => {'
+      const importPart = match.match(/import\s+(.*?)\s+from/)[1];
+      return `import ${importPart} from '${moduleName}';`;
+    });
+
+    // Fix any remaining extra quotes
+    content = content.replace(/;+/g, ';);
+    content = content.replace(/;/g, ';);
+    content = content.replace(/;+/g, ';);
+    // Fix array syntax issues
+    content = content.replace(/\[\s*;\s*/g, '[');
+    content = content.replace(/,\s*;\s*\]/g, ']');
+    content = content.replace(/,\s*;\s*,/g, ',');
+    // Fix object syntax issues
+    content = content.replace(/{\s*;\s*/g, '{');
+    content = content.replace(/,\s*;\s*}/g, '}');
+    content = content.replace(/,\s*;\s*,/g, ',');
+    // Fix unterminated strings
+    content = content.replace(/'([^']*?)\s*$/gm, (match, str) => {'
+      if (str && !str.includes("'") && !str.includes('"')) {'
+        return `'${str}'`;
       }
+      return match;
+    });
 
-      filteredLines.push(line)
+    if (content !== fs.readFileSync(filePath, 'utf8')) {'
+      fs.writeFileSync(filePath, content);
+      return true;
     }
-
-    content = filteredLines.join('\n')
-    // Clean up extra empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
-    // Fix function declarations
-    content = content.replace(
-      /export default function (\w+)\(\) \{/,
-      'const $1: React.FC = () => {'
-    )
-    // Add proper export at the end if missing
-    if (!content.includes('export default') && content.includes('const ')) {,
-      //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
-      if (componentName) {,
-    content = content.replace()
-      /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`)
-        modified = true
-      }
-    }
-
-    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
-    }
-
-    return false
-  } catch (error) {/* TODO: Fix JSX expression */}
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Process all files
-filesToFix.forEach(file => {)
-  if (processFile(file)) {
-    fixedCount++
+function findFilesToFix(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {'
+        traverse(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {'
+        files.push(fullPath);
+      }
+    }
   }
-filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
-  })
-})
-// `
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+const workspaceDir = process.cwd();
+console.log('Fixing final syntax errors...');
+const filesToFix = findFilesToFix(workspaceDir);
+console.log(`Found ${filesToFix.length} files to process`);
+
+let fixedCount = 0;
+for (const file of filesToFix) {
+  if (fixFile(file)) {
+    fixedCount++;
+    console.log(`Fixed: ${file}`);
+  }
+}
+
+console.log(`Fixed ${fixedCount} files`);
