@@ -1,247 +1,68 @@
-
-import React from 'react';
-
-interface EnhancedAccessibilityProps {
-import React from 'react';
-interface EnhancedaccessibilityProps {
-interface EnhancedAccessibilityProps {
-interface EnhancedAccessibilityProps {
-  className?: string;
-  children?: React.ReactNode;
-
-}
-
-export default function EnhancedAccessibility({ className = '', children }: EnhancedAccessibilityProps) {
-  return (
-    <div className={`${className}`}>
-export default function Enhancedaccessibility({ className = '', children, ...props }: EnhancedaccessibilityProps) {
-  return (
-    <div className={`enhancedaccessibility-component ${className}`} {...props}>
-export default function EnhancedAccessibility({
-  className = '',
-  children
-}: EnhancedAccessibilityProps) {
-  return (
-    <div className={`enhanced-accessibility ${className}`}>
-      {children}
-    </div>
-  );
-}
-export default function EnhancedAccessibility({ className = '', children, ...props }: EnhancedAccessibilityProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-import React, { useEffect } from 'react';
-
-interface EnhancedAccessibilityProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export default function EnhancedAccessibility({ children, className = '' }: EnhancedAccessibilityProps) {
-  useEffect(() => {
-    // Add keyboard navigation enhancements
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const mainContent = document.querySelector('main');
-        if (mainContent) {
-          mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    };
-
-    // Add focus management
-    const handleFocusIn = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      if (target) {
-        target.setAttribute('data-focused', 'true');
-      }
-    };
-
-    const handleFocusOut = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      if (target) {
-        target.removeAttribute('data-focused');
-      }
-    };
-
-    // Add ARIA landmarks
-    const addLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
-
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      skipLink.style.position = 'absolute';
-      skipLink.style.left = '-9999px';
-      skipLink.style.top = '-9999px';
-
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-
-    // Initialize accessibility features
-    addLandmarks();
-    addSkipLinks();
-
-    // Add event listeners
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut);
-    };
-  }, []);
-
-  return <div className={className}>{children}</div>;
-  return (
-  return (
-
-    <div className={`enhancedaccessibility-component ${className}`} {...props}>
-
-      {children}
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-export default function Page() {
+export default function ComponentsEnhancedAccessibilityPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions by Zion Tech Group for modern businesses." />
       </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Components
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced Components solutions by Zion Tech Group for modern businesses.
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+            <p className="text-gray-600 mb-6">
+              This page is under development. Please check back later for comprehensive ai solutions.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+                <p className="text-gray-600">
+                  Advanced ai solution for your business requirements.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+                <p className="text-gray-600">
+                  Cutting-edge technology integration and optimization.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+                <p className="text-gray-600">
+                  Scalable and secure implementation.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 }
-import React from 'react';
-
-const EnhancedAccessibility = ({ children }: { children: React.ReactNode }) => {
-  return <>{children}</>;
-};
-
-export default EnhancedAccessibility;
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  useEffect(() => {
-    // Add keyboard navigation enhancements;
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content;
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const mainContent = document.querySelector('main');
-        if (mainContent) {
-          mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    };
-
-    // Add focus management;
-    const handleFocusIn = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      if (target) {
-        target.setAttribute('data-focused', 'true');
-      }
-    };
-
-    const handleFocusOut = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      if (target) {
-        target.removeAttribute('data-focused');
-      }
-    };
-
-    // Add ARIA landmarks;
-    const addLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
-
-    // Add skip links;
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      skipLink.style.position = 'absolute';
-      skipLink.style.left = '-9999px';
-      skipLink.style.top = '-9999px';
-
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-
-    // Initialize accessibility features;
-    addLandmarks();
-    addSkipLinks();
-
-    // Add event listeners;
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
-
-    // Cleanup;
-export default function EnhancedaccessibilityPage() {
-  return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut);
-    };
-  }, []);
-}
-
-}}

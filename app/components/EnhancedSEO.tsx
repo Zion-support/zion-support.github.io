@@ -1,54 +1,37 @@
 import React from 'react';
-
-interface EnhancedSEOProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function EnhancedSEO({ className = '', children }: EnhancedSEOProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
-export default function EnhancedSEO({ className = '', children, ...props }: EnhancedSEOProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
 import { Helmet } from 'react-helmet-async';
+
 interface EnhancedSEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
+  title: string;
+  description: string;
   canonical?: string;
+  keywords?: string;
+  image?: string;
+  type?: string;
 }
 
-const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
-  title = "Zion Tech Group - Advanced AI & IT Solutions",
-  description = "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.",
-  keywords = "AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology",
-  canonical
-}) => {
+export default function EnhancedSEO({
+  title,
+  description,
+  canonical,
+  keywords,
+  image,
+  type = 'website'
+}: EnhancedSEOProps) {
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      {keywords && <meta name="keywords" content={keywords} />}
       {canonical && <link rel="canonical" href={canonical} />}
+      {image && <meta property="og:image" content={image} />}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {image && <meta name="twitter:image" content={image} />}
     </Helmet>
   );
-};
-
-import React from 'react';
-
-export default EnhancedSEO;
-  );
 }
-
-export default function Enhancedseo({ className = '', children, ...props }: EnhancedseoProps) {
-}
-export default $1;

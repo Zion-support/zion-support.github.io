@@ -1,56 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-export default function Page5gIotSolutions() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>5g Iot Solutions - Zion Tech Group</title>
-        <meta name="description" content="5g Iot Solutions solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">5g Iot Solutions</h1>
-          <p className="text-xl text-gray-300 mb-8">
-export default function FiveGIotSolutionsPage() {
-  return (
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function IoT5GPage() {
+export default function FiveGIoTSolutionsPage() {
   return (
-
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
-        <title>5g Iot Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5g iot solutions solutions by Zion Tech Group" />
+        <title>5G IoT Solutions - Zion Tech Group</title>
+        <meta name="description" content="Innovative 5G IoT solutions for connected devices and smart systems." />
       </Helmet>
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            5g Iot Solutions
+            5G IoT Solutions
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Innovative 5G IoT solutions for connected devices and smart systems.
+          </p>
+        </div>
+
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Page
-
+            5G IoT Solutions Solutions
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
-
-export default function FiveGIotsolutionsPage() {
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">5G Iot Solutions</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
           </p>
         </div>
 
@@ -78,19 +54,15 @@ export default function Page() {
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+          <Link
+            to="/contact"
+            className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+          >
             Get Started
-          </button>
-          </p>
-
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </div>
     </div>
   );
-}
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function Page() {
 }

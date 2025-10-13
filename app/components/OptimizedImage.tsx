@@ -1,227 +1,68 @@
 import React from 'react';
-import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import React, { useState, useCallback } from 'react';
-import React from 'react';
-import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface OptimizedImageProps {
-interface OptimizedImageProps {,
-    src: string;,
-    alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function OptimizedImage({ className = '', children }: OptimizedImageProps) {
+export default function ComponentsOptimizedImagePage() {
   return (
-    <div className={`${className}`}>
-      {children}
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-export default function OptimizedImage({
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  onLoad,
-  onError
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const imgRef = useRef<HTMLImageElement>(null);
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions by Zion Tech Group for modern businesses." />
+      </Helmet>
 
-  useEffect(() => {
-    if (priority) {
-      setIsInView(true);
-      return;
-    }
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Components
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced Components solutions by Zion Tech Group for modern businesses.
+          </p>
+        </div>
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+            <p className="text-gray-600 mb-6">
+              This page is under development. Please check back later for comprehensive ai solutions.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+                <p className="text-gray-600">
+                  Advanced ai solution for your business requirements.
+                </p>
+              </div>
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+                <p className="text-gray-600">
+                  Cutting-edge technology integration and optimization.
+                </p>
+              </div>
 
-    return () => observer.disconnect();
-  }, [priority]);
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+                <p className="text-gray-600">
+                  Scalable and secure implementation.
+                </p>
+              </div>
+            </div>
 
-import React, { useState, useRef, useEffect, forwardRef } from 'react';
-import { motion } from 'framer-motion';
-
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-
-const OptimizedImage = forwardRef<HTMLImageElement, OptimizedImageProps>(({
-  src,
-  alt,
-  className = '',
-  width,
-  height,
-  priority = false,
-  onLoad,
-  onError
-}, ref) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-}: OptimizedImageProps) {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-
-  const handleLoad = useCallback(() => {
-    setIsLoaded(true);
-    onLoad?.();
-  }, [onLoad]);
-
-  const handleError = useCallback(() => {
-    setHasError(true);
-    onError?.();
-  }, [onError]);
-
-  if (hasError) {
-    return (
-      <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-        style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}
-style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}
-      <div >
-  className={`bg-gray-200 flex items-center justify-center ${className}`}>
-  style={{ width, height }}
-      >
-        <span className="text-gray-500 text-sm">Failed to load image</span>
-
-  useEffect(() => {
-    const img = imgRef.current;
-    if (img) {
-      img.addEventListener('load', handleLoad);
-      img.addEventListener('error', handleError);
-
-      return () => {
-        img.removeEventListener('load', handleLoad);
-        img.removeEventListener('error', handleError);
-      };
-    }
-  }, [onLoad, onError]);
-
-  if (hasError) {
-    return (
-      <div className={`optimized-image-container ${className}`} style={{ width, height }}>
-        <div className="flex items-center justify-center h-full bg-gray-200 text-gray-500">
-          Failed to load image
+            <div className="text-center mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
-    );
-  }
-
-  return (
-    <div ref={imgRef} className={`relative ${className}`} style={{ width, height }}>
-<div ref={imgRef} className={`relative ${className}`} style={{ width, height }}>
-      {!isLoaded && isInView && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded"></div>
-      )}
-      {isInView && (
-        <motion.img
-          src={src}
-  alt={alt}
-          width={width}
-  height={height}
-          loading={priority ? 'eager' : 'lazy'}
-  onLoad={handleLoad}
-          onError={handleError}>
-  initial={{ opacity: 0 }}>
-  animate={{ opacity: isLoaded ? 1 : 0 }}>
-  transition={{ duration: 0.3 }}>
-  className="w-full h-full object-cover"
-        />
-      )}
-    <div className={`relative ${className}`} style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}>
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
-      )}
-      <img
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        loading={priority ? 'eager' : 'lazy'}
-        onLoad={handleLoad}
-        onError={handleError}
-        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-      />
     </div>
   );
 }
-export default function OptimizedImage({ className = '', children, ...props }: OptimizedImageProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-    <div className={`optimized-image-container ${className}`} style={{ width, height }}>
-      {!isLoaded && (
-        <div className="animate-pulse bg-gray-200 w-full h-full flex items-center justify-center">
-          <div className="text-gray-400">Loading...</div>
-        </div>
-      )}
-      <motion.img
-        ref={(node) => {
-          imgRef.current = node;
-          if (typeof ref === 'function') {
-            ref(node);
-          } else if (ref) {
-            ref.current = node;
-          }
-        }}
-        src={src}
-        alt={alt}
-        loading={priority ? 'eager' : 'lazy'}
-        className={`optimized-image ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: isLoaded ? 1 : 0 }}
-        transition={{ duration: 0.3 }}
-        onLoad={handleLoad}
-        onError={handleError}
-      />
-    </div>
-  );
-});
-
-OptimizedImage.displayName = 'OptimizedImage';
-
-export default OptimizedImage;

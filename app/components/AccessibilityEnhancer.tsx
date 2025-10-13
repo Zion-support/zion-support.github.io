@@ -1,154 +1,68 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-import React from 'react';
-
-interface AccessibilityEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function AccessibilityEnhancer({ className = '', children }: AccessibilityEnhancerProps) {
-export default function Accessibilityenhancer() {
+export default function ComponentsAccessibilityEnhancerPage() {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions by Zion Tech Group for modern businesses." />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Components
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced Components solutions by Zion Tech Group for modern businesses.
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+            <p className="text-gray-600 mb-6">
+              This page is under development. Please check back later for comprehensive ai solutions.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+                <p className="text-gray-600">
+                  Advanced ai solution for your business requirements.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+                <p className="text-gray-600">
+                  Cutting-edge technology integration and optimization.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+                <p className="text-gray-600">
+                  Scalable and secure implementation.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
-export default function AccessibilityEnhancer({ className = '', children, ...props }: AccessibilityEnhancerProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-
-  useEffect(() => {
-    // Check for user preferences
-    const mediaQueryHighContrast = window.matchMedia('(prefers-contrast: high)');
-    const mediaQueryReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-    setIsHighContrast(mediaQueryHighContrast.matches);
-    setIsReducedMotion(mediaQueryReducedMotion.matches);
-
-    // Listen for changes
-    const handleHighContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
-    const handleReducedMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
-
-    mediaQueryHighContrast.addEventListener('change', handleHighContrastChange);
-    mediaQueryReducedMotion.addEventListener('change', handleReducedMotionChange);
-
-    // Keyboard navigation enhancements
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        const skipLink = document.querySelector('[data-skip-to-main]') as HTMLElement;
-        if (skipLink) {
-          skipLink.focus();
-          e.preventDefault();
-        }
-      }
-
-      // Focus management for modals and dropdowns
-      if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement?.closest('[role="dialog"]') || activeElement?.closest('[role="menu"]')) {
-          activeElement.blur();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-
-    // Add ARIA landmarks if missing
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (!main) {
-        const mainContent = document.querySelector('[role="main"]') || document.querySelector('.main-content');
-        if (mainContent) {
-          mainContent.setAttribute('role', 'main');
-        }
-      }
-
-      // Ensure navigation has proper role
-      const navs = document.querySelectorAll('nav');
-      navs.forEach(nav => {
-        if (!nav.getAttribute('aria-label') && !nav.getAttribute('aria-labelledby')) {
-          nav.setAttribute('aria-label', 'Main navigation');
-        }
-      });
-    };
-
-    addAriaLandmarks();
-
-    return () => {
-      mediaQueryHighContrast.removeEventListener('change', handleHighContrastChange);
-      mediaQueryReducedMotion.removeEventListener('change', handleReducedMotionChange);
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-
-  useEffect(() => {
-    // Apply accessibility styles
-    const root = document.documentElement;
-
-    if (isHighContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    // Apply font size
-    root.style.setProperty('--font-size-base', `${fontSize}px`);
-  }, [isHighContrast, isReducedMotion, fontSize]);
-
-  // Skip to main content link
-  const SkipToMainLink = () => (
-    <a
-      href="#main-content"
-      data-skip-to-main
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-      onClick={(e) => {
-        e.preventDefault();
-        const main = document.querySelector('#main-content') || document.querySelector('main');
-        if (main) {
-          main.focus();
-          main.scrollIntoView();
-        }
-      }}
-    >
-      Skip to main content
-    </a>
-  );
-
-  return (
-    <>
-      <SkipToMainLink />
-      <div
-        className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
-        style={{ fontSize: `${fontSize}px` }}
-      >
-        {children}
-      </div>
-    </>
-  );
-};
-
-export default AccessibilityEnhancer;
-
-export default function Accessibilityenhancer({ className = '', children, ...props }: AccessibilityenhancerProps) {
 }

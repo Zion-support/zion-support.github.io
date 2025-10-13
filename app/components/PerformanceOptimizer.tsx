@@ -1,129 +1,68 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface PerformanceOptimizerProps {
-interface PerformanceoptimizerProps {
-interface PerformanceOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function PerformanceOptimizer({ className = '', children }: PerformanceOptimizerProps) {
-export default function Performanceoptimizer({ className = '', children, ...props }: PerformanceoptimizerProps) {
+export default function ComponentsPerformanceOptimizerPage() {
   return (
-    <div className={`${className}`}>
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions by Zion Tech Group for modern businesses." />
+      </Helmet>
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-
-  useEffect(() => {
-    // Performance optimization logic
-    const optimizePerformance = () => {
-      // Preload critical resources
-      const criticalResources = [
-        '/fonts/inter-var.woff2',
-        '/images/hero-bg.jpg',
-        '/icons/sprite.svg'
-      ];
-
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
-        }
-        document.head.appendChild(link);
-      });
-
-      // Optimize images
-      const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        if (!img.loading) {
-          img.loading = 'lazy';
-        }
-        if (!img.decoding) {
-          img.decoding = 'async';
-        }
-      });
-
-      // Handle lazy loading for data-src images
-      const lazyImages = document.querySelectorAll('img[data-src]');
-      lazyImages.forEach(img => {
-        const imageElement = img as HTMLImageElement;
-        if (imageElement.dataset.src) {
-          imageElement.src = imageElement.dataset.src;
-          imageElement.removeAttribute('data-src');
-        }
-      });
-
-      // Add performance monitoring
-      if ('performance' in window) {
-        const observer = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach(entry => {
-            if (entry.entryType === 'navigation') {
-              console.log('Navigation timing:', entry);
-            }
-          });
-        });
-        observer.observe({ entryTypes: ['navigation', 'paint'] });
-      }
-
-      // Enable service worker for caching
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            console.log('Service Worker registered:', registration);
-          })
-          .catch(error => {
-            console.log('Service Worker registration failed:', error);
-          });
-      }
-
-      setIsOptimized(true);
-    };
-
-    // Run optimization after component mount
-    const timer = setTimeout(optimizePerformance, 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-import React from 'react';
-
-interface PerformanceoptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Performanceoptimizer({ className = '', children, ...props }: PerformanceoptimizerProps) {
-
-  return (
-    <div className="performance-optimizer">
-      {children}
-      {isOptimized && (
-        <div className="hidden" aria-hidden="true">
-          {/* Performance monitoring indicators */}
-          <div id="performance-indicator" data-optimized="true" />
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Components
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced Components solutions by Zion Tech Group for modern businesses.
+          </p>
         </div>
-      )}
+
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+            <p className="text-gray-600 mb-6">
+              This page is under development. Please check back later for comprehensive ai solutions.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+                <p className="text-gray-600">
+                  Advanced ai solution for your business requirements.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+                <p className="text-gray-600">
+                  Cutting-edge technology integration and optimization.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+                <p className="text-gray-600">
+                  Scalable and secure implementation.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
-export default function PerformanceOptimizer({ className = '', children, ...props }: PerformanceOptimizerProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-};
-
-export default PerformanceOptimizer;
-  );
-}
-export default PerformanceOptimizer;
-}
-export default PerformanceOptimizer;

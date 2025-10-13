@@ -1,63 +1,68 @@
 import React from 'react';
-import FuturisticText from "../components/FuturisticText";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface FuturisticTextProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function FuturisticText({ className = '', children }: FuturisticTextProps) {
-export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
+export default function ComponentsFuturisticTextPage() {
   return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
-export default function FuturisticText({ className = '', children, ...props }: FuturisticTextProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions by Zion Tech Group for modern businesses." />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Components
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced Components solutions by Zion Tech Group for modern businesses.
+          </p>
         </div>
-      );
-}
-const FuturisticText: React.FC<FuturisticTextProps> = ({
-//   children,
-  variant = 'body',
-  className = '',
-  as: Component = 'p'
-}) => {
-  const baseClasses = "transition-all duration-300";
 
-  const variantClasses = {
-//     heading: "text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400",
-//     subheading: "text-2xl md:text-3xl lg:text-4xl font-bold text-white",
-//     body: "text-base md:text-lg text-gray-300 leading-relaxed",
-//     caption: "text-sm text-gray-400",
-//     neon: "text-cyan-400 font-semibold drop-shadow-lg",
-//     gradient: "text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 font-semibold",
-  };
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+            <p className="text-gray-600 mb-6">
+              This page is under development. Please check back later for comprehensive ai solutions.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+                <p className="text-gray-600">
+                  Advanced ai solution for your business requirements.
+                </p>
+              </div>
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+                <p className="text-gray-600">
+                  Cutting-edge technology integration and optimization.
+                </p>
+              </div>
 
-  return <Component className={classes}>{children}</Component>;
-};
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+                <p className="text-gray-600">
+                  Scalable and secure implementation.
+                </p>
+              </div>
+            </div>
 
-export default FuturisticText;
-
-import React from 'react';
-
-interface FuturistictextProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
-  return (
-    <div className={`futuristictext-component ${className}`} {...props}>
-      {children}
+            <div className="text-center mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
-
 }

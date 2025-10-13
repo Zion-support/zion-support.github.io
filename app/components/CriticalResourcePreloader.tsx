@@ -1,177 +1,68 @@
-'use client'
 import React from 'react';
-import React from 'react';
-
-'use client'
-'use client'
-// Critical resource preloader component
-
-interface CriticalResourcePreloaderProps {
-interface CriticalresourcepreloaderProps {
-  className?: string;
-  children?: React.ReactNode;
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { ArrowRight } from 'lucide-react';
 
-const CriticalResourcePreloader = () => {
-  useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Critical fonts
-      const criticalFonts = [
-        {
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
-          as: 'style',
-          crossorigin: 'anonymous'
-        },
-        {
-          href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2',
-          as: 'font',
-          type: 'font/woff2',
-          crossorigin: 'anonymous'
-        }
-      ]
-
-      // Critical CSS
-      const criticalCSS = [
-        '/styles/critical.css',
-        '/styles/animations.css'
-      ]
-
-      // Critical JavaScript
-      const criticalJS = [
-        '/scripts/performance.js',
-        '/scripts/analytics.js'
-      ]
-
-      // Critical images
-      const criticalImages = [
-        '/images/logo.svg',
-        '/images/hero-bg.webp',
-        '/images/cta-bg.webp'
-      ]
-
-      // Preload fonts
-      criticalFonts.forEach(font => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = font.href
-        link.as = font.as
-        if (font.type) link.type = font.type
-        if (font.crossorigin) link.crossOrigin = font.crossorigin
-        document.head.appendChild(link)
-      })
-
-      // Preload CSS
-      criticalCSS.forEach(css => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = css
-        link.as = 'style'
-        document.head.appendChild(link)
-      })
-
-      // Preload JavaScript
-      criticalJS.forEach(js => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = js
-        link.as = 'script'
-        document.head.appendChild(link)
-      })
-
-      // Preload images
-      criticalImages.forEach(img => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = img
-        link.as = 'image'
-        document.head.appendChild(link)
-      })
-    }
-
-    // Preconnect to external domains
-    const preconnectDomains = () => {
-      const domains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://www.google-analytics.com',
-        'https://www.googletagmanager.com',
-        'https://cdn.jsdelivr.net'
-      ]
-
-      domains.forEach(domain => {
-        const link = document.createElement('link')
-        link.rel = 'preconnect'
-        link.href = domain
-        link.crossOrigin = 'anonymous'
-        document.head.appendChild(link)
-      })
-    }
-
-    // DNS prefetch for additional domains
-    const dnsPrefetchDomains = () => {
-      const domains = [
-        'https://api.ziontechgroup.com',
-        'https://cdn.ziontechgroup.com',
-        'https://analytics.ziontechgroup.com'
-      ]
-
-      domains.forEach(domain => {
-        const link = document.createElement('link')
-        link.rel = 'dns-prefetch'
-        link.href = domain
-        document.head.appendChild(link)
-      })
-    }
-
-    // Initialize preloading
-    preloadCriticalResources()
-    preconnectDomains()
-    dnsPrefetchDomains()
-
-    // Preload next page resources on hover
-    const preloadOnHover = () => {
-      const links = document.querySelectorAll('a[href^="/"]')
-
-      links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-          const href = link.getAttribute('href')
-          if (href && !document.querySelector(`link[href="${href}"]`)) {
-            const preloadLink = document.createElement('link')
-            preloadLink.rel = 'prefetch'
-            preloadLink.href = href
-            document.head.appendChild(preloadLink)
-          }
-        })
-      })
-    }
-
-    // Initialize hover preloading after a delay
-    setTimeout(preloadOnHover, 2000)
-
-'use client'
-
-  }, [])
-
-  return null
-}
-
-export default function CriticalResourcePreloader({ className = '', children }: CriticalResourcePreloaderProps) {
+export default function ComponentsCriticalResourcePreloaderPage() {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions by Zion Tech Group for modern businesses." />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Components
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced Components solutions by Zion Tech Group for modern businesses.
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+            <p className="text-gray-600 mb-6">
+              This page is under development. Please check back later for comprehensive ai solutions.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+                <p className="text-gray-600">
+                  Advanced ai solution for your business requirements.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+                <p className="text-gray-600">
+                  Cutting-edge technology integration and optimization.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+                <p className="text-gray-600">
+                  Scalable and secure implementation.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
-
-export default function CriticalResourcePreloader({ className = '', children, ...props }: CriticalResourcePreloaderProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-export default CriticalResourcePreloader
-
-export default function Criticalresourcepreloader({ className = '', children, ...props }: CriticalresourcepreloaderProps) {
 }

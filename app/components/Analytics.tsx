@@ -1,286 +1,68 @@
 import React from 'react';
-import React, { useEffect } from 'react';
-import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface AnalyticsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Analytics({ className = '', children }: AnalyticsProps) {
+export default function ComponentsAnalyticsPage() {
   return (
-    <div className={`${className}`}>
-export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
-  return (
-    <div className={`analytics-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-import React, { useEffect } from 'react';
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions by Zion Tech Group for modern businesses." />
+      </Helmet>
 
-import React, { useEffect } from 'react';
-import { Star } from 'lucide-react';
-
-import React from 'react';
-declare global {
-  interface Window {,
-    gtag: (...args: any[]) => void;
-  }
-}
-
-interface AnalyticsProps {
-  children: React.ReactNode;
-}
-
-export default function Analytics({ children }: AnalyticsProps) {
-  return <>{children}</>;
-}
-interface AnalyticsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Components
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced Components solutions by Zion Tech Group for modern businesses.
+          </p>
         </div>
-      );
-}
-}
-  measurementId?: string;
-  enabled?: boolean;
-}
 
-const Analytics: React.FC<AnalyticsProps> = ({
-  measurementId = 'G-XXXXXXXXXX', // Replace with actual GA4 measurement ID
-  enabled = process.env.NODE_ENV === 'production'
-}) => {
-  const location = useLocation();
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+            <p className="text-gray-600 mb-6">
+              This page is under development. Please check back later for comprehensive ai solutions.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+                <p className="text-gray-600">
+                  Advanced ai solution for your business requirements.
+                </p>
+              </div>
 
-  useEffect(() => {
-    if (!enabled || typeof window === 'undefined') return;
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+                <p className="text-gray-600">
+                  Cutting-edge technology integration and optimization.
+                </p>
+              </div>
 
-    // Initialize Google Analytics
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-    document.head.appendChild(script);
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+                <p className="text-gray-600">
+                  Scalable and secure implementation.
+                </p>
+              </div>
+            </div>
 
-    // Initialize dataLayer
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
-      window.dataLayer.push(arguments);
-    };
-
-    window.gtag('js', new Date());
-    window.gtag('config', measurementId, {
-      page_title: document.title,
-      page_location: window.location.href,
-    });
-
-    return () => {
-      // Cleanup if needed
-      const existingScript = document.querySelector(`script[src*="${measurementId}"]`);
-      if (existingScript) {
-        existingScript.remove();
-      }
-    };
-  }, [measurementId, enabled]);
-
-  // Track page views on route changes
-  useEffect(() => {
-    if (!enabled || typeof window === 'undefined' || !window.gtag) return;
-
-    window.gtag('config', measurementId, {
-      page_title: document.title,
-      page_location: window.location.href,
-    });
-  }, [location, measurementId, enabled]);
-
-  // Track Core Web Vitals
-  useEffect(() => {
-    if (!enabled || typeof window === 'undefined') return;
-
-    const trackWebVitals = () => {
-      // Track LCP
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            window.gtag('event', 'web_vitals', {
-              name: 'LCP',
-              value: Math.round(entry.startTime),
-              event_category: 'Web Vitals',
-              event_label: 'Largest Contentful Paint',
-            });
-          }
-        }
-      }).observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // Track FID
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (entry.entryType === 'first-input') {
-            window.gtag('event', 'web_vitals', {
-              name: 'FID',
-              value: Math.round((entry as any).processingStart - entry.startTime),
-              event_category: 'Web Vitals',
-              event_label: 'First Input Delay',
-            });
-          }
-        }
-      }).observe({ entryTypes: ['first-input'] });
-
-      // Track CLS
-      let clsValue = 0;
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
-          }
-        }
-        window.gtag('event', 'web_vitals', {
-          name: 'CLS',
-          value: Math.round(clsValue * 1000),
-          event_category: 'Web Vitals',
-          event_label: 'Cumulative Layout Shift',
-        });
-      }).observe({ entryTypes: ['layout-shift'] });
-    };
-
-    // Wait for page to be fully loaded
-    if (document.readyState === 'complete') {
-      trackWebVitals();
-    } else {
-      window.addEventListener('load', trackWebVitals);
-    }
-
-    return () => {
-      window.removeEventListener('load', trackWebVitals);
-    };
-  }, [enabled]);
-
-  // Track custom events
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-    if (!enabled || typeof window === 'undefined' || !window.gtag) return;
-
-    window.gtag('event', eventName, parameters);
-  };
-
-  // Track button clicks
-  useEffect(() => {
-    if (!enabled) return;
-
-    const handleClick = (event: Event) => {
-      const target = event.target as HTMLElement;
-      const button = target.closest('button, a, [role="button"]');
-
-      if (button) {
-        const buttonText = button.textContent?.trim() || 'Unknown';
-        const buttonId = button.id || button.className;
-
-        trackEvent('button_click', {
-          button_text: buttonText,
-          button_id: buttonId,
-          page_location: window.location.href,
-        });
-      }
-    };
-
-    document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
-  }, [enabled]);
-
-  // Track form submissions
-  useEffect(() => {
-    if (!enabled) return;
-
-    const handleSubmit = (event: Event) => {
-      const form = event.target as HTMLFormElement;
-      const formId = form.id || form.className;
-
-      trackEvent('form_submit', {
-        form_id: formId,
-        page_location: window.location.href,
-      });
-    };
-
-    document.addEventListener('submit', handleSubmit);
-    return () => document.removeEventListener('submit', handleSubmit);
-  }, [enabled]);
-
-  // Track scroll depth
-  useEffect(() => {
-    if (!enabled) return;
-
-    let maxScroll = 0;
-    const trackScroll = () => {
-      const scrollPercent = Math.round(
-        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
-      );
-
-      if (scrollPercent > maxScroll) {
-        maxScroll = scrollPercent;
-
-        // Track at 25%, 50%, 75%, and 100%
-        if ([25, 50, 75, 100].includes(scrollPercent)) {
-          trackEvent('scroll_depth', {
-            scroll_percent: scrollPercent,
-            page_location: window.location.href,
-          });
-        }
-      }
-    };
-
-    window.addEventListener('scroll', trackScroll, { passive: true });
-    return () => window.removeEventListener('scroll', trackScroll);
-  }, [enabled]);
-
-  return null; // This component doesn't render anything
-};
-
-export default Analytics;
-  );
-}
-  trackingId?: string;
-  children?: React.ReactNode;
-}
-
-const Analytics: React.FC<AnalyticsProps> = ({ trackingId, children }) => {
-  useEffect(() => {
-    if (trackingId && typeof window !== 'undefined') {
-      // Initialize Google Analytics
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
-
-      window.gtag = window.gtag || function() {
-        (window.gtag as any).q = (window.gtag as any).q || [];
-        (window.gtag as any).q.push(arguments);
-      };
-
-      window.gtag('js', new Date());
-      window.gtag('config', trackingId);
-    }
-  }, [trackingId]);
-
-  return <>{children}</>;
-};
-
-export default Analytics;
-
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
-  return (
-    <div className={`analytics-component ${className}`} {...props}>
-      {children}
+            <div className="text-center mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
-
-}
-export default $1;

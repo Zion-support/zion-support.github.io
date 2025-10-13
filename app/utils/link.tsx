@@ -1,131 +1,68 @@
 import React from 'react';
-
-interface linkProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function link({ className = '', children }: linkProps) {
-import React from 'react';
-
-export default function UtilsPage() {
-import { Link } from 'react-router-dom';
-
-export default function LinkPage() {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-export function formatDate(date: Date | string): string {
-  const d = new Date(date);
-  return d.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-}
-
-export function formatCurrency(amount: number, currency = 'USD'): string {
-  return new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency
-  }).format(amount);
-}
-
-export function slugify(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, '')
-    .replace(/[\s_-]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
-
-interface LinkProps {
-  to: string;
-  children: React.ReactNode;
-  className?: string;
-  external?: boolean;
-}
-
-export default function Link({
-  to,
-  children,
-  className = '',
-  external = false
-}: LinkProps) {
-  if (external) {
-    return (
-      <a
-        href={to}
-        className={className}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {children}
-      </a>
-    );
-  }
-
-  return (
-    <RouterLink to={to} className={className}>
-      {children}
-    </RouterLink>
-  );
-}
-import React from 'react';
-
-interface LinkProps {
-  href: string;
-  children: React.ReactNode;
-  className?: string;
-}
-
-export const Link = ({ href, children, className = '' }: LinkProps) => {
-  return (
-    <a href={href} className={className}>
-      {children}
-    </a>
-  );
-};
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-  return (;
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>;
-      <div className="container mx-auto px-4 py-16"></div>;
-        <div className="max-w-4xl mx-auto text-center"></div>;
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">;
-            link;
-          </h1>;
-          <p className="text-xl text-gray-600 mb-8">;
-            This component is under development. Please check back later.;
-          </p>;
-        </div>;
-      </div>;
-</div>;
-);
 
-import React from 'react';
-
-export default function link() {
-
+export default function UtilsLinkPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions by Zion Tech Group for modern businesses." />
+      </Helmet>
+
       <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            link
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Utils
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            This component is under development. Please check back later.
+            Advanced Utils solutions by Zion Tech Group for modern businesses.
           </p>
         </div>
-      </div>
 
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+            <p className="text-gray-600 mb-6">
+              This page is under development. Please check back later for comprehensive ai solutions.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+                <p className="text-gray-600">
+                  Advanced ai solution for your business requirements.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+                <p className="text-gray-600">
+                  Cutting-edge technology integration and optimization.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+                <p className="text-gray-600">
+                  Scalable and secure implementation.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
-
 }

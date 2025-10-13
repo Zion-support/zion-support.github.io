@@ -1,77 +1,68 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface FuturisticCardProps {
-interface FuturisticcardProps {
-interface FuturisticCardProps {
-interface FuturisticCardProps {
-  children: React.ReactNode;
-  className?: string;
-  variant?: 'default' | 'glass' | 'neon' | 'hologram';
-}
-
-export default function FuturisticCard({ className = '', children }: FuturisticCardProps) {
-export default function Futuristiccard({ className = '', children, ...props }: FuturisticcardProps) {
-interface FuturisticCardProps {
-  children: React.ReactNode;
-  className?: string;
-  [key: string]: any;
-}
-
-export default function FuturisticCard({ children, className = '', ...props }: FuturisticCardProps) {
+export default function ComponentsFuturisticCardPage() {
   return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
-export default function FuturisticCard({ className = '', children, ...props }: FuturisticCardProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions by Zion Tech Group for modern businesses." />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Components
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced Components solutions by Zion Tech Group for modern businesses.
+          </p>
         </div>
-      );
-}
-}
-const FuturisticCard: React.FC<FuturisticCardProps> = ({
-  children,
-  className = '',
-  variant = 'default'
-}) => {
-  const baseClasses = "rounded-xl p-6 transition-all duration-300";
 
-  const variantClasses = {
-    default: "bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20",
-    glass: "bg-white/5 backdrop-blur-md border border-cyan-500/30 hover:bg-white/10",
-    neon: "bg-slate-800/50 border border-cyan-400/50 hover:border-cyan-400 shadow-lg shadow-cyan-500/10",
-    hologram: "bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-cyan-400/30 hover:from-cyan-500/20 hover:to-purple-500/20",
-  };
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+            <p className="text-gray-600 mb-6">
+              This page is under development. Please check back later for comprehensive ai solutions.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+                <p className="text-gray-600">
+                  Advanced ai solution for your business requirements.
+                </p>
+              </div>
 
-import React from 'react';
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+                <p className="text-gray-600">
+                  Cutting-edge technology integration and optimization.
+                </p>
+              </div>
 
-interface FuturisticcardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+                <p className="text-gray-600">
+                  Scalable and secure implementation.
+                </p>
+              </div>
+            </div>
 
-export default function Futuristiccard({ className = '', children, ...props }: FuturisticcardProps) {
-
-  return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
-      {children}
-
+            <div className="text-center mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-};
-
-export default FuturisticCard;
-  );
 }
-  return (;
-    <div className={`futuristiccard-component ${className}`} {...props}></div>;
-      {children}
-;
-</div>;
-);
-
-}
-export default $1;

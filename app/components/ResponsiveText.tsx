@@ -1,101 +1,68 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface ResponsiveTextProps {
-interface ResponsivetextProps {
-interface ResponsiveTextProps {
-interface ResponsiveTextProps {
-  children: React.ReactNode;
-  className?: string;
-  size?: {
-    default?: string;
-    sm?: string;
-    md?: string;
-    lg?: string;
-    xl?: string;
-  };
-  weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold';
-  color?: 'primary' | 'secondary' | 'accent' | 'muted' | 'white' | 'gray';
-}
-
-export default function ResponsiveText({ className = '', children }: ResponsiveTextProps) {
-export default function Responsivetext({ className = '', children, ...props }: ResponsivetextProps) {
-interface ResponsiveTextProps {
-  children: React.ReactNode;
-  className?: string;
-  [key: string]: any;
-}
-
-export default function ResponsiveText({ children, className = '', ...props }: ResponsiveTextProps) {
+export default function ComponentsResponsiveTextPage() {
   return (
-    <div className={`${className}`}>
-const ResponsiveText: React.FC<ResponsiveTextProps> = ({
-  children,
-  className = '',
-  size = { default: 'base', sm: 'lg', md: 'xl' },
-  weight = 'normal',
-  color = 'white'
-}) => {
-  const weightClasses = {
-    light: 'font-light',
-    normal: 'font-normal',
-    medium: 'font-medium',
-    semibold: 'font-semibold',
-    bold: 'font-bold'
-  };
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions by Zion Tech Group for modern businesses." />
+      </Helmet>
 
-  const colorClasses = {
-    primary: 'text-cyan-400',
-    secondary: 'text-purple-400',
-    accent: 'text-pink-400',
-    muted: 'text-gray-400',
-    white: 'text-white',
-    gray: 'text-gray-300'
-  };
-
-  const sizeClasses = `text-${size.default || 'base'} ${
-    size.sm ? `sm:text-${size.sm}` : ''
-  } ${size.md ? `md:text-${size.md}` : ''} ${
-    size.lg ? `lg:text-${size.lg}` : ''
-  } ${size.xl ? `xl:text-${size.xl}` : ''}`;
-
-import React from 'react';
-
-interface ResponsivetextProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Responsivetext({ className = '', children, ...props }: ResponsivetextProps) {
-
-  return (
-    <span className={`${sizeClasses} ${weightClasses[weight]} ${colorClasses[color]} ${className}`}>
-      {children}
-    </span>
-  );
-}
-export default function ResponsiveText({ className = '', children, ...props }: ResponsiveTextProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Components
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced Components solutions by Zion Tech Group for modern businesses.
+          </p>
         </div>
-      );
-}
-}
-};
 
-export default ResponsiveText;
-  );
-}
-  return (;
-    <div className={`responsivetext-component ${className}`} {...props}></div>;
-      {children}
-;
-</div>;
-);
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+            <p className="text-gray-600 mb-6">
+              This page is under development. Please check back later for comprehensive ai solutions.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+                <p className="text-gray-600">
+                  Advanced ai solution for your business requirements.
+                </p>
+              </div>
 
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+                <p className="text-gray-600">
+                  Cutting-edge technology integration and optimization.
+                </p>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+                <p className="text-gray-600">
+                  Scalable and secure implementation.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
-
-}
-export default $1;

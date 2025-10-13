@@ -1,101 +1,68 @@
 import React from 'react';
-
-import React, { useState } from "react";
-import AnalyticsProvider from "./components/AnalyticsProvider";
-import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
-import ErrorFallback from "./components/ErrorFallback";
-import { Helmet } from "react-helmet-async";
-import MobileNavigation from "./components/MobileNavigation";
-import ImprovedNavigation from "./components/ImprovedNavigation";
-import ImprovedFooter from "./components/ImprovedFooter";
-import ImprovedSidebar from "./components/ImprovedSidebar";
-import { Monitor } from 'lucide-react';
-
-interface layoutProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function layout({ className = '', children }: layoutProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-    </div>
-  );
-}
-import React, { useState } from "react";
-import AnalyticsProvider from "./components/AnalyticsProvider";
-import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
-// import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
-import ErrorFallback from "./components/ErrorFallback";
-
-import MobileNavigation from "./components/MobileNavigation";
-import ImprovedNavigation from "./components/ImprovedNavigation";
-import ImprovedFooter from "./components/ImprovedFooter";
-import ImprovedSidebar from "./components/ImprovedSidebar";
 import { Helmet } from 'react-helmet-async';
-import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-interface LayoutProps {
-  children: React.ReactNode;
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+export default function AppLayoutPage() {
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
-      <HelmetProvider>
-        <BrowserRouter>
-          <AnalyticsProvider>
-            <EnhancedPerformanceMonitor showInProduction={false} />
-            <Helmet>
-              <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-              <meta
-                name="description"
-                content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses."
-              />
-              <meta
-                name="keywords"
-                content="AI solutions, IT services, digital transformation, business automation, technology consulting"
-              />
-            </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>App - Zion Tech Group</title>
+        <meta name="description" content="Advanced App solutions by Zion Tech Group for modern businesses." />
+      </Helmet>
 
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-              {/* Animated Background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
-              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            App
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced App solutions by Zion Tech Group for modern businesses.
+          </p>
+        </div>
 
-              <ImprovedNavigation />
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+            <p className="text-gray-600 mb-6">
+              This page is under development. Please check back later for comprehensive ai solutions.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+                <p className="text-gray-600">
+                  Advanced ai solution for your business requirements.
+                </p>
+              </div>
 
-              <main>{children}</main>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+                <p className="text-gray-600">
+                  Cutting-edge technology integration and optimization.
+                </p>
+              </div>
 
-              <ImprovedFooter />
-
-              {/* Sidebar */}
-              <ImprovedSidebar
-                isOpen={isSidebarOpen}
-                onClose={() => setIsSidebarOpen(false)}
-              />
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+                <p className="text-gray-600">
+                  Scalable and secure implementation.
+                </p>
+              </div>
             </div>
-          </AnalyticsProvider>
-        </BrowserRouter>
-      </HelmetProvider>
-    </ErrorBoundary>
-  );
-};
 
-import React from 'react';
-
-export default Layout;
+            <div className="text-center mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
-
-export default $1;

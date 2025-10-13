@@ -1,84 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Helmet } from "react-helmet-async";
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-export default function zionAiVoiceAssistantPro() {
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for small teams and individuals",
-      features: [
-        "Up to 5 users",
-        "Basic voice commands",
-        "10 integrations",
-        "Standard voice models",
-        "Email support",
-        "5GB storage"
-      ],
-      popular: false;
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 25 users",
-        "Advanced AI capabilities",
-        "Unlimited integrations",
-        "Custom voice training",
-        "Priority support",
-        "50GB storage",
-        "API access",
-        "Analytics dashboard"
-      ],
-      popular: true;
-    },
-    {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited users",
-        "Full AI suite",
-        "Custom integrations",
-        "Advanced voice models",
-        "24/7 dedicated support",
-        "Unlimited storage",
-        "White-label options",
-        "Advanced analytics",
-        "Custom deployment"
-      ],
-      popular: false;
-    }
-  ];
-
-import React from 'react';
-
-export default function Page() {
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Zion Ai Voice Assistant Pro - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Voice Assistant Pro solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">Zion Ai Voice Assistant Pro</h1>
-          <p className="text-xl text-gray-300 mb-8">
-export default function ZionAiVoiceAssistantProPage() {
+export default function ZionAiVoiceAssistantProPagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Zion Ai Voice Assistant Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced zion ai voice assistant pro solutions by Zion Tech Group" />
+        <meta name="description" content="Advanced Zion Ai Voice Assistant Pro solutions by Zion Tech Group for modern businesses." />
       </Helmet>
 
       <div className="container mx-auto px-4 py-16">
@@ -87,51 +17,52 @@ export default function ZionAiVoiceAssistantProPage() {
             Zion Ai Voice Assistant Pro
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-
-export default function ZionaivoiceassistantproPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion Ai Voice Assistant Pro</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
+            Advanced Zion Ai Voice Assistant Pro solutions by Zion Tech Group for modern businesses.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
-              Comprehensive solution for your business requirements.
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h2>
+            <p className="text-gray-600 mb-6">
+              This page is under development. Please check back later for comprehensive ai solutions.
             </p>
-          </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+                <p className="text-gray-600">
+                  Advanced ai solution for your business requirements.
+                </p>
+              </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-            <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+                <p className="text-gray-600">
+                  Cutting-edge technology integration and optimization.
+                </p>
+              </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
-              Scalable and secure implementation.
-            </p>
-          </div>
-        </div>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+                <p className="text-gray-600">
+                  Scalable and secure implementation.
+                </p>
+              </div>
+            </div>
 
-        <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Get Started
-          </button>
+            <div className="text-center mt-8">
+              <Link
+                to="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
-}
-import { Helmet } from 'react-helmet-async';
-
 }
