@@ -40,6 +40,8 @@ const AIMarketingAutomationPage = React.lazy(() => import("./app/ai-marketing-au
 const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
 const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
 const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AIMachineLearningPage = React.lazy(() => import("./app/ai-machine-learning/page"));
+const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
 
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
@@ -172,6 +174,8 @@ function App() {
                             <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
                             <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
                             <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+                            <Route path="/ai-machine-learning" element={<AIMachineLearningPage />} />
+                            <Route path="/ai-automation" element={<AIAutomationPage />} />
 
                             {/* IT Services Routes */}
                             <Route path="/cloud-migration" element={<CloudMigrationPage />} />

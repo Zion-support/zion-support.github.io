@@ -19,10 +19,26 @@ import {
 const AIServicesPage = () => {
   const aiServices = [
     {
+      title: "AI Machine Learning",
+      description: "Custom ML model development, predictive analytics, and deep learning solutions for your business.",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      link: "/ai-machine-learning",
+      features: ["Custom ML Models", "Predictive Analytics", "Deep Learning"]
+    },
+    {
+      title: "AI Automation",
+      description: "Intelligent process automation with AI-powered workflow orchestration and RPA integration.",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      link: "/ai-automation",
+      features: ["Workflow Automation", "RPA Integration", "Process Optimization"]
+    },
+    {
       title: "AI Analytics",
       description: "Transform your data into actionable insights with our advanced AI analytics platform.",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
+      color: "from-green-500 to-emerald-500",
       link: "/ai-analytics",
       features: ["Predictive Analytics", "Real-time Insights", "Custom Dashboards"]
     },
@@ -30,7 +46,7 @@ const AIServicesPage = () => {
       title: "AI Content Generation",
       description: "Create high-quality content at scale with our AI-powered content generation tools.",
       icon: <Code className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
+      color: "from-indigo-500 to-purple-500",
       link: "/ai-content-generation",
       features: ["Automated Writing", "SEO Optimization", "Multi-language Support"]
     },
@@ -46,25 +62,9 @@ const AIServicesPage = () => {
       title: "AI Customer Support",
       description: "Enhance customer experience with intelligent chatbots and support automation.",
       icon: <Users className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
+      color: "from-yellow-500 to-orange-500",
       link: "/ai-customer-support",
       features: ["Smart Chatbots", "Sentiment Analysis", "Multi-channel Support"]
-    },
-    {
-      title: "AI Data Analytics",
-      description: "Unlock the power of your data with advanced AI analytics and machine learning.",
-      icon: <Database className="w-8 h-8" />,
-      color: "from-indigo-500 to-purple-500",
-      link: "/ai-data-analytics",
-      features: ["Data Mining", "Pattern Recognition", "Predictive Modeling"]
-    },
-    {
-      title: "AI Workflow Automation",
-      description: "Streamline your business processes with intelligent workflow automation.",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500",
-      link: "/ai-workflow-automation",
-      features: ["Process Optimization", "Task Automation", "Smart Routing"]
     }
   ];
 

@@ -2,170 +2,139 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
+  Brain, 
+  BarChart3, 
   Zap, 
-  Bot, 
   CheckCircle, 
   ArrowRight,
   Star,
   Target,
   TrendingUp,
   Users,
+  Shield,
   Clock,
   Globe,
-  Smartphone,
-  BarChart3,
-  Shield
+  Smartphone
 } from 'lucide-react';
 
-const AIAutomationPage = () => {
+const AIMachineLearningPage = () => {
   const features = [
     {
-      title: "Workflow Automation",
-      description: "Automate complex business processes with intelligent workflow orchestration",
-      icon: <Zap className="w-6 h-6" />,
-      details: "End-to-end process automation with AI decision making"
+      title: "Custom ML Model Development",
+      description: "Build tailored machine learning models for your specific business needs",
+      icon: <Brain className="w-6 h-6" />,
+      details: "From data preprocessing to model deployment and monitoring"
     },
     {
-      title: "RPA Integration",
-      description: "Seamlessly integrate robotic process automation with AI capabilities",
-      icon: <Bot className="w-6 h-6" />,
-      details: "Combine RPA with AI for intelligent task execution"
-    },
-    {
-      title: "Document Processing",
-      description: "Automate document handling with AI-powered extraction and classification",
-      icon: <BarChart3 className="w-6 h-6" />,
-      details: "Intelligent document routing and data extraction"
-    },
-    {
-      title: "Customer Service Automation",
-      description: "Deploy AI chatbots and virtual assistants for 24/7 customer support",
-      icon: <Users className="w-6 h-6" />,
-      details: "Natural language processing and sentiment analysis"
-    },
-    {
-      title: "Data Processing Automation",
-      description: "Automate data collection, cleaning, and analysis workflows",
+      title: "Predictive Analytics",
+      description: "Forecast future trends and behaviors with advanced predictive models",
       icon: <TrendingUp className="w-6 h-6" />,
-      details: "Intelligent data pipeline management and quality control"
+      details: "Time series analysis, demand forecasting, and risk assessment"
     },
     {
-      title: "Predictive Automation",
-      description: "Use AI to predict and prevent issues before they occur",
+      title: "Natural Language Processing",
+      description: "Extract insights from text data with advanced NLP capabilities",
+      icon: <Globe className="w-6 h-6" />,
+      details: "Sentiment analysis, text classification, and language translation"
+    },
+    {
+      title: "Computer Vision",
+      description: "Process and analyze visual data with state-of-the-art CV models",
       icon: <Target className="w-6 h-6" />,
-      details: "Proactive automation based on predictive analytics"
+      details: "Image recognition, object detection, and visual quality assessment"
+    },
+    {
+      title: "Deep Learning Solutions",
+      description: "Implement complex neural networks for advanced AI applications",
+      icon: <Zap className="w-6 h-6" />,
+      details: "CNN, RNN, Transformer models for various use cases"
+    },
+    {
+      title: "MLOps & Model Deployment",
+      description: "Deploy and manage ML models in production environments",
+      icon: <Shield className="w-6 h-6" />,
+      details: "Automated training pipelines, model versioning, and monitoring"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$1,500",
-      period: "/month",
-      description: "Perfect for small business automation",
+      name: "Consultation",
+      price: "$2,500",
+      period: "/project",
+      description: "Perfect for initial ML strategy and planning",
       features: [
-        "Up to 5 automated workflows",
-        "Basic AI capabilities",
-        "Email support",
-        "Standard integrations",
-        "Monthly reporting",
-        "Basic analytics"
+        "ML Strategy Assessment",
+        "Data Quality Analysis",
+        "Technology Recommendations",
+        "Implementation Roadmap",
+        "2 weeks delivery",
+        "Post-project support"
       ],
       popular: false,
       cta: "Get Started"
     },
     {
-      name: "Professional",
-      price: "$4,500",
-      period: "/month",
-      description: "Ideal for growing businesses",
+      name: "Custom Development",
+      price: "$15,000",
+      period: "/project",
+      description: "Ideal for custom ML model development",
       features: [
-        "Up to 25 automated workflows",
-        "Advanced AI features",
-        "Priority support",
-        "Custom integrations",
-        "Real-time monitoring",
-        "Advanced analytics",
-        "API access",
-        "Team collaboration"
+        "Custom Model Development",
+        "Data Preprocessing",
+        "Model Training & Validation",
+        "API Integration",
+        "Documentation",
+        "3 months support",
+        "Performance Optimization",
+        "Scalability Planning"
       ],
       popular: true,
       cta: "Get Started"
     },
     {
-      name: "Enterprise",
-      price: "$12,000",
-      period: "/month",
-      description: "For large organizations",
+      name: "Enterprise ML Platform",
+      price: "$50,000",
+      period: "/year",
+      description: "Complete ML platform for large organizations",
       features: [
-        "Unlimited workflows",
-        "Custom AI models",
-        "24/7 phone support",
-        "White-label solution",
-        "Advanced security",
-        "Custom development",
-        "Dedicated account manager",
-        "SLA guarantee"
+        "Multiple ML Models",
+        "MLOps Infrastructure",
+        "Real-time Monitoring",
+        "Auto-scaling",
+        "24/7 Support",
+        "Custom Integrations",
+        "Dedicated Team",
+        "SLA Guarantee"
       ],
       popular: false,
       cta: "Contact Sales"
     }
   ];
 
-  const benefits = [
-    {
-      title: "Save Time",
-      description: "Automate repetitive tasks and focus on strategic work",
-      icon: <Clock className="w-8 h-8" />,
-      stat: "80% time saved",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Reduce Errors",
-      description: "Eliminate human errors with intelligent automation",
-      icon: <Shield className="w-8 h-8" />,
-      stat: "95% accuracy",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Increase Productivity",
-      description: "Boost team productivity with smart automation",
-      icon: <TrendingUp className="w-8 h-8" />,
-      stat: "300% productivity boost",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Lower Costs",
-      description: "Reduce operational costs through automation",
-      icon: <Target className="w-8 h-8" />,
-      stat: "60% cost reduction",
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
   const useCases = [
     {
-      title: "Finance & Accounting",
-      description: "Automate invoice processing, expense management, and financial reporting",
-      icon: <BarChart3 className="w-8 h-8" />,
+      title: "E-commerce",
+      description: "Recommendation engines, price optimization, and fraud detection",
+      icon: <Smartphone className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Human Resources",
-      description: "Streamline recruitment, onboarding, and employee management processes",
-      icon: <Users className="w-8 h-8" />,
+      title: "Healthcare",
+      description: "Medical diagnosis, drug discovery, and patient monitoring",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Sales & Marketing",
-      description: "Automate lead generation, email campaigns, and customer follow-ups",
-      icon: <Target className="w-8 h-8" />,
+      title: "Finance",
+      description: "Risk assessment, algorithmic trading, and credit scoring",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Operations",
-      description: "Optimize supply chain, inventory management, and quality control",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Manufacturing",
+      description: "Predictive maintenance, quality control, and supply chain optimization",
+      icon: <Target className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -173,28 +142,28 @@ const AIAutomationPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Automation Services - Intelligent Business Process Automation | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with AI-powered automation. Streamline workflows, reduce costs, and boost productivity with intelligent process automation solutions." />
-        <meta name="keywords" content="AI automation, business process automation, workflow automation, RPA, intelligent automation, process optimization" />
+        <title>AI Machine Learning Services - Custom ML Solutions | Zion Tech Group</title>
+        <meta name="description" content="Transform your business with custom machine learning solutions. From model development to deployment, we provide end-to-end ML services for every industry." />
+        <meta name="keywords" content="machine learning, AI development, custom ML models, predictive analytics, deep learning, MLOps, data science" />
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Hero Section */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Intelligent Process Automation</span>
+            <Brain className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">Custom Machine Learning Solutions</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Automation Services
+              AI Machine Learning Services
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Transform your business with AI-powered automation. Streamline workflows, reduce costs, 
-            and boost productivity with intelligent process automation solutions that adapt and learn.
+            Transform your business with custom machine learning solutions. From model development to deployment, 
+            we provide end-to-end ML services that drive real business value and competitive advantage.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -202,69 +171,43 @@ const AIAutomationPage = () => {
               to="/contact"
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Automate Your Processes
+              Start Your ML Project
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-              View Demo
-              <Bot className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              View Case Studies
+              <BarChart3 className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </Link>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
-              <div className="text-gray-300 text-sm">Processes Automated</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-              <div className="text-gray-300 text-sm">Time Saved</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">200+</div>
+              <div className="text-gray-300 text-sm">ML Models Deployed</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
               <div className="text-gray-300 text-sm">Accuracy Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">4.8/5</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">50%</div>
+              <div className="text-gray-300 text-sm">Cost Reduction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">4.9/5</div>
               <div className="text-gray-300 text-sm">Client Rating</div>
             </div>
-          </div>
-        </div>
-
-        {/* Benefits Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Why Choose AI Automation?
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="group text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              >
-                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${benefit.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-300 mb-3 leading-relaxed">
-                  {benefit.description}
-                </p>
-                <div className="text-2xl font-bold text-cyan-400">{benefit.stat}</div>
-              </div>
-            ))}
           </div>
         </div>
 
         {/* Features Section */}
         <div className="mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Comprehensive Automation Features
+            Comprehensive ML Capabilities
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -317,7 +260,7 @@ const AIAutomationPage = () => {
         {/* Pricing Section */}
         <div className="mb-20">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Flexible Pricing Plans
+            Flexible Pricing Options
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
@@ -376,26 +319,26 @@ const AIAutomationPage = () => {
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-8 border border-cyan-500/20">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Automate Your Business?
+              Ready to Transform Your Business with ML?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join hundreds of companies using our AI automation solutions to streamline operations, 
-              reduce costs, and accelerate growth.
+              Join industry leaders who trust our machine learning expertise to drive innovation, 
+              optimize operations, and unlock new opportunities for growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Automating Today
+                Start Your ML Journey
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Schedule Demo
-                <Bot className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                Schedule Consultation
+                <Brain className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>
@@ -405,4 +348,4 @@ const AIAutomationPage = () => {
   );
 };
 
-export default AIAutomationPage;
+export default AIMachineLearningPage;
