@@ -59,8 +59,6 @@ export default function CloudServices() {
       features: ["Microservices", "Containerization", "Serverless", "API Development"]
     }
   ];
-
->>>>>>> 772e8e1b479bacba5b030e0b9a1c321c4e1bf36c
   return (
     <>
       <Helmet>
@@ -240,14 +238,4 @@ export default function CloudServices() {
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
-=======
-}
->>>>>>> 772e8e1b479bacba5b030e0b9a1c321c4e1bf36c
