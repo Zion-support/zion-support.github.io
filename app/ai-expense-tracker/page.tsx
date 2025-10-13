@@ -249,9 +249,8 @@ export default function AIExpenseTracker() {
             </div>
           </div>
         </div>
-      </div>
-</div>
+        </div>
+      </section>
+    </div>
   );
 };
-
-export default Page;

@@ -269,9 +269,8 @@ export default function AIEcommerceOptimizerPro() {
             </div>
           </div>
         </div>
-      </div>
-</div>
+        </div>
+      </section>
+    </div>
   );
 };
-
-export default Page;
