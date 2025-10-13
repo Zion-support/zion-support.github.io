@@ -161,31 +161,60 @@ const FuturisticBackground = () => {
         style={{ background: 'transparent' }}
       />
       
-      {/* Additional futuristic elements */}
-      <div className="absolute inset-0">
-        {/* Animated gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        
-        {/* Grid pattern */}
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }}
-        ></div>
-        
-        {/* Scanning lines */}
+        {/* Additional futuristic elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse delay-1000"></div>
+          {/* Animated gradient orbs with enhanced effects */}
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
+          <div className="absolute top-3/4 left-1/3 w-72 h-72 bg-gradient-to-r from-emerald-500/15 to-cyan-500/15 rounded-full blur-3xl animate-pulse delay-3000"></div>
+          <div className="absolute top-1/6 right-1/6 w-56 h-56 bg-gradient-to-r from-pink-500/15 to-purple-500/15 rounded-full blur-3xl animate-pulse delay-4000"></div>
+          
+          {/* Enhanced grid pattern with neon glow */}
+          <div 
+            className="absolute inset-0 opacity-15"
+            style={{
+              backgroundImage: `
+                linear-gradient(rgba(6, 182, 212, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6, 182, 212, 0.2) 1px, transparent 1px)
+              `,
+              backgroundSize: '40px 40px'
+            }}
+          ></div>
+          
+          {/* Diagonal grid overlay */}
+          <div 
+            className="absolute inset-0 opacity-5"
+            style={{
+              backgroundImage: `
+                linear-gradient(45deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+                linear-gradient(-45deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '60px 60px'
+            }}
+          ></div>
+          
+          {/* Enhanced scanning lines with neon effects */}
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse shadow-[0_0_10px_rgba(6,182,212,0.5)]"></div>
+            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse delay-1000 shadow-[0_0_10px_rgba(139,92,246,0.5)]"></div>
+            <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-pink-400 to-transparent animate-pulse delay-2000 shadow-[0_0_10px_rgba(236,72,153,0.5)]"></div>
+          </div>
+          
+          {/* Floating particles */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/6 w-2 h-2 bg-cyan-400 rounded-full animate-ping opacity-60"></div>
+            <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping delay-1000 opacity-60"></div>
+            <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping delay-2000 opacity-60"></div>
+            <div className="absolute top-1/6 right-1/3 w-1 h-1 bg-emerald-400 rounded-full animate-ping delay-3000 opacity-60"></div>
+            <div className="absolute bottom-1/3 left-1/2 w-2 h-2 bg-blue-400 rounded-full animate-ping delay-4000 opacity-60"></div>
+          </div>
+          
+          {/* Neon border effects */}
+          <div className="absolute inset-0 border border-cyan-500/20 rounded-none"></div>
+          <div className="absolute inset-2 border border-purple-500/10 rounded-none"></div>
+          <div className="absolute inset-4 border border-pink-500/5 rounded-none"></div>
         </div>
-      </div>
     </div>
   );
 };

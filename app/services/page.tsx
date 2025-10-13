@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Video, Mic, Camera, Settings, Heart, MessageSquare, CheckCircle, Truck, Zap, Database, Server, HardDrive, Link, DollarSign, Headphones } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -181,6 +181,327 @@ export default function Services() {
       originalPrice: "$399/month",
       features: ["Energy Optimization", "Renewable Integration", "Predictive Maintenance", "Smart Grid", "Cost Analysis", "Carbon Tracking"],
       category: "Energy Management"
+    },
+    {
+      title: "AI Video Generation Studio",
+      description: "Create professional videos with AI-powered editing, voice synthesis, and automated production. Perfect for marketing, training, and social media content.",
+      icon: <Video className="w-8 h-8" />,
+      path: "/ai-video-generation",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $89/month",
+      originalPrice: "$179/month",
+      features: ["AI Video Editing", "Voice Synthesis", "Auto Captions", "Template Library", "Brand Integration", "Multi-format Export"],
+      category: "AI Video",
+      popular: true
+    },
+    {
+      title: "AI Voice Assistant Platform",
+      description: "Build custom voice assistants with natural language processing, speech recognition, and multi-language support for customer service and automation.",
+      icon: <Mic className="w-8 h-8" />,
+      path: "/ai-voice-assistant",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $129/month",
+      originalPrice: "$259/month",
+      features: ["Voice Recognition", "Natural Language Processing", "Multi-language Support", "Custom Training", "API Integration", "Analytics Dashboard"],
+      category: "AI Voice"
+    },
+    {
+      title: "AI Image Recognition System",
+      description: "Advanced computer vision with object detection, facial recognition, and image classification for security, retail, and healthcare applications.",
+      icon: <Camera className="w-8 h-8" />,
+      path: "/ai-image-recognition",
+      color: "from-green-500 to-teal-500",
+      price: "Starting at $159/month",
+      originalPrice: "$319/month",
+      features: ["Object Detection", "Facial Recognition", "Image Classification", "Real-time Processing", "Custom Models", "API Access"],
+      category: "AI Vision"
+    },
+    {
+      title: "AI Predictive Maintenance",
+      description: "Prevent equipment failures with AI-powered predictive analytics, sensor data analysis, and automated maintenance scheduling for manufacturing and facilities.",
+      icon: <Settings className="w-8 h-8" />,
+      path: "/ai-predictive-maintenance",
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $179/month",
+      originalPrice: "$359/month",
+      features: ["Failure Prediction", "Sensor Integration", "Maintenance Scheduling", "Cost Optimization", "Real-time Alerts", "Performance Analytics"],
+      category: "AI Maintenance"
+    },
+    {
+      title: "AI Fraud Detection Engine",
+      description: "Advanced fraud detection with machine learning algorithms, real-time monitoring, and automated response for financial institutions and e-commerce.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/ai-fraud-detection",
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Real-time Detection", "Machine Learning Models", "Pattern Recognition", "Automated Response", "Risk Scoring", "Compliance Reporting"],
+      category: "AI Security"
+    },
+    {
+      title: "AI Recommendation Engine",
+      description: "Personalized recommendations with collaborative filtering, content-based filtering, and deep learning for e-commerce, streaming, and content platforms.",
+      icon: <Target className="w-8 h-8" />,
+      path: "/ai-recommendation-engine",
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $149/month",
+      originalPrice: "$299/month",
+      features: ["Collaborative Filtering", "Content-based Filtering", "Deep Learning", "A/B Testing", "Real-time Updates", "Analytics Dashboard"],
+      category: "AI Recommendations"
+    },
+    {
+      title: "AI Translation Services",
+      description: "Real-time translation with neural machine translation, language detection, and context-aware translations for global businesses and content creators.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/ai-translation-services",
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $79/month",
+      originalPrice: "$159/month",
+      features: ["100+ Languages", "Neural Translation", "Context Awareness", "Real-time Processing", "API Integration", "Quality Metrics"],
+      category: "AI Translation"
+    },
+    {
+      title: "AI Sentiment Analysis Platform",
+      description: "Analyze customer sentiment across social media, reviews, and feedback with advanced NLP and machine learning for brand monitoring and customer insights.",
+      icon: <Heart className="w-8 h-8" />,
+      path: "/ai-sentiment-analysis",
+      color: "from-pink-500 to-rose-500",
+      price: "Starting at $99/month",
+      originalPrice: "$199/month",
+      features: ["Multi-source Analysis", "Real-time Monitoring", "Emotion Detection", "Trend Analysis", "Alert System", "Custom Dashboards"],
+      category: "AI Analytics"
+    },
+    {
+      title: "AI Code Review Assistant",
+      description: "Automated code review with bug detection, security analysis, and performance optimization suggestions for development teams and code quality assurance.",
+      icon: <Code className="w-8 h-8" />,
+      path: "/ai-code-review",
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $119/month",
+      originalPrice: "$239/month",
+      features: ["Bug Detection", "Security Analysis", "Performance Optimization", "Code Quality Metrics", "Team Collaboration", "Integration Support"],
+      category: "AI Development"
+    },
+    {
+      title: "AI Personalization Engine",
+      description: "Deliver personalized experiences with AI-powered user profiling, behavioral analysis, and dynamic content optimization for websites and applications.",
+      icon: <Users className="w-8 h-8" />,
+      path: "/ai-personalization",
+      color: "from-emerald-500 to-green-500",
+      price: "Starting at $139/month",
+      originalPrice: "$279/month",
+      features: ["User Profiling", "Behavioral Analysis", "Dynamic Content", "A/B Testing", "Real-time Adaptation", "Performance Tracking"],
+      category: "AI Personalization"
+    },
+    {
+      title: "AI Document Intelligence",
+      description: "Extract insights from documents with OCR, natural language processing, and automated data extraction for legal, healthcare, and business applications.",
+      icon: <FileText className="w-8 h-8" />,
+      path: "/ai-document-intelligence",
+      color: "from-amber-500 to-orange-500",
+      price: "Starting at $109/month",
+      originalPrice: "$219/month",
+      features: ["OCR Technology", "NLP Processing", "Data Extraction", "Document Classification", "Search & Retrieval", "Workflow Automation"],
+      category: "AI Document Processing"
+    },
+    {
+      title: "AI Chatbot Builder Pro",
+      description: "Create advanced conversational AI with no-code builder, multi-channel deployment, and advanced analytics for customer service and sales automation.",
+      icon: <MessageSquare className="w-8 h-8" />,
+      path: "/ai-chatbot-builder",
+      color: "from-cyan-500 to-teal-500",
+      price: "Starting at $69/month",
+      originalPrice: "$139/month",
+      features: ["No-code Builder", "Multi-channel Deployment", "Advanced Analytics", "Custom Training", "Integration APIs", "White-label Options"],
+      category: "AI Chatbots"
+    },
+    {
+      title: "AI Market Research Assistant",
+      description: "Automated market research with data collection, trend analysis, and competitive intelligence for business strategy and market insights.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      path: "/ai-market-research",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $189/month",
+      originalPrice: "$379/month",
+      features: ["Data Collection", "Trend Analysis", "Competitive Intelligence", "Market Forecasting", "Report Generation", "Custom Research"],
+      category: "AI Research"
+    },
+    {
+      title: "AI Quality Assurance Suite",
+      description: "Automated testing and quality assurance with AI-powered test generation, bug detection, and performance monitoring for software development.",
+      icon: <CheckCircle className="w-8 h-8" />,
+      path: "/ai-quality-assurance",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $159/month",
+      originalPrice: "$319/month",
+      features: ["Automated Testing", "Bug Detection", "Performance Monitoring", "Test Generation", "Regression Testing", "Quality Metrics"],
+      category: "AI Testing"
+    },
+    {
+      title: "AI Supply Chain Optimizer",
+      description: "Optimize supply chain operations with demand forecasting, inventory optimization, and logistics automation using advanced AI algorithms.",
+      icon: <Truck className="w-8 h-8" />,
+      path: "/ai-supply-chain-optimizer",
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $279/month",
+      originalPrice: "$559/month",
+      features: ["Demand Forecasting", "Inventory Optimization", "Route Planning", "Supplier Management", "Risk Assessment", "Cost Analysis"],
+      category: "AI Supply Chain"
+    },
+    {
+      title: "Enterprise Cloud Migration",
+      description: "Complete cloud migration services with zero-downtime deployment, data security, and cost optimization for enterprise applications and infrastructure.",
+      icon: <Cloud className="w-8 h-8" />,
+      path: "/enterprise-cloud-migration",
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $2,999/month",
+      originalPrice: "$4,999/month",
+      features: ["Zero-downtime Migration", "Data Security", "Cost Optimization", "Performance Monitoring", "Disaster Recovery", "24/7 Support"],
+      category: "Cloud Services",
+      popular: true
+    },
+    {
+      title: "Advanced Network Security",
+      description: "Comprehensive network security with firewall management, intrusion detection, VPN solutions, and threat monitoring for enterprise networks.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/advanced-network-security",
+      color: "from-red-500 to-orange-500",
+      price: "Starting at $1,299/month",
+      originalPrice: "$2,199/month",
+      features: ["Firewall Management", "Intrusion Detection", "VPN Solutions", "Threat Monitoring", "Security Audits", "Compliance Support"],
+      category: "Cybersecurity"
+    },
+    {
+      title: "Database Administration Pro",
+      description: "Professional database management with performance optimization, backup solutions, security hardening, and 24/7 monitoring for critical databases.",
+      icon: <Database className="w-8 h-8" />,
+      path: "/database-administration",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $899/month",
+      originalPrice: "$1,599/month",
+      features: ["Performance Optimization", "Backup Solutions", "Security Hardening", "24/7 Monitoring", "Disaster Recovery", "Migration Services"],
+      category: "Database Services"
+    },
+    {
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile app development with modern frameworks, UI/UX design, and backend integration for iOS and Android platforms.",
+      icon: <Smartphone className="w-8 h-8" />,
+      path: "/mobile-app-development",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $3,999/project",
+      originalPrice: "$6,999/project",
+      features: ["Native Development", "Cross-platform", "UI/UX Design", "Backend Integration", "App Store Deployment", "Maintenance Support"],
+      category: "Mobile Development"
+    },
+    {
+      title: "API Development & Integration",
+      description: "Custom API development with RESTful services, GraphQL, microservices architecture, and third-party integrations for modern applications.",
+      icon: <Code className="w-8 h-8" />,
+      path: "/api-development",
+      color: "from-indigo-500 to-blue-500",
+      price: "Starting at $1,599/month",
+      originalPrice: "$2,799/month",
+      features: ["RESTful APIs", "GraphQL Services", "Microservices", "Third-party Integration", "API Documentation", "Performance Optimization"],
+      category: "API Services"
+    },
+    {
+      title: "DevOps Automation Suite",
+      description: "Complete DevOps implementation with CI/CD pipelines, infrastructure as code, containerization, and automated deployment for modern software delivery.",
+      icon: <Settings className="w-8 h-8" />,
+      path: "/devops-automation",
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $1,899/month",
+      originalPrice: "$3,199/month",
+      features: ["CI/CD Pipelines", "Infrastructure as Code", "Containerization", "Automated Deployment", "Monitoring & Logging", "Security Integration"],
+      category: "DevOps"
+    },
+    {
+      title: "IT Infrastructure Management",
+      description: "Complete IT infrastructure management with server administration, network monitoring, hardware maintenance, and 24/7 technical support.",
+      icon: <Server className="w-8 h-8" />,
+      path: "/it-infrastructure-management",
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $1,499/month",
+      originalPrice: "$2,499/month",
+      features: ["Server Administration", "Network Monitoring", "Hardware Maintenance", "24/7 Support", "Performance Optimization", "Disaster Recovery"],
+      category: "Infrastructure"
+    },
+    {
+      title: "Web Application Development",
+      description: "Modern web application development with responsive design, progressive web apps, and full-stack solutions for businesses and enterprises.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/web-application-development",
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $2,999/project",
+      originalPrice: "$4,999/project",
+      features: ["Responsive Design", "Progressive Web Apps", "Full-stack Development", "Performance Optimization", "SEO Integration", "Maintenance Support"],
+      category: "Web Development"
+    },
+    {
+      title: "Data Backup & Recovery",
+      description: "Comprehensive data backup and disaster recovery solutions with automated backups, off-site storage, and rapid recovery capabilities.",
+      icon: <HardDrive className="w-8 h-8" />,
+      path: "/data-backup-recovery",
+      color: "from-amber-500 to-yellow-500",
+      price: "Starting at $299/month",
+      originalPrice: "$499/month",
+      features: ["Automated Backups", "Off-site Storage", "Rapid Recovery", "Data Encryption", "Compliance Support", "24/7 Monitoring"],
+      category: "Data Protection"
+    },
+    {
+      title: "IT Consulting Services",
+      description: "Strategic IT consulting with technology assessment, digital transformation planning, and technology roadmap development for business growth.",
+      icon: <Users className="w-8 h-8" />,
+      path: "/it-consulting",
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $199/hour",
+      originalPrice: "$299/hour",
+      features: ["Technology Assessment", "Digital Transformation", "Technology Roadmap", "Vendor Selection", "Cost Optimization", "Strategic Planning"],
+      category: "Consulting"
+    },
+    {
+      title: "System Integration Services",
+      description: "Enterprise system integration with legacy system modernization, API integration, and seamless data flow between different business applications.",
+      icon: <Link className="w-8 h-8" />,
+      path: "/system-integration",
+      color: "from-emerald-500 to-green-500",
+      price: "Starting at $2,499/month",
+      originalPrice: "$4,199/month",
+      features: ["Legacy Modernization", "API Integration", "Data Migration", "System Testing", "Performance Optimization", "Ongoing Support"],
+      category: "Integration"
+    },
+    {
+      title: "IT Security Audit",
+      description: "Comprehensive security audit with vulnerability assessment, penetration testing, compliance review, and security recommendations for businesses.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/it-security-audit",
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $1,999/audit",
+      originalPrice: "$3,499/audit",
+      features: ["Vulnerability Assessment", "Penetration Testing", "Compliance Review", "Security Recommendations", "Risk Analysis", "Remediation Support"],
+      category: "Security Audit"
+    },
+    {
+      title: "Cloud Cost Optimization",
+      description: "Optimize cloud spending with cost analysis, resource optimization, and automated scaling to reduce cloud expenses while maintaining performance.",
+      icon: <DollarSign className="w-8 h-8" />,
+      path: "/cloud-cost-optimization",
+      color: "from-green-500 to-teal-500",
+      price: "Starting at $599/month",
+      originalPrice: "$999/month",
+      features: ["Cost Analysis", "Resource Optimization", "Automated Scaling", "Spending Alerts", "Cost Forecasting", "ROI Analysis"],
+      category: "Cloud Optimization"
+    },
+    {
+      title: "IT Support & Helpdesk",
+      description: "24/7 IT support and helpdesk services with remote assistance, ticketing system, and technical support for all IT-related issues.",
+      icon: <Headphones className="w-8 h-8" />,
+      path: "/it-support-helpdesk",
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $399/month",
+      originalPrice: "$699/month",
+      features: ["24/7 Support", "Remote Assistance", "Ticketing System", "Priority Support", "Knowledge Base", "SLA Guarantee"],
+      category: "IT Support"
     }
   ];
 
