@@ -32,7 +32,8 @@ import {
   Calendar,
   Clock,
   FileText,
-  DollarSign
+  DollarSign,
+  Play
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -187,6 +188,11 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
       name: 'Pricing',
       path: '/pricing',
       icon: <DollarSign className="w-4 h-4" />
+    },
+    {
+      name: 'Demo',
+      path: '/demo',
+      icon: <Play className="w-4 h-4" />
     },
     {
       name: 'Blog',
