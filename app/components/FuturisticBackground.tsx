@@ -1,11 +1,5 @@
-'use client'';
-import React, { useEffect, useRef } from 'react';';';
-const FuturisticBackground: React.FC = () => {;
-const canvasRef = useRef<HTMLCanvasElement>(null)
-  useEffect(() => {;
-const canvas = canvasRef.current;
-=======
-import React, { useRef, useEffect } from 'react';
+'use client';
+import React, { useEffect, useRef } from 'react';
 
 interface FuturisticBackgroundProps {
   children: React.ReactNode;
@@ -17,49 +11,51 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-;
-const ctx = canvas.getContext('2d');'
+
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
-;
-const resizeCanvas = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
+
+    const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
 
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Simple animated background
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // Create animated particles
-      const time = Date.now() * 0.001;
-      const particleCount = 50;
+      // Draw gradient background
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      gradient.addColorStop(0, 'rgba(6, 182, 212, 0.1)');
+      gradient.addColorStop(1, 'rgba(147, 51, 234, 0.1)');
       
-      for (let i = 0; i < particleCount; i++) {
-        const x = (i / particleCount) * canvas.width;
-        const y = canvas.height / 2 + Math.sin(time + i * 0.1) * 100;
-        const size = Math.sin(time + i * 0.2) * 2 + 2;
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Draw animated particles
+      const time = Date.now() * 0.001;
+      for (let i = 0; i < 50; i++) {
+        const x = (Math.sin(time + i) * canvas.width * 0.5) + canvas.width * 0.5;
+        const y = (Math.cos(time * 0.5 + i) * canvas.height * 0.5) + canvas.height * 0.5;
+        const size = Math.sin(time + i) * 2 + 2;
         
         ctx.beginPath();
         ctx.arc(x, y, size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(59, 130, 246, ${Math.sin(time + i * 0.3) * 0.3 + 0.3})`;
+        ctx.fillStyle = `rgba(6, 182, 212, ${0.3 + Math.sin(time + i) * 0.2})`;
         ctx.fill();
       }
-      
+
       requestAnimationFrame(animate);
     };
 
-    resizeCanvas();
     animate();
 
-    window.addEventListener('resize', resizeCanvas);
-    return () => window.removeEventListener('resize', resizeCanvas);
+    return () => {
+      window.removeEventListener('resize', resizeCanvas);
+    };
   }, []);
 
   return (
@@ -67,15 +63,11 @@ const resizeCanvas = () => {
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%)' }}
+        style={{ zIndex: -1 }}
       />
-      <div className="relative z-10">
-        {children}
-      </div>
+      {children}
     </div>
   );
 };
-;
-export default FuturisticBackgroundPage;
 
 export default FuturisticBackground;

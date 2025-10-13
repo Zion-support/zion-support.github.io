@@ -1,82 +1,58 @@
-'use client';';
-import React, { useEffect } from 'react';';'
-;
-const PerformanceMonitor: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-  useEffect(() => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-    // Monitor performance metrics;
-const observer = new PerformanceObserver((list) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      for (const entry of list.getEntries()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        console.log('Performance Entry:', entry);'
-      }
-    });
-
-    observer.observe({ entryTypes: ['measure', 'navigation'] });'
-
-    return () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-      observer.disconnect();
-    };
-  }, []);
-
-  return null;
-};
-;
-export default PerformanceMonitor;
-;
-export default PerformanceMonitor;
->>>>>>> origin/main
->>>>>>> cursor/delete-records-a75e
-=======
+'use client';
 import React, { useEffect } from 'react';
 
 interface PerformanceMonitorProps {
-  className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '', children }) => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
   useEffect(() => {
-    // Performance monitoring logic can be added here
-    console.log('Performance Monitor initialized');
+    // Monitor Core Web Vitals
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Largest Contentful Paint (LCP)
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
+        }
+      });
+
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // Monitor First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
+      });
+
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Monitor Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        console.log('CLS:', clsValue);
+      });
+
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      return () => {
+        observer.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    }
   }, []);
 
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
+  return <>{children}</>;
 };
 
 export default PerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
