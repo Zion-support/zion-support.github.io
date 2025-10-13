@@ -1,66 +1,46 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
 
 interface ErrorBoundaryState {
   hasError: boolean;
-<<<<<<< HEAD
   error?: Error;
+  errorInfo?: ErrorInfo;
+  retryCount: number;
 }
 
-class EnhancedErrorBoundary extends React.Component<
-  React.PropsWithChildren<{}>,
-  ErrorBoundaryState
-> {
-  constructor(props: React.PropsWithChildren<{}>) {
+interface ErrorBoundaryProps {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
+
+class EnhancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  private maxRetries = 3;
+
+  constructor(props: ErrorBoundaryProps) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { 
+      hasError: false, 
+      error: undefined,
+      errorInfo: undefined,
+      retryCount: 0
+    };
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
-  }
-
-=======
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
-    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
     }
 
     // Call custom error handler if provided
@@ -68,109 +48,102 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo);
     }
 
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a service like Sentry
-      console.error('Production error:', error, errorInfo);
-    }
+    // Report error to monitoring service
+    this.reportError(error, errorInfo);
   }
 
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // In a real application, you would send this to your error reporting service
+    console.error('Error reported:', {
+      error: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
     });
   };
 
-  handleReload = () => {
+  private handleRetry = () => {
+    if (this.state.retryCount < this.maxRetries) {
+      this.setState(prevState => ({
+        hasError: false,
+        error: undefined,
+        errorInfo: undefined,
+        retryCount: prevState.retryCount + 1,
+      }));
+    }
+  };
+
+  private handleReload = () => {
     window.location.reload();
   };
 
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
   render() {
     if (this.state.hasError) {
+      // Use custom fallback if provided
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
       return (
-<<<<<<< HEAD
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">We're working to fix this issue. Please try again later.</p>
-            <button
-              onClick={() => this.setState({ hasError: false })}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition-colors"
-            >
-              Try Again
-            </button>
-=======
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-red-500/20 text-center">
+            <div className="mb-6">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-red-500 to-pink-600 flex items-center justify-center">
+                <AlertTriangle className="w-8 h-8 text-white" />
+              </div>
+              <h1 className="text-2xl font-bold text-white mb-2">Something went wrong</h1>
+              <p className="text-gray-300 mb-6">
+                We encountered an unexpected error. Please try again or contact support if the problem persists.
+              </p>
             </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
-            </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
+              <div className="mb-6 p-4 bg-red-900/20 rounded-lg border border-red-500/30">
+                <h3 className="text-sm font-semibold text-red-400 mb-2 flex items-center">
+                  <Bug className="w-4 h-4 mr-2" />
                   Error Details (Development)
-                </summary>
-                <div className="bg-red-900/20 border border-red-500/20 rounded p-3 text-xs text-red-300 font-mono overflow-auto max-h-32">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  {this.state.error.stack && (
-                    <div>
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">{this.state.error.stack}</pre>
-                    </div>
-                  )}
-                </div>
-              </details>
+                </h3>
+                <pre className="text-xs text-red-300 whitespace-pre-wrap overflow-auto max-h-32">
+                  {this.state.error.message}
+                  {this.state.error.stack && `\n\n${this.state.error.stack}`}
+                </pre>
+              </div>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Try Again
-              </button>
-              
+            <div className="space-y-3">
+              {this.state.retryCount < this.maxRetries && (
+                <button
+                  onClick={this.handleRetry}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                  <span>Try Again ({this.maxRetries - this.state.retryCount} attempts left)</span>
+                </button>
+              )}
+
               <button
                 onClick={this.handleReload}
-                className="flex-1 bg-purple-500 hover:bg-purple-600 text-white px-4 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <RefreshCw className="w-4 h-4" />
-                Reload Page
+                <span>Reload Page</span>
               </button>
-            </div>
 
-            <div className="mt-6 pt-6 border-t border-white/10">
               <Link
                 to="/"
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium gap-2"
+                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Home className="w-4 h-4" />
-                Go Home
+                <span>Go Home</span>
               </Link>
             </div>
 
-            {process.env.NODE_ENV === 'development' && (
-              <div className="mt-4 text-xs text-gray-500">
-                <Bug className="w-3 h-3 inline mr-1" />
-                Development Mode - Error details shown above
-              </div>
-            )}
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
+            <div className="mt-6 text-xs text-gray-400">
+              <p>If this problem persists, please contact our support team.</p>
+              <p className="mt-1">
+                Error ID: {Date.now().toString(36)}
+              </p>
+            </div>
           </div>
         </div>
       );
