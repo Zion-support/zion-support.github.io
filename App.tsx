@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { Suspense, useEffect, useState } from "react";
-=======
 import React, { Suspense, useEffect, useState, useCallback } from "react";
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
