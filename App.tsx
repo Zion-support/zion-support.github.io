@@ -29,6 +29,7 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -149,6 +150,7 @@ function App() {
                             <Route path="/tutorials" element={<TutorialsPage />} />
                             <Route path="/demo" element={<DemoPage />} />
                             <Route path="/support" element={<SupportPage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
 
                             {/* AI Services Routes */}
                             <Route path="/ai-analytics" element={<AIAnalyticsPage />} />

@@ -64,9 +64,14 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       icon: <Globe className="w-4 h-4" />
     },
     {
+      name: 'Blog',
+      path: '/blog',
+      icon: <FileText className="w-4 h-4" />
+    },
+    {
       name: 'Contact',
       path: '/contact',
-      icon: <Globe className="w-4 h-4" />
+      icon: <Mail className="w-4 h-4" />
     }
   ];
 

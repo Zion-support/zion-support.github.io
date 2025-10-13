@@ -50,6 +50,7 @@ const Footer: React.FC = () => {
     { name: "AI Services", path: "/ai-services" },
     { name: "Micro SAAS", path: "/micro-saas" },
     { name: "5G Solutions", path: "/5g-solutions" },
+    { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
     { name: "Demo", path: "/demo" },
     { name: "Consultation", path: "/consultation" },
