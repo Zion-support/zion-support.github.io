@@ -5,5 +5,10 @@ interface FuturistictextProps {
   children?: React.ReactNode;
 }
 
-export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
+export default function Futuristictext({ className = '', children }: FuturistictextProps) {
+  return (
+    <div className={className}>
+      {children}
+    </div>
+  );
 }
