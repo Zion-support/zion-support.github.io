@@ -9,6 +9,7 @@ import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
@@ -135,6 +136,11 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 
 export default function AIFinancialAnalysisPage() {
+=======
+import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-react';
+
+const AIFinancialAnalysisPage = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,

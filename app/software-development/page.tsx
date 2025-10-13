@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +35,11 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Smartphone, Monitor, Code, Zap, BarChart3, Clock, Award, Settings, Users, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Globe, Smartphone, Monitor, Database, Shield, Code } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
 
 export default function SoftwaredevelopmentPage() {
   return (
@@ -252,6 +258,7 @@ export default function SoftwareDevelopmentPage() {
       features: ["System integration", "Legacy modernization", "Workflow automation", "Data migration"]
     },
     {
+<<<<<<< HEAD
       title: "Cloud Solutions",
       description: "Design and implement cloud-based solutions that scale with your business and provide reliable, secure access to your applications.",
       icon: <Cloud className="w-6 h-6" />,
@@ -268,10 +275,29 @@ export default function SoftwareDevelopmentPage() {
       description: "Implement comprehensive security measures to protect your applications and data from threats and vulnerabilities.",
       icon: <Shield className="w-6 h-6" />,
       features: ["Authentication systems", "Data encryption", "Security audits", "Compliance standards"]
+=======
+      title: "Database Solutions",
+      description: "Design and implement efficient database systems that handle large-scale data with optimal performance and security.",
+      icon: <Database className="w-6 h-6" />,
+      features: ["Database design", "Query optimization", "Data modeling", "Performance tuning"]
+    },
+    {
+      title: "Security & Compliance",
+      description: "Implement comprehensive security measures and ensure compliance with industry standards and regulations.",
+      icon: <Shield className="w-6 h-6" />,
+      features: ["Security audits", "Penetration testing", "Compliance implementation", "Data protection"]
+    },
+    {
+      title: "Code Review & Optimization",
+      description: "Review and optimize existing codebases to improve performance, maintainability, and scalability.",
+      icon: <Code className="w-6 h-6" />,
+      features: ["Code quality analysis", "Performance optimization", "Refactoring", "Best practices implementation"]
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
     }
   ];
 
   const technologies = [
+<<<<<<< HEAD
     "React", "Next.js", "Node.js", "TypeScript", "Python", "Java", "C#", "Go",
     "React Native", "Flutter", "Swift", "Kotlin", "PostgreSQL", "MongoDB",
     "Redis", "Docker", "Kubernetes", "AWS", "Azure", "GCP"
@@ -355,10 +381,30 @@ export default function SoftwareDevelopmentPage() {
 =======
     <>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+=======
+    "React & Next.js", "Node.js & Express", "TypeScript", "Python & Django", 
+    "Java & Spring", "C# & .NET", "PHP & Laravel", "React Native", 
+    "Flutter", "Swift & Kotlin", "PostgreSQL", "MongoDB", 
+    "Redis", "Docker", "Kubernetes", "AWS & Azure"
+  ];
+
+  const benefits = [
+    "Scalable and maintainable code",
+    "Modern development practices",
+    "Comprehensive testing",
+    "Security-first approach",
+    "Performance optimization",
+    "Ongoing support and maintenance"
+  ];
+
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
       <Helmet>
         <title>Software Development - Zion Tech Group</title>
         <meta name="description" content="Professional software development services for modern applications." />
       </Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       {/* Hero Section */}
@@ -385,11 +431,41 @@ export default function SoftwareDevelopmentPage() {
             >
               View Our Work
             </Link>
+=======
+
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Software Development
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Transform your ideas into powerful, scalable software solutions. 
+              We build custom applications that drive business growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center"
+              >
+                Start Your Project
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/consultation"
+                className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300"
+              >
+                Free Consultation
+              </Link>
+            </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
           </div>
         </div>
       </section>
 
       {/* Services Section */}
+<<<<<<< HEAD
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -420,9 +496,26 @@ export default function SoftwareDevelopmentPage() {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
                 <div className="flex items-center mb-4">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+=======
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Our Development Services</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              From web applications to mobile apps, we provide comprehensive software development 
+              solutions tailored to your business needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
+                <div className="text-blue-400 mb-4">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
                   {service.icon}
                   <h3 className="text-xl font-semibold text-white ml-3">{service.title}</h3>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {service.title}
@@ -487,6 +580,16 @@ export default function SoftwareDevelopmentPage() {
                   {service.features.map((feature, idx) => (
                     <li key={idx}>• {feature}</li>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+=======
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                      {feature}
+                    </li>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
                   ))}
 <<<<<<< HEAD
                 </div>
@@ -511,6 +614,7 @@ export default function SoftwareDevelopmentPage() {
 
 <<<<<<< HEAD
       {/* Technologies Section */}
+<<<<<<< HEAD
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -527,6 +631,22 @@ export default function SoftwareDevelopmentPage() {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20">
                 <div className="text-white font-semibold mb-1">{tech.name}</div>
                 <div className="text-gray-400 text-sm">{tech.category}</div>
+=======
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Technologies We Use</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              We stay up-to-date with the latest technologies and frameworks to deliver 
+              cutting-edge solutions for our clients.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+            {technologies.map((tech, index) => (
+              <div key={index} className="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 transition-colors">
+                <span className="text-sm font-medium">{tech}</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
               </div>
             ))}
 =======
@@ -559,6 +679,7 @@ export default function SoftwareDevelopmentPage() {
 
 <<<<<<< HEAD
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -567,12 +688,21 @@ export default function SoftwareDevelopmentPage() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the benefits of working with our expert development team and proven methodologies.
+=======
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Why Choose Our Development Services?</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Experience the benefits of professional software development with our expert team and proven methodologies.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
+<<<<<<< HEAD
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   {benefit.icon}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
@@ -668,6 +798,12 @@ export default function SoftwareDevelopmentPage() {
                     </FuturisticCardEnhanced>
                   ))}
                 </div>
+=======
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold">{index + 1}</span>
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{benefit}</h3>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
               </div>
             </section>
 
@@ -816,6 +952,7 @@ const SoftwareDevelopmentPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -823,11 +960,22 @@ const SoftwareDevelopmentPage: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Let our expert development team help you turn your ideas into reality with cutting-edge software solutions.
+=======
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Build Your Next Project?</h2>
+          <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+            Let's discuss your software development needs and create a solution that drives your business forward.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
+<<<<<<< HEAD
               className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+=======
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
             >
               Start Your Project
             </Link>
@@ -855,6 +1003,7 @@ const SoftwareDevelopmentPage: React.FC = () => {
 <<<<<<< HEAD
 };
 
+<<<<<<< HEAD
 export default SoftwareDevelopmentPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 =======
@@ -863,3 +1012,6 @@ export default SoftwareDevelopmentPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+=======
+export default SoftwareDevelopmentPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2

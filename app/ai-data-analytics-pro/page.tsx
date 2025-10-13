@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -149,6 +150,12 @@ import { Helmet } from 'react-helmet-async';
 
 const AIDataAnalyticsProPage = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp, Brain, BarChart3, Database } from 'lucide-react';
+
+const AIDataAnalyticsProPage = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -221,6 +228,7 @@ const AIDataAnalyticsProPage = () => {
       popular: false
     }
   ];
+<<<<<<< HEAD
 =======
 import { TrendingUp, BarChart3, Database, Brain } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -278,6 +286,8 @@ import { Helmet } from 'react-helmet-async';
       "url": "https://ziontechgroup.com"
     }
   };
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
 
   return (
     <PerformanceOptimizer>
@@ -538,5 +548,11 @@ export default function PagePage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+};
+
+export default AIDataAnalyticsProPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2

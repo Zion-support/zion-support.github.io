@@ -12,6 +12,9 @@ import React from 'react';
 
 import { Brain, TrendingUp, BarChart3, Zap } from 'lucide-react';
 
+import { Helmet } from 'react-helmet-async';
+import { Brain, TrendingUp, BarChart3, Zap } from 'lucide-react';
+
 export default function AIEcommerceOptimizerPro() {
   const features = [
     {

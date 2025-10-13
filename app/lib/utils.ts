@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // utils utility functions
 
 export interface utilsConfig {
@@ -43,12 +44,21 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 <<<<<<< HEAD
 }
+=======
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
 
 export function formatDate(date: Date | string): string {
   const d = new Date(date);
   return d.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
+<<<<<<< HEAD
     day: 'numeric'
   });
 =======
@@ -66,11 +76,16 @@ export function formatDate(date: Date | string): string {
     day: 'numeric',
   }).format(new Date(date))
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+=======
+    day: 'numeric',
+  });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
 }
 
 export function formatCurrency(amount: number, currency = 'USD'): string {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
+<<<<<<< HEAD
 <<<<<<< HEAD
     currency
   }).format(amount);
@@ -173,12 +188,17 @@ export function truncateText(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text
   return text.slice(0, maxLength).trim() + '...'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+=======
+    currency,
+  }).format(amount);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
 }
 
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -190,20 +210,26 @@ export function debounce<T extends (...args: any[]) => any>(
   }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
 }
 
 export function throttle<T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -247,6 +273,8 @@ export function isValidUrl(url: string): boolean {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
@@ -256,7 +284,37 @@ export function isValidUrl(url: string): boolean {
     }
   };
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+=======
+
+export function generateId(): string {
+  return Math.random().toString(36).substr(2, 9);
+}
+
+export function isValidEmail(email: string): boolean {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+export function isValidPhone(phone: string): boolean {
+  const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+  return phoneRegex.test(phone.replace(/\s/g, ''));
+}
+
+export function capitalizeFirst(str: string): string {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+export function truncateText(text: string, maxLength: number): string {
+  if (text.length <= maxLength) return text;
+  return text.substr(0, maxLength) + '...';
+}
+
+export function sleep(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
