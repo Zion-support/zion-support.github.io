@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Globe, TrendingUp, MessageSquare, Phone } from "lucide-react";
@@ -305,5 +303,4 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default ImprovedSidebar;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default ImprovedSidebar; origin/cursor/analyze-improve-and-deploy-application-0ff3

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 /**
  * Performance Metrics Utility
  * Advanced performance tracking and monitoring for web applications
@@ -404,5 +401,4 @@ interface LayoutShift extends PerformanceEntry {
 // Export singleton instance
 export const performanceMetrics = PerformanceMetrics.getInstance();
 
-export default PerformanceMetrics;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export default PerformanceMetrics; origin/cursor/analyze-improve-and-deploy-application-1247

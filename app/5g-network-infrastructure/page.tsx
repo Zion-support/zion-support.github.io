@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -26,5 +23,4 @@ const FiveGNetworkInfrastructurePage = () => {
   );
 };
 
-export default FiveGNetworkInfrastructurePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default FiveGNetworkInfrastructurePage; origin/cursor/analyze-improve-and-deploy-application-0ff3

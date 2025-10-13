@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
 import { ArrowRight, Globe, BarChart3, Zap, Target, CheckCircle, Star, Sparkles, Mail, Smartphone, TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+import { Link } from "react-router-dom"; origin/cursor/analyze-improve-and-deploy-application-1091

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React from 'react'
 interface PerformanceMetrics {
   lcp?: number
@@ -288,5 +285,4 @@ export const lazyLoadImages = () => performanceOptimizer.lazyLoadImages()
 export const preloadCriticalResources = () => performanceOptimizer.preloadCriticalResources()
 export const collectPerformanceMetrics = () => performanceOptimizer.getNavigationMetrics()
 
-export { performanceOptimizer }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export { performanceOptimizer } origin/cursor/analyze-improve-and-deploy-application-1247

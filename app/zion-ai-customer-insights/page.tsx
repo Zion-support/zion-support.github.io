@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -193,8 +189,7 @@ const ZionAiCustomerInsights = () => {
         <title>Zion AI Customer Insights - AI-Powered Customer Analytics Platform | Zion Tech Group</title>
         <meta name="description" content="Transform customer data into actionable insights with Zion AI Customer Insights. Predictive analytics, sentiment analysis, and automated recommendations. Start your free trial!" />
         <meta name="keywords" content="customer insights, AI analytics, sentiment analysis, predictive analytics, customer behavior, churn prediction, customer experience" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-customer-insights" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-customer-insights" /> origin/cursor/analyze-improve-and-deploy-application-1091
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -224,21 +219,7 @@ const ZionAiCustomerInsights = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Pricing Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Plan
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-=======
-            ))}
+))}
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -330,8 +311,7 @@ const ZionAiCustomerInsights = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"> origin/cursor/analyze-improve-and-deploy-application-1091
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
@@ -380,46 +360,7 @@ const ZionAiCustomerInsights = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-8 border border-cyan-500/20">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Understand Your Customers Better?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Start gaining deep insights into your customer behavior and boost your 
-              engagement with our AI-powered analytics platform.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              >
-                Start Analyzing
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              >
-                View Demo
-                <BarChart3 className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ZionAICustomerInsightsPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
-        </ResponsiveContainer>
+</ResponsiveContainer>
       </section>
 
       {/* Testimonials Section */}
@@ -487,5 +428,4 @@ export default ZionAICustomerInsightsPage;
             
             <div className="mt-8 text-sm text-gray-400">
               <p>14-day free trial • No credit card required • Cancel anytime</p>
-export default ZionAiCustomerInsights;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+export default ZionAiCustomerInsights; origin/cursor/analyze-improve-and-deploy-application-1091

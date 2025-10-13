@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -77,8 +73,7 @@ const ZionAiVideoGenerator = () => {
         "Watermark included"
       ],
       popular: false,
-      cta: "Start Free Trial"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+      cta: "Start Free Trial" origin/cursor/analyze-improve-and-deploy-application-1091
     },
     {
       name: "Professional",
@@ -90,21 +85,7 @@ const ZionAiVideoGenerator = () => {
     {
       name: "Enterprise",
       price: "$299",
-<<<<<<< HEAD
-      period: "per month",
-      features: ["Unlimited videos", "8K quality", "Custom templates", "24/7 support"],
-      popular: false
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion AI Video Generator - Create Professional Videos with AI</title>
-        <meta name="description" content="Transform your ideas into professional videos with our AI-powered video generator. Create stunning content in minutes." />
-        <meta name="keywords" content="AI video generator, video creation, AI content, video automation, professional videos" />
-=======
-      period: "/month",
+period: "/month",
       description: "For large organizations with high-volume needs",
       features: [
         "Unlimited videos",
@@ -151,8 +132,7 @@ const ZionAiVideoGenerator = () => {
         <title>Zion AI Video Generator - AI-Powered Video Creation Platform | Zion Tech Group</title>
         <meta name="description" content="Create professional videos in minutes with Zion AI Video Generator. AI-powered script generation, voice synthesis, and smart editing. Start your free trial today!" />
         <meta name="keywords" content="AI video generator, video creation, automated video, voice synthesis, video editing, content creation, marketing videos" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-generator" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-generator" /> origin/cursor/analyze-improve-and-deploy-application-1091
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -185,18 +165,7 @@ const ZionAiVideoGenerator = () => {
               <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
-<<<<<<< HEAD
-          ))}
-        </div>
-
-        {/* Pricing Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Plan
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-=======
-            <div className="text-center">
+<div className="text-center">
               <div className="text-2xl md:text-3xl font-bold text-white mb-2">50+</div>
               <div className="text-gray-300 text-sm">Languages</div>
             </div>
@@ -298,8 +267,7 @@ const ZionAiVideoGenerator = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"> origin/cursor/analyze-improve-and-deploy-application-1091
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
@@ -343,51 +311,7 @@ const ZionAiVideoGenerator = () => {
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}
                 >
-<<<<<<< HEAD
-                  Get Started
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-8 border border-cyan-500/20">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Create Amazing Videos?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of creators who are already using our AI video generator 
-              to create professional content in minutes.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              >
-                Start Creating
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              >
-                Watch Demo
-                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ZionAIVideoGeneratorPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
-                  {plan.cta}
+{plan.cta}
                 </FuturisticButton>
               </FuturisticCard>
             ))}
@@ -425,5 +349,4 @@ export default ZionAIVideoGeneratorPage;
             
             <div className="mt-8 text-sm text-gray-400">
               <p>14-day free trial • No credit card required • Cancel anytime</p>
-export default ZionAiVideoGenerator;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+export default ZionAiVideoGenerator; origin/cursor/analyze-improve-and-deploy-application-1091

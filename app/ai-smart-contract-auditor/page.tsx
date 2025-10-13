@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -309,5 +307,4 @@ const AISmartContractAuditor: React.FC = () => {
   );
 };
 
-export default AISmartContractAuditor;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+export default AISmartContractAuditor; origin/cursor/analyze-improve-and-deploy-application-1232

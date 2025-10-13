@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -27,122 +24,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       hasError: true, 
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-import { logger } from '../utils/logger';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string | null;
-}
-
-interface ErrorBoundaryProps {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  enableRetry?: boolean;
-}
-
-interface ErrorReport {
-  errorId: string | null;
-  error: Error;
-  errorInfo: ErrorInfo;
-  message: string;
-  stack: string | undefined;
-  componentStack: string | null | undefined;
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  userId: string | null;
-  sessionId: string;
-}
-
-class AdvancedErrorBoundary extends Component<
-  ErrorBoundaryProps,
-  ErrorBoundaryState
-> {
-  private retryCount = 0;
-  private maxRetries = 3;
-
-  constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null,
-    };
-  }
-
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-    };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo,
-    });
-
-<<<<<<< HEAD
-    // Call custom error handler if provided
-=======
-    // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      logger.error(
-        'Error Boundary caught an error',
-        error,
-        'ErrorBoundary',
-        { component: 'ErrorBoundary', errorInfo }
-      );
-    }
-
-    // Call custom error handler
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-<<<<<<< HEAD
-    // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-
-    // Log error to external service in production
-    if (process.env['NODE_ENV'] === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
-  }
-
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // You can integrate with services like Sentry, LogRocket, etc.
-    const errorData = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-    };
-
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
-    // Log the error data for debugging
-    console.error('Error data:', errorData);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
+ origin/cursor/analyze-improve-and-deploy-application-13a2
     // Example: Send to your error reporting service
     // You could send this to your backend:
     // fetch('/api/error-report', {
@@ -171,196 +53,17 @@ class AdvancedErrorBoundary extends Component<
     
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink);
-=======
-    // Report error to external service
-    if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
-    }
-  }
-
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    const errorReport: ErrorReport = {
-      errorId: this.state.errorId || this.generateErrorId(),
-      error,
-      errorInfo,
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      userId: this.getUserId(),
-      sessionId: this.getSessionId(),
-    };
-
-    // Send to error reporting service
-    this.sendErrorReport(errorReport);
-  };
-
-  private getUserId = (): string | null => {
-    // Try to get user ID from localStorage or other sources
-    try {
-      return localStorage.getItem('userId') || null;
-    } catch {
-      return null;
-    }
-  };
-
-  private getSessionId = (): string => {
-    // Generate or retrieve session ID
-    try {
-      let sessionId = sessionStorage.getItem('sessionId');
-      if (!sessionId) {
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-        sessionStorage.setItem('sessionId', sessionId);
-      }
-      return sessionId;
-    } catch {
-      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    }
-  };
-
-  private generateErrorId = (): string => {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };
-
-  private sendErrorReport = async (errorReport: ErrorReport) => {
-    try {
-      // Send to your error reporting service
-      await fetch('/api/errors', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(errorReport),
-      });
-    } catch (reportError) {
-      logger.error(
-        'Failed to send error report',
-        reportError instanceof Error ? reportError : new Error(String(reportError)),
-        'ErrorReporting',
-        { component: 'ErrorReporting' }
-      );
-    }
-  };
-
-  private handleRetry = () => {
-    if (this.retryCount < this.maxRetries) {
-      this.retryCount++;
-      this.setState({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: null,
-      });
-    }
-  };
-
-  private handleReload = () => {
-    window.location.reload();
-  };
-
-  private handleGoHome = () => {
-    window.location.href = '/';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247
   };
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
-=======
-      // Custom fallback UI
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+// Custom fallback UI origin/cursor/analyze-improve-and-deploy-application-1247
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
-<<<<<<< HEAD
-      return (
-        <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
-          <div className="max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="flex justify-center mb-6">
-              <AlertTriangle className="h-20 w-20 text-red-500" />
-            </div>
-            
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-600 mb-6 text-lg">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
-
-            {this.state.errorId && (
-              <div className="bg-gray-100 p-4 rounded-lg mb-6">
-                <p className="text-sm text-gray-600">
-                  <strong>Error ID:</strong> {this.state.errorId}
-                </p>
-                <p className="text-xs text-gray-500 mt-1">
-                  Please include this ID when contacting support
-                </p>
-              </div>
-            )}
-
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-gray-100 p-3 rounded text-xs font-mono text-gray-800 overflow-auto max-h-40">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  )}
-                </div>
-              </details>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button
-                onClick={this.handleReset}
-                className="flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
-              >
-                <RefreshCw className="h-4 w-4 mr-2" />
-                Try Again
-              </button>
-              
-              <button
-                onClick={() => window.location.href = '/'}
-                className="flex items-center justify-center px-6 py-3 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
-              >
-                <Home className="h-4 w-4 mr-2" />
-                Go Home
-              </button>
-
-              <button
-                onClick={this.handleReportError}
-                className="flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
-              >
-                <Mail className="h-4 w-4 mr-2" />
-                Report Issue
-              </button>
-            </div>
-
-            <div className="mt-8 pt-6 border-t border-gray-200">
-              <p className="text-sm text-gray-500">
-                If this problem persists, please contact our support team at{' '}
-                <a 
-                  href="mailto:support@ziontechgroup.com" 
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  support@ziontechgroup.com
-                </a>
-              </p>
-=======
-      // Default error UI
+// Default error UI
       return (
         <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
           <div className='sm:mx-auto sm:w-full sm:max-w-md'>
@@ -459,8 +162,7 @@ class AdvancedErrorBoundary extends Component<
                     kleber@ziontechgroup.com
                   </Link>
                 </p>
-              </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+              </div> origin/cursor/analyze-improve-and-deploy-application-1247
             </div>
           </div>
         </div>
@@ -472,7 +174,4 @@ class AdvancedErrorBoundary extends Component<
 }
 
 export default AdvancedErrorBoundary;
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247

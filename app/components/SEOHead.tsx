@@ -1,110 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
-<<<<<<< HEAD
-
-interface SEOHeadProps {
-<<<<<<< HEAD
-  title?: string;
-=======
-import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps {title?: string;}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
-<<<<<<< HEAD
-    title?: string;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
-  }
-}
-=======
-  title?: string
-}
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-<<<<<<< HEAD
-  structuredData?: object;
-  noIndex?: boolean;
-  noFollow?: boolean;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords = '',
-  canonical = '',
-  ogImage = '/og-image.jpg',
-  ogType = 'website'
-}) => {
-<<<<<<< HEAD
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullCanonical = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
-
-    <Helmet>
-      {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={fullCanonical} />
-      
-      {/* Open Graph Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={fullCanonical} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter Card Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-=======
-  const structuredData = {
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-
-interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
-  structuredData?: object
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered solutions, cloud infrastructure, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = 'AI solutions, cloud computing, cybersecurity, software development, digital transformation, artificial intelligence, IT services, technology consulting',
-  image = 'https://ziontechgroup.com/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
-  structuredData
-}) => {
-  const defaultStructuredData = {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-    "@context": "https://schema.org",
-=======
-  structuredData?: object};
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+ cursor/fix-errors-and-merge-to-main-6ce7
 const SEOHead: React.FC<SEOHeadProps> = ({
     title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
@@ -119,15 +14,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 const defaultStructuredData = {
-<<<<<<< HEAD
-    "@context": "https: //schema.org",
-=======
 };
 };
 };
 }
-    "@context": "https://schema.org",
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    "@context": "https://schema.org", cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -148,175 +39,13 @@ const defaultStructuredData = {
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
-<<<<<<< HEAD
-    },
-    "sameAs": [
-<<<<<<< HEAD
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
-    ]
-  };
-
-  return (
-    <>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-=======
-      "https://twitter.com/ziontechgroup",
+"https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
       "https://github.com/ziontechgroup",
       "https://facebook.com/ziontechgroup",
       "https://instagram.com/ziontechgroup",
       "https://youtube.com/@ziontechgroup"
-=======
-  },
-    "contactPoint": {
-    "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-  },
-    "sameAs": [
-<<<<<<< HEAD
-      "https: //www.linkedin.com/company/zion-tech-group",
-      "https: //twitter.com/ziontechgroup"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-    ],
-    "foundingDate": "2020",
-    "numberOfEmployees": "10-50",
-    "industry": "Information Technology",
-    "services": [
-      "AI Solutions",
-      "Cloud Infrastructure",
-      "Cybersecurity",
-      "Software Development",
-      "Digital Transformation",
-      "IT Consulting"
-    ]
-  }
-
-  const finalStructuredData = structuredData || defaultStructuredData
-
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-<<<<<<< HEAD
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#06b6d4" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-<<<<<<< HEAD
-      <meta property="og:image" content={image} />
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-=======
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-<<<<<<< HEAD
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-      
-=======
-      <title>{fullTitle}</title>
-      <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta>
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-{/* Open Graph Meta Tags */}
-      <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta>
-      {/* Twitter Card Meta Tags */}
-      <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      {/* Additional SEO Meta Tags */}
-      <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-
-=======
-      "https://www.linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup"
-    ]
-  };
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />};
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#0f172a" />
-      <meta name="msapplication-TileColor" content="#0f172a" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
-    </>
-  );
-};
-
-export default SEOHead;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+ origin/cursor/analyze-improve-and-deploy-application-0e37
 =======
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
@@ -357,10 +86,4 @@ export default SEOHead;
     </Helmet>
   )
 }
-<<<<<<< HEAD
-
-export default SEOHead
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
-export default SEOHead
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export default SEOHead origin/cursor/analyze-improve-and-deploy-application-1247

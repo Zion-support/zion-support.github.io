@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -45,5 +43,4 @@ const PagePage = () => {
   );
 };
 
-export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default PagePage; origin/cursor/analyze-improve-and-deploy-application-0ff3

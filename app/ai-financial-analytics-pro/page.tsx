@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 "use client";
 import { CheckCircle, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -342,5 +340,4 @@ export default function AiFinancialAnalyticsProPage() {
       </div>
     </>
   );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+} origin/cursor/analyze-improve-and-deploy-application-0ff3

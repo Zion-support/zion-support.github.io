@@ -1,41 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-=======
 import { ArrowRight, Brain, Zap, Globe, TrendingUp, Target, Monitor, Phone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+import { Link } from "react-router-dom"; origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Phone, Mail, MapPin, Clock, CheckCircle, Star, ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
-
-=======
-import Link from 'next/link';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
+ origin/cursor/analyze-improve-and-deploy-application-0f1c
+ origin/cursor/analyze-improve-and-deploy-application-1573
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
       color: 'text-purple-600',
@@ -98,13 +67,9 @@ const ServicesPage: React.FC = () => {
       ]
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
+ origin/cursor/analyze-improve-and-deploy-application-1573
 
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+ origin/cursor/analyze-improve-and-deploy-application-1448
   const benefits = [
     {
       icon: TrendingUp,
@@ -125,88 +90,18 @@ const ServicesPage: React.FC = () => {
       icon: Users,
       title: 'Expert Team',
       description: 'World-class engineers and data scientists with proven track records'
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Cloud, Shield, BarChart3, Code, Users, Zap, ArrowRight, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart, Rocket } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-=======
-    }
-  ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
-
-const ServicesPage: React.FC = () => {
-  const aiServices = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Chatbots',
-      description: 'Advanced conversational AI with natural language processing and sentiment analysis',
-      price: '$299/month',
-      features: ['Natural language processing', 'Multi-language support', 'Sentiment analysis', 'CRM integration']
-    },
-    {
-      icon: FileText,
-      title: 'AI Content Generation',
-      description: 'Automated content creation using advanced language models',
-      price: '$199/month',
-      features: ['Blog post generation', 'Social media content', 'Email marketing campaigns', 'SEO optimization']
-    }
-  ];
-
-  const itServices = [
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure & Migration',
-      description: 'Complete cloud solutions with seamless migration and 24/7 monitoring',
-      price: '$1,500/month',
-      features: ['AWS/Azure/GCP expertise', 'Zero-downtime migration', 'Auto-scaling', 'Cost optimization']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security services including threat detection and prevention',
-      price: '$2,200/month',
-      features: ['24/7 monitoring', 'Threat detection', 'Incident response', 'Compliance management']
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+ origin/cursor/analyze-improve-and-deploy-application-1232
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions designed to transform your business operations and drive innovation.
-          </p>
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-              <div className="text-gray-300">Services</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
-              <div className="text-3xl font-bold text-green-400 mb-2">$99</div>
-              <div className="text-gray-300">Starting Price</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
-              <div className="text-3xl font-bold text-purple-400 mb-2">300%</div>
-              <div className="text-gray-300">Average ROI</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 cyber-card">
-              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
-              <div className="text-gray-300">Support</div>
-=======
-    <>
+<>
       <SEOOptimizer
         title="Service - Zion Tech Group"
         description="Professional AI and IT servicess for your business transformation."
@@ -241,8 +136,7 @@ const ServicesPage: React.FC = () => {
                 >
                   Contact Us
                 </a>
-              </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
+              </div> origin/cursor/analyze-improve-and-deploy-application-1256
             </div>
           </div>
           {/* Contact Info */}
@@ -260,10 +154,7 @@ const ServicesPage: React.FC = () => {
                 <MapPin className="w-5 h-5" />
                 <span className="text-white font-medium">Middletown, DE</span>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <>
+<>
       <Helmet>
         <title>Services - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Explore our comprehensive AI and IT services. From AI chatbots to cloud infrastructure, we provide cutting-edge solutions for your business." />
@@ -272,88 +163,9 @@ const ServicesPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <Navigation />
         
-=======
-      {/* Main Service Categories */}
-      <section className="py-16 bg-white">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">Our Services</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business and drive growth.
-            </p>
-          </div>
-          
-          {/* AI Services Section */}
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">AI Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge artificial intelligence solutions to transform your business operations
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-300 flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </section>
+ origin/cursor/analyze-improve-and-deploy-application-1232
 
-          {/* IT Services Section */}
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">IT Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions for modern businesses
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-purple-500/20 rounded-lg p-6 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-purple-400 mr-3" />
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-purple-400 mb-4">{service.price}</div>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-300 flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </section>
-        </div>
-        
-        <Footer />
-      </div>
-    </>
-  );
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+ origin/cursor/analyze-improve-and-deploy-application-1448
       {/* Service Categories */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -403,9 +215,7 @@ const ServicesPage: React.FC = () => {
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD
-=======
-          </section>
+</section>
 
           {/* CTA Section */}
           <section className="text-center py-16">
@@ -428,17 +238,13 @@ const ServicesPage: React.FC = () => {
                 >
                   <Mail className="w-5 h-5" />
                   kleber@ziontechgroup.com
-                </a>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
+                </a> origin/cursor/analyze-improve-and-deploy-application-1256
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      {/* Additional Services */}
+{/* Additional Services */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -463,11 +269,7 @@ const ServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+ origin/cursor/analyze-improve-and-deploy-application-1448
       {/* Benefits Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -485,18 +287,11 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      {/* Contact Section */}
+{/* Contact Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1448
+ origin/cursor/analyze-improve-and-deploy-application-1448
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -522,10 +317,7 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>
-=======
-    <>
+<>
       <Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Services services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -542,201 +334,8 @@ const ServicesPage: React.FC = () => {
             </p>
           </div>
         </div>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
-      </div>
-    </>
-<<<<<<< HEAD
-  )
-}
-=======
-import React from 'react';
-
-
-const ServicesPage: React.FC = () => {
-  const services = [
-    {
-      title: 'AI Solutions',
-      description:
-        'Advanced artificial intelligence solutions for enterprise automation and optimization.',
-      icon: '🤖',
-      features: [
-        'Machine Learning',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-      ],
-    },
-    {
-      title: 'Quantum Computing',
-      description:
-        'Next-generation quantum computing capabilities for complex problem solving.',
-      icon: '⚛️',
-      features: [
-        'Quantum Algorithms',
-        'Quantum Security',
-        'Optimization',
-        'Simulation',
-      ],
-    },
-    {
-      title: 'Autonomous Systems',
-      description:
-        'Self-managing and self-optimizing systems for enterprise operations.',
-      icon: '🔄',
-      features: [
-        'Self-Healing Infrastructure',
-        'Automated Operations',
-        'Intelligent Monitoring',
-        'Adaptive Learning',
-      ],
-    },
-    {
-      title: 'Business Intelligence',
-      description:
-        'Data-driven insights and analytics for strategic decision making.',
-      icon: '📊',
-      features: [
-        'Real-time Analytics',
-        'Data Visualization',
-        'Reporting',
-        'Dashboard Creation',
-      ],
-    },
-    {
-      title: 'Cloud Migration',
-      description:
-        'Seamless cloud transformation with zero downtime and cost optimization.',
-      icon: '☁️',
-      features: [
-        'Zero Downtime',
-        'Cost Optimization',
-        'Security Enhancement',
-        'Scalability',
-      ],
-    },
-    {
-      title: 'Consulting',
-      description:
-        'Expert guidance and strategic planning for digital transformation.',
-      icon: '💡',
-      features: [
-        'Strategic Planning',
-        'Technology Assessment',
-        'Implementation Support',
-        'Training',
-      ],
-    },
-  ];
-
-  return (
-    <div className='min-h-screen bg-slate-50 py-16'>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>
-          <h1 className='text-4xl font-bold text-gray-900 mb-4'>
-            Our Services
-          </h1>
-          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-            Comprehensive AI and IT solutions designed to transform your
-            business and drive innovation
-          </p>
-        </div>
-
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className='bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow'
-            >
-              <div className='text-4xl mb-4'>{service.icon}</div>
-              <h3 className='text-xl font-semibold text-gray-900 mb-3'>
-                {service.title}
-              </h3>
-              <p className='text-gray-600 mb-4'>{service.description}</p>
-              <ul className='space-y-2'>
-                {service.features.map((feature, featureIndex) => (
-                  <li
-                    key={featureIndex}
-                    className='flex items-center text-sm text-gray-500'
-                  >
-                    <span className='w-2 h-2 bg-blue-500 rounded-full mr-2'></span>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-
-        <div className='mt-16 text-center'>
-          <h2 className='text-3xl font-bold text-gray-900 mb-4'>
-            Ready to Transform Your Business?
-          </h2>
-          <p className='text-xl text-gray-600 mb-8'>
-            Contact us today to discuss how our AI solutions can help your
-            organization
-          </p>
-          <button className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'>
-            Get Started
-          </button>
-        </div>
-      </div>
-    </div>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
-  );
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247
 
 export default ServicesPage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
-import { Helmet } from 'react-helmet-async';
-
-export default function ServicesPage() {
-  return (
-    <>
-      <Helmet>
-        <title>Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Explore our comprehensive AI and IT services including AI solutions, cybersecurity, cloud infrastructure, and digital transformation." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business and drive growth.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-800 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
-              <p className="text-gray-300">
-                Advanced artificial intelligence solutions to automate processes and enhance decision-making.
-              </p>
-            </div>
-            
-            <div className="bg-slate-800 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
-              <p className="text-gray-300">
-                Comprehensive security solutions to protect your business from cyber threats.
-              </p>
-            </div>
-            
-            <div className="bg-slate-800 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
-              <p className="text-gray-300">
-                Scalable cloud solutions to modernize your infrastructure and improve efficiency.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-f512
+ cursor/fix-errors-and-merge-to-main-f512

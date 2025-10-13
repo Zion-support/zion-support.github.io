@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-class Logger {
-  private logLevel: LogLevel = LogLevel.INFO;
-  private logs: Array<{
-    level: LogLevel,
-    message: string,
-    context?: LogContext;
-    metadata?: Record<string, unknown>
-    timestamp: number,
-  }> = []
-=======
 import React from 'react'
 /**
  * Enhanced Logger Utility
@@ -473,5 +461,4 @@ export const fatal = (
   metadata?: Record<string, unknown>
 ) => logger.fatal(message, err, context, metadata)
 
-export default logger
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export default logger origin/cursor/analyze-improve-and-deploy-application-1247

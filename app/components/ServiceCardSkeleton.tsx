@@ -1,30 +1,8 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const ServiceCardSkeletonPage: React.FC = () => {,
-=======
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const ServiceCardSkeletonPage: React.FC = () => {
-const features = [
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-=======
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const ServiceCardSkeletonPage: React.FC = () => {
-<<<<<<< HEAD
-  const features = [
-=======
-const features = [
-];
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+const features = [ origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -37,20 +15,10 @@ const features = [
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-  ];];];
-const benefits = [
-  ];
-
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-export default function ComponentsPage() {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default function ComponentsPage() { origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -164,28 +132,4 @@ export default function ComponentsPage() {
 };
 
 export default ServiceCardSkeletonPage;
-=======
-<<<<<<< HEAD
-      description: 'Worldwide deployment and support for international businesses'  }
-  }]
-=======
-      description: 'Worldwide deployment and support for international businesses'
-    }
-];;
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-const benefits = [
-];
-'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-)
-}
-export default ServiceCardSkeletonPage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247

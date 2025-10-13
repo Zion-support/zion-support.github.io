@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface StructuredDataProps {
-  type?: 'Organization' | 'WebSite' | 'Service' | 'BreadcrumbList';
-  data?: any;
-=======
 'use client'
 import React from 'react'
 interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness'
-  data?: Record<string, unknown>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+  data?: Record<string, unknown> origin/cursor/analyze-improve-and-deploy-application-1247
 }
 
 const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data }) => {
@@ -114,26 +106,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', 
           }
         };
 
-<<<<<<< HEAD
-      case 'BreadcrumbList':
-        return {
-          ...baseData,
-          itemListElement: data?.breadcrumbs?.map((item: any, index: number) => ({
-            "@type": "ListItem",
-            position: index + 1,
-            name: item.name,
-            item: item.url
-          })) || []
-        };
-
-      default:
-        return baseData;
-    }
-  };
-
-=======
-  const structuredData = data || getDefaultData()
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+const structuredData = data || getDefaultData() origin/cursor/analyze-improve-and-deploy-application-1247
   return (
     <script
       type="application/ld+json"
@@ -141,12 +114,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', 
         __html: JSON.stringify(getStructuredData(), null, 2)
       }}
     />
-<<<<<<< HEAD
-  );
-};
-=======
-  )
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+)
+} origin/cursor/analyze-improve-and-deploy-application-1247
 
 export default StructuredData

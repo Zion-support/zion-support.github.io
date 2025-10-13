@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Globe, TrendingUp, Monitor, MessageSquare, Phone } from "lucide-react";
@@ -452,5 +450,4 @@ export default function AiPoweredDevops() {
       </div>
     </>
   );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+} origin/cursor/analyze-improve-and-deploy-application-0ff3

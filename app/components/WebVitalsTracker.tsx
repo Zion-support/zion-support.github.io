@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface WebVitalsTrackerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function WebVitalsTracker({ className = '', children }: WebVitalsTrackerProps) {
-  return (
-    <div className={`web-vitals-tracker ${className}`}>
-      {children}
-    </div>
-  );
-}
-=======
-    const sendToAnalytics = (metric: WebVitalsData) => {
+const sendToAnalytics = (metric: WebVitalsData) => {
       // Send to Google Analytics or other analytics service
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', metric.name, {
@@ -78,5 +62,4 @@ export default function WebVitalsTracker({ className = '', children }: WebVitals
           navigationType: 'reload',
         });
       }
-    }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+    } origin/cursor/analyze-improve-and-deploy-application-1091

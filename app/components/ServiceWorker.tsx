@@ -1,21 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React, { useEffect } from 'react';
 
-const ServiceWorker: React.FC = () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+const ServiceWorker: React.FC = () => { origin/cursor/analyze-improve-and-deploy-application-1232
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
-<<<<<<< HEAD
-          console.log('Service Worker registered:', registration);
-=======
 'use client'
 import React from 'react'
 import { ArrowRight, Mail, Brain, BarChart } from 'lucide-react';
@@ -179,62 +170,5 @@ const ServiceWorker: React.FC = () => {
       </section>
     </div>
   )
-}
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
-=======
-import { useEffect } from 'react';
-
-const ServiceWorker: React.FC = () => {
-  useEffect(() => {
-    if ('serviceWorker' in navigator && process.env['NODE_ENV'] === 'production') {
-      const registerSW = async () => {
-        try {
-          const registration = await navigator.serviceWorker.register('/sw.js');
-          console.log('Service Worker registered successfully:', registration);
-          
-          // Handle updates
-          registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (newWorker) {
-              newWorker.addEventListener('statechange', () => {
-                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // New content is available, show update notification
-                  if (confirm('New version available! Reload to update?')) {
-                    window.location.reload();
-                  }
-                }
-              });
-            }
-          });
-        } catch (error) {
-          console.error('Service Worker registration failed:', error);
-        }
-      };
-
-      registerSW();
-=======
-          console.log('Service Worker registered successfully:', registration);
-        })
-        .catch((error) => {
-          console.log('Service Worker registration failed:', error);
-        });
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-    }
-  }, []);
-
-  return null;
-};
-
-<<<<<<< HEAD
-export default ServiceWorker;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
-=======
-export default ServiceWorker;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
-export default ServiceWorker;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+} origin/cursor/analyze-improve-and-deploy-application-0e37
+ origin/cursor/analyze-improve-and-deploy-application-1247

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Star, Zap, Globe, Phone } from "lucide-react";
@@ -42,9 +39,7 @@ import { ArrowRight, CheckCircle, Star, Zap, Globe, Phone } from "lucide-react";
   Fingerprint,
   Search,
   Activity
-} from "lucide-react";
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+} from "lucide-react"; origin/cursor/analyze-improve-and-deploy-application-1091
 export default function ZionSecurityShieldPro() {
 
   const securityStats = [
@@ -54,13 +49,7 @@ export default function ZionSecurityShieldPro() {
     { number: "100%", label: "Compliance Coverage", icon: <Award className="w-6 h-6" /> }
   ];
 
-<<<<<<< HEAD
-  const pricingPlans = [
-    {
-      name: "Essential",
-      price: "$499",
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+ origin/cursor/analyze-improve-and-deploy-application-1091
       period: "month",
       description: "Core security features for small to medium businesses",
       features: [
@@ -69,14 +58,7 @@ export default function ZionSecurityShieldPro() {
         "Firewall management",
         "Standard support",
         "Up to 50 users"
-<<<<<<< HEAD
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+ origin/cursor/analyze-improve-and-deploy-application-1091
       price: "$799",
       period: "month",
       description: "Advanced security features for growing businesses",
@@ -88,14 +70,7 @@ export default function ZionSecurityShieldPro() {
         "Priority support",
         "Up to 200 users",
         "Mobile app access"
-<<<<<<< HEAD
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+ origin/cursor/analyze-improve-and-deploy-application-1091
       price: "$1299",
       period: "month",
       description: "Complete security solution for large organizations",
@@ -108,16 +83,7 @@ export default function ZionSecurityShieldPro() {
         "Unlimited users",
         "White-label options",
         "On-premise deployment"
-<<<<<<< HEAD
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+ origin/cursor/analyze-improve-and-deploy-application-1091
       name: "David Martinez",
       company: "Financial Services Corp",
       role: "CISO",
@@ -154,13 +120,7 @@ export default function ZionSecurityShieldPro() {
         <meta
           name="keywords"
           content="cybersecurity, AI security, threat detection, automated response, 24/7 monitoring, compliance reporting, vulnerability assessment, multi-factor authentication"
-<<<<<<< HEAD
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-security-shield-pro" />
-      </Helmet>
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+ origin/cursor/analyze-improve-and-deploy-application-1091
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div>
@@ -472,7 +432,4 @@ export default function ZionSecurityShieldPro() {
     </>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+ origin/cursor/analyze-improve-and-deploy-application-1091

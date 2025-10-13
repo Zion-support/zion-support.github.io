@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 /**
  * Data Validation Utility
  * Provides comprehensive data validation with type safety
@@ -356,5 +353,4 @@ class DataValidator {
 }
 
 export const dataValidator = DataValidator.getInstance();
-export default DataValidator;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export default DataValidator; origin/cursor/analyze-improve-and-deploy-application-1247

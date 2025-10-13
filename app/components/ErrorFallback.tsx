@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useEffect } from "react";
 
 import { Link } from "react-router-dom";
@@ -143,5 +141,4 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
   );
 };
 
-export default ErrorFallback;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default ErrorFallback; origin/cursor/analyze-improve-and-deploy-application-0ff3

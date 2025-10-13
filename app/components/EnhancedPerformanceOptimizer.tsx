@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-react';
-  useEffect(() => {
-    // Preload critical resources
-    if (enablePreloading) {
-      const preloadLink = document.createElement('link');
-      preloadLink.rel = 'preload';
-      preloadLink.href = '/fonts/inter.woff2';
-      preloadLink.as = 'font';
-      preloadLink.type = 'font/woff2';
-      preloadLink.crossOrigin = 'anonymous';
-      document.head.appendChild(preloadLink);
-    }
-  }, [enablePreloading]);
-
-  return (
-<<<<<<< HEAD
-    <div className="performance-optimizer">
-      {children}
-=======
-    <>
+<>
       <Helmet>
         <title>EnhancedPerformanceOptimizer | Zion Tech Group</title>
         <meta name="description" content="Professional EnhancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -98,8 +76,7 @@ import { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-
             </div>
           </div>
         </div>
-      </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
+      </section> origin/cursor/analyze-improve-and-deploy-application-1507
     </div>
     </>
   );
@@ -131,10 +108,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           img.loading = 'lazy';
         }
       });
-<<<<<<< HEAD
-    }
-=======
-    };
+};
 
     // Run optimization after DOM is ready
     if (document.readyState === 'loading') {
@@ -145,31 +119,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     return () => {
       document.removeEventListener('DOMContentLoaded', optimizeImages);
-    };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+    }; origin/cursor/analyze-improve-and-deploy-application-1247
   }, [enableImageOptimization]);
 
   useEffect(() => {
-<<<<<<< HEAD
-    if (enablePreloading) {
-      // Preload critical resources
-      const preloadLink = document.createElement('link');
-      preloadLink.rel = 'preload';
-      preloadLink.href = '/fonts/inter.woff2';
-      preloadLink.as = 'font';
-      preloadLink.type = 'font/woff2';
-      preloadLink.crossOrigin = 'anonymous';
-      document.head.appendChild(preloadLink);
-    }
-  }, [enablePreloading]);
-
-  return <>{children}</>;
-};
-
-export default PerformanceOptimizer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
-    if (!enableLazyLoading) return;
+if (!enableLazyLoading) return;
 
     const lazyLoadElements = () => {
       const lazyElements = document.querySelectorAll('[data-lazy]');
@@ -272,5 +226,4 @@ export default PerformanceOptimizer;
   return <>{children}</>;
 };
 
-export default PerformanceOptimizer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export default PerformanceOptimizer; origin/cursor/analyze-improve-and-deploy-application-1247

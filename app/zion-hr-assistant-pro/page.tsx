@@ -1,22 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, Sparkles, Monitor, Mic, Mail, Smartphone, Globe } from 'lucide-react';
-=======
-import { ArrowRight, CheckCircle, Star, Brain, TrendingUp } from "lucide-react";
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+import { ArrowRight, CheckCircle, Star, Brain, TrendingUp } from "lucide-react"; origin/cursor/analyze-improve-and-deploy-application-0ff3
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-<<<<<<< HEAD
-const ZionhrassistantproPage = () => {
-  const features = [
-    {
-      title: "AI-Powered Intelligence",
-      description: "Advanced artificial intelligence algorithms that learn and adapt to your business needs",
-      icon: <Brain className="w-8 h-8" />,
-=======
 const ZionHRAssistantPro = () => {
 
   const pricingPlans = [
@@ -110,8 +98,7 @@ const ZionHRAssistantPro = () => {
     {
       title: "Recruitment & Hiring",
       description: "AI-powered candidate screening, interview scheduling, and talent pipeline management",
-      icon: <Users className="w-8 h-8" />,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+      icon: <Users className="w-8 h-8" />, origin/cursor/analyze-improve-and-deploy-application-0ff3
       color: "from-blue-500 to-cyan-500"
     },
     {

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { useEffect } from 'react';
 
 const CriticalResourcePreloader: React.FC = () => {
@@ -93,5 +91,4 @@ const CriticalResourcePreloader: React.FC = () => {
   return null;
 };
 
-export default CriticalResourcePreloader;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
+export default CriticalResourcePreloader; origin/cursor/analyze-improve-and-deploy-application-13a2

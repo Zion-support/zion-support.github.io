@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useRef, useEffect } from 'react';
 
 interface ImprovedImageProps {
@@ -179,5 +177,4 @@ export const BlurImage: React.FC<ImprovedImageProps & { blurDataURL?: string }> 
   );
 };
 
-export default ImprovedImage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default ImprovedImage; origin/cursor/analyze-improve-and-deploy-application-0ff3

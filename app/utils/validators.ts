@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 /**
  * Validation Utilities
  * Provides common validation functions for forms and data
@@ -252,5 +249,4 @@ export const validators = {
     validate: isStrongPassword,
     message,
   }),
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+}; origin/cursor/analyze-improve-and-deploy-application-1247

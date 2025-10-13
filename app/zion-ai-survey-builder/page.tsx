@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function ZionAISurveyBuilder() {
-=======
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -201,17 +197,11 @@ const ZionAiSurveyBuilderPage: React.FC = () => {
                 </button>
               </div>
             </div>
-          </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+          </div> origin/cursor/analyze-improve-and-deploy-application-1232
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
 };
 
-export default ZionAiSurveyBuilderPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+export default ZionAiSurveyBuilderPage; origin/cursor/analyze-improve-and-deploy-application-1232

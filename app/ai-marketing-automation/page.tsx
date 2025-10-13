@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { ArrowRight, Globe } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -280,5 +278,4 @@ export default function AIMarketingAutomation() {
       </div>
     </>
   );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+} origin/cursor/analyze-improve-and-deploy-application-0ff3

@@ -1,36 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+'use client'; origin/cursor/analyze-improve-and-deploy-application-1247
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { ArrowRight, CheckCircle, Brain, Zap, Globe } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+import { Link } from "react-router-dom"; origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 
-=======
-import { Link } from 'react-router-dom';
-import { CheckCircle, Star, ArrowRight, Zap, Shield, Users, Building } from 'lucide-react';
-
-interface PricingPlan {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  cta: string;
-  icon: React.ComponentType<any>;
-}
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+ origin/cursor/analyze-improve-and-deploy-application-1232
 const PricingPage: React.FC = () => {
   const plans: PricingPlan[] = [
     {
@@ -43,10 +19,7 @@ const PricingPage: React.FC = () => {
         'Cloud Infrastructure Setup',
         'Email Support',
         'Monthly Reports',
-<<<<<<< HEAD
-        'Basic Analytics Dashboard'
-=======
-        'Basic Analytics Dashboard',
+'Basic Analytics Dashboard',
         'Up to 5 users',
         'Standard SLA'
       ],
@@ -54,8 +27,7 @@ const PricingPage: React.FC = () => {
       cta: 'Get Started',
       icon: Users
     },
-    {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+    { origin/cursor/analyze-improve-and-deploy-application-1247
       name: 'Professional',
       price: '$7,999',
       period: '/month',
@@ -66,11 +38,7 @@ const PricingPage: React.FC = () => {
         'Priority Support',
         'Weekly Reports',
         'Advanced Analytics',
-<<<<<<< HEAD
-        'API Access',
-        'Training Sessions'
-=======
-        'Up to 25 users',
+'Up to 25 users',
         '99.9% SLA',
         'Dedicated Account Manager',
         'Custom Integrations'
@@ -79,8 +47,7 @@ const PricingPage: React.FC = () => {
       cta: 'Start Free Trial',
       icon: Building
     },
-    {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+    { origin/cursor/analyze-improve-and-deploy-application-1247
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -90,175 +57,27 @@ const PricingPage: React.FC = () => {
         'White-label Solutions',
         '24/7 Premium Support',
         'Real-time Monitoring',
-<<<<<<< HEAD
-        'Custom Integrations',
-        'White-label Options',
-        'On-site Training',
-        'SLA Guarantee'
-  const microSaasPlans = [
-  const addOns = [
-    {
-      name: 'Basic',
-      price: '$29',
-      period: '/month',
-      description: 'Essential tools for small teams',
-      features: [
-        '5 AI Tools Access',
-        'Basic Analytics',
-        'Email Support',
-        'Standard Templates',
-        '1 User Account'
-      ],
-      popular: false
-    },
-    {
-      name: 'Pro',
-      price: '$99',
-      period: '/month',
-      description: 'Advanced features for growing businesses',
-      features: [
-        'Unlimited AI Tools',
-        'Advanced Analytics',
-        'Priority Support',
-        'Custom Templates',
-        'Up to 10 Users',
-        'API Access',
-        'White-label Options'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Custom solutions for large organizations',
-      features: [
-        'Custom AI Tools',
-        'Dedicated Support',
-        'Custom Integrations',
-        'Unlimited Users',
-        'On-premise Deployment',
-        'SLA Guarantee',
-        'Training & Consulting'
-=======
-        'Custom Analytics',
+'Custom Analytics',
         'Unlimited users',
         '99.99% SLA',
         'Dedicated Team',
         'On-premise Deployment',
         'Custom Training',
-        'Compliance Support'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+        'Compliance Support' origin/cursor/analyze-improve-and-deploy-application-1247
       ],
       popular: false,
       cta: 'Contact Sales',
       icon: Shield
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
+ origin/cursor/analyze-improve-and-deploy-application-1247
 
-  return (
+return (
     <>
-      <Helmet>
-        <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
-        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
-        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
+ origin/cursor/analyze-improve-and-deploy-application-1247
       </Helmet>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
-
-  const addOns = [
-    {
-      name: 'AI Model Training',
-      price: '$5,000',
-      description: 'Custom AI model training for your specific use case'
-    },
-    {
-      name: 'Data Migration',
-      price: '$3,000',
-      description: 'Complete data migration and system integration'
-    },
-    {
-      name: 'Training & Support',
-      price: '$2,000',
-      description: 'Comprehensive training for your team'
-    },
-    {
-      name: 'Custom Development',
-      price: '$150/hour',
-      description: 'Additional custom development services'
-    }
-  ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-
-<<<<<<< HEAD
-        <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Advanced pricing solutions by Zion Tech Group" />
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content=Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business. />
-        <meta name="keywords" content=page, AI solutions, IT services, Zion Tech Group />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Pricing
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced pricing solutions by Zion Tech Group
-          </p>
-        </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
-            <p className="text-gray-600">
-              This page is under development. Please check back later for updates.
-            </p>
-          </div>
-<div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Basic</h3>
-              <p className="text-3xl font-bold text-gray-900 mb-4">$99<span className="text-lg text-gray-600">/month</span></p>
-              <ul className="space-y-2 text-gray-600">
-                <li>Basic AI features</li>
-                <li>Email support</li>
-                <li>Standard templates</li>
-=======
-  return (
-    <>
-<<<<<<< HEAD
-  <Helmet />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-        <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
-        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
-        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
-=======
-      <Helmet>
-        <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose the plan that fits your business needs." />
-        <meta name="keywords" content="pricing, AI solutions, IT services, enterprise software" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-      </Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-};
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Pricing</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include our core AI and IT solutions with transparent, no-hidden-fees pricing.
-            </p>
-          </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+ origin/cursor/analyze-improve-and-deploy-application-1460
 
 export default PricingPage;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -340,30 +159,7 @@ export default PricingPage;
               </ul>
             </div>
           </div>
-<<<<<<< HEAD
-}
-
-  );  ));)
-                  key={plan.name}
-                  className={`cyber-card hologram-card p-8 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-500 scale-105' : ''
-                      <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        Most Popular
-                      <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
-                        {plan.cta}
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-=======
-        {/* Hero Section */}
+{/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -419,36 +215,20 @@ export default PricingPage;
                     <p className="text-gray-400 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-5xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-2">{plan.period}</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+                      <span className="text-gray-400 ml-2">{plan.period}</span> origin/cursor/analyze-improve-and-deploy-application-1247
                     </div>
                   </div>
 
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-=======
-                      <li key={featureIndex} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+<li key={featureIndex} className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" /> origin/cursor/analyze-improve-and-deploy-application-1247
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
 
-<<<<<<< HEAD
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'cyber-button'
-                      : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
-                  }`}>
-                    {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                    <ArrowRight className="w-4 h-4 inline ml-2" />
-                  </button>
-=======
-                  <Link
+<Link
                     to={plan.name === 'Enterprise' ? '/contact' : '/contact'}
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
                       plan.popular
@@ -458,68 +238,14 @@ export default PricingPage;
                   >
                     {plan.cta}
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+                  </Link> origin/cursor/analyze-improve-and-deploy-application-1247
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Micro SAAS Pricing */}
-        <section className="py-16 px-4 bg-gray-900/30">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-              Micro SAAS Solutions
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {microSaasPlans.map((plan, index) => (
-                <div
-                  key={plan.name}
-                  className={`cyber-card hologram-card p-8 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-500 scale-105' : ''
-                  }`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
-                        <Star className="w-4 h-4 mr-1" />
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
-                  </div>
-
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'cyber-button'
-                      : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
-                  }`}>
-                    {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
-                    <ArrowRight className="w-4 h-4 inline ml-2" />
-                  </button>
-                </div>
-              ))}
-=======
-        {/* Add-ons Section */}
+{/* Add-ons Section */}
         <section className="py-16 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
@@ -612,8 +338,7 @@ export default PricingPage;
               >
                 Contact Sales
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+              </Link> origin/cursor/analyze-improve-and-deploy-application-1247
             </div>
           </div>
         </section>
@@ -690,79 +415,23 @@ export default PricingPage;
                 </a>
               </div>
 export default PricingPage;
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-
-const PricingPage: React.FC = () => {
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const PricingPage: React.FC = () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
+ origin/cursor/analyze-improve-and-deploy-application-1009
   return (
     <>
       <Helmet>
         <title>Pricing - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Pricing services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Pricing
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Coming soon - Advanced Pricing solutions by Zion Tech Group
-            </p>
-          </div>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
+ origin/cursor/analyze-improve-and-deploy-application-0fac
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
+ origin/cursor/analyze-improve-and-deploy-application-1507
     </>
   )
 }
 
 export default PricingPage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-=======
-        <meta name="description" content="Zion Tech Group - Pricing page" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <div className="pt-24 pb-16">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Pricing
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              This page is under construction. Please check back soon.
-            </p>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    </>
-=======
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
+ origin/cursor/analyze-improve-and-deploy-application-1460
   );
 };
 
-<<<<<<< HEAD
-export default PricingPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
-=======
-export default PricingPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export default PricingPage; origin/cursor/analyze-improve-and-deploy-application-1247

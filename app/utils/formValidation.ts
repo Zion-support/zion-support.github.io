@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 /**
  * Form Validation Utilities
  * Provides common validation rules and form handling utilities
@@ -248,5 +245,4 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(
     }
     timeout = setTimeout(later, wait);
   };
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+} origin/cursor/analyze-improve-and-deploy-application-1247

@@ -2,20 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 export interface ApiError extends Error {/* TODO: Fix JSX expression */};
 };
 export class AppError extends Error implements ApiError {
-<<<<<<< HEAD
-    public statusCode: number
-  public isOperational: boolean,
-,
-  constructor(message: string, statusCode: number = 500) {
-    super(message)
-    this.statusCode = statusCode
-    this.isOperational = true,
-    Error.captureStackTrace(this, this.constructor)
-  }
-}
-
-=======
-  public statusCode: number;
+public statusCode: number;
   public isOperational: boolean;
 ,;
 constructor(message: string, statusCode: number = 500) {
@@ -23,57 +10,32 @@ constructor(message: string, statusCode: number = 500) {
     this.statusCode = statusCode;
     this.isOperational = true;
     Error.captureStackTrace(this, this.constructor)};
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+}; cursor/fix-errors-and-merge-to-main-6ce7
 export const errorHandler = (
   err: ApiError
   req: NextApiRequest
   res: NextApiResponse,
 ) => {,
-<<<<<<< HEAD
-export class AppError extends Error implements ApiError {/* TODO: Fix JSX expression */}
-  }
-}
-
-=======
 export class AppError extends Error implements ApiError {/* TODO: Fix JSX expression */};
   };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+}; cursor/fix-errors-and-merge-to-main-6ce7
 export const errorHandler = (er,
   r: ApiError,
   re,
   q: NextApiRequest,
   re,
-<<<<<<< HEAD
-  s: NextApiResponse,)
-) => {/* TODO: Fix JSX expression */}
-=======
-  s: NextApiResponse;)
-) => {/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+s: NextApiResponse;)
+) => {/* TODO: Fix JSX expression */}; cursor/fix-errors-and-merge-to-main-6ce7
   const { statusCode = 500, message } = err;
   // Log error for monitoring;
   if (process.env['NODE_ENV'] === 'development') {
     // eslint-disable-next-line no-console;
 //     // .toISOString(),
     userAgent: req.headers['user-agent'],
-<<<<<<< HEAD
-    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
-  });
-
+ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress});
     timestamp: new Date().toISOString(),
     userAgent: req.headers['user-agent'],
-    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
-    });
-  }
-
-=======
-    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress});
-    timestamp: new Date().toISOString(),
-    userAgent: req.headers['user-agent'],
-    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress})};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress})}; cursor/fix-errors-and-merge-to-main-6ce7
   res.status(statusCode).json({)
     error: {)
       message:)
@@ -92,10 +54,7 @@ export const errorHandler = (er,
       timestamp: new Date().toISOString()};
       statusCode,
       timestamp: new Date().toISOString(),
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+ cursor/fix-errors-and-merge-to-main-6ce7
   // Log error for monitoring
   if (process.env['NODE_ENV'] === 'development') {
     // eslint-disable-next-line no-console
@@ -106,24 +65,14 @@ export const errorHandler = (er,
       userAgent: req.headers['user-agent'],
       ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
   });
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+ cursor/fix-errors-and-merge-to-main-6ce7
     timestam,
   p: new Date().toISOString(),
     userAgen,
   t: req.headers['user-agent'],
     i,
-<<<<<<< HEAD
-  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress});
-  }
-
-  res.status(statusCode).json({/* TODO: Fix JSX expression */}
-=======
-  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress})};
-  res.status(statusCode).json({/* TODO: Fix JSX expression */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+p: req.headers['x-forwarded-for'] || req.connection.remoteAddress})};
+  res.status(statusCode).json({/* TODO: Fix JSX expression */}; cursor/fix-errors-and-merge-to-main-6ce7
     },
       statusCode,
       timestam)
@@ -136,30 +85,7 @@ export const errorHandler = (er,
       statusCode,
       timestam,
   p: new Date().toISOString()
-<<<<<<< HEAD
-    }
-  });
-}
-
-export const asyncHandler =
-  (fn: Function) =>,
-  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
-    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
-  }
-  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
-    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
-  }
-  (req: NextApiRequest, res: NextApiResponse, next: Function) => {
-    ,
-    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
-  }
-    stack: err.stack,
-  });
-
-=======
-    };
+};
   })};
 export const asyncHandler =
   (fn: Function) =>,
@@ -169,8 +95,7 @@ export const asyncHandler =
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))};
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))};
-    stack: err.stack});
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    stack: err.stack}); cursor/fix-errors-and-merge-to-main-6ce7
   res.status(statusCode).json({)
     error: {)
       message: message || 'Internal Server Error'),
@@ -182,31 +107,7 @@ export const asyncHandler = {}
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
-<<<<<<< HEAD
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-  (re,
-  q: NextApiRequest, re,
-  s: NextApiResponse, nex)
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-  (re,
-  q: NextApiRequest, re,
-  s: NextApiResponse, nex)
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-    stac,
-  k: err.stack,
-  });
-
-  res.status(statusCode).json({/* TODO: Fix JSX expression */})
-  k: err.stack })
-    }
-  });
-}
-
-=======
-  t: Function) => {/* TODO: Fix JSX expression */};
+t: Function) => {/* TODO: Fix JSX expression */};
   };
   (re,
   q: NextApiRequest, re,
@@ -223,29 +124,14 @@ export const asyncHandler = {}
   res.status(statusCode).json({/* TODO: Fix JSX expression */})
   k: err.stack })
     };
-  })};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  })}; cursor/fix-errors-and-merge-to-main-6ce7
 export const asyncHandler = (fn: Function) => {,
   return (req: NextApiRequest, res: NextApiResponse) => {,
     Promise.resolve(fn(req, res)).catch((err) => {
       statusCode,
       timestamp: new Date().toISOString(),
 export const asyncHandler = (f)
-<<<<<<< HEAD
-  n: Function) => {/* TODO: Fix JSX expression */}
-    }});
-}
-
-export const asyncHandler = (fn: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void) => {
-    ,
-  return (req: NextApiRequest, res: NextApiResponse) => {,
-    Promise.resolve(fn(req, res)).catch(err => {)
-      errorHandler(err, req, res)
-  });
-  }
-}
-=======
-  n: Function) => {/* TODO: Fix JSX expression */};
+n: Function) => {/* TODO: Fix JSX expression */};
     }})};
 export const asyncHandler = (fn: (req: NextApiRequest, res: NextApiResponse) => Promise<void> | void) => {,
   return (req: NextApiRequest, res: NextApiResponse) => {,
@@ -272,8 +158,7 @@ export const asyncHandler =
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))};
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {,
-    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))}; cursor/fix-errors-and-merge-to-main-6ce7
   (req: NextApiRequest, res: NextApiResponse, next: Function) => {
     ,
     Promise.resolve(fn(req, res, next)).catch((error: Error) => next(error))
@@ -321,45 +206,7 @@ export const asyncHandler =
 export const asyncHandler = (f,
   n: (re,
   q: NextApiRequest, re)
-<<<<<<< HEAD
-  s: NextApiResponse) => Promise<void> | void) => {/* TODO: Fix JSX expression */}
-    });
-  }
-}
-  (re,
-  q: NextApiRequest, re,
-  s: NextApiResponse, nex)
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-  (re,
-  q: NextApiRequest, re,
-  s: NextApiResponse, nex)
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-  (re,
-  q: NextApiRequest, re,
-  s: NextApiResponse, nex)
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-  (re,
-  q: NextApiRequest, re,
-  s: NextApiResponse, nex)
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-  (re,
-  q: NextApiRequest, re,
-  s: NextApiResponse, nex)
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-  (re,
-  q: NextApiRequest, re,
-  s: NextApiResponse, nex)
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-
-export const asyncHandler = {}
-=======
-  s: NextApiResponse) => Promise<void>
+s: NextApiResponse) => Promise<void>
 );
 } | void) => {/* TODO: Fix JSX expression */};
     })}};
@@ -393,43 +240,21 @@ export const asyncHandler = {}
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */};
   };
-export const asyncHandler = {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export const asyncHandler = {}; cursor/fix-errors-and-merge-to-main-6ce7
   (f)
   n: Function) =>
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
-<<<<<<< HEAD
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-
-export const asyncHandler = {}
-=======
-  t: Function) => {/* TODO: Fix JSX expression */};
+t: Function) => {/* TODO: Fix JSX expression */};
   };
-export const asyncHandler = {};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export const asyncHandler = {}; cursor/fix-errors-and-merge-to-main-6ce7
   (f)
   n: Function) =>
   (re,
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
-<<<<<<< HEAD
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-  (re,
-  q: NextApiRequest, re,
-  s: NextApiResponse, nex)
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-  (re,
-  q: NextApiRequest, re,
-  s: NextApiResponse, nex)
-  t: Function) => {/* TODO: Fix JSX expression */}
-  }
-=======
-  t: Function) => {/* TODO: Fix JSX expression */};
+t: Function) => {/* TODO: Fix JSX expression */};
   };
   (re,
   q: NextApiRequest, re,
@@ -440,6 +265,5 @@ export const asyncHandler = {};
   q: NextApiRequest, re,
   s: NextApiResponse, nex)
   t: Function) => {/* TODO: Fix JSX expression */};
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  }; cursor/fix-errors-and-merge-to-main-6ce7
 `

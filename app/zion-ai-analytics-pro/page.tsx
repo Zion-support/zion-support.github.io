@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function ZionAIAnalyticsPro() {
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Star, Zap, Globe, Monitor, Phone } from "lucide-react";
@@ -82,8 +78,7 @@ export default function ZionAiAnalyticsPro() {
       title: "White-label Solutions",
       description: "Rebrand our analytics platform as your own with complete white-label customization options for agencies and resellers.",
       icon: <Settings className="w-8 h-8" />,
-      benefits: ["Custom branding", "Domain mapping", "API access", "Reseller tools"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+      benefits: ["Custom branding", "Domain mapping", "API access", "Reseller tools"] origin/cursor/analyze-improve-and-deploy-application-1091
       period: "month",
       description: "Perfect for small businesses getting started with analytics",
       features: [
@@ -92,15 +87,7 @@ export default function ZionAiAnalyticsPro() {
         "Standard reports",
         "Email support",
         "1 user account"
-<<<<<<< HEAD
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$599",
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+ origin/cursor/analyze-improve-and-deploy-application-1091
       period: "month",
       description: "Ideal for growing businesses with advanced analytics needs",
       features: [
@@ -111,15 +98,7 @@ export default function ZionAiAnalyticsPro() {
         "Up to 10 user accounts",
         "API access",
         "Mobile apps"
-<<<<<<< HEAD
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$999",
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+ origin/cursor/analyze-improve-and-deploy-application-1091
       period: "month",
       description: "Complete solution for large organizations",
       features: [
@@ -129,47 +108,9 @@ export default function ZionAiAnalyticsPro() {
         "24/7 dedicated support",
         "Unlimited user accounts",
         "White-label options",
-<<<<<<< HEAD
-        "Custom integrations",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion AI Analytics Pro transformed our decision-making process. We can now see trends before they happen and make data-driven decisions with confidence.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
+content: "Zion AI Analytics Pro transformed our decision-making process. We can now see trends before they happen and make data-driven decisions with confidence.",
       content: "The predictive analytics feature helped us increase our sales by 40% in just 3 months. The ROI was immediate and substantial.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "The real-time dashboards give us instant visibility into campaign performance. Our team productivity increased by 60%.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
-  const stats = [
-=======
-      content: "Zion AI Analytics Pro transformed our decision-making process. We can now see trends before they happen and make data-driven decisions with confidence.",
-      content: "The predictive analytics feature helped us increase our sales by 40% in just 3 months. The ROI was immediate and substantial.",
-      content: "The real-time dashboards give us instant visibility into campaign performance. Our team productivity increased by 60%.",
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+      content: "The real-time dashboards give us instant visibility into campaign performance. Our team productivity increased by 60%.", origin/cursor/analyze-improve-and-deploy-application-1091
     { number: "40%", label: "Increase in Decision Speed", icon: <Zap className="w-6 h-6" /> },
     { number: "60%", label: "Reduction in Manual Reporting", icon: <FileText className="w-6 h-6" /> },
     { number: "99.9%", label: "Data Accuracy", icon: <Award className="w-6 h-6" /> },
@@ -187,13 +128,7 @@ export default function ZionAiAnalyticsPro() {
         <meta
           name="keywords"
           content="AI analytics, business intelligence, predictive analytics, real-time dashboards, data visualization, business reporting, AI insights, data analytics platform"
-<<<<<<< HEAD
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-analytics-pro" />
-      </Helmet>
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+ origin/cursor/analyze-improve-and-deploy-application-1091
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -504,7 +439,4 @@ export default function ZionAiAnalyticsPro() {
     </>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+ origin/cursor/analyze-improve-and-deploy-application-1091

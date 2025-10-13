@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
@@ -169,5 +166,4 @@ export const SEO: React.FC<SEOProps> = ({
   );
 };
 
-export default SEO;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export default SEO; origin/cursor/analyze-improve-and-deploy-application-1247

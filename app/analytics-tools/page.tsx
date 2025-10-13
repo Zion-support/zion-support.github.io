@@ -1,153 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const AnalyticsToolsPage: React.FC = () => {,
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
-const AnalyticsToolsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Advanced AI technology to transform your data analysis and business intelligence',},
-    {icon: Zap,
-      title: 'Real-Time Processing',
-<<<<<<< HEAD
-      description: 'Lightning-fast data processing and real-time analytics for optimal insights',},
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards for your data',},
-    {icon: Globe,
-      title: 'Global Scalability',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-      description: 'Worldwide deployment and support for international business analytics',}];
-  ];];];
+ origin/cursor/analyze-improve-and-deploy-application-1247
     'Proven track record of success'
-  ];
-
-=======
-      description: 'Lightning-fast data processing and real-time analytics for optimal insights'
-=======
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const PagePage: React.FC = () => {
-const features = [
-];
-};
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-const PagePage: React.FC = () => {
-};
-  const features = [
-[
-        {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-        {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-        {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-        {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    },
-        {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Scale your solutions globally with intelligent distribution.',
-      benefits: ['Global deployment', 'Edge computing', 'Load balancing', 'Geographic optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    },
-        {
-      icon: Shield,
-      title: 'Enterprise Security',
-<<<<<<< HEAD
-      description: 'Bank-level security with encryption and compliance standards for your data'
-    },
-    {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Worldwide deployment and support for international business analytics'
-    }
-  ]
-  const benefits = [
-    'Advanced AI-powered data analysis',
-    'Real-time processing and insights',
-=======
-      description: 'Enterprise-grade security to protect your data and operations.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    };
-  ];
-;
-const benefits = [
-];
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible analytics solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-    'Proven track record of success'
-<<<<<<< HEAD
-  ]
-<<<<<<< HEAD
-
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
-      <Helmet />
-<<<<<<< HEAD
-=======
-=======
-=======
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-  return (
-    <>
-      <Helmet>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247
         <title>Analytics Tools | Zion Tech Group</title>
         <meta name="description" content="Professional Analytics Tools services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="analytics tools, AI solutions, IT services, Zion Tech Group, data analytics" />
       </Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-<<<<<<< HEAD
-          <h1 className="text-5xl font-bold text-white mb-6">Analytics Tools;</h1>
-=======
-          <h1 className="text-5xl font-bold text-white mb-6">
-=======
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
-            Analytics Tools
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+<h1 className="text-5xl font-bold text-white mb-6">
+ origin/cursor/analyze-improve-and-deploy-application-1247
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced analytics tools.</p>
             Powered by cutting-edge AI technology and industry expertise.
@@ -181,153 +40,13 @@ const benefits = [
           <h1 className="text-5xl font-bold text-white mb-6"></h1>
             Analytics Tools
   </
-<<<<<<< HEAD
-
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-=======
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"> cursor/website-audit-and-update-with-deployment-c0e8
             Transform your business with our advanced analytics tools. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
-<<<<<<< HEAD
-      </section>
-      {/* Features Section */}
-<<<<<<< HEAD
-      <section className="py-16 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-=======
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        {/* Hero Section */};
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Page
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Advanced page solution powered by artificial intelligence.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
-                  <span>Get Started</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-                <a href="#features"
-                  className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2">
-                  <span>Learn More</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced analytics tools. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-      <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-              Why Choose Our Analytics Tools?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Our analytics tools deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
-                <feature.icon className="w-12 h-12 text-purple-400 mb-4" /></feature>
-                <h3 className="text-xl font-semibold text-white mb-2"></h>{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-
-              </div>
-            ))}
-          </div>
-        </div>
-
-      <section className="py-16 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
-              Key Benefits,
+ origin/cursor/analyze-improve-and-deploy-application-1247
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our analytics tools for your business.</p>
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
-            {benefits.map((benefit, index) => (
-              <div key={index}className="flex items-center space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit</span>}</span>
-
-      <section className="py-16 px-4 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-12"></div>
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4"></h2>
-              Key Benefits,
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Experience the power of our analytics tools for your business.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3"></div>
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" /></CheckCircle>
-                <span className="text-gray-300"></spa>{benefit}</span>
-
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-
-      {/* CTA Section */} <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
-=======
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your analytics needs and get a customized solution.</p>
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-all duration-300 flex items-center justify-center">,</button>
-              <Phone className="mr-2 h-5 w-5" />
-              Call Now;
-  </
-            <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
-              <Mail className="mr-2 h-5 w-5" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-              Email Us;
-=======
-              Email Us
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
-=======
-              Email Us
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-  </
-=======
-        </div>
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
+ origin/cursor/analyze-improve-and-deploy-application-1460
           </div>
         </div>
         <div className="text-center">
@@ -386,14 +105,7 @@ const benefits = [
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ),
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-
-=======
-  )
+)
 }
 export default AnalyticsToolsPage
   </button>
@@ -506,14 +218,7 @@ export default AnalyticsToolsPage
       </section>
     </div>)
 =======
-    </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
+    </> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 };
-<<<<<<< HEAD
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-=======
-export default AnalyticsToolsPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
+export default AnalyticsToolsPage; origin/cursor/analyze-improve-and-deploy-application-1256

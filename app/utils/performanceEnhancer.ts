@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 /**
  * Performance Enhancement Utilities
  * Advanced performance optimization tools for the application
@@ -313,5 +310,4 @@ export const initializePerformanceEnhancements = () => {
      
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Performance metrics:', metrics); } }
   }
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+}; origin/cursor/analyze-improve-and-deploy-application-1247

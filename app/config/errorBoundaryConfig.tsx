@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -180,18 +177,11 @@ function DefaultErrorFallback({
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
             Go Home
-          </button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+          </button> origin/cursor/analyze-improve-and-deploy-application-1247
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default ErrorboundaryconfigPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
 }
 
 /**
@@ -311,5 +301,4 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
   };
 }
 
-export default getErrorBoundaryConfig;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export default getErrorBoundaryConfig; origin/cursor/analyze-improve-and-deploy-application-1247

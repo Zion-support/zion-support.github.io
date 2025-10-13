@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-  cleanup: () => {
-    },
-};
-
-export default Sitemapgenerator;
-=======
 /**
  * Sitemap Generation Utility
  * Generates XML sitemaps for better SEO and search engine crawling
@@ -59,5 +51,4 @@ export function generateRobotsTxt(hostname: string, sitemapPath = '/sitemap.xml'
 Disallow:
 
 Sitemap: ${hostname}${sitemapPath}`;
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+} origin/cursor/analyze-improve-and-deploy-application-1247

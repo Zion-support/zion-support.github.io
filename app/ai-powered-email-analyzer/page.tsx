@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -316,5 +314,4 @@ const AIPoweredEmailAnalyzerPage = () => {
   );
 };
 
-export default AIPoweredEmailAnalyzerPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default AIPoweredEmailAnalyzerPage; origin/cursor/analyze-improve-and-deploy-application-0ff3

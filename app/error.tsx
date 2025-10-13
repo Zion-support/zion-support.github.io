@@ -1,30 +1,5 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const ErrorPage: React.FC = () => {,
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-=======
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-const ErrorPage: React.FC = () => {
-  const features = [
-=======
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-;
-const ErrorPage: React.FC = () => {
-const features = [
-];
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+ cursor/fix-errors-and-merge-to-main-6ce7
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -36,62 +11,10 @@ const features = [
     {icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-<<<<<<< HEAD
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
-    {icon: TrendingUp,
-=======
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
-<<<<<<< HEAD
-      icon: TrendingUp,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
-  ]
-<<<<<<< HEAD
-  return(<React.Fragment>)</React.Fragment>
-      <Helmet />
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-    <>
-=======
-=======
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    };
-  ];
-;
-const benefits = [
-];
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
-=======
-"use client";
-
-
-export default function Error({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string };
-  reset: () => void;
-}) {
-  useEffect(() => {
-    // Log the error to an error reporting service
-
-  }, [error]);
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
+ origin/cursor/analyze-improve-and-deploy-application-15aa
   return (
     <React.Fragment>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
@@ -130,12 +53,7 @@ export default function Error({
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
               Contact Us;
   </
-<<<<<<< HEAD
-};
-
-export default ErrorPage;
-=======
-          </div>
+</div>
         </section>
       </main>
       <Footer />
@@ -147,5 +65,4 @@ export default ErrorPage
   </h2>
   </button>
   </button>
-  </h1>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+  </h1> origin/cursor/analyze-improve-and-deploy-application-1247

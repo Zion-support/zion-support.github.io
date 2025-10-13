@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Globe, TrendingUp, Phone } from "lucide-react";
@@ -812,5 +810,4 @@ const ImprovedNavigation = () => {
   );
 };
 
-export default ImprovedNavigation;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default ImprovedNavigation; origin/cursor/analyze-improve-and-deploy-application-0ff3

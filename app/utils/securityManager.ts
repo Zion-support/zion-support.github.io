@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 /**
  * Enhanced Security Utilities
  * Generated: 2025-10-08T02:06:22.083Z
@@ -91,5 +88,4 @@ export class SecurityManager {
   }
 }
 
-export default SecurityManager.getInstance();
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export default SecurityManager.getInstance(); origin/cursor/analyze-improve-and-deploy-application-1247

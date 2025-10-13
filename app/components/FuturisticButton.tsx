@@ -1,42 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
-import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+import { Link } from 'react-router-dom'; origin/cursor/analyze-improve-and-deploy-application-1091
 
 // import React from 'react';
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from "lucide-react";
-interface FuturisticButtonProps {
-  children: React.ReactNode;
-  href?: string;
-<<<<<<< HEAD
-  to?: string;
-  variant?: 'primary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
-  icon?: React.ReactNode;
-  onClick?: () => void;
-  className?: string;
-  disabled?: boolean;
-=======
-  onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'outline';
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  icon?: React.ReactNode;
-  disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+ origin/cursor/analyze-improve-and-deploy-application-0ff3
 
-<<<<<<< HEAD
-// import React from 'react';
-
-=======
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   children,
   href,
@@ -95,5 +62,4 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   );
 };
 
-export default FuturisticButton;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+export default FuturisticButton; origin/cursor/analyze-improve-and-deploy-application-1091

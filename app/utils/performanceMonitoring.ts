@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 /**
  * Advanced Performance Monitoring System
  * Tracks Core Web Vitals and custom performance metrics
@@ -475,5 +472,4 @@ export const getRecommendations = (): string[] => {
   }
   
   return recommendations;
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+}; origin/cursor/analyze-improve-and-deploy-application-1247

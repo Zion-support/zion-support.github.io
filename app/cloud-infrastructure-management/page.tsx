@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Link } from "react-router-dom";
 import {
   Cloud,
@@ -53,5 +51,4 @@ export default function CloudInfrastructureManagement() {
   ];
 
   const managementFeatures = [
-    {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+    { origin/cursor/analyze-improve-and-deploy-application-1091

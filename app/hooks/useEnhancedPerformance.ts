@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 /**;
  * Enhanced Performance Hook;
  * Combines performance monitoring, error tracking, and analytics;
@@ -49,71 +45,20 @@ export function useEnhancedPerformance(
   const renderCountRef = useRef<number>(0);
 
   useEffect(() => {
-    mountTimeRef.current = performance.now();
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+    mountTimeRef.current = performance.now(); origin/cursor/analyze-improve-and-deploy-application-1247
     renderCountRef.current = 0;
 
     // Track component mount
     if (trackAnalytics) {
-<<<<<<< HEAD
-      analytics.trackCustomEvent('Component', 'Mounted', component)}}
-return () => {// Track component unmount duration;
-=======
-      analytics.trackCustomEvent('Component', 'Mounted', component);
+analytics.trackCustomEvent('Component', 'Mounted', component);
     }
 
     return () => {
-      // Track component unmount duration
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+      // Track component unmount duration origin/cursor/analyze-improve-and-deploy-application-1247
       if (trackPerformance) {
         const duration = performance.now() - mountTimeRef.current;
         if (duration > 5000) {
-<<<<<<< HEAD
-          // Long-lived component;
-          analytics.trackCustomEvent('Performance',;)
-            'Long Component Lifetime',;
-            component,;
-            Math.round(duration);
-          )}}
-      }
-// Track component unmount;
-      if (trackAnalytics) {analytics.trackCustomEvent('Component', 'Unmounted', component)}}
-    }
-  }, [component, trackAnalytics, trackPerformance]);
-// Track render performance;
-  useEffect(() => {renderCountRef.current++;
-if (trackPerformance && renderCountRef.current > 10) {
-      // Many re-renders detected;
-      analytics.trackCustomEvent('Performance',;)
-        'High Render Count',;
-        component,;
-        renderCountRef.current;
-      )}}
-  })
-const trackError = useCallback(;)
-    (error: Error, context?: Record<string, unknown>) => {if (trackErrors) {
-        errorTracker.trackError(error, {)
-          component,;
-          ...context,}})
-      },
-    [component, trackErrors]
-  );
-const trackUserAction = useCallback(;)
-    (action: string, metadata?: Record<string, unknown>) => {if (trackAnalytics) {
-        analytics.trackCustomEvent('User Action', action, component, undefined, metadata)}},
-    [component, trackAnalytics]
-  );
-const measureOperation = useCallback(;)
-    (operationName: string) => {,}const _markName = `${component}-${operationName}`;
-      const _startTime = performance.now();
-return {end: () => {,}
-          const _duration = performance.now() - startTime,
-if (trackPerformance) {
-            analytics.trackPerformance()}`${component}-${operationName}`,;
-              duration,;
-              duration > 1000 ? 'slow' : 'fast';
-=======
-          // Long-lived component
+// Long-lived component
           analytics.trackCustomEvent(
             'Performance',
             'Long Component Lifetime',
@@ -182,8 +127,7 @@ if (trackPerformance) {
             analytics.trackPerformance(
               `${component}-${operationName}`,
               duration,
-              duration > 1000 ? 'slow' : 'fast'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+              duration > 1000 ? 'slow' : 'fast' origin/cursor/analyze-improve-and-deploy-application-1247
             );
           }
           
@@ -193,21 +137,11 @@ if (trackPerformance) {
     },
     [component, trackPerformance]
   );
-<<<<<<< HEAD
-return {trackError,;}
-    trackUserAction,;
-    measureOperation,}}
-}
-export default useEnhancedPerformance;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
-
-  return {
+return {
     trackError,
     trackUserAction,
     measureOperation,
   };
 }
 
-export default useEnhancedPerformance;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export default useEnhancedPerformance; origin/cursor/analyze-improve-and-deploy-application-1247

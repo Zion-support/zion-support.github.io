@@ -1,27 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-<<<<<<< HEAD
-import React, { useState, useEffect, Suspense, memo } from 'react;
-=======
-=======
-'use client';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+ origin/cursor/analyze-improve-and-deploy-application-0e37
 
 import { Navigation } from './components/Navigation;
 
@@ -47,10 +24,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton;
 
 const HomePage: React.FC = () => {}
 
-<<<<<<< HEAD
-    const timer = setTimeout(() => setIsVisible(true), 100);;
-=======
-  useEffect(() => {
+useEffect(() => {
     // Use requestAnimationFrame for better performance
     const rafId = requestAnimationFrame(() => {
       setIsLoaded(true);
@@ -60,280 +34,14 @@ const HomePage: React.FC = () => {}
     });
     
     return () => cancelAnimationFrame(rafId);
-=======
-'use client';
-import React, { useState, useEffect, useCallback, memo, Suspense, lazy } from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart, Rocket, Phone, Mail, MapPin, Clock } from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import { PageLoader } from './components/LoadingStates';
-
-// Lazy load components
-=======
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
-
-// Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
-<<<<<<< HEAD
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}).gtag;
-      gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number'
-=======
-import { lazy } from 'react';
-import React, { useCallback, useState, useEffect, Suspense, lazy } from 'react';
-
-// Dynamically import heavy components for better performance
-const ServiceCard = lazy(() => import('./components/ServiceCard'));
-=======
-// Preload critical components
-const preloadComponents = () => {
-  if (typeof window !== 'undefined') {
-    // Preload critical components after initial render
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
-  }
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
-
-// Loading skeleton component
-const ServiceCardSkeleton: React.FC = () => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
-<<<<<<< HEAD
-);
-
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-=======
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-
-<<<<<<< HEAD
-=======
-// Main page loading component
-const MainPageLoading: React.FC = memo(() => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-    <div className="container mx-auto px-4 py-16 pt-24">
-      <div className="text-center mb-16">
-        <div className="h-16 bg-gray-200 rounded-lg mb-6 animate-pulse"></div>
-        <div className="h-8 bg-gray-200 rounded-lg mb-4 animate-pulse"></div>
-        <div className="h-6 bg-gray-200 rounded-lg mb-8 animate-pulse"></div>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-        {Array.from({ length: 8 }).map((_, i) => (
-          <ServiceCardSkeleton key={i} />
-        ))}
-      </div>
-    </div>
-  </div>
-));
-MainPageLoading.displayName = 'MainPageLoading';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
-const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-<<<<<<< HEAD
-  // Analytics tracking for phone clicks
-=======
-  // Analytics tracking for phone clicks - optimized
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
-  const handlePhoneClick = useCallback(() => {
-    if (
-      typeof window !== 'undefined' &&
-      (
-        window as unknown as {
-          gtag?: (
-            command: string,
-            action: string,
-            parameters: Record<string, unknown>
-          ) => void;
-        }
-      ).gtag
-    ) {
-      (
-        window as unknown as {
-          gtag: (
-            command: string,
-            action: string,
-            parameters: Record<string, unknown>
-          ) => void;
-        }
-      ).gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247
       });
     }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const handlePhoneClick = () => {;;
-
-    // Analytics tracking
-    if (typeof window !== 'undefined && window.gtag) {
-      window.gtag('event', 'phone_click, {
-        event_category: 'engagement,
-        event_label: header_phone
-  };
-
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import ErrorBoundary from './components/ErrorBoundary'
-import LoadingSpinner from './components/LoadingSpinner'
-import PerformanceMonitor from './components/PerformanceMonitor'
-import AccessibilityEnhancer from './components/AccessibilityEnhancer'
-      benefits: ['AI Content Generation - $500/month', 'AI Chatbots - $300/month', 'Process Automation - $800/month', 'AI Analytics - $400/month'],
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Brain, Shield, Zap, Globe, ArrowRight, CheckCircle, Star, Users, Award } from "lucide-react";
-import ImageOptimizer from "./components/ImageOptimizer";
-=======
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-130f
-
-const HomePage = () => {
-  const features = [
-    {
-<<<<<<< HEAD
-      title: "AI-Powered Solutions",
-      description:
-        "Cutting-edge artificial intelligence to transform your business operations",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      link: "/ai-services"
-    },
-    {
-      title: "IT Services",
-      description: "Comprehensive technology solutions for modern businesses",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      link: "/services"
-    },
-    {
-      title: "Micro SAAS",
-      description: "Ready-to-use software solutions for immediate deployment",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      link: "/micro-saas"
-    },
-    {
-      title: "5G Solutions",
-      description: "Next-generation connectivity and infrastructure services",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500",
-      link: "/5g-solutions"
-    },
-  ];
-
-  const stats = [
-    { number: "500+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
-    { number: "50+", label: "Happy Clients", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime Guarantee", icon: <Award className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Star className="w-6 h-6" /> },
-  ];
-
-  const benefits = [
-    "Advanced AI and Machine Learning Solutions",
-    "Enterprise-grade Security and Compliance",
-    "Scalable Cloud Infrastructure",
-    "24/7 Technical Support",
-    "Custom Development Services",
-    "5G Implementation and Optimization"
-  ];
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
-=======
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'AI-Powered Solutions',
-      description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
-      benefits: ['AI Content Generation - $500/month', 'AI Chatbots - $300/month', 'AI Automation - $800/month', 'AI Analytics - $400/month'],
-      link: '/ai-services'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'IT Services & Solutions',
-      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
-      benefits: ['Cloud Migration - Starting at $2,500', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000', 'Data Analytics - $2,000/month'],
-      link: '/it-services'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-purple-500" />,
-      title: 'Micro SAAS Applications',
-      description: 'Powerful, affordable micro applications designed to solve specific business problems with AI intelligence.',
-      benefits: ['AI Task Manager - $19/month', 'AI Expense Tracker - $15/month', 'AI Password Manager - $12/month', 'AI Invoice Generator - $25/month'],
-      link: '/micro-saas-services'
-    },
-    {
-      icon: <Cloud className="w-8 h-8 text-orange-500" />,
-      title: 'Cloud Services',
-      description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
-      benefits: ['Cloud Migration - $1,200/month', 'Infrastructure Setup - $3,000', 'Security Solutions - $800/month', 'Cost Optimization - $500/month'],
-      link: '/cloud-services'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-red-500" />,
-      title: '5G Implementation',
-      description: 'Next-generation connectivity solutions to power your digital transformation with ultra-fast speeds and low latency.',
-      benefits: ['Ultra-Fast Speeds - 10+ Gbps', 'Low Latency - 1ms', 'IoT Integration - 1M+ devices/km²', 'Edge Computing Solutions'],
-      link: '/5g-implementation'
-    },
-    {
-      icon: <Smartphone className="w-8 h-8 text-yellow-500" />,
-      title: 'Digital Transformation',
-      description: 'Transform your business for the digital age with comprehensive digital transformation services.',
-      benefits: ['Process Automation - $2,000/month', 'Digital Workforce - $1,500/month', 'Customer Experience - $1,800/month', 'Data Strategy - $2,500/month'],
-      link: '/digital-transformation'
-    }
-  ]
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-130f
+ origin/cursor/analyze-improve-and-deploy-application-130f
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
@@ -341,42 +49,11 @@ const HomePage = () => {
     { number: '24/7', label: 'Support Available' },
     { number: '5+', label: 'Years Experience' }
   ]
-=======
-  
-  if (!isLoaded) {
-    return <MainPageLoading />;
-  }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
+ origin/cursor/analyze-improve-and-deploy-application-1573
 
   return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI solutions, cloud infrastructure, and IT services. Transform your business with cutting-edge technology."
-        keywords={[
-          'AI solutions',
-          'artificial intelligence',
-          'cloud infrastructure',
-          'IT services',
-          'machine learning',
-          'cybersecurity',
-          '5G solutions',
-          'business automation',
-          'digital transformation',
-          'enterprise solutions'
-        ]}
-        canonicalUrl="https://ziontechgroup.com"
-        ogImage="https://ziontechgroup.com/images/og-image.jpg"
-=======
 import { ArrowRight, Star, Brain, Zap, Globe } from "lucide-react";
-=======
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
-=======
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
+ origin/cursor/analyze-improve-and-deploy-application-13a2
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -506,12 +183,7 @@ const HomePage = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-<<<<<<< HEAD
-=======
-      <FuturisticBackground />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
+<FuturisticBackground /> origin/cursor/analyze-improve-and-deploy-application-13a2
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -520,15 +192,7 @@ const HomePage = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
         structuredData={structuredData}
       />
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-6xl font-bold text-white mb-6">
-            Welcome to Zion Tech Group
-=======
-    <PerformanceOptimizer>
+<PerformanceOptimizer>
       <EnhancedAccessibility>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
           <EnhancedSEO
@@ -573,16 +237,9 @@ const HomePage = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Welcome to Zion Tech Group
-            </span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-15ad
+            </span> origin/cursor/analyze-improve-and-deploy-application-15ad
           </h1>
-<<<<<<< HEAD
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            We are a cutting-edge technology company specializing in AI solutions, 
-            cloud infrastructure, and innovative IT services that transform businesses.
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
-=======
-      <PerformanceOptimizer
+<PerformanceOptimizer
         enableImageOptimization={true}
         enableLazyLoading={true}
         enablePreloading={true}
@@ -594,90 +251,11 @@ const HomePage = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced quantum-particles neural-connections">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
-=======
-      <SecurityEnhancer
-        enableCSP={true}
-        enableXSSProtection={true}
-        enableClickjackingProtection={true}
-      />
-      <Analytics />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
+ origin/cursor/analyze-improve-and-deploy-application-1256
         {/* Navigation */}
-=======
-          
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
-            Transform your operations with cutting-edge technology and innovative solutions.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link
-              to="/contact"
-              className="btn-primary touch-target mobile-optimized flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              aria-label="Get started with Zion Tech Group services"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-            </Link>
-            <Link
-              to="/demo"
-              className="btn-secondary touch-target mobile-optimized group hover:scale-105"
-              aria-label="Watch a demo of our services"
-            >
-              Watch Demo
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" aria-hidden="true" />
-            </Link>
-          </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
+ origin/cursor/analyze-improve-and-deploy-application-0f9e
 
-<<<<<<< HEAD
-        <Navigation />
-        
-<<<<<<< HEAD
-        {/* Skip to main content for accessibility */}
-
-        <a
-          href="#main-content
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50
-        >
-          Skip to main content
-        </a>
-        
-        {/* Content Promotion Banner */}
-<<<<<<< HEAD
-            className={text-center mb-16 transition-all duration-1000 ${
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      <PerformanceOptimizer />
-      <SEOOptimizer />
-      <AccessibilityEnhancer />
-      <Analytics />
-      <SecurityEnhancer />
-      
-      <Navigation />
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-=======
-        <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+<Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
           <ContentPromotionBanner />
         </Suspense>
         
@@ -691,8 +269,7 @@ const HomePage = () => {
             }`}
             aria-labelledby="hero-heading"
           >
-            <div className="max-w-6xl mx-auto">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
+            <div className="max-w-6xl mx-auto"> origin/cursor/analyze-improve-and-deploy-application-0d10
               <h1 
                 id="hero-heading" 
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
@@ -702,43 +279,7 @@ const HomePage = () => {
               </h1>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect" role="doc-subtitle">
                 Advanced AI and IT Solutions
-=======
-import { Helmet } from 'react-helmet-async';
-
-export default function HomePage() {
-  return (
-    <>
-      <Helmet>
-        <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-6xl font-bold text-white mb-6">
-              Welcome to Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, 
-              and digital transformation services that transform businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-                Get Started
-              </button>
-              <button className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-800 rounded-lg p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
-              <p className="text-gray-300">
-                Advanced artificial intelligence solutions to automate processes and enhance decision-making.
->>>>>>> cursor/fix-errors-and-merge-to-main-f512
+ cursor/fix-errors-and-merge-to-main-f512
               </p>
             </div>
             
@@ -747,24 +288,7 @@ export default function HomePage() {
               <p className="text-gray-300">
                 Comprehensive security solutions to protect your business from cyber threats.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
-                  Get Started Today
-                </a>
-                <a 
-                  href="/case-studies" 
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 transform hover:scale-105"
-                >
-                  View Our Work
-                </a>
-=======
-      {/* Features Section */}
+{/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -827,8 +351,7 @@ export default function HomePage() {
                 </div>
                 <div className="text-gray-300 text-sm md:text-base">
                   {stat.label}
-                </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
+                </div> origin/cursor/analyze-improve-and-deploy-application-0ed4
               </div>
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
           >
@@ -837,9 +360,7 @@ export default function HomePage() {
           <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-8 font-medium" role="doc-subtitle">
         {/* Services Section */}
 
-<<<<<<< HEAD
-=======
-    <ErrorBoundary>
+<ErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
         {/* Navigation */}
         <Navigation />
@@ -1037,183 +558,7 @@ export default function HomePage() {
                   </a>
                 </div>
               </article>
-<<<<<<< HEAD
-            </Suspense>
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">✍️</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Content Generation</h3>
-                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Revolutionary AI-powered content creation for blogs, social media, emails, and marketing materials.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">Starting at $199/month</div>
-                  <a href="/ai-content-generation" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
-=======
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔒</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cybersecurity Suite</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Comprehensive security solutions with threat detection, vulnerability assessment, and automated response.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">$799/month</div>
-                  <a href="/cybersecurity-suite" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-<<<<<<< HEAD
-            </Suspense>
-
-            <Suspense fallback={<ServiceCardSkeleton />}>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-4xl sm:text-5xl mb-4 sm:mb-6 text-center">☁️</div>
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">IT Infrastructure</h3>
-                <p className="text-gray-300 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
-                  Enterprise-grade IT infrastructure with 99.9% uptime guarantee and 24/7 expert support.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">Starting at $999/month</div>
-                  <a href="/it-infrastructure" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
-=======
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">⚙️</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">DevOps & CI/CD</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Streamline development workflows with automated testing, deployment, and monitoring solutions.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">$599/month</div>
-                  <a href="/devops-cicd" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-<<<<<<< HEAD
-            </Suspense>
-          </div>
-
-          {/* Additional Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">AI Solutions</h3>
-              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                Harness the power of artificial intelligence to drive innovation and efficiency in
-                your organization.
-              </p>
-              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
-                <li>• Machine Learning Models</li>
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision</li>
-                <li>• Predictive Analytics</li>
-              </ul>
-            </article>
-
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🔄</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Digital Transformation</h3>
-              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                Transform your business processes with cutting-edge technology and expert
-                consultation.
-              </p>
-              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
-                <li>• Process Automation</li>
-                <li>• Legacy System Modernization</li>
-                <li>• Workflow Optimization</li>
-                <li>• Change Management</li>
-              </ul>
-            </article>
-
-            <article className="cyber-card hologram-card p-4 sm:p-6">
-              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">☁️</div>
-              <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Cloud Services</h3>
-              <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                Scale your infrastructure with secure, reliable, and efficient cloud solutions.
-              </p>
-              <ul className="text-xs sm:text-sm text-gray-400 space-y-1">
-                <li>• Cloud Migration</li>
-                <li>• Infrastructure as Code</li>
-                <li>• Auto-scaling</li>
-                <li>• Disaster Recovery</li>
-              </ul>
-            </article>
-=======
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🗄️</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Database Management</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Database design, optimization, migration, and management with AI-powered performance tuning.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">$399/month</div>
-                  <a href="/database-management" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌐</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Network Solutions</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Enterprise networking, VPN setup, load balancing, and network security with 24/7 monitoring.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">$699/month</div>
-                  <a href="/network-solutions" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📱</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">Mobile App Development</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Native and cross-platform mobile applications with AI integration and modern UX design.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$1,999/month</div>
-                  <a href="/mobile-app-development" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🛠️</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Consulting</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Strategic IT planning, technology assessment, and digital transformation consulting.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2">$299/hour</div>
-                  <a href="/it-consulting" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-              <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">📊</div>
-                <h3 className="text-lg sm:text-2xl font-semibold text-white mb-3 sm:mb-4">IT Support & Maintenance</h3>
-                <p className="text-gray-300 mb-3 sm:mb-4 text-sm sm:text-base">
-                  Comprehensive IT support, system maintenance, and troubleshooting with guaranteed response times.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">$499/month</div>
-                  <a href="/it-support" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1573
-          </div>
-        </section>
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
+ origin/cursor/analyze-improve-and-deploy-application-10c6
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentStatistics />
@@ -1276,45 +621,7 @@ export default function HomePage() {
         {/* Call to Action Section */}
         <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/10">
           <h2 className="text-3xl font-bold text-white mb-4">
-=======
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Zion Tech Group?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
-              </p>
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="relative">
-              <ImageOptimizer
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Team working on technology solutions"
-                className="rounded-xl shadow-2xl"
-                width={600}
-                height={400}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
+ origin/cursor/analyze-improve-and-deploy-application-0ed4
             Ready to Transform Your Business?
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -1358,9 +665,7 @@ export default function HomePage() {
             >
               Watch Demo
             </FuturisticButton>
-<<<<<<< HEAD
-=======
-              {/* Key Benefits */}
+{/* Key Benefits */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
                 <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
                   <div className="text-2xl sm:text-3xl mb-3">🚀</div>
@@ -1404,475 +709,7 @@ export default function HomePage() {
                   Get Free Consultation
                 </a>
               </div>
-=======
-  const aiServices = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Chatbots',
-      description: 'Advanced conversational AI with natural language processing and sentiment analysis',
-      price: '$299/month',
-      features: ['Natural language processing', 'Multi-language support', 'Sentiment analysis', 'CRM integration'],
-      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions'],
-      category: 'Customer Service',
-      popular: true
-    },
-    {
-      icon: FileText,
-      title: 'AI Content Generation',
-      description: 'Automated content creation using advanced language models for blogs, social media, and marketing',
-      price: '$199/month',
-      features: ['Blog post generation', 'Social media content', 'Email marketing campaigns', 'SEO optimization'],
-      benefits: ['Save 80% content creation time', 'Consistent brand voice', 'SEO optimization', 'Multi-platform publishing'],
-      category: 'Content',
-      popular: true
-    }
-  ];
-
-  const itServices = [
-    {
-      icon: Cloud,
-      title: 'Cloud Infrastructure & Migration',
-      description: 'Complete cloud solutions with seamless migration and 24/7 monitoring',
-      price: '$1,500/month',
-      features: ['AWS/Azure/GCP expertise', 'Zero-downtime migration', 'Auto-scaling', 'Cost optimization'],
-      benefits: ['99.9% uptime guarantee', '50% cost reduction', 'Enhanced security', 'Global scalability'],
-      category: 'Cloud Services',
-      popular: true
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity Solutions',
-      description: 'Comprehensive security services including threat detection, prevention, and incident response',
-      price: '$2,200/month',
-      features: ['24/7 monitoring', 'Threat detection', 'Incident response', 'Compliance management'],
-      benefits: ['Advanced threat protection', 'Regulatory compliance', 'Risk mitigation', 'Peace of mind'],
-      category: 'Security',
-      popular: false
-    }
-  ];
-
-  const microSaasServices = [
-    {
-      icon: BarChart,
-      title: 'Zion Analytics Pro',
-      description: 'Advanced real-time business intelligence and analytics platform with AI-powered insights',
-      price: '$399/month',
-      features: ['Real-time dashboards', 'AI-powered insights', 'Custom reports', 'Data visualization'],
-      benefits: ['Data-driven decisions', 'Increased efficiency', 'Cost savings', 'Competitive advantage'],
-      category: 'Analytics',
-      popular: true
-    },
-    {
-      icon: MessageCircle,
-      title: 'Zion Chat AI',
-      description: 'Intelligent customer support chatbot with natural language understanding and multi-channel integration',
-      price: '$199/month',
-      features: ['Multi-channel support', 'Natural language processing', 'CRM integration', 'Analytics dashboard'],
-      benefits: ['24/7 customer support', 'Reduced response time', 'Improved satisfaction', 'Cost efficiency'],
-      category: 'Customer Service',
-      popular: true
-    }
-  ];
-
-  const stats = [
-    { icon: <Users className="w-8 h-8 text-blue-500" />, value: '500+', label: 'Projects Delivered' },
-    { icon: <TrendingUp className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime Guarantee' },
-    { icon: <Shield className="w-8 h-8 text-purple-500" />, value: '24/7', label: 'Support Available' },
-    { icon: <Zap className="w-8 h-8 text-orange-500" />, value: '5★', label: 'Client Rating' }
-  ];
-
-  return (
-    <React.Fragment>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        
-        <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <div className="max-w-6xl mx-auto">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-                Zion Tech Group
-              </h1>
-              <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-                Advanced AI and IT Solutions
-              </p>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-                Transform your business with our cutting-edge technology and achieve unprecedented growth.
-              </p>
-              
-              {/* Key Benefits */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
-                <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-2xl sm:text-3xl mb-3">🚀</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
-                </div>
-                <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-2xl sm:text-3xl mb-3">⚡</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
-                </div>
-                <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 sm:p-6 hover:scale-105 transition-all duration-300">
-                  <div className="text-2xl sm:text-3xl mb-3">🔒</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
-                </div>
-                <div className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
-                  <div className="text-2xl sm:text-3xl mb-3">🌐</div>
-                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
-                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
-                </div>
-              </div>
-              
-              {/* CTA Buttons */}
-              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
-                  href="tel:+13024640950"
-                  onClick={handlePhoneClick}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 w-full sm:w-auto text-center"
-                  aria-label="Call us at (302) 464-0950"
-                >
-                  📞 Call: (302) 464-0950
-                </a>
-                <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  📧 Email Us
-=======
-        {/* Hero Section */}
-        <section className="relative overflow-hidden py-20 px-4">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
-            <div className="mb-8">
-              <h1 
-                id="hero-heading" 
-                className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text"
-                data-text="Zion Tech Group"
-              >
-                Zion Tech Group
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <a
-                  href="tel:+13024640950"
-                  onClick={handlePhoneClick}
-                  className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center space-x-2"
-                  aria-label="Call us at (302) 464-0950"
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>(302) 464-0950</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
-                </a>
-                <a
-                  href="mailto:info@ziontechgroup.com"
-                  className="border-2 border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center space-x-2"
-                  aria-label="Email us at info@ziontechgroup.com"
-                >
-<<<<<<< HEAD
-                  Get Started
-                </a>
-              </div>
-            </div>
-          </section>
-
-          {/* AI Services Section */}
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">AI Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Cutting-edge artificial intelligence solutions to transform your business operations
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-6 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                  <ul className="space-y-2 mb-4">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-300 flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* IT Services Section */}
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">IT Services</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions for modern businesses
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-purple-500/20 rounded-lg p-6 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-purple-400 mr-3" />
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-purple-400 mb-4">{service.price}</div>
-                  <ul className="space-y-2 mb-4">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-300 flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors duration-300"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Micro SaaS Section */}
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Micro SaaS Solutions</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Ready-to-use business tools with AI and automation
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {microSaasServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-500/20 rounded-lg p-6 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-green-400 mr-3" />
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                  </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="text-2xl font-bold text-green-400 mb-4">{service.price}</div>
-                  <ul className="space-y-2 mb-4">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="text-sm text-gray-300 flex items-center">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors duration-300"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Stats Section */}
-          <section className="mb-16">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Our Impact</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Numbers that speak for our success and client satisfaction
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    {stat.icon}
-                  </div>
-                  <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
-              ))}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-            </div>
-          </section>
-        </main>
-
-        <Footer />
-      </div>
-    </React.Fragment>
-  );
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
-}
-      </div>
-=======
-          </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-                </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      {/* Skip to main content for accessibility */}
-      <a 
-        href="#main-content" 
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
-      >
-        Skip to main content
-      </a>
-
-      <main id="main-content" className="container mx-auto px-4 py-16" role="main">
-        {/* Hero Section */}
-        <section 
-          className={`text-center mb-16 transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-          aria-labelledby="hero-heading"
-        >
-          <h1 id="hero-heading" className="text-5xl font-bold text-gray-900 mb-6">
-            Zion Tech Group
-          </h1>
-          <p className="text-xl text-gray-600 mb-8" role="doc-subtitle">
-            Advanced AI and IT Solutions
-          </p>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. 
-            Transform your business with our cutting-edge technology.
-          </p>
-        </section>
-
-        {/* Services Section */}
-        <section 
-          className="grid md:grid-cols-3 gap-8 mb-16"
-          aria-labelledby="services-heading"
-        >
-          <h2 id="services-heading" className="sr-only">Our Services</h2>
-          
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                AI Solutions
-              </h3>
-              <p className="text-gray-600">
-                Harness the power of artificial intelligence to drive innovation and efficiency in your organization.
-              </p>
-            </article>
-          </Suspense>
-
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Digital Transformation
-              </h3>
-              <p className="text-gray-600">
-                Transform your business processes with cutting-edge technology and expert consultation.
-              </p>
-            </article>
-          </Suspense>
-
-          <Suspense fallback={<ServiceCardSkeleton />}>
-            <article className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                Cloud Services
-              </h3>
-              <p className="text-gray-600">
-                Scale your infrastructure with secure, reliable, and efficient cloud solutions.
-              </p>
-            </article>
-          </Suspense>
-        </section>
-
-        {/* Call to Action Section */}
-        <section className="text-center" aria-labelledby="cta-heading">
-          <h2 id="cta-heading" className="text-3xl font-bold text-gray-900 mb-6">
-            Ready to Get Started?
-          </h2>
-          <a
-            href="tel:+13026009898"
-            onClick={handlePhoneClick}
-            className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300"
-            aria-label="Call us at (302) 600-9898"
-          >
-            Contact Us: (302) 600-9898
-          </a>
-        </section>
-      </main>
-    </div>
-  );
-};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our Core Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation. 
-              From AI-powered analytics to enterprise security, we have everything you need.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
-              >
-                <Link
-                  to={feature.link}
-                  className="block"
-                  aria-label={`Learn more about ${feature.title}`}
-=======
-      <FuturisticBackground />
-      
-      <div className="relative z-10">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <FuturisticText className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-                Transform Your Business with
-                <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                  Advanced Technology
-                </span>
-              </FuturisticText>
-              
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Leading provider of AI-powered solutions, IT services, micro SAAS, 
-                and digital transformation for modern businesses.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton
-                  as={Link}
-                  to="/contact"
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+ origin/cursor/analyze-improve-and-deploy-application-0ff3
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -1985,16 +822,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-          </main>
-        </div>
-      </EnhancedAccessibility>
-    </PerformanceOptimizer>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
-=======
-        </section>
+</section>
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -2029,8 +857,7 @@ export default function HomePage() {
           </div>
         </section>
       </div>
-    </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+    </div> origin/cursor/analyze-improve-and-deploy-application-0ff3
   );
 };
 
@@ -2202,296 +1029,7 @@ export default HomePage;
                   to="/contact" 
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
                   Our Services
-=======
-};
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+ origin/cursor/analyze-improve-and-deploy-application-1232
 export default HomePage;
-=======
-                  <Mail className="w-5 h-5" />
-                  <span>Get Free Consultation</span>
-                </a>
-              </div>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-500/20">
-                <div className="text-2xl font-bold text-white mb-1">50+</div>
-                <div className="text-sm text-gray-300">AI Services</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-500/20">
-                <div className="text-2xl font-bold text-white mb-1">100+</div>
-                <div className="text-sm text-gray-300">Happy Clients</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-500/20">
-                <div className="text-2xl font-bold text-white mb-1">24/7</div>
-                <div className="text-sm text-gray-300">Support</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-500/20">
-                <div className="text-2xl font-bold text-white mb-1">99%</div>
-                <div className="text-sm text-gray-300">Success Rate</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Services */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Featured AI Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover our cutting-edge AI solutions designed to transform your business operations and drive innovation.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI Lead Generation */}
-              <article className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4 text-center">🎯</div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">AI Lead Generation</h3>
-                <p className="text-gray-300 mb-4 text-center">
-                  Intelligent lead scoring and qualification with AI-powered predictive analytics and automated nurturing.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-red-400 mb-2">$149/month</div>
-                  <a href="/ai-lead-generation" className="text-red-400 hover:text-red-300 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-
-              {/* AI Sales Forecasting */}
-              <article className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4 text-center">📈</div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">AI Sales Forecasting</h3>
-                <p className="text-gray-300 mb-4 text-center">
-                  Advanced sales forecasting with machine learning algorithms and predictive analytics.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-emerald-400 mb-2">$199/month</div>
-                  <a href="/ai-sales-forecasting" className="text-emerald-400 hover:text-emerald-300 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-
-              {/* AI E-commerce Optimizer */}
-              <article className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4 text-center">🛒</div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">AI E-commerce Optimizer</h3>
-                <p className="text-gray-300 mb-4 text-center">
-                  Optimize your e-commerce platform with AI-powered recommendations and automated pricing strategies.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-violet-400 mb-2">$249/month</div>
-                  <a href="/ai-ecommerce-optimizer" className="text-violet-400 hover:text-violet-300 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-
-              {/* AI Design Assistant */}
-              <article className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4 text-center">🎨</div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">AI Design Assistant</h3>
-                <p className="text-gray-300 mb-4 text-center">
-                  Create stunning designs with AI-powered tools for graphics, logos, and marketing materials.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-rose-400 mb-2">$129/month</div>
-                  <a href="/ai-design-assistant" className="text-rose-400 hover:text-rose-300 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-
-              {/* AI Document Processor */}
-              <article className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4 text-center">📄</div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">AI Document Processor</h3>
-                <p className="text-gray-300 mb-4 text-center">
-                  Intelligent document processing, OCR, data extraction, and automated form filling with AI accuracy.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-amber-400 mb-2">$179/month</div>
-                  <a href="/ai-document-processing" className="text-amber-400 hover:text-amber-300 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-
-              {/* AI Security Monitor */}
-              <article className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4 text-center">🔐</div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">AI Security Monitor</h3>
-                <p className="text-gray-300 mb-4 text-center">
-                  Advanced security monitoring with AI-powered threat detection and automated response systems.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-slate-400 mb-2">$299/month</div>
-                  <a href="/ai-cybersecurity" className="text-slate-400 hover:text-slate-300 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        {/* Advanced AI Services */}
-        <section className="py-20 px-4 bg-gradient-to-r from-purple-900/50 to-indigo-900/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Advanced AI Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Explore our comprehensive suite of AI-powered services designed for enterprise-level solutions.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Quantum Computing */}
-              <article className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4 text-center">⚛️</div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">Quantum Computing</h3>
-                <p className="text-gray-300 mb-4 text-center">
-                  Next-generation quantum computing capabilities for complex problem solving and optimization.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-purple-400 mb-2">Custom Pricing</div>
-                  <a href="/quantum-computing" className="text-purple-400 hover:text-purple-300 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-
-              {/* Autonomous Systems */}
-              <article className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4 text-center">🤖</div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">Autonomous Systems</h3>
-                <p className="text-gray-300 mb-4 text-center">
-                  Self-managing systems that adapt and optimize themselves using advanced AI algorithms.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-cyan-400 mb-2">Custom Pricing</div>
-                  <a href="/autonomous-systems" className="text-cyan-400 hover:text-cyan-300 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-
-              {/* Business Intelligence */}
-              <article className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
-                <div className="text-4xl mb-4 text-center">📊</div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">Business Intelligence</h3>
-                <p className="text-gray-300 mb-4 text-center">
-                  Advanced analytics and insights to drive data-driven decision making across your organization.
-                </p>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-green-400 mb-2">Custom Pricing</div>
-                  <a href="/business-intelligence" className="text-green-400 hover:text-green-300 font-medium">
-                    Learn More →
-                  </a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get in touch with our experts to discuss how our AI solutions can help your business grow and innovate.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                onClick={handlePhoneClick}
-                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center space-x-2"
-                aria-label="Call us at (302) 464-0950"
-              >
-                <Phone className="w-5 h-5" />
-                <span>(302) 464-0950</span>
-              </a>
-              <a
-                href="mailto:info@ziontechgroup.com"
-                className="border-2 border-purple-600 text-purple-400 hover:bg-purple-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center space-x-2"
-                aria-label="Email us at info@ziontechgroup.com"
-              >
-                <Mail className="w-5 h-5" />
-                <span>Contact Us</span>
-              </a>
-            </div>
-            
-            {/* Contact Info */}
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex items-center justify-center space-x-3 text-gray-300">
-                <Phone className="w-5 h-5 text-purple-400" />
-                <span>(302) 464-0950</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3 text-gray-300">
-                <Mail className="w-5 h-5 text-purple-400" />
-                <span>info@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3 text-gray-300">
-                <MapPin className="w-5 h-5 text-purple-400" />
-                <span>Middletown, DE</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Dynamic Content */}
-        <Suspense fallback={<div className="h-32 bg-gray-800 animate-pulse rounded-lg mx-4"></div>}>
-          <ContentPromotionBanner />
-        </Suspense>
-        
-        <Suspense fallback={<div className="h-64 bg-gray-800 animate-pulse rounded-lg mx-4"></div>}>
-          <ContentCarousel />
-        </Suspense>
-        
-        <Suspense fallback={<div className="h-96 bg-gray-800 animate-pulse rounded-lg mx-4"></div>}>
-          <DynamicContentShowcase />
-        </Suspense>
-        
-        <Suspense fallback={<div className="h-48 bg-gray-800 animate-pulse rounded-lg mx-4"></div>}>
-          <ContentStatistics />
-        </Suspense>
-        
-        <Suspense fallback={<div className="h-32 bg-gray-800 animate-pulse rounded-lg mx-4"></div>}>
-          <ContentNewsletterSignup />
-        </Suspense>
-      </div>
-      
-      <Footer />
-    </>
-  );
-};
-
-export default HomePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
-=======
-            </div>
-            
-            <div className="bg-slate-800 rounded-lg p-8 text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">Cloud Infrastructure</h3>
-              <p className="text-gray-300">
-                Scalable cloud solutions to modernize your infrastructure and improve efficiency.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-f512
+ origin/cursor/analyze-improve-and-deploy-application-1256
+ cursor/fix-errors-and-merge-to-main-f512

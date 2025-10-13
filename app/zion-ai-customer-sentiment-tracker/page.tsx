@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Heart, Brain, BarChart3, Zap, ArrowRight, CheckCircle, Star, Users, Award, Clock, Target } from "lucide-react";
@@ -196,5 +193,4 @@ const ZionAICustomerSentimentTrackerPage = () => {
   );
 };
 
-export default ZionAICustomerSentimentTrackerPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1579
+export default ZionAICustomerSentimentTrackerPage; origin/cursor/analyze-improve-and-deploy-application-1579

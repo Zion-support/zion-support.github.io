@@ -16,31 +16,7 @@ export const performanceOptimizer = {/* TODO: Fix JSX expression */};
       //       };
   },
   getMetric,
-<<<<<<< HEAD
-  s: () => {/* TODO: Fix JSX expression */}
-      }
-    }
-    return null;
-  }}
-
-export const lazyLoadImages = () => {
-  if (typeof window !== 'undefined') {
-    const _images = document.querySelectorAll('img[data-src]');
-    images.forEach(img => {)
-      if (img instanceof HTMLImageElement) {
-        img['src'] = img.dataset['src'] || '';
-export const lazyLoadImages = () => {/* TODO: Fix JSX expression */}
-      }
-    });
-  }
-}
-
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
-    //     }
-}
-
-=======
-  s: () => {/* TODO: Fix JSX expression */};
+s: () => {/* TODO: Fix JSX expression */};
       }};
     return null}};
 export const lazyLoadImages = () => {
@@ -56,25 +32,14 @@ export const lazyLoadImages = () => {/* TODO: Fix JSX expression */};
 };
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */};
     //     };
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+}; cursor/fix-errors-and-merge-to-main-6ce7
 export const collectPerformanceMetrics = () => {
 };
   if (typeof window !== 'undefined' && 'performance' in window) {
     //     const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     return {
-<<<<<<< HEAD
-      loadTime: perfData?.loadEventEnd - perfData?.fetchStart
-      domContentLoaded: perfData?.domContentLoadedEventEnd - perfData?.fetchStart,
-export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
-    }
-  }
-  return null;
-}
-=======
-      loadTime: perfData?.loadEventEnd - perfData?.fetchStart;
+loadTime: perfData?.loadEventEnd - perfData?.fetchStart;
       domContentLoaded: perfData?.domContentLoadedEventEnd - perfData?.fetchStart;
 export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */};
     }};
-  return null};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  return null}; cursor/fix-errors-and-merge-to-main-6ce7

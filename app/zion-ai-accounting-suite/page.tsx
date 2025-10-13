@@ -1,22 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, Sparkles, Monitor, Mic, Mail, Smartphone, Globe } from 'lucide-react';
-=======
-import { ArrowRight, CheckCircle, Star, Brain } from "lucide-react";
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+import { ArrowRight, CheckCircle, Star, Brain } from "lucide-react"; origin/cursor/analyze-improve-and-deploy-application-0ff3
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-<<<<<<< HEAD
-const ZionaiaccountingsuitePage = () => {
-  const features = [
-    {
-      title: "AI-Powered Intelligence",
-      description: "Advanced artificial intelligence algorithms that learn and adapt to your business needs",
-      icon: <Brain className="w-8 h-8" />,
-=======
 const ZionAIAccountingSuite = () => {
 
   const pricingPlans = [
@@ -110,8 +98,7 @@ const ZionAIAccountingSuite = () => {
     {
       title: "Invoice Management",
       description: "Automated invoice creation, processing, and payment tracking with AI-powered data extraction",
-      icon: <FileText className="w-8 h-8" />,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+      icon: <FileText className="w-8 h-8" />, origin/cursor/analyze-improve-and-deploy-application-0ff3
       color: "from-blue-500 to-cyan-500"
     },
     {

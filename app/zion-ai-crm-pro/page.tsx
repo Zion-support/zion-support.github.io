@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-export default function ZionAICRMPro() {
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Globe, TrendingUp, Phone } from "lucide-react";
@@ -417,5 +414,4 @@ export default function ZionAiCrmPro() {
       </div>
     </>
   );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+} origin/cursor/analyze-improve-and-deploy-application-0ff3

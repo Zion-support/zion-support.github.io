@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Zap, Globe, TrendingUp, Phone } from "lucide-react";
@@ -370,5 +367,4 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
   );
 };
 
-export default ZionAIInvoiceGeneratorPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default ZionAIInvoiceGeneratorPage; origin/cursor/analyze-improve-and-deploy-application-0ff3

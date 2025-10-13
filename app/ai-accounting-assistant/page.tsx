@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -26,8 +23,7 @@ const AIAccountingAssistantPage: React.FC = () => {
       <Helmet />
         <title>AI Accounting Assistant | Zion Tech Group - Intelligent Financial Management</title>
         <meta name="description" content="Streamline your accounting with AI-powered financial management tools. Automated bookkeeping, tax preparation, and financial analytics." />
-        <meta name="keywords" content="AI accounting, financial management, bookkeeping automation, tax preparation, accounting software" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+        <meta name="keywords" content="AI accounting, financial management, bookkeeping automation, tax preparation, accounting software" /> origin/cursor/analyze-improve-and-deploy-application-1232
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
@@ -46,14 +42,7 @@ const AIAccountingAssistantPage: React.FC = () => {
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
-    </>
-  );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
-=======
-    </React.Fragment>
+</React.Fragment>
   )
 }
-export default AIAccountingAssistantPage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export default AIAccountingAssistantPage origin/cursor/analyze-improve-and-deploy-application-1247

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-
 import { Link } from "react-router-dom";
 
 export default function AIContentManagementZionTechGroup() {
@@ -10,6 +7,7 @@ export default function AIContentManagementZionTechGroup() {
     <>
       <Helmet>
         <title>AI Content Management - Zion Tech Group</title>
+        <meta name="description" content="Professional AI content management services" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
@@ -31,4 +29,3 @@ export default function AIContentManagementZionTechGroup() {
     </>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -357,5 +355,4 @@ const SmartInventoryOptimizerPage = () => {
   );
 };
 
-export default SmartInventoryOptimizerPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default SmartInventoryOptimizerPage; origin/cursor/analyze-improve-and-deploy-application-0ff3

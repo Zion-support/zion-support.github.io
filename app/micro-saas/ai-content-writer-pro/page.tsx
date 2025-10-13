@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
@@ -27,5 +25,4 @@ const AIContentWriterProPage: React.FC = () => {
   )
 }
 
-export default AIContentWriterProPage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+export default AIContentWriterProPage origin/cursor/analyze-improve-and-deploy-application-0f1c

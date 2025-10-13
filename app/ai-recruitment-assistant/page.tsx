@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
@@ -57,16 +55,4 @@ const AIRecruitmentAssistantPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-<<<<<<< HEAD
-  );
-};
-
-export default AIRecruitmentAssistantPage;
-  </h1>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-=======
-  )
-}
-export default AIRecruitmentAssistantPage
-  </h1>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247

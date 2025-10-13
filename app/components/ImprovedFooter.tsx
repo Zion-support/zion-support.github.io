@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Brain, Zap, Globe, Phone } from "lucide-react";
@@ -374,5 +372,4 @@ const ImprovedFooter = () => {
   );
 };
 
-export default ImprovedFooter;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default ImprovedFooter; origin/cursor/analyze-improve-and-deploy-application-0ff3

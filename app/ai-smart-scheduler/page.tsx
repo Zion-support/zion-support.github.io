@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Link } from "react-router-dom";
 import { CheckCircle } from "lucide-react";
 import Layout from "../layout";
@@ -257,5 +255,4 @@ export default function AISmartScheduler() {
       </section>
     </Layout>
   );
-}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+} origin/cursor/analyze-improve-and-deploy-application-0ff3

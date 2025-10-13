@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from "lucide-react";
@@ -129,5 +127,4 @@ const MobileNavigation: React.FC = () => {
   );
 };
 
-export default MobileNavigation;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default MobileNavigation; origin/cursor/analyze-improve-and-deploy-application-0ff3

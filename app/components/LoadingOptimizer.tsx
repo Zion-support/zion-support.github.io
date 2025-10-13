@@ -1,51 +1,7 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-
-interface LoadingOptimizerProps {
-  children: React.ReactNode;
-  fallback?: React.ReactNode;
-  delay?: number;
-}
-
-export default function LoadingOptimizer({ 
-  children, 
-  fallback = <DefaultLoadingSpinner />, 
-  delay = 200 
-}: LoadingOptimizerProps) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [showFallback, setShowFallback] = useState(false);
-
-  useEffect(() => {
-    // Show fallback after delay to prevent flash
-    const fallbackTimer = setTimeout(() => {
-      setShowFallback(true);
-    }, delay);
-
-    // Simulate loading completion
-    const loadingTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => {
-      clearTimeout(fallbackTimer);
-      clearTimeout(loadingTimer);
-    };
-  }, [delay]);
-
-  if (isLoading && showFallback) {
-    return <>{fallback}</>;
-  }
-
-  return <>{children}</>;
-}
-
-function DefaultLoadingSpinner() {
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-export default function LoadingOptimizer() {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default function LoadingOptimizer() { origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
