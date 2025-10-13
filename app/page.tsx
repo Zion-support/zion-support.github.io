@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, TrendingUp, Mic, Phone, Code } from 'lucide-react';
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -17,197 +13,172 @@ const HomePage = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-//     "name": "Zion Tech Group",
+    "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.svg",
     "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
     "address": {
       "@type": "PostalAddress",
-//       "streetAddress": "364 E Main St STE 1008",
+      "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
-//       "addressRegion": "DE",
-//       "postalCode": "19709",
-//       "addressCountry": "US"
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
     },
     "contactPoint": {
       "@type": "ContactPoint",
-//       "telephone": "+1-302-464-0950",
-//       "contactType": "customer service",
-//       "email": "kleber@ziontechgroup.com"
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
     },
-//     "sameAs": [
+    "sameAs": [
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup"
-//     ],
-//     "offers": [
+    ],
+    "offers": [
       {
         "@type": "Offer",
-//         "name": "AI Solutions",
+        "name": "AI Solutions",
         "description": "Artificial intelligence and machine learning services"
       },
       {
         "@type": "Offer", 
-//         "name": "Cybersecurity",
-//         "description": "Advanced cybersecurity solutions and protection"
+        "name": "Cybersecurity",
+        "description": "Advanced cybersecurity solutions and protection"
       },
       {
         "@type": "Offer",
-//         "name": "Cloud Infrastructure", 
-//         "description": "Cloud computing and infrastructure services"
+        "name": "Cloud Infrastructure", 
+        "description": "Cloud computing and infrastructure services"
       }
-//     ]
+    ]
   };
-
   const features = [
     {
-//       title: "AI-Powered Solutions",
+      title: "AI-Powered Solutions",
       description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics",
       icon: <Brain className="w-8 h-8" />,
-//       color: "from-blue-500 to-cyan-500",
-//       stats: "40% efficiency boost",
-//       link: "/ai-services"
+      color: "from-blue-500 to-cyan-500",
+      stats: "40% efficiency boost",
+      link: "/ai-services"
     },
     {
-//       title: "IT Services",
+      title: "IT Services",
       description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
       icon: <Shield className="w-8 h-8" />,
-//       color: "from-green-500 to-emerald-500",
-//       stats: "99.9% uptime SLA",
-//       link: "/services"
+      color: "from-green-500 to-emerald-500",
+      stats: "99.9% uptime SLA",
+      link: "/services"
     },
     {
-//       title: "Micro SAAS",
+      title: "Micro SAAS",
       description: "Ready-to-use software solutions for immediate deployment including analytics, security, and productivity tools",
       icon: <Zap className="w-8 h-8" />,
-//       color: "from-purple-500 to-pink-500",
-//       stats: "50+ solutions",
-//       link: "/micro-saas"
+      color: "from-purple-500 to-pink-500",
+      stats: "50+ solutions",
+      link: "/micro-saas"
     },
     {
-//       title: "5G Solutions",
+      title: "5G Solutions",
       description: "Next-generation connectivity and infrastructure services for IoT, edge computing, and smart city implementations",
       icon: <Globe className="w-8 h-8" />,
-//       color: "from-orange-500 to-red-500",
-//       stats: "10x faster speeds",
-//       link: "/5g-solutions"
+      color: "from-orange-500 to-red-500",
+      stats: "10x faster speeds",
+      link: "/5g-solutions"
     },
   ];
 
   const microSaasHighlights = [
     {
-//       name: "Zion AI Meeting Transcriber",
-      description: "Real-time meeting transcription with 99.5% accuracy, speaker identification, and automatic action item extraction",
-//       price: "From $19/month",
+      name: "Zion AI Workflow Automator Pro",
+      description: "AI-powered workflow automation that reduces manual work by 80% with intelligent process optimization",
+      price: "From $99/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-workflow-automator-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Social Scheduler Pro",
+      description: "AI-powered social media management with content optimization and 300% engagement increase",
+      price: "From $49/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-social-scheduler-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Email Marketing Pro",
+      description: "AI-powered email marketing with 400% ROI increase and advanced segmentation capabilities",
+      price: "From $29/month",
       icon: <Mail className="w-6 h-6" />,
-//       link: "/zion-ai-meeting-transcriber",
-//       featured: true
+      link: "/zion-ai-email-marketing-pro",
+      featured: true
     },
     {
-//       name: "Zion AI Sales Predictor",
-      description: "AI-powered sales forecasting with 95% accuracy, lead scoring, and customer behavior prediction",
-//       price: "From $39/month",
-      icon: <TrendingUp className="w-6 h-6" />,
-//       link: "/zion-ai-sales-predictor",
-//       featured: true
+      name: "Zion AI Inventory Optimizer Pro",
+      description: "AI-powered inventory management with 30% cost reduction and 95% forecast accuracy",
+      price: "From $199/month",
+      icon: <Package className="w-6 h-6" />,
+      link: "/zion-ai-inventory-optimizer-pro",
+      featured: true
     },
     {
-//       name: "Zion Analytics Pro",
+      name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
-//       price: "From $299/month",
+      price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
-//       link: "/zion-analytics-pro",
-//       featured: true
+      link: "/zion-analytics-pro",
+      featured: true
     },
     {
-//       name: "Zion Security Shield",
-//       description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
-//       price: "From $499/month",
+      name: "Zion Security Shield",
+      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
+      price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
-//       link: "/zion-security-shield",
-//       featured: true
-    },
-    {
-//       name: "Zion Cloud Vault",
-//       description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
-//       price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-//       link: "/zion-cloud-vault",
-//       featured: true
-    },
-    {
-//       name: "Zion AI CRM Pro",
-//       description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-//       price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-//       link: "/zion-ai-crm-pro",
-//       featured: true
+      link: "/zion-security-shield",
+      featured: true
     }
   ];
 
   const stats = [
-    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
   const testimonials = [
     {
-//       name: "Sarah Johnson",
-//       company: "TechStart Inc.",
-//       role: "CEO",
+      name: "Sarah Johnson",
+      company: "TechStart Inc.",
+      role: "CEO",
       content: "Zion Tech Group transformed our entire technology stack. The AI solutions increased our productivity by 60% in just 3 months.",
-//       rating: 5
+      rating: 5
     },
     {
-//       name: "Michael Chen",
-//       company: "E-commerce Solutions",
-//       role: "CTO",
-//       content: "The micro SAAS solutions are incredibly powerful and easy to implement. We've saved thousands of hours with their automation tools.",
-//       rating: 5
+      name: "Michael Chen",
+      company: "E-commerce Solutions",
+      role: "CTO",
+      content: "The micro SAAS solutions are incredibly powerful and easy to implement. We've saved thousands of hours with their automation tools.",
+      rating: 5
     },
     {
-//       name: "Emily Rodriguez",
-//       company: "Digital Marketing Agency",
-//       role: "Operations Director",
+      name: "Emily Rodriguez",
+      company: "Digital Marketing Agency",
+      role: "Operations Director",
       content: "Outstanding support and cutting-edge technology. Zion Tech Group is our trusted partner for all digital transformation needs.",
-//       rating: 5
+      rating: 5
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
-export default function AppPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>App - Zion Tech Group</title>
-        <meta name="description" content="App solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">App</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive app solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <FuturisticBackground />
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
         description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, micro SAAS, 5G technology, IT services, machine learning"
         canonical="https://ziontechgroup.com"
-        structuredData={structuredData}
       />
-      <FuturisticBackground />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -231,7 +202,7 @@ export default function AppPage() {
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
             Unlock the power of artificial intelligence, cybersecurity, and cloud solutions. 
-//             We help businesses scale, secure, and innovate with cutting-edge technology that drives real results.
+            We help businesses scale, secure, and innovate with cutting-edge technology that drives real results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -241,7 +212,7 @@ export default function AppPage() {
               size="lg"
               icon={<ArrowRight className="w-5 h-5" />}
             >
-//               Start Your AI Journey
+              Start Your AI Journey
             </FuturisticButton>
             <FuturisticButton
               href="/ai-services"
@@ -249,7 +220,7 @@ export default function AppPage() {
               size="lg"
               icon={<Brain className="w-5 h-5" />}
             >
-//               Explore AI Solutions
+              Explore AI Solutions
             </FuturisticButton>
           </div>
           
@@ -273,11 +244,11 @@ export default function AppPage() {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-//               Our Core Services
+              Our Core Services
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Comprehensive technology solutions designed to accelerate your business growth and digital transformation. 
-//               From AI-powered analytics to enterprise security, we have everything you need.
+              From AI-powered analytics to enterprise security, we have everything you need.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -320,7 +291,7 @@ export default function AppPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-//               Featured Micro SAAS Solutions
+              Featured Micro SAAS Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready-to-use software solutions that can transform your business operations immediately.
@@ -336,7 +307,7 @@ export default function AppPage() {
                 {saas.featured && (
                   <div className="absolute top-4 right-4">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-//                       Featured
+                      Featured
                     </span>
                   </div>
                 )}
@@ -355,7 +326,7 @@ export default function AppPage() {
                   {saas.description}
                 </p>
                 <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
-//                   Learn More
+                  Learn More
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
@@ -366,7 +337,7 @@ export default function AppPage() {
               to="/micro-saas"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
             >
-//               View All Micro SAAS Solutions
+              View All Micro SAAS Solutions
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -378,10 +349,10 @@ export default function AppPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-//               Trusted by Industry Leaders
+              Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-//               See what our clients say about working with Zion Tech Group
+              See what our clients say about working with Zion Tech Group
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -413,7 +384,7 @@ export default function AppPage() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-//             Join thousands of businesses already using our solutions to drive growth and innovation. 
+            Join thousands of businesses already using our solutions to drive growth and innovation. 
             Start your digital transformation journey today.
           </p>
           
@@ -425,51 +396,43 @@ export default function AppPage() {
               </div>
               <h3 className="text-white font-semibold mb-2">Email</h3>
               <p className="text-cyan-400">kleber@ziontechgroup.com</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Smartphone className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-white font-semibold mb-2">Phone</h3>
+              <p className="text-cyan-400">+1 302 464 0950</p>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <Globe className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-white font-semibold mb-2">Address</h3>
+              <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-<<<<<<< HEAD
-=======
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-//               Start Your Journey
+              Start Your Journey
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/services"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-//               Explore Services
+              Explore Services
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
         </div>
-      </div>
+      </section>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default HomePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

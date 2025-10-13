@@ -1,45 +1,54 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Link } from "react-router-dom";
+import {
+  Cloud,
+  Shield,
+  TrendingUp,
+  Server,
+  Zap,
+  BarChart3,
+  ArrowRight,
+} from "lucide-react";
+import Layout from "../layout";
 
-export default function CloudInfrastructureManagementPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Cloud Infrastructure Management - Zion Tech Group</title>
-        <meta name="description" content="Cloud Infrastructure Management solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Cloud Infrastructure Management</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive cloud infrastructure management solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+export default function CloudInfrastructureManagement() {
+  const features = [
+    {
+      icon: <Cloud className="w-6 h-6 text-cyan-400" />,
+      title: "Multi-Cloud Management",
+      description:
+        "Seamlessly manage infrastructure across AWS, Azure, Google Cloud, and private clouds",
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-purple-400" />,
+      title: "Security & Compliance",
+      description:
+        "Enterprise-grade security with automated compliance monitoring and threat detection",
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
+      title: "Cost Optimization",
+      description:
+        "Reduce cloud costs by up to 40% with intelligent resource optimization and right-sizing",
+    },
+    {
+      icon: <Server className="w-6 h-6 text-green-400" />,
+      title: "24/7 Monitoring",
+      description:
+        "Proactive monitoring with automated scaling, performance optimization, and incident response",
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-orange-400" />,
+      title: "Auto-Scaling",
+      description:
+        "Automatically scale resources based on demand to ensure optimal performance and cost efficiency",
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
+      title: "Analytics & Insights",
+      description:
+        "Advanced analytics to optimize infrastructure performance and make data-driven decisions",
+    },
+  ];
+
+  const managementFeatures = [
+    {
