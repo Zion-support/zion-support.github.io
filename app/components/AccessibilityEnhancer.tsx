@@ -1,22 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 
 
 import React, { useEffect, useState } from 'react';
 
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
 import React, { useEffect, useState } from 'react';
 
 // Type definitions for browser APIs
@@ -31,32 +17,14 @@ declare global {
     removeEventListener(type: 'change', listener: (event: MediaQueryListEvent) => void): void;
   }
 
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
 import React, { useEffect, useState } from 'react';
 
 // Using built-in DOM types
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
 import React, { useEffect, useState } from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
 import React, { useEffect, useState } from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -219,41 +187,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
 };
 
 export default AccessibilityEnhancer;

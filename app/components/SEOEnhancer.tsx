@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -120,13 +113,5 @@ export const defaultStructuredData = {
     "addressCountry": "US"
   }
 };
-<<<<<<< HEAD
-export default SEOEnhancer;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
 
 export default SEOEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a

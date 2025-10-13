@@ -1,23 +1,12 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
 // Type definitions for browser APIs
 declare global {
   interface PerformanceObserver {
     observe(options: { entryTypes: string[] }): void;
     disconnect(): void;
   }
-<<<<<<< HEAD
-=======
 
 
 import React, { useEffect, useState } from 'react';
@@ -28,39 +17,18 @@ declare global {
     // This extends the built-in PerformanceEntry
   }
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
 
 // Type definitions for browser APIs
 declare global {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
   interface PerformanceNavigationTiming extends PerformanceEntry {
     requestStart: number;
     responseStart: number;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const PerformanceObserver: {
-    new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
-  };
-  const performance: {
-    getEntriesByType(type: string): PerformanceEntry[];
-  };
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
 }
 import React, { useEffect, useState } from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
-=======
 
 // Type definitions for browser APIs
 declare global {
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
   interface PerformanceEntry {
     name: string;
     entryType: string;
@@ -85,9 +53,6 @@ declare global {
     getEntriesByType(type: string): PerformanceEntry[];
   };
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
   
   interface PerformanceEntry {
     name: string;
@@ -96,19 +61,7 @@ declare global {
     duration: number;
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
-  interface PerformanceEntry {
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -139,14 +92,6 @@ const PerformanceMonitor: React.FC = () => {
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
           } else if (entry.entryType === 'first-input') {
             const inputEntry = entry as any;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
@@ -162,23 +107,13 @@ const PerformanceMonitor: React.FC = () => {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
           } else if (entry.entryType === 'layout-shift') {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
           }
@@ -216,13 +151,5 @@ const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-<<<<<<< HEAD
-export default PerformanceMonitor;
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
 
 export default PerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a

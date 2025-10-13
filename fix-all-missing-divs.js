@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// List of files that need fixing based on the TypeScript errors
+// List of files that need fixing
 const filesToFix = [
   'app/zion-ai-inventory-manager/page.tsx',
   'app/zion-ai-performance-optimizer/page.tsx',
@@ -21,14 +21,14 @@ function fixPageFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix the missing closing tags pattern
+    // Fix the missing closing div for the grid container
     const fixedContent = content.replace(
-      /(\s+<\/div>\s+<div className="text-center">[\s\S]*?<\/div>\s+);\s*}/,
-      '$1        </div>\n      </div>\n    </div>\n  );\n}'
+      /(\s+<\/div>\s+<div className="text-center">)/,
+      '$1        </div>\n        <div className="text-center">'
     );
     
     fs.writeFileSync(filePath, fixedContent, 'utf8');
-    console.log(`Fixed syntax errors in: ${filePath}`);
+    console.log(`Fixed missing div in: ${filePath}`);
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -37,7 +37,7 @@ function fixPageFile(filePath) {
 }
 
 // Fix each file
-console.log('Fixing syntax errors in page files...');
+console.log('Fixing missing div tags...');
 
 let successCount = 0;
 for (const file of filesToFix) {

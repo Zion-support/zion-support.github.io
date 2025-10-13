@@ -9,8 +9,6 @@ const __dirname = path.dirname(__filename);
 
 // List of files that need fixing
 const filesToFix = [
-  'app/zion-ai-email-analyzer/page.tsx',
-  'app/zion-ai-inventory-manager/page.tsx',
   'app/zion-ai-performance-optimizer/page.tsx',
   'app/zion-ai-social-media-manager/page.tsx',
   'app/zion-ai-voice-assistant-pro/page.tsx',
@@ -22,15 +20,36 @@ function fixPageFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix the missing closing tags - add the missing closing divs before the closing );
-    const fixedContent = content.replace(
-      /(\s+<\/div>\s+<div className="text-center">[\s\S]*?<\/div>\s+);\s*}/,
-      '$1        </div>\n      </div>\n    </div>\n  );\n}'
-    );
+    // Find the pattern and fix it
+    const lines = content.split('\n');
+    const fixedLines = [];
+    let foundPattern = false;
     
-    fs.writeFileSync(filePath, fixedContent, 'utf8');
-    console.log(`Fixed syntax errors in: ${filePath}`);
-    return true;
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Look for the pattern where we have the closing div and then the function ends
+      if (line.includes('</div>') && i + 1 < lines.length && lines[i + 1].trim() === ');') {
+        fixedLines.push(line);
+        fixedLines.push('        </div>');
+        fixedLines.push('      </div>');
+        fixedLines.push('    </div>');
+        fixedLines.push('  );');
+        foundPattern = true;
+        i++; // Skip the next line since we're handling it
+      } else {
+        fixedLines.push(line);
+      }
+    }
+    
+    if (foundPattern) {
+      fs.writeFileSync(filePath, fixedLines.join('\n'), 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      return true;
+    } else {
+      console.log(`No pattern found in: ${filePath}`);
+      return false;
+    }
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
@@ -38,7 +57,7 @@ function fixPageFile(filePath) {
 }
 
 // Fix each file
-console.log('Fixing syntax errors in page files...');
+console.log('Fixing remaining syntax errors...');
 
 let successCount = 0;
 for (const file of filesToFix) {
