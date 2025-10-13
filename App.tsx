@@ -187,8 +187,9 @@ function App() {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <FuturisticBackground>
               <Navigation />
-              <Breadcrumb />
-              <Suspense fallback={<LoadingPage />}>
+              <div className="pt-20">
+                <Breadcrumb />
+                <Suspense fallback={<LoadingPage />}>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -398,7 +399,8 @@ function App() {
                     element={<FiveGSolutionsPage />}
                   />
                 </Routes>
-              </Suspense>
+                </Suspense>
+              </div>
               <Footer />
               <PerformanceOptimizer />
               <AccessibilityEnhancer />
