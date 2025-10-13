@@ -281,8 +281,12 @@ const features = [
 <<<<<<< HEAD
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),
 =======
+=======
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 };

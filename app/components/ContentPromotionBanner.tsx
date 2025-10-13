@@ -279,6 +279,7 @@ const ContentPromotionBanner: React.FC = () => {
 ];;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
@@ -624,6 +625,8 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
 =======
   return (
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
     <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-white mb-4">Transform Your Business Today</h2>
@@ -649,6 +652,7 @@ const ContentPromotionBanner: React.FC = () => {
           Get Started Now
           <ArrowRight className="w-5 h-5 ml-2" />
         </button>
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-a217
 =======
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -693,6 +697,9 @@ const ContentPromotionBanner: React.FC = () => {
           </div>
         </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       </div>
     </div>
 <<<<<<< HEAD

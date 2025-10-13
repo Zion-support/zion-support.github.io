@@ -74,9 +74,16 @@ const benefits = [
     'Cost-effective pricing plans',
     'Proven track record of success'
 <<<<<<< HEAD
+<<<<<<< HEAD
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+=======
+  ];
+
+  return (
+    <>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       <Helmet>
         <title>ServiceWorkerRegistration | Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions" />
@@ -312,6 +319,7 @@ return (
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 };
 =======
@@ -357,6 +365,9 @@ const ServiceWorkerRegistration: React.FC = () => {
     <div className="service-worker-registration">
       {/* Service worker registration happens automatically */}
     </div>
+=======
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 };
 

@@ -214,8 +214,14 @@ const blockchainServices = [
     'Proven track record of success'
   ]
 
+<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Helmet />
+=======
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
         <title>Blockchain Solutions | Zion Tech Group</title>
         <meta name="description" content="Professional Blockchain Solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="blockchain solutions, blockchain technology, IT services, Zion Tech Group, smart contracts" />
@@ -1122,9 +1128,16 @@ const BlockchainPage: React.FC = () => {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </>
   )
 }
+=======
+    </div>
+    </>
+  );
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 
 export default BlockchainPage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c

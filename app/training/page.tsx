@@ -3,11 +3,22 @@
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 ]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
+=======
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+
+  ];
+
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
         <title>Page | Zion Tech Group</title>
 <<<<<<< HEAD
         <meta name="description" content="AI-powered solution" />
@@ -53,6 +64,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
     </div>
+    </>
   );
 };
 

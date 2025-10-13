@@ -447,7 +447,10 @@ return (
   ];
   return (
     <>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions" />
@@ -490,6 +493,7 @@ return (
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   )
 }
 export default PagePage
@@ -523,6 +527,9 @@ export default PagePage
         </div>
       </section>
     </div>)
+=======
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 };
 export default PagePage;

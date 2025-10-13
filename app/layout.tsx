@@ -166,7 +166,7 @@ return (
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Layout | Zion Tech Group</title>
         <meta name="description" content="Advanced layout solutions powered by cutting-edge AI technology" />
@@ -568,6 +568,7 @@ return (
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   ),
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -575,6 +576,9 @@ return (
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
+=======
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 =======

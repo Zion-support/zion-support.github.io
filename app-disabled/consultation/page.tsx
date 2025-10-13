@@ -26,6 +26,7 @@ interface ConsultationType {}
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD:app/consultation/page.tsx
 <<<<<<< HEAD
 import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MessageCircle, Star, Award, Zap } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
@@ -170,6 +171,18 @@ const ConsultationPage = () => {
       duration: '4-6 hours'
 =======
       features: [,
+=======
+import { Phone, Mail, Calendar, CheckCircle, ArrowRight } from 'lucide-react';
+
+const ConsultationPage: React.FC = () => {
+  const consultationTypes = [
+    {
+      title: 'AI Strategy Consultation',
+      description: 'Get expert guidance on implementing AI solutions that align with your business goals.',
+      duration: '2-4 hours',
+      price: 'Starting at $500/hour',
+      features: [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507:app-disabled/consultation/page.tsx
         'AI readiness assessment',
         'Technology roadmap development',
         'ROI analysis and projections',
@@ -179,6 +192,7 @@ const ConsultationPage = () => {
       ],
       popular: true;,
     },
+<<<<<<< HEAD:app/consultation/page.tsx
     {id: 'technical',
       name: 'Technical Architecture Review',
       description: 'Deep dive into your current technical infrastructure',
@@ -215,6 +229,34 @@ const ConsultationPage = () => {
       title: 'Implementation Plan',},
     {step: '4',
       title: 'Ongoing Support',}]
+=======
+    {
+      title: 'Cloud Migration Planning',
+      description: 'Comprehensive cloud strategy and migration planning for your infrastructure.',
+      duration: '4-8 hours',
+      price: 'Starting at $400/hour',
+      features: [
+        'Current infrastructure analysis',
+        'Cloud platform selection',
+        'Migration strategy development',
+        'Cost optimization recommendations'
+      ]
+    },
+    {
+      title: 'Cybersecurity Audit',
+      description: 'Complete security assessment and recommendations for your digital infrastructure.',
+      duration: '6-12 hours',
+      price: 'Starting at $600/hour',
+      features: [
+        'Security vulnerability assessment',
+        'Compliance review',
+        'Security policy development',
+        'Incident response planning'
+      ]
+
+    }
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507:app-disabled/consultation/page.tsx
 
   return (
     <>
@@ -834,8 +876,13 @@ const ConsultationPage: React.FC = () => {
                   <Calendar className="w-5 h-5 mr-2" />
                   Schedule Consultation
                 </button>
+<<<<<<< HEAD:app/consultation/page.tsx
               </form>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+              </div>
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507:app-disabled/consultation/page.tsx
             </div>
           </div>
         </section>
@@ -1177,6 +1224,7 @@ import { Helmet } from 'react-helmet-async'
             <h2 className="text-3xl font-bold text-white mb-12 text-center">
               Consultation Types
             </h2>
+<<<<<<< HEAD:app/consultation/page.tsx
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
               {consultationTypes.map((type) => (
@@ -2325,3 +2373,20 @@ export default ConsultationPage;
 
 export default ConsultationPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
+=======
+            <p className="text-xl text-gray-300 mb-8">
+              Book a consultation with our experts and take the first step towards digital transformation.
+            </p>
+            <button className="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors font-semibold">
+              Schedule Consultation
+            </button>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </>
+  );
+};
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507:app-disabled/consultation/page.tsx

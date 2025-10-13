@@ -149,6 +149,7 @@ export default IoTEdgeComputingPage
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 export default PagePage
@@ -158,3 +159,10 @@ export default PagePage
 export default PagePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+    </>
+  );
+};
+
+export default PagePage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507

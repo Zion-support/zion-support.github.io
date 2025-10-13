@@ -206,6 +206,7 @@ const cleanup = initAccessibility();
       {children}
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 export default AdvancedAccessibilityEnhancer
@@ -214,6 +215,9 @@ export default AdvancedAccessibilityEnhancer
   </button>
   </AccessibilityEnhancerProps>
 =======
+=======
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 };
 export default AdvancedAccessibilityEnhancer;

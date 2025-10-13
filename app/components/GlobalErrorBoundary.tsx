@@ -301,12 +301,23 @@ export default GlobalErrorBoundaryPage;
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
+<<<<<<< HEAD
   ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+=======
+  ];
+
+  return (
+    <>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       <Helmet>
         <title>GlobalErrorBoundary | Zion Tech Group</title>
         <meta name="description" content="Professional GlobalErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="GlobalErrorBoundary, AI solutions, IT services, Zion Tech Group, globalerrorboundary" />
       </Helmet>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -373,11 +384,18 @@ export default GlobalErrorBoundaryPage;
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
       </section>
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 =======
       );
     }
+=======
+    </div>
+    </>
+  );
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 
     return this.props.children;
   }

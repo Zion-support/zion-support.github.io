@@ -194,6 +194,7 @@ export default PagePage;
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   )
 }
 export default PagePage
@@ -203,6 +204,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
 const features = [
 ];
+=======
+    </>
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

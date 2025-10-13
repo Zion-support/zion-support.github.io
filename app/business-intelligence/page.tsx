@@ -134,7 +134,7 @@ const benefits = [
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <title>Business Intelligence | Zion Tech Group</title>
@@ -391,6 +391,10 @@ const benefits = [
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 };
 

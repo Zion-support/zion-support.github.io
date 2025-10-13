@@ -16,7 +16,6 @@ interface PerformanceMetrics {loadTime: number;,}
       const navigation = performance.getEntriesByType('navigation')
 =======
 
-
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -31,7 +30,6 @@ interface PerformanceMetrics {
   fps: number;
   [key: string]: number;
 }
-
 
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -221,6 +219,7 @@ const PerformanceDashboard: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       </div>
     </div>
+    </>
   );
 };
 

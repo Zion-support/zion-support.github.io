@@ -527,9 +527,16 @@ export default ItInfrastructurePage
     'Cost-effective pricing plans',
     'Proven track record of success'
 <<<<<<< HEAD
+<<<<<<< HEAD
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+=======
+  ];
+
+  return (
+    <>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions" />
@@ -603,6 +610,7 @@ return (
       </section>
 <<<<<<< HEAD
     </div>
+<<<<<<< HEAD
   )
 }
 export default PagePage
@@ -611,3 +619,10 @@ export default PagePage
 export default PagePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+    </>
+  );
+};
+
+export default PagePage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507

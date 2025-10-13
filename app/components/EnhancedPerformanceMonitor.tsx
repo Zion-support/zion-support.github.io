@@ -286,9 +286,17 @@ return (
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       </section>
 =======
   )
 }
 export default EnhancedPerformanceMonitorPage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+    </>
+  );
+};
+
+export default EnhancedPerformanceMonitorPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507

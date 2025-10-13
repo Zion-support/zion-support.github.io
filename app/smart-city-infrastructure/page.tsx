@@ -201,6 +201,7 @@ export default PagePage
               ))}
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Services Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">,</section>
@@ -282,6 +283,13 @@ export default PagePage
     </>
 <<<<<<< HEAD
   ),
+=======
+        </div>
+      </section>
+    </div>
+    </>
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 };
 
 export default SmartCityInfrastructurePage;

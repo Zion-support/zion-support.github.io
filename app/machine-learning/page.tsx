@@ -110,7 +110,15 @@ const benefits = [
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   )
 }
 export default PagePage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+    </>
+  );
+};
+
+export default PagePage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507

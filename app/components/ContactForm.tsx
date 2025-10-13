@@ -617,6 +617,7 @@ export default ContactForm;
           </div>
         </div>
     </div>
+<<<<<<< HEAD
   )
 =======
           <div className="grid md:grid-cols-3 gap-6 text-center">
@@ -639,6 +640,9 @@ export default ContactForm;
         </div>
       </div>
     </div>
+=======
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 }

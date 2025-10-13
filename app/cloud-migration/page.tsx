@@ -206,7 +206,7 @@ const benefits = [
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <title>Cloud Migration | Zion Tech Group</title>
@@ -587,6 +587,7 @@ export default CloudMigrationPage
 =======
       <Footer />
     </div>
+    </>
   );
 };
 export default CloudMigrationPage;

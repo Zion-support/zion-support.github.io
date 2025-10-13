@@ -9,6 +9,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react;
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 
@@ -372,17 +373,69 @@ export default ErrorBoundary
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ error, errorInfo });
+    
+    // Log error to console in development
+    if (process.env['NODE_ENV'] === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log error to external service in production
+    if (process.env['NODE_ENV'] === 'production') {
+      // Here you would typically send the error to a service like Sentry, LogRocket, etc.
+      console.error('Application error:', error);
+    }
+  }
+
+  render() {
+    if (this.state.hasError) {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
+<<<<<<< HEAD
       // Default fallback UI
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       return (
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+<<<<<<< HEAD
           <div className="max-w-md w-full bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
 =======
@@ -399,11 +452,22 @@ export default ErrorBoundary
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">
+=======
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            
+            <h1 className="text-2xl font-bold text-white mb-4">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
               Oops! Something went wrong
             </h1>
 <<<<<<< HEAD
             
             <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
 =======
@@ -461,9 +525,29 @@ export default ErrorBoundary
 =======
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
+=======
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+            </p>
+
+            {process.env['NODE_ENV'] === 'development' && this.state.error && (
+              <details className="mb-6 text-left">
+                <summary className="text-red-400 cursor-pointer mb-2">
+                  Error Details (Development Only)
+                </summary>
+                <pre className="text-xs text-gray-400 bg-black/20 p-4 rounded overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
+
+            <div className="space-y-4">
+              <button
+                onClick={() => window.location.reload()}
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
               >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
+                Reload Page
               </button>
               
 <<<<<<< HEAD
@@ -473,6 +557,7 @@ export default ErrorBoundary
                 className="border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center"
 =======
               <button
+<<<<<<< HEAD
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-lg transition-colors"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
@@ -481,12 +566,23 @@ export default ErrorBoundary
                 onClick={this.handleGoHome}
                 className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
+=======
+                onClick={() => window.location.href = '/'}
+                className="w-full border border-white/30 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
               >
-                <Home className="w-4 h-4 mr-2" />
                 Go Home
+              </button>
+              
+              <button
+                onClick={() => window.history.back()}
+                className="w-full border border-white/30 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Go Back
               </button>
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="mt-6 pt-6 border-t border-gray-700/50">
               <p className="text-gray-400 text-sm">
@@ -531,6 +627,18 @@ export default ErrorBoundary
               <p>If this problem persists, please contact our support team:</p>
               <p className="text-cyan-400">kleber@ziontechgroup.com</p>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
+=======
+            <div className="mt-8 pt-6 border-t border-white/20">
+              <p className="text-sm text-gray-400 mb-2">
+                Need help? Contact our support team:
+              </p>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                kleber@ziontechgroup.com
+              </a>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
             </div>
             <div className="mt-2">
               <p className="text-sm text-gray-500">

@@ -828,6 +828,7 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Footer />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
 =======
@@ -835,6 +836,11 @@ const ContactPage: React.FC = () => {
         <Footer />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </div>
+=======
+      </section>
+
+      <Footer />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
     </>
   );
 };

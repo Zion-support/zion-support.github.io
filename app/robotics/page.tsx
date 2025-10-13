@@ -106,7 +106,12 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),
+=======
+    </>
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 };
 
 export default PagePage;

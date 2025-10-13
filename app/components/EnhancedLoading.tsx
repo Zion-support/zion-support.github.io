@@ -12,8 +12,15 @@ export default EnhancedLoadingPage
 =======
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 </div>
+=======
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+
+    </div>
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 };
 

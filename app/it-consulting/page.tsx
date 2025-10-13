@@ -1005,6 +1005,7 @@ export default ItConsultingPage;
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 }
 export default ITConsultingPage
@@ -1014,3 +1015,10 @@ export default ITConsultingPage
 export default ITConsultingPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+    </>
+  );
+};
+
+export default ITConsultingPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507

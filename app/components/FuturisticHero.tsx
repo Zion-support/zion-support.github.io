@@ -215,6 +215,7 @@ return (
               </button>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -223,6 +224,11 @@ return (
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
 =======
+=======
+    </>
+  );
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 
 import { ArrowRight, Brain } from 'lucide-react';
 import { ArrowRight, Mail, Brain } from 'lucide-react';

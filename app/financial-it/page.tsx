@@ -145,10 +145,18 @@ const benefits = [
     'Fraud Prevention',
     'Advanced Analytics'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   ]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>)
       <Helmet />
+=======
+  ];
+
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
         <title>Financial IT Solutions | Zion Tech Group</title>
 <<<<<<< HEAD
         <meta name="description" content="AI-powered solution" />
@@ -457,7 +465,13 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-9
       </section>
 <<<<<<< HEAD
       <Footer />
+<<<<<<< HEAD
   ),
+=======
+    </div>
+    </>
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 };
 
 export default FinancialITPage;

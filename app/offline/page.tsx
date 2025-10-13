@@ -16,6 +16,7 @@ import { ArrowRight } from "lucide-react";
 const OfflinePage = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
+<<<<<<< HEAD
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4'>
       <div className='max-w-md w-full text-center'>
         <div className='mb-8'>
@@ -35,6 +36,14 @@ const OfflinePage = () => {
             </svg>
 =======
 import { Helmet } from 'react-helmet-async';
+=======
+    <>
+      <Helmet>
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+      </Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
@@ -215,6 +224,7 @@ const OfflinePage: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 <<<<<<< HEAD

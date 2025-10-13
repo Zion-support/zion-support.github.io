@@ -60,8 +60,14 @@ const benefits = [
 <<<<<<< HEAD
   ]
 
+<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Helmet />
+=======
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
         <title>Blockchain Integration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Blockchain Integration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
 <<<<<<< HEAD
@@ -269,7 +275,12 @@ const benefits = [
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),
+=======
+    </>
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 };
 
 export default BlockchainIntegrationServicesPage;

@@ -5,6 +5,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const FuturisticServiceCardPage: React.FC = () => {
   const features = [
     {
@@ -29,6 +30,8 @@ const FuturisticServiceCardPage: React.FC = () => {
     }
   ];
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   const benefits = [
 'use client';
 import React, { useState } from 'react';
@@ -104,9 +107,16 @@ const benefits = [
     'Cost-effective pricing plans',
     'Proven track record of success'
 <<<<<<< HEAD
+<<<<<<< HEAD
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+=======
+  ];
+
+  return (
+    <>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       <Helmet>
         <title>FuturisticServiceCard | Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions" />
@@ -159,6 +169,7 @@ return (
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
       </section>
 
@@ -235,6 +246,9 @@ return (
         </div>
       </section>
     </div>
+=======
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 };
 

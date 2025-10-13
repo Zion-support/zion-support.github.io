@@ -311,8 +311,13 @@ const pages = [
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>
 <<<<<<< HEAD
+=======
+    </div>
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 };
 

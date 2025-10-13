@@ -579,6 +579,7 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
+<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
 =======
           return prev
@@ -698,6 +699,8 @@ export default ContentStatistics;
           ))
         </div>
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -724,6 +727,7 @@ export default ContentStatistics;
 <<<<<<< HEAD
               <div className="text-white font-semibold mb-1">{stat.label}</div>
               <div className="text-gray-300 text-sm">{stat.description}</div>
+<<<<<<< HEAD
 =======
               <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
@@ -869,6 +873,9 @@ export default ContentStatistics;
                 <h3 className="text-xl font-bold text-white mb-2">{achievement.title}</h3>
                 <p className="text-gray-300">{achievement.description}</p>
               </div>
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
             </div>
           ))}
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5

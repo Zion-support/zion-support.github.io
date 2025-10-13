@@ -67,10 +67,18 @@ const benefits = [
     'Cost-effective pricing plans',
     'Proven track record of success'
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   ]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
+=======
+  ];
+
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
         <title>MicroSaasServices | Zion Tech Group</title>
 <<<<<<< HEAD
         <meta name="description" content="AI-powered solution" />
@@ -331,7 +339,12 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),
+=======
+    </>
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 };
 
 export default MicroSaasServicesPage;

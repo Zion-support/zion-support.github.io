@@ -156,7 +156,18 @@ const PricingPage: React.FC = () => {
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+  return (
+    <>
+      <Helmet>
+        <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
+        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
+        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
+      </Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 
   const addOns = [
     {
@@ -716,6 +727,9 @@ const PricingPage: React.FC = () => {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
     </>
   )
 }

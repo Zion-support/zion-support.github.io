@@ -201,6 +201,7 @@ export default LoadingSpinner
       {text && <p className="mt-2 text-sm text-gray-600">{text}</p>}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     </div>
+    </>
   );
 
   if (fullScreen) {

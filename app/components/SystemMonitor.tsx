@@ -652,6 +652,7 @@ console.error('Failed to update metrics:', error);
       )}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     </div>
+    </>
   );
 };
 

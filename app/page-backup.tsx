@@ -592,6 +592,7 @@ const benefits = [
         </div>
       </section>
     </div>
+    </>
   );
 };
 

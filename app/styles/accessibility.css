@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Accessibility Enhancements */
+=======
+/* Accessibility and Performance Enhancements */
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 
 /* Screen reader only content */
 .sr-only {
@@ -13,6 +17,7 @@
   border: 0;
 }
 
+<<<<<<< HEAD
 /* Focus management */
 .focus-visible {
   outline: 2px solid #06b6d4;
@@ -83,6 +88,264 @@
   top: 6px;
 }
 
+=======
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* Focus indicators */
+*:focus {
+  outline: 2px solid #00ffff;
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #00ffff;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .high-contrast {
+    --text-primary: #ffffff;
+    --text-secondary: #e5e7eb;
+    --bg-primary: #000000;
+    --bg-secondary: #1f2937;
+    --accent: #00ffff;
+    --border: #ffffff;
+  }
+  
+  .high-contrast * {
+    color: var(--text-primary) !important;
+    background-color: var(--bg-primary) !important;
+    border-color: var(--border) !important;
+  }
+  
+  .high-contrast .text-gray-300 {
+    color: var(--text-secondary) !important;
+  }
+  
+  .high-contrast .bg-white\/10 {
+    background-color: var(--bg-secondary) !important;
+  }
+  
+  .high-contrast .border-white\/20 {
+    border-color: var(--border) !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .reduced-motion *,
+  .reduced-motion *::before,
+  .reduced-motion *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Skip links */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Loading states */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+  
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+  }
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1025px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Touch target sizes */
+button,
+a,
+input,
+select,
+textarea {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Form accessibility */
+input:invalid {
+  border-color: #ef4444;
+}
+
+input:valid {
+  border-color: #10b981;
+}
+
+/* Error states */
+.error {
+  color: #ef4444;
+  border-color: #ef4444;
+}
+
+.success {
+  color: #10b981;
+  border-color: #10b981;
+}
+
+/* Loading states */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Accessibility improvements for interactive elements */
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Focus trap for modals */
+.focus-trap {
+  position: relative;
+}
+
+.focus-trap:focus-within {
+  outline: 2px solid #00ffff;
+  outline-offset: 2px;
+}
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 /* ARIA live regions */
 [aria-live] {
   position: absolute;
@@ -92,6 +355,7 @@
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 /* Focus trap */
 .focus-trap {
   position: relative;
@@ -329,5 +593,21 @@ audio {
   .focus-visible {
     outline-width: 3px;
     outline-color: #000;
+=======
+/* High contrast mode for better visibility */
+@media (prefers-contrast: high) {
+  .cyber-card {
+    border: 2px solid #ffffff !important;
+  }
+  
+  .neon-text {
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 15px #00ffff !important;
+  }
+  
+  .holographic-text {
+    background: linear-gradient(45deg, #ffffff, #00ffff, #ffffff) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   }
 }

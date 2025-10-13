@@ -14,6 +14,7 @@ import {Helmet}}from 'react-helmet-async';
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD:app/partners/page.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
@@ -29,6 +30,10 @@ import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Use
 =======
 import { Handshake, Award, Users, Zap, ArrowRight, CheckCircle, Star } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight, ExternalLink } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507:app-disabled/partners/page.tsx
 
 interface Partner {
   name: string;
@@ -520,6 +525,7 @@ export default PartnersPage;
       logo: '/images/partners/aws.png',}'Access to cutting-edge technology',
     'Joint go-to-market opportunities',
     'Technical support and training',
+<<<<<<< HEAD:app/partners/page.tsx
     'Co-innovation projects',
     'Global reach and scalability',
     'Certified expertise and solutions'
@@ -768,11 +774,18 @@ const PartnersPage: React.FC = () => {
       requirements: 'Growing partnership with potential for expansion',
       benefits: ['Standard support', 'Basic training', 'Marketing materials', 'Community access']
     }
+=======
+    'Co-marketing and co-selling',
+    'Product integration support',
+    'Priority customer support'
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507:app-disabled/partners/page.tsx
   ];
 
   return (
     <>
       <Helmet>
+<<<<<<< HEAD:app/partners/page.tsx
         <title>Partners - Zion Tech Group</title>
 <<<<<<< HEAD
         <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group's AI and IT solutions." />
@@ -804,6 +817,11 @@ const PartnersPage: React.FC = () => {
 =======
         <meta name="description" content="Our strategic partnerships with leading technology companies enable us to deliver world-class AI and IT solutions." />
         <meta name="keywords" content="partners, strategic alliances, technology partnerships, cloud providers" />
+=======
+        <title>Partners | Zion Tech Group - Strategic Technology Partnerships</title>
+        <meta name="description" content="Discover our strategic partnerships with leading technology companies. Join our partner ecosystem and grow your business with Zion Tech Group." />
+        <meta name="keywords" content="technology partners, strategic partnerships, cloud partners, AI partners, business partnerships" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507:app-disabled/partners/page.tsx
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -1025,6 +1043,7 @@ const PartnersPage: React.FC = () => {
               </p>
             </div>
 
+<<<<<<< HEAD:app/partners/page.tsx
             <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
               {categories.map((category) => (
                 <button
@@ -1034,11 +1053,30 @@ const PartnersPage: React.FC = () => {
                   {category}
                 </button>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+              {partners.map((partner, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 text-center"
+                >
+                  <div className="aspect-video bg-gray-700 rounded-lg mb-4 flex items-center justify-center">
+                    <span className="text-gray-400 text-sm">{partner.name}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4">{partner.description}</p>
+                  <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">
+
+                    {partner.category}
+                  </span>
+                </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507:app-disabled/partners/page.tsx
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD:app/partners/page.tsx
 <<<<<<< HEAD
         {/* Partners by Tier */}
         {partnershipTiers.map((tier, tierIndex) => {
@@ -1080,6 +1118,18 @@ const PartnersPage: React.FC = () => {
                     </div>
                   ))}
                 </div>
+=======
+            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-6 text-center">Partnership Benefits</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center text-gray-300">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                    {benefit}
+
+                  </div>
+                ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507:app-disabled/partners/page.tsx
               </div>
             </section>
           );
@@ -1643,6 +1693,7 @@ const PartnersPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD:app/partners/page.tsx
 
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-gray-800/30">
@@ -1707,6 +1758,8 @@ const PartnersPage: React.FC = () => {
             </Link>
           </div>
         </section>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507:app-disabled/partners/page.tsx
       </div>
     </>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e

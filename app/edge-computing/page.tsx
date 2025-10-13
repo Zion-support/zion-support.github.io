@@ -228,6 +228,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-90
       icon: '🎮'
     };
   ];
+<<<<<<< HEAD
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <title>Edge Computing Solutions | Zion Tech Group<
         <meta name="description" content="Professional edge computing solutions by Zion Tech Group. Ultra-low latency, real-time processing, and global edge infrastructure." 
@@ -238,6 +239,23 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-90
       <section className="relative py-20 px-4 overflow-hidden">)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }};
+=======
+
+  return (
+    <>
+      <Helmet>
+        <title>Edge Computing Solutions | Zion Tech Group</title>
+        <meta name="description" content="Professional edge computing solutions by Zion Tech Group. Ultra-low latency, real-time processing, and global edge infrastructure." />
+        <meta name="keywords" content="edge computing, low latency, IoT, real-time processing, edge infrastructure, Zion Tech Group" />
+      </Helmet>
+      
+      <Navigation />
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Edge Computing
@@ -548,7 +566,13 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-90
       </section>
 <<<<<<< HEAD
       <Footer />
+<<<<<<< HEAD
   ),
+=======
+    </div>
+    </>
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 };
 
 export default EdgeComputingPage;

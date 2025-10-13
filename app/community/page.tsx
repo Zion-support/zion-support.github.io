@@ -69,11 +69,18 @@ const CommunityPage: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
   <Helmet />
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
         <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
         <link rel="canonical" href="https: //ziontechgroup.com/community" />,
+=======
+      <Helmet>
+        <title>Community | Zion Tech Group</title>
+        <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts." />
+        <meta name="keywords" content="community, developers, tech community, networking, Zion Tech Group" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -231,7 +238,16 @@ export default function Community() {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
+=======
+        </div>
+      </div>
+    </div>
+    </>
+  );
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 
         {/* Stats Section */}
         <section className="py-16 px-4 bg-gray-800/30">

@@ -67,7 +67,7 @@ const benefits = [
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <title>AR/VR Platform | Zion Tech Group</title>
@@ -229,7 +229,12 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   ),
+=======
+    </>
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 };
 
 export default ARVRPlatformPage;

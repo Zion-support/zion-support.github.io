@@ -94,7 +94,15 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   )
 }
 export default PagePage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+    </>
+  );
+};
+
+export default PagePage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507

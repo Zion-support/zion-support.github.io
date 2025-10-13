@@ -455,6 +455,7 @@ export default Pagebroken2Page;
         </section>
       </div>
 </div>
+<<<<<<< HEAD
   )
 }
 export default ContactPage
@@ -632,3 +633,10 @@ export default ContactPage
 export default ContactPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+    </>
+  );
+};
+
+export default ContactPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507

@@ -152,6 +152,10 @@ const benefits = [
               <span>
 =======
   ];
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -228,7 +232,15 @@ const benefits = [
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   )
 }
 export default LazyImagePage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+    </>
+  );
+};
+
+export default LazyImagePage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507

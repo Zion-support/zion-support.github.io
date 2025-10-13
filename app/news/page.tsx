@@ -75,6 +75,7 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
+<<<<<<< HEAD
   ]
 {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
@@ -82,6 +83,16 @@ const benefits = [
           <div className="text-center"></div>
             <h1>
               <span>
+=======
+  ];
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
                 Page
               </span>
               <br>
@@ -217,6 +228,7 @@ const benefits = [
 export default PagePage;
 =======
     </div>
+<<<<<<< HEAD
   )
 }
 export default PagePage
@@ -226,6 +238,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
 const features = [
 ];
+=======
+    </>
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

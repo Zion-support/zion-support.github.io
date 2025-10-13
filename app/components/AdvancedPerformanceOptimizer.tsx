@@ -648,6 +648,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         </div>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 export default AdvancedPerformanceOptimizer
@@ -768,3 +769,10 @@ const benefits = [
 export default AdvancedPerformanceOptimizerPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+    </>
+  );
+};
+
+export default AdvancedPerformanceOptimizer;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507

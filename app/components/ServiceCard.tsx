@@ -4,6 +4,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const ServiceCardPage: React.FC = () => {
   const features = [
     {
@@ -39,6 +40,8 @@ const ServiceCardPage: React.FC = () => {
     'Proven track record of success'
   ];
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -104,6 +107,7 @@ interface ServiceCardProps {title: string;,}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
           <div className="text-3xl font-bold text-white mb-1">{price</div>}</div>
           <div className="text-gray-400 text-sm">per month</div>
         </div>
@@ -153,6 +157,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         {description}
       </p>
     </article>
+=======
+    </div>
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 };
 

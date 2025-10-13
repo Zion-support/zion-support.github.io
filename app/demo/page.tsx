@@ -214,6 +214,7 @@ export default function Demo() {
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 
         </div>
@@ -234,6 +235,8 @@ import Footer from '../components/Footer';
 
 const DemoPage: React.FC = () => {
   return (
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
     <>
       <Helmet>
         <title>Demo - Zion Tech Group</title>
@@ -421,9 +424,16 @@ const DemoPage: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       </div>
+=======
+        </div>
+      </section>
+
+      <Footer />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
     </>
   );
 };

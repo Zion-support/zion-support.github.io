@@ -69,9 +69,16 @@ const benefits = [
     'Cost-effective pricing plans',
     'Proven track record of success'
 <<<<<<< HEAD
+<<<<<<< HEAD
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+=======
+  ];
+
+  return (
+    <>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
       <Helmet>
         <title>EnhancedSEOOptimizer | Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions" />
@@ -258,7 +265,12 @@ return (
           </div>
         </div>
       </section>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+=======
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
             {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle>
@@ -292,6 +304,10 @@ return (
       </section>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
   );
 };
 
