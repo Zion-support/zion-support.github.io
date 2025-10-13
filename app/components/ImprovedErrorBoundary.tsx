@@ -140,12 +140,17 @@ export const withErrorBoundary = <P extends object>(
 
 // Hook for functional components to handle errors
 export const useErrorHandler = () => {
-  return (error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by hook:', error, errorInfo);
+  const handleError = (error: Error, errorInfo?: ErrorInfo) => {
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by hook:', error, errorInfo);
+    }
     
     // In production, you might want to send this to an error reporting service
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
   };
+  
+  return { handleError };
 };
 
 export default ImprovedErrorBoundary;

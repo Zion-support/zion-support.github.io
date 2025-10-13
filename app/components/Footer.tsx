@@ -1,19 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  ArrowRight,
-  Shield,
-  Zap,
-  Globe,
-  Twitter,
-  Linkedin,
-  Github
-} from "lucide-react";
+import {Brain, Mail, Phone, MapPin, ArrowRight, Twitter, Linkedin, Github} from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -36,19 +23,7 @@ const Footer: React.FC = () => {
     }
   ];
 
-  const mainLinks = [
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "AI Services", path: "/ai-services" },
-    { name: "Micro SAAS", path: "/micro-saas" },
-    { name: "5G Solutions", path: "/5g-solutions" },
-    { name: "Contact", path: "/contact" },
-    { name: "Blog", path: "/blog" },
-    { name: "Tutorials", path: "/tutorials" },
-    { name: "Demo", path: "/demo" },
-    { name: "Consultation", path: "/consultation" },
-    { name: "Support", path: "/support" },
-  ];
+  
 
   const aiServices = [
     { name: "AI Analytics", path: "/ai-analytics" },

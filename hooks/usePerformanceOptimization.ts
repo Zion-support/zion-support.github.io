@@ -8,16 +8,13 @@ interface PerformanceOptimizationOptions {
   enableCaching?: boolean;
 }
 
-export const usePerformanceOptimization = (options: PerformanceOptimizationOptions = {}) => {
-  const {
-    enableLazyLoading = true,
-    enablePreloading = true,
-    enableImageOptimization = true,
-
-    enableCodeSplitting = true,
-    enableCaching = true,
-  } = options;
-
+export const usePerformanceOptimization = ({
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableImageOptimization = true,
+  enableCodeSplitting = false,
+  enableCaching = true,
+}: PerformanceOptimizationOptions = {}) => {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   // Lazy loading for images
