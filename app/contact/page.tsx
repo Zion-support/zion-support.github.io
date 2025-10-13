@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
+
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -15,7 +14,7 @@ export default function Contact() {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -23,7 +22,7 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     setIsSubmitted(true);

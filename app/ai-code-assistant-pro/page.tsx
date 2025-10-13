@@ -1,13 +1,5 @@
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
-import EnhancedSEO from "../components/EnhancedSEO";
-import StructuredData from "../components/StructuredData";
-import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
-import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
-import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
-import ResponsiveContainer from "../components/ResponsiveContainer";
+
 import { Helmet } from 'react-helmet-async';
-import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 export default function AiCodeAssistantProPage() {
   const features = [

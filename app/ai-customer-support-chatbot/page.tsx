@@ -1,7 +1,5 @@
-import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Brain, Clock, Target, BarChart3, MessageSquare, Zap, Shield, Users, CheckCircle, ArrowRight, Star, Globe } from 'lucide-react';
 
 export default function AiCustomerSupportChatbotPage() {
   const features = [
@@ -108,32 +106,6 @@ export default function AiCustomerSupportChatbotPage() {
       description: "Complete solution for large organizations",
       period: "/month",
       popular: false,
-    },
-  ];
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: "Natural Language Processing",
-      description:
-        "Advanced AI understands context, intent, and provides human-like responses",
-    },
-    {
-      icon: <Clock className="w-6 h-6 text-purple-400" />,
-      title: "24/7 Availability",
-      description:
-        "Provide instant support around the clock without additional staffing costs",
-    },
-    {
-      icon: <Target className="w-6 h-6 text-yellow-400" />,
-      title: "Intelligent Routing",
-      description:
-        "Automatically route complex queries to the right human agents when needed",
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: "Analytics & Insights",
-      description:
-        "Track customer satisfaction, response times, and identify improvement opportunities",
     },
   ];
 

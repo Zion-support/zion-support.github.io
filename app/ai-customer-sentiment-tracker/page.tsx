@@ -1,6 +1,5 @@
-import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
-import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
 
 export default function AiCustomerSentimentTrackerPage() {
   const stats = [

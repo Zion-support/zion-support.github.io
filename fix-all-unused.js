@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
 import { execSync } from 'child_process';
 
 // Get all TypeScript/JavaScript files
@@ -17,29 +16,10 @@ files.forEach(filePath => {
     const content = fs.readFileSync(filePath, 'utf8');
     let newContent = content;
     
-    // Remove unused imports from lucide-react
+    // Remove all unused imports from lucide-react
     const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
     if (lucideImportMatch) {
-      const imports = lucideImportMatch[1].split(',').map(imp => imp.trim());
-      const usedImports = [];
-      
-      imports.forEach(imp => {
-        // Check if the import is used in the file
-        const importName = imp.replace(/\s+as\s+\w+/, '').trim();
-        const regex = new RegExp(`\\b${importName}\\b`, 'g');
-        if (regex.test(content)) {
-          usedImports.push(imp);
-        }
-      });
-      
-      if (usedImports.length === 0) {
-        // Remove the entire import line
-        newContent = newContent.replace(lucideImportMatch[0], '');
-      } else if (usedImports.length !== imports.length) {
-        // Replace with only used imports
-        const newImport = `import { ${usedImports.join(', ')} } from 'lucide-react';`;
-        newContent = newContent.replace(lucideImportMatch[0], newImport);
-      }
+      newContent = newContent.replace(lucideImportMatch[0], '');
     }
     
     // Remove unused React imports (if only default import and not used)
@@ -59,6 +39,18 @@ files.forEach(filePath => {
     if (linkImportMatch && !content.includes('<Link')) {
       newContent = newContent.replace(linkImportMatch[0], '');
     }
+    
+    // Remove unused component imports
+    const componentImports = [
+      'EnhancedSEO', 'StructuredData', 'FuturisticBackgroundEnhanced', 
+      'FuturisticCardEnhanced', 'FuturisticButtonEnhanced', 'FuturisticTextEnhanced',
+      'ResponsiveContainer', 'PerformanceOptimizer'
+    ];
+    
+    componentImports.forEach(component => {
+      const regex = new RegExp(`import\\s+${component}\\s+from\\s+['"][^'"]+['"];?\\n?`, 'g');
+      newContent = newContent.replace(regex, '');
+    });
     
     // Remove unused variable declarations
     const lines = newContent.split('\n');
@@ -95,4 +87,4 @@ files.forEach(filePath => {
   }
 });
 
-console.log('Done fixing unused imports and variables');
+console.log('Done fixing all unused imports and variables');
