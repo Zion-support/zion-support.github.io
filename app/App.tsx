@@ -1,5 +1,8 @@
-import React, { lazy } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
 const ContactPage = lazy(() => import("./contact/page"));
@@ -38,14 +41,7 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
-          <PerformanceMonitor showDetails={false}>
-            <div>Performance monitoring active</div>
-          </PerformanceMonitor>
-          <AccessibilityEnhancer>
-            <CriticalResourcePreloader />
-            <CacheManager />
-            <AdvancedPerformanceMonitor />
-            <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -95,27 +91,11 @@ function App() {
               />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             </Routes>
-            </Suspense>
-          </AccessibilityEnhancer>
+          </Suspense>
         </ErrorBoundary>
       </BrowserRouter>
     </HelmetProvider>
   );
 }
 
-export default function App({ className = '', children, ...props }: AppProps) {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Zion App
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Welcome to Zion - Your AI-Powered Technology Solutions
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
+export default App;

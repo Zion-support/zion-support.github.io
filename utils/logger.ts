@@ -95,17 +95,5 @@ class Logger {
 }
 
 const logger = new Logger();
-=======
-export const logger = {
-  // Logger implementation
-  info: (message: string) => {
-    console.log(`[INFO] ${message}`);
-  },
-  error: (message: string) => {
-    console.error(`[ERROR] ${message}`);
-  },
-  warn: (message: string) => {
-    console.warn(`[WARN] ${message}`);
-  }
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-bd18
+
+export { logger };

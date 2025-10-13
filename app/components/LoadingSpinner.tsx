@@ -1,14 +1,11 @@
 import React from 'react';
 
-interface LoadingspinnerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Loadingspinner({ className = '', children, ...props }: LoadingspinnerProps) {
+const LoadingSpinner: React.FC = () => {
   return (
-    <div className={`loadingspinner-component ${className}`} {...props}>
-      {children}
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
     </div>
   );
-}
+};
+
+export default LoadingSpinner;

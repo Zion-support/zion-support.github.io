@@ -1,5 +1,7 @@
 
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, ArrowRight } from 'lucide-react';
 const features = [
     {
       title: "Predictive Analytics",
@@ -253,6 +255,4 @@ export default function Page() {
       </div>
     </div>
   );
-}
-
 }
