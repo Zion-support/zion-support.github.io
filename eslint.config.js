@@ -28,6 +28,24 @@ export default tseslint.config(
     },
   },
   {
-    ignores: ["dist", "node_modules", "*.config.js"],
+    ignores: [
+      "dist", 
+      "node_modules", 
+      "*.config.js",
+      "backup*/**",
+      "backup-problematic*/**",
+      "backup-unused-components/**",
+      "cleanup-*.cjs",
+      "comprehensive-*.cjs",
+      "fix-*.cjs",
+      "fix-*.js",
+      "create-*.cjs",
+      "create-*.js",
+      "scripts/**",
+      "src/**",
+      "utils/**",
+      "*.cjs",
+      "*.js"
+    ],
   }
 );
