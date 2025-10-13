@@ -39,6 +39,11 @@ const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
 // AI Service Pages
+const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
+const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
+const AICybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
+
+// AI Service Pages
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -211,6 +216,9 @@ function App() {
                   <Route path="/sitemap" element={<SitemapPage />} />
 
                   {/* AI Service Routes */}
+                  <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
+                  <Route path="/ai-automation" element={<AIAutomationPage />} />
+                  <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
 
                   {/* IT Service Routes */}
                   <Route

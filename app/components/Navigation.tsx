@@ -15,13 +15,13 @@ const Navigation = React.memo(() => {
   }, [isServicesOpen])
 
   const services = useMemo(() => [
-    { name: 'AI & Machine Learning', path: '/ai-services', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Cloud Solutions', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
-    { name: '5G Implementation', path: '/5g-implementation', icon: <Globe className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <Database className="w-4 h-4" /> },
-    { name: 'Custom Development', path: '/custom-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Solutions', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
+    { name: 'AI Services', path: '/ai-services', icon: <Zap className="w-4 h-4" /> },
+    { name: 'IT Services', path: '/services', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Micro SAAS', path: '/services', icon: <Shield className="w-4 h-4" /> },
+    { name: '5G Solutions', path: '/5g-solutions', icon: <Globe className="w-4 h-4" /> },
+    { name: 'AI Analytics', path: '/ai-analytics', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Automation', path: '/ai-automation', icon: <Code className="w-4 h-4" /> },
+    { name: 'AI Cybersecurity', path: '/ai-cybersecurity', icon: <Smartphone className="w-4 h-4" /> }
   ], [])
 
   return (
@@ -33,10 +33,10 @@ const Navigation = React.memo(() => {
           </Link>
 
           <div className="hidden md:flex space-x-8">
-            <Link to="/" className="hover:text-blue-400 transition-colors">
+            <Link to="/" className="hover:text-cyan-400 transition-colors">
               Home
             </Link>
-            <Link to="/about" className="hover:text-blue-400 transition-colors">
+            <Link to="/about" className="hover:text-cyan-400 transition-colors">
               About
             </Link>
             
@@ -44,41 +44,46 @@ const Navigation = React.memo(() => {
             <div className="relative">
               <button
                 onClick={toggleServices}
-                className="flex items-center space-x-1 hover:text-blue-400 transition-colors"
+                className="flex items-center space-x-1 hover:text-cyan-400 transition-colors"
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.path}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
-                      onClick={() => setIsServicesOpen(false)}
-                    >
-                      {service.icon}
-                      <span>{service.name}</span>
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg py-2 z-50">
+                  <div className="grid grid-cols-2 gap-2 p-4">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="flex items-center space-x-3 px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors rounded-lg"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        {service.icon}
+                        <span className="text-sm font-medium">{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
 
-            <Link to="/case-studies" className="hover:text-blue-400 transition-colors">
+            <Link to="/pricing" className="hover:text-cyan-400 transition-colors">
+              Pricing
+            </Link>
+            <Link to="/case-studies" className="hover:text-cyan-400 transition-colors">
               Case Studies
             </Link>
-            <Link to="/blog" className="hover:text-blue-400 transition-colors">
+            <Link to="/blog" className="hover:text-cyan-400 transition-colors">
               Blog
             </Link>
-            <Link to="/contact" className="hover:text-blue-400 transition-colors">
+            <Link to="/contact" className="hover:text-cyan-400 transition-colors">
               Contact
             </Link>
             <Link
               to="/consultation"
-              className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-4 py-2 rounded-lg transition-all duration-300 text-white font-semibold"
             >
               Get Started
             </Link>
@@ -101,14 +106,14 @@ const Navigation = React.memo(() => {
             <div className="flex flex-col space-y-4">
               <Link
                 to="/"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-cyan-400 transition-colors"
                 onClick={toggleMenu}
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-cyan-400 transition-colors"
                 onClick={toggleMenu}
               >
                 About
@@ -118,7 +123,7 @@ const Navigation = React.memo(() => {
               <div>
                 <button
                   onClick={toggleServices}
-                  className="flex items-center space-x-1 hover:text-blue-400 transition-colors"
+                  className="flex items-center space-x-1 hover:text-cyan-400 transition-colors"
                 >
                   <span>Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -145,29 +150,36 @@ const Navigation = React.memo(() => {
               </div>
 
               <Link
+                to="/pricing"
+                className="hover:text-cyan-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                Pricing
+              </Link>
+              <Link
                 to="/case-studies"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-cyan-400 transition-colors"
                 onClick={toggleMenu}
               >
                 Case Studies
               </Link>
               <Link
                 to="/blog"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-cyan-400 transition-colors"
                 onClick={toggleMenu}
               >
                 Blog
               </Link>
               <Link
                 to="/contact"
-                className="hover:text-blue-400 transition-colors"
+                className="hover:text-cyan-400 transition-colors"
                 onClick={toggleMenu}
               >
                 Contact
               </Link>
               <Link
                 to="/consultation"
-                className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors text-center"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-4 py-2 rounded-lg transition-all duration-300 text-center text-white font-semibold"
                 onClick={toggleMenu}
               >
                 Get Started

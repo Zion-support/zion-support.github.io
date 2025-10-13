@@ -40,6 +40,11 @@ const Footer = React.memo(() => {
               Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            <div className="mt-4 space-y-2 text-sm text-gray-400">
+              <p><strong>Phone:</strong> +1 302 464 0950</p>
+              <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
+              <p><strong>Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
