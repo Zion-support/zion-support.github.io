@@ -10,6 +10,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import CriticalResourcePreloader from "./components/CriticalResourcePreloader";
 import CacheManager from "./components/CacheManager";
 import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
+import Layout from "./components/Layout";
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"));
@@ -24,6 +25,25 @@ const CareersPage = lazy(() => import("./careers/page"));
 const PrivacyPage = lazy(() => import("./privacy/page"));
 const TermsPage = lazy(() => import("./terms/page"));
 const CookiesPage = lazy(() => import("./cookies/page"));
+
+// Additional pages
+const ConsultationPage = lazy(() => import("./consultation/page"));
+const DemoPage = lazy(() => import("./demo/page"));
+const SupportPage = lazy(() => import("./support/page"));
+const TutorialsPage = lazy(() => import("./tutorials/page"));
+const SitemapPage = lazy(() => import("./sitemap/page"));
+const AiServicesPage = lazy(() => import("./ai-services/page"));
+const CloudServicesPage = lazy(() => import("./cloud-services/page"));
+const CybersecurityPage = lazy(() => import("./cybersecurity/page"));
+const WebDevelopmentPage = lazy(() => import("./web-development/page"));
+const CustomDevelopmentPage = lazy(() => import("./custom-development/page"));
+const DataAnalyticsPage = lazy(() => import("./data-analytics/page"));
+const AiAnalyticsPage = lazy(() => import("./ai-analytics/page"));
+const AiAutomationPage = lazy(() => import("./ai-automation/page"));
+const AiContentGenerationPage = lazy(() => import("./ai-content-generation/page"));
+const AiCustomerServicePage = lazy(() => import("./ai-customer-service/page"));
+const AiMarketingPage = lazy(() => import("./ai-marketing/page"));
+const MicroSaasPage = lazy(() => import("./micro-saas/page"));
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
@@ -55,8 +75,9 @@ function App() {
             <CriticalResourcePreloader />
             <CacheManager />
             <AdvancedPerformanceMonitor />
-            <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+            <Layout>
+              <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
@@ -69,6 +90,29 @@ function App() {
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/cookies" element={<CookiesPage />} />
+              
+              {/* Additional Routes */}
+              <Route path="/consultation" element={<ConsultationPage />} />
+              <Route path="/demo" element={<DemoPage />} />
+              <Route path="/support" element={<SupportPage />} />
+              <Route path="/tutorials" element={<TutorialsPage />} />
+              <Route path="/sitemap" element={<SitemapPage />} />
+              
+              {/* Service Routes */}
+              <Route path="/ai-services" element={<AiServicesPage />} />
+              <Route path="/cloud-services" element={<CloudServicesPage />} />
+              <Route path="/cybersecurity" element={<CybersecurityPage />} />
+              <Route path="/web-development" element={<WebDevelopmentPage />} />
+              <Route path="/custom-development" element={<CustomDevelopmentPage />} />
+              <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+              <Route path="/micro-saas" element={<MicroSaasPage />} />
+              
+              {/* AI Service Routes */}
+              <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+              <Route path="/ai-automation" element={<AiAutomationPage />} />
+              <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
+              <Route path="/ai-customer-service" element={<AiCustomerServicePage />} />
+              <Route path="/ai-marketing" element={<AiMarketingPage />} />
 
               {/* 5G Solutions Routes */}
               <Route
@@ -104,8 +148,9 @@ function App() {
                 element={<FiveGSmartCitySolutionsPage />}
               />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-            </Routes>
-            </Suspense>
+              </Routes>
+              </Suspense>
+            </Layout>
           </AccessibilityEnhancer>
         </ErrorBoundary>
       </BrowserRouter>

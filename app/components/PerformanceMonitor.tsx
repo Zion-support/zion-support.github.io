@@ -141,76 +141,50 @@ const PerformanceMonitor = () => {
           <div className="space-y-3 text-sm">
             <div className="flex justify-between items-center">
               <span className="text-gray-600">Load Time:</span>
-<<<<<<< HEAD
               <span className={`font-mono ${getMetricColor(metrics.loadTime || 0, { good: 1000, poor: 3000 })}`}>
                 {metrics.loadTime?.toFixed(0) || 'N/A'}ms
-
-=======
-              <span className={`font-mono ${getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 })}`}>
-                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/fix-errors-and-merge-to-main-f25b
               </span>
             </div>
             
             <div className="flex justify-between items-center">
               <span className="text-gray-600">FCP:</span>
-<<<<<<< HEAD
               <span className={`font-mono ${getMetricColor(metrics.firstContentfulPaint || 0, { good: 1800, poor: 3000 })}`}>
                 {metrics.firstContentfulPaint?.toFixed(0) || 'N/A'}ms
-=======
-              <span className={`font-mono ${getMetricColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 })}`}>
-                {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/fix-errors-and-merge-to-main-f25b
               </span>
             </div>
             
             <div className="flex justify-between items-center">
               <span className="text-gray-600">LCP:</span>
-<<<<<<< HEAD
               <span className={`font-mono ${getMetricColor(metrics.largestContentfulPaint || 0, { good: 2500, poor: 4000 })}`}>
                 {metrics.largestContentfulPaint?.toFixed(0) || 'N/A'}ms
-=======
-              <span className={`font-mono ${getMetricColor(metrics.largestContentfulPaint, { good: 2500, poor: 4000 })}`}>
-                {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/fix-errors-and-merge-to-main-f25b
               </span>
             </div>
             
             <div className="flex justify-between items-center">
-<<<<<<< HEAD
               <span className="text-gray-600">INP:</span>
               <span className={`font-mono ${getMetricColor(metrics.interactionToNextPaint || 0, { good: 200, poor: 500 })}`}>
                 {metrics.interactionToNextPaint?.toFixed(0) || 'N/A'}ms
-=======
+              </span>
+            </div>
+            
+            <div className="flex justify-between items-center">
               <span className="text-gray-600">FID:</span>
-              <span className={`font-mono ${getMetricColor(metrics.firstInputDelay, { good: 100, poor: 300 })}`}>
-                {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/fix-errors-and-merge-to-main-f25b
+              <span className={`font-mono ${getMetricColor(metrics.firstInputDelay || 0, { good: 100, poor: 300 })}`}>
+                {metrics.firstInputDelay?.toFixed(0) || 'N/A'}ms
               </span>
             </div>
             
             <div className="flex justify-between items-center">
               <span className="text-gray-600">CLS:</span>
-<<<<<<< HEAD
               <span className={`font-mono ${getMetricColor(metrics.cumulativeLayoutShift || 0, { good: 0.1, poor: 0.25 })}`}>
                 {metrics.cumulativeLayoutShift?.toFixed(3) || 'N/A'}
-=======
-              <span className={`font-mono ${getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, poor: 0.25 })}`}>
-                {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(3) : 'N/A'}
->>>>>>> cursor/fix-errors-and-merge-to-main-f25b
               </span>
             </div>
             
             <div className="flex justify-between items-center">
               <span className="text-gray-600">TTFB:</span>
-<<<<<<< HEAD
               <span className={`font-mono ${getMetricColor(metrics.timeToFirstByte || 0, { good: 800, poor: 1800 })}`}>
                 {metrics.timeToFirstByte?.toFixed(0) || 'N/A'}ms
-
-=======
-              <span className={`font-mono ${getMetricColor(metrics.timeToFirstByte, { good: 800, poor: 1800 })}`}>
-                {metrics.timeToFirstByte ? `${metrics.timeToFirstByte.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/fix-errors-and-merge-to-main-f25b
               </span>
             </div>
             

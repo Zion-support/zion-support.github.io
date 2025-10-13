@@ -1,11 +1,13 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe, Search, User, Bell } from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [showSearch, setShowSearch] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -18,6 +20,18 @@ const Navigation = React.memo(() => {
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
+
+  const toggleSearch = useCallback(() => {
+    setShowSearch(!showSearch)
+  }, [showSearch])
+
+  const handleSearch = useCallback((e: React.FormEvent) => {
+    e.preventDefault()
+    if (searchQuery.trim()) {
+      // Implement search functionality
+      console.log('Searching for:', searchQuery)
+    }
+  }, [searchQuery])
 
 
   const microSaasServices = useMemo(() => [
@@ -110,6 +124,15 @@ const Navigation = React.memo(() => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
+            
+            {/* Search Button */}
+            <button
+              onClick={toggleSearch}
+              className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
             
             {/* Services Dropdown */}
             <div className="relative">
@@ -223,10 +246,66 @@ const Navigation = React.memo(() => {
           </div>
         </div>
 
+        {/* Search Modal */}
+        {showSearch && (
+          <div className="absolute top-full left-0 right-0 bg-slate-800/95 backdrop-blur-xl border-b border-cyan-500/20 py-4 z-50">
+            <div className="max-w-4xl mx-auto px-4">
+              <form onSubmit={handleSearch} className="flex items-center space-x-4">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="Search services, solutions, or topics..."
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    autoFocus
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                >
+                  Search
+                </button>
+                <button
+                  type="button"
+                  onClick={toggleSearch}
+                  className="text-gray-400 hover:text-white transition-colors p-2"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+
         {/* Mobile menu */}
         {isOpen && (
           <div className="lg:hidden py-4 border-t border-cyan-500/20">
             <div className="flex flex-col space-y-2">
+              {/* Mobile Search */}
+              <div className="px-4 py-2">
+                <form onSubmit={handleSearch} className="flex items-center space-x-2">
+                  <div className="flex-1 relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                    <input
+                      type="text"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder="Search..."
+                      className="w-full pl-9 pr-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
+                    />
+                  </div>
+                  <button
+                    type="submit"
+                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-sm"
+                  >
+                    Search
+                  </button>
+                </form>
+              </div>
+
               {mainNavItems.map((item) => (
                 <Link
                   key={item.name}
