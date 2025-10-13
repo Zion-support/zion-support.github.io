@@ -2,10 +2,14 @@
 =======
 'use client';
 import React from 'react';
+<<<<<<< HEAD:app-disabled/iot-edge-computing/page.tsx
 <<<<<<< HEAD:app/iot-edge-computing/page.tsx
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 =======
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/iot-edge-computing/page.tsx
 import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/iot-edge-computing/page.tsx
 
@@ -31,6 +35,7 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
+<<<<<<< HEAD:app-disabled/iot-edge-computing/page.tsx
 
       description: 'Worldwide deployment and support for international businesses',}}
   ]
@@ -64,6 +69,11 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 =======
     <>
 
+=======
+  const categories = [...new Set(iotServices.map(service => service.category))];
+  return (
+    <>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/iot-edge-computing/page.tsx
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-cyan-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">

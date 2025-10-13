@@ -316,6 +316,7 @@ export default defineConfig({
     open: true,
   },
   optimizeDeps: {
+<<<<<<< HEAD
     include: [
       "react",
       "react-dom",
@@ -325,6 +326,10 @@ export default defineConfig({
       "scheduler",
     ],
     exclude: ["@vite/client", "@vite/env"],
+=======
+    include: ['react', 'react-dom', 'framer-motion'],
+    exclude: ['react-router-dom'],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
   },
   // Add polyfills for better compatibility
   esbuild: {

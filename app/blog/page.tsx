@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -16,6 +17,32 @@ export default function Blog() {
   ];
 
   const posts = [
+=======
+'use client';
+import React, { useState, useEffect, useMemo } from 'react';
+import Link from 'next/link';
+import ContentPreviewCard from '../components/ContentPreviewCard';
+interface BlogPost {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  readTime: string;
+  date: string;
+  path: string;
+  image: string;
+  featured: boolean;
+  stats?: {
+    views: number;
+    engagement: number;
+  };
+}
+export default function BlogPage() {
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const blogPosts: BlogPost[] = useMemo(() => [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
     {
       id: 1,
       title: "The Future of AI in Business: 2024 Trends and Predictions",

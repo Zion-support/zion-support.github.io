@@ -28,6 +28,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -71,6 +72,8 @@ return(<Helmet />)
     </Helmet>
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
   );
 };
 

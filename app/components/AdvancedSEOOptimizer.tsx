@@ -4,12 +4,23 @@ import React, {useEffect, useState, useCallback}from 'react';
 import {Helmet}}from 'react-helmet-async';
 =======
 import React, { useEffect, useCallback, useRef } from 'react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
 
 interface SEOOptimizerProps {title?: string;}
   description?: string;
   keywords?: string;
   canonicalUrl?: string;
+=======
+
+interface SEOData {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+  ogTitle?: string;
+  ogDescription?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
   ogImage?: string;
   twitterCard?: string;
   structuredData?: object;
@@ -76,6 +87,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       window.addEventListener('load', () => {
       window.addEventListener('load', () => {;
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+<<<<<<< HEAD
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
           (window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag('event', 'page_load_performance', {)
   return(<>)
@@ -224,6 +236,19 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
 =======
   return (
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
+=======
+        if (_perfData) {
+          (window as any).gtag('event', 'page_load_performance', {
+            event_category: 'Performance',
+            event_label: 'Page Load',
+            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)
+          });
+        }
+      });
+    }
+  };
+  return (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
   );
 };
 

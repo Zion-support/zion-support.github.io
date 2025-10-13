@@ -2,10 +2,14 @@
 =======
 'use client';
 import React from 'react';
+<<<<<<< HEAD:app-disabled/robotics/page.tsx
 <<<<<<< HEAD:app/robotics/page.tsx
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 =======
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/robotics/page.tsx
 import { CheckCircle, Star, Bot, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Cog } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/robotics/page.tsx
 
@@ -38,6 +42,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
       <Helmet />
 
   return (
+<<<<<<< HEAD:app-disabled/robotics/page.tsx
 <<<<<<< HEAD:app/robotics/page.tsx
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -60,6 +65,9 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 =======
     <>
 
+=======
+    <>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/robotics/page.tsx
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-teal-600 to-cyan-700 text-white py-20">
