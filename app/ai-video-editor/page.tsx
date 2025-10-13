@@ -1,10 +1,3 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Edit } from 'lucide-react';
-
-"use client";
-
 export default function AiVideoEditorZionTechGroup() {
   return (
     <>
@@ -27,5 +20,4 @@ export default function AiVideoEditorZionTechGroup() {
         </div>
       </div>
     </>
-  );
 }

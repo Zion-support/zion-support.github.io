@@ -1,11 +1,6 @@
-import React, { useEffect } from 'react';
-
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
 }
-
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-
   useEffect(() => {
     // Performance optimization logic
     const optimizePerformance = () => {
@@ -25,9 +20,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         if (resource.endsWith('.woff2')) {
           link.crossOrigin = 'anonymous';
         }
-        document.head.appendChild(link);
-      });
-
       // Optimize images
       const images = document.querySelectorAll('img');
       images.forEach(img => {
@@ -37,8 +29,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         if (!img.decoding) {
           img.decoding = 'async';
         }
-      });
-
       // Preconnect to external domains
       const externalDomains = [
         'https://fonts.googleapis.com',
@@ -50,9 +40,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         const link = document.createElement('link');
         link.rel = 'preconnect';
         link.href = domain;
-        document.head.appendChild(link);
-      });
-
       // Enable resource hints
       const resourceHints = [
         { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
@@ -66,7 +53,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         link.href = hint.href;
         document.head.appendChild(link);
       });
-
     };
 
     // Run optimization after component mounts

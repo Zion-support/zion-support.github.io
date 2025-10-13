@@ -1,18 +1,3 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Package } from 'lucide-react';
-
 const ZionAIInventoryManager = () => {
   const testimonials = [
     {
@@ -33,15 +18,11 @@ const ZionAIInventoryManager = () => {
       content: "We saw immediate results after implementing their solutions.",
       avatar: "/images/testimonials/mike-chen.jpg"
     }
-  ];
-
   const stats = [
     { label: "Projects Completed", value: "500+" },
     { label: "Happy Clients", value: "200+" },
     { label: "Years Experience", value: "5+" },
     { label: "Team Members", value: "50+" }
-  ];
-
   const features = [
     {
       title: "AI-Powered Demand Forecasting",
@@ -79,8 +60,6 @@ const ZionAIInventoryManager = () => {
       icon: <Smartphone className="w-6 h-6" />,
       benefit: "24/7 access"
     }
-  ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -131,8 +110,6 @@ const ZionAIInventoryManager = () => {
       ],
       popular: false
     }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -141,7 +118,6 @@ const ZionAIInventoryManager = () => {
         keywords="AI inventory management, demand forecasting, inventory tracking, stock management, supply chain optimization, business automation"
         canonical="https://ziontechgroup.com/zion-ai-inventory-manager"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -150,18 +126,15 @@ const ZionAIInventoryManager = () => {
               <Zap className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Management</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Zion AI Inventory Manager
               </span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Revolutionize your inventory management with AI-powered demand forecasting, real-time tracking, 
               and automated reorder points. Reduce stockouts by 60% and optimize your supply chain.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
@@ -177,7 +150,6 @@ const ZionAIInventoryManager = () => {
                 Watch Demo
               </Link>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
@@ -185,7 +157,7 @@ const ZionAIInventoryManager = () => {
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
               ))}
@@ -193,7 +165,6 @@ const ZionAIInventoryManager = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -206,7 +177,6 @@ const ZionAIInventoryManager = () => {
               and reduce costs while improving customer satisfaction.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
@@ -231,7 +201,6 @@ const ZionAIInventoryManager = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -244,7 +213,6 @@ const ZionAIInventoryManager = () => {
               and come with a 30-day free trial.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -262,7 +230,6 @@ const ZionAIInventoryManager = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -271,7 +238,6 @@ const ZionAIInventoryManager = () => {
                     <span className="text-gray-300 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -280,7 +246,6 @@ const ZionAIInventoryManager = () => {
                     </li>
                   ))}
                 </ul>
-                
                 <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
@@ -296,7 +261,6 @@ const ZionAIInventoryManager = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -308,7 +272,6 @@ const ZionAIInventoryManager = () => {
               See how businesses are transforming their inventory management with our AI-powered solution.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -316,7 +279,7 @@ const ZionAIInventoryManager = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -324,7 +287,7 @@ const ZionAIInventoryManager = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                   </div>
                   <div className="text-cyan-400 text-sm font-medium bg-cyan-400/10 px-3 py-1 rounded-full">
                     {testimonial.savings}
@@ -335,7 +298,6 @@ const ZionAIInventoryManager = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -346,7 +308,6 @@ const ZionAIInventoryManager = () => {
             Join thousands of businesses already using Zion AI Inventory Manager to optimize their supply chain. 
             Start your free trial today and see the difference AI can make.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -365,7 +326,3 @@ const ZionAIInventoryManager = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default ZionAIInventoryManager;

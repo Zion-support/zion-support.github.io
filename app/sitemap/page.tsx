@@ -1,6 +1,3 @@
-import React from "react";
-import { Helmet } from 'react-helmet-async';
-
 export default function Sitemap() {
   return (
     <>
@@ -15,5 +12,4 @@ export default function Sitemap() {
         </div>
       </div>
     </>
-  );
 }

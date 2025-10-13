@@ -1,26 +1,3 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Headphones } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import { Heart } from 'lucide-react';
-
 const ZionAICustomerInsightsPage = () => {
   const testimonials = [
     {
@@ -41,17 +18,12 @@ const ZionAICustomerInsightsPage = () => {
       content: "We saw immediate results after implementing their solutions.",
       avatar: "/images/testimonials/mike-chen.jpg"
     }
-  ];
-
   const stats = [
     { label: "Projects Completed", value: "500+" },
     { label: "Happy Clients", value: "200+" },
     { label: "Years Experience", value: "5+" },
     { label: "Team Members", value: "50+" }
-  ];
-
   const [selectedPlan, setSelectedPlan] = useState('pro');
-
   const features = [
     {
       title: 'Behavioral Analytics',
@@ -125,8 +97,6 @@ const ZionAICustomerInsightsPage = () => {
       icon: <Headphones className="w-6 h-6" />,
       included: true
     }
-  ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -182,8 +152,6 @@ const ZionAICustomerInsightsPage = () => {
       popular: false,
       color: 'from-cyan-500 to-blue-500'
     }
-  ];
-
   const useCases = [
     {
       title: 'E-commerce',
@@ -209,8 +177,6 @@ const ZionAICustomerInsightsPage = () => {
       icon: <CreditCard className="w-8 h-8" />,
       examples: ['Risk assessment', 'Cross-selling opportunities', 'Customer lifetime value', 'Fraud detection']
     }
-  ];
-
   return (
     <>
       <Helmet>
@@ -224,12 +190,10 @@ const ZionAICustomerInsightsPage = () => {
           content="AI customer insights, customer analytics, churn prediction, behavioral analytics, customer segmentation, personalized recommendations, customer retention"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)]"></div>
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -237,18 +201,15 @@ const ZionAICustomerInsightsPage = () => {
               <Sparkles className="w-4 h-4 text-blue-400 mr-2" />
               <span className="text-blue-400 text-sm font-medium">AI-Powered Customer Analytics</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
                 Zion AI Customer Insights Pro
               </span>
             </h1>
-            
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Advanced customer analytics with behavioral insights, churn prediction, and personalized recommendations. 
               Transform your customer relationships and drive growth with AI-powered insights.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link
                 to="/contact"
@@ -265,7 +226,6 @@ const ZionAICustomerInsightsPage = () => {
                 <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
-            
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {stats.map((stat, index) => (
@@ -273,14 +233,13 @@ const ZionAICustomerInsightsPage = () => {
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
-                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -294,7 +253,6 @@ const ZionAICustomerInsightsPage = () => {
                 Everything you need to understand, predict, and optimize customer behavior with AI-powered insights.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -302,12 +260,10 @@ const ZionAICustomerInsightsPage = () => {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
                   <div className="relative z-10">
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       {feature.icon}
                     </div>
-                    
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors">
                       {feature.title}
                     </h3>
@@ -320,7 +276,6 @@ const ZionAICustomerInsightsPage = () => {
             </div>
           </div>
         </section>
-
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -332,7 +287,6 @@ const ZionAICustomerInsightsPage = () => {
                 From e-commerce to SaaS, our AI customer insights adapt to your industry needs.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
                 <div
@@ -342,14 +296,12 @@ const ZionAICustomerInsightsPage = () => {
                   <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     {useCase.icon}
                   </div>
-                  
                   <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-blue-300 transition-colors">
                     {useCase.title}
                   </h3>
                   <p className="text-gray-300 text-center mb-4 leading-relaxed">
                     {useCase.description}
                   </p>
-                  
                   <div className="space-y-2">
                     {useCase.examples.map((example, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-300">
@@ -363,7 +315,6 @@ const ZionAICustomerInsightsPage = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -375,7 +326,6 @@ const ZionAICustomerInsightsPage = () => {
                 Flexible pricing plans designed to scale with your customer base and analytics needs.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
@@ -393,7 +343,6 @@ const ZionAICustomerInsightsPage = () => {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -405,7 +354,6 @@ const ZionAICustomerInsightsPage = () => {
                       <span className="text-gray-500 line-through text-lg">{plan.originalPrice}{plan.period}</span>
                     )}
                   </div>
-                  
                   <div className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
@@ -414,7 +362,6 @@ const ZionAICustomerInsightsPage = () => {
                       </div>
                     ))}
                   </div>
-                  
                   <Link
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
@@ -430,7 +377,6 @@ const ZionAICustomerInsightsPage = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -442,7 +388,6 @@ const ZionAICustomerInsightsPage = () => {
                 See what our customers say about Zion AI Customer Insights Pro
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -450,7 +395,7 @@ const ZionAICustomerInsightsPage = () => {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -461,7 +406,7 @@ const ZionAICustomerInsightsPage = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                     </div>
                   </div>
                 </div>
@@ -469,7 +414,6 @@ const ZionAICustomerInsightsPage = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -481,7 +425,6 @@ const ZionAICustomerInsightsPage = () => {
                 Join thousands of businesses already using Zion AI Customer Insights Pro. 
                 Contact us today for a personalized demo.
               </p>
-              
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -506,7 +449,6 @@ const ZionAICustomerInsightsPage = () => {
                   <p className="text-blue-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -527,7 +469,3 @@ const ZionAICustomerInsightsPage = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default ZionAICustomerInsightsPage;

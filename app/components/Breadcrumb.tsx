@@ -1,11 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
-
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
-
   return (
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 py-2 px-4">
       <div className="max-w-7xl mx-auto">
@@ -20,7 +15,6 @@ const Breadcrumb: React.FC = () => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1;
             const displayName = name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ');
-
             return (
               <li key={name} className="flex items-center">
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
@@ -32,12 +26,7 @@ const Breadcrumb: React.FC = () => {
                   </Link>
                 )}
               </li>
-            );
           })}
         </ol>
       </div>
     </nav>
-  );
-};
-
-export default Breadcrumb;

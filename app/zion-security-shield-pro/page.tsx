@@ -1,21 +1,28 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Search } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { FileText } from 'lucide-react';
-
-
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO",
+    content: "Zion Tech Group has transformed our business with their AI solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "TechCorp"
+  },
+  {
+    name: "Michael Chen",
+    role: "CTO", 
+    content: "The performance improvements are remarkable. Highly recommended!",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "InnovateLabs"
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Product Manager",
+    content: "Outstanding support and cutting-edge technology solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "FutureTech"
+  }
 export default function ZionSecurityShieldPro() {
   const features = [
     {
@@ -54,15 +61,11 @@ export default function ZionSecurityShieldPro() {
       icon: <Fingerprint className="w-8 h-8" />,
       benefits: ["Biometric authentication", "Hardware tokens", "Mobile app verification", "SSO integration"]
     }
-  ];
-
   const securityStats = [
     { number: "99.9%", label: "Threat Detection Accuracy", icon: <Shield className="w-6 h-6" /> },
     { number: "50%", label: "Faster Incident Response", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Security Monitoring", icon: <Eye className="w-6 h-6" /> },
     { number: "100%", label: "Compliance Coverage", icon: <Award className="w-6 h-6" /> }
-  ];
-
   const pricingPlans = [
     {
       name: "Essential",
@@ -111,8 +114,6 @@ export default function ZionSecurityShieldPro() {
       ],
       popular: false
     }
-  ];
-
   return (
     <>
       <Helmet>
@@ -127,12 +128,10 @@ export default function ZionSecurityShieldPro() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-security-shield-pro" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -142,18 +141,15 @@ export default function ZionSecurityShieldPro() {
                   <Shield className="w-4 h-4 text-red-400 mr-2" />
                   <span className="text-red-400 text-sm font-medium">#1 AI Cybersecurity Platform 2024</span>
                 </div>
-                
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400">
                     Zion Security Shield Pro
                   </span>
                 </h1>
-                
                 <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
                   Protect your business with advanced AI-powered cybersecurity. Get 24/7 threat detection, 
                   automated response, and comprehensive compliance reporting that keeps you secure.
                 </p>
-                
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
                     to="/contact"
@@ -170,7 +166,6 @@ export default function ZionSecurityShieldPro() {
                     <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                   </Link>
                 </div>
-                
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-6">
                   {securityStats.map((stat, index) => (
@@ -178,13 +173,12 @@ export default function ZionSecurityShieldPro() {
                       <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         {stat.icon}
                       </div>
-                      <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
+                      <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                       <div className="text-gray-300 text-sm">{stat.label}</div>
                     </div>
                   ))}
                 </div>
               </div>
-              
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <div className="text-center mb-6">
@@ -194,7 +188,6 @@ export default function ZionSecurityShieldPro() {
                     <h3 className="text-2xl font-bold text-white mb-2">Starting at $499/month</h3>
                     <p className="text-gray-300">Advanced AI cybersecurity protection</p>
                   </div>
-                  
                   <div className="space-y-4">
                     <div className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3" />
@@ -213,7 +206,6 @@ export default function ZionSecurityShieldPro() {
                       <span>Compliance reporting</span>
                     </div>
                   </div>
-                  
                   <div className="mt-6">
                     <Link
                       to="/contact"
@@ -228,7 +220,6 @@ export default function ZionSecurityShieldPro() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -242,7 +233,6 @@ export default function ZionSecurityShieldPro() {
                 Comprehensive cybersecurity protection powered by artificial intelligence
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -271,7 +261,6 @@ export default function ZionSecurityShieldPro() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-red-800/50">
           <div className="max-w-7xl mx-auto">
@@ -285,7 +274,6 @@ export default function ZionSecurityShieldPro() {
                 Choose the security plan that fits your organization's needs and budget
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
@@ -303,7 +291,6 @@ export default function ZionSecurityShieldPro() {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
@@ -312,7 +299,6 @@ export default function ZionSecurityShieldPro() {
                       <span className="text-gray-300 ml-1">/{plan.period}</span>
                     </div>
                   </div>
-                  
                   <div className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
@@ -321,7 +307,6 @@ export default function ZionSecurityShieldPro() {
                       </div>
                     ))}
                   </div>
-                  
                   <Link
                     to="/contact"
                     className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${
@@ -338,7 +323,6 @@ export default function ZionSecurityShieldPro() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -352,7 +336,6 @@ export default function ZionSecurityShieldPro() {
                 See what security experts say about Zion Security Shield Pro
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -360,7 +343,7 @@ export default function ZionSecurityShieldPro() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -371,7 +354,7 @@ export default function ZionSecurityShieldPro() {
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                     </div>
                   </div>
                 </div>
@@ -379,7 +362,6 @@ export default function ZionSecurityShieldPro() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -391,7 +373,6 @@ export default function ZionSecurityShieldPro() {
                 Join thousands of businesses already protected by Zion Security Shield Pro. 
                 Get started with a free security assessment today.
               </p>
-              
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -416,7 +397,6 @@ export default function ZionSecurityShieldPro() {
                   <p className="text-red-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -437,5 +417,4 @@ export default function ZionSecurityShieldPro() {
         </section>
       </div>
     </>
-  );
 }

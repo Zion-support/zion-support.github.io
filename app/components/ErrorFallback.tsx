@@ -1,15 +1,6 @@
-import React, { useEffect } from "react";
-import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Mail } from 'lucide-react';
-
 interface ErrorFallbackProps {
-  error: Error;
   resetErrorBoundary: () => void;
-  errorInfo?: React.ErrorInfo;
 }
-
 const ErrorFallback: React.FC<ErrorFallbackProps> = ({
   error,
   resetErrorBoundary,
@@ -18,12 +9,9 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
   useEffect(() => {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error);
       if (errorInfo) {
-        console.error('Error info:', errorInfo);
       }
     }
-
     // Send error to analytics in production
     if (process.env.NODE_ENV === 'production' && window.gtag) {
       window.gtag('event', 'exception', {
@@ -33,10 +21,7 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
           'error_stack': error.stack || '',
           'error_component_stack': errorInfo?.componentStack || ''
         }
-      });
     }
-  }, [error, errorInfo]);
-
   const handleReportError = () => {
     const errorReport = {
       message: error.message,
@@ -45,16 +30,8 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    };
-
     // In a real app, you would send this to your error reporting service
-    console.log('Error report:', errorReport);
-    
     // For now, we'll just copy to clipboard
-    navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));
-    alert('Error details copied to clipboard. Please send this to our support team.');
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
@@ -65,7 +42,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
         <p className="text-gray-300 mb-6 text-lg">
           We're sorry, but something unexpected happened. Our team has been notified and we're working to fix it.
         </p>
-        
         {/* Error Details */}
         <details className="text-left mb-6 bg-black/20 rounded-lg p-4">
           <summary className="text-cyan-400 cursor-pointer mb-2 font-semibold flex items-center">
@@ -89,7 +65,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
             )}
           </div>
         </details>
-
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
@@ -99,7 +74,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
             <RefreshCw className="w-4 h-4 mr-2 group-hover:rotate-180 transition-transform" />
             Try Again
           </button>
-          
           <Link
             to="/"
             className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group border border-white/20"
@@ -107,7 +81,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
             <Home className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
             Go Home
           </Link>
-          
           <button
             onClick={handleReportError}
             className="bg-red-500/20 text-red-400 px-6 py-3 rounded-lg font-semibold hover:bg-red-500/30 transition-all duration-300 flex items-center justify-center group border border-red-500/30"
@@ -116,7 +89,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
             Report Error
           </button>
         </div>
-
         {/* Contact Information */}
         <div className="mt-8 pt-6 border-t border-white/10">
           <p className="text-gray-400 text-sm mb-2">
@@ -140,7 +112,3 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
-export default ErrorFallback;

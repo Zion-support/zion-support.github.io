@@ -1,9 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();
-
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -104,8 +100,6 @@ const ImprovedFooter = () => {
         { label: 'View All 5G Solutions', href: '/5g-solutions', featured: true }
       ]
     }
-  ];
-
   const companyLinks = [
     { label: 'About Us', href: '/about' },
     { label: 'Our Team', href: '/team' },
@@ -115,8 +109,6 @@ const ImprovedFooter = () => {
     { label: 'News', href: '/news' },
     { label: 'Press', href: '/press' },
     { label: 'Partners', href: '/partners' }
-  ];
-
   const resourceLinks = [
     { label: 'Pricing', href: '/pricing' },
     { label: 'Demo', href: '/demo' },
@@ -126,8 +118,6 @@ const ImprovedFooter = () => {
     { label: 'Tutorials', href: '/tutorials' },
     { label: 'Webinars', href: '/webinars' },
     { label: 'Whitepapers', href: '/whitepapers' }
-  ];
-
   const legalLinks = [
     { label: 'Privacy Policy', href: '/privacy' },
     { label: 'Terms of Service', href: '/terms' },
@@ -135,8 +125,6 @@ const ImprovedFooter = () => {
     { label: 'Sitemap', href: '/sitemap' },
     { label: 'Accessibility', href: '/accessibility' },
     { label: 'Security', href: '/security' }
-  ];
-
   const socialLinks = [
     { label: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
     { label: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
@@ -144,21 +132,15 @@ const ImprovedFooter = () => {
     { label: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
     { label: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
     { label: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: <Youtube className="w-5 h-5" /> }
-  ];
-
   const stats = [
     { number: '10,000+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
     { number: '99.9%', label: 'Uptime SLA', icon: <Award className="w-6 h-6" /> },
     { number: '60+', label: 'Micro SAAS Solutions', icon: <Zap className="w-6 h-6" /> },
     { number: '24/7', label: 'Support Available', icon: <Shield className="w-6 h-6" /> }
-  ];
-
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709'
-  };
-
   return (
     <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 relative z-10">
       {/* Main Footer Content */}
@@ -170,12 +152,11 @@ const ImprovedFooter = () => {
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 {stat.icon}
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
             </div>
           ))}
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-16">
           {serviceCategories.map((category, index) => (
@@ -218,7 +199,6 @@ const ImprovedFooter = () => {
             </div>
           ))}
         </div>
-
         {/* Company Info & Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
@@ -233,7 +213,6 @@ const ImprovedFooter = () => {
                 Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology.
               </p>
             </div>
-            
             {/* Social Links */}
             <div>
               <h4 className="text-white font-semibold mb-4">Follow Us</h4>
@@ -253,7 +232,6 @@ const ImprovedFooter = () => {
               </div>
             </div>
           </div>
-
           {/* Company Links */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Company</h4>
@@ -269,7 +247,6 @@ const ImprovedFooter = () => {
               ))}
             </div>
           </div>
-
           {/* Resources */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Resources</h4>
@@ -285,7 +262,6 @@ const ImprovedFooter = () => {
               ))}
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Contact</h4>
@@ -314,7 +290,6 @@ const ImprovedFooter = () => {
             </div>
           </div>
         </div>
-
         {/* Newsletter Signup */}
         <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-xl p-8 mb-12">
           <div className="max-w-2xl mx-auto text-center">
@@ -335,7 +310,6 @@ const ImprovedFooter = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -369,7 +343,3 @@ const ImprovedFooter = () => {
         </div>
       </div>
     </footer>
-  );
-};
-
-export default ImprovedFooter;

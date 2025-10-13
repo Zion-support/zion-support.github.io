@@ -1,5 +1,3 @@
-
-
 export default function NetworkInfrastructureZionTechGroup() {
   return (
     <>
@@ -24,5 +22,4 @@ export default function NetworkInfrastructureZionTechGroup() {
         </div>
       </div>
     </>
-  );
 }

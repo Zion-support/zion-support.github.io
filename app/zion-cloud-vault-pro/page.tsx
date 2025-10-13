@@ -1,24 +1,28 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Activity } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Headphones } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
-
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO",
+    content: "Zion Tech Group has transformed our business with their AI solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "TechCorp"
+  },
+  {
+    name: "Michael Chen",
+    role: "CTO", 
+    content: "The performance improvements are remarkable. Highly recommended!",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "InnovateLabs"
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Product Manager",
+    content: "Outstanding support and cutting-edge technology solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "FutureTech"
+  }
 export default function ZionCloudVaultPro() {
   const features = [
     {
@@ -57,15 +61,11 @@ export default function ZionCloudVaultPro() {
       icon: <Users className="w-8 h-8" />,
       benefits: ["Secure sharing", "Permission controls", "Real-time collaboration", "Activity tracking"]
     }
-  ];
-
   const storageStats = [
     { number: "99.99%", label: "Uptime Guarantee", icon: <Award className="w-6 h-6" /> },
     { number: "256-bit", label: "AES Encryption", icon: <Lock className="w-6 h-6" /> },
     { number: "Unlimited", label: "Storage Capacity", icon: <Database className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
-  ];
-
   const pricingPlans = [
     {
       name: "Personal",
@@ -116,8 +116,6 @@ export default function ZionCloudVaultPro() {
       ],
       popular: false
     }
-  ];
-
   return (
     <>
       <Helmet>
@@ -132,12 +130,10 @@ export default function ZionCloudVaultPro() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-cloud-vault-pro" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-teal-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.3),transparent_50%)]"></div>
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -147,18 +143,15 @@ export default function ZionCloudVaultPro() {
                   <Cloud className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">#1 Secure Cloud Storage 2024</span>
                 </div>
-                
                 <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400">
                     Zion Cloud Vault Pro
                   </span>
                 </h1>
-                
                 <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
                   Secure your data with unlimited cloud storage featuring end-to-end encryption, 
                   cross-platform sync, and advanced team collaboration tools.
                 </p>
-                
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link
                     to="/contact"
@@ -175,7 +168,6 @@ export default function ZionCloudVaultPro() {
                     <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                   </Link>
                 </div>
-                
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-6">
                   {storageStats.map((stat, index) => (
@@ -183,13 +175,12 @@ export default function ZionCloudVaultPro() {
                       <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         {stat.icon}
                       </div>
-                      <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
+                      <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                       <div className="text-gray-300 text-sm">{stat.label}</div>
                     </div>
                   ))}
                 </div>
               </div>
-              
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <div className="text-center mb-6">
@@ -199,7 +190,6 @@ export default function ZionCloudVaultPro() {
                     <h3 className="text-2xl font-bold text-white mb-2">Starting at $99/month</h3>
                     <p className="text-gray-300">Unlimited secure cloud storage</p>
                   </div>
-                  
                   <div className="space-y-4">
                     <div className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
@@ -218,7 +208,6 @@ export default function ZionCloudVaultPro() {
                       <span>Team collaboration</span>
                     </div>
                   </div>
-                  
                   <div className="mt-6">
                     <Link
                       to="/contact"
@@ -233,7 +222,6 @@ export default function ZionCloudVaultPro() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -247,7 +235,6 @@ export default function ZionCloudVaultPro() {
                 Everything you need to store, sync, and collaborate on your files securely
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -276,7 +263,6 @@ export default function ZionCloudVaultPro() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
           <div className="max-w-7xl mx-auto">
@@ -290,7 +276,6 @@ export default function ZionCloudVaultPro() {
                 Choose the storage plan that fits your needs and budget
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
@@ -308,7 +293,6 @@ export default function ZionCloudVaultPro() {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
@@ -317,7 +301,6 @@ export default function ZionCloudVaultPro() {
                       <span className="text-gray-300 ml-1">/{plan.period}</span>
                     </div>
                   </div>
-                  
                   <div className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
@@ -326,7 +309,6 @@ export default function ZionCloudVaultPro() {
                       </div>
                     ))}
                   </div>
-                  
                   <Link
                     to="/contact"
                     className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${
@@ -343,7 +325,6 @@ export default function ZionCloudVaultPro() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -357,7 +338,6 @@ export default function ZionCloudVaultPro() {
                 See what our users say about Zion Cloud Vault Pro
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
@@ -365,7 +345,7 @@ export default function ZionCloudVaultPro() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -376,7 +356,7 @@ export default function ZionCloudVaultPro() {
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                     </div>
                   </div>
                 </div>
@@ -384,7 +364,6 @@ export default function ZionCloudVaultPro() {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -396,7 +375,6 @@ export default function ZionCloudVaultPro() {
                 Join thousands of users already protecting their data with Zion Cloud Vault Pro. 
                 Start your free trial today.
               </p>
-              
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -421,7 +399,6 @@ export default function ZionCloudVaultPro() {
                   <p className="text-blue-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -442,5 +419,4 @@ export default function ZionCloudVaultPro() {
         </section>
       </div>
     </>
-  );
 }

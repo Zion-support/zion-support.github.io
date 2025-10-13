@@ -1,6 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
 const CloudServicesPage: React.FC = () => {
   const services = [
     {
@@ -33,8 +30,6 @@ const CloudServicesPage: React.FC = () => {
       description: "Managed database services with automated backups, scaling, and performance optimization.",
       icon: <Database className="w-6 h-6" />
     }
-  ];
-
   const benefits = [
     {
       title: "Scalability",
@@ -56,8 +51,6 @@ const CloudServicesPage: React.FC = () => {
       description: "High availability and disaster recovery solutions for business continuity.",
       icon: <CheckCircle className="w-8 h-8" />
     }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -87,7 +80,6 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -99,7 +91,6 @@ const CloudServicesPage: React.FC = () => {
               We deliver cloud solutions that provide real business value through innovation, security, and scalability.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -117,7 +108,6 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -129,7 +119,6 @@ const CloudServicesPage: React.FC = () => {
               Experience the benefits of cloud computing with our expert guidance and support.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -147,7 +136,6 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -174,7 +162,3 @@ const CloudServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default CloudServicesPage;

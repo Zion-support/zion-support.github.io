@@ -1,22 +1,3 @@
-import React from 'react';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Activity } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
 const CloudInfrastructure = () => {
   const testimonials = [
     {
@@ -37,15 +18,11 @@ const CloudInfrastructure = () => {
       content: "We saw immediate results after implementing their solutions.",
       avatar: "/images/testimonials/mike-chen.jpg"
     }
-  ];
-
   const stats = [
     { label: "Projects Completed", value: "500+" },
     { label: "Happy Clients", value: "200+" },
     { label: "Years Experience", value: "5+" },
     { label: "Team Members", value: "50+" }
-  ];
-
   const services = [
     {
       title: "Cloud Migration",
@@ -75,8 +52,6 @@ const CloudInfrastructure = () => {
       features: ["Automatic scaling", "Cost optimization", "Performance monitoring", "Load balancing"],
       price: "From $999/month"
     }
-  ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -131,8 +106,6 @@ const CloudInfrastructure = () => {
       popular: false,
       cta: "Contact Sales"
     }
-  ];
-
   const capabilities = [
     {
       title: "Multi-Cloud Strategy",
@@ -158,8 +131,6 @@ const CloudInfrastructure = () => {
       icon: <Activity className="w-6 h-6" />,
       stats: "Sub-second response"
     }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
@@ -168,31 +139,26 @@ const CloudInfrastructure = () => {
         <meta name="keywords" content="cloud infrastructure, cloud migration, cloud security, auto scaling, infrastructure as code, cloud consulting, AWS, Azure, GCP" />
         <link rel="canonical" href="https://ziontechgroup.com/cloud-infrastructure" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
             <Cloud className="w-4 h-4 text-blue-400 mr-2" />
             <span className="text-blue-400 text-sm font-medium">Enterprise Cloud Infrastructure</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
               Cloud Infrastructure Services
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Transform your business with our comprehensive cloud infrastructure services. From migration and security 
             to auto-scaling and monitoring, we provide enterprise-grade solutions that scale with your needs.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <FuturisticButton
               href="#pricing"
@@ -211,7 +177,6 @@ const CloudInfrastructure = () => {
               Explore Services
             </FuturisticButton>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
@@ -219,14 +184,13 @@ const CloudInfrastructure = () => {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -238,7 +202,6 @@ const CloudInfrastructure = () => {
               Our expert team delivers enterprise-grade cloud solutions that ensure reliability, security, and cost optimization
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {capabilities.map((capability, index) => (
               <FuturisticCard
@@ -264,7 +227,6 @@ const CloudInfrastructure = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Services Section */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
@@ -276,7 +238,6 @@ const CloudInfrastructure = () => {
               Comprehensive cloud solutions designed to meet your specific business requirements
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <FuturisticCard
@@ -308,7 +269,6 @@ const CloudInfrastructure = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Pricing Section */}
       <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -320,7 +280,6 @@ const CloudInfrastructure = () => {
               Choose the plan that best fits your infrastructure needs and budget
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <FuturisticCard
@@ -336,7 +295,6 @@ const CloudInfrastructure = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -345,7 +303,6 @@ const CloudInfrastructure = () => {
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-                
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
@@ -354,7 +311,6 @@ const CloudInfrastructure = () => {
                     </li>
                   ))}
                 </ul>
-                
                 <FuturisticButton
                   href={plan.cta === "Contact Sales" ? "/contact" : "#contact"}
                   variant={plan.popular ? "primary" : "outline"}
@@ -368,7 +324,6 @@ const CloudInfrastructure = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
@@ -380,7 +335,6 @@ const CloudInfrastructure = () => {
               See how organizations are using our cloud infrastructure services to drive growth
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <FuturisticCard
@@ -388,7 +342,7 @@ const CloudInfrastructure = () => {
                 className="group hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -401,7 +355,7 @@ const CloudInfrastructure = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                   </div>
                 </div>
               </FuturisticCard>
@@ -409,7 +363,6 @@ const CloudInfrastructure = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <ResponsiveContainer>
@@ -420,7 +373,6 @@ const CloudInfrastructure = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Join hundreds of organizations using our cloud infrastructure services to achieve scalability, security, and cost optimization.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
                 href="/contact"
@@ -439,7 +391,6 @@ const CloudInfrastructure = () => {
                 Schedule Demo
               </FuturisticButton>
             </div>
-            
             <div className="mt-8 text-sm text-gray-400">
               <p>Free consultation • Custom solutions • 24/7 support</p>
             </div>
@@ -447,7 +398,3 @@ const CloudInfrastructure = () => {
         </ResponsiveContainer>
       </section>
     </div>
-  );
-};
-
-export default CloudInfrastructure;

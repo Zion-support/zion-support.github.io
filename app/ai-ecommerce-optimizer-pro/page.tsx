@@ -1,15 +1,28 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Search } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-
-"use client";
-
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO",
+    content: "Zion Tech Group has transformed our business with their AI solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "TechCorp"
+  },
+  {
+    name: "Michael Chen",
+    role: "CTO", 
+    content: "The performance improvements are remarkable. Highly recommended!",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "InnovateLabs"
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Product Manager",
+    content: "Outstanding support and cutting-edge technology solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "FutureTech"
+  }
 export default function AIEcommerceOptimizerPro() {
   const features = [
     {
@@ -36,8 +49,6 @@ export default function AIEcommerceOptimizerPro() {
       description:
         "Continuously test and optimize your store elements for maximum performance",
     },
-  ];
-
   const optimizationFeatures = [
     {
       category: "Product Optimization",
@@ -83,8 +94,6 @@ export default function AIEcommerceOptimizerPro() {
         "Custom Dashboards",
       ],
     },
-  ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -133,8 +142,6 @@ export default function AIEcommerceOptimizerPro() {
       ],
       popular: false,
     },
-  ];
-
   return (
     <>
       <Helmet>
@@ -144,7 +151,6 @@ export default function AIEcommerceOptimizerPro() {
           content="Transform your e-commerce business with advanced AI optimization solutions that boost sales, improve conversion rates, and maximize your online store performance."
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-20">
@@ -172,7 +178,6 @@ export default function AIEcommerceOptimizerPro() {
               </Link>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => (
@@ -188,7 +193,6 @@ export default function AIEcommerceOptimizerPro() {
               </div>
             ))}
           </div>
-
           {/* Optimization Features Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -218,7 +222,6 @@ export default function AIEcommerceOptimizerPro() {
               ))}
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -274,7 +277,6 @@ export default function AIEcommerceOptimizerPro() {
               ))}
             </div>
           </div>
-
           {/* Testimonials Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -287,7 +289,7 @@ export default function AIEcommerceOptimizerPro() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star
                         key={i}
                         className="w-5 h-5 text-yellow-400 fill-current"
@@ -302,14 +304,13 @@ export default function AIEcommerceOptimizerPro() {
                       {testimonial.name}
                     </p>
                     <p className="text-gray-400 text-sm">
-                      {testimonial.company}
+                      {testimonial.company || "Company"}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -337,5 +338,4 @@ export default function AIEcommerceOptimizerPro() {
         </div>
       </div>
     </>
-  );
 }

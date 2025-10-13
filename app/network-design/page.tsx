@@ -1,5 +1,3 @@
-
-
 export default function GDataAnalyticsZionTechGroupPage() {
   return (
     <>
@@ -22,5 +20,4 @@ export default function GDataAnalyticsZionTechGroupPage() {
         </div>
       </div>
     </>
-  );
 }

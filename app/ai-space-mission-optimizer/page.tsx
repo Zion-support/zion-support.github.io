@@ -1,5 +1,3 @@
-import React from 'react';
-import { 
   Rocket, 
   Satellite, 
   Orbit, 
@@ -18,27 +16,6 @@ import {
   Navigation,
   MapPin,
   Gauge
-} from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import { ArrowRight } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { PieChart } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Rocket } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { Activity } from 'lucide-react';
-
 const AISpaceMissionOptimizerPage = () => {
   const features = [
     {
@@ -65,8 +42,6 @@ const AISpaceMissionOptimizerPage = () => {
       icon: <Target className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
   const pricingPlans = [
     {
       name: "Mission Starter",
@@ -119,8 +94,6 @@ const AISpaceMissionOptimizerPage = () => {
       ],
       popular: false
     }
-  ];
-
   const capabilities = [
     {
       title: "Trajectory Optimization",
@@ -146,15 +119,11 @@ const AISpaceMissionOptimizerPage = () => {
       accuracy: "94.2%",
       icon: <Award className="w-6 h-6" />
     }
-  ];
-
   const stats = [
     { number: "99.9%", label: "Trajectory Accuracy", icon: <Rocket className="w-6 h-6" /> },
     { number: "50ms", label: "Real-Time Processing", icon: <Zap className="w-6 h-6" /> },
     { number: "10,000+", label: "Satellites Tracked", icon: <Satellite className="w-6 h-6" /> },
     { number: "24/7", label: "Mission Monitoring", icon: <Globe className="w-6 h-6" /> }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <EnhancedSEO
@@ -163,31 +132,26 @@ const AISpaceMissionOptimizerPage = () => {
         keywords="space mission AI, satellite optimization, trajectory planning, space technology, mission control, satellite management"
         canonical="https://ziontechgroup.com/ai-space-mission-optimizer"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
             <Rocket className="w-4 h-4 text-blue-400 mr-2" />
             <span className="text-blue-400 text-sm font-medium">AI Space Mission Optimizer</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
               AI Space Mission Optimizer
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Revolutionary AI-powered space mission optimization for satellite management, 
             trajectory planning, and mission control with unprecedented accuracy.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               href="/contact"
@@ -206,7 +170,6 @@ const AISpaceMissionOptimizerPage = () => {
               View Demo
             </FuturisticButton>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
@@ -214,14 +177,13 @@ const AISpaceMissionOptimizerPage = () => {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -255,7 +217,6 @@ const AISpaceMissionOptimizerPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
@@ -290,7 +251,6 @@ const AISpaceMissionOptimizerPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -348,7 +308,6 @@ const AISpaceMissionOptimizerPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -358,7 +317,6 @@ const AISpaceMissionOptimizerPage = () => {
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Join the space technology revolution with AI-powered mission optimization.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
               href="/contact"
@@ -380,7 +338,3 @@ const AISpaceMissionOptimizerPage = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default AISpaceMissionOptimizerPage;

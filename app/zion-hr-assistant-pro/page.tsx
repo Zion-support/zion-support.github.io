@@ -1,19 +1,3 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { Heart } from 'lucide-react';
-
 const ZionHRAssistantPro = () => {
   const testimonials = [
     {
@@ -34,15 +18,11 @@ const ZionHRAssistantPro = () => {
       content: "We saw immediate results after implementing their solutions.",
       avatar: "/images/testimonials/mike-chen.jpg"
     }
-  ];
-
   const stats = [
     { label: "Projects Completed", value: "500+" },
     { label: "Happy Clients", value: "200+" },
     { label: "Years Experience", value: "5+" },
     { label: "Team Members", value: "50+" }
-  ];
-
   const features = [
     {
       title: "AI-Powered Resume Screening",
@@ -80,8 +60,6 @@ const ZionHRAssistantPro = () => {
       icon: <Brain className="w-6 h-6" />,
       benefit: "Proactive engagement"
     }
-  ];
-
   const pricingPlans = [
     {
       name: "Startup",
@@ -133,8 +111,6 @@ const ZionHRAssistantPro = () => {
       ],
       popular: false
     }
-  ];
-
   const hrProcesses = [
     {
       title: "Recruitment & Hiring",
@@ -160,8 +136,6 @@ const ZionHRAssistantPro = () => {
       icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -170,7 +144,6 @@ const ZionHRAssistantPro = () => {
         keywords="AI HR management, recruitment automation, performance analytics, employee engagement, HR software, talent management, human resources AI"
         canonical="https://ziontechgroup.com/zion-hr-assistant-pro"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -179,18 +152,15 @@ const ZionHRAssistantPro = () => {
               <Brain className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">AI-Powered HR Management</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Zion HR Assistant Pro
               </span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Revolutionize your human resources with AI-powered recruitment, performance analytics, 
               and automated workflows. Transform HR from administrative burden to strategic advantage.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
@@ -206,7 +176,6 @@ const ZionHRAssistantPro = () => {
                 Watch Demo
               </Link>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
@@ -214,7 +183,7 @@ const ZionHRAssistantPro = () => {
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
               ))}
@@ -222,7 +191,6 @@ const ZionHRAssistantPro = () => {
           </div>
         </div>
       </section>
-
       {/* HR Processes Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -235,7 +203,6 @@ const ZionHRAssistantPro = () => {
               with intelligent automation and AI-powered insights.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {hrProcesses.map((process, index) => (
               <div
@@ -256,7 +223,6 @@ const ZionHRAssistantPro = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -269,7 +235,6 @@ const ZionHRAssistantPro = () => {
               improve decision-making, and enhance employee experience.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
@@ -294,7 +259,6 @@ const ZionHRAssistantPro = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -307,7 +271,6 @@ const ZionHRAssistantPro = () => {
               and come with a 30-day free trial.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -325,7 +288,6 @@ const ZionHRAssistantPro = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -334,7 +296,6 @@ const ZionHRAssistantPro = () => {
                     <span className="text-gray-300 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -343,7 +304,6 @@ const ZionHRAssistantPro = () => {
                     </li>
                   ))}
                 </ul>
-                
                 <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
@@ -359,7 +319,6 @@ const ZionHRAssistantPro = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -371,7 +330,6 @@ const ZionHRAssistantPro = () => {
               See how HR professionals are transforming their departments with our AI-powered solution.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -379,7 +337,7 @@ const ZionHRAssistantPro = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -387,7 +345,7 @@ const ZionHRAssistantPro = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                   </div>
                   <div className="text-cyan-400 text-sm font-medium bg-cyan-400/10 px-3 py-1 rounded-full">
                     {testimonial.savings}
@@ -398,7 +356,6 @@ const ZionHRAssistantPro = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -409,7 +366,6 @@ const ZionHRAssistantPro = () => {
             Join thousands of HR professionals already using Zion HR Assistant Pro to streamline their operations. 
             Start your free trial today and experience the future of HR management.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -428,7 +384,3 @@ const ZionHRAssistantPro = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default ZionHRAssistantPro;

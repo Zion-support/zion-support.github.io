@@ -1,20 +1,10 @@
-import React, { useEffect } from 'react';
-import { Code } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Code } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
 interface SEOOptimizerProps {
-  children: React.ReactNode;
 }
-
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Add structured data for better SEO
     const addStructuredData = () => {
       const existingScript = document.querySelector('script[type="application/ld+json"]');
-      if (existingScript) return;
-
       const structuredData = {
         "@context": "https://schema.org",
         "@type": "Organization",
@@ -58,14 +48,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
             "description": "Cloud computing and infrastructure services"
           }
         ]
-      };
-
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-    };
-
     // Add meta tags for better social sharing
     const addSocialMetaTags = () => {
       const metaTags = [
@@ -79,20 +64,11 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { property: 'og:image:alt', content: 'Zion Tech Group - Advanced AI and IT Solutions' }
-      ];
-
       metaTags.forEach(tag => {
         const existingTag = document.querySelector(`meta[name="${tag.name}"], meta[property="${tag.property}"]`);
         if (!existingTag) {
           const meta = document.createElement('meta');
-          if (tag.name) meta.setAttribute('name', tag.name);
-          if (tag.property) meta.setAttribute('property', tag.property);
-          meta.setAttribute('content', tag.content);
-          document.head.appendChild(meta);
         }
-      });
-    };
-
     // Add performance hints
     const addPerformanceHints = () => {
       const hints = [
@@ -100,8 +76,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'anonymous' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
-      ];
-
       hints.forEach(hint => {
         const existingHint = document.querySelector(`link[rel="${hint.rel}"][href="${hint.href}"]`);
         if (!existingHint) {
@@ -109,17 +83,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
           link.rel = hint.rel;
           link.href = hint.href;
           if (hint.crossorigin) link.crossOrigin = hint.crossorigin;
-          document.head.appendChild(link);
         }
-      });
-    };
-
     // Initialize SEO optimizations
-    addStructuredData();
-    addSocialMetaTags();
-    addPerformanceHints();
-  }, []);
-
   return (
     <>
       <Helmet>
@@ -127,25 +92,17 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
         <meta name="bingbot" content="index, follow" />
-        
         {/* Mobile optimization */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <meta name="theme-color" content="#0f172a" />
-        
         {/* Performance hints */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        
         {/* Security headers */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-Frame-Options" content="DENY" />
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        
         {/* Cache control */}
         <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
       </Helmet>
       {children}
     </>
-  );
-};
-
-export default SEOOptimizer;

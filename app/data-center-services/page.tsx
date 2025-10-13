@@ -1,18 +1,3 @@
-import React from 'react';
-import { Settings, Sparkles, ArrowRight, CheckCircle, Star, Globe, Shield, Server } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Server } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
 const DataCenterServicesPage = () => {
   const benefits = [
     {
@@ -35,8 +20,6 @@ const DataCenterServicesPage = () => {
       description: "Cutting-edge solutions that keep you ahead of the competition.",
       icon: <Zap className="w-8 h-8" />
     }
-  ];
-
   const features = [
     {
       title: "Enterprise Data Centers",
@@ -62,8 +45,6 @@ const DataCenterServicesPage = () => {
       icon: <Settings className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -72,31 +53,26 @@ const DataCenterServicesPage = () => {
         <meta name="keywords" content="data center services, enterprise hosting, cloud migration, disaster recovery, server management, infrastructure" />
         <link rel="canonical" href="https://ziontechgroup.com/data-center-services" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">Enterprise Infrastructure</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Data Center Services
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Reliable, secure, and scalable data center solutions for your business. 
             From enterprise hosting to cloud migration, we provide the infrastructure you need.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
@@ -115,7 +91,6 @@ const DataCenterServicesPage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -128,7 +103,6 @@ const DataCenterServicesPage = () => {
               your business needs to thrive in the digital age.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
@@ -151,7 +125,6 @@ const DataCenterServicesPage = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -163,7 +136,6 @@ const DataCenterServicesPage = () => {
               Experience the benefits of enterprise-grade data center services
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
@@ -174,7 +146,6 @@ const DataCenterServicesPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -185,7 +156,6 @@ const DataCenterServicesPage = () => {
             Join thousands of businesses trusting our data center services. 
             Get reliable, secure, and scalable infrastructure today.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -205,7 +175,3 @@ const DataCenterServicesPage = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default DataCenterServicesPage;

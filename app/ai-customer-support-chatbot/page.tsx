@@ -1,14 +1,28 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Clock } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-
-"use client";
-
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO",
+    content: "Zion Tech Group has transformed our business with their AI solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "TechCorp"
+  },
+  {
+    name: "Michael Chen",
+    role: "CTO", 
+    content: "The performance improvements are remarkable. Highly recommended!",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "InnovateLabs"
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Product Manager",
+    content: "Outstanding support and cutting-edge technology solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "FutureTech"
+  }
 export default function AICustomerSupportChatbot() {
   const chatbotFeatures = [
     {
@@ -38,8 +52,6 @@ export default function AICustomerSupportChatbot() {
         "Custom Reports",
       ],
     },
-  ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -65,7 +77,6 @@ export default function AICustomerSupportChatbot() {
       period: "/month",
       popular: false,
     },
-  ];
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
@@ -91,8 +102,6 @@ export default function AICustomerSupportChatbot() {
       description:
         "Track customer satisfaction, response times, and identify improvement opportunities",
     },
-  ];
-
   return (
     <>
       <Helmet>
@@ -102,7 +111,6 @@ export default function AICustomerSupportChatbot() {
           content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs."
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-20">
@@ -129,7 +137,6 @@ export default function AICustomerSupportChatbot() {
               </Link>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => (
@@ -145,7 +152,6 @@ export default function AICustomerSupportChatbot() {
               </div>
             ))}
           </div>
-
           {/* Chatbot Features Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -175,7 +181,6 @@ export default function AICustomerSupportChatbot() {
               ))}
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -229,7 +234,6 @@ export default function AICustomerSupportChatbot() {
               ))}
             </div>
           </div>
-
           {/* Testimonials Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -242,7 +246,7 @@ export default function AICustomerSupportChatbot() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <span key={i} className="text-yellow-400">
                         ★
                       </span>
@@ -254,14 +258,13 @@ export default function AICustomerSupportChatbot() {
                       {testimonial.name}
                     </p>
                     <p className="text-gray-400 text-sm">
-                      {testimonial.company}
+                      {testimonial.company || "Company"}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -289,5 +292,4 @@ export default function AICustomerSupportChatbot() {
         </div>
       </div>
     </>
-  );
 }

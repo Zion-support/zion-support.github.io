@@ -1,14 +1,28 @@
-import Layout from "../layout";
-import { Link } from 'react-router-dom';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO",
+    content: "Zion Tech Group has transformed our business with their AI solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "TechCorp"
+  },
+  {
+    name: "Michael Chen",
+    role: "CTO", 
+    content: "The performance improvements are remarkable. Highly recommended!",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "InnovateLabs"
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Product Manager",
+    content: "Outstanding support and cutting-edge technology solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "FutureTech"
+  }
 export default function AISmartScheduler() {
   const features = [
     {
@@ -34,8 +48,6 @@ export default function AISmartScheduler() {
       title: "Global Integration",
       description: "Works with all major calendar platforms and time zones",
     },
-  ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -81,8 +93,6 @@ export default function AISmartScheduler() {
       ],
       popular: false,
     },
-  ];
-
   return (
     <Layout>
       {/* Hero Section */}
@@ -114,7 +124,6 @@ export default function AISmartScheduler() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
@@ -141,7 +150,6 @@ export default function AISmartScheduler() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
@@ -202,7 +210,6 @@ export default function AISmartScheduler() {
           </div>
         </div>
       </section>
-
       {/* Testimonials */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
@@ -218,7 +225,7 @@ export default function AISmartScheduler() {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg">
                 <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Clock key={i} className="w-5 h-5 text-yellow-400" />
                   ))}
                 </div>
@@ -227,14 +234,13 @@ export default function AISmartScheduler() {
                   {testimonial.name}
                 </div>
                 <div className="text-sm text-gray-400">
-                  {testimonial.company}
+                  {testimonial.company || "Company"}
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
         <div className="container mx-auto px-4 text-center">
@@ -262,5 +268,4 @@ export default function AISmartScheduler() {
         </div>
       </section>
     </Layout>
-  );
 }

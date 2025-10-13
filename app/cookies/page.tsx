@@ -1,6 +1,3 @@
-import React from "react";
-import { Helmet } from 'react-helmet-async';
-
 export default function Cookies() {
   return (
     <>
@@ -15,5 +12,4 @@ export default function Cookies() {
         </div>
       </div>
     </>
-  );
 }

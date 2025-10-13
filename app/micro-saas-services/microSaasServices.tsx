@@ -1,10 +1,5 @@
-import React from "react";
-import { Mic } from 'lucide-react';
-
 interface MicrosaasservicesProps {
-  className?: string;
 }
-
 const Microsaasservices: React.FC<MicrosaasservicesProps> = ({
   className = "",
 }) => {
@@ -12,7 +7,3 @@ const Microsaasservices: React.FC<MicrosaasservicesProps> = ({
     <div className={className}>
       <h2>Microsaasservices</h2>
     </div>
-  );
-};
-
-export default Microsaasservices;

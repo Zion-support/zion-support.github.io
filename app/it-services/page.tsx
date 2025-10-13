@@ -1,22 +1,3 @@
-import React from "react";
-import SEOOptimizer from "../components/SEOOptimizer";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Headphones } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
 export default function ITServices() {
   const itServices = [
     {
@@ -367,8 +348,6 @@ export default function ITServices() {
       link: "/managed-it-services",
       featured: false
     }
-  ];
-
   const processSteps = [
     {
       step: "01",
@@ -394,8 +373,6 @@ export default function ITServices() {
       description: "Provide ongoing monitoring, maintenance, and support to ensure optimal performance and security.",
       icon: <Monitor className="w-8 h-8" />
     }
-  ];
-
   return (
     <>
       <Helmet>
@@ -404,9 +381,7 @@ export default function ITServices() {
         <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, software development, system integration, IT consulting, technology solutions" />
         <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Helmet>
-      
       <SEOOptimizer />
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -414,19 +389,16 @@ export default function ITServices() {
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           </div>
-          
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Professional IT Services
               </span>
             </h1>
-            
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Comprehensive technology solutions designed to accelerate your business growth and digital transformation. 
               From cloud infrastructure to cybersecurity, we have everything you need.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -444,7 +416,6 @@ export default function ITServices() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -456,7 +427,6 @@ export default function ITServices() {
                 Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service, index) => (
                 <div
@@ -476,7 +446,7 @@ export default function ITServices() {
                     <span className="text-cyan-400 font-semibold">{service.price}</span>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-gray-300 ml-1 text-sm">{service.rating}</span>
+                      <span className="text-gray-300 ml-1 text-sm">{service.rating || 5}</span>
                     </div>
                   </div>
                   <Link
@@ -491,7 +461,6 @@ export default function ITServices() {
             </div>
           </div>
         </section>
-
         {/* Process Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
@@ -503,7 +472,6 @@ export default function ITServices() {
                 We follow a proven methodology to deliver exceptional IT solutions
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => (
                 <div key={index} className="text-center group">
@@ -518,7 +486,6 @@ export default function ITServices() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -529,7 +496,6 @@ export default function ITServices() {
               Join thousands of businesses already using our IT solutions to drive growth and innovation. 
               Start your digital transformation journey today.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -549,5 +515,4 @@ export default function ITServices() {
         </section>
       </div>
     </>
-  );
 }

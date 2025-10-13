@@ -1,4 +1,3 @@
-
 export default function Cybersecurity() {
   const services = [
     {
@@ -55,8 +54,6 @@ export default function Cybersecurity() {
       price: "Starting at $179/month",
       features: ["Vulnerability Scanning", "Patch Management", "Policy Enforcement", "Compliance Automation"]
     }
-  ];
-
   return (
     <>
       <Helmet>
@@ -70,12 +67,10 @@ export default function Cybersecurity() {
           content="cybersecurity, security services, threat detection, security monitoring, network security, security automation, AI security, penetration testing, vulnerability assessment"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(239,68,68,0.3),transparent_50%)]"></div>
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -108,7 +103,6 @@ export default function Cybersecurity() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -130,7 +124,6 @@ export default function Cybersecurity() {
                 >
                   {/* Animated background effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
                   <div className="relative z-10">
                     <div
                       className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
@@ -143,7 +136,6 @@ export default function Cybersecurity() {
                     <p className="text-gray-300 text-center mb-4 leading-relaxed">
                       {service.description}
                     </p>
-                    
                     {/* Price and Features */}
                     <div className="space-y-3">
                       <div className="text-center">
@@ -160,7 +152,6 @@ export default function Cybersecurity() {
                         ))}
                       </div>
                     </div>
-                    
                     <div className="mt-4 text-center">
                       <Link
                         to={service.path}
@@ -176,7 +167,6 @@ export default function Cybersecurity() {
             </div>
           </div>
         </section>
-
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -187,7 +177,6 @@ export default function Cybersecurity() {
               <p className="text-xl text-gray-300 mb-8">
                 Don't wait for a security breach. Join thousands of businesses already using our cybersecurity solutions to protect their valuable data and assets.
               </p>
-              
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -212,7 +201,6 @@ export default function Cybersecurity() {
                   <p className="text-red-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -233,5 +221,4 @@ export default function Cybersecurity() {
         </section>
       </div>
     </>
-  );
 }

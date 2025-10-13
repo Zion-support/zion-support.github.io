@@ -1,24 +1,3 @@
-import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
-import EnhancedSEO from "./components/EnhancedSEO";
-import FuturisticBackground from "./components/FuturisticBackground";
-import ResponsiveContainer from "./components/ResponsiveContainer";
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
 const HomePage = () => {
   const features = [
     {
@@ -52,7 +31,7 @@ const HomePage = () => {
       color: "from-orange-500 to-red-500",
       stats: "10x faster speeds",
       link: "/5g-solutions"
-    },
+    }
   ];
 
   const microSaasHighlights = [
@@ -146,7 +125,6 @@ const HomePage = () => {
         canonical="https://ziontechgroup.com"
       />
       <FuturisticBackground />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Animated Background Elements */}
@@ -154,24 +132,20 @@ const HomePage = () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Transform Your Business with AI
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
             Unlock the power of artificial intelligence, cybersecurity, and cloud solutions. 
             We help businesses scale, secure, and innovate with cutting-edge technology that drives real results.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               href="/contact"
@@ -190,7 +164,6 @@ const HomePage = () => {
               Explore AI Solutions
             </FuturisticButton>
           </div>
-          
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
@@ -198,14 +171,13 @@ const HomePage = () => {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -252,7 +224,6 @@ const HomePage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Micro SAAS Highlights */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -310,7 +281,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -329,21 +299,20 @@ const HomePage = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               >
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -354,7 +323,6 @@ const HomePage = () => {
             Join thousands of businesses already using our solutions to drive growth and innovation. 
             Start your digital transformation journey today.
           </p>
-          
           {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
@@ -379,7 +347,6 @@ const HomePage = () => {
               <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"

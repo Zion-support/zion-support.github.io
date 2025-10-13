@@ -1,17 +1,3 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { PieChart } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { Receipt } from 'lucide-react';
-
 const ZionAIAccountingSuite = () => {
   const testimonials = [
     {
@@ -32,15 +18,11 @@ const ZionAIAccountingSuite = () => {
       content: "We saw immediate results after implementing their solutions.",
       avatar: "/images/testimonials/mike-chen.jpg"
     }
-  ];
-
   const stats = [
     { label: "Projects Completed", value: "500+" },
     { label: "Happy Clients", value: "200+" },
     { label: "Years Experience", value: "5+" },
     { label: "Team Members", value: "50+" }
-  ];
-
   const features = [
     {
       title: "AI-Powered Invoice Processing",
@@ -78,8 +60,6 @@ const ZionAIAccountingSuite = () => {
       icon: <Shield className="w-6 h-6" />,
       benefit: "99.9% fraud detection"
     }
-  ];
-
   const pricingPlans = [
     {
       name: "Solo",
@@ -131,8 +111,6 @@ const ZionAIAccountingSuite = () => {
       ],
       popular: false
     }
-  ];
-
   const accountingModules = [
     {
       title: "Invoice Management",
@@ -158,8 +136,6 @@ const ZionAIAccountingSuite = () => {
       icon: <Calculator className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -168,7 +144,6 @@ const ZionAIAccountingSuite = () => {
         keywords="AI accounting software, automated bookkeeping, invoice processing, expense tracking, financial analytics, tax preparation, accounting automation"
         canonical="https://ziontechgroup.com/zion-ai-accounting-suite"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -177,18 +152,15 @@ const ZionAIAccountingSuite = () => {
               <Brain className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">AI-Powered Accounting</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Zion AI Accounting Suite
               </span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Revolutionize your accounting with AI-powered automation, intelligent categorization, 
               and real-time financial insights. Transform bookkeeping from tedious task to strategic advantage.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
@@ -204,7 +176,6 @@ const ZionAIAccountingSuite = () => {
                 Watch Demo
               </Link>
             </div>
-
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
@@ -212,7 +183,7 @@ const ZionAIAccountingSuite = () => {
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
               ))}
@@ -220,7 +191,6 @@ const ZionAIAccountingSuite = () => {
           </div>
         </div>
       </section>
-
       {/* Accounting Modules Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -233,7 +203,6 @@ const ZionAIAccountingSuite = () => {
               with intelligent automation and AI-powered insights.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {accountingModules.map((module, index) => (
               <div
@@ -254,7 +223,6 @@ const ZionAIAccountingSuite = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -267,7 +235,6 @@ const ZionAIAccountingSuite = () => {
               improve accuracy, and gain valuable financial insights.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
@@ -292,7 +259,6 @@ const ZionAIAccountingSuite = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -305,7 +271,6 @@ const ZionAIAccountingSuite = () => {
               and come with a 30-day free trial.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -323,7 +288,6 @@ const ZionAIAccountingSuite = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -332,7 +296,6 @@ const ZionAIAccountingSuite = () => {
                     <span className="text-gray-300 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -341,7 +304,6 @@ const ZionAIAccountingSuite = () => {
                     </li>
                   ))}
                 </ul>
-                
                 <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
@@ -357,7 +319,6 @@ const ZionAIAccountingSuite = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -369,7 +330,6 @@ const ZionAIAccountingSuite = () => {
               See how accounting professionals are transforming their workflows with our AI-powered solution.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -377,7 +337,7 @@ const ZionAIAccountingSuite = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -385,7 +345,7 @@ const ZionAIAccountingSuite = () => {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                   </div>
                   <div className="text-cyan-400 text-sm font-medium bg-cyan-400/10 px-3 py-1 rounded-full">
                     {testimonial.savings}
@@ -396,7 +356,6 @@ const ZionAIAccountingSuite = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -407,7 +366,6 @@ const ZionAIAccountingSuite = () => {
             Join thousands of businesses already using Zion AI Accounting Suite to streamline their financial management. 
             Start your free trial today and experience the future of accounting.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -426,7 +384,3 @@ const ZionAIAccountingSuite = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default ZionAIAccountingSuite;

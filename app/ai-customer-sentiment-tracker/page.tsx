@@ -1,6 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
 const AICustomerSentimentTrackerPage = () => {
   const benefits = [
     {
@@ -23,15 +20,11 @@ const AICustomerSentimentTrackerPage = () => {
       description: "Cutting-edge solutions that keep you ahead of the competition.",
       icon: <Zap className="w-8 h-8" />
     }
-  ];
-
   const stats = [
     { label: "Projects Completed", value: "500+" },
     { label: "Happy Clients", value: "200+" },
     { label: "Years Experience", value: "5+" },
     { label: "Team Members", value: "50+" }
-  ];
-
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -63,8 +56,6 @@ const AICustomerSentimentTrackerPage = () => {
       title: "Team Collaboration",
       description: "Share insights across teams, assign tasks, and track resolution progress for better customer experience."
     }
-  ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -113,8 +104,6 @@ const AICustomerSentimentTrackerPage = () => {
       ],
       popular: false
     }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -122,7 +111,6 @@ const AICustomerSentimentTrackerPage = () => {
         <meta name="description" content="Monitor and analyze customer sentiment across all channels with AI-powered insights and real-time alerts." />
         <meta name="keywords" content="customer sentiment, sentiment analysis, customer satisfaction, brand monitoring, AI analytics" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -136,17 +124,14 @@ const AICustomerSentimentTrackerPage = () => {
               <Heart className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Customer Intelligence</span>
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Understand Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Customers Better</span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Monitor customer sentiment across all channels with AI-powered analysis, real-time alerts, 
               and actionable insights to improve customer satisfaction and loyalty.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -167,7 +152,6 @@ const AICustomerSentimentTrackerPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -181,7 +165,7 @@ const AICustomerSentimentTrackerPage = () => {
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
+                  {stat.value}
                 </div>
                 <div className="text-gray-400 font-medium">
                   {stat.label}
@@ -191,7 +175,6 @@ const AICustomerSentimentTrackerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -208,7 +191,6 @@ const AICustomerSentimentTrackerPage = () => {
               loyalty, and business growth.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
@@ -232,7 +214,6 @@ const AICustomerSentimentTrackerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -250,7 +231,6 @@ const AICustomerSentimentTrackerPage = () => {
               across all touchpoints.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -274,7 +254,6 @@ const AICustomerSentimentTrackerPage = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -292,7 +271,6 @@ const AICustomerSentimentTrackerPage = () => {
               with no hidden fees or long-term contracts.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
@@ -313,7 +291,6 @@ const AICustomerSentimentTrackerPage = () => {
                     </div>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -322,7 +299,6 @@ const AICustomerSentimentTrackerPage = () => {
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -331,7 +307,6 @@ const AICustomerSentimentTrackerPage = () => {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -348,7 +323,6 @@ const AICustomerSentimentTrackerPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -385,7 +359,6 @@ const AICustomerSentimentTrackerPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-16 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto text-center">
@@ -406,7 +379,3 @@ const AICustomerSentimentTrackerPage = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default AICustomerSentimentTrackerPage;

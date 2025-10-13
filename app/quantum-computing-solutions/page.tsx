@@ -1,5 +1,3 @@
-import React from 'react';
-import { 
   Cpu, 
   Zap, 
   Shield, 
@@ -17,29 +15,6 @@ import {
   Database,
   Lock,
   Gauge
-} from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import { ArrowRight } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { PieChart } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { Activity } from 'lucide-react';
-
 const QuantumComputingSolutionsPage = () => {
   const features = [
     {
@@ -66,8 +41,6 @@ const QuantumComputingSolutionsPage = () => {
       icon: <Target className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
   const pricingPlans = [
     {
       name: "Quantum Starter",
@@ -120,8 +93,6 @@ const QuantumComputingSolutionsPage = () => {
       ],
       popular: false
     }
-  ];
-
   const capabilities = [
     {
       title: "Quantum Speed",
@@ -147,15 +118,11 @@ const QuantumComputingSolutionsPage = () => {
       coherence: "99.7%",
       icon: <Activity className="w-6 h-6" />
     }
-  ];
-
   const stats = [
     { number: "10^9x", label: "Processing Speed", icon: <Cpu className="w-6 h-6" /> },
     { number: "100%", label: "Security Level", icon: <Shield className="w-6 h-6" /> },
     { number: "50+", label: "Quantum Algorithms", icon: <Brain className="w-6 h-6" /> },
     { number: "24/7", label: "Quantum Monitoring", icon: <Globe className="w-6 h-6" /> }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -164,31 +131,26 @@ const QuantumComputingSolutionsPage = () => {
         keywords="quantum computing, quantum algorithms, quantum security, quantum optimization, quantum machine learning, quantum technology"
         canonical="https://ziontechgroup.com/quantum-computing-solutions"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 mb-6">
             <Cpu className="w-4 h-4 text-purple-400 mr-2" />
             <span className="text-purple-400 text-sm font-medium">Quantum Computing Solutions</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400">
               Quantum Computing Solutions
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Revolutionary quantum computing solutions for optimization, security, and machine learning. 
             Harness the power of quantum mechanics for unprecedented computational capabilities.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               href="/contact"
@@ -207,7 +169,6 @@ const QuantumComputingSolutionsPage = () => {
               View Demo
             </FuturisticButton>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
@@ -215,14 +176,13 @@ const QuantumComputingSolutionsPage = () => {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -256,7 +216,6 @@ const QuantumComputingSolutionsPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -291,7 +250,6 @@ const QuantumComputingSolutionsPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -349,7 +307,6 @@ const QuantumComputingSolutionsPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-indigo-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -359,7 +316,6 @@ const QuantumComputingSolutionsPage = () => {
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Join the quantum computing revolution with our advanced quantum solutions.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
               href="/contact"
@@ -381,7 +337,3 @@ const QuantumComputingSolutionsPage = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default QuantumComputingSolutionsPage;

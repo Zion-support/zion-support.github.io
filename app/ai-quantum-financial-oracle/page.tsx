@@ -1,5 +1,3 @@
-import React from 'react';
-import { 
   Brain, 
   TrendingUp, 
   Shield, 
@@ -17,30 +15,6 @@ import {
   Star,
   Activity,
   PieChart
-} from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import { ArrowRight } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { PieChart } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Activity } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-
 const AIQuantumFinancialOraclePage = () => {
   const features = [
     {
@@ -67,8 +41,6 @@ const AIQuantumFinancialOraclePage = () => {
       icon: <PieChart className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
   const pricingPlans = [
     {
       name: "Quantum Starter",
@@ -121,8 +93,6 @@ const AIQuantumFinancialOraclePage = () => {
       ],
       popular: false
     }
-  ];
-
   const capabilities = [
     {
       title: "Market Prediction",
@@ -148,15 +118,11 @@ const AIQuantumFinancialOraclePage = () => {
       accuracy: "99.9%",
       icon: <Clock className="w-6 h-6" />
     }
-  ];
-
   const stats = [
     { number: "99.7%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
     { number: "50ms", label: "Processing Speed", icon: <Zap className="w-6 h-6" /> },
     { number: "10M+", label: "Data Points Analyzed", icon: <BarChart3 className="w-6 h-6" /> },
     { number: "24/7", label: "Market Monitoring", icon: <Globe className="w-6 h-6" /> }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -165,31 +131,26 @@ const AIQuantumFinancialOraclePage = () => {
         keywords="quantum financial AI, market prediction, portfolio optimization, risk analysis, financial oracle, quantum computing finance"
         canonical="https://ziontechgroup.com/ai-quantum-financial-oracle"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 mb-6">
             <Cpu className="w-4 h-4 text-purple-400 mr-2" />
             <span className="text-purple-400 text-sm font-medium">AI Quantum Financial Oracle</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400">
               AI Quantum Financial Oracle
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Revolutionary AI-powered financial oracle using quantum computing for ultra-accurate 
             market predictions, risk analysis, and portfolio optimization.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               href="/contact"
@@ -208,7 +169,6 @@ const AIQuantumFinancialOraclePage = () => {
               View Demo
             </FuturisticButton>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
@@ -216,14 +176,13 @@ const AIQuantumFinancialOraclePage = () => {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -257,7 +216,6 @@ const AIQuantumFinancialOraclePage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -292,7 +250,6 @@ const AIQuantumFinancialOraclePage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -350,7 +307,6 @@ const AIQuantumFinancialOraclePage = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-indigo-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -360,7 +316,6 @@ const AIQuantumFinancialOraclePage = () => {
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Join the financial revolution with quantum-powered AI predictions and analysis.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
               href="/contact"
@@ -382,7 +337,3 @@ const AIQuantumFinancialOraclePage = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default AIQuantumFinancialOraclePage;

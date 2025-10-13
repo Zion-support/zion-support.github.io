@@ -1,5 +1,3 @@
-
-
 export default function ServerManagementZionTechGroup() {
   return (
     <>
@@ -24,5 +22,4 @@ export default function ServerManagementZionTechGroup() {
         </div>
       </div>
     </>
-  );
 }

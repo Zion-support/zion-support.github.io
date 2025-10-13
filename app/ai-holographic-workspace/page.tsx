@@ -1,15 +1,3 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Hand } from 'lucide-react';
-
 const AIHolographicWorkspace = () => {
   const features = [
     {
@@ -36,8 +24,6 @@ const AIHolographicWorkspace = () => {
       icon: <Hand className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
   const capabilities = [
     "3D holographic projection technology",
     "Real-time remote collaboration tools",
@@ -51,8 +37,6 @@ const AIHolographicWorkspace = () => {
     "3D model manipulation and editing",
     "Spatial computing applications",
     "Immersive presentation capabilities"
-  ];
-
   const pricingPlans = [
     {
       name: "Holographic Starter",
@@ -103,8 +87,6 @@ const AIHolographicWorkspace = () => {
       ],
       popular: false
     }
-  ];
-
   const testimonials = [
     {
       name: "Dr. Alex Thompson",
@@ -130,15 +112,11 @@ const AIHolographicWorkspace = () => {
       rating: 5,
       avatar: "JC"
     }
-  ];
-
   const stats = [
     { number: "360°", label: "Field of View", icon: <Eye className="w-6 h-6" /> },
     { number: "4K", label: "Holographic Resolution", icon: <Monitor className="w-6 h-6" /> },
     { number: "50+", label: "Concurrent Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -147,31 +125,26 @@ const AIHolographicWorkspace = () => {
         keywords="holographic workspace, 3D collaboration, immersive technology, remote work, data visualization, gesture control, spatial computing"
         canonical="https://ziontechgroup.com/ai-holographic-workspace"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Monitor className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">Next-Gen Holographic Technology</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               AI Holographic Workspace
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             3D holographic interface for immersive remote collaboration and data visualization. 
             Transform your workspace with cutting-edge holographic technology that brings the future to your present.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
@@ -188,7 +161,6 @@ const AIHolographicWorkspace = () => {
               <Eye className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
-          
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
@@ -196,14 +168,13 @@ const AIHolographicWorkspace = () => {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -215,7 +186,6 @@ const AIHolographicWorkspace = () => {
               Experience the future of workspace technology with our cutting-edge holographic interface.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
@@ -238,7 +208,6 @@ const AIHolographicWorkspace = () => {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -250,7 +219,6 @@ const AIHolographicWorkspace = () => {
               Unlock the full potential of holographic workspace technology with our comprehensive feature set.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
               {capabilities.slice(0, 6).map((capability, index) => (
@@ -271,7 +239,6 @@ const AIHolographicWorkspace = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -283,7 +250,6 @@ const AIHolographicWorkspace = () => {
               Select the perfect plan for your holographic workspace needs and step into the future.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -332,7 +298,6 @@ const AIHolographicWorkspace = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-7xl mx-auto">
@@ -344,7 +309,6 @@ const AIHolographicWorkspace = () => {
               Hear from professionals who are already using our holographic workspace technology.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -357,23 +321,20 @@ const AIHolographicWorkspace = () => {
                   </div>
                   <div className="ml-4">
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                   </div>
                 </div>
-                
                 <div className="flex items-center mb-3">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -384,7 +345,6 @@ const AIHolographicWorkspace = () => {
             Transform your workspace with holographic technology and experience collaboration like never before. 
             Start your holographic journey today.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -404,7 +364,3 @@ const AIHolographicWorkspace = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default AIHolographicWorkspace;

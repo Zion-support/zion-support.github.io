@@ -1,17 +1,28 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
-
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO",
+    content: "Zion Tech Group has transformed our business with their AI solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "TechCorp"
+  },
+  {
+    name: "Michael Chen",
+    role: "CTO", 
+    content: "The performance improvements are remarkable. Highly recommended!",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "InnovateLabs"
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Product Manager",
+    content: "Outstanding support and cutting-edge technology solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "FutureTech"
+  }
 export default function ZionSecurityShield() {
   const features = [
     {
@@ -44,8 +55,6 @@ export default function ZionSecurityShield() {
       title: "Behavioral Analytics",
       description: "Advanced user behavior analysis to detect insider threats and anomalies"
     }
-  ];
-
   const securityFeatures = [
     "Multi-factor Authentication (MFA)",
     "End-to-end Encryption",
@@ -59,8 +68,6 @@ export default function ZionSecurityShield() {
     "Mobile Device Management (MDM)",
     "Email Security Gateway",
     "Cloud Security Posture Management"
-  ];
-
   const pricingPlans = [
     {
       name: "Essential",
@@ -110,8 +117,6 @@ export default function ZionSecurityShield() {
       ],
       popular: false
     }
-  ];
-
   return (
     <>
       <Helmet>
@@ -125,7 +130,6 @@ export default function ZionSecurityShield() {
           content="cybersecurity, threat detection, security monitoring, AI security, zero trust, compliance, SOC 2, GDPR, security platform"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -158,7 +162,6 @@ export default function ZionSecurityShield() {
                 Watch Demo
               </Link>
             </div>
-            
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
@@ -176,7 +179,6 @@ export default function ZionSecurityShield() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -208,7 +210,6 @@ export default function ZionSecurityShield() {
             </div>
           </div>
         </section>
-
         {/* Security Features List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -233,7 +234,6 @@ export default function ZionSecurityShield() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -293,7 +293,6 @@ export default function ZionSecurityShield() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -312,21 +311,20 @@ export default function ZionSecurityShield() {
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -355,5 +353,4 @@ export default function ZionSecurityShield() {
         </section>
       </div>
     </>
-  );
 }

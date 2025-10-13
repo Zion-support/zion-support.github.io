@@ -1,17 +1,28 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Receipt } from 'lucide-react';
-
-"use client";
-
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO",
+    content: "Zion Tech Group has transformed our business with their AI solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "TechCorp"
+  },
+  {
+    name: "Michael Chen",
+    role: "CTO", 
+    content: "The performance improvements are remarkable. Highly recommended!",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "InnovateLabs"
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Product Manager",
+    content: "Outstanding support and cutting-edge technology solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "FutureTech"
+  }
 export default function AIExpenseTracker() {
   const features = [
     {
@@ -38,8 +49,6 @@ export default function AIExpenseTracker() {
       description:
         "Generate detailed reports and visualizations to understand your spending habits.",
     },
-  ];
-
   const capabilities = [
     {
       title: "Automatic Categorization",
@@ -65,8 +74,6 @@ export default function AIExpenseTracker() {
         "Get personalized insights and recommendations to help you save money and manage finances better.",
       icon: <Brain className="w-8 h-8 text-purple-400" />,
     },
-  ];
-
   const pricingPlans = [
     {
       name: "Basic",
@@ -115,8 +122,6 @@ export default function AIExpenseTracker() {
       ],
       popular: false,
     },
-  ];
-
   return (
     <>
       <Helmet>
@@ -126,7 +131,6 @@ export default function AIExpenseTracker() {
           content="Smart expense tracking with AI-powered categorization, receipt scanning, and financial insights."
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-20">
@@ -154,7 +158,6 @@ export default function AIExpenseTracker() {
               </Link>
             </div>
           </div>
-
           {/* Features Section */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {features.map((feature, index) => (
@@ -170,7 +173,6 @@ export default function AIExpenseTracker() {
               </div>
             ))}
           </div>
-
           {/* Capabilities Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -193,7 +195,6 @@ export default function AIExpenseTracker() {
               ))}
             </div>
           </div>
-
           {/* Pricing Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -249,7 +250,6 @@ export default function AIExpenseTracker() {
               ))}
             </div>
           </div>
-
           {/* Testimonials Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -262,7 +262,7 @@ export default function AIExpenseTracker() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star
                         className="w-5 h-5 text-yellow-400 fill-current"
                         key={i}
@@ -277,14 +277,13 @@ export default function AIExpenseTracker() {
                       {testimonial.name}
                     </p>
                     <p className="text-gray-400 text-sm">
-                      {testimonial.company}
+                      {testimonial.company || "Company"}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -312,5 +311,4 @@ export default function AIExpenseTracker() {
         </div>
       </div>
     </>
-  );
 }

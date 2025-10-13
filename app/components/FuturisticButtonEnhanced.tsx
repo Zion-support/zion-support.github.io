@@ -1,21 +1,6 @@
-import React from 'react';
-
 interface FuturisticButtonEnhancedProps {
-  children: React.ReactNode;
   onClick?: () => void;
-  href?: string;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  glowColor?: 'cyan' | 'purple' | 'pink' | 'green' | 'blue' | 'orange';
-  icon?: LucideIcon;
-  iconPosition?: 'left' | 'right';
-  disabled?: boolean;
-  loading?: boolean;
-  className?: string;
-  animated?: boolean;
-  neon?: boolean;
 }
-
 const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
   children,
   onClick,
@@ -35,15 +20,11 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
     relative inline-flex items-center justify-center font-semibold rounded-lg
     transition-all duration-300 overflow-hidden group
     ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-  `;
-
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',
     lg: 'px-6 py-3 text-lg',
     xl: 'px-8 py-4 text-xl'
-  };
-
   const variantClasses = {
     primary: `
       bg-gradient-to-r from-cyan-500 to-purple-600 text-white
@@ -64,8 +45,6 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       text-cyan-400 bg-transparent
       hover:bg-cyan-400/10 hover:text-cyan-300
     `
-  };
-
   const buttonVariants = {
     initial: { 
       scale: 1,
@@ -80,15 +59,12 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       scale: 0.95,
       transition: { duration: 0.1 }
     }
-  };
-
   const content = (
     <>
       {/* Animated background */}
       {animated && (
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       )}
-      
       {/* Neon glow effect */}
       {neon && (
         <div className={`
@@ -96,14 +72,12 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
           bg-gradient-to-r from-${glowColor}-500/20 to-${glowColor}-500/10
         `} />
       )}
-      
       {/* Loading spinner */}
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
         </div>
       )}
-      
       {/* Content */}
       <div className={`relative z-10 flex items-center ${loading ? 'opacity-0' : 'opacity-100'}`}>
         {Icon && iconPosition === 'left' && (
@@ -114,20 +88,15 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
           <Icon className={`w-4 h-4 ${size === 'sm' ? 'w-3 h-3' : size === 'lg' ? 'w-5 h-5' : size === 'xl' ? 'w-6 h-6' : 'w-4 h-4'} ml-2 group-hover:scale-110 transition-transform duration-200`} />
         )}
       </div>
-      
       {/* Corner accents */}
       <div className="absolute top-1 right-1 w-1 h-1 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="absolute bottom-1 left-1 w-1 h-1 bg-purple-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300" />
     </>
-  );
-
   const buttonClasses = `
     ${baseClasses}
     ${sizeClasses[size]}
     ${variantClasses[variant]}
     ${className}
-  `;
-
   if (href) {
     return (
       <motion.a
@@ -141,9 +110,7 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       >
         {content}
       </motion.a>
-    );
   }
-
   return (
     <motion.button
       className={buttonClasses}
@@ -156,7 +123,3 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
     >
       {content}
     </motion.button>
-  );
-};
-
-export default FuturisticButtonEnhanced;

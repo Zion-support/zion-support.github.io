@@ -1,60 +1,29 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Hand } from 'lucide-react';
-
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
-
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
 }
-
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-    
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
     }
-    
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
     }
-    
     // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
-
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback;
       }
-
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <div className="max-w-md mx-auto px-6 text-center">
@@ -69,7 +38,6 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
               </p>
             </div>
-
             <div className="space-y-4">
               <button
                 onClick={this.handleRetry}
@@ -78,7 +46,6 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-5 h-5" />
                 Try Again
               </button>
-              
               <Link
                 to="/"
                 className="w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
@@ -87,7 +54,6 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 Go Home
               </Link>
             </div>
-
             {/* Development Error Details */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-8 text-left">
@@ -102,7 +68,6 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 </div>
               </details>
             )}
-
             {/* Contact Support */}
             <div className="mt-8 pt-6 border-t border-white/10">
               <p className="text-gray-400 text-sm mb-4">
@@ -118,13 +83,9 @@ class ImprovedErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-      );
     }
-
-    return this.props.children;
   }
 }
-
 // Higher-order component for easier usage
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
@@ -134,21 +95,8 @@ export const withErrorBoundary = <P extends object>(
     <ImprovedErrorBoundary {...errorBoundaryProps}>
       <Component {...props} />
     </ImprovedErrorBoundary>
-  );
-  
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  
-  return WrappedComponent;
-};
-
 // Hook for functional components to handle errors
 export const useErrorHandler = () => {
   return (error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by hook:', error, errorInfo);
-    
     // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
-  };
-};
-
-export default ImprovedErrorBoundary;

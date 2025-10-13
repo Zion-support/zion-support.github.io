@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from 'react';
-
 const ImprovedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
-
   // Close mobile menu when route changes
   useEffect(() => {
-    setIsOpen(false);
-    setIsSidebarOpen(false);
-  }, [location]);
-
   const navigationItems = [
     {
       label: 'AI Services',
@@ -533,21 +526,15 @@ const ImprovedNavigation = () => {
         }
       ]
     }
-  ];
-
   const quickLinks = [
     { label: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
     { label: 'Demo', href: '/demo', icon: <Play className="w-4 h-4" /> },
     { label: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
     { label: 'Consultation', href: '/consultation', icon: <Users className="w-4 h-4" /> }
-  ];
-
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709'
-  };
-
   const Sidebar = () => (
     <div className={`fixed inset-0 z-50 lg:hidden ${isSidebarOpen ? 'block' : 'hidden'}`}>
       <div className="fixed inset-0 bg-black/50" onClick={() => setIsSidebarOpen(false)} />
@@ -562,7 +549,6 @@ const ImprovedNavigation = () => {
               <X className="w-6 h-6" />
             </button>
           </div>
-
           {/* Search */}
           <div className="mb-6">
             <div className="relative">
@@ -576,7 +562,6 @@ const ImprovedNavigation = () => {
               />
             </div>
           </div>
-
           {/* Navigation Items */}
           <div className="space-y-4">
             {navigationItems.map((item) => (
@@ -597,7 +582,6 @@ const ImprovedNavigation = () => {
               </div>
             ))}
           </div>
-
           {/* Quick Links */}
           <div className="mt-8 pt-6 border-t border-white/10">
             <h3 className="text-white font-medium mb-4">Quick Links</h3>
@@ -615,7 +599,6 @@ const ImprovedNavigation = () => {
               ))}
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="mt-8 pt-6 border-t border-white/10">
             <h3 className="text-white font-medium mb-4">Contact</h3>
@@ -637,8 +620,6 @@ const ImprovedNavigation = () => {
         </div>
       </div>
     </div>
-  );
-
   return (
     <>
       <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
@@ -650,7 +631,6 @@ const ImprovedNavigation = () => {
                 Zion Tech Group
               </span>
             </Link>
-
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex space-x-8">
               {navigationItems.map((item) => (
@@ -668,7 +648,6 @@ const ImprovedNavigation = () => {
                     <span>{item.label}</span>
                     <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                   </Link>
-                  
                   {/* Enhanced Dropdown Menu */}
                   {activeDropdown === item.label && (
                     <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-xl shadow-2xl z-50">
@@ -710,7 +689,6 @@ const ImprovedNavigation = () => {
                 </div>
               ))}
             </nav>
-
             {/* Quick Links & CTA */}
             <div className="hidden md:flex items-center space-x-4">
               <div className="hidden lg:flex space-x-4">
@@ -733,7 +711,6 @@ const ImprovedNavigation = () => {
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-
             {/* Mobile Menu Buttons */}
             <div className="lg:hidden flex items-center space-x-2">
               <button
@@ -744,7 +721,6 @@ const ImprovedNavigation = () => {
               </button>
             </div>
           </div>
-
           {/* Mobile Navigation */}
           {isOpen && (
             <div className="lg:hidden py-4 border-t border-white/10">
@@ -782,7 +758,6 @@ const ImprovedNavigation = () => {
                     </div>
                   </div>
                 ))}
-                
                 <div className="pt-4 border-t border-white/10">
                   <div className="space-y-2">
                     {quickLinks.map((link) => (
@@ -802,11 +777,6 @@ const ImprovedNavigation = () => {
           )}
         </div>
       </header>
-
       {/* Sidebar */}
       <Sidebar />
     </>
-  );
-};
-
-export default ImprovedNavigation;

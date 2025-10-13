@@ -1,4 +1,28 @@
-
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO",
+    content: "Zion Tech Group has transformed our business with their AI solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "TechCorp"
+  },
+  {
+    name: "Michael Chen",
+    role: "CTO", 
+    content: "The performance improvements are remarkable. Highly recommended!",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "InnovateLabs"
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Product Manager",
+    content: "Outstanding support and cutting-edge technology solutions.",
+    avatar: "/api/placeholder/60/60",
+    rating: 5,
+    company: "FutureTech"
+  }
 export default function ZionCloudVault() {
   const features = [
     {
@@ -31,8 +55,6 @@ export default function ZionCloudVault() {
       title: "Unlimited Storage",
       description: "Scale from GB to PB with no storage limits and automatic scaling"
     }
-  ];
-
   const storageFeatures = [
     "File Versioning & History",
     "Collaborative Workspaces",
@@ -46,8 +68,6 @@ export default function ZionCloudVault() {
     "Team Management",
     "Share Links & Permissions",
     "Integration with 100+ Apps"
-  ];
-
   const pricingPlans = [
     {
       name: "Personal",
@@ -96,8 +116,6 @@ export default function ZionCloudVault() {
       ],
       popular: false
     }
-  ];
-
   return (
     <>
       <Helmet>
@@ -111,7 +129,6 @@ export default function ZionCloudVault() {
           content="cloud storage, secure file sharing, data encryption, cloud backup, file synchronization, enterprise storage, data security"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -144,7 +161,6 @@ export default function ZionCloudVault() {
                 Watch Demo
               </Link>
             </div>
-            
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
@@ -162,7 +178,6 @@ export default function ZionCloudVault() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -194,7 +209,6 @@ export default function ZionCloudVault() {
             </div>
           </div>
         </section>
-
         {/* Storage Features List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -219,7 +233,6 @@ export default function ZionCloudVault() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -279,7 +292,6 @@ export default function ZionCloudVault() {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -298,21 +310,20 @@ export default function ZionCloudVault() {
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -341,5 +352,4 @@ export default function ZionCloudVault() {
         </section>
       </div>
     </>
-  );
 }

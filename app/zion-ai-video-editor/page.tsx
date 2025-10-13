@@ -1,5 +1,3 @@
-
-
 export default function ZionAiVideoEditorZionTechGroup() {
   return (
     <>
@@ -24,5 +22,4 @@ export default function ZionAiVideoEditorZionTechGroup() {
         </div>
       </div>
     </>
-  );
 }

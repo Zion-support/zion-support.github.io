@@ -1,17 +1,3 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { Hand } from 'lucide-react';
-
 const ZionAINeuralInterface = () => {
   const features = [
     {
@@ -38,8 +24,6 @@ const ZionAINeuralInterface = () => {
       icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
   const capabilities = [
     "Direct neural communication with AI systems",
     "Thought-based device control and automation",
@@ -49,8 +33,6 @@ const ZionAINeuralInterface = () => {
     "Mental health monitoring and optimization",
     "Cognitive enhancement and memory augmentation",
     "Telepathic communication protocols"
-  ];
-
   const pricingPlans = [
     {
       name: "Neural Starter",
@@ -101,8 +83,6 @@ const ZionAINeuralInterface = () => {
       ],
       popular: false
     }
-  ];
-
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -128,15 +108,11 @@ const ZionAINeuralInterface = () => {
       rating: 5,
       avatar: "EW"
     }
-  ];
-
   const stats = [
     { number: "99.7%", label: "Accuracy Rate", icon: <Target className="w-6 h-6" /> },
     { number: "2ms", label: "Response Time", icon: <Zap className="w-6 h-6" /> },
     { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -145,31 +121,26 @@ const ZionAINeuralInterface = () => {
         keywords="neural interface, brain-computer interface, thought-to-text, mind control, AI, neural technology, accessibility, cognitive enhancement"
         canonical="https://ziontechgroup.com/zion-ai-neural-interface"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Brain className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">Revolutionary Neural Technology</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Zion AI Neural Interface
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Revolutionary brain-computer interface technology that enables direct thought-to-text conversion 
             and mind control with unprecedented 99.7% accuracy. Transform how you interact with technology.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
@@ -186,7 +157,6 @@ const ZionAINeuralInterface = () => {
               <Eye className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
-          
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
@@ -194,14 +164,13 @@ const ZionAINeuralInterface = () => {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -213,7 +182,6 @@ const ZionAINeuralInterface = () => {
               Experience the future of human-computer interaction with our cutting-edge neural interface technology.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
@@ -236,7 +204,6 @@ const ZionAINeuralInterface = () => {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -248,7 +215,6 @@ const ZionAINeuralInterface = () => {
               Unlock the full potential of your mind with our comprehensive neural interface capabilities.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
               {capabilities.slice(0, 4).map((capability, index) => (
@@ -269,7 +235,6 @@ const ZionAINeuralInterface = () => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -281,7 +246,6 @@ const ZionAINeuralInterface = () => {
               Select the perfect plan for your neural interface needs and start your journey into the future.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -330,7 +294,6 @@ const ZionAINeuralInterface = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-7xl mx-auto">
@@ -342,7 +305,6 @@ const ZionAINeuralInterface = () => {
               Hear from researchers, professionals, and innovators who are using our neural interface technology.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -355,23 +317,20 @@ const ZionAINeuralInterface = () => {
                   </div>
                   <div className="ml-4">
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                   </div>
                 </div>
-                
                 <div className="flex items-center mb-3">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -382,7 +341,6 @@ const ZionAINeuralInterface = () => {
             Join the neural revolution and transform how you interact with technology. 
             Start your journey with the Zion AI Neural Interface today.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -402,7 +360,3 @@ const ZionAINeuralInterface = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default ZionAINeuralInterface;

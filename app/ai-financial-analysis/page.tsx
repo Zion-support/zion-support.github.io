@@ -1,16 +1,3 @@
-import React from 'react';
-import { TrendingUp, Sparkles, ArrowRight, CheckCircle, Star, Shield, PieChart, Activity } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { PieChart } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Activity } from 'lucide-react';
-
 const AIFinancialAnalysisPage = () => {
   const benefits = [
     {
@@ -33,8 +20,6 @@ const AIFinancialAnalysisPage = () => {
       description: "Cutting-edge solutions that keep you ahead of the competition.",
       icon: <Zap className="w-8 h-8" />
     }
-  ];
-
   const features = [
     {
       title: "Predictive Financial Modeling",
@@ -60,8 +45,6 @@ const AIFinancialAnalysisPage = () => {
       icon: <PieChart className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -70,31 +53,26 @@ const AIFinancialAnalysisPage = () => {
         <meta name="keywords" content="AI financial analysis, financial forecasting, risk management, investment analysis, financial modeling, fintech" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-financial-analysis" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">Intelligent Financial Analysis</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               AI Financial Analysis
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Transform your financial decision-making with AI-powered analysis, predictive modeling, 
             and automated risk assessment. Make smarter investments with 95% accuracy.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
@@ -113,7 +91,6 @@ const AIFinancialAnalysisPage = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -126,7 +103,6 @@ const AIFinancialAnalysisPage = () => {
               and real-time data processing for unparalleled financial insights.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
@@ -149,7 +125,6 @@ const AIFinancialAnalysisPage = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -161,7 +136,6 @@ const AIFinancialAnalysisPage = () => {
               Experience the power of AI-driven financial analysis and make better investment decisions
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
@@ -172,7 +146,6 @@ const AIFinancialAnalysisPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
@@ -183,7 +156,6 @@ const AIFinancialAnalysisPage = () => {
             Join thousands of investors using our AI financial analysis platform to make smarter decisions. 
             Start your financial transformation today.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -203,7 +175,3 @@ const AIFinancialAnalysisPage = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default AIFinancialAnalysisPage;

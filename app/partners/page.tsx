@@ -1,6 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
 export default function Partners() {
   const partners = [
     {
@@ -45,8 +42,6 @@ export default function Partners() {
       category: "Database Partner",
       tier: "Silver"
     }
-  ];
-
   const tiers = [
     {
       name: "Platinum",
@@ -66,8 +61,6 @@ export default function Partners() {
       requirements: "Partnership with mutual business opportunities",
       benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
     }
-  ];
-
   return (
     <>
       <Helmet>
@@ -90,5 +83,4 @@ export default function Partners() {
         </div>
       </div>
     </>
-  );
 }

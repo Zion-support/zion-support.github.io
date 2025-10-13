@@ -1,8 +1,26 @@
-import React, { useMemo } from "react";
+import React, { useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Twitter, 
+  Linkedin, 
+  Github, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Brain, 
+  Shield, 
+  Zap, 
+  Globe, 
+  Cloud, 
+  Code, 
+  BarChart3, 
+  Award, 
+  Users, 
+  Clock 
+} from 'lucide-react';
 
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
-
   const socialLinks = useMemo(() => [
     {
       name: "Twitter",
@@ -18,7 +36,7 @@ const Footer = React.memo(() => {
       name: "GitHub",
       url: "https://github.com/ziontechgroup",
       icon: <Github className="w-5 h-5" />,
-    },
+    }
   ], []);
 
   const services = useMemo(() => [
@@ -71,7 +89,6 @@ const Footer = React.memo(() => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
-      
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -104,7 +121,6 @@ const Footer = React.memo(() => {
                 </div>
               </div>
             </div>
-
             {/* Services */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
@@ -124,7 +140,6 @@ const Footer = React.memo(() => {
                 ))}
               </ul>
             </div>
-
             {/* Company */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
@@ -141,7 +156,6 @@ const Footer = React.memo(() => {
                 ))}
               </ul>
             </div>
-
             {/* Support */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
@@ -158,7 +172,6 @@ const Footer = React.memo(() => {
                 ))}
               </ul>
             </div>
-
             {/* Legal */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white mb-4">Legal</h3>
@@ -176,7 +189,6 @@ const Footer = React.memo(() => {
               </ul>
             </div>
           </div>
-
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {stats.map((stat, index) => (
@@ -189,7 +201,6 @@ const Footer = React.memo(() => {
               </div>
             ))}
           </div>
-
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-8">
             {socialLinks.map((social) => (
@@ -205,7 +216,6 @@ const Footer = React.memo(() => {
               </a>
             ))}
           </div>
-
           {/* Bottom Footer */}
           <div className="border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
@@ -238,7 +248,7 @@ const Footer = React.memo(() => {
       </div>
     </footer>
   );
-});
+};
 
 Footer.displayName = "Footer";
 

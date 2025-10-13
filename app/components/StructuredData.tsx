@@ -1,22 +1,11 @@
-import React from 'react';
-import { Search, Code } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Search } from 'lucide-react';
-import { Code } from 'lucide-react';
-
 interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
-  data: any;
 }
-
 const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
   const getStructuredData = () => {
     const baseData = {
       "@context": "https://schema.org",
       "@type": type,
       ...data
-    };
-
     switch (type) {
       case 'Organization':
         return {
@@ -43,8 +32,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
             "https://twitter.com/ziontechgroup",
             "https://linkedin.com/company/ziontechgroup"
           ]
-        };
-
       case 'WebSite':
         return {
           ...baseData,
@@ -55,8 +42,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
           }
-        };
-
       case 'WebPage':
         return {
           ...baseData,
@@ -69,8 +54,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
             "url": "https://ziontechgroup.com"
           },
           "breadcrumb": data.breadcrumb
-        };
-
       case 'Service':
         return {
           ...baseData,
@@ -82,32 +65,19 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
           },
           "areaServed": data.areaServed || "US",
           "hasOfferCatalog": data.hasOfferCatalog
-        };
-
       case 'FAQPage':
         return {
           ...baseData,
           "mainEntity": data.mainEntity || []
-        };
-
       case 'BreadcrumbList':
         return {
           ...baseData,
           "itemListElement": data.itemListElement || []
-        };
-
       default:
-        return baseData;
     }
-  };
-
   return (
     <Helmet>
       <script type="application/ld+json">
         {JSON.stringify(getStructuredData(), null, 2)}
       </script>
     </Helmet>
-  );
-};
-
-export default StructuredData;

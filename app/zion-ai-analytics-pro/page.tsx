@@ -1,26 +1,3 @@
-import React from 'react';
-import { Settings, Users, Sparkles, ArrowRight, CheckCircle, Star, Zap, Brain, BarChart3, Database, Target, Mic, FileText, Mail, Play, MapPin, Phone } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
 const ZionAIAnalyticsProPage = () => {
   const benefits = [
     {
@@ -43,8 +20,6 @@ const ZionAIAnalyticsProPage = () => {
       description: "Cutting-edge solutions that keep you ahead of the competition.",
       icon: <Zap className="w-8 h-8" />
     }
-  ];
-
   const testimonials = [
     {
       name: "John Smith",
@@ -64,8 +39,6 @@ const ZionAIAnalyticsProPage = () => {
       content: "We saw immediate results after implementing their solutions.",
       avatar: "/images/testimonials/mike-chen.jpg"
     }
-  ];
-
   const features = [
     {
       title: 'Real-time Data Visualization',
@@ -103,8 +76,6 @@ const ZionAIAnalyticsProPage = () => {
       icon: <Target className="w-6 h-6" />,
       benefits: ['Smart recommendations', 'Pattern recognition', 'Automated alerts', 'Action suggestions']
     }
-  ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -157,8 +128,6 @@ const ZionAIAnalyticsProPage = () => {
       ],
       popular: false
     }
-  ];
-
   const integrations = [
     { name: 'Salesforce', logo: 'SF', category: 'CRM' },
     { name: 'HubSpot', logo: 'HS', category: 'Marketing' },
@@ -172,8 +141,6 @@ const ZionAIAnalyticsProPage = () => {
     { name: 'PostgreSQL', logo: 'PG', category: 'Database' },
     { name: 'MongoDB', logo: 'MG', category: 'Database' },
     { name: 'AWS', logo: 'AW', category: 'Cloud' }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -181,7 +148,6 @@ const ZionAIAnalyticsProPage = () => {
         <meta name="description" content="Transform your business with Zion AI Analytics Pro. Advanced AI-powered business intelligence platform with real-time dashboards, predictive analytics, and automated insights." />
         <meta name="keywords" content="AI analytics, business intelligence, data visualization, predictive analytics, automated reporting, dashboard, data insights" />
       </Helmet>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
         <div className="text-center mb-16">
@@ -189,18 +155,15 @@ const ZionAIAnalyticsProPage = () => {
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Analytics</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Zion AI Analytics Pro
             </span>
           </h1>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Transform your business data into actionable insights with our advanced AI-powered analytics platform. 
             Get real-time dashboards, predictive analytics, and automated insights that drive growth.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
               Start Free Trial
@@ -211,7 +174,6 @@ const ZionAIAnalyticsProPage = () => {
               <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </button>
           </div>
-
           {/* Key Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
@@ -232,7 +194,6 @@ const ZionAIAnalyticsProPage = () => {
             </div>
           </div>
         </div>
-
         {/* Features Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
@@ -243,7 +204,6 @@ const ZionAIAnalyticsProPage = () => {
               Everything you need to transform your data into actionable business insights
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
@@ -253,15 +213,12 @@ const ZionAIAnalyticsProPage = () => {
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
-                
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {feature.title}
                 </h3>
-                
                 <p className="text-gray-300 mb-4 leading-relaxed">
                   {feature.description}
                 </p>
-                
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
@@ -274,7 +231,6 @@ const ZionAIAnalyticsProPage = () => {
             ))}
           </div>
         </div>
-
         {/* Integrations Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
@@ -285,7 +241,6 @@ const ZionAIAnalyticsProPage = () => {
               Connect with 100+ popular business tools and data sources
             </p>
           </div>
-          
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index) => (
               <div
@@ -301,7 +256,6 @@ const ZionAIAnalyticsProPage = () => {
             ))}
           </div>
         </div>
-
         {/* Pricing Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
@@ -312,7 +266,6 @@ const ZionAIAnalyticsProPage = () => {
               Choose the plan that fits your business needs. All plans include 14-day free trial.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
@@ -330,7 +283,6 @@ const ZionAIAnalyticsProPage = () => {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
@@ -339,7 +291,6 @@ const ZionAIAnalyticsProPage = () => {
                     <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
                 </div>
-                
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -348,7 +299,6 @@ const ZionAIAnalyticsProPage = () => {
                     </li>
                   ))}
                 </ul>
-                
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
@@ -360,7 +310,6 @@ const ZionAIAnalyticsProPage = () => {
             ))}
           </div>
         </div>
-
         {/* Testimonials Section */}
         <div className="mb-20">
           <div className="text-center mb-12">
@@ -371,7 +320,6 @@ const ZionAIAnalyticsProPage = () => {
               Join thousands of businesses already using Zion AI Analytics Pro
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -384,18 +332,15 @@ const ZionAIAnalyticsProPage = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                   </div>
                 </div>
-                
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
                 <p className="text-gray-300 italic leading-relaxed mb-4">"{testimonial.content}"</p>
-                
                 <div className="text-cyan-400 font-semibold text-sm">
                   {testimonial.results}
                 </div>
@@ -403,7 +348,6 @@ const ZionAIAnalyticsProPage = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-8 border border-cyan-500/20">
@@ -414,7 +358,6 @@ const ZionAIAnalyticsProPage = () => {
               Start your 14-day free trial today and experience the power of AI-driven analytics. 
               No credit card required.
             </p>
-            
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
@@ -439,7 +382,6 @@ const ZionAIAnalyticsProPage = () => {
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
                 Start Free Trial
@@ -457,7 +399,3 @@ const ZionAIAnalyticsProPage = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default ZionAIAnalyticsProPage;

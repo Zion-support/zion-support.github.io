@@ -1,22 +1,6 @@
-import React, { useState } from 'react';
-import { ArrowRight, CheckCircle, Star, Hand, Play, Pause, Calendar, Network } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Pause } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Hand } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
 export default function DemoPage() {
   const [currentDemo, setCurrentDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-
   const demos = [
     {
       id: 'ai-analytics',
@@ -78,8 +62,6 @@ export default function DemoPage() {
       thumbnail: '/api/placeholder/800/450',
       videoUrl: '#'
     }
-  ];
-
   const handlePlayPause = () => {
   const benefits = [
     {
@@ -102,28 +84,15 @@ export default function DemoPage() {
       description: "Cutting-edge solutions that keep you ahead of the competition.",
       icon: <Zap className="w-8 h-8" />
     }
-  ];
-
   const stats = [
     { label: "Projects Completed", value: "500+" },
     { label: "Happy Clients", value: "200+" },
     { label: "Years Experience", value: "5+" },
     { label: "Team Members", value: "50+" }
-  ];
-
-    setIsPlaying(!isPlaying);
-  };
-
   const handleNextDemo = () => {
     setCurrentDemo((prev) => (prev + 1) % demos.length);
-    setIsPlaying(false);
-  };
-
   const handlePrevDemo = () => {
     setCurrentDemo((prev) => (prev - 1 + demos.length) % demos.length);
-    setIsPlaying(false);
-  };
-
   return (
     <>
       <Helmet>
@@ -137,12 +106,10 @@ export default function DemoPage() {
           content="live demos, AI solutions demo, IT services demo, interactive demonstrations, technology showcase, business automation demo"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -150,20 +117,17 @@ export default function DemoPage() {
               <Play className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">Interactive Live Demos</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Experience Our Solutions
               </span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               See our AI and IT solutions in action through interactive live demonstrations. 
               Experience real-world applications and discover how our technology can transform your business.
             </p>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -171,7 +135,7 @@ export default function DemoPage() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                    {stat.number}
+                    {stat.value}
                   </div>
                   <div className="text-gray-300 text-sm md:text-base">
                     {stat.label}
@@ -181,7 +145,6 @@ export default function DemoPage() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -195,7 +158,6 @@ export default function DemoPage() {
                 Our interactive demonstrations provide valuable insights into how our solutions work in real business environments.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group">
@@ -209,7 +171,6 @@ export default function DemoPage() {
             </div>
           </div>
         </section>
-
         {/* Main Demo Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -223,7 +184,6 @@ export default function DemoPage() {
                 Explore our most popular solutions through interactive demonstrations and real-world use cases.
               </p>
             </div>
-
             {/* Demo Player */}
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 mb-12">
               <div className="aspect-video bg-slate-800 rounded-lg overflow-hidden relative group">
@@ -237,7 +197,6 @@ export default function DemoPage() {
                     <p className="text-gray-300">{demos[currentDemo].description}</p>
                   </div>
                 </div>
-
                 {/* Demo Controls */}
                 <div className="absolute bottom-4 left-4 right-4 bg-black/50 backdrop-blur-sm rounded-lg p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex items-center justify-between">
@@ -270,7 +229,6 @@ export default function DemoPage() {
                   </div>
                 </div>
               </div>
-
               {/* Demo Info */}
               <div className="mt-6">
                 <div className="flex items-center justify-between mb-4">
@@ -283,7 +241,6 @@ export default function DemoPage() {
                     <div className="text-gray-400 text-sm">{demos[currentDemo].duration}</div>
                   </div>
                 </div>
-
                 {/* Features */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {demos[currentDemo].features.map((feature, index) => (
@@ -295,7 +252,6 @@ export default function DemoPage() {
                 </div>
               </div>
             </div>
-
             {/* Demo Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {demos.map((demo, index) => (
@@ -318,7 +274,6 @@ export default function DemoPage() {
                       {demo.duration}
                     </div>
                   </div>
-                  
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30">
                       {demo.category}
@@ -330,11 +285,9 @@ export default function DemoPage() {
                       </div>
                     )}
                   </div>
-                  
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                     {demo.title}
                   </h3>
-                  
                   <p className="text-gray-300 text-sm leading-relaxed">
                     {demo.description}
                   </p>
@@ -343,7 +296,6 @@ export default function DemoPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -356,7 +308,6 @@ export default function DemoPage() {
               <p className="text-xl text-gray-300 mb-8">
                 Schedule a personalized demo with our experts to see how our solutions can work specifically for your business.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/consultation"
@@ -378,5 +329,4 @@ export default function DemoPage() {
         </section>
       </div>
     </>
-  );
 }

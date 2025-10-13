@@ -1,18 +1,13 @@
-import React, { useState, useCallback, useMemo } from 'react';
-
 interface NavigationProps {
   onSidebarToggle: () => void;
 }
-
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
-
   const toggleMenu = useCallback(() => {
     setIsMenuOpen(prev => !prev);
   }, []);
-
 
   const closeDropdowns = useCallback(() => {
     setActiveDropdown(null);
@@ -129,7 +124,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -146,7 +140,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   <span>{item.label}</span>
                   {item.dropdown && <ChevronDown className="w-4 h-4" />}
                 </Link>
-
                 {/* Dropdown Menu */}
                 {item.dropdown && activeDropdown === item.label && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-gray-900 rounded-lg shadow-lg opacity-100 visible transition-all duration-200 z-50">
@@ -169,7 +162,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </div>
             ))}
           </div>
-
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -187,7 +179,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               <span>Get Started</span>
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center space-x-2">
             <button
@@ -207,7 +198,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="lg:hidden">
@@ -224,7 +214,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   {item.icon}
                   <span>{item.label}</span>
                 </Link>
-                
                 {/* Mobile Dropdown */}
                 {item.dropdown && (
                   <div className="ml-4 mt-1 space-y-1">

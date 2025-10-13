@@ -1,14 +1,3 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Target } from 'lucide-react';
-
 const AIImageRecognitionPro = () => {
   const features = [
     {
@@ -32,11 +21,9 @@ const AIImageRecognitionPro = () => {
     {
       title: "Scene Analysis",
       description: "Understand and analyze complex scenes and contexts",
-      icon: <Image className="w-6 h-6" />,
+      icon: <img className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
   const benefits = [
     "99.2% recognition accuracy",
     "Real-time processing",
@@ -44,8 +31,6 @@ const AIImageRecognitionPro = () => {
     "Advanced security",
     "Scalable infrastructure",
     "Easy integration"
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
@@ -54,31 +39,26 @@ const AIImageRecognitionPro = () => {
         keywords="AI image recognition, computer vision, object detection, facial recognition, OCR, image analysis"
         canonical="https://ziontechgroup.com/ai-image-recognition-pro"
       />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Camera className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">Computer Vision AI</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               AI Image Recognition Pro
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
             Transform images into actionable insights with AI-powered recognition. 
             Object detection, facial recognition, and text extraction for modern applications.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               href="/contact"
@@ -99,7 +79,6 @@ const AIImageRecognitionPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -133,7 +112,6 @@ const AIImageRecognitionPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -155,7 +133,6 @@ const AIImageRecognitionPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -188,7 +165,3 @@ const AIImageRecognitionPro = () => {
         </ResponsiveContainer>
       </section>
     </div>
-  );
-};
-
-export default AIImageRecognitionPro;

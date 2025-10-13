@@ -1,7 +1,3 @@
-import { Star } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-
-
 interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number
@@ -10,7 +6,6 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number
   timeToInteractive: number
 }
-
 export const usePerformanceMonitor = () => {
   const metricsRef = useRef<PerformanceMetrics>({
     loadTime: 0,
@@ -20,17 +15,14 @@ export const usePerformanceMonitor = () => {
     cumulativeLayoutShift: 0,
     timeToInteractive: 0
   })
-
   useEffect(() => {
     const measurePerformance = () => {
       if (typeof window === 'undefined' || !window.performance) return
-
       // Measure page load time
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
         metricsRef.current.loadTime = navigation.loadEventEnd - navigation.loadEventStart
       }
-
       // Measure Core Web Vitals
       const measureWebVitals = () => {
         // First Contentful Paint (FCP)
@@ -38,7 +30,6 @@ export const usePerformanceMonitor = () => {
         if (fcpEntry) {
           metricsRef.current.firstContentfulPaint = fcpEntry.startTime
         }
-
         // Largest Contentful Paint (LCP)
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
@@ -46,7 +37,6 @@ export const usePerformanceMonitor = () => {
           metricsRef.current.largestContentfulPaint = lastEntry.startTime
         })
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-
         // First Input Delay (FID)
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
@@ -55,7 +45,6 @@ export const usePerformanceMonitor = () => {
           })
         })
         fidObserver.observe({ entryTypes: ['first-input'] })
-
         // Cumulative Layout Shift (CLS)
         let clsValue = 0
         const clsObserver = new PerformanceObserver((list) => {
@@ -68,7 +57,6 @@ export const usePerformanceMonitor = () => {
           metricsRef.current.cumulativeLayoutShift = clsValue
         })
         clsObserver.observe({ entryTypes: ['layout-shift'] })
-
         // Time to Interactive (TTI) - approximation
         const ttiObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries()
@@ -76,7 +64,6 @@ export const usePerformanceMonitor = () => {
           metricsRef.current.timeToInteractive = lastEntry.startTime
         })
         ttiObserver.observe({ entryTypes: ['measure'] })
-
         // Cleanup observers after 10 seconds
         setTimeout(() => {
           lcpObserver.disconnect()
@@ -85,7 +72,6 @@ export const usePerformanceMonitor = () => {
           ttiObserver.disconnect()
         }, 10000)
       }
-
       // Log performance metrics
       const logMetrics = () => {
         // Send to analytics service
@@ -100,27 +86,21 @@ export const usePerformanceMonitor = () => {
           })
         }
       }
-
       // Start measuring after page load
       if (document.readyState === 'complete') {
         measureWebVitals()
       } else {
         window.addEventListener('load', measureWebVitals)
       }
-
       // Log metrics after 5 seconds
       setTimeout(logMetrics, 5000)
     }
-
     measurePerformance()
-
     // Cleanup
     return () => {
       // Cleanup is handled by the setTimeout in measureWebVitals
     }
   }, [])
-
   return metricsRef.current
 }
-
 export default usePerformanceMonitor

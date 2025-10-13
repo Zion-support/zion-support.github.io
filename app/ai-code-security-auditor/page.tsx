@@ -1,6 +1,3 @@
-
-
-
 export default function AICodeSecurityAuditorZionTechGroup() {
   return (
     <>
@@ -25,5 +22,4 @@ export default function AICodeSecurityAuditorZionTechGroup() {
         </div>
       </div>
     </>
-  );
 }

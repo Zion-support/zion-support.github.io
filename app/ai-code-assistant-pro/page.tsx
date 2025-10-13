@@ -1,21 +1,3 @@
-import EnhancedSEO from "../components/EnhancedSEO";
-import StructuredData from "../components/StructuredData";
-import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
-import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
-import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
-import ResponsiveContainer from "../components/ResponsiveContainer";
-import EnhancedAccessibility from "../components/EnhancedAccessibility";
-import PerformanceOptimizer from "../components/PerformanceOptimizer";
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Code } from 'lucide-react';
-
 const AICodeAssistantProZionTechGroup = () => {
   const testimonials = [
     {
@@ -36,8 +18,6 @@ const AICodeAssistantProZionTechGroup = () => {
       content: "We saw immediate results after implementing their solutions.",
       avatar: "/images/testimonials/mike-chen.jpg"
     }
-  ];
-
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -62,8 +42,6 @@ const AICodeAssistantProZionTechGroup = () => {
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com"
     }
-  };
-
   const features = [
     {
       title: "AI Code Generation",
@@ -89,8 +67,6 @@ const AICodeAssistantProZionTechGroup = () => {
       icon: <Globe className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -138,8 +114,6 @@ const AICodeAssistantProZionTechGroup = () => {
       ],
       popular: false
     }
-  ];
-
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -151,9 +125,7 @@ const AICodeAssistantProZionTechGroup = () => {
             canonical="https://ziontechgroup.com/ai-code-assistant-pro"
             structuredData={structuredData}
           />
-          
           <StructuredData type="SoftwareApplication" data={structuredData} />
-
           <main id="main-content" role="main" aria-label="Zion AI Code Assistant Pro">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -161,13 +133,11 @@ const AICodeAssistantProZionTechGroup = () => {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
                   <Brain className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">AI-Powered Development Tool</span>
                 </div>
-                
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -176,12 +146,10 @@ const AICodeAssistantProZionTechGroup = () => {
                   className="mb-6 leading-tight">
                   Zion AI Code Assistant Pro
                 </FuturisticTextEnhanced>
-                
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
                   Revolutionize your development workflow with AI-powered code generation, intelligent debugging, 
                   and optimization across 50+ programming languages.
                 </p>
-                
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#pricing"
@@ -202,7 +170,6 @@ const AICodeAssistantProZionTechGroup = () => {
                 </div>
               </ResponsiveContainer>
             </section>
-
             {/* Features Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
               <ResponsiveContainer>
@@ -236,7 +203,6 @@ const AICodeAssistantProZionTechGroup = () => {
                 </div>
               </ResponsiveContainer>
             </section>
-
             {/* Pricing Section */}
             <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
               <div className="max-w-7xl mx-auto">
@@ -289,7 +255,6 @@ const AICodeAssistantProZionTechGroup = () => {
                 </div>
               </div>
             </section>
-
             {/* Testimonials Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
               <div className="max-w-7xl mx-auto">
@@ -307,21 +272,20 @@ const AICodeAssistantProZionTechGroup = () => {
                       key={index}
                       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden">
                       <div className="flex items-center mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
+                        {[...Array(testimonial.rating || 5)].map((_, i) => (
                           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                         ))}
                       </div>
                       <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                       <div>
                         <div className="font-semibold text-white">{testimonial.name}</div>
-                        <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                        <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
             </section>
-
             {/* CTA Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
               <div className="max-w-4xl mx-auto text-center">
@@ -332,7 +296,6 @@ const AICodeAssistantProZionTechGroup = () => {
                   Join thousands of developers using Zion AI Code Assistant Pro to write better code faster. 
                   Start your free trial today.
                 </p>
-                
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -357,7 +320,3 @@ const AICodeAssistantProZionTechGroup = () => {
         </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
-  );
-};
-
-export default AICodeAssistantProZionTechGroup;

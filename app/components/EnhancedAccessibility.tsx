@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, ReactNode } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
@@ -13,11 +12,9 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const mainContent = document.querySelector('main');
         if (mainContent) {
-          mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' });
+          (mainContent as HTMLElement).focus();
         }
       }
-
       // Escape key to close modals/dropdowns
       if (event.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement;
@@ -25,21 +22,17 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
           activeElement.blur();
         }
       }
-
       // Arrow key navigation for custom components
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
         const focusableElements = document.querySelectorAll(
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
         );
         const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element);
-        
         if (currentIndex !== -1) {
           const nextIndex = event.key === 'ArrowDown' 
             ? Math.min(currentIndex + 1, focusableElements.length - 1)
             : Math.max(currentIndex - 1, 0);
-          
-          (focusableElements[nextIndex] as HTMLElement)?.focus();
-          event.preventDefault();
+          (focusableElements[nextIndex] as HTMLElement).focus();
         }
       }
     };
@@ -57,9 +50,9 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       if (!document.getElementById('live-region')) {
         const liveRegion = document.createElement('div');
         liveRegion.id = 'live-region';
+        liveRegion.className = 'sr-only';
         liveRegion.setAttribute('aria-live', 'polite');
         liveRegion.setAttribute('aria-atomic', 'true');
-        liveRegion.className = 'sr-only';
         document.body.appendChild(liveRegion);
       }
     };
@@ -75,13 +68,15 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
           <a href="#navigation" class="bg-cyan-500 text-white px-4 py-2 rounded-lg mr-2 focus:outline-none focus:ring-2 focus:ring-cyan-300">Skip to navigation</a>
           <a href="#footer" class="bg-cyan-500 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-300">Skip to footer</a>
         `;
-        document.body.insertBefore(skipLinks, document.body.firstChild);
+        document.body.appendChild(skipLinks);
       }
     };
 
+    // Initialize accessibility features
     addLiveRegion();
     addSkipLinks();
 
+    // Add event listeners
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('focusin', handleFocusIn);
 
@@ -100,18 +95,16 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       >
         Skip to main content
       </a>
-      
       {/* High contrast mode toggle */}
       <button
         onClick={() => {
-          document.documentElement.classList.toggle('high-contrast');
+          document.body.classList.toggle('high-contrast');
         }}
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:right-4 bg-purple-500 text-white px-4 py-2 rounded-lg z-50 focus:outline-none focus:ring-2 focus:ring-purple-300"
         aria-label="Toggle high contrast mode"
       >
         High Contrast
       </button>
-
       {children}
     </>
   );

@@ -1,19 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Box } from 'lucide-react';
-
 interface ImageOptimizerProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  lazy?: boolean;
-  quality?: number;
-  format?: 'webp' | 'jpeg' | 'png';
-  placeholder?: string;
 }
-
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+const ImageOptimizer: React.FC<imgOptimizerProps> = ({
   src,
   alt,
   width,
@@ -28,56 +15,24 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [isInView, setIsInView] = useState(!lazy);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
   // Generate optimized src
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
-      return originalSrc;
     }
-    
     const url = new URL(originalSrc, window.location.origin);
-    url.searchParams.set('format', format);
-    url.searchParams.set('quality', quality.toString());
-    
-    if (width) url.searchParams.set('width', width.toString());
-    if (height) url.searchParams.set('height', height.toString());
-    
-    return url.toString();
-  };
-
   // Intersection Observer for lazy loading
   useEffect(() => {
-    if (!lazy || !imgRef.current) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsInView(true);
-            observer.disconnect();
           }
-        });
       },
       { threshold: 0.1 }
-    );
-
-    observer.observe(imgRef.current);
-
     return () => observer.disconnect();
-  }, [lazy]);
-
   const handleLoad = () => {
-    setIsLoaded(true);
-    setHasError(false);
-  };
-
   const handleError = () => {
-    setHasError(true);
-    setIsLoaded(false);
-  };
-
   const optimizedSrc = getOptimizedSrc(src);
-
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {/* Placeholder */}
@@ -97,7 +52,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           )}
         </div>
       )}
-
       {/* Error state */}
       {hasError && (
         <div 
@@ -114,7 +68,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
           </div>
         </div>
       )}
-
       {/* Main image */}
       {isInView && (
         <img
@@ -134,7 +87,3 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         />
       )}
     </div>
-  );
-};
-
-export default ImageOptimizer;

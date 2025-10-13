@@ -1,5 +1,4 @@
 // Metadata configuration for Zion Tech Group
-
 export const siteMetadata = {
   title: "Zion Tech Group - Advanced AI and IT Solutions",
   description:
@@ -11,8 +10,6 @@ export const siteMetadata = {
   image: "https://ziontechgroup.com/og-image.jpg",
   twitter: "@ziontechgroup",
   linkedin: "https://linkedin.com/company/ziontechgroup",
-};
-
 export const defaultMetadata = {
   title: siteMetadata.title,
   description: siteMetadata.description,
@@ -30,6 +27,3 @@ export const defaultMetadata = {
     description: siteMetadata.description,
     image: siteMetadata.image,
   },
-};
-
-export default siteMetadata;

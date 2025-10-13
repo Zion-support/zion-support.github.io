@@ -1,4 +1,3 @@
-
 export default function MicroSaasServices() {
   const microSaasServices = [
     {
@@ -325,8 +324,6 @@ export default function MicroSaasServices() {
         "Complete DevOps automation"
       ]
     }
-  ];
-
   return (
     <>
       <Helmet>
@@ -341,12 +338,10 @@ export default function MicroSaasServices() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas-services" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -354,18 +349,15 @@ export default function MicroSaasServices() {
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">#1 Micro SAAS Solutions Provider 2024</span>
             </div>
-            
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Micro SAAS Solutions
               </span>
             </h1>
-            
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
               Transform your business with our comprehensive suite of AI-powered micro SAAS solutions. 
               Ready-to-deploy software that delivers immediate value and accelerates your digital transformation.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link
                 to="/contact"
@@ -382,7 +374,6 @@ export default function MicroSaasServices() {
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
-            
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {stats.map((stat, index) => (
@@ -390,14 +381,13 @@ export default function MicroSaasServices() {
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
-                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Categories Filter */}
         <section className="py-8 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -425,7 +415,6 @@ export default function MicroSaasServices() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -439,7 +428,6 @@ export default function MicroSaasServices() {
                 Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform your business operations.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasServices.map((service, index) => (
                 <div
@@ -453,10 +441,8 @@ export default function MicroSaasServices() {
                       </span>
                     </div>
                   )}
-                  
                   {/* Animated background effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
                   <div className="relative z-10">
                     <div className="flex items-center mb-4">
                       <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
@@ -470,14 +456,12 @@ export default function MicroSaasServices() {
                         </div>
                       </div>
                     </div>
-                    
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                       {service.name}
                     </h3>
                     <p className="text-gray-300 text-sm leading-relaxed mb-4">
                       {service.description}
                     </p>
-                    
                     {/* Pricing */}
                     <div className="text-center mb-4">
                       <div className="flex items-center justify-center space-x-2">
@@ -487,7 +471,6 @@ export default function MicroSaasServices() {
                         )}
                       </div>
                     </div>
-                    
                     {/* Key Features */}
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 4).map((feature, idx) => (
@@ -502,7 +485,6 @@ export default function MicroSaasServices() {
                         </div>
                       )}
                     </div>
-                    
                     {/* Benefits */}
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Benefits:</h4>
@@ -515,7 +497,6 @@ export default function MicroSaasServices() {
                         ))}
                       </div>
                     </div>
-                    
                     <div className="mt-4 text-center">
                       <Link
                         to={service.link}
@@ -531,7 +512,6 @@ export default function MicroSaasServices() {
             </div>
           </div>
         </section>
-
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -543,7 +523,6 @@ export default function MicroSaasServices() {
                 Join thousands of businesses already using our micro SAAS solutions to drive growth and innovation. 
                 Start your free trial today or contact us for a personalized consultation.
               </p>
-              
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -568,7 +547,6 @@ export default function MicroSaasServices() {
                   <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -589,5 +567,4 @@ export default function MicroSaasServices() {
         </section>
       </div>
     </>
-  );
 }

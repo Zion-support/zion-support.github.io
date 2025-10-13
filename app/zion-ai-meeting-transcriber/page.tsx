@@ -1,14 +1,3 @@
-import React from "react";
-import SEOOptimizer from "../components/SEOOptimizer";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Search } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Mic } from 'lucide-react';
-
 export default function ZionAIMeetingTranscriber() {
   const features = [
     "Real-time meeting transcription with 99.5% accuracy",
@@ -23,8 +12,6 @@ export default function ZionAIMeetingTranscriber() {
     "Export to multiple formats (PDF, Word, SRT)",
     "AI-powered insights and analytics",
     "Secure cloud storage and backup"
-  ];
-
   const benefits = [
     "Save 2+ hours per meeting on note-taking",
     "Never miss important details again",
@@ -32,8 +19,6 @@ export default function ZionAIMeetingTranscriber() {
     "Create searchable knowledge base",
     "Generate actionable follow-ups automatically",
     "Ensure compliance with meeting records"
-  ];
-
   const pricing = [
     {
       name: "Starter",
@@ -59,8 +44,6 @@ export default function ZionAIMeetingTranscriber() {
       features: ["Unlimited hours", "Custom integrations", "Dedicated support", "Unlimited users", "Advanced analytics", "White-labeling"],
       popular: false
     }
-  ];
-
   const testimonials = [
     {
       name: "Sarah Chen",
@@ -83,8 +66,6 @@ export default function ZionAIMeetingTranscriber() {
       content: "The automatic action item extraction saves us hours of follow-up work. Highly recommended!",
       rating: 5
     }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -94,31 +75,26 @@ export default function ZionAIMeetingTranscriber() {
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-meeting-transcriber" />
       </Helmet>
       <SEOOptimizer />
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Mic className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">#1 AI Meeting Transcriber 2024</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Never Miss a Meeting Detail Again
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Transform your meetings with AI-powered real-time transcription, speaker identification, 
             and automatic action item extraction. 99.5% accuracy across 100+ languages.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
@@ -137,7 +113,6 @@ export default function ZionAIMeetingTranscriber() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -149,7 +124,6 @@ export default function ZionAIMeetingTranscriber() {
               Everything you need to capture, analyze, and act on every meeting detail with cutting-edge AI technology.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
@@ -167,7 +141,6 @@ export default function ZionAIMeetingTranscriber() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -179,7 +152,6 @@ export default function ZionAIMeetingTranscriber() {
               Transform your meeting productivity with measurable results
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div
@@ -197,7 +169,6 @@ export default function ZionAIMeetingTranscriber() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -209,7 +180,6 @@ export default function ZionAIMeetingTranscriber() {
               Choose the plan that fits your team size and meeting volume
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div
@@ -227,7 +197,6 @@ export default function ZionAIMeetingTranscriber() {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -236,7 +205,6 @@ export default function ZionAIMeetingTranscriber() {
                     <span className="text-gray-400 ml-2">/{plan.period}</span>
                   </div>
                 </div>
-                
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -245,7 +213,6 @@ export default function ZionAIMeetingTranscriber() {
                     </li>
                   ))}
                 </ul>
-                
                 <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${
@@ -262,7 +229,6 @@ export default function ZionAIMeetingTranscriber() {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-7xl mx-auto">
@@ -274,7 +240,6 @@ export default function ZionAIMeetingTranscriber() {
               See what our customers say about Zion AI Meeting Transcriber
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -282,21 +247,20 @@ export default function ZionAIMeetingTranscriber() {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "Company"}</div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -307,7 +271,6 @@ export default function ZionAIMeetingTranscriber() {
             Join thousands of teams already using Zion AI Meeting Transcriber to capture every important detail.
             Start your free trial today.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -327,5 +290,4 @@ export default function ZionAIMeetingTranscriber() {
         </div>
       </section>
     </div>
-  );
 }
