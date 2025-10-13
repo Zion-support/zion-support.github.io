@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, FileText, Users, Target, TrendingUp, Globe, Mail } from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
@@ -36,7 +36,29 @@ const Navigation = React.memo(() => {
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion AI Accounting Assistant', path: '/zion-ai-accounting-assistant', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Zion AI Code Reviewer', path: '/zion-ai-code-reviewer', icon: <Code className="w-4 h-4" /> },
+    { name: 'Zion AI Content Moderation', path: '/zion-ai-content-moderation', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Zion AI Contract Analyzer', path: '/zion-ai-contract-analyzer', icon: <FileText className="w-4 h-4" /> },
+    { name: 'Zion AI Customer Service Pro', path: '/zion-ai-customer-service-pro', icon: <Users className="w-4 h-4" /> },
+    { name: 'Zion AI Data Cleaner', path: '/zion-ai-data-cleaner', icon: <Database className="w-4 h-4" /> },
+    { name: 'Zion AI Document AI', path: '/zion-ai-document-ai', icon: <FileText className="w-4 h-4" /> },
+    { name: 'Zion AI Email Assistant', path: '/zion-ai-email-assistant', icon: <Mail className="w-4 h-4" /> },
+    { name: 'Zion AI Energy Manager', path: '/zion-ai-energy-manager', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion AI Fraud Detector', path: '/zion-ai-fraud-detector', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Zion AI Marketing Automation', path: '/zion-ai-marketing-automation', icon: <Target className="w-4 h-4" /> },
+    { name: 'Zion AI Meeting Assistant', path: '/zion-ai-meeting-assistant', icon: <Users className="w-4 h-4" /> },
+    { name: 'Zion AI Predictive Maintenance', path: '/zion-ai-predictive-maintenance', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Zion AI Recruitment Pro', path: '/zion-ai-recruitment-pro', icon: <Users className="w-4 h-4" /> },
+    { name: 'Zion AI SEO Optimizer', path: '/zion-ai-seo-optimizer', icon: <TrendingUp className="w-4 h-4" /> },
+    { name: 'Zion AI Supply Chain Optimizer', path: '/zion-ai-supply-chain-optimizer', icon: <Globe className="w-4 h-4" /> },
+    { name: 'Zion AI Survey Builder', path: '/zion-ai-survey-builder', icon: <FileText className="w-4 h-4" /> },
+    { name: 'Zion AI Translator Pro', path: '/zion-ai-translator-pro', icon: <Globe className="w-4 h-4" /> },
+    { name: 'Zion AI Video Editor', path: '/zion-ai-video-editor', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Chat AI', path: '/zion-chat-ai', icon: <Brain className="w-4 h-4" /> },
+    { name: 'Zion CRM Intelligence', path: '/zion-crm-intelligence', icon: <Users className="w-4 h-4" /> },
+    { name: 'Zion Customer Insights', path: '/zion-customer-insights', icon: <BarChart3 className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -180,33 +202,60 @@ const Navigation = React.memo(() => {
               </button>
               
               {isMicroSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
                     <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">Micro SAAS Solutions</h3>
+                    <p className="text-xs text-gray-400 mt-1">36+ AI-powered business solutions</p>
                   </div>
-                  {microSaasServices.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.path}
-                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group ${
-                        service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : ''
-                      }`}
-                      onClick={() => setIsMicroSaasOpen(false)}
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
-                        {service.icon}
-                      </div>
-                      <div className="flex-1">
-                        <span className="font-medium">{service.name}</span>
-                        {service.featured && (
-                          <div className="flex items-center mt-1">
-                            <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
-                            <span className="text-xs text-yellow-400">Featured</span>
+                  <div className="max-h-96 overflow-y-auto">
+                    <div className="px-4 py-2">
+                      <h4 className="text-xs font-semibold text-purple-300 uppercase tracking-wider mb-2">Featured Solutions</h4>
+                      {microSaasServices.filter(service => service.featured).map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.path}
+                          className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group rounded-lg mb-1"
+                          onClick={() => setIsMicroSaasOpen(false)}
+                        >
+                          <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
+                            {service.icon}
                           </div>
-                        )}
+                          <div className="flex-1">
+                            <span className="font-medium text-sm">{service.name}</span>
+                            <div className="flex items-center mt-1">
+                              <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
+                              <span className="text-xs text-yellow-400">Featured</span>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="px-4 py-2 border-t border-gray-700">
+                      <h4 className="text-xs font-semibold text-purple-300 uppercase tracking-wider mb-2">All Solutions</h4>
+                      <div className="grid grid-cols-1 gap-1">
+                        {microSaasServices.slice(0, 8).map((service) => (
+                          <Link
+                            key={service.name}
+                            to={service.path}
+                            className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group rounded-lg"
+                            onClick={() => setIsMicroSaasOpen(false)}
+                          >
+                            <div className="w-6 h-6 rounded bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
+                              {service.icon}
+                            </div>
+                            <span className="font-medium text-sm">{service.name}</span>
+                          </Link>
+                        ))}
                       </div>
-                    </Link>
-                  ))}
+                      <Link
+                        to="/micro-saas"
+                        className="block w-full text-center px-3 py-2 mt-2 text-purple-400 hover:text-purple-300 text-sm font-medium border border-purple-500/30 rounded-lg hover:bg-purple-500/10 transition-all duration-300"
+                        onClick={() => setIsMicroSaasOpen(false)}
+                      >
+                        View All 36+ Solutions →
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -308,22 +357,52 @@ const Navigation = React.memo(() => {
                 </button>
                 
                 {isMicroSaasOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
-                    {microSaasServices.map((service) => (
+                  <div className="ml-4 mt-2 space-y-2">
+                    <div className="mb-3">
+                      <h4 className="text-xs font-semibold text-purple-300 uppercase tracking-wider mb-2">Featured Solutions</h4>
+                      {microSaasServices.filter(service => service.featured).map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.path}
+                          className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-purple-400 transition-colors rounded-lg hover:bg-purple-500/10 mb-1"
+                          onClick={() => {
+                            setIsMicroSaasOpen(false)
+                            toggleMenu()
+                          }}
+                        >
+                          {service.icon}
+                          <span className="text-sm">{service.name}</span>
+                          <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="border-t border-gray-700 pt-3">
+                      <h4 className="text-xs font-semibold text-purple-300 uppercase tracking-wider mb-2">All Solutions</h4>
+                      {microSaasServices.slice(0, 6).map((service) => (
+                        <Link
+                          key={service.name}
+                          to={service.path}
+                          className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-purple-400 transition-colors rounded-lg hover:bg-purple-500/10"
+                          onClick={() => {
+                            setIsMicroSaasOpen(false)
+                            toggleMenu()
+                          }}
+                        >
+                          {service.icon}
+                          <span className="text-sm">{service.name}</span>
+                        </Link>
+                      ))}
                       <Link
-                        key={service.name}
-                        to={service.path}
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-purple-400 transition-colors rounded-lg hover:bg-purple-500/10"
+                        to="/micro-saas"
+                        className="block w-full text-center px-3 py-2 mt-2 text-purple-400 hover:text-purple-300 text-sm font-medium border border-purple-500/30 rounded-lg hover:bg-purple-500/10 transition-all duration-300"
                         onClick={() => {
                           setIsMicroSaasOpen(false)
                           toggleMenu()
                         }}
                       >
-                        {service.icon}
-                        <span>{service.name}</span>
-                        {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
+                        View All 36+ Solutions →
                       </Link>
-                    ))}
+                    </div>
                   </div>
                 )}
               </div>

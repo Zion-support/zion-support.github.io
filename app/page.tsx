@@ -41,31 +41,58 @@ const HomePage = () => {
   const microSaasHighlights = [
     {
       name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform",
+      description: "AI-powered business intelligence platform with real-time insights and predictive analytics",
       price: "From $29/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro"
+      link: "/zion-analytics-pro",
+      featured: true
     },
     {
       name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection",
+      description: "Advanced cybersecurity protection with 24/7 monitoring and automated threat response",
       price: "From $49/month",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield"
+      link: "/zion-security-shield",
+      featured: true
+    },
+    {
+      name: "Zion AI Accounting Assistant",
+      description: "Automated bookkeeping, invoice processing, and financial forecasting with 99.9% accuracy",
+      price: "From $29/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-accounting-assistant",
+      featured: true
+    },
+    {
+      name: "Zion AI Energy Manager",
+      description: "Smart energy monitoring and cost optimization reducing bills by up to 30%",
+      price: "From $49/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-energy-manager",
+      featured: false
+    },
+    {
+      name: "Zion AI Supply Chain Optimizer",
+      description: "Intelligent logistics optimization improving efficiency by 40% and reducing costs by 25%",
+      price: "From $199/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-supply-chain-optimizer",
+      featured: false
     },
     {
       name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
+      description: "Secure cloud storage solution with enterprise-grade encryption and compliance",
       price: "From $9/month",
       icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
+      link: "/zion-cloud-vault",
+      featured: false
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "36+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -215,18 +242,28 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+                  saas.featured 
+                    ? 'border-purple-500/50 hover:border-purple-400/70 hover:shadow-purple-500/20' 
+                    : 'border-white/20 hover:border-purple-500/30 hover:shadow-purple-500/10'
+                }`}
               >
+                {saas.featured && (
+                  <div className="flex items-center mb-3">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current mr-2" />
+                    <span className="text-yellow-400 text-sm font-medium">Featured Solution</span>
+                  </div>
+                )}
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
                     {saas.icon}
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                       {saas.name}
                     </h3>
@@ -236,6 +273,10 @@ const HomePage = () => {
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {saas.description}
                 </p>
+                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
               </Link>
             ))}
           </div>
