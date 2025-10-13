@@ -10,6 +10,7 @@ const CacheManager = () => {
           const registration = await navigator.serviceWorker.register('/sw.js');
           console.log('Service Worker registered:', registration);
 <<<<<<< HEAD
+<<<<<<< HEAD
         } catch (error) {
           console.error('Service Worker registration failed:', error);
 =======
@@ -25,6 +26,10 @@ const CacheManager = () => {
           // Handle error silently
 >>>>>>> cursor/fix-errors-and-merge-to-main-6877
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
+=======
+        } catch (error) {
+          console.error('Service Worker registration failed:', error);
+>>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
         }
       }
     }
@@ -52,10 +57,9 @@ const CacheManager = () => {
           console.error('Failed to cache static assets:', error);
 =======
           console.log('Static assets cached successfully');
-<<<<<<< HEAD
-
         } catch (error) {
           console.error('Failed to cache static assets:', error);
+<<<<<<< HEAD
 
 
 
@@ -64,6 +68,8 @@ const CacheManager = () => {
           // Handle error silently
 >>>>>>> cursor/fix-errors-and-merge-to-main-6877
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
         }
       }
 
@@ -79,6 +85,7 @@ const CacheManager = () => {
           
           return response
 <<<<<<< HEAD
+<<<<<<< HEAD
         } catch (error) {
           console.error('Cache API error:', error);
 =======
@@ -93,6 +100,10 @@ const CacheManager = () => {
         } catch {
 >>>>>>> cursor/fix-errors-and-merge-to-main-6877
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
+=======
+        } catch (error) {
+          console.error('Failed to cache API response:', error);
+>>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
           return fetch(request);
         }
       }

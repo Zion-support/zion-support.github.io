@@ -3,8 +3,12 @@ import { useState } from "react";
 import { ArrowRight, Calendar, User } from "lucide-react";
 =======
 import React, { useState } from "react";
+<<<<<<< HEAD
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
+=======
+import { ArrowRight, Search, Calendar, Clock, User, Zap } from "lucide-react";
+>>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 

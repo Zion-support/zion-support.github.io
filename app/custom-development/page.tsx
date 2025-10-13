@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail, Smartphone as Phone } from "lucide-react";
+=======
+import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail } from "lucide-react";
+>>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -204,7 +208,7 @@ export default function CustomDevelopment() {
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Phone className="w-6 h-6 text-white" />
+                    <Smartphone className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
                   <p className="text-cyan-400">+1 302 464 0950</p>

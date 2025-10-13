@@ -1,11 +1,5 @@
 'use client'
 import { useEffect, useState } from 'react'
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
 
 interface PerformanceMetrics {
   fcp: number | null
@@ -17,6 +11,7 @@ interface PerformanceMetrics {
   loadTime: number | null
 }
 
+<<<<<<< HEAD
 const AdvancedPerformanceMonitor = () => {
 <<<<<<< HEAD
 =======
@@ -27,6 +22,9 @@ const AdvancedPerformanceMonitor = () => {
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-6877
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
+=======
+const AdvancedPerformanceMonitor: React.FC = () => {
+>>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -43,6 +41,7 @@ const AdvancedPerformanceMonitor = () => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
+<<<<<<< HEAD
     const measurePerformance = () => {
       // Measure Core Web Vitals
       const observer = new PerformanceObserver((list) => {
@@ -59,6 +58,11 @@ const AdvancedPerformanceMonitor = () => {
           } else if (entry.entryType === 'layout-shift') {
             setMetrics(prev => ({ ...prev, cls: (entry as any).value }))
           }
+=======
+        onCLS((metric: any) => {
+          setMetrics(prev => ({ ...prev, cls: metric.value }))
+          reportMetric()
+>>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
         })
       })
 
@@ -72,24 +76,25 @@ const AdvancedPerformanceMonitor = () => {
 =======
         onINP((metric: any) => {
           setMetrics(prev => ({ ...prev, fid: metric.value }))
-          reportMetric('INP', metric.value)
+          reportMetric()
         })
 
         onFCP((metric: any) => {
           setMetrics(prev => ({ ...prev, fcp: metric.value }))
-          reportMetric('FCP', metric.value)
+          reportMetric()
         })
 
         onLCP((metric: any) => {
           setMetrics(prev => ({ ...prev, lcp: metric.value }))
-          reportMetric('LCP', metric.value)
+          reportMetric()
         })
 
         onTTFB((metric: any) => {
           setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-          reportMetric('TTFB', metric.value)
+          reportMetric()
         })
       } catch (error) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         console.error('Failed to measure web vitals:', error);
@@ -100,6 +105,9 @@ const AdvancedPerformanceMonitor = () => {
         console.warn('Web Vitals not available:', error)
 >>>>>>> cursor/fix-errors-and-merge-to-main-6877
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
+=======
+        console.warn('Failed to load web-vitals:', error);
+>>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
       }
 
       // Measure memory usage
@@ -118,38 +126,8 @@ const AdvancedPerformanceMonitor = () => {
     }
 
     // Report metrics to analytics
-    const reportMetric = (name: string, value: number) => {
-<<<<<<< HEAD
-
-      // Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          metric_name: name,
-          metric_value: Math.round(value),
-          metric_delta: Math.round(value)
-        })
-      }
-
-      // Send to custom analytics
-      if (typeof window !== 'undefined' && (window as any).analytics) {
-        (window as any).analytics.track('Performance Metric', {
-          name,
-          value: Math.round(value),
-          timestamp: Date.now()
-        })
-      }
-
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`Performance Metric: ${name} = ${value}`);
-
-
-      }
-
-=======
-      // You can integrate with your analytics service here
-      console.log(`Performance Metric - ${name}:`, value)
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
+    const reportMetric = () => {
+      // Analytics reporting would go here
     }
 
     measureWebVitals()
@@ -216,6 +194,7 @@ const AdvancedPerformanceMonitor = () => {
   const performanceScore = calculateScore()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   // Render performance dashboard in development
   if (process.env.NODE_ENV === 'development') {
@@ -255,74 +234,19 @@ export default AdvancedPerformanceMonitor
   // Don't render if no metrics are available
   if (!performanceScore) return null
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
   return (
-    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 max-w-sm z-50 border border-gray-200 dark:border-gray-700">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Monitor</h3>
-      </div>
-
-      <div className="space-y-3">
-        {/* Performance Score */}
-        <div className="text-center">
-          <div className={`text-2xl font-bold ${
-            performanceScore >= 90 ? 'text-green-500' : 
-            performanceScore >= 70 ? 'text-yellow-500' : 'text-red-500'
-          }`}>
-            {performanceScore}/100
-          </div>
-          <div className="text-sm text-gray-600 dark:text-gray-400">Performance Score</div>
-        </div>
-
-        {/* Metrics */}
-        <div className="grid grid-cols-2 gap-2 text-sm">
-          {metrics.fcp !== null && (
-            <div className="text-center">
-              <div className="text-xs text-gray-500 dark:text-gray-400">FCP</div>
-              <div className="font-semibold">{metrics.fcp.toFixed(0)}ms</div>
-            </div>
-          )}
-          {metrics.lcp !== null && (
-            <div className="text-center">
-              <div className="text-xs text-gray-500 dark:text-gray-400">LCP</div>
-              <div className="font-semibold">{metrics.lcp.toFixed(0)}ms</div>
-            </div>
-          )}
-          {metrics.cls !== null && (
-            <div className="text-center">
-              <div className="text-xs text-gray-500 dark:text-gray-400">CLS</div>
-              <div className="font-semibold">{metrics.cls.toFixed(3)}</div>
-            </div>
-          )}
-          {metrics.fid !== null && (
-            <div className="text-center">
-              <div className="text-xs text-gray-500 dark:text-gray-400">FID</div>
-              <div className="font-semibold">{metrics.fid.toFixed(0)}ms</div>
-            </div>
-          )}
-        </div>
-
-        {/* Memory Usage */}
-        {metrics.memoryUsage !== null && (
-          <div className="text-center">
-            <div className="text-xs text-gray-500 dark:text-gray-400">Memory</div>
-            <div className="text-sm font-semibold">
-              {(metrics.memoryUsage / 1024 / 1024).toFixed(1)}MB
-            </div>
-          </div>
-        )}
-
-        {/* Load Time */}
-        {metrics.loadTime !== null && (
-          <div className="text-center">
-            <div className="text-xs text-gray-500 dark:text-gray-400">Load Time</div>
-            <div className="text-sm font-semibold">{metrics.loadTime}ms</div>
-          </div>
-        )}
-      </div>
+    <div className="performance-monitor">
+      <h3>Performance Score: {performanceScore || 'Calculating...'}</h3>
     </div>
-  )
-}
+  );
+};
 
+<<<<<<< HEAD
 export default AdvancedPerformanceMonitor
 >>>>>>> cursor/fix-errors-and-merge-to-main-6877
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
+=======
+export default AdvancedPerformanceMonitor;
+>>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
