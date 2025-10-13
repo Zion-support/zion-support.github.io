@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import Layout from "../layout";
 
-export default function CloudInfrastructureManagement() {
+const CloudInfrastructureManagementPage: React.FC = () => {
   const features = [
     {
       icon: <Cloud className="w-6 h-6 text-cyan-400" />,
@@ -52,3 +52,6 @@ export default function CloudInfrastructureManagement() {
 
   const managementFeatures = [
     {
+};
+
+export default CloudInfrastructureManagementPage;

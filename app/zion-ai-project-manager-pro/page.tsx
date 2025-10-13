@@ -2,7 +2,7 @@ import { ArrowRight, Calendar, Brain, BarChart3, CheckCircle, Star, Zap, Users, 
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAiProjectManagerPro() {
+const ZionAiProjectManagerProPage: React.FC = () => {
   const features = [
     {
       title: "AI-Powered Task Prioritization",
@@ -447,4 +447,6 @@ export default function ZionAiProjectManagerPro() {
       </div>
     </>
   );
-}
+}  };
+
+export default ZionAiProjectManagerProPage;

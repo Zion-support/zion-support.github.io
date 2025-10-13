@@ -37,7 +37,7 @@
   Activity
 } from "lucide-react";
 
-export default function ZionSecurityShieldPro() {
+const ZionSecurityShieldProPage: React.FC = () => {
   const features = [
     {
       title: "AI-Powered Threat Detection",
@@ -84,3 +84,6 @@ export default function ZionSecurityShieldPro() {
     { number: "100%", label: "Compliance Coverage", icon: <Award className="w-6 h-6" /> }
   ];
 
+};
+
+export default ZionSecurityShieldProPage;

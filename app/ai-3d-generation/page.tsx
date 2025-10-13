@@ -26,3 +26,6 @@ export default function Ai3DGenerationZionTechGroup() {
     </>
   );
 }
+};
+
+export default Ai3dGenerationPage;

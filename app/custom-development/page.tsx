@@ -2,7 +2,7 @@ import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail, Sm
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function CustomDevelopment() {
+const CustomDevelopmentPage: React.FC = () => {
   const services = [
     {
       title: "Custom Software Development",
@@ -239,4 +239,6 @@ export default function CustomDevelopment() {
       </div>
     </>
   );
-}
+}  };
+
+export default CustomDevelopmentPage;

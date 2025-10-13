@@ -2,7 +2,7 @@ import { ArrowRight, Shield, Lock, Eye, AlertTriangle, Users, Database, Mail, Sm
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function Cybersecurity() {
+const CybersecurityPage: React.FC = () => {
   const services = [
     {
       title: "AI Cybersecurity Suite",
@@ -237,4 +237,6 @@ export default function Cybersecurity() {
       </div>
     </>
   );
-}
+}  };
+
+export default CybersecurityPage;

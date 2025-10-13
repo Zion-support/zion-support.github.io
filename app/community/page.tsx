@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
 
-export default function Community() {
+const CommunityPage: React.FC = () => {
   const events = [
     {
       title: "AI Innovation Summit 2024",
@@ -212,3 +212,6 @@ export default function Community() {
   );
 }
 
+};
+
+export default CommunityPage;

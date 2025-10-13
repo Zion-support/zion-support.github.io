@@ -2,7 +2,7 @@ import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, Mes
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAiMarketingAutomationPro() {
+const ZionAiMarketingAutomationProPage: React.FC = () => {
   const features = [
     {
       title: "AI-Powered Campaign Optimization",
@@ -447,4 +447,6 @@ export default function ZionAiMarketingAutomationPro() {
       </div>
     </>
   );
-}
+}  };
+
+export default ZionAiMarketingAutomationProPage;

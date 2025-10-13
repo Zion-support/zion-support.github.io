@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle, Star, Cpu, Brain, Zap, Atom, Sparkles, Users, 
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
-export default function AiQuantumComputing() {
+const AiQuantumComputingPage: React.FC = () => {
   const features = [
     "Quantum machine learning algorithms for complex optimization",
     "Quantum simulation for drug discovery and materials science",
@@ -458,4 +458,6 @@ export default function AiQuantumComputing() {
       </div>
     </>
   );
-}
+}  };
+
+export default AiQuantumComputingPage;

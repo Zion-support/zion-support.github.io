@@ -2,7 +2,7 @@ import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, B
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionSecurityShield() {
+const ZionSecurityShieldPage: React.FC = () => {
   const features = [
     {
       icon: <Shield className="w-6 h-6" />,
@@ -371,3 +371,6 @@ export default function ZionSecurityShield() {
     </>
   );
 }
+};
+
+export default ZionSecurityShieldPage;

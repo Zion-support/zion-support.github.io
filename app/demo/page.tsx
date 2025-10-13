@@ -16,7 +16,7 @@ import {
   Phone
 } from "lucide-react";
 
-export default function DemoPage() {
+const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState("ai-analytics");
 
   const demos = [
@@ -286,4 +286,6 @@ export default function DemoPage() {
       </div>
     </>
   );
-}
+}  };
+
+export default DemoPage;

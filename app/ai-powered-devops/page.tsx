@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle, Star, Cpu, Brain, Zap, Settings, Sparkles, Use
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
-export default function AiPoweredDevops() {
+const AiPoweredDevopsPage: React.FC = () => {
   const features = [
     "AI-powered automated testing and quality assurance",
     "Intelligent deployment orchestration and rollback",
@@ -457,4 +457,6 @@ export default function AiPoweredDevops() {
       </div>
     </>
   );
-}
+}  };
+
+export default AiPoweredDevopsPage;

@@ -160,3 +160,49 @@ const AIServices = () => {
     { number: "10,000+", label: "Businesses Transformed", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
     { number: "50%", label: "Average Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <EnhancedSEO
+        title="AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions"
+        description="Transform your business with our cutting-edge AI services including machine learning, natural language processing, computer vision, and predictive analytics."
+        keywords="AI services, artificial intelligence, machine learning, NLP, computer vision, predictive analytics, business automation"
+        canonical="https://ziontechgroup.com/ai-services"
+      />
+      
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+              AI Services
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your business with cutting-edge artificial intelligence solutions designed to drive innovation, efficiency, and growth.
+          </p>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
+                  <div className="text-cyan-400">{stat.icon}</div>
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-400">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default AIServicesPage;

@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionSmartExpenseCategorizer() {
+const ZionSmartExpenseCategorizerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -42,4 +42,6 @@ export default function ZionSmartExpenseCategorizer() {
       </div>
     </>
   );
-}
+}  };
+
+export default ZionSmartExpenseCategorizerPage;

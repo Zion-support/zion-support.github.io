@@ -10,7 +10,7 @@ import {
   BarChart3,
 } from "lucide-react";
 
-export default function AIProjectManagementPro() {
+const AiProjectManagementProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
@@ -362,3 +362,6 @@ export default function AIProjectManagementPro() {
     </>
   );
 }
+};
+
+export default AiProjectManagementProPage;

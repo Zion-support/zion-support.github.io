@@ -32,7 +32,7 @@
   Clock
 } from "lucide-react";
 
-export default function ZionAiAnalyticsPro() {
+const ZionAiAnalyticsProPage: React.FC = () => {
   const features = [
     {
       title: "Real-time Analytics Dashboard",
@@ -69,3 +69,6 @@ export default function ZionAiAnalyticsPro() {
       description: "Rebrand our analytics platform as your own with complete white-label customization options for agencies and resellers.",
       icon: <Settings className="w-8 h-8" />,
       benefits: ["Custom branding", "Domain mapping", "API access", "Reseller tools"]
+};
+
+export default ZionAiAnalyticsProPage;

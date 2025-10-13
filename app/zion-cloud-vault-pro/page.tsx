@@ -44,7 +44,7 @@ import {
   Key
 } from "lucide-react";
 
-export default function ZionCloudVaultPro() {
+const ZionCloudVaultProPage: React.FC = () => {
   const features = [
     {
       title: "End-to-End Encryption",
@@ -495,4 +495,6 @@ export default function ZionCloudVaultPro() {
       </div>
     </>
   );
-}
+}  };
+
+export default ZionCloudVaultProPage;

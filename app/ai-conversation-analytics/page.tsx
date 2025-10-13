@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiConversationAnalytics() {
+const AiConversationAnalyticsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -29,3 +29,6 @@ export default function AiConversationAnalytics() {
     </>
   );
 }
+};
+
+export default AiConversationAnalyticsPage;

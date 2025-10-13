@@ -13,7 +13,7 @@ import {
   Users,
 } from "lucide-react";
 
-export default function AIEmailAssistant() {
+const AiEmailAssistantPage: React.FC = () => {
   const features = [
     {
       icon: <Mail className="w-6 h-6 text-cyan-400" />,
@@ -337,3 +337,6 @@ export default function AIEmailAssistant() {
     </>
   );
 }
+};
+
+export default AiEmailAssistantPage;

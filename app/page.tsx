@@ -52,7 +52,7 @@ const HomePage = () => {
         "description": "Cloud computing and infrastructure services"
       }
     ]
-  };
+};
   const features = [
     {
       title: "AI-Powered Solutions",

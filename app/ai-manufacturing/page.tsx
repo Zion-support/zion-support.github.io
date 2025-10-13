@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 import { Link } from "react-router-dom";
 
-export default function GDataAnalyticsZionTechGroupPage() {
+const AiManufacturingPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -29,3 +29,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
     </>
   );
 }
+};
+
+export default AiManufacturingPage;

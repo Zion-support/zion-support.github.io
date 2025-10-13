@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, TrendingUp, Clock } from 'lucide-react';
 
-export default function CloudServices() {
+const CloudServicesPage: React.FC = () => {
   const services = [
     {
       icon: <TrendingUp className="w-6 h-6" />,
@@ -262,4 +262,6 @@ export default function CloudServices() {
       </section>
     </div>
   );
-}
+}  };
+
+export default CloudServicesPage;

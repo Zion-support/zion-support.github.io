@@ -34,3 +34,6 @@ export default function Implementation5GPage() {
     </>
   );
 }
+};
+
+export default 5gImplementationPage;

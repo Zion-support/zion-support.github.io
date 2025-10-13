@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 import { Link } from "react-router-dom";
 
-export default function AIDevOpsAutomationZionTechGroup() {
+const AiDevopsAutomationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -29,3 +29,6 @@ export default function AIDevOpsAutomationZionTechGroup() {
     </>
   );
 }
+};
+
+export default AiDevopsAutomationPage;

@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function Contact() {
+const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,7 +21,7 @@ export default function Contact() {
       ...prev,
       [name]: value
     }));
-  };
+};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,7 +39,7 @@ export default function Contact() {
         message: ''
       });
     }, 3000);
-  };
+};
 
   const contactInfo = [
     {
@@ -356,4 +356,6 @@ export default function Contact() {
       </div>
     </>
   );
-}
+};
+
+export default ContactPage;

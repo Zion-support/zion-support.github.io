@@ -54,7 +54,7 @@ import {
   Download
 } from "lucide-react";
 
-export default function ZionAiCrmPro() {
+const ZionAiCrmProPage: React.FC = () => {
   const features = [
     {
       title: "AI Lead Scoring & Qualification",
@@ -505,4 +505,6 @@ export default function ZionAiCrmPro() {
       </div>
     </>
   );
-}
+}  };
+
+export default ZionAiCrmProPage;

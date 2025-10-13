@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Brain, Users, Zap, Globe, Clock, CheckCircle } from "lucide-react";
 import Layout from "../layout";
 
-export default function AISmartScheduler() {
+const AiSmartSchedulerPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
@@ -281,3 +281,6 @@ export default function AISmartScheduler() {
     </Layout>
   );
 }
+};
+
+export default AiSmartSchedulerPage;

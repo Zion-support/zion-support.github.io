@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
 
-export default function Partners() {
+const PartnersPage: React.FC = () => {
   const partners = [
     {
       name: "Microsoft",
@@ -122,4 +122,6 @@ export default function Partners() {
       </div>
     </>
   );
-}
+}  };
+
+export default PartnersPage;

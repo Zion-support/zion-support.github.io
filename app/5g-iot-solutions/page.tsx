@@ -34,3 +34,6 @@ export default function IoT5GPage() {
     </>
   );
 }
+};
+
+export default 5gIotSolutionsPage;

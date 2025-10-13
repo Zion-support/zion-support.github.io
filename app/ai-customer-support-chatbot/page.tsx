@@ -3,7 +3,7 @@ import { Brain, Clock, Target, BarChart3 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AICustomerSupportChatbot() {
+const AiCustomerSupportChatbotPage: React.FC = () => {
   const chatbotFeatures = [
     {
       category: "Core Features",
@@ -304,3 +304,6 @@ export default function AICustomerSupportChatbot() {
     </>
   );
 }
+};
+
+export default AiCustomerSupportChatbotPage;

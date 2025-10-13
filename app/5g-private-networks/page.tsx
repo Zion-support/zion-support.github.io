@@ -35,3 +35,6 @@ export default function PrivateNetworks5GPage() {
     </>
   );
 }
+};
+
+export default 5gPrivateNetworksPage;

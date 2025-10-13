@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-export default function AIAnalyticsDashboardProZionTechGroup() {
+const AiAnalyticsDashboardProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -28,3 +28,6 @@ export default function AIAnalyticsDashboardProZionTechGroup() {
     </>
   );
 }
+};
+
+export default AiAnalyticsDashboardProPage;

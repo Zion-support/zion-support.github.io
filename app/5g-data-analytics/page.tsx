@@ -34,3 +34,6 @@ export default function DataAnalytics5GPage() {
     </>
   );
 }
+};
+
+export default 5gDataAnalyticsPage;

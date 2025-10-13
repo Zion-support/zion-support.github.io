@@ -35,3 +35,6 @@ export default function MobileApplications5GPage() {
     </>
   );
 }
+};
+
+export default 5gMobileApplicationsPage;

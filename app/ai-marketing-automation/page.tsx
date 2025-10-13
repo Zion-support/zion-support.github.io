@@ -2,7 +2,7 @@ import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Mail as Email,
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIMarketingAutomation() {
+const AiMarketingAutomationPage: React.FC = () => {
   const features = [
     {
       title: "Email Marketing Automation",
@@ -322,4 +322,6 @@ export default function AIMarketingAutomation() {
       </div>
     </>
   );
-}
+}  };
+
+export default AiMarketingAutomationPage;

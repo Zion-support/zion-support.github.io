@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 import { Link } from "react-router-dom";
 
-export default function PageZionTechGroup() {
+const ApiPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -33,3 +33,6 @@ export default function PageZionTechGroup() {
     </>
   );
 }
+};
+
+export default ApiPage;

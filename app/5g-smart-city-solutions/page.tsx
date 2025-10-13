@@ -35,3 +35,6 @@ export default function SmartCitySolutions5GPage() {
     </>
   );
 }
+};
+
+export default 5gSmartCitySolutionsPage;

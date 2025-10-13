@@ -55,7 +55,7 @@ import {
   Zap as LightningIcon
 } from "lucide-react";
 
-export default function AiAnalytics() {
+const AiAnalyticsPage: React.FC = () => {
   const features = [
     {
       title: "Real-time Data Processing",
@@ -506,3 +506,6 @@ export default function AiAnalytics() {
     </>
   );
 }
+};
+
+export default AiAnalyticsPage;

@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-export default function AIAPIManagerZionTechGroup() {
+const AiApiManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -26,3 +26,6 @@ export default function AIAPIManagerZionTechGroup() {
     </>
   );
 }
+};
+
+export default AiApiManagerPage;

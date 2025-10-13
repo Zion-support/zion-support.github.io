@@ -48,3 +48,6 @@ const ZionAiCustomerInsights = () => {
       description: "Connect with 100+ platforms including social media, email, chat, and CRM systems",
       icon: <Globe className="w-6 h-6" />,
       stats: "100+ integrations"
+};
+
+export default ZionAiCustomerInsightsPage;

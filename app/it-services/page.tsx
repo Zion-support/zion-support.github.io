@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function ITServices() {
+const ItServicesPage: React.FC = () => {
   const itServices = [
     {
       id: "cloud-infrastructure",
@@ -694,4 +694,6 @@ export default function ITServices() {
       </div>
     </>
   );
-}
+}  };
+
+export default ItServicesPage;

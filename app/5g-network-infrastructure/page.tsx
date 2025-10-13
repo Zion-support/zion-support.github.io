@@ -35,3 +35,6 @@ export default function NetworkInfrastructure5GPage() {
     </>
   );
 }
+};
+
+export default 5gNetworkInfrastructurePage;

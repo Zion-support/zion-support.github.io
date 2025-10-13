@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function FaqZionTechGroup() {
+const FaqPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -27,3 +27,6 @@ export default function FaqZionTechGroup() {
     </>
   );
 }
+};
+
+export default FaqPage;

@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-export default function Consultation() {
+const ConsultationPage: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -23,13 +23,13 @@ export default function Consultation() {
       ...prev,
       [name]: value
     }));
-  };
+};
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
     // Handle form submission logic here
-  };
+};
 
   const consultationTypes = [
     {
@@ -127,4 +127,6 @@ export default function Consultation() {
       </div>
     </>
   );
-}
+}  };
+
+export default ConsultationPage;

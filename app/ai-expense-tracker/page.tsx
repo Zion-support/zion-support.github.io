@@ -13,7 +13,7 @@ import {
   DollarSign,
 } from "lucide-react";
 
-export default function AIExpenseTracker() {
+const AiExpenseTrackerPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-12 h-12 text-cyan-400" />,
@@ -339,3 +339,6 @@ export default function AIExpenseTracker() {
     </>
   );
 }
+};
+
+export default AiExpenseTrackerPage;

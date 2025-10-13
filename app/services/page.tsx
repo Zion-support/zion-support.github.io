@@ -2,7 +2,7 @@ import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, B
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function Services() {
+const ServicesPage: React.FC = () => {
   const services = [
     {
       title: "AI-Powered Business Intelligence Pro",
@@ -541,4 +541,6 @@ export default function Services() {
       </div>
     </>
   );
-}
+};
+
+export default ServicesPage;

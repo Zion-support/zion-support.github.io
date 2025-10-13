@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-export default function Customerrelationshipmanager() {
+const CustomerRelationshipManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -31,4 +31,6 @@ export default function Customerrelationshipmanager() {
       </div>
     </>
   );
-}
+}  };
+
+export default CustomerRelationshipManagerPage;

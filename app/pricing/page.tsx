@@ -2,7 +2,7 @@ import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, G
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function Pricing() {
+const PricingPage: React.FC = () => {
   const aiServicesPricing = [
     {
       name: "AI Analytics Dashboard",
@@ -503,3 +503,6 @@ export default function Pricing() {
     </>
   );
 }
+};
+
+export default PricingPage;

@@ -10,7 +10,7 @@ import {
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIEcommerceOptimizerPro() {
+const AiEcommerceOptimizerProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
@@ -363,3 +363,6 @@ export default function AIEcommerceOptimizerPro() {
     </>
   );
 }
+};
+
+export default AiEcommerceOptimizerProPage;

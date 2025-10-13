@@ -2,7 +2,7 @@ import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Databas
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionCloudVault() {
+const ZionCloudVaultPage: React.FC = () => {
   const features = [
     {
       icon: <Cloud className="w-6 h-6" />,
@@ -370,3 +370,6 @@ export default function ZionCloudVault() {
     </>
   );
 }
+};
+
+export default ZionCloudVaultPage;

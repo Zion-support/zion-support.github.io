@@ -7,7 +7,7 @@ import { ArrowRight, TrendingUp, Zap, BarChart3, Clock, CheckCircle } from "luci
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function CaseStudies() {
+const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
       id: 1,
@@ -134,4 +134,6 @@ export default function CaseStudies() {
       </div>
     </>
   );
-}
+}  };
+
+export default CaseStudiesPage;

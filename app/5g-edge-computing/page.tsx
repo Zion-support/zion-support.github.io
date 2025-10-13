@@ -34,3 +34,6 @@ export default function EdgeComputing5GPage() {
     </>
   );
 }
+};
+
+export default 5gEdgeComputingPage;

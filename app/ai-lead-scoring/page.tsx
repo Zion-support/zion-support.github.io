@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 import { Link } from "react-router-dom";
 
-export default function AiLeadScoringZionTechGroup() {
+const AiLeadScoringPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -27,3 +27,6 @@ export default function AiLeadScoringZionTechGroup() {
     </>
   );
 }
+};
+
+export default AiLeadScoringPage;

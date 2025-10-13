@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function ZionAnalyticsPro() {
+const ZionAnalyticsProPage: React.FC = () => {
   const features = [
     "Real-time dashboard analytics",
     "Predictive business insights",
@@ -340,4 +340,6 @@ export default function ZionAnalyticsPro() {
       </div>
     </>
   );
-}
+}  };
+
+export default ZionAnalyticsProPage;

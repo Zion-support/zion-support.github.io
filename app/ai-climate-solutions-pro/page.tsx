@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 
 import { Link } from "react-router-dom";
 
-export default function AIClimateSolutionsProZionTechGroup() {
+const AiClimateSolutionsProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -30,3 +30,6 @@ export default function AIClimateSolutionsProZionTechGroup() {
     </>
   );
 }
+};
+
+export default AiClimateSolutionsProPage;

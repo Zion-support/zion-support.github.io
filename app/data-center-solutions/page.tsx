@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
-export default function Softwaredevelopment() {
+const DataCenterSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -31,4 +31,6 @@ export default function Softwaredevelopment() {
       </div>
     </>
   );
-}
+}  };
+
+export default DataCenterSolutionsPage;

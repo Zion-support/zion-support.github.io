@@ -2,7 +2,7 @@ import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Star, Sparkle
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIHealthcareDiagnostics() {
+const AiHealthcareDiagnosticsPage: React.FC = () => {
   const features = [
     {
       title: "Medical Imaging Analysis",
@@ -338,4 +338,6 @@ export default function AIHealthcareDiagnostics() {
       </div>
     </>
   );
-}
+}  };
+
+export default AiHealthcareDiagnosticsPage;
