@@ -32,10 +32,16 @@ export default tseslint.config(
       "dist", 
       "node_modules", 
       "*.config.js",
+<<<<<<< HEAD
       "backup*/**",
       "backup-problematic*/**",
       "backup-unused-components/**",
       "corrupted-src-backup/**",
+=======
+"backup*/**",
+      "backup-problematic*/**",
+      "backup-unused-components/**",
+>>>>>>> origin/clean-main-20251013-145848
       "cleanup-*.cjs",
       "comprehensive-*.cjs",
       "fix-*.cjs",
@@ -46,6 +52,7 @@ export default tseslint.config(
       "src/**",
       "utils/**",
       "*.cjs",
+<<<<<<< HEAD
       "*.js",
       "*.py",
       "*.sh",
@@ -64,3 +71,9 @@ export default tseslint.config(
     ],
   }
 );
+=======
+      "*.js"
+    ],
+  }
+);
+>>>>>>> origin/clean-main-20251013-145848

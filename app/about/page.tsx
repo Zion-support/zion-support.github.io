@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Users } from 'lucide-react';
 
@@ -29,6 +30,73 @@ export default function AboutPage() {
     }
   ];
 
+=======
+
+export default function AboutPage() {
+  // Team members data (for future use)
+  // const teamMembers = [
+  //   {
+  //     name: "Sarah Chen",
+  //     role: "CEO & Co-Founder",
+  //     expertise: "AI Strategy & Business Development",
+  //     image: "/images/team/sarah-chen.jpg",
+  //     bio: "15+ years in AI and machine learning, former Google AI researcher."
+  //   },
+  //   {
+  //     name: "Michael Rodriguez",
+  //     role: "CTO & Co-Founder",
+  //     expertise: "Cloud Architecture & Security",
+  //     image: "/images/team/michael-rodriguez.jpg",
+  //     bio: "Expert in cloud infrastructure and cybersecurity with 12+ years experience."
+  //   },
+  //   {
+  //     name: "Emily Johnson",
+  //     role: "Head of AI Research",
+  //     expertise: "Machine Learning & Data Science",
+  //     image: "/images/team/emily-johnson.jpg",
+  //     bio: "PhD in Computer Science, specializing in deep learning and NLP."
+  //   },
+  //   {
+  //     name: "David Kim",
+  //     role: "Head of Engineering",
+  //     expertise: "5G Technology & IoT",
+  //     image: "/images/team/david-kim.jpg",
+  //     bio: "Telecommunications expert with extensive experience in 5G implementation."
+  //   }
+  // ];
+
+  // Company values (for future use)
+  // const values = [
+  //   {
+  //     icon: <Brain className="w-8 h-8" />,
+  //     title: "Innovation First",
+  //     description: "We constantly push the boundaries of what's possible with cutting-edge technology and creative solutions."
+  //   },
+  //   {
+  //     icon: <Shield className="w-8 h-8" />,
+  //     title: "Security & Trust",
+  //     description: "We prioritize the security and privacy of our clients' data with enterprise-grade protection measures."
+  //   },
+  //   {
+  //     icon: <Users className="w-8 h-8" />,
+  //     title: "Client Success",
+  //     description: "Our success is measured by our clients' success. We're committed to delivering exceptional results."
+  //   },
+  //   {
+  //     icon: <Award className="w-8 h-8" />,
+  //     title: "Excellence",
+  //     description: "We maintain the highest standards of quality in everything we do, from code to customer service."
+  //   }
+  // ];
+
+  // Company stats (for future use)
+  // const stats = [
+  //   { number: "500+", label: "Projects Completed" },
+  //   { number: "150+", label: "Happy Clients" },
+  //   { number: "99.9%", label: "Uptime Guarantee" },
+  //   { number: "24/7", label: "Support Available" }
+  // ];
+>>>>>>> origin/clean-main-20251013-145848
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -37,6 +105,7 @@ export default function AboutPage() {
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
+<<<<<<< HEAD
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
             About Zion Tech Group
@@ -44,6 +113,12 @@ export default function AboutPage() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a cutting-edge technology company specializing in AI solutions, 
             cloud infrastructure, and innovative IT services that transform businesses.
+=======
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">About Us</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Leading the future of AI and IT solutions with innovation and excellence
+>>>>>>> origin/clean-main-20251013-145848
           </p>
         </div>
 

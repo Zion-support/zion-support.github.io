@@ -1,0 +1,30 @@
+{
+"timestamp": "2025-10-13T11:09:39.189Z",
+  "buildStats": {
+    "totalFiles": 85,
+    "totalSize": 658760,
+    "jsFiles": 82,
+    "jsSize": 649870,    "cssFiles": 1,
+    "cssSize": 1770,
+    "imageFiles": 0,
+    "imageSize": 0
+  },
+  "performanceMetrics": {
+    "buildTime": 2.22,
+    "bundleSize": 658760,
+    "chunkCount": 85,
+    "largestChunk": "react-vendor-D3F3s8fL.js",
+    "largestChunkSize": 141720
+  },
+  "optimizations": {
+    "codeSplitting": true,
+    "treeShaking": true,
+    "minification": true,
+    "compression": true
+  },
+  "recommendations": [
+    "Consider implementing lazy loading for non-critical components",
+    "Optimize images to reduce bundle size",
+    "Implement service worker for better caching"
+  ]
+}

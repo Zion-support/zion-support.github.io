@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 interface AdvancedPerformanceMonitorProps {
   className?: string;
 }
@@ -12,3 +13,6 @@ export default function AdvancedPerformanceMonitor({ className = '' }: AdvancedP
     </div>
   );
 }
+=======
+
+>>>>>>> origin/clean-main-20251013-145848

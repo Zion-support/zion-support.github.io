@@ -19,7 +19,10 @@ export default function AIAnalytics() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - Advanced AI Analytics Solutions</p>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>

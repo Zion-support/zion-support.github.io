@@ -19,7 +19,10 @@ export default function ZionAiPerformanceOptimizer() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - ZionAiPerformanceOptimizer Solutions</p>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>

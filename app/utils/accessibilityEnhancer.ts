@@ -43,4 +43,8 @@ class AccessibilityEnhancer {
 }
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
+<<<<<<< HEAD
 export default accessibilityEnhancer;
+=======
+export default accessibilityEnhancer;
+>>>>>>> origin/clean-main-20251013-145848

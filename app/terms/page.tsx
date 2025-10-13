@@ -32,7 +32,10 @@ export default function Terms() {
               If you have any questions about these terms, please contact us at legal@ziontechgroup.com.
             </p>
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>

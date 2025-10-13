@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function AIMobileBuilder() {
+=======
+export default function AiMobileBuilder() {
+>>>>>>> origin/clean-main-20251013-145848
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
