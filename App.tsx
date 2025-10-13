@@ -10,6 +10,7 @@ import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -20,6 +21,7 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import LoadingPageEnhanced from "./app/components/EnhancedLoading";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -90,15 +92,17 @@ function App() {
 
   return (
     <HelmetProvider>
-      <GlobalErrorBoundary>
-        <AnalyticsProvider>
-          <PerformanceMonitor>
-            <WebVitalsTracker>
-              <EnhancedAccessibility>
-                <AccessibilityEnhancer>
-                  <CoreWebVitals>
-                    <Router>
+      <EnhancedErrorBoundary>
+        <GlobalErrorBoundary>
+          <AnalyticsProvider>
+            <PerformanceMonitor>
+              <WebVitalsTracker>
+                <EnhancedAccessibility>
+                  <AccessibilityEnhancer>
+                    <CoreWebVitals>
+                      <Router>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                        <PerformanceOptimizer />
                         <FuturisticBackground />
                         <Navigation />
                         <Sidebar />
@@ -219,14 +223,15 @@ function App() {
                         
                         <Footer />
                       </div>
-                    </Router>
-                  </CoreWebVitals>
-                </AccessibilityEnhancer>
-              </EnhancedAccessibility>
-            </WebVitalsTracker>
-          </PerformanceMonitor>
-        </AnalyticsProvider>
-      </GlobalErrorBoundary>
+                      </Router>
+                    </CoreWebVitals>
+                  </AccessibilityEnhancer>
+                </EnhancedAccessibility>
+              </WebVitalsTracker>
+            </PerformanceMonitor>
+          </AnalyticsProvider>
+        </GlobalErrorBoundary>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 }
