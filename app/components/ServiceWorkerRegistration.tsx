@@ -1,15 +1,21 @@
-import React from "react";
+import { useEffect } from 'react';
 
-interface ServiceWorkerRegistrationProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
-  children,
-  className = "",
-}) => {
-  return <div className={className}>{children}</div>;
+export const useServiceWorker = () => {
+  useEffect(() => {
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker
+        .register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
 };
 
-export default ServiceWorkerRegistration;
+export const ServiceWorkerRegistration: React.FC = () => {
+  useServiceWorker();
+  return null;
+};

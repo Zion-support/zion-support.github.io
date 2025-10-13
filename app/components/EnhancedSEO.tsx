@@ -56,7 +56,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     'max-video-preview:-1'
   ].join(', ');
 
-  const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group';
+  const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, machine learning, artificial intelligence, cloud computing, data analytics, Zion Tech Group, enterprise software, software development, technology solutions, digital innovation, business intelligence, automation tools, AI consulting, tech consulting, software consulting';
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
 
   const defaultStructuredData = {

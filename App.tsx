@@ -19,6 +19,7 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedSEO from "./app/components/EnhancedSEO";
+import { ServiceWorkerRegistration } from "./app/components/ServiceWorkerRegistration";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -102,6 +103,7 @@ function App() {
           <AccessibilityEnhancer>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                <ServiceWorkerRegistration />
                 <FuturisticBackground>
                   <Navigation onSidebarToggle={toggleSidebar} />
                   <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />

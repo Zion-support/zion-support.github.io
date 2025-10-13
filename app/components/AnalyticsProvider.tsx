@@ -1,84 +1,68 @@
-import React, { createContext, useContext, useEffect, ReactNode } from "react";
-
-declare global {
-  interface Window {
-    gtag: (...args: unknown[]) => void;
-  }
-}
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
-  undefined,
-);
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error("useAnalytics must be used within an AnalyticsProvider");
-  }
-  return context;
-};
+import React, { useEffect } from 'react';
 
 interface AnalyticsProviderProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-}) => {
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      // Google Analytics
-      if (process.env.NODE_ENV === "production") {
-        const script = document.createElement("script");
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`;
-        script.async = true;
-        document.head.appendChild(script);
+    // Initialize Google Analytics (replace with your GA4 measurement ID)
+    const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Replace with actual ID
+    
+    if (typeof window !== 'undefined' && GA_MEASUREMENT_ID) {
+      // Load Google Analytics
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+      document.head.appendChild(script);
 
-        window.gtag =
-          window.gtag ||
-          function (...args: any[]) {
-            (window.gtag as any).q = (window.gtag as any).q || [];
-            (window.gtag as any).q.push(args);
-          };
-        window.gtag("js", new Date());
-        window.gtag("config", process.env.REACT_APP_GA_MEASUREMENT_ID || "");
+      // Initialize gtag
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: any[]) {
+        window.dataLayer.push(args);
       }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', GA_MEASUREMENT_ID, {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+
+      // Track page views
+      const trackPageView = () => {
+        gtag('event', 'page_view', {
+          page_title: document.title,
+          page_location: window.location.href,
+          page_path: window.location.pathname,
+        });
+      };
+
+      // Track initial page view
+      trackPageView();
+
+      // Track navigation changes
+      const originalPushState = history.pushState;
+      const originalReplaceState = history.replaceState;
+
+      history.pushState = function(...args) {
+        originalPushState.apply(history, args);
+        setTimeout(trackPageView, 0);
+      };
+
+      history.replaceState = function(...args) {
+        originalReplaceState.apply(history, args);
+        setTimeout(trackPageView, 0);
+      };
+
+      window.addEventListener('popstate', trackPageView);
+
+      return () => {
+        window.removeEventListener('popstate', trackPageView);
+      };
     }
   }, []);
 
-  const trackEvent = (
-    eventName: string,
-    parameters?: Record<string, unknown>,
-  ) => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", eventName, parameters);
-    }
-  };
-
-  const trackPageView = (pageName: string) => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("config", "GA_MEASUREMENT_ID", {
-        page_title: pageName,
-        page_location: window.location.href,
-      });
-    }
-  };
-
-  const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-  };
-
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
+  return <>{children}</>;
 };
 
 export default AnalyticsProvider;

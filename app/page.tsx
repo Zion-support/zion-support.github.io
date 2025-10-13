@@ -201,9 +201,9 @@ const HomePage = () => {
             color="white"
             className="mb-6 leading-tight"
           >
-            <FuturisticText text="Welcome to " delay={0} speed={100} />
+            <FuturisticText text="Transform Your Business with " delay={0} speed={100} />
             <FuturisticText 
-              text="Zion Tech Group" 
+              text="AI-Powered Solutions" 
               delay={1000} 
               speed={150} 
               className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"
@@ -217,8 +217,8 @@ const HomePage = () => {
             align="center"
             className="mb-8 max-w-4xl mx-auto leading-relaxed"
           >
-            Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
-            Transform your operations with cutting-edge technology and innovative solutions.
+            Accelerate your digital transformation with our comprehensive suite of AI solutions, cloud infrastructure, and cybersecurity services. 
+            Join 10,000+ businesses already leveraging our technology to drive growth and innovation.
           </ResponsiveText>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
