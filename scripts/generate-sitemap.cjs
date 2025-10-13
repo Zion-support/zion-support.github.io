@@ -1,7 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
-<<<<<<< HEAD
 // Define all routes for the sitemap
 const routes = [
   // Main pages
