@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
+import "./app/styles/futuristic-ultra.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
@@ -60,6 +61,8 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AI3DGenerationPage = React.lazy(() => import("./app/ai-3d-generation/page"));
+const AIQuantumComputingPage = React.lazy(() => import("./app/ai-quantum-computing/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -179,6 +182,15 @@ const ZionComplianceManagerPage = React.lazy(
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
+const ZionAIChatbotBuilderPage = React.lazy(
+  () => import("./app/zion-ai-chatbot-builder/page"),
+);
+const ZionAPIManagerPage = React.lazy(
+  () => import("./app/zion-api-manager/page"),
+);
+const ZionDataPipelinePage = React.lazy(
+  () => import("./app/zion-data-pipeline/page"),
+);
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
@@ -265,6 +277,8 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                  <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
+                  <Route path="/ai-quantum-computing" element={<AIQuantumComputingPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -423,6 +437,18 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-chatbot-builder"
+                    element={<ZionAIChatbotBuilderPage />}
+                  />
+                  <Route
+                    path="/zion-api-manager"
+                    element={<ZionAPIManagerPage />}
+                  />
+                  <Route
+                    path="/zion-data-pipeline"
+                    element={<ZionDataPipelinePage />}
                   />
 
                   {/* 5G Solutions Routes */}

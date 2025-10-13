@@ -1,89 +1,89 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Atom, Cpu, Zap, Brain, Shield, BarChart3, ArrowRight, CheckCircle, Star, Smartphone, Mail, Globe, Database, Settings } from 'lucide-react';
+import { Database, Zap, BarChart3, Shield, Globe, Users, ArrowRight, CheckCircle, Star, Smartphone, Mail, Settings, TrendingUp } from 'lucide-react';
 
-const AIQuantumComputingPage = () => {
+const ZionDataPipelinePage = () => {
   const features = [
     {
-      title: "Quantum Machine Learning",
-      description: "Leverage quantum algorithms for exponentially faster machine learning and pattern recognition",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Real-Time Processing",
+      description: "Process and transform data in real-time with sub-second latency using our streaming architecture",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems with quantum annealing and variational algorithms",
-      icon: <Cpu className="w-6 h-6" />,
+      title: "Multi-Source Integration",
+      description: "Connect to 200+ data sources including databases, APIs, files, and cloud services seamlessly",
+      icon: <Database className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms",
+      title: "Data Quality & Validation",
+      description: "Automated data quality checks, validation rules, and cleansing to ensure data integrity",
       icon: <Shield className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Quantum Simulation",
-      description: "Simulate quantum systems for drug discovery, materials science, and financial modeling",
-      icon: <Atom className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Built-in analytics and monitoring with real-time dashboards and alerting capabilities",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Quantum Neural Networks",
-      description: "Next-generation neural networks powered by quantum computing principles",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Auto-Scaling",
+      description: "Intelligent auto-scaling based on data volume and processing requirements",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Quantum Analytics",
-      description: "Process massive datasets with quantum algorithms for real-time insights",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Cloud & On-Premise",
+      description: "Deploy anywhere - public cloud, private cloud, or hybrid environments with full flexibility",
+      icon: <Globe className="w-6 h-6" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Quantum Starter",
-      price: "$2,999",
+      name: "Starter",
+      price: "$99",
       period: "/month",
-      description: "Perfect for research institutions and startups",
+      description: "Perfect for small teams and basic data processing needs",
       features: [
-        "Up to 10 quantum circuits/month",
-        "Basic quantum algorithms",
-        "Standard quantum hardware",
+        "Up to 1M records/month",
+        "5 data sources",
+        "Basic transformations",
         "Email support",
-        "Basic documentation"
+        "Standard monitoring"
       ],
       popular: false
     },
     {
-      name: "Quantum Professional",
-      price: "$9,999",
+      name: "Professional",
+      price: "$299",
       period: "/month",
-      description: "Ideal for enterprises and advanced research",
+      description: "Ideal for growing businesses with complex data requirements",
       features: [
-        "Up to 100 quantum circuits/month",
-        "Advanced quantum algorithms",
-        "Premium quantum hardware",
+        "Up to 10M records/month",
+        "25 data sources",
+        "Advanced transformations",
         "Priority support",
-        "Custom algorithm development",
-        "Quantum simulation tools"
+        "Real-time monitoring",
+        "Data quality tools"
       ],
       popular: true
     },
     {
-      name: "Quantum Enterprise",
-      price: "$29,999",
+      name: "Enterprise",
+      price: "$799",
       period: "/month",
-      description: "For large organizations with complex quantum needs",
+      description: "For large organizations with mission-critical data pipelines",
       features: [
-        "Unlimited quantum circuits",
-        "Custom quantum algorithms",
-        "Dedicated quantum hardware",
+        "Unlimited records",
+        "Unlimited data sources",
+        "Custom transformations",
         "24/7 dedicated support",
-        "Quantum consulting",
+        "Advanced analytics",
         "Custom integrations",
         "SLA guarantee"
       ],
@@ -93,44 +93,44 @@ const AIQuantumComputingPage = () => {
 
   const testimonials = [
     {
-      name: "Dr. Sarah Chen",
-      company: "Quantum Research Lab",
-      role: "Chief Quantum Scientist",
-      content: "Zion's quantum computing platform has revolutionized our research. We've achieved breakthroughs in quantum machine learning that would have taken years with classical computers.",
+      name: "Alex Thompson",
+      company: "Data Analytics Corp",
+      role: "Chief Data Officer",
+      content: "Zion Data Pipeline has transformed our data infrastructure. We can now process 10x more data with 90% less manual effort. The real-time processing is game-changing.",
       rating: 5,
-      avatar: "SC"
+      avatar: "AT"
     },
     {
-      name: "Marcus Johnson",
-      company: "FinTech Quantum",
-      role: "CTO",
-      content: "The quantum optimization algorithms have solved our portfolio optimization problems in minutes instead of hours. The performance improvement is incredible.",
+      name: "Maria Garcia",
+      company: "FinTech Startup",
+      role: "Data Engineer",
+      content: "The multi-source integration is incredible. We can now connect to all our data sources in minutes instead of weeks. The data quality features have eliminated 95% of our data issues.",
       rating: 5,
-      avatar: "MJ"
+      avatar: "MG"
     },
     {
-      name: "Dr. Elena Rodriguez",
-      company: "Pharmaceutical Corp",
-      role: "Head of R&D",
-      content: "Quantum simulation has accelerated our drug discovery process by 1000x. We can now test molecular interactions that were previously impossible.",
+      name: "Robert Chen",
+      company: "E-commerce Giant",
+      role: "VP of Engineering",
+      content: "The auto-scaling feature has saved us millions in infrastructure costs. Our data pipelines now handle traffic spikes seamlessly without any manual intervention.",
       rating: 5,
-      avatar: "ER"
+      avatar: "RC"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Quantum Computing - Next-Generation Quantum Solutions | Zion Tech Group</title>
+        <title>Zion Data Pipeline - Real-Time Data Processing Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI quantum computing solutions for machine learning, optimization, cryptography, and simulation. Harness the power of quantum algorithms for exponential performance gains. Starting at $2,999/month."
+          content="Build and manage real-time data pipelines with Zion Data Pipeline. Multi-source integration, data quality validation, auto-scaling, and advanced analytics. Starting at $99/month."
         />
         <meta
           name="keywords"
-          content="quantum computing, quantum machine learning, quantum optimization, quantum cryptography, quantum simulation, quantum algorithms, quantum neural networks, quantum analytics"
+          content="data pipeline, real-time data processing, ETL, data integration, data quality, data analytics, streaming data, data transformation"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-data-pipeline" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -142,39 +142,38 @@ const AIQuantumComputingPage = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Atom className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Quantum Computing Platform</span>
+              <Database className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">#1 Real-Time Data Processing Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              <span className="text-cyberpunk-ultra neon-ultra">
-                AI Quantum Computing
+              Build & Scale
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
+                {" "}Data Pipelines
               </span>
               <br />
-              <span className="text-cyberpunk-ultra neon-ultra">
-                Next Generation
-              </span>
+              in Minutes
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Harness the power of quantum computing with AI-driven algorithms for exponential performance gains. 
-              Solve impossible problems with quantum machine learning, optimization, and simulation.
+              Real-time data processing platform that connects, transforms, and delivers data at scale. 
+              Built for modern data teams who need speed, reliability, and flexibility.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link
                 to="/contact"
-                className="btn-quantum-ultra flex items-center justify-center group"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Quantum Journey
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="holographic-card-ultra border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Atom className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Settings className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
 
@@ -182,31 +181,31 @@ const AIQuantumComputingPage = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Atom className="w-6 h-6 text-cyan-400" />
+                  <Database className="w-6 h-6 text-cyan-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">1000x</div>
-                <div className="text-gray-300 text-sm">Faster Processing</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">1B+</div>
+                <div className="text-gray-300 text-sm">Records Processed</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Brain className="w-6 h-6 text-purple-400" />
+                  <Zap className="w-6 h-6 text-purple-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Quantum Algorithms</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">&lt;100ms</div>
+                <div className="text-gray-300 text-sm">Processing Latency</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Shield className="w-6 h-6 text-pink-400" />
+                  <Globe className="w-6 h-6 text-pink-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">100%</div>
-                <div className="text-gray-300 text-sm">Quantum Security</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">200+</div>
+                <div className="text-gray-300 text-sm">Data Sources</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-6 h-6 text-yellow-400" />
+                  <TrendingUp className="w-6 h-6 text-yellow-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Quantum Access</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">99.9%</div>
+                <div className="text-gray-300 text-sm">Uptime SLA</div>
               </div>
             </div>
           </div>
@@ -217,23 +216,20 @@ const AIQuantumComputingPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                <span className="text-cyberpunk-ultra neon-ultra">
-                  Quantum Computing
-                </span>
-                <br />
-                <span className="text-cyberpunk-ultra neon-ultra">
-                  Capabilities
+                Complete Data Pipeline
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  {" "}Solution
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Revolutionary quantum computing solutions that solve problems impossible for classical computers.
+                Everything you need to build, deploy, and manage data pipelines at enterprise scale.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group holographic-card-ultra hover-quantum-ultra p-6"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div
                     className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
@@ -257,21 +253,21 @@ const AIQuantumComputingPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Plans
+                Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect quantum computing plan for your research and business needs.
+                Choose the perfect plan for your data processing needs. Scale up or down as your data grows.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative holographic-card-ultra p-8 ${
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
                     plan.popular 
                       ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
                       : 'border-white/20'
-                  } hover:scale-105 transition-all duration-300`}
+                  } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -300,8 +296,8 @@ const AIQuantumComputingPage = () => {
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
-                        ? 'btn-quantum-ultra'
-                        : 'holographic-card-ultra border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
                     Get Started
@@ -317,17 +313,17 @@ const AIQuantumComputingPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Quantum Researchers
+                Trusted by Data Teams Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what leading quantum researchers say about our platform
+                See what our customers say about Zion Data Pipeline
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="group holographic-card-ultra hover-quantum-ultra p-6"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -354,11 +350,11 @@ const AIQuantumComputingPage = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Enter the Quantum Era?
+              Ready to Transform Your Data Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join the quantum revolution with AI-powered quantum computing solutions. 
-              Start your quantum journey today.
+              Join thousands of data teams already using Zion Data Pipeline to process, transform, and deliver data at scale. 
+              Start your free trial today.
             </p>
             
             {/* Contact Information */}
@@ -389,17 +385,17 @@ const AIQuantumComputingPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="btn-quantum-ultra flex items-center justify-center group"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Quantum Journey
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="holographic-card-ultra border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Atom className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Settings className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
@@ -409,4 +405,4 @@ const AIQuantumComputingPage = () => {
   );
 };
 
-export default AIQuantumComputingPage;
+export default ZionDataPipelinePage;

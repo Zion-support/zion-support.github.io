@@ -22,6 +22,8 @@ const Navigation = React.memo(() => {
   const aiServices = useMemo(() => [
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI 3D Generation', path: '/ai-3d-generation', icon: <Code className="w-4 h-4" />, featured: true },
+    { name: 'AI Quantum Computing', path: '/ai-quantum-computing', icon: <Zap className="w-4 h-4" />, featured: true },
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
@@ -32,6 +34,9 @@ const Navigation = React.memo(() => {
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Chatbot Builder', path: '/zion-ai-chatbot-builder', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion API Manager', path: '/zion-api-manager', icon: <Code className="w-4 h-4" />, featured: true },
+    { name: 'Zion Data Pipeline', path: '/zion-data-pipeline', icon: <Database className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
@@ -51,7 +56,7 @@ const Navigation = React.memo(() => {
 
   return (
     <nav 
-      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
+      className="nav-cyberpunk-ultra text-white shadow-2xl backdrop-blur-md"
       role="navigation"
       aria-label="Main navigation"
     >
@@ -59,7 +64,7 @@ const Navigation = React.memo(() => {
         <div className="flex justify-between items-center py-4">
           <Link 
             to="/" 
-            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+            className="text-2xl font-bold text-cyberpunk-ultra neon-ultra hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
             aria-label="Zion Tech Group - Go to homepage"
           >
             Zion Tech Group
@@ -70,7 +75,7 @@ const Navigation = React.memo(() => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="relative group hover:text-cyan-400 transition-all duration-300 font-medium"
+                className="nav-link relative group hover:text-cyan-400 transition-all duration-300 font-medium"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
@@ -153,7 +158,7 @@ const Navigation = React.memo(() => {
 
             <Link
               to="/consultation"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
+              className="btn-quantum-ultra flex items-center space-x-2 group"
             >
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
