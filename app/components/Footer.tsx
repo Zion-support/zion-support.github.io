@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Right, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -132,7 +132,7 @@ const Footer: React.FC = () => {
               />
               <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Subscribe
-                <Right className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2" />
               </button>
             </div>
           </div>
