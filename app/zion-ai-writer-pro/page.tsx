@@ -1,80 +1,81 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, BarChart3, Shield, Clock, Sparkles, Target, TrendingUp, Mail, Phone } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Zap, Brain, FileText, Users, BarChart3, Shield, Clock, Sparkles, Globe } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const ZionCrmIntelligencePage = () => {
+const ZionAiWriterProPage = () => {
   const features = [
     {
-      title: "AI-Powered Lead Scoring",
-      description: "Automatically score and prioritize leads using machine learning algorithms",
-      icon: <Target className="w-6 h-6" />,
-      benefits: ["95% accuracy in lead scoring", "Real-time lead prioritization", "Custom scoring models"]
+      title: "AI-Powered Content Generation",
+      description: "Generate high-quality articles, blogs, and marketing copy using advanced AI models",
+      icon: <Brain className="w-6 h-6" />,
+      benefits: ["10x faster content creation", "SEO-optimized output", "Multiple content types"]
     },
     {
-      title: "Predictive Analytics",
-      description: "Forecast sales outcomes and customer behavior with advanced predictive models",
-      icon: <TrendingUp className="w-6 h-6" />,
-      benefits: ["Sales forecasting", "Churn prediction", "Revenue optimization"]
+      title: "Multi-Language Support",
+      description: "Create content in 50+ languages with native-level quality and cultural context",
+      icon: <Globe className="w-6 h-6" />,
+      benefits: ["50+ languages", "Cultural adaptation", "Local market optimization"]
     },
     {
-      title: "Automated Follow-ups",
-      description: "Intelligent email and call scheduling based on customer engagement patterns",
-      icon: <Mail className="w-6 h-6" />,
-      benefits: ["Smart scheduling", "Personalized outreach", "Multi-channel automation"]
+      title: "Brand Voice Consistency",
+      description: "Maintain consistent brand voice across all content with custom AI training",
+      icon: <Shield className="w-6 h-6" />,
+      benefits: ["Custom brand training", "Style consistency", "Tone matching"]
     },
     {
-      title: "Customer Insights Dashboard",
-      description: "Comprehensive analytics and insights to understand customer behavior and preferences",
+      title: "Content Analytics",
+      description: "Track performance and optimize content with detailed analytics and insights",
       icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["360° customer view", "Behavior analytics", "Performance metrics"]
+      benefits: ["Performance tracking", "ROI analysis", "Content optimization"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small sales teams",
+      description: "Perfect for small businesses and freelancers",
       features: [
-        "Up to 1,000 contacts",
-        "Basic lead scoring",
-        "Email automation",
-        "Standard reporting",
-        "Email support"
+        "10,000 words/month",
+        "5 AI models",
+        "Basic templates",
+        "Email support",
+        "Standard quality"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$79",
       period: "/month",
-      description: "Ideal for growing sales teams",
+      description: "Ideal for growing businesses and agencies",
       features: [
-        "Up to 10,000 contacts",
-        "Advanced AI features",
-        "Predictive analytics",
-        "Custom dashboards",
+        "50,000 words/month",
+        "15 AI models",
+        "Premium templates",
         "Priority support",
-        "API access",
-        "Advanced automation"
+        "High quality output",
+        "Brand voice training",
+        "Multi-language support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$199",
       period: "/month",
-      description: "For large organizations",
+      description: "For large organizations with advanced needs",
       features: [
-        "Unlimited contacts",
-        "All AI features",
-        "Custom integrations",
-        "White-label options",
+        "Unlimited words",
+        "All AI models",
+        "Custom templates",
         "24/7 support",
-        "Advanced security",
-        "Custom training"
+        "Premium quality",
+        "Advanced analytics",
+        "API access",
+        "White-label options"
       ],
       popular: false
     }
@@ -82,38 +83,38 @@ const ZionCrmIntelligencePage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Adams",
-      company: "Tech Solutions Inc.",
-      role: "Sales Director",
-      content: "Zion CRM Intelligence has increased our conversion rate by 40%. The AI lead scoring is incredibly accurate and saves us hours every week.",
+      name: "Sarah Mitchell",
+      company: "Content Marketing Agency",
+      role: "Creative Director",
+      content: "Zion AI Writer Pro has revolutionized our content production. We're creating 5x more content with better quality and consistency.",
       rating: 5,
-      avatar: "JA"
+      avatar: "SM"
     },
     {
-      name: "Michael Torres",
-      company: "Global Sales Corp",
-      role: "VP of Sales",
-      content: "The predictive analytics feature has been a game-changer. We can now forecast sales with 90% accuracy and plan accordingly.",
+      name: "David Chen",
+      company: "E-commerce Platform",
+      role: "Marketing Manager",
+      content: "The brand voice training feature is incredible. Our content now perfectly matches our brand personality across all channels.",
       rating: 5,
-      avatar: "MT"
+      avatar: "DC"
     },
     {
-      name: "Lisa Chen",
-      company: "Digital Marketing Agency",
-      role: "Account Manager",
-      content: "The automated follow-ups have improved our response rates significantly. Our team can focus on high-value activities while AI handles routine tasks.",
+      name: "Maria Rodriguez",
+      company: "Global Tech Company",
+      role: "Content Strategist",
+      content: "Multi-language support has been a game-changer for our international expansion. Quality is consistently high across all languages.",
       rating: 5,
-      avatar: "LC"
+      avatar: "MR"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="Zion CRM Intelligence - AI-Powered Customer Relationship Management | Zion Tech Group"
-        description="Transform your sales process with Zion CRM Intelligence. AI-powered lead scoring, predictive analytics, and automated follow-ups to boost conversion rates and revenue."
-        keywords="AI CRM, customer relationship management, lead scoring, predictive analytics, sales automation, CRM software, sales intelligence"
-        canonical="https://ziontechgroup.com/zion-crm-intelligence"
+        title="Zion AI Writer Pro - Advanced AI Content Generation Platform | Zion Tech Group"
+        description="Transform your content creation with Zion AI Writer Pro. Generate high-quality articles, blogs, and marketing copy using advanced AI. 50+ languages, brand voice training, and analytics included."
+        keywords="AI content generation, AI writer, content creation, marketing copy, blog writing, multi-language content, brand voice, content analytics"
+        canonical="https://ziontechgroup.com/zion-ai-writer-pro"
       />
 
       {/* Hero Section */}
@@ -126,18 +127,18 @@ const ZionCrmIntelligencePage = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 AI-Powered CRM Platform</span>
+            <span className="text-cyan-400 text-sm font-medium">#1 AI Content Generation Platform</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion CRM Intelligence
+              Zion AI Writer Pro
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your sales process with AI-powered customer relationship management. 
-            Boost conversion rates, predict customer behavior, and automate your sales workflow.
+            Transform your content creation with the most advanced AI writing platform. 
+            Generate high-quality articles, blogs, and marketing copy in 50+ languages with brand voice consistency.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -164,10 +165,10 @@ const ZionCrmIntelligencePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Intelligent CRM Features
+              Powerful AI Writing Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to manage customer relationships intelligently with AI-powered insights and automation.
+              Everything you need to create exceptional content at scale with AI-powered intelligence and human-level quality.
             </p>
           </div>
           
@@ -205,10 +206,10 @@ const ZionCrmIntelligencePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Plan
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Select the perfect plan for your sales team size and requirements.
+              Choose the perfect plan for your content creation needs. All plans include our core AI writing features.
             </p>
           </div>
           
@@ -269,10 +270,10 @@ const ZionCrmIntelligencePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Sales Teams Worldwide
+              Trusted by Content Creators Worldwide
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about Zion CRM Intelligence
+              See what our users say about Zion AI Writer Pro
             </p>
           </div>
           
@@ -307,10 +308,10 @@ const ZionCrmIntelligencePage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Sales Process?
+            Ready to Transform Your Content Creation?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of sales teams using Zion CRM Intelligence to boost conversion rates and revenue. 
+            Join thousands of content creators using Zion AI Writer Pro to produce high-quality content at scale. 
             Start your free trial today.
           </p>
           
@@ -336,4 +337,4 @@ const ZionCrmIntelligencePage = () => {
   );
 };
 
-export default ZionCrmIntelligencePage;
+export default ZionAiWriterProPage;

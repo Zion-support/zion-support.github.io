@@ -37,7 +37,7 @@ const Footer = React.memo(() => {
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm max-w-md">
-              Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
+              Leading provider of AI-powered solutions, micro SAAS, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
             <div className="flex space-x-4">

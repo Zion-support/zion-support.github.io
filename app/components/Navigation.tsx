@@ -20,18 +20,22 @@ const Navigation = React.memo(() => {
   }, [isMicroSaasOpen])
 
   const aiServices = useMemo(() => [
+    { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: 'AI Cybersecurity Suite Pro', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Writer Pro', path: '/zion-ai-writer-pro', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion CRM Intelligence', path: '/zion-crm-intelligence', icon: <Users className="w-4 h-4" />, featured: true },
+    { name: 'Zion Social Media Manager', path: '/zion-social-media-manager', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Chatbot Builder', path: '/zion-ai-chatbot-builder', icon: <Brain className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
@@ -96,13 +100,23 @@ const Navigation = React.memo(() => {
                     <Link
                       key={service.name}
                       to={service.path}
-                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group"
+                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group ${
+                        service.featured ? 'bg-gradient-to-r from-cyan-500/5 to-purple-500/5 border-l-2 border-cyan-400' : ''
+                      }`}
                       onClick={() => setIsServicesOpen(false)}
                     >
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-300">
                         {service.icon}
                       </div>
-                      <span className="font-medium">{service.name}</span>
+                      <div className="flex-1">
+                        <span className="font-medium">{service.name}</span>
+                        {service.featured && (
+                          <div className="flex items-center mt-1">
+                            <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
+                            <span className="text-xs text-yellow-400">Featured</span>
+                          </div>
+                        )}
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -210,6 +224,7 @@ const Navigation = React.memo(() => {
                       >
                         {service.icon}
                         <span>{service.name}</span>
+                        {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
                       </Link>
                     ))}
                   </div>

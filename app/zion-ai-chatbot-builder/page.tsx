@@ -1,80 +1,80 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, BarChart3, Shield, Clock, Sparkles, Target, TrendingUp, Mail, Phone } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, MessageCircle, Brain, Zap, Shield, Clock, Sparkles, Users, BarChart3, Globe } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const ZionCrmIntelligencePage = () => {
+const ZionAiChatbotBuilderPage = () => {
   const features = [
     {
-      title: "AI-Powered Lead Scoring",
-      description: "Automatically score and prioritize leads using machine learning algorithms",
-      icon: <Target className="w-6 h-6" />,
-      benefits: ["95% accuracy in lead scoring", "Real-time lead prioritization", "Custom scoring models"]
+      title: "No-Code Chatbot Builder",
+      description: "Create intelligent chatbots without any coding knowledge using our visual builder",
+      icon: <MessageCircle className="w-6 h-6" />,
+      benefits: ["Drag-and-drop interface", "Pre-built templates", "Custom workflows"]
     },
     {
-      title: "Predictive Analytics",
-      description: "Forecast sales outcomes and customer behavior with advanced predictive models",
-      icon: <TrendingUp className="w-6 h-6" />,
-      benefits: ["Sales forecasting", "Churn prediction", "Revenue optimization"]
+      title: "Multi-Language Support",
+      description: "Deploy chatbots in 50+ languages with natural conversation capabilities",
+      icon: <Globe className="w-6 h-6" />,
+      benefits: ["50+ languages", "Natural language processing", "Cultural adaptation"]
     },
     {
-      title: "Automated Follow-ups",
-      description: "Intelligent email and call scheduling based on customer engagement patterns",
-      icon: <Mail className="w-6 h-6" />,
-      benefits: ["Smart scheduling", "Personalized outreach", "Multi-channel automation"]
-    },
-    {
-      title: "Customer Insights Dashboard",
-      description: "Comprehensive analytics and insights to understand customer behavior and preferences",
+      title: "Advanced Analytics",
+      description: "Track conversation metrics, user satisfaction, and chatbot performance",
       icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["360° customer view", "Behavior analytics", "Performance metrics"]
+      benefits: ["Real-time analytics", "Conversation insights", "Performance tracking"]
+    },
+    {
+      title: "Seamless Integrations",
+      description: "Connect with your existing tools and platforms for unified customer experience",
+      icon: <Zap className="w-6 h-6" />,
+      benefits: ["CRM integration", "API connections", "Third-party tools"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small sales teams",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 contacts",
-        "Basic lead scoring",
-        "Email automation",
-        "Standard reporting",
-        "Email support"
+        "Up to 1,000 conversations/month",
+        "Basic chatbot builder",
+        "Email support",
+        "Standard templates",
+        "1 chatbot"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$79",
       period: "/month",
-      description: "Ideal for growing sales teams",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 contacts",
-        "Advanced AI features",
-        "Predictive analytics",
-        "Custom dashboards",
+        "Up to 10,000 conversations/month",
+        "Advanced builder features",
         "Priority support",
-        "API access",
-        "Advanced automation"
+        "Custom templates",
+        "5 chatbots",
+        "Analytics dashboard",
+        "Multi-language support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited contacts",
-        "All AI features",
-        "Custom integrations",
-        "White-label options",
+        "Unlimited conversations",
+        "All features",
         "24/7 support",
-        "Advanced security",
-        "Custom training"
+        "White-label options",
+        "Unlimited chatbots",
+        "Advanced analytics",
+        "Custom integrations"
       ],
       popular: false
     }
@@ -82,38 +82,38 @@ const ZionCrmIntelligencePage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Adams",
-      company: "Tech Solutions Inc.",
-      role: "Sales Director",
-      content: "Zion CRM Intelligence has increased our conversion rate by 40%. The AI lead scoring is incredibly accurate and saves us hours every week.",
+      name: "Rachel Thompson",
+      company: "Customer Support Agency",
+      role: "Support Manager",
+      content: "Zion AI Chatbot Builder has reduced our response time by 80%. The no-code interface makes it easy for our team to create and manage chatbots.",
       rating: 5,
-      avatar: "JA"
+      avatar: "RT"
     },
     {
-      name: "Michael Torres",
-      company: "Global Sales Corp",
-      role: "VP of Sales",
-      content: "The predictive analytics feature has been a game-changer. We can now forecast sales with 90% accuracy and plan accordingly.",
+      name: "Mark Davis",
+      company: "E-commerce Platform",
+      role: "Customer Experience Director",
+      content: "The multi-language support is incredible. We can now serve customers in their native language, significantly improving satisfaction rates.",
       rating: 5,
-      avatar: "MT"
+      avatar: "MD"
     },
     {
-      name: "Lisa Chen",
-      company: "Digital Marketing Agency",
-      role: "Account Manager",
-      content: "The automated follow-ups have improved our response rates significantly. Our team can focus on high-value activities while AI handles routine tasks.",
+      name: "Lisa Park",
+      company: "SaaS Company",
+      role: "Product Manager",
+      content: "The analytics dashboard provides valuable insights into customer interactions. We've optimized our chatbot based on real conversation data.",
       rating: 5,
-      avatar: "LC"
+      avatar: "LP"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="Zion CRM Intelligence - AI-Powered Customer Relationship Management | Zion Tech Group"
-        description="Transform your sales process with Zion CRM Intelligence. AI-powered lead scoring, predictive analytics, and automated follow-ups to boost conversion rates and revenue."
-        keywords="AI CRM, customer relationship management, lead scoring, predictive analytics, sales automation, CRM software, sales intelligence"
-        canonical="https://ziontechgroup.com/zion-crm-intelligence"
+        title="Zion AI Chatbot Builder - No-Code AI Chatbot Creation Platform | Zion Tech Group"
+        description="Create intelligent chatbots without coding using Zion AI Chatbot Builder. Multi-language support, advanced analytics, and seamless integrations for better customer experience."
+        keywords="AI chatbot builder, no-code chatbot, customer service automation, chatbot platform, conversational AI, customer support chatbot"
+        canonical="https://ziontechgroup.com/zion-ai-chatbot-builder"
       />
 
       {/* Hero Section */}
@@ -126,18 +126,18 @@ const ZionCrmIntelligencePage = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 AI-Powered CRM Platform</span>
+            <span className="text-cyan-400 text-sm font-medium">#1 No-Code Chatbot Platform</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion CRM Intelligence
+              Zion AI Chatbot Builder
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your sales process with AI-powered customer relationship management. 
-            Boost conversion rates, predict customer behavior, and automate your sales workflow.
+            Create intelligent chatbots without coding using our powerful no-code platform. 
+            Deploy in 50+ languages with advanced analytics and seamless integrations.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -164,10 +164,10 @@ const ZionCrmIntelligencePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Intelligent CRM Features
+              Powerful Chatbot Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to manage customer relationships intelligently with AI-powered insights and automation.
+              Everything you need to create, deploy, and manage intelligent chatbots that deliver exceptional customer experiences.
             </p>
           </div>
           
@@ -208,7 +208,7 @@ const ZionCrmIntelligencePage = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Select the perfect plan for your sales team size and requirements.
+              Select the perfect plan for your chatbot needs and conversation volume.
             </p>
           </div>
           
@@ -269,10 +269,10 @@ const ZionCrmIntelligencePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Sales Teams Worldwide
+              Trusted by Businesses Worldwide
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about Zion CRM Intelligence
+              See what our customers say about Zion AI Chatbot Builder
             </p>
           </div>
           
@@ -307,10 +307,10 @@ const ZionCrmIntelligencePage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Sales Process?
+            Ready to Build Your First Chatbot?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of sales teams using Zion CRM Intelligence to boost conversion rates and revenue. 
+            Join thousands of businesses using Zion AI Chatbot Builder to improve customer experience. 
             Start your free trial today.
           </p>
           
@@ -336,4 +336,4 @@ const ZionCrmIntelligencePage = () => {
   );
 };
 
-export default ZionCrmIntelligencePage;
+export default ZionAiChatbotBuilderPage;

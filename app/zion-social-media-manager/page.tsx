@@ -1,80 +1,80 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, BarChart3, Shield, Clock, Sparkles, Target, TrendingUp, Mail, Phone } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Share2, BarChart3, Shield, Clock, Sparkles, Users, Heart, MessageCircle, TrendingUp } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const ZionCrmIntelligencePage = () => {
+const ZionSocialMediaManagerPage = () => {
   const features = [
     {
-      title: "AI-Powered Lead Scoring",
-      description: "Automatically score and prioritize leads using machine learning algorithms",
-      icon: <Target className="w-6 h-6" />,
-      benefits: ["95% accuracy in lead scoring", "Real-time lead prioritization", "Custom scoring models"]
+      title: "AI Content Scheduling",
+      description: "Intelligently schedule posts across all platforms for optimal engagement",
+      icon: <Clock className="w-6 h-6" />,
+      benefits: ["Optimal timing algorithms", "Cross-platform posting", "Content calendar management"]
     },
     {
-      title: "Predictive Analytics",
-      description: "Forecast sales outcomes and customer behavior with advanced predictive models",
-      icon: <TrendingUp className="w-6 h-6" />,
-      benefits: ["Sales forecasting", "Churn prediction", "Revenue optimization"]
-    },
-    {
-      title: "Automated Follow-ups",
-      description: "Intelligent email and call scheduling based on customer engagement patterns",
-      icon: <Mail className="w-6 h-6" />,
-      benefits: ["Smart scheduling", "Personalized outreach", "Multi-channel automation"]
-    },
-    {
-      title: "Customer Insights Dashboard",
-      description: "Comprehensive analytics and insights to understand customer behavior and preferences",
+      title: "Engagement Analytics",
+      description: "Track performance and engagement metrics across all social media platforms",
       icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["360° customer view", "Behavior analytics", "Performance metrics"]
+      benefits: ["Real-time analytics", "ROI tracking", "Performance insights"]
+    },
+    {
+      title: "Automated Responses",
+      description: "AI-powered responses to comments and messages to maintain engagement",
+      icon: <MessageCircle className="w-6 h-6" />,
+      benefits: ["Smart response generation", "Brand voice consistency", "24/7 engagement"]
+    },
+    {
+      title: "Trend Analysis",
+      description: "Identify trending topics and hashtags to boost content visibility",
+      icon: <TrendingUp className="w-6 h-6" />,
+      benefits: ["Trend identification", "Hashtag optimization", "Content suggestions"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$39",
       period: "/month",
-      description: "Perfect for small sales teams",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 contacts",
-        "Basic lead scoring",
-        "Email automation",
-        "Standard reporting",
-        "Email support"
+        "Up to 5 social accounts",
+        "Basic scheduling",
+        "Standard analytics",
+        "Email support",
+        "1 user"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$99",
       period: "/month",
-      description: "Ideal for growing sales teams",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 contacts",
-        "Advanced AI features",
-        "Predictive analytics",
-        "Custom dashboards",
+        "Up to 20 social accounts",
+        "Advanced scheduling",
+        "Detailed analytics",
         "Priority support",
-        "API access",
-        "Advanced automation"
+        "5 users",
+        "AI responses",
+        "Trend analysis"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$299",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited contacts",
-        "All AI features",
-        "Custom integrations",
-        "White-label options",
+        "Unlimited accounts",
+        "All features",
+        "Custom analytics",
         "24/7 support",
-        "Advanced security",
-        "Custom training"
+        "Unlimited users",
+        "White-label options",
+        "API access"
       ],
       popular: false
     }
@@ -82,38 +82,38 @@ const ZionCrmIntelligencePage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Adams",
-      company: "Tech Solutions Inc.",
-      role: "Sales Director",
-      content: "Zion CRM Intelligence has increased our conversion rate by 40%. The AI lead scoring is incredibly accurate and saves us hours every week.",
-      rating: 5,
-      avatar: "JA"
-    },
-    {
-      name: "Michael Torres",
-      company: "Global Sales Corp",
-      role: "VP of Sales",
-      content: "The predictive analytics feature has been a game-changer. We can now forecast sales with 90% accuracy and plan accordingly.",
-      rating: 5,
-      avatar: "MT"
-    },
-    {
-      name: "Lisa Chen",
+      name: "Amanda Foster",
       company: "Digital Marketing Agency",
-      role: "Account Manager",
-      content: "The automated follow-ups have improved our response rates significantly. Our team can focus on high-value activities while AI handles routine tasks.",
+      role: "Social Media Manager",
+      content: "Zion Social Media Manager has increased our engagement rates by 60%. The AI scheduling and response features are game-changers.",
       rating: 5,
-      avatar: "LC"
+      avatar: "AF"
+    },
+    {
+      name: "James Wilson",
+      company: "E-commerce Brand",
+      role: "Marketing Director",
+      content: "The trend analysis feature helps us stay ahead of the competition. We've seen a 40% increase in organic reach since using this platform.",
+      rating: 5,
+      avatar: "JW"
+    },
+    {
+      name: "Sarah Kim",
+      company: "Tech Startup",
+      role: "Growth Manager",
+      content: "Managing multiple social accounts used to be overwhelming. Now with Zion, we can maintain consistent engagement across all platforms effortlessly.",
+      rating: 5,
+      avatar: "SK"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="Zion CRM Intelligence - AI-Powered Customer Relationship Management | Zion Tech Group"
-        description="Transform your sales process with Zion CRM Intelligence. AI-powered lead scoring, predictive analytics, and automated follow-ups to boost conversion rates and revenue."
-        keywords="AI CRM, customer relationship management, lead scoring, predictive analytics, sales automation, CRM software, sales intelligence"
-        canonical="https://ziontechgroup.com/zion-crm-intelligence"
+        title="Zion Social Media Manager - AI-Powered Social Media Management | Zion Tech Group"
+        description="Transform your social media presence with Zion Social Media Manager. AI-powered scheduling, engagement analytics, and automated responses for all platforms."
+        keywords="social media management, AI social media, social media scheduling, engagement analytics, social media automation, content management"
+        canonical="https://ziontechgroup.com/zion-social-media-manager"
       />
 
       {/* Hero Section */}
@@ -126,18 +126,18 @@ const ZionCrmIntelligencePage = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 AI-Powered CRM Platform</span>
+            <span className="text-cyan-400 text-sm font-medium">#1 AI Social Media Platform</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion CRM Intelligence
+              Zion Social Media Manager
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your sales process with AI-powered customer relationship management. 
-            Boost conversion rates, predict customer behavior, and automate your sales workflow.
+            Transform your social media presence with AI-powered management tools. 
+            Schedule posts, analyze engagement, and automate responses across all platforms.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -164,10 +164,10 @@ const ZionCrmIntelligencePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Intelligent CRM Features
+              Powerful Social Media Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to manage customer relationships intelligently with AI-powered insights and automation.
+              Everything you need to manage and grow your social media presence with AI-powered intelligence.
             </p>
           </div>
           
@@ -208,7 +208,7 @@ const ZionCrmIntelligencePage = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Select the perfect plan for your sales team size and requirements.
+              Select the perfect plan for your social media management needs.
             </p>
           </div>
           
@@ -269,10 +269,10 @@ const ZionCrmIntelligencePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Sales Teams Worldwide
+              Trusted by Social Media Managers
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about Zion CRM Intelligence
+              See what our users say about Zion Social Media Manager
             </p>
           </div>
           
@@ -307,10 +307,10 @@ const ZionCrmIntelligencePage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Sales Process?
+            Ready to Transform Your Social Media?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of sales teams using Zion CRM Intelligence to boost conversion rates and revenue. 
+            Join thousands of social media managers using Zion to grow their presence and engagement. 
             Start your free trial today.
           </p>
           
@@ -336,4 +336,4 @@ const ZionCrmIntelligencePage = () => {
   );
 };
 
-export default ZionCrmIntelligencePage;
+export default ZionSocialMediaManagerPage;
