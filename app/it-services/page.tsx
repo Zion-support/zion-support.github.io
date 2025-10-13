@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Shield, Server, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Clock, DollarSign, Globe, Lock, Settings, Zap, BarChart3, Users, Award, Target, TrendingUp, Cpu, HardDrive, Wifi, Bluetooth, Usb, Printer, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, watch, Hourglass, Calendar, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart } from 'lucide-react';
+import { Cloud, Shield, Database, Code, Network, Smartphone, Monitor, Headphones } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -392,7 +392,9 @@ export default function ITServices() {
         <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Helmet>
       
-      <SEOOptimizer />
+      <SEOOptimizer>
+        <div></div>
+      </SEOOptimizer>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}

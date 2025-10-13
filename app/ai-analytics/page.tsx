@@ -19,6 +19,33 @@ import {
 } from "lucide-react";
 
 export default function AiAnalytics() {
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp",
+      company: "TechCorp",
+      avatar: "/avatars/sarah-johnson.jpg",
+      content: "AI Analytics transformed our data insights. We've seen 300% improvement in decision-making speed.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Data Director, InnovateLabs",
+      company: "InnovateLabs",
+      avatar: "/avatars/michael-chen.jpg",
+      content: "The predictive analytics capabilities are incredible. We can now forecast trends with 95% accuracy.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP Analytics, DataFlow Inc",
+      company: "DataFlow Inc",
+      avatar: "/avatars/emily-rodriguez.jpg",
+      content: "Zion's AI Analytics platform is a game-changer. Our ROI increased by 400% in just 6 months.",
+      rating: 5
+    }
+  ];
+
   const features = [
     {
       title: "Real-time Data Processing",

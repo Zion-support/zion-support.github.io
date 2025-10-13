@@ -1,37 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Calendar, 
-  Brain, 
-  Users, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Award, 
-  BarChart3,
-  Clock,
-  Target,
-  Sparkles,
-  TrendingUp,
-  Globe,
-  Lock,
-  Smartphone,
-  Monitor,
-  Settings,
-  FileText,
-  MessageSquare,
-  Bell,
-  PieChart,
-  Activity,
-  Workflow,
-  Database,
-  Shield,
-  Rocket,
-  Lightbulb,
-  GitBranch,
-  Timer
-} from 'lucide-react';
+import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

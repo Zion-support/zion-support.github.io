@@ -1,7 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, FileText } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Users, BarChart3, Cloud, Sparkles, Mail, Monitor } from 'lucide-react';
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
 import FuturisticBackground from "./components/FuturisticBackground";
@@ -142,8 +141,12 @@ const HomePage = () => {
 
   return (
     <PerformanceOptimizer>
-      <EnhancedSEO />
-      <StructuredData data={structuredData} />
+      <EnhancedSEO 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services."
+        keywords="AI solutions, cybersecurity, cloud infrastructure, digital transformation, technology consulting"
+      />
+      <StructuredData type="Organization" data={structuredData} />
       <FuturisticBackground>
         <div className="min-h-screen">
           {/* Hero Section */}
@@ -151,14 +154,17 @@ const HomePage = () => {
             <div className="max-w-7xl mx-auto text-center relative z-10">
               <FuturisticText
                 className="text-5xl md:text-7xl font-bold mb-6"
-                text="Zion Tech Group"
-                variant="gradient"
-              />
+                variant="heading"
+                gradient={true}
+              >
+                Zion Tech Group
+              </FuturisticText>
               <FuturisticText
                 className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-                text="Advanced AI and IT Solutions for the Future"
-                variant="glow"
-              />
+                variant="subheading"
+              >
+                Advanced AI and IT Solutions for the Future
+              </FuturisticText>
               <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
                 We empower businesses with cutting-edge technology, innovative solutions, 
                 and expert guidance to accelerate digital transformation and drive sustainable growth.
@@ -175,7 +181,7 @@ const HomePage = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </FuturisticButton>
                 <FuturisticButton
-                  variant="secondary"
+                  variant="outline"
                   size="lg"
                   className="px-8 py-4"
                   onClick={() => window.location.href = '/demo'}

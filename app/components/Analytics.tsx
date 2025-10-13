@@ -30,8 +30,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     // Initialize dataLayer
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
-      window.dataLayer.push(arguments);
+    window.gtag = function(...args) {
+      window.dataLayer.push(args);
     };
 
     window.gtag('js', new Date());
@@ -150,7 +150,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     document.addEventListener('click', handleClick);
     return () => document.removeEventListener('click', handleClick);
-  }, [enabled]);
+  }, [enabled, trackEvent]);
 
   // Track form submissions
   useEffect(() => {
@@ -168,7 +168,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     document.addEventListener('submit', handleSubmit);
     return () => document.removeEventListener('submit', handleSubmit);
-  }, [enabled]);
+  }, [enabled, trackEvent]);
 
   // Track scroll depth
   useEffect(() => {
@@ -195,7 +195,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     window.addEventListener('scroll', trackScroll, { passive: true });
     return () => window.removeEventListener('scroll', trackScroll);
-  }, [enabled]);
+  }, [enabled, trackEvent]);
 
   return null; // This component doesn't render anything
 };

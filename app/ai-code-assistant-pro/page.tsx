@@ -1,4 +1,4 @@
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star } from "lucide-react";
+import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -10,6 +10,33 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AICodeAssistantProZionTechGroup = () => {
+  const testimonials = [
+    {
+      name: "Alex Thompson",
+      role: "Senior Developer, TechCorp",
+      company: "TechCorp",
+      avatar: "/avatars/alex-thompson.jpg",
+      content: "This AI code assistant has revolutionized our development process. We're coding 3x faster with fewer bugs.",
+      rating: 5
+    },
+    {
+      name: "Maria Garcia",
+      role: "Lead Engineer, InnovateLabs",
+      company: "InnovateLabs",
+      avatar: "/avatars/maria-garcia.jpg",
+      content: "The code suggestions are incredibly accurate. It's like having a senior developer pair programming with you.",
+      rating: 5
+    },
+    {
+      name: "David Kim",
+      role: "CTO, DataFlow Inc",
+      company: "DataFlow Inc",
+      avatar: "/avatars/david-kim.jpg",
+      content: "Our team productivity has increased by 400% since implementing this AI assistant. Game-changing tool.",
+      rating: 5
+    }
+  ];
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",

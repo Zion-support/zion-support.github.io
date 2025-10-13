@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Mail, Brain, Shield, Eye, Heart, MessageSquare, FileText, Star, CheckCircle, Sparkles, Smartphone, Globe, Award, Lock, Cloud, Database, Settings, Headphones, ExternalLink, ChevronRight, RefreshCw, RotateCcw, Save, Trash2, Plus, Minus, X, Menu, MoreHorizontal, MoreVertical, Grid, List, Layout, Maximize, Minimize, Move, Copy, Scissors, Clipboard, Bookmark, Tag, Flag, Bell, BellOff, Volume2, VolumeX, Mic, MicOff, Camera, CameraOff, Wifi, WifiOff, Battery, BatteryLow, Signal, SignalLow, SignalZero, SignalHigh, SignalMedium, DollarSign, CreditCard, Receipt, Calculator, PieChart, LineChart, BarChart, TrendingDown, AlertCircle, Info, HelpCircle, Play, Pause, ThumbsUp, Share, Download, Upload, Edit, Zap, Clock, Target, Users, BarChart3 } from 'lucide-react';
+import { ArrowRight, Mail, Shield, Heart, MessageSquare, FileText, Star, CheckCircle, Sparkles, Smartphone, Globe, Settings, Headphones, Play, Share, Target, Users, BarChart3 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIEmailAnalyzerPage = () => {

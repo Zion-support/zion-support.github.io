@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Brain, Target, Globe, DollarSign, FileText } from 'lucide-react';
+import { Receipt, Shield, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe } from 'lucide-react';
 
 const SmartExpenseCategorizerPage = () => {
   const features = [
