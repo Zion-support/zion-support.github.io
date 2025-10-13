@@ -1,6 +1,19 @@
 'use client';
+<<<<<<< HEAD:temp-broken/about/page.tsx
 import React, { Helmet } from 'react-helmet-async';
 import React, { Users, Target, Award, Globe } from 'lucide-react';
+=======
+import React from 'react';
+
+export default function AboutPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">About</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -126,6 +139,7 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
     </div>
   );
   );

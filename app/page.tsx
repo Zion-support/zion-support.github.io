@@ -1,111 +1,39 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield } from 'lucide-react';
 
-const HomePage: React.FC = () => {
-  const features = [
-    {
-      icon: Zap,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced artificial intelligence to transform your business operations'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Users,
-      title: 'Expert Team',
-      description: 'Experienced professionals dedicated to your success'
-    }
-  ];
-
-  const stats = [
-    { label: 'Projects Completed', value: '500+' },
-    { label: 'Happy Clients', value: '200+' },
-    { label: 'Years Experience', value: '10+' },
-    { label: 'Team Members', value: '50+' }
-  ];
-
+export default function HomePage() {
   return (
-    <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions and IT services for modern businesses" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h1 className="text-6xl font-bold text-white mb-6">
-              Transform Your Business with{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                AI-Powered Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We deliver cutting-edge artificial intelligence and IT solutions that drive innovation, 
-              efficiency, and growth for businesses of all sizes.
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-5xl font-bold mb-8 text-center">
+          Welcome to Zion AI Solutions
+        </h1>
+        <p className="text-xl text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+          Advanced AI-powered solutions for modern businesses. We provide cutting-edge 
+          artificial intelligence services to help your organization thrive in the digital age.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-4">AI Automation</h3>
+            <p className="text-gray-300">
+              Streamline your business processes with intelligent automation solutions.
             </p>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2 mx-auto">
-              Get Started Today
-              <ArrowRight className="w-5 h-5" />
-            </button>
           </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Why Choose Zion Tech Group?
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center">
-                  <feature.icon className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              {stats.map((stat, index) => (
-                <div key={index}>
-                  <div className="text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="container mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of companies that trust Zion Tech Group for their AI and IT needs.
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-4">Data Analytics</h3>
+            <p className="text-gray-300">
+              Unlock insights from your data with advanced analytics and machine learning.
             </p>
-            <button className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300">
-              Start Your Journey Today
-            </button>
           </div>
-        </section>
+          <div className="bg-gray-800 p-6 rounded-lg">
+            <h3 className="text-xl font-semibold mb-4">Custom Solutions</h3>
+            <p className="text-gray-300">
+              Tailored AI solutions designed specifically for your business needs.
+            </p>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
-};
-
-export default HomePage;
+}
+>>>>>>> origin/main

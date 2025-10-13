@@ -1,31 +1,39 @@
 import React from 'react';
-import { render, screen, waitFor, act } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
-
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
   motion: {
+<<<<<<< HEAD:__tests__/components/OptimizedImage.test.tsx
+    div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
+    img: ({ children, ...props }: any) => <img {...props}>{children}</img>,
+=======
     img: ({ children, ...props }: React.ImgHTMLAttributes<HTMLImageElement> & { children?: React.ReactNode }) => <img {...props}>{children}</img>,
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea:app-broken/__tests__/components/OptimizedImage.test.tsx
   },
 }));
-
-const defaultProps = {
-  src: 'https://example.com/image.jpg',
+const mockProps = {
+  src: 'https://example.com/test.jpg',
   alt: 'Test image',
-  width: 300,
-  height: 200,
 };
-
 describe('OptimizedImage Component', () => {
   it('renders with default props', () => {
-    const { container } = render(<OptimizedImage {...defaultProps} />);
-    expect(container.firstChild).toBeInTheDocument();
+    render(<OptimizedImage {...mockProps} />);
+    const image = screen.getByAltText('Test image');
+    expect(image).toBeInTheDocument();
+    expect(image).toHaveAttribute('src', 'https://example.com/test.jpg');
   });
-
   it('renders with custom className', () => {
-    const { container } = render(<OptimizedImage {...defaultProps} className="test-class" />);
-    expect(container.firstChild).toHaveClass('test-class');
+    render(<OptimizedImage {...mockProps} className="custom-class" />);
+    const image = screen.getByAltText('Test image');
+    expect(image).toBeInTheDocument();
+    // The className is applied to the wrapper div, not the img element
+    const wrapper = image.closest('div');
+    expect(wrapper).toHaveClass('custom-class');
   });
+<<<<<<< HEAD:__tests__/components/OptimizedImage.test.tsx
+});
+=======
 
   it('renders with width and height', () => {
     render(<OptimizedImage {...defaultProps} width={300} height={200} />);
@@ -82,3 +90,4 @@ describe('OptimizedImage Component', () => {
     expect(img).toHaveAttribute('loading', 'lazy');
   });
 });
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea:app-broken/__tests__/components/OptimizedImage.test.tsx

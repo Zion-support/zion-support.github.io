@@ -38,6 +38,7 @@ export default function Tutorials() {
           </div>
 
         </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       </div>
     </div>
   );

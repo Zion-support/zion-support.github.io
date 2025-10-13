@@ -1835,22 +1835,10 @@ export default function Navigation() {
                 Get Started;
               </Link>
             </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
           </div>
         )}
       </div>
     </nav>
   );
-};
-
-
-export default Navigation;
-
-export default Navigation;
-
-export default Navigation;
-
-export default Navigation;
-};
-
-export default Navigation;
-export default Navigation;
+}

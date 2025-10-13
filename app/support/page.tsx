@@ -357,6 +357,7 @@ const SupportPage: React.FC = () => {
             Get help and support for our services.
           </p>
         </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       </div>
     </div>
   );

@@ -1,5 +1,8 @@
 import React, {   useContext   } from 'react';
 import { AnalyticsContext } from '../contexts/AnalyticsContext';
+=======
+import { AnalyticsContext } from '../contexts/AnalyticsContextDefinition';
+>>>>>>> cursor/fix-errors-and-merge-to-main-3a06
 
 export const useAnalytics = () => {
   

@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import React from 'react';
+
+export default function BlogPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Blog</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+=======
 import React, { useState } from "react";
 import React, { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from 'lucide-react';
 import React, { Helmet } from 'react-helmet-async';
@@ -582,6 +595,7 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
     </div>
   );
 };

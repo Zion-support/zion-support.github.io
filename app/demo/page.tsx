@@ -422,6 +422,7 @@ const DemoPage: React.FC = () => {
       
       <Footer />
     </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
   );
 };
 

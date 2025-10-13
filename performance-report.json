@@ -1,10 +1,19 @@
 {
+<<<<<<< HEAD
+
+  "timestamp": "2025-10-13T11:09:39.189Z",
+=======
 "timestamp": "2025-10-13T11:09:39.189Z",
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
   "buildStats": {
     "totalFiles": 85,
     "totalSize": 658760,
     "jsFiles": 82,
     "jsSize": 649870,    "cssFiles": 1,
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
     "cssSize": 1770,
     "imageFiles": 0,
     "imageSize": 0

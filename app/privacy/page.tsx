@@ -222,4 +222,5 @@ const PrivacyPage: React.FC = () => {
         </li>
       </li>
     </li>
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
   );

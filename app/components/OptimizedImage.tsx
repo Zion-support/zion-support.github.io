@@ -1,38 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
-  className?: string;
   width?: number;
   height?: number;
+  className?: string;
   priority?: boolean;
   onLoad?: () => void;
   onError?: () => void;
 }
 
-export default function OptimizedImage({ 
-  src, 
-  alt, 
-  className = '', 
-  width, 
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width,
   height,
+  className = '',
   priority = false,
   onLoad,
   onError;
 }: OptimizedImageProps) {
   const [isLoading, setIsLoading] = useState(true);
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
   const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   const handleLoad = () => {
   
     setIsLoading(false);
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
     onLoad?.();
   };
 
   const handleError = () => {
   
     setIsLoading(false);
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
     setHasError(true);
     onError?.();
   };
@@ -43,45 +48,39 @@ export default function OptimizedImage({
         <div className="flex items-center justify-center w-full h-full bg-gray-100 text-gray-500">
           Failed to load image;
         </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       </div>
   );
     );
   }
 
   return (
-    <div className={`relative ${className}`}>
-      {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
+    <motion.div
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
       )}
-      <img;
+      <img
+        ref={imgRef}
         src={src}
         alt={alt}
-        className="optimized-image"
         width={width}
         height={height}
-        loading={priority ? "eager" : "lazy"}"
         onLoad={handleLoad}
         onError={handleError}
-        style={{ opacity: isLoading ? 0 : 1 }}
+        loading={priority ? 'eager' : 'lazy'}
+        className={`transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
       />
-    </div>
+    </motion.div>
   );
-        width={width}
-        height={height}
-        loading={priority ? 'eager' : 'lazy'}'
-        decoding="async"
-        onLoad={handleLoad}
-        onError={handleError}
-        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}'
-        style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover'
-        }}
-      />
-    </div>
-  );
-  )
-}
+};
 
 export default OptimizedImage;
+>>>>>>> origin/main

@@ -1,15 +1,29 @@
 /** @type {import('tailwindcss').Config} */
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 export default {
-  content: [
-    "./index.html",
+    "./index.html";
+    "./src/**/*.{js,ts,jsx,tsx}";
+    "./app/**/*.{js,ts,jsx,tsx}";
+  ];
+export default {
+//   content: [
+//     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
-    "./App.tsx",
-    "./main.tsx"
-  ],
+//   ],
   theme: {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     extend: {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       colors: {
         primary: {
           50: "#f0f9ff",
@@ -29,6 +43,11 @@ export default {
       },
     },
   },
-  plugins: [],
+//   plugins: [],
+  };,
+    plugins: [];
 };
+<<<<<<< HEAD
+=======
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea

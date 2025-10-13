@@ -1,3 +1,87 @@
+<<<<<<< HEAD
+import globals from 'globals';
+import js from '@eslint/js';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+export default [
+  // Global ignores
+  {
+    ignores: [
+      "dist/**", 
+      "node_modules/**", 
+      "*.config.js", 
+      "*.config.cjs",
+      "add-missing-routes*.jsx",
+      "backup-problematic/**",
+      "backup-unused-components/**",
+      "backup/**",
+      "cleanup-*.js",
+      "cleanup-*.cjs",
+      "comprehensive-*.js",
+      "fix-*.js",
+      "fix-*.cjs",
+      "*.cjs",
+      "scripts/**",
+      "src/**",
+      "create-*.js",
+      "identify-*.js",
+      "merge-*.js",
+      "remove-*.js",
+      "simple-*.js",
+      "website-*.js",
+      "public/sw.js",
+      'admin-api-disabled/**',
+      'ai-customer-support-disabled/**',
+      'ai-data-visualization-disabled/**',
+      'ai-sales-automation-disabled/**',
+      'ai-workflow-automation-disabled/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'api-backup/**',
+      'components-disabled/**',
+      'components.disabled/**',
+      'automation_backup/**',
+      'backup*/**',
+      '*-disabled/**',
+      '*.disabled/**',
+      '*.broken',
+      '*.backup',
+      'temp-files/**',
+      'cache/**',
+      'analyze-*.js',
+      'check-*.js',
+      'clean-*.js',
+      'fix-*.js',
+      'jest.setup.js'
+    ],
+  },
+  {
+    files: ['**/*.{js,jsx}'],
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      'no-unused-vars': 'warn',
+      'no-console': 'off'
+    }
+  },
+  // TypeScript configuration
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
+      parser: tsParser,
+=======
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
@@ -24,6 +108,7 @@ export default [
     files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       parser: typescriptParser,
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -33,12 +118,31 @@ export default [
       }
     },
     plugins: {
+<<<<<<< HEAD
+      '@typescript-eslint': tseslint,
+=======
       '@typescript-eslint': typescript,
       'react': react,
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh
     },
     rules: {
+<<<<<<< HEAD
+      ...tseslint.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true }
+      ],
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      'no-console': 'off',
+      'no-unused-vars': 'off'
+=======
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -52,6 +156,7 @@ export default [
       react: {
         version: 'detect'
       }
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
     }
   }
 ];
