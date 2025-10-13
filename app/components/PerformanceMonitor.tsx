@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -16,6 +17,10 @@ export default function PerformanceMonitor() {
     // Only run in development
     if (process.env['NODE_ENV'] !== 'development') return;
 =======
+=======
+'use client';
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -290,6 +295,9 @@ const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
     // Only run in production
     if (process.env['NODE_ENV'] !== 'production') return;
 
@@ -778,6 +786,7 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
 =======
   const updateMetric = useCallback((name: keyof PerformanceMetrics, value: number) => {
@@ -935,3 +944,5 @@ export default PerformanceMonitor;
 =======
 export default PerformanceMonitor;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6

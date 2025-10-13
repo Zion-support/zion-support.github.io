@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -80,6 +81,9 @@ export default CookiesPage
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -100,13 +104,42 @@ const CookiesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               This page is under construction. Please check back soon.
             </p>
+<<<<<<< HEAD
           </div>
         </div>
         <Footer />
       </div>
     </>
+=======
+
+            <h2 className="text-2xl font-semibold text-white mb-4">How We Use Cookies</h2>
+            <p className="text-gray-300 mb-6">
+              We use cookies to improve your browsing experience, analyze site traffic, and personalize content. 
+              We also use cookies for security purposes and to remember your preferences.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-white mb-4">Managing Cookies</h2>
+            <p className="text-gray-300 mb-6">
+              You can control and manage cookies through your browser settings. However, disabling cookies may 
+              affect the functionality of our website.
+            </p>
+
+            <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
+            <p className="text-gray-300 mb-6">
+              If you have any questions about our cookie policy, please contact us at kleber@ziontechgroup.com
+            </p>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
   );
 };
 
 export default CookiesPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6

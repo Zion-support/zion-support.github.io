@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 'use client;
+=======
+import React, { memo } from 'react';
+import Link from 'next/link';
+import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
 
 import React, { memo } from 'react;
 

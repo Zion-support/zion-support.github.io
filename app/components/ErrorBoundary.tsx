@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   fallback?: ReactNode;
 'use client;
 
@@ -46,6 +47,12 @@ import { Link } from 'react-router-dom'
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
+=======
+'use client';
+
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
 
 interface Props {
   children: ReactNode;
@@ -352,9 +359,15 @@ export default ErrorBoundary
                 Try Again
               </button>
               
+<<<<<<< HEAD
               <Link
                 to="/"
                 className="border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center"
+=======
+              <button
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-lg transition-colors"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home

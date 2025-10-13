@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+=======
+import React from 'react';
+import Link from 'next/link';
+import { ArrowRight, MapPin, Clock, Users, Award, Zap } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
 
 const CareersPage: React.FC = () => {
   return (

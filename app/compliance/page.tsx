@@ -1,5 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
+=======
+import React from 'react';
+import Link from 'next/link';
+import { ArrowLeft, CheckCircle, Shield, FileText, Award, Users, Lock } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
 
 <<<<<<< HEAD
 export default CompliancePage;

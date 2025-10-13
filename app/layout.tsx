@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     'Easy integration with existing systems',
 =======
 import React, { useState } from "react";
@@ -11,6 +12,11 @@ import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./components/ErrorFallback";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+=======
+import './globals.css';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import ErrorBoundary from './components/ErrorBoundary';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
 
 import MobileNavigation from "./components/MobileNavigation";
 import ImprovedNavigation from "./components/ImprovedNavigation";
@@ -145,6 +151,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         />
       </head>
       <body className='antialiased'>
+<<<<<<< HEAD
         <GlobalErrorBoundary>
           <AnalyticsProvider>
             <AccessibilityEnhancer>
@@ -155,6 +162,12 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             </AccessibilityEnhancer>
           </AnalyticsProvider>
         </GlobalErrorBoundary>
+=======
+        <ErrorBoundary>
+          <PerformanceMonitor />
+          {children}
+        </ErrorBoundary>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
       </body>
     </html>
   );
