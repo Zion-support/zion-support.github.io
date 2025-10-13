@@ -1,12 +1,12 @@
 /**;
- * Production-ready logger that removes console statements in production;
+ * Production-ready logger that removes console statements in production;*/
  */;
 type LogLevel = 'debug' | 'info' | 'warn' | 'error';'
 interface LogEntry {}}level: LogLevel,
   context?: string;
 class ProductionLogger {}}private isDevelopment = process.env['NODE_ENV'] === 'development';'
   private isProduction = process.env['NODE_ENV'] === 'production';'
-private log(level: LogLevel, message: string, data?: unknown, context?: string): void {const entry: LogEntry = {,}
+private log(level: LogLevel, message: string, data?: unknown, context?: string): void {const entry: LogEntry = {,};
       level;}private log(level: LogLevel, message: string, data?: unknown, context?: string): void {}}const entry: LogEntry = {,}level,;
       message,;
       data,;
@@ -24,17 +24,17 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
           break;
         case 'error':;
           break;
-      }
-    }
+      };
+    };
 // In production, send critical errors to monitoring service;
     if (this.isProduction && level === 'error') {// In production, send critical errors to monitoring service;}if (this.isProduction && level === 'error') {}this.sendToMonitoring(entry);'
           break;
-    if (this.isProduction && level === 'error') {}
+    if (this.isProduction && level === 'error') {};
       this.sendToMonitoring(entry);
-    }
+    };
       (window as any).gtag('event', 'error_log', {)'
-        error_message: entry.message;)
-        error_context: entry.context)
+        error_message: entry.message;);
+        error_context: entry.context),
       (window as any).gtag('event', 'error_log', {);'
         error_message: entry.message;),
         error_context: entry.context),
@@ -45,32 +45,27 @@ private log(level: LogLevel, message: string, data?: unknown, context?: string):
       (window as any).gtag('event', 'error_log', {</div>'
         event_category: 'Error'
 
-    }
-  }
-
-  debug(message: string, data?: unknown, context?: string): void {}
+    };
+  },
+  debug(message: string, data?: unknown, context?: string): void {};
     this.log('debug', message, data, context);
-  }
-
-  info(message: string, data?: unknown, context?: string): void {}
+  };
+  info(message: string, data?: unknown, context?: string): void {};
     this.log('info', message, data, context);
-  }
-
-  warn(message: string, data?: unknown, context?: string): void {}
+  };
+  warn(message: string, data?: unknown, context?: string): void {};
     this.log('warn', message, data, context);
-  }
-
-  error(message: string, data?: unknown, context?: string): void {}
+  };
+  error(message: string, data?: unknown, context?: string): void {};
     this.log('error', message, data, context);
-  }
-}
-
+  };
+};
 export const logger = new ProductionLogger();
 export default logger;
 debug(message: string, data?: unknown, context?: string): void {}}this.log('debug', message, data, context);
-  }
+  };
 info(message: string, data?: unknown, context?: string): void {}}this.log('info', message, data, context);
-  }
+  };
 warn(message: string, data?: unknown, context?: string): void {}}this.log('warn', message, data, context);
-  }
+  };
 error(message: string, data?: unknown, context?: string): void {}}this.log('error', message, data, context);

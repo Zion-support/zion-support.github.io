@@ -1,6 +1,5 @@
     </div>
-  ).
+  );
 };
 
-export default NewsPage.
-
+export default NewsPage;

@@ -1,8 +1,8 @@
-import {Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,;}
+import {Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,;};
   GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,;
   Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,;
   Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon;}} from 'lucide-react';
-export const microSAASServices = [
+export const microSAASServices = [;
   // Productivity & Management Tools;
   {title: 'AI Project Manager Pro',
     description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',;
@@ -59,8 +59,8 @@ export const microSAASServices = [
     description: 'Automated lead generation with AI-powered prospecting, qualification, and nurturing. Generate 5 x more qualified leads.',;
     users: '18,000+',}freeTrial: '7 days',}'
 ]
-export const aiServices = [
-  {title: 'Machine Learning Solutions',
+export const aiServices = [;
+  {title: 'Machine Learning Solutions',;
     description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation. Trusted by Fortune 500 companies.',;
     users: '500+',}freeTrial: '30 days',},;'
   {title: 'AI Cybersecurity Shield Pro',
@@ -103,8 +103,8 @@ export const aiServices = [
     description: 'Strategic IT consulting with digital transformation, technology roadmaps, and implementation planning.',;
     users: '200+',}freeTrial: '30 days',}'
 ]
-export const specializedServices = [
-  {title: 'Quantum Computing Solutions',
+export const specializedServices = [;
+  {title: 'Quantum Computing Solutions',;
     description: 'Cutting-edge quantum computing with quantum algorithms, optimization, and research. Solve complex problems with quantum power.',;
     users: '50+',}freeTrial: '60 days',},;'
   {title: 'Autonomous Systems',
@@ -117,7 +117,7 @@ export const specializedServices = [
     description: 'Comprehensive IoT solutions with edge computing, sensor networks, and real-time processing. Connect and optimize everything.',;
     users: '400+',}freeTrial: '30 days',}'
 ]
-export interface Service {id: string,}
+export interface Service {id: string,};
       'Integration with 50+ tools';
     ],;
     pricing: {,
@@ -178,7 +178,7 @@ export interface Service {id: string,}
       'Analytics dashboard';
     ],;
     pricing: {,
-    bgColor: 'bg-pink-500/10',}}
+    bgColor: 'bg-pink-500/10',}};
 ]
-export const contactInfo = {phone: '+1 (302) 464-0950',
-  hours: 'Mon-Fri: 9AM-6PM EST',}}
+export const contactInfo = {phone: '+1 (302) 464-0950',;
+  hours: 'Mon-Fri: 9AM-6PM EST',}};

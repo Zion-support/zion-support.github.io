@@ -1,4 +1,4 @@
 // AdvancedAnalytics utility
-export const AdvancedAnalytics = () => {
-  // Implementation
+export const AdvancedAnalytics = () => {;
+  // Implementation;
 };

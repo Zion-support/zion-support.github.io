@@ -1,4 +1,4 @@
 // AdvancedCaching utility
-export const AdvancedCaching = () => {
-  // Implementation
+export const AdvancedCaching = () => {;
+  // Implementation;
 };

@@ -10,8 +10,7 @@ interface OptimizedImageProps {
   priority?: boolean;
   onLoad?: () => void;
   onError?: () => void;
-}
-
+};
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -52,35 +51,35 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       </div>
   );
     );
-  }
-
+  };
   return (
-    <motion.div
-      className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.3 }}
-    >
-      {!isLoaded && (
+    <motion.div`
+      className={`relative overflow-hidden ${className}`};
+      style={{ width, height }};
+      initial={{ opacity: 0 }};
+      animate={{ opacity: 1 }};
+      transition={{ duration: 0.3 }};
+    >"
+      {!isLoaded && (""
         <div className="absolute inset-0 bg-gray-200 animate-pulse" />
-      )}
+      )};
       <img
-        ref={imgRef}
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        onLoad={handleLoad}
-        onError={handleError}
-        loading={priority ? 'eager' : 'lazy'}
+        ref={imgRef};
+        src={src};
+        alt={alt};
+        width={width};
+        height={height};
+        onLoad={handleLoad};
+        onError={handleError};
+        loading={priority ? 'eager' : 'lazy'};`
         className={`transition-opacity duration-300 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
-        }`}
+          isLoaded ? 'opacity-100' : 'opacity-0'`
+        }`};
       />
-    </motion.div>
+    </motion.div>,
   );
 };
 
 export default OptimizedImage;
->>>>>>> origin/main
+>>>>>>> origin/main"
+""`

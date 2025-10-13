@@ -1,28 +1,27 @@
-'use client'.
-import React from 'react'.
-
+'use client';
+import React from 'react';
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
+    },
   ];
 
   const benefits = [
@@ -41,26 +40,25 @@ interface SkeletonProps {
   height?: string | number.
   rounded?: boolean.
   animate?: boolean.
-}
-
-const Skeleton: React.FC<SkeletonProps> = ({
+};
+const Skeleton: React.FC<SkeletonProps> = ({ ,
   className = '',
   width = '100%',
   height = '1rem',
   rounded = false,
   animate = true.
-}) => {
-  const baseClasses = 'bg-gray-300 dark:bg-gray-700'.
+  }) => {
+  const baseClasses = 'bg-gray-300 dark:bg-gray-700';
   const roundedClasses = rounded ? 'rounded-full' : 'rounded';'
   const animateClasses = animate ? 'animate-pulse' : '';'
   
   return (
     <div
-      className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`}
-      style={{ width, height }}
+      className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`};
+      style={{ width, height }};
       aria-hidden="true"
     />
-  ).
+  );
 };
-
-export default LoadingSkeletonPage.
+"
+export default LoadingSkeletonPage;""`

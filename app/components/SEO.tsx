@@ -1,16 +1,14 @@
-'use client'.
+'use client';
 
 /**
  * SEO Component.
- * Provides comprehensive SEO meta tags and structured data.
+ * Provides comprehensive SEO meta tags and structured data.*/
  */
 
-import React from 'react'.
-
-
-export interface SEOProps {
-  title?: string.
-  description?: string.
+import React from 'react'.;
+export interface SEOProps {;
+  title?: string;
+  description?: string;
   keywords?: string[];
   image?: string.
   url?: string.
@@ -24,13 +22,12 @@ export interface SEOProps {
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';'
   locale?: string.
   alternateLocales?: { locale: string; url: string }[];
-}
-
+};
 const defaultSEO = {
   title: 'Zion Tech Group - AI & IT Solutions',
   description:
     'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
-  keywords: [
+  keywords: [,
     'AI',
     'artificial intelligence',
     'enterprise solutions',
@@ -44,7 +41,7 @@ const defaultSEO = {
   twitterCard: 'summary_large_image' as const,
 };
 
-export const SEO: React.FC<SEOProps> = ({
+export const SEO: React.FC<SEOProps> = ({ ,
   title,
   description,
   keywords,
@@ -60,7 +57,7 @@ export const SEO: React.FC<SEOProps> = ({
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
   alternateLocales = [],
-}) => {
+  }) => {
   const seo = {
     title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,
@@ -68,17 +65,16 @@ export const SEO: React.FC<SEOProps> = ({
     image: image || defaultSEO.image,
     url: url || defaultSEO.url,
     type,
-    twitterCard,
-    locale,
+    twitterCard,;
+    locale,;
   };
 
   // Generate structured data.
   const generateStructuredData = () => {
   
     if (structuredData) {
-      return structuredData.
-    }
-
+      return structuredData;
+    };
     const baseStructuredData: Record<string, unknown> = {
       '@context': 'https://schema.org','
       '@type': type === 'article' ? 'Article' : 'WebPage','
@@ -93,27 +89,24 @@ export const SEO: React.FC<SEOProps> = ({
         '@type': 'Person','
         name: author,
       };
-    }
-
+    };
     if (publishDate) {
       baseStructuredData.datePublished = publishDate.
-    }
-
+    };
     if (modifiedDate) {
       baseStructuredData.dateModified = modifiedDate.
-    }
-
+    };
     return baseStructuredData.
   };
 
   return (
     <div>
-  )
+  );
     </div>
-  ).
-  ).
-  )
-  ).
+  );
+  );
+  );
+  );
 };
 
-export default SEO.
+export default SEO;`

@@ -1,8 +1,10 @@
-import React, {  createContext  } from 'react';
+import React, { createContext } from 'react';
+
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
   trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
 }
+
 export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -22,4 +24,3 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     </AnalyticsContext.Provider>
   );
 };
->>>>>>> origin/main
