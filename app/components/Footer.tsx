@@ -27,7 +27,7 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -70,15 +70,15 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-infrastructure"
+                  to="/cloud-services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Infrastructure
+                  Cloud Solutions
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity-solutions"
+                  to="/cybersecurity"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Cybersecurity
@@ -90,6 +90,22 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   5G Implementation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/data-analytics"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/custom-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Custom Development
                 </Link>
               </li>
             </ul>
@@ -168,6 +184,45 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Consultation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Resources</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/blog"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/tutorials"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Tutorials
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/demo"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Demo
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/sitemap"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Sitemap
                 </Link>
               </li>
             </ul>

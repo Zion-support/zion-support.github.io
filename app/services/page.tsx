@@ -1,33 +1,139 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Brain, Shield, Zap, Globe, Database, Code, Smartphone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function Services() {
+  const services = [
+    {
+      title: "AI & Machine Learning",
+      description: "Cutting-edge artificial intelligence solutions to transform your business operations",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      path: "/ai-services"
+    },
+    {
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure and migration services",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      path: "/cloud-services"
+    },
+    {
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions to protect your digital assets",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      path: "/cybersecurity"
+    },
+    {
+      title: "5G Implementation",
+      description: "Next-generation connectivity and infrastructure services",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-orange-500 to-yellow-500",
+      path: "/5g-implementation"
+    },
+    {
+      title: "Data Analytics",
+      description: "Advanced data analysis and business intelligence solutions",
+      icon: <Database className="w-8 h-8" />,
+      color: "from-purple-500 to-indigo-500",
+      path: "/data-analytics"
+    },
+    {
+      title: "Custom Development",
+      description: "Tailored software solutions for your specific business needs",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      path: "/custom-development"
+    },
+    {
+      title: "Mobile Solutions",
+      description: "Native and cross-platform mobile applications",
+      icon: <Smartphone className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      path: "/mobile-development"
+    }
+  ];
+
   return (
     <>
       <Helmet>
         <title>Services - Zion Tech Group</title>
         <meta
           name="description"
-          content="Professional services for businesses"
+          content="Comprehensive technology services including AI solutions, cloud computing, cybersecurity, and digital transformation for modern businesses."
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Services</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional services coming soon.
-          </p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Our
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                {" "}Services
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
+            </p>
+          </div>
+        </section>
 
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
+        {/* Services Grid */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <Link
+                  key={index}
+                  to={service.path}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                >
+                  <div
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 text-center">
+                    {service.description}
+                  </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our services can help you achieve your goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/consultation"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Schedule Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/contact"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
