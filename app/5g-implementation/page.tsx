@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
@@ -102,25 +101,21 @@ const FiveGImplementationPage: React.FC = () => {
               Why Choose Our 5G Implementation?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We deliver comprehensive 5G solutions that drive business growth and innovation.
+              We provide end-to-end 5G implementation services with proven expertise and cutting-edge technology.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-blue-600" />
+              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {feature.description}
-                </p>
-                <ul className="space-y-1">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-600">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                <p className="text-gray-600 mb-6">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                       {benefit}
                     </li>
@@ -140,49 +135,31 @@ const FiveGImplementationPage: React.FC = () => {
               Our Implementation Process
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A proven methodology that ensures successful 5G deployment and optimal performance.
+              A systematic approach to ensure successful 5G network deployment and optimization.
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
-            {implementationSteps.map((step, index) => (
-              <div key={index} className="flex items-start mb-8">
-                <div className="flex-shrink-0 w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mr-6">
-                  {step.step}
+            <div className="space-y-8">
+              {implementationSteps.map((step, index) => (
+                <div key={index} className="flex items-start space-x-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                      {step.step}
+                    </div>
+                  </div>
+                  <div className="flex-1 bg-white rounded-xl p-8 shadow-lg">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-2xl font-semibold text-gray-900">{step.title}</h3>
+                      <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                        {step.duration}
+                      </span>
+                    </div>
+                    <p className="text-gray-600 text-lg">{step.description}</p>
+                  </div>
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 mb-2">
-                    {step.description}
-                  </p>
-                  <span className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                    {step.duration}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Ready to Implement 5G?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Contact our 5G experts today to discuss your implementation needs and get a customized solution.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
-              Schedule Consultation
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-              Download Brochure
-            </button>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -190,15 +167,13 @@ const FiveGImplementationPage: React.FC = () => {
       {/* Contact Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Get in Touch
-              </h2>
-              <p className="text-xl text-gray-600">
-                Ready to transform your business with 5G? Contact us today.
-              </p>
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Ready to Implement 5G?
+            </h2>
+            <p className="text-xl text-gray-600 mb-12">
+              Contact our experts to discuss your 5G implementation needs and get a customized solution.
+            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
@@ -231,38 +206,3 @@ const FiveGImplementationPage: React.FC = () => {
 };
 
 export default FiveGImplementationPage;
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-300">
-          This page is under development. Please check back later for updates.
-        </p>
-      </div>
-    
-        </div>
-      </div>
-    </div>
-  );
-}
->>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
