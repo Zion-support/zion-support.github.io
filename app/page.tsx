@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Video, Calendar, Target } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -90,12 +90,58 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "AI Video Generator",
+      description: "Create professional videos in minutes with AI-powered script generation, voice synthesis, and smart editing",
+      price: "From $29/month",
+      icon: <Video className="w-6 h-6" />,
+      link: "/ai-video-generator",
+      featured: true,
+      category: "Content Creation"
+    },
+    {
+      name: "AI Customer Insights",
+      description: "Transform customer data into actionable insights with AI-powered analytics and predictive behavior modeling",
+      price: "From $49/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/ai-customer-insights",
+      featured: true,
+      category: "Analytics"
+    },
+    {
+      name: "AI Cybersecurity Suite Pro",
+      description: "Enterprise-grade AI-powered cybersecurity with advanced threat detection and automated incident response",
+      price: "From $299/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/ai-cybersecurity-suite-pro",
+      featured: true,
+      category: "Security"
+    },
+    {
+      name: "AI Business Intelligence Pro",
+      description: "AI-powered business intelligence platform with predictive analytics and natural language queries",
+      price: "From $199/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/ai-business-intelligence-pro",
+      featured: true,
+      category: "Business Intelligence"
+    },
+    {
+      name: "Cloud Infrastructure",
+      description: "Comprehensive cloud solutions with auto-scaling, multi-cloud support, and disaster recovery",
+      price: "From $249/month",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/cloud-infrastructure",
+      featured: true,
+      category: "Infrastructure"
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro",
-      featured: true
+      featured: false,
+      category: "Analytics"
     },
     {
       name: "Zion Security Shield",
@@ -103,7 +149,8 @@ const HomePage = () => {
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
-      featured: true
+      featured: false,
+      category: "Security"
     },
     {
       name: "Zion Cloud Vault",
@@ -111,7 +158,8 @@ const HomePage = () => {
       price: "From $99/month",
       icon: <Cloud className="w-6 h-6" />,
       link: "/zion-cloud-vault",
-      featured: true
+      featured: false,
+      category: "Storage"
     },
     {
       name: "Zion AI CRM Pro",
@@ -119,7 +167,8 @@ const HomePage = () => {
       price: "From $199/month",
       icon: <Users className="w-6 h-6" />,
       link: "/zion-ai-crm-pro",
-      featured: true
+      featured: false,
+      category: "CRM"
     },
     {
       name: "Zion AI Marketing Automation Pro",
@@ -127,7 +176,8 @@ const HomePage = () => {
       price: "From $149/month",
       icon: <Target className="w-6 h-6" />,
       link: "/zion-ai-marketing-automation-pro",
-      featured: true
+      featured: false,
+      category: "Marketing"
     },
     {
       name: "Zion AI Project Manager Pro",
@@ -135,7 +185,8 @@ const HomePage = () => {
       price: "From $99/month",
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
-      featured: true
+      featured: false,
+      category: "Productivity"
     }
   ];
 
@@ -185,7 +236,11 @@ const HomePage = () => {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-3xl animate-float"></div>
         </div>
+        
+        {/* Cyber Grid Background */}
+        <div className="absolute inset-0 animate-cyber-grid opacity-20"></div>
         
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
@@ -194,7 +249,7 @@ const HomePage = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-neon-pulse">
               Welcome to Zion Tech Group
             </span>
           </h1>
@@ -210,6 +265,7 @@ const HomePage = () => {
               variant="primary"
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
+              className="cyber-glow animate-glow"
             >
               Get Started Today
             </FuturisticButton>
@@ -218,6 +274,7 @@ const HomePage = () => {
               variant="outline"
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
+              className="neon-border animate-float"
             >
               Watch Demo
             </FuturisticButton>
@@ -226,11 +283,11 @@ const HomePage = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="text-center group hologram-effect rounded-xl p-4 animate-float" style={{ animationDelay: `${index * 0.2}s` }}>
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 cyber-glow">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 animate-neon-pulse">{stat.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
@@ -254,7 +311,8 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer hologram-effect animate-float"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <Link
                   to={feature.link}
@@ -290,27 +348,36 @@ const HomePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured Micro SAAS Solutions
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                Featured Micro SAAS Solutions
+              </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready-to-use software solutions that can transform your business operations immediately.
+              Ready-to-use software solutions that can transform your business operations immediately. 
+              From AI-powered content creation to enterprise security, we have everything you need.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasHighlights.map((saas, index) => (
+          
+          {/* Featured Solutions */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {microSaasHighlights.filter(saas => saas.featured).map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden hologram-effect animate-float"
+                style={{ animationDelay: `${index * 0.15}s` }}
               >
-                {saas.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                      Featured
-                    </span>
-                  </div>
-                )}
-                <div className="flex items-center mb-4">
+                <div className="absolute top-4 right-4">
+                  <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    Featured
+                  </span>
+                </div>
+                <div className="absolute top-4 left-4">
+                  <span className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 text-purple-300 px-2 py-1 rounded-full text-xs font-medium border border-purple-500/30">
+                    {saas.category}
+                  </span>
+                </div>
+                <div className="flex items-center mb-4 mt-8">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
                     {saas.icon}
                   </div>
@@ -331,12 +398,46 @@ const HomePage = () => {
               </Link>
             ))}
           </div>
-          <div className="text-center mt-12">
+
+          {/* Additional Solutions Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {microSaasHighlights.filter(saas => !saas.featured).map((saas, index) => (
+              <Link
+                key={index}
+                to={saas.link}
+                className="group bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/5 relative overflow-hidden neon-border animate-shimmer"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="flex items-center mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/50 to-cyan-500/50 flex items-center justify-center text-white mr-3 group-hover:scale-110 transition-transform">
+                    {saas.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                      {saas.name}
+                    </h3>
+                    <p className="text-cyan-400 text-xs">{saas.price}</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 text-xs leading-relaxed mb-2">
+                  {saas.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-300 text-xs bg-purple-500/20 px-2 py-1 rounded-full">
+                    {saas.category}
+                  </span>
+                  <ArrowRight className="w-3 h-3 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+          
+          <div className="text-center">
             <Link
               to="/micro-saas"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25 hover:scale-105 cyber-glow animate-glow"
             >
-              View All Micro SAAS Solutions
+              View All 60+ Micro SAAS Solutions
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -358,7 +459,8 @@ const HomePage = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden hologram-effect animate-float"
+                style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -415,14 +517,14 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105 cyber-glow animate-glow"
             >
               Start Your Journey
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105 neon-border animate-float"
             >
               Explore Services
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
