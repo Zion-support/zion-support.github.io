@@ -27,7 +27,7 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -56,9 +56,9 @@ const Footer = React.memo(() => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI & IT Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4">AI & IT Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -86,10 +86,57 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/5g-implementation"
+                  to="/web-development"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  5G Implementation
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/mobile-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Mobile Development
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* 5G & Advanced */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">5G & Advanced</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/5g-solutions"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  5G Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/data-engineering"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Data Engineering
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/custom-software"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Custom Software
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/micro-saas"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Micro SAAS
                 </Link>
               </li>
             </ul>
@@ -134,7 +181,7 @@ const Footer = React.memo(() => {
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Support & Resources */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Support</h4>
             <ul className="space-y-2">
@@ -167,7 +214,15 @@ const Footer = React.memo(() => {
                   to="/consultation"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Consultation
+                  Free Consultation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/tutorials"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Tutorials
                 </Link>
               </li>
             </ul>
