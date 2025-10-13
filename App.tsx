@@ -18,7 +18,7 @@ import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
