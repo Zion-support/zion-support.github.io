@@ -10,7 +10,6 @@ import {
   CheckCircle, 
   Star, 
   Clock, 
-
   Sparkles,
   Cpu,
   Send,
@@ -19,6 +18,7 @@ import {
   Shield,
   Zap,
   TrendingUp
+<<<<<<< HEAD
 
 
   Zap, 
@@ -42,6 +42,9 @@ import {
   Heart
 
 
+=======
+} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-82b8
 
 
 

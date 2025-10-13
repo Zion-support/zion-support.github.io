@@ -2,7 +2,11 @@ export interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
+<<<<<<< HEAD
   canonicalUrl: string;
+=======
+  canonicalUrl?: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-82b8
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
@@ -31,6 +35,10 @@ export class SEOUtils {
     };
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-82b8
   updateTitle(title: string) {
     document.title = title;
   }
@@ -55,7 +63,8 @@ export class SEOUtils {
     metaKeywords.setAttribute('content', keywords.join(', '));
   }
 
-  updateCanonicalUrl(url: string) {
+  updateCanonicalUrl(url: string | undefined) {
+    if (!url) return;
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
@@ -69,7 +78,7 @@ export class SEOUtils {
     const ogTags = [
       { property: 'og:title', content: this.config.title },
       { property: 'og:description', content: this.config.description },
-      { property: 'og:url', content: this.config.canonicalUrl },
+      { property: 'og:url', content: this.config.canonicalUrl || '' },
       { property: 'og:type', content: this.config.ogType || 'website' },
     ];
 

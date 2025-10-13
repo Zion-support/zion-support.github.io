@@ -1,7 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { 
+  Eye, 
+  AlertTriangle, 
+  Users, 
+  Database, 
+  CheckCircle 
+} from 'lucide-react';
 
 
+<<<<<<< HEAD
 
 export default function PageTsxPage() {
   return (
@@ -32,6 +40,8 @@ export default function PageTsxPage() {
 
 
 import { Eye, AlertTriangle, Users, Database, CheckCircle } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-82b8
 export default function CybersecuritySolutions() {
   const services = [
     {

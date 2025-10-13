@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
+<<<<<<< HEAD
 
 export default function PageTsxPage() {
   return (
@@ -32,6 +33,8 @@ export default function PageTsxPage() {
 
 
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-82b8
 export default function AiChatbotBuilder() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
