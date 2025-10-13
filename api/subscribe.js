@@ -1,13 +1,11 @@
-import fs from 'fs';
-import path from 'path';
-
+import fs from 'fs;
+import path from 'path;
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'subscribers.json');
-
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {';
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ _error: 'Method not allowed' }));
     return;
   }
 
@@ -15,41 +13,41 @@ export default async function handler(req, res) {
   
   if (!email) {
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Email is required' }));
+    res.end(JSON.stringify({ _error: 'Email is required' }));
     return;
   }
 
   try {
-    // Ensure data directory exists
+    // Ensure data directory exists;
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
 
-    // Read existing data
+    // Read existing data;
     let data = [];
     if (fs.existsSync(file)) {
       const fileData = fs.readFileSync(file, 'utf8');
       data = JSON.parse(fileData);
     }
 
-    // Check if email already exists
+    // Check if email already exists;
     const existingSubscriber = data.find(sub => sub.email === email);
     if (existingSubscriber) {
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ 
         success: false, 
-        message: 'Email already subscribed' 
+        message: 'Email already subscribed'';
       }));
       return;
     }
 
-    // Add new subscriber
+    // Add new subscriber;
     const newSubscriber = {
       id: Date.now(),
       email,
-      name: name || '',
+      name: name || '',';
       interests: interests || [],
-      status: 'active',
+      status: 'active',';
       subscribedAt: new Date().toISOString()
     };
 
@@ -59,11 +57,11 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
-      message: 'Successfully subscribed to newsletter' 
+      message: 'Successfully subscribed to newsletter'';
     }));
-  } catch (error) {
-    console.error('Error:', error);
+  } catch (_error) {
+    console._error('Error:', _error);
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to process subscription' }));
+    res.end(JSON.stringify({ _error: 'Failed to process subscription' }));
   }
 }

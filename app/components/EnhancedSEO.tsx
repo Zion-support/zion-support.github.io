@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
@@ -12,18 +12,18 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   description,
   keywords,
   canonical,
-  children
+  children;
 }) => {
   return (
-    <>
-      <Helmet>
+    <>;
+      <Helmet>;
         {title && <title>{title}</title>}
         {description && <meta name="description" content={description} />}
         {keywords && <meta name="keywords" content={keywords} />}
         {canonical && <link rel="canonical" href={canonical} />}
-      </Helmet>
+      </Helmet>;
       {children}
-    </>
+    </>;
   );
 };
 export default EnhancedSEO;

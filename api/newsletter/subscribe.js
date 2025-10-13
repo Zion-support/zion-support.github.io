@@ -4,9 +4,9 @@ const isValidEmail = (email) => {
 };
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {';
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ _error: 'Method not allowed' }));
     return;
   }
 
@@ -14,22 +14,21 @@ export default async function handler(req, res) {
   
   if (!email || !isValidEmail(email)) {
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Valid email is required' }));
+    res.end(JSON.stringify({ _error: 'Valid email is required' }));
     return;
   }
 
   try {
-    // Here you would typically save to a database
+    // Here you would typically save to a database;
     console.log('Newsletter subscription:', { email, name });
-    
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
-      message: 'Successfully subscribed to newsletter' 
+      message: 'Successfully subscribed to newsletter'';
     }));
-  } catch (error) {
-    console.error('Error processing newsletter subscription:', error);
+  } catch (_error) {
+    console._error('Error processing newsletter subscription:', _error);
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to process subscription' }));
+    res.end(JSON.stringify({ _error: 'Failed to process subscription' }));
   }
 }

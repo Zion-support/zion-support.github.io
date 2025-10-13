@@ -1,6 +1,6 @@
-// cn utility
+// cn utility;
 export const cn = () => {
-  // Implementation
+  // Implementation;
   return true;
 };
 

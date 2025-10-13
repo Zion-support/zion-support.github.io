@@ -1,6 +1,5 @@
-
-
-import React, { useEffect, useState } from 'react';
+import React from 'react;
+import React, { useEffect, useState } from 'react;
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -11,23 +10,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const [isReducedMotion, setIsReducedMotion] = useState(false);
 
   useEffect(() => {
-    // for user preferences
+    // for user preferences;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    
     setIsReducedMotion(prefersReducedMotion);
     setIsHighContrast(prefersHighContrast);
 
-    // Listen for changes in user preferences
+    // Listen for changes in user preferences;
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const contrastQuery = window.matchMedia('(prefers-contrast: high)');
-
     const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
     const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
 
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
-
     return () => {
       motionQuery.removeEventListener('change', handleMotionChange);
       contrastQuery.removeEventListener('change', handleContrastChange);
@@ -35,7 +31,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, []);
 
   useEffect(() => {
-    // Apply accessibility styles
+    // Apply accessibility styles;
     const root = document.documentElement;
     
     if (isHighContrast) {
@@ -56,15 +52,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root.style.removeProperty('--animation-iteration-count');
     }
 
-    // Apply font size
+    // Apply font size;
     root.style.setProperty('--base-font-size', `${fontSize}px`);
   }, [isHighContrast, isReducedMotion, fontSize]);
 
-  // Keyboard navigation enhancements
+  // Keyboard navigation enhancements;
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
+      // Skip to main content;
+      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {';
         const mainContent = document.querySelector('main, [role="main"]');
         if (mainContent) {
           (mainContent as HTMLElement).focus();
@@ -72,8 +68,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         }
       }
 
-      // Skip to navigation
-      if (e.key === 'Tab' && !e.shiftKey && e.target === document.body) {
+      // Skip to navigation;
+      if (e.key === 'Tab' && !e.shiftKey && e.target === document.body) {';
         const navigation = document.querySelector('nav, [role="navigation"]');
         if (navigation) {
           (navigation as HTMLElement).focus();
@@ -86,10 +82,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Focus management
+  // Focus management;
   useEffect(() => {
     const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'';
     );
 
     const handleFocus = (e: Event) => {
@@ -118,50 +114,49 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, []);
 
   return (
-    <div 
-      className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
+    <div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}>';
       style={{ fontSize: `${fontSize}px` }}
-    >
+    >;
       {children}
       
       {/* Accessibility controls */}
-      <div className="fixed top-4 right-4 z-50 bg-white border border-gray-300 rounded-lg p-4 shadow-lg">
-        <h3 className="text-sm font-semibold mb-2">Accessibility Controls</h3>
-        <div className="space-y-2">
-          <label className="flex items-center space-x-2">
-            <input
-              type="checkbox"
+      <div className="fixed top-4 right-4 z-50 bg-white border border-gray-300 rounded-lg p-4 shadow-lg">;
+        <h3 className="text-sm font-semibold mb-2">Accessibility Controls</h3>;
+        <div className="space-y-2">;
+          <label className="flex items-center space-x-2">;
+            <input;
+              type="checkbox";
               checked={isHighContrast}
               onChange={(e) => setIsHighContrast(e.target.checked)}
-              className="rounded"
-            />
-            <span className="text-sm">High Contrast</span>
-          </label>
-          <label className="flex items-center space-x-2">
-            <input
-              type="checkbox"
+              className="rounded";
+            />;
+            <span className="text-sm">High Contrast</span>;
+          </label>;
+          <label className="flex items-center space-x-2">;
+            <input;
+              type="checkbox";
               checked={isReducedMotion}
               onChange={(e) => setIsReducedMotion(e.target.checked)}
-              className="rounded"
-            />
-            <span className="text-sm">Reduce Motion</span>
-          </label>
-          <div className="flex items-center space-x-2">
-            <label htmlFor="font-size" className="text-sm">Font Size:</label>
-            <input
-              id="font-size"
-              type="range"
-              min="12"
-              max="24"
+              className="rounded";
+            />;
+            <span className="text-sm">Reduce Motion</span>;
+          </label>;
+          <div className="flex items-center space-x-2">;
+            <label htmlFor="font-size" className="text-sm">Font Size:</label>;
+            <input;
+              id="font-size";
+              type="range";
+              min="12";
+              max="24";
               value={fontSize}
               onChange={(e) => setFontSize(Number(e.target.value))}
-              className="w-20"
-            />
-            <span className="text-sm">{fontSize}px</span>
-          </div>
-        </div>
-      </div>
-    </div>
+              className="w-20";
+            />;
+            <span className="text-sm">{fontSize}px</span>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
   );
 
 };

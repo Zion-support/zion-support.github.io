@@ -1,18 +1,17 @@
-import '@testing-library/jest-dom';
-import React from 'react';
-
-// Mock react-router-dom
-jest.mock('react-router-dom', () => {
+import '@testing-library/jest-dom;
+import React from 'react;
+// Mock react-router-dom;
+jest.mock('react-router-dom', () => {';
   const actual = jest.requireActual('react-router-dom');
   return {
     ...actual,
     useNavigate: () => jest.fn(),
     useLocation: () => ({
-      pathname: '/',
-      search: '',
-      hash: '',
+      pathname: '/',';
+      search: '',';
+      hash: '',';
       state: null,
-      key: 'default'
+      key: 'default'';
     }),
     Link: ({ to, children, ...props }) => {
       return React.createElement('a', { href: to, ...props }, children);
@@ -24,17 +23,17 @@ jest.mock('react-router-dom', () => {
     useParams: () => ({}),
     useSearchParams: () => [new URLSearchParams(), jest.fn()],
     createBrowserRouter: () => ({
-      path: '/',
-      element: React.createElement('div')
+      path: '/',';
+      element: React.createElement('div')';
     })
   };
 });
 
-// Suppress console warnings for tests
+// Suppress console warnings for tests;
 const originalError = console.error;
 beforeAll(() => {
   console.error = (...args) => {
-    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {
+    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is no longer supported')) {';
       return;
     }
     originalError.call(console, ...args);

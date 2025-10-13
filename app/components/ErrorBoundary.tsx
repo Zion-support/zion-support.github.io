@@ -1,5 +1,4 @@
-import { Component, ErrorInfo, Node } from 'react';
-
+import { Component, ErrorInfo, Node } from 'react;
 interface Props {
   children: Node;
   fallback?: Node;
@@ -23,7 +22,6 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
@@ -32,20 +30,20 @@ class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900">
-          <div className="text-center p-8">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>
-            <button
+        <div className="min-h-screen flex items-center justify-center bg-slate-900">;
+          <div className="text-center p-8">;
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>;
+            <p className="text-gray-300 mb-6">;
+              We're sorry, but something unexpected happened. Please try refreshing the page.';
+            </p>;
+            <button;
               onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
-            >
-              Refresh Page
-            </button>
-          </div>
-        </div>
+              className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors";
+            >;
+              Refresh Page;
+            </button>;
+          </div>;
+        </div>;
       );
     }
 

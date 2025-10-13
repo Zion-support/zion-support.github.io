@@ -1,13 +1,11 @@
-import fs from 'fs';
-import path from 'path';
-
+import fs from 'fs;
+import path from 'path;
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
-
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST') {';
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    res.end(JSON.stringify({ _error: 'Method not allowed' }));
     return;
   }
 
@@ -15,34 +13,34 @@ export default async function handler(req, res) {
   
   if (!name || !email || !phone || !address) {
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Name, email, phone, and address are required' }));
+    res.end(JSON.stringify({ _error: 'Name, email, phone, and address are required' }));
     return;
   }
 
   try {
-    // Ensure data directory exists
+    // Ensure data directory exists;
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }
 
-    // Read existing data
+    // Read existing data;
     let data = [];
     if (fs.existsSync(file)) {
       const fileData = fs.readFileSync(file, 'utf8');
       data = JSON.parse(fileData);
     }
 
-    // Add new request
+    // Add new request;
     const newRequest = {
       id: Date.now(),
       name,
       email,
       phone,
-      company: company || '',
+      company: company || '',';
       address,
-      service: service || 'General',
-      details: details || '',
-      status: 'pending',
+      service: service || 'General',';
+      details: details || '',';
+      status: 'pending',';
       createdAt: new Date().toISOString()
     };
 
@@ -52,12 +50,12 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
-      message: 'Onsite request submitted successfully',
-      requestId: newRequest.id
+      message: 'Onsite request submitted successfully',';
+      requestId: newRequest.id;
     }));
-  } catch (error) {
-    console.error('Error:', error);
+  } catch (_error) {
+    console._error('Error:', _error);
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to process onsite request' }));
+    res.end(JSON.stringify({ _error: 'Failed to process onsite request' }));
   }
 }

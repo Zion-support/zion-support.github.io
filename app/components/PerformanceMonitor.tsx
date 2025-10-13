@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
-
-// Type definitions for browser APIs
+import React from 'react;
+import { useEffect, useState } from 'react;
+// Type definitions for browser APIs;
 declare global {
   interface PerformanceObserver {
     observe(options: { entryTypes: string[] }): void;
@@ -36,17 +36,17 @@ const PerformanceMonitor: React.FC = () => {
     ttfb: null,
   });
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
+    if (typeof window !== 'undefined' && 'performance' in window) {';
+      // Monitor Core Web Vitals;
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
+          if (entry.entryType === 'paint') {';
+            if (entry.name === 'first-contentful-paint') {';
               setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
             }
-          } else if (entry.entryType === 'largest-contentful-paint') {
+          } else if (entry.entryType === 'largest-contentful-paint') {';
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-          } else if (entry.entryType === 'first-input') {
+          } else if (entry.entryType === 'first-input') {';
             const inputEntry = entry as any;
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
@@ -67,13 +67,13 @@ const PerformanceMonitor: React.FC = () => {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
 
-          } else if (entry.entryType === 'layout-shift') {
+          } else if (entry.entryType === 'layout-shift') {';
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
           }
         }
       });
       observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-      // Monitor TTFB
+      // Monitor TTFB;
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
         setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
@@ -82,21 +82,21 @@ const PerformanceMonitor: React.FC = () => {
     }
     return undefined;
   }, []);
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
+  // Only show in development;
+  if (process.env.NODE_ENV !== 'development') {';
     return null;
   }
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
-      </div>
-    </div>
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">;
+      <h3 className="font-bold mb-2">Performance Metrics</h3>;
+      <div className="space-y-1">;
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>';
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>';
+        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>';
+        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>';
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>';
+      </div>;
+    </div>;
   );
 };
 export default PerformanceMonitor;

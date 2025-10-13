@@ -1,14 +1,15 @@
-describe('Component Tests', () => {
-  test('LoadingSpinner renders correctly', () => {
+/* global describe, test, expect, it, beforeEach */
+describe('Component Tests', () => {';
+  test('LoadingSpinner renders correctly', () => {';
     render(<LoadingSpinner />);
     expect(screen.getByRole('status')).toBeInTheDocument();
   });
 
-  test('SEOEnhancer renders without crashing', () => {
+  test('SEOEnhancer renders without crashing', () => {';
     render(
-      <HelmetProvider>
-        <SEOEnhancer />
-      </HelmetProvider>
+      <HelmetProvider>;
+        <SEOEnhancer />;
+      </HelmetProvider>;
     );
     expect(document.head).toBeInTheDocument();
   });

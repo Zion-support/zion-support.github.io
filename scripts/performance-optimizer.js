@@ -1,33 +1,32 @@
-#!/usr/bin// Fixed regex
-
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-console.log('🚀 Starting performance optimization...'
-const viteConfigPath = path.join(process.cwd(), 'vite.config.ts'
-  console.log('📦 Optimizing Vite configuration...'
-  const viteConfig = `import { defineConfig } from 'vite'
-import react from '
-import { resolve } from 'path'
-      '@': resolve(__dirname, '
-      '@app': resolve(__dirname, '
-      '@components': resolve(__dirname, '
-      '@utils': resolve(__dirname, '
-    target: 'esnext'
-    minify: 'esbuild'
-          vendor: ['react', 'react-dom'
-          router: ['react-router-dom'
-          ui: ['
-    include: ['react', 'react-dom', 'react-router-dom'
-  console.log('✅ Vite configuration optimized'
-const performanceMonitorPath = path.join(process.cwd(), '
-const performanceMonitor = `import React, { useEffect, useState } from 'react'
-    if (typeof window !== 'undefined' && 'performance'
-          if (entry.entryType === 'paint'
-            if (entry.name === 'first-contentful-paint'
-          } else if (entry.entryType === 'largest-contentful-paint'
-          } else if (entry.entryType === 'first-input'
-          } else if (entry.entryType === 'layout-shift'
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'
-      const navigationEntry = performance.getEntriesByType('navigation'
-  if (process.env.NODE_ENV !== 'development'
+import fs from 'fs;
+import path from 'path;
+import { fileURLToPath } from 'url;
+import react from ';
+import { resolve } from 'path;
+#!/usr/bin// Fixed regex;
+console.log('🚀 Starting performance optimization...'';
+const viteConfigPath = path.join(process.cwd(), 'vite.config.ts'';
+  console.log('📦 Optimizing Vite configuration...'';
+  const viteConfig = `import { defineConfig } from 'vite';
+      '@': resolve(__dirname, '';
+      '@app': resolve(__dirname, '';
+      '@components': resolve(__dirname, '';
+      '@utils': resolve(__dirname, '';
+    target: 'esnext'';
+    minify: 'esbuild'';
+          vendor: ['react', 'react-dom'';
+          router: ['react-router-dom'';
+          ui: ['';
+    include: ['react', 'react-dom', 'react-router-dom'';
+  console.log('✅ Vite configuration optimized'';
+const performanceMonitorPath = path.join(process.cwd(), '';
+const performanceMonitor = `import React, { useEffect, useState } from 'react';
+    if (typeof window !== 'undefined' && 'performance'';
+          if (entry.entryType === 'paint'';
+            if (entry.name === 'first-contentful-paint'';
+          } else if (entry.entryType === 'largest-contentful-paint'';
+          } else if (entry.entryType === 'first-input'';
+          } else if (entry.entryType === 'layout-shift'';
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'';
+      const navigationEntry = performance.getEntriesByType('navigation'';
+  if (process.env.NODE_ENV !== 'development'';

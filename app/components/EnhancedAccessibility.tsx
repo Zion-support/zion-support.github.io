@@ -1,12 +1,12 @@
-import { useEffect, Node } from 'react';
-
+import React from 'react;
+import { useEffect, Node } from 'react;
 interface EnhancedAccessibilityProps {
   children: Node;
 }
 
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
   useEffect(() => {
-    // Enhanced accessibility features
+    // Enhanced accessibility features;
     const addSkipLinks = () => {
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
@@ -16,9 +16,9 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     };
 
     const enhanceFocusManagement = () => {
-      // Add focus indicators
+      // Add focus indicators;
       const style = document.createElement('style');
-      style.textContent = `
+      style.textContent = `;
         *:focus {
           outline: 2px solid #06b6d4 !important;
           outline-offset: 2px !important;
@@ -39,7 +39,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     };
 
     const addAriaLabels = () => {
-      // Add ARIA labels to interactive elements
+      // Add ARIA labels to interactive elements;
       const buttons = document.querySelectorAll('button:not([aria-label])');
       buttons.forEach((button) => {
         if (!button.textContent?.trim()) {
@@ -56,27 +56,27 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
     };
 
     const setupKeyboardNavigation = () => {
-      // Enhanced keyboard navigation
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
+      // Enhanced keyboard navigation;
+      document.addEventListener('keydown', (e) => {';
+        if (e.key === 'Tab') {';
           document.body.classList.add('keyboard-navigation');
         }
       });
 
-      document.addEventListener('mousedown', () => {
+      document.addEventListener('mousedown', () => {';
         document.body.classList.remove('keyboard-navigation');
       });
     };
 
-    // Initialize accessibility enhancements
+    // Initialize accessibility enhancements;
     addSkipLinks();
     enhanceFocusManagement();
     addAriaLabels();
     setupKeyboardNavigation();
 
-    // Cleanup
+    // Cleanup;
     return () => {
-      // Cleanup if needed
+      // Cleanup if needed;
     };
   }, []);
 

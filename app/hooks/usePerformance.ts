@@ -1,6 +1,6 @@
-// usePerformance utility
+// usePerformance utility;
 export const usePerformance = () => {
-  // Implementation
+  // Implementation;
   return true;
 };
 
