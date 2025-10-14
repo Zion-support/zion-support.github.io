@@ -1,15 +1,11 @@
-import React from 'react';
-import { Monitor } from 'lucide-react';
+import React from "react";
 
-interface PerformancemonitorProps {
-  className?: string;
-  children?: React.ReactNode;
+interface PerformanceMonitorProps {
+  onMetricsUpdate: () => void;
 }
 
-export default function Performancemonitor({ className = '', children, ...props }: PerformancemonitorProps) {
-  return (
-    <div className={`performancemonitor-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = () => {
+  return null;
+};
+
+export default PerformanceMonitor;

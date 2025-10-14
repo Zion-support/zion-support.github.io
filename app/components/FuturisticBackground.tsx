@@ -1,14 +1,12 @@
-import React from 'react';
+import React from "react";
 
-interface FuturisticbackgroundProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Futuristicbackground({ className = '', children, ...props }: FuturisticbackgroundProps) {
+const FuturisticBackground = () => {
   return (
-    <div className={`futuristicbackground-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">FuturisticBackground</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default FuturisticBackground;

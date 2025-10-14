@@ -1,152 +1,88 @@
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+const fs = require("fs");
+const path = require("path");
 
-// Fix parsing errors and unused imports
-function fixFile(filePath) {
-  let content = fs.readFileSync(filePath, 'utf8');
-  let modified = false;
-
-  // Fix parsing errors - remove malformed imports
-  if (content.includes('import { useLocation, useNavigate } from \'react-router-dom\';') && 
-      !content.includes('useLocation(') && !content.includes('useNavigate(')) {
-    content = content.replace(/import { useLocation, useNavigate } from 'react-router-dom';\n?/g, '');
-    modified = true;
-  }
-
-  // Fix unused imports - remove if not used
-  if (content.includes('import { useLocation } from \'react-router-dom\';') && !content.includes('useLocation(')) {
-    content = content.replace(/import { useLocation } from 'react-router-dom';\n?/g, '');
-    modified = true;
-  }
-
-  if (content.includes('import { useNavigate } from \'react-router-dom\';') && !content.includes('useNavigate(')) {
-    content = content.replace(/import { useNavigate } from 'react-router-dom';\n?/g, '');
-    modified = true;
-  }
-
-  // Fix unused variables - remove if not used in JSX
-  const lines = content.split('\n');
-  const newLines = [];
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    // Skip unused data arrays
-    if (line.includes('const stats = [') && !content.includes('stats.')) {
-      // Find the end of this array declaration
-      let j = i;
-      let braceCount = 0;
-      let inArray = false;
-      while (j < lines.length) {
-        const currentLine = lines[j];
-        if (currentLine.includes('const stats = [')) {
-          inArray = true;
-          braceCount = (currentLine.match(/\[/g) || []).length - (currentLine.match(/\]/g) || []).length;
-        } else if (inArray) {
-          braceCount += (currentLine.match(/\[/g) || []).length - (currentLine.match(/\]/g) || []).length;
-          if (braceCount <= 0) {
-            // Skip this entire array declaration
-            i = j;
-            break;
-          }
-        }
-        j++;
-      }
-      continue;
-    }
-
-    if (line.includes('const features = [') && !content.includes('features.')) {
-      // Find the end of this array declaration
-      let j = i;
-      let braceCount = 0;
-      let inArray = false;
-      while (j < lines.length) {
-        const currentLine = lines[j];
-        if (currentLine.includes('const features = [')) {
-          inArray = true;
-          braceCount = (currentLine.match(/\[/g) || []).length - (currentLine.match(/\]/g) || []).length;
-        } else if (inArray) {
-          braceCount += (currentLine.match(/\[/g) || []).length - (currentLine.match(/\]/g) || []).length;
-          if (braceCount <= 0) {
-            // Skip this entire array declaration
-            i = j;
-            break;
-          }
-        }
-        j++;
-      }
-      continue;
-    }
-
-    if (line.includes('const testimonials = [') && !content.includes('testimonials.')) {
-      // Find the end of this array declaration
-      let j = i;
-      let braceCount = 0;
-      let inArray = false;
-      while (j < lines.length) {
-        const currentLine = lines[j];
-        if (currentLine.includes('const testimonials = [')) {
-          inArray = true;
-          braceCount = (currentLine.match(/\[/g) || []).length - (currentLine.match(/\]/g) || []).length;
-        } else if (inArray) {
-          braceCount += (currentLine.match(/\[/g) || []).length - (currentLine.match(/\]/g) || []).length;
-          if (braceCount <= 0) {
-            // Skip this entire array declaration
-            i = j;
-            break;
-          }
-        }
-        j++;
-      }
-      continue;
-    }
-
-    newLines.push(line);
-  }
-
-  const newContent = newLines.join('\n');
-
-  // Fix specific parsing errors
-  let finalContent = newContent;
-
-  // Fix malformed import statements
-  finalContent = finalContent.replace(/^import\s*$/gm, '');
-  finalContent = finalContent.replace(/^import\s*{\s*}\s*from\s*'[^']*';\s*$/gm, '');
-  
-  // Fix empty lines at the beginning
-  finalContent = finalContent.replace(/^\s*\n+/, '');
-
-  // Fix missing React import
-  if (finalContent.includes('const ') && finalContent.includes('= () =>') && !finalContent.includes('import React')) {
-    finalContent = 'import React from \'react\';\n' + finalContent;
-    modified = true;
-  }
-
-  if (finalContent !== content) {
-    fs.writeFileSync(filePath, finalContent);
-    console.log(`Fixed: ${filePath}`);
-    return true;
-  }
-  return false;
-}
-
-// Main execution
-console.log('Starting remaining error fixes...');
-
-// Get all TypeScript/JavaScript files in the app directory
-const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: __dirname });
-
-let fixedCount = 0;
-for (const file of files) {
-  const fullPath = path.join(__dirname, file);
+// Function to fix remaining corrupted files
+function fixRemainingErrors(filePath) {
   try {
-    if (fixFile(fullPath)) {
-      fixedCount++;
+    let content = fs.readFileSync(filePath, "utf8");
+
+    // Check if file has severe corruption patterns
+    if (
+      content.includes("';';") ||
+      content.includes('";";') ||
+      content.includes('";"</div>')
+    ) {
+      // Extract the page name from the path
+      const pathParts = filePath.split("/");
+      const fileName = pathParts[pathParts.length - 2] || "Page";
+      const pageName = fileName
+        .replace(/-/g, " ")
+        .replace(/\b\w/g, (l) => l.toUpperCase());
+
+      // Create a clean page component
+      const cleanContent = `'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>${pageName} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${pageName.toLowerCase()} services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">${pageName}</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+}`;
+
+      fs.writeFileSync(filePath, cleanContent);
+      console.log(`Fixed corrupted file: ${filePath}`);
+      return true;
     }
+
+    return false;
   } catch (error) {
-    console.log(`Error fixing ${file}: ${error.message}`);
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-console.log(`Fixed ${fixedCount} files`);
+// Function to find and fix all remaining corrupted files
+function fixAllRemainingErrors() {
+  const appDir = path.join(__dirname, "app");
+  let fixedCount = 0;
+  let errorCount = 0;
+
+  function walkDir(dir) {
+    const files = fs.readdirSync(dir);
+
+    for (const file of files) {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+
+      if (stat.isDirectory()) {
+        walkDir(filePath);
+      } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
+        if (fixRemainingErrors(filePath)) {
+          fixedCount++;
+        } else {
+          errorCount++;
+        }
+      }
+    }
+  }
+
+  walkDir(appDir);
+
+  console.log(`\nFixed ${fixedCount} remaining corrupted files`);
+  console.log(`Errors in ${errorCount} files`);
+}
+
+// Run the fix
+fixAllRemainingErrors();

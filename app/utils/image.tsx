@@ -1,10 +1,10 @@
+import React from 'react';
 
-
-import { ArrowRight } from 'lucide-react';
-export default function UtilsPage() {
+export default function Image() {
   return (
-    <div className={`image-component ${className}`} {...props}>
-      {children}
+    <div>
+      <h1>Image</h1>
+      <p>This component is under development.</p>
     </div>
   );
 }

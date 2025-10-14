@@ -1,101 +1,99 @@
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+const fs = require("fs");
+const path = require("path");
 
-// Fix final parsing errors
+// Files that need specific fixes
+const filesToFix = [
+  "app/components/Navigation-backup.tsx",
+  "app/data/services.ts",
+  "app/data/servicesData.ts",
+  "app/global-error.tsx",
+  "app/medical-records-manager/page.tsx",
+  "app/not-found.tsx",
+  "app/page-backup.tsx",
+  "app/page-optimized.tsx",
+  "app/pages/5GSolutionsPage.tsx",
+  "app/service-template.tsx",
+  "app/sitemap-page.tsx",
+  "app/support/page.tsx",
+  "app/tutorials/page.tsx",
+  "app/types/next.d.ts",
+  "app/utils/__tests__/performanceMonitoring.test.ts",
+  "app/utils/accessibilityEnhancer.tsx",
+  "app/utils/dynamic.tsx",
+  "app/utils/errorHandler.tsx",
+  "app/utils/image.tsx",
+  "app/utils/link.tsx",
+  "app/utils/navigation.tsx",
+  "app/utils/testRunner.tsx",
+  "vite-env.d.ts",
+];
+
 function fixFile(filePath) {
-  let content = fs.readFileSync(filePath, 'utf8');
-  let modified = false;
-
-  // Fix missing opening brace in import statements
-  content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];\s*const\s+/g, (match, imports, packageName) => {
-    return `import { ${imports} } from '${packageName}';\n\nconst `;
-  });
-
-  // Fix trailing comma in import statements
-  content = content.replace(/import\s*{\s*([^,}]+),\s*}\s*from\s*['"]([^'"]+)['"];/g, 'import { $1 } from \'$2\';');
-
-  // Fix missing closing brace in import statements
-  const lines = content.split('\n');
-  const newLines = [];
-  let inImport = false;
-  let importLines = [];
-  let braceCount = 0;
-
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    
-    if (line.trim().startsWith('import ') && line.includes('{')) {
-      inImport = true;
-      importLines = [line];
-      braceCount = (line.match(/{/g) || []).length - (line.match(/}/g) || []).length;
-    } else if (inImport) {
-      importLines.push(line);
-      braceCount += (line.match(/{/g) || []).length - (line.match(/}/g) || []).length;
-      
-      if (braceCount <= 0) {
-        // Import statement is complete
-        inImport = false;
-        newLines.push(...importLines);
-        importLines = [];
-      }
-    } else {
-      if (inImport) {
-        // We're still in an import but this line doesn't belong
-        // Close the import and add this line
-        importLines.push('} from \'lucide-react\';');
-        newLines.push(...importLines);
-        importLines = [];
-        inImport = false;
-      }
-      newLines.push(line);
-    }
-  }
-
-  if (inImport && importLines.length > 0) {
-    // Close any remaining import
-    importLines.push('} from \'lucide-react\';');
-    newLines.push(...importLines);
-  }
-
-  const newContent = newLines.join('\n');
-
-  // Fix other common issues
-  let finalContent = newContent;
-
-  // Fix missing React import
-  if (finalContent.includes('export default function') && !finalContent.includes('import React')) {
-    finalContent = 'import React from \'react\';\n' + finalContent;
-    modified = true;
-  }
-
-  // Fix function name casing
-  finalContent = finalContent.replace(/export default function page\(/g, 'export default function Page(');
-
-  if (finalContent !== content) {
-    fs.writeFileSync(filePath, finalContent);
-    console.log(`Fixed: ${filePath}`);
-    return true;
-  }
-  return false;
-}
-
-// Main execution
-console.log('Starting final error fixes...');
-
-// Get all TypeScript/JavaScript files in the app directory
-const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: __dirname });
-
-let fixedCount = 0;
-for (const file of files) {
-  const fullPath = path.join(__dirname, file);
   try {
-    if (fixFile(fullPath)) {
-      fixedCount++;
+    const fullPath = path.join(__dirname, filePath);
+    let content = fs.readFileSync(fullPath, "utf8");
+
+    // Fix common syntax errors
+    content = content.replace(
+      /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{/g,
+      "export default function $1() {",
+    );
+    content = content.replace(
+      /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*=>/g,
+      "export default function $1() {",
+    );
+    content = content.replace(
+      /const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\s*\)\s*=>/g,
+      "const $1: React.FC = () =>",
+    );
+    content = content.replace(
+      /const\s+(\w+)\s*=\s*\(\s*\)\s*=>/g,
+      "const $1 = () =>",
+    );
+
+    // Fix unterminated string literals
+    content = content.replace(/"([^"]*);""/g, '"$1"');
+    content = content.replace(/""([^"]*);""/g, '"$1"');
+    content = content.replace(/""([^"]*);/g, '"$1"');
+
+    // Fix malformed function declarations
+    content = content.replace(
+      /function\s+(\w+)\s*\(\s*\)\s*=>/g,
+      "function $1() {",
+    );
+    content = content.replace(
+      /function\s+(\w+)\s*\(\s*\)\s*{/g,
+      "function $1() {",
+    );
+
+    // Fix numeric literal issues
+    content = content.replace(/5GSolutionsPage/g, "FiveGSolutionsPage");
+
+    // Fix missing commas
+    content = content.replace(/React\.FC\s*\(\s*\)/g, "React.FC = ()");
+    content = content.replace(/React\.FC\s*=>/g, "React.FC = () =>");
+
+    // Fix specific issues
+    if (filePath.includes("medical-records-manager")) {
+      content = content.replace(/""([^"]*);""/g, '"$1"');
     }
+
+    if (filePath.includes("tutorials")) {
+      content = content.replace(/<className=/g, "<div className=");
+    }
+
+    if (filePath.includes("support")) {
+      content = content.replace(/,\s*}/g, "\n  }");
+    }
+
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed ${filePath}`);
   } catch (error) {
-    console.log(`Error fixing ${file}: ${error.message}`);
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-console.log(`Fixed ${fixedCount} files`);
+// Fix all files
+filesToFix.forEach(fixFile);
+
+console.log("Finished fixing final errors");

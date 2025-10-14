@@ -1,16 +1,12 @@
-import React from 'react';
-import { Code } from 'lucide-react';
-import { Cloud } from 'lucide-react';
+import React from "react";
 
-interface SEOOptimizerProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export default function SEOOptimizer({ className = '', children, ...props }: SEOOptimizerProps) {
+const SEOOptimizer = () => {
   return (
-    <div className={`seooptimizer-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">SEOOptimizer</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default SEOOptimizer;

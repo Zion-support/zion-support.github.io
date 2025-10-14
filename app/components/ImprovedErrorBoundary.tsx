@@ -1,35 +1,12 @@
-import { Link } from 'react-router-dom';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Home } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Hand } from 'lucide-react';
+import React from "react";
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
-
-export default function Improvederrorboundary({ className = '', children, ...props }: ImprovederrorboundaryProps) {
+const ImprovedErrorBoundary = () => {
   return (
-    <div className={`improvederrorboundary-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">ImprovedErrorBoundary</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-  
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  
-  return WrappedComponent;
 };
 
-// Hook for functional components to handle errors
-export const _useErrorHandler = () => {
-  return (error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by hook:', error, errorInfo);
-    
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
-  };
-};
-
+export default ImprovedErrorBoundary;

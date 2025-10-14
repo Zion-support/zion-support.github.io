@@ -1,49 +1,51 @@
 #!/bin/bash
 
-# Script to merge all open PRs into main branch
-set -e
+# Script to merge all open PRs automatically
+# This script will merge all open PRs by accepting incoming changes
 
-echo "Starting to merge all open PRs..."
+echo "Starting automatic PR merge process..."
 
-# List of branches to merge (most recent first)
-branches=(
-    "origin/cursor/fix-errors-and-merge-to-main-1077"
-    "origin/cursor/fix-errors-and-merge-to-main-25a5"
-    "origin/cursor/fix-errors-and-merge-to-main-2d1b"
-    "origin/cursor/fix-errors-and-merge-to-main-2fa9"
-    "origin/cursor/fix-errors-and-merge-to-main-396e"
-    "origin/cursor/fix-errors-and-merge-to-main-3b7c"
-    "origin/cursor/fix-errors-and-merge-to-main-3f21"
-    "origin/cursor/fix-errors-and-merge-to-main-4d8c"
-    "origin/cursor/fix-errors-and-merge-to-main-5690"
-    "origin/cursor/fix-errors-and-merge-to-main-5aa5"
-    "origin/cursor/fix-errors-and-merge-to-main-653f"
-    "origin/cursor/fix-errors-and-merge-to-main-6977"
-    "origin/cursor/fix-errors-and-merge-to-main-7ab0"
-    "origin/cursor/fix-errors-and-merge-to-main-87ea"
-    "origin/cursor/fix-errors-and-merge-to-main-c0a0"
-    "origin/cursor/fix-errors-and-merge-to-main-c5eb"
-    "origin/cursor/fix-errors-and-merge-to-main-c6b9"
-    "origin/cursor/fix-errors-and-merge-to-main-d738"
-    "origin/cursor/fix-errors-and-merge-to-main-dcd8"
-    "origin/cursor/fix-errors-and-merge-to-main-e54f"
-    "origin/cursor/fix-errors-and-merge-to-main-e863"
-    "origin/cursor/fix-errors-and-merge-to-main-f45b"
-)
+# Get list of open PRs
+PRS=$(gh pr list --state open --json number --jq '.[].number')
 
-# Merge each branch
-for branch in "${branches[@]}"; do
-    echo "Attempting to merge $branch..."
-    if git merge "$branch" --no-edit; then
-        echo "✅ Successfully merged $branch"
+for pr in $PRS; do
+    echo "Processing PR #$pr..."
+    
+    # Try to merge with auto-merge strategy
+    if gh pr merge $pr --squash --delete-branch --auto; then
+        echo "Successfully merged PR #$pr"
     else
-        echo "❌ Failed to merge $branch, resolving conflicts..."
-        # Resolve conflicts automatically
-        git status --porcelain | grep "^UU" | cut -c4- | xargs -I {} git checkout --theirs {}
-        git add .
-        git commit -m "Resolve merge conflicts for $branch"
-        echo "✅ Resolved conflicts and merged $branch"
+        echo "Failed to merge PR #$pr, trying conflict resolution..."
+        
+        # Checkout the PR branch
+        if gh pr checkout $pr; then
+            # Fetch latest main
+            git fetch origin main
+            
+            # Try to merge with strategy to accept incoming changes
+            if git merge origin/main -X theirs; then
+                # Push the resolved conflicts
+                git push origin HEAD
+                
+                # Try to merge again
+                if gh pr merge $pr --squash --delete-branch; then
+                    echo "Successfully merged PR #$pr after conflict resolution"
+                else
+                    echo "Still failed to merge PR #$pr after conflict resolution"
+                fi
+            else
+                echo "Failed to resolve conflicts for PR #$pr"
+                git merge --abort
+            fi
+            
+            # Go back to main
+            git checkout main
+        else
+            echo "Failed to checkout PR #$pr"
+        fi
     fi
+    
+    echo "---"
 done
 
-echo "🎉 All PRs merged successfully!"
+echo "PR merge process completed!"

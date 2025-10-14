@@ -1,17 +1,12 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Home } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import React from 'react';
+import React from "react";
 
-interface EnhancederrorfeedbackProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Enhancederrorfeedback({ className = '', children, ...props }: EnhancederrorfeedbackProps) {
+const EnhancedErrorFeedback = () => {
   return (
-    <div className={`enhancederrorfeedback-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">EnhancedErrorFeedback</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default EnhancedErrorFeedback;

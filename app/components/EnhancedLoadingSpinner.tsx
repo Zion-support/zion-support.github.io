@@ -1,19 +1,12 @@
-import React from 'react';
+import React from "react";
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  text?: string;
-}
-
-interface EnhancedloadingspinnerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Enhancedloadingspinner({ className = '', children, ...props }: EnhancedloadingspinnerProps) {
+const EnhancedLoadingSpinner = () => {
   return (
-    <div className={`enhancedloadingspinner-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">EnhancedLoadingSpinner</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default EnhancedLoadingSpinner;

@@ -1,14 +1,10 @@
 import React from 'react';
 
-interface ErrorhandlerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Errorhandler({ className = '', children, ...props }: ErrorhandlerProps) {
+export default function ErrorHandler() {
   return (
-    <div className={`errorhandler-component ${className}`} {...props}>
-      {children}
+    <div>
+      <h1>ErrorHandler</h1>
+      <p>This component is under development.</p>
     </div>
   );
 }

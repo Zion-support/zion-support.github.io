@@ -1,14 +1,12 @@
-import React from 'react';
+import React from "react";
 
-interface EnhancedseoProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Enhancedseo({ className = '', children, ...props }: EnhancedseoProps) {
+const EnhancedSEO = () => {
   return (
-    <div className={`enhancedseo-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">EnhancedSEO</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default EnhancedSEO;

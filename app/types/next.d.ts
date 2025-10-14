@@ -1,10 +1,7 @@
-// Next.js type definitions
-
-declare module 'next' {
-  interface NextConfig {
-    experimental?: {
-      appDir?: boolean;
-    };
+// Type definitions for app/types/next.d.ts
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
   }
 }
 

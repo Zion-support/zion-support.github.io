@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
 
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
+const root = createRoot(document.getElementById("root")!);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+);

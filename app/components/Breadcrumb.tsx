@@ -1,15 +1,12 @@
-import React from 'react';
-import { Home } from 'lucide-react';
+import React from "react";
 
-interface BreadcrumbProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Breadcrumb({ className = '', children, ...props }: BreadcrumbProps) {
+const Breadcrumb = () => {
   return (
-    <div className={`breadcrumb-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">Breadcrumb</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default Breadcrumb;

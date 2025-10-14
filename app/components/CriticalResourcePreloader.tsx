@@ -1,17 +1,12 @@
-import { Link } from 'react-router-dom';
+import React from "react";
 
-'use client'
-'use client'
-
-interface CriticalresourcepreloaderProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Criticalresourcepreloader({ className = '', children, ...props }: CriticalresourcepreloaderProps) {
+const CriticalResourcePreloader = () => {
   return (
-    <div className={`criticalresourcepreloader-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">CriticalResourcePreloader</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default CriticalResourcePreloader;

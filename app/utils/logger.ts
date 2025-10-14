@@ -1,8 +1,4 @@
-// Logger utility functions
-
-export function logger() {
-  // Implementation here
+// Logger - Basic implementation
+export default function Logger() {
   return null;
 }
-
-export default logger;

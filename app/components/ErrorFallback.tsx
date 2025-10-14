@@ -1,19 +1,12 @@
-import React, { useEffect } from "react";
-import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Mail } from 'lucide-react';
+import React from "react";
 
-interface ErrorFallbackProps {
-  error: Error;
-  resetErrorBoundary: () => void;
-  errorInfo?: React.ErrorInfo;
-}
-
-export default function Errorfallback({ className = '', children, ...props }: ErrorfallbackProps) {
+const ErrorFallback = () => {
   return (
-    <div className={`errorfallback-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">ErrorFallback</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default ErrorFallback;

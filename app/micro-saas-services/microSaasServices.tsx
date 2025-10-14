@@ -1,17 +1,10 @@
-import React from "react";
-import { Mic } from 'lucide-react';
-
 import React from 'react';
 
-interface MicrosaasservicesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Microsaasservices({ className = '', children, ...props }: MicrosaasservicesProps) {
+export default function MicroSaasServices() {
   return (
-    <div className={`microsaasservices-component ${className}`} {...props}>
-      {children}
+    <div>
+      <h1>MicroSaasServices</h1>
+      <p>This component is under development.</p>
     </div>
   );
 }

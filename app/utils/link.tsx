@@ -1,10 +1,10 @@
+import React from 'react';
 
-
-import { ArrowRight } from 'lucide-react';
-export default function UtilsPage() {
+export default function Link() {
   return (
-    <div className={`link-component ${className}`} {...props}>
-      {children}
+    <div>
+      <h1>Link</h1>
+      <p>This component is under development.</p>
     </div>
   );
 }

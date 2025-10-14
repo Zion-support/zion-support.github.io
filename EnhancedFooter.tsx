@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 
-export default function EnhancedFooter() {
+const EnhancedFooter: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8">
-      <div className="container mx-auto px-4">
-        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-      </div>
-    </footer>
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">Enhanced Footer</h2>
+      <p className="text-gray-300">This is the enhanced footer component.</p>
+    </div>
   );
-}
+};
+
+export default EnhancedFooter;

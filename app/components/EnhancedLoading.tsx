@@ -1,14 +1,12 @@
-import React from 'react';
+import React from "react";
 
-interface EnhancedloadingProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Enhancedloading({ className = '', children, ...props }: EnhancedloadingProps) {
+const EnhancedLoading = () => {
   return (
-    <div className={`enhancedloading-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">EnhancedLoading</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default EnhancedLoading;

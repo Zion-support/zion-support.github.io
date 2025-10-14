@@ -1,17 +1,12 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Home } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import React from 'react';
+import React from "react";
 
-interface EnhancederrorboundaryProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Enhancederrorboundary({ className = '', children, ...props }: EnhancederrorboundaryProps) {
+const EnhancedErrorBoundary = () => {
   return (
-    <div className={`enhancederrorboundary-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">EnhancedErrorBoundary</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default EnhancedErrorBoundary;

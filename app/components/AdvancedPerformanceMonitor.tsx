@@ -1,15 +1,12 @@
 import React from 'react';
-import { Monitor } from 'lucide-react';
 
-interface AdvancedperformancemonitorProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Advancedperformancemonitor({ className = '', children, ...props }: AdvancedperformancemonitorProps) {
+const AdvancedPerformanceMonitor = () => {
   return (
-    <div className={`advancedperformancemonitor-component ${className}`} {...props}>
-      {children}
+    <div>
+      <h2>AdvancedPerformanceMonitor</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default AdvancedPerformanceMonitor;

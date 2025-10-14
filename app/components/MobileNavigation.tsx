@@ -1,21 +1,12 @@
-import { ArrowRight } from 'lucide-react';
-import { Menu, X, ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
+import React from "react";
 
-const MobileNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-interface MobilenavigationProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Mobilenavigation({ className = '', children, ...props }: MobilenavigationProps) {
+const MobileNavigation = () => {
   return (
-    <div className={`mobilenavigation-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">MobileNavigation</h2>
+      <p>This component is under construction.</p>
     </div>
   );
 };
 
-}
+export default MobileNavigation;

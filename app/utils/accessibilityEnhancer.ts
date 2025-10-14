@@ -1,8 +1,7 @@
-// Accessibilityenhancer utility functions
-
-export function accessibilityenhancer() {
+// AccessibilityEnhancer utility
+export const accessibilityenhancer = () => {
   // Implementation here
-  return null;
-}
+  console.log('AccessibilityEnhancer utility called');
+};
 
 export default accessibilityenhancer;

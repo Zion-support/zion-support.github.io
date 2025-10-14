@@ -5,22 +5,7 @@ echo "Fixing merge conflicts..."
 
 # Find all files with merge conflicts
 find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | while read file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
-    echo "Fixing merge conflicts in: $file"
-    
-    # Create a temporary file
-    temp_file=$(mktemp)
-    
-    # Process the file line by line
-    in_head=false
-    in_other=false
-    
-    while IFS= read -r line; do
-      if [[ "$line" == "<<<<<<< HEAD" ]]; then
-        in_head=true
-        in_other=false
-        continue
-      elif [[ "$line" == "=======" ]]; then
+  if grep -q "" ]]; then
         in_head=false
         in_other=true
         continue
@@ -39,6 +24,11 @@ find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v 
     
     # Replace the original file
     mv "$temp_file" "$file"
+    echo "Fixing merge conflicts in: $file"
+    
+    # Remove merge conflict markers and keep the HEAD version (first part)
+    sed -i '//,//!d' "$file"
+    sed -i '//,/    
   fi
 done
 

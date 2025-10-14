@@ -1,14 +1,10 @@
 import React from 'react';
 
-interface ServicesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Services({ className = '', children, ...props }: ServicesProps) {
+export default function Services() {
   return (
-    <div className={`services-component ${className}`} {...props}>
-      {children}
+    <div>
+      <h1>Services</h1>
+      <p>This component is under development.</p>
     </div>
   );
 }

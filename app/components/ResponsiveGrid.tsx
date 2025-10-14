@@ -1,14 +1,12 @@
-import React from 'react';
+import React from "react";
 
-interface ResponsivegridProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Responsivegrid({ className = '', children, ...props }: ResponsivegridProps) {
+const ResponsiveGrid = () => {
   return (
-    <div className={`responsivegrid-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">ResponsiveGrid</h2>
+      <p>This component is under construction.</p>
     </div>
   );
-}
+};
+
+export default ResponsiveGrid;

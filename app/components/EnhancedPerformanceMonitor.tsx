@@ -1,18 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { Star } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import React, { useState, useEffect } from 'react';
+import React from "react";
 
-interface EnhancedperformancemonitorProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Enhancedperformancemonitor({ className = '', children, ...props }: EnhancedperformancemonitorProps) {
+const EnhancedPerformanceMonitor = () => {
   return (
-    <div className={`enhancedperformancemonitor-component ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">EnhancedPerformanceMonitor</h2>
+      <p>This component is under construction.</p>
     </div>
   );
 };
 
+export default EnhancedPerformanceMonitor;

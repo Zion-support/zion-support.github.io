@@ -1,14 +1,11 @@
-import React from 'react';
+import React, { ReactNode } from "react";
 
-interface PerformanceoptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
+interface PerformanceOptimizerProps {
+  children: ReactNode;
 }
 
-export default function Performanceoptimizer({ className = '', children, ...props }: PerformanceoptimizerProps) {
-  return (
-    <div className={`performanceoptimizer-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  return <>{children}</>;
+};
+
+export default PerformanceOptimizer;
