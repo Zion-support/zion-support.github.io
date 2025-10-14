@@ -14,7 +14,11 @@ export interface ServiceData {
 
 export const servicesData: ServiceData[] = [
   {
-
+    id: 'ai-solutions',
+    name: 'AI Solutions',
+    description: 'Advanced artificial intelligence solutions for your business',
+    category: 'AI',
+    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision'],
     pricing: {
       starter: 1000,
       professional: 2500,
@@ -23,7 +27,11 @@ export const servicesData: ServiceData[] = [
     icon: 'robot'
   },
   {
-
+    id: 'cloud-solutions',
+    name: 'Cloud Solutions',
+    description: 'Comprehensive cloud infrastructure and services',
+    category: 'Cloud',
+    features: ['Cloud Migration', 'Infrastructure as Code', 'DevOps'],
     pricing: {
       starter: 2000,
       professional: 5000,
