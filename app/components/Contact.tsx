@@ -1,7 +1,4 @@
-import { Clock, Phone, MapPin } from 'lucide-react';
 import React, { useState } from 'react';
-import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
-
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -25,25 +22,25 @@ const Contact: React.FC = () => {
 
   const contactInfo = [
     {
-      icon: EnvelopeIcon,
+      icon: null,
       title: 'Email',
       details: 'contact@ziontech.com',
       description: 'Send us an email anytime'
     },
     {
-      icon: PhoneIcon,
-      title: 'Phone',
+      icon: null,
+      title: '',
       details: '+1 (555) 123-4567',
       description: 'Mon-Fri from 9 am to 6 pm'
     },
     {
-      icon: MapPinIcon,
+      icon: null,
       title: 'Office',
       details: 'San Francisco, CA',
       description: 'Visit our headquarters'
     },
     {
-      icon: ClockIcon,
+      icon: null,
       title: 'Response Time',
       details: '< 24 hours',
       description: 'We respond quickly'
@@ -58,7 +55,7 @@ const Contact: React.FC = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-3 xl mx-auto">
-            Ready to transform your business? Let's discuss how our solutions 
+            Ready to transform your business? Let&apos;s discuss how our solutions 
             can help you achieve your goals.
           </p>
         </div>
@@ -147,8 +144,8 @@ const Contact: React.FC = () => {
                 Contact Information
               </h3>
               <p className="text-gray-600 mb-8">
-                We're here to help! Reach out to us through any of the channels below, 
-                and we'll get back to you as soon as possible.
+                We&apos;re here to help! Reach out to us through any of the channels below, 
+                and we&apos;ll get back to you as soon as possible.
               </p>
             </div>
 
@@ -157,7 +154,7 @@ const Contact: React.FC = () => {
                 <div key={index} className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <info.icon className="h-6 w-6 text-blue-600" />
+                      <div className="w-6 h-6" />
                     </div>
                   </div>
                   <div>

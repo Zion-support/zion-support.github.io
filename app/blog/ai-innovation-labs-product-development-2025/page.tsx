@@ -1,4 +1,3 @@
-import { Star } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 const InnovationLabsPage: React.FC = () => {
@@ -109,14 +108,14 @@ const InnovationLabsPage: React.FC = () => {
               </pre>
             </div>
 
-            <h2 className="text-2 xl font-bold text-gray-900 mb-6">🚀 Getting Started with AI Innovation</h2>
+            <h2 className="text-2 xl font-bold text-gray-900 mb-6">🚀 Getting ted with AI Innovation</h2>
             <p className="text-gray-700 mb-6">
               Ready to revolutionize your product development? Our AI Innovation Labs can help you 
               achieve breakthrough results in product development speed, cost, and innovation.
             </p>
 
             <div className="bg-blue-50 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Start Your AI Innovation Journey</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">t Your AI Innovation Journey</h3>
               <p className="text-gray-700 mb-4">
                 Join leading companies transforming product development with AI-powered innovation
               </p>

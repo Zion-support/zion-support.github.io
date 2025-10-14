@@ -1,8 +1,6 @@
-import { Shield, ArrowRight, Star, Cpu } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRightIcon, ShieldCheckIcon, CloudIcon, CpuChipIcon, WrenchScrewdriverIcon } from "@heroicons/react/24/outline";
 import FuturisticBackground from "../components/FuturisticBackground";
 
 const ServicesPage = () => {
@@ -11,7 +9,7 @@ const ServicesPage = () => {
       title: 'AI Services',
       color: 'text-purple-600',
       bgColor: 'bg-purple-50',
-      icon: CpuChipIcon,
+      icon: null,
       services: [
         { name: 'AI Analytics Dashboard', price: '$2,500/month', description: 'Advanced AI-powered analytics and business intelligence platform', features: ['Real-time Analytics', 'Predictive Insights', 'Custom Dashboards', 'Data Visualization'] },
         { name: 'AI Content Generation', price: '$1,800/month', description: 'Automated content creation using cutting-edge AI technology', features: ['Blog Posts', 'Social Media', 'Email Campaigns', 'SEO Optimization'] },
@@ -23,7 +21,7 @@ const ServicesPage = () => {
       title: 'Cybersecurity',
       color: 'text-red-600',
       bgColor: 'bg-red-50',
-      icon: ShieldCheckIcon,
+      icon: null,
       services: [
         { name: 'Security Assessment', price: '$1,200/month', description: 'Comprehensive security evaluation and vulnerability assessment', features: ['Penetration Testing', 'Security Audit', 'Risk Assessment', 'Compliance Check'] },
         { name: 'Managed Security Services', price: '$2,000/month', description: '24/7 security monitoring and incident response', features: ['24/7 Monitoring', 'Incident Response', 'Threat Detection', 'Security Updates'] },
@@ -35,7 +33,7 @@ const ServicesPage = () => {
       title: 'Cloud Infrastructure',
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
-      icon: CloudIcon,
+      icon: null,
       services: [
         { name: 'Cloud Migration', price: '$3,000/month', description: 'Seamless migration to cloud platforms with minimal downtime', features: ['Migration Planning', 'Data Transfer', 'Application Migration', 'Performance Optimization'] },
         { name: 'Cloud Management', price: '$2,200/month', description: 'Ongoing cloud infrastructure management and optimization', features: ['Resource Monitoring', 'Cost Optimization', 'Security Management', 'Backup & Recovery'] },
@@ -47,7 +45,7 @@ const ServicesPage = () => {
       title: 'IT Consulting',
       color: 'text-green-600',
       bgColor: 'bg-green-50',
-      icon: WrenchScrewdriverIcon,
+      icon: null,
       services: [
         { name: 'Digital Transformation', price: '$4,000/month', description: 'Complete digital transformation strategy and implementation', features: ['Strategy Development', 'Process Optimization', 'Technology Integration', 'Change Management'] },
         { name: 'System Integration', price: '$2,800/month', description: 'Seamless integration of existing and new systems', features: ['API Development', 'Data Synchronization', 'Legacy System Integration', 'Performance Optimization'] },
@@ -85,8 +83,8 @@ const ServicesPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
             >
-              <span>Get Started</span>
-              <ArrowRightIcon className="w-5 h-5" />
+              <span>Get ted</span>
+              <div className="w-6 h-6" />
             </Link>
             <Link 
               to="/pricing"
@@ -115,7 +113,7 @@ const ServicesPage = () => {
               <div key={categoryIndex} className="bg-white/10 backdrop-blur-sm rounded-2 xl p-8 border border-white/20">
                 <div className="flex items-center mb-8">
                   <div className={`p-3 rounded-lg ${category.bgColor} mr-4`}>
-                    <category.icon className={`w-8 h-8 ${category.color}`} />
+                    <div className="w-6 h-6" />
                   </div>
                   <h3 className="text-2 xl font-bold text-white">
                     {category.title}

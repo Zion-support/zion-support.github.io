@@ -1,41 +1,5 @@
-import { Shield, ArrowRight, Globe, Database, Phone, Cpu } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  XMarkIcon, 
-  HomeIcon, 
-  UserGroupIcon, 
-  BriefcaseIcon, 
-  CurrencyDollarIcon, 
-  DocumentTextIcon,
-  ChatBubbleLeftRightIcon,
-  CogIcon,
-  QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  MapIcon,
-  CloudIcon,
-  CpuChipIcon,
-  GlobeAltIcon,
-  DevicePhoneMobileIcon,
-  ServerIcon,
-  CodeBracketIcon,
-  WrenchScrewdriverIcon,
-  ChartBarIcon,
-  LockClosedIcon,
-  Cog6ToothIcon,
-  SparklesIcon,
-  RocketLaunchIcon,
-  BeakerIcon,
-  HeartIcon,
-  ShieldExclamationIcon,
-  DocumentDuplicateIcon,
-  AcademicCapIcon,
-  PresentationChartLineIcon,
-  CommandLineIcon,
-  PuzzlePieceIcon,
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -54,64 +18,64 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   };
 
   const mainLinks = [
-    { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: UserGroupIcon },
-    { name: 'Services', href: '/services', icon: BriefcaseIcon },
-    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Contact', href: '/contact', icon: ChatBubbleLeftRightIcon },
-    { name: 'Demo', href: '/demo', icon: PresentationChartLineIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
+    { name: 'Home', href: '/', icon: null },
+    { name: 'About', href: '/about', icon: null },
+    { name: 'Services', href: '/services', icon: null },
+    { name: 'Pricing', href: '/pricing', icon: null },
+    { name: 'Blog', href: '/blog', icon: null },
+    { name: 'Contact', href: '/contact', icon: null },
+    { name: 'Demo', href: '/demo', icon: null },
+    { name: 'Support', href: '/support', icon: null }
   ];
 
   const aiServices = [
-    { name: 'AI Analytics', href: '/ai-analytics', icon: ChartBarIcon },
-    { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
-    { name: 'AI Healthcare', href: '/ai-healthcare-diagnostics', icon: HeartIcon },
-    { name: 'AI Automation', href: '/ai-automation-platform', icon: CogIcon },
-    { name: 'AI Content Generation', href: '/ai-content-generation', icon: DocumentTextIcon },
-    { name: 'AI Customer Support', href: '/ai-customer-support', icon: ChatBubbleLeftRightIcon },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: ShieldExclamationIcon },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: ChartBarIcon }
+    { name: 'AI Analytics', href: '/ai-analytics', icon: null },
+    { name: 'AI Services', href: '/ai-services', icon: null },
+    { name: 'AI Healthcare', href: '/ai-healthcare-diagnostics', icon: null },
+    { name: 'AI Automation', href: '/ai-automation-platform', icon: null },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: null },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: null },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: null },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: null }
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-    { name: 'IT Services', href: '/it-services', icon: CpuChipIcon },
-    { name: 'Web Development', href: '/web-development', icon: GlobeAltIcon },
-    { name: 'Mobile Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
-    { name: 'Database Management', href: '/database-management', icon: ServerIcon },
-    { name: 'Custom Software', href: '/custom-software', icon: CodeBracketIcon },
-    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: LockClosedIcon },
-    { name: 'System Integration', href: '/system-integration', icon: WrenchScrewdriverIcon }
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: null },
+    { name: 'IT Services', href: '/it-services', icon: null },
+    { name: 'Web Development', href: '/web-development', icon: null },
+    { name: 'Mobile Development', href: '/mobile-development', icon: null },
+    { name: 'Management', href: '/database-management', icon: null },
+    { name: 'Custom Software', href: '/custom-software', icon: null },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: null },
+    { name: 'System Integration', href: '/system-integration', icon: null }
   ];
 
   const businessSolutions = [
-    { name: 'Micro SaaS', href: '/micro-saas', icon: RocketLaunchIcon },
-    { name: 'Cloud Services', href: '/cloud-services', icon: ServerIcon },
-    { name: 'Digital Transformation', href: '/digital-transformation', icon: SparklesIcon },
-    { name: 'Process Automation', href: '/process-automation', icon: Cog6ToothIcon },
-    { name: 'Data Migration', href: '/data-migration', icon: ArrowRightIcon },
-    { name: 'Performance Optimization', href: '/performance-optimization', icon: ChartBarIcon },
-    { name: 'API Development', href: '/api-development', icon: CommandLineIcon },
-    { name: 'Legacy Modernization', href: '/legacy-modernization', icon: BeakerIcon }
+    { name: 'Micro SaaS', href: '/micro-saas', icon: null },
+    { name: 'Cloud Services', href: '/cloud-services', icon: null },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: null },
+    { name: 'Process Automation', href: '/process-automation', icon: null },
+    { name: 'Data Migration', href: '/data-migration', icon: null },
+    { name: 'Performance Optimization', href: '/performance-optimization', icon: null },
+    { name: 'API Development', href: '/api-development', icon: null },
+    { name: 'Legacy Modernization', href: '/legacy-modernization', icon: null }
   ];
 
   const additionalLinks = [
-    { name: 'Privacy Policy', href: '/privacy', icon: ShieldCheckIcon },
-    { name: 'Terms of Service', href: '/terms', icon: DocumentTextIcon },
-    { name: 'Cookie Policy', href: '/cookies', icon: DocumentTextIcon },
-    { name: 'Sitemap', href: '/sitemap', icon: MapIcon },
-    { name: 'Our Team', href: '/team', icon: UserGroupIcon },
-    { name: 'Documentation', href: '/docs', icon: DocumentDuplicateIcon },
-    { name: 'Careers', href: '/careers', icon: BriefcaseIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon }
+    { name: 'Privacy Policy', href: '/privacy', icon: null },
+    { name: 'Terms of Service', href: '/terms', icon: null },
+    { name: 'Cookie Policy', href: '/cookies', icon: null },
+    { name: 'Sitemap', href: '/sitemap', icon: null },
+    { name: 'Our Team', href: '/team', icon: null },
+    { name: 'Documentation', href: '/docs', icon: null },
+    { name: 'Careers', href: '/careers', icon: null },
+    { name: 'Tutorials', href: '/tutorials', icon: null }
   ];
 
   const serviceSections = [
-    { title: 'AI Services', links: aiServices, icon: CpuChipIcon, key: 'ai' },
-    { title: 'IT Services', links: itServices, icon: CpuChipIcon, key: 'it' },
-    { title: 'Business Solutions', links: businessSolutions, icon: PuzzlePieceIcon, key: 'business' }
+    { title: 'AI Services', links: aiServices, icon: null, key: 'ai' },
+    { title: 'IT Services', links: itServices, icon: null, key: 'it' },
+    { title: 'Business Solutions', links: businessSolutions, icon: null, key: 'business' }
   ];
 
   const isActive = (href: string) => location.pathname === href;
@@ -136,7 +100,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="flex items-center justify-between p-6 border-b border-slate-700">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <CpuChipIcon className="w-5 h-5 text-white" />
+                <div className="w-6 h-6" />
               </div>
               <span className="text-xl font-bold text-white">Zion Tech</span>
             </div>
@@ -144,7 +108,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={onClose}
               className="lg:hidden p-2 rounded-lg hover:bg-slate-700 transition-colors"
             >
-              <XMarkIcon className="w-6 h-6 text-white" />
+              <div className="w-6 h-6" />
             </button>
           </div>
 
@@ -169,7 +133,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         }
                       `}
                     >
-                      <link.icon className="w-5 h-5" />
+                      <div className="w-6 h-6" />
                       <span>{link.name}</span>
                     </Link>
                   </li>
@@ -185,14 +149,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   className="flex items-center justify-between w-full px-3 py-2 text-left text-sm font-semibold text-gray-400 uppercase tracking-wider hover:text-white transition-colors"
                 >
                   <div className="flex items-center space-x-3">
-                    <section.icon className="w-5 h-5" />
+                    <div className="w-6 h-6" />
                     <span>{section.title}</span>
                   </div>
-                  <ArrowRightIcon 
-                    className={`w-4 h-4 transition-transform ${
-                      expandedSections.includes(section.key) ? 'rotate-90' : ''
-                    }`} 
-                  />
+                  <div className="w-6 h-6" />
                 </button>
                 {expandedSections.includes(section.key) && (
                   <ul className="mt-2 space-y-1 ml-8">
@@ -209,7 +169,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                             }
                           `}
                         >
-                          <link.icon className="w-4 h-4" />
+                          <div className="w-6 h-6" />
                           <span>{link.name}</span>
                         </Link>
                       </li>
@@ -238,7 +198,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         }
                       `}
                     >
-                      <link.icon className="w-4 h-4" />
+                      <div className="w-6 h-6" />
                       <span>{link.name}</span>
                     </Link>
                   </li>

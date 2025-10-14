@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Activity, Brain, Shield, Zap, Target, ArrowRight, Star } from 'lucide-react';
+import { Heart, Activity, Brain, Shield, Zap, Target, ArrowRight, } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import Footer from '../components/Footer';
 import FuturisticBackground from '../components/FuturisticBackground';
@@ -71,7 +71,7 @@ const AIHealthcareDiagnosticsPage: React.FC = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
             >
-              <span>Get Started</span>
+              <span>Get ted</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link 
@@ -179,7 +179,7 @@ const AIHealthcareDiagnosticsPage: React.FC = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
             >
-              <span>Start Healthcare AI Journey</span>
+              <span>t Healthcare AI Journey</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link 

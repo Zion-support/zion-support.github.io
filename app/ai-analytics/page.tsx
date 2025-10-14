@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BarChart3, TrendingUp, Brain, Zap, Users, Target, ArrowRight, Star } from 'lucide-react';
+import { BarChart3, TrendingUp, Brain, Zap, Users, Target, ArrowRight, } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import Footer from '../components/Footer';
 import FuturisticBackground from '../components/FuturisticBackground';
@@ -62,7 +62,7 @@ const AIAnalyticsPage: React.FC = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
             >
-              <span>Get Started</span>
+              <span>Get ted</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link 
@@ -130,7 +130,7 @@ const AIAnalyticsPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4 xl mx-auto text-center">
           <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6">
-            Ready to Unlock Your Data's Potential?
+            Ready to Unlock Your Data&apos;s Potential?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Let our AI analytics platform transform your data into actionable insights. 
@@ -141,7 +141,7 @@ const AIAnalyticsPage: React.FC = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
             >
-              <span>Start Analytics Journey</span>
+              <span>t Analytics Journey</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link 

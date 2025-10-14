@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { BookOpen, Code, Database, Cloud, Star } from 'lucide-react';
+import { BookOpen, Code, Database, Cloud, } from 'lucide-react';
 
 const GuidesPage: React.FC = () => {
   const guides = [
@@ -28,16 +28,16 @@ const GuidesPage: React.FC = () => {
       description: 'Step-by-step guide to implementing autonomous business processes',
       url: '/guides/autonomous-business-processes-implementation-guide-2026',
       category: 'Process Automation',
-      icon: 
+      icon: BookOpen,
       difficulty: 'Expert',
       duration: '90 min read'
     }
   ];
 
   const categories = [
-    { name: 'AI Implementation', icon:  color: 'text-purple-400' },
-    { name: 'Process Automation', icon:  color: 'text-blue-400' },
-    { name: 'Security', icon:  color: 'text-red-400' },
+    { name: 'AI Implementation', icon: BookOpen, color: 'text-purple-400' },
+    { name: 'Process Automation', icon: BookOpen, color: 'text-blue-400' },
+    { name: 'Security', icon: BookOpen, color: 'text-red-400' },
     { name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400' },
     { name: 'Data Management', icon: Database, color: 'text-green-400' },
     { name: 'Development', icon: Code, color: 'text-orange-400' }
@@ -146,15 +146,15 @@ const GuidesPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Getting Started */}
+          {/* Getting ted */}
           <section className="mb-16">
-            <h2 className="text-3 xl font-bold text-white mb-8">Getting Started</h2>
+            <h2 className="text-3 xl font-bold text-white mb-8">Getting ted</h2>
             <div className="bg-slate-800 rounded-lg p-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">New to AI Implementation?</h3>
                   <p className="text-gray-300 mb-4">
-                    Start with our comprehensive AI 2026 Implementation Roadmap to understand 
+                    t with our comprehensive AI 2026 Implementation Roadmap to understand 
                     the fundamentals and plan your AI transformation journey.
                   </p>
                   <ul className="space-y-2 text-gray-300">

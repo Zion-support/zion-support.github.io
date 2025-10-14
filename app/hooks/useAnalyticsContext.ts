@@ -9,7 +9,7 @@ export const useUseAnalyticsContext = () => {
   return {
     data,
     loading,
-    _error,
+    error,
     // Add your hook methods here
   };
 };

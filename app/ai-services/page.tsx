@@ -1,4 +1,4 @@
-import { Brain, Shield, Zap, Users, Target, BarChart3, ArrowRight, CheckCircle, Star } from 'lucide-react';
+import { Brain, Shield, Zap, Users, Target, BarChart3, ArrowRight, CheckCircle, } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -103,7 +103,7 @@ const AIServicesPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
             >
-              <span>Get Started</span>
+              <span>Get ted</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link 
@@ -212,14 +212,14 @@ const AIServicesPage = () => {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
+            Let&apos;s discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
-              Start Your AI Journey
+              t Your AI Journey
             </Link>
             <Link 
               to="/demo"

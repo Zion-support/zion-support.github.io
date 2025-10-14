@@ -4,7 +4,7 @@ import AnalyticsProvider from './components/AnalyticsProvider';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import PWAInstaller from './components/PWAInstaller';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
-import { GlobalErrorBoundary } from './components/GlobalErrorBoundary';
+import GlobalErrorBoundary from './components/GlobalErrorBoundary';
 
 export default function RootLayout({
   children}: {
@@ -50,15 +50,12 @@ export default function RootLayout({
       <body>
         <GlobalErrorBoundary>
           <PerformanceMonitor />
-          <AnalyticsProvider>
-            <AccessibilityEnhancer>
-              <PWAInstaller>
-                <PerformanceOptimizer>
-                  {children}
-                </PerformanceOptimizer>
-              </PWAInstaller>
-            </AccessibilityEnhancer>
-          </AnalyticsProvider>
+          <AnalyticsProvider />
+          <AccessibilityEnhancer>
+            <PWAInstaller />
+            <PerformanceOptimizer />
+            {children}
+          </AccessibilityEnhancer>
         </GlobalErrorBoundary>
       </body>
     </html>

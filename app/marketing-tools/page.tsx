@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Clock, TrendingUp, BarChart, Phone, Mail, MapPin, Target, Star } from 'lucide-react';
+import { CheckCircle, Clock, TrendingUp, BarChart, Phone, Mail, MapPin, Target, } from 'lucide-react';
 
 const MarketingToolsPage: React.FC = () => {
   const marketingTools = [
@@ -81,7 +81,7 @@ const MarketingToolsPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Marketing Tools - Zion Tech Group</title>
-        <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. Starting at $179/month." />
+        <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. ting at $179/month." />
         <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
       </Helmet>
 
@@ -102,7 +102,7 @@ const MarketingToolsPage: React.FC = () => {
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3 xl font-bold text-green-400 mb-2">$179</div>
-              <div className="text-gray-300">Starting Price</div>
+              <div className="text-gray-300">ting Price</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3 xl font-bold text-purple-400 mb-2">250%</div>
@@ -171,7 +171,7 @@ const MarketingToolsPage: React.FC = () => {
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started
+                    Get ted
                   </a>
                 </div>
               </div>

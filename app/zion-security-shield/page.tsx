@@ -1,4 +1,4 @@
-import { Shield, ArrowRight, CheckCircle, Star, Mail, Phone, MapPin } from 'lucide-react';
+import { Shield, ArrowRight, CheckCircle, Mail, Phone, MapPin, Eye, AlertTriangle, Lock } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -34,22 +34,22 @@ export default function ZionSecurityShield() {
     {
       title: "Security Monitoring",
       description: "24/7 monitoring of your network, systems, and applications for potential security threats.",
-      price: "Starting at $99/month"
+      price: "ting at $99/month"
     },
     {
       title: "Vulnerability Scanning",
       description: "Regular security assessments to identify and prioritize vulnerabilities in your infrastructure.",
-      price: "Starting at $149/month"
+      price: "ting at $149/month"
     },
     {
       title: "Incident Response",
       description: "Rapid response and containment services when security incidents occur.",
-      price: "Starting at $199/month"
+      price: "ting at $199/month"
     },
     {
       title: "Security Training",
       description: "Employee security awareness training and phishing simulation programs.",
-      price: "Starting at $79/month"
+      price: "ting at $79/month"
     }
   ];
 
@@ -161,7 +161,7 @@ export default function ZionSecurityShield() {
                 to="/contact"
                 className="group bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105"
               >
-                Start Free Trial
+                t Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -324,7 +324,7 @@ export default function ZionSecurityShield() {
                         : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
                     }`}
                   >
-                    {plan.popular ? 'Start Free Trial' : 'Get Started'}
+                    {plan.popular ? 't Free Trial' : 'Get ted'}
                   </Link>
                 </div>
               ))}
@@ -373,8 +373,8 @@ export default function ZionSecurityShield() {
                 Ready to Secure Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Don't wait for a security breach. Protect your business with Zion Security Shield today. 
-                Start your free trial or contact us for a security assessment.
+                Don&apos;t wait for a security breach. Protect your business with Zion Security Shield today. 
+                t your free trial or contact us for a security assessment.
               </p>
               
               {/* Contact Details */}
@@ -407,7 +407,7 @@ export default function ZionSecurityShield() {
                   to="/contact"
                   className="group bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-red-500/25 hover:scale-105"
                 >
-                  Start Free Trial
+                  t Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link

@@ -6,12 +6,10 @@ export function withLazyLoading<T extends ComponentType<Record<string, unknown>>
   fallback?: React.ReactNode) {
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   
-  const WrappedComponent = (props: React.ComponentProps<T>) => {
-     
-    const LazyComponentAny = LazyComponent as unknown;
+  const WrappedComponent = (props: Record<string, unknown>) => {
     return (
       <Suspense fallback={fallback || <div>Loading...</div>}>
-        <LazyComponentAny {...props} />
+        <LazyComponent {...props} />
       </Suspense>
     );
   };
@@ -25,12 +23,10 @@ export function createLazyComponent<T extends ComponentType<Record<string, unkno
   fallback?: React.ReactNode) {
   const LazyComponent = lazy(importFunction);
   
-  const WrappedComponent = (props: React.ComponentProps<T>) => {
-     
-    const LazyComponentAny = LazyComponent as unknown;
+  const WrappedComponent = (props: Record<string, unknown>) => {
     return (
       <Suspense fallback={fallback || <div>Loading...</div>}>
-        <LazyComponentAny {...props} />
+        <LazyComponent {...props} />
       </Suspense>
     );
   };

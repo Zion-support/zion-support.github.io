@@ -15,7 +15,7 @@ class GlobalErrorBoundary extends React.Component<GlobalErrorBoundaryProps, { ha
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Global Error Boundary caught an error:', _error, _errorInfo);
+    console.error('Global Error Boundary caught an error:', error, errorInfo);
   }
 
   render() {

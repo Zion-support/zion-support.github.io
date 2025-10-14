@@ -1,14 +1,9 @@
-import { Users } from 'lucide-react';
 import React from 'react';
-import { CheckIcon, 
-  UsersIcon, 
-  TrophyIcon, 
-  LightBulbIcon } from '@heroicons/react/24/outline';
 const About: React.FC = () => {
   const stats = [
-    { icon: UsersIcon, value: '500+', label: 'Happy Clients' },
-    { icon: TrophyIcon, value: '50+', label: 'Awards Won' },
-    { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }
+    { icon: null, value: '500+', label: 'Happy Clients' },
+    { icon: null, value: '50+', label: 'Awards Won' },
+    { icon: null, value: '1000+', label: 'Projects Completed' }
   ];
 
   const values = [
@@ -47,7 +42,7 @@ const About: React.FC = () => {
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
-                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                <div className="w-6 h-6" />
                 <p className="text-gray-600">
                   <strong className="text-gray-900">Expert Team:</strong> Our team consists of 
                   highly skilled professionals with deep expertise in AI, cloud computing, 
@@ -55,7 +50,7 @@ const About: React.FC = () => {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                <div className="w-6 h-6" />
                 <p className="text-gray-600">
                   <strong className="text-gray-900">Proven Track Record:</strong> We have 
                   successfully delivered hundreds of projects for clients across various 
@@ -63,7 +58,7 @@ const About: React.FC = () => {
                 </p>
               </div>
               <div className="flex items-start">
-                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                <div className="w-6 h-6" />
                 <p className="text-gray-600">
                   <strong className="text-gray-900">Cutting-Edge Technology:</strong> We 
                   leverage the latest technologies and best practices to deliver 
@@ -77,7 +72,7 @@ const About: React.FC = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-2">
-                    <stat.icon className="h-8 w-8 text-blue-600" />
+                    <div className="w-6 h-6" />
                   </div>
                   <div className="text-2 xl font-bold text-gray-900">{stat.value}</div>
                   <div className="text-sm text-gray-600">{stat.label}</div>

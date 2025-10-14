@@ -1,8 +1,5 @@
-import { ArrowRight, Play, Star } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRightIcon, PlayIcon } from '@heroicons/react/24/outline';
-
 const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -36,11 +33,11 @@ const Hero: React.FC = () => {
               to="/contact"
               className="group bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
             >
-              <span>Get Started Today</span>
-              <ArrowRightIcon className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <span>Get ted Today</span>
+              <div className="w-6 h-6" />
             </Link>
             <button className="group bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300 flex items-center space-x-2">
-              <PlayIcon className="h-5 w-5" />
+              <div className="w-6 h-6" />
               <span>Watch Demo</span>
             </button>
           </div>

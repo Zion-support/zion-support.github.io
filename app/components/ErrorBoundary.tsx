@@ -1,8 +1,8 @@
-import React, { Component, ReactNode } from 'react';
+import React, { Component, ReactNode, ErrorInfo } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -20,8 +20,8 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', _error, _errorInfo);
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   render() {
@@ -30,7 +30,7 @@ class ErrorBoundary extends Component<Props, State> {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4 xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
+            <p className="text-gray-300 mb-8">We&apos;re sorry, but something unexpected happened.</p>
             <button
               onClick={() => window.location.reload()}
               className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors"

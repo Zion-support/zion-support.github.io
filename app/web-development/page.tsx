@@ -1,38 +1,36 @@
-import { ArrowRight, Globe, Database, Star, Phone } from 'lucide-react';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRightIcon, CodeBracketIcon, GlobeAltIcon, DevicePhoneMobileIcon, ShoppingCartIcon, ChartBarIcon } from "@heroicons/react/24/outline";
 import FuturisticBackground from "../components/FuturisticBackground";
 
 const WebDevelopmentPage = () => {
   const services = [
     {
-      icon: <CodeBracketIcon className="w-12 h-12 text-cyan-400" />,
+      icon: <div className="w-6 h-6" />,
       title: "Frontend Development",
       description: "Modern, responsive user interfaces built with the latest technologies and best practices.",
       features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Responsive Design", "Performance Optimization"]
     },
     {
-      icon: <GlobeAltIcon className="w-12 h-12 text-cyan-400" />,
+      icon: <div className="w-6 h-6" />,
       title: "Backend Development",
       description: "Robust server-side applications and APIs that power your web applications.",
-      features: ["Node.js & Express", "Python & Django", "Database Design", "API Development", "Cloud Integration"]
+      features: ["Node.js & Express", "Python & Django", "Design", "API Development", "Cloud Integration"]
     },
     {
-      icon: <DevicePhoneMobileIcon className="w-12 h-12 text-cyan-400" />,
+      icon: <div className="w-6 h-6" />,
       title: "Mobile-First Design",
       description: "Responsive web applications optimized for all devices and screen sizes.",
       features: ["Mobile Optimization", "Touch Interactions", "Progressive Web Apps", "Cross-Browser Compatibility"]
     },
     {
-      icon: <ShoppingCartIcon className="w-12 h-12 text-cyan-400" />,
+      icon: <div className="w-6 h-6" />,
       title: "E-commerce Solutions",
       description: "Complete online store solutions with payment processing and inventory management.",
       features: ["Online Store Setup", "Payment Integration", "Inventory Management", "Order Processing", "Customer Management"]
     },
     {
-      icon: <ChartBarIcon className="w-12 h-12 text-cyan-400" />,
+      icon: <div className="w-6 h-6" />,
       title: "Performance Optimization",
       description: "Fast, efficient web applications with optimal loading times and user experience.",
       features: ["Speed Optimization", "SEO Optimization", "Analytics Integration", "Performance Monitoring"]
@@ -79,8 +77,8 @@ const WebDevelopmentPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
             >
-              <span>Start Your Project</span>
-              <ArrowRightIcon className="w-5 h-5" />
+              <span>t Your Project</span>
+              <div className="w-6 h-6" />
             </Link>
             <Link 
               to="/demo"
@@ -184,7 +182,7 @@ const WebDevelopmentPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
-              Start Your Project
+              t Your Project
             </Link>
             <Link 
               to="/demo"

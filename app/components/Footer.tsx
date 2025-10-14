@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Cloud, Brain, Zap, Database } from 'lucide-react';
+import { Mail, Phone, MapPin, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Cloud, Brain, Zap, } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -27,7 +27,7 @@ const Footer = () => {
       color: 'from-green-500 to-emerald-500',
       links: [
         { label: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-        { label: 'Database Management', href: '/database-management' },
+        { label: 'Management', href: '/database-management' },
         { label: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
         { label: 'IT Consulting', href: '/it-consulting' },
         { label: 'System Integration', href: '/system-integration' },

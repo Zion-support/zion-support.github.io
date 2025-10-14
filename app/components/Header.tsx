@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown, Star } from 'lucide-react';
+import { Menu, X, ChevronDown, } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
               to="/contact"
               className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
             >
-              Get Started
+              Get ted
             </Link>
           </div>
 
@@ -120,7 +120,7 @@ const Header: React.FC = () => {
                 className="block w-full text-center px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                Get Started
+                Get ted
               </Link>
             </div>
           </div>

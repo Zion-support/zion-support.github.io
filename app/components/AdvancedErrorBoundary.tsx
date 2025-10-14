@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { logger } from '../utils/logger';
+import { } from '../utils/logger';
 
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -11,7 +11,7 @@ interface ErrorBoundaryState {
 interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
 }
@@ -49,40 +49,40 @@ class AdvancedErrorBoundary extends Component<
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
-      _error,
+      error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      _error,
-      _errorInfo});
+      error,
+      errorInfo});
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      logger.error(
+      console.error(
         'Error Boundary caught an error',
-        _error,
+        error,
         { context: 'ErrorBoundary', errorInfo }
       );
     }
 
     // Call custom error handler
     if (this.props.onError) {
-      this.props.onError(_error, _errorInfo);
+      this.props.onError(error, errorInfo);
     }
 
     // Report error to external service
     if (this.props.enableErrorReporting) {
-      this.reportError(_error, _errorInfo);
+      this.reportError(error, errorInfo);
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
-      _error,
-      _errorInfo,
+      error,
+      errorInfo,
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -132,7 +132,7 @@ class AdvancedErrorBoundary extends Component<
           'Content-Type': 'application/json'},
         body: JSON.stringify(errorReport)});
     } catch (reportError) {
-      logger.error(
+      console.error(
         'Failed to send error report',
         reportError as Error,
         { context: 'ErrorReporting' }
@@ -191,7 +191,7 @@ class AdvancedErrorBoundary extends Component<
                   Oops! Something went wrong
                 </h2>
                 <p className='mt-2 text-sm text-gray-600'>
-                  We're sorry, but something unexpected happened. Our team
+                  We&apos;re sorry, but something unexpected happened. Our team
                   has been notified.
                 </p>
               </div>

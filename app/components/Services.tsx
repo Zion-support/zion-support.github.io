@@ -1,10 +1,10 @@
-import { Shield } from 'lucide-react';
+import { } from 'lucide-react';
 import React from 'react';
 import { CpuChipIcon, 
   CloudIcon, 
   CogIcon, 
   ChartBarIcon,
-  ShieldCheckIcon,
+  CheckIcon,
   RocketLaunchIcon } from '@heroicons/react/24/outline';
 const Services: React.FC = () => {
   const services = [
@@ -33,7 +33,7 @@ const Services: React.FC = () => {
       features: ['Business Intelligence', 'Data Visualization', 'Real-time Dashboards', 'Custom Reports']
     },
     {
-      icon: ShieldCheckIcon,
+      icon: CheckIcon,
       title: 'Cybersecurity',
       description: 'Protect your business with comprehensive security solutions and best practices.',
       features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response']
@@ -103,7 +103,7 @@ const Services: React.FC = () => {
               Ready to Transform Your Business?
             </h3>
             <p className="text-xl mb-6 opacity-90">
-              Let's discuss how our solutions can help you achieve your goals.
+              Let&apos;s discuss how our solutions can help you achieve your goals.
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Get Free Consultation

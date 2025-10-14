@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react';
+import { } from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
 const EnterpriseTransformationPage: React.FC = () => {
@@ -54,7 +54,7 @@ const EnterpriseTransformationPage: React.FC = () => {
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🎯 Transformation Strategy</h2>
             <p className="text-gray-700 mb-6">
               The transformation followed a comprehensive 6-phase approach, each phase building upon the previous to create 
-              exponential value. Here's the proven roadmap:
+              exponential value. Here&apos;s the proven roadmap:
             </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: Foundation & Assessment (Months 1-3)</h3>
@@ -77,7 +77,7 @@ const EnterpriseTransformationPage: React.FC = () => {
 
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">💰 Detailed ROI Analysis</h2>
             <p className="text-gray-700 mb-6">
-              The transformation delivered measurable value across multiple dimensions. Here's the detailed breakdown:
+              The transformation delivered measurable value across multiple dimensions. Here&apos;s the detailed breakdown:
             </p>
 
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Direct Cost Savings</h3>
@@ -89,14 +89,14 @@ const EnterpriseTransformationPage: React.FC = () => {
               <li>• <strong>$5 M:</strong> Reduced compliance and audit costs</li>
             </ul>
 
-            <h2 className="text-2 xl font-bold text-gray-900 mb-6">🚀 Getting Started with Your Transformation</h2>
+            <h2 className="text-2 xl font-bold text-gray-900 mb-6">🚀 Getting ted with Your Transformation</h2>
             <p className="text-gray-700 mb-6">
               Ready to achieve similar results? Our expert team has guided 500+ organizations through successful AI transformations. 
               Get started with a comprehensive assessment and personalized transformation roadmap.
             </p>
 
             <div className="bg-indigo-50 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">Start Your $50 M Transformation Today</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-4">t Your $50 M Transformation Today</h3>
               <p className="text-gray-700 mb-4">
                 Join Fortune 500 companies achieving breakthrough results through strategic AI transformation
               </p>
