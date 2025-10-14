@@ -21,7 +21,7 @@ describe('HomePage', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
+    expect(screen.getAllByText('Zion Tech Group')).toHaveLength(2);
   });
   
   it('renders navigation links', () => {
@@ -32,6 +32,6 @@ describe('HomePage', () => {
         </BrowserRouter>
       </HelmetProvider>
     );
-    expect(screen.getByText('Get Started')).toBeInTheDocument();
+    expect(screen.getAllByText('Get Started')).toHaveLength(2);
   });
 });
