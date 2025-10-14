@@ -13,14 +13,6 @@ const ContentStatistics: React.FC = () => {
     uptime: 0
   });
 
-  const targetCounters = {
-    clients: 10000,
-    projects: 5000,
-    satisfaction: 99,
-    years: 15,
-    countries: 50,
-    uptime: 99
-  };
 
   const statistics = [
     {
@@ -133,6 +125,15 @@ const ContentStatistics: React.FC = () => {
   ];
 
   useEffect(() => {
+    const targetCounters = {
+      clients: 10000,
+      projects: 5000,
+      satisfaction: 99,
+      years: 15,
+      countries: 50,
+      uptime: 99
+    };
+    
     const duration = 3000; // 3 seconds
     const steps = 60;
     const stepDuration = duration / steps;

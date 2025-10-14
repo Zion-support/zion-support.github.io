@@ -1,5 +1,14 @@
 import { useState, useEffect } from 'react'
 
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart?: number;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
 export const usePerformanceMetrics = () => {
   const [metrics, setMetrics] = useState({
     fcp: 0,
@@ -33,7 +42,7 @@ export const usePerformanceMetrics = () => {
     // First Input Delay
     new PerformanceObserver((list) => {
       const entries = list.getEntries()
-      const fidEntry = entries[0] as any
+      const fidEntry = entries[0] as PerformanceEventTiming
       if (fidEntry && fidEntry.processingStart) {
         setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }))
       }
@@ -44,7 +53,7 @@ export const usePerformanceMetrics = () => {
       let clsValue = 0
       const entries = list.getEntries()
       entries.forEach(entry => {
-        const layoutShiftEntry = entry as any
+        const layoutShiftEntry = entry as LayoutShift
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value || 0
         }

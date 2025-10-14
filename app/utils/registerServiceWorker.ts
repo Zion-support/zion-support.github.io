@@ -4,7 +4,7 @@ export const registerServiceWorker = () => {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
           if (process.env.NODE_ENV === 'development') {
-            console.log('SW registered: ', registration);
+            console.warn('SW registered: ', registration);
           }
         })
         .catch((registrationError) => {

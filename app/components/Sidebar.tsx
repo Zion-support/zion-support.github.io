@@ -14,7 +14,7 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const navigationItems: Array<{ name: string; href: string; icon: React.ComponentType<any> }> = [
+  const navigationItems: Array<{ name: string; href: string; icon: React.ComponentType<{ className?: string }> }> = [
   ];
   return (
     <>
