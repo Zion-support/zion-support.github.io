@@ -1,103 +1,50 @@
-import React, { lazy, Suspense } from 'react''
-import { BrowserRouter, Routes, Route } from 'react-router-dom''
-import { HelmetProvider } from 'react-helmet-async;
-const HomePage = lazy(() => import("./page"));
-const AboutPage = lazy(() => import("./about/page"));
-const ContactPage = lazy(() => import("./contact/page"));
-const ServicesPage = lazy(() => import("./services/page"));
-const PricingPage = lazy(() => import("./pricing/page"));
-const CaseStudiesPage = lazy(() => import("./case-studies/page"));
-const BlogPage = lazy(() => import("./blog/page"));
-const TeamPage = lazy(() => import("./team/page"));
-const CareersPage = lazy(() => import("./careers/page"));
-const PrivacyPage = lazy(() => import("./privacy/page"));
-const TermsPage = lazy(() => import("./terms/page"));
-const CookiesPage = lazy(() => import("./cookies/page"));
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-// 5G Solutions Pages
-const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
-const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"));
-const FiveGImplementationPage = lazy(() => import("./5g-implementation/page"));
-const FiveGIoTSolutionsPage = lazy(() => import("./5g-iot-solutions/page"));
-const FiveGMobileApplicationsPage = lazy(
-  () => import("./5g-mobile-applications/page"),
-);
-const FiveGNetworkInfrastructurePage = lazy(
-  () => import("./5g-network-infrastructure/page"),
-);
-const FiveGPrivateNetworksPage = lazy(
-  () => import("./5g-private-networks/page"),
-);
-const FiveGSmartCitySolutionsPage = lazy(
-  () => import("./5g-smart-city-solutions/page"),
-);
-const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
-
-// Loading component
-const LoadingSpinner = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
-  </div>
-);
-
-// Main App Component
-export default function App() {
+export default function Page() {
   return (
-    <HelmetProvider></HelmetProvider>
-      <BrowserRouter></BrowserRouter>
-        <Suspense fallback={<LoadingSpinner />}>
-          <Routes></Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/pricing" element={<PricingPage />} />
-            <Route path="/case-studies" element={<CaseStudiesPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/team" element={<TeamPage />} />
-            <Route path="/careers" element={<CareersPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/terms" element={<TermsPage />} />
-            <Route path="/cookies" element={<CookiesPage />} />
-
-            {/* 5G Solutions Routes */}
-            <Route
-              path="/5g-data-analytics"
-              element={<FiveGDataAnalyticsPage />}
-            />
-            <Route
-              path="/5g-edge-computing"
-              element={<FiveGEdgeComputingPage />}
-            />
-            <Route
-              path="/5g-implementation"
-              element={<FiveGImplementationPage />}
-            />
-            <Route
-              path="/5g-iot-solutions"
-              element={<FiveGIoTSolutionsPage />}
-            />
-            <Route
-              path="/5g-mobile-applications"
-              element={<FiveGMobileApplicationsPage />}
-            />
-            <Route
-              path="/5g-network-infrastructure"
-              element={<FiveGNetworkInfrastructurePage />}
-            />
-            <Route
-              path="/5g-private-networks"
-              element={<FiveGPrivateNetworksPage />}
-            />
-            <Route
-              path="/5g-smart-city-solutions"
-              element={<FiveGSmartCitySolutionsPage />}
-            />
-            <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-          </Routes>
-        </Suspense>
-      </BrowserRouter>
-    </HelmetProvider>
+    <>
+      <Helmet>
+        <title>App - Zion Tech Group</title>
+        <meta name="description" content="Professional App solutions and services" />
+        <meta name="keywords" content="app" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">App</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional App solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
-'

@@ -1,123 +1,50 @@
-import React from 'react''
-{ useEffect } from 'react''
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-
-interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: string;
-  structuredData?: unknown;}
-}'
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({''
-  title = 'Zion Tech Group - Advanced AI and IT Solutions'''
-  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.'''
-  keywords = ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group']''
-  image = '/.jpg'''
-  url = typeof window !== 'undefined' ? window.location.href : ''''
-  type = 'website'';
-  structuredData}) => {
-  useEffect(() => {
-    // Add structured data to the page;
-    if (structuredData) {'
-      const script = document.createElement('script')'
-      script.type = 'application/ld+json'
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-      return () => {
-        if (document.head.contains(script)) {
-          document.head.removeChild(script);}
-        }
-      };
-    }
-    return undefined;
-  }, [structuredData])'
-  // Generate meta tags;''
-  const metaTags = [{ name: 'description', content: description }''
-    { name: 'keywords', content: keywords.join(', ') }''
-    { name: 'author', content: 'Zion Tech Group' }''
-    { name: 'robots', content: '_index, follow' }''
-    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }''
-    // Open Graph tags;''
-    { property: 'og:title', content: title }''
-    { property: 'og:description', content: description }''
-    { property: 'og:image', content: image }''
-    { property: 'og:url', content: url }''
-    { property: 'og:type', content: type }''
-    { property: 'og:site_name', content: 'Zion Tech Group' }''
-    // Twitter d tags;''
-    { name: 'twitter:card', content: 'summary_large_image' }''
-    { name: 'twitter:title', content: title }''
-    { name: 'twitter:description', content: description }''
-    { name: 'twitter:image', content: image }''
-    // Additional SEO tags;''
-    { name: 'theme-color', content: '#0066cc' }''
-    { name: 'msapplication-TileColor', content: '#0066cc' }''
-    { name: 'apple-mobile-web-app-capable', content: 'yes' }''
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' }';
-  ];
+export default function Page() {
   return (
-    <Helmet></Helmet>
-      <title>{title}</title>
-      {metaTags.map((tag, _index) => (}
-        <meta key={_index} {...tag} /></meta>
-))}
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} /></link>
-      {/* Favicon */}
-      <link rel="icon" type="" href="/favicon.ico" /></link>
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" /></link>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></link>
-      {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
-    </Helmet>
-  )};
-// Default structured data for the organization;
-      <link rel="canonical" href={url} />{/* Favicon */}
-      <link rel="icon" type="" href="/favicon.ico" /></link>
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />{/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" /></link>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />{/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></Helmet>
-  )}
-// Default structured data for the organization
-const  {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Zion Tech Group",
-  "description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.",
-  "url": "https://ziontechgroup.com",
-  "logo": "https://ziontechgroup.com/images/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-555-0123",
-    "contactType": "customer service",
-    "availableLanguage": "English"},
-  "sameAs": ["https://www.linkedin.com/",
-    "https://twitter.com/ziontechgroup",
-    "https://github."],
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "123 Tech Street",
-    "addressLocality": "San Francisco",
-    "addressRegion": "CA",
-    "postalCode": "94105",
-    "addressCountry": "US"}
-};
-
-    "addressCountry": "US"
-};
-
-export default SEOEnhancer
-'
+    <>
+      <Helmet>
+        <title>SEOEnhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional SEOEnhancer solutions and services" />
+        <meta name="keywords" content="seoenhancer" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">SEOEnhancer</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional SEOEnhancer solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

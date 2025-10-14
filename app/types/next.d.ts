@@ -1,12 +1,16 @@
-// Next.js type declarations
-declare module 'next' {'
-  interface NextApiRequest {
-    user?: any;
-  interface NextConfig {
-    // Add any Next.js specific types here;
+import { NextPage } from 'next';
+import { AppProps } from 'next/app';
+
+declare module 'next' {
+  interface NextPageProps {
+    title?: string;
+    description?: string;
+    keywords?: string;
+  }
 }
-// Export a utility function
-export const nextUtil = () => {
-  // Implementation
-  return true}
-export default nextUtil
+
+declare module 'next/app' {
+  interface AppProps {
+    Component: NextPage;
+  }
+}
