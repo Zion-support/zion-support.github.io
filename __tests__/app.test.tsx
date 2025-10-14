@@ -33,6 +33,7 @@ describe("HomePage", () => {
         </BrowserRouter>
       </HelmetProvider>,
     );
-    expect(screen.getByText("Call +1 302 464 0950")).toBeInTheDocument();
+    expect(screen.getByText('Get Started')).toBeInTheDocument();
+    expect(screen.getAllByText('Learn More')).toHaveLength(4);
   });
 });

@@ -1,17 +1,5 @@
 import React from 'react';
 
-interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-}
-
-export default SEOOptimizer;
-=======
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
 
@@ -46,6 +34,14 @@ export default SEOOptimizer;
       <link rel="canonical" href="https://ziontech.com" />
     </Helmet>
   );
+};
+
+export default SEOOptimizer;
+=======
+const SEOOptimizer: React.FC = () => {
+  // SEO optimization component
+  // This component can be used for SEO monitoring and optimization
+  return null;
 };
 
 export default SEOOptimizer;

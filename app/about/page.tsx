@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b6c8
+// import { Link } from 'react-router-dom';
+// Icons are imported for future use in commented code
+// import { ArrowRight, Brain, Shield, Users, Download, ExternalLink, ChevronRight, Phone, Mail } from 'lucide-react';
 
 // Team members data (for future use)
 // const teamMembers = [
@@ -30,7 +32,8 @@ import { Helmet } from 'react-helmet-async';
 //     role: "Head of Engineering",
 //     expertise: "5G Technology & IoT",
 //     image: "/images/team/david-kim.jpg",
-//     bio: "Telecommunications expert with extensive experience in 5G implementation."//   }
+//     bio: "Telecommunications expert with extensive experience in 5G implementation."
+//   }
 // ];
 
 // Company values (for future use)
@@ -53,7 +56,8 @@ import { Helmet } from 'react-helmet-async';
 //   {
 //     icon: <Award className="w-8 h-8" />,
 //     title: "Excellence",
-//     description: "We maintain the highest standards of quality in everything we do, from code to customer service."//   }
+//     description: "We maintain the highest standards of quality in everything we do, from code to customer service."
+//   }
 // ];
 
 // Company stats (for future use)
@@ -61,8 +65,6 @@ import { Helmet } from 'react-helmet-async';
 //   { number: "500+", label: "Projects Completed" },
 //   { number: "150+", label: "Happy Clients" },
 //   { number: "99.9%", label: "Uptime Guarantee" },
-// ];
-=======
   // Company stats (for future use)
   // const stats = [
   //   { number: "500+", label: "Projects Completed" },
@@ -72,6 +74,9 @@ import { Helmet } from 'react-helmet-async';
   // ];
 =======
 //   { number: "24/7", label: "Support Available" }// ];
+=======
+//   { number: "24/7", label: "Support Available" }
+// ];
 
 const,
   AboutPage: React.FC = () => {
