@@ -16,7 +16,7 @@ ${pages.map(page => `  <url>
     return `User-agent: *
 Allow: /
 
-Sitemap: ${sitemapUrl}`;
+Sitemap: ${sitemapUrl}`
   }
 }
 </priority>

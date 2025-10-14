@@ -1,12 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-
-const FiveGDataAnalyticsPage = () => {
+import { Helmet } from 'react-helmet-async';
 
 const FiveGDataAnalyticsPage: React.FC = () => {
   return (

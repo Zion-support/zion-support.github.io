@@ -1,24 +1,43 @@
-import fs from 'fs';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
-// Find all page.tsx files
-const files = glob.sync('app/**/page.tsx', { cwd: process.cwd() });
+// Find all page.tsx files in the app directory
+const pageFiles = glob.sync('app/**/page.tsx');
 
-console.log(`Found ${files.length} page files to fix`);
+console.log(`Found ${pageFiles.length} page files to process`);
 
-files.forEach(file => {
+pageFiles.forEach(filePath => {
   try {
-    let content = fs.readFileSync(file, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has unused Suspense import
     if (content.includes("import React, { Suspense } from 'react';") && !content.includes('<Suspense')) {
-      content = content.replace("import React, { Suspense } from 'react';", "import React from 'react';");
-      fs.writeFileSync(file, content);
-      console.log(`Fixed: ${file}`);
+      console.log(`Fixing unused Suspense import in ${filePath}`);
+      
+      // Remove Suspense from the import
+      const updatedContent = content.replace(
+        "import React, { Suspense } from 'react';",
+        "import React from 'react';"
+      );
+      
+      fs.writeFileSync(filePath, updatedContent);
+      console.log(`✓ Fixed ${filePath}`);
+    } else if (content.includes("import { Suspense } from 'react';") && !content.includes('<Suspense')) {
+      console.log(`Fixing unused Suspense import in ${filePath}`);
+      
+      // Remove the entire Suspense import line
+      const updatedContent = content.replace(
+        "import { Suspense } from 'react';\n",
+        ""
+      );
+      
+      fs.writeFileSync(filePath, updatedContent);
+      console.log(`✓ Fixed ${filePath}`);
     }
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 });
 
-console.log('Done fixing Suspense imports');
+console.log('Suspense import cleanup completed');
