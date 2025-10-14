@@ -7,5 +7,6 @@ declare global {
     ) => void;
     dataLayer: unknown[];
   }
+}
 
 export {}
