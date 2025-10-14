@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 
 
-import { ArrowRight, Users, CheckCircle, TrendingUp, Clock, UserCheck, FileText, Target } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+import { ArrowRight, Users, CheckCircle, TrendingUp, Clock, UserCheck, FileText, Target} from "lucide-react";
+import EnhancedSEO from "../components/EnhancedSEO";
+import ResponsiveContainer from "../components/ResponsiveContainer";
+import FuturisticCard from "../components/FuturisticCard";
+import FuturisticButton from "../components/FuturisticButton";
 
 const AIHRRecruitmentPro = () => {
   const features = [
@@ -13,27 +12,22 @@ const AIHRRecruitmentPro = () => {
       title: "AI Resume Screening",
       description: "Automatically screen and rank resumes using advanced AI algorithms",
       icon: <FileText className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
+      color: "from-blue-500 to-cyan-500"},
     {
       title: "Candidate Matching",
       description: "Match candidates to job requirements with 95% accuracy",
       icon: <Target className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
+      color: "from-green-500 to-emerald-500"},
     {
       title: "Interview Scheduling",
       description: "Automated interview scheduling and calendar management",
       icon: <Clock className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
+      color: "from-purple-500 to-pink-500"},
     {
       title: "Talent Analytics",
       description: "Comprehensive analytics on recruitment performance and trends",
       icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
+      color: "from-orange-500 to-red-500"}];
 
   const benefits = [
     "60% faster hiring process",
@@ -41,12 +35,9 @@ const AIHRRecruitmentPro = () => {
     "Automated resume screening",
     "Intelligent interview scheduling",
     "Comprehensive talent analytics",
-    "Reduced bias in hiring"
-  ];
-=======
+    "Reduced bias in hiring"];
 import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> origin/main
+import { Helmet} from "react-helmet-async";
 
 const HomePage = () => {
   return (
@@ -64,7 +55,6 @@ const HomePage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default HomePage;

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet} from "react-helmet-async";
 export default function FixRemainingCorrupted() {
   return (
     <>
@@ -22,7 +21,7 @@ export default function FixRemainingCorrupted() {
           </div>
         </section>
 
-        { /* Content Section */ }
+        { /* Content Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -42,7 +41,7 @@ export default function FixRemainingCorrupted() {
           </div>
         </section>
 
-        { /* CTA Section */ }
+        { /* CTA Section */}
         <section className="py-20 px-4 bg-gray-900">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -57,9 +56,8 @@ export default function FixRemainingCorrupted() {
           </div>
         </section>
       </div>
-=======
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React from "react";"
+import { Helmet} from "react-helmet-async";"
 export default function fix-remaining-corrupted.js() {
   return (}
     <>
@@ -89,7 +87,5 @@ export default function fix-remaining-corrupted.js() {
                   24/7 Support
                 <p className="text-purple-700">"
                   Round-the-clock support for all your needs.
->>>>>>> origin/main
     </>
-  )
-}
+  )}

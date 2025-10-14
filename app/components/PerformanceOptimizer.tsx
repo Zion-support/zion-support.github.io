@@ -1,47 +1,37 @@
-<<<<<<< HEAD
-import React from 'react'
-<<<<<<< HEAD
-import { useEffect, Node } from 'react'
+import React from "react""
+import { useEffect, Node} from "react""
 interface PerformanceOptimizerProps {
   children: Node}
-=======
-import { useEffect, Node } from 'react
-interface PerformanceOptimizerProps { children: Node }
->>>>>>> origin/main
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+import { useEffect, Node} from "react"
+interface PerformanceOptimizerProps { children: Node}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children}) => {
   useEffect(() => {
-    // Performance optimization code''
+    // Performance optimization code""
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img')'
+      const images = document.querySelectorAll("img")""
       images.forEach((img) => {
-<<<<<<< HEAD
-        if (!img.hasAttribute('loading")) {"
-          img.setAttribute('loading', 'lazy')";
-import React from 'react';
-{ useEffect, Node } from 'react";
+        if (!img.hasAttribute("loading")) {""
+          img.setAttribute("loading", "lazy")";"
+import React from "react";"
+{ useEffect, Node} from "react";"
 interface PerformanceOptimizerProps {children: Node}
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {useEffect(() => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children}) => {useEffect(() => {
     // Performance optimization code;
-    const optimizeImages = () => {''
-      const images = document.querySelectorAll('img')";
-      images.forEach((img) => {''
-        if (!img.hasAttribute('loading')) {'
-          img.setAttribute('loading', 'lazy')}'
-        }
-      }
+    const optimizeImages = () => {""
+      const images = document.querySelectorAll("img")";"
+      images.forEach((img) => {""
+        if (!img.hasAttribute("loading")) {""
+          img.setAttribute("loading", "lazy")}"}}"
     const optimizeFonts = () => {
-      // Preload critical fonts';
-      const link = document.createElement('link')';
-=======
-        if (!img.hasAttribute('loading')) {';
-          img.setAttribute('loading', 'lazy');
-import React from 'react';'
-{ useEffect, Node } from 'react';
-interface PerformanceOptimizerProps { children: Node; }
-=======
-'use client';
-import React, { useEffect } from 'react';
-
+      // Preload critical fonts";"
+      const link = document.createElement("link")";"
+        if (!img.hasAttribute("loading")) {";"
+          img.setAttribute("loading", "lazy");"
+import React from "react";""
+{ useEffect, Node} from "react";"
+interface PerformanceOptimizerProps { children: Node}
+"use client";"
+import React, { useEffect} from "react";"
 interface PerformanceOptimizerProps {
   children?: React.ReactNode;
   enableImageOptimization?: boolean;
@@ -49,10 +39,7 @@ interface PerformanceOptimizerProps {
   enableCodeSplitting?: boolean;
   enablePrefetching?: boolean;
   enableCriticalCSS?: boolean;
-  enableResourceHints?: boolean;
->>>>>>> origin/main
-}
-
+  enableResourceHints?: boolean}
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableImageOptimization = true,
@@ -60,140 +47,106 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableCodeSplitting = true,
   enablePrefetching = true,
   enableCriticalCSS = true,
-  enableResourceHints = true,
-}) => {
+  enableResourceHints = true}) => {
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
+    if (typeof window === "undefined") return;"
     // Image optimization
     if (enableImageOptimization) {
-      const images = document.querySelectorAll('img');
+      const images = document.querySelectorAll("img");"
       images.forEach((img) => {
         if (!img.loading) {
-          img.loading = 'lazy';
-        }
+          img.loading = "lazy"}"
         if (!img.decoding) {
-          img.decoding = 'async';
-        }
+          img.decoding = "async"}"
         // Add fetchpriority for above-the-fold images
         if (img.getBoundingClientRect().top < window.innerHeight) {
-          img.setAttribute('fetchpriority', 'high');
-        }
-      });
-    }
-<<<<<<< HEAD
-    const optimizeFonts = () => { // Preload critical fonts;'
-      const link = document.createElement('link');'
-      link.rel = 'preload';'
-      link.href = '/fonts/inter.woff2';'
-      link.as = 'font';'
-      link.type = 'font/woff2';'
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link); }
-        if (!img.hasAttribute('loading')) { '
-          img.setAttribute('loading', 'lazy') }
-      })}
+          img.setAttribute("fetchpriority", "high")}})}"
+    const optimizeFonts = () => { // Preload critical fonts;""
+      const link = document.createElement("link");""
+      link.rel = "preload";""
+      link.href = "/fonts/inter.woff2";""
+      link.as = "font";""
+      link.type = "font/woff2";""
+      link.crossOrigin = "anonymous";"
+      document.head.appendChild(link)}
+        if (!img.hasAttribute("loading")) { ""
+          img.setAttribute("loading", "lazy")}})}"
     const optimizeFonts = () => { // Preload critical fonts
-      const link = document.createElement('link')
->>>>>>> origin/main
-      link.rel = 'preload'
-      link.href = '/fonts/inter.woff2'
-      link.as = 'font'
-      link.type = 'font/woff2'
-<<<<<<< HEAD
-      link.crossOrigin = "anonymous"
+      const link = document.createElement("link")"
+      link.rel = "preload""
+      link.href = "/fonts/inter.woff2""
+      link.as = "font""
+      link.type = "font/woff2""
+      link.crossOrigin = "anonymous""
       document.head.appendChild(link)
-        if (!img.hasAttribute('loading')) {''
-          img.setAttribute('loading', 'lazy')}'
-      }
+        if (!img.hasAttribute("loading")) {""
+          img.setAttribute("loading", "lazy")}"}"
     const optimizeFonts = () => {
       // Preload critical fonts
-      const link = document.createElement('link')'
-      link.rel = 'preload''
-      link.href = '/fonts/inter.woff2''
-      link.as = 'font''
-      link.type = 'font/woff2''
-      link.crossOrigin = 'anonymous''
+      const link = document.createElement("link")""
+      link.rel = "preload""
+      link.href = "/fonts/inter.woff2""
+      link.as = "font""
+      link.type = "font/woff2""
+      link.crossOrigin = "anonymous""
       document.head.appendChild(link)
     const optimizeResources = () => {// Preload critical resources
-      const criticalResources = ['/css/critical.css',''
-        '/js/critical.js'''
-      ]
+      const criticalResources = ["/css/critical.css",""
+        "/js/critical.js""]"
       criticalResources.forEach((resource) => {
-        const link = document.createElement('link')";
+        const link = document.createElement("link")";"
       document.head.appendChild(link)
-    const optimizeResources = () => {// Preload critical resources';
-      const criticalResources = ['/css/critical.css','
-        '/js/critical.js''";
-      ];
-      criticalResources.forEach((resource) => {''
-        const link = document.createElement('link')';
-        link.rel = "preload"
-        link.href = resource';
-        link.as = resource.endsWith('.css') ? 'style' : "script"
-        document.head.appendChild(link)
-      }
-=======
-      link.crossOrigin = 'anonymous'
-      document.head.appendChild(link) }
+    const optimizeResources = () => {// Preload critical resources";"
+      const criticalResources = ["/css/critical.css",""
+        "/js/critical.js""];"
+      criticalResources.forEach((resource) => {""
+        const link = document.createElement("link")";"
+        link.rel = "preload""
+        link.href = resource";"
+        link.as = resource.endsWith(".css") ? "style" : "script""
+        document.head.appendChild(link)}
+      link.crossOrigin = "anonymous""
+      document.head.appendChild(link)}
     const optimizeResources = () => {
       // Preload critical resources
-      const criticalResources = ['/css/critical.css','
-        '/js/critical.js''
-      ]
+      const criticalResources = ["/css/critical.css",""
+        "/js/critical.js"]"
       criticalResources.forEach((resource) => {
-        const link = document.createElement('link');
-      document.head.appendChild(link);}
-    };
+        const link = document.createElement("link");"
+      document.head.appendChild(link)}};
     const optimizeResources = () => {
-      // Preload critical resources;'
-      const criticalResources = ['/css/critical.css',';'
-        '/js/critical.js'';
-=======
-
+      // Preload critical resources;""
+      const criticalResources = ["/css/critical.css",";""
+        "/js/critical.js";"
     // Prefetch critical resources
     if (enablePrefetching) {
       const prefetchLinks = [
-        '/services',
-        '/contact',
-        '/ai-solutions',
-        '/it-services',
-        '/about',
-        '/blog',
->>>>>>> origin/main
-      ];
-
+        "/services","
+        "/contact","
+        "/ai-solutions","
+        "/it-services","
+        "/about","
+        "/blog"];"
       prefetchLinks.forEach((href) => {
-        const existingLink = document.querySelector(`link[href="${href}"]`);
+        const existingLink = document.querySelector(`link[href="${href}"]`);"
         if (!existingLink) {
-          const link = document.createElement('link');
-          link.rel = 'prefetch';
+          const link = document.createElement("link");"
+          link.rel = "prefetch";"
           link.href = href;
-          document.head.appendChild(link);
-        }
-      });
-    }
-<<<<<<< HEAD
->>>>>>> origin/main
+          document.head.appendChild(link)}})}
     // Run optimizations;
     optimizeImages()
     optimizeFonts()
     optimizeResources()
     // Cleanup function;
-<<<<<<< HEAD
-    return () => {// Cleanup if needed}
-  }, [])
-=======
-    return () => { // Cleanup if needed; }
-  }, []);
->>>>>>> origin/main
-  return <>{children}</>
-}
-export default PerformanceOptimizer;
-        const link = document.createElement('link')'
-        link.rel = 'preload''
+    return () => {// Cleanup if needed}}, [])
+    return () => { // Cleanup if needed}}, []);
+  return <>{children}</>}
+
+        const link = document.createElement("link")""
+        link.rel = "preload""
         link.href = resource
-        link.as = resource.endsWith('.css') ? 'style' : 'script''
+        link.as = resource.endsWith(".css") ? "style" : "script""
         document.head.appendChild(link)}
     // Run optimizations
     optimizeImages()
@@ -202,79 +155,46 @@ export default PerformanceOptimizer;
     // Cleanup function
     return () => {
       // Cleanup if needed}}, [])
-  return <>{children}</>
-}
+  return <>{children}</>}
 export default PerformanceOptimizer
-      // Cleanup if needed;}
-  }, [])
-  return <>{children}</>
-<<<<<<< HEAD
-}
-export default PerformanceOptimizer';
-=======
-=======
-
+      // Cleanup if needed}}, [])
+  return <>{children}</>}
+export default PerformanceOptimizer";"
     // Add resource hints
     if (enableResourceHints) {
       const dnsPrefetchDomains = [
-        'fonts.googleapis.com',
-        'fonts.gstatic.com',
-        'cdnjs.cloudflare.com',
-      ];
-
+        "fonts.googleapis.com","
+        "fonts.gstatic.com","
+        "cdnjs.cloudflare.com"];"
       dnsPrefetchDomains.forEach((domain) => {
-        const existingLink = document.querySelector(`link[href="//${domain}"]`);
+        const existingLink = document.querySelector(`link[href="//${domain}"]`);"
         if (!existingLink) {
-          const link = document.createElement('link');
-          link.rel = 'dns-prefetch';
+          const link = document.createElement("link");"
+          link.rel = "dns-prefetch";"
           link.href = `//${domain}`;
-          document.head.appendChild(link);
-        }
-      });
-    }
-
+          document.head.appendChild(link)}})}
     // Preload critical fonts
     if (enableCriticalCSS) {
       const fontPreloads = [
         {
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-          as: 'style',
-        },
-      ];
-
+          href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap","
+          as: "style"}];"
       fontPreloads.forEach((font) => {
-        const existingLink = document.querySelector(`link[href="${font.href}"]`);
+        const existingLink = document.querySelector(`link[href="${font.href}"]`);"
         if (!existingLink) {
-          const link = document.createElement('link');
-          link.rel = 'preload';
+          const link = document.createElement("link");"
+          link.rel = "preload";"
           link.href = font.href;
           link.as = font.as;
-          document.head.appendChild(link);
-        }
-      });
-    }
-
+          document.head.appendChild(link)}})}
     // Performance monitoring
-    if (typeof window !== 'undefined' && 'performance' in window) {
+    if (typeof window !== "undefined" && "performance" in window) {"
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
+          if (entry.entryType === "largest-contentful-paint") {"
+            console.log("LCP:", entry.startTime)}"
+          if (entry.entryType === "first-input") {"
             const fidEntry = entry as PerformanceEventTiming;
-            console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
-    }
-  }, [enableImageOptimization, enableLazyLoading, enableCodeSplitting, enablePrefetching, enableCriticalCSS, enableResourceHints]);
-
-  return <>{children}</>;
->>>>>>> origin/main
-};
-
-export default PerformanceOptimizer;
->>>>>>> origin/main
+            console.log("FID:", fidEntry.processingStart - fidEntry.startTime)}})});"
+      observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"]})}}, [enableImageOptimization, enableLazyLoading, enableCodeSplitting, enablePrefetching, enableCriticalCSS, enableResourceHints]);"
+  return <>{children}</>};

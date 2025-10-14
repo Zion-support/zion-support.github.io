@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-'use client';
+"use client";
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet} from "react-helmet-async";
 
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
->>>>>>> origin/main
+import React from "react";
+import { Helmet} from "react-helmet-async";
+"use client";
 const EnhancedFooter: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -17,12 +13,9 @@ const EnhancedFooter: React.FC = () => {
         <title>Enhanced Footer - Zion Tech Group</title>
         <meta name="description" content="Professional enhanced footer services by Zion Tech Group." />
       </Helmet>
-<<<<<<< HEAD
       
       {/* Hero Section */}
-=======
-      { /* Hero Section */ }
->>>>>>> origin/main
+      { /* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -34,16 +27,12 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-<<<<<<< HEAD
+  )};
 
 export default EnhancedFooter;
-=======
 export default EnhancedFooter;
 export default EnhancedFooter;
-'
-=======
+"
 import React from "react";
 
 const EnhancedFooter: React.FC = () => {
@@ -52,9 +41,6 @@ const EnhancedFooter: React.FC = () => {
       <h2 className="text-xl font-semibold text-white">Enhanced Footer</h2>
       <p className="text-gray-300">This is the enhanced footer component.</p>
     </div>
-  );
-};
+  )};
 
 export default EnhancedFooter;
->>>>>>> origin/main
->>>>>>> origin/main

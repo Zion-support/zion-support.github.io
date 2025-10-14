@@ -1,32 +1,27 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";"
+import path from "path";"
+import { fileURLToPath} from "url";"
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 function cleanupMergeMarkers(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, "utf8");"
     const originalContent = content;
     // Remove merge conflict markers
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
-    content = content.replace(/    
+    content = content.replace(/\n?/g, ");"
+    content = content.replace(/\n?/g, ");"
+    content = content.replace(/
     // Clean up extra whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/gm, '');
+    content = content.replace(/\n\s*\n\s*\n/g, "\n\n");"
+    content = content.replace(/^\s*\n/gm, ");"
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`Cleaned merge markers from: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
+      return true}
+    return false} catch (error) {
     console.error(`Error cleaning ${filePath}:`, error.message);
-    return false;
-  }
-}
+    return false}}
 function findFilesWithMergeMarkers(dir) {
   const files = [];
   function traverse(currentDir) {
@@ -34,36 +29,23 @@ function findFilesWithMergeMarkers(dir) {
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git')) {
-        traverse(fullPath);
-      } else if (stat.isFile() && /\.(tsx?|jsx?|ts|js)$/.test(item)) {
+      if (stat.isDirectory() && !item.includes("node_modules") && !item.includes(".git")) {"
+        traverse(fullPath)} else if (stat.isFile() && /\.(tsx?|jsx?|ts|js)$/.test(item)) {
         try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
-            files.push(fullPath);
-          }
-        } catch (error) { // Skip files that can't be read }
-      }
-    }
-  }
+          const content = fs.readFileSync(fullPath, "utf8");"
+          if (content.includes(") || content.includes(") || content.includes("            files.push(fullPath)}} catch (error) { // Skip files that can"t be read}}}}"
   traverse(dir);
-  return files;
-}
+  return files}
 // Main execution
 const projectRoot = process.cwd();
-console.log('Searching for files with merge conflict markers...');
+console.log("Searching for files with merge conflict markers...");"
 const filesWithMarkers = findFilesWithMergeMarkers(projectRoot);
 console.log(`Found ${filesWithMarkers.length} files with merge conflict markers`);
 let cleanedCount = 0;
 for (const file of filesWithMarkers) {
   if (cleanupMergeMarkers(file)) {
-    cleanedCount++;
-  }
-}
+    cleanedCount++}}
 console.log(`Cleaned merge markers from ${cleanedCount} files`);
-=======
 // cleanup-merge-markers - Basic implementation
 export default function cleanup-merge-markers() {
-  return null;
-}
->>>>>>> origin/main
+  return null}

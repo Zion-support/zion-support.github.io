@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 
-import { Link } from 'react-router-dom';
-import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
+import { Link} from "react-router-dom";
+import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand} from "lucide-react";
+import EnhancedSEO from "../components/EnhancedSEO";
 
 const AIHolographicWorkspace = () => {
   const features = [
@@ -10,27 +9,22 @@ const AIHolographicWorkspace = () => {
       title: "3D Holographic Display",
       description: "Immersive 3D holographic interface that projects data and applications into your physical space.",
       icon: <Monitor className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
+      color: "from-blue-500 to-cyan-500"},
     {
       title: "Remote Collaboration",
       description: "Seamless collaboration with team members in shared holographic workspaces from anywhere in the world.",
       icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
+      color: "from-purple-500 to-pink-500"},
     {
       title: "Data Visualization",
       description: "Transform complex data into interactive 3D visualizations that you can manipulate with gestures.",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
+      color: "from-green-500 to-emerald-500"},
     {
       title: "Gesture Control",
       description: "Control your holographic workspace with natural hand gestures and eye tracking technology.",
       icon: <Hand className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
+      color: "from-orange-500 to-red-500"}];
 
   const capabilities = [
     "3D holographic projection technology",
@@ -44,8 +38,7 @@ const AIHolographicWorkspace = () => {
     "Virtual whiteboard and sketching",
     "3D model manipulation and editing",
     "Spatial computing applications",
-    "Immersive presentation capabilities"
-  ];
+    "Immersive presentation capabilities"];
 
   const pricingPlans = [
     {
@@ -59,10 +52,8 @@ const AIHolographicWorkspace = () => {
         "Gesture control interface",
         "Basic data visualization",
         "Email support",
-        "10GB holographic storage"
-      ],
-      popular: false
-    },
+        "10GB holographic storage"],
+      popular: false},
     {
       name: "Holographic Professional",
       price: "$799",
@@ -76,10 +67,8 @@ const AIHolographicWorkspace = () => {
         "Priority support",
         "100GB holographic storage",
         "API access",
-        "Custom workspace templates"
-      ],
-      popular: true
-    },
+        "Custom workspace templates"],
+      popular: true},
     {
       name: "Holographic Enterprise",
       price: "$1,599",
@@ -93,11 +82,8 @@ const AIHolographicWorkspace = () => {
         "Dedicated support team",
         "Unlimited holographic storage",
         "Advanced security protocols",
-        "SLA guarantee"
-      ],
-      popular: false
-    }
-  ];
+        "SLA guarantee"],
+      popular: false}];
 
   const testimonials = [
     {
@@ -106,36 +92,29 @@ const AIHolographicWorkspace = () => {
       role: "Research Director",
       content: "The holographic workspace has revolutionized how we collaborate. The 3D data visualization capabilities are absolutely mind-blowing.",
       rating: 5,
-      avatar: "AT"
-    },
+      avatar: "AT"},
     {
       name: "Maria Rodriguez",
       company: "Design Innovation Co.",
       role: "Creative Director",
       content: "Working in 3D space has completely changed our design process. We can now visualize and iterate on concepts in ways we never thought possible.",
       rating: 5,
-      avatar: "MR"
-    },
+      avatar: "MR"},
     {
       name: "James Chen",
       company: "Global Engineering Solutions",
       role: "CTO",
-      content: "The remote collaboration features are incredible. Our distributed team feels like they're working in the same room, even across continents.",
+      content: "The remote collaboration features are incredible. Our distributed team feels like they"re working in the same room, even across continents.",
       rating: 5,
-      avatar: "JC"
-    }
-  ];
+      avatar: "JC"}];
 
   const stats = [
-    { number: "360°", label: "Field of View", icon: <Eye className="w-6 h-6" /> },
-    { number: "4K", label: "Holographic Resolution", icon: <Monitor className="w-6 h-6" /> },
-    { number: "50+", label: "Concurrent Users", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
-  ];
-=======
+    { number: "360°", label: "Field of View", icon: <Eye className="w-6 h-6" />},
+    { number: "4K", label: "Holographic Resolution", icon: <Monitor className="w-6 h-6" />},
+    { number: "50+", label: "Concurrent Users", icon: <Users className="w-6 h-6" />},
+    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" />}];
 import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> origin/main
+import { Helmet} from "react-helmet-async";
 
 const HomePage = () => {
   return (
@@ -153,7 +132,6 @@ const HomePage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default HomePage;

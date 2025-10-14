@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 
 
-import { ArrowRight, BarChart3, Shield, CheckCircle, TrendingUp, DollarSign, Activity, Target } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+import { ArrowRight, BarChart3, Shield, CheckCircle, TrendingUp, DollarSign, Activity, Target} from "lucide-react";
+import EnhancedSEO from "../components/EnhancedSEO";
+import ResponsiveContainer from "../components/ResponsiveContainer";
+import FuturisticCard from "../components/FuturisticCard";
+import FuturisticButton from "../components/FuturisticButton";
 
 const AIFinancialAnalysis = () => {
   const features = [
@@ -13,27 +12,22 @@ const AIFinancialAnalysis = () => {
       title: "Predictive Financial Modeling",
       description: "Build accurate financial models and forecasts using AI",
       icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
+      color: "from-blue-500 to-cyan-500"},
     {
       title: "Risk Assessment",
       description: "Advanced risk analysis and portfolio optimization",
       icon: <Shield className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
+      color: "from-green-500 to-emerald-500"},
     {
       title: "Real-time Market Analysis",
       description: "Monitor market trends and make informed decisions",
       icon: <Activity className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
+      color: "from-purple-500 to-pink-500"},
     {
       title: "Automated Reporting",
       description: "Generate comprehensive financial reports automatically",
       icon: <FileText className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
+      color: "from-orange-500 to-red-500"}];
 
   const benefits = [
     "50% more accurate predictions",
@@ -41,12 +35,9 @@ const AIFinancialAnalysis = () => {
     "Automated risk assessment",
     "Comprehensive financial reporting",
     "Portfolio optimization",
-    "Regulatory compliance"
-  ];
-=======
+    "Regulatory compliance"];
 import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> origin/main
+import { Helmet} from "react-helmet-async";
 
 const HomePage = () => {
   return (
@@ -64,7 +55,6 @@ const HomePage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default HomePage;

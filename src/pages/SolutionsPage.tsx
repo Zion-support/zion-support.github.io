@@ -1,18 +1,15 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from "react";
+import { Helmet} from "react-helmet-async";
 const SolutionsPage: React.FC = () => { return (
   <>
       <Helmet></Helmet>
-=======
 import React from "react"
-import { Helmet } from "react-helmet-async"
+import { Helmet} from "react-helmet-async"
 
 const SolutionsPage: React.FC = () => {
   return (
     <div>
       <Helmet>
->>>>>>> origin/main
         <title>Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI and IT solutions by Zion Tech Group." />
       </Helmet>
@@ -106,16 +103,11 @@ const SolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
 )
     </>)
-  ); }
-}
+  )}}
 export default SolutionsPag;e;
-=======
     </div>
-  )
-}
+  )}
 
 export default SolutionsPage
->>>>>>> origin/main

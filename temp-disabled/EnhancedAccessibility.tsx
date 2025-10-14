@@ -1,26 +1,24 @@
-import React from 'react';'react''''
+import React from 'react';'react'''''
 interface EnhancedAccessibilityProps {}
   children: "Node"}"""
 const EnhancedAccessibility: React.FC = () => {"}""
   const [settings, setSettings] = useState<AccessibilitySettings>({}
     highContrast: "false","""
-    fontSize: 'normal',''''
+    fontSize: 'normal','''''
     reducedMotion: "false","""
-    screenReader: "false""""
-  })
+    screenReader: "false""})"
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {}, [])
     // Enhanced accessibility features
     const addSkipLinks = () => {}
-      const skipLink = document.createElement('a')''''
-      skipLink.href = '#main-content'''''
-      skipLink.textContent = 'Skip to main content'''''
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'''''
-      document.body.insertBefore(skipLink, document.body.firstChild)
-    }
+      const skipLink = document.createElement('a')'''''
+      skipLink.href = '#main-content''''''
+      skipLink.textContent = 'Skip to main content''''''
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50''''''
+      document.body.insertBefore(skipLink, document.body.firstChild)}
     const enhanceFocusManagement = () => {}
       // Add focus indicators
-      const style = document.createElement('style')''''
+      const style = document.createElement('style')'''''
       style.textContent = `
         *:focus {}
           outline: 2px solid #06b6d4 !important
@@ -34,37 +32,29 @@ const EnhancedAccessibility: React.FC = () => {"}""
           overflow: hidden
           clip: "rect(0", 0, 0, 0)"""
           white-space: nowrap
-          border: "0""""
-        }
+          border: "0""}"
       `
-      document.head.appendChild(style)
-    }
+      document.head.appendChild(style)}
     const addAriaLabels = () => {}
       // Add ARIA labels to interactive elements
-      const buttons = document.querySelectorAll('button:not([aria-label])')''''
+      const buttons = document.querySelectorAll('button:not([aria-label])')'''''
       buttons.forEach((button) => {}
         if (!button.textContent?.trim()) {}
-          button.setAttribute('aria-label', 'Button')}''''
-      })
+          button.setAttribute('aria-label', 'Button')}''''})'
     // Apply accessibility settings
     applyAccessibilitySettings(settings)
     // Listen for system preference changes
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')''''
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')'''''
     const handleChange = () => {}
-      setSettings(prev => ({ ...prev, reducedMotion: "mediaQuery.matches"}))"""
-    }
-    mediaQuery.addEventListener('change', handleChange)''''
+      setSettings(prev => ({ ...prev, reducedMotion: "mediaQuery.matches"}))""}"
+    mediaQuery.addEventListener('change', handleChange)'''''
     const setupKeyboardNavigation = () => {}
       // Enhanced keyboard navigation
-      document.addEventListener('keydown', (e) => {''}'''
-        if (e.key === 'Tab') {''}'''
-          document.body.classList.add('keyboard-navigation')''''
-        }
-      })
-      document.addEventListener('mousedown', () => {''}'''
-        document.body.classList.remove('keyboard-navigation')''''
-      })
-    }
+      document.addEventListener('keydown', (e) => {''}''''
+        if (e.key === 'Tab') {''}''''
+          document.body.classList.add('keyboard-navigation')''''}})'
+      document.addEventListener('mousedown', () => {''}''''
+        document.body.classList.remove('keyboard-navigation')''''})}'
     // Initialize accessibility enhancements
     addSkipLinks()
     enhanceFocusManagement()
@@ -72,42 +62,34 @@ const EnhancedAccessibility: React.FC = () => {"}""
     setupKeyboardNavigation()
     // Cleanup
     return () => {}
-      // Cleanup if needed
-    }
-  }, [])
+      // Cleanup if needed}}, [])
   useEffect(() => {}, [])
     applyAccessibilitySettings(settings)
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])''''
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])'''''
   const applyAccessibilitySettings = (settings: "AccessibilitySettings) => {"}""
     const root = document.documentElement
     // Apply high contrast
     if (settings.highContrast) {}
-      root.classList.add('high-contrast')} else {'}'''
-      root.classList.remove('high-contrast')}''''
+      root.classList.add('high-contrast')} else {'}''''
+      root.classList.remove('high-contrast')}'''''
     // Apply font size
-    root.classList.remove('font-size-small', 'font-size-large', 'font-size-extra-large')''''
-    if (settings.fontSize !== 'normal') {'}'''
+    root.classList.remove('font-size-small', 'font-size-large', 'font-size-extra-large')'''''
+    if (settings.fontSize !== 'normal') {'}''''
       root.classList.add(`font-size-${settings.fontSize}`)}
     // Apply reduced motion
     if (settings.reducedMotion) {}
-      root.classList.add('reduced-motion')''''
-    } else {}
-      root.classList.remove('reduced-motion')''''
-    }
-  }
+      root.classList.add('reduced-motion')''''} else {}'
+      root.classList.remove('reduced-motion')''''}}'
   const toggleHighContrast = () => {}
-    setSettings(prev => ({ ...prev, highContrast: "!prev.highContrast"}))"""
-  }
-  const setFontSize = (size: "AccessibilitySettings['fontSize']) => {'"}'''
-    setSettings(prev => ({ ...prev, fontSize: "size"}))"""
-  }
+    setSettings(prev => ({ ...prev, highContrast: "!prev.highContrast"}))""}"
+  const setFontSize = (size: "AccessibilitySettings['fontSize']) => {'"}'''"'
+    setSettings(prev => ({ ...prev, fontSize: "size"}))""}"
   const toggleVisibility = () => {}
-    setIsVisible(prev => !prev)
-  }
+    setIsVisible(prev => !prev)}
   // Add CSS for accessibility features
   useEffect(() => {}, [])
-    const style = document.createElement('style')''''
-    style.id = 'enhanced-accessibility-styles'''''
+    const style = document.createElement('style')'''''
+    style.id = 'enhanced-accessibility-styles''''''
     style.textContent = `
       .high-contrast {}
         filter: "contrast(150%) brightness(110%)"}"""
@@ -156,72 +138,81 @@ const EnhancedAccessibility: React.FC = () => {"}""
     `
     document.head.appendChild(style)
     return () => {}
-      const existingStyle = document.getElementById('enhanced-accessibility-styles')''''
+      const existingStyle = document.getElementById('enhanced-accessibility-styles')'''''
       if (existingStyle) {}
-        existingStyle.remove()
-      }
-    }
-  }, [])
+        existingStyle.remove()}}}, [])
   return (
-    <>
+    <></></</>
       <button
-        className="accessibility-toggle"""""
+        className="accessibility-toggle""""
         onClick={toggleVisibility}
-        aria-label="Toggle accessibility options"""""
-        title="Accessibility Options"""""
-      >
+        aria-label="Toggle accessibility options""""
+        title="Accessibility Options""""></button
+        className="accessibility-toggle""""
+        onClick={toggleVisibility}
+        aria-label="Toggle accessibility options""""
+        title="Accessibility Options""""></</button
+        className="accessibility-toggle""""
+        onClick={toggleVisibility}
+        aria-label="Toggle accessibility options""""
+        title="Accessibility Options"""">
         ♿ A11y
-      </button>
-      <div className={`accessibility-panel ${isVisible ? 'visible' : ''}`}>''''
-        <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>""""
-        <div className="space-y-4">""""
-          <div>
-            <label className="flex items-center space-x-2">""""
+      </button><//button></<//button>
+      <div className={`accessibility-panel ${isVisible ? 'visible' : ''}`}>'''''
+        <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>"""
+        <div className="space-y-4">"""
+          <div></div></</div>
+            <label className="flex items-center space-x-2">"""
               <input
-                type="checkbox"""""
+                type="checkbox""""
                 checked={settings.highContrast}
                 onChange={toggleHighContrast}
-                className="rounded"""""
+                className="rounded""""
+              /></input
+                type="checkbox""""
+                checked={settings.highContrast}
+                onChange={toggleHighContrast}
+                className="rounded""""
+              /></</input
+                type="checkbox""""
+                checked={settings.highContrast}
+                onChange={toggleHighContrast}
+                className="rounded""""
               />
-              <span>High Contrast</span>
-            </label>
-          </div>
-          <div>
-            <label className="block text-sm font-medium mb-2">Font Size</label>""""
-            <div className="space-y-2">""""
-              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('}'''
-                <label key={size} className="flex items-center space-x-2">""""
+              <span>High Contrast</span></label><//label></div><//div></<//div>
+          <div></div></</div>
+            <label className="block text-sm font-medium mb-2">Font Size</label>"""
+            <div className="space-y-2">"""
+              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('}''''
+                <label key={size} className="flex items-center space-x-2">"""
                   <input
-                    type="radio"""""
-                    name="fontSize"""""
+                    type="radio""""
+                    name="fontSize""""
                     value={size}
                     checked={settings.fontSize === size}
                     onChange={() => setFontSize(size)}
-                    className="rounded"""""
+                    className="rounded""""
                   />
-                  <span className="capitalize">{size}</span>""""
-                </label>
+                  <span className="capitalize">{size}</span>"""
+                </label><//label></<//label>
               ))}
-            </div>
-          </div>
-          <div>
-            <p className="text-sm text-gray-300">""""
-              Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}''''
-            </p>
-            <p className="text-sm text-gray-300">""""
-              Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}''''
-            </p>
-          </div>
+            </div></div><//div></<//div>
+          <div></div></</div>
+            <p className="text-sm text-gray-300">"""
+              Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}'''''
+            </p><//p></<//p>
+            <p className="text-sm text-gray-300">"""
+              Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}'''''
+            </p></div><//div></<//div>
           <button
             onClick={toggleVisibility}
-            className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors"""""
-          >
+            className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors""""></button
+            onClick={toggleVisibility}
+            className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors""""></</button
+            onClick={toggleVisibility}
+            className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors"""">
             Close
-          </button>
-        </div>
-      </div>
-    </>
-  )
-}
+          </button></div><//div></div></><//></<//>
+  )}
 export default EnhancedAccessibility
-</AccessibilitySettings>
+</AccessibilitySettings><//AccessibilitySettings></<//AccessibilitySettings>

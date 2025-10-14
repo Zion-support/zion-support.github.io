@@ -1,44 +1,39 @@
-import { memo } from "react"
-import { Link } from "react-router-dom"
-import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from "lucide-react"
+import { memo} from "react"
+import { Link} from "react-router-dom"
+import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github} from "lucide-react"
 
 const Footer = memo(() => {
   const services = [
-    { name: "AI Services", url: "/ai-services" },
-    { name: "IT Solutions", url: "/it-services" },
-    { name: "Cloud Services", url: "/cloud-services" },
-    { name: "Cybersecurity", url: "/cybersecurity" }
-  ]
+    { name: "AI Services", url: "/ai-services"},
+    { name: "IT Solutions", url: "/it-services"},
+    { name: "Cloud Services", url: "/cloud-services"},
+    { name: "Cybersecurity", url: "/cybersecurity"}]
 
   const solutions = [
-    { name: "Quantum Computing", url: "/quantum-computing" },
-    { name: "Autonomous Systems", url: "/autonomous-systems" },
-    { name: "Blockchain Web3", url: "/blockchain-web3" },
-    { name: "IoT Edge Computing", url: "/iot-edge-computing" }
-  ]
+    { name: "Quantum Computing", url: "/quantum-computing"},
+    { name: "Autonomous Systems", url: "/autonomous-systems"},
+    { name: "Blockchain Web3", url: "/blockchain-web3"},
+    { name: "IoT Edge Computing", url: "/iot-edge-computing"}]
 
   const company = [
-    { name: "About Us", url: "/about" },
-    { name: "Team", url: "/team" },
-    { name: "Careers", url: "/careers" },
-    { name: "News", url: "/news" }
-  ]
+    { name: "About Us", url: "/about"},
+    { name: "Team", url: "/team"},
+    { name: "Careers", url: "/careers"},
+    { name: "News", url: "/news"}]
 
   const support = [
-    { name: "Documentation", url: "/documentation" },
-    { name: "Support", url: "/support" },
-    { name: "FAQ", url: "/faq" },
-    { name: "Contact", url: "/contact" }
-  ]
+    { name: "Documentation", url: "/documentation"},
+    { name: "Support", url: "/support"},
+    { name: "FAQ", url: "/faq"},
+    { name: "Contact", url: "/contact"}]
 
   const socialLinks = [
-    { name: "Facebook", icon: Facebook, url: "#" },
-    { name: "Twitter", icon: Twitter, url: "#" },
-    { name: "LinkedIn", icon: Linkedin, url: "#" },
-    { name: "Instagram", icon: Instagram, url: "#" },
-    { name: "YouTube", icon: Youtube, url: "#" },
-    { name: "GitHub", icon: Github, url: "#" }
-  ]
+    { name: "Facebook", icon: Facebook, url: "#"},
+    { name: "Twitter", icon: Twitter, url: "#"},
+    { name: "LinkedIn", icon: Linkedin, url: "#"},
+    { name: "Instagram", icon: Instagram, url: "#"},
+    { name: "YouTube", icon: Youtube, url: "#"},
+    { name: "GitHub", icon: Github, url: "#"}]
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -49,12 +44,10 @@ const Footer = memo(() => {
             <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
             <p className="text-sm text-cyan-400">AI & IT Solutions</p>
             <p className="text-gray-300 text-sm leading-relaxed">
-<<<<<<< HEAD
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
               and digital transformation services. Transform your business with cutting-edge technology.;
-                  <to={ service.url }
+                  <to={ service.url}
                     className="service-card"
-=======
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems,
               and digital transformation services. Transform your business with cutting-edge technology.
             </p>
@@ -69,7 +62,6 @@ const Footer = memo(() => {
                   <Link
                     to={service.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
->>>>>>> origin/main
                   >
                     {service.name}
                   </Link>
@@ -80,11 +72,9 @@ const Footer = memo(() => {
                   to="/services"
                   className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"
                 >
-<<<<<<< HEAD
                   View All AI Services →;
-                  <to={ service.url }
+                  <to={ service.url}
                     className="service-card"
-=======
                   View All AI Services
                   <Right className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -101,7 +91,6 @@ const Footer = memo(() => {
                   <Link
                     to={solution.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
->>>>>>> origin/main
                   >
                     {solution.name}
                   </Link>
@@ -112,18 +101,17 @@ const Footer = memo(() => {
                   to="/solutions"
                   className="text-cyan-400 hover:text-white transition-colors duration-300 text-sm flex items-center group"
                 >
-<<<<<<< HEAD
                 <to="$1"
                 className="service-card"
               >
                 View All Solutions;
                 <Right className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" /></Right>
-                <div className="text-white font-medium">{ contactInfo.hours }
+                <div className="text-white font-medium">{ contactInfo.hours}
                 <div className="text-gray-400 text-sm">Business hours;
-                  <to={ link.url }
+                  <to={ link.url}
                     className="service-card"
                   >
-                  <to={ link.url }
+                  <to={ link.url}
                     className="service-card"
                   >
               <li><to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</>
@@ -136,11 +124,9 @@ const Footer = memo(() => {
                 Terms of Service;
               <to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy;
-  );
-});
+  )});
 Footer.displayName = &apos;Footer&apos;
 export default Foote;r;
-=======
                   View All Solutions
                   <Right className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -212,10 +198,8 @@ export default Foote;r;
         </div>
       </div>
     </footer>
-  )
-})
+  )})
 
 Footer.displayName = "Footer"
 
 export default Footer
->>>>>>> origin/main

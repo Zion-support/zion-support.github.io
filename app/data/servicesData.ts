@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 export interface Service {id: string;
-=======
-<<<<<<< HEAD
 export interface Service {
   id: string;
->>>>>>> origin/main
   title: string;
   description: string;
   shortDescription: string;
-  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | "IoT"
+  category: "AI" | "IT" | "SaaS" | "Cybersecurity" | "Cloud" | "5G" | "Blockchain" | "IoT""
   icon: string;
   features: string[];
   pricing: {
@@ -21,514 +17,409 @@ export interface Service {
   contactInfo: {phone: string;
     email: string;
     website: string}
-  href: string;
-}
-
+  href: string}
 export const services: Service[] = [
   {
-    id: 'ai-solutions','
-    title: 'AI Solutions','
-    description: 'Comprehensive artificial intelligence solutions including machine learning, natural language processing, computer vision, and predictive analytics to transform your business operations.','
-    shortDescription: 'Advanced AI solutions for business transformation','
-    category: 'AI','
-    icon: 'CpuChipIcon','
+    id: "ai-solutions",""
+    title: "AI Solutions",""
+    description: "Comprehensive artificial intelligence solutions including machine learning, natural language processing, computer vision, and predictive analytics to transform your business operations.",""
+    shortDescription: "Advanced AI solutions for business transformation",""
+    category: "AI",""
+    icon: "CpuChipIcon",""
     features: [
-      'Machine Learning Models','
-      'Natural Language Processing','
-      'Computer Vision','
-      'Predictive Analytics','
-      'AI Chatbots','
-      'Automated Decision Making''
-    ],
+      "Machine Learning Models",""
+      "Natural Language Processing",""
+      "Computer Vision",""
+      "Predictive Analytics",""
+      "AI Chatbots",""
+      "Automated Decision Making"],"
     pricing: {
       basic: 5000,
       pro: 15000,
-      enterprise: 50000
-    },
+      enterprise: 50000},
     benefits: [
-<<<<<<< HEAD
-      'Increased Efficiency','
-      'Cost Reduction','
-      'Better Decision Making','
-      'Automated Processes','
-      'Improved Customer Experience','
-      'Competitive Advantage''
-    ],
+      "Increased Efficiency",""
+      "Cost Reduction",""
+      "Better Decision Making",""
+      "Automated Processes",""
+      "Improved Customer Experience",""
+      "Competitive Advantage"],"
     useCases: [
-      'Customer Service Automation','
-      'Predictive Maintenance','
-      'Fraud Detection','
-      'Content Generation','
-      'Data Analysis','
-      'Process Optimization''
-    ],
+      "Customer Service Automation",""
+      "Predictive Maintenance",""
+      "Fraud Detection",""
+      "Content Generation",""
+      "Data Analysis",""
+      "Process Optimization"],"
     technologies: [
-      'TensorFlow','
-      'PyTorch','
-      'OpenAI GPT','
-      'Hugging Face','
-      'Scikit-learn','
-      'Pandas','
-      'NumPy''
-    ],
+      "TensorFlow",""
+      "PyTorch",""
+      "OpenAI GPT",""
+      "Hugging Face",""
+      "Scikit-learn",""
+      "Pandas",""
+      "NumPy"],"
     contactInfo: {
-      phone: '+1-302-464-0950','
-      email: 'ai@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/ai-solutions''
-=======
-      'Increased Efficiency',
-      'Cost Reduction',
-      'Better Decision Making',
-      'Automated Processes',
-<<<<<<< HEAD
-=======
-      'Improved Customer Experience',
->>>>>>> origin/main
-      'Competitive Advantage'
-    ],
+      phone: "+1-302-464-0950",""
+      email: "ai@ziontechgroup.com",""
+      website: "https://ziontechgroup.com/ai-solutions""
+      "Increased Efficiency","
+      "Cost Reduction","
+      "Better Decision Making","
+      "Automated Processes","
+      "Improved Customer Experience","
+      "Competitive Advantage"],"
     useCases: [
-      'Customer Service Automation',
-      'Predictive Maintenance',
-      'Fraud Detection',
-      'Content Generation',
-<<<<<<< HEAD
-      'Data Analysis'
-=======
-      'Data Analysis',
-      'Process Optimization'
->>>>>>> origin/main
-    ],
+      "Customer Service Automation","
+      "Predictive Maintenance","
+      "Fraud Detection","
+      "Content Generation","
+      "Data Analysis""
+      "Data Analysis","
+      "Process Optimization"],"
     technologies: [
-      'TensorFlow',
-      'PyTorch',
-      'OpenAI GPT',
-<<<<<<< HEAD
-      'Computer Vision APIs',
-      'Natural Language Processing'
-    ],
+      "TensorFlow","
+      "PyTorch","
+      "OpenAI GPT","
+      "Computer Vision APIs","
+      "Natural Language Processing"],"
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
-=======
-      'Hugging Face',
-      'Scikit-learn',
-      'Pandas',
-      'NumPy'
-    ],
+      phone: "+1-302-464-0950","
+      email: "kleber@ziontechgroup.com","
+      website: "https://ziontechgroup.com""
+      "Hugging Face","
+      "Scikit-learn","
+      "Pandas","
+      "NumPy"],"
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'ai@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/ai-solutions'
->>>>>>> origin/main
->>>>>>> origin/main
-    },
-    href: '/ai-solutions''
-  },
+      phone: "+1-302-464-0950","
+      email: "ai@ziontechgroup.com","
+      website: "https://ziontechgroup.com/ai-solutions"},"
+    href: "/ai-solutions"},"
   {
-<<<<<<< HEAD
-    id: 'cybersecurity','
-    title: 'Cybersecurity','
-    description: 'Enterprise-grade cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management to protect your digital assets.','
-    shortDescription: 'Comprehensive cybersecurity protection','
-    category: 'Cybersecurity','
-    icon: 'ShieldCheckIcon','
+    id: "cybersecurity",""
+    title: "Cybersecurity",""
+    description: "Enterprise-grade cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management to protect your digital assets.",""
+    shortDescription: "Comprehensive cybersecurity protection",""
+    category: "Cybersecurity",""
+    icon: "ShieldCheckIcon",""
     features: [
-      'Threat Detection','
-      'Vulnerability Assessment','
-      'Security Monitoring','
-      'Compliance Management','
-      'Incident Response','
-      'Security Training''
-=======
-    id: 'cybersecurity',
-    title: 'Cybersecurity',
-<<<<<<< HEAD
-    description: 'Comprehensive cybersecurity solutions to protect your digital assets, including threat detection, vulnerability assessment, security monitoring, and incident response.',
-    shortDescription: 'Complete cybersecurity protection for your business',
-=======
-    description: 'Enterprise-grade cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management to protect your digital assets.',
-    shortDescription: 'Comprehensive cybersecurity protection',
->>>>>>> origin/main
-    category: 'Cybersecurity',
-    icon: 'ShieldCheckIcon',
+      "Threat Detection",""
+      "Vulnerability Assessment",""
+      "Security Monitoring",""
+      "Compliance Management",""
+      "Incident Response",""
+      "Security Training""
+    id: "cybersecurity","
+    title: "Cybersecurity","
+    description: "Comprehensive cybersecurity solutions to protect your digital assets, including threat detection, vulnerability assessment, security monitoring, and incident response.","
+    shortDescription: "Complete cybersecurity protection for your business","
+    description: "Enterprise-grade cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management to protect your digital assets.","
+    shortDescription: "Comprehensive cybersecurity protection","
+    category: "Cybersecurity","
+    icon: "ShieldCheckIcon","
     features: [
-      'Threat Detection',
-      'Vulnerability Assessment',
-      'Security Monitoring',
-<<<<<<< HEAD
-      'Incident Response',
-      'Security Training',
-      'Compliance Management'
-=======
-      'Compliance Management',
-      'Incident Response',
-      'Security Training'
->>>>>>> origin/main
->>>>>>> origin/main
-    ],
+      "Threat Detection","
+      "Vulnerability Assessment","
+      "Security Monitoring","
+      "Incident Response","
+      "Security Training","
+      "Compliance Management""
+      "Compliance Management","
+      "Incident Response","
+      "Security Training"],"
     pricing: {
       basic: 3000,
       pro: 10000,
-      enterprise: 30000
-    },
+      enterprise: 30000},
     benefits: [
-<<<<<<< HEAD
-      'Enhanced Security','
-      'Compliance Assurance','
-      'Risk Mitigation','
-      '24/7 Monitoring','
-      'Expert Support','
-      'Peace of Mind''
-    ],
+      "Enhanced Security",""
+      "Compliance Assurance",""
+      "Risk Mitigation",""
+      "24/7 Monitoring",""
+      "Expert Support",""
+      "Peace of Mind"],"
     useCases: [
-      'Network Security','
-      'Data Protection','
-      'Compliance Auditing','
-      'Threat Hunting','
-      'Security Awareness','
-      'Incident Management''
-=======
-      'Enhanced Security',
-<<<<<<< HEAD
-      'Risk Mitigation',
-      'Compliance Assurance',
-      'Peace of Mind',
-      'Cost Savings'
-=======
-      'Compliance Assurance',
-      'Risk Mitigation',
-      '24/7 Monitoring',
-      'Expert Support',
-      'Peace of Mind'
->>>>>>> origin/main
-    ],
+      "Network Security",""
+      "Data Protection",""
+      "Compliance Auditing",""
+      "Threat Hunting",""
+      "Security Awareness",""
+      "Incident Management""
+      "Enhanced Security","
+      "Risk Mitigation","
+      "Compliance Assurance","
+      "Peace of Mind","
+      "Cost Savings""
+      "Compliance Assurance","
+      "Risk Mitigation","
+      "24/7 Monitoring","
+      "Expert Support","
+      "Peace of Mind"],"
     useCases: [
-      'Network Security',
-      'Data Protection',
-<<<<<<< HEAD
-      'Access Control',
-      'Security Audits',
-      'Incident Response'
-    ],
+      "Network Security","
+      "Data Protection","
+      "Access Control","
+      "Security Audits","
+      "Incident Response"],"
     technologies: [
-      'SIEM Systems',
-      'Firewall Management',
-      'Intrusion Detection',
-      'Encryption',
-      'Multi-Factor Authentication'
-    ],
+      "SIEM Systems","
+      "Firewall Management","
+      "Intrusion Detection","
+      "Encryption","
+      "Multi-Factor Authentication"],"
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
-=======
-      'Compliance Auditing',
-      'Threat Hunting',
-      'Security Awareness',
-      'Incident Management'
->>>>>>> origin/main
-    ],
+      phone: "+1-302-464-0950","
+      email: "kleber@ziontechgroup.com","
+      website: "https://ziontechgroup.com""
+      "Compliance Auditing","
+      "Threat Hunting","
+      "Security Awareness","
+      "Incident Management"],"
     technologies: [
-      'SIEM','
-      'EDR','
-      'XDR','
-      'SOAR','
-      'NGFW','
-      'WAF','
-      'DLP''
-    ],
+      "SIEM",""
+      "EDR",""
+      "XDR",""
+      "SOAR",""
+      "NGFW",""
+      "WAF",""
+      "DLP"],"
     contactInfo: {
-<<<<<<< HEAD
-      phone: '+1-302-464-0950','
-      email: 'security@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/cybersecurity''
-=======
-      phone: '+1-302-464-0950',
-      email: 'security@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/cybersecurity'
->>>>>>> origin/main
->>>>>>> origin/main
-    },
-    href: '/cybersecurity''
-  },
+      phone: "+1-302-464-0950",""
+      email: "security@ziontechgroup.com",""
+      website: "https://ziontechgroup.com/cybersecurity""
+      phone: "+1-302-464-0950","
+      email: "security@ziontechgroup.com","
+      website: "https://ziontechgroup.com/cybersecurity"},"
+    href: "/cybersecurity"},"
   {
-<<<<<<< HEAD
-    id: 'cloud-infrastructure','
-    title: 'Cloud Infrastructure','
-    description: 'Scalable cloud infrastructure solutions including cloud migration, architecture design, DevOps implementation, and cloud management services.','
-    shortDescription: 'Scalable cloud infrastructure solutions','
-    category: 'Cloud','
-    icon: 'CloudIcon','
+    id: "cloud-infrastructure",""
+    title: "Cloud Infrastructure",""
+    description: "Scalable cloud infrastructure solutions including cloud migration, architecture design, DevOps implementation, and cloud management services.",""
+    shortDescription: "Scalable cloud infrastructure solutions",""
+    category: "Cloud",""
+    icon: "CloudIcon",""
     features: [
-      'Cloud Migration','
-      'Architecture Design','
-      'DevOps Implementation','
-      'Cloud Management','
-      'Auto-scaling','
-      'Disaster Recovery''
-=======
-    id: 'cloud-infrastructure',
-    title: 'Cloud Infrastructure',
-<<<<<<< HEAD
-    description: 'Scalable cloud infrastructure solutions including cloud migration, infrastructure management, DevOps automation, and cloud security to support your business growth.',
-    shortDescription: 'Scalable cloud infrastructure for modern businesses',
-=======
-    description: 'Scalable cloud infrastructure solutions including cloud migration, architecture design, DevOps implementation, and cloud management services.',
-    shortDescription: 'Scalable cloud infrastructure solutions',
->>>>>>> origin/main
-    category: 'Cloud',
-    icon: 'CloudIcon',
+      "Cloud Migration",""
+      "Architecture Design",""
+      "DevOps Implementation",""
+      "Cloud Management",""
+      "Auto-scaling",""
+      "Disaster Recovery""
+    id: "cloud-infrastructure","
+    title: "Cloud Infrastructure","
+    description: "Scalable cloud infrastructure solutions including cloud migration, infrastructure management, DevOps automation, and cloud security to support your business growth.","
+    shortDescription: "Scalable cloud infrastructure for modern businesses","
+    description: "Scalable cloud infrastructure solutions including cloud migration, architecture design, DevOps implementation, and cloud management services.","
+    shortDescription: "Scalable cloud infrastructure solutions","
+    category: "Cloud","
+    icon: "CloudIcon","
     features: [
-      'Cloud Migration',
-<<<<<<< HEAD
-      'Infrastructure Management',
-      'DevOps Automation',
-      'Cloud Security',
-      'Scalability Solutions',
-      'Cost Optimization'
-    ],
+      "Cloud Migration","
+      "Infrastructure Management","
+      "DevOps Automation","
+      "Cloud Security","
+      "Scalability Solutions","
+      "Cost Optimization"],"
     pricing: {
       basic: 2000,
       pro: 8000,
-      enterprise: 25000
-    },
+      enterprise: 25000},
     benefits: [
-      'Scalability',
-      'Cost Efficiency',
-      'Reliability',
-      'Flexibility',
-      'Global Reach'
-    ],
+      "Scalability","
+      "Cost Efficiency","
+      "Reliability","
+      "Flexibility","
+      "Global Reach"],"
     useCases: [
-      'Application Hosting',
-      'Data Storage',
-      'Backup Solutions',
-      'Disaster Recovery',
-      'Development Environments'
-    ],
+      "Application Hosting","
+      "Data Storage","
+      "Backup Solutions","
+      "Disaster Recovery","
+      "Development Environments"],"
     technologies: [
-      'AWS',
-      'Azure',
-      'Google Cloud',
-      'Docker',
-      'Kubernetes'
-    ],
+      "AWS","
+      "Azure","
+      "Google Cloud","
+      "Docker","
+      "Kubernetes"],"
     contactInfo: {
-      phone: '+1-302-464-0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com'
-    },
-    href: '/cloud-infrastructure'
-  }
-];
-=======
-      'Architecture Design',
-      'DevOps Implementation',
-      'Cloud Management',
-      'Auto-scaling',
-      'Disaster Recovery'
->>>>>>> origin/main
-    ],
+      phone: "+1-302-464-0950","
+      email: "kleber@ziontechgroup.com","
+      website: "https://ziontechgroup.com"},"
+    href: "/cloud-infrastructure"}];"
+      "Architecture Design","
+      "DevOps Implementation","
+      "Cloud Management","
+      "Auto-scaling","
+      "Disaster Recovery"],"
     pricing: {
       basic: 2000,
       pro: 8000,
-      enterprise: 25000
-    },
+      enterprise: 25000},
     benefits: [
-      'Scalability','
-      'Cost Efficiency','
-      'High Availability','
-      'Flexibility','
-      'Global Reach','
-      'Reduced Maintenance''
-    ],
+      "Scalability",""
+      "Cost Efficiency",""
+      "High Availability",""
+      "Flexibility",""
+      "Global Reach",""
+      "Reduced Maintenance"],"
     useCases: [
-      'Application Hosting','
-      'Data Storage','
-      'Backup Solutions','
-      'Development Environments','
-      'Production Workloads','
-      'Hybrid Cloud''
-    ],
+      "Application Hosting",""
+      "Data Storage",""
+      "Backup Solutions",""
+      "Development Environments",""
+      "Production Workloads",""
+      "Hybrid Cloud"],"
     technologies: [
-      'AWS','
-      'Azure','
-      'Google Cloud','
-      'Docker','
-      'Kubernetes','
-      'Terraform','
-      'Ansible''
-    ],
+      "AWS",""
+      "Azure",""
+      "Google Cloud",""
+      "Docker",""
+      "Kubernetes",""
+      "Terraform",""
+      "Ansible"],"
     contactInfo: {
-      phone: '+1-302-464-0950','
-      email: 'cloud@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/cloud-infrastructure''
-    },
-    href: '/cloud-infrastructure''
-  },
+      phone: "+1-302-464-0950",""
+      email: "cloud@ziontechgroup.com",""
+      website: "https://ziontechgroup.com/cloud-infrastructure"},"
+    href: "/cloud-infrastructure"},"
   {
-    id: 'digital-transformation','
-    title: 'Digital Transformation','
-    description: 'Complete digital transformation services including process automation, workflow optimization, system integration, and change management.','
-    shortDescription: 'Complete digital transformation services','
-    category: 'IT','
-    icon: 'RocketLaunchIcon','
+    id: "digital-transformation",""
+    title: "Digital Transformation",""
+    description: "Complete digital transformation services including process automation, workflow optimization, system integration, and change management.",""
+    shortDescription: "Complete digital transformation services",""
+    category: "IT",""
+    icon: "RocketLaunchIcon",""
     features: [
-      'Process Automation','
-      'Workflow Optimization','
-      'System Integration','
-      'Change Management','
-      'Digital Strategy','
-      'Technology Adoption''
-    ],
+      "Process Automation",""
+      "Workflow Optimization",""
+      "System Integration",""
+      "Change Management",""
+      "Digital Strategy",""
+      "Technology Adoption"],"
     pricing: {
       basic: 10000,
       pro: 30000,
-      enterprise: 100000
-    },
+      enterprise: 100000},
     benefits: [
-      'Improved Efficiency','
-      'Better Customer Experience','
-      'Increased Agility','
-      'Cost Reduction','
-      'Competitive Advantage','
-      'Future-Ready Operations''
-    ],
+      "Improved Efficiency",""
+      "Better Customer Experience",""
+      "Increased Agility",""
+      "Cost Reduction",""
+      "Competitive Advantage",""
+      "Future-Ready Operations"],"
     useCases: [
-      'Process Modernization','
-      'System Integration','
-      'Workflow Automation','
-      'Digital Strategy','
-      'Change Management','
-      'Technology Adoption''
-    ],
+      "Process Modernization",""
+      "System Integration",""
+      "Workflow Automation",""
+      "Digital Strategy",""
+      "Change Management",""
+      "Technology Adoption"],"
     technologies: [
-      'RPA','
-      'API Integration','
-      'Workflow Engines','
-      'Data Analytics','
-      'Cloud Platforms','
-      'Mobile Solutions','
-      'IoT Integration''
-    ],
+      "RPA",""
+      "API Integration",""
+      "Workflow Engines",""
+      "Data Analytics",""
+      "Cloud Platforms",""
+      "Mobile Solutions",""
+      "IoT Integration"],"
     contactInfo: {
-      phone: '+1-302-464-0950','
-      email: 'transformation@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/digital-transformation''
-    },
-    href: '/digital-transformation''
-  },
+      phone: "+1-302-464-0950",""
+      email: "transformation@ziontechgroup.com",""
+      website: "https://ziontechgroup.com/digital-transformation"},"
+    href: "/digital-transformation"},"
   {
-    id: '5g-solutions','
-    title: '5G Solutions','
-    description: 'Next-generation 5G solutions including network implementation, IoT connectivity, mobile optimization, and enterprise 5G services.','
-    shortDescription: 'Next-generation 5G solutions','
-    category: '5G','
-    icon: 'SignalIcon','
+    id: "5g-solutions",""
+    title: "5G Solutions",""
+    description: "Next-generation 5G solutions including network implementation, IoT connectivity, mobile optimization, and enterprise 5G services.",""
+    shortDescription: "Next-generation 5G solutions",""
+    category: "5G",""
+    icon: "SignalIcon",""
     features: [
-      'Network Implementation','
-      'IoT Connectivity','
-      'Mobile Optimization','
-      'Enterprise Services','
-      'Edge Computing','
-      'Network Slicing''
-    ],
+      "Network Implementation",""
+      "IoT Connectivity",""
+      "Mobile Optimization",""
+      "Enterprise Services",""
+      "Edge Computing",""
+      "Network Slicing"],"
     pricing: {
       basic: 15000,
       pro: 50000,
-      enterprise: 150000
-    },
+      enterprise: 150000},
     benefits: [
-      'Ultra-Fast Speeds','
-      'Low Latency','
-      'Massive Connectivity','
-      'Enhanced Mobility','
-      'Edge Computing','
-      'Future-Ready Infrastructure''
-    ],
+      "Ultra-Fast Speeds",""
+      "Low Latency",""
+      "Massive Connectivity",""
+      "Enhanced Mobility",""
+      "Edge Computing",""
+      "Future-Ready Infrastructure"],"
     useCases: [
-      'Smart Cities','
-      'Industrial IoT','
-      'Autonomous Vehicles','
-      'Remote Work','
-      'AR/VR Applications','
-      'Real-time Analytics''
-    ],
+      "Smart Cities",""
+      "Industrial IoT",""
+      "Autonomous Vehicles",""
+      "Remote Work",""
+      "AR/VR Applications",""
+      "Real-time Analytics"],"
     technologies: [
-      '5G NR','
-      'Edge Computing','
-      'Network Slicing','
-      'MEC','
-      'IoT Platforms','
-      'SDN/NFV','
-      'AI/ML''
-    ],
+      "5G NR",""
+      "Edge Computing",""
+      "Network Slicing",""
+      "MEC",""
+      "IoT Platforms",""
+      "SDN/NFV",""
+      "AI/ML"],"
     contactInfo: {
-      phone: '+1-302-464-0950','
-      email: '5g@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/5g-solutions''
-    },
-    href: '/5g-solutions''
-  },
+      phone: "+1-302-464-0950",""
+      email: "5g@ziontechgroup.com",""
+      website: "https://ziontechgroup.com/5g-solutions"},"
+    href: "/5g-solutions"},"
   {
-    id: 'micro-saas','
-    title: 'Micro SaaS Solutions','
-    description: 'Custom micro SaaS solutions including application development, API integration, subscription management, and scalable architecture design.','
-    shortDescription: 'Custom micro SaaS solutions','
-    category: 'SaaS','
-    icon: 'GlobeAltIcon','
+    id: "micro-saas",""
+    title: "Micro SaaS Solutions",""
+    description: "Custom micro SaaS solutions including application development, API integration, subscription management, and scalable architecture design.",""
+    shortDescription: "Custom micro SaaS solutions",""
+    category: "SaaS",""
+    icon: "GlobeAltIcon",""
     features: [
-      'Application Development','
-      'API Integration','
-      'Subscription Management','
-      'Scalable Architecture','
-      'Multi-tenancy','
-      'Analytics Dashboard''
-    ],
+      "Application Development",""
+      "API Integration",""
+      "Subscription Management",""
+      "Scalable Architecture",""
+      "Multi-tenancy",""
+      "Analytics Dashboard"],"
     pricing: {
       basic: 8000,
       pro: 25000,
-      enterprise: 75000
-    },
+      enterprise: 75000},
     benefits: [
-      'Rapid Deployment','
-      'Scalable Architecture','
-      'Cost-Effective','
-      'Easy Maintenance','
-      'Multi-tenant Support','
-      'Revenue Generation''
-    ],
+      "Rapid Deployment",""
+      "Scalable Architecture",""
+      "Cost-Effective",""
+      "Easy Maintenance",""
+      "Multi-tenant Support",""
+      "Revenue Generation"],"
     useCases: [
-      'Business Tools','
-      'Productivity Apps','
-      'Industry Solutions','
-      'API Services','
-      'Data Management','
-      'Automation Tools''
-    ],
+      "Business Tools",""
+      "Productivity Apps",""
+      "Industry Solutions",""
+      "API Services",""
+      "Data Management",""
+      "Automation Tools"],"
     technologies: [
-      'React','
-      'Node.js','
-      'PostgreSQL','
-      'Redis','
-      'Docker','
-      'Kubernetes','
-      'Stripe API''
-    ],
+      "React",""
+      "Node.js",""
+      "PostgreSQL",""
+      "Redis",""
+      "Docker",""
+      "Kubernetes",""
+      "Stripe API"],"
     contactInfo: {
-      phone: '+1-302-464-0950','
-      email: 'saas@ziontechgroup.com','
-      website: 'https://ziontechgroup.com/micro-saas-solutions''
-    },
-    href: '/micro-saas-solutions''
-  }
-];
-=======
+      phone: "+1-302-464-0950",""
+      email: "saas@ziontechgroup.com",""
+      website: "https://ziontechgroup.com/micro-saas-solutions"},"
+    href: "/micro-saas-solutions"}];"
 // servicesData - Basic implementation;
 export default function servicesData() {;
-  return null;
-}
+  return null}
 ;
->>>>>>> origin/main
->>>>>>> origin/main

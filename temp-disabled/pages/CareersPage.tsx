@@ -1,24 +1,23 @@
-import React from 'react''''
-import { Helmet } from 'react-helmet-async''''
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const CareersPage: React.FC = () => {'}''
+import React from 'react'''''
+import { Helmet} from 'react-helmet-async'''''
+import { MapPin, Clock, Users, Heart, Zap, Target} from 'lucide-react;const CareersPage: React.FC = () => {'}'''
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">"""
-      <Helmet>
-        <title>Careers | Zion Tech Group</title>
+      <Helmet></Helmet></</Helmet>
+        <title>Careers | Zion Tech Group</title><//title></<//title>
         <meta name="description" content="Join our team of AI and IT experts. Explore career opportunities at Zion Tech Group and be part of the future of technology." />"""
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, technology careers" />"""
-      </Helmet>
+      </Helmet><//Helmet></<//Helmet>
       <div className="container mx-auto px-4 py-16">"""
         {/* Hero Section */}
         <div className="text-center mb-16">"""
           <h1 className="text-5xl font-bold text-white mb-6">"""
             Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">Team</span>"""
-          </h1>
+          </h1><//h1></<//h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"""
-            Be part of a team that's shaping the future of AI and IT solutions.''''
+            Be part of a team that's shaping the future of AI and IT solutions.'''''
             Work on cutting-edge projects and make a real impact.
-          </p>
-        </div>
+          </p></div><//div></<//div>
         {/* Why Work With Us */}
         <div className="mb-16">"""
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>"""
@@ -29,14 +28,12 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
                 <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">"""
                   <div className="p-3 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg w-fit mx-auto mb-4">"""
                     <Icon className="w-6 h-6 text-white" />"""
-                  </div>
+                  </div><//div></<//div>
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>"""
                   <p className="text-gray-300 text-sm">{benefit.description}</p>"""
-                </div>
-              )
-            })}
-          </div>
-        </div>
+                </div><//div></<//div>
+              )})}
+          </div></div><//div></<//div>
         {/* Open Positions */}
         <div className="mb-16">"""
           <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>"""
@@ -47,22 +44,19 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
                   <h3 className="text-xl font-semibold text-white">{position.title}</h3>"""
                   <span className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">"""
                     {position.type}
-                  </span>
-                </div>
+                  </span></div><//div></<//div>
                 <div className="flex items-center text-gray-400 mb-3">"""
                   <MapPin className="w-4 h-4 mr-2" />"""
                   <span className="text-sm">{position.location}</span>"""
                   <span className="mx-2">•</span>"""
                   <span className="text-sm">{position.department}</span>"""
-                </div>
+                </div><//div></<//div>
                 <p className="text-gray-300 mb-4">{position.description}</p>"""
                 <button className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-rose-600 hover:to-pink-600 transition-all duration-300">"""
                   Apply Now
-                </button>
-              </div>
+                </button></div><//div></<//div>
             ))}
-          </div>
-        </div>
+          </div></div><//div></<//div>
         {/* Company Culture */}
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16">"""
           <h2 className="text-3xl font-bold text-white text-center mb-8">Our Culture</h2>"""
@@ -70,44 +64,35 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
             <div className="text-center">"""
               <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">"""
                 <Users className="w-8 h-8 text-white" />"""
-              </div>
+              </div><//div></<//div>
               <h3 className="text-xl font-semibold text-white mb-3">Collaborative</h3>"""
               <p className="text-gray-300">We believe in the power of teamwork and open communication to achieve great things.</p>"""
-            </div>
+            </div><//div></<//div>
             <div className="text-center">"""
               <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">"""
                 <Zap className="w-8 h-8 text-white" />"""
-              </div>
+              </div><//div></<//div>
               <h3 className="text-xl font-semibold text-white mb-3">Innovative</h3>"""
               <p className="text-gray-300">We encourage creative thinking and embrace new technologies to solve complex problems.</p>"""
-            </div>
+            </div><//div></<//div>
             <div className="text-center">"""
               <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">"""
                 <Target className="w-8 h-8 text-white" />"""
-              </div>
+              </div><//div></<//div>
               <h3 className="text-xl font-semibold text-white mb-3">Impact-Driven</h3>"""
               <p className="text-gray-300">We focus on delivering real value to our clients and making a positive impact.</p>"""
-            </div>
-          </div>
-        </div>
+            </div></div><//div></div><//div></<//div>
         {/* CTA Section */}
         <div className="text-center">"""
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">"""
-            <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>''''
+            <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>''''"'
             <p className="text-gray-300 mb-6">"""
-              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.''''
-            </p>
+              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.'''''
+            </p><//p></<//p>
             <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">"""
               Send Resume
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>;  )
-}
+            </button></div><//div></div></div><//div></<//div>
+    </div>;  )}
 export default CareersPage
-</Target>
-</Zap>
-</Users>
-</MapPin>
-</Icon>
+</Target></Zap><//Zap></Users></MapPin><//MapPin></<//MapPin>
+</Icon><//Icon></<//Icon>

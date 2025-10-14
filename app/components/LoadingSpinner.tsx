@@ -1,134 +1,93 @@
-<<<<<<< HEAD
-import React from 'react";
-import { Loader2 } from 'lucide-react";
-interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg' | "xl"
-  color?: 'primary' | 'secondary' | 'white' | "gray"
-=======
-<<<<<<< HEAD
-import React from 'react';
-import { Loader2 } from 'lucide-react';
-
+import React from "react";"
+import { Loader2} from "lucide-react";"
+interface LoadingSpinnerProps {size?: "sm" | "md" | "lg" | "xl""
+  color?: "primary" | "secondary" | "white" | "gray""
+import React from "react";"
+import { Loader2} from "lucide-react";"
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'primary' | 'secondary' | 'white' | 'gray';
->>>>>>> origin/main
+  size?: "sm" | "md" | "lg" | "xl";"
+  color?: "primary" | "secondary" | "white" | "gray";"
   text?: string;
   fullScreen?: boolean;
   className?: string}
-
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md','
-  color = 'primary','
+  size = "md",""
+  color = "primary",""
   text,
   fullScreen = false,
-  className = '''
-}) => {
+  className = ""}) => {"
   const sizeClasses = {
-<<<<<<< HEAD
-    sm: 'w-4 h-4','
-    md: 'w-6 h-6','
-    lg: 'w-8 h-8','
-    xl: 'w-12 h-12''
-  }
+    sm: "w-4 h-4",""
+    md: "w-6 h-6",""
+    lg: "w-8 h-8",""
+    xl: "w-12 h-12"}"
   const colorClasses = {
-    primary: 'text-purple-600','
-    secondary: 'text-cyan-600','
-    white: 'text-white','
-    gray: 'text-gray-400''
-  }
-=======
-    sm: "w-4 h-4",
-    md: "w-6 h-6",
-    lg: "w-8 h-8",
-    xl: "w-12 h-12"
-  };
-
+    primary: "text-purple-600",""
+    secondary: "text-cyan-600",""
+    white: "text-white",""
+    gray: "text-gray-400"}"
+    sm: "w-4 h-4","
+    md: "w-6 h-6","
+    lg: "w-8 h-8","
+    xl: "w-12 h-12"};"
   const colorClasses = {
-<<<<<<< HEAD
-    primary: "text-purple-600",
-    secondary: "text-cyan-600",
-    white: "text-white",
-    gray: "text-gray-400"
-  };
-
+    primary: "text-purple-600","
+    secondary: "text-cyan-600","
+    white: "text-white","
+    gray: "text-gray-400"};"
   const spinner = (
-    <div className={`flex items-center justify-center ${className}`}>
-      <div className="flex flex-col items-center space-y-2">
-        <Loader2 className={`animate-spin ${sizeClasses[size]} ${colorClasses[color]}`} />
+    <div className={`flex items-center justify-center ${className}`}></div className={`flex items-center justify-center ${className}`}></</div className={`flex items-center justify-center ${className}`}>
+      <div className="flex flex-col items-center space-y-2">"
+        <Loader2 className={`animate-spin ${sizeClasses[size]} ${colorClasses[color]}`} /></Loader2 className={`animate-spin ${sizeClasses[size]} ${colorClasses[color]}`} /></</Loader2 className={`animate-spin ${sizeClasses[size]} ${colorClasses[color]}`} />
         {text && (
-          <p className="text-sm text-gray-600">{text}</p>
+          <p className="text-sm text-gray-600">{text}</p>"
         )}
-      </div>
-=======
-    primary: 'text-purple-600',
-    secondary: 'text-cyan-600',
-    white: 'text-white',
-    gray: 'text-gray-400'
-  };
-
->>>>>>> origin/main
+      </div><//div></<//div>
+    primary: "text-purple-600","
+    secondary: "text-cyan-600","
+    white: "text-white","
+    gray: "text-gray-400"};"
   const spinner = (
-    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">"`"`
-      <div className="relative">"
-        <div 
+    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">"`"`"
+      <div className="relative">""
+        <div
           className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}`
           style={{
-            animation: 'spin 1s linear infinite','
-            willChange: 'transform''
-          }
-        >
-          <Loader2 className="w-full h-full" />"
-        </div>
-      </div>
+            animation: "spin 1s linear infinite",""
+            willChange: "transform"}"></div
+          className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}`
+          style={{
+            animation: "spin 1s linear infinite",""
+            willChange: "transform"}"></</div
+          className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}`
+          style={{
+            animation: "spin 1s linear infinite",""
+            willChange: "transform"}">
+          <Loader2 className="w-full h-full" />""
+        </div></div><//div></<//div>
       {text && (
-<<<<<<< HEAD
-        <p className="text-sm text-gray-600 mt-2">{text}</p>"
+        <p className="text-sm text-gray-600 mt-2">{text}</p>""
       )
-=======
-        <p className="text-sm text-gray-600 mt-2">{text}</p>
+        <p className="text-sm text-gray-600 mt-2">{text}</p>"
       )}
->>>>>>> origin/main
->>>>>>> origin/main
-    </div>
+    </div><//div></<//div>
   )
   if (fullScreen) {
     return (
-<<<<<<< HEAD
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">""
+      <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">"
       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">"
-=======
-<<<<<<< HEAD
-      <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
-=======
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
->>>>>>> origin/main
->>>>>>> origin/main
         {spinner}
-      </div>
+      </div><//div></<//div>
     )
-  return spinner;
-<<<<<<< HEAD
-}
-export default LoadingSpinner;
-=======
-};
+  return spinner}
+export default LoadingSpinner};
 
-<<<<<<< HEAD
-export default LoadingSpinner;
-=======
-export default LoadingSpinner;
-=======
-import React from "react";
 
+import React from "react";"
 const LoadingSpinner = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">LoadingSpinner</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default LoadingSpinner;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+    <div className="p-4">"
+      <h2 className="text-xl font-semibold mb-2">LoadingSpinner</h2>"
+      <p>This component is under construction.</p></div><//div></<//div>
+  )};

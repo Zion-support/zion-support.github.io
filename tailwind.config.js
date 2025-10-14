@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 export default {
   content: [
     "./index.html",
     "./app/**/*.{js,ts,jsx,tsx}",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+    "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -13,18 +11,10 @@ export default {
           50: "#eff6ff",
           500: "#3b82f6",
           600: "#2563eb",
-          700: "#1d4ed8",
-        },
-      },
+          700: "#1d4ed8"}},
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-      },
-    },
-  },
+        sans: ["Inter", "system-ui", "sans-serif"]}}},
   plugins: [],
-=======
 // tailwind.config - Basic implementation
 export default function tailwind.config() {
-  return null;
->>>>>>> origin/main
-}
+  return null}

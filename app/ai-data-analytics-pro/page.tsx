@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 
 
-import { ArrowRight, BarChart3, Brain, CheckCircle, TrendingUp, PieChart, Activity, Target } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+import { ArrowRight, BarChart3, Brain, CheckCircle, TrendingUp, PieChart, Activity, Target} from "lucide-react";
+import EnhancedSEO from "../components/EnhancedSEO";
+import ResponsiveContainer from "../components/ResponsiveContainer";
+import FuturisticCard from "../components/FuturisticCard";
+import FuturisticButton from "../components/FuturisticButton";
 
 const AIDataAnalyticsPro = () => {
   const features = [
@@ -13,27 +12,22 @@ const AIDataAnalyticsPro = () => {
       title: "Real-time Analytics",
       description: "Process and analyze data in real-time with advanced AI algorithms",
       icon: <Activity className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
+      color: "from-blue-500 to-cyan-500"},
     {
       title: "Predictive Modeling",
       description: "Build accurate predictive models using machine learning",
       icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
+      color: "from-green-500 to-emerald-500"},
     {
       title: "Data Visualization",
       description: "Create stunning interactive dashboards and reports",
       icon: <PieChart className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
+      color: "from-purple-500 to-pink-500"},
     {
       title: "Automated Insights",
       description: "Get AI-powered insights and recommendations automatically",
       icon: <Brain className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
+      color: "from-orange-500 to-red-500"}];
 
   const benefits = [
     "40% faster data processing",
@@ -41,12 +35,9 @@ const AIDataAnalyticsPro = () => {
     "Real-time dashboard updates",
     "Automated report generation",
     "Multi-source data integration",
-    "Advanced security protocols"
-  ];
-=======
+    "Advanced security protocols"];
 import React from "react";
-import { Helmet } from "react-helmet-async";
->>>>>>> origin/main
+import { Helmet} from "react-helmet-async";
 
 const HomePage = () => {
   return (
@@ -64,7 +55,6 @@ const HomePage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default HomePage;

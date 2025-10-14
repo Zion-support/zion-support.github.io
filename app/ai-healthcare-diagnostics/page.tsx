@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from 'lucide-react';
-=======
+import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe} from "lucide-react";
 import React from "react";
->>>>>>> origin/main
-import { Helmet } from "react-helmet-async";
+import { Helmet} from "react-helmet-async";
 
 const HomePage = () => {
   return (
@@ -21,7 +18,6 @@ const HomePage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )};
 
 export default HomePage;

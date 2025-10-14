@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
+import React from "react";
+import { Helmet} from "react-helmet-async";
 import React from "react"
-import { Helmet } from "react-helmet-async"
+import { Helmet} from "react-helmet-async"
 
->>>>>>> origin/main
 export default function AdvancedSEOOptimizer() {
   return (
     <div>
@@ -16,7 +13,6 @@ export default function AdvancedSEOOptimizer() {
           content="Professional advanced SEO optimization services by Zion Tech Group."
         />
       </Helmet>
-<<<<<<< HEAD
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -31,7 +27,7 @@ export default function AdvancedSEOOptimizer() {
           </div>
         </section>
 
-        { /* Content Section */ }
+        { /* Content Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -51,7 +47,7 @@ export default function AdvancedSEOOptimizer() {
           </div>
         </section>
 
-        { /* CTA Section */ }
+        { /* CTA Section */}
         <section className="py-20 px-4 bg-gray-900">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -68,10 +64,7 @@ export default function AdvancedSEOOptimizer() {
       </div>
     </>
   );
-=======
       <h1>Advanced SEO Optimizer</h1>
       <p>This component is under development.</p>
     </div>
-  )
->>>>>>> origin/main
-}
+  )}
