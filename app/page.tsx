@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 'use client';
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -13,12 +9,14 @@ import {
   RocketLaunchIcon,
   CheckCircleIcon,
   ArrowRightIcon,
-  StarIcon
+  StarIcon,
+  ChartBarIcon,
+  UserGroupIcon,
+  GlobeAltIcon,
+  SignalIcon,
+  CogIcon
 } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
-const HomePage: React.FC = () => {
-=======
 export default function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -35,7 +33,11 @@ export default function HomePage() {
       "foundingDate": "2020",
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "US"
+        "addressCountry": "US",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709"
       },
       "contactPoint": {
         "@type": "ContactPoint",
@@ -50,31 +52,48 @@ export default function HomePage() {
     }
   };
 
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
   const services = [
     {
       icon: CpuChipIcon,
       title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions to transform your business.',
-      href: '/ai-solutions'
+      description: 'Cutting-edge artificial intelligence solutions to transform your business with machine learning, natural language processing, and computer vision.',
+      href: '/ai-solutions',
+      price: 'Starting at $2,500/month'
     },
     {
       icon: CloudIcon,
       title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud infrastructure solutions for modern businesses.',
-      href: '/cloud-infrastructure'
+      description: 'Scalable and secure cloud infrastructure solutions for modern businesses with 99.9% uptime guarantee.',
+      href: '/cloud-infrastructure',
+      price: 'Starting at $1,200/month'
     },
     {
       icon: ShieldCheckIcon,
       title: 'Cybersecurity',
-      description: 'Comprehensive cybersecurity solutions to protect your digital assets.',
-      href: '/cybersecurity'
+      description: 'Comprehensive cybersecurity solutions to protect your digital assets with advanced threat detection and response.',
+      href: '/cybersecurity',
+      price: 'Starting at $3,000/month'
     },
     {
       icon: RocketLaunchIcon,
       title: 'Digital Transformation',
-      description: 'Complete digital transformation services to modernize your business.',
-      href: '/digital-transformation'
+      description: 'Complete digital transformation services to modernize your business processes and operations.',
+      href: '/digital-transformation',
+      price: 'Starting at $5,000/month'
+    },
+    {
+      icon: SignalIcon,
+      title: 'Micro SaaS Solutions',
+      description: 'Custom micro SaaS applications tailored to your specific business needs with rapid deployment.',
+      href: '/micro-saas-solutions',
+      price: 'Starting at $800/month'
+    },
+    {
+      icon: GlobeAltIcon,
+      title: '5G Solutions',
+      description: 'Next-generation 5G network solutions for ultra-fast connectivity and IoT applications.',
+      href: '/5g-solutions',
+      price: 'Starting at $4,000/month'
     }
   ];
 
@@ -84,25 +103,21 @@ export default function HomePage() {
     'Scalable Architecture',
     'Security First',
     'Performance Optimized',
-    'Cost Effective'
+    'Cost Effective',
+    'Rapid Deployment',
+    'Enterprise Grade'
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '50+', label: 'Expert Team Members' },
+    { number: '24/7', label: 'Support Available' }
   ];
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, cybersecurity, digital transformation" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Transform Your Business with AI & IT Solutions
-=======
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." />
         <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" />
@@ -136,100 +151,29 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">
               Zion Tech Group
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-3xl mx-auto font-light">
+              Advanced AI & IT Solutions for the Future
+            </p>
+            <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
               We deliver cutting-edge artificial intelligence and information technology solutions 
               that drive growth, efficiency, and innovation for businesses of all sizes.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link 
                 to="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Get Started
+                Get Started Today
               </Link>
               <Link 
-                to="/services" 
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+                to="/demo" 
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
-                Learn More
+                Schedule Demo
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Our Services
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <Link 
-                  key={index} 
-                  to={service.href}
-                  className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <div className="flex items-center text-blue-600 font-medium">
-                    Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Why Choose Us?
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center">
-                  <CheckCircleIcon className="w-6 h-6 text-green-500 mr-3" />
-                  <span className="text-gray-700">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Let's discuss how our AI and IT solutions can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-              >
-                Contact Us
-              </Link>
-              <Link 
-                to="/about" 
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
-              >
-                About Us
-              </Link>
-            </div>
-=======
         </div>
       </section>
 
@@ -252,9 +196,12 @@ export default function HomePage() {
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
-                <p className="text-gray-300 mb-6">
+                <p className="text-gray-300 mb-4">
                   {service.description}
                 </p>
+                <div className="text-purple-400 font-semibold mb-4">
+                  {service.price}
+                </div>
                 <Link to={service.href} className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
                   Learn More <ArrowRightIcon className="w-4 h-4" />
                 </Link>
@@ -265,19 +212,18 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
               Why Choose <span className="bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Zion Tech Group</span>?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We deliver exceptional results through innovative technology and expert guidance.
             </p>
->>>>>>> cursor/analyze-improve-and-deploy-application-4227
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center space-x-4 p-6 bg-slate-800/30 rounded-lg hover:bg-slate-700/30 transition-colors">
                 <CheckCircleIcon className="w-6 h-6 text-green-400 flex-shrink-0" />
@@ -318,7 +264,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-12">
@@ -342,10 +288,4 @@ export default function HomePage() {
       </section>
     </>
   );
-<<<<<<< HEAD
-};
-
-export default HomePage;
-=======
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-4227

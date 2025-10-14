@@ -3,174 +3,183 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  PencilSquareIcon,
-  CpuChipIcon,
-  DocumentTextIcon,
+  CogIcon,
+  ServerIcon,
+  CloudIcon,
   ArrowRightIcon,
   CheckCircleIcon,
   StarIcon,
   ClockIcon,
   ShieldCheckIcon,
-  CloudIcon,
   UserGroupIcon,
-  PhotoIcon,
-  VideoCameraIcon,
-  SpeakerWaveIcon
+  ChartBarIcon,
+  WrenchScrewdriverIcon,
+  ComputerDesktopIcon
 } from '@heroicons/react/24/outline';
 
-export default function AIContentGenerationPro() {
-  const contentTypes = [
+export default function ITInfrastructureManagementPro() {
+  const services = [
     {
-      icon: DocumentTextIcon,
-      title: 'Blog Posts & Articles',
-      description: 'SEO-optimized long-form content that engages readers and drives traffic.',
-      price: '$0.10 per word'
+      icon: ServerIcon,
+      title: 'Server Management',
+      description: 'Complete server administration, monitoring, and optimization for maximum uptime.',
+      price: '$299/month per server'
     },
     {
-      icon: PencilSquareIcon,
-      title: 'Marketing Copy',
-      description: 'Compelling ad copy, email campaigns, and social media content that converts.',
-      price: '$0.15 per word'
+      icon: CloudIcon,
+      title: 'Cloud Infrastructure',
+      description: 'AWS, Azure, and GCP management with cost optimization and security hardening.',
+      price: '$499/month per environment'
     },
     {
-      icon: PhotoIcon,
-      title: 'Visual Content',
-      description: 'AI-generated images, infographics, and visual assets for your brand.',
-      price: '$2.50 per image'
+      icon: ComputerDesktopIcon,
+      title: 'Desktop Support',
+      description: 'End-user support, software deployment, and device management across your organization.',
+      price: '$99/month per user'
     },
     {
-      icon: VideoCameraIcon,
-      title: 'Video Scripts',
-      description: 'Engaging video scripts and storyboards for marketing and educational content.',
-      price: '$0.20 per word'
+      icon: WrenchScrewdriverIcon,
+      title: 'Network Management',
+      description: 'Network design, implementation, and ongoing maintenance for optimal performance.',
+      price: '$399/month per location'
     },
     {
-      icon: SpeakerWaveIcon,
-      title: 'Audio Content',
-      description: 'Podcast scripts, voice-over scripts, and audio marketing content.',
-      price: '$0.18 per word'
+      icon: ShieldCheckIcon,
+      title: 'Security Management',
+      description: 'Comprehensive security monitoring, patch management, and compliance maintenance.',
+      price: '$599/month per environment'
     },
     {
-      icon: DocumentTextIcon,
-      title: 'Technical Documentation',
-      description: 'Comprehensive technical docs, API documentation, and user guides.',
-      price: '$0.12 per word'
+      icon: ChartBarIcon,
+      title: 'Performance Monitoring',
+      description: '24/7 monitoring and alerting for all critical systems and applications.',
+      price: '$199/month per system'
     }
   ];
 
   const features = [
     {
-      icon: CpuChipIcon,
-      title: 'Advanced AI Models',
-      description: 'Powered by GPT-4, Claude, and custom fine-tuned models for optimal results.'
-    },
-    {
       icon: ClockIcon,
-      title: 'Lightning Fast',
-      description: 'Generate high-quality content in seconds, not hours. 10x faster than traditional methods.'
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support and monitoring for your critical systems.'
     },
     {
       icon: ShieldCheckIcon,
-      title: 'Plagiarism-Free',
-      description: '100% original content with built-in plagiarism detection and SEO optimization.'
+      title: 'Proactive Maintenance',
+      description: 'Preventive maintenance and updates to avoid downtime and security vulnerabilities.'
     },
     {
-      icon: CloudIcon,
-      title: 'Cloud-Based',
-      description: 'Access from anywhere with automatic cloud backup and version control.'
+      icon: ChartBarIcon,
+      title: 'Performance Optimization',
+      description: 'Continuous optimization to ensure peak performance and cost efficiency.'
+    },
+    {
+      icon: UserGroupIcon,
+      title: 'Dedicated Team',
+      description: 'Assigned technical experts who understand your specific infrastructure needs.'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$99',
+      name: 'Basic',
+      price: '$2,999',
       period: '/month',
-      description: 'Perfect for small businesses and freelancers',
+      description: 'Perfect for small businesses',
       features: [
-        '10,000 words per month',
-        '5 content types',
-        'Basic AI models',
+        'Up to 10 servers',
+        'Basic monitoring',
         'Email support',
-        'Standard templates',
-        '1 user account'
+        'Standard maintenance',
+        'Monthly reports',
+        '1 dedicated engineer'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$299',
+      price: '$7,999',
       period: '/month',
-      description: 'Ideal for growing content teams',
+      description: 'Ideal for growing companies',
       features: [
-        '50,000 words per month',
-        'All content types',
-        'Advanced AI models',
-        'Priority support',
-        'Custom templates',
-        '5 user accounts',
-        'API access',
-        'Brand voice training'
+        'Up to 50 servers',
+        'Advanced monitoring',
+        '24/7 phone support',
+        'Proactive maintenance',
+        'Weekly reports',
+        '3 dedicated engineers',
+        'Cloud management',
+        'Security services'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$999',
+      price: '$19,999',
       period: '/month',
-      description: 'For large organizations and agencies',
+      description: 'For large organizations',
       features: [
-        'Unlimited words',
-        'All content types + custom',
-        'Premium AI models',
-        '24/7 dedicated support',
-        'Custom integrations',
-        'Unlimited users',
-        'White-label solution',
-        'Custom AI training'
+        'Unlimited servers',
+        'Full monitoring suite',
+        'Dedicated support team',
+        'Custom maintenance',
+        'Real-time dashboards',
+        'Unlimited engineers',
+        'Multi-cloud management',
+        'Custom integrations'
       ],
       popular: false
     }
   ];
 
   const benefits = [
-    'Save 80% of content creation time',
-    'Increase content output by 500%',
-    'Improve SEO rankings with optimized content',
-    'Maintain consistent brand voice across all content',
-    'Scale content production without hiring more writers',
-    'Generate content in 25+ languages'
+    'Reduce IT downtime by 90%',
+    'Save 40% on IT operational costs',
+    'Improve system performance by 60%',
+    'Enhance security posture with proactive monitoring',
+    'Scale infrastructure seamlessly as you grow',
+    'Get expert guidance on technology decisions'
   ];
 
-  const useCases = [
+  const technologies = [
     {
-      title: 'E-commerce',
-      description: 'Product descriptions, category pages, and marketing copy for online stores.',
-      icon: '🛒'
+      name: 'Microsoft Azure',
+      description: 'Cloud infrastructure and services management',
+      icon: '☁️'
     },
     {
-      title: 'SaaS Companies',
-      description: 'Technical documentation, user guides, and marketing content for software products.',
-      icon: '💻'
+      name: 'Amazon AWS',
+      description: 'Scalable cloud computing and storage solutions',
+      icon: '🚀'
     },
     {
-      title: 'Marketing Agencies',
-      description: 'Client content, social media posts, and campaign materials at scale.',
-      icon: '📈'
+      name: 'Google Cloud',
+      description: 'AI-powered cloud services and analytics',
+      icon: '🔍'
     },
     {
-      title: 'Publishers',
-      description: 'News articles, blog posts, and editorial content for digital publications.',
-      icon: '📰'
+      name: 'VMware',
+      description: 'Virtualization and container management',
+      icon: '📦'
+    },
+    {
+      name: 'Docker',
+      description: 'Containerization and orchestration',
+      icon: '🐳'
+    },
+    {
+      name: 'Kubernetes',
+      description: 'Container orchestration and management',
+      icon: '⚙️'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Content Generation Pro - Zion Tech Group</title>
-        <meta name="description" content="Generate high-quality content at scale with our AI-powered content creation platform. Blog posts, marketing copy, images, and more in 25+ languages." />
-        <meta name="keywords" content="AI content generation, content creation, blog writing, marketing copy, AI writing, content automation" />
+        <title>IT Infrastructure Management Pro - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT infrastructure management services including server management, cloud infrastructure, network management, and 24/7 support for businesses of all sizes." />
+        <meta name="keywords" content="IT infrastructure management, server management, cloud services, network management, IT support, infrastructure monitoring" />
       </Helmet>
 
       {/* Hero Section */}
@@ -182,20 +191,20 @@ export default function AIContentGenerationPro() {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 gradient-text neon-text">
-              AI Content Generation Pro
+              IT Infrastructure Management Pro
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Create high-quality content at scale with our advanced AI-powered platform
+              Complete IT infrastructure management with 24/7 support and proactive monitoring
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-              Generate blog posts, marketing copy, images, videos, and more in 25+ languages with just a few clicks
+              Let us handle your IT infrastructure so you can focus on growing your business
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
               >
-                Start Free Trial
+                Get Infrastructure Assessment
               </Link>
               <Link 
                 to="/demo" 
@@ -208,30 +217,30 @@ export default function AIContentGenerationPro() {
         </div>
       </section>
 
-      {/* Content Types Section */}
+      {/* Services Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
-              Content Types We Generate
+              Our IT Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From text to visuals, we create all types of content your business needs
+              Comprehensive IT infrastructure management tailored to your business needs
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {contentTypes.map((type, index) => (
+            {services.map((service, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating">
-                  <type.icon className="w-8 h-8 text-white" />
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{type.title}</h3>
+                <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
                 <p className="text-gray-300 mb-4">
-                  {type.description}
+                  {service.description}
                 </p>
                 <div className="text-purple-400 font-semibold">
-                  {type.price}
+                  {service.price}
                 </div>
               </div>
             ))}
@@ -244,10 +253,10 @@ export default function AIContentGenerationPro() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
-              Powerful Features
+              Why Choose Our Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to create professional content at scale
+              Expert IT management with proven results and exceptional support
             </p>
           </div>
           
@@ -267,25 +276,25 @@ export default function AIContentGenerationPro() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Technologies Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
-              Perfect For
+              Technologies We Manage
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Trusted by businesses across industries
+              Expert management of all major cloud and infrastructure platforms
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {technologies.map((tech, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark text-center">
-                <div className="text-4xl mb-4">{useCase.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{useCase.title}</h3>
+                <div className="text-4xl mb-4">{tech.icon}</div>
+                <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{tech.name}</h3>
                 <p className="text-gray-300">
-                  {useCase.description}
+                  {tech.description}
                 </p>
               </div>
             ))}
@@ -298,10 +307,10 @@ export default function AIContentGenerationPro() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
-              Why Choose Our Platform?
+              Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Proven results that drive content marketing success
+              Measurable improvements that drive business success
             </p>
           </div>
           
@@ -321,10 +330,10 @@ export default function AIContentGenerationPro() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
-              Simple, Transparent Pricing
+              Management Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your content needs. All plans include our core AI features.
+              Choose the management level that fits your infrastructure needs
             </p>
           </div>
           
@@ -381,17 +390,17 @@ export default function AIContentGenerationPro() {
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-white">
-            Ready to Scale Your Content?
+            Ready to Optimize Your IT?
           </h2>
           <p className="text-xl text-gray-300 mb-12">
-            Join thousands of businesses already using our AI content platform to grow faster
+            Let our experts manage your IT infrastructure so you can focus on business growth
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >
-              Start Free Trial
+              Get Infrastructure Assessment
             </Link>
             <Link
               to="/demo"
