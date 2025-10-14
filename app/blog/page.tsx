@@ -6,16 +6,17 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Right, User, Calendar } from 'lucide-react'
 const BlogPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
-
   const categories = [
-    { id: "all", name: "All Posts", count: 12 },
-    { id: "ai", name: "AI & Machine Learning", count: 5 },
-    { id: "cybersecurity", name: "Cybersecurity", count: 3 },
-    { id: "cloud", name: "Cloud Computing", count: 2 },
-    { id: "development", name: "Development", count: 2 }
+    { id: "all", name: "All Posts" },
+    { id: "ai", name: "Artificial Intelligence" },
+    { id: "blockchain", name: "Blockchain & Web3" },
+    { id: "cloud", name: "Cloud Computing" },
+    { id: "devops", name: "DevOps" },
+    { id: "security", name: "Cybersecurity" }
   ];
 
   const blogPosts = [
@@ -25,9 +26,8 @@ const BlogPage: React.FC = () => {
       excerpt: "Explore the latest AI trends shaping the business landscape and how companies can leverage these technologies for competitive advantage.",
       author: "Zion Tech Team",
       date: "2024-01-15",
-      readTime: "5 min read",
-      category: "AI & Technology",
-      image: "/api/placeholder/400/250",
+      readTime: "8 min read",
+      image: "/api/placeholder/600/300",
       featured: true
     },
     {
@@ -131,6 +131,17 @@ const BlogPage: React.FC = () => {
                   </div>
                 </div>
               </div>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                {categories.map(category => (
+                  <option key={category.id} value={category.id}>
+                    {category.name}
+                  </option>
+                ))}
+              </select>
             </div>
           </section>
 

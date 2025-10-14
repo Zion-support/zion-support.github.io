@@ -16,6 +16,7 @@ interface State {
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
+    };
     this.state = { hasError: false };
   }
 
@@ -26,7 +27,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
     });
 
     // Call custom error handler if provided
@@ -127,6 +127,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
-}
+    })}
+  private handleReload = () => {
+    window.location.reload()}
+  private handleGoHome = () => {
+    window.location.href = '/'}
+  render() {
+    if (this.state.hasError) {
+      // Custom fallback UI
+      if (this.props.fallback) {
 
 export default EnhancedErrorBoundary;

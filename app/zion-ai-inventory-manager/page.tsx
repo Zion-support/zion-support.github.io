@@ -1,21 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { BarChart3, Package, TrendingUp, AlertTriangle, Users, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Smartphone, Globe, Database, Settings } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-=======
 import { ArrowRight, BarChart3, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, Package, Target, Settings } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-
-const ZionAIInventoryManager = () => {
-  const features = [
-    {
-<<<<<<< HEAD
-      title: "AI-Powered Demand Forecasting",
+import FuturisticButton from '../components/FuturisticButton';      title: "AI-Powered Demand Forecasting",
       description: "Predict inventory needs with 95% accuracy using machine learning algorithms",
       icon: <TrendingUp className="w-6 h-6" />,
       benefit: "Reduce stockouts by 60%"
@@ -140,156 +129,37 @@ const ZionAIInventoryManager = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="Zion AI Inventory Manager - AI-Powered Inventory Management | Zion Tech Group"
-        description="Revolutionary AI-powered inventory management system with demand forecasting, real-time tracking, and automated reorder points. Reduce stockouts by 60% and save costs."
-        keywords="AI inventory management, demand forecasting, inventory tracking, stock management, supply chain optimization, business automation"
-=======
-      title: "Smart Inventory Tracking",
-      description: "AI-powered inventory tracking with real-time updates and alerts",
-      icon: <Package className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast demand and optimize stock levels using AI algorithms",
-      icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Automated Reordering",
-      description: "Set up automatic reorder points and supplier management",
-      icon: <Zap className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Multi-location Support",
-      description: "Manage inventory across multiple warehouses and locations",
-      icon: <Globe className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  const benefits = [
-    "30% reduction in stockouts",
-    "25% lower inventory costs",
-    "Real-time visibility",
-    "Automated reordering",
-    "Multi-location support",
-    "Advanced analytics"
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
-        title="Zion AI Inventory Manager - Smart Inventory Management | Zion Tech Group"
-        description="Optimize your inventory with AI-powered management. Smart tracking, predictive analytics, and automated reordering for modern businesses."
-        keywords="inventory management, AI inventory, stock management, predictive analytics, automated reordering, inventory optimization"
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-        canonical="https://ziontechgroup.com/zion-ai-inventory-manager"
-      />
-
-      {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Management</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Inventory Manager
-              </span>
-            </h1>
-            
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize your inventory management with AI-powered demand forecasting, real-time tracking, 
-              and automated reorder points. Reduce stockouts by 60% and optimize your supply chain.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              >
-                Watch Demo
-              </Link>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
-                  </div>
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300 text-sm">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-=======
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Package className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion AI Inventory Manager
-            </span>
+      <Helmet>
+        <title>Zion AI Inventory Manager | Zion Tech Group</title>
+        <meta name="description" content="Professional AI Inventory Manager services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Zion AI Inventory Manager <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
             Optimize your inventory with AI-powered management. 
             Smart tracking, predictive analytics, and automated reordering for modern businesses.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
-            >
-              Get Started Today
-            </FuturisticButton>
-            <FuturisticButton
-              href="/demo"
-              variant="outline"
-              size="lg"
-              icon={<Package className="w-5 h-5" />}
-            >
-              View Demo
-            </FuturisticButton>
+        </div>
+            Zion AI Inventory Manager <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span></h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            AI-powered inventory management solutions for modern businesses.</p></div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Smart Inventory Tracking</h3>
+            <p className="text-gray-300 mb-4">
+              AI-powered inventory tracking and management capabilities.;
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Real-time tracking</li>
+              <li>• Predictive analytics</li>
+              <li>• Automated reordering</li>
+            </ul>
           </div>
-        </ResponsiveContainer>
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto">
+        </ResponsiveContainer>        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Powerful AI-Driven Features
@@ -323,18 +193,32 @@ const ZionAIInventoryManager = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include our core AI features 
-              and come with a 30-day free trial.
+              AI-powered inventory tracking and management capabilities.</p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Real-time tracking</li>
+              <li>• Predictive analytics</li>
+              <li>• Automated reordering</li></ul></div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Demand Forecasting</h3>
+            <p className="text-gray-300 mb-4">
+              Advanced demand forecasting and optimization algorithms.</p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• ML-based predictions</li>
+              <li>• Seasonal adjustments</li>
+              <li>• Trend analysis</li></ul></div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Cost Optimization</h3>
+            <p className="text-gray-300 mb-4">
+              Intelligent cost optimization and waste reduction.</p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Cost analysis</li>
+              <li>• Waste reduction</li>
+              <li>• Efficiency metrics</li></ul></div></div>
+        <div className="text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Optimize Your Inventory?</h2>
+            <p className="text-gray-300 mb-6">
+              Our AI inventory management experts are ready to help you streamline your operations.;
             </p>
           </div>
           
@@ -455,96 +339,23 @@ const ZionAIInventoryManager = () => {
               Schedule Demo
             </Link>
           </div>
-        </div>
-=======
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Smart Inventory Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to manage your inventory efficiently with AI-powered insights.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <FuturisticCard
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              >
-                <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                >
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
-                  {feature.description}
-                </p>
-              </FuturisticCard>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Zion AI Inventory Manager?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience intelligent inventory management that saves time and reduces costs.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-white font-medium">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Optimize Your Inventory?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join leading companies using Zion AI Inventory Manager to streamline their operations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
-                Start Your Free Trial
-              </FuturisticButton>
-              <FuturisticButton
-                href="/pricing"
-                variant="outline"
-                size="lg"
-                icon={<Target className="w-5 h-5" />}
-              >
-                View Pricing
-              </FuturisticButton>
-            </div>
-          </div>
-        </ResponsiveContainer>
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
+        </div>cursor/analyze-improve-and-deploy-application-9c39
       </section>
     </div>
+  )
+}
+              Our AI inventory management experts are ready to help you streamline your operations.</p>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+              Get Started Today</button></div></div></div></div>
+)}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-};
-
-export default ZionAIInventoryManager;
+}
+              Our AI inventory management experts are ready to help you streamline your operations.</p>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+              Get Started Today</button></div></div></div></div>
+  )}

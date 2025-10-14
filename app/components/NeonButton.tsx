@@ -1,73 +1,77 @@
-import React from "react";
 import { ArrowRight } from "lucide-react";
 
 interface NeonButtonProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
+  children: React.ReactNode;
+  to?: string;
   href?: string;
   onClick?: () => void;
-  variant?: "primary" | "secondary" | "accent";
-  size?: "sm" | "md" | "lg";
-  icon?: React.ReactNode;
-  disabled?: boolean;
+  variant?: 'primary' | 'secondary' | 'accent'
+  size?: 'sm' | 'md' | 'lg'
+  className?: string;
 }
 
 const NeonButton: React.FC<NeonButtonProps> = ({
   children,
+  to,
   href,
   onClick,
-  variant = "primary",
-  size = "md",
-  className = "",
-  icon,
-  disabled = false,
+  variant = 'primary'
+  size = 'md'
+  className = ''
 }) => {
-  const baseClasses =
-    "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100";
-
-  const sizeClasses = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-lg",
-  };
-
+  const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  
   const variantClasses = {
-    primary:
-      "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-blue-500/25 hover:shadow-2xl",
-    secondary:
-      "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:shadow-purple-500/25 hover:shadow-2xl",
-    accent:
-      "bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl",
-  };
+    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 focus:ring-blue-500',
+    secondary: 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 focus:ring-purple-500',
+    accent: 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 focus:ring-cyan-500;
+  }
+  
+  const sizeClasses = {
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg;
+  }
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
-  const neonEffect =
-    "before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10";
-
-  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
-
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
   const content = (
     <>
-      {icon && <span className="mr-2">{icon}</span>}
-      {children}
-      {!icon && <ArrowRight className="w-5 h-5 ml-2" />}
+      <span className="relative z-10">{children}</span>
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
     </>
-  );
+  )
+  if (to) {
+    return (
+      <Link to={to} className={`${classes} group`}>
+        {content}
+      </Link>
+    )}
 
   if (href) {
     return (
-      <a href={href} className={buttonClasses}>
-        {content}
+      <a
+        href={href}
+        className={classes}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {children}
       </a>
-    );
+    )
   }
-
+  
+  if (to) {
+    return (
+      <Link to={to} className={classes}>
+        {children}
+      </Link>
+)
+    )
   return (
-    <button onClick={onClick} disabled={disabled} className={buttonClasses}>
+    <button onClick={onClick} className={`${classes} group`}>
       {content}
     </button>
   );
-};
-
-export default NeonButton;
+}
+export default NeonButton

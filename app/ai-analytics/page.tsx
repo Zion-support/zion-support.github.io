@@ -81,7 +81,7 @@ export default function AiAnalytics() {
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Real-time dashboards, predictive analytics, and advanced reporting." />
