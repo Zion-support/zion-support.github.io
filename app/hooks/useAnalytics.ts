@@ -1,3 +1,27 @@
-"use client;{ useContext } from "react;{ AnalyticsContext } from "../contexts/AnalyticsContext;;"export const useAnalytics = () => {;"  const context :  useContext(AnalyticsContext);
-  if (!context) {throw new Error(useAnalytics must be used within an AnalyticsProvider)}"  }"  return context;"}
+import { useState, useEffect } from 'react';
 
+export function useAnalytics() {
+  const [isEnabled, setIsEnabled] = useState(false);
+
+  useEffect(() => {
+    setIsEnabled(true);
+  }, []);
+
+  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
+    if (!isEnabled) return;
+    console.log('Analytics Event:', eventName, properties);
+  };
+
+  const trackPageView = (pageName: string) => {
+    if (!isEnabled) return;
+    console.log('Page View:', pageName);
+  };
+
+  return {
+    trackEvent,
+    trackPageView,
+    isEnabled
+  };
+}
+
+export default useAnalytics;

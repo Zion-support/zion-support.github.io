@@ -1,35 +1,41 @@
-import React, { createContext, useContext, ReactNode } from "react;"interface AnalyticsContextType {"  trackEvent: (eventName: string, properties ?  : Record<string, any>) => void
-  trackPageView: (pageName: string) => void;
-}
+'use client';
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+import React from 'react';
 
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties ?  : Record<string, any>) => {
-    // Basic analytics tracking
-    console.log(Analytics Event:", eventName, properties)    "    // In a real implementation, you would send this to your analytics service"    if (typeof window !=="undefined && (window as any).gtag) {      (window as any).gtag("event", eventName, properties);    }"  }"
-  const trackPageView = (pageName: string) => {
-    console.log(Page View:", pageName);    "    if (typeof window !=="undefined && (window as any).gtag) {      (window as any).gtag("config", GA_MEASUREMENT_ID, {"        page_title="pageName,"        page_location: window.location.href,"      });
-    }
-  }
-
-  const value = {
-    trackEvent,
-    trackPageView,
-  }
-
+export default function Page() {
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Page Under Development</h1>
+            <div className="prose max-w-none">
+              <p className="text-lg text-gray-600 mb-6">
+                This page is currently under development. We're working hard to bring you amazing content and features.
+              </p>
+              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                <p className="text-blue-800">
+                  <strong>Coming Soon:</strong> This page will be available with full functionality in the near future.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="/" 
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                >
+                  Go Home
+                </a>
+                <a 
+                  href="/contact" 
+                  className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
-
-export const useAnalytics = () => {
-  const context :  useContext(AnalyticsContext);
-  if (context : : :  undefined) {
-    throw new Error(useAnalytics must be used within an AnalyticsProvider");"  }'}''export default AnalyticsProvider;'

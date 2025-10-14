@@ -1,20 +1,41 @@
-"use client;"import React from react";"import { Link   } from react-router-dom";"import SEO from ../components/SEO;"";"import {}  GlobeAltIcon,"  CpuChipIcon,
-  ChartBarIcon,
-  RocketLaunchIcon,
-  CheckCircleIcon,
-  ArrowRightIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon"} from @heroicons/react/24/outline;"export default function Component() {"  return (
-    <div>Page content</div>
-  );
+'use client';
 
-  const services :  [
-    {}
-      icon: "GlobeAltIcon,""      title="Custom Micro SaaS Development"",      description: "Tailored micro SaaS solutions designed to solve specific business challenges with scalable architecture.","      features: [Custom development", Scalable architecture, "API integration", Multi-tenant support];"    },"    {}"      icon: CpuChipIcon","      title="AI-Powered Micro SaaS"",      description: "Intelligent micro SaaS applications powered by artificial intelligence and machine learning.","      features: [AI integration", Machine learning, "Predictive analytics", Automated workflows];"    },"    {}"      icon: ChartBarIcon","      title="Analytics & Reporting"",      description: "Comprehensive analytics and reporting solutions for your micro SaaS applications.","      features: [Real-time dashboards", Custom reports, "Data visualization", Business intelligence];"    },"    {}"      icon: RocketLaunchIcon","      title="Deployment & Scaling"",      description: "Seamless deployment and automatic scaling solutions for your micro SaaS applications.","      features: [Cloud deployment", Auto-scaling, "Load balancing", Performance optimization];"    }"  ]"  const industries = ["    { name="E-commerce"", description: "Online retail solutions"},    { name="""Healthcare, description: ""Medical practice management"},    { name=""Finance"", description: Financial services tools""},    { name=""Education", description: ""Learning management systems},"    { name=""Real Estate", description: "Property management tools""},    { name=""Manufacturing", description: "Production optimization"}"  ]'"    <div>Page content</div>"  );'    <React.Fragment></React.Fragment>'      <Helmet>
-        <title>MicroSaaSPage - Zion Tech Group</title>
-        <meta name="description content="MicroSaaSPage - Zion Tech Group" />      </Helmet>"      "      <div>
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Page Under Development</h1>
+            <div className="prose max-w-none">
+              <p className="text-lg text-gray-600 mb-6">
+                This page is currently under development. We're working hard to bring you amazing content and features.
+              </p>
+              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                <p className="text-blue-800">
+                  <strong>Coming Soon:</strong> This page will be available with full functionality in the near future.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="/" 
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                >
+                  Go Home
+                </a>
+                <a 
+                  href="/contact" 
+                  className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-        <div>
-      </div>
-          <h1 className="text-4xl font-bold mb-4">MicroSaaSPage</h1>          <p className="text-gray-30o0">This page is under construction.</p>"        </div>"      </div>"  )}
+    </div>
+  );
+}

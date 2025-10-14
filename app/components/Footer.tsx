@@ -1,41 +1,41 @@
-import React from "react";"import { Link } from react-router-dom";"import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Brain, ArrowRight } from lucide-react";"const Footer = () => {"    const currentYear :  new Date().getFullYear();
-  
-  const services :  [
-    { name="AI Solutions, href=""/ai-solutions" },    { name="Cybersecurity", href: "/cybersecurity" },    { name="Cloud Infrastructure", href: ""/cloud-infrastructure },    { name=""Digital Transformation, href: ""/digital-transformation },    { name=""IT Services", href: "/it-services },"    { name="Micro SAAS", href: "/micro-saas }"  ];""  return (
-    <footer className="bg-gray-900 text-white"      <div>"        <div>"          {/* Company Info */}
-          <div>
-            <div>
-              <div>
-                <Brain className="w-5 h-5 text-white"              </div>"              <span className="text-xl font-bold Zion Tech Group  span"            </div>"            <p className="text-gray-400 mb-4"              Leading technology solutions provider specializing in AI, cybersecurity, and digital transformation."            </p>"            <div>
-              <a href="# className="text-gray-400 hover text-white transition-colors">                <Linkedin className="w-5 h-5" />              </a>"              <a href="#" className=text-gray-400 hover text-white transition-colors">"                <Twitter className=w-5 h-5" />"              </a>"              <a href=#" className="text-gray-400 hover text-white transition-colors"                <Github className="w-5 h-5"              </a>"            </div>"          </div>
+'use client';
 
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 Services  h3"            <ul className="space-y-2"              {services.map((service, index) : > ("                <li key: {index}>"                  <Link
-                    to={service.href}
-                    className="text-gray-400 hover text-white transition-colors flex items-center"                  >"                    <ArrowRight className="w-3 h-3 mr-2"                    {service.name}""                  </Link>
-                </li>
-              ))}
-            </ul>
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Page Under Development</h1>
+            <div className="prose max-w-none">
+              <p className="text-lg text-gray-600 mb-6">
+                This page is currently under development. We're working hard to bring you amazing content and features.
+              </p>
+              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                <p className="text-blue-800">
+                  <strong>Coming Soon:</strong> This page will be available with full functionality in the near future.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="/" 
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                >
+                  Go Home
+                </a>
+                <a 
+                  href="/contact" 
+                  className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
           </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4 Company  h4"            <ul className="space-y-2"              <li><Link to="/about className="text-gray-400 hover text-white transition-colors">About Us</Link></li>              <li><Link to="/careers" className=text-gray-400 hover text-white transition-colors">Careers</Link></li>"              <li><Link to=/blog" className="text-gray-400 hover text-white transition-colors Blog  Link   li"              <li><Link to="/contact className="text-gray-400 hover text-white transition-colors">Contact</Link></li>"            </ul>"          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>            <div>"              <div>"                <Mail size={16} className="text-blue-400" />                <span className="text-gray-300">kleber@ziontechgroup.com</span>              </div>"              <div>"                <Phone size={16} className="text-blue-400" />                <span className="text-gray-300">+1-302-464-0950</span>              </div>"              <div>"                <MapPin size={16} className="text-blue-400" />                <span className="text-gray-300">Middletown, DE</span>"              </div>"            </div>
-          </div>
-        </div>
-
-        {/* Copyright */}
-        <div>
-          <p className="text-gray-400">"            © {currentYear} Zion Tech Group. All rights reserved."          </p>"
         </div>
       </div>
-    </footer>
+    </div>
   );
 }
-
-export default Footer;

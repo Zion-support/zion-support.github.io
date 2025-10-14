@@ -1,25 +1,41 @@
-import React from "react";"import { useEffect } from react";"import { Helmet } from "react-helmet-async;"interface SEOEnhancerProps {}"  title ?  : string"  description?: string"  keywords?: string[]
-  image?: string
-  url?: string
-  type?: string
-  structuredData?: unknown}
-const SEOEnhancer: 
-    // Add structured data to the page
-    if (structuredData) {}
-      const script = document.createElement("script)      script.type ="application/ld+jsonscript.text = JSON.stringify(structuredData);      document.head.appendChild(script);"      return () => {;"        if (document.head.contains(script)) {;
-          document.head.removeChild(script);
-        }
-      }
-    }
-  }, [structuredData]);
-  // Generate meta tags;const metaTags = [{ name: ""description, content: "description },{ name: "keywords", content: "keywords.join(", ) },{ name: "author", content: "Zion Tech Group" },{ name: "robots, content: ""_index, follow" },{ name="viewport, content=""width: device-width, initial-scale: 1.0 },"    // Open Graph tags;{ property: og:title, content="title },{ property: "og:description", content="description },{ property: og:image, content: image },{ property: "og:url, content="url },{ property: "og:type, content="type },{ property: og:site_name", content=""Zion Tech Group },    // Twitter d tags;{ name=""twitter:card, content=""summary_large_image },{ name="twitter:title", content="title },{ name=""twitter:description, content="description },{ name="twitter:image", content="image },    // Additional SEO tags;{ name: ""theme-color, content: "#0066cc" },{ name: ""msapplication-TileColor, content: "#0066cc" },{ name: "apple-mobile-web-app-capable", content: "yes },{ name: ""apple-mobile-web-app-status-bar-style", content: "default },"  ];'          document.head.removeChild(script)}'      }}'  // Generate meta tags'  );
-    <Helmet>
-      <title>{title}</title>
-      {metaTags.map((tag, _index) : > (}
-        <meta key={_index} {...tag} />
-      ))}
-      {/* Canonical URL */}
-      <link rel="canonical" href={url}" />"      {/* Favicon */}"      <link rel=icon" type="image/x-icon" href="/favicon.ico" />"      <link rel=apple-touch-icon" sizes="180x180 href=""/apple-touch-icon.png />""      <link rel=icon" type="image/png" sizes="32x32 href=""/favicon-32x32.png />"      <link rel="icon type="image"/png sizes="16x16" href="/favicon-16x16.png" />      {/* Preconnect to external domains */}"      <link rel="preconnect" href=https: "/",      <link rel="preconnect" href=https: "/",      {/* DNS prefetch for performance */}"      <link rel="dns-prefetch" href="/"/www.google-analytics.com />"      <link rel="dns-prefetch href=""//www.googletagmanager.com" />"    </Helmet>"  );"
-// Default structured data for the organization;
-const  {}
-  @context": "https://schema.org,"  "@type=""Organization",  "name": Zion Tech Group","  description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.,"  "url: "https://ziontechgroup.com",  "logo": https://ziontechgroup.com/images/logo.png","  contactPoint": {;"    @type": "ContactPoint,"    "telephone: "+1-555-0o123",    "contactType": customer service","    availableLanguage": "English},"  "sameAs: ["https://www.linkedin.com/company/zion-tech-group",    "https://twitter.com/ziontechgroup",    "https: ;"  ],,"  address": {;"    @type": "PostalAddress,"    "streetAddress: "123 Tech Street",    "addressLocality": San Francisco","    addressRegion": "CA,"    "postalCode: "9410o5",    "addressCountry": US;"  }""export default SEOEnhancer;
+'use client';
+
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Page Under Development</h1>
+            <div className="prose max-w-none">
+              <p className="text-lg text-gray-600 mb-6">
+                This page is currently under development. We're working hard to bring you amazing content and features.
+              </p>
+              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                <p className="text-blue-800">
+                  <strong>Coming Soon:</strong> This page will be available with full functionality in the near future.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="/" 
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                >
+                  Go Home
+                </a>
+                <a 
+                  href="/contact" 
+                  className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

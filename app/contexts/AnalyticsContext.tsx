@@ -1,16 +1,41 @@
-import { createContext, useContext, useState, useEffect   } from "react;"interface AnalyticsContextType {}"  trackEvent: (eventNam,e: string", properties ?  : Record<string, any>) => void"  trackPageView: (pageNam,e: string) => void",setUser: "(userI,d: string, properties ?  : Record<string, any>) => void"  isEnabled: "boolean}"const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)"const  ({ children }) => {}"  const [ isEnabled, setIsEnabled ] = useState(false);
-  const [ userId, setUserId ] = useState<string | null>(null);
-  useEffect(() => {;
-    // if analytics is enabled;
-    setIsEnabled(true)}, []);
-  const trackEvent = (eventName: "string, properties ?  : Record<string, any>) => {"    if (!isEnabled) return;"    // Track event logic here;"    console.log(Analytics Event: "", eventName, properties);"  }"  const trackPageView = (pageName: "    // Track page view logic here;"    console.log(Page View: "", pageName);  }"  const setUser = (newUserId: "string, properties ?  : Record<string, any>) => {"    setUserId(newUserId);"    console.log(User Set: "", newUserId, properties);"  }    // Track event logic here;console.log(Analytics Event: "", eventName, properties)}"  }"  const trackPageView = (pageName: "    // Track page view logic here;console.log(Page View: "", pageName)}  }"  const setUser = (newUserId: "string, properties ?  : Record<string, any>) => {"    setUserId(newUserId);console.log(User Set: "", newUserId, properties)}"  }'  const value: "    t,rackEvent,"    trackPageView,'    setUser,'    isEnabled
-  }
-    <div>Page content</div>
-  );
-    <AnalyticsContext.Provider value={value}">"      {children}"    </AnalyticsContext.Provider>"  );
+'use client';
 
-export { AnalyticsContext }
+import React from 'react';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-lg shadow-md p-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">Page Under Development</h1>
+            <div className="prose max-w-none">
+              <p className="text-lg text-gray-600 mb-6">
+                This page is currently under development. We're working hard to bring you amazing content and features.
+              </p>
+              <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+                <p className="text-blue-800">
+                  <strong>Coming Soon:</strong> This page will be available with full functionality in the near future.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="/" 
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+                >
+                  Go Home
+                </a>
+                <a 
+                  href="/contact" 
+                  className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-export { AnalyticsContext }
-</string>
-</AnalyticsContextType>
