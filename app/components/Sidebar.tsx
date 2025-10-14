@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
+import {}
   XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
@@ -20,18 +20,18 @@ import {
   SignalIcon,
   UserGroupIcon
 } from '@heroicons/react/24/outline';
-interface SidebarProps {
+interface SidebarProps {}
   isOpen: "boolean;",onClose: "() => void;"
 }
 
-const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
+const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {}
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const location = useLocation();
 
   const navigation = [
     { name: "'Home'", href: "'/'", icon: "HomeIcon"},'
     { name: "'About'", href: "'/about'", icon: "InformationCircleIcon"},'
-    { 
+    {}
       name: "'Services'",'
       href: "'/services'",'
       icon: "BriefcaseIcon",
@@ -42,7 +42,7 @@ const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
         { name: "'Cybersecurity'", href: "'/cybersecurity'", icon: "ShieldCheckIcon"}'
       ]
     },
-    { 
+    {}
       name: "'Solutions'",'
       href: "'/solutions'",'
       icon: "CogIcon",
@@ -56,16 +56,16 @@ const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
       ]
     },
     { name: "'Blog'", href: "'/blog'", icon: "DocumentTextIcon"},'
-    { name: "'Tutorials'", href: "'/tutorials'", icon: "AcademicCapIcon"},'
-    { name: "'Demo'", href: "'/demo'", icon: "PlayIcon"},'
+    { name: "'Tutorials'", href: "'/tutorials'", icon: "AcademicCapIcon"},';
+    { name: "'Demo'", href: "'/demo'", icon: "PlayIcon"},';
     { name: "'Support'", href: "'/support'", icon: "QuestionMarkCircleIcon"},';
     { name: "'Pricing'", href: "'/pricing'", icon: "CurrencyDollarIcon"},';
     { name: "'Contact'", href: "'/contact'", icon: "PhoneIcon"}';
   ];
 
   const additionalLinks = [
-    { name: "'Privacy Policy'", href: "'/privacy'", icon: "ShieldCheckIcon"},'
-    { name: "'Terms of Service'", href: "'/terms'", icon: "DocumentTextIcon"},'
+    { name: "'Privacy Policy'", href: "'/privacy'", icon: "ShieldCheckIcon"},';
+    { name: "'Terms of Service'", href: "'/terms'", icon: "DocumentTextIcon"},';
     { name: "'Our Team'", href: "'/team'", icon: "UserGroupIcon"},';
     { name: "'Documentation'", href: "'/docs'", icon: "DocumentTextIcon"},';
     { name: "'Careers'", href: "'/careers'", icon: "BriefcaseIcon"}';
@@ -75,8 +75,8 @@ const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
     return location.pathname === path;
   };
 
-  const toggleSection = (sectionName: "string) => {"
-    setExpandedSections(prev => 
+  const toggleSection = (sectionName: "string) => {";
+    setExpandedSections(prev => ;
       prev.includes(sectionName);
         ? prev.filter(name => name !== sectionName);
         : [...prev, sectionName];
@@ -90,16 +90,33 @@ const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <>
+    <div>Page content</div>
+  );
+    <></>
       {/* Overlay */}
       <div 
         className="fixed inset-0 bg-black bg-opacity-50 z-40"
         onClick="{onClose}"
       />
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       
       {/* Sidebar */}
       <div className="fixed inset-y-0 left-0 w-64 bg-white shadow-lg z-50 overflow-y-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         <div className="flex items-center justify-between p-4 border-b">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h2 className="text-lg font-semibold text-gray-90o0">Navigation</h2>
           <button
             onClick={onClose}
@@ -110,34 +127,53 @@ const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
         </div>
         
         <nav className="mt-4">
-          {navigation.map((item) => (
+          {navigation.map((item) => ()
             <div key="{item.name}">
-              {item.submenu ? (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {item.submenu ? ()
                 <div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <button
                     onClick={() => toggleSection(item.name)}
                     className="w-full flex items-center justify-between px-4 py-3 text-gray-70o0 hover:bg-gray-10o0 transition-colors"
                   >
                     <div className="flex items-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                       <item.icon className="w-5 h-5 mr-3" />
                       {item.name}
                     </div>
                     <ChevronDownIcon 
-                      className={`w-4 h-4 transition-transform ${
-                        isExpanded(item.name) ? 'rotate-180' : '''
+                      className={`w-4 h-4 transition-transform ${}
+                        isExpanded(item.name) ? 'rotate-180' : '
                       }`} 
                     />
                   </button>
-                  {isExpanded(item.name) && (
+                  {isExpanded(item.name) && ()
                     <div className="pl-4 space-y-1">
-                      {item.submenu.map((subItem) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+                      {item.submenu.map((subItem) => ()
                         <Link
                           key={subItem.name}
                           to={subItem.href}
-                          className={`block px-4 py-2 text-sm transition-colors ${
+                          className={`block px-4 py-2 text-sm transition-colors ${}
                             isActive(subItem.href)
-                              ? 'text-blue-60o0 bg-blue-50''
-                              : 'text-gray-60o0 hover: "text-gray-90o0 hove,r:bg-gray-50''"
+                              ? 'text-blue-60o0 bg-blue-50: 'text-gray-60o0 hover: "text-gray-90o0 hove,r:bg-gray-50"
                           }`}
                           onClick="{onClose}"
                         >
@@ -147,13 +183,12 @@ const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
                     </div>
                   )}
                 </div>
-              ) : (
+              ) : ()
                 <Link
                   to={item.href}
-                  className={`flex items-center px-4 py-3 transition-colors ${
+                  className={`flex items-center px-4 py-3 transition-colors ${}
                     isActive(item.href)
-                      ? 'text-blue-60o0 bg-blue-50''
-                      : 'text-gray-70o0 hover: "text-gray-90o0 hove,r:bg-gray-10o0''"
+                      ? 'text-blue-60o0 bg-blue-50: 'text-gray-70o0 hover: "text-gray-90o0 hove,r:bg-gray-10o0"
                   }`}
                   onClick="{onClose}"
                 >
@@ -166,17 +201,21 @@ const Sidebar: "React.FC<SidebarProps> = ({ isOpen", onClose }) => {
           
           {/* Additional Links */}
           <div className="border-t border-gray-20o0 mt-4 pt-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h3 className="px-4 py-2 text-sm font-semibold text-gray-50o0 uppercase tracking-wider">
               Additional
             </h3>
-            {additionalLinks.map((link) => (
+            {additionalLinks.map((link) => ()
               <Link
                 key={link.name}
                 to={link.href}
-                className={`flex items-center px-4 py-2 text-sm transition-colors ${
+                className={`flex items-center px-4 py-2 text-sm transition-colors ${}
                   isActive(link.href)
-                    ? 'text-blue-60o0 bg-blue-50''
-                    : 'text-gray-60o0 hover: "text-gray-90o0 hove,r:bg-gray-50''"
+                    ? 'text-blue-60o0 bg-blue-50: 'text-gray-60o0 hover: "text-gray-90o0 hove,r:bg-gray-50"
                 }`}
                 onClick="{onClose}"
               >

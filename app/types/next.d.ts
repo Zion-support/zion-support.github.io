@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Next.js type definitions
 <<<<<<< HEAD
 
@@ -56,3 +57,35 @@ declare module 'next' {
   }
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-fabf
+=======
+'use client';
+// Next.js type definitions
+declare module 'next' {}
+  interface NextConfig {}
+    // Add any custom Next.js configuration types here
+    [key: string]: unknown;
+  }
+}
+
+// Export a default configuration object
+const nextConfig = {};
+  // Configuration options
+};
+
+export default nextConfig;
+// Next.js type declarations;
+declare module 'next' {';'
+  interface NextApiRequest {}
+    user?: any;}
+  }
+  interface NextConfig {}
+    // Add any Next.js specific types here;}
+  }
+}
+// Export a utility function;
+export const nextUtil = () => {;
+  // Implementation;
+  return true;}
+};
+export default nextUtil;'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, Globe } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -173,6 +174,23 @@ export default function Pricing() {
 
   return (
     <>
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const PricingPage: React.FC = () => {}
+  return (
+    <div>Page content</div>
+  );
+    <div className="min-h-screen bg-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
       <Helmet>
         <title>Pricing - Zion Tech Group | AI & IT Solutions</title>
         <meta
@@ -184,6 +202,7 @@ export default function Pricing() {
           content="AI services pricing, micro SAAS pricing, IT solutions pricing, business intelligence pricing, cybersecurity pricing, cloud storage pricing"
         />
       </Helmet>
+<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
@@ -499,6 +518,49 @@ export default function Pricing() {
             </div>
           </div>
         </section>
+=======
+      
+      <div className="container mx-auto px-4 py-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+        <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Pricing</h1>
+          <p className="text-xl text-gray-600">
+            Welcome to our pricing page.
+          </p>
+        </div>
+
+const PricingPage: React.FC = () => {}
+  return (
+    <div>Page content</div>
+  );
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div className="container mx-auto px-4 py-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+        <h1 className="text-4xl font-bold text-white mb-8">Pricing</h1>
+        <p className="text-xl text-gray-300 max-w-3xl">
+          Flexible pricing plans for our solutions.
+        </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
       </div>
     </>
   );

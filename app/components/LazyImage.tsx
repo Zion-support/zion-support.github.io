@@ -1,9 +1,16 @@
+'use client';
 import React from 'react';
-import { Helmet } from  from 'react-helmet-async';
-'use client'
+import { Helmet } from 'react-helmet-async';
 const LazyImage: "React.FC = () => {"
   return (
+    <div>Page content</div>
+  );
     <div className="min-h-screen bg-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       <Helmet>
         <title>Lazy Image - Zion Tech Group</title>
         <meta name="description" content="Professional lazy image services by Zion Tech Group." />
@@ -11,6 +18,11 @@ const LazyImage: "React.FC = () => {"
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">
         <div className="max-w-6xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h1 className="text-5xl font-bold text-gray-90o0 mb-6">
             Lazy Image;
           </h1>
@@ -23,8 +35,23 @@ const LazyImage: "React.FC = () => {"
       {/* Content Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h2 className="text-3xl font-bold text-gray-90o0 mb-6">Our Services</h2>
               <p className="text-lg text-gray-60o0 mb-6">
                 We provide comprehensive lazy image;
@@ -46,6 +73,11 @@ const LazyImage: "React.FC = () => {"
               </ul>
             </div>
             <div className="bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-lg p-8 text-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p className="mb-6">
                 Ready to transform your business with our lazy image services?;
@@ -63,6 +95,11 @@ const LazyImage: "React.FC = () => {"
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-60o0">
         <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Get Started?;
           </h2>
@@ -83,7 +120,7 @@ const LazyImage: "React.FC = () => {"
 }
 export default LazyImage;
 import React, { useState, useRef, useEffect } from 'react';
-interface LazyImageProps {
+interface LazyImageProps {}
   src: "string;",alt: "string;"
   className?: string;
   placeholder?: string;
@@ -94,16 +131,16 @@ interface LazyImageProps {
 const LazyImage: "React.FC<LazyImageProps> = ({"
   src,
   alt,
-  className = '','
+  className = ,'
   placeholder = 'data: "image/svg+xml;base64",PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjwvc3ZnPg==','
   onLoad,
   onError
-}) => {
+}) => {}
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
-  useEffect(() => {
+  useEffect(() => {}
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry.isIntersecting) {;
@@ -114,7 +151,7 @@ const LazyImage: "React.FC<LazyImageProps> = ({"
       { threshold: "0.1"}
     );
 
-    if (imgRef.current) {
+    if (imgRef.current) {}
       observer.observe(imgRef.current);
     }
 
@@ -131,28 +168,40 @@ const LazyImage: "React.FC<LazyImageProps> = ({"
   };
 
   return (
+    <div>Page content</div>
+  );
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
-      {isInView && (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      {isInView && ()
         <img
           src={src}
           alt={alt}
           onLoad={handleLoad}
           onError={handleError}
-          className={`transition-opacity duration-30o0 ${
-            isLoaded ? 'opacity-10o0' : 'opacity-0''
-          }`}
+          className={`transition-opacity duration-30o0 ${}
+            isLoaded ? 'opacity-10o0' : 'opacity-0}`}
           loading="lazy""
         />
       )}
-      {!isLoaded && (
+      {!isLoaded && ()
         <div
           className="absolute inset-0 bg-gray-20o0 animate-pulse"
-          style={{
+          style={{}
             backgroundImage: "`url(${placeholder"})`,
             backgroundSize: "'cover'",'
             backgroundPosition: "'center'"
   }}
         />
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       )}
     </div>
   );

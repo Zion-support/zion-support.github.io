@@ -31,6 +31,34 @@ const SolutionsPage: React.FC = () => {
                     <li>• Computer Vision</li>
                   </ul>
                 </div>
+                <div className="bg-gray-800 p-6 rounded-lg">
+                  <div className="h-12 w-12 bg-green-600 rounded-lg mb-4 flex items-center justify-center">
+                    <span className="text-white font-bold">IT</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">IT Infrastructure</h3>
+                  <p className="text-gray-300 mb-4">
+                    Robust and scalable IT infrastructure solutions for modern businesses.
+                  </p>
+                  <ul className="text-sm text-gray-400 space-y-1">
+                    <li>• Cloud Migration</li>
+                    <li>• Network Security</li>
+                    <li>• Data Management</li>
+                  </ul>
+                </div>
+                <div className="bg-gray-800 p-6 rounded-lg">
+                  <div className="h-12 w-12 bg-purple-600 rounded-lg mb-4 flex items-center justify-center">
+                    <span className="text-white font-bold">Q</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4">Quantum Computing</h3>
+                  <p className="text-gray-300 mb-4">
+                    Next-generation quantum computing solutions for complex problem solving.
+                  </p>
+                  <ul className="text-sm text-gray-400 space-y-1">
+                    <li>• Quantum Algorithms</li>
+                    <li>• Optimization</li>
+                    <li>• Simulation</li>
+                  </ul>
+                </div>
               </div>
             </section>
             <section>
@@ -41,13 +69,21 @@ const SolutionsPage: React.FC = () => {
               <div className="flex justify-center space-x-4">
                 <a
                   href="/contact"
+<<<<<<< HEAD
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors"
+=======
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
                 >
                   Contact Us
                 </a>
                 <a
                   href="/demo"
+<<<<<<< HEAD
                   className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-md transition-colors"
+=======
+                  className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
                 >
                   Request Demo
                 </a>

@@ -1,9 +1,9 @@
-
-'use client';'
+'use client';
+'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Link } from 'react-router-dom';'
-import { 
+import {}
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
@@ -25,7 +25,7 @@ import {
 } from '@heroicons/react/24/outline';'
 const ITSolutionsPage: "React.FC = () => {"
   const solutions = [
-    {
+    {}
       title: "Cloud Infrastructure","
       description: "Scalable and secure cloud infrastructure solutions for modern businesses.","
       icon: "CloudIcon",
@@ -43,7 +43,7 @@ const ITSolutionsPage: "React.FC = () => {"
       useCases: ["Web hosting", "Data storage", "Application hosting"],"
       href: "/cloud-infrastructure"
     },
-    {
+    {}
       title: "Cybersecurity Solutions","
       description: "Comprehensive cybersecurity solutions to protect your digital assets and data.","
       icon: "ShieldCheckIcon",
@@ -61,7 +61,7 @@ const ITSolutionsPage: "React.FC = () => {"
       useCases: ["Data protection", "Network security", "Compliance"],"
       href: "/cybersecurity"
     },
-    {
+    {}
       title: "IT Consulting","
       description: "Strategic IT consulting to help you make informed technology decisions.","
       icon: "LightBulbIcon",
@@ -79,7 +79,7 @@ const ITSolutionsPage: "React.FC = () => {"
       useCases: ["Technology planning", "Digital transformation", "System integration"],"
       href: "/it-consulting"
     },
-    {
+    {}
       title: "Network Solutions","
       description: "Advanced networking solutions for reliable and secure connectivity.","
       icon: "GlobeAltIcon",
@@ -97,7 +97,7 @@ const ITSolutionsPage: "React.FC = () => {"
       useCases: ["Office networking", "Remote work", "Data centers"],"
       href: "/network-solutions"
     },
-    {
+    {}
       title: "Data Management","
       description: "Comprehensive data management solutions for storage, processing, and analytics.","
       icon: "ChartBarIcon",
@@ -115,7 +115,7 @@ const ITSolutionsPage: "React.FC = () => {"
       useCases: ["Business intelligence", "Data analytics", "Compliance"],"
       href: "/data-management"
     },
-    {
+    {}
       title: "IT Support","
       description: "Comprehensive IT support services to keep your systems running smoothly.","
       icon: "UserGroupIcon",
@@ -128,31 +128,31 @@ const ITSolutionsPage: "React.FC = () => {"
         "User training""
       ],
       color: "from-cyan-50o0 to-blue-50o0","
-      price: "Starting at $1,0o00/month","
-      benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],"
+      price: "Starting at $1,0o00/month",";
+      benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],";
       useCases: ["Help desk", "System maintenance", "User support"],";
       href: "/it-support";
   };
   ];
 
   const features = [
-    {
+    {}
       title: "Expert Solutions","
       description: "Our team of certified professionals delivers cutting-edge IT solutions.","
       icon: "CpuChipIcon"
     },
-    {
+    {}
       title: "Scalable Architecture","
       description: "Solutions that grow with your business and adapt to changing needs.","
       icon: "CloudIcon"
     },
-    {
+    {}
       title: "24/7 Support","
       description: "Round-the-clock support to ensure your systems are always running.","
       icon: "UserGroupIcon"
     },
-    {
-      title: "Security First","
+    {};
+      title: "Security First",";
       description: "Security is built into every solution we deliver.",";
       icon: "ShieldCheckIcon;"
     };
@@ -162,7 +162,9 @@ import { Helmet } from 'react-helmet-async';'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
   return (
-    <>
+    <div>Page content</div>
+  );
+    <></>
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, and consulting services." />
@@ -170,9 +172,19 @@ import { Helmet } from 'react-helmet-async';'
       </Helmet>
       
       <div className="min-h-screen bg-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">
           <div className="max-w-6xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h1 className="text-5xl font-bold text-gray-90o0 mb-6">
               IT Solutions
             </h1>
@@ -181,6 +193,11 @@ import { Helmet } from 'react-helmet-async';'
               enhance security, and drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <Link 
                 to=""/contact" "
                 className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors"
@@ -200,18 +217,43 @@ import { Helmet } from 'react-helmet-async';'
         {/* Solutions Grid */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl font-bold text-center text-gray-90o0 mb-12">
               Our IT Solutions
             </h2>
             <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8">
-              {solutions.map((solution, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {solutions.map((solution, index) => ()
                 <div key={index} className="bg-white border border-gray-20o0 rounded-lg p-6 hover:shadow-lg transition-shadow">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center mb-4`}>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <solution.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-90o0 mb-3">{solution.title}</h3>
                   <p className="text-gray-60o0 mb-4">{solution.description}</p>
                   <div className="mb-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <p className="text-blue-60o0 font-semibold">{solution.price}</p>
                   </div>
                   <Link 
@@ -229,13 +271,33 @@ import { Helmet } from 'react-helmet-async';'
         {/* Features Section */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl font-bold text-center text-gray-90o0 mb-12">
               Why Choose Our IT Solutions?
             </h2>
             <div className="grid md: grid-cols-2 l,g:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {features.map((feature, index) => ()
                 <div key={index} className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-lg flex items-center justify-center mb-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-90o0 mb-3">{feature.title}</h3>
@@ -249,6 +311,11 @@ import { Helmet } from 'react-helmet-async';'
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl font-bold text-gray-90o0 mb-6">
               Ready to Transform Your IT Infrastructure?
             </h2>
@@ -256,6 +323,11 @@ import { Helmet } from 'react-helmet-async';'
               Let's discuss how our IT solutions can help you achieve your business goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <Link 
                 to=""/contact" "
                 className="bg-blue-60o0 text-white px-8 py-3 rounded-lg hover:bg-blue-70o0 transition-colors"
@@ -279,7 +351,17 @@ import { Helmet } from 'react-helmet-async';'
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
               IT Solutions
             </h1>
@@ -297,12 +379,34 @@ import { Helmet } from 'react-helmet-async';'
       {/* IT Services Grid */}
       <section className="py-20 bg-slate-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {itServices.map((service, index) => {
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+            {itServices.map((service, index) => {}
               const Icon = service.icon;
               return (
+    <div>Page content</div>
+  );
                 <div key={service.title} className="group bg-gradient-to-br from-slate-80o0 to-slate-70o0 p-8 rounded-xl border border-slate-60o0 hover:border-purple-50o0 transition-all duration-30o0 hover-lift hover-glow glass-dark">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover: "scale-110 transition-transform floating`"}>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
@@ -312,13 +416,23 @@ import { Helmet } from 'react-helmet-async';'
                   
                   {/* Pricing */}
                   <div className="mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <span className="text-3xl font-bold text-green-40o0">{service.price}</span>
                   </div>
 
                   {/* Features */}
                   <div className="mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <h4 className="text-sm font-semibold text-gray-40o0 mb-3">Key Features: "</h4>",
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => ()
                         <li key={featureIndex} className="flex items-center text-gray-30o0">
                           <CheckCircleIcon className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
@@ -329,8 +443,13 @@ import { Helmet } from 'react-helmet-async';'
 
                   {/* Benefits */}
                   <div className="mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <h4 className="text-sm font-semibold text-gray-40o0 mb-2">Benefits: "</h4>",
-                      {service.benefits.map((benefit, benefitIndex) => (
+                      {service.benefits.map((benefit, benefitIndex) => ()
                         <span key={benefitIndex} className="text-xs bg-green-90o0"/30 text-green-30o0 px-2 py-1 rounded-full">
                           {benefit}
                         </span>
@@ -340,8 +459,13 @@ import { Helmet } from 'react-helmet-async';'
 
                   {/* Use Cases */}
                   <div className="mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <h4 className="text-sm font-semibold text-gray-40o0 mb-2">Perfect for: "</h4>",
-                      {service.useCases.map((useCase, useCaseIndex) => (
+                      {service.useCases.map((useCase, useCaseIndex) => ()
                         <span key={useCaseIndex} className="text-xs bg-blue-90o0"/30 text-blue-30o0 px-2 py-1 rounded-full">
                           {useCase}
                         </span>
@@ -350,6 +474,11 @@ import { Helmet } from 'react-helmet-async';'
                   </div>
 
                   <div className="flex gap-2">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <Link
                       to={service.href}
                       className="flex-1 inline-flex items-center justify-center gap-2 text-purple-40o0 hover: text-purple-30o0 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg hove,r:bg-purple-40o0"/10"
@@ -373,7 +502,17 @@ import { Helmet } from 'react-helmet-async';'
       {/* Why Choose Our IT Solutions */}
       <section className="py-20 bg-gradient-to-r from-slate-90o0 to-purple-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our IT Solutions?
             </h2>
@@ -382,8 +521,23 @@ import { Helmet } from 'react-helmet-async';'
             </p>
           </div>
           <div className="grid md: grid-cols-2 l,g:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-20 h-20 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <ServerIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>
@@ -392,7 +546,17 @@ import { Helmet } from 'react-helmet-async';'
               </p>
             </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-20 h-20 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <ClockIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">24/7 Support</h3>
@@ -401,7 +565,17 @@ import { Helmet } from 'react-helmet-async';'
               </p>
             </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-20 h-20 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <ShieldCheckIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
@@ -410,7 +584,17 @@ import { Helmet } from 'react-helmet-async';'
               </p>
             </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-20 h-20 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <CogIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Scalable Solutions</h3>
@@ -425,7 +609,17 @@ import { Helmet } from 'react-helmet-async';'
       {/* IT Implementation Process */}
       <section className="py-20 bg-slate-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our IT Implementation Process
             </h2>
@@ -434,8 +628,23 @@ import { Helmet } from 'react-helmet-async';'
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <span className="text-white font-bold text-xl">1</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Assessment & Planning</h3>
@@ -444,7 +653,17 @@ import { Helmet } from 'react-helmet-async';'
               </p>
             </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Design & Configuration</h3>
@@ -453,7 +672,17 @@ import { Helmet } from 'react-helmet-async';'
               </p>
             </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-16 h-16 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Implementation & Testing</h3>
@@ -462,7 +691,17 @@ import { Helmet } from 'react-helmet-async';'
               </p>
             </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <span className="text-white font-bold text-xl">4</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Monitoring & Support</h3>
@@ -477,7 +716,17 @@ import { Helmet } from 'react-helmet-async';'
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-slate-90o0 to-purple-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Ready to Optimize Your IT Infrastructure?
             </h2>
@@ -485,6 +734,11 @@ import { Helmet } from 'react-helmet-async';'
               Let's discuss how our IT solutions can enhance your business operations and security'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <Link
                 to=""/contact""
                 className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: from-purple-70o0 hover:to-cyan-70o0 transition-all duration-30o0 transform hove,r:scale-10o5 flex items-center justify-center gap-2"
@@ -501,11 +755,26 @@ import { Helmet } from 'react-helmet-async';'
               </Link>
             </div>
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-30o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="flex items-center gap-3">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <PhoneIcon className="w-6 h-6 text-purple-40o0" />
                 <span>+1-30o2-464-0o950</span>
               </div>
               <div className="flex items-center gap-3">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <EnvelopeIcon className="w-6 h-6 text-purple-40o0" />
                 <span>kleber@ziontechgroup.com</span>
               </div>

@@ -1,6 +1,7 @@
+'use client';
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
-import { 
+import {}
   CheckCircleIcon,
   UserGroupIcon,
   LightBulbIcon,
@@ -13,26 +14,41 @@ import {
   EnvelopeIcon,;
   MapPinIcon;
 } from '@heroicons/react/24/outline';'
-export default function AboutPage() {
-
-  const stats = [
-    { number: "'50+'", label: "'Projects Completed'"},'
+export default function AboutPage() {}
+  return (
+    <div>Page content</div>
+  );
+}
+  const stats = [;
+    { number: "'50+'", label: "'Projects Completed'"},';
     { number: "'25+'", label: "'Happy Clients'"},';
     { number: "'99%'", label: "'Success Rate'"},';
     { number: "'4+'", label: "'Years Experience'"}';
   ];
 
   return (
-    <>
+    <div>Page content</div>
+  );
+    <></>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." />
       </Helmet>
       
       <div className="min-h-screen bg-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">
           <div className="max-w-6xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h1 className="text-5xl font-bold text-gray-90o0 mb-6">
               About Zion Tech Group
             </h1>
@@ -50,13 +66,38 @@ export default function AboutPage() {
         {/* Stats Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {stats.map((stat, index) => ()
                 <div key={index} className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className="text-4xl font-bold text-blue-60o0 mb-2">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     {stat.number}
                   </div>
                   <div className="text-gray-60o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     {stat.label}
                   </div>
                 </div>
@@ -68,7 +109,17 @@ export default function AboutPage() {
         {/* Mission Section */}
         <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center mb-12">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h2 className="text-3xl font-bold text-gray-90o0 mb-4">
                 Our Mission
               </h2>
@@ -83,6 +134,11 @@ export default function AboutPage() {
         {/* CTA Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl font-bold text-gray-90o0 mb-4">
               Ready to Transform Your Business?
             </h2>

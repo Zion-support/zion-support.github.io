@@ -1,13 +1,12 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-interface SEOHeadProps {
+import React from 'react';
+;import { Helmet } from 'react-helmet-async';
+;interface SEOHeadProps {}
   title?: string
   description?: string
   keywords?: string
   image?: string
   url?: string
-  type?: 'website' | 'article' | 'product''
-  structuredData?: any}
+  type?: 'website' | 'article' | 'productstructuredData?: any}
 
 const SEOHead: "React.FC<SEOHeadProps> = ({"
   title = 'Zion Tech Group - Advanced AI & IT Solutions','
@@ -22,8 +21,8 @@ const SEOHead: "React.FC<SEOHeadProps> = ({"
   section,
   tags = [],
   structuredData
-}) => {
-  const defaultStructuredData = {
+}) => {}
+  const defaultStructuredData = {};
     "@context": "https://schema.org","
     "@type": "Organization","
     "name": "Zion Tech Group","
@@ -50,17 +49,17 @@ const SEOHead: "React.FC<SEOHeadProps> = ({"
       "@type": "AggregateOffer","
       "offerCount": "50+","
       "offers": ["
-        {
+        {}
           "@type": "Offer","
           "name": "AI Solutions","
           "description": "Advanced artificial intelligence solutions for businesses""
         },
-        {
+        {}
           "@type": "Offer","
           "name": "Cybersecurity Services","
           "description": "Comprehensive cybersecurity solutions and consulting""
         },
-        {
+        {}
           "@type": "Offer","
           "name": "Cloud Infrastructure",";
           "description": "Scalable cloud infrastructure and migration services"";
@@ -70,6 +69,8 @@ const SEOHead: "React.FC<SEOHeadProps> = ({"
   };
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
+    <div>Page content</div>
+  );
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -115,7 +116,7 @@ const SEOHead: "React.FC<SEOHeadProps> = ({"
       {/* Canonical URL */}
       <link rel="canonical" href="{fullUrl}" />
       {/* Structured Data */}
-      {structuredData && (
+      {structuredData && ()
         <script type="application"/ld+json">
           {JSON.stringify(structuredData)}
         </script>

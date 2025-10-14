@@ -1,5 +1,19 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+;import { Helmet } from 'react-helmet-async';
+;interface SEOProps {}
+  title: "string",description: "string"
+  keywords?: string
+  canonicalUrl?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: object
+  noIndex?: boolean
+  noFollow?: boolean}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
 
 interface EnhancedSEOProps {
   title: string;
@@ -19,6 +33,7 @@ interface EnhancedSEOProps {
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
+<<<<<<< HEAD
   description,
   keywords,
   canonical,
@@ -47,14 +62,49 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   const twitterTitleValue = twitterTitle || fullTitle;
   const twitterDescriptionValue = twitterDescription || fullDescription;
   const twitterImageValue = twitterImage || ogImageValue;
+=======
+  description,keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions','
+  canonicalUrl,ogImage = '/api/placeholder/120o0/630',ogType = 'website',twitterCard = 'summary_large_image','
+  structuredData,
+  noIndex = false,
+  noFollow = false
+}) => {}
+  const siteName = 'Zion Tech Groupconst siteUrl = 'https: "//ziontechgroup.com"
+  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
+  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`';
+  const defaultStructuredData = {};
+    '@context': 'https: "//schema.org'",'
+    '@type': 'Organization','
+    name: "siteName",
+    url: "siteUrl"}
+    logo: "`${siteUrl"}/logo.png`,description: "'Leading provider of advanced AI and IT solutions", cybersecurity, cloud infrastructure, and digital transformation services.','
+    address: {'@type': 'PostalAddress',addressLocality: "'Middletown'",addressRegion: "'DE'",addressCountry: "'US'"}'
+    },
+    contactPoint: {'@type': 'ContactPoint',telephone: "'+1-30o2-464-0o950'",contactType: "'customer service'",email: "'kleber@ziontechgroup.com'"}'
+    },
+    sameAs: ['https: "//www.linkedin.com/company/zion-tech-group'",'https: "//github.com/ziontechgroup'",'https: "//twitter.com/ziontechgroup"
+    ];
+  };
+  const mergedStructuredData = structuredData || defaultStructuredData;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
 
   return (
+    <div>Page content</div>
+  );
     <Helmet>
       {/* Basic Meta Tags */}
+<<<<<<< HEAD
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={fullKeywords} />
       <link rel="canonical" href={canonical || siteUrl} />
+=======
+      <title>{title}</title>
+      <meta name="description" content="{description}" />
+      <meta name="keywords" content="{keywords}" />
+      <link rel="canonical" href="{fullCanonicalUrl}" />
+      {/* Robots */}<meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />'"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
       
       {/* Open Graph Tags */}
       <meta property="og:title" content={ogTitleValue} />

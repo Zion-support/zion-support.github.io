@@ -1,7 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SEOHead from '../components/SEOHead'
-import { 
+'use client';
+import React from 'react';
+;import { Link } from 'react-router-dom';
+;import SEOHead from '../components/SEOHead';
+;import {}
   ArrowRightIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
@@ -19,23 +20,28 @@ import FuturisticBackground from '../components/FuturisticBackground';
 import NeonButton from '../components/NeonButton';
 import AnimatedCard from '../components/AnimatedCard';
 import { services } from '../data/servicesData';
-export default function HomePage() {
-
-  const structuredData = {
+export default function HomePage() {}
+  return (
+    <div>Page content</div>
+  );
+}
+  const structuredData = {};
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "description": "Advanced AI and IT Solutions",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
-    "contactPoint": {
+    "contactPoint": {}
       "@type": "ContactPoint",
       "telephone": "+1-555-0123",
       "contactType": "customer service"
     }
   };
   return (
-    <>
+    <div>Page content</div>
+  );
+    <></>
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.""
@@ -48,13 +54,33 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="relative z-10 container mx-auto px-4 text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="max-w-5xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             {/* Animated Title */}
             <div className="mb-8">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h1 className="text-7xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-purple-20o0 to-cyan-20o0 bg-clip-text text-transparent animate-pulse">
                 Zion Tech Group
               </h1>
               <div className="flex items-center justify-center gap-4 mb-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <SparklesIcon className="w-8 h-8 text-purple-40o0 animate-bounce" />
                 <BoltIcon className="w-8 h-8 text-cyan-40o0 animate-bounce delay-10o0" />
                 <RocketLaunchIcon className="w-8 h-8 text-pink-40o0 animate-bounce delay-20o0" />
@@ -70,6 +96,11 @@ export default function HomePage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <NeonButton to=""/contact" variant="primary" size="lg">
                 Get Started Today
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
@@ -86,7 +117,17 @@ export default function HomePage() {
       {/* Featured Services Section */}
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
               Our Featured Services
             </h2>
@@ -96,17 +137,37 @@ export default function HomePage() {
           </div>
           
           <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {featuredServices.map((service, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+            {featuredServices.map((service, index) => ()
               <AnimatedCard key={service.id} glowColor={service.glowColor} className="group">
                 <div className="text-center mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className="text-6xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-30o0 mb-4 leading-relaxed">{service.shortDescription}</p>
                 </div>
                 
                 <div className="space-y-3 mb-6">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+                    {service.features.slice(0, 4).map((feature, featureIndex) => ()
                     <div key={featureIndex} className="flex items-center text-gray-30o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-40o0 to-cyan-40o0 rounded-full mr-3"></div>
                       <span className="text-sm">{feature}</span>
                     </div>
@@ -114,7 +175,17 @@ export default function HomePage() {
                 </div>
                 
                 <div className="mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <span className="text-3xl font-bold text-white">${service.pricing.basic}</span>
                     <span className="text-gray-40o0 text-sm ml-2">/month</span>
                   </div>
@@ -122,6 +193,11 @@ export default function HomePage() {
                 </div>
                 
                 <div className="flex flex-col gap-3">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <NeonButton to={service.href} variant="primary" size="sm">
                     Learn More
                     <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -135,6 +211,11 @@ export default function HomePage() {
           </div>
           
           <div className="text-center mt-12">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <NeonButton to=""/services" variant="primary" size="lg">
               View All Services
               <ArrowRightIcon className="w-5 h-5 ml-2" />
@@ -147,19 +228,38 @@ export default function HomePage() {
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-90o0 via-purple-90o0"/50 to-slate-90o0"></div>
         <div className="container mx-auto px-4 relative z-10">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-30o0 mb-12 leading-relaxed max-w-4xl mx-auto">
-                With over 4 years of experience in cutting-edge technology solutions, ''
-                we've helped businesses across various industries transform their operations'
+                With over 4 years of experience in cutting-edge technology solutions, we've helped businesses across various industries transform their operations'
                 and achieve unprecedented growth.
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8 mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <AnimatedCard glowColor="purple" className="text-center">
                 <div className="text-6xl font-bold text-purple-40o0 mb-4 animate-pulse">50+</div>
                 <div className="text-xl text-gray-30o0 mb-2">Projects Completed</div>
@@ -178,6 +278,11 @@ export default function HomePage() {
             </div>
             
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <NeonButton to=""/about" variant="primary" size="lg">
                 Learn More About Us
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
@@ -191,17 +296,37 @@ export default function HomePage() {
       <section className="py-20 relative">
         <div className="absolute inset-0 bg-slate-90o0"></div>
         <div className="container mx-auto px-4 relative z-10">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 bg-gradient-to-r from-purple-40o0 to-cyan-40o0 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-30o0 mb-12 max-w-4xl mx-auto leading-relaxed">''"
+              <p className="text-xl text-gray-30o0 mb-12 max-w-4xl mx-auto leading-relaxed">"
                 Let's discuss how our technology solutions can drive your business forward'
               </p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8 mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <AnimatedCard glowColor="purple" className="text-center">
                 <PhoneIcon className="w-12 h-12 text-purple-40o0 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
@@ -223,6 +348,11 @@ export default function HomePage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <NeonButton to=""/contact" variant="primary" size="lg">
                 Get In Touch
                 <ArrowRightIcon className="w-5 h-5 ml-2" />

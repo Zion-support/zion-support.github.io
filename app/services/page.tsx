@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones, CheckCircle, Star, Award, Rocket, Sparkles } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -337,10 +338,139 @@ export default function Services() {
       features: ["Asset Inventory", "Lifecycle Management", "Cost Tracking", "License Management", "Depreciation Tracking", "Compliance Reporting"],
       category: "Asset Management"
     }
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ServicesPage: React.FC = () => {}
+  return (
+    <div>Page content</div>
+  );
+    <div className="min-h-screen bg-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group services page." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+        <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Services</h1>
+          <p className="text-xl text-gray-600">
+            Welcome to our services page.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ServicesPage;
+import { Link } from 'react-router-dom';
+import {}
+  CpuChipIcon,
+  ShieldCheckIcon,
+  CloudIcon,
+  ChartBarIcon,
+  GlobeAltIcon,
+  RocketLaunchIcon,
+  CheckCircleIcon,
+  ArrowRightIcon
+} from '@heroicons/react/24/outline';
+
+export default function ServicesPage() {}
+  return (
+    <div>Page content</div>
+  );
+}
+  const services = [
+    {}
+      icon: CpuChipIcon,
+      title: 'AI Solutions',
+      description: 'Cutting-edge artificial intelligence solutions to transform your business operations.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      href: '/ai-solutions'
+    },
+    {}
+      icon: CloudIcon,
+      title: 'Cloud Services',
+      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
+      features: ['Cloud Migration', 'Infrastructure Setup', 'DevOps Automation', 'Cost Optimization'],
+      href: '/cloud-services'
+    },
+    {}
+      icon: ShieldCheckIcon,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets and data.',
+      features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response'],
+      href: '/cybersecurity'
+    },
+    {}
+      icon: ChartBarIcon,
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with advanced analytics solutions.',
+      features: ['Business Intelligence', 'Data Visualization', 'Real-time Analytics', 'Custom Dashboards'],
+      href: '/data-analytics'
+    },
+    {}
+      icon: GlobeAltIcon,
+      title: 'Web Development',
+      description: 'Modern, responsive web applications built with the latest technologies.',
+      features: ['React Applications', 'Progressive Web Apps', 'E-commerce Solutions', 'API Development'],
+      href: '/web-development'
+    },
+    {}
+      icon: RocketLaunchIcon,
+      title: 'Digital Transformation',
+      description: 'Complete digital transformation strategies and implementation services.',
+      features: ['Process Automation', 'Digital Strategy', 'Change Management', 'Technology Integration'],
+      href: '/digital-transformation';
+    };
+  ];
+
+  const process = [
+    {}
+      step: '01',
+      title: 'Discovery',
+      description: 'We analyze your current systems and identify opportunities for improvement.'
+    },
+    {}
+      step: '02',
+      title: 'Strategy',
+      description: 'We develop a comprehensive strategy tailored to your business goals.'
+    },
+    {}
+      step: '03',
+      title: 'Implementation',
+      description: 'We execute the solution with precision and attention to detail.'
+    },
+    {}
+      step: '04',
+      title: 'Optimization',
+      description: 'We continuously monitor and optimize for maximum performance.';
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
   ];
 
   return (
-    <>
+    <div>Page content</div>
+  );
+    <></>
       <Helmet>
         <title>Services - Zion Tech Group | AI & IT Solutions</title>
         <meta
@@ -353,6 +483,7 @@ export default function Services() {
         />
       </Helmet>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -368,6 +499,31 @@ export default function Services() {
                   {" "}Services
                 </span>
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+        {/* Hero Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="container mx-auto px-4 relative z-10">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+            <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+                Our Services
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -393,6 +549,7 @@ export default function Services() {
         </section>
 
         {/* Services Grid */}
+<<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -477,12 +634,61 @@ export default function Services() {
                       </Link>
                     </div>
                   </div>
+=======
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {services.map((service, index) => ()
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20 hover:bg-white/20 transition-colors group">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+                  <div className="text-blue-400 mb-6 flex justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+                    <service.icon className="w-16 h-16 group-hover:scale-110 transition-transform" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <ul className="space-y-2 mb-8">
+                    {service.features.map((feature, idx) => ()
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link to={service.href}>
+                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
+                      Learn More
+                      <ArrowRightIcon className="w-5 h-5 ml-2" />
+                    </button>
+                  </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -500,10 +706,52 @@ export default function Services() {
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Mail className="w-6 h-6 text-white" />
+=======
+        {/* Process Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+            <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              <h2 className="text-4xl font-bold text-white mb-4">Our Process</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We follow a proven methodology to ensure successful project delivery
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {process.map((step, index) => ()
+                <div key={index} className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+                    <span className="text-2xl font-bold text-white">{step.step}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
                   <p className="text-cyan-400">kleber@ziontechgroup.com</p>
                 </div>
+<<<<<<< HEAD
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Smartphone className="w-6 h-6 text-white" />
@@ -527,6 +775,42 @@ export default function Services() {
                 >
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+=======
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+            <div className="text-center bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Let's discuss how our services can help transform your business and drive growth.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+                <Link to="/contact">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                    Get Started Today
+                    <ArrowRightIcon className="w-5 h-5 ml-2 inline" />
+                  </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
                 </Link>
                 <Link
                   to="/consultation"

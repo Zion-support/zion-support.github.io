@@ -1,39 +1,25 @@
+'use client';
 import React from 'react';'react-helmet-async;'
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;'
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;'
-import FuturisticBackground from '../components/FuturisticBackground;'
-const AiServicesPage: "React.FC = () => {"
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;';
+;import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;';
+;import FuturisticBackground from '../components/FuturisticBackground;';
+;const AiServicesPage: "React.FC = () => {"
   const services = [{;
-      icon: "Brain",'';
-      title: "'AI Consulting'",';''
-      description: "'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.'",';''
-      color: "'from-purple-50o0 to-pink-50o0';"}'
+      icon: "Brain",title: "'AI Consulting'",';description: "'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.'",';color: "'from-purple-50o0 to-pink-50o0';"}'
     },
-    {
-      icon: "BarChart3",''
-      title: "'AI Analytics'",';''
-      description: "'Advanced analytics solutions powered by machine learning and AI algorithms.'",';''
-      color: "'from-blue-50o0 to-cyan-50o0';"}'
+    {}
+      icon: "BarChart3",title: "'AI Analytics'",';description: "'Advanced analytics solutions powered by machine learning and AI algorithms.'",';color: "'from-blue-50o0 to-cyan-50o0';"}'
     },
-    {
-      icon: "Zap",''
-      title: "'AI Automation'",';''
-      description: "'Intelligent automation solutions to streamline your business processes.'",';''
-      color: "'from-green-50o0 to-emerald-50o0';"}'
+    {}
+      icon: "Zap",title: "'AI Automation'",';description: "'Intelligent automation solutions to streamline your business processes.'",';color: "'from-green-50o0 to-emerald-50o0';"}'
     },
-    {
-      icon: "FileText",''
-      title: "'AI Content Generation'",';''
-      description: "'AI-powered content creation for marketing", documentation, and communication.',';''
-      color: "'from-orange-50o0 to-red-50o0';"}'
+    {}
+      icon: "FileText",title: "'AI Content Generation'",';description: "'AI-powered content creation for marketing", documentation, and communication.',';color: "'from-orange-50o0 to-red-50o0';"}'
     },
-    {
-      icon: "MessageSquare",''
-      title: "'AI Customer Service'",';''
-      description: "'Intelligent chatbots and customer service solutions powered by AI.'",';''
-      color: "'from-indigo-50o0 to-purple-50o0';"}'
+    {}
+      icon: "MessageSquare",title: "'AI Customer Service'",';description: "'Intelligent chatbots and customer service solutions powered by AI.'",';color: "'from-indigo-50o0 to-purple-50o0';"}'
     },
-    {
+    {}
       icon: "ico,n: Shield",
       title: "'AI Security'",';'
       description: "'AI-powered security solutions to protect your business and data.'",';'
@@ -42,43 +28,43 @@ import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Right, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';'
 import FuturisticBackground from '../components/FuturisticBackground';'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react'
-import FuturisticBackground from '../components/FuturisticBackground'
-const AiServicesPage: "React.FC = () => {"
+import React from 'react';
+;import { Helmet } from 'react-helmet-async';
+;import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react';
+;import FuturisticBackground from '../components/FuturisticBackground';
+;const AiServicesPage: "React.FC = () => {"
   const services = [
-    {
+    {}
       icon: "Brain",
       title: "'AI Consulting'",'
       description: "'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.'",'
       color: "'from-purple-50o0 to-pink-50o0'"
     },
-    {
+    {}
       icon: "BarChart3",
       title: "'AI Analytics'",'
       description: "'Advanced analytics solutions powered by AI to extract insights from your data.'",'
       color: "'from-blue-50o0 to-cyan-50o0'"
     },
-    {
+    {}
       icon: "Zap",
       title: "'AI Automation'",'
       description: "'Automate repetitive tasks and processes with intelligent AI solutions.'",'
       color: "'from-green-50o0 to-emerald-50o0'"
     },
-    {
+    {}
       icon: "FileText",
       title: "'AI Content Generation'",'
       description: "'Generate high-quality content at scale using advanced AI models.'",'
       color: "'from-orange-50o0 to-red-50o0'"
     },
-    {
+    {}
       icon: "MessageSquare",
       title: "'AI Chatbots'",'
       description: "'Intelligent chatbots and virtual assistants for customer support.'",'
       color: "'from-indigo-50o0 to-purple-50o0'"
     },
-    {
+    {}
       icon: "Shield",
       title: "'AI Security'",'
       description: "'AI-powered security solutions to protect your business from threats.'",'
@@ -86,48 +72,45 @@ const AiServicesPage: "React.FC = () => {"
   }
   ]
   const features = [
-    {
+    {}
       title: "'Custom AI Solutions'",'
       description: "'Tailored AI implementations designed specifically for your business needs.'",'
       icon: "'🤖'"
     },
-    {
+    {}
       title: "'Machine Learning Models'",'
       description: "'Advanced ML models trained on your data for optimal performance.'",'
       icon: "'🧠'"
     },
-    {
+    {}
       title: "'Real-time Processing'",'
-      description: "'High-performance AI systems that process data in real-time.'",'
-      icon: "'⚡'"
+      description: "'High-performance AI systems that process data in real-time.'",';
+      icon: "'⚡'";
     },;
     {;
       title: "'Scalable Architecture'",';
       description: "'AI solutions that grow with your business and handle increasing loads.'",';
-      icon: "'📈';",icon: "Shield",'';
-      title: "'AI Security'",';''
-      description: "'AI-powered security solutions to protect your business and data.'",';''
-      color: "'from-cyan-50o0 to-blue-50o0';"}'
+      icon: "'📈';",icon: "Shield",title: "'AI Security'",';description: "'AI-powered security solutions to protect your business and data.'",';color: "'from-cyan-50o0 to-blue-50o0';"}'
     }
   ];
 
-  const testimonials = [{
+  const testimonials = [{;
       name: "Dr. Sarah Johnson",";
       company: "MedTech Solutions",";
-      role: "CTO",''";
+      role: "CTO",";
       content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",';'"
       rating: "5;"
   }
     },
-    {
+    {}
       name: "Michael Chen","
       company: "E-commerce Plus","
-      role: "CEO",''"
+      role: "CEO","
       content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",';'"
       rating: "5;"
   }
     },
-    {
+    {}
       name: "Emily Rodriguez","
       company: "FinanceFlow","
       role: "Head of Analytics","
@@ -137,7 +120,14 @@ const AiServicesPage: "React.FC = () => {"
     }
   ]
   return (
+    <div>Page content</div>
+  );
     <div className="min-h-screen bg-slate-90o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services including consulting, analytics, automation, and more." />
@@ -146,9 +136,19 @@ const AiServicesPage: "React.FC = () => {"
       <FuturisticBackground />
       
       <div className="relative z-10">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h1 className="text-5xl font-bold text-white mb-6">
               AI Services
             </h1>
@@ -161,13 +161,33 @@ const AiServicesPage: "React.FC = () => {"
         {/* Services Grid */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="grid grid-cols-1 md: grid-cols-2 l,g:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {services.map((service, index) => ()
                 <div
                   key={index}
                   className="bg-white"/10 backdrop-blur-lg rounded-xl p-6 border border-white"/20 hover:bg-white"/20 transition-all duration-30o0"
                 >
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -189,6 +209,11 @@ const AiServicesPage: "React.FC = () => {"
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
@@ -196,6 +221,11 @@ const AiServicesPage: "React.FC = () => {"
               Let our AI experts help you unlock the full potential of artificial intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <button className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-3 rounded-lg hover: from-purple-70o0 hove,r:to-cyan-70o0 transition-all duration-30o0">
                 Get Started
               </button>
@@ -213,13 +243,33 @@ const AiServicesPage: "React.FC = () => {"
         {/* Services Grid */}
         <section className="py-20 px-4 sm: px-6 l,g:px-8">
           <div className="max-w-7xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
               Our AI Services
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 l,g:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {services.map((service, index) => ()
                 <div key={index} className="bg-slate-80o0 rounded-lg p-6 hover: bg-slate-70o0 transition-all duration-30o0 transform hove,r:scale-10o5">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
@@ -236,12 +286,27 @@ const AiServicesPage: "React.FC = () => {"
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 l,g:px-8 bg-slate-80o0">
           <div className="max-w-7xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
               Why Choose Our AI Services?
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 l,g:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {features.map((feature, index) => ()
                 <div key={index} className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-30o0">{feature.description}</p>
@@ -254,6 +319,11 @@ const AiServicesPage: "React.FC = () => {"
         {/* CTA Section */}
         <section className="py-20 px-4 sm: px-6 l,g:px-8">
           <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
@@ -261,6 +331,11 @@ const AiServicesPage: "React.FC = () => {"
               Let's discuss how our AI services can help you achieve your goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <button className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 hover: from-purple-70o0 hover:to-cyan-70o0 text-white font-bold py-3 px-8 rounded-lg transition-all duration-30o0 transform hove,r:scale-10o5">
                 Schedule Consultation
               </button>

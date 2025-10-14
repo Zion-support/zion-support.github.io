@@ -1,7 +1,8 @@
+'use client';
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Link } from 'react-router-dom';'
-import { 
+import {}
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
@@ -21,10 +22,13 @@ import {
   DocumentTextIcon,
   LightBulbIcon
 } from '@heroicons/react/24/outline'
-export default function AISolutionsPage() {
-
+export default function AISolutionsPage() {}
+  return (
+    <div>Page content</div>
+  );
+}
   const aiServices = [
-    {
+    {}
       title: "Machine Learning Models","
       description: "Custom machine learning models tailored to your specific business needs with advanced algorithms and real-time processing.","
       icon: "CpuChipIcon",
@@ -42,7 +46,7 @@ export default function AISolutionsPage() {
       useCases: ["Predictive analytics", "Recommendation engines", "Fraud detection"],"
       href: "/ai-machine-learning"
     },
-    {
+    {}
       title: "Natural Language Processing","
       description: "Advanced NLP solutions for text analysis, sentiment analysis, language translation, and conversational AI.","
       icon: "ChatBubbleLeftRightIcon",
@@ -60,7 +64,7 @@ export default function AISolutionsPage() {
       useCases: ["Customer support", "Content analysis", "Language translation"],"
       href: "/ai-nlp"
     },
-    {
+    {}
       title: "Computer Vision","
       description: "Advanced computer vision solutions for image recognition, object detection, and visual analytics.","
       icon: "EyeIcon",
@@ -78,7 +82,7 @@ export default function AISolutionsPage() {
       useCases: ["Quality control", "Security systems", "Medical imaging"],"
       href: "/ai-computer-vision"
     },
-    {
+    {}
       title: "Predictive Analytics","
       description: "Data-driven predictions and forecasting using advanced machine learning algorithms and statistical models.","
       icon: "ChartBarIcon",
@@ -96,7 +100,7 @@ export default function AISolutionsPage() {
       useCases: ["Sales forecasting", "Risk management", "Inventory optimization"],"
       href: "/ai-predictive-analytics"
     },
-    {
+    {}
       title: "AI Automation","
       description: "Intelligent automation solutions that streamline business processes and reduce manual work.","
       icon: "CogIcon",
@@ -114,7 +118,7 @@ export default function AISolutionsPage() {
       useCases: ["Business processes", "Customer service", "Data processing"],"
       href: "/ai-automation"
     },
-    {
+    {}
       title: "AI Consulting","
       description: "Strategic AI consulting to help you identify opportunities, develop roadmaps, and implement AI solutions.","
       icon: "LightBulbIcon",
@@ -124,8 +128,8 @@ export default function AISolutionsPage() {
         "Implementation planning","
         "ROI analysis","
         "Change management","
-        "Training and support""
-      ],
+        "Training and support"";
+      ],;
       color: "from-cyan-50o0 to-blue-50o0",";
       price: "Starting at $1,50o0/month",";
       benefits: ["Expert guidance", "Strategic planning", "Risk mitigation"],";
@@ -136,29 +140,31 @@ export default function AISolutionsPage() {
 const AISolutionsPage: "React.FC = () => {"
   ]
   const features = [
-    {
+    {}
       title: "Custom AI Solutions","
       description: "Tailored AI implementations designed specifically for your business needs and requirements.","
       icon: "CpuChipIcon"
     },
-    {
+    {}
       title: "Scalable Architecture","
       description: "AI solutions that grow with your business and handle increasing data volumes and complexity.","
       icon: "CloudIcon"
     },
-    {
+    {}
       title: "Real-time Processing","
       description: "High-performance AI systems that process data in real-time for immediate insights and actions.","
       icon: "RocketLaunchIcon"
     },
-    {
+    {}
       title: "Expert Support","
       description: "Dedicated AI experts who provide ongoing support, monitoring, and optimization of your AI systems.","
       icon: "UserGroupIcon"
   }
   ]
   return (
-    <>
+    <div>Page content</div>
+  );
+    <></>
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
         <meta name="description" content="Explore our advanced AI solutions including machine learning, natural language processing, and predictive analytics." />
@@ -166,7 +172,17 @@ const AISolutionsPage: "React.FC = () => {"
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
               AI Solutions
             </h1>
@@ -183,13 +199,35 @@ const AISolutionsPage: "React.FC = () => {"
 
       {/* AI Services Grid */}
       <section className="py-20 bg-slate-90o0">
-        <div className="container mx-auto px-4">;
-          <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8 max-w-7xl mx-auto">;
+        <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>;
+      </div>;
+      </div>;
+          <div className="grid md: grid-cols-2 l,g:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>;
             {aiServices.map((service, index) => {;
               const Icon = service.icon;
               return (
+    <div>Page content</div>
+  );
                 <div key={service.title} className="group bg-gradient-to-br from-slate-80o0 to-slate-70o0 p-8 rounded-xl border border-slate-60o0 hover:border-purple-50o0 transition-all duration-30o0 hover-lift hover-glow glass-dark">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover: "scale-110 transition-transform floating`"}>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
@@ -199,13 +237,23 @@ const AISolutionsPage: "React.FC = () => {"
                   
                   {/* Pricing */}
                   <div className="mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <span className="text-3xl font-bold text-green-40o0">{service.price}</span>
                   </div>
 
                   {/* Features */}
                   <div className="mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <h4 className="text-sm font-semibold text-gray-40o0 mb-3">Key Features: "</h4>",
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => ()
                         <li key={featureIndex} className="flex items-center text-gray-30o0">
                           <CheckCircleIcon className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
@@ -216,8 +264,13 @@ const AISolutionsPage: "React.FC = () => {"
 
                   {/* Benefits */}
                   <div className="mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <h4 className="text-sm font-semibold text-gray-40o0 mb-2">Benefits: "</h4>",
-                      {service.benefits.map((benefit, benefitIndex) => (
+                      {service.benefits.map((benefit, benefitIndex) => ()
                         <span key={benefitIndex} className="text-xs bg-green-90o0"/30 text-green-30o0 px-2 py-1 rounded-full">
                           {benefit}
                         </span>
@@ -227,8 +280,13 @@ const AISolutionsPage: "React.FC = () => {"
 
                   {/* Use Cases */}
                   <div className="mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <h4 className="text-sm font-semibold text-gray-40o0 mb-2">Perfect for: "</h4>",
-                      {service.useCases.map((useCase, useCaseIndex) => (
+                      {service.useCases.map((useCase, useCaseIndex) => ()
                         <span key={useCaseIndex} className="text-xs bg-blue-90o0"/30 text-blue-30o0 px-2 py-1 rounded-full">
                           {useCase}
                         </span>
@@ -237,6 +295,11 @@ const AISolutionsPage: "React.FC = () => {"
                   </div>
 
                   <div className="flex gap-2">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <Link
                       to={service.href}
                       className="flex-1 inline-flex items-center justify-center gap-2 text-purple-40o0 hover: text-purple-30o0 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg hove,r:bg-purple-40o0"/10"
@@ -260,7 +323,17 @@ const AISolutionsPage: "React.FC = () => {"
       {/* Why Choose Our AI Solutions */}
       <section className="py-20 bg-gradient-to-r from-slate-90o0 to-purple-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our AI Solutions?
             </h2>
@@ -269,8 +342,23 @@ const AISolutionsPage: "React.FC = () => {"
             </p>
           </div>
           <div className="grid md: grid-cols-2 l,g:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-20 h-20 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <CpuChipIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Advanced Algorithms</h3>
@@ -279,7 +367,17 @@ const AISolutionsPage: "React.FC = () => {"
               </p>
             </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-20 h-20 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <ClockIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Real-time Processing</h3>
@@ -288,7 +386,17 @@ const AISolutionsPage: "React.FC = () => {"
               </p>
             </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-20 h-20 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <ShieldCheckIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
@@ -297,7 +405,17 @@ const AISolutionsPage: "React.FC = () => {"
               </p>
             </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-20 h-20 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <CogIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Custom Solutions</h3>
@@ -312,7 +430,17 @@ const AISolutionsPage: "React.FC = () => {"
       {/* AI Implementation Process */}
       <section className="py-20 bg-slate-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our AI Implementation Process
             </h2>
@@ -321,8 +449,23 @@ const AISolutionsPage: "React.FC = () => {"
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <span className="text-white font-bold text-xl">1</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Discovery & Analysis</h3>
@@ -331,7 +474,17 @@ const AISolutionsPage: "React.FC = () => {"
               </p>
             </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-50o0 to-blue-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <span className="text-white font-bold text-xl">2</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Solution Design</h3>
@@ -340,7 +493,17 @@ const AISolutionsPage: "React.FC = () => {"
               </p>
             </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-16 h-16 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <span className="text-white font-bold text-xl">3</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Development & Training</h3>
@@ -349,7 +512,17 @@ const AISolutionsPage: "React.FC = () => {"
               </p>
             </div>
             <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-16 h-16 bg-gradient-to-r from-yellow-50o0 to-orange-50o0 rounded-full flex items-center justify-center mx-auto mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <span className="text-white font-bold text-xl">4</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Deployment & Support</h3>
@@ -364,7 +537,17 @@ const AISolutionsPage: "React.FC = () => {"
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-slate-90o0 to-purple-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Ready to Harness the Power of AI?
             </h2>
@@ -372,6 +555,11 @@ const AISolutionsPage: "React.FC = () => {"
               Let's discuss how our AI solutions can transform your business and drive innovation'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <Link
                 to=""/contact""
                 className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 text-white px-8 py-4 rounded-lg font-semibold hover: from-purple-70o0 hover:to-cyan-70o0 transition-all duration-30o0 transform hove,r:scale-10o5 flex items-center justify-center gap-2"
@@ -388,11 +576,26 @@ const AISolutionsPage: "React.FC = () => {"
               </Link>
             </div>
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-30o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="flex items-center gap-3">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <PhoneIcon className="w-6 h-6 text-purple-40o0" />
                 <span>+1-30o2-464-0o950</span>
               </div>
               <div className="flex items-center gap-3">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <EnvelopeIcon className="w-6 h-6 text-purple-40o0" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
@@ -410,9 +613,19 @@ export default AISolutionsPage;
       </Helmet>
       
       <div className="min-h-screen bg-slate-90o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm: px-6 l,g:px-8">
           <div className="max-w-7xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Solutions
             </h1>
@@ -421,6 +634,11 @@ export default AISolutionsPage;
               From machine learning to computer vision, we deliver AI that drives real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <button className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 hover: from-purple-70o0 hover:to-cyan-70o0 text-white font-bold py-3 px-8 rounded-lg transition-all duration-30o0 transform hove,r:scale-10o5">
                 Get Started
               </button>
@@ -434,18 +652,43 @@ export default AISolutionsPage;
         {/* Services Grid */}
         <section className="py-20 px-4 sm: px-6 l,g:px-8">
           <div className="max-w-7xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
               Our AI Solutions
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 l,g:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {aiServices.map((service, index) => ()
                 <div key={index} className="bg-slate-80o0 rounded-lg p-6 hover: bg-slate-70o0 transition-all duration-30o0 transform hove,r:scale-10o5">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-30o0 mb-4">{service.description}</p>
                   <div className="mb-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <p className="text-purple-40o0 font-semibold">{service.price}</p>
                   </div>
                   <Link 
@@ -463,13 +706,33 @@ export default AISolutionsPage;
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 l,g:px-8 bg-slate-80o0">
           <div className="max-w-7xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
               Why Choose Our AI Solutions?
             </h2>
             <div className="grid grid-cols-1 md: grid-cols-2 l,g:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+              {features.map((feature, index) => ()
                 <div key={index} className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className="w-16 h-16 mx-auto bg-gradient-to-r from-purple-50o0 to-cyan-50o0 rounded-lg flex items-center justify-center mb-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -483,6 +746,11 @@ export default AISolutionsPage;
         {/* CTA Section */}
         <section className="py-20 px-4 sm: px-6 l,g:px-8">
           <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
@@ -490,6 +758,11 @@ export default AISolutionsPage;
               Let's discuss how our AI solutions can help you achieve your goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <button className="bg-gradient-to-r from-purple-60o0 to-cyan-60o0 hover: from-purple-70o0 hover:to-cyan-70o0 text-white font-bold py-3 px-8 rounded-lg transition-all duration-30o0 transform hove,r:scale-10o5">
                 Schedule Consultation
               </button>

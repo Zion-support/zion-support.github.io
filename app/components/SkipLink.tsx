@@ -1,12 +1,27 @@
 import React from 'react';
-'use client';
+;
       {/* Content Section */}
-import React from  from 'react';
-'use client'{/* Content Section */}'
+import React from 'react';
+{/* Content Section */}'
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h2 className="text-3xl font-bold text-gray-90o0 mb-6">Our Services</h2>
               <p className="text-lg text-gray-60o0 mb-6">
                 We provide comprehensive skip link;
@@ -28,6 +43,11 @@ import React from  from 'react';
               </ul>
             </div>
             <div className="bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-lg p-8 text-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p className="mb-6">
                 Ready to transform your business with our skip link services?;
@@ -42,4 +62,4 @@ import React from  from 'react';
           </div>
         </div>
       </section>
-              </a></div></div></div></section>;''
+              </a></div></div></div></section>;

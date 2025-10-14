@@ -23,13 +23,22 @@ const HomePage: React.FC = () => {
             <div className="flex justify-center space-x-4">
               <a
                 href="/contact"
+<<<<<<< HEAD
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors"
+=======
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
               >
                 Get Started
               </a>
               <a
+<<<<<<< HEAD
                 href="/services"
                 className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-md transition-colors"
+=======
+                href="/solutions"
+                className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
               >
                 Our Solutions
               </a>
@@ -65,7 +74,11 @@ const HomePage: React.FC = () => {
             </p>
             <a
               href="/contact"
+<<<<<<< HEAD
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors"
+=======
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
             >
               Contact Us
             </a>

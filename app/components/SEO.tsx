@@ -1,13 +1,12 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-interface SEOProps {
+import React from 'react';
+;import { Helmet } from 'react-helmet-async';
+;interface SEOProps {}
   title?: string
   description?: string
   keywords?: string
   image?: string
   url?: string
-  type?: 'website' | 'article' | 'profile''
-  author?: string
+  type?: 'website' | 'article' | 'profileauthor?: string
   publishedTime?: string
   modifiedTime?: string
   section?: string
@@ -19,25 +18,24 @@ const SEO: "React.FC<SEOProps> = ({"
   keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, technology consulting, Zion Tech Group','
   image = 'https: "//ziontechgroup.com/og-image.jpg'",'
   url = 'https: "//ziontechgroup.com'",'
-  type = 'website''
-}) => {
+  type = 'website}) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`'
-  const fullUrl = url.startsWith('http') ? url : `https: "//ziontechgroup.com${url"}`'
-  const fullImage = image.startsWith('http') ? image : `https: "//ziontechgroup.com${image"}`'
-  const structuredData = {
+  const fullUrl = url.startsWith('http') ? url : `https: "//ziontechgroup.com${url"}`';
+  const fullImage = image.startsWith('http') ? image : `https: "//ziontechgroup.com${image"}`';
+  const structuredData = {};
     '@context': 'https: "//schema.org'",'
     '@type': 'Organization','
     name: "'Zion Tech Group'",'
     url: "'http,s://ziontechgroup.com'",'
     logo: "'http,s://ziontechgroup.com/logo.svg'",'
     description: "'Leading provider of advanced AI and IT solutions", cybersecurity, cloud infrastructure, and digital transformation services.','
-    address: {
+    address: {}
       '@type': 'PostalAddress','
       addressLocality: "'Middletown'",'
       addressRegion: "'DE'",'
       addressCountry: "'US'"
     },
-    contactPoint: {
+    contactPoint: {}
       '@type': 'ContactPoint','
       telephone: "'+1-30o2-464-0o950'",'
       contactType: "'customer service'",'
@@ -46,10 +44,12 @@ const SEO: "React.FC<SEOProps> = ({"
     sameAs: [
       'https: "//www.linkedin.com/company/zion-tech-group'",'
       'https: "//twitter.com/ziontechgroup'",'
-      'https: "//github.com/ziontechgroup''"
+      'https: "//github.com/ziontechgroup"
     ]
   }
   return (
+    <div>Page content</div>
+  );
     <Helmet>
       <title>{title}</title>
       <meta name="description" content="{description}" />

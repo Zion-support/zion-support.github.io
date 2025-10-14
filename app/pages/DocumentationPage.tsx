@@ -1,7 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import SEO from '../components/SEO'
-import { 
+'use client';
+import React from 'react';
+;import { Link } from 'react-router-dom';
+;import SEO from '../components/SEO';
+;import {}
   DocumentTextIcon,
   CodeBracketIcon,
   CogIcon,
@@ -11,10 +12,13 @@ import {
   EnvelopeIcon,
   MapPinIcon
 } from '@heroicons/react/24/outline'
-export default function DocumentationPage() {
-
+export default function DocumentationPage() {}
+  return (
+    <div>Page content</div>
+  );
+}
   const sections = [
-    {
+    {}
       icon: "CodeBracketIcon",
       title: "'API Documentation'",'
       description: "'Comprehensive API reference for all our services and integrations.'",'
@@ -25,7 +29,7 @@ export default function DocumentationPage() {
         { name: "'Webhooks'", href: "'/docs/api/webhooks'"}'
       ]
     },
-    {
+    {}
       icon: "CogIcon",
       title: "'Integration Guides'",'
       description: "'Step-by-step guides for integrating our solutions with your systems.'",'
@@ -36,7 +40,7 @@ export default function DocumentationPage() {
         { name: "'Best Practices'", href: "'/docs/integration/best-practices'"}'
       ]
     },
-    {
+    {}
       icon: "DocumentTextIcon",
       title: "'User Guides'",'
       description: "'Detailed user guides for all our products and services.'",'
@@ -47,7 +51,7 @@ export default function DocumentationPage() {
         { name: "'Micro SaaS Development'", href: "'/docs/guides/micro-saas'"}'
       ]
     },
-    {
+    {}
       icon: "QuestionMarkCircleIcon",
       title: "'Troubleshooting'",'
       description: "'Common issues and solutions to help you resolve problems quickly.'",'
@@ -66,22 +70,55 @@ export default function DocumentationPage() {
     { step: 4, title: "'Make API Call'", description: "'Start making API calls to our services'"}'
   ]
   return (
-    <>
+    <div>Page content</div>
+  );
+    <></>
       <Helmet>
         <title>DocumentationPage - Zion Tech Group</title>
         <meta name="description" content="DocumentationPage - Zion Tech Group" />
       </Helmet>
       
       <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
         <div className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h1 className="text-4xl font-bold mb-4">DocumentationPage</h1>
           <p className="text-gray-30o0">This page is under construction.</p>
         </div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="max-w-4xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div className="flex justify-center mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="w-20 h-20 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <DocumentTextIcon className="w-10 h-10 text-white" />
               </div>
             </div>
@@ -97,6 +134,11 @@ export default function DocumentationPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <Link 
                 to="#quick-start" "
                 className="group bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-green-70o0 hover:to-emerald-70o0 transition-all duration-30o0 transform hove,r:scale-10o5 flex items-center gap-2"
@@ -119,7 +161,17 @@ export default function DocumentationPage() {
       {/* Quick Start Section */}
       <section id="quick-start" className="py-20 bg-slate-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quick Start Guide
             </h2>
@@ -129,9 +181,24 @@ export default function DocumentationPage() {
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
-            {quickStart.map((step, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+            {quickStart.map((step, index) => ()
               <div key={index} className="text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center mx-auto mb-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <span className="text-white font-bold text-xl">{step.step}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
@@ -145,7 +212,17 @@ export default function DocumentationPage() {
       {/* Documentation Sections */}
       <section className="py-20 bg-gradient-to-r from-slate-90o0 to-green-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="text-center mb-16">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Documentation Sections
             </h2>
@@ -155,19 +232,44 @@ export default function DocumentationPage() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {sections.map((section, index) => (
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+            {sections.map((section, index) => ()
               <div key={index} className="bg-slate-80o0 p-8 rounded-xl border border-slate-60o0 hover:border-green-50o0 transition-all duration-30o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <div className="flex items-center mb-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-lg flex items-center justify-center mr-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <section.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                     <h3 className="text-xl font-bold text-white">{section.title}</h3>
                     <p className="text-gray-40o0">{section.description}</p>
                   </div>
                 </div>
                 <ul className="space-y-2">
-                  {section.links.map((link, linkIndex) => (
+                  {section.links.map((link, linkIndex) => ()
                     <li key="{linkIndex}">
                       <Link 
                         to={link.href} 
@@ -188,7 +290,17 @@ export default function DocumentationPage() {
       {/* Code Examples Section */}
       <section className="py-20 bg-slate-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Code Examples
             </h2>
@@ -197,12 +309,17 @@ export default function DocumentationPage() {
             </p>
             
             <div className="bg-slate-80o0 p-8 rounded-xl border border-slate-60o0 mb-8">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h3 className="text-xl font-bold text-white mb-4">Basic API Call Example</h3>
               <pre className="text-left text-green-40o0 overflow-x-auto">
                 <code>{`// Initialize the client
-const client = new ZionTechClient({
-  apiKey: "'your-api-key'",'
-  environment: "'production'"
+const client = new ZionTechClient({}
+  apiKey: "'your-api-key'",';
+  environment: "'production'";
 });
 // Make an API call;
 const response = await client.ai.generateText({;
@@ -214,7 +331,17 @@ console.log(response.data);`}</code>
             </div>
             
             <div className="grid md:grid-cols-3 gap-6">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="bg-slate-80o0 p-6 rounded-lg border border-slate-60o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <h4 className="text-white font-semibold mb-2">JavaScript/Node.js</h4>
                 <p className="text-gray-40o0 text-sm mb-4">Complete examples for web applications</p>
                 <Link to=""/docs"/examples"/javascript" className="text-green-40o0 hover:text-green-30o0 text-sm">
@@ -222,6 +349,11 @@ console.log(response.data);`}</code>
                 </Link>
               </div>
               <div className="bg-slate-80o0 p-6 rounded-lg border border-slate-60o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <h4 className="text-white font-semibold mb-2">Python</h4>
                 <p className="text-gray-40o0 text-sm mb-4">Python SDK and examples</p>
                 <Link to=""/docs"/examples"/python" className="text-green-40o0 hover:text-green-30o0 text-sm">
@@ -229,6 +361,11 @@ console.log(response.data);`}</code>
                 </Link>
               </div>
               <div className="bg-slate-80o0 p-6 rounded-lg border border-slate-60o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <h4 className="text-white font-semibold mb-2">cURL</h4>
                 <p className="text-gray-40o0 text-sm mb-4">Direct HTTP API calls</p>
                 <Link to=""/docs"/examples"/curl" className="text-green-40o0 hover:text-green-30o0 text-sm">
@@ -243,7 +380,17 @@ console.log(response.data);`}</code>
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-slate-90o0 to-green-90o0">
         <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Need Help?
             </h2>
@@ -252,21 +399,46 @@ console.log(response.data);`}</code>
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <div className="flex items-center justify-center gap-4 text-gray-30o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <PhoneIcon className="w-6 h-6 text-green-40o0" />
                 <span>+1-30o2-464-0o950</span>
               </div>
               <div className="flex items-center justify-center gap-4 text-gray-30o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <EnvelopeIcon className="w-6 h-6 text-green-40o0" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center gap-4 text-gray-30o0">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
                 <MapPinIcon className="w-6 h-6 text-green-40o0" />
                 <span>Middletown, DE</span>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <Link 
                 to=""/support" "
                 className="bg-gradient-to-r from-green-60o0 to-emerald-60o0 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-green-70o0 hove,r:to-emerald-70o0 transition-all duration-30o0"

@@ -1,11 +1,26 @@
-import React from 'react'
-/* global describe, test, expect, it, beforeEach */
-'use client'
-export default function ZionAiTestingAutomationPage() {
-
+'use client';
+import React from 'react';
+;/* global describe, test, expect, it, beforeEach */
+export default function ZionAiTestingAutomationPage() {}
   return (
+    <div>Page content</div>
+  );
+}
+  return (
+    <div>Page content</div>
+  );
     <div className="min-h-screen bg-gray-90o0 text-white py-20">
-      <div className="container mx-auto px-4">;
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <div className="container mx-auto px-4">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>;
         <h1 className="text-4xl font-bold mb-8">Zion Ai Testing Automation</h1>;
         <p className="text-gray-30o0 text-lg">;
           This page is under development.;
@@ -17,4 +32,3 @@ export default function ZionAiTestingAutomationPage() {
         </p></div></div>
   );}
 }
-''

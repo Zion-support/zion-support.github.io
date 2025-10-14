@@ -1,5 +1,9 @@
 import React, { Suspense, lazy, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import { HelmetProvider } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -53,6 +57,7 @@ const PrivacyPage = lazy(() => import('./privacy/page'));
 const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 
+<<<<<<< HEAD
 // 404 Page
 const NotFoundPage = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -68,14 +73,26 @@ const NotFoundPage = () => (
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
   
+=======
+const NotFoundPage = () => <div>Page Not Found</div>;
+
+const App: React.FC = () => {
+  const [isInitialized, setIsInitialized] = useState(false);
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
   useEffect(() => {
     // Initialize app
     const initApp = async () => {
       try {
         // Add any initialization logic here
         setIsInitialized(true);
+<<<<<<< HEAD
       } catch (_error) {
         console.error('Failed to initialize app:', _error);
+=======
+      } catch (error) {
+        console.error('Failed to initialize app:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
         setIsInitialized(true); // Still show the app even if initialization fails
       }
     };
@@ -87,6 +104,7 @@ const App: React.FC = () => {
   }
 
   return (
+<<<<<<< HEAD
     <Router>
       <ErrorBoundary>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -143,6 +161,66 @@ const App: React.FC = () => {
         </div>
       </ErrorBoundary>
     </Router>
+=======
+    <HelmetProvider>
+      <Router>
+        <ErrorBoundary>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                {/* Main Pages */}
+                <Route path="/" element={<Page />} />
+                {/* Company Pages */}
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/team" element={<TeamPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/news" element={<NewsPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                {/* Main Services */}
+                <Route path="/services" element={<ItServicesPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/demo" element={<DemoPage />} />
+                <Route path="/consultation" element={<ConsultationPage />} />
+                {/* AI Services */}
+                <Route path="/ai-services" element={<AiServicesPage />} />
+                <Route path="/ai-marketing" element={<AiMarketingPage />} />
+                <Route path="/ai-automation" element={<AiAutomationPage />} />
+                <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+                <Route path="/ai-fintech" element={<AiFintechPage />} />
+                {/* IT Services */}
+                <Route path="/it-services" element={<ItServicesPage />} />
+                <Route path="/cloud-services" element={<ServicesPage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                <Route path="/devops" element={<DevOpsPage />} />
+                {/* Specialized Solutions */}
+                <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+                <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
+                <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                <Route path="/robotics" element={<RoboticsPage />} />
+                {/* Support Pages */}
+                <Route path="/support" element={<SupportPage />} />
+                <Route path="/documentation" element={<DocumentationPage />} />
+                <Route path="/faq" element={<FAQPage />} />
+                {/* Content Pages */}
+                <Route path="/case-studies" element={<CaseStudiesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                {/* Legal Pages */}
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/cookies" element={<CookiesPage />} />
+                {/* Catch all route */}
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </Suspense>
+            <Footer />
+          </div>
+        </ErrorBoundary>
+      </Router>
+    </HelmetProvider>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
   );
 };
 

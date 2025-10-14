@@ -1,9 +1,16 @@
+'use client';
 import React from 'react';
-import { Helmet } from  from 'react-helmet-async';
-'use client'
+import { Helmet } from 'react-helmet-async';
 const FuturisticBackgroundEnhanced: "React.FC = () => {"
   return (
+    <div>Page content</div>
+  );
     <div className="min-h-screen bg-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       <Helmet>
         <title>Futuristic Background Enhanced - Zion Tech Group</title>
         <meta name="description" content="Professional futuristic background enhanced services by Zion Tech Group." />
@@ -11,6 +18,11 @@ const FuturisticBackgroundEnhanced: "React.FC = () => {"
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10o0">
         <div className="max-w-6xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h1 className="text-5xl font-bold text-gray-90o0 mb-6">
             Futuristic Background Enhanced;
           </h1>
@@ -23,8 +35,23 @@ const FuturisticBackgroundEnhanced: "React.FC = () => {"
       {/* Content Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
             <div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h2 className="text-3xl font-bold text-gray-90o0 mb-6">Our Services</h2>
               <p className="text-lg text-gray-60o0 mb-6">
                 We provide comprehensive futuristic background enhanced;
@@ -46,6 +73,11 @@ const FuturisticBackgroundEnhanced: "React.FC = () => {"
               </ul>
             </div>
             <div className="bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-lg p-8 text-white">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p className="mb-6">
                 Ready to transform your business with our futuristic background enhanced services?;
@@ -63,6 +95,11 @@ const FuturisticBackgroundEnhanced: "React.FC = () => {"
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-60o0">
         <div className="max-w-4xl mx-auto text-center">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Get Started?;
           </h2>
@@ -84,4 +121,4 @@ const FuturisticBackgroundEnhanced: "React.FC = () => {"
 export default FuturisticBackgroundEnhanced;
 };
 
-export default FuturisticBackgroundEnhanced;''
+export default FuturisticBackgroundEnhanced;

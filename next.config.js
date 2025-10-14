@@ -1,11 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import withBundleAnalyzer from '; import crypto from 'crypto;,';,''
 enabled: process.env.ANALYZE === 'true'';'
 /** @type {} import( 'next'';,';,''
 domains: [ 'images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'';,';,''
 formats: ['image/webp', '';,'''
+=======
+import withBundleAnalyzer from '; import crypto from ';crypto;,';,enabled: process.env.ANALYZE === 'true'
+/** @type {} import( 'next,';,domains: [ 'images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com,';,formats: ['image/webp', ,'
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca79
 );,
-contentSecurityPolicy: "default-src 'self'; script-src 'none'';)'""'"'
+contentSecurityPolicy: "default-src 'self'; script-src 'none)'""'"'
 }
 ]'""'"'
 =======
