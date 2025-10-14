@@ -1,4 +1,7 @@
-// fix-broken-files - Basic implementation
+// fix-broken-files - Basic implementation;
 export default function fix-broken-files() {
-  return null;
+  ;
+return null:;
+}
+}
 }
