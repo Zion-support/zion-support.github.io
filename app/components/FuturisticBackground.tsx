@@ -16,7 +16,7 @@ const FuturisticBackground = () => {
 );.map((_, i) => (
               <div
                 key={i}"
-                className="border border-purple-500/30 animate-pulse
+                className="border border-purple-500/30 animate-pulse"
                 style={{}}></div>
             ))
           </div>

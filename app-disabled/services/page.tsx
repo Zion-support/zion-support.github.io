@@ -139,9 +139,6 @@ const ServicesPage: React.FC = () => {const services = [;
                 className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg"">"
                 Learn More;
               </a>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );

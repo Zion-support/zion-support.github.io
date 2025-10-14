@@ -374,7 +374,7 @@ export default function ZionAnalyticsPro() {
                   className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >
                   Schedule Demo
-                </div>
+      </div>
     </>
   );
 }

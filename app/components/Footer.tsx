@@ -160,7 +160,7 @@ const Footer = () => {
               <input
                 type="email
                 placeholder="Enter your email
-                className="flex-1 px-4 py-2 bg-slate-800 border border-slate-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500
+                className="flex-1 px-4 py-2 bg-slate-800 border border-slate-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
               /></input>
               <button className="px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-r-lg transition-colors flex items-center">"
                 Subscribe
@@ -184,7 +184,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank
                   rel="noopener noreferrer
-                  className="text-gray-400 hover:text-white transition-colors
+                  className="text-gray-400 hover:text-white transition-colors"
                   aria-label={social.label}></a>
                   {social.icon}
                 </a>

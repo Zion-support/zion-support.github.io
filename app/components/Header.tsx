@@ -35,7 +35,7 @@ const Header: React.FC = () => {
               <div key={item.name} className="relative group">"
                 <Link
                   to={item.href}
-                  className="text-gray-300 hover:text-white transition-colors flex items-center
+                  className="text-gray-300 hover:text-white transition-colors flex items-center"
                   onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                   onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                 >
@@ -70,7 +70,7 @@ const Header: React.FC = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-300 hover:text-white
+            className="md:hidden text-gray-300 hover:text-white"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}"
           </button>
@@ -83,7 +83,7 @@ const Header: React.FC = () => {
               <div key={item.name}></div>
                 <Link
                   to={item.href}
-                  className="block py-2 text-gray-300 hover:text-white transition-colors
+                  className="block py-2 text-gray-300 hover:text-white transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -94,7 +94,7 @@ const Header: React.FC = () => {
                       <Link
                         key={subItem.name}
                         to={subItem.href}
-                        className="block py-1 text-gray-400 hover:text-white transition-colors
+                        className="block py-1 text-gray-400 hover:text-white transition-colors"
                         onClick={() => setIsOpen(false)}
                       >
                         {subItem.name}
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
             <div className="pt-4">"
               <Link
                 to="/contact
-                className="block w-full text-center px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors
+                className="block w-full text-center px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Get Started
