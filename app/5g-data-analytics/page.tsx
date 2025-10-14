@@ -60,7 +60,6 @@ const Page = () => {
                 View Demo
               </Link>
             </div>
-        </div>
           </div>
         </section>
 
