@@ -8,7 +8,7 @@ if (typeof window !== 'undefined') {
   // Fix for scheduler unstable_now error
   if (!window.performance || !window.performance.now) {
     window.performance = window.performance || {};
-    window.performance.now = window.performance.now || (() => Date.now());
+      window.performance.now = window.performance.now || (() => Date.now());
   }
 }
 
@@ -20,20 +20,20 @@ root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-);
+  );
 
 // Register service worker for PWA functionality
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
     navigator.serviceWorker
-      .register("/sw.js")
+      .register('/sw.js')
       .then(() => {
         // Service worker registered successfully
-        console.log('Service worker registered successfully');
+          console.log('Service worker registered successfully');
       })
       .catch((registrationError) => {
         // Service worker registration failed
         console.error('Service worker registration failed:', registrationError);
       });
-  });
+    });
 }

@@ -1,8 +1,23 @@
-import React from "react";"import { Helmet } from "react-helmet-async";"export default function Page() {'  return ('    <React.Fragment>
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
+const AutonomoussystemsPage = () => {
+  return (
+    <div>
       <Helmet>
-        <title>Autonomous Systems - Zion Tech Group</title>
-        <meta name: "description" content: "Professional autonomous systems services by Zion Tech Group." />"      </Helmet>"      <div>"        <div>
-          <h1 className: "text-4xl font-bold text-white mb-4">Autonomous Systems</h1>"          <p className: "text-gray-300">Coming soon...</p>"        </div>"      </div>"    </React.Fragment>
+        <title>Autonomous systems Page - Zion Tech Group</title>
+        <meta name="description" content="Autonomous systems Page - Zion Tech Group" />
+      </Helmet>
+      <div>
+        <div>
+          <h1 className="text-4xl font-bold text-white mb-8">Autonomous systems Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default AutonomoussystemsPage;

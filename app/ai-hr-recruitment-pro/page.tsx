@@ -1,11 +1,23 @@
-import React from "react";"import { Helmet } from "react-helmet-async";"const PagePage = () => {'  return ('    <div>
-      <Helmet>
-        <title>PagePage - Zion Tech Group</title>
-        <meta name: "description" content: "PagePage - Zion Tech Group" />"      </Helmet>"      "      <div>
-        <div>
-          <h1 className: "text-4xl font-bold text-white mb-8">PagePage</h1>"          <p className: "text-gray-300 text-lg">"            This page is under construction. Please check back later."          </p>"        </div>
-      </div>
-  );
-}
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-export default PagePage;</div>
+const AihrrecruitmentproPage = () => {
+  return (
+    <div>
+      <Helmet>
+        <title>Ai hr recruitment pro Page - Zion Tech Group</title>
+        <meta name="description" content="Ai hr recruitment pro Page - Zion Tech Group" />
+      </Helmet>
+      <div>
+        <div>
+          <h1 className="text-4xl font-bold text-white mb-8">Ai hr recruitment pro Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AihrrecruitmentproPage;

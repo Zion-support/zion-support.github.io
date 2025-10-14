@@ -1,10 +1,12 @@
-import React from 'react;'const AdAnalytics = () => {
+import React from "react";
+
+const AdAnalytics: React.FC = () => {
   return (
     <div>
       <h2>AdAnalytics</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default AdAnalytics;

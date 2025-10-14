@@ -1,3 +1,5 @@
-// next.d - Basic implementation
-export default function next.d() {
-  return null;
+declare module "next" {
+  export interface NextPageProps {
+    params: Record<string, string>;
+  }
+}

@@ -1,10 +1,12 @@
-import React from 'react;'const AdDashboard = () => {
+import React from "react";
+
+const AdDashboard: React.FC = () => {
   return (
     <div>
       <h2>AdDashboard</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default AdDashboard;

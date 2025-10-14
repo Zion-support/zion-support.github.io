@@ -1,10 +1,12 @@
-import React from 'react;'const SkipLink = () => {
+import React from "react";
+
+const SkipLink: React.FC = () => {
   return (
     <div>
       <h2>SkipLink</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default SkipLink;

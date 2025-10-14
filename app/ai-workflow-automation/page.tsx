@@ -1,8 +1,23 @@
-import React from "react";"import { Helmet } from "react-helmet-async";"export default function Page() {'  return ('    <React.Fragment>
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
+const AiworkflowautomationPage = () => {
+  return (
+    <div>
       <Helmet>
-        <title>Ai Workflow Automation - Zion Tech Group</title>
-        <meta name: "description" content: "Professional ai workflow automation services by Zion Tech Group." />"      </Helmet>"      <div>"        <div>
-          <h1 className: "text-4xl font-bold text-white mb-4">Ai Workflow Automation</h1>"          <p className: "text-gray-300">Coming soon...</p>"        </div>"      </div>"    </React.Fragment>
+        <title>Ai workflow automation Page - Zion Tech Group</title>
+        <meta name="description" content="Ai workflow automation Page - Zion Tech Group" />
+      </Helmet>
+      <div>
+        <div>
+          <h1 className="text-4xl font-bold text-white mb-8">Ai workflow automation Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default AiworkflowautomationPage;

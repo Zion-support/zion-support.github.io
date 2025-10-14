@@ -1,10 +1,12 @@
-import React from 'react;'const CoreWebVitals = () => {
+import React from "react";
+
+const CoreWebVitals: React.FC = () => {
   return (
     <div>
       <h2>CoreWebVitals</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default CoreWebVitals;

@@ -1,7 +1,12 @@
-import React from 'react';
-const App: React.FC = () => {return (
-    <div className="App">"
-      <h1>Test App</h1>
+import React from "react";
+
+const AppTest = () => {
+  return (
+    <div>
+      <h1>App Test</h1>
+      <p>This is a test app component.</p>
     </div>
-  )};
-export default App;
+  );
+};
+
+export default AppTest;

@@ -1,18 +1,23 @@
-import React from "react";"import { Helmet } from "react-helmet-async";"
-const PagePage = () => {
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const AboutPage = () => {
   return (
     <div>
       <Helmet>
-        <title>PagePage - Zion Tech Group</title>
-        <meta name: "description" content: "PagePage - Zion Tech Group" />"      </Helmet>
+        <title>About Page - Zion Tech Group</title>
+        <meta name="description" content="About Page - Zion Tech Group" />
+      </Helmet>
       <div>
         <div>
-          <h1 className: "text-4xl font-bold text-white mb-8">PagePage</h1>"          <p className: "text-gray-300 text-lg">"            This page is under construction. Please check back later.
+          <h1 className="text-4xl font-bold text-white mb-8">About Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
           </p>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default PagePage;
+export default AboutPage;

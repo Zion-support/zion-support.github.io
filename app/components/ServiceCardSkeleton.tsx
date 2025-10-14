@@ -1,10 +1,12 @@
-import React from 'react;'const ServiceCardSkeleton = () => {
+import React from "react";
+
+const ServiceCardSkeleton: React.FC = () => {
   return (
     <div>
       <h2>ServiceCardSkeleton</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default ServiceCardSkeleton;

@@ -1,10 +1,12 @@
-import React from 'react;'const FuturisticBackground = () => {
+import React from "react";
+
+const FuturisticBackground: React.FC = () => {
   return (
     <div>
       <h2>FuturisticBackground</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default FuturisticBackground;

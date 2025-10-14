@@ -1,19 +1,23 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-export default function Page() {
+const _5gimplementationPage = () => {
   return (
-    <React.Fragment>
+    <div>
       <Helmet>
-        <title>5G Implementation - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G implementation services by Zion Tech Group." />
+        <title>5g implementation Page - Zion Tech Group</title>
+        <meta name="description" content="5g implementation Page - Zion Tech Group" />
       </Helmet>
       <div>
         <div>
-          <h1 className="text-4xl font-bold text-white mb-4">5G Implementation</h1>
-          <p className="text-gray-300">Coming soon...</p>
+          <h1 className="text-4xl font-bold text-white mb-8">5g implementation Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
         </div>
       </div>
-    </React.Fragment>
+    </div>
   );
-}
+};
+
+export default _5gimplementationPage;

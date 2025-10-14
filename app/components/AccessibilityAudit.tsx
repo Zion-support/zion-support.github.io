@@ -1,10 +1,12 @@
-import React from 'react;'const AccessibilityAudit = () => {
+import React from "react";
+
+const AccessibilityAudit: React.FC = () => {
   return (
     <div>
       <h2>AccessibilityAudit</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default AccessibilityAudit;

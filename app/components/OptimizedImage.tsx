@@ -1,10 +1,12 @@
-import React from 'react;'const OptimizedImage = () => {
+import React from "react";
+
+const OptimizedImage: React.FC = () => {
   return (
     <div>
       <h2>OptimizedImage</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default OptimizedImage;

@@ -1,10 +1,12 @@
-import React from 'react;'const MobileOptimizer = () => {
+import React from "react";
+
+const MobileOptimizer: React.FC = () => {
   return (
     <div>
       <h2>MobileOptimizer</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default MobileOptimizer;

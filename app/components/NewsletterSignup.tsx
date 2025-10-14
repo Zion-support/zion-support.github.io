@@ -1,10 +1,12 @@
-import React from 'react;'const NewsletterSignup = () => {
+import React from "react";
+
+const NewsletterSignup: React.FC = () => {
   return (
     <div>
       <h2>NewsletterSignup</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default NewsletterSignup;

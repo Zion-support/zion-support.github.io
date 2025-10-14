@@ -1,10 +1,12 @@
-import React from 'react;'const ImprovedNavigation = () => {
+import React from "react";
+
+const ImprovedNavigation: React.FC = () => {
   return (
     <div>
       <h2>ImprovedNavigation</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default ImprovedNavigation;

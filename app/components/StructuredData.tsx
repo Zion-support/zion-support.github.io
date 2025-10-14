@@ -1,10 +1,12 @@
-import React from 'react;'const StructuredData = () => {
+import React from "react";
+
+const StructuredData: React.FC = () => {
   return (
     <div>
       <h2>StructuredData</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default StructuredData;

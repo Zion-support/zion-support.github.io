@@ -1,8 +1,23 @@
-import React from "react";"import { Helmet } from "react-helmet-async";"export default function Page() {'  return ('    <React.Fragment>
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
+const AicontentgenerationPage = () => {
+  return (
+    <div>
       <Helmet>
-        <title>Ai Content Generation - Zion Tech Group</title>
-        <meta name: "description" content: "Professional ai content generation services by Zion Tech Group." />"      </Helmet>"      <div>"        <div>
-          <h1 className: "text-4xl font-bold text-white mb-4">Ai Content Generation</h1>"          <p className: "text-gray-300">Coming soon...</p>"        </div>"      </div>"    </React.Fragment>
+        <title>Ai content generation Page - Zion Tech Group</title>
+        <meta name="description" content="Ai content generation Page - Zion Tech Group" />
+      </Helmet>
+      <div>
+        <div>
+          <h1 className="text-4xl font-bold text-white mb-8">Ai content generation Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default AicontentgenerationPage;

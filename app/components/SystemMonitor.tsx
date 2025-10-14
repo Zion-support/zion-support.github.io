@@ -1,10 +1,12 @@
-import React from 'react;'const SystemMonitor = () => {
+import React from "react";
+
+const SystemMonitor: React.FC = () => {
   return (
     <div>
       <h2>SystemMonitor</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default SystemMonitor;

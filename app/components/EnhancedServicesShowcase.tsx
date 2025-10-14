@@ -1,10 +1,12 @@
-import React from 'react;'const EnhancedServicesShowcase = () => {
+import React from "react";
+
+const EnhancedServicesShowcase: React.FC = () => {
   return (
     <div>
       <h2>EnhancedServicesShowcase</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default EnhancedServicesShowcase;

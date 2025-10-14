@@ -1,10 +1,12 @@
-import React from 'react;'const FuturisticTextEnhanced = () => {
+import React from "react";
+
+const FuturisticTextEnhanced: React.FC = () => {
   return (
     <div>
       <h2>FuturisticTextEnhanced</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default FuturisticTextEnhanced;

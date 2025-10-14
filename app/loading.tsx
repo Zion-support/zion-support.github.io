@@ -1,2 +1,12 @@
-import React from 'react';'// loading - Basic implementation'export default function loading() {
-  return null;
+import React from "react";
+
+const LoadingPage = () => {
+  return (
+    <div>
+      <h1>Loading...</h1>
+      <p>Please wait while we load the content.</p>
+    </div>
+  );
+};
+
+export default LoadingPage;

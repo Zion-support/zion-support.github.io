@@ -1,10 +1,12 @@
-import React from 'react;'const ErrorBoundary = () => {
+import React from "react";
+
+const ErrorBoundary: React.FC = () => {
   return (
     <div>
       <h2>ErrorBoundary</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default ErrorBoundary;

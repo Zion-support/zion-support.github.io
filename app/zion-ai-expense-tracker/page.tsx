@@ -1,17 +1,23 @@
-"use client;"import React from react;"export default function Page() {
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const ZionaiexpensetrackerPage = () => {
   return (
-    <div>Page content</div>
-  );
-
-    <div>Page content</div>
-  );
     <div>
-      </div>
+      <Helmet>
+        <title>Zion ai expense tracker Page - Zion Tech Group</title>
+        <meta name="description" content="Zion ai expense tracker Page - Zion Tech Group" />
+      </Helmet>
       <div>
+        <div>
+          <h1 className="text-4xl font-bold text-white mb-8">Zion ai expense tracker Page</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
       </div>
-        <h1 className: ""text-4xl font-bold mb-8">Zion Ai Expense Tracker</h1>        <p className: ""text-gray-30o0 text-lg">"          This page is under development.;"        </p>"
-      </div>
+    </div>
   );
+};
 
-        </p></div></div>
-  )}
+export default ZionaiexpensetrackerPage;

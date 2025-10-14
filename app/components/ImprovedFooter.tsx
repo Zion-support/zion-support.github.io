@@ -1,10 +1,12 @@
-import React from 'react;'const ImprovedFooter = () => {
+import React from "react";
+
+const ImprovedFooter: React.FC = () => {
   return (
     <div>
       <h2>ImprovedFooter</h2>
-      <p>This component is under construction.</p>
+      <p>Component implementation coming soon.</p>
     </div>
   );
-}
+};
 
 export default ImprovedFooter;
