@@ -1,109 +1,123 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
+import { execSync } from 'child_process';
 
-// Function to fix common syntax errors in TSX files
-function fixSyntaxErrors(content) {
-  // Fix triple quotes in 'use client' directive
-  content = content.replace(/'use client''''/g, "'use client';");
-  content = content.replace(/'use client''/g, "'use client';");
+// Get all TypeScript and JavaScript files
+const getFiles = (dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) => {
+  let files = [];
+  const items = fs.readdirSync(dir);
   
-  // Fix import statements with extra quotes
-  content = content.replace(/import\s+([^;]+);""/g, 'import $1;');
-  content = content.replace(/import\s+([^;]+);"/g, 'import $1;');
-  
-  // Fix JSX closing tags with extra quotes
-  content = content.replace(/<\/[^>]+>""/g, (match) => match.replace('""', ''));
-  content = content.replace(/<\/[^>]+>"/g, (match) => match.replace('"', ''));
-  
-  // Fix JSX attributes with extra quotes
-  content = content.replace(/className="([^"]+)""/g, 'className="$1"');
-  content = content.replace(/className="([^"]+)"'/g, 'className="$1"');
-  
-  // Fix malformed JSX structure
-  content = content.replace(/<>    <div><\/div>/g, '<>');
-  content = content.replace(/<Helmet><\/Helmet>/g, '<Helmet>');
-  content = content.replace(/<\/Helmet>/g, '</Helmet>');
-  
-  // Fix function return statements
-  content = content.replace(/  \)\};/g, '  );');
-  content = content.replace(/  \)\};/g, '  );');
-  
-  // Fix malformed JSX fragments
-  content = content.replace(/<>\s*<div><\/div>/g, '<>');
-  content = content.replace(/<>\s*<Helmet><\/Helmet>/g, '<>\n      <Helmet>');
-  
-  // Fix extra semicolons in JSX
-  content = content.replace(/;\s*""/g, '');
-  content = content.replace(/;\s*"/g, '');
-  
-  // Fix malformed closing tags
-  content = content.replace(/<\/[^>]+>\s*<\/[^>]+>/g, (match) => {
-    const tags = match.match(/<\/[^>]+>/g);
-    return tags[tags.length - 1];
-  });
-  
-  // Fix extra closing divs and fragments
-  content = content.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
-  content = content.replace(/<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
-  content = content.replace(/<\/div>\s*<\/div>/g, '</div>');
-  
-  // Fix malformed JSX structure patterns
-  content = content.replace(/<>\s*<div[^>]*><\/div>\s*<Helmet><\/Helmet>/g, '<>\n      <Helmet>');
-  content = content.replace(/<>\s*<div[^>]*><\/div>\s*<Helmet>/g, '<>\n      <Helmet>');
-  
-  // Fix extra closing fragments
-  content = content.replace(/<\/>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</>');
-  content = content.replace(/<\/>\s*<\/div>\s*<\/div>/g, '</>');
-  content = content.replace(/<\/>\s*<\/div>/g, '</>');
-  
-  return content;
-}
-
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixSyntaxErrors(content);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
+    if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git')) {
+      files = files.concat(getFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
     }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
   }
-}
+  
+  return files;
+};
 
-// Main function to process all TSX files
-async function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    '*.tsx',
-    '*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: ['node_modules/**', 'dist/**', '.next/**'] 
+// Fix common syntax errors
+const fixFile = (filePath) => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix unterminated string literals (remove extra quotes)
+    const originalContent = content;
+    content = content.replace(//g, '');
+    
+    // Fix malformed JSX closing tags
+    content = content.replace(/<\/[^>]+><\/[^>]+>/g, (match) => {
+      const tags = match.match(/<\/[^>]+>/g);
+      return tags[tags.length - 1];
     });
     
-    for (const file of files) {
-      totalFiles++;
-      if (processFile(file)) {
-        fixedFiles++;
-      }
+    // Fix semicolons at end of lines
+    content = content.replace(/;$/gm, ';');
+    
+    // Fix malformed function declarations
+    content = content.replace(/\)\};/g, ');');
+    
+    // Fix malformed JSX fragments
+    content = content.replace(/<>[\s]*<div><\/div>/g, '<>');
+    content = content.replace(/<\/div>[\s]*<\/>/g, '</>');
+    
+    // Fix malformed imports
+    content = content.replace(/import\s+([^;]+);/g, 'import $1;');
+    
+    // Fix malformed exports
+    content = content.replace(/export\s+default\s+([^;]+);/g, 'export default $1;');
+    
+    // Fix malformed JSX attributes
+    content = content.replace(/=\{[^}]+\}\s*\/>/g, (match) => {
+      return match.replace(/\s*\/>/, ' />');
+    });
+    
+    // Fix malformed closing tags
+    content = content.replace(/<\/[^>]+><\/[^>]+>/g, (match) => {
+      const tags = match.match(/<\/[^>]+>/g);
+      return tags[tags.length - 1];
+    });
+    
+    // Fix malformed React fragments
+    content = content.replace(/<>[\s]*<\/>/g, '<></>');
+    
+    // Fix malformed component declarations
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\{[\s]*return\s*\([\s]*<>[\s]*<div><\/div>[\s]*<\/>[\s]*\)[\s]*\};/g, 
+      'const $1 = () => {\n  return (\n    <div></div>\n  );\n};');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      modified = true;
+    }
+    
+    return modified;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+};
+
+// Main execution
+const main = () => {
+  console.log('Starting syntax error fixes...');
+  
+  const files = getFiles('.');
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    if (fixFile(file)) {
+      fixedCount++;
     }
   }
   
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
-}
+  console.log(`Fixed ${fixedCount} files`);
+  
+  // Run linting to check for remaining errors
+  try {
+    console.log('Running linting check...');
+    execSync('npm run lint', { stdio: 'pipe' });
+    console.log('Linting passed!');
+  } catch (error) {
+    console.log('Linting found remaining errors, continuing...');
+  }
+  
+  // Run type check
+  try {
+    console.log('Running type check...');
+    execSync('npm run type-check', { stdio: 'pipe' });
+    console.log('Type check passed!');
+  } catch (error) {
+    console.log('Type check found remaining errors, continuing...');
+  }
+};
 
 main();

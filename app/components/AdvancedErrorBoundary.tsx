@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Logger } from '../utils/logger';
+// import { Logger } from '../utils/logger';
 
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -11,7 +11,7 @@ interface ErrorBoundaryState {
 interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
 }
@@ -43,48 +43,46 @@ class AdvancedErrorBoundary extends Component<
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: null,
-    };
+      errorId: null};
   }
 
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    };
+      _error,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo,
-    });
+      _error,
+      _errorInfo});
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      Logger.error(
+      logger.error(
         'Error Boundary caught an error',
-        { error, context: 'ErrorBoundary', errorInfo }
+        _error,
+        { context: 'ErrorBoundary', errorInfo }
       );
     }
 
     // Call custom error handler
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(_error, _errorInfo);
     }
 
     // Report error to external service
     if (this.props.enableErrorReporting) {
-      this.reportError(error, errorInfo);
+      this.reportError(_error, _errorInfo);
     }
   }
 
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
-      error,
-      errorInfo,
+      _error,
+      _errorInfo,
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
@@ -92,8 +90,7 @@ class AdvancedErrorBoundary extends Component<
       userAgent: navigator.userAgent,
       url: window.location.href,
       userId: this.getUserId(),
-      sessionId: this.getSessionId(),
-    };
+      sessionId: this.getSessionId()};
 
     // Send to error reporting service
     this.sendErrorReport(errorReport);
@@ -132,14 +129,13 @@ class AdvancedErrorBoundary extends Component<
       await fetch('/api/errors', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(errorReport),
-      });
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(errorReport)});
     } catch (reportError) {
-      Logger.error(
+      logger.error(
         'Failed to send error report',
-        { error: reportError as Error, context: 'ErrorReporting' }
+        reportError as Error,
+        { context: 'ErrorReporting' }
       );
     }
   };
@@ -151,8 +147,7 @@ class AdvancedErrorBoundary extends Component<
         hasError: false,
         error: null,
         errorInfo: null,
-        errorId: null,
-      });
+        errorId: null});
     }
   };
 
@@ -188,15 +183,18 @@ class AdvancedErrorBoundary extends Component<
                       strokeLinecap='round'
                       strokeLinejoin='round'
                       strokeWidth={2}
-                      d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
+                      d='M12 9 v2 m0 4 h.01 m-6.938 4 h13.856 c1.54 0 2.502-1.667 1.732-2.5 L13.732 4 c-.77-.833-1.964-.833-2.732 0 L3.732 16.5 c-.77.833.192 2.5 1.732 2.5 z'
                     />
-                  </div>
-                <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
+                  </svg>
+                </div>
+                <h2 className='mt-6 text-3 xl font-extrabold text-gray-900'>
                   Oops! Something went wrong
                 </h2>
-                <p>We&apos;re sorry, but something unexpected happened. Our team
-                  has been notified.</p>
-                </div>
+                <p className='mt-2 text-sm text-gray-600'>
+                  We're sorry, but something unexpected happened. Our team
+                  has been notified.
+                </p>
+              </div>
 
               {process.env.NODE_ENV === 'development' && (
                 <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
@@ -214,18 +212,24 @@ class AdvancedErrorBoundary extends Component<
                       <summary className='cursor-pointer font-medium'>
                         Stack Trace
                       </summary>
-                      <p>{this.state.error?.stack}</p>
-                      </details>
+                      <pre className='mt-2 text-xs overflow-auto'>
+                        {this.state.error?.stack}
+                      </pre>
+                    </details>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
                         Component Stack
                       </summary>
-                      <p>{this.state.errorInfo?.componentStack}</p>
-                      </details>
+                      <pre className='mt-2 text-xs overflow-auto'>
+                        {this.state.errorInfo?.componentStack}
+                      </pre>
+                    </details>
                   </div>
+                </div>
               )}
 
-              <div>{this.props.enableRetry &&</div>
+              <div className='mt-6 space-y-3'>
+                {this.props.enableRetry &&
                   this.retryCount < this.maxRetries && (
                     <button
                       onClick={this.handleRetry}
@@ -248,18 +252,24 @@ class AdvancedErrorBoundary extends Component<
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
                   Go to Homepage
-                </div>
+                </button>
+              </div>
 
               <div className='mt-6 text-center'>
-                <p>If this problem persists, please contact our support team
-                  at&nbsp;</p>
+                <p className='text-xs text-gray-500'>
+                  If this problem persists, please contact our support team
+                  at&nbsp;
                   <a
                     href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
                   >
                     kleber@ziontechgroup.com
-                  </p>
+                  </a>
+                </p>
               </div>
+            </div>
+          </div>
+        </div>
       );
     }
 

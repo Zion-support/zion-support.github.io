@@ -1,6 +1,6 @@
 import React from "react";
 
-const App_minimalPage = () => {
+const AppMinimal = () => {
   return (
     <>
       <div className="min-h-screen bg-slate-900">
@@ -10,4 +10,4 @@ const App_minimalPage = () => {
   );
 };
 
-export default AppMinimal;
+

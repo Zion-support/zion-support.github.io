@@ -6,10 +6,10 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
-const HomePage = () => {
+export default function Page() {
   return (
-<>
-      <Helmet>
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions, empowering businesses to transform and scale through innovative technology." /></meta>
         <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, digital transformation, technology consulting" /></meta>
@@ -18,13 +18,14 @@ const HomePage = () => {
         <meta property="og:type" content="website" /></meta>
         <meta name="twitter:card" content="summary_large_image" /></meta>
         <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" /></meta>
-        <meta name="twitter:description" content="Leading provider of AI and IT solutions, empowering businesses to transform and scale through innovative technology." /></Helmet>
+        <meta name="twitter:description" content="Leading provider of AI and IT solutions, empowering businesses to transform and scale through innovative technology." /></meta>
+      </Helmet>
       
       <Hero /></Hero>
       <Services /></Services>
       <About /></About>
       <Contact /></Contact>
-      <Footer /></div>
+      <Footer /></Footer>
     </>
   );
 };

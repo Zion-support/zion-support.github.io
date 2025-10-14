@@ -1,3 +1,15 @@
-import { useAnalytics    } from "../contexts/AnalyticsContext";
-
-export { useAnalytics };
+import { useState, useEffect } from 'react';
+export const useUseAnalyticsContext = () => {
+  const [data] = useState(null);
+  const [loading] = useState(false);
+  const [error] = useState(null);
+  useEffect(() => {
+    // Add your hook logic here
+  }, []);
+  return {
+    data,
+    loading,
+    _error,
+    // Add your hook methods here
+  };
+};

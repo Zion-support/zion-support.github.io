@@ -1,7 +1,9 @@
           This page is under development.</div>
   )
-        </div>
-  )}
+        </p>
+      </div>
+    </div>
+  );
 };
 
-export default WebVitalsTrackerPage;
+export default WebVitalsTracker;

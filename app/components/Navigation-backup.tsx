@@ -1,4 +1,9 @@
           This page is under development.</div>
   )
-        </div>
-  )}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default NavigationBackup;

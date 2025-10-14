@@ -1,4 +1,4 @@
-}
+import React from "react";
 
 const NeonButton: React.FC<NeonButtonProps> = ({
   children,
@@ -29,8 +29,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 <>      <a;
         href={href}
         className={classes}
-        target="_blank""""
-        rel="noopener noreferrer""></a>
+        target="_blank
+        rel="noopener noreferrer></a>
         {children}
       </a>
     )}
