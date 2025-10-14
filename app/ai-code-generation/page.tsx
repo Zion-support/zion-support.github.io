@@ -54,5 +54,4 @@ const AiCodeGenerationPage: React.FC = () => {
   );
 };
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default AiCodeGenerationPage;
