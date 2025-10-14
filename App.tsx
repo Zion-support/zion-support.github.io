@@ -15,6 +15,7 @@ const HomePage = React.lazy(() => import('./app/page'));
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 
 // Dynamic page loader for all other pages
 const DynamicPageLoader: React.FC<{ pagePath: string }> = ({ pagePath }) => {
@@ -49,6 +50,7 @@ const RouterContent: React.FC = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/micro-saas" element={<MicroSaasPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<DynamicPageLoader pagePath={location.pathname} />} />
       </Routes>

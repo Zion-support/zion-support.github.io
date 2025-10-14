@@ -65,6 +65,10 @@ const Header: React.FC = () => {
       href: '/micro-saas',
       icon: <Cloud className="w-4 h-4" />,
       dropdown: [
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Financial Analytics Pro', href: '/ai-financial-analytics-pro' },
         { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
         { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
@@ -104,16 +108,16 @@ const Header: React.FC = () => {
       {/* Top Contact Bar */}
       <div className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-4">
         <div className="container mx-auto flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-6">
+          <div className="flex flex-wrap items-center space-x-2 md:space-x-6 text-xs md:text-sm">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
-              <span>+1 302 464 0950</span>
+              <a href="tel:+13024640950" className="hover:text-cyan-200 transition-colors">+1 302 464 0950</a>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
-              <span>kleber@ziontechgroup.com</span>
+              <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-200 transition-colors">kleber@ziontechgroup.com</a>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="hidden md:flex items-center space-x-2">
               <MapPin className="w-4 h-4" />
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  DollarSign, 
-  TrendingUp, 
+  MessageSquare, 
+  Users, 
+  Headphones, 
   BarChart3, 
-  PieChart, 
   Zap, 
   Shield, 
   Globe, 
@@ -23,11 +23,13 @@ import {
   Eye,
   Filter,
   Clock,
+  PieChart,
   LineChart,
   Activity,
   AlertTriangle,
   CheckSquare,
   FileText,
+  Bot,
   Target,
   Calendar,
   Image,
@@ -35,6 +37,7 @@ import {
   Link,
   Hashtag,
   AtSign,
+  DollarSign,
   Award,
   ThumbsUp,
   MessageCircle,
@@ -42,17 +45,10 @@ import {
   Search,
   BookOpen,
   Lightbulb,
-  Calculator,
-  CreditCard,
-  Banknote,
-  Wallet,
-  PiggyBank,
-  TrendingDown,
-  Percent,
-  Graph
+  TrendingUp
 } from 'lucide-react';
 
-const AiFinancialAnalyticsProPage: React.FC = () => {
+const AiCustomerSupportProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -61,106 +57,106 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
 
   const features = [
     {
+      icon: <Bot className="w-6 h-6" />,
+      title: "AI-Powered Chatbots",
+      description: "Intelligent chatbots that understand context, provide instant responses, and escalate complex issues to human agents seamlessly.",
+      benefits: ["24/7 availability", "Instant responses", "Context understanding", "Smart escalation"]
+    },
+    {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Forecasting",
-      description: "Advanced machine learning algorithms predict financial trends, cash flow, and market movements with unprecedented accuracy.",
-      benefits: ["Cash flow prediction", "Market trend analysis", "Risk assessment", "Investment insights"]
+      title: "Intelligent Ticket Routing",
+      description: "AI automatically categorizes and routes support tickets to the right agent based on expertise, workload, and priority.",
+      benefits: ["Smart categorization", "Auto-routing", "Priority detection", "Load balancing"]
+    },
+    {
+      icon: <Search className="w-6 h-6" />,
+      title: "Knowledge Base AI",
+      description: "AI-powered search that understands natural language queries and provides accurate, contextual answers from your knowledge base.",
+      benefits: ["Natural language search", "Contextual answers", "Self-learning", "Multi-language support"]
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Financial Dashboards",
-      description: "Comprehensive financial dashboards with live data, customizable KPIs, and interactive visualizations for better decision making.",
-      benefits: ["Live data feeds", "Custom KPIs", "Interactive charts", "Mobile access"]
+      title: "Advanced Analytics",
+      description: "Comprehensive analytics with AI insights on customer satisfaction, response times, and support team performance.",
+      benefits: ["Customer insights", "Performance metrics", "Predictive analytics", "Trend analysis"]
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Fraud Detection & Security",
-      description: "AI-powered fraud detection, anomaly identification, and security monitoring to protect your financial assets and transactions.",
-      benefits: ["Real-time fraud detection", "Anomaly alerts", "Security monitoring", "Compliance tracking"]
-    },
-    {
-      icon: <Calculator className="w-6 h-6" />,
-      title: "Automated Financial Reporting",
-      description: "Generate comprehensive financial reports, tax documents, and compliance reports automatically with AI-powered analysis.",
-      benefits: ["Automated reporting", "Tax preparation", "Compliance reports", "Custom formats"]
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Investment Optimization",
-      description: "AI-driven investment recommendations, portfolio optimization, and risk management strategies for maximum returns.",
-      benefits: ["Portfolio optimization", "Risk management", "Investment recommendations", "Performance tracking"]
+      title: "Sentiment Analysis",
+      description: "AI analyzes customer emotions and sentiment in real-time to prioritize urgent issues and improve response strategies.",
+      benefits: ["Emotion detection", "Urgency prioritization", "Sentiment tracking", "Proactive support"]
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Smart Automation",
-      description: "Automate financial processes, bill payments, budget tracking, and expense management with intelligent workflows.",
-      benefits: ["Process automation", "Bill automation", "Budget tracking", "Expense management"]
+      title: "Automation Suite",
+      description: "Automate repetitive tasks, follow-ups, and workflows to improve efficiency and reduce response times.",
+      benefits: ["Task automation", "Auto-follow-ups", "Workflow automation", "Efficiency gains"]
     }
   ];
 
-  const financialMetrics = [
-    { name: "Revenue Growth", icon: <TrendingUp className="w-8 h-8" />, color: "text-green-500" },
-    { name: "Profit Margins", icon: <Percent className="w-8 h-8" />, color: "text-blue-500" },
-    { name: "Cash Flow", icon: <DollarSign className="w-8 h-8" />, color: "text-cyan-500" },
-    { name: "ROI Analysis", icon: <Graph className="w-8 h-8" />, color: "text-purple-500" },
-    { name: "Budget Tracking", icon: <PiggyBank className="w-8 h-8" />, color: "text-orange-500" },
-    { name: "Expense Analysis", icon: <CreditCard className="w-8 h-8" />, color: "text-red-500" },
-    { name: "Tax Planning", icon: <Calculator className="w-8 h-8" />, color: "text-indigo-500" },
-    { name: "Risk Assessment", icon: <Shield className="w-8 h-8" />, color: "text-yellow-500" }
+  const channels = [
+    { name: "Live Chat", icon: <MessageSquare className="w-8 h-8" />, color: "text-cyan-500" },
+    { name: "Email", icon: <Mail className="w-8 h-8" />, color: "text-blue-500" },
+    { name: "Phone", icon: <Phone className="w-8 h-8" />, color: "text-green-500" },
+    { name: "Social Media", icon: <Globe className="w-8 h-8" />, color: "text-purple-500" },
+    { name: "WhatsApp", icon: <MessageCircle className="w-8 h-8" />, color: "text-green-600" },
+    { name: "SMS", icon: <MessageSquare className="w-8 h-8" />, color: "text-orange-500" },
+    { name: "Video Call", icon: <Video className="w-8 h-8" />, color: "text-red-500" },
+    { name: "Help Center", icon: <HelpCircle className="w-8 h-8" />, color: "text-indigo-500" }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$149",
+      price: "$99",
       period: "month",
-      description: "Perfect for small businesses and freelancers",
+      description: "Perfect for small businesses starting their AI support journey",
       features: [
-        "Basic financial analytics",
-        "Up to 5 bank accounts",
-        "Standard reporting",
+        "Up to 1,000 tickets/month",
+        "Basic AI chatbot",
+        "Email & chat support",
+        "Standard analytics",
         "Email support",
-        "5GB data storage",
+        "5GB storage",
         "Mobile app access",
-        "Basic forecasting",
-        "Monthly reports"
+        "Basic integrations"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$199",
       period: "month",
-      description: "Ideal for growing companies and financial advisors",
+      description: "Ideal for growing companies with advanced support needs",
       features: [
-        "Advanced AI analytics",
-        "Unlimited accounts",
-        "Comprehensive reporting",
+        "Up to 10,000 tickets/month",
+        "Advanced AI features",
+        "All communication channels",
+        "Comprehensive analytics",
         "Priority support",
-        "50GB data storage",
+        "50GB storage",
         "API access",
-        "Advanced forecasting",
-        "Real-time dashboards",
-        "Fraud detection",
+        "Custom integrations",
+        "Sentiment analysis",
         "White-label options"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$599",
+      price: "$399",
       period: "month",
       description: "Complete solution for large organizations",
       features: [
+        "Unlimited tickets",
         "Full AI suite",
-        "Custom integrations",
         "Custom development",
+        "Advanced analytics",
         "24/7 dedicated support",
         "Unlimited storage",
         "Advanced security",
         "On-premise deployment",
         "Custom AI training",
-        "Compliance management",
         "Training & onboarding"
       ],
       popular: false
@@ -169,56 +165,56 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Michael Chen",
-      company: "Investment Firm",
-      role: "CFO",
-      content: "AI Financial Analytics Pro has transformed our investment strategies. The AI predictions have increased our portfolio returns by 35% and reduced risk exposure by 40%. The fraud detection has saved us millions.",
+      name: "Rachel Thompson",
+      company: "E-commerce Solutions",
+      role: "Customer Success Manager",
+      content: "AI Customer Support Pro has revolutionized our support operations. Response times dropped by 70% and customer satisfaction increased to 95%. The AI chatbot handles 80% of inquiries without human intervention.",
       rating: 5
     },
     {
-      name: "Sarah Johnson",
-      company: "Tech Startup",
-      role: "Finance Director",
-      content: "The automated reporting and forecasting features have been game-changers. We can now make data-driven decisions in real-time and our financial planning accuracy has improved by 80%.",
+      name: "James Wilson",
+      company: "TechStart Inc.",
+      role: "Head of Support",
+      content: "The intelligent ticket routing and sentiment analysis have been game-changers. We can now prioritize urgent issues and provide personalized support at scale. Our team productivity has increased by 60%.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "E-commerce Platform",
-      role: "VP of Finance",
-      content: "The AI-powered cash flow predictions and budget optimization have helped us scale efficiently. We've reduced financial waste by 25% and improved our profit margins significantly.",
+      name: "Maria Garcia",
+      company: "SaaS Platform",
+      role: "VP of Customer Experience",
+      content: "The AI-powered knowledge base and automation features have transformed our support quality. Customers get instant, accurate answers, and our support team can focus on complex issues. ROI was achieved in just 2 months.",
       rating: 5
     }
   ];
 
   const metrics = [
-    { number: "35%", label: "Higher Returns", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "40%", label: "Risk Reduction", icon: <Shield className="w-6 h-6" /> },
-    { number: "80%", label: "Accuracy Improvement", icon: <Target className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Monitoring", icon: <Activity className="w-6 h-6" /> }
+    { number: "95%", label: "Customer Satisfaction", icon: <ThumbsUp className="w-6 h-6" /> },
+    { number: "70%", label: "Faster Response Time", icon: <Clock className="w-6 h-6" /> },
+    { number: "80%", label: "Issues Resolved by AI", icon: <Bot className="w-6 h-6" /> },
+    { number: "24/7", label: "Always Available", icon: <Activity className="w-6 h-6" /> }
   ];
 
   const integrations = [
-    { name: "QuickBooks", description: "Accounting software" },
-    { name: "Xero", description: "Cloud accounting" },
-    { name: "Sage", description: "Business management" },
-    { name: "Stripe", description: "Payment processing" },
-    { name: "PayPal", description: "Online payments" },
-    { name: "Bank APIs", description: "Banking integration" },
-    { name: "Excel", description: "Spreadsheet sync" },
-    { name: "Google Sheets", description: "Collaboration" }
+    { name: "Salesforce", description: "CRM integration" },
+    { name: "Zendesk", description: "Support platform" },
+    { name: "Slack", description: "Team communication" },
+    { name: "Microsoft Teams", description: "Collaboration" },
+    { name: "HubSpot", description: "Marketing automation" },
+    { name: "Intercom", description: "Customer messaging" },
+    { name: "Freshdesk", description: "Help desk" },
+    { name: "Jira", description: "Issue tracking" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Financial Analytics Pro - Intelligent Financial Management | Zion Tech Group</title>
-        <meta name="description" content="Transform your financial management with AI-powered analytics, forecasting, and automation. Make smarter financial decisions with intelligent insights." />
-        <meta name="keywords" content="AI financial analytics, financial forecasting, investment optimization, fraud detection, financial reporting, budget management, cash flow analysis" />
-        <meta property="og:title" content="AI Financial Analytics Pro - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent financial analytics platform with AI-powered forecasting and automation" />
+        <title>AI Customer Support Pro - Intelligent Support Automation | Zion Tech Group</title>
+        <meta name="description" content="Transform your customer support with AI-powered chatbots, intelligent ticket routing, and automated workflows. Improve satisfaction and reduce response times." />
+        <meta name="keywords" content="AI customer support, support automation, chatbots, ticket management, customer service AI, support analytics, help desk automation" />
+        <meta property="og:title" content="AI Customer Support Pro - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent customer support platform with AI-powered automation and analytics" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-financial-analytics-pro" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -247,16 +243,16 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
-                  #1 AI Financial Analytics Platform
+                  #1 AI Customer Support Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Financial Analytics Pro
+                    AI Customer Support Pro
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Revolutionize your financial management with AI-powered analytics, intelligent forecasting, 
-                  and automated financial processes. Make smarter decisions with data-driven insights.
+                  Revolutionize your customer support with AI-powered automation, intelligent chatbots, 
+                  and smart ticket management. Deliver exceptional support experiences at scale.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -278,30 +274,30 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Financial Metrics Section */}
+          {/* Channel Support Section */}
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Comprehensive Financial Metrics
+                    All Support Channels
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Track and analyze all your financial KPIs with AI-powered insights and predictions.
+                  Unify all your customer support channels with AI-powered automation and intelligence.
                 </p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {financialMetrics.map((metric, index) => (
+                {channels.map((channel, index) => (
                   <div 
                     key={index} 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group"
                   >
-                    <div className={`${metric.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
-                      {metric.icon}
+                    <div className={`${channel.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
+                      {channel.icon}
                     </div>
-                    <div className="text-white font-semibold text-sm">{metric.name}</div>
+                    <div className="text-white font-semibold text-sm">{channel.name}</div>
                   </div>
                 ))}
               </div>
@@ -318,7 +314,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to manage your finances intelligently with AI-driven insights and automation.
+                  Everything you need to deliver exceptional customer support with intelligent automation.
                 </p>
               </div>
               
@@ -361,7 +357,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Join thousands of businesses achieving remarkable financial improvements with our AI platform.
+                  Join thousands of companies achieving remarkable support improvements with our AI platform.
                 </p>
               </div>
               
@@ -389,7 +385,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Connect with your existing financial tools and platforms for a unified experience.
+                  Connect with your existing tools and platforms for a unified support experience.
                 </p>
               </div>
               
@@ -417,7 +413,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your financial needs and business size. All plans include our core AI features.
+                  Choose the plan that fits your support volume and team size. All plans include our core AI features.
                 </p>
               </div>
               
@@ -481,7 +477,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  See how businesses are transforming their financial management with our AI platform.
+                  See how companies are transforming their customer support with our AI platform.
                 </p>
               </div>
               
@@ -515,10 +511,10 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Transform Your Financial Management?
+                  Ready to Transform Your Customer Support?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Start your free trial today and experience the power of AI-driven financial analytics. 
+                  Start your free trial today and experience the power of AI-driven customer support. 
                   No credit card required.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -546,4 +542,4 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
   );
 };
 
-export default AiFinancialAnalyticsProPage;
+export default AiCustomerSupportProPage;

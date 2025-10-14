@@ -1,5 +1,5 @@
 import React, { memo, useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowRight, Shield, Brain, Code, Cloud, Wifi, Star, CheckCircle, Users, Award, TrendingUp, Clock, MessageSquare, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 // Loading skeleton component
@@ -22,27 +22,35 @@ const HomePage: React.FC = () => {
   const services = [
     {
       icon: <Brain className="w-8 h-8" />,
-      title: "AI Analytics Dashboard Pro",
-      description: "Advanced AI-powered analytics with real-time insights, predictive modeling, and automated reporting.",
-      price: "$299/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"],
-      link: "/ai-analytics-dashboard-pro"
+      title: "AI Project Manager Pro",
+      description: "Revolutionary project management with AI-powered task automation, predictive analytics, and intelligent resource allocation.",
+      price: "$99/month",
+      features: ["AI Task Management", "Predictive Analytics", "Team Collaboration", "Goal Tracking"],
+      link: "/ai-project-manager-pro"
     },
     {
-      icon: <Code className="w-8 h-8" />,
-      title: "AI Code Assistant Pro",
-      description: "Intelligent code generation, debugging, and optimization with support for 50+ programming languages.",
+      icon: <Users className="w-8 h-8" />,
+      title: "AI Social Media Manager Pro",
+      description: "Transform your social media strategy with AI-powered content generation, analytics, and automated management across all platforms.",
+      price: "$149/month",
+      features: ["AI Content Generation", "Multi-platform Management", "Advanced Analytics", "Audience Intelligence"],
+      link: "/ai-social-media-manager-pro"
+    },
+    {
+      icon: <MessageSquare className="w-8 h-8" />,
+      title: "AI Customer Support Pro",
+      description: "Revolutionize customer support with AI-powered chatbots, intelligent ticket routing, and automated workflows.",
       price: "$199/month",
-      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Multi-language Support"],
-      link: "/ai-code-assistant-pro"
+      features: ["AI Chatbots", "Smart Routing", "Sentiment Analysis", "24/7 Support"],
+      link: "/ai-customer-support-pro"
     },
     {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "AI Cloud Infrastructure",
-      description: "Scalable cloud solutions with AI-powered auto-scaling, monitoring, and cost optimization.",
-      price: "$499/month",
-      features: ["Auto-scaling", "AI Monitoring", "Cost Optimization", "99.9% Uptime"],
-      link: "/ai-cloud-infrastructure"
+      icon: <DollarSign className="w-8 h-8" />,
+      title: "AI Financial Analytics Pro",
+      description: "Transform financial management with AI-powered forecasting, fraud detection, and automated financial reporting.",
+      price: "$299/month",
+      features: ["AI Forecasting", "Fraud Detection", "Investment Optimization", "Automated Reporting"],
+      link: "/ai-financial-analytics-pro"
     },
     {
       icon: <Wifi className="w-8 h-8" />,
@@ -59,14 +67,6 @@ const HomePage: React.FC = () => {
       price: "$399/month",
       features: ["AI Threat Detection", "Automated Response", "Compliance Management", "24/7 Monitoring"],
       link: "/advanced-security-suite"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "AI Chatbot Enterprise",
-      description: "Enterprise-grade conversational AI with multi-language support and advanced NLP capabilities.",
-      price: "$149/month",
-      features: ["Multi-language Support", "Advanced NLP", "Integration APIs", "Analytics Dashboard"],
-      link: "/ai-chatbot-enterprise"
     }
   ];
 

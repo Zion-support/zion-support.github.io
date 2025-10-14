@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  DollarSign, 
+  Share2, 
+  Users, 
   TrendingUp, 
   BarChart3, 
-  PieChart, 
   Zap, 
   Shield, 
   Globe, 
@@ -23,11 +23,18 @@ import {
   Eye,
   Filter,
   Clock,
+  PieChart,
   LineChart,
   Activity,
   AlertTriangle,
   CheckSquare,
   FileText,
+  MessageSquare,
+  Camera,
+  Hash,
+  Heart,
+  MessageCircle,
+  ThumbsUp,
   Target,
   Calendar,
   Image,
@@ -35,24 +42,11 @@ import {
   Link,
   Hashtag,
   AtSign,
-  Award,
-  ThumbsUp,
-  MessageCircle,
-  HelpCircle,
-  Search,
-  BookOpen,
-  Lightbulb,
-  Calculator,
-  CreditCard,
-  Banknote,
-  Wallet,
-  PiggyBank,
-  TrendingDown,
-  Percent,
-  Graph
+  DollarSign,
+  Award
 } from 'lucide-react';
 
-const AiFinancialAnalyticsProPage: React.FC = () => {
+const AiSocialMediaManagerProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -62,105 +56,105 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Forecasting",
-      description: "Advanced machine learning algorithms predict financial trends, cash flow, and market movements with unprecedented accuracy.",
-      benefits: ["Cash flow prediction", "Market trend analysis", "Risk assessment", "Investment insights"]
+      title: "AI Content Generation",
+      description: "Generate engaging posts, captions, and hashtags using advanced AI that understands your brand voice and audience.",
+      benefits: ["Brand voice matching", "Hashtag optimization", "Content scheduling", "Trend analysis"]
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Financial Dashboards",
-      description: "Comprehensive financial dashboards with live data, customizable KPIs, and interactive visualizations for better decision making.",
-      benefits: ["Live data feeds", "Custom KPIs", "Interactive charts", "Mobile access"]
+      title: "Advanced Analytics",
+      description: "Comprehensive social media analytics with AI-powered insights, competitor analysis, and performance predictions.",
+      benefits: ["Engagement metrics", "ROI tracking", "Competitor analysis", "Growth predictions"]
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Audience Intelligence",
+      description: "Deep audience insights with AI-powered demographic analysis, interest mapping, and engagement optimization.",
+      benefits: ["Demographic analysis", "Interest mapping", "Engagement optimization", "Audience growth"]
+    },
+    {
+      icon: <Calendar className="w-6 h-6" />,
+      title: "Smart Scheduling",
+      description: "AI-powered optimal posting times, content calendar management, and cross-platform synchronization.",
+      benefits: ["Optimal timing", "Content calendar", "Cross-platform sync", "Bulk scheduling"]
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Fraud Detection & Security",
-      description: "AI-powered fraud detection, anomaly identification, and security monitoring to protect your financial assets and transactions.",
-      benefits: ["Real-time fraud detection", "Anomaly alerts", "Security monitoring", "Compliance tracking"]
-    },
-    {
-      icon: <Calculator className="w-6 h-6" />,
-      title: "Automated Financial Reporting",
-      description: "Generate comprehensive financial reports, tax documents, and compliance reports automatically with AI-powered analysis.",
-      benefits: ["Automated reporting", "Tax preparation", "Compliance reports", "Custom formats"]
-    },
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: "Investment Optimization",
-      description: "AI-driven investment recommendations, portfolio optimization, and risk management strategies for maximum returns.",
-      benefits: ["Portfolio optimization", "Risk management", "Investment recommendations", "Performance tracking"]
+      title: "Brand Safety",
+      description: "AI-powered content moderation, brand safety checks, and crisis management to protect your reputation.",
+      benefits: ["Content moderation", "Brand safety", "Crisis alerts", "Reputation monitoring"]
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Smart Automation",
-      description: "Automate financial processes, bill payments, budget tracking, and expense management with intelligent workflows.",
-      benefits: ["Process automation", "Bill automation", "Budget tracking", "Expense management"]
+      title: "Automation Suite",
+      description: "Automate responses, engagement, and content distribution across all major social media platforms.",
+      benefits: ["Auto-responses", "Engagement automation", "Content distribution", "Workflow automation"]
     }
   ];
 
-  const financialMetrics = [
-    { name: "Revenue Growth", icon: <TrendingUp className="w-8 h-8" />, color: "text-green-500" },
-    { name: "Profit Margins", icon: <Percent className="w-8 h-8" />, color: "text-blue-500" },
-    { name: "Cash Flow", icon: <DollarSign className="w-8 h-8" />, color: "text-cyan-500" },
-    { name: "ROI Analysis", icon: <Graph className="w-8 h-8" />, color: "text-purple-500" },
-    { name: "Budget Tracking", icon: <PiggyBank className="w-8 h-8" />, color: "text-orange-500" },
-    { name: "Expense Analysis", icon: <CreditCard className="w-8 h-8" />, color: "text-red-500" },
-    { name: "Tax Planning", icon: <Calculator className="w-8 h-8" />, color: "text-indigo-500" },
-    { name: "Risk Assessment", icon: <Shield className="w-8 h-8" />, color: "text-yellow-500" }
+  const platforms = [
+    { name: "Facebook", icon: <MessageCircle className="w-8 h-8" />, color: "text-blue-500" },
+    { name: "Instagram", icon: <Camera className="w-8 h-8" />, color: "text-pink-500" },
+    { name: "Twitter", icon: <Hash className="w-8 h-8" />, color: "text-cyan-500" },
+    { name: "LinkedIn", icon: <Users className="w-8 h-8" />, color: "text-blue-600" },
+    { name: "TikTok", icon: <Video className="w-8 h-8" />, color: "text-white" },
+    { name: "YouTube", icon: <Play className="w-8 h-8" />, color: "text-red-500" },
+    { name: "Pinterest", icon: <Image className="w-8 h-8" />, color: "text-red-600" },
+    { name: "Snapchat", icon: <Camera className="w-8 h-8" />, color: "text-yellow-500" }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$149",
+      price: "$79",
       period: "month",
-      description: "Perfect for small businesses and freelancers",
+      description: "Perfect for small businesses and influencers",
       features: [
-        "Basic financial analytics",
-        "Up to 5 bank accounts",
-        "Standard reporting",
+        "3 social media accounts",
+        "Basic AI content generation",
+        "Standard analytics",
+        "Content scheduling",
         "Email support",
-        "5GB data storage",
+        "5GB media storage",
         "Mobile app access",
-        "Basic forecasting",
-        "Monthly reports"
+        "Basic templates"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$149",
       period: "month",
-      description: "Ideal for growing companies and financial advisors",
+      description: "Ideal for growing brands and agencies",
       features: [
-        "Advanced AI analytics",
-        "Unlimited accounts",
-        "Comprehensive reporting",
+        "10 social media accounts",
+        "Advanced AI features",
+        "Comprehensive analytics",
+        "Team collaboration",
         "Priority support",
-        "50GB data storage",
+        "50GB media storage",
         "API access",
-        "Advanced forecasting",
-        "Real-time dashboards",
-        "Fraud detection",
+        "Custom templates",
+        "Competitor analysis",
         "White-label options"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$599",
+      price: "$299",
       period: "month",
       description: "Complete solution for large organizations",
       features: [
+        "Unlimited accounts",
         "Full AI suite",
-        "Custom integrations",
+        "Advanced analytics",
         "Custom development",
         "24/7 dedicated support",
         "Unlimited storage",
         "Advanced security",
         "On-premise deployment",
-        "Custom AI training",
-        "Compliance management",
+        "Custom integrations",
         "Training & onboarding"
       ],
       popular: false
@@ -169,56 +163,45 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Michael Chen",
-      company: "Investment Firm",
-      role: "CFO",
-      content: "AI Financial Analytics Pro has transformed our investment strategies. The AI predictions have increased our portfolio returns by 35% and reduced risk exposure by 40%. The fraud detection has saved us millions.",
+      name: "Lisa Chen",
+      company: "Fashion Forward",
+      role: "Marketing Director",
+      content: "AI Social Media Manager Pro has transformed our social media strategy. The AI-generated content performs 3x better than our manual posts, and we've grown our following by 200% in just 6 months.",
       rating: 5
     },
     {
-      name: "Sarah Johnson",
-      company: "Tech Startup",
-      role: "Finance Director",
-      content: "The automated reporting and forecasting features have been game-changers. We can now make data-driven decisions in real-time and our financial planning accuracy has improved by 80%.",
+      name: "Marcus Johnson",
+      company: "TechStart Agency",
+      role: "Social Media Manager",
+      content: "The analytics and audience insights are incredible. We can now predict which content will perform best and optimize our campaigns in real-time. ROI has increased by 150%.",
       rating: 5
     },
     {
-      name: "David Rodriguez",
-      company: "E-commerce Platform",
-      role: "VP of Finance",
-      content: "The AI-powered cash flow predictions and budget optimization have helped us scale efficiently. We've reduced financial waste by 25% and improved our profit margins significantly.",
+      name: "Emily Rodriguez",
+      company: "E-commerce Plus",
+      role: "Digital Marketing Lead",
+      content: "The automation features have saved us 20 hours per week. The AI content generation is so good that our engagement rates have doubled across all platforms.",
       rating: 5
     }
   ];
 
   const metrics = [
-    { number: "35%", label: "Higher Returns", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "40%", label: "Risk Reduction", icon: <Shield className="w-6 h-6" /> },
-    { number: "80%", label: "Accuracy Improvement", icon: <Target className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Monitoring", icon: <Activity className="w-6 h-6" /> }
-  ];
-
-  const integrations = [
-    { name: "QuickBooks", description: "Accounting software" },
-    { name: "Xero", description: "Cloud accounting" },
-    { name: "Sage", description: "Business management" },
-    { name: "Stripe", description: "Payment processing" },
-    { name: "PayPal", description: "Online payments" },
-    { name: "Bank APIs", description: "Banking integration" },
-    { name: "Excel", description: "Spreadsheet sync" },
-    { name: "Google Sheets", description: "Collaboration" }
+    { number: "500M+", label: "Posts Analyzed", icon: <BarChart3 className="w-6 h-6" /> },
+    { number: "10K+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "95%", label: "Content Performance", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Monitoring", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Financial Analytics Pro - Intelligent Financial Management | Zion Tech Group</title>
-        <meta name="description" content="Transform your financial management with AI-powered analytics, forecasting, and automation. Make smarter financial decisions with intelligent insights." />
-        <meta name="keywords" content="AI financial analytics, financial forecasting, investment optimization, fraud detection, financial reporting, budget management, cash flow analysis" />
-        <meta property="og:title" content="AI Financial Analytics Pro - Zion Tech Group" />
-        <meta property="og:description" content="Intelligent financial analytics platform with AI-powered forecasting and automation" />
+        <title>AI Social Media Manager Pro - Intelligent Social Media Management | Zion Tech Group</title>
+        <meta name="description" content="Transform your social media strategy with AI-powered content generation, analytics, and automation. Grow your audience and engagement across all platforms." />
+        <meta name="keywords" content="AI social media management, social media automation, content generation, social media analytics, brand management, social media scheduling" />
+        <meta property="og:title" content="AI Social Media Manager Pro - Zion Tech Group" />
+        <meta property="og:description" content="Intelligent social media management platform with AI-powered content generation and analytics" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-financial-analytics-pro" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-social-media-manager-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -247,16 +230,16 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
               <div className={`text-center max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8">
                   <Star className="w-4 h-4 mr-2" />
-                  #1 AI Financial Analytics Platform
+                  #1 AI Social Media Platform
                 </div>
                 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                    AI Financial Analytics Pro
+                    AI Social Media Manager Pro
                   </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-4xl mx-auto">
-                  Revolutionize your financial management with AI-powered analytics, intelligent forecasting, 
-                  and automated financial processes. Make smarter decisions with data-driven insights.
+                  Revolutionize your social media strategy with AI-powered content generation, 
+                  intelligent analytics, and automated management across all platforms.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                   <a
@@ -278,30 +261,30 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Financial Metrics Section */}
+          {/* Platform Support Section */}
           <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 relative">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Comprehensive Financial Metrics
+                    All Major Platforms
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Track and analyze all your financial KPIs with AI-powered insights and predictions.
+                  Manage all your social media accounts from one powerful AI-driven platform.
                 </p>
               </div>
               
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {financialMetrics.map((metric, index) => (
+                {platforms.map((platform, index) => (
                   <div 
                     key={index} 
                     className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105 group"
                   >
-                    <div className={`${metric.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
-                      {metric.icon}
+                    <div className={`${platform.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex justify-center`}>
+                      {platform.icon}
                     </div>
-                    <div className="text-white font-semibold text-sm">{metric.name}</div>
+                    <div className="text-white font-semibold text-sm">{platform.name}</div>
                   </div>
                 ))}
               </div>
@@ -318,7 +301,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Everything you need to manage your finances intelligently with AI-driven insights and automation.
+                  Everything you need to dominate social media with intelligent automation and insights.
                 </p>
               </div>
               
@@ -361,7 +344,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Join thousands of businesses achieving remarkable financial improvements with our AI platform.
+                  Join thousands of brands achieving remarkable social media success with our AI platform.
                 </p>
               </div>
               
@@ -379,36 +362,8 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Integrations Section */}
-          <section className="py-20 bg-slate-900">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                    Seamless Integrations
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Connect with your existing financial tools and platforms for a unified experience.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-                {integrations.map((integration, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 text-center hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-                  >
-                    <div className="text-cyan-400 font-bold text-lg mb-2">{integration.name}</div>
-                    <div className="text-gray-300 text-sm">{integration.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
           {/* Pricing Section */}
-          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+          <section className="py-20 bg-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -417,7 +372,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  Choose the plan that fits your financial needs and business size. All plans include our core AI features.
+                  Choose the plan that fits your social media needs. All plans include our core AI features.
                 </p>
               </div>
               
@@ -472,7 +427,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
           </section>
 
           {/* Testimonials Section */}
-          <section className="py-20 bg-slate-900">
+          <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
             <div className="container mx-auto px-4">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -481,7 +436,7 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                  See how businesses are transforming their financial management with our AI platform.
+                  See how brands are achieving social media success with our AI platform.
                 </p>
               </div>
               
@@ -515,10 +470,10 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
             <div className="container mx-auto px-4">
               <div className="text-center max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Ready to Transform Your Financial Management?
+                  Ready to Dominate Social Media?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
-                  Start your free trial today and experience the power of AI-driven financial analytics. 
+                  Start your free trial today and experience the power of AI-driven social media management. 
                   No credit card required.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -546,4 +501,4 @@ const AiFinancialAnalyticsProPage: React.FC = () => {
   );
 };
 
-export default AiFinancialAnalyticsProPage;
+export default AiSocialMediaManagerProPage;

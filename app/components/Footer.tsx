@@ -65,6 +65,10 @@ const Footer: React.FC = () => {
       title: 'Micro SAAS',
       icon: <Cloud className="w-5 h-5 text-orange-400" />,
       services: [
+        { name: 'AI Project Manager Pro', href: '/ai-project-manager-pro' },
+        { name: 'AI Social Media Manager Pro', href: '/ai-social-media-manager-pro' },
+        { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro' },
+        { name: 'AI Financial Analytics Pro', href: '/ai-financial-analytics-pro' },
         { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant' },
         { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro' },
         { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
@@ -127,19 +131,22 @@ const Footer: React.FC = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-4 h-4 text-cyan-400" />
-                  <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                  <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors font-medium">
                     +1 302 464 0950
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Mail className="w-4 h-4 text-cyan-400" />
-                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors font-medium">
                     kleber@ziontechgroup.com
                   </a>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-cyan-400" />
-                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+                <div className="flex items-start space-x-3 text-gray-300">
+                  <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
+                  <div>
+                    <div className="font-medium">364 E Main St STE 1008</div>
+                    <div>Middletown DE 19709</div>
+                  </div>
                 </div>
               </div>
 
