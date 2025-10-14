@@ -5,17 +5,13 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Function to fix all remaining syntax issues
+// Function to fix all syntax issues comprehensively
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix common patterns
+    // Fix import statements missing quotes and semicolons
     content = content
-      // Fix unterminated string literals in 'use client' directives
-      .replace(/^'use client$/gm, "'use client';")
-      .replace(/^"use client"$/gm, '"use client";')
-      // Fix unterminated string literals in imports
       .replace(/import React from 'react$/gm, "import React from 'react';")
       .replace(/import { Helmet } from 'react-helmet-async$/gm, "import { Helmet } from 'react-helmet-async';")
       .replace(/import { useEffect } from 'react$/gm, "import { useEffect } from 'react';")
@@ -45,14 +41,47 @@ function fixFile(filePath) {
       .replace(/import { useFormState } from 'react$/gm, "import { useFormState } from 'react';")
       .replace(/import { useFormStatus } from 'react$/gm, "import { useFormStatus } from 'react';")
       .replace(/import { useOptimistic } from 'react$/gm, "import { useOptimistic } from 'react';")
+      .replace(/import { use } from 'react$/gm, "import { use } from 'react';")
+      .replace(/import { useActionState } from 'react$/gm, "import { useActionState } from 'react';")
+      .replace(/import { useFormState } from 'react$/gm, "import { useFormState } from 'react';")
+      .replace(/import { useFormStatus } from 'react$/gm, "import { useFormStatus } from 'react';")
+      .replace(/import { useOptimistic } from 'react$/gm, "import { useOptimistic } from 'react';")
       // Fix other common imports
       .replace(/from '([^']+)$/gm, "from '$1';")
       .replace(/from "([^"]+)$/gm, 'from "$1";')
-      // Fix function declarations
-      .replace(/export default function (\w+)\(\) \{\}$/gm, 'export default function $1() {\n  return (\n    <div>Page content</div>\n  );\n}')
-      .replace(/export default function (\w+)\(\) \{\}$/gm, 'export default function $1() {\n  return (\n    <div>Page content</div>\n  );\n}')
-      // Fix malformed JSX
-      .replace(/<div>Page content<\/div>$/gm, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">\n      <div className="container mx-auto px-4">\n        <div className="text-center">\n          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>\n          <p className="text-gray-300 text-lg">This page is under development.</p>\n        </div>\n      </div>\n    </div>')
+      // Fix any remaining unterminated strings
+      .replace(/import React from 'react\n/g, "import React from 'react';\n")
+      .replace(/import { Helmet } from 'react-helmet-async\n/g, "import { Helmet } from 'react-helmet-async';\n")
+      .replace(/import { useEffect } from 'react\n/g, "import { useEffect } from 'react';\n")
+      .replace(/import { useState } from 'react\n/g, "import { useState } from 'react';\n")
+      .replace(/import { useCallback } from 'react\n/g, "import { useCallback } from 'react';\n")
+      .replace(/import { useMemo } from 'react\n/g, "import { useMemo } from 'react';\n")
+      .replace(/import { useRef } from 'react\n/g, "import { useRef } from 'react';\n")
+      .replace(/import { useReducer } from 'react\n/g, "import { useReducer } from 'react';\n")
+      .replace(/import { useContext } from 'react\n/g, "import { useContext } from 'react';\n")
+      .replace(/import { createContext } from 'react\n/g, "import { createContext } from 'react';\n")
+      .replace(/import { Fragment } from 'react\n/g, "import { Fragment } from 'react';\n")
+      .replace(/import { Suspense } from 'react\n/g, "import { Suspense } from 'react';\n")
+      .replace(/import { lazy } from 'react\n/g, "import { lazy } from 'react';\n")
+      .replace(/import { memo } from 'react\n/g, "import { memo } from 'react';\n")
+      .replace(/import { forwardRef } from 'react\n/g, "import { forwardRef } from 'react';\n")
+      .replace(/import { useImperativeHandle } from 'react\n/g, "import { useImperativeHandle } from 'react';\n")
+      .replace(/import { useLayoutEffect } from 'react\n/g, "import { useLayoutEffect } from 'react';\n")
+      .replace(/import { useDebugValue } from 'react\n/g, "import { useDebugValue } from 'react';\n")
+      .replace(/import { useDeferredValue } from 'react\n/g, "import { useDeferredValue } from 'react';\n")
+      .replace(/import { useId } from 'react\n/g, "import { useId } from 'react';\n")
+      .replace(/import { useInsertionEffect } from 'react\n/g, "import { useInsertionEffect } from 'react';\n")
+      .replace(/import { useSyncExternalStore } from 'react\n/g, "import { useSyncExternalStore } from 'react';\n")
+      .replace(/import { useTransition } from 'react\n/g, "import { useTransition } from 'react';\n")
+      .replace(/import { startTransition } from 'react\n/g, "import { startTransition } from 'react';\n")
+      .replace(/import { use } from 'react\n/g, "import { use } from 'react';\n")
+      .replace(/import { useActionState } from 'react\n/g, "import { useActionState } from 'react';\n")
+      .replace(/import { useFormState } from 'react\n/g, "import { useFormState } from 'react';\n")
+      .replace(/import { useFormStatus } from 'react\n/g, "import { useFormStatus } from 'react';\n")
+      .replace(/import { useOptimistic } from 'react\n/g, "import { useOptimistic } from 'react';\n")
+      // Fix other common imports
+      .replace(/from '([^']+)\n/g, "from '$1';\n")
+      .replace(/from "([^"]+)\n/g, 'from "$1";\n')
       // Clean up extra whitespace
       .replace(/\n\s*\n\s*\n/g, '\n\n')
       .replace(/\s+$/gm, '')
@@ -67,8 +96,8 @@ function fixFile(filePath) {
   }
 }
 
-// Function to find all files with issues
-function findProblemFiles(dir) {
+// Function to find all tsx files
+function findTsxFiles(dir) {
   const files = [];
   
   function traverse(currentDir) {
@@ -80,7 +109,7 @@ function findProblemFiles(dir) {
       
       if (stat.isDirectory()) {
         traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js')) {
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         files.push(fullPath);
       }
     }
@@ -92,24 +121,15 @@ function findProblemFiles(dir) {
 
 // Main execution
 const appDir = path.join(__dirname, 'app');
-const srcDir = path.join(__dirname, 'src');
-const publicDir = path.join(__dirname, 'public');
-const tempDir = path.join(__dirname, 'temp-broken');
+const tsxFiles = findTsxFiles(appDir);
 
-const allFiles = [
-  ...findProblemFiles(appDir),
-  ...findProblemFiles(srcDir),
-  ...findProblemFiles(publicDir),
-  ...findProblemFiles(tempDir)
-];
-
-console.log(`Found ${allFiles.length} files to check`);
+console.log(`Found ${tsxFiles.length} tsx/ts files`);
 
 let fixedCount = 0;
-for (const file of allFiles) {
+for (const file of tsxFiles) {
   if (fixFile(file)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed ${fixedCount} out of ${allFiles.length} files`);
+console.log(`Fixed ${fixedCount} out of ${tsxFiles.length} files`);

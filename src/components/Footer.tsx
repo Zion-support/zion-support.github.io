@@ -1,31 +1,24 @@
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
-
-
 const Footer = memo(() => {
   const services = [
     { name: 'AI Services', url: '/ai-services' },
     { name: 'IT Solutions', url: '/it-services' },
     { name: 'Cloud Services', url: '/cloud-services' },
     { name: 'Cybersecurity', url: '/cybersecurity' }
-
-
   ];
   const solutions = [
     { name: 'Quantum Computing', url: '/quantum-computing' },
     { name: 'Autonomous Systems', url: '/autonomous-systems' },
     { name: 'Blockchain Web3', url: '/blockchain-web3' },
     { name: 'IoT Edge Computing', url: '/iot-edge-computing' }
-
-
   ];
   const company = [
     { name: 'About Us', url: '/about' },
     { name: 'Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'News', url: '/news' }
-
   ];
   const support = [
     { name: 'Documentation', url: '/documentation' },'
@@ -54,7 +47,6 @@ const Footer = memo(() => {
               and digital transformation services. Transform your business with cutting-edge technology.
             </p>
           </div>
-
           {/* Services */}
           <div className="space-y-4">"
             <h4 className="text-lg font-semibold text-white">Services</h4>"
@@ -80,7 +72,6 @@ const Footer = memo(() => {
               </li>
             </ul>
           </div>
-
           {/* Solutions */}
           <div className="space-y-4">"
             <h4 className="text-lg font-semibold text-white">Solutions</h4>"
@@ -92,7 +83,6 @@ const Footer = memo(() => {
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm""
                   >
                     {solution.name}
-
                   </Link>
                 </li>
               ))}
@@ -109,19 +99,15 @@ const Footer = memo(() => {
                 >
                   View All Solutions
                   <Right className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-
 >>>>>>> cursor/fix-errors-and-merge-to-main-d09f
                 </Link>
               </li>
             </ul>
           </div>
-
           {/* Company & Support */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Company</h4>
             <ul className="space-y-2">
-
-
               {company.map((item) => (
                 <li key={item.name}>
                   <Link;
@@ -133,11 +119,8 @@ const Footer = memo(() => {
                 </li>
               ))}
             </ul>
-            
             <h4 className="text-lg font-semibold text-white mt-6">Support</h4>
-
             <ul className="space-y-2">
-
               {support.map((item) => (
                 <li key={item.name}>
                   <Link;
@@ -151,7 +134,6 @@ const Footer = memo(() => {
             </ul>
           </div>
         </div>
-
         {/* Social Links */}
         <div className="border-t border-gray-800 mt-8 pt-8">"
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">"
@@ -167,7 +149,6 @@ const Footer = memo(() => {
                 </a>
               ))}
             </div>
-            
             <div className="flex space-x-6 text-sm">"
               <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors">"
                 Privacy Policy;
@@ -176,17 +157,13 @@ const Footer = memo(() => {
                 Terms of Service;
               </Link>
               <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
-
                 Cookie Policy
-
               </Link>
             </div>
           </div>
-          
           <div className="text-center text-gray-400 text-sm mt-4">"
             © 2024 Zion Tech Group. All rights reserved.
           </div>
-
         </div>
       </div>
     </footer>

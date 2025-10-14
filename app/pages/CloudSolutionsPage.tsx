@@ -13,9 +13,27 @@ import React from 'react';';';
   EnvelopeIcon,
   MapPinIcon
 } from '@heroicons/react/24/outline'';';
-export default function CloudSolutionsPage() {}
+export default function CloudSolutionsPage() {
   return (
-    <div>Page content</div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-gray-300 text-lg">This page is under development.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-gray-300 text-lg">This page is under development.</p>
+        </div>
+      </div>
+    </div>
   );
 }
   const services = [
@@ -52,16 +70,21 @@ export default function CloudSolutionsPage() {}
     { name: "'Oracle Cloud'", logo: "'Oracle'"},'';';
     { name: "'DigitalOcean'", logo: "'DO'"}'';';
   ]
-
   return (
-    <div>Page content</div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-gray-300 text-lg">This page is under development.</p>
+        </div>
+      </div>
+    </div>
   );
     <React.Fragment></React.Fragment>
       <Helmet>
         <title>CloudSolutionsPage - Zion Tech Group</title>
         <meta name="description" content="CloudSolutionsPage - Zion Tech Group" />";";
       </Helmet>
-      
       <div className="min-h-screen bg-slate-90o0 text-white flex items-center justify-center">";";
       </div>
       </div>
@@ -80,4 +103,3 @@ export default function CloudSolutionsPage() {}
       </div>;
     </>;
   )};
-

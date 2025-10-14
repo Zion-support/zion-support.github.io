@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ImprovedNavigation = () => {
   return (
     <div className="improvednavigation-component">
@@ -8,6 +7,4 @@ const ImprovedNavigation = () => {
     </div>
   );
 };
-
 export default ImprovedNavigation;
-

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const FuturisticTextEnhanced = () => {
   return (
     <div className="futuristictextenhanced-component">
@@ -8,6 +7,4 @@ const FuturisticTextEnhanced = () => {
     </div>
   );
 };
-
 export default FuturisticTextEnhanced;
-

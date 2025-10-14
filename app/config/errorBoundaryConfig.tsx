@@ -2,4 +2,3 @@
 export default function errorBoundaryConfig() {
   return null;
 }
-

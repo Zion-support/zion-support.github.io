@@ -1,9 +1,7 @@
 import React, { useEffect, ReactNode } from 'react';
-
 interface PerformanceOptimizerProps {
   children: ReactNode;
 }
-
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     const optimizeImages = () => {
@@ -14,7 +12,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         }
       });
     };
-
     const optimizeFonts = () => {
       // Preload critical fonts
       const link = document.createElement('link');
@@ -25,7 +22,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
     };
-
     const optimizeResources = () => {
       // Preload critical resources
       const criticalResources = ['/css/critical.css', '/js/critical.js'];
@@ -37,20 +33,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         document.head.appendChild(link);
       });
     };
-
     // Run optimizations
     optimizeImages();
     optimizeFonts();
     optimizeResources();
-
     // Cleanup function
     return () => {
       // Cleanup if needed
     };
   }, []);
-
   return <React.Fragment>{children}</React.Fragment>;
 };
-
 export default PerformanceOptimizer;
-

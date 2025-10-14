@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedPerformanceOptimizer = () => {
   return (
     <div className="enhancedperformanceoptimizer-component">
@@ -8,6 +7,4 @@ const EnhancedPerformanceOptimizer = () => {
     </div>
   );
 };
-
 export default EnhancedPerformanceOptimizer;
-

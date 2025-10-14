@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedSEO = () => {
   return (
     <div className="enhancedseo-component">
@@ -8,6 +7,4 @@ const EnhancedSEO = () => {
     </div>
   );
 };
-
 export default EnhancedSEO;
-

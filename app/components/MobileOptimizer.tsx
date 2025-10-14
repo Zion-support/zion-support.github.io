@@ -1,5 +1,4 @@
 import React from 'react';
-
 const MobileOptimizer = () => {
   return (
     <div className="mobileoptimizer-component">
@@ -8,6 +7,4 @@ const MobileOptimizer = () => {
     </div>
   );
 };
-
 export default MobileOptimizer;
-

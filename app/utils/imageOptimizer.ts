@@ -5,7 +5,6 @@ export interface ImageOptimizationOptions {}
   format?: 'webp' | 'avif' | 'jpeg' | 'png';'';';
   lazy?: boolean;}
 }
-
 export const optimizeImage = ();
   src: "string",;";";
   options: "ImageOptimizationOptions = {"};";";
@@ -15,7 +14,6 @@ export const optimizeImage = ();
   const params = new URLSearchParams();
   if (width) params.set('w', width.toString());if (height) params.set('h', height.toString());if (quality) params.set('q', quality.toString());if (format) params.set('f', format);if (lazy) params.set('lazy', 'true');const separator = src.includes('?') ? '&' : '?';'';';
   return `${src}${separator}${params.toString()}`;`;
-
 };
 export const generateResponsiveImages = (;
   src: "string",;";";
@@ -24,4 +22,3 @@ export const generateResponsiveImages = (;
   return sizes;}
     .map(size => `${optimizeImage(src, { width: "size"})} ${size}w`).join(', ');'';';
 };'';';
-

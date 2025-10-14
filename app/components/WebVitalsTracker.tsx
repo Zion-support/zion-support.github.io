@@ -1,35 +1,38 @@
-'use client';';';
-import React from 'react';';';
-export default function ComponentsPage() {}
-  return (
-    <div>Page content</div>
-  );
+'use client';
+import { useEffect } from 'react';
+interface WebVitalsTrackerProps {
+  onVitalsUpdate?: (vitals: { type: string; value: number }) => void;
 }
-  return (
-    <div>Page content</div>
-  );
-    <div className="min-h-screen bg-gray-90o0 text-white py-20">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div className="container mx-auto px-4">";";
-      </div>
-      </div>
-      </div>
-      </div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Components</h1>";";
-        <p className="text-gray-30o0 text-lg">";";
-          This page is under development.;
-        </p>
-
-      </div>
-    </>
-  );
+export default function WebVitalsTracker({ onVitalsUpdate }: WebVitalsTrackerProps) {
+  useEffect(() => {
+    // Track Core Web Vitals
+    const trackWebVitals = () => {
+      // Track LCP (Largest Contentful Paint)
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        onVitalsUpdate?.({ type: 'LCP', value: lastEntry.startTime });
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
+      // Track FID (First Input Delay)
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          onVitalsUpdate?.({ type: 'FID', value: entry.processingStart - entry.startTime });
+        });
+      }).observe({ entryTypes: ['first-input'] });
+      // Track CLS (Cumulative Layout Shift)
+      let clsValue = 0;
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+          }
+        });
+        onVitalsUpdate?.({ type: 'CLS', value: clsValue });
+      }).observe({ entryTypes: ['layout-shift'] });
+    };
+    trackWebVitals();
+  }, [onVitalsUpdate]);
+  return null; // This component doesn't render anything
 }
-        </p></div></div>
-  );}
-}
-

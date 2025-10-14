@@ -2,4 +2,3 @@
 export default function next.d() {
   return null;
 }
-

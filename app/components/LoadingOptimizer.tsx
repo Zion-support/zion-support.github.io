@@ -1,5 +1,4 @@
 import React from 'react';
-
 const LoadingOptimizer = () => {
   return (
     <div className="loadingoptimizer-component">
@@ -8,6 +7,4 @@ const LoadingOptimizer = () => {
     </div>
   );
 };
-
 export default LoadingOptimizer;
-

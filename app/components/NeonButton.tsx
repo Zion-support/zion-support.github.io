@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NeonButton = () => {
   return (
     <div className="neonbutton-component">
@@ -8,6 +7,4 @@ const NeonButton = () => {
     </div>
   );
 };
-
 export default NeonButton;
-

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const EnhancedHero = () => {
   return (
     <div className="enhancedhero-component">
@@ -8,6 +7,4 @@ const EnhancedHero = () => {
     </div>
   );
 };
-
 export default EnhancedHero;
-

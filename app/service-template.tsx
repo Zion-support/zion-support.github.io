@@ -2,4 +2,3 @@
 export default function service-template() {
   return null;
 }
-
