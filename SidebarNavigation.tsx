@@ -1,14 +1,20 @@
 import React from 'react';
 
+
+interface SidebarNavigationProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
 const navigationItems = [
-  { name: 'Home', href: '/' },
-  { name: 'Profile', href: '/profile' },
-  { name: 'Settings', href: '/settings' },
-  { name: 'Help', href: '/help' },
-  { name: 'About', href: '/about' }
+  { name: 'Home', href: '/', icon: User },
+  { name: 'Profile', href: '/profile', icon: User },
+  { name: 'Settings', href: '/settings', icon: User },
+  { name: 'Help', href: '/help', icon: User },
+  { name: 'About', href: '/about', icon: User }
 ];
 
-export default function SidebarNavigation() {
+const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
   return (
     <>
       {/* Overlay */}
@@ -53,4 +59,6 @@ export default function SidebarNavigation() {
       </div>
     </>
   );
-}
+};
+
+export default SidebarNavigation;
