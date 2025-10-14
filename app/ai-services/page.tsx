@@ -1,10 +1,11 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Zap, BarChart3, Users, Target, CheckCircle } from "lucide-react";
-import FuturisticBackground from "../components/FuturisticBackground";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Brain, Shield, Zap, BarChart3, Users, Target, CheckCircle } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+import Footer from '../components/Footer';
+import FuturisticBackground from '../components/FuturisticBackground';
 
-const AIServicesPage = () => {
+const AIServicesPage: React.FC = () => {
   const stats = [
     { icon: <Brain className="w-8 h-8 text-cyan-400" />, value: "500+", label: "AI Models Deployed" },
     { icon: <Shield className="w-8 h-8 text-cyan-400" />, value: "99.9%", label: "Security Uptime" },
@@ -51,68 +52,27 @@ const AIServicesPage = () => {
     }
   ];
 
-  const processSteps = [
-    {
-      step: "01",
-      title: "Discovery & Analysis",
-      description: "We analyze your business needs and identify AI opportunities for maximum impact."
-    },
-    {
-      step: "02", 
-      title: "Solution Design",
-      description: "Our experts design custom AI solutions tailored to your specific requirements."
-    },
-    {
-      step: "03",
-      title: "Implementation",
-      description: "We implement the AI solutions with minimal disruption to your operations."
-    },
-    {
-      step: "04",
-      title: "Optimization",
-      description: "Continuous monitoring and optimization to ensure peak performance and ROI."
-    }
-  ];
+  const benefits = [
+    "Increase productivity by up to 300%",
+    "Reduce operational costs by 40%",
+    "Improve customer satisfaction scores",
+    "Accelerate time-to-market for new products",
+    "Enhance decision-making with data insights",
+    "Scale operations without proportional cost increases"  ];
 
+const Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Services - Zion Tech Group | Advanced AI Solutions for Business</title>
-        <meta name="description" content="Discover our comprehensive AI services including video generation, content creation, analytics, cybersecurity, and workflow automation. Transform your business with cutting-edge AI technology." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI cybersecurity, business AI solutions" />
-        <meta property="og:title" content="AI Services - Zion Tech Group" />
-        <meta property="og:description" content="Transform your business with our comprehensive suite of AI services." />
-        <meta property="og:type" content="website" />
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" /></meta>
       </Helmet>
-
-      <FuturisticBackground />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Services
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our comprehensive suite of AI services. 
-            From content generation to cybersecurity, we provide intelligent solutions 
-            that drive growth and efficiency.
+      <div className="container mx-auto px-4 py-16"></>
+        <div className="text-center"></div>
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
+          <p className="text-gray-300 text-lg"></p>
+            This page is under construction. Please check back later.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-            >
-              <span>Get Started</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              View Demo
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -194,10 +154,10 @@ const AIServicesPage = () => {
                   {step.step}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
-                  {step.title}
+                  Step {index + 1}
                 </h3>
                 <p className="text-gray-300">
-                  {step.description}
+                  Complete this step to proceed
                 </p>
               </div>
             ))}
@@ -212,7 +172,7 @@ const AIServicesPage = () => {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let&apos;s discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
+            Let's discuss how our AI services can help you achieve your business goals and stay ahead of the competition.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -234,4 +194,4 @@ const AIServicesPage = () => {
   );
 };
 
-export default AIServicesPage;
+export default Page;

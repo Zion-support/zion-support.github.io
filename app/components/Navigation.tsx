@@ -1,4 +1,33 @@
-import React from "react";
+import { 
+  HomeIcon,
+  InformationCircleIcon,
+  BriefcaseIcon,
+  PhoneIcon,
+  DocumentTextIcon,
+  AcademicCapIcon,
+  PlayIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+  CurrencyDollarIcon,
+  CogIcon,
+  ChevronDownIcon,
+  GlobeAltIcon,
+  CloudIcon,
+  CpuChipIcon,
+  SignalIcon,
+  UserGroupIcon;
+  const isActive = (href: string) => {
+    if (href === '/') {'''
+      return location.pathname === '/'"}"'"'"
+    return location.pathname.startsWith(href)
+  const toggleExpanded = (item: string) => {
+    setExpandedItems(prev => 
+      prev.includes(item) 
+        ? prev.filter(i => i !== item)
+        : [...prev, item]
+interface NavigationProps {
+  onSidebarToggle?: () => void;
+}
 
 interface NavigationProps {
   onSidebarToggle: () => void;
