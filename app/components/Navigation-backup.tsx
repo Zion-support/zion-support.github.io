@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Navigation-backup() {
+export default function NavigationBackup() {
   return (
     <div>
       <h1>Navigation-backup</h1>
