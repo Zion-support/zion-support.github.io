@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const EnhancedSkipLink = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const EnhancedSkipLink = () => {
     </div>
   );
 };
-
-export default EnhancedSkipLink;
+export default EnhancedSkipLink

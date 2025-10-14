@@ -1,5 +1,5 @@
-import React from 'react';
-import react-helmet-async from 'react-helmet-async';
+import React from 'react;'
+import react-helmet-async from 'react-helmet-async;'
 const SolutionsPage: React.FC = () => {return (
     <>
       <Helmet>
@@ -11,7 +11,7 @@ const SolutionsPage: React.FC = () => {return (
           <div className="max-w-6xl mx-auto">"
             <h1 className="text-4xl font-bold text-center mb-8">Our Solutions</h1>"
             <p className="text-xl text-gray-300 text-center mb-12">"
-              Comprehensive AI and IT solutions tailored to your business needs;
+              Comprehensive AI and IT solutions tailored to your business needs
             </p>
             <section className="mb-16">"
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
@@ -70,14 +70,14 @@ const SolutionsPage: React.FC = () => {return (
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
 
                 >
-                  Contact Us;
+                  Contact Us
                 </a>
                 <a
                   href="/demo"
                   className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
 
                 >
-                  Request Demo;
+                  Request Demo
                 </a>
               </div>
             </section>
@@ -86,5 +86,5 @@ const SolutionsPage: React.FC = () => {return (
       </div>
     </>
   )};
-export default SolutionsPage;
+export default SolutionsPage
 '

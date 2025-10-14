@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const EnhancedHero = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const EnhancedHero = () => {
     </div>
   );
 };
-
-export default EnhancedHero;
+export default EnhancedHero

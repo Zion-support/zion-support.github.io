@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const ImprovedSidebar = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const ImprovedSidebar = () => {
     </div>
   );
 };
-
-export default ImprovedSidebar;
+export default ImprovedSidebar

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const ImprovedImage = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const ImprovedImage = () => {
     </div>
   );
 };
-
-export default ImprovedImage;
+export default ImprovedImage

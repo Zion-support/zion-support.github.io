@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const ImprovedFooter = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const ImprovedFooter = () => {
     </div>
   );
 };
-
-export default ImprovedFooter;
+export default ImprovedFooter

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const ErrorFallback = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const ErrorFallback = () => {
     </div>
   );
 };
-
-export default ErrorFallback;
+export default ErrorFallback

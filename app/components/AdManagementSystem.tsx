@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const AdManagementSystem = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const AdManagementSystem = () => {
     </div>
   );
 };
-
-export default AdManagementSystem;
+export default AdManagementSystem

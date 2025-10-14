@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const ContentCarousel = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const ContentCarousel = () => {
     </div>
   );
 };
-
-export default ContentCarousel;
+export default ContentCarousel

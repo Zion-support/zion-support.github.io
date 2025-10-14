@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const EnhancedLoading = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const EnhancedLoading = () => {
     </div>
   );
 };
-
-export default EnhancedLoading;
+export default EnhancedLoading

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const LazyImage = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const LazyImage = () => {
     </div>
   );
 };
-
-export default LazyImage;
+export default LazyImage

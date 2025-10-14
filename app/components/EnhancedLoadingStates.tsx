@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+'use client;'
+import React from 'react;'
 
 export default function EnhancedLoadingStates() {
   return (
@@ -9,5 +9,5 @@ export default function EnhancedLoadingStates() {
         This page is under development.
       </p>
     </div>
-  );
-}
+  )
+};

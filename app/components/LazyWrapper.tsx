@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const LazyWrapper = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const LazyWrapper = () => {
     </div>
   );
 };
-
-export default LazyWrapper;
+export default LazyWrapper

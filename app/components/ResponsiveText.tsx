@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const ResponsiveText = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const ResponsiveText = () => {
     </div>
   );
 };
-
-export default ResponsiveText;
+export default ResponsiveText

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const AdAnalytics = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const AdAnalytics = () => {
     </div>
   );
 };
-
-export default AdAnalytics;
+export default AdAnalytics

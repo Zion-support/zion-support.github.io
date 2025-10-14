@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const EnhancedErrorBoundary = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const EnhancedErrorBoundary = () => {
     </div>
   );
 };
-
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary

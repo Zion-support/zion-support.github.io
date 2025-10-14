@@ -1,5 +1,5 @@
-import React from 'react';
-import react-helmet-async from 'react-helmet-async';
+import React from 'react;'
+import react-helmet-async from 'react-helmet-async;'
 const ContactPage: React.FC = () => {
   return (
     <>
@@ -18,13 +18,13 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-semibold">Email</h3>"
                     <a href="mailto:info@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">"
-                      info@ziontechgroup.com;
+                      info@ziontechgroup.com
                     </a>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold">Phone</h3>"
                     <a href="tel:+1234567890" className="text-blue-400 hover:text-blue-300">"
-                      +1 (234) 567-890;
+                      +1 (234) 567-890
                     </a>
                   </div>
                 </div>
@@ -34,7 +34,7 @@ const ContactPage: React.FC = () => {
                 <form className="space-y-4">"
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium mb-2">"
-                      Name;
+                      Name
                     </label>
                     <input
                       type="text"
@@ -48,7 +48,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">"
-                      Email;
+                      Email
                     </label>
                     <input
                       type="email"
@@ -62,23 +62,23 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">"
-                      Message;
+                      Message
                     </label>
-                    <textarea;
+                    <textarea
                       id="message""
                       name="message""
-                      rows={4}
+                      rows={4};
                       className="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
 
                       required
 
                     ></textarea>
                   </div>
-                  <button;
+                  <button
                     type="submit""
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md transition-colors""
                   >
-                    Send Message;
+                    Send Message
                   </button>
                 </form>
               </div>
@@ -87,7 +87,7 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 };
-export default ContactPage;
+export default ContactPage
 '

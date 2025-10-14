@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const ServiceCardSkeleton = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const ServiceCardSkeleton = () => {
     </div>
   );
 };
-
-export default ServiceCardSkeleton;
+export default ServiceCardSkeleton

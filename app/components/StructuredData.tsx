@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const StructuredData = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const StructuredData = () => {
     </div>
   );
 };
-
-export default StructuredData;
+export default StructuredData

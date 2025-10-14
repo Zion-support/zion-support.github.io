@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const ServiceWorkerRegistration = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const ServiceWorkerRegistration = () => {
     </div>
   );
 };
-
-export default ServiceWorkerRegistration;
+export default ServiceWorkerRegistration

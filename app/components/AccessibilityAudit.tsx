@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const AccessibilityAudit = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const AccessibilityAudit = () => {
     </div>
   );
 };
-
-export default AccessibilityAudit;
+export default AccessibilityAudit

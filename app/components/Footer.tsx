@@ -1,23 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Brain, ArrowRight } from 'lucide-react';
+import React from 'react;'
+import { Link } from 'react-router-dom;'
+import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Brain, ArrowRight } from 'lucide-react;'
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
-  
+    const currentYear = new Date().getFullYear()
   const services = [
-    { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SAAS', href: '/micro-saas' }
-  ];
-
+    { name: 'AI Solutions', href: '/ai-solutions' },'
+    { name: 'Cybersecurity', href: '/cybersecurity' },'
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },'
+    { name: 'Digital Transformation', href: '/digital-transformation' },'
+    { name: 'IT Services', href: '/it-services' },'
+    { name: 'Micro SAAS', href: '/micro-saas' }'
+  ]
   return (
     <footer className="bg-gray-900 text-white">
       <div>
         <div>
-          {/* Company Info */}
+          {/* Company Info */};
           <div>
             <div>
               <div>
@@ -41,26 +39,25 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Services */};
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
                   <Link
-                    to={service.href}
+                    to={service.href};
                     className="text-gray-400 hover:text-white transition-colors flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
-                    {service.name}
-
+                    {service.name};
                   </Link>
                 </li>
-              ))}
+              ))};
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Company */};
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
@@ -72,7 +69,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info */};
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div>
@@ -93,7 +90,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
+        {/* Copyright */};
         <div>
           <p className="text-gray-400">
             © {currentYear} Zion Tech Group. All rights reserved.
@@ -102,7 +99,6 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
+  )
 };
-
-export default Footer;
+export default Footer

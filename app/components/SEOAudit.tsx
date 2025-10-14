@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const SEOAudit = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const SEOAudit = () => {
     </div>
   );
 };
-
-export default SEOAudit;
+export default SEOAudit

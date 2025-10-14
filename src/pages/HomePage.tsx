@@ -1,10 +1,10 @@
-import React from 'react';
-import react-helmet-async from 'react-helmet-async';
+import React from 'react;'
+import react-helmet-async from 'react-helmet-async;'
 const HomePage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta;
+        <meta
           name="description""
           content="Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.""
         />
@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {return (
               Welcome to <span className="text-blue-400">Zion Tech Group</span>"
             </h1>
             <p className="text-xl text-gray-300 mb-8">"
-              Leading provider of AI-powered enterprise solutions;
+              Leading provider of AI-powered enterprise solutions
             </p>
             <div className="flex justify-center space-x-4">
               <a
@@ -24,14 +24,14 @@ const HomePage: React.FC = () => {return (
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
 
               >
-                Get Started;
+                Get Started
               </a>
               <a
                 href="/solutions"
                 className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
 
               >
-                Our Solutions;
+                Our Solutions
               </a>
             </div>
           </section>
@@ -68,12 +68,12 @@ const HomePage: React.FC = () => {return (
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
 
             >
-              Contact Us;
+              Contact Us
             </a>
           </section>
         </main>
       </div>
     </>
   )};
-export default HomePage;
+export default HomePage
 '

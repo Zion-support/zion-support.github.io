@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const EnhancedPerformanceOptimizer = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const EnhancedPerformanceOptimizer = () => {
     </div>
   );
 };
-
-export default EnhancedPerformanceOptimizer;
+export default EnhancedPerformanceOptimizer

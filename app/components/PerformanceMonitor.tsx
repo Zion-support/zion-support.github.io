@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const PerformanceMonitor = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const PerformanceMonitor = () => {
     </div>
   );
 };
-
-export default PerformanceMonitor;
+export default PerformanceMonitor

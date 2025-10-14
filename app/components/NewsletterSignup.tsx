@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const NewsletterSignup = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const NewsletterSignup = () => {
     </div>
   );
 };
-
-export default NewsletterSignup;
+export default NewsletterSignup

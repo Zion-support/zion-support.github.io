@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const Breadcrumb = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const Breadcrumb = () => {
     </div>
   );
 };
-
-export default Breadcrumb;
+export default Breadcrumb

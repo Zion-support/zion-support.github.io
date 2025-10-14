@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const MobileOptimizer = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const MobileOptimizer = () => {
     </div>
   );
 };
-
-export default MobileOptimizer;
+export default MobileOptimizer

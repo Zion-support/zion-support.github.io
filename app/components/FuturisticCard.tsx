@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const FuturisticCard = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const FuturisticCard = () => {
     </div>
   );
 };
-
-export default FuturisticCard;
+export default FuturisticCard

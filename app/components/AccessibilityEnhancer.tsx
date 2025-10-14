@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const AccessibilityEnhancer = () => {
   return (
     <div>
@@ -6,7 +6,5 @@ const AccessibilityEnhancer = () => {
       <p>This component is under construction.</p>
     </div>
   );
-
 };
-
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer

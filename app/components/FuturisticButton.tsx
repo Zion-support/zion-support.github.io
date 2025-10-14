@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const FuturisticButton = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const FuturisticButton = () => {
     </div>
   );
 };
-
-export default FuturisticButton;
+export default FuturisticButton

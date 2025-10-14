@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const ImprovedNavigation = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const ImprovedNavigation = () => {
     </div>
   );
 };
-
-export default ImprovedNavigation;
+export default ImprovedNavigation

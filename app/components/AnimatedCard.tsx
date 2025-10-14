@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const AnimatedCard = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const AnimatedCard = () => {
     </div>
   );
 };
-
-export default AnimatedCard;
+export default AnimatedCard

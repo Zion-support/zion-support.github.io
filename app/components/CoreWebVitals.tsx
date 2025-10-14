@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const CoreWebVitals = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const CoreWebVitals = () => {
     </div>
   );
 };
-
-export default CoreWebVitals;
+export default CoreWebVitals

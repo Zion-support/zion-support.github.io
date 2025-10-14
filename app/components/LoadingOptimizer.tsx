@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const LoadingOptimizer = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const LoadingOptimizer = () => {
     </div>
   );
 };
-
-export default LoadingOptimizer;
+export default LoadingOptimizer

@@ -1,5 +1,5 @@
-import React from 'react';
-import react-helmet-async from 'react-helmet-async';
+import React from 'react;'
+import react-helmet-async from 'react-helmet-async;'
 const BlogPage: React.FC = () => {return (
     <>
       <Helmet>
@@ -25,7 +25,7 @@ const BlogPage: React.FC = () => {return (
                   <div className="flex items-center justify-between">"
                     <span className="text-blue-400">Read More</span>"
                     <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors">"
-                      Read Article;
+                      Read Article
                     </button>
                   </div>
                 </article>
@@ -44,7 +44,7 @@ const BlogPage: React.FC = () => {return (
 
                 />
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors">"
-                  Subscribe;
+                  Subscribe
                 </button>
               </div>
             </section>
@@ -53,5 +53,5 @@ const BlogPage: React.FC = () => {return (
       </div>
     </>
   )};
-export default PagePage;
+export default PagePage
 '

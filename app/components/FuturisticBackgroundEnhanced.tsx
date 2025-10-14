@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const FuturisticBackgroundEnhanced = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const FuturisticBackgroundEnhanced = () => {
     </div>
   );
 };
-
-export default FuturisticBackgroundEnhanced;
+export default FuturisticBackgroundEnhanced

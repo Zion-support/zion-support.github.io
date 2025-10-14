@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const NeonButton = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const NeonButton = () => {
     </div>
   );
 };
-
-export default NeonButton;
+export default NeonButton

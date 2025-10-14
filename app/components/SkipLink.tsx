@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const SkipLink = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const SkipLink = () => {
     </div>
   );
 };
-
-export default SkipLink;
+export default SkipLink

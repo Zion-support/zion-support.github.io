@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const FuturisticServiceCard = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const FuturisticServiceCard = () => {
     </div>
   );
 };
-
-export default FuturisticServiceCard;
+export default FuturisticServiceCard

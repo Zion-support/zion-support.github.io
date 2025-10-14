@@ -1,3 +1,3 @@
 // CaseStudiesPage - Basic implementation
 export default function CaseStudiesPage() {
-  return null;
+  return null

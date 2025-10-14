@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const ContentPromotionBanner = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const ContentPromotionBanner = () => {
     </div>
   );
 };
-
-export default ContentPromotionBanner;
+export default ContentPromotionBanner

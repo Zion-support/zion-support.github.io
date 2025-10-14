@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const EnhancedServicesShowcase = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const EnhancedServicesShowcase = () => {
     </div>
   );
 };
-
-export default EnhancedServicesShowcase;
+export default EnhancedServicesShowcase

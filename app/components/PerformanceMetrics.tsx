@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const PerformanceMetrics = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const PerformanceMetrics = () => {
     </div>
   );
 };
-
-export default PerformanceMetrics;
+export default PerformanceMetrics

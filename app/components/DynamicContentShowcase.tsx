@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const DynamicContentShowcase = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const DynamicContentShowcase = () => {
     </div>
   );
 };
-
-export default DynamicContentShowcase;
+export default DynamicContentShowcase

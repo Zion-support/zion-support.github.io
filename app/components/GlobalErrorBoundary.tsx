@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const GlobalErrorBoundary = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const GlobalErrorBoundary = () => {
     </div>
   );
 };
-
-export default GlobalErrorBoundary;
+export default GlobalErrorBoundary

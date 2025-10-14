@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const EnhancedLoadingSkeleton = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const EnhancedLoadingSkeleton = () => {
     </div>
   );
 };
-
-export default EnhancedLoadingSkeleton;
+export default EnhancedLoadingSkeleton

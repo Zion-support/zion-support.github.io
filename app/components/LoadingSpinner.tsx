@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const LoadingSpinner = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const LoadingSpinner = () => {
     </div>
   );
 };
-
-export default LoadingSpinner;
+export default LoadingSpinner

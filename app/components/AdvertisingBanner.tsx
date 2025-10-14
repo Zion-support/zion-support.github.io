@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 const AdvertisingBanner = () => {
   return (
     <div>
@@ -7,5 +7,4 @@ const AdvertisingBanner = () => {
     </div>
   );
 };
-
-export default AdvertisingBanner;
+export default AdvertisingBanner
