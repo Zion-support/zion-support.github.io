@@ -1,25 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  PhoneIcon, 
-  EnvelopeIcon, 
-  MapPinIcon,
+import {
   ArrowRightIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';
 
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
 
-  const services = [
+
+const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'IT Solutions', href: '/it-solutions' },
-    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: '5G Solutions', href: '/5g-solutions' }
+    { name: 'Digital Transformation', href: '/digital-transformation' }
   ];
+
+  const Footer: React.FC = () => {
+  
+
+  
 
   const company = [
     { name: 'About Us', href: '/about' },

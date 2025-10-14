@@ -2,59 +2,23 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CpuChipIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
-  RocketLaunchIcon,
-  CheckCircleIcon,
+import {
+  CpuChipIcon,
+  ShieldCheckIcon,
+  CloudIcon,
   ArrowRightIcon,
-  StarIcon
+  ChartBarIcon,
+  GlobeAltIcon
 } from '@heroicons/react/24/outline';
 
+
+
 const HomePage: React.FC = () => {
-  const services = [
-    {
-      icon: CpuChipIcon,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
-      href: '/ai-solutions'
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-      href: '/cybersecurity'
-    },
-    {
-      icon: CloudIcon,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
-      href: '/cloud-solutions'
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation strategies to modernize your operations.',
-      href: '/digital-transformation'
-    }
-  ];
+  
 
-  const features = [
-    '24/7 Expert Support',
-    'Cutting-edge Technology',
-    'Scalable Solutions',
-    'Industry Expertise',
-    'Proven Results',
-    'Custom Implementation'
-  ];
+  
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
-  ];
+  
 
   return (
     <>

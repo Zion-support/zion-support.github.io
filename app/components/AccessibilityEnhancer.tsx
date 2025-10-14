@@ -112,7 +112,7 @@ const AccessibilityEnhancer: React.FC = () => {
           <label className="text-white text-sm">Font Size</label>
           <select
             value={fontSize}
-            onChange={(e) => setFontSize(e.target.value as any)}
+            onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large')}
             className="w-full bg-slate-700 text-white rounded px-2 py-1 text-sm"
           >
             <option value="small">Small</option>

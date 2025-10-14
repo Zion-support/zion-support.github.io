@@ -1,26 +1,20 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Bars3Icon, 
-  XMarkIcon,
+import {
   HomeIcon,
   InformationCircleIcon,
   BriefcaseIcon,
-  PhoneIcon,
+  CogIcon,
+  CurrencyDollarIcon,
   DocumentTextIcon,
   AcademicCapIcon,
   PlayIcon,
   QuestionMarkCircleIcon,
-  ShieldCheckIcon,
-  CurrencyDollarIcon,
-  CogIcon,
-  ChevronDownIcon,
-  GlobeAltIcon,
-  CloudIcon,
-  CpuChipIcon,
-  SignalIcon,
-  UserGroupIcon
+  PhoneIcon,
+  Bars3Icon,
+  ChevronDownIcon
 } from '@heroicons/react/24/outline';
+
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
@@ -70,16 +64,15 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
   const isActive = (path: string) => {
     return location.pathname === path;
-  }
-  const toggleMobileMenu = () => {
-    setIsOpen(!isOpen);
-  }
+  };
+  
   const toggleServicesMenu = () => {
     setIsServicesOpen(!isServicesOpen);
-  }
+  };
+  
   const toggleSolutionsMenu = () => {
     setIsSolutionsOpen(!isSolutionsOpen);
-  }
+  };
   return (
     <nav className="bg-slate-900/95 backdrop-blur-md border-b border-slate-700 sticky top-0 z-50 neon-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -188,7 +181,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                           setIsSolutionsOpen(false);
                         }}
                       >
-                        <subItem.icon className="w-4 h-4 mr-3" />
+                        <div className="w-4 h-4 mr-3" />
                         {subItem.name}
                       </Link>
                     ))}

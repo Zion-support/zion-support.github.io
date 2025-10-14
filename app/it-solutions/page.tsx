@@ -1,22 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
+import {
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  RocketLaunchIcon,
-  ArrowRightIcon,
   CheckCircleIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  UserGroupIcon,
+  ArrowRightIcon,
+  ChartBarIcon,
   CogIcon
 } from '@heroicons/react/24/outline';
+
+
 
 export default function ITSolutionsPage() {
   const itServices = [

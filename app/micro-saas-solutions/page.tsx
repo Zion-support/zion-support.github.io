@@ -2,43 +2,38 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CpuChipIcon,
+import {
   ShieldCheckIcon,
   CloudIcon,
+  RocketLaunchIcon,
+  CheckCircleIcon,
+  ArrowRightIcon,
+  StarIcon,
   ChartBarIcon,
   GlobeAltIcon,
-  RocketLaunchIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
   PhoneIcon,
   EnvelopeIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
   UserGroupIcon,
-  CogIcon,
-  StarIcon,
-  EyeIcon,
-  HeartIcon,
-  SparklesIcon,
-  BoltIcon,
-  FireIcon,
-  AcademicCapIcon,
-  BuildingOfficeIcon,
-  TruckIcon,
-  LightBulbIcon,
+  CurrencyDollarIcon,
   DocumentTextIcon,
+  CogIcon,
+  HomeIcon,
+  AcademicCapIcon,
   ChatBubbleLeftRightIcon,
+  EyeIcon,
   VideoCameraIcon,
   ScaleIcon,
-  HomeIcon,
   BeakerIcon,
-  WrenchScrewdriverIcon,
-  ExclamationTriangleIcon,
-  BookOpenIcon,
+  TruckIcon,
+  LightBulbIcon,
   ClipboardDocumentCheckIcon,
-  CalendarDaysIcon
+  CalendarDaysIcon,
+  WrenchScrewdriverIcon,
+  SparklesIcon,
+  BoltIcon
 } from '@heroicons/react/24/outline';
+
+
 
 const MicroSaaSSolutionsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');

@@ -1,8 +1,43 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
+import {
+  UserGroupIcon as Users,
+  BoltIcon as Zap,
+  FlagIcon as Target,
+  MapPinIcon as MapPin
+} from '@heroicons/react/24/outline';
 
-const CareersPage: React.FC = () => {
+
+
+const benefits = [
+    { icon: Users, title: 'Competitive salary and equity', description: 'We offer competitive compensation packages' },
+    { icon: Zap, title: 'Health, dental, and vision insurance', description: 'Comprehensive health coverage for you and your family' },
+    { icon: Target, title: 'Flexible work arrangements', description: 'Work from home or our modern office' },
+    { icon: MapPin, title: 'Professional development opportunities', description: 'Continuous learning and growth opportunities' }
+  ];
+
+  const openPositions = [
+    {
+      title: 'Senior Full Stack Developer',
+      department: 'Engineering',
+      location: 'Remote',
+      type: 'Full-time'
+    },
+    {
+      title: 'AI/ML Engineer',
+      department: 'Engineering', 
+      location: 'San Francisco, CA',
+      type: 'Full-time'
+    },
+    {
+      title: 'DevOps Engineer',
+      department: 'Engineering',
+      location: 'Remote',
+      type: 'Full-time'
+    }
+  ];
+
+  const CareersPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
       <Helmet>
@@ -25,7 +60,7 @@ const CareersPage: React.FC = () => {
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, _index) => {
+            {(benefits || []).map((benefit, _index) => {
               const Icon = benefit.icon;
               return (
                 <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
@@ -43,7 +78,7 @@ const CareersPage: React.FC = () => {
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            {openPositions.map((position, _index) => (
+            {(openPositions || []).map((position, _index) => (
               <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-semibold text-white">{position.title}</h3>
@@ -57,7 +92,7 @@ const CareersPage: React.FC = () => {
                   <span className="mx-2">•</span>
                   <span className="text-sm">{position.department}</span>
                 </div>
-                <p className="text-gray-300 mb-4">{position.description}</p>
+                <p className="text-gray-300 mb-4">Join our team and make an impact</p>
                 <button className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
                   Apply Now;
                 </button>

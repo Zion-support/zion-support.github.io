@@ -7,7 +7,14 @@ interface PerformanceMetrics {
   lcp: number | null;
   ttfb: number | null;
   loadTime: number | null;
+  fid: number | null;
 }
+
+const getScoreColor = (score: number): string => {
+  if (score >= 90) return 'text-green-500';
+  if (score >= 70) return 'text-yellow-500';
+  return 'text-red-500';
+};
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -15,25 +22,27 @@ const PerformanceMonitor: React.FC = () => {
     inp: null,
     fcp: null,
     lcp: null,
-    ttfb: null
+    ttfb: null,
+    loadTime: 0,
+    fid: null
   });
 
   useEffect(() => {
     // Only run in production
     if (process.env.NODE_ENV !== 'production') return;
 
-    const handleMetric = (metric: any) => {
+    const handleMetric = (metric: unknown) => {
       setMetrics(prev => ({
         ...prev,
-        [metric.name]: metric.value
+        [(metric as { name: string; value: number }).name]: (metric as { name: string; value: number }).value
       }));
 
       // Send to analytics service
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
+      if (typeof window !== 'undefined' && (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag) {
+        (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', (metric as { name: string; value: number; id: string }).name, {
           event_category: 'Web Vitals',
-          value: Math.round(metric.value),
-          event_label: metric.id,
+          value: Math.round((metric as { name: string; value: number; id: string }).value),
+          event_label: (metric as { name: string; value: number; id: string }).id,
           non_interaction: true,
         });
       }
@@ -64,31 +73,31 @@ const PerformanceMonitor: React.FC = () => {
       <div className="space-y-2 text-xs">
         <div className="flex justify-between">
           <span>FCP:</span>
-          <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
+          <span className={getScoreColor(metrics.fcp || 0)}>
             {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
           </span>
         </div>
         <div className="flex justify-between">
           <span>LCP:</span>
-          <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
+          <span className={getScoreColor(metrics.lcp || 0)}>
             {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
           </span>
         </div>
         <div className="flex justify-between">
           <span>FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
+          <span className={getScoreColor(metrics.fid || 0)}>
             {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
           </span>
         </div>
         <div className="flex justify-between">
           <span>CLS:</span>
-          <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
+          <span className={getScoreColor(metrics.cls || 0)}>
             {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
           </span>
         </div>
         <div className="flex justify-between">
           <span>TTFB:</span>
-          <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
+          <span className={getScoreColor(metrics.ttfb || 0)}>
             {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
           </span>
         </div>
