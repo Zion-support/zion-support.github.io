@@ -14,18 +14,13 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const navigationItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Contact', href: '/contact', icon: Mail }
+  const navigationItems: Array<{ name: string; href: string; icon: React.ComponentType<any> }> = [
   ];
   return (
     <>
       {/* Overlay */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
@@ -39,7 +34,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <h2 className="text-xl font-bold text-white">Zion Tech Group</h2>
           <button
             onClick={onClose}
-            className="lg:hidden text-gray-300 hover:text-white"
           >
             <X className="w-6 h-6" />
           </button>
@@ -53,7 +47,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <Link
                     to={item.href}
                     onClick={onClose}
-                    className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md"
                   >
                     <Icon className="w-5 h-5 mr-3" />
                     {item.name}

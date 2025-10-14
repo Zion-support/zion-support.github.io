@@ -17,35 +17,9 @@ export const dataTransformers = {
   },
   
   transformToSelectOptions: (data: Record<string, unknown>[], valueField: string, labelField: string) => {
-    return data.map((item, index) => ({
+    return data.map(item => ({
       value: item[valueField],
-      label: item[labelField],
-      id: item.id || index
-    }));
-  },
-  
-  transformToKeyValuePairs: (data: Record<string, unknown>[]) => {
-    return data.map(item => 
-      Object.entries(item).map(([key, value]) => ({
-        key,
-        value
-      }))
-    );
-  },
-  
-  transformToNestedStructure: (data: Record<string, unknown>[], groupBy: string) => {
-    const grouped = data.reduce((acc, item) => {
-      const key = item[groupBy] as string;
-      if (!acc[key]) {
-        acc[key] = [];
-      }
-      acc[key].push(item);
-      return acc;
-    }, {} as Record<string, Record<string, unknown>[]>);
-    
-    return Object.entries(grouped).map(([key, value]) => ({
-      group: key,
-      items: value
+      label: item[labelField]
     }));
   }
 };

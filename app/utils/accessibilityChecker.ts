@@ -1,8 +1,7 @@
 export const accessibilityChecker = {
   checkAltText: () => {
     const images = document.querySelectorAll('img')
-    const issues: Array<{ element: HTMLElement,
-  issue: string }> = []
+    const issues: Array<{ element: HTMLElement; issue: string }> = []
     
     images.forEach((img) => {
       if (!img.getAttribute('alt')) {
@@ -11,7 +10,6 @@ export const accessibilityChecker = {
           issue: 'Missing alt text'
         })
       }
-
     })
     
     return issues
@@ -19,8 +17,7 @@ export const accessibilityChecker = {
   
   checkHeadingStructure: () => {
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
-    const issues: Array<{ element: HTMLElement,
-  issue: string }> = []
+    const issues: Array<{ element: HTMLElement; issue: string }> = []
     let previousLevel = 0
     
     headings.forEach((heading) => {
@@ -31,7 +28,6 @@ export const accessibilityChecker = {
           issue: 'Heading level skipped'
         })
       }
-
       previousLevel = currentLevel
     })
     
@@ -43,4 +39,4 @@ export const accessibilityChecker = {
     // For now, return empty array
     return []
   }
-}
+};

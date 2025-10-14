@@ -5,7 +5,7 @@ export const errorHandler = {
       window.gtag('event', 'exception', {
         description: _error.message,
         fatal: false,
-        custom_map: { context: context || 'unknown' }
+        custom_map: context ? { context } : undefined
       });
     }
     
@@ -16,9 +16,8 @@ export const errorHandler = {
   },
   
   handleApiError: (error: unknown) => {
-    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
-    const status = errorWithResponse.response?.status;
-    const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
+    const status = (error as any).response?.status;
+    const message = (error as any).response?.data?.message || (error as Error).message;
     
     switch (status) {
       case 400:

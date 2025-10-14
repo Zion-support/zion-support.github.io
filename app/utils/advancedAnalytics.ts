@@ -21,7 +21,7 @@ export const advancedAnalytics = {
         send_to: conversionId,
         value: value,
         currency: currency
-      })
+      });
     }
 
   },

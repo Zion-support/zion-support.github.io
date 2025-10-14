@@ -10,11 +10,10 @@ export const performanceMonitor = {
     }
     
     // Send to analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, eventName: string, parameters: any) => void }).gtag;
-      gtag('event', 'performance_measurement', {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'performance_measurement', {
         metric_name: name,
-        metric_value: duration
+        value: duration
       });
     }
     
@@ -31,27 +30,31 @@ export const performanceMonitor = {
       console.warn(`${name} took ${duration.toFixed(2)}ms`);
     }
     
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, eventName: string, parameters: any) => void }).gtag;
-      gtag('event', 'performance_measure', {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'performance_measure', {
         metric_name: name,
-        metric_value: duration
+        value: duration
       });
     }
     
     return duration;
   },
   
-  measureComponent: (componentName: string, renderFn: () => void) => {
-    const start = performance.now();
-    renderFn();
-    const end = performance.now();
-    const duration = end - start;
-    
-    if (process.env.NODE_ENV === 'development') {
-      console.warn(`${componentName} render took ${duration.toFixed(2)}ms`);
+  mark: (name: string) => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      performance.mark(name);
     }
-    
-    return duration;
+  },
+  
+  measure: (name: string, startMark: string, endMark: string) => {
+    try {
+      performance.measure(name, startMark, endMark);
+      const measure = performance.getEntriesByName(name)[0];
+      if (measure) {
+        console.warn(`${name} took ${measure.duration.toFixed(2)}ms`);
+      }
+    } catch {
+      // Error handled silently
+    }
   }
 };

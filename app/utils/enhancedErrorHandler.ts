@@ -2,12 +2,11 @@ export const enhancedErrorHandler = {
   handleError: (error: Error, context?: string) => {
     console.error('Error occurred: ', error);
     
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, eventName: string, parameters: any) => void }).gtag;
-      gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-        context: context
+        custom_map: context ? { context } : undefined
       });
     }
     
@@ -18,13 +17,7 @@ export const enhancedErrorHandler = {
   },
   
   handleApiError: (error: unknown) => {
-    const errorWithResponse = error as { 
-      response?: { 
-        status?: number; 
-        data?: { message?: string } 
-      }; 
-      message?: string 
-    };
+    const errorWithResponse = error as { response?: { status?: number; data?: { message?: string } }; message?: string };
     const status = errorWithResponse.response?.status;
     const message = errorWithResponse.response?.data?.message || errorWithResponse.message;
     

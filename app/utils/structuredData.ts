@@ -3,21 +3,14 @@ export const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    description: 'Leading provider of AI and IT solutions',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/images/logo.png',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-0123',
-      contactType: 'customer service'
-    }
+    description: 'Leading technology solutions provider'
   },
   
   website: {
+    '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    description: 'Leading provider of AI and IT solutions'
+    description: 'Leading technology solutions provider'
   },
   
   generate: (type: 'organization' | 'website') => {

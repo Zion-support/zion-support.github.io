@@ -1,28 +1,26 @@
 export const analyticsTracker = {
   trackPageView: (page: string, title?: string) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, eventName: string, parameters: any) => void }).gtag;
-      gtag('event', 'page_view', {
-        page_title: title || document.title,
+    if (typeof window !== 'undefined') {
+      window.gtag('event', 'page_view', {
+        page_title: title,
         page_location: page
       });
     }
   },
   
   trackClick: (element: string, location: string) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, eventName: string, parameters: any) => void }).gtag;
-      gtag('event', 'click', {
-        element_name: element,
-        location: location
+    if (typeof window !== 'undefined') {
+      window.gtag('event', 'click', {
+        event_category: 'engagement',
+        event_label: element,
+        value: location
       });
     }
   },
   
   trackFormSubmit: (formName: string, success: boolean) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, eventName: string, parameters: any) => void }).gtag;
-      gtag('event', 'form_submit', {
+    if (typeof window !== 'undefined') {
+      window.gtag('event', 'form_submit', {
         form_name: formName,
         success: success
       });
@@ -30,10 +28,9 @@ export const analyticsTracker = {
   },
   
   trackConversion: (conversionId: string, value?: number) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, eventName: string, parameters: any) => void }).gtag;
-      gtag('event', 'conversion', {
-        conversion_id: conversionId,
+    if (typeof window !== 'undefined') {
+      window.gtag('event', 'conversion', {
+        send_to: conversionId,
         value: value
       });
     }
