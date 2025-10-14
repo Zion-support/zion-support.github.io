@@ -1,66 +1,77 @@
-import React, { useState } from 'react';
-
-interface OptimizedImageProps {
-  src: string;
   alt: string;
-  className?: string;
   width?: number;
   height?: number;
+  className?: string;
   priority?: boolean;
+  placeholder?: string;
+  sizes?: string;
+  quality?: number';'
+  loading?: 'lazy' | "eager"'"'"
   onLoad?: () => void;
-  onError?: () => void;
-}
-
-export default function OptimizedImage({ 
-  src, 
-  alt, 
-  className = '', 
-  width, 
+  alt,
+  width,
+<<<<<<< HEAD
+  height,''''
+  className = '','''
+  priority = false,''''
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',''''
+  sizes = '100vw','''
+  quality = 85,''''
+  loading = 'lazy','''
+=======
   height,
+  className = '',
   priority = false,
+  placeholder: _placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
+>>>>>>> 81be860c1fc3 (Fix all linting errors and merge conflicts)
   onLoad,
-  onError
-}: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-
-  const handleLoad = () => {
-    setIsLoading(false);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setIsLoading(false);
-    setHasError(true);
-    onError?.();
-  };
-
-  if (hasError) {
-    return (
-      <div className={`optimized-image-error ${className}`}>
-        <div className="flex items-center justify-center w-full h-full bg-gray-100 text-gray-500">
-          Failed to load image
-        </div>
-      </div>
-    );
+  const [isError, setIsError] = useState(false)
+  const [isInView, setIsInView] = useState(priority)
+  const imgRef = useRef<HTMLImageElement>(null)
+  useEffect(() => {
+    if (priority) return;
+const observer = new IntersectionObserver()
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true)
+          observer.disconnect()
+          setIsInView(true)
+          observer.disconnect()}
+      },
+  // Generate WebP src if supported;
+  const getOptimizedSrc = (originalSrc: string) => {''''
+    if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {'''
+      return originalSrc}
+      return originalSrc;}
+      return originalSrc;}
+    // For local images, you could implement WebP conversion here;
+    return originalSrc;
   }
-
+  const optimizedSrc = getOptimizedSrc(src)
+    return originalSrc}
+  const optimizedSrc = getOptimizedSrc(src)
   return (
-    <div className={`relative ${className}`}>
-      {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
+<>    <div></div>
+        </Helmet>
       )}
-      <img
-        src={src}
-        alt={alt}
-        className="optimized-image"
-        width={width}
-        height={height}
-        loading={priority ? "eager" : "lazy"}
-        onLoad={handleLoad}
-        onError={handleError}
-        style={{ opacity: isLoading ? 0 : 1 }}
-      />
+      <div></div>
+    </>
+        { /* Placeholder */ }
+        { !isLoaded && !isError && (
+          <div></div>
+            <div className="text-gray-400 text-sm">Loading...</div>"""
+          </div>
+          >
+            <div className="text-gray-400 text-sm text-center">"""
+              <div className="text-2xl mb-2">📷</div>"""
+              <div>Image not available</div>
+            </div>
+          </div>
+          />
+        )
+      </div>
     </div>
   );
-}
+};
+
+export default OptimizedImage;

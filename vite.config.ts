@@ -1,8 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { resolve } from "path";
+import path from "path";
 
-// https://vitejs.dev/config/
+const resolve = path.resolve;
+
 export default defineConfig({
   plugins: [
     react({
@@ -12,51 +13,50 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./app"),
-      "@/components": resolve(__dirname, "./app/components"),
-      "@/utils": resolve(__dirname, "./app/utils"),
-      "@/hooks": resolve(__dirname, "./hooks"),
+      '@': resolve(__dirname, './src'),
+      '@app': resolve(__dirname, './app'),
     },
   },
   build: {
-    target: "esnext",
-    minify: "terser",
-    sourcemap: true,
+    outDir: "dist",
+    sourcemap: false,
+    minify: "esbuild",
+    cssCodeSplit: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ["react", "react-dom"],
-          router: ["react-router-dom"],
-          ui: ["framer-motion", "lucide-react"],
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
         },
-      },
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
+        assetFileNames: (assetInfo) => {
+          if (
+            assetInfo.name &&
+            /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
+          ) {
+            return `assets/images/[name]-[hash][extname]`;
+          }
+          return `assets/[name]-[hash][extname]`;
+        },
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
       },
     },
   },
   server: {
     port: 3000,
-    open: true,
+    open: false,
     cors: true,
-  },
-  preview: {
-    port: 4173,
-    open: true,
+    hmr: {
+      overlay: true,
+    },
   },
   optimizeDeps: {
     include: [
-      "react",
-      "react-dom",
-      "react-router-dom",
-      "framer-motion",
-      "lucide-react",
+      'react',
+      'react-dom',
+      'react-router-dom',
     ],
-  },
-  define: {
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
   },
 });
