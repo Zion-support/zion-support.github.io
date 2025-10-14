@@ -18,11 +18,7 @@ import EnhancedSEO from "./app/components/EnhancedSEO";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
 
-// Additional imports are already defined above
-import Footer from './app/components/Footer''
-import ErrorBoundary from './app/components/ErrorBoundary''
-import PerformanceMonitor from './app/components/PerformanceMonitor''
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer;
+// All necessary imports are already defined above
 
 
 
