@@ -70,4 +70,3 @@ export default function ContentPromotionBanner() {
     </div>
   )
 }
-export default ContentPromotionBanner;

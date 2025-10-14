@@ -1,4 +1,4 @@
 // not-found - Basic implementation
-export default function notFound() {
+export default function NotFound() {
   return null;
 }

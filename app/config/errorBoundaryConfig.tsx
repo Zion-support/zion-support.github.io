@@ -1,4 +1,4 @@
 // errorBoundaryConfig - Basic implementation
-export default function errorBoundaryConfig() {
+export default function ErrorBoundaryConfig() {
   return null;
 }

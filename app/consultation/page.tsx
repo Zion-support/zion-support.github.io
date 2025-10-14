@@ -1,62 +1,13 @@
 
 import React from 'react';
 
-
-
-
-
-import { Helmet } from 'react-helmet-async';
-
-
-
-
-
-import { Calendar, Clock, Users, CheckCircle } from 'lucide-react';
-
-
-
-
-
-
-const ConsultationPage = () => {
-  const consultationTypes = [
-    {
-      title: 'AI Strategy Consultation',
-      description: 'Get expert guidance on implementing AI solutions for your business.',
-      duration: '2 hours',
-      price: '$500'
-    },
-    {
-      title: 'Cloud Migration Planning',
-      description: 'Plan your cloud migration with our certified cloud architects.',
-      duration: '3 hours',
-      price: '$750'
-    },
-    {
-      title: 'Cybersecurity Assessment',
-      description: 'Comprehensive security assessment and recommendations.',
-      duration: '4 hours',
-      price: '$1000'
-    }
-  ];
-
+export default function ConsultationPage() {
   return (
-    div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-  )
-        <title>Consultation - Zion Tech Group | Expert IT Consulting</title>
-        <meta name="description"content="Get expert consultation on AI, cloud computing, cybersecurity, and IT strategy. Book a consultation with our experienced team." />
-        <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy" />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
-            Expert IT Consultation
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Get personalized guidance from our experienced team of IT professionals and AI experts.
-          </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Consultation</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about consultation</p>
         </div>
       </section>
 
@@ -83,6 +34,3 @@ const ConsultationPage = () => {
     </div>
   )
 }
-export default ConsultationPage;
-
-</Clock>

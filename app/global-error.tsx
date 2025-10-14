@@ -1,4 +1,4 @@
 // global-error - Basic implementation
-export default function globalError() {
+export default function GlobalError() {
   return null;
 }

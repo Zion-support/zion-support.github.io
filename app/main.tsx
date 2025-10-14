@@ -1,4 +1,4 @@
 // main - Basic implementation
-export default function main() {
+export default function Main() {
   return null;
 }

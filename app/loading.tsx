@@ -1,4 +1,4 @@
 // loading - Basic implementation
-export default function loading() {
+export default function Loading() {
   return null;
 }
