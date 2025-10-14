@@ -1,5 +1,5 @@
-'use client';
-import React from 'react'
+'use client';''
+import React from 'react''
 /**
  * Enhanced Error Monitoring System for Zion Tech Group Website
  * Provides comprehensive error tracking, reporting, and recovery
@@ -12,7 +12,7 @@ interface ErrorContext {}
   timestamp: string;
   component?: string;,
   action?: string;,
-  metadata?: Record<string, unknown>;
+  metadata?: Record<string, unknown>
   filename?: string;
   lineno?: number;
   colno?: number;
@@ -30,8 +30,8 @@ interface ErrorReport {}
   message: string;
   stack?: string;
   context: ErrorContext;
-  severity: 'low' | 'medium' | 'high' | 'critical';';
-  category: 'javascript' | 'network' | 'promise' | 'resource' | 'custom';';
+  severity: 'low' | 'medium' | 'high' | 'critical';';''
+  category: 'javascript' | 'network' | 'promise' | 'resource' | 'custom';';''
   resolved: boolean;
   occurrences: number;
   firstSeen: string;,
@@ -59,28 +59,28 @@ class EnhancedErrorMonitoring {}
    * Initialize comprehensive error monitoring
    */
   private initializeMonitoring(): void {}
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return''
     // JavaScript errors
-    window.addEventListener('error', (event) => {}
+    window.addEventListener('error', (event) => {}''
       this.handleError(event.error || new Error(event.message), {}
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        category: 'javascript',
+        category: 'javascript',''
       });
     })
     // Unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {}
+    window.addEventListener('unhandledrejection', (event) => {}''
       this.handleError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {}
         reason: event.reason,
-        category: 'promise',
+        category: 'promise',''
       });
     })
     // Resource loading errors
-    window.addEventListener('error', (event) => {}
+    window.addEventListener('error', (event) => {}''
       if (event.target !== window) {}
         this.handleError(new Error(`Resource loading error: ${event.type}`), {}
-          category: 'resource',
+          category: 'resource',''
         })
       }
     }, true);
@@ -102,14 +102,14 @@ class EnhancedErrorMonitoring {}
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText,
-            category: 'network',
+            category: 'network',''
           });
         }
         return response
       } catch (error) {}
         this.handleError(error as Error, {}
           url: args[0] as string,
-          category: 'network',
+          category: 'network',''
         })
         throw error
       }
@@ -120,44 +120,44 @@ class EnhancedErrorMonitoring {}
    */
   private setupPerformanceErrorMonitoring(): void {}
     // Monitor long tasks
-    if ('PerformanceObserver' in window) {}
+    if ('PerformanceObserver' in window) {}''
       new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
           if (entry.duration > 50) { // Tasks longer than 50ms}
             this.handleError(new Error(`Long task detected: ${entry.duration}ms`), {}
               duration: entry.duration,
               startTime: entry.startTime,
-              category: 'performance',
+              category: 'performance',''
             })
           }
         }
-      }).observe({ entryTypes: ['longtask'] })
+      }).observe({ entryTypes: ['longtask'] })''
       // Monitor memory leaks
       new PerformanceObserver((list) => {}
         for (const entry of list.getEntries()) {}
-          if (entry.entryType === 'memory') {}
+          if (entry.entryType === 'memory') {}''
             const memoryInfo = (entry as any).memory;
             if (memoryInfo && memoryInfo.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB}
               this.handleError(new Error(`High memory usage detected: ${memoryInfo.usedJSHeapSize / 1024 / 1024}MB`), {}
                 memoryUsage: memoryInfo.usedJSHeapSize,
-                category: 'performance',
+                category: 'performance',''
               })
             }
           }
         }
-      }).observe({ entryTypes: ['memory'] })'';
+      }).observe({ entryTypes: ['memory'] })';''
     }
   }
   /**
    * Setup network status monitoring
    */
   private setupNetworkMonitoring(): void {}
-    if (typeof window === 'undefined') return
-    window.addEventListener('online', () => {}
+    if (typeof window === 'undefined') return''
+    window.addEventListener('online', () => {}''
       this.isOnline = true
       this.flushErrorQueue()
     })
-    window.addEventListener('offline', () => {}
+    window.addEventListener('offline', () => {}''
       this.isOnline = false
     })
   }
@@ -178,7 +178,7 @@ class EnhancedErrorMonitoring {}
         ...context
       },
       severity: this.calculateSeverity(error, context),
-      category: (context.category as 'javascript' | 'network' | 'promise' | 'resource' | 'custom') || 'javascript',
+      category: (context.category as 'javascript' | 'network' | 'promise' | 'resource' | 'custom') || 'javascript',''
       resolved: false,
       occurrences: 1,
       firstSeen: new Date().toISOString(),
@@ -201,15 +201,15 @@ class EnhancedErrorMonitoring {}
       this.sendErrorReport(errorReport)
     }
     // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {}
-      // console.error('Error captured:', errorReport)
+    if (process.env['NODE_ENV'] === 'development') {}''
+      // console.error('Error captured:', errorReport)''
     }
   }
   /**
    * Find similar error in queue
    */
   private findSimilarError(newError: ErrorReport): ErrorReport | undefined {}
-    return this.errorQueue.find(error => 
+    return this.errorQueue.find(error =>
       error.message === newError.message &&
       error.context.url === newError.context.url &&
       error.category === newError.category,
@@ -218,31 +218,31 @@ class EnhancedErrorMonitoring {}
   /**
    * Calculate error severity
    */
-  private calculateSeverity(error: Error, context: Partial<ErrorContext>): 'low' | 'medium' | 'high' | 'critical' {,}
+  private calculateSeverity(error: Error, context: Partial<ErrorContext>): 'low' | 'medium' | 'high' | 'critical' {,}''
     // Critical: Network errors, unhandled promise rejections
-    if (context.category === 'network' || context.category === 'promise') {}
-      return 'critical'
+    if (context.category === 'network' || context.category === 'promise') {}''
+      return 'critical''
     }
     // High: JavaScript errors in critical components,
-    if (context.component && ['App', 'Router', 'Auth'].includes(context.component)) {}
-      return 'high'
+    if (context.component && ['App', 'Router', 'Auth'].includes(context.component)) {}''
+      return 'high''
     }
     // Medium: Resource loading errors
-    if (context.category === 'resource') {,}
-      return 'medium',
+    if (context.category === 'resource') {,}''
+      return 'medium',''
     }
     // Low: Other errors,
-    return 'low',
+    return 'low',''
   }
   /**
    * Send error report to external service
    */
   private async sendErrorReport(errorReport: ErrorReport): Promise<void> {,}
     try {,}
-      await fetch('/api/errors', {}
-        method: 'POST',
+      await fetch('/api/errors', {}''
+        method: 'POST',''
         headers: {,}
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json',''
         },
         body: JSON.stringify(errorReport),
       })
@@ -332,9 +332,9 @@ class EnhancedErrorMonitoring {}
 - Total Errors: ${stats.total}
 - Recent Errors (24h): ${stats.recent.length}
 ## By Severity
-${Object.entries(stats.bySeverity).map(([severity, count]) => `- ${severity}: ${count}`).join('\n')}
+${Object.entries(stats.bySeverity).map(([severity, count]) => `- ${severity}: ${count}`).join('\n')}''
 ## By Category
-${Object.entries(stats.byCategory).map(([category, count]) => `- ${category}: ${count}`).join('\n')}
+${Object.entries(stats.byCategory).map(([category, count]) => `- ${category}: ${count}`).join('\n')}''
 ## Recent Errors
 ${stats.recent.map(error => `}
 ### ${error.message}
@@ -343,7 +343,7 @@ ${stats.recent.map(error => `}
 - Occurrences: ${error.occurrences}
 - Last Seen: ${error.lastSeen}
 - URL: ${error.context.url}
-`).join('\n')}'``'`;
+`).join('\n')}'``'`;''
     `.trim()```;
   }
 }

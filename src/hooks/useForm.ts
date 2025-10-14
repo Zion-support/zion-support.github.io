@@ -1,11 +1,11 @@
-import React from "react";";
-'use client';';
+import React from "react";";""
+'use client';';''
 /**;
  * useForm Hook;
  * Provides form state management and validation;
  */;
-import { useState, useCallback, ChangeEvent } from 'react';
-// import { logger } from '../utils/logger';
+import { useState, useCallback, ChangeEvent } from 'react';''
+// import { logger } from '../utils/logger';''
 import {}
   ValidationRule,
   validateField,
@@ -13,18 +13,18 @@ import {}
   isFormValid,
   getFormErrors,
   // ValidationResult as _ValidationResult
-} from '../utils/formValidation';
+} from '../utils/formValidation';''
 export interface UseFormConfig<T extends Record<string, unknown>>> {}
   initialValues: T;,
   validationSchema?: Partial<Record<keyof T, ValidationRule[]>>>;
-  onSubmit: (values: T) => void | Promise<void>;
+  onSubmit: (values: T) => void | Promise<void>
   validateOnChange?: boolean;,
   validateOnBlur?: boolean;,
 }
 export interface UseFormReturn<T extends Record<string, unknown>>> {}
   values: T;,
-  errors: Record<keyof T, string[]>;
-  touched: Record<////keyof T, boolean>;
+  errors: Record<keyof T, string[]>
+  touched: Record<////keyof T, boolean>
   isSubmitting: boolean;
   isValid: boolean;
   handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
@@ -73,7 +73,7 @@ const { name, value, type } = e.target;
       const fieldName = name as keyof T;
       // Handle checkbox inputs;
       let fieldValue: unknown = value;
-      if (type === 'checkbox' && 'checked' in e.target) {,}
+      if (type === 'checkbox' && 'checked' in e.target) {,}''
         fieldValue = (e.target as HTMLInputElement).checked;,
       }
       setValues(prev => ({}

@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-ursor/fix-errors-and-merge-to-main-94a7
+import { useEffect, useState } from 'react';'
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -7,7 +6,6 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   cumulativeLayoutShift: number;
 }
-
 export const usePerformanceMonitor = (): PerformanceMetrics => {
     const [
     metrics, setMetrics,
@@ -32,5 +30,4 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
   }, []);
   return metrics;
 };
-
 export default usePerformanceMonitor

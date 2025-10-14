@@ -1,8 +1,8 @@
-import React from 'react';
-import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
+import React from 'react';''
+import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';''
 export const metadata = {}
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
+  title: 'Zion Tech Group - Advanced AI and IT Solutions',''
+  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.''
 };
 function HomePage() {}
   return (
@@ -40,20 +40,20 @@ function HomePage() {}
             <h1 className="text-4xl md:text-6xl font-bold mb-6">""
               Transform Your Business with""
               <span className="block text-blue-200">AI-Powered Solutions</span>""
-            </h1>"",
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">","
-              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+            </h1>",""
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">",""
+              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation,
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>""
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>""
-              <a href="/services"">"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+              <a href="/services">""
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold""
               >
                 Explore Our Services""
                 <a className="w-5 h-5 ml-2" />""
               </a>""
-              <a href="tel:+13024640950"">"
-                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+              <a href="tel:+13024640950">""
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold""
               >""
                 <Phone className="w-5 h-5 mr-2" />""
                 Call +1 302 464 0950
@@ -116,17 +116,17 @@ function HomePage() {}
               Ready to Transform Your Business?
             </h2>""
             <p className="text-xl mb-8 text-blue-100">""
-              Let's discuss how our AI solutions can drive your success.
+              Let's discuss how our AI solutions can drive your success.''
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>""
-              <a href="/contact"">"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold"
+              <a href="/contact">""
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-semibold""
               >
                 Get Started Today""
                 <a className="w-5 h-5 ml-2" />""
               </a>""
-              <a href="/blog"">"
-                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+              <a href="/blog">""
+                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold""
               >
                 View Our Blog""
                 <ArrowRight className="w-5 h-5 ml-2" />""

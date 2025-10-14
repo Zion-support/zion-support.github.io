@@ -1,24 +1,24 @@
-'use client';
-import React from 'react';
-import { lazy } from 'react';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
+'use client';''
+import React from 'react';''
+import { lazy } from 'react';''
+import SEOOptimizer from './components/SEOOptimizer';''
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';''
+import PerformanceMonitor from './components/PerformanceMonitor';''
 // Fallback component;
 const EmptyComponent = () => null;
 // Lazy load heavy components - these may not exist, so make them optional;
 const UnifiedBanner = lazy(() =>;
-import('./components/NewestContent2025Banner').catch(() =>;
-import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))
+import('./components/NewestContent2025Banner').catch(() =>;''
+import('./components/EmptyComponent').catch(() => ({ default: EmptyComponent }))''
   )
 );
 const ContentPromotion = lazy(() =>;
-import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {}
+import('./components/UltimateBusinessIntelligence2025Banner').catch(() => {}''
     return { default: EmptyComponent };
   })
 );
 const ContentShowcase = lazy(() =>;
-import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({)}
+import('./components/UltimateBusinessIntelligenceShowcase2025').catch(() => ({)}''
     default: () => <div></div>Loading...</div>,
   }))
 );
@@ -40,22 +40,22 @@ function OptimizedHomePage() {}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">""
                   That Delivers Results
                 </span>
-              </h1>"",
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">","
-                Transform your enterprise with AI-powered solutions that deliver 300% ROI, 
-                70% cost reduction, and 90% efficiency gains. Expert AI consulting, 
+              </h1>",""
+              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">",""
+                Transform your enterprise with AI-powered solutions that deliver 300% ROI,
+                70% cost reduction, and 90% efficiency gains. Expert AI consulting,
                 autonomous systems, and digital transformation services.
               </p>""
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>""
-                <a">"
+                <a">""
                   href="/contact"""
-                  className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
+                  className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg""
                 >
                   Get Your Free AI Assessment
                 </a>
-                <a">"
+                <a">""
                   href="/case-studies"""
-                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg"
+                  className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-900 transition-colors font-semibold text-lg""
                 >
                   View Success Stories
                 </a>

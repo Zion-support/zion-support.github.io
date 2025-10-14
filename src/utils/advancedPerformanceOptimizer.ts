@@ -1,12 +1,12 @@
-'use client';
-import React from 'react'
+'use client';''
+import React from 'react''
 /**
  * Advanced Performance Optimizer
  * Generated: 2025-10-08T02:06:22.084Z
  */
 export class PerformanceOptimizer {,}
   private static instance: PerformanceOptimizer;,
-  private metrics: Map<string, number[]>;
+  private metrics: Map<string, number[]>
   private constructor() {}
     this.metrics = new Map()
   }
@@ -111,7 +111,7 @@ export class PerformanceOptimizer {,}
       if (cache.has(key)) {,}
         return cache.get(key)!,
       }
-      const result = func(...args) as ReturnType<T></T>;
+      const result = func(...args) as ReturnType<T></T>
       cache.set(key, result);
       return result;
     }

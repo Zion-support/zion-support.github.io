@@ -1,57 +1,57 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';''
+import { Helmet } from 'react-helmet-async';''
 const SolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI and IT solutions by Zion Tech Group." />
+        <meta name="description" content="Comprehensive AI and IT solutions by Zion Tech Group." />""
       </Helmet>
-      <div className="min-h-screen bg-gray-900 text-white py-16">;
-        <div className="container mx-auto px-4">;
-          <div className="max-w-6xl mx-auto">;
-            <h1 className="text-4xl font-bold text-center mb-8">Our Solutions</h1>;
-            <p className="text-xl text-gray-300 text-center mb-12">;
+      <div className="min-h-screen bg-gray-900 text-white py-16">;""
+        <div className="container mx-auto px-4">;""
+          <div className="max-w-6xl mx-auto">;""
+            <h1 className="text-4xl font-bold text-center mb-8">Our Solutions</h1>;""
+            <p className="text-xl text-gray-300 text-center mb-12">;""
               Comprehensive AI and IT solutions tailored to your business needs;
-            </p>;
-            <section className="mb-16">;
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                <div className="bg-gray-800 p-6 rounded-lg">;
-                  <div className="h-12 w-12 bg-blue-600 rounded-lg mb-4 flex items-center justify-center">;
-                    <span className="text-white font-bold">AI</span>;
+            </p>
+            <section className="mb-16">;""
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;""
+                <div className="bg-gray-800 p-6 rounded-lg">;""
+                  <div className="h-12 w-12 bg-blue-600 rounded-lg mb-4 flex items-center justify-center">;""
+                    <span className="text-white font-bold">AI</span>;""
                   </div>
-                  <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>;
-                  <p className="text-gray-300 mb-4">;
+                  <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>;""
+                  <p className="text-gray-300 mb-4">;""
                     Advanced artificial intelligence solutions for automation and optimization.;
-                  </p>;
-                  <ul className="text-sm text-gray-400 space-y-1">;
-                    <li>• Machine Learning</li>;
-                    <li>• Natural Language Processing</li>;
-                    <li>• Computer Vision</li>;
-                  </ul>;
+                  </p>
+                  <ul className="text-sm text-gray-400 space-y-1">;""
+                    <li>• Machine Learning</li>
+                    <li>• Natural Language Processing</li>
+                    <li>• Computer Vision</li>
+                  </ul>
                 </div>
               </div>
-            </section>;
-            <section>;
-              <h2 className="text-2xl font-semibold mb-6">Ready to Get Started?</h2>;
-              <p className="text-gray-300 mb-8">;
+            </section>
+            <section>
+              <h2 className="text-2xl font-semibold mb-6">Ready to Get Started?</h2>;""
+              <p className="text-gray-300 mb-8">;""
                 Contact us today to discuss your specific requirements.;
-              </p>;
-              <div className="flex justify-center space-x-4">;
+              </p>
+              <div className="flex justify-center space-x-4">;""
                 <a;
-                  href="/contact";
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors";
-                >;
+                  href="/contact";""
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors";""
+                >
                   Contact Us;
-                </a>;
+                </a>
                 <a;
-                  href="/demo";
-                  className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-colors";
-                >;
+                  href="/demo";""
+                  className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-colors";""
+                >
                   Request Demo;
-                </a>;
+                </a>
               </div>
-            </section>;
+            </section>
           </div>
         </div>
       </div>
@@ -63,7 +63,6 @@ const SolutionsPage: React.FC = () => {
   return (
     <div></div>
       <Helmet></Helmet>
-
         <title>Solutions - Zion Tech Group</title>""
         <meta name="description" content="Comprehensive AI and IT solutions by Zion Tech Group." />""
       </Helmet>""
@@ -140,15 +139,15 @@ const SolutionsPage: React.FC = () => {
                 Contact us today to discuss your specific requirements.
               </p>""
               <div className="flex justify-center space-x-4"></div>""
-                <a">"
+                <a">""
                   href="/contact"""
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors""
                 >
                   Contact Us
                 </a>
-                <a">"
+                <a">""
                   href="/demo"""
-                  className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+                  className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors""
                 >
                   Request Demo
                 </a>2137
@@ -157,7 +156,6 @@ const SolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-
     </div>),
   ),
 }

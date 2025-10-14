@@ -1,22 +1,22 @@
-'use client';';
+'use client';';''
 /**;
  * Application Health Check Utility;
  * Monitors application health and provides diagnostic information;
  */;
-import React from 'react';
-import { logger } from './logger';
-import { performanceMonitor } from './performanceMonitor';
+import React from 'react';''
+import { logger } from './logger';''
+import { performanceMonitor } from './performanceMonitor';''
 export interface HealthStatus {}
-  status: 'healthy' | 'degraded' | 'unhealthy';
+  status: 'healthy' | 'degraded' | 'unhealthy';''
   timestamp: number;
   uptime: number;,
   checks: HealthCheck[];,
 }
 export interface HealthCheck {}
   name: string;
-  status: 'pass' | 'warn' | 'fail';,
+  status: 'pass' | 'warn' | 'fail';,''
   message?: string;,
-  details?: Record<string, unknown>;
+  details?: Record<string, unknown>
   duration?: number;
 }
 export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
@@ -34,16 +34,16 @@ constructor() {,}
    */
   private registerDefaultChecks(): void {}
     // Memory usage check
-    this.register('memory', this.checkMemory.bind(this))
+    this.register('memory', this.checkMemory.bind(this))''
     // Performance check
-    this.register('performance', this.checkPerformance.bind(this))
+    this.register('performance', this.checkPerformance.bind(this))''
     // Browser API availability check
-    if (typeof window !== 'undefined') {}
-      this.register('browser-apis', this.checkBrowserAPIs.bind(this))
+    if (typeof window !== 'undefined') {}''
+      this.register('browser-apis', this.checkBrowserAPIs.bind(this))''
     }
     // Local storage check
-    if (typeof window !== 'undefined') {}
-      this.register('storage', this.checkStorage.bind(this))
+    if (typeof window !== 'undefined') {}''
+      this.register('storage', this.checkStorage.bind(this))''
     }
   }
   /**
@@ -86,21 +86,21 @@ const duration = performance.now() - startTime
         logger.error(`Health check "${name}" failed`, error as Error);""
         checks.push({}
           name,
-          status: 'fail',
-          message: error instanceof Error ? error.message : 'Unknown error'),
+          status: 'fail',''
+          message: error instanceof Error ? error.message : 'Unknown error'),''
         })
       }
     }
     // Determine overall status;
-const hasFailures = checks.some((c) => c.status === 'fail');
-const hasWarnings = checks.some((c) => c.status === 'warn')
-    let status: 'healthy' | 'degraded' | 'unhealthy'
+const hasFailures = checks.some((c) => c.status === 'fail');''
+const hasWarnings = checks.some((c) => c.status === 'warn')''
+    let status: 'healthy' | 'degraded' | 'unhealthy''
     if (hasFailures) {,}
-      status = 'unhealthy',
+      status = 'unhealthy',''
     } else if (hasWarnings) {}
-      status = 'degraded'
+      status = 'degraded''
     } else {}
-      status = 'healthy'
+      status = 'healthy''
     }
     const healthStatus: HealthStatus = {,}
       status,
@@ -112,10 +112,10 @@ const hasWarnings = checks.some((c) => c.status === 'warn')
     this.cachedStatus = healthStatus
     this.lastCheckTime = now
     // Log unhealthy status
-    if (status === 'unhealthy') {}
-      logger.error('Application health check failed', { healthStatus })
-    } else if (status === 'degraded') {}
-      logger.warn('Application health degraded', { healthStatus })
+    if (status === 'unhealthy') {}''
+      logger.error('Application health check failed', { healthStatus })''
+    } else if (status === 'degraded') {}''
+      logger.warn('Application health degraded', { healthStatus })''
     }
     return healthStatus;
   }
@@ -129,27 +129,27 @@ const hasWarnings = checks.some((c) => c.status === 'warn')
    * Check memory usage
    */
   private checkMemory(): HealthCheck {}
-    if (typeof performance === 'undefined' || !('memory' in performance)) {}
+    if (typeof performance === 'undefined' || !('memory' in performance)) {}''
       return {}
-        name: 'memory',
-        status: 'pass',
-        message: 'Memory API not available',
+        name: 'memory',''
+        status: 'pass',''
+        message: 'Memory API not available',''
       };
     }
     try {;}
 const memoryInfo = (performance as any).memory;
       const usedPercent = (memoryInfo.usedJSHeapSize / memoryInfo.jsHeapSizeLimit) * 100
-      let status: 'pass' | 'warn' | 'fail' = 'pass',
+      let status: 'pass' | 'warn' | 'fail' = 'pass',''
       let message = `Memory usage: ${usedPercent.toFixed(1)}%`
       if (usedPercent > 90) {}
-        status = 'fail'
+        status = 'fail''
         message = `Critical memory usage: ${usedPercent.toFixed(1)}%`
       } else if (usedPercent > 75) {}
-        status = 'warn'
+        status = 'warn''
         message = `High memory usage: ${usedPercent.toFixed(1)}%`
       }
       return {}
-        name: 'memory',
+        name: 'memory',''
         status,
         message,
         details: {,}
@@ -161,9 +161,9 @@ const memoryInfo = (performance as any).memory;
       }
     } catch (error) {}
       return {}
-        name: 'memory',
-        status: 'warn',
-        message: 'Could not check memory usage',
+        name: 'memory',''
+        status: 'warn',''
+        message: 'Could not check memory usage',''
       };
     }
   }
@@ -174,17 +174,17 @@ const memoryInfo = (performance as any).memory;
     try {;}
 const report = (performanceMonitor as any).getReport ? performanceMonitor.getReport() : { summary: { poor: 0, needsImprovement: 0, good: 0 } }
       const { poor, needsImprovement, good } = report.summary
-      let status: 'pass' | 'warn' | 'fail' = 'pass',
+      let status: 'pass' | 'warn' | 'fail' = 'pass',''
       let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
       if (poor > 0) {}
-        status = 'warn'
+        status = 'warn''
       }
       if (poor > 2) {}
-        status = 'fail'
+        status = 'fail''
         message = `Critical performance issues: ${poor} poor metrics`
       }
       return {}
-        name: 'performance',
+        name: 'performance',''
         status,
         message,
         details: {,}
@@ -194,9 +194,9 @@ const report = (performanceMonitor as any).getReport ? performanceMonitor.getRep
       }
     } catch (error) {}
       return {}
-        name: 'performance',
-        status: 'warn',
-        message: 'Could not check performance',
+        name: 'performance',''
+        status: 'warn',''
+        message: 'Could not check performance',''
       }
     }
   }
@@ -205,30 +205,30 @@ const report = (performanceMonitor as any).getReport ? performanceMonitor.getRep
    */
   private checkBrowserAPIs(): HealthCheck {;}
 const requiredAPIs = [
-      'fetch',
-      'localStorage',
-      'sessionStorage',
-      'console',
-      'navigator'
+      'fetch',''
+      'localStorage',''
+      'sessionStorage',''
+      'console',''
+      'navigator''
     ];
 const missingAPIs: string[] = []
     requiredAPIs.forEach((api) => {}
-      if (typeof window !== 'undefined' && !(api in window)) {,}
+      if (typeof window !== 'undefined' && !(api in window)) {,}''
         missingAPIs.push(api),
       }
     })
     if (missingAPIs.length > 0) {}
       return {}
-        name: 'browser-apis',
-        status: 'warn',
-        message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
+        name: 'browser-apis',''
+        status: 'warn',''
+        message: `Missing browser APIs: ${missingAPIs.join(', ')}`,''
         details: { missingAPIs }
       }
     }
     return {}
-      name: 'browser-apis',
-      status: 'pass',
-      message: 'All required browser APIs available',
+      name: 'browser-apis',''
+      status: 'pass',''
+      message: 'All required browser APIs available',''
     }
   }
   /**
@@ -236,41 +236,41 @@ const missingAPIs: string[] = []
    */
   private checkStorage(): HealthCheck {}
     try {;}
-const testKey = '_health_check_test';
-const testValue = 'test'
+const testKey = '_health_check_test';''
+const testValue = 'test''
       // Test localStorage
       localStorage.setItem(testKey, testValue);
 const retrieved = localStorage.getItem(testKey)
       localStorage.removeItem(testKey)
       if (retrieved !== testValue) {}
         return {}
-          name: 'storage',
-          status: 'fail',
-          message: 'LocalStorage not working correctly',
+          name: 'storage',''
+          status: 'fail',''
+          message: 'LocalStorage not working correctly',''
         }
       }
       // Check available space (approximate);
-const testData = 'x'.repeat(1024 * 1024); // 1MB
+const testData = 'x'.repeat(1024 * 1024); // 1MB''
       try {}
-        localStorage.setItem('_size_test', testData);
-        localStorage.removeItem('_size_test');
+        localStorage.setItem('_size_test', testData);''
+        localStorage.removeItem('_size_test');''
       } catch {}
         return {}
-          name: 'storage',
-          status: 'warn',
-          message: 'LocalStorage space limited',
+          name: 'storage',''
+          status: 'warn',''
+          message: 'LocalStorage space limited',''
         }
       }
       return {}
-        name: 'storage',
-        status: 'pass',
-        message: 'Storage working correctly',
+        name: 'storage',''
+        status: 'pass',''
+        message: 'Storage working correctly',''
       };
     } catch {}
       return {}
-        name: 'storage',
-        status: 'fail',
-        message: 'LocalStorage not available',
+        name: 'storage',''
+        status: 'fail',''
+        message: 'LocalStorage not available',''
       }
     }
   }

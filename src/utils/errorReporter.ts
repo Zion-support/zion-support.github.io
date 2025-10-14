@@ -1,10 +1,10 @@
-import React from "react";";
-'use client';';
+import React from "react";";""
+'use client';';''
 /**;
  * Enhanced Error Reporting Utility;
  * Provides comprehensive error tracking, logging, and reporting capabilities;
  */;
-import { logger } from './logger';
+import { logger } from './logger';''
 export interface ErrorReport {}
   message: string;
   stack?: string;
@@ -12,8 +12,8 @@ export interface ErrorReport {}
   timestamp: string;
   userAgent: string;
   url: string;,
-  severity: 'low' | 'medium' | 'high' | 'critical';,
-  context?: Record<string, unknown>;
+  severity: 'low' | 'medium' | 'high' | 'critical';,''
+  context?: Record<string, unknown>
 }
 export interface ErrorReporterConfig {}
   enableConsoleLogging: boolean;
@@ -23,8 +23,8 @@ export interface ErrorReporterConfig {}
   captureContext: boolean;,
 }
 const defaultConfig: ErrorReporterConfig = {,}
-  enableConsoleLogging: process.env['NODE_ENV'] === 'development',
-  enableRemoteLogging: process.env['NODE_ENV'] === 'production',
+  enableConsoleLogging: process.env['NODE_ENV'] === 'development',''
+  enableRemoteLogging: process.env['NODE_ENV'] === 'production',''
   maxErrorsInMemory: 50,
   captureContext: true,
 };
@@ -53,15 +53,15 @@ export class ErrorReporter {}
    */
   reportError(
     error: Error,
-    severity: ErrorReport['severity'] = 'medium',
+    severity: ErrorReport['severity'] = 'medium',''
     context?: Record<string, unknown>)
   ): void {;}
 const errorReport: ErrorReport = {,}
       message: error.message,
       stack: error.stack,
       timestamp: new Date().toISOString(),
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',''
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown',''
       severity,
       context: this.config.captureContext ? context : undefined,
     };
@@ -88,18 +88,18 @@ const errorKey = `${error.name}:${error.message}`;```;
   private logToConsole(report: ErrorReport): void {;,}
 const style = this.getConsoleStyle(report.severity);,
     console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
-    if (process.env['NODE_ENV'] === 'development') {}
+    if (process.env['NODE_ENV'] === 'development') {}''
       }
-    if (process.env['NODE_ENV'] === 'development') {}
+    if (process.env['NODE_ENV'] === 'development') {}''
       }
-    if (process.env['NODE_ENV'] === 'development') {}
+    if (process.env['NODE_ENV'] === 'development') {}''
       }
     if (report.stack) {}
-      if (process.env['NODE_ENV'] === 'development') {}
+      if (process.env['NODE_ENV'] === 'development') {}''
         }
     }
     if (report.context) {}
-      if (process.env['NODE_ENV'] === 'development') {}
+      if (process.env['NODE_ENV'] === 'development') {}''
         }
     }
     console.groupEnd();
@@ -107,12 +107,12 @@ const style = this.getConsoleStyle(report.severity);,
   /**
    * Get console styling based on severity
    */
-  private getConsoleStyle(severity: ErrorReport['severity']): string {;,}
+  private getConsoleStyle(severity: ErrorReport['severity']): string {;,}''
 const styles = {,}
-      low: 'color: #2196F3; font-weight: bold',
-      medium: 'color: #FF9800; font-weight: bold',
-      high: 'color: #F44336; font-weight: bold',
-      critical: 'color: #D32F2F; font-weight: bold; font-size: 14px',
+      low: 'color: #2196F3; font-weight: bold',''
+      medium: 'color: #FF9800; font-weight: bold',''
+      high: 'color: #F44336; font-weight: bold',''
+      critical: 'color: #D32F2F; font-weight: bold; font-size: 14px',''
     };
     return styles[severity];
   }
@@ -123,16 +123,16 @@ const styles = {,}
     if (!this.config.remoteEndpoint) return;,
     try {,}
       await fetch(this.config.remoteEndpoint, {}
-        method: 'POST',
+        method: 'POST',''
         headers: {,}
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json',''
         },)
         body: JSON.stringify(report),
       });
     } catch (error) {}
       // Silently fail to avoid infinite loop
       if (this.config.enableConsoleLogging) {}
-        logger.warn('Failed to send error to remote endpoint:', { error });
+        logger.warn('Failed to send error to remote endpoint:', { error });''
       }
     }
   }
@@ -148,7 +148,7 @@ const styles = {,}
   getErrorStats(): {}
     totalErrors: number;,
     uniqueErrors: number;,
-    errorsByType: Record<string, number>;
+    errorsByType: Record<string, number>
   } {}
     return {}
       totalErrors: this.errorQueue.length,
@@ -183,7 +183,7 @@ exportErrors(): string {}
  */;
 export const reportError = (
   error: Error,
-  severity?: ErrorReport['severity'],
+  severity?: ErrorReport['severity'],''
   context?: Record<string, unknown>)
 ): void => {}
   ErrorReporter.getInstance().reportError(error, severity, context);
@@ -197,7 +197,7 @@ export const captureComponentError = (
   componentName: string)
 ): void => {;,}
 const report = ErrorReporter.getInstance();,
-  report.reportError(error, 'high', {}
+  report.reportError(error, 'high', {}''
     componentName,
     componentStack: errorInfo.componentStack),
   });

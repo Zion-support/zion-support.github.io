@@ -1,6 +1,6 @@
-import React from 'react';
-import { Node  } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';''
+import { Node  } from 'lucide-react';''
+import { Helmet } from 'react-helmet-async';''
 interface SEOEnhancerProps {
   title: string;
   description: string;
@@ -9,7 +9,6 @@ interface SEOEnhancerProps {
   structuredData?: unknown;
   children?: Node;
 }
-
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title,
   description,
@@ -19,28 +18,26 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   children;
 }) => {
   const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Leading AI and IT solutions provider",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service";
+    "@context": "https://schema.org",""
+    "@type": "Organization",""
+    "name": "Zion Tech Group",""
+    "description": "Leading AI and IT solutions provider",""
+    "url": "https://ziontechgroup.com",""
+    "logo": "https://ziontechgroup.com/logo.png",""
+    "contactPoint": {""
+      "@type": "ContactPoint",""
+      "telephone": "+1-302-464-0950",""
+      "contactType": "customer service";""
     }
   };
-
   const finalStructuredData = structuredData || defaultStructuredData;
-
   return (
     <div></div>
       <Helmet></Helmet>
         <title>SEO Enhancer - Zion Tech Group</title>
-        <meta">"
+        <meta">""
           name="description"""
-          content="Professional SEO enhancement services by Zion Tech Group."
+          content="Professional SEO enhancement services by Zion Tech Group.""
         />
       </Helmet>""
       <div className="min-h-screen bg-white"></div>""
@@ -54,7 +51,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
             </p>
           </div>
         </section>
-
       </div>
     </div>)
   )

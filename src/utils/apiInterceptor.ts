@@ -1,10 +1,10 @@
-'use client';
+'use client';''
 /**
  * API Interceptor Utility
  * Centralized API request handling with error handling, retry logic, and caching
  */
-// import { ErrorHandler } from './errorHandler';
-import { performanceMetrics } from './performanceMetrics';
+// import { ErrorHandler } from './errorHandler';''
+import { performanceMetrics } from './performanceMetrics';''
 // ErrorHandler class definition
 class ErrorHandler {}
   private static instance: ErrorHandler;
@@ -15,7 +15,7 @@ class ErrorHandler {}
     return ErrorHandler.instance;
   }
   handleNetworkError(error: Error, url: string, config?: unknown): void {}
-    // console.error('Network error:', { error: error.message, url, config });
+    // console.error('Network error:', { error: error.message, url, config });''
   }
 }
 export interface APIConfig {}
@@ -25,19 +25,19 @@ export interface APIConfig {}
   retryDelay: number;
   enableCaching: boolean;,
   cacheTimeout: number;,
-  headers?: Record<string, string>;
+  headers?: Record<string, string>
   interceptors?: {}
-    request?: (config: RequestConfig) => RequestConfig | Promise<RequestConfig>;
+    request?: (config: RequestConfig) => RequestConfig | Promise<RequestConfig>
     response?: (response: Response) => Response | Promise<Response>;,
     error?: (error: Error) => Error | Promise<Error>;,
   };
 }
 export interface RequestConfig {}
   url: string;,
-  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';,
-  headers?: Record<string, string>;
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';,''
+  headers?: Record<string, string>
   body?: unknown;
-  params?: Record<////string, string | number | boolean>;
+  params?: Record<////string, string | number | boolean>
   timeout?: number;
   cache?: boolean;
   retryAttempts?: number;
@@ -62,7 +62,7 @@ export class APIInterceptor {}
   private pendingRequests: Map<string, Promise<APIResponse>> = new Map();
   constructor(config: Partial<APIConfig> = {}) {}
     this.config = {}
-      baseURL: config.baseURL || '',
+      baseURL: config.baseURL || ',''
       timeout: config.timeout || 30000,
       retryAttempts: config.retryAttempts || 3,
       retryDelay: config.retryDelay || 1000,
@@ -86,7 +86,7 @@ export class APIInterceptor {}
     const fullConfig = this.prepareRequest(config);
     const cacheKey = this.getCacheKey(fullConfig);
     // Check cache for GET requests
-    if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {}
+    if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {}''
       const cachedResponse = this.getFromCache(cacheKey);
       if (cachedResponse) {,}
         return cachedResponse as APIResponse<T>;,
@@ -102,7 +102,7 @@ export class APIInterceptor {}
     try {}
       const response = await requestPromise;
       // Cache successful GET requests
-      if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {}
+      if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {}''
         this.setInCache(cacheKey, response);
       }
       return response;
@@ -170,43 +170,38 @@ export class APIInterceptor {}
       throw err;
     }
   }
-  
   async get<////T = unknown>(;
     url: string,;
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {}
-    return this.request<T>({ ...config, url, method: 'GET' });
+    return this.request<T>({ ...config, url, method: 'GET' });''
   }
-  
   async post<////T = unknown>(;
     url: string,;
     body?: unknown,;
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {}
-    return this.request<T>({ ...config, url, method: 'POST', body });
+    return this.request<T>({ ...config, url, method: 'POST', body });''
   }
-  
   async put<////T = unknown>(;
     url: string,;
     body?: unknown,;
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {}
-    return this.request<T>({ ...config, url, method: 'PUT', body });
+    return this.request<T>({ ...config, url, method: 'PUT', body });''
   }
-  
   async delete<////T = unknown>(;
     url: string,;
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {}
-    return this.request<T>({ ...config, url, method: 'DELETE' });
+    return this.request<T>({ ...config, url, method: 'DELETE' });''
   }
-  
   async patch<////T = unknown>(;
     url: string,;
     body?: unknown,;
     config: Partial<RequestConfig> = {}
   ): Promise<APIResponse<T>> {}
-    return this.request<T>({ ...config, url, method: 'PATCH', body });
+    return this.request<T>({ ...config, url, method: 'PATCH', body });''
   }
   /**
    * Prepare request configuration
@@ -227,7 +222,7 @@ export class APIInterceptor {}
    * Build full URL with query parameters
    */
   private buildURL(config: RequestConfig): string {,}
-    let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
+    let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;''
     if (config.params) {}
       const params = new URLSearchParams();
       Object.entries(config.params).forEach(([key, value]) => {}
@@ -243,7 +238,7 @@ export class APIInterceptor {}
   private buildHeaders(config: RequestConfig): Headers {}
     const headers = new Headers();,
     // Add default headers,
-    headers.set('Content-Type', 'application/json');
+    headers.set('Content-Type', 'application/json');''
     // Add config headers
     Object.entries(config.headers || {}).forEach(([key, value]) => {}
       headers.set(key, value);
@@ -262,11 +257,11 @@ export class APIInterceptor {}
    * Parse response based on content type
    */
   private async parseResponse<T>(response: Response): Promise<T> {}
-    const contentType = response.headers.get('content-type');
-    if (contentType?.includes('application/json')) {,}
+    const contentType = response.headers.get('content-type');''
+    if (contentType?.includes('application/json')) {,}''
       return await response.json();,
     }
-    if (contentType?.includes('text/')) {}
+    if (contentType?.includes('text/')) {}''
       return (await response.text()) as T;
     }
     return (await response.blob()) as T;
