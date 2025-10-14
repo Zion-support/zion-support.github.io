@@ -9,7 +9,8 @@ export function withLazyLoading<T extends ComponentType<Record<string, unknown>>
   
   const WrappedComponent = (props: React.ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
-      <LazyComponent {...props} />
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      <LazyComponent {...(props as any)} />
     </Suspense>
   );
   WrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name || 'Component'})`;
@@ -25,7 +26,8 @@ export function createLazyComponent<T extends ComponentType<Record<string, unkno
   
   const WrappedComponent = (props: React.ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
-      <LazyComponent {...props} />
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      <LazyComponent {...(props as any)} />
     </Suspense>
   );
   WrappedComponent.displayName = 'createLazyComponent';
