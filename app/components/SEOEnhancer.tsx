@@ -9,8 +9,8 @@ interface SEOEnhancerProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  children?: React.ReactNode;
-}
+  children?: React.ReactNode
+  }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title,
@@ -45,7 +45,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       </Helmet>
       {children}
     </>
-  );
-};
+  )
+  };
 
 export default SEOEnhancer;

@@ -5,17 +5,17 @@ interface PerformanceMetrics {
   fid?: number;
   cls?: number;
   fcp?: number;
-  ttfb?: number;
-}
+  ttfb?: number
+  }
 
 interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart?: number;
-}
+  processingStart?: number
+  }
 
 interface LayoutShift extends PerformanceEntry {
   hadRecentInput: boolean;
-  value: number;
-}
+  value: number
+  }
 
 const PerformanceMonitor = () => {
   useEffect(() => {
@@ -28,8 +28,8 @@ const PerformanceMonitor = () => {
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      metrics.lcp = lastEntry.startTime;
-    });
+      metrics.lcp = lastEntry.startTime
+  });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
     // Measure First Input Delay (FID)
@@ -38,10 +38,10 @@ const PerformanceMonitor = () => {
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
         if (fidEntry.processingStart) {
-          metrics.fid = fidEntry.processingStart - fidEntry.startTime;
-        }
-      });
-    });
+          metrics.fid = fidEntry.processingStart - fidEntry.startTime
+  }
+      })
+  });
     fidObserver.observe({ entryTypes: ['first-input'] });
 
     // Measure Cumulative Layout Shift (CLS)
@@ -50,41 +50,41 @@ const PerformanceMonitor = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         const layoutShiftEntry = entry as LayoutShift;
-        if (!layoutShiftEntry.hadRecentInput) => {
-          clsValue += layoutShiftEntry.value;
-        }
+        if (!layoutShiftEntry.hadRecentInput) {
+          clsValue += layoutShiftEntry.value
+  }
       });
-      metrics.cls = clsValue;
-    });
+      metrics.cls = clsValue
+  });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
     // Measure First Contentful Paint (FCP)
     const fcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
-        if (entry.name === 'first-contentful-paint') => {
-          metrics.fcp = entry.startTime;
-        }
-      });
-    });
+        if (entry.name === 'first-contentful-paint') {
+          metrics.fcp = entry.startTime
+  }
+      })
+  });
     fcpObserver.observe({ entryTypes: ['paint'] });
 
     // Measure Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) => {
-      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-    }
+    if (navigationEntry) {
+      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart
+  }
 
     // Send metrics after page load
     const sendMetrics = () => {
-      if (Object.keys(metrics).length > 0) => {
+      if (Object.keys(metrics).length > 0) {
         // In a real application, you would send these metrics to your analytics service
-        console.log('Performance Metrics: ', metrics);
-      }
+        console.log('Performance Metrics: ', metrics)
+  }
     };
 
     // Send metrics when page is about to unload
-    window.addEventListener(',beforeunload', sendMetrics);
+    window.addEventListener('beforeunload', sendMetrics);
 
     // Cleanup observers
     return () => {
@@ -92,13 +92,13 @@ const PerformanceMonitor = () => {
       fidObserver.disconnect();
       clsObserver.disconnect();
       fcpObserver.disconnect();
-      window.removeEventListener('beforeunload', sendMetrics);
-    };
+      window.removeEventListener('beforeunload', sendMetrics)
+  }
   }, []);
 
   // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') => {
-    return null;
+  if (process.env.NODE_ENV === 'production') {
+    return null
   }
 
   // Development mode: show performance metrics
@@ -108,46 +108,46 @@ const PerformanceMonitor = () => {
     if (!value) return 'text-gray-500';
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.poor) return 'text-yellow-500';
-    return 'text-red-500';
+    return 'text-red-500'
   };
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-7 5 text-white p-4 rounded-lg text-xs font-mono">
-      <div className="font-bold mb-2">Performance Metrics</div>
+    <div className="fixedbottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs font-mono">
+      <div className="font-boldmb-2">Performance Metrics</div>
       <div className="space-y-1">
-        <div className="flex justify-between">
-          <span>FCP: </span>,
+        <div className="flexjustify-between">
+          <span>FCP: </span>
           <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
             {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}
           </span>
         </div>
-        <div className="flex justify-between">
-          <span>LCP: </span>,
+        <div className="flexjustify-between">
+          <span>LCP: </span>
           <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
             {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
           </span>
         </div>
-        <div className="flex justify-between">
-          <span>FID: </span>,
+        <div className="flexjustify-between">
+          <span>FID: </span>
           <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
             {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
           </span>
         </div>
-        <div className="flex justify-between">
-          <span>CLS: </span>,
+        <div className="flexjustify-between">
+          <span>CLS: </span>
           <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
             {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
           </span>
         </div>
-        <div className="flex justify-between">
-          <span>TTFB: </span>,
+        <div className="flexjustify-between">
+          <span>TTFB: </span>
           <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
             {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
           </span>
         </div>
       </div>
     </div>
-  );
-};
+  )
+  };
 
 export default PerformanceMonitor;

@@ -6,15 +6,15 @@ const ContactPage: React.FC = () => {
     <>
       <Helmet>
         <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Professional Contact solutions and services" />
-        <meta name="keywords" content="contact" />
+        <meta name="description" content="Get in touch with Zion Tech Group" />
+        <meta name="keywords" content="contact, support, help" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Contact</h1>
+            <h1 className="text-4xl font-bold text-white mb-8">Contact Us</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Professional Contact solutions and services
+              Get in touch with Zion Tech Group
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -24,13 +24,12 @@ const ContactPage: React.FC = () => {
                 <p className="text-blue-700">
                   Our team of experts delivers cutting-edge solutions.
                 </p>
-                </div>
-        </div>
+              </div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
                   Custom Implementation
                 </h3>
-                <p className="text-green-700">
+                <p className="text-purple-700">
                   Tailored implementations for your specific requirements.
                 </p>
               </div>
@@ -48,5 +47,6 @@ const ContactPage: React.FC = () => {
       </div>
     </>
   );
-}
+};
+
 export default ContactPage;
