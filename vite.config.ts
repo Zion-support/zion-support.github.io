@@ -7,7 +7,7 @@ export default defineConfig({
     react({
       // Optimize JSX runtime
       jsxRuntime: 'automatic',
-    })
+    }),
   ],
   resolve: {
     alias: {
@@ -45,7 +45,6 @@ export default defineConfig({
             }
             return 'vendor-other';
           }
-          
           // Page chunks for better code splitting
           if (id.includes('/app/pages/')) {
             return 'pages';
@@ -91,7 +90,7 @@ export default defineConfig({
       'react-helmet-async',
       '@heroicons/react/24/outline',
       'lucide-react',
-      'framer-motion'
+      'framer-motion',
     ],
     exclude: ['@vite/client', '@vite/env'],
   },

@@ -1,86 +1,103 @@
 #!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    // Fix missing closing tags and syntax issues
-    const originalContent = content;
-    // Fix missing closing div tags
-    content = content.replace(/<div\s+key="[^"]*"\s*>\s*className="[^"]*"\s*>/g, '<div key="$1" className="$2">');
-    // Fix malformed JSX attributes
-    content = content.replace(/className="\$1"/g, 'className="service-card"');
-    // Fix missing closing tags for common patterns
-    content = content.replace(/<div\s+key="[^"]*"\s*>\s*className="[^"]*"\s*>\s*<div/g, '<div key="$1" className="$2"><div');
-    // Fix missing semicolons and closing braces
-    content = content.replace(/export default (\w+)(?!;)/g, 'export default $1;');
-    // Fix missing closing tags for React components
-    content = content.replace(/(<[A-Z]\w+[^>]*>)(?!.*<\/\1>)(?!.*\/>)/g, (match, tag) => {
-      const tagName = tag.match(/<(\w+)/)[1];
-}
-      return match + `</${tagName}>`;
-    });
-    // Fix JSX fragment issues
-    content = content.replace(/<>\s*<\/>/g, '<></>');
-    // Fix missing closing parentheses in function calls
-    content = content.replace(/\(([^)]*)\s*$/gm, '($1)');
-    // Fix malformed object literals
-    content = content.replace(/\{\s*([^}]*)\s*$/gm, '{\n  $1\n}');
-    // Fix missing commas in object literals
-    content = content.replace(/([^,}])\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
-    // Fix missing closing brackets
-    content = content.replace(/\[\s*([^\]]*)\s*$/gm, '[\n  $1\n]');
-    // Fix missing closing parentheses in JSX
-    content = content.replace(/\(\s*([^)]*)\s*$/gm, '(\n  $1\n)');
-    // Clean up extra whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/gm, '');
-    if (content !== originalContent) {
-  fs.writeFileSync(filePath, content);
-}
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      modified = true;
+import { glob } from 'glob';
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix malformed import statements with 'use client'
+  fixed = fixed.replace(/import\s+([^']+)'([^']+)'use client'/g, "import $1 from '$2';\n'use client'");
+  fixed = fixed.replace(/import\s+([^']+)'([^']+)'use client'/g, "import $1 from '$2';\n'use client'");
+  
+  // Fix missing semicolons after import statements
+  fixed = fixed.replace(/import\s+[^;]+(?!;)\n/g, (match) => {
+    if (!match.trim().endsWith(';')) {
+      return match.trim() + ';\n';
     }
-    return modified;
-  } catch (error) {
+    return match;
+  });
+  
+  // Fix unterminated string literals in object properties
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)"([^,}\n]*)/g, (match, key, value, rest) => {
+    if (rest.includes('"') && !rest.includes('",')) {
+      return `${key}: "${value}",`;
+    }
+    return match;
+  });
+  
+  // Fix unterminated string literals with missing closing quotes
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)(?![^"]*")/g, (match, key, value) => {
+    if (!value.endsWith('"')) {
+      return `${key}: "${value}"`;
+    }
+    return match;
+  });
+  
+  // Fix missing commas in object properties
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*(?=\w+:)/g, '$1: "$2",');
+  
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/<(\w+)([^>]*)>\s*<\/\1>/g, '<$1$2></$1>');
+  
+  // Fix missing closing brackets in object literals
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*}(?=\s*[}\]])/g, '$1: "$2"\n  }');
+  
+  // Fix missing semicolons after variable declarations
+  fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?!;)\n/g, (match) => {
+    if (!match.trim().endsWith(';')) {
+      return match.trim() + ';\n';
+    }
+    return match;
+  });
+  
+  return fixed;
 }
-    console.error(`Error fixing ${filePath}:`, error.message);
+
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
-function findFilesWithSyntaxErrors(dir) {
-  const files = [];
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git') && !item.includes('app-broken')) {
-        traverse(fullPath);
-}
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item) && !item.includes('app-broken')) {
-  files.push(fullPath);
-}
+
+// Main function
+async function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'api/**/*.js'
+  ];
+  
+  let totalFixed = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    for (const file of files) {
+      if (processFile(file)) {
+        totalFixed++;
       }
     }
   }
-  traverse(dir);
-  return files;
+  
+  console.log(`\nTotal files fixed: ${totalFixed}`);
 }
-// Main execution
-const projectRoot = process.cwd();
-console.log('Searching for files with syntax errors...');
-const filesToCheck = findFilesWithSyntaxErrors(projectRoot);
-console.log(`Checking ${filesToCheck.length} files for syntax errors`);
-let fixedCount = 0;
-for (const file of filesToCheck) {
-  if (fixSyntaxErrors(file)) {
-    fixedCount++;
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
 }
-  }
-}
-console.log(`Fixed syntax errors in ${fixedCount} files`);
+
+export { fixSyntaxErrors, processFile };
