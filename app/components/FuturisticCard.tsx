@@ -1,4 +1,4 @@
-const FuturisticCard: React.FC<FuturisticCardProps> = ({ ;}
+const FuturisticCard: React.FC<FuturisticCardProps> = ({) ;}
   children, ;})
   className="})"
   variant = 'default}) => {';}
@@ -18,12 +18,11 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({ '}
     default: 'bg-white/10'''}
     glow: 'bg-white/10 shadow-lg shadow-blue-500/20'''}
     gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'';}
-  };
-
+  }
   return (
-    <div className="{`${baseClasses}" ${variantClasses[variant]} ${className}`}></div>
+    <div className="{`${baseClasses`}" ${variantClasses[variant]} ${className}``}></div>
       {children})
     </div>)
-  );
-export default FuturisticCard;
+  )
+export default FuturisticCard
 '

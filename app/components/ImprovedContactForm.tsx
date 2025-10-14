@@ -1,15 +1,14 @@
-import React from 'react;';
-import { MessageSquare } from 'lucide-react';
-import { Send } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { AlertCircle } from 'lucide-react';
-import { User } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Building } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { ChevronDown } from 'lucide-react';
-
+import React from 'react;'
+import { MessageSquare } from 'lucide-react'
+import { Send } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+import { AlertCircle } from 'lucide-react'
+import { User } from 'lucide-react'
+import { Mail } from 'lucide-react'
+import { Phone } from 'lucide-react'
+import { Building } from 'lucide-react'
+import { FileText } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 interface FormData {
   name: 'string','
   email: 'string','
@@ -33,11 +32,11 @@ const ImprovedContactForm: React.FC = () => {
     service: ,"}
     budget: ,"})
     timeline: ,"})
-  });
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
+  })
+  const [errors, setErrors] = useState<FormErrors>({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false)
   const services = [
     "AI Solutions","
     "Cybersecurity","
@@ -50,7 +49,7 @@ const ImprovedContactForm: React.FC = () => {
     "Micro SAAS","
     "5G Solutions","]
     "Other"]
-  ];
+  ]
   const budgets = [
     "Under $10,000","
     "$10,000 - $50,000","
@@ -58,7 +57,7 @@ const ImprovedContactForm: React.FC = () => {
     "$100,000 - $500,000","
     "Over $500,000","]
     "Not sure"]
-  ];
+  ]
   const timelines = [
     "ASAP","
     "Within 1 month","
@@ -66,17 +65,17 @@ const ImprovedContactForm: React.FC = () => {
     "3-6 months","
     "6+ months","]
     "Flexible"]
-  ];
+  ]
   const validateForm = (): boolean => {}
-    const newErrors: FormErrors = {};
-    // Name validation;
+    const newErrors: FormErrors = {}
+    // Name validation
     if (!formData.name.trim()) {}
       newErrors.name = "Name is required;}
     } else if (formData.name.trim().length < 2) {}
       newErrors.name = "Name must be at least 2 characters;}
     }
-    // Email validation;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!formData.email.trim()) {}
       newErrors.email = "Email is required;}
     } else if (!emailRegex.test(formData.email)) {}
@@ -84,56 +83,53 @@ const ImprovedContactForm: React.FC = () => {
     }
     // Phone validation (optional but if provided, should be valid)
     if (formData.phone.trim()) {}
-      const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+      const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/
       if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ))) {'}
         newErrors.phone = "Please enter a valid phone number;}
       }
     }
-    // Message validation;
+    // Message validation
     if (!formData.message.trim()) {}
       newErrors.message = "Message is required;}
     } else if (formData.message.trim().length < 10) {}
       newErrors.message = "Message must be at least 10 characters;}
     }
-    // Service validation;
+    // Service validation
     if (!formData.service) {}
       newErrors.service = "Please select a service;}
     }
-    setErrors(newErrors);
-    return Object.keys(newErrors).length ="==" 0;
-  };
+    setErrors(newErrors)
+    return Object.keys(newErrors).length ="==" 0
+  }
   const handleChange = ()
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>)
   ) => {}
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
     if (errors[name]) {'}
-      setErrors(prev => ({ ...prev, [name]: '' }));
+      setErrors(prev => ({ ...prev, [name]: '' }))
     }
-  };
+  }
   const handleServiceSelect = (service: string) => {}
-    setFormData(prev => ({ ...prev, service }));
-    setIsServiceDropdownOpen(false);
+    setFormData(prev => ({ ...prev, service }))
+    setIsServiceDropdownOpen(false)
     if (errors.service) {'}
-      setErrors(prev => ({ ...prev, service: '' }));
+      setErrors(prev => ({ ...prev, service: '' }))
     }
-  };
+  }
   const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault();}
     if (!validateForm()) {}
       return;}
     }
-    setIsSubmitting(true);
+    setIsSubmitting(true)
     try {
-      // Simulate API call;
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000))
       // In a real app, you would send the data to your backend'
-      console.log('Form submitted:', formData);
-      
-      setIsSubmitted(true);
+      console.log('Form submitted: '', formData)
+      setIsSubmitted(true)
       setFormData({
         name: ,"
         email: ,"
@@ -143,18 +139,17 @@ const ImprovedContactForm: React.FC = () => {
         service: ,"}
         budget: ,"})
         timeline: ,"})
-      });
+      })
     } catch (error) {'}
-      console.error('Error submitting form:', error);}
+      console.error('Error submitting form: '', error);}
     } finally {}
       setIsSubmitting(false);}
     }
-  };
+  }
   if (isSubmitted) {
     return (
-      <div className="bg-white/5 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 text-center"></div>
-        <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-          <CheckCircle className="w-8 h-8 text-green-400" /></CheckCircle>
+      <div>CheckCircle</div>
+      <CheckCircle></CheckCircle>
         </div>
         <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
         <p className="text-gray-300 mb-6"></p>'}
@@ -162,42 +157,40 @@ const ImprovedContactForm: React.FC = () => {
         </p>})
         <button;})
           onClick="{()" => setIsSubmitted(false)}
-          className="bg-cyan-500 hover: 'bg-cyan-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors"','
+          className="bg-cyan-500 hover: "'bg-cyan-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors'",'
         >
-          Send Another Message;
+          Send Another Message
         </button>
       </div>
-    );
+    )
   }
   return (
-    <div className="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8"></div>
-      <div className="flex items-center gap-3 mb-6"></div>
-        <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center"></div>
-          <MessageSquare className="w-6 h-6 text-cyan-400" /></MessageSquare>
+    <div>div</div>
+      <div>MessageSquare</div>
+      <MessageSquare></MessageSquare>
         </div>
-        <div></div>
-          <h3 className="text-2xl font-bold text-white">Get In Touch</h3>'
+        <h3>h3</h3>
+      <h3>Get In Touch</h3>'
           <p className="text-gray-300">We'd love to hear from you. Send us a message!</p>
         </div>
       </div>
 
       <form onSubmit="{handleSubmit}" className="space-y-6"></form>
         {/* Name and Email Row */}
-        <div className="grid md:grid-cols-2 gap-4"></div>
-          <div></div>
-            <label htmlFor="name" className="block text-sm font-medium text-white mb-2"></label>
-              <User className="w-4 h-4 inline mr-2" /></User>
+        <div>label</div>
+      <label>User</label>
+      <User></User>
               Full Name *
             </label>
-            <input;
-              type="text"
-              id="name"
-              name="name"
-              value="{formData.name}"
+            <input)
+              type=text
+              id=name
+              name=name
+              value={formData.name"}"
               onChange="{handleChange}"
-              className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${'}
+              className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${'`}
                 errors.name ? 'border-red-500' : 'border-white/20'}
-              }`}
+              }``}
               placeholder="Your full name"
             /></input>
             {errors.name && (}
@@ -208,9 +201,9 @@ const ImprovedContactForm: React.FC = () => {
             )}
           </div>
 
-          <div></div>
-            <label htmlFor="email" className="block text-sm font-medium text-white mb-2"></label>
-              <Mail className="w-4 h-4 inline mr-2" /></Mail>
+          <div>label</div>
+      <label>Mail</label>
+      <Mail>
               Email Address *
             </label>
             <input
@@ -219,9 +212,9 @@ const ImprovedContactForm: React.FC = () => {
               name="email"
               value="{formData.email}"
               onChange="{handleChange}"
-              className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${'}
+              className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${'`}
                 errors.email ? 'border-red-500' : 'border-white/20'}
-              }`}
+              }``}
               placeholder="your.email@example.com"
             /></input>
             {errors.email && (}
@@ -233,21 +226,20 @@ const ImprovedContactForm: React.FC = () => {
           </div>
         </div>
         {/* Phone and Company Row */}
-        <div className="grid md:grid-cols-2 gap-4"></div>
-          <div></div>
-            <label htmlFor="phone" className="block text-sm font-medium text-white mb-2"></label>
-              <Phone className="w-4 h-4 inline mr-2" /></Phone>
+        <div>label</div>
+      <label>Phone</label>
+      <Phone></Phone>
               Phone Number
             </label>
             <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value="{formData.phone}"
+              type=tel
+              id=phone
+              name=phone
+              value={formData.phone"}"
               onChange="{handleChange}"
-              className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${'}
+              className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors ${'`}
                 errors.phone ? 'border-red-500' : 'border-white/20'}
-              }`}
+              }``}
               placeholder="+1 (555) 123-4567"
             /></input>
             {errors.phone && (}
@@ -258,49 +250,47 @@ const ImprovedContactForm: React.FC = () => {
             )}
           </div>
 
-          <div></div>
-            <label htmlFor="company" className="block text-sm font-medium text-white mb-2"></label>
-              <Building className="w-4 h-4 inline mr-2" /></Building>
+          <div>label</div>
+      <label>Building</label>
+      <Building>
               Company
             </label>
-            <input;
+            <input
               type="text"
               id="company"
               name="company"
 value="{formData.company;"
               onChange="{handleChange;"
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
-              placeholder="Your company name"
-            /></input>}
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: "outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors
+              placeholder=Your company name
+            /></input>"}
           </div>}
         </div>}
 }
         {/* Service Selection */}
-        <div></div>
-          <label className="block text-sm font-medium text-white mb-2"></label>
+        <div>label</div>
+      <label></label>
             Service Interest *
           </label>
-          <div className="relative"></div>
-            <button
-              type="button"
-              onClick="{()" => setIsServiceDropdownOpen(!isServiceDropdownOpen)}
-              className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors flex items-center justify-between ${'}
+          <div>button</div>
+      <button> setIsServiceDropdownOpen(!isServiceDropdownOpen)}
+              className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors flex items-center justify-between ${'`}
                 errors.service ? 'border-red-500' : 'border-white/20'}
-              }`}
+              }``}
             >'
               <span className="{formData.service" ? 'text-white' : 'text-gray-400'}></span>'
                 {formData.service || 'Select a service'}
               </span>'
-              <ChevronDown className="{`w-5" h-5 transition-transform ${isServiceDropdownOpen ? 'rotate-180' : ''}`} /></ChevronDown>
+              <ChevronDown className="{`w-5" h-5 transition-transform ${isServiceDropdownOpen ? 'rotate-180' : ''`}``} /></ChevronDown>
             </button>
             {isServiceDropdownOpen && ()
               <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto"></div>)
                 {services.map((service) => (}
 <button}
-                    key="{service;"})
+                    key="{service);"})
                     type="button"})
                     onClick="{()" => handleServiceSelect(service)}
-                    className="w-full px-4 py-3 text-left text-white hover: 'bg-white/10 transition-colors first:rounded-t-lg last:rounded-b-lg"','
+                    className="w-full px-4 py-3 text-left text-white hover: "'bg-white/10 transition-colors first:rounded-t-lg last:rounded-b-lg'",'
                   >
                     {service;}
                   </button>}
@@ -316,17 +306,16 @@ value="{formData.company;"
           )}
         </div>
         {/* Budget and Timeline Row */}
-        <div className="grid md:grid-cols-2 gap-4"></div>
-          <div></div>
-            <label htmlFor="budget" className="block text-sm font-medium text-white mb-2"></label>
+        <div>label</div>
+      <label></label>
               Budget Range
             </label>
-            <select;
-              id="budget"
-              name="budget"
-value="{formData.budget;"
-              onChange="{handleChange;"
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"}
+            <select
+              id=budget
+              name=budget
+value={formData.budget
+              onChange={handleChange
+              className="w-full" px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: "outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"}
             ></select>}
               <option value="">Select budget range</option>}
               {budgets.map((budget) => (}
@@ -337,16 +326,16 @@ value="{formData.budget;"
             </select>
           </div>
 
-          <div></div>
-            <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2"></label>
+          <div>label</div>
+      <label></label>
               Project Timeline
             </label>
-            <select;
+            <select
               id="timeline"
               name="timeline"
 value="{formData.timeline;"
               onChange="{handleChange;"
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"}
+              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: "outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"}
             ></select>}
               <option value="">Select timeline</option>}
               {timelines.map((timeline) => (}
@@ -358,9 +347,9 @@ value="{formData.timeline;"
           </div>
         </div>
         {/* Message */}
-        <div></div>
-          <label htmlFor="message" className="block text-sm font-medium text-white mb-2"></label>
-            <FileText className="w-4 h-4 inline mr-2" /></FileText>
+        <div>label</div>
+      <label>FileText</label>
+      <FileText>
             Message *
           </label>
           <textarea
@@ -369,9 +358,9 @@ value="{formData.timeline;"
             value="{formData.message}"
             onChange="{handleChange}"
             rows="{5}"
-            className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors resize-none ${'}
+            className="{`w-full" px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors resize-none ${'`}
               errors.message ? 'border-red-500' : 'border-white/20'}
-            }`}
+            }``}
             placeholder="Tell us about your project, requirements, or any questions you have..."
           /></textarea>
           {errors.message && (}
@@ -382,18 +371,18 @@ value="{formData.timeline;"
           )}
         </div>
         {/* Submit Button */}
-        <button;
+        <button
           type="submit"
 disabled="{isSubmitting;"
-          className="w-full bg-cyan-500 hover:bg-cyan-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+          className="w-full bg-cyan-500 hover: "bg-cyan-600 disabled:bg-gray-600 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2
         ></button>
           {isSubmitting ? (
             <></>
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" /></div>
+              <div className="w-5" h-5 border-2 border-white border-t-transparent rounded-full animate-spin /></div>
               Sending...)
             </>)
           ) : (
-            <></>}
+            <></>"}
               <Send className="w-5 h-5" /></Send>}
               Send Message})
             </>})
@@ -401,7 +390,6 @@ disabled="{isSubmitting;"
         </button>
       </form>
     </div>
-  );
-};
-
+  )
+}
 export default ImprovedContactForm'

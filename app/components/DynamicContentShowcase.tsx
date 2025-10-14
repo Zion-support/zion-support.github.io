@@ -1,43 +1,36 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+'use client'
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
-        <title>DynamicContentShowcase - Zion Tech Group</title>
-        <meta name="description" content="Professional dynamiccontentshowcase services by Zion Tech Group." /></meta>
+    <div>Helmet</div>
+      <Helmet>title</Helmet>
+      <title>DynamicContentShowcase - Zion Tech Group</title>
+        <meta name="description" content="404 - Zion Tech Group" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>
-            DynamicContentShowcase;
+      <div>h1</div>
+      <h1></h1>
+            DynamicContentShowcase)
           </h1>
           <p className="text-xl text-gray-600 mb-8"></p>
             Professional dynamiccontentshowcase solutions tailored to your business needs.</p>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
-              <h3 className="text-lg font-semibold text-blue-900 mb-2"></h3>
-                Expert Solutions;
-              </h3>;
-              <p className="text-blue-700">;
-                Our team of experts delivers cutting-edge dynamiccontentshowcase solutions.;
-              </p>;
+          <div>h3</div>
+      <h3></h3>
+                Expert Solutions
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge dynamiccontentshowcase solutions.
             </div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">;
-              <h3 className="text-lg font-semibold text-green-900 mb-2">;
-                Custom Implementation;
-              </h3>;
-              <p className="text-green-700">;
-                Tailored dynamiccontentshowcase implementations for your specific requirements.;
-              </p>;
+            <div className="bg-green-50" border border-green-200 rounded-lg p-6>
+              <h3 className="text-lg" font-semibold text-green-900 mb-2>
+                Custom Implementation
+              <p className="text-green-700">
+                Tailored dynamiccontentshowcase implementations for your specific requirements.
             </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">;
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">;
-                24/7 Support;
-              </h3>;
-              <p className="text-purple-700">;
-                Round-the-clock support for all your dynamiccontentshowcase needs.;}
+            <div className="bg-purple-50" border border-purple-200 rounded-lg p-6>
+              <h3 className="text-lg" font-semibold text-purple-900 mb-2>
+                24/7 Support
+              <p className="text-purple-700">
+                Round-the-clock support for all your dynamiccontentshowcase needs.;"}
               </p>;}
             </div>})
           </div>})

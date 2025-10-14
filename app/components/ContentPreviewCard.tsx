@@ -1,11 +1,11 @@
-import React from 'react;';
-import Link from 'next/link;
+import React from 'react;'
+import Link from 'next/link
 interface ContentPreviewCardProps {
-  id: string;
-  title: string;
-  excerpt: string;
-  author: string;
-  publishedAt: string;
+  id: string
+  title: string
+  excerpt: string
+  author: string
+  publishedAt: string
   readTime: string;}
   category: string;}
   imageUrl?: string;}
@@ -19,16 +19,15 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   publishedAt,
   readTime,}
   category,}
-  imageUrl,}';)
-  slug})';
-}) => {';
-  return (';
-    <div className="p-4"></div>
-      <h2 className="text-2xl font-bold mb-4">ContentPreviewCard</h2>
+  imageUrl,}');)
+  slug})'
+}) => {'
+  return (')
+    <div>h2</div>
+      <h2>ContentPreviewCard</h2>
       <p>This component is under development.</p>}
     </div>})
 )}
   );}
-</div></div></div></div></div></Link></ContentPreviewCardProps></article></div></img></div></div></span></span></h3></Link></div></div></div></span></div></Link></svg></path></ContentPreviewCardProps></article></div></img></div></div></span></span></h3></Link></div></div></div></span></div></Link></svg></path>};
-
-export default ContentPreviewCard;
+</div></div></div></div></div></Link></ContentPreviewCardProps></article></div></img></div></div></span></span></h3></Link></div></div></div></span></div></Link></svg></path></ContentPreviewCardProps></article></div></img></div></div></span></span></h3></Link></div></div></div></span></div></Link></svg></path>}
+export default ContentPreviewCard

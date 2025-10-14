@@ -1,79 +1,72 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+'use client'
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
-        <title>Loading - Zion Tech Group</title>
+    <div>Helmet</div>
+      <Helmet>title</Helmet>
+      <title>Loading - Zion Tech Group</title>
         <meta name="description" content="Professional loading services by Zion Tech Group." />
       </Helmet>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>
-            Loading;
+      <div>h1</div>
+      <h1></h1>
+            Loading)
           </h1>
           <p className="text-xl text-gray-600 mb-8"></p>
             Professional loading solutions tailored to your business needs.</p>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
-              <h3 className="text-lg font-semibold text-blue-900 mb-2"></h3>
-                Expert Solutions;
+          <div>h3</div>
+      <h3></h3>
+                Expert Solutions
               </h3>
               <p></p>
-                Our team of experts delivers cutting-edge loading solutions.;
+                Our team of experts delivers cutting-edge loading solutions.
               </p>
             </div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div>"
-              <h3 className="text-lg font-semibold text-green-900 mb-2"></h3>
-                Custom Implementation;
+            <h3>h3</h3>
+                Custom Implementation
               </h3>
               <p></p>
-                Tailored loading implementations for your specific requirements.;
+                Tailored loading implementations for your specific requirements.
               </p>
             </div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>"
-              <h3 className="text-lg font-semibold text-purple-900 mb-2"></h3>
-                24/7 Support;
+            <h3>h3</h3>
+                24/7 Support
               </h3>
               <p></p>
-                Round-the-clock support for all your loading needs.;
+                Round-the-clock support for all your loading needs.
               </p>
             </div>
           </div>
-          <div className="mt-12"></div>"
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
-              Get Started Today;
+          <div>button</div>
+      <button></button>
+              Get Started Today
             </button>
           </div>
         </div>
       </div>
-    </div>;
+    
             Loading</h1>
           <p></p>
             Professional loading solutions tailored to your business needs.</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>"
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>"
-              <h3 className="text-lg font-semibold text-blue-900 mb-2"></h3>
+          <><div>div</div></>
+              <h3 className="text-lg" font-semibold text-blue-900 mb-2></h3>
                 Expert Solutions</h3>
               <p></p>
                 Our team of experts delivers cutting-edge loading solutions.</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6"></div>"
-              <h3 className="text-lg font-semibold text-green-900 mb-2"></h3>
+            <h3>h3</h3>
                 Custom Implementation</h3>
               <p></p>
                 Tailored loading implementations for your specific requirements.</p></div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>"
-              <h3 className="text-lg font-semibold text-purple-900 mb-2"></h3>
+            <h3>h3</h3>
                 24/7 Support</h3>
               <p></p>
                 Round-the-clock support for all your loading needs.</p></div></div>
-          <div className="mt-12"></div>"
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>)
+          <div>button</div>
+      <button></button>)
               Get Started Today</button></div></div></div></div>)
   )
             </button>
-          </div>}
+          </div>"}
         </div>}
       </div>}
     </div>}

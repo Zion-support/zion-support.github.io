@@ -1,21 +1,21 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async;
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { Helmet } from 'react-helmet-async
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  children: ReactNode
+  fallback?: ReactNode
+  onError?: (error: Error, errorInfo: ErrorInfo) => void
 interface State {
   hasError: boolean;}
   error: Error | null;}
   errorInfo: ErrorInfo | null;}
   errorId: string;}
 }
->>>>>>> origin/main;
+>>>>>>> origin/main
 >>>>>>> origin/main
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);';
-    this.state = {';
+    super(props);'
+    this.state = {'
       hasError: false,';}
       error: null,';}
       errorInfo: null,'}
@@ -23,11 +23,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }}
 
   static getDerivedStateFromError(error: Error): State {}
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {'}
-    console.error('Enhanced Error Boundary caught an error:', error, errorInfo);}
+    console.error('Enhanced Error Boundary caught an error: '', error, errorInfo);}
   }
 
   render() {
@@ -38,27 +38,26 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private retryTimeoutId: NodeJS.Timeout | null = null;
-
+  private retryTimeoutId: NodeJS.Timeout | null = null
   static getDerivedStateFromError(error: Error): Partial<State> {}
     return {}
       hasError: true,}
       error,}
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
-    };
->>>>>>> origin/main;
+      errorId: `error_${Date.now()`}_${Math.random().toString(36).substr(2, 9)}`````
+    }
+>>>>>>> origin/main
   }
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
+    console.error('Error caught by boundary: '', error, errorInfo);}
   }
-    // Call the onError callback if provided;
+    // Call the onError callback if provided
     if (this.props.onError) {}
       this.props.onError(error, errorInfo);}
     }
 
     // Log error to console in development'
     if (process.env.NODE_ENV ="==" 'development') {'}
-      console.error('Error caught by boundary:', error, errorInfo)}
+      console.error('Error caught by boundary: '', error, errorInfo)}
 
     // Log error to external service in production'
     if (process.env.NODE_ENV ="==" 'production') {}
@@ -76,29 +75,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),}
       userAgent: navigator.userAgent,}
       url: window.location.href,}
-    };
-
+    }
       // Example: Send to error tracking service
-      // errorTrackingService.captureException(error, { extra: errorData });
+      // errorTrackingService.captureException(error, { extra: errorData })
       '
-      console.error('Error logged to service:', errorData)} catch (loggingError) {'}
-      console.error('Failed to log error to service:', loggingError)}
-  };
-
+      console.error('Error logged to service: '', errorData)} catch (loggingError) {'}
+      console.error('Failed to log error to service: '', loggingError)}
+  }
   private handleRetry = () => {
     this.setState(prevState => ({
       hasError: false,}
       error: null,}
       errorInfo: null,'})
       errorId: ''})
-    })};
-
+    })}
   private handleReload = () => {}
-    window.location.reload()};
-
+    window.location.reload()}
   private handleGoHome = () => {'}
-    window.location.href = '/'};
-
+    window.location.href = '/'}
   render() {}
     if (this.state.hasError) {}
       // Custom fallback UI;}
@@ -106,14 +100,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         return this.props.fallback}
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
-          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center"></div>
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>
-              <AlertTriangle className="w-8 h-8 text-red-400" /></AlertTriangle>
+        <div>div</div>
+      <div>AlertTriangle</div>
+      <AlertTriangle></AlertTriangle>
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4"></h1>
-              Something went wrong
+              Something went wrong)
             </h1>
             
             <p className="text-gray-300 mb-6 leading-relaxed"></p>'
@@ -121,8 +114,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             </p>
             '
             {process.env.NODE_ENV ="==" 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left"></div>
-                <h3 className="text-red-400 font-semibold mb-2 flex items-center"></h3>)
+              <h3>h3</h3>)
                   <Bug className="w-4 h-4 mr-2" /></Bug>)
                   Error Details (Development Only)}
                 </h3>}
@@ -130,8 +122,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   <div></div>}
                     <strong>Error:</strong> {this.state.error.message}
                   </div>
-                  <div></div>
-                    <strong>Error ID:</strong> {this.state.errorId}
+                  <div>strong</div>
+      <strong>Error ID:</strong> {this.state.errorId}
                   </div>
                   {this.state.error.stack && (}
                     <div></div>}
@@ -153,65 +145,51 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </div>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6"></div>
-              <button
-                onClick="{()" => window.location.reload()}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+            <div>button</div>
+      <button> window.location.reload()"}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2
               >
-                <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform duration-500" /></RefreshCw>
+                <RefreshCw className="w-5" h-5 mr-2 group-hover:rotate-180 transition-transform duration-500 /></RefreshCw>
                 Try Again
               </button>
               
-              <button
-                onClick="{this.handleGoHome;"
-                className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 group"
-              ></button>
-                <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /></Home>
-                Go Home}
+              <button>Home</button>
+      <Home></Home>
+                Go Home"}
               </button>}
               }
-              <button}
-                onClick="{this.handleReload}"
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
-              ></button>
-                <RefreshCw className="w-5 h-5 mr-2" /></RefreshCw>
+              <button>RefreshCw</button>
+      <RefreshCw></RefreshCw>
                 Reload Page
               </button>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <Link
-                to="/"
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
-              ></Link>
-                <Home className="w-5 h-5 mr-2" /></Home>
+            <div>Link</div>
+      <Link>Home</Link>
+      <Home>
                 Go Home
               </Link>
               
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="inline-flex items-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
-              ></a>
-                <Mail className="w-5 h-5 mr-2" /></Mail>
+              <a>Mail</a>
+      <Mail></Mail>
                 Contact Support
               </a>
             </div>
 
-            <div className="mt-6 text-sm text-gray-400"></div>
-              <p>Error ID: {this.state.errorId}</p>
+            <div>p</div>
+      <p>Error ID: "{this.state.errorId"}</p>
               <p>If this problem persists, please contact our support team with this error ID.</p>
             </div>
->>>>>>> origin/main;
+>>>>>>> origin/main
           </div>
         </>
 )}
 
-    return this.props.children;
+    return this.props.children
 }
-export default EnhancedErrorBoundary;
-
-            <div className="mt-6 text-sm text-gray-400"></div>
-              <p>If this problem persists, please contact our support team.</p>
+export default EnhancedErrorBoundary
+            <div>p</div>
+      <p>If this problem persists, please contact our support team.</p>
               <p className="mt-2"></p>
                 Error ID: {Date.now().toString(36)}-{Math.random().toString(36).substr(2, 9)}
               </p>

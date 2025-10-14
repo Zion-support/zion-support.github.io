@@ -1,19 +1,19 @@
-import React from 'react;';
-import { Link } from 'react-router-dom;';
-import SEO from '../components/SEO;
+import React from 'react;'
+import { Link } from 'react-router-dom;'
+import SEO from '../components/SEO
 import { CloudIcon,
   ServerIcon,
-  CpuChipIcon,;
-  ChartBarIcon,';
-  CheckCircleIcon,;';
+  CpuChipIcon,
+  ChartBarIcon,'
+  CheckCircleIcon,;'
   ArrowRightIcon,';}
   PhoneIcon,';}
   EnvelopeIcon,'}
   MapPinIcon''}
-} from '@heroicons/react/24/outline;
+} from '@heroicons/react/24/outline
 export default function CloudSolutionsPage() {
-  const services = [';
-    {';
+  const services = [']
+    {'
       icon: CloudIcon,'}
       title: 'Cloud Migration','}]
       description: 'Seamless migration of your applications and data to the cloud with minimal downtime.','}]
@@ -46,18 +46,17 @@ export default function CloudSolutionsPage() {
     { name: 'Oracle Cloud', logo: 'Oracle' },']
     { name: 'DigitalOcean', logo: 'DO' }]
   ]'
-import { Helmet } from 'react-helmet-async;
-const CloudSolutionsPage: React.FC = () => {
-  return (';
-    <></>';
-      <Helmet></Helmet>';
-        <title>CloudSolutionsPage - Zion Tech Group</title>';
-        <meta name="description" content="CloudSolutionsPage - Zion Tech Group" /></meta>
+import { Helmet } from 'react-helmet-async
+const CloudSolutionsPage: "React.FC = () => {
+  return (')
+    <></>'
+      <Helmet></Helmet>'
+        <title>CloudSolutionsPage - Zion Tech Group</title>'
+        <meta name=description content=CloudSolutionsPage - Zion Tech Group /></meta>
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">CloudSolutionsPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>}
+      <div>h1</div>
+      <h1>CloudSolutionsPage</h1>
+          <p className="text-gray-300">This page is under construction.</p>"}
         </div>}
       </div>})
     </>})

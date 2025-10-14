@@ -1,13 +1,11 @@
 <<<<<<< HEAD
 
 
-import React from 'react';
-import { Loader2 } from 'lucide-react;';
-';
+import React from 'react'
+import { Loader2 } from 'lucide-react;'
+'
 interface LoadingSpinnerProps {'
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-
-
+  size?: 'sm' | 'md' | 'lg' | 'xl'
 ="======"
 >>>>>>> origin/main}
   text?: string;}
@@ -28,26 +26,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({'
 '}
     lg: 'w-12 h-12','}
     xl: 'w-16 h-16'}
-  };
-
-
+  }
       </div>
-    );
+    )
   }
 
-  return spinner;
-
-
-    <div className="{`flex" flex-col items-center justify-center ${className}`}></div>
-      <div className="{`${sizeClasses[size]}" animate-spin rounded-full border-2 border-gray-300 border-t-purple-600`}></div>
+  return spinner
+    <div></div>
       {text && (})
         <p className="mt-2 text-sm text-gray-400">{text}</p>)
       )}
     </div>
-  );
-
-
-
-};
-
+  )
+}
 export default LoadingSpinner'

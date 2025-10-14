@@ -1,25 +1,25 @@
-import React from 'react;';
-import { Helmet } from 'react-helmet-async;';
-interface AdvancedSEOProps {';
+import React from 'react;'
+import { Helmet } from 'react-helmet-async;'
+interface AdvancedSEOProps {'
   title: 'string','
   description: 'string','
-  keywords?: string;
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  structuredData?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
-  lang?: string;
-  author?: string;
-  publishedTime?: string;
+  keywords?: string
+  canonical?: string
+  ogTitle?: string
+  ogDescription?: string
+  ogImage?: string
+  ogUrl?: string
+  ogType?: string
+  twitterCard?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
+  structuredData?: object
+  noindex?: boolean
+  nofollow?: boolean
+  lang?: string
+  author?: string
+  publishedTime?: string
   modifiedTime?: string;}
   section?: string;}
   tags?: string[];}
@@ -50,22 +50,22 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   tags = [],})
   readingTime})
 }) => {'}
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullOgTitle = ogTitle || fullTitle;
-  const fullOgDescription = ogDescription || description;
-  const fullTwitterTitle = twitterTitle || fullTitle;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title`} | Zion Tech Group`
+  const fullOgTitle = ogTitle || fullTitle
+  const fullOgDescription = ogDescription || description
+  const fullTwitterTitle = twitterTitle || fullTitle
   const fullTwitterDescription = twitterDescription || description'
-  const fullOgImage = ogImage || 'https://ziontechgroup.com/api/placeholder/1200/630';
+  const fullOgImage = ogImage || 'https: "//ziontechgroup.com/api/placeholder/1200/630'
   const fullTwitterImage = twitterImage || fullOgImage'
-  const fullCanonical = canonical || (typeof window !="=" 'undefined' ? window.location.href : '');
-  const currentDate = new Date().toISOString();
-  // Default structured data for organization;
+  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '')
+  const currentDate = new Date().toISOString()
+  // Default structured data for organization
   const defaultStructuredData = {
-    "@context": "https://schema.org","
+    @context: https://schema.org`","
     "@type": "Organization","
     "name": "Zion Tech Group","
-    "url": "https://ziontechgroup.com","
-    "logo": "https://ziontechgroup.com/logo.svg","
+    "url": "https: "//ziontechgroup.com","
+    "logo": "https: "//ziontechgroup.com/logo.svg","
     "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.","
     "foundingDate": "2020","
     "address": {"
@@ -84,9 +84,9 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       "availableLanguage": ["English"]"}
     },
     "sameAs": ["
-      "https://twitter.com/ziontechgroup","
-      "https://linkedin.com/company/ziontechgroup","]
-      "https: '//github.com/ziontechgroup"',']
+      "https: "//twitter.com/ziontechgroup","
+      "https: "//linkedin.com/company/ziontechgroup","]
+      "https: "'//github.com/ziontechgroup'",']
     ],
     "offers": ["
       {
@@ -108,10 +108,10 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         "category": "Software"}]
       }]
     ]
-  };
-  // Article structured data if publishedTime is provided;
+  }
+  // Article structured data if publishedTime is provided
   const articleStructuredData = publishedTime ? {
-    "@context": "https://schema.org","
+    "@context": "https: "//schema.org","
     "@type": "Article","
     "headline": fullTitle,"
     "description": description,"
@@ -119,14 +119,14 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
     "author": {"}
       "@type": "Organization","}
       "name": author,"}
-      "url": "https://ziontechgroup.com"}
+      "url": "https: "//ziontechgroup.com"}
     },
     "publisher": {"
       "@type": "Organization","
       "name": "Zion Tech Group","}
       "logo": {"}
         "@type": "ImageObject","}
-        "url": "https://ziontechgroup.com/logo.svg"}
+        "url": "https: "//ziontechgroup.com/logo.svg"}
       }
     },
     "datePublished": publishedTime,"
@@ -138,75 +138,74 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
     "articleSection": section,'
     "keywords": tags.join(', '),
     "wordCount": readingTime ? readingTime * 200 : undefined
-  } : null;
-
+  } : null
   return (
     <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content="{description}" /></meta>
+        <meta name="description" content="404 - Zion Tech Group" />
       {keywords && <meta name="keywords" content="{keywords}" />}
       <meta name="language" content="{lang}" /></meta>'
-      <meta name="robots" content="{`${noindex" ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} /></meta>
-      <link rel="canonical" href="{fullCanonical}" /></link>
+      <meta>link</meta>
+      <link></link>
       {/* Author and Publishing */}
       <meta name="author" content="{author}" /></meta>
-      {publishedTime && <meta name="article:published_time" content="{publishedTime}" />}
-      {modifiedTime && <meta name="article:modified_time" content="{modifiedTime}" />})
-      {section && <meta name="article:section" content="{section}" />}')
-      {tags.length > 0 && <meta name="article:tag" content={tags.join(', ')} />}
-      {readingTime && <meta name="twitter:label1" content="Reading time" />}
-      {readingTime && <meta name="twitter:data1" content="{`${readingTime}" min read`} />}
+      {publishedTime && <meta name="article: "published_time content={publishedTime"}" />}
+      {modifiedTime && <meta name="article: "modified_time content={modifiedTime"}" />})
+      {section && <meta name="article: "section content={section"}" />}')
+      {tags.length > 0 && <meta name="article: "tag content={tags.join('", ')} />}
+      {readingTime && <meta name="twitter: "label1 content=Reading time />"}
+      {readingTime && <meta name="twitter: "data1 content={`${readingTime`"}" min read``} />}
 
       {/* Open Graph Meta Tags */}
-      <meta property="og:type" content="{ogType}" /></meta>
-      <meta property="og:title" content="{fullOgTitle}" /></meta>
-      <meta property="og:description" content="{fullOgDescription}" /></meta>
-      <meta property="og:image" content="{fullOgImage}" /></meta>
-      <meta property="og:url" content="{ogUrl" || fullCanonical} /></meta>
-      <meta property="og:site_name" content="Zion Tech Group" /></meta>'
-      <meta property="og:locale" content="{lang" ="==" 'en' ? 'en_US' : lang} /></meta>
-      {publishedTime && <meta property="article:published_time" content="{publishedTime}" />}
-      {modifiedTime && <meta property="article:modified_time" content="{modifiedTime}" />}
-      {section && <meta property="article:section" content="{section}" />}
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta></meta>'
+      <meta property=og: "locale content={lang === 'en' ? 'en_US' : lang"} /></meta>
+      {publishedTime && <meta property="article: "published_time content={publishedTime"}" />}
+      {modifiedTime && <meta property="article: "modified_time content={modifiedTime"}" />}
+      {section && <meta property="article: "section content={section"}" />}
       {tags.length > 0 && tags.map(tag => (})
-        <meta key="{tag}" property="article:tag" content="{tag}" /></meta>)
+        <meta key="{tag}" property="article: "tag content={tag"}" /></meta>)
       ))}
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="{twitterCard}" /></meta>
-      <meta name="twitter:title" content="{fullTwitterTitle}" /></meta>
-      <meta name="twitter:description" content="{fullTwitterDescription}" /></meta>
-      <meta name="twitter:image" content="{fullTwitterImage}" /></meta>
-      <meta name="twitter:site" content="@ziontechgroup" /></meta>
-      <meta name="twitter:creator" content="@ziontechgroup" /></meta>
-      {/* Additional SEO Meta Tags */}
-      <meta name="viewport" content="width="device-width," initial-scale=1.0" /></meta>
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>
-      <meta name="theme-color" content="#0f172a" /></meta>
-      <meta name="msapplication-TileColor" content="#0f172a" /></meta>
-      <meta name="apple-mobile-web-app-capable" content="yes" /></meta>
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /></meta>
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta></meta>
+      {/* Additional SEO Meta Tags */"}
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta>
       {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" /></meta>
-      <meta httpEquiv="X-Frame-Options" content="DENY" /></meta>
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" /></meta>
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" /></meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta>meta</meta>
+      <meta></meta>
       {/* Performance Hints */}
-      <meta name="format-detection" content="telephone=no" /></meta>
-      <meta name="mobile-web-app-capable" content="yes" /></meta>
+      <meta>meta</meta>
+      <meta></meta>
       {/* Favicon and App Icons */}
-      <link rel="icon" type="" href="/favicon.ico" /></link>
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>
-      <link rel="manifest" href="/site.webmanifest" /></link>
+      <link>link</link>
+      <link>link</link>
+      <link>link</link>
+      <link>link</link>
+      <link>
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" /></link>
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></link>
-      <link rel="preconnect" href="https://api.ziontechgroup.com" /></link>
-      <link rel="dns-prefetch" href="https://www.google-analytics.com" /></link>
-      {/* Structured Data */}
+      <link>link</link>
+      <link>link</link>
+      <link>link</link>
+      <link></link>
+      {/* Structured Data */"}
       <script type="application/ld+json"></script>
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
@@ -219,25 +218,24 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       {/* Breadcrumb structured data */}
       <script type="application/ld+json"></script>
         {JSON.stringify({
-          "@context": "https://schema.org","
+          "@context": "https: "//schema.org","
           "@type": "BreadcrumbList","
           "itemListElement": ["
             {
               "@type": "ListItem","}
               "position": 1,"}
               "name": "Home","}
-              "item": "https://ziontechgroup.com"}
+              "item": "https: "//ziontechgroup.com"}
             },
             {
 "@type": "ListItem",
               "position": 2,}
               "name": title,}]
-              "item": fullCanonical;}])
+              "item": fullCanonical);}])
           ]})
         })}
       </script>
     </Helmet>
-  );
-};
-
+  )
+}
 export default AdvancedSEO'

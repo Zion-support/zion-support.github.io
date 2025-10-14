@@ -1,22 +1,20 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom;
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom
 import { 
   UserGroupIcon,
   CpuChipIcon,
   ShieldCheckIcon,
   RocketLaunchIcon,
-  HeartIcon,;
-  ArrowRightIcon,';
+  HeartIcon,
+  ArrowRightIcon,'
   StarIcon,;';}
   PhoneIcon,';}
   EnvelopeIcon,';}
   MapPinIcon'}
-} from '@heroicons/react/24/outline;
-
-const AboutPage: React.FC = () => {';
-  const values = [';
+} from '@heroicons/react/24/outline
+const AboutPage: React.FC = () => {'
+  const values = [']
     {'}
       title: 'Innovation','}
       description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions.',}
@@ -29,7 +27,7 @@ const AboutPage: React.FC = () => {';
     },
     {'
       title: 'Reliability','
-      description: 'We deliver consistent, high-quality solutions that you can depend on.',]
+      description: 'We deliver consistent', high-quality solutions that you can depend on.',]
       icon: CloudIcon;]}
   ];}
 }
@@ -38,8 +36,7 @@ const AboutPage: React.FC = () => {';
     { number: '25+', label: 'Happy Clients' },'
     { number: '99%', label: 'Success Rate' },']
     { number: '4+', label: 'Years Experience' }]
-  ];
-
+  ]
   const team = [
     {'
       name: 'Kleber Santos','}
@@ -59,32 +56,30 @@ const AboutPage: React.FC = () => {';
       description: 'Specialist in machine learning and artificial intelligence.','}
       image: '/team/michael.jpg'}]
     }]
-  ];
+  ]
   return (
     <></>
-      <Helmet></Helmet>
-        <title>About Us - Zion Tech Group</title>'
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions." /></meta>
-        <meta name="keywords" content="about us, team, mission, values, AI company, IT solutions" /></meta>
+      <Helmet>title</Helmet>
+      <title>About Us - Zion Tech Group</title>'
+        <meta>meta</meta>
+      <meta></meta>
 
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
-        <div className="absolute inset-0 opacity-20"></div>
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
+      <section>div</section>
+      <div></div>
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center"></div>
-          <div className="max-w-4xl mx-auto"></div>
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent"></h1>
-              About Zion Tech Group
+        <div>h1</div>
+      <h1></h1>
+              About Zion Tech Group)
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed"></p>
+            <p className="text-xl" md:text-2xl text-gray-300 mb-8 leading-relaxed></p>
               Pioneering the Future of Technology
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto"></p>
-              Founded in 2020, Zion Tech Group has been at the forefront of technological innovation, 
+            <p className="text-lg" text-gray-400 mb-12 max-w-3xl mx-auto></p>
+              Founded in 2020", Zion Tech Group has been at the forefront of technological innovation, 
               delivering cutting-edge AI and IT solutions that transform businesses and drive growth.
             </p>
           </div>
@@ -92,14 +87,13 @@ const AboutPage: React.FC = () => {';
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 bg-slate-900"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+      <section>div</section>
+      <div></div>
+            <h2 className="text-4xl" md: "text-5xl font-bold text-white mb-6></h2>
               Our Mission
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
-              To empower businesses with innovative technology solutions that drive digital transformation, 
+            <p className="text-xl" text-gray-300 max-w-4xl mx-auto leading-relaxed></p>
+              To empower businesses with innovative technology solutions that drive digital transformation", 
               enhance security, and accelerate growth in an ever-evolving digital landscape.
             </p>
           </div>
@@ -107,22 +101,20 @@ const AboutPage: React.FC = () => {';
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-slate-800/50"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+      <section>div</section>
+      <div></div>
+            <h2 className="text-4xl" md: "text-5xl font-bold text-white mb-6></h2>
               Our Values
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p className="text-xl" text-gray-300 max-w-3xl mx-auto></p>
               The principles that guide everything we do
             </p>
           </div>
           )
-          <div className="grid md:grid-cols-3 gap-8"></div>)
-            {values.map((value, index) => (}
-              <div key="{index}" className="text-center"></div>
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
-                  <value.icon className="w-10 h-10 text-white" /></value>
+          <div className="grid" md:grid-cols-3 gap-8></div>)
+            {values.map((value", index) => (}
+              <div>value</div>
+      <value></value>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{value.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{value.description}</p>)
@@ -133,22 +125,20 @@ const AboutPage: React.FC = () => {';
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-slate-900"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+      <section>div</section>
+      <div></div>
+            <h2 className="text-4xl" md: "text-5xl font-bold text-white mb-6></h2>
               Our Impact
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p className="text-xl" text-gray-300 max-w-3xl mx-auto></p>
               Numbers that reflect our commitment to excellence
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-            {stats.map((stat, index) => (}
-              <div key="{index}" className="text-center"></div>
-                <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2"></div>
-                  {stat.number}
+          <div className="grid" grid-cols-2 md:grid-cols-4 gap-8></div>
+            {stats.map((stat", index) => (}
+              <div></div>
+                  {stat.number"}
                 </div>
                 <div className="text-gray-300 text-lg"></div>
                   {stat.label}
@@ -160,47 +150,42 @@ const AboutPage: React.FC = () => {';
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-slate-800/50"></section>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+      <section>div</section>
+      <div></div>
+            <h2 className="text-4xl" md: "text-5xl font-bold text-white mb-6></h2>
               Meet Our Team
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
+            <p className="text-xl" text-gray-300 max-w-3xl mx-auto></p>
               The experts behind our innovative solutions
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8"></div>
-            {team.map((member, index) => (}
-              <div key="{index}" className="bg-slate-800 rounded-xl p-8 text-center hover:bg-slate-700 transition-all duration-300"></div>
-                <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
-                  <UserGroupIcon className="w-12 h-12 text-white" /></UserGroupIcon>
+          <div className="grid" md:grid-cols-3 gap-8></div>
+            {team.map((member", index) => (}
+              <div>UserGroupIcon</div>
+      <UserGroupIcon></UserGroupIcon>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{member.name}</h3>
+                <h3 className="text-2xl" font-bold text-white mb-2>{member.name"}</h3>
                 <p className="text-purple-400 font-semibold mb-4">{member.role}</p>
                 <p className="text-gray-300">{member.description}</p>
               </div>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900"></section>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
+      <section>div</section>
+      <div>h2</div>
+      <h2>
             Ready to Work With Us?
           </h2>
-          <p className="text-xl text-gray-300 mb-8"></p>'
-            Let's discuss how we can help transform your business with our technology solutions
+          <p className="text-xl" text-gray-300 mb-8></p>'
+            Let's discuss how we can help transform your business with our technology solutions)
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link
-              to="/contact"
-              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
-            ></Link>
+          <div>Link</div>
+      <Link></Link>
               Get In Touch
             </Link>
             <Link
-              to="/careers"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
+              to=/careers
+              className="border-2" border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300
             ></Link>
               Join Our Team
             </Link>
@@ -208,8 +193,7 @@ const AboutPage: React.FC = () => {';
         </div>
       </section>)
     </>)
-  );
-};
-
-export default AboutPage;
+  )
+"}
+export default AboutPage
 '

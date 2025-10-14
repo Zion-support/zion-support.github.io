@@ -1,19 +1,19 @@
-import React from 'react;';
-import { Link } from 'react-router-dom;';
-import SEO from '../components/SEO;
+import React from 'react;'
+import { Link } from 'react-router-dom;'
+import SEO from '../components/SEO
 import { GlobeAltIcon,
   CpuChipIcon,
-  ChartBarIcon,;
-  RocketLaunchIcon,';
-  CheckCircleIcon,;';
+  ChartBarIcon,
+  RocketLaunchIcon,'
+  CheckCircleIcon,;'
   ArrowRightIcon,';}
   PhoneIcon,';}
   EnvelopeIcon,'}
   MapPinIcon''}
-} from '@heroicons/react/24/outline;
+} from '@heroicons/react/24/outline
 export default function MicroSaaSPage() {
-  const services = [';
-    {';
+  const services = [']
+    {'
       icon: GlobeAltIcon,'}
       title: 'Custom Micro SaaS Development','}]
       description: 'Tailored micro SaaS solutions designed to solve specific business challenges with scalable architecture.','}]
@@ -46,18 +46,17 @@ export default function MicroSaaSPage() {
     { name: 'Real Estate', description: 'Property management tools' },']
     { name: 'Manufacturing', description: 'Production optimization' }]
   ]'
-import { Helmet } from 'react-helmet-async;
-const MicroSaaSPage: React.FC = () => {
-  return (';
-    <></>';
-      <Helmet></Helmet>';
-        <title>MicroSaaSPage - Zion Tech Group</title>';
-        <meta name="description" content="MicroSaaSPage - Zion Tech Group" /></meta>
+import { Helmet } from 'react-helmet-async
+const MicroSaaSPage: "React.FC = () => {
+  return (')
+    <></>'
+      <Helmet></Helmet>'
+        <title>MicroSaaSPage - Zion Tech Group</title>'
+        <meta name=description content=MicroSaaSPage - Zion Tech Group /></meta>
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">MicroSaaSPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>}
+      <div>h1</div>
+      <h1>MicroSaaSPage</h1>
+          <p className="text-gray-300">This page is under construction.</p>"}
         </div>}
       </div>})
     </>})

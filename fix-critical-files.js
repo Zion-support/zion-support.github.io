@@ -1,210 +1,168 @@
-#!/usr/bin/env node;
-;
+#!/usr/bin/env node
+
 import fs from 'fs';
-import path from 'path';
+import { glob } from 'glob';
 
-// Function to create a clean, working page component;
-function createCleanPage(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, '') + 'Page';}
-  const pageTitle = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());}
-  }
-  return `import React from "react";}
-import { Helmet } from "react-helmet-async";
-
-const ${componentName} = () => {}
-  return (}
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>}
-      <Helmet></Helmet>}
-        <title>${pageTitle} - Zion Tech Group</title>
-        <meta name="description" content="${pageTitle} - Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-8">${pageTitle}</h1>
-          <p className="text-gray-300 text-lg"></p>
-            This page is under construction. Please check back later.
-          </p>
-        </div>
-      </div>)
-    </div>)
-  );
-};
-
-export default ${componentName};`;
-}
-
-// Function to create a clean main.tsx;
-function createCleanMain() {}
-  return `import React from 'react';}
-import ReactDOM from 'react-dom/client';}
-import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import App from './App';
-import './index.css';
-
-const root = ReactDOM.createRoot()
-  document.getElementById('root') as HTMLElement;
-);
-
-root.render(
-  <React.StrictMode></React>
-    <HelmetProvider></HelmetProvider>
-      <BrowserRouter></BrowserRouter>
-        <App /></App>
-      </BrowserRouter>
-    </HelmetProvider>)
-  </React.StrictMode>)
-);`;
-}
-
-// Function to create a clean App.tsx;
-function createCleanApp() {}
-  return `import React from 'react';}
-import { Routes, Route } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
-// Import pages;
-import HomePage from './page';
-import AboutPage from './about/page';
-import ServicesPage from './services/page';
-import ContactPage from './contact/page';
-
-function App() {
-  return (
-    <div className="App"></div>
-      <Helmet></Helmet>
-        <title>Zion Tech Group - AI and IT Solutions</title>}
-        <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />}
-      </Helmet>}
-      <Routes></Routes>}
-        <Route path="/" element="{<HomePage" />} />
-        <Route path="/about" element="{<AboutPage" />} />
-        <Route path="/services" element="{<ServicesPage" />} />
-        <Route path="/contact" element="{<ContactPage" />} />
-      </Routes>)
-    </div>)
-  );
-}
-
-export default App;`;
-}
-
-// Function to create a clean home page;
-function createCleanHomePage() {}
-  return `import React from 'react';}
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
-const HomePage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet></Helmet>
-        <title>Zion Tech Group - AI and IT Solutions</title>}
-        <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />}
-      </Helmet>}
-      }
-      {/* Hero Section */}
-      <section className="py-20 px-4"></section>
-        <div className="container mx-auto text-center"></div>
-          <h1 className="text-5xl font-bold text-white mb-6"></h1>
-            Welcome to Zion Tech Group;
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-            We are a leading technology company specializing in AI and IT solutions, 
-            dedicated to transforming businesses through innovative technology.
-          </p>
-          <div className="flex flex-col sm: 'flex-row gap-4 justify-center">',
-            <Link;
-              to="/services"
-              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover: 'from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"',
-            ></Link>
-              Our Services;
-            </Link>
-            <Link;
-              to="/contact"
-              className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover: 'bg-purple-400 hover:text-white transition-all duration-300"',
-            ></Link>
-              Get In Touch;
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Preview */}
-      <section className="py-20 px-4"></section>
-        <div className="container mx-auto"></div>
-          <h2 className="text-4xl font-bold text-white text-center mb-12">Our Services</h2>
-          <div className="grid md: 'grid-cols-3 gap-8">',
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
-              <h3 className="text-xl font-semibold text-white mb-4">AI Solutions</h3>
-              <p className="text-gray-300"></p>
-                Cutting-edge artificial intelligence solutions to automate and optimize your business processes.
-              </p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
-              <h3 className="text-xl font-semibold text-white mb-4">IT Services</h3>
-              <p className="text-gray-300"></p>
-                Comprehensive IT services including cloud infrastructure, cybersecurity, and digital transformation.
-              </p>
-            </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
-              <h3 className="text-xl font-semibold text-white mb-4">Consulting</h3>
-              <p className="text-gray-300"></p>
-                Expert consulting services to help you navigate the digital landscape and achieve your goals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>)
-    </div>)
-  );
-};
-
-export default HomePage;`;
-}
-
-// Main execution;
-console.log('Starting critical file fixes...');
-
-// Fix main.tsx;
-const mainPath = './app/main.tsx';
-fs.writeFileSync(mainPath, createCleanMain());
-console.log('Fixed main.tsx');
-
-// Fix App.tsx;
-const appPath = './app/App.tsx';
-fs.writeFileSync(appPath, createCleanApp());
-console.log('Fixed App.tsx');
-
-// Fix home page;
-const homePath = './app/page.tsx';
-fs.writeFileSync(homePath, createCleanHomePage());
-console.log('Fixed page.tsx');
-
-// Fix about page (already done, but ensure it's clean)
-const aboutPath = './app/about/page.tsx';
-if (fs.existsSync(aboutPath)) {
-  const aboutContent = fs.readFileSync(aboutPath, 'utf8');}
-  if (aboutContent.includes('Unterminated string literal') || aboutContent.includes('')) {}
-    fs.writeFileSync(aboutPath, createCleanPage(aboutPath));}
-    console.log('Fixed about/page.tsx');}
-  }
-}
-
-// Fix other critical pages;
-const criticalPages = [
-  './app/services/page.tsx',
-  './app/contact/page.tsx',
-  './app/404.tsx',]
-  './app/not-found.tsx']
+// List of critical files that need to be completely rewritten
+const criticalFiles = [
+  'app/5g-edge-computing/page.tsx',
+  'app/5g-implementation/page.tsx',
+  'app/5g-infrastructure/page.tsx',
+  'app/5g-iot-solutions/page.tsx',
+  'app/5g-mobile-applications/page.tsx',
+  'app/5g-network-infrastructure/page.tsx',
+  'app/5g-network-optimization/page.tsx',
+  'app/5g-private-networks/page.tsx',
+  'app/5g-smart-city-solutions/page.tsx',
+  'app/5g-solutions/page.tsx'
 ];
 
-for (const pagePath of criticalPages) {}
-  if (fs.existsSync(pagePath)) {}
-    fs.writeFileSync(pagePath, createCleanPage(pagePath));}
-    console.log(`Fixed ${pagePath}`);
+// Template for 5G pages
+const create5GPageTemplate = (title, description, keywords) => `import React from 'react';
+import { CheckCircle } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Users } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+
+const Page = () => {
+  const features = [
+    {
+      icon: <CheckCircle className="w-8 h-8" />,
+      title: 'Advanced Features',
+      description: 'Cutting-edge technology for maximum efficiency'
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
+    }
+  ];
+
+  return (
+    <>
+      <EnhancedSEO 
+        title="${title} - Zion Tech Group"
+        description="${description}"
+        keywords="${keywords}"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              ${title}
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              ${description}
+            </p>
+            <div className="flex justify-center space-x-4">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="text-blue-400 mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Page;`;
+
+// Page configurations
+const pageConfigs = {
+  'app/5g-edge-computing/page.tsx': {
+    title: '5G Edge Computing Solutions',
+    description: 'Revolutionary 5G edge computing solutions for ultra-low latency applications',
+    keywords: '5G edge computing, low latency, real-time processing, edge analytics'
+  },
+  'app/5g-implementation/page.tsx': {
+    title: '5G Implementation Services',
+    description: 'Complete 5G implementation services for enterprise businesses',
+    keywords: '5G implementation, 5G deployment, enterprise 5G, 5G services'
+  },
+  'app/5g-infrastructure/page.tsx': {
+    title: '5G Infrastructure Solutions',
+    description: 'Comprehensive 5G infrastructure solutions for modern businesses',
+    keywords: '5G infrastructure, 5G network, 5G deployment, network infrastructure'
+  },
+  'app/5g-iot-solutions/page.tsx': {
+    title: '5G IoT Solutions',
+    description: 'Advanced 5G IoT solutions for connected devices and smart systems',
+    keywords: '5G IoT, internet of things, connected devices, smart systems'
+  },
+  'app/5g-mobile-applications/page.tsx': {
+    title: '5G Mobile Applications',
+    description: 'Next-generation 5G mobile applications for enhanced user experiences',
+    keywords: '5G mobile apps, mobile development, 5G applications, mobile solutions'
+  },
+  'app/5g-network-infrastructure/page.tsx': {
+    title: '5G Network Infrastructure',
+    description: 'Robust 5G network infrastructure solutions for enterprise connectivity',
+    keywords: '5G network, network infrastructure, enterprise connectivity, 5G solutions'
+  },
+  'app/5g-network-optimization/page.tsx': {
+    title: '5G Network Optimization',
+    description: 'Advanced 5G network optimization services for peak performance',
+    keywords: '5G optimization, network performance, 5G tuning, network efficiency'
+  },
+  'app/5g-private-networks/page.tsx': {
+    title: '5G Private Networks',
+    description: 'Secure 5G private network solutions for enterprise environments',
+    keywords: '5G private networks, enterprise 5G, secure networks, private 5G'
+  },
+  'app/5g-smart-city-solutions/page.tsx': {
+    title: '5G Smart City Solutions',
+    description: 'Innovative 5G smart city solutions for urban transformation',
+    keywords: '5G smart cities, urban technology, smart city solutions, 5G infrastructure'
+  },
+  'app/5g-solutions/page.tsx': {
+    title: '5G Solutions',
+    description: 'Comprehensive 5G solutions for modern business needs',
+    keywords: '5G solutions, 5G technology, business 5G, 5G services'
   }
+};
+
+async function main() {
+  console.log('Fixing critical files...');
+  
+  for (const file of criticalFiles) {
+    try {
+      const config = pageConfigs[file];
+      if (config) {
+        const content = create5GPageTemplate(config.title, config.description, config.keywords);
+        fs.writeFileSync(file, content, 'utf8');
+        console.log(`Fixed: ${file}`);
+      }
+    } catch (error) {
+      console.error(`Error fixing ${file}:`, error.message);
+    }
+  }
+  
+  console.log('Critical files fixed!');
 }
 
-console.log('Critical file fixes completed!');
+main().catch(console.error);

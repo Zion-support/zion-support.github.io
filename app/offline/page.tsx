@@ -23,35 +23,34 @@ import { Cpu } from 'lucide-react'
 import { Wifi } from 'lucide-react'
 import { Building2 } from 'lucide-react'
 import { Briefcase } from 'lucide-react'
-import { Lightbulb } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO;
-';
-const Page = () => {';
-  const features = [';
+import { Lightbulb } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import EnhancedSEO from '../components/EnhancedSEO
+'
+const Page = () => {
+  const features = [']
     {';}
-      icon: <CheckCircle className="w-8 h-8" />,'}
+      icon: "<CheckCircle className="w-8" h-8 />",'}
       title: 'Advanced Features','}
       description: 'Cutting-edge technology for maximum efficiency'}
     },
     {}
-      icon: <Shield className="w-8 h-8" />,'}
+      icon: "<Shield className="w-8" h-8 />",'}
       title: 'Secure & Reliable','}
       description: 'Enterprise-grade security and 99.9% uptime'}
     },
     {}
-      icon: <Users className="w-8 h-8" />,'}
+      icon: "<Users className="w-8" h-8 />",'}
       title: 'Expert Support','}
       description: '24/7 support from our team of specialists'}]
     }]
-  ];
+  ]
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20"></div>
-      <div className="container mx-auto px-4">;
-        <h1 className="text-4xl font-bold mb-8">Offline</h1>;
-        <p className="text-gray-300 text-lg">;
-          This page is under development.;
-        </p>;
+    <div>div</div>
+      <div>)
+        <h1 className="text-4xl font-bold mb-8">Offline
+        <p className="text-gray-300 text-lg">
+          This page is under development.
       </div>)
     </div>)
   );}

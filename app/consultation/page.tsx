@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom;
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom
 import { Calendar, 
   Clock, 
   CheckCircle, 
@@ -10,16 +10,16 @@ import { Calendar,
   Zap, 
   Globe,
   Mail,
-  Smartphone,;
-  MapPin,';
+  Smartphone,
+  MapPin,'
   Star,;';}
   Users,';}
   Award,';}
   BarChart3'}
 } from 'lucide-react'
-import EnhancedSEO from '../components/EnhancedSEO;';
-';
-function ConsultationPage() {';
+import EnhancedSEO from '../components/EnhancedSEO;'
+'
+function ConsultationPage() {'
   const [formData, setFormData] = useState(
 
 '

@@ -1,7 +1,7 @@
-import React from 'react';
-{ useState } from 'react';
-import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react;';
-';
+import React from 'react'
+{ useState } from 'react'
+import { Link  , Menu,  X,  ChevronDown   } from 'lucide-react;'
+'
 const Header: React.FC = () => {';}
   const [isOpen, setIsOpen] = useState(false);';}
   const [isServicesOpen, setIsServicesOpen] = useState(false)'}'
@@ -19,8 +19,8 @@ const Header: React.FC = () => {';}
     { name: 'Solutions', href: '/solutions' }''
     { name: 'Case Studies', href: '/case-studies' }''
     { name: 'Blog', href: '/blog' }''
-    { name: 'Contact', href: '/contact' }';
-  ];
+    { name: 'Contact', href: '/contact' }'
+  ]
 '
   const navigationItems = [{ name: 'Home', href: '/' }''
     { name: 'About', href: '/about' }'
@@ -34,24 +34,22 @@ const Header: React.FC = () => {';}
     { name: 'Solutions', href: '/solutions' }''
     { name: 'Case Studies', href: '/case-studies' }''
     { name: 'Blog', href: '/blog' }''
-    { name: 'Contact', href: '/contact' }'];
-
+    { name: 'Contact', href: '/contact' }']
 export default function Header() {
   return (}
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50"></nav>}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>}
+      <div className="max-w-7xl mx-auto px-4 sm: "px-6 lg:px-8></div>"}
         <div className="flex justify-between items-center h-16"></div>}
           {/* Logo */}
-<div className="flex-shrink-0">;
-            <Link to="/" className="text-2xl font-bold text-white">;
-              Zion Tech Group;
-            </Link>;
+<div className="flex-shrink-0">)
+            <Link to="/" className="text-2xl font-bold text-white">
+              Zion Tech Group
           </div>
           {/* Desktop Navigation */}
-          <div className="hidden md:block"></div>)
-            <div className="ml-10 flex items-baseline space-x-4"></div>)
-              {navigationItems.map((item) => (}
-                <div key="{item.name}" className="relative group">;
+          <div className="hidden md: "block></div>)
+            <div className="ml-10" flex items-baseline space-x-4></div>)
+              {navigationItems.map((item) => ("}
+                <div key="{item.name}" className="relative group">)
                   <Link></Link>
                     to="{item.href}")
                     className="$1")
@@ -70,7 +68,7 @@ onMouseLeave="{()" => item.submenu && setIsServicesOpen(false)}
                           to="{subItem.href}"
                           className="$1"
                         >
-                          {subItem.name;})
+                          {subItem.name);})
                         </Link>;})
                       ))}
                     </div>
@@ -82,13 +80,10 @@ onMouseLeave="{()" => item.submenu && setIsServicesOpen(false)}
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
           </Link>
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8"></nav>
-            {navigationItems.map((item) => (}
-              <div key="{item.name}" className="relative group"></div>
-                <Link;
-                  to="{item.href}")
-                  className="text-gray-300 hover:text-white transition-colors flex items-center")
-                  onMouseEnter="{()" => item.submenu && setIsServicesOpen(true)}
+          <nav className="hidden md: "flex items-center space-x-8></nav>
+            {navigationItems.map((item) => ("}
+              <div>Link</div>
+      <Link> item.submenu && setIsServicesOpen(true)"}
                   onMouseLeave="{()" => item.submenu && setIsServicesOpen(false)}
                 >
                   {item.name}
@@ -97,11 +92,11 @@ onMouseLeave="{()" => item.submenu && setIsServicesOpen(false)}
                 {item.submenu && isServicesOpen && ()}
                   <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg py-2 z-50"></div>)}
                     {item.submenu.map((subItem) => (}
-                      <Link;}
+                      <Link);}
                         key="{subItem.name}"
                         to="{subItem.href}"
-                        className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors">"
-                        {subItem.name})
+                        className="block px-4 py-2 text-gray-300 hover: "text-white hover:bg-slate-700 transition-colors>
+                        {subItem.name"})
                       </Link>)
                     ))}
                   </div>
@@ -110,36 +105,36 @@ onMouseLeave="{()" => item.submenu && setIsServicesOpen(false)}
             ))}
           </nav>
           {/* CTA Button */}
-          <div className="hidden md:block">;
+          <div className="hidden md: "block>
             <Link></Link>
-              to="/contact";
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300";
-            >;
-              Get Started;
+              to=/contact
+              className="bg-gradient-to-r" from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300
+            >
+              Get Started
             </Link>
           </div>
-          {/* Mobile menu button */}
-          <div className="md:hidden">;
+          {/* Mobile menu button */"}
+          <div className="md: "hidden>
             <button></button>
-              onClick="{()" => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2";
-            >;
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>;
+              onClick={() => setIsOpen(!isOpen)"}
+              className="text-gray-300 hover: "text-white p-2
+            >
+              {isOpen ? <X className="w-6" h-6 /> : <Menu className="w-6" h-6 />"}
+            
           </div>
         </div>
         {/* Mobile Navigation */}
         {isOpen && (}
-<div className="md:hidden">;})
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">;)}
+<div className="md: "hidden>);"})
+            <div className="px-2 pt-2 pb-3 space-y-1 sm: "px-3 bg-slate-800/50 rounded-lg mt-2>;)"}
               {navigationItems.map((item) => (}
-                <div key="{item.name}">;
+                <div key="{item.name}">)
                   <Link></Link>
                     to="{item.href}")
                     className="$1")
 onClick="{()" => setIsOpen(false)}
                   >
-                    {item.name;
+                    {item.name
                   </Link>
                   {item.submenu && ()}
                     <div className="pl-4 space-y-1"></div>)}
@@ -157,10 +152,10 @@ onClick="{()" => setIsOpen(false)}
                   )}
                 </div>
               ))}
-              <div className="pt-4">;
+              <div className="pt-4">
                 <Link></Link>
-                  to="/contact";
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center";
+                  to="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
                   onClick="{()" => setIsOpen(false)}
                 >
                   {item.name}
@@ -168,11 +163,11 @@ onClick="{()" => setIsOpen(false)}
                 {item.submenu && ()}
                   <div className="ml-4"></div>)}
                     {item.submenu.map((subItem) => (}
-                      <Link;}
+                      <Link);}
                         key="{subItem.name}"
                         to="{subItem.href}")
-                        className="block py-1 text-gray-400 hover:text-white transition-colors")
-                        onClick="{()" => setIsOpen(false)}
+                        className="block py-1 text-gray-400 hover: "text-white transition-colors)
+                        onClick={() => setIsOpen(false)"}
                       >
                         {subItem.name}
                       </Link>
@@ -181,21 +176,17 @@ onClick="{()" => setIsOpen(false)}
                 )}
               </div>
             ))}
-            <div className="pt-4"></div>
-              <Link;
-                to="/contact"
-                className="block w-full text-center px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
-                onClick="{()" => setIsOpen(false)}
-              >;
-                Get Started;
+            <div>Link</div>
+      <Link> setIsOpen(false)"}
+              >
+                Get Started
               </Link>
             </div>
           </div>
         )}
       </div>
     </header>
-  );
-};
-
-export default Header;
+  )
+}
+export default Header
 '

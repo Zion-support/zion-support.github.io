@@ -1,6 +1,6 @@
-import React, { Component, ReactNode } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowPathIcon, HomeIcon } from '@heroicons/react/24/outline;
+import React, { Component, ReactNode } from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowPathIcon, HomeIcon } from '@heroicons/react/24/outline
 interface Props {}
   children: ReactNode;}
   fallback?: ReactNode;}
@@ -14,12 +14,12 @@ interface State {}
 
 class ErrorBoundary extends Component<Props, State> {
     constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = {}
       hasError: false,}
       error: null,}
       errorInfo: null}
-    };
+    }
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -27,24 +27,24 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: true,}
       error,}
       errorInfo: null}
-    };
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: any) {}
     this.setState({}
-      error,}';)
-      errorInfo})';
-    });';
-';
+      error,}');)
+      errorInfo})'
+    });'
+'
     // Log error to console in development'
     if (process.env.NODE_ENV ="==" 'development') {'}
-      console.error('ErrorBoundary caught an error:', error, errorInfo);}
+      console.error('ErrorBoundary caught an error: '', error, errorInfo);}
     }
 
     // Log error to external service in production'
     if (process.env.NODE_ENV ="==" 'production') {}
       // Here you would typically send the error to a service like Sentry'}
-      console.error('ErrorBoundary caught an error:', error, errorInfo);}
+      console.error('ErrorBoundary caught an error: '', error, errorInfo);}
     }
   }
 
@@ -53,9 +53,8 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: false,}
       error: null,})
       errorInfo: null})
-    });
-  };
-
+    })
+  }
   render() {
     if (this.state.hasError) {
       return (
@@ -68,7 +67,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4"></h1>
-              Something went wrong
+              Something went wrong)
             </h1>
             
             <p className="text-gray-300 mb-6"></p>'
@@ -76,9 +75,9 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             '
             {process.env.NODE_ENV ="==" 'development' && this.state.error && (
-              <details className="mb-6 text-left"></details>
-                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white"></summary>
-                  Show Error Details}
+              <details>summary</details>
+      <summary></summary>
+                  Show Error Details"}
                 </summary>}
                 <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto"></div>}
                   <div className="mb-2"></div>}
@@ -93,17 +92,16 @@ class ErrorBoundary extends Component<Props, State> {
                     )
                   </div>
                 )
-                <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center"></div>"
-                  <button;
-                    onClick="{()" => window.location.reload()"
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                  >"
-                    <RefreshCw className="w-4 h-4 mr-2" />"
-                    Refresh Page;
+                <div>button</div>
+      <button> window.location.reload()
+                    className="inline-flex" items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
+                  >
+                    <RefreshCw className="w-4" h-4 mr-2 />
+                    Refresh Page
                   </button>
                   <Link"}
                     to="/"}
-                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">"}
+                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: "bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500>"}
                     <Home className="w-4 h-4 mr-2" />"}
                     Go Home}
                   </Link>
@@ -111,28 +109,24 @@ class ErrorBoundary extends Component<Props, State> {
               </details>
             )}
 
-            <div className="space-y-3"></div>
-              <button
-                onClick="{()" => window.location.reload()}
-                className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors"
+            <div>button</div>
+      <button> window.location.reload()}
+                className="flex items-center justify-center gap-2 bg-purple-600 hover: "bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors
               >
-                <ArrowPathIcon className="w-5 h-5" /></ArrowPathIcon>
+                <ArrowPathIcon className="w-5" h-5 /></ArrowPathIcon>
                 Try Again
               </button>
               
-              <Link
-                to="/"
-                className="w-full border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
-              ></Link>
-                <HomeIcon className="w-5 h-5" /></HomeIcon>
+              <Link>HomeIcon</Link>
+      <HomeIcon></HomeIcon>
                 Go Home
               </Link>
             </div>
 
-            <div className="mt-6 pt-6 border-t border-slate-700"></div>
-              <p className="text-sm text-gray-400"></p>'
-                If this problem persists, please{' '}
-                <Link to="/contact" className="text-purple-400 hover:text-purple-300"></Link>
+            <div>p</div>
+      <p></p>'
+                If this problem persists", please{' '}
+                <Link to="/contact" className="text-purple-400 hover: "text-purple-300></Link>
                   contact our support team
                 </Link>
               </p>
@@ -140,11 +134,11 @@ class ErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       )
-    }
+    "}
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary
 '
