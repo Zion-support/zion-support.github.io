@@ -1,3 +1,4 @@
 // next.d - Basic implementation
 export default function next.d() {
   return null;
+}

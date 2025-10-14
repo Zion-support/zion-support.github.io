@@ -35,7 +35,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         link.href = resource;
         link.as = resource.endsWith('.css') ? 'style' : 'script';
         document.head.appendChild(link);
-      );
+      });
     };
 
     // Run optimizations

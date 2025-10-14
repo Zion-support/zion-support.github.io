@@ -1,3 +1,4 @@
-// 5GSolutionsPage - Basic implementation
-export default function 5GSolutionsPage() {
+// FiveGSolutionsPage - Basic implementation
+export default function FiveGSolutionsPage() {
   return null;
+}

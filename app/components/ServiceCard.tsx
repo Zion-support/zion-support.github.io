@@ -1,23 +1,27 @@
 'use client';
-export default function ServiceCard() {
-  return (
-    <div>Page content</div>
-  );
 
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+  className?: string;
+}
+
+export default function ServiceCard({ 
+  title, 
+  description, 
+  icon, 
+  className = '' 
+}: ServiceCardProps) {
   return (
-    <div>Page content</div>
-  );
-    <div>
-      </div>
-      <div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-30o0 text-lg">
-          This page is under development.;
-        </p>
-      </div>
+    <div className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${className}`}>
+      {icon && (
+        <div className="mb-4">
+          {icon}
+        </div>
+      )}
+      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
-
-        </p></div></div>
-  );}
+}
