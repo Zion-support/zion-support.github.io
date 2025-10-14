@@ -10,6 +10,6 @@ export default function WhitepapersPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

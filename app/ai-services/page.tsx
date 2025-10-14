@@ -1,34 +1,34 @@
 
 const AiServicesPage: React.FC = () => {
   const services = [{
-      icon: Brain,'
-      title: 'AI Consulting',';
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',';
-      color: 'from-purple-500 to-pink-500'';}
+      icon: Brain,
+      title: 'AI Consulting',
+      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: BarChart3,'
-      title: 'AI Analytics',';
-      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',';
-      color: 'from-blue-500 to-cyan-500'';}
+      icon: BarChart3,
+      title: 'AI Analytics',
+      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Zap,'
-      title: 'AI Automation',';
-      description: 'Intelligent automation solutions to streamline your business processes.',';
-      color: 'from-green-500 to-emerald-500'';}
+      icon: Zap,
+      title: 'AI Automation',
+      description: 'Intelligent automation solutions to streamline your business processes.',
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: FileText,'
-      title: 'AI Content Generation',';
-      description: 'AI-powered content creation for marketing, documentation, and communication.',';
-      color: 'from-orange-500 to-red-500'';}
+      icon: FileText,
+      title: 'AI Content Generation',
+      description: 'AI-powered content creation for marketing, documentation, and communication.',
+      color: 'from-orange-500 to-red-500'
     },
     {
-      icon: MessageSquare,'
-      title: 'AI Customer Service',';
-      description: 'Intelligent chatbots and customer service solutions powered by AI.',';
-      color: 'from-indigo-500 to-purple-500'';}
+      icon: MessageSquare,
+      title: 'AI Customer Service',
+      description: 'Intelligent chatbots and customer service solutions powered by AI.',
+      color: 'from-indigo-500 to-purple-500'
     },
     {
 
@@ -39,23 +39,23 @@ const AiServicesPage: React.FC = () => {
   const testimonials = [{
       name: "Dr. Sarah Johnson",
       company: "MedTech Solutions",
-      role: "CTO",'
-      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",';
-      rating: 5;}
+      role: "CTO",
+      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",
+      rating: 5
     },
     {
       name: "Michael Chen",
       company: "E-commerce Plus",
-      role: "CEO",'
-      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",';
-      rating: 5;}
+      role: "CEO",
+      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",
+      rating: 5
     },
     {
       name: "Emily Rodriguez",
       company: "FinanceFlow",
       role: "Head of Analytics",
       content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
-      rating: 5;}
+      rating: 5
     }
   ];
 
@@ -164,4 +164,4 @@ const AiServicesPage: React.FC = () => {
   );
 };
 
-export default AiServicesPage;'
+export default AiServicesPage;

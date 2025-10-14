@@ -11,6 +11,6 @@ export default function ZionAiTestingAutomationPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

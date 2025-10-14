@@ -66,7 +66,7 @@ export default function Infrastructure() {
         </div>
       </div>
     </div>
-  );}
+  );
 }
 
 '

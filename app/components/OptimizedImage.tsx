@@ -42,7 +42,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observer.disconnect();}
+          observer.disconnect();
         }
       },
       {
@@ -52,7 +52,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     );
 
     if (imgRef.current) {
-      observer.observe(imgRef.current);}
+      observer.observe(imgRef.current);
     }
 
     return () => observer.disconnect();
@@ -60,12 +60,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();}
+    onLoad?.();
   };
 
   const handleError = () => {
     setIsError(true);
-    onError?.();}
+    onError?.();
   };
 
   // Generate WebP src if supported

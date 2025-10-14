@@ -28,7 +28,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({'
       document.head.appendChild(script);
       return () => {
         if (document.head.contains(script)) {
-          document.head.removeChild(script);}
+          document.head.removeChild(script);
         }
       };
     }

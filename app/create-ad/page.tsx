@@ -10,6 +10,6 @@ export default function CreateAdPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

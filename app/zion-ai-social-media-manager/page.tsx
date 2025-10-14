@@ -65,6 +65,6 @@ export default function ZionAISocialMediaManager() {
         </div>
       </div>
     </div>
-  );}
+  );
 }
 '

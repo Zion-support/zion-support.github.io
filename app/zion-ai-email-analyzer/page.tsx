@@ -65,6 +65,6 @@ export default function ZionAIEmailAnalyzer() {
         </div>
       </div>
     </div>
-  );}
+  );
 }
 '

@@ -10,6 +10,5 @@ export default function AiNlpTextAnalysisPage() {
         </p>;
       </div>
     </div>
-  );}
-}
-'
+  );
+};

@@ -10,6 +10,5 @@ export default function AiDataAnalyticsPage() {
         </p>;
       </div>
     </div>
-  );}
-}
-'
+  );
+};

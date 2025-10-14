@@ -41,7 +41,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development'
     if (process.env.NODE_ENV === 'development') {'
-      console.error('Error caught by boundary:', error, errorInfo);}
+      console.error('Error caught by boundary:', error, errorInfo);
     }
 
     // Call custom error handler
@@ -49,7 +49,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log error to external service in production'
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);}
+      this.logErrorToService(error, errorInfo);
     }
   }
 
@@ -72,7 +72,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       '
       console.error('Error logged to service:', errorData);
     } catch (loggingError) {'
-      console.error('Failed to log error to service:', loggingError);}
+      console.error('Failed to log error to service:', loggingError);
     }
   };
 
@@ -86,7 +86,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private handleReload = () => {
-    window.location.reload();}
+    window.location.reload();
   };
 
   private handleGoHome = () => {'
@@ -186,7 +186,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </div>
               </div>
 
-              {/* Development Error Details */}'
+              {/* Development Error Details */
               {process.env.NODE_ENV === 'development' && this.state.error && (
                 <details className="mt-6 text-left">
                   <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">

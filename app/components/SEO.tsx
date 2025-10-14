@@ -86,19 +86,19 @@ const SEO: React.FC<SEOProps> = ({'
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
 
-      {/* Article specific meta tags */}'
+      {/* Article specific meta tags */
       {type === 'article' && publishedTime && (}
         <meta property="article:published_time" content={publishedTime} />
-      )}'
+      )
       {type === 'article' && modifiedTime && (}
         <meta property="article:modified_time" content={modifiedTime} />
-      )}'
+      )
       {type === 'article' && author && (}
         <meta property="article:author" content={author} />
-      )}'
+      )
       {type === 'article' && section && (}
         <meta property="article:section" content={section} />
-      )}'
+      )
       {type === 'article' && tags.length > 0 && (
         tags.map((tag, index) => (}
           <meta key={index} property="article:tag" content={tag} />

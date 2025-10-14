@@ -10,6 +10,6 @@ export default function ZionAiDocumentProcessorPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

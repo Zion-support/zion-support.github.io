@@ -10,6 +10,6 @@ export default function ZionAiApiManagerPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

@@ -10,6 +10,6 @@ export default function ZionAiLeadScoringPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

@@ -16,8 +16,8 @@ import {
   CogIcon,
   EyeIcon,
   ChatBubbleLeftRightIcon,
-  DocumentTextIcon,;
-  LightBulbIcon;'}
+  DocumentTextIcon,
+  LightBulbIcon
 } from '@heroicons/react/24/outline';
 export default function AISolutionsPage() {
   const aiServices = [{
@@ -29,13 +29,13 @@ export default function AISolutionsPage() {
         "A/B testing framework",
         "Model performance monitoring",
         "Automated retraining",
-        "Edge deployment";
+        "Edge deployment"
       ],
       color: "from-purple-500 to-pink-500",
       price: "Starting at $3,500/month",
       benefits: ["95% accuracy", "Real-time processing", "Custom algorithms"],
       useCases: ["Predictive analytics", "Recommendation engines", "Fraud detection"],
-      href: "/ai-machine-learning";}
+      href: "/ai-machine-learning"
     },
     {
       title: "Natural Language Processing",
@@ -46,13 +46,13 @@ export default function AISolutionsPage() {
         "Language translation",
         "Named entity recognition",
         "Text summarization",
-        "Conversational AI";
+        "Conversational AI"
       ],
       color: "from-blue-500 to-indigo-500",
       price: "Starting at $2,200/month",
       benefits: ["Multi-language support", "Real-time analysis", "High accuracy"],
       useCases: ["Customer feedback analysis", "Content moderation", "Chatbots"],
-      href: "/ai-nlp";}
+      href: "/ai-nlp"
     },
     {
       title: "Computer Vision",
@@ -63,13 +63,13 @@ export default function AISolutionsPage() {
         "Facial recognition",
         "OCR technology",
         "Video analysis",
-        "Quality inspection";
+        "Quality inspection"
       ],
       color: "from-green-500 to-emerald-500",
       price: "Starting at $2,800/month",
       benefits: ["99.5% accuracy", "Real-time processing", "Multi-format support"],
       useCases: ["Quality control", "Security monitoring", "Medical imaging"],
-      href: "/ai-computer-vision";}
+      href: "/ai-computer-vision"
     },
     {
       title: "Predictive Analytics",

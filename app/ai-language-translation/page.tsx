@@ -10,6 +10,5 @@ export default function AiLanguageTranslationPage() {
         </p>;
       </div>
     </div>
-  );}
-}
-'
+  );
+};

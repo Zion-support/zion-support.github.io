@@ -1,1 +1,1 @@
-/* global describe, test, expect, it, beforeEach */
+// Removed global declarations as they are already defined in ESLint config

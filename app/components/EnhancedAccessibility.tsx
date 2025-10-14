@@ -14,7 +14,7 @@ import React from 'react';
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);}
+      document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
     const enhanceFocusManagement = () => {
@@ -45,7 +45,7 @@ import React from 'react';
       const buttons = document.querySelectorAll('button:not([aria-label])');
       buttons.forEach((button) => {
         if (!button.textContent?.trim()) {'
-          button.setAttribute('aria-label', 'Button');}
+          button.setAttribute('aria-label', 'Button');
         }
       });
 
@@ -63,12 +63,12 @@ import React from 'react';
       // Enhanced keyboard navigation;'
       document.addEventListener('keydown', (e) => {';
         if (e.key === 'Tab') {';
-          document.body.classList.add('keyboard-navigation');}
+          document.body.classList.add('keyboard-navigation');
         }
       });
 '
       document.addEventListener('mousedown', () => {';
-        document.body.classList.remove('keyboard-navigation');}
+        document.body.classList.remove('keyboard-navigation');
       });
     };
 
@@ -86,7 +86,7 @@ import React from 'react';
 
   useEffect(() => {
     applyAccessibilitySettings(settings);'
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings));}
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
 
   const applyAccessibilitySettings = (settings: AccessibilitySettings) => {
@@ -94,9 +94,9 @@ import React from 'react';
     
     // Apply high contrast
     if (settings.highContrast) {'
-      root.classList.add('high-contrast');}
+      root.classList.add('high-contrast');
     } else {'
-      root.classList.remove('high-contrast');}
+      root.classList.remove('high-contrast');
     }
 
     // Apply font size'
@@ -107,9 +107,9 @@ import React from 'react';
 
     // Apply reduced motion
     if (settings.reducedMotion) {'
-      root.classList.add('reduced-motion');}
+      root.classList.add('reduced-motion');
     } else {'
-      root.classList.remove('reduced-motion');}
+      root.classList.remove('reduced-motion');
     }
   };
 
@@ -122,7 +122,7 @@ import React from 'react';
   };
 
   const toggleVisibility = () => {
-    setIsVisible(prev => !prev);}
+    setIsVisible(prev => !prev);
   };
 
   // Add CSS for accessibility features
@@ -131,7 +131,7 @@ import React from 'react';
     style.id = 'enhanced-accessibility-styles';
     style.textContent = `
       .high-contrast {
-        filter: contrast(150%) brightness(110%);}
+        filter: contrast(150%) brightness(110%);
       }
 
       .font-size-small {
@@ -197,7 +197,7 @@ import React from 'react';
     return () => {'
       const existingStyle = document.getElementById('enhanced-accessibility-styles');
       if (existingStyle) {
-        existingStyle.remove();}
+        existingStyle.remove();
       }
     };
   }, []);

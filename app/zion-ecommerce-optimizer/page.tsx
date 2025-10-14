@@ -10,6 +10,6 @@ export default function ZionEcommerceOptimizerPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

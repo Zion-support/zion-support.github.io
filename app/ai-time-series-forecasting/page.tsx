@@ -10,6 +10,6 @@ export default function AiTimeSeriesForecastingPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

@@ -10,6 +10,6 @@ export default function ZionAiExpenseTrackerPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

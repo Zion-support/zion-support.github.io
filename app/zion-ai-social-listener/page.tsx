@@ -10,6 +10,6 @@ export default function ZionAiSocialListenerPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

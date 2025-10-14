@@ -11,7 +11,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const images = document.querySelectorAll('img');
       images.forEach((img) => {'
         if (!img.hasAttribute('loading')) {';
-          img.setAttribute('loading', 'lazy');}
+          img.setAttribute('loading', 'lazy');
         }
       });
     };
@@ -24,7 +24,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       link.as = 'font';
       link.type = 'font/woff2';
       link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);}
+      document.head.appendChild(link);
     };
 
     const optimizeResources = () => {
@@ -38,7 +38,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         link.rel = 'preload';
         link.href = resource;'
         link.as = resource.endsWith('.css') ? 'style' : 'script';
-        document.head.appendChild(link);}
+        document.head.appendChild(link);
       });
     };
 

@@ -10,6 +10,5 @@ export default function AiDataMiningProPage() {
         </p>;
       </div>
     </div>
-  );}
-}
-'
+  );
+};

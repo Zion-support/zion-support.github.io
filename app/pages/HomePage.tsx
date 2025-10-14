@@ -236,4 +236,3 @@ import { services } from '../data/servicesData';
       </section>
     </>
   );
-}'

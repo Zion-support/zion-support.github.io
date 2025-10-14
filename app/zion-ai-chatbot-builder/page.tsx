@@ -10,6 +10,6 @@ export default function ZionAiChatbotBuilderPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

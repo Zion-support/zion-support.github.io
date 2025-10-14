@@ -10,6 +10,6 @@ export default function ZionAiMobileAppBuilderPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

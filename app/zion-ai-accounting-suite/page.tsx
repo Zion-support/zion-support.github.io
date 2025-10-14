@@ -10,6 +10,6 @@ export default function ZionAiAccountingSuitePage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

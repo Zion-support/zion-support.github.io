@@ -10,6 +10,6 @@ export default function ZionHrAssistantProPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

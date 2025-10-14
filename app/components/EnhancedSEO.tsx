@@ -67,7 +67,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullCanonicalUrl} />
       
-      {/* Robots */}'
+      {/* Robots */
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
       
       {/* Open Graph */}

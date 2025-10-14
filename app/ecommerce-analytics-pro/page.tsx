@@ -9,6 +9,6 @@ export default function EcommerceAnalyticsProPage() {
         </p>;
       </div>
     </div>
-  );}
+  );
 }
 '

@@ -1,5 +1,5 @@
 import React from 'react';
-/* global describe, test, expect, it, beforeEach */
+
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -9,4 +9,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-'
