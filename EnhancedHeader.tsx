@@ -1,56 +1,70 @@
 import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 const EnhancedHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
-    
-    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 fixed w-full top-0 z-50"></header>
-      <div>
-    <div className="flex items-center justify-between h-16"></div>
+    <header className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 fixed w-full top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2"></Link>
-            <div>
-    <span className="text-white font-bold text-lg">Z</span>
+          <Link to="/" className="flex items-center space-x-2">
+            <span className="text-white font-bold text-lg">Z</span>
             <span className="text-white font-bold text-xl">Zion Tech Group</span>
+          </Link>
+          
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8"></nav>
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Home
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
               About
-            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Services
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
               Contact
             </Link>
           </nav>
+          
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"></button>
-            {isMenuOpen ? <X className="w-6 h-6"> : <Menu className="w-6 h-6">}
+            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+        
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div>
-    <nav className="flex flex-col space-y-4"></nav>
-              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
+          <div className="md:hidden">
+            <nav className="flex flex-col space-y-4 py-4">
+              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Home
-              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 About
-              <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
+              </Link>
+              <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Services
-              <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
                 Contact
               </Link>
             </nav>
           </div>
         )}
-  )
-}
-export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></nav>'
+      </div>
+    </header>
+  );
+};
+
+export default EnhancedHeader;
