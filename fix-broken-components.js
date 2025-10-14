@@ -1,2 +1,2 @@
-// fix-broken-components.js - Under development;
-console.log('fix-broken-components.js loaded');';
+// fix-broken-components.js - Under development
+console.log('fix-broken-components.js loaded');''

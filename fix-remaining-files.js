@@ -1,2 +1,2 @@
-// fix-remaining-files.js - Under development;
-console.log('fix-remaining-files.js loaded');';
+// fix-remaining-files.js - Under development
+console.log('fix-remaining-files.js loaded');''

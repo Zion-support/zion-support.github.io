@@ -1,20 +1,21 @@
-#!/usr/bin/env node;
-import fs from "fs";
-// Read the Footer component";
-const content = fs.readFileSync("/workspace/app/components/Footer.tsx", "utf8");
-// Fix the malformed services array line;
-let fixed = content;
-// Replace the entire malformed line with properly formatted services;
-fixed = fixed.replace("
-  /{ name="AI Solutions, href: "\/ai-solutions" },    { name="Cybersecurity", href="\/cybersecurity" },    { name="Cloud Infrastructure", href="\/cloud-infrastructure },    { name: "Digital Transformation, href="\/digital-transformation },    { name="IT Services", href="\/it-services },"    { name="Micro SAAS", href="\/micro-saas }/g,"
-  `{ name: "AI Solutions", href: "/ai-solutions" },``"`
-    { name: "Cybersecurity", href: "/cybersecurity" },"
-    { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },"
-    { name: "Digital Transformation", href: "/digital-transformation" },"
-    { name: "IT Services", href: "/it-services" },"
+#!/usr/bin/env node
+import fs from "fs""
+// Read the Footer component""
+const content = fs.readFileSync("/workspace/app/components/Footer.tsx", "utf8")
+// Fix the malformed services array line
+let fixed = content
+// Replace the entire malformed line with properly formatted services"
+fixed = fixed.replace(""
+  /{ name="AI Solutions, href: "\/ai-solutions" },    { name="Cybersecurity", href="\/cybersecurity" },    { name="Cloud Infrastructure", href="\/cloud-infrastructure },    { name: "Digital Transformation, href="\/digital-transformation },    { name="IT Services", href="\/it-services },"    { name="Micro SAAS", href="\/micro-saas }/g,""
+  `{ name: "AI Solutions", href: "/ai-solutions" },``"`"
+    { name: "Cybersecurity", href: "/cybersecurity" },""
+    { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },""
+    { name: "Digital Transformation", href: "/digital-transformation" },""
+    { name: "IT Services", href: "/it-services" },""
     { name: "Micro SAAS", href: "/micro-saas" }`,)"``"`
-);
-// Write the fixed content back"
-fs.writeFileSync("/workspace/app/components/Footer.tsx", fixed, "utf8");"
-console.log("Fixed Footer services array line");
+)"
+// Write the fixed content back""
+fs.writeFileSync("/workspace/app/components/Footer.tsx", fixed, "utf8");""
+console.log("Fixed Footer services array line")"
+"
 "

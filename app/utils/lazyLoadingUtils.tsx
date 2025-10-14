@@ -1,4 +1,4 @@
-// LazyLoadingUtils - Basic implementation;
+// LazyLoadingUtils - Basic implementation
 export default function LazyLoadingUtils() {
-  return null;
+  return null
 }
