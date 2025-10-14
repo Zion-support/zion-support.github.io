@@ -1,4 +1,3 @@
-'use client';'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -19,7 +18,7 @@ import {
   CogIcon
 } from '@heroicons/react/24/outline';
 
-export default function MicroSaaSSolutionsPage()   {
+export default function MicroSaaSSolutionsPage() {
   const microSaaSProducts = [
     {
       title: "AI-Powered Analytics Dashboard",
@@ -459,25 +458,252 @@ export default function MicroSaaSSolutionsPage()   {
       href: "/ai-event-management"
     }
   ];
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const MicroSaaSSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Micro SaaS solutions from Zion Tech Group" />
+        <meta name="description" content="Comprehensive micro SaaS solutions including AI-powered analytics, content management, customer support, project management, and more. Transform your business with intelligent software solutions." />
+        <meta name="keywords" content="micro SaaS, AI-powered software, business automation, analytics dashboard, content management, customer support, project management" />
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white p-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">Micro SaaS Solutions</h1>
-          <p className="text-lg text-gray-300">
-            Discover our micro SaaS solutions and services.
-          </p>
+      
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 to-blue-600/20"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              Micro SaaS Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Intelligent software solutions designed to solve specific business challenges
+            </p>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+              Our comprehensive suite of AI-powered micro SaaS applications helps businesses automate processes, gain insights, and scale efficiently with cost-effective, specialized solutions.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Micro SaaS Products Grid */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {microSaaSProducts.map((product, index) => {
+              const Icon = product.icon;
+              return (
+                <div key={product.title} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{product.title}</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    {product.description}
+                  </p>
+                  
+                  {/* Pricing */}
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-green-400">{product.price}</span>
+                    <span className="text-sm text-gray-400 ml-2">+ {product.setupFee} setup</span>
+                  </div>
+                  
+                  {/* Benefits */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {product.benefits.map((benefit, benefitIndex) => (
+                        <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Use Cases */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {product.useCases.map((useCase, useCaseIndex) => (
+                        <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
+                          {useCase}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-2 mb-6">
+                    {product.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <div className="flex gap-2">
+                    <Link
+                      to={product.href}
+                      className="flex-1 inline-flex items-center justify-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all border border-cyan-400 px-4 py-2 rounded-lg hover:bg-cyan-400/10"
+                    >
+                      Learn More <ArrowRightIcon className="w-4 h-4" />
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-4 py-2 rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 font-semibold"
+                    >
+                      Get Started
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Our Micro SaaS Solutions */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-cyan-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose Our Micro SaaS Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Built for modern businesses with cutting-edge AI technology and enterprise-grade security
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <CpuChipIcon className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI-Powered</h3>
+              <p className="text-gray-300">
+                Every solution is enhanced with advanced AI capabilities for superior performance and automation.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <ClockIcon className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Quick Setup</h3>
+              <p className="text-gray-300">
+                Get up and running in minutes with our streamlined onboarding and automated setup process.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <ShieldCheckIcon className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Secure & Reliable</h3>
+              <p className="text-gray-300">
+                Enterprise-grade security with 99.9% uptime guarantee and comprehensive data protection.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <CogIcon className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Scalable</h3>
+              <p className="text-gray-300">
+                Solutions that grow with your business, from startup to enterprise scale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Process */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Simple Implementation Process
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get your micro SaaS solution up and running in just a few steps
+            </p>
+          </div>
+          <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-xl">1</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Choose Your Solution</h3>
+              <p className="text-gray-300">
+                Select the micro SaaS solution that best fits your business needs and requirements.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-xl">2</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Quick Setup</h3>
+              <p className="text-gray-300">
+                Our team handles the technical setup and configuration for your specific use case.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-xl">3</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Training & Onboarding</h3>
+              <p className="text-gray-300">
+                We provide comprehensive training and support to get your team up to speed quickly.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-white font-bold text-xl">4</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Go Live & Scale</h3>
+              <p className="text-gray-300">
+                Launch your solution and scale as your business grows with ongoing support.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-cyan-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-12">
+              Let's discuss which micro SaaS solution is perfect for your business needs
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              >
+                Get Free Consultation
+                <ArrowRightIcon className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border-2 border-cyan-400 text-cyan-300 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Schedule Demo
+                <ArrowRightIcon className="w-5 h-5" />
+              </Link>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-300">
+              <div className="flex items-center gap-3">
+                <PhoneIcon className="w-6 h-6 text-cyan-400" />
+                <span>+1-302-464-0950</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <EnvelopeIcon className="w-6 h-6 text-cyan-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
-export default MicroSaaSSolutionsPage;
