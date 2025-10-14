@@ -28,8 +28,7 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
   const navigation = [
@@ -43,7 +42,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
         { name: 'IT Services', href: '/it-services', icon: CogIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon }
+        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', icon: GlobeAltIcon }
       ]
     },
     { 
@@ -52,18 +53,27 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: CogIcon,
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
-        { name: 'Digital Transformation', href: '/digital-transformation', icon: CogIcon },
-        { name: 'Micro SaaS', href: '/micro-saas', icon: GlobeAltIcon },
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        { name: 'IT Solutions', href: '/it-solutions', icon: CogIcon },
+        { name: 'Cloud Solutions', href: '/cloud-solutions', icon: CloudIcon },
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity', icon: ShieldCheckIcon },
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon },
+        { name: 'Industry Solutions', href: '/solutions', icon: GlobeAltIcon }
       ]
     },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
-    { name: 'Demo', href: '/demo', icon: PlayIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
+    { 
+      name: 'Resources', 
+      href: '#', 
+      icon: DocumentTextIcon,
+      submenu: [
+        { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+        { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },
+        { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
+        { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon }
+      ]
+    },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
+    { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
 
@@ -91,24 +101,25 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     <div className="relative group">
                       <button
                         className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium flex items-center"
-                        onMouseEnter={() => setIsServicesOpen(true)}
-                        onMouseLeave={() => setIsServicesOpen(false)}
+                        onMouseEnter={() => setActiveDropdown(item.name)}
+                        onMouseLeave={() => setActiveDropdown(null)}
                       >
                         {item.name}
                         <ChevronDownIcon className="ml-1 h-4 w-4" />
                       </button>
-                      {isServicesOpen && (
+                      {activeDropdown === item.name && (
                         <div 
-                          className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
-                          onMouseEnter={() => setIsServicesOpen(true)}
-                          onMouseLeave={() => setIsServicesOpen(false)}
+                          className="absolute left-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50"
+                          onMouseEnter={() => setActiveDropdown(item.name)}
+                          onMouseLeave={() => setActiveDropdown(null)}
                         >
                           {item.submenu.map((subItem) => (
                             <Link
                               key={subItem.name}
                               to={subItem.href}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center"
                             >
+                              <subItem.icon className="w-4 h-4 mr-2" />
                               {subItem.name}
                             </Link>
                           ))}
@@ -156,21 +167,22 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   {item.submenu ? (
                     <div>
                       <button
-                        onClick={() => setIsServicesOpen(!isServicesOpen)}
-                        className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left"
+                        onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                        className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left flex items-center"
                       >
                         {item.name}
-                        <ChevronDownIcon className="ml-1 h-4 w-4 inline" />
+                        <ChevronDownIcon className="ml-1 h-4 w-4" />
                       </button>
-                      {isServicesOpen && (
+                      {activeDropdown === item.name && (
                         <div className="pl-4 space-y-1">
                           {item.submenu.map((subItem) => (
                             <Link
                               key={subItem.name}
                               to={subItem.href}
-                              className="text-gray-600 hover:text-blue-600 block px-3 py-2 text-sm"
+                              className="text-gray-600 hover:text-blue-600 block px-3 py-2 text-sm flex items-center"
                               onClick={() => setIsOpen(false)}
                             >
+                              <subItem.icon className="w-4 h-4 mr-2" />
                               {subItem.name}
                             </Link>
                           ))}
