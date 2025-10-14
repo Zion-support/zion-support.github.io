@@ -1,10 +1,17 @@
 import React from 'react';
-const OptimizedLoadingSpinner = () => {
+
+
+const OptimizedLoadingSpinner = () = {
+
   return (
-    <div className="optimizedloadingspinner-component">
-      <h2>OptimizedLoadingSpinner</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>OptimizedLoadingSpinner</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default OptimizedLoadingSpinner;
+
+
+>>>>

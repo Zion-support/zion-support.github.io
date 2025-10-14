@@ -1,10 +1,17 @@
 import React from 'react';
-const AdAnalytics = () => {
+
+
+const AdAnalytics = () = {
+
   return (
-    <div className="adanalytics-component">
-      <h2>AdAnalytics</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>AdAnalytics</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default AdAnalytics;
+
+
+>>>>

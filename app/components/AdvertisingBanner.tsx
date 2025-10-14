@@ -1,10 +1,17 @@
 import React from 'react';
-const AdvertisingBanner = () => {
+
+
+const AdvertisingBanner = () = {
+
   return (
-    <div className="advertisingbanner-component">
-      <h2>AdvertisingBanner</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>AdvertisingBanner</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default AdvertisingBanner;
+
+
+>>>>

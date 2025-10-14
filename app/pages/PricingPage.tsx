@@ -1,23 +1,16 @@
-'use client';
+"use client;";
+import React from "react";
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const PricingPage: React.FC = () => {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Competitive pricing for our AI and IT solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Pricing</h1>
-          <p className="text-gray-300">This page is under construction.</p>
-        </div>
-      </div>
-    </React.Fragment>
+ import { Helmet   } from "react-helmet-async";
+
+
+ const PricingPage: React.FC = () = {} return (
+    
+      React.Fragment>Helme t<//titl e>PricingPage - Zion Tech Group<//meta nam e=description"conten t="PricingPage - Zion Tech Group /"<//div classNam e=min-h-screen bg-slate-900 text-white flex items-center justify-center" <div>>>>>PricingPage</h 1" <p classNam e=text-gray-300"This page is under construction.</di v<///di v") </React.Fragment
   );
-};
+    </
+  ) ); }"export default PricingPag;e";</h1>>>>>'
 
-export default PricingPage;
+
+

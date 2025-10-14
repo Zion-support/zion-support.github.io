@@ -1,10 +1,17 @@
 import React from 'react';
-const LoadingOptimizer = () => {
+
+
+const LoadingOptimizer = () = {
+
   return (
-    <div className="loadingoptimizer-component">
-      <h2>LoadingOptimizer</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>LoadingOptimizer</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default LoadingOptimizer;
+
+
+>>>>

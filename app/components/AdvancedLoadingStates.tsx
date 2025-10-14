@@ -7,7 +7,7 @@ interface LoadingStatesProps {
   fullScreen?: boolean;
 }
 
-const LoadingStates: React.FC<LoadingStatesProps> = ({
+const LoadingStates: React.FC<LoadingStatesProps> = ({ 
   type = 'spinner',
   size = 'md',
   message = 'Loading...',
@@ -28,8 +28,15 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
     <div className={`${sizeClasses[size]} border-4 border-gray-300 border-t-blue-600 rounded-full animate-spin`}></div>
   );
 
+  const renderSkeleton = () => (
+    <div className="animate-pulse">
+      <div className="bg-gray-300 rounded h-4 w-48 mb-2"></div>
+      <div className="bg-gray-300 rounded h-4 w-32"></div>
+    </div>
+  );
+
   const renderDots = () => (
-    <div className="flex space-x-2">
+    <div className="flex space-x-1">
       {[0, 1, 2].map((i) => (
         <div
           key={i}
@@ -50,7 +57,7 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
         <div
           key={i}
           className="w-1 bg-blue-600 rounded-full animate-pulse"
-          style={{
+          style={{ 
             height: '20px',
             animationDelay: `${i * 0.1}s`,
             animationDuration: '1s'
@@ -60,25 +67,16 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
     </div>
   );
 
-  const renderSkeleton = () => (
-    <div className="space-y-4 w-full max-w-md">
-      <div className="h-4 bg-gray-300 rounded animate-pulse"></div>
-      <div className="h-4 bg-gray-300 rounded animate-pulse w-3/4"></div>
-      <div className="h-4 bg-gray-300 rounded animate-pulse w-1/2"></div>
-      <div className="h-20 bg-gray-300 rounded animate-pulse"></div>
-    </div>
-  );
-
   const renderLoader = () => {
     switch (type) {
+      case 'skeleton':
+        return renderSkeleton();
       case 'dots':
         return renderDots();
       case 'pulse':
         return renderPulse();
       case 'wave':
         return renderWave();
-      case 'skeleton':
-        return renderSkeleton();
       default:
         return renderSpinner();
     }
@@ -89,7 +87,7 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
       <div className="text-center">
         {renderLoader()}
         {message && (
-          <p className="mt-4 text-white text-lg font-medium">{message}</p>
+          <p className="mt-4 text-gray-600 dark:text-gray-300">{message}</p>
         )}
       </div>
     </div>

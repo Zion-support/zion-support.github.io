@@ -1,10 +1,17 @@
 import React from 'react';
-const FuturisticBackground = () => {
+
+
+const FuturisticBackground = () = {
+
   return (
-    <div className="futuristicbackground-component">
-      <h2>FuturisticBackground</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>FuturisticBackground</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default FuturisticBackground;
+
+
+>>>>

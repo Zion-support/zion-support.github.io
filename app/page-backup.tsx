@@ -1,21 +1,4 @@
-'use client';
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PageBackup() {
-  return (
-    <React.Fragment>
-      <Helmet>
-        <title>Page Backup - Zion Tech Group</title>
-        <meta name="description" content="Backup page for Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Page Backup</h1>
-          <p className="text-gray-300">This is a backup page.</p>
-        </div>
-      </div>
-    </React.Fragment>
-  );
-}
+// page-backup - Basic implementation
+export default function pageBackup() {
+  return null;
+};

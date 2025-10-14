@@ -1,10 +1,17 @@
 import React from 'react';
-const CriticalResourcePreloader = () => {
+
+
+const CriticalResourcePreloader = () = {
+
   return (
-    <div className="criticalresourcepreloader-component">
-      <h2>CriticalResourcePreloader</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>CriticalResourcePreloader</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default CriticalResourcePreloader;
+
+
+>>>>

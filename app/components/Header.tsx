@@ -1,10 +1,12 @@
 import React from 'react';
+import Navigation from './Navigation';
+
 const Header = () => {
   return (
-    <div className="header-component">
-      <h2>Header</h2>
-      <p>This component is under construction.</p>
+    <div>
+      <Navigation />
     </div>
   );
 };
+
 export default Header;

@@ -1,10 +1,17 @@
 import React from 'react';
-const DynamicContentShowcase = () => {
+
+
+const DynamicContentShowcase = () = {
+
   return (
-    <div className="dynamiccontentshowcase-component">
-      <h2>DynamicContentShowcase</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>DynamicContentShowcase</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default DynamicContentShowcase;
+
+
+>>>>

@@ -1,20 +1,20 @@
-'use client';
-import React, { useEffect } from 'react';
+"use client;";
+import React from react;
 
-interface WebVitalsTrackerProps {
-  children: React.ReactNode;
+
+"export default function WebVitalsTracker() {
+  return (
+    div
+  );Page content</div
+  );
+
+    <div>Page content</div>
+  );
+    <div>Components</h1        <p className: ""text-gray-30o0 text-lg""          This page is under development.;        </div
+  );
+
+        </div</div
 }
-
-export default function WebVitalsTracker({ children }: WebVitalsTrackerProps) {
-  useEffect(() => {
-    // Track Core Web Vitals
-    const trackWebVitals = () => {
-      // This would integrate with your analytics service
-      console.log('Web Vitals tracking initialized');
-    };
-
-    trackWebVitals();
-  }, []);
-
-  return <>{children}</>;
-}
+};
+};
+  )};

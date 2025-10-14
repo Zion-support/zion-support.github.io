@@ -1,14 +1,20 @@
-'use client';
-import React from 'react';
-export default function NavigationBackup() {
+"use client;";
+import React from react;
+
+
+"export default function Navigation-backup() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Navigation Backup</h1>
-        <p className="text-gray-300 text-lg">
-          This is a backup navigation component.
-        </p>
-      </div>
-    </div>
+    div
+  );Page content</div
   );
+
+    <div>Page content</div>
+  );
+    <div>Components</h1        <p className: ""text-gray-30o0 text-lg""          This page is under development.;        </div
+  );
+
+        </div</div
 }
+};
+};
+  )};

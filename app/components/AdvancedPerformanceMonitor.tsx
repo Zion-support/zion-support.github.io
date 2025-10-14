@@ -1,12 +1,16 @@
 import React from 'react';
 
-const AdvancedPerformanceMonitor = () => {
+
+const AdvancedPerformanceMonitor = () = {
+
   return (
-    <div className="advancedperformancemonitor-component">
-      <h2>AdvancedPerformanceMonitor</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>AdvancedPerformanceMonitor</h2
+  );
+      <p>This component is under construction.</div
   );
 };
-
 export default AdvancedPerformanceMonitor;
+
+
+

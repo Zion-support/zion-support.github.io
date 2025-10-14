@@ -1,99 +1,119 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node
 
-// Function to clean up corrupted TSX/JSX files
-function cleanFile(filePath) {
+import fs from 'fs';
+import { glob } from 'glob';
+
+// Function to fix corrupted files with >>>> characters
+function fixCorruptedContent(content) {
+  let fixed = content;
+
+  // Remove >>>> characters that have been inserted
+  fixed = fixed.replace(/>+>/g, '');
+  fixed = fixed.replace(/>+</g, '<');
+  fixed = fixed.replace(/>+"/g, '"');
+  fixed = fixed.replace(/>+ /g, ' ');
+  fixed = fixed.replace(/>+\n/g, '\n');
+  fixed = fixed.replace(/>+$/g, '');
+  
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<\/div>/g, '<div>');
+  fixed = fixed.replace(/<main[^>]*>\s*<\/main>\s*<\/main>/g, '<main>');
+  fixed = fixed.replace(/<section[^>]*>\s*<\/section>\s*<\/section>/g, '<section>');
+  
+  // Fix malformed function returns
+  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g, 'return (');
+  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;/g, 'return (');
+  
+  // Fix multiple closing parentheses and semicolons
+  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;/g, ');');
+  fixed = fixed.replace(/\)\s*;\s*\)\s*;/g, ');');
+  
+  // Fix orphaned semicolons and braces
+  fixed = fixed.replace(/;\s*}\s*;\s*}\s*;\s*}/g, '}');
+  fixed = fixed.replace(/;\s*}\s*;\s*}/g, '}');
+  
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, '<$1>');
+  
+  // Fix unterminated JSX elements
+  fixed = fixed.replace(/<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g, (match, tagName) => {
+    if (match.includes('=') && !match.includes('/>')) {
+      return match + '>';
+    }
+    return match;
+  });
+
+  // Fix specific malformed patterns
+  fixed = fixed.replace(/export default function Page\(\) \{'  return \(\s*<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/g, 
+    'export default function Page() {\n  return (\n    <React.Fragment>\n    </React.Fragment>\n  );');
+  
+  // Fix malformed JSX with orphaned closing tags
+  fixed = fixed.replace(/<div[^>]*>\s*<\/div>\s*<\/div>/g, '<div>');
+  fixed = fixed.replace(/<main[^>]*>\s*<\/main>\s*<\/main>/g, '<main>');
+  fixed = fixed.replace(/<section[^>]*>\s*<\/section>\s*<\/section>/g, '<section>');
+  
+  // Fix malformed function returns
+  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g, 'return (');
+  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;/g, 'return (');
+  
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, '<$1>');
+  
+  // Fix unterminated JSX elements
+  fixed = fixed.replace(/<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g, (match, tagName) => {
+    if (match.includes('=') && !match.includes('/>')) {
+      return match + '>';
+    }
+    return match;
+  });
+
+  return fixed;
+}
+
+// Function to fix specific file patterns
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixCorruptedContent(content);
     
-    // Fix common corruption patterns
-    content = content
-      // Remove extra semicolons after imports
-      .replace(/';';/g, ';')
-      .replace(/';';';/g, ';')
-      // Fix malformed JSX attributes
-      .replace(/";";/g, '"')
-      .replace(/";';/g, '"')
-      .replace(/';";/g, ';')
-      // Fix malformed className attributes
-      .replace(/c,lassName/g, 'className')
-      .replace(/bg-gray-90o0/g, 'bg-gray-900')
-      .replace(/text-gray-30o0/g, 'text-gray-300')
-      // Remove stray closing tags and malformed JSX
-      .replace(/<\/div><\/div><\/div><\/div><\/div><\/div><\/div><\/div>/g, '')
-      .replace(/<\/div><\/div><\/div><\/div><\/div><\/div><\/div>/g, '')
-      .replace(/<\/div><\/div><\/div><\/div><\/div><\/div>/g, '')
-      .replace(/<\/div><\/div><\/div><\/div><\/div>/g, '')
-      .replace(/<\/div><\/div><\/div><\/div>/g, '')
-      .replace(/<\/div><\/div><\/div>/g, '')
-      .replace(/<\/div><\/div>/g, '')
-      // Fix malformed function declarations
-      .replace(/export default function ComponentsPage\(\) \{\}/g, 'export default function Page() {')
-      // Remove duplicate return statements
-      .replace(/return \(\s*<div>Page content<\/div>\s*\);\s*\}\s*return \(/g, 'return (')
-      // Fix malformed JSX structure
-      .replace(/<div className="min-h-screen bg-gray-90o0 text-white py-20">";"<\/div>/g, '')
-      .replace(/<div className="container mx-auto px-4">";"<\/div>/g, '')
-      .replace(/<h1 className="text-4xl font-bold mb-8">Components<\/h1>";"/g, '')
-      .replace(/<p className="text-gray-30o0 text-lg">";"/g, '')
-      .replace(/This page is under development\.<\/p>/g, '')
-      .replace(/<\/p><\/div><\/div>/g, '')
-      .replace(/\);\}/g, ');')
-      .replace(/\}\s*\);\}/g, '});')
-      // Clean up extra closing braces and parentheses
-      .replace(/\}\s*\);\}\s*\}/g, '});')
-      .replace(/\}\s*\);\}/g, '});')
-      // Remove malformed interface declarations
-      .replace(/interface ResponsiveContainerProps \{\}\s*children:\s*c,lassName\?\: string;\s*\}/g, 'interface ResponsiveContainerProps {\n  children: React.ReactNode;\n  className?: string;\n}')
-      // Fix malformed function parameters
-      .replace(/const ResponsiveContainer: React\.FC<ResponsiveContainerProps> = \(\{\}\s*children,\s*className = \}\) => \{\}/g, 'const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({\n  children, \n  className = \'\'\n}) => {')
-      // Remove stray closing tags at the end
-      .replace(/<\/ResponsiveContainerProps>\s*$/g, '')
-      // Clean up multiple consecutive newlines
-      .replace(/\n\s*\n\s*\n/g, '\n\n')
-      // Remove empty lines at the end
-      .replace(/\n\s*$/g, '\n');
-
-    // Write the cleaned content back
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-    return true;
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find and fix all corrupted files
-function fixAllCorruptedFiles() {
-  const appDir = path.join(__dirname, 'app');
-  let fixedCount = 0;
-  let errorCount = 0;
+// Main execution
+async function main() {
+  console.log('Starting corrupted file fixes...');
 
-  function walkDir(dir) {
-    const files = fs.readdirSync(dir);
-    
+  // Get all TypeScript/JavaScript files
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'app/**/*.jsx',
+    'app/**/*.js',
+    '__tests__/**/*.tsx',
+    '__tests__/**/*.ts'
+  ];
+
+  let totalFixed = 0;
+
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
     for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        walkDir(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-        if (cleanFile(filePath)) {
-          fixedCount++;
-        } else {
-          errorCount++;
-        }
+      if (fixFile(file)) {
+        totalFixed++;
       }
     }
   }
 
-  walkDir(appDir);
-  
-  console.log(`\nFixed ${fixedCount} files`);
-  console.log(`Errors in ${errorCount} files`);
+  console.log(`Fixed ${totalFixed} files.`);
 }
 
-// Run the fix
-fixAllCorruptedFiles();
+main().catch(console.error);

@@ -1,10 +1,17 @@
 import React from 'react';
-const PWAInstaller = () => {
+
+
+const PWAInstaller = () = {
+
   return (
-    <div className="pwainstaller-component">
-      <h2>PWAInstaller</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>PWAInstaller</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default PWAInstaller;
+
+
+>>>>

@@ -1,10 +1,17 @@
 import React from 'react';
-const NewsletterSignup = () => {
+
+
+const NewsletterSignup = () = {
+
   return (
-    <div className="newslettersignup-component">
-      <h2>NewsletterSignup</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>NewsletterSignup</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default NewsletterSignup;
+
+
+>>>>

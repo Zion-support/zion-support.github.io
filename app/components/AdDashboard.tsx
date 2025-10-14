@@ -1,10 +1,17 @@
 import React from 'react';
-const AdDashboard = () => {
+
+
+const AdDashboard = () = {
+
   return (
-    <div className="addashboard-component">
-      <h2>AdDashboard</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>AdDashboard</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default AdDashboard;
+
+
+>>>>

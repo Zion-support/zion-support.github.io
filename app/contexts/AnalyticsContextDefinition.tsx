@@ -1,13 +1,5 @@
 import { createContext } from 'react';
 
-interface AnalyticsContextType {
-trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string) => void;
-  setUser: (userId: string, properties?: Record<string, unknown>) => void;
-  isEnabled: boolean;
-}
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export type { AnalyticsContextType };
-export { AnalyticsContext };
+interface AnalyticsContextType {;
+  trackEvent: '(eventNam,e: string, properties ?  : Record<string, any>) = void"trackPageView: "(pageNam,e: string) = void}"const  createContext<AnalyticsContextType | undefined>(undefined);"export type { AnalyticsContextType }"export type { AnalyticsContextType };</AnalyticsContextType

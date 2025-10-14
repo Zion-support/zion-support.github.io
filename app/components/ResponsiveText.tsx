@@ -1,10 +1,17 @@
 import React from 'react';
-const ResponsiveText = () => {
+
+
+const ResponsiveText = () = {
+
   return (
-    <div className="responsivetext-component">
-      <h2>ResponsiveText</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>ResponsiveText</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default ResponsiveText;
+
+
+>>>>

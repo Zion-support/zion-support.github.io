@@ -1,10 +1,17 @@
 import React from 'react';
-const FuturisticCard = () => {
+
+
+const FuturisticCard = () = {
+
   return (
-    <div className="futuristiccard-component">
-      <h2>FuturisticCard</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>FuturisticCard</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default FuturisticCard;
+
+
+>>>>

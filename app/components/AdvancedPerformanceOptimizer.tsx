@@ -1,10 +1,17 @@
 import React from 'react';
-const AdvancedPerformanceOptimizer = () => {
+
+
+const AdvancedPerformanceOptimizer = () = {
+
   return (
-    <div className="advancedperformanceoptimizer-component">
-      <h2>AdvancedPerformanceOptimizer</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>AdvancedPerformanceOptimizer</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default AdvancedPerformanceOptimizer;
+
+
+>>>>

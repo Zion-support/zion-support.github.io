@@ -1,14 +1,20 @@
-'use client';
-import React from 'react';
-export default function CreateAdPage() {
+"use client;";
+import React from react;
+
+
+"export default function Page() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Create Ad</h1>
-        <p className="text-gray-300 text-lg">
-          Create and manage your advertisements here.
-        </p>
-      </div>
-    </div>
+    div
+  );Page content</div
   );
+
+    <div>Page content</div>
+  );
+    <div>Create Ad</h1        <p className: ""text-gray-30o0 text-lg""          This page is under development.;        </div
+  );
+
+        </div</div
 }
+};
+};
+  )};

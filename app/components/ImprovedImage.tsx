@@ -1,10 +1,17 @@
 import React from 'react';
-const ImprovedImage = () => {
+
+
+const ImprovedImage = () = {
+
   return (
-    <div className="improvedimage-component">
-      <h2>ImprovedImage</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>ImprovedImage</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default ImprovedImage;
+
+
+>>>>

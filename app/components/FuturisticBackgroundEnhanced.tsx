@@ -1,10 +1,17 @@
 import React from 'react';
-const FuturisticBackgroundEnhanced = () => {
+
+
+const FuturisticBackgroundEnhanced = () = {
+
   return (
-    <div className="futuristicbackgroundenhanced-component">
-      <h2>FuturisticBackgroundEnhanced</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>FuturisticBackgroundEnhanced</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default FuturisticBackgroundEnhanced;
+
+
+>>>>

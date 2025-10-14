@@ -1,10 +1,17 @@
 import React from 'react';
-const SEOHead = () => {
+
+
+const SEOHead = () = {
+
   return (
-    <div className="seohead-component">
-      <h2>SEOHead</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>SEOHead</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default SEOHead;
+
+
+>>>>

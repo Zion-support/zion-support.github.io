@@ -1,10 +1,17 @@
 import React from 'react';
-const EnhancedErrorBoundary = () => {
+
+
+const EnhancedErrorBoundary = () = {
+
   return (
-    <div className="enhancederrorboundary-component">
-      <h2>EnhancedErrorBoundary</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>EnhancedErrorBoundary</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default EnhancedErrorBoundary;
+
+
+>>>>

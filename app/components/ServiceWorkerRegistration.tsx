@@ -1,10 +1,17 @@
 import React from 'react';
-const ServiceWorkerRegistration = () => {
+
+
+const ServiceWorkerRegistration = () = {
+
   return (
-    <div className="serviceworkerregistration-component">
-      <h2>ServiceWorkerRegistration</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>ServiceWorkerRegistration</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default ServiceWorkerRegistration;
+
+
+>>>>

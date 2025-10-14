@@ -1,10 +1,17 @@
 import React from 'react';
-const AccessibilityAudit = () => {
+
+
+const AccessibilityAudit = () = {
+
   return (
-    <div className="accessibilityaudit-component">
-      <h2>AccessibilityAudit</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>AccessibilityAudit</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default AccessibilityAudit;
+
+
+>>>>

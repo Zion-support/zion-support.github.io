@@ -1,10 +1,17 @@
 import React from 'react';
-const PerformanceDashboard = () => {
+
+
+const PerformanceDashboard = () = {
+
   return (
-    <div className="performancedashboard-component">
-      <h2>PerformanceDashboard</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>PerformanceDashboard</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default PerformanceDashboard;
+
+
+>>>>

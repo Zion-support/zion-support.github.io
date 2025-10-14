@@ -1,10 +1,17 @@
 import React from 'react';
-const LazyImage = () => {
+
+
+const LazyImage = () = {
+
   return (
-    <div className="lazyimage-component">
-      <h2>LazyImage</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>LazyImage</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default LazyImage;
+
+
+>>>>

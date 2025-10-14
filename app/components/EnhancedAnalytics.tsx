@@ -53,37 +53,85 @@ const EnhancedAnalytics: React.FC = () => {
     // Store in localStorage for offline tracking
     const storedEvents = JSON.parse(localStorage.getItem('analytics_events') || '[]');
     storedEvents.push(eventData);
-    localStorage.setItem('analytics_events', JSON.stringify(storedEvents.slice(-200))); // Keep last 200 events
+    localStorage.setItem('analytics_events', JSON.stringify(storedEvents.slice(-1000))); // Keep last 1000 events
   }, []);
 
-  // Track user interactions
-  const trackUserInteraction = useCallback((element: string, action: string) => {
-    trackEvent({
-      action,
-      category: 'User Interaction',
-      label: element
-    });
-  }, [trackEvent]);
-
   // Track performance metrics
-  const trackPerformance = useCallback((metric: string, value: number) => {
-    trackEvent({
-      action: metric,
-      category: 'Performance',
-      value: Math.round(value)
+  const trackPerformance = useCallback(() => {
+    if ('performance' in window) {
+      // Track Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            trackEvent({
+              action: 'LCP',
+              category: 'Performance',
+              value: entry.startTime
+            });
+          } else if (entry.entryType === 'first-input') {
+            trackEvent({
+              action: 'FID',
+              category: 'Performance',
+              value: (entry as any).processingStart - entry.startTime
+            });
+          } else if (entry.entryType === 'layout-shift') {
+            const layoutShift = entry as LayoutShift;
+            if (!layoutShift.hadRecentInput) {
+              trackEvent({
+                action: 'CLS',
+                category: 'Performance',
+                value: layoutShift.value
+              });
+            }
+          }
+        }
+      });
+
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    }
+  }, [trackEvent]);
+
+  // Track page visibility changes
+  const trackVisibilityChange = useCallback(() => {
+    document.addEventListener('visibilitychange', () => {
+      trackEvent({
+        action: 'visibility_change',
+        category: 'User Behavior',
+        label: document.hidden ? 'hidden' : 'visible'
+      });
     });
   }, [trackEvent]);
 
-  // Track errors
-  const trackError = useCallback((error: Error, context?: string) => {
-    trackEvent({
-      action: 'Error',
-      category: 'Error Tracking',
-      label: context || 'Unknown',
-      value: 1
+  // Track scroll depth
+  const trackScrollDepth = useCallback(() => {
+    let maxScroll = 0;
+    window.addEventListener('scroll', () => {
+      const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      if (scrollPercent > maxScroll) {
+        maxScroll = scrollPercent;
+        trackEvent({
+          action: 'scroll_depth',
+          category: 'User Behavior',
+          value: scrollPercent
+        });
+      }
     });
   }, [trackEvent]);
 
+  // Track time on page
+  const trackTimeOnPage = useCallback(() => {
+    const startTime = Date.now();
+    window.addEventListener('beforeunload', () => {
+      const timeOnPage = Date.now() - startTime;
+      trackEvent({
+        action: 'time_on_page',
+        category: 'User Behavior',
+        value: timeOnPage
+      });
+    });
+  }, [trackEvent]);
+
+  // Initialize tracking
   useEffect(() => {
     // Track initial page view
     trackPageView(
@@ -92,216 +140,29 @@ const EnhancedAnalytics: React.FC = () => {
       window.location.href
     );
 
-    // Track page visibility changes
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        trackEvent({
-          action: 'Page Hidden',
-          category: 'User Behavior'
-        });
-      } else {
-        trackEvent({
-          action: 'Page Visible',
-          category: 'User Behavior'
-        });
-      }
-    };
+    // Initialize other tracking
+    trackPerformance();
+    trackVisibilityChange();
+    trackScrollDepth();
+    trackTimeOnPage();
 
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    // Track scroll depth
-    let maxScrollDepth = 0;
-    const handleScroll = () => {
-      const scrollDepth = Math.round(
-        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+    // Track route changes (if using React Router)
+    const handleRouteChange = () => {
+      trackPageView(
+        window.location.pathname,
+        document.title,
+        window.location.href
       );
-      
-      if (scrollDepth > maxScrollDepth) {
-        maxScrollDepth = scrollDepth;
-        
-        // Track milestone scroll depths
-        if (scrollDepth >= 25 && scrollDepth < 50) {
-          trackEvent({
-            action: 'Scroll Depth',
-            category: 'User Behavior',
-            label: '25%',
-            value: 25
-          });
-        } else if (scrollDepth >= 50 && scrollDepth < 75) {
-          trackEvent({
-            action: 'Scroll Depth',
-            category: 'User Behavior',
-            label: '50%',
-            value: 50
-          });
-        } else if (scrollDepth >= 75 && scrollDepth < 90) {
-          trackEvent({
-            action: 'Scroll Depth',
-            category: 'User Behavior',
-            label: '75%',
-            value: 75
-          });
-        } else if (scrollDepth >= 90) {
-          trackEvent({
-            action: 'Scroll Depth',
-            category: 'User Behavior',
-            label: '90%',
-            value: 90
-          });
-        }
-      }
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    // Track form interactions
-    const handleFormSubmit = (event: Event) => {
-      const form = event.target as HTMLFormElement;
-      trackEvent({
-        action: 'Form Submit',
-        category: 'User Interaction',
-        label: form.id || form.className || 'Unknown Form'
-      });
-    };
-
-    document.addEventListener('submit', handleFormSubmit);
-
-    // Track button clicks
-    const handleButtonClick = (event: Event) => {
-      const button = event.target as HTMLButtonElement;
-      trackUserInteraction(button.textContent || button.className || 'Unknown Button', 'Click');
-    };
-
-    document.addEventListener('click', handleButtonClick);
-
-    // Track external links
-    const handleLinkClick = (event: Event) => {
-      const link = event.target as HTMLAnchorElement;
-      if (link.href && !link.href.startsWith(window.location.origin)) {
-        trackEvent({
-          action: 'External Link Click',
-          category: 'User Interaction',
-          label: link.href
-        });
-      }
-    };
-
-    document.addEventListener('click', handleLinkClick);
-
-    // Track performance metrics
-    const trackWebVitals = () => {
-      // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-        if (fcpEntry) {
-          trackPerformance('FCP', fcpEntry.startTime);
-        }
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        trackPerformance('LCP', lastEntry.startTime);
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
-          if (entry.processingStart) {
-            trackPerformance('FID', entry.processingStart - entry.startTime);
-          }
-        });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
-          const clsEntry = entry as LayoutShift;
-          if (!clsEntry.hadRecentInput) {
-            clsValue += clsEntry.value;
-            trackPerformance('CLS', clsValue);
-          }
-        });
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-    };
-
-    trackWebVitals();
-
-    // Cleanup
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('submit', handleFormSubmit);
-      document.removeEventListener('click', handleButtonClick);
-      document.removeEventListener('click', handleLinkClick);
-    };
-  }, [trackPageView, trackEvent, trackUserInteraction, trackPerformance]);
-
-  // Expose tracking functions globally for manual tracking
-  useEffect(() => {
-    (window as typeof window & { 
-      trackEvent?: typeof trackEvent;
-      trackUserInteraction?: typeof trackUserInteraction;
-      trackPerformance?: typeof trackPerformance;
-      trackError?: typeof trackError;
-    }).trackEvent = trackEvent;
-    (window as typeof window & { 
-      trackEvent?: typeof trackEvent;
-      trackUserInteraction?: typeof trackUserInteraction;
-      trackPerformance?: typeof trackPerformance;
-      trackError?: typeof trackError;
-    }).trackUserInteraction = trackUserInteraction;
-    (window as typeof window & { 
-      trackEvent?: typeof trackEvent;
-      trackUserInteraction?: typeof trackUserInteraction;
-      trackPerformance?: typeof trackPerformance;
-      trackError?: typeof trackError;
-    }).trackPerformance = trackPerformance;
-    (window as typeof window & { 
-      trackEvent?: typeof trackEvent;
-      trackUserInteraction?: typeof trackUserInteraction;
-      trackPerformance?: typeof trackPerformance;
-      trackError?: typeof trackError;
-    }).trackError = trackError;
+    window.addEventListener('popstate', handleRouteChange);
 
     return () => {
-      delete (window as typeof window & { 
-        trackEvent?: typeof trackEvent;
-        trackUserInteraction?: typeof trackUserInteraction;
-        trackPerformance?: typeof trackPerformance;
-        trackError?: typeof trackError;
-      }).trackEvent;
-      delete (window as typeof window & { 
-        trackEvent?: typeof trackEvent;
-        trackUserInteraction?: typeof trackUserInteraction;
-        trackPerformance?: typeof trackPerformance;
-        trackError?: typeof trackError;
-      }).trackUserInteraction;
-      delete (window as typeof window & { 
-        trackEvent?: typeof trackEvent;
-        trackUserInteraction?: typeof trackUserInteraction;
-        trackPerformance?: typeof trackPerformance;
-        trackError?: typeof trackError;
-      }).trackPerformance;
-      delete (window as typeof window & { 
-        trackEvent?: typeof trackEvent;
-        trackUserInteraction?: typeof trackUserInteraction;
-        trackPerformance?: typeof trackPerformance;
-        trackError?: typeof trackError;
-      }).trackError;
+      window.removeEventListener('popstate', handleRouteChange);
     };
-  }, [trackEvent, trackUserInteraction, trackPerformance, trackError]);
+  }, [trackPageView, trackPerformance, trackVisibilityChange, trackScrollDepth, trackTimeOnPage]);
 
-  return null;
+  return null; // This component doesn't render anything
 };
 
 export default EnhancedAnalytics;

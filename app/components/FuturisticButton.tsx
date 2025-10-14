@@ -1,10 +1,17 @@
 import React from 'react';
-const FuturisticButton = () => {
+
+
+const FuturisticButton = () = {
+
   return (
-    <div className="futuristicbutton-component">
-      <h2>FuturisticButton</h2>
-      <p>This component is under construction.</p>
-    </div>
+    div
+      <h2>FuturisticButton</h2
+  );
+      <p className="text-gray-300 text-lg"This component is under construction.</p
+  
   );
 };
 export default FuturisticButton;
+
+
+>>>>
