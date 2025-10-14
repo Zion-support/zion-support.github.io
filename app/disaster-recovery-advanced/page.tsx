@@ -36,7 +36,7 @@ const DisasterRecoveryAdvancedPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default DisasterRecoveryAdvancedPage;

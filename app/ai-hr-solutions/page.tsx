@@ -36,7 +36,7 @@ const AiHrSolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiHrSolutionsPage;

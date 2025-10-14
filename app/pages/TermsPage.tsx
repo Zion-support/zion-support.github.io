@@ -24,7 +24,7 @@ const TermsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
 

@@ -36,7 +36,7 @@ const BlockchainWeb3Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default BlockchainWeb3Page;

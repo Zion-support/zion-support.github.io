@@ -36,7 +36,7 @@ const ResourcesPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ResourcesPage;

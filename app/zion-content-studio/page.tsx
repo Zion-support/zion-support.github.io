@@ -36,7 +36,7 @@ const ZionContentStudioPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionContentStudioPage;

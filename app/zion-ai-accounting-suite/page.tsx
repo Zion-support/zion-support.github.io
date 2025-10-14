@@ -36,7 +36,7 @@ const ZionAiAccountingSuitePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAiAccountingSuitePage;

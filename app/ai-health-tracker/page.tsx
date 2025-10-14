@@ -36,7 +36,7 @@ const AiHealthTrackerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiHealthTrackerPage;

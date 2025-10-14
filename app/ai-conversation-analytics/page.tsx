@@ -36,7 +36,7 @@ const AiConversationAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiConversationAnalyticsPage;

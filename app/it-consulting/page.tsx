@@ -36,7 +36,7 @@ const ItConsultingPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ItConsultingPage;

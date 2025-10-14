@@ -36,7 +36,7 @@ const AiDataMiningProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiDataMiningProPage;

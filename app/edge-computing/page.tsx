@@ -36,7 +36,7 @@ const EdgeComputingPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default EdgeComputingPage;

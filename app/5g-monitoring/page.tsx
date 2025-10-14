@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom';
 const FiveGMonitoringPage = () => {
   const services = [
     {
-      title: &apos;5G Network Monitoring&apos;,
-      description: &apos;Real-time monitoring and analysis of 5G network performance.&apos;
+      title: '5G Network Monitoring',
+      description: 'Real-time monitoring and analysis of 5G network performance.'
     },
     {
-      title: &apos;Security Monitoring&apos;,
-      description: &apos;Advanced security monitoring and threat detection for 5G networks.&apos;
+      title: 'Security Monitoring',
+      description: 'Advanced security monitoring and threat detection for 5G networks.'
     },
     {
-      title: &apos;Team Training&apos;,
-      description: &apos;Comprehensive training for 5G network monitoring and management.&apos;
+      title: 'Team Training',
+      description: 'Comprehensive training for 5G network monitoring and management.'
     }
   ]
 

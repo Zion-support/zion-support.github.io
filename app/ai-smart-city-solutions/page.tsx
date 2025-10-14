@@ -36,7 +36,7 @@ const AiSmartCitySolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiSmartCitySolutionsPage;

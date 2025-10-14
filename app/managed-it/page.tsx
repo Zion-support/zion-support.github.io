@@ -36,7 +36,7 @@ const ManagedItPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ManagedItPage;

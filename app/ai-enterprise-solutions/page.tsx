@@ -36,7 +36,7 @@ const AiEnterpriseSolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiEnterpriseSolutionsPage;

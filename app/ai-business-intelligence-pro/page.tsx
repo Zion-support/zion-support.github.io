@@ -46,7 +46,7 @@ const AIBusinessIntelligenceProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
 

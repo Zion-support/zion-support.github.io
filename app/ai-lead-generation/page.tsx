@@ -36,7 +36,7 @@ const AiLeadGenerationPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiLeadGenerationPage;

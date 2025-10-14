@@ -36,7 +36,7 @@ const ZionAiLeadScoringPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAiLeadScoringPage;

@@ -36,7 +36,7 @@ const FiveGSolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default FiveGSolutionsPage;

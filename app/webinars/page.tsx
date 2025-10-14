@@ -36,7 +36,7 @@ const WebinarsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default WebinarsPage;

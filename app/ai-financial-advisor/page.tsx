@@ -36,7 +36,7 @@ const AiFinancialAdvisorPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiFinancialAdvisorPage;

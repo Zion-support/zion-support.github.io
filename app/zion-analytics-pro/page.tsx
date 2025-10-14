@@ -36,7 +36,7 @@ const ZionAnalyticsProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAnalyticsProPage;

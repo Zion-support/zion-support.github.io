@@ -36,7 +36,7 @@ const NetworkDesignPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default NetworkDesignPage;

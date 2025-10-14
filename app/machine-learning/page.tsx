@@ -36,7 +36,7 @@ const MachineLearningPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default MachineLearningPage;

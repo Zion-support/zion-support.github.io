@@ -36,7 +36,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiAnalyticsDashboardPage;

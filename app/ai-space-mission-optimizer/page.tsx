@@ -36,7 +36,7 @@ const AiSpaceMissionOptimizerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiSpaceMissionOptimizerPage;

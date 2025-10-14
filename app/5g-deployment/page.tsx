@@ -6,16 +6,16 @@ import { Link } from 'react-router-dom';
 const FiveGDeploymentPage = () => {
   const services = [
     {
-      title: &apos;5G Network Deployment&apos;,
-      description: &apos;Complete 5G network infrastructure deployment and configuration.&apos;
+      title: '5G Network Deployment',
+      description: 'Complete 5G network infrastructure deployment and configuration.'
     },
     {
-      title: &apos;Security Implementation&apos;,
-      description: &apos;Advanced security measures for 5G network protection.&apos;
+      title: 'Security Implementation',
+      description: 'Advanced security measures for 5G network protection.'
     },
     {
-      title: &apos;Team Training&apos;,
-      description: &apos;Comprehensive training for your team on 5G deployment best practices.&apos;
+      title: 'Team Training',
+      description: 'Comprehensive training for your team on 5G deployment best practices.'
     }
   ]
 

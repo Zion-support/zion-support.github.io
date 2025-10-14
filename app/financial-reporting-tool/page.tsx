@@ -36,7 +36,7 @@ const FinancialReportingToolPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default FinancialReportingToolPage;

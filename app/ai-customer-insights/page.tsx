@@ -36,7 +36,7 @@ const AiCustomerInsightsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiCustomerInsightsPage;

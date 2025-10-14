@@ -36,7 +36,7 @@ const AiInfrastructureMonitoringPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiInfrastructureMonitoringPage;

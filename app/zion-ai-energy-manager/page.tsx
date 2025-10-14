@@ -36,7 +36,7 @@ const ZionAiEnergyManagerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAiEnergyManagerPage;

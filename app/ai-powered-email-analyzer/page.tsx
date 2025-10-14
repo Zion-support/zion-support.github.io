@@ -36,7 +36,7 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiPoweredEmailAnalyzerPage;

@@ -36,7 +36,7 @@ const AiAccountingAssistantPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiAccountingAssistantPage;

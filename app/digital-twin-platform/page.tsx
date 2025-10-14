@@ -36,7 +36,7 @@ const DigitalTwinPlatformPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default DigitalTwinPlatformPage;

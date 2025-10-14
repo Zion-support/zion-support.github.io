@@ -36,7 +36,7 @@ const AiTimeSeriesForecastingPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiTimeSeriesForecastingPage;

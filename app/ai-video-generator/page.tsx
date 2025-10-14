@@ -36,7 +36,7 @@ const AiVideoGeneratorPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiVideoGeneratorPage;

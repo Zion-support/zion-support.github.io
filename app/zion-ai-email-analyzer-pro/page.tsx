@@ -36,7 +36,7 @@ const ZionAiEmailAnalyzerProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAiEmailAnalyzerProPage;

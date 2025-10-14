@@ -36,7 +36,7 @@ const AiNlpTextAnalysisPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiNlpTextAnalysisPage;

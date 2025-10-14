@@ -36,7 +36,7 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default BusinessIntelligencePage;

@@ -36,7 +36,7 @@ const GuidesPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default GuidesPage;

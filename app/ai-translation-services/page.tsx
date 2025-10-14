@@ -36,7 +36,7 @@ const AiTranslationServicesPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiTranslationServicesPage;

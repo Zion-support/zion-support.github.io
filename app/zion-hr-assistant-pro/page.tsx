@@ -36,7 +36,7 @@ const ZionHrAssistantProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionHrAssistantProPage;

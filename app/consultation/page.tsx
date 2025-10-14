@@ -36,7 +36,7 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ConsultationPage;

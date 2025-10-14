@@ -36,7 +36,7 @@ const AiEdgeComputingPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiEdgeComputingPage;

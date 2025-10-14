@@ -24,7 +24,7 @@ const SupportPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
 

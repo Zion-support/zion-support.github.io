@@ -36,7 +36,7 @@ const AiInnovationLabsProductDevelopment2025Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiInnovationLabsProductDevelopment2025Page;

@@ -36,7 +36,7 @@ const AiInvoiceGeneratorPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiInvoiceGeneratorPage;

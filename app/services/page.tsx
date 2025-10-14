@@ -31,7 +31,7 @@ const ServicesPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 

@@ -36,7 +36,7 @@ const AiContentCreationPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiContentCreationPage;

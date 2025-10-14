@@ -36,7 +36,7 @@ const AiWorkflowAutomationPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiWorkflowAutomationPage;

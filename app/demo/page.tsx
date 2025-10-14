@@ -36,7 +36,7 @@ const DemoPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default DemoPage;

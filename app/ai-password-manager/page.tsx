@@ -36,7 +36,7 @@ const AiPasswordManagerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiPasswordManagerPage;

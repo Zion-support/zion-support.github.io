@@ -36,7 +36,7 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default CloudServicesPage;

@@ -36,7 +36,7 @@ const AiCybersecuritySuitePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiCybersecuritySuitePage;

@@ -36,7 +36,7 @@ const AiServicesPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiServicesPage;

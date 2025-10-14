@@ -36,7 +36,7 @@ const AiLearningPlatformPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiLearningPlatformPage;

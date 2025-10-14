@@ -36,7 +36,7 @@ const AiBlockchainAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiBlockchainAnalyticsPage;

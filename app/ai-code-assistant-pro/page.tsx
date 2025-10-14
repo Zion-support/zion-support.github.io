@@ -36,7 +36,7 @@ const AiCodeAssistantProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiCodeAssistantProPage;

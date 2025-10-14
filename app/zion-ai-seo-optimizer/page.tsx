@@ -36,7 +36,7 @@ const ZionAiSeoOptimizerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAiSeoOptimizerPage;

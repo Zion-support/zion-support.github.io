@@ -36,7 +36,7 @@ const FiveGIotSolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default FiveGIotSolutionsPage;

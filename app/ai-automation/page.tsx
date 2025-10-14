@@ -36,7 +36,7 @@ const AiAutomationPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiAutomationPage;

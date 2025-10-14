@@ -36,7 +36,7 @@ const AiSentimentAnalysisPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiSentimentAnalysisPage;

@@ -36,7 +36,7 @@ const AiMeetingAssistantPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiMeetingAssistantPage;

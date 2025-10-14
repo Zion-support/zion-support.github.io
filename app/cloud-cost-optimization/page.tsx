@@ -36,7 +36,7 @@ const CloudCostOptimizationPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default CloudCostOptimizationPage;

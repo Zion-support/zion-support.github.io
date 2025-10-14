@@ -36,7 +36,7 @@ const AiMobileAppBuilderPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiMobileAppBuilderPage;

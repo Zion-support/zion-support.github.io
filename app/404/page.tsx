@@ -44,7 +44,7 @@ const NotFoundPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 

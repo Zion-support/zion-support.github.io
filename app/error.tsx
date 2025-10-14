@@ -15,7 +15,7 @@ const ErrorPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
 

@@ -36,7 +36,7 @@ const ZionAiRecruitmentProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAiRecruitmentProPage;

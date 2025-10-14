@@ -36,7 +36,7 @@ const ZionAiEmailOptimizerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAiEmailOptimizerPage;

@@ -36,7 +36,7 @@ const AiDataAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiDataAnalyticsPage;

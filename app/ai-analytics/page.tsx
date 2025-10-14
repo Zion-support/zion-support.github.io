@@ -36,7 +36,7 @@ const AiAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiAnalyticsPage;

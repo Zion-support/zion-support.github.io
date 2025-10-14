@@ -36,7 +36,7 @@ const DocsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default DocsPage;

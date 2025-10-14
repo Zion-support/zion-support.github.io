@@ -36,7 +36,7 @@ const AiRecommendationEnginePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiRecommendationEnginePage;

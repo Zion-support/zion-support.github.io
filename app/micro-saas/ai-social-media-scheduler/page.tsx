@@ -36,7 +36,7 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiSocialMediaSchedulerPage;

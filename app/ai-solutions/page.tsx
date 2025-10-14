@@ -10,7 +10,7 @@ import {
   CogIcon,
   ChatBubbleLeftRightIcon,
   EyeIcon
-} from &apos;@heroicons/react/24/outline&apos;;
+} from '@heroicons/react/24/outline';
 
 export default function AISolutionsPage() {
   const aiServices = [
@@ -207,7 +207,7 @@ export default function AISolutionsPage() {
 
                 <div className="mb-6">
                   <div className="text-2xlfont-bold text-purple-400 mb-2">{service.price}</div>
-                  <div className="text-gray-400text-sm mb-4">Benefits: {service.benefits.join(&apos;, &apos;)}</div>
+                  <div className="text-gray-400text-sm mb-4">Benefits: {service.benefits.join(', ')}</div>
                 </div>
 
                 <Link
@@ -230,7 +230,7 @@ export default function AISolutionsPage() {
             Ready to Harness the Power of AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let&apos;s discuss how our AI solutions can transform your business and give you a competitive edge.
+            Let's discuss how our AI solutions can transform your business and give you a competitive edge.
           </p>
           <div className="flexflex-col sm:flex-row gap-4 justify-center">
             <Link

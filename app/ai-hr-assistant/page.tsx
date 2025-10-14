@@ -36,7 +36,7 @@ const AiHrAssistantPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiHrAssistantPage;

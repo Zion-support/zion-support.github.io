@@ -36,7 +36,7 @@ const AiSmartContractAuditorPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiSmartContractAuditorPage;

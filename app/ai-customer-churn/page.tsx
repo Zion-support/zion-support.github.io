@@ -36,7 +36,7 @@ const AiCustomerChurnPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiCustomerChurnPage;

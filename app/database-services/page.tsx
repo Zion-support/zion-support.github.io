@@ -36,7 +36,7 @@ const DatabaseServicesPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default DatabaseServicesPage;

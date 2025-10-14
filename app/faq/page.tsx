@@ -36,7 +36,7 @@ const FaqPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default FaqPage;

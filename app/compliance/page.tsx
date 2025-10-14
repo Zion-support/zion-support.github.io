@@ -36,7 +36,7 @@ const CompliancePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default CompliancePage;

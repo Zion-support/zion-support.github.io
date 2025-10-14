@@ -36,7 +36,7 @@ const SeoOptimizerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default SeoOptimizerPage;

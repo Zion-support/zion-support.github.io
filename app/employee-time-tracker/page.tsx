@@ -36,7 +36,7 @@ const EmployeeTimeTrackerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default EmployeeTimeTrackerPage;

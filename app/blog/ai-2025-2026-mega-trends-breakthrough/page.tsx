@@ -36,7 +36,7 @@ const Ai20252026MegaTrendsBreakthroughPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default Ai20252026MegaTrendsBreakthroughPage;

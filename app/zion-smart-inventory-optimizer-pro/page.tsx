@@ -36,7 +36,7 @@ const ZionSmartInventoryOptimizerProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionSmartInventoryOptimizerProPage;

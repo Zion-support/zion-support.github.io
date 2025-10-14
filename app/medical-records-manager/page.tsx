@@ -36,7 +36,7 @@ const MedicalRecordsManagerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default MedicalRecordsManagerPage;

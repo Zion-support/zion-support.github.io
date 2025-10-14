@@ -36,7 +36,7 @@ const InventoryManagementSaasPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default InventoryManagementSaasPage;

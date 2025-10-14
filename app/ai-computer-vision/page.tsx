@@ -36,7 +36,7 @@ const AiComputerVisionPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiComputerVisionPage;

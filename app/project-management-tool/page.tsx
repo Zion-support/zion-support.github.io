@@ -36,7 +36,7 @@ const ProjectManagementToolPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ProjectManagementToolPage;

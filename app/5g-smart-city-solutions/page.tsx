@@ -36,7 +36,7 @@ const FiveGSmartCitySolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default FiveGSmartCitySolutionsPage;

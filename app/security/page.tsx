@@ -36,7 +36,7 @@ const SecurityPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default SecurityPage;

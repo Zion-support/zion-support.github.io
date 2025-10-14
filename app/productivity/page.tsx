@@ -36,7 +36,7 @@ const ProductivityPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ProductivityPage;

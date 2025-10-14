@@ -10,18 +10,18 @@ const Page = () => {
   const features = [
     {
       icon: <CheckCircle className="w-8h-8" />,
-      title: &apos;Advanced Analytics&apos;,
-      description: &apos;Cutting-edge 5G data analytics for maximum efficiency&apos;
+      title: 'Advanced Analytics',
+      description: 'Cutting-edge 5G data analytics for maximum efficiency'
     },
     {
       icon: <Shield className="w-8h-8" />,
-      title: &apos;Secure & Reliable&apos;,
-      description: &apos;Enterprise-grade security and 99.9% uptime&apos;
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
       icon: <Users className="w-8h-8" />,
-      title: &apos;Expert Support&apos;,
-      description: &apos;24/7 support from our team of specialists&apos;
+      title: 'Expert Support',
+      description: '24/7 support from our team of specialists'
     }
   ];
 
@@ -95,7 +95,7 @@ const Page = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let&apos;s discuss how our 5G data analytics services can help your business succeed.
+              Let's discuss how our 5G data analytics services can help your business succeed.
             </p>
             <div className="flexflex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -115,7 +115,7 @@ const Page = () => {
           </div>
         </section>
       </div>
-    </>
+</>
   );
 };
 

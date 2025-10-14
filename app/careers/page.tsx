@@ -36,7 +36,7 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default CareersPage;

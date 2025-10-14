@@ -36,7 +36,7 @@ const ZionComplianceManagerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionComplianceManagerPage;

@@ -36,7 +36,7 @@ const HrAnalyticsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default HrAnalyticsPage;

@@ -36,7 +36,7 @@ const SupportPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default SupportPage;

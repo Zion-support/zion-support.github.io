@@ -36,7 +36,7 @@ const ZionAiPredictiveMaintenancePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAiPredictiveMaintenancePage;

@@ -36,7 +36,7 @@ const PressPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default PressPage;

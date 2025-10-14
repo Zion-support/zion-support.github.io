@@ -36,7 +36,7 @@ const NlpPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default NlpPage;

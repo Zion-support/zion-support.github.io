@@ -36,7 +36,7 @@ const CreateAdPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default CreateAdPage;

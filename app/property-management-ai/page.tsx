@@ -36,7 +36,7 @@ const PropertyManagementAiPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default PropertyManagementAiPage;

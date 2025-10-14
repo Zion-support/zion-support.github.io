@@ -36,7 +36,7 @@ const AiFintechSolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiFintechSolutionsPage;

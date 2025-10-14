@@ -110,7 +110,7 @@ const DigitalTransformationPage: React.FC = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let&apos;s discuss how our digital transformation services can modernize your operations and drive growth.
+            Let's discuss how our digital transformation services can modernize your operations and drive growth.
           </p>
           <div className="flexflex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-rfrom-green-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">

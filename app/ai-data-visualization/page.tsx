@@ -36,7 +36,7 @@ const AiDataVisualizationPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiDataVisualizationPage;

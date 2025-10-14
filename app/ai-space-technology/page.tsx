@@ -36,7 +36,7 @@ const AiSpaceTechnologyPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiSpaceTechnologyPage;

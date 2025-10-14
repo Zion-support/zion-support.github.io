@@ -6,16 +6,16 @@ import EnhancedSEO from '../components/EnhancedSEO';
 const FiveGConsultingPage = () => {
   const services = [
     {
-      title: &apos;5G Strategy Development&apos;,
-      description: &apos;Comprehensive 5G implementation strategies tailored to your business needs.&apos;
+      title: '5G Strategy Development',
+      description: 'Comprehensive 5G implementation strategies tailored to your business needs.'
     },
     {
-      title: &apos;Security Assessment&apos;,
-      description: &apos;Complete security evaluation for 5G network implementation.&apos;
+      title: 'Security Assessment',
+      description: 'Complete security evaluation for 5G network implementation.'
     },
     {
-      title: &apos;Team Training&apos;,
-      description: &apos;Expert training for your team on 5G technologies and best practices.&apos;
+      title: 'Team Training',
+      description: 'Expert training for your team on 5G technologies and best practices.'
     }
   ];
 

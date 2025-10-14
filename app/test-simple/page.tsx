@@ -36,7 +36,7 @@ const TestSimplePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default TestSimplePage;

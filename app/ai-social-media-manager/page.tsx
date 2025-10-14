@@ -36,7 +36,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiSocialMediaManagerPage;

@@ -36,7 +36,7 @@ const AdvancedSecuritySuitePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AdvancedSecuritySuitePage;

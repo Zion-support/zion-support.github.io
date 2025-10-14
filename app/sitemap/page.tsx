@@ -36,7 +36,7 @@ const SitemapPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default SitemapPage;

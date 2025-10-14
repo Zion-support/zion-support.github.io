@@ -36,7 +36,7 @@ const FiveGNetworkInfrastructurePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default FiveGNetworkInfrastructurePage;

@@ -36,7 +36,7 @@ const MarketingToolsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default MarketingToolsPage;

@@ -36,7 +36,7 @@ const NewsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default NewsPage;

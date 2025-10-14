@@ -36,7 +36,7 @@ const AiVideoEditorPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiVideoEditorPage;

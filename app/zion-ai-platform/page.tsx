@@ -36,7 +36,7 @@ const ZionAiPlatformPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAiPlatformPage;

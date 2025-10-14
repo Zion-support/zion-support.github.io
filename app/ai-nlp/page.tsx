@@ -36,7 +36,7 @@ const AiNlpPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiNlpPage;

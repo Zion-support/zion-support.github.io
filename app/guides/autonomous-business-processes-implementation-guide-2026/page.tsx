@@ -36,7 +36,7 @@ const AutonomousBusinessProcessesImplementationGuide2026Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AutonomousBusinessProcessesImplementationGuide2026Page;

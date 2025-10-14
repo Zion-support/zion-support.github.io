@@ -36,7 +36,7 @@ const DevopsAdvancedPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default DevopsAdvancedPage;

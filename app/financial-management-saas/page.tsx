@@ -36,7 +36,7 @@ const FinancialManagementSaasPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default FinancialManagementSaasPage;

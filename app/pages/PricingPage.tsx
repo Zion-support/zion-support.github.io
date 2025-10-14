@@ -24,7 +24,7 @@ const PricingPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
 

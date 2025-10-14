@@ -36,7 +36,7 @@ const ZionAiNeuralInterfacePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAiNeuralInterfacePage;

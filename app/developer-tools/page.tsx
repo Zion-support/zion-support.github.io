@@ -36,7 +36,7 @@ const DeveloperToolsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default DeveloperToolsPage;

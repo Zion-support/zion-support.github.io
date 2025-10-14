@@ -36,7 +36,7 @@ const EmailMarketingSaasPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default EmailMarketingSaasPage;

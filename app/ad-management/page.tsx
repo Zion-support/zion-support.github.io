@@ -36,7 +36,7 @@ const AdManagementPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AdManagementPage;

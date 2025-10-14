@@ -36,7 +36,7 @@ const DevopsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default DevopsPage;

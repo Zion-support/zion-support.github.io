@@ -36,7 +36,7 @@ const SlaPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default SlaPage;

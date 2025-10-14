@@ -36,7 +36,7 @@ const ZionAiSocialSchedulerProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAiSocialSchedulerProPage;

@@ -36,7 +36,7 @@ const SocialManagerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default SocialManagerPage;

@@ -36,7 +36,7 @@ const AiQualityAssurancePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiQualityAssurancePage;

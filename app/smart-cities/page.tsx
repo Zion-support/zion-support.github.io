@@ -36,7 +36,7 @@ const SmartCitiesPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default SmartCitiesPage;

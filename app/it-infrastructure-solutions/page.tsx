@@ -36,7 +36,7 @@ const ItInfrastructureSolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ItInfrastructureSolutionsPage;

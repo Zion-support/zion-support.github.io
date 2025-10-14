@@ -36,7 +36,7 @@ const SearchPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default SearchPage;

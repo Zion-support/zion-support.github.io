@@ -36,7 +36,7 @@ const Ai3dGenerationPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default Ai3dGenerationPage;

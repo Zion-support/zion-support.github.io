@@ -36,7 +36,7 @@ const InnovationLabsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default InnovationLabsPage;

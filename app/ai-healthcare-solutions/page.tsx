@@ -36,7 +36,7 @@ const AiHealthcareSolutionsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiHealthcareSolutionsPage;

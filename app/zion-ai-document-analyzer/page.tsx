@@ -36,7 +36,7 @@ const ZionAiDocumentAnalyzerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default ZionAiDocumentAnalyzerPage;

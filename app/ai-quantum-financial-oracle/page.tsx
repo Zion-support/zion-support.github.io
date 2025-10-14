@@ -36,7 +36,7 @@ const AiQuantumFinancialOraclePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiQuantumFinancialOraclePage;

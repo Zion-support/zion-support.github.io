@@ -36,7 +36,7 @@ const CookiesPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default CookiesPage;

@@ -36,7 +36,7 @@ const AiRecruitmentAssistantPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiRecruitmentAssistantPage;

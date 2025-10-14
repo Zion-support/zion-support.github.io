@@ -36,7 +36,7 @@ const SystemAdminPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default SystemAdminPage;

@@ -24,7 +24,7 @@ const TutorialsPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 };
 

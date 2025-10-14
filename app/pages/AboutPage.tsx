@@ -193,7 +193,7 @@ const stats = [
               Ready to Work With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let&apos;s discuss how our team can help transform your business with 
+              Let's discuss how our team can help transform your business with 
               cutting-edge AI and IT solutions.
             </p>
             <div className="flexflex-col sm:flex-row gap-4 justify-center">
@@ -210,7 +210,7 @@ const stats = [
         </div>
         </section>
       </div>
-    </>
+</>
   );
 };
 

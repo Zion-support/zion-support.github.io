@@ -36,7 +36,7 @@ const EnterprisePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default EnterprisePage;

@@ -36,7 +36,7 @@ const AiFitnessCoachPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiFitnessCoachPage;

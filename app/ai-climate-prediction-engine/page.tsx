@@ -36,7 +36,7 @@ const AiClimatePredictionEnginePage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiClimatePredictionEnginePage;

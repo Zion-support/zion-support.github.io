@@ -36,7 +36,7 @@ const GdprPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default GdprPage;

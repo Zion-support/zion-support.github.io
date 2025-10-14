@@ -36,7 +36,7 @@ const AiInvestmentOptimizerPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiInvestmentOptimizerPage;

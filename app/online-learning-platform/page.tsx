@@ -36,7 +36,7 @@ const OnlineLearningPlatformPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default OnlineLearningPlatformPage;

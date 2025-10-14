@@ -36,7 +36,7 @@ const AiClimateSolutionsProPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiClimateSolutionsProPage;

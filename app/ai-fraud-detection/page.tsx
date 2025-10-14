@@ -36,7 +36,7 @@ const AiFraudDetectionPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiFraudDetectionPage;

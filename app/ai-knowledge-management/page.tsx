@@ -36,7 +36,7 @@ const AiKnowledgeManagementPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiKnowledgeManagementPage;

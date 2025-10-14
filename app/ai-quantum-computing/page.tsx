@@ -36,7 +36,7 @@ const AiQuantumComputingPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiQuantumComputingPage;

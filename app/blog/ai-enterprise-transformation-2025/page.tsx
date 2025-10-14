@@ -36,7 +36,7 @@ const AiEnterpriseTransformation2025Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default AiEnterpriseTransformation2025Page;

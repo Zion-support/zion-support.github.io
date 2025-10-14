@@ -36,7 +36,7 @@ const HelpPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+</>
   );
 }
 export default HelpPage;
