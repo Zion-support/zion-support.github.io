@@ -81,16 +81,6 @@ export default defineConfig({
       output: {
         manualChunks: (id: string) => {
           // Split vendor chunks for better caching
-<<<<<<< HEAD
-          if (id.includes('node_modules')) {
-            // React core (smaller chunk)
-            if (id.includes('react/') || id.includes('react-dom/')) {
-              return 'react-core';
-            }
-            // React router (separate chunk)
-            if (id.includes('react-router')) {
-              return 'react-router';
-=======
           if (id.includes("node_modules")) {
             // React ecosystem
             if (
@@ -99,7 +89,6 @@ export default defineConfig({
               id.includes("react-router")
             ) {
               return "react-vendor";
->>>>>>> cursor/comprehensive-app-audit-and-update-4a25
             }
             // UI libraries
             if (id.includes("lucide-react") || id.includes("framer-motion")) {
@@ -119,16 +108,10 @@ export default defineConfig({
             if (id.includes('/ai-') || id.includes('/5g-')) {
               return 'feature-pages';
             }
-            // Main app pages
-            if (id.includes('/page.tsx') && !id.includes('/ai-') && !id.includes('/5g-')) {
-              return 'main-pages';
-            }
-            return 'app';
-=======
+          }
           // App chunks
           if (id.includes("/app/")) {
             return "app";
->>>>>>> cursor/comprehensive-app-audit-and-update-4a25
           }
           return undefined;
         },
@@ -155,8 +138,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-<<<<<<< HEAD
-    include: ['react', 'react-dom', 'react-router-dom'],
+    include: ["react", "react-dom", "react-router-dom"],
     exclude: ['@heroicons/react', 'framer-motion', 'recharts'],
   },
   esbuild: {
@@ -164,8 +146,5 @@ export default defineConfig({
     drop: ['console', 'debugger'],
     // Target modern browsers
     target: 'es2020',
-=======
-    include: ["react", "react-dom", "react-router-dom"],
->>>>>>> cursor/comprehensive-app-audit-and-update-4a25
   },
 });
