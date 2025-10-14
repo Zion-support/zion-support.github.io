@@ -10,3 +10,4 @@ import React from 'react';const ImprovedSidebar = () => {
 }
 
 export default ImprovedSidebar;
+

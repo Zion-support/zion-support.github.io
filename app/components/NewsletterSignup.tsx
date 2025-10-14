@@ -10,3 +10,4 @@ import React from 'react';const NewsletterSignup = () => {
 }
 
 export default NewsletterSignup;
+

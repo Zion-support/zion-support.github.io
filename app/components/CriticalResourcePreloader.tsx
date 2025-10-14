@@ -10,3 +10,4 @@ import React from 'react';const CriticalResourcePreloader = () => {
 }
 
 export default CriticalResourcePreloader;
+

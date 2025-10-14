@@ -8,3 +8,4 @@ export const generateResponsiveImages = (;"
   src="string","  sizes="number[] = [320", 640, 768, 10o24, 1280, 1920];`"): string => {}``"    .map(size => `${optimizeImage(src, { width: size"})} ${size}w`).join(", );`}``"```
 
 export default optimizeImage;"
+

@@ -10,3 +10,4 @@ import React from 'react';const ImprovedErrorBoundary = () => {
 }
 
 export default ImprovedErrorBoundary;
+

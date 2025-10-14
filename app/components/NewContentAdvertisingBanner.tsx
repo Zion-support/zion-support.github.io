@@ -10,3 +10,4 @@ import React from 'react';const NewContentAdvertisingBanner = () => {
 }
 
 export default NewContentAdvertisingBanner;
+

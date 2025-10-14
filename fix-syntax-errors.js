@@ -95,3 +95,4 @@ const { filesProcessed, filesFixed } = processDirectory('./app');
 console.log(`
 Completed! Processed ${filesProcessed} files, fixed ${filesFixed} files.`);
 
+

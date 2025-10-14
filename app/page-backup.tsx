@@ -1,2 +1,4 @@
-import React from 'react';'// page-backup - Basic implementation'export default function page-backup() {
+// page-backup - Basic implementation
+export default function pageBackup() {
   return null;
+}

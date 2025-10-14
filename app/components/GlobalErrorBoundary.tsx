@@ -10,3 +10,4 @@ import React from 'react';const GlobalErrorBoundary = () => {
 }
 
 export default GlobalErrorBoundary;
+

@@ -10,3 +10,4 @@ import React from 'react';const EnhancedSEOOptimizer = () => {
 }
 
 export default EnhancedSEOOptimizer;
+

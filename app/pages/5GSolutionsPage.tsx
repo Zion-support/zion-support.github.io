@@ -1,2 +1,4 @@
-import React from 'react';'// 5GSolutionsPage - Basic implementation'export default function 5GSolutionsPage() {
+// 5GSolutionsPage - Basic implementation
+export default function FiveGSolutionsPage() {
   return null;
+}

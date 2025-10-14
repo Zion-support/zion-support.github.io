@@ -10,3 +10,4 @@ import React from 'react';const FuturisticBackground = () => {
 }
 
 export default FuturisticBackground;
+
