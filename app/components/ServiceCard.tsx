@@ -1,18 +1,12 @@
 import React from "react";
-export default function ServiceCardPage() {
+
+export default function ServiceCard() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">ServiceCard</h1>
-          <p className="text-gray-300 text-xl mb-8">
-            Learn more about servicecard
-          </p>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-8">Service Card</h1>
+        <p className="text-gray-300 text-lg">This component is under development.</p>
       </div>
-        <h1 className: '"text-4xl font-bold mb-8>Components</h1>        <p className: ""text-gray-30o0 text-lg>"          This page is under development.;        </p>      </div>
     </div>
-  )
-        </p></div></div>
+  );
 }
-;

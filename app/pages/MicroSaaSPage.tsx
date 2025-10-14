@@ -1,14 +1,22 @@
+"use client";
 import React from "react";
+import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
+import { Helmet } from "react-helmet-async";
 
 export default function MicroSaaSPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
+    <React.Fragment>
+      <Helmet>
+        <title>Micro SaaS - Zion Tech Group</title>
+        <meta name="description" content="Micro SaaS - Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Micro Saa S</h1>
-          <p className="text-gray-300 text-xl mb-8">Learn more about microsaas</p>
+          <h1 className="text-4xl font-bold mb-8">Micro SaaS</h1>
+          <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }

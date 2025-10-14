@@ -1,5 +1,4 @@
 "use client";
-
 import { useContext } from "react";
 import { AnalyticsContext } from "../contexts/AnalyticsContext";
 

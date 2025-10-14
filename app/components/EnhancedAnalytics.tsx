@@ -47,6 +47,49 @@ const EnhancedAnalytics: React.FC = () => {
       timestamp: Date.now(),
       userAgent: navigator.userAgent,
       url: window.location.href
+    };
+
+    // Send to analytics service
+    console.log('Event tracked:', eventData);
+
+    // Store in localStorage for offline tracking
+    const storedEvents = JSON.parse(localStorage.getItem('analytics_events') || '[]');
+    storedEvents.push(eventData);
+    localStorage.setItem('analytics_events', JSON.stringify(storedEvents.slice(-1000))); // Keep last 1000 events
+  }, []);
+
+  // Track performance metrics
+  const trackPerformance = useCallback(() => {
+    if ('performance' in window) {
+      // Track Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            trackEvent({
+              action: 'LCP',
+              category: 'Performance',
+              value: entry.startTime
+            });
+          } else if (entry.entryType === 'first-input') {
+            trackEvent({
+              action: 'FID',
+              category: 'Performance',
+              value: (entry as PerformanceEventTiming).processingStart - entry.startTime
+            });
+          } else if (entry.entryType === 'layout-shift') {
+            const layoutShift = entry as LayoutShift;
+            if (!layoutShift.hadRecentInput) {
+              trackEvent({
+                action: 'CLS',
+                category: 'Performance',
+                value: layoutShift.value
+              });
+            }
+          }
+        }
+      });
+
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
     }
     // Send to analytics service
     console.log('Event tracked:', eventData)

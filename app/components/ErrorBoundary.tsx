@@ -11,28 +11,15 @@ export default class ErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(): State {
-    return { hasError: true };
-  }
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error("Error caught by boundary:", error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-red-50">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-red-600 mb-4">
-              Something went wrong
-            </h1>
-            <p className="text-gray-600">
-              Please refresh the page and try again.
-            </p>
-          </div>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
-;
+const ErrorBoundary = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        <h2 className="text-4xl font-bold text-white mb-8">Error Boundary</h2>
+        <p className="text-gray-300 text-lg">This component is under construction.</p>
+      </div>
+    </div>
+  );
+};
+
+export default ErrorBoundary;
