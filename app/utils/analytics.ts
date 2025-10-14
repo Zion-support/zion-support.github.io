@@ -1,7 +1,7 @@
 // Analytics utility functions
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (..._args: unknown[]) => void;
   }
 }
 export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {

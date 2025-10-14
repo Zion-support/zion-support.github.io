@@ -4,7 +4,7 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -64,7 +64,7 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
+              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
             </p>
             
             {process.env.NODE_ENV === 'development' && this.state.error && (
