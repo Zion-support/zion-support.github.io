@@ -5,11 +5,12 @@ const FiveGReliabilityPage: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-9 0 0 mb-6">
-            5gReliability Services
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            5g Reliability Services
           </h1>
-
-          </div>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional 5g reliability solutions and services
+          </p>
         </div>
       </div>
     </div>
