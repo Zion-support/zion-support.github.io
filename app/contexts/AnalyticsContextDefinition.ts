@@ -6,6 +6,7 @@ export interface AnalyticsContextType {
   setUserProperties: (properties: Record<string, any>) => void;
 }
 export const defaultAnalyticsContext: AnalyticsContextType = {
-  trackEvent: () => {},
+    trackEvent: () => {,
+  },
   trackPageView: () => {},
 }

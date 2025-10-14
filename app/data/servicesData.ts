@@ -95,7 +95,8 @@ export const services: Service[] = [
       basic: 3000,
       pro: 10000,
       enterprise: 30000;
-    },
+    ,
+  },
     benefits: [
 
       'Enhanced Security',

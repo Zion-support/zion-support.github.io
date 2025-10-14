@@ -18,7 +18,9 @@ export function withLazyLoading<T extends ComponentType<any>>(
 // Utility function to create lazy-loaded components;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any;
 export function createLazyComponent<T extends ComponentType<any>>(
-  importFunction: () => Promise<{ default: T }>,
+  importFunction: () => Promise<{
+    default: T ,
+  }>,
   fallback?: React.ReactNode;
 ) {
   const LazyComponent = lazy(importFunction);

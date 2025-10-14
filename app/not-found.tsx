@@ -85,7 +85,8 @@ ursor/fix-errors-and-merge-to-main-94a7
 ursor/fix-errors-and-merge-to-main-94a7
     </div>
   );
-};
+,
+  };
 
       { /* CTA Section */ }"
       <section className="py-16 px-4 bg-blue-600">"

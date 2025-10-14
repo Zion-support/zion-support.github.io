@@ -62,7 +62,7 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
       email: 'kleber@ziontechgroup.com',
     },
     sameAs: [
-      'https://twitter.com/ziontechgroup',
+    'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
       'https://github.com/ziontechgroup',
     ],
@@ -74,7 +74,7 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
     headline: title,
     description,
     author: {
-      '@type': 'Organization',
+    '@type': 'Organization',
       name: author,
     },
     publisher: {
@@ -88,11 +88,13 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
     datePublished: publishedTime,
     dateModified: modifiedTime || publishedTime,
     mainEntityOfPage: {
-      '@type': 'WebPage',
+    '@type': 'WebPage',
       '@id': finalCanonical,
-    },
+  },
     image: finalOgImage,
-    ...(section && { articleSection: section }),
+    ...(section && {
+    articleSection: section ,
+  }),
     ...(tags.length > 0 && { keywords: tags.join(', ') }),
   } : null;
 

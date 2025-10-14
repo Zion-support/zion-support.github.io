@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom';
 import { ArrowPathIcon, HomeIcon } from '@heroicons/react/24/outline';
 
 interface Props {
-  children: ReactNode;
+    children: ReactNode;
   fallback?: ReactNode;
-}
+,
+  }
 
 interface State {
   hasError: boolean;
@@ -14,7 +15,7 @@ interface State {
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+    constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,

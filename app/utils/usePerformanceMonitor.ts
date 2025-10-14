@@ -9,7 +9,9 @@ interface PerformanceMetrics {
 }
 
 export const usePerformanceMonitor = (): PerformanceMetrics => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    const [
+    metrics, setMetrics,
+  ] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
   });

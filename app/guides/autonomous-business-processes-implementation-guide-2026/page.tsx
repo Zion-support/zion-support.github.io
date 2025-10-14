@@ -56,7 +56,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
           </p>
         </div>
 
-        {/* Pre-Implementation Checklist */}
+        {/* Pre-Implementation Checklist  */}
         <div className="mb-12">
           <h2 className="text-3 xl font-bold text-gray-900 mb-6">📋 Pre-Implementation Checklist</h2>
 
@@ -113,7 +113,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
           </div>
         </div>
 
-        {/* Implementation Phases */}
+        {/* Implementation Phases  */}
         <div className="mb-12">
           <h2 className="text-3 xl font-bold text-gray-900 mb-8">🚀 Implementation Phases</h2>
 
@@ -154,7 +154,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               </div>
             </div>
 
-            {/* Phase 2 */}
+            {/* Phase 2  */}
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg border-l-4 border-blue-500">
               <div className="flex items-center mb-4">
                 <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">
@@ -190,7 +190,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               </div>
             </div>
 
-            {/* Phase 3 */}
+            {/* Phase 3  */}
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-lg border-l-4 border-purple-500">
               <div className="flex items-center mb-4">
                 <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">
@@ -226,7 +226,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               </div>
             </div>
 
-            {/* Phase 4 */}
+            {/* Phase 4  */}
             <div className="bg-gradient-to-r from-orange-50 to-red-50 p-8 rounded-lg border-l-4 border-orange-500">
               <div className="flex items-center mb-4">
                 <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4">
@@ -266,7 +266,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
           </div>
         </div>
 
-        {/* Expected Outcomes */}
+        {/* Expected Outcomes  */}
         <div className="mb-12">
           <h2 className="text-3 xl font-bold text-gray-900 mb-8">📊 Expected Outcomes</h2>
 
@@ -297,7 +297,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
           </div>
         </div>
 
-        {/* Key Technologies */}
+        {/* Key Technologies  */}
         <div className="mb-12">
           <h2 className="text-3 xl font-bold text-gray-900 mb-8">🔧 Key Technologies</h2>
 
@@ -340,7 +340,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
           </div>
         </div>
 
-        {/* CTA Section */}
+        {/* CTA Section  */}
         <div className="bg-gradient-to-r from-green-900 to-blue-900 text-white p-12 rounded-lg text-center">
           <h3 className="text-3 xl font-bold mb-4">
             Ready to Transform Your Business with Autonomous Processes?

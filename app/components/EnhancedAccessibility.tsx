@@ -15,7 +15,7 @@ import React from 'react';
       document.body.insertBefore(skipLink, document.body.firstChild)};
 
     const enhanceFocusManagement = () => {
-      // Add focus indicators
+    // Add focus indicators
       const style = document.createElement('style')
       style.textContent = `
         *:focus {

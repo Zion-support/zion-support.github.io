@@ -14,6 +14,6 @@ export const trackPageView = (pageName: string) => {
     (window as { gtag: (command: string, measurementId: string, config: { page_title: string; page_location: string }) => void }).gtag('config', 'GA_MEASUREMENT_ID', {
       page_title: pageName,
       page_location: window.location.href,
-    });
+  });
   }
 }

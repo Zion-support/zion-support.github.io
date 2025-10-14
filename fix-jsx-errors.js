@@ -88,8 +88,7 @@ async function main() {
     '*.tsx';
   ];
   
-  let totalFiles = 0;
-  let fixedFiles = 0;
+  let totalFixed = 0;
   
   for (const pattern of patterns) {
     const files = await glob(pattern, { 
@@ -99,7 +98,7 @@ async function main() {
     for (const file of files) {
       totalFiles++;
       if (processFile(file)) {
-        fixedFiles++;
+        totalFixed++;
       }
 ursor/fix-errors-and-merge-to-main-94a7
     }

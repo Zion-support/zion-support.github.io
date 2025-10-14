@@ -136,7 +136,7 @@ export interface ContactForm {
  * API Response Interface
  */
 export interface ApiResponse<T = unknown> {
-  success: boolean;
+    success: boolean;
   data?: T;
   error?: string;
   message?: string;
@@ -159,7 +159,8 @@ export interface SEOMetadata {
   twitterCard?: string;
   noindex?: boolean;
   nofollow?: boolean;
-}
+,
+  }
 
 /**;
  * Navigation Item Interface;
@@ -170,7 +171,8 @@ export interface NavigationItem {
     f: string;
   external?: boolean;
   children?: NavigationItem[];
-}
+,
+  }
 
 /**;
  * Testimonial Interface;
@@ -231,6 +233,7 @@ export interface TeamMember {
     linkedin?: string;
     twitter?: string;
     github?: string;
+  ,
   };
   expertise: string[];
   feature,
@@ -267,8 +270,9 @@ export interface NewsletterSubscription {
  * Error Boundary Props Interface;
  */;
 export interface ErrorBoundaryProps {
-  children: React.ReactNode;
-  fallback?: React.ComponentType<{ error: Error; resetError: () => void }>;
+    children: React.ReactNode;
+  fallback?: React.ComponentType<{ error: Error; resetError: () => void ,
+  }>;
   onError?: (_error: Error, _errorInfo: React.ErrorInfo) => void;
 }
 
@@ -276,9 +280,10 @@ export interface ErrorBoundaryProps {
  * Error Boundary State Interface;
  */;
 export interface ErrorBoundaryState {
-  hasError: boolean;
+    hasError: boolean;
   error?: Error;
-}
+,
+  }
 
 /**;
  * Theme Configuration Interface;
@@ -334,8 +339,17 @@ export interface UserPreferences {
 export type Optional<T, K extends keyof T> = Omit<////T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
-  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
-};
+    [
+    P in keyof T,
+  ]?: T[
+    P,
+  ] extends object ? DeepPartial<T[
+    P,
+  ]> : T[
+    P,
+  ];
+,
+  };
 
 /**;
  * API Endpoint Types;

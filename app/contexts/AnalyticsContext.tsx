@@ -8,8 +8,12 @@ ursor/fix-errors-and-merge-to-main-94a7
   isEnabled: boolean}
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 const  ({ children }) => {
-  const [isEnabled, setIsEnabled] = useState(false)
-  const [userId, setUserId] = useState<string | null>(null)
+  const [
+    isEnabled, setIsEnabled,
+  ] = useState(false)
+  const [
+    userId, setUserId,
+  ] = useState<string | null>(null)
   useEffect(() => {
     // if analytics is enabled
 setIsEnabled(true)}, [])

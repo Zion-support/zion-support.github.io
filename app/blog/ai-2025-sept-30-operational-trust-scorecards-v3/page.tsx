@@ -15,7 +15,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
-            Operational Trust    Scorecards    v3
+            Operational Trust Scorecards v3
           </h1>
           <p className="text-gray-300 text-lg">
             A practical blueprint to ship reliable, safe, and cost‑effective AI
@@ -29,7 +29,7 @@ const OperationalTrustScorecardsPage: React.FC = () => {
       <section className="py-12">
         <div className="max-w-3 xl mx-auto px-4 space-y-10">
           <div>
-            <h2 className="text-2xl font-bold mb-3">Why Operational    Trust</h2>
+            <h2 className="text-2xl font-bold mb-3">Why Operational Trust</h2>
             <p>Enterprise AI fails without measurable trust. Scorecards unify
               KPIs across reliability (accuracy, grounding, latency), safety
               (policy adherence), cost (per task, per user), and value (business

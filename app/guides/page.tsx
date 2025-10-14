@@ -13,34 +13,51 @@ const GuidesPage: React.FC = () => {
       icon: Brain,
       difficulty: 'Intermediate',
       duration: '45 min read'
-    },
+    ,
+  },
     {
-      title: 'AI 2027 Implementation Roadmap',
+    title: 'AI 2027 Implementation Roadmap',
       description: 'Advanced roadmap for AI implementation strategies in 2027',
       url: '/guides/ai-2027-implementation-roadmap',
       category: 'AI Implementation',
       icon: Brain,
       difficulty: 'Advanced',
       duration: '60 min read'
-    },
+    ,
+  },
     {
-      title: 'Autonomous Business Processes Implementation Guide 2026',
+    title: 'Autonomous Business Processes Implementation Guide 2026',
       description: 'Step-by-step guide to implementing autonomous business processes',
       url: '/guides/autonomous-business-processes-implementation-guide-2026',
       category: 'Process Automation',
       icon: Zap,
       difficulty: 'Expert',
       duration: '90 min read'
-    }
+    ,
+  }
+  ,
   ];
 
   const categories = [
-    { name: 'AI Implementation', icon: Brain, color: 'text-purple-400' },
-    { name: 'Process Automation', icon: Zap, color: 'text-blue-400' },
-    { name: 'Security', icon: Shield, color: 'text-red-400' },
-    { name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400' },
-    { name: 'Data Management', icon: Database, color: 'text-green-400' },
-    { name: 'Development', icon: Code, color: 'text-orange-400' }
+    {
+    name: 'AI Implementation', icon: Brain, color: 'text-purple-400' ,
+  },
+    {
+    name: 'Process Automation', icon: Zap, color: 'text-blue-400' ,
+  },
+    {
+    name: 'Security', icon: Shield, color: 'text-red-400' ,
+  },
+    {
+    name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400' ,
+  },
+    {
+    name: 'Data Management', icon: Database, color: 'text-green-400' ,
+  },
+    {
+    name: 'Development', icon: Code, color: 'text-orange-400' ,
+  }
+  ,
   ];
 
   const getDifficultyColor = (difficulty: string) => {
@@ -50,7 +67,8 @@ const GuidesPage: React.FC = () => {
       case 'Advanced': return 'text-orange-400 bg-orange-400/20';
       case 'Expert': return 'text-red-400 bg-red-400/20';
       default: return 'text-gray-400 bg-gray-400/20';
-    }
+    ,
+  }
   };
 
 const Page = () => {
@@ -70,7 +88,7 @@ ursor/fix-errors-and-merge-to-main-94a7
         </nav>
 
         <main className="container mx-auto px-4 py-16">
-          {/* Header */}
+          {/* Header  */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center space-x-4 mb-6">
               <BookOpen className="w-16 h-16 text-cyan-400" />
@@ -84,7 +102,7 @@ ursor/fix-errors-and-merge-to-main-94a7
             </p>
           </div>
 
-          {/* Categories */}
+          {/* Categories  */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Guide Categories</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -97,7 +115,7 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </section>
 
-          {/* Guides Grid */}
+          {/* Guides Grid  */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Available Guides</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -134,7 +152,7 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </section>
 
-          {/* Getting Started */}
+          {/* Getting Started  */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
             <div className="bg-slate-800 rounded-lg p-8">
@@ -169,7 +187,7 @@ ursor/fix-errors-and-merge-to-main-94a7
             </div>
           </section>
 
-          {/* Call to Action */}
+          {/* Call to Action  */}
           <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-4">
               Need Personalized Guidance?
