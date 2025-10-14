@@ -1,57 +1,52 @@
-import React, { useEffect } from 'react';
+import React, { use Effect } from 'react'
 
-const PerformanceOptimizer: React.FC = () => {
-  useEffect(() => {
+
+const Performance Optimizer: React.FC = () => {
+  use Effect(() => {
     // Performance optimization logic
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {
+    const optimize Images = () => {
+      const images = document.query Selector All('img')
+      images.for Each((img) => {
         if (!(img as any).loading) {
-          (img as any).loading = 'lazy';
+          (img as any).loading = 'lazy'
         }
-      });
-    };
-
-    const optimizeFonts = () => {
+  )
+      })
+    }
+  )
+    const optimize Fonts = () => {
       // Preload critical fonts
-      const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
-      fontPreload.href = '/fonts/inter-var.woff2';
-      fontPreload.as = 'font';
-      fontPreload.type = 'font/woff2';
-      fontPreload.crossOrigin = 'anonymous';
-      document.head.appendChild(fontPreload);
-    };
-
-    const optimizeResources = () => {
+      const font Preload = document.create Element('link')
+      font Preload.rel = 'preload'
+      font Preload.href = '/fonts/inter-var.woff2'
+      font Preload.as = 'font'
+      font Preload.type = 'font/woff2'
+      font Preload.cross Origin = 'anonymous'
+      document.head.append Child(font Preload)
+    }
+  )
+    const optimize Resources = () => {
       // Add resource hints
-      const resourceHints = [
-        { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-        { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
-      ];
-
-      resourceHints.forEach((hint) => {
-        const link = document.createElement('link');
-        link.rel = hint.rel;
-        link.href = hint.href;
-        document.head.appendChild(link);
-      });
-    };
-
+      const resource Hints = 
+      resource Hints.for Each((hint) => {
+        const link = document.create Element('link')
+        link.rel = hint.rel
+        link.href = hint.href
+        document.head.append Child(link)
+      })
+    }
+  )
     // Run optimizations
-    optimizeImages();
-    optimizeFonts();
-    optimizeResources();
-
+    optimize Images()
+    optimize Fonts()
+    optimize Resources()
     // Cleanup function
     return () => {
       // Cleanup if needed
-    };
-  }, []);
-
+    }
+  )
+  }, )
   return null; // This component doesn't render anything
-};
-
-export default PerformanceOptimizer;
+}
+  )
+export default Performance;; Optimizer

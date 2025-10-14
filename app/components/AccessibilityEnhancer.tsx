@@ -1,96 +1,99 @@
-import React, { useEffect, useState } from 'react';
+import React, { use Effect, use State } from 'react'
 
-const AccessibilityEnhancer: React.FC = () => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal');
 
-  useEffect(() => {
-    const root = document.documentElement;
-
+const Accessibility Enhancer: React.FC = () => {
+  const  = use State(false)
+  const  = use State(false)
+  const  = use State<'small' | 'normal' | 'large' | 'extra-large'>('normal')
+  use Effect(() => {
+    const root = document.document Element
     // High contrast mode
-    if (isHighContrast) {
-      root.classList.add('high-contrast');
+    if (is High Contrast) {
+      root.class List.add('high-contrast')
     } else {
-      root.classList.remove('high-contrast');
+      root.class List.remove('high-contrast')
     }
-
+  )
     // Reduced motion mode
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
+    if (is Reduced Motion) {
+      root.class List.add('reduced-motion')
     } else {
-      root.classList.remove('reduced-motion');
+      root.class List.remove('reduced-motion')
     }
-
+  )
     // Font size adjustment
-    root.style.fontSize = fontSize === 'small' ? '14px' : 
-                         fontSize === 'normal' ? '16px' : 
-                         fontSize === 'large' ? '18px' : '20px';
-  }, [isHighContrast, isReducedMotion, fontSize]);
-
+    root.style.font Size = font Size === 'small' ? '14px' : 
+                         font Size === 'normal' ? '16px' : 
+                         font Size === 'large' ? '18px' : '20px'
+  }, )
   // Keyboard navigation enhancement
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+  use Effect(() => {
+    const handle Key Down = (e: Keyboard Event) => {
       // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        e.preventDefault();
-        const main = document.querySelector('main');
+      if (e.key === 'Tab' && e.shift Key && e.target === document.body) {
+        e.prevent Default()
+        const main = document.query Selector('main')
         if (main) {
-          (main as HTMLElement).focus();
+          (main as HTML Element).focus()
         }
+  )
       }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  // Add ARIA landmarks
-  useEffect(() => {
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
+  )
+    }
+  )
+    document.add Event Listener('keydown', handle Key Down)
+    return () => document.remove Event Listener('keydown', handle Key Down)
+  }, )
+  // Add ARI A landmarks
+  use Effect(() => {
+    const add Aria Landmarks = () => {
+      const main = document.query Selector('main')
+      if (main && !main.get Attribute('role')) {
+        main.set Attribute('role', 'main')
       }
-
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
+  )
+      const nav = document.query Selector('nav')
+      if (nav && !nav.get Attribute('role')) {
+        nav.set Attribute('role', 'navigation')
       }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
+  )
+      const footer = document.query Selector('footer')
+      if (footer && !footer.get Attribute('role')) {
+        footer.set Attribute('role', 'contentinfo')
       }
-    };
-
-    addAriaLandmarks();
-  }, []);
-
+  )
+    }
+  )
+    add Aria Landmarks()
+  }, )
   // Add alt text to images without alt attributes
-  useEffect(() => {
-    const addAltText = () => {
-      const images = document.querySelectorAll('img:not([alt])');
-      images.forEach((img, index) => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', `Image ${index + 1}`);
+  use Effect(() => {
+    const add Alt Text = () => {
+      const images = document.query Selector All('img:not()')
+      images.for Each((img, index) => {
+        if (!img.get Attribute('alt')) {
+          img.set Attribute('alt', `Image ${index + 1}`)
         }
-      });
-    };
-
-    addAltText();
-  }, []);
-
+  )
+      })
+    }
+  )
+    add Alt Text()
+  }, )
   return (
     <div className="accessibility-controls fixed bottom-4 left-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
+        
       <h3 className="text-white font-semibold mb-3">Accessibility</h3>
       
       <div className="space-y-3">
+        
         <label className="flex items-center space-x-2 text-white">
           <input
             type="checkbox"
-            checked={isHighContrast}
-            onChange={(e) => setIsHighContrast(e.target.checked)}
+            checked={is High Contrast}
+  )
+            on Change={(e) => set Is High Contrast(e.target.checked)}
+  )
             className="rounded"
           />
           <span>High Contrast</span>
@@ -99,18 +102,23 @@ const AccessibilityEnhancer: React.FC = () => {
         <label className="flex items-center space-x-2 text-white">
           <input
             type="checkbox"
-            checked={isReducedMotion}
-            onChange={(e) => setIsReducedMotion(e.target.checked)}
+            checked={is Reduced Motion}
+  )
+            on Change={(e) => set Is Reduced Motion(e.target.checked)}
+  )
             className="rounded"
           />
           <span>Reduce Motion</span>
         </label>
         
         <div className="space-y-2">
+        
           <label className="text-white text-sm">Font Size</label>
           <select
-            value={fontSize}
-            onChange={(e) => setFontSize(e.target.value as 'small' | 'normal' | 'large')}
+            value={font Size}
+  )
+            on Change={(e) => set Font Size(e.target.value as 'small' | 'normal' | 'large')}
+  )
             className="w-full p-2 rounded bg-slate-700 text-white"
           >
             <option value="small">Small</option>
@@ -119,9 +127,8 @@ const AccessibilityEnhancer: React.FC = () => {
             <option value="extra-large">Extra Large</option>
           </select>
         </div>
-      </div>
     </div>
-  );
-};
-
-export default AccessibilityEnhancer;
+  )
+}
+  )
+export default Accessibility;; Enhancer

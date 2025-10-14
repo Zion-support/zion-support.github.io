@@ -1,20 +1,25 @@
-import React, { Suspense } from 'react';
+import React, { Suspense } from 'react'
 
-const FiveGSecurityPage: React.FC = () => {
+
+const FiveG Security Page: React.FC = () => {
   return (
-    <div className="min-h-screenbg-gray-50">
+    <div className="min-h-screen bg-gray-50">
+        
       <div className="container mx-auto px-4 py-16">
+        
         <div className="text-center">
-          <h1 className="text-4xlfont-bold text-gray-900 mb-6">
-            5gSecurity Services
+        
+          <h1>
+          
+            5g Security Services
           </h1>
-          <p className="text-xltext-gray-600 max-w-3xl mx-auto">
+          <p>
+          
             Professional services and solutions.
           </p>
           </div>
-        </div>
       </div>
-    </div>
   )
   }
-export default FiveGSecurityPage;
+  )
+export default FiveG;; Security Page

@@ -1,20 +1,25 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import HomePage from './page';
+import { BrowserRouterasRouter, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import Home Page from './page'
+
+
+
 
 function App() {
   return (
-    <HelmetProvider>
+    <div>
+    <Helmet Provider>
       <Router>
         <div className="App">
+        
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="*" element={<HomePage />} />
+            <Route path="/" element={<Home Page />} />
+            <Route path="*" element={<Home Page />} />
           </Routes>
         </div>
       </Router>
-    </HelmetProvider>
+    </Helmet Provider>
   )
   }
-
-export default App;
+  )
+export default App;;

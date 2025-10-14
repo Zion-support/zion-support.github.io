@@ -1,122 +1,142 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
+import React from 'react'
+import { ArrowRight } from 'lucide-react'
+import { CheckCircle } from 'lucide-react'
+import { Users } from 'lucide-react'
+import { Shield } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import EnhancedSEO from '../components/EnhancedSEO'
+
+
+
+
+
+
+
 
 const FiveGDataAnalyticsPage = () => {
+  
   const services = [
     {
-      icon: <CheckCircle className="w-8h-8" />,
-      title: 'Advanced Analytics',
-      description: 'Cutting-edge 5G data analytics for maximum efficiency',
+      title: "Service 1",
+      description: "Description 1"
     },
     {
-      icon: <Shield className="w-8h-8" />,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and 99.9% uptime',
-    },
-    {
-      icon: <Users className="w-8h-8" />,
-      title: 'Expert Support',
-      description: '24/7 support from our team of specialists',
+      title: "Service 2",
+      description: "Description 2"
     }
   ];
-
   return (
     <>
+      <div>
       <EnhancedSEO 
-        title="5G Data Analytics - Zion Tech Group"
-        description="Professional 5G data analytics services by Zion Tech Group. Expert solutions for your business needs."
+        title="5G Data Analytics - Zion TechGroup"
+        description="Professional 5G data analytics services by Zion Tech Group. Expert solutions for your businessneeds."
         keywords="5G, data analytics, business solutions, technology services, professional services"
       />
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00 via-purple-9 0 0 to-slate-9 0 0">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        
         {/* Hero Section */}
-        <section className="relativepy-2 0 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xlmx-auto text-center">
-            <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6">
+  )
+        <section>
+        
+          <div className="max-w-7xl mx-auto text-center">
+        
+            <h1>
+          
               5G Data Analytics
-              <span className="blockbg-gradient-to-r from-cyan-4 0 0 to-purple-4 0 0 bg-clip-text text-transparent">
+              <span className="blockbg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 Solutions
               </span>
             </h1>
-            <p className="text-xltext-gray-3 0 0 mb-8 max-w-3xl mx-auto">
+            <p>
+          
               Professional 5G data analytics services designed to help your business succeed and grow.
             </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        
               <Link
                 to="/contact"
-                className="inline-flexitems-center px-8 py-4 bg-gradient-to-r from-cyan-5 00 to-purple-6 00 text-white font-semibold rounded-lg hover:from-cyan-6 00 hover:to-purple-7 0 0 transition-all duration-3 0 0 group"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-3 0 0 group"
               >
                 Get Started
-                <ArrowRight className="ml-2w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="inline-flexitems-center px-8 py-4 border border-cyan-4 00 text-cyan-4 00 font-semibold rounded-lg hover:bg-cyan-4 0 0/1 0 transition-all duration-3 0 0"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-3 0 0"
               >
                 View Demo
               </Link>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xlmx-auto">
-            <div className="text-centermb-1 6">
-              <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
+  )
+        <section>
+        
+          <div className="max-w-7xl mx-auto">
+        
+            <div className="text-center mb-1 6">
+        
+              <h2>
+          
                 Why Choose Our 5G Data Analytics Services?
               </h2>
-              <p className="text-xltext-gray-3 0 0 max-w-2xl mx-auto">
+              <p>
+          
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
-            <div className="gridgrid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-1 6 bg-gradient-to-r from-cyan-5 0 0 to-purple-6 0 0 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-1 6 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        
                     {feature.icon}
+  )
                   </div>
-                  <h3 className="text-xlfont-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-30 0">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
+  )
             </div>
-          </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-8 0 0/3 0">
-          <div className="max-w-4xlmx-auto text-center">
-            <h2 className="text-3xlmd:text-4xl font-bold text-white mb-6">
+        {/* CT A Section */}
+  )
+        <section>
+        
+          <div className="max-w-4xl mx-auto text-center">
+        
+            <h2>
+          
               Ready to Get Started?
             </h2>
-            <p className="text-xltext-gray-3 0 0 mb-8">
+            <p className="text-xl text-gray-300 mb-8">
               Let&apos;s discuss how our 5G data analytics services can help your business succeed.
             </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        
               <Link
                 to="/contact"
-                className="inline-flexitems-center px-8 py-4 bg-gradient-to-r from-cyan-5 00 to-purple-6 00 text-white font-semibold rounded-lg hover:from-cyan-6 00 hover:to-purple-7 0 0 transition-all duration-3 0 0 group"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-3 0 0 group"
               >
                 Contact Us
-                <ArrowRight className="ml-2w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flexitems-center px-8 py-4 border border-cyan-4 00 text-cyan-4 00 font-semibold rounded-lg hover:bg-cyan-4 0 0/1 0 transition-all duration-3 0 0"
+                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-3 0 0"
               >
                 View All Services
               </Link>
             </div>
-          </div>
         </section>
       </div>
     </>
   )
-  };
-
-export default FiveGDataAnalyticsPage;
+  }
+  )
+export default FiveG;; Data Analytics Page

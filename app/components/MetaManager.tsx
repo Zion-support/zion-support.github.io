@@ -1,92 +1,109 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { use Effect } from 'react'
+import { Helmet } from 'react-helmet-async'
 
-interface MetaManagerProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string
+
+
+interface Meta Manager Props {
+  title?: string
+  description?: string
+  keywords?: string
+  canonical?: string
+  og Image?: string
+  og Type?: string
+  twitter Card?: string
   }
-
-const MetaManager: React.FC<MetaManagerProps> = ({
-  title,
-  description,
-  keywords,
-  canonical,
-  ogImage,
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
+  )
+const Meta Manager: React.FC<Meta Manager Props> = ({
+  title
+  description
+  keywords
+  canonical
+  og Image
+  og Type = 'website'
+  twitter Card = 'summary_large_image'
 }) => {
-  useEffect(() => {
+  use Effect(() => {
     // Update document title
     if (title) {
       document.title = title
   }
-
+  )
     // Update meta description
     if (description)  {
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription)  {
-        metaDescription.setAttribute('content', description)
+      const meta Description = document.query Selector('meta')
+      if (meta Description)  {
+        meta Description.set Attribute('content', description)
   } else {
-        const meta = document.createElement('meta');
-        meta.name = 'description';
-        meta.content = description;
-        document.head.appendChild(meta)
+        const meta = document.create Element('meta')
+        meta.name = 'description'
+        meta.content = description
+        document.head.append Child(meta)
   }
+  )
     }
-
+  )
     // Update meta keywords
     if (keywords)  {
-      const metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords)  {
-        metaKeywords.setAttribute('content', keywords)
+      const meta Keywords = document.query Selector('meta')
+      if (meta Keywords)  {
+        meta Keywords.set Attribute('content', keywords)
   } else {
-        const meta = document.createElement('meta');
-        meta.name = 'keywords';
-        meta.content = keywords;
-        document.head.appendChild(meta)
+        const meta = document.create Element('meta')
+        meta.name = 'keywords'
+        meta.content = keywords
+        document.head.append Child(meta)
   }
+  )
     }
-
-    // Update canonical URL
+  )
+    // Update canonical UR L
     if (canonical)  {
-      const canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (canonicalLink)  {
-        canonicalLink.setAttribute('href', canonical)
+      const canonical Link = document.query Selector('link')
+      if (canonical Link)  {
+        canonical Link.set Attribute('href', canonical)
   } else {
-        const link = document.createElement('link');
-        link.rel = 'canonical';
-        link.href = canonical;
-        document.head.appendChild(link)
+        const link = document.create Element('link')
+        link.rel = 'canonical'
+        link.href = canonical
+        document.head.append Child(link)
   }
+  )
     }
-  }, [title, description, keywords, canonical]);
-
+  )
+  }, )
   return (
+    <div>
     <Helmet>
       {title && <title>{title}</title>}
+  )
       {description && <meta name="description" content={description} />}
+  )
       {keywords && <meta name="keywords" content={keywords} />}
+  )
       {canonical && <link rel="canonical" href={canonical} />}
-      
+  )
       {/* Open Graph */}
-      <meta property="og:type" content={ogType} />
+  )
+      <meta property="og:type" content={og Type} />
       {title && <meta property="og:title" content={title} />}
+  )
       {description && <meta property="og:description" content={description} />}
-      {ogImage && <meta property="og:image" content={ogImage} />}
+  )
+      {og Image && <meta property="og:image" content={og Image} />}
+  )
       {canonical && <meta property="og:url" content={canonical} />}
-      
+  )
       {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
+  )
+      <meta name="twitter:card" content={twitter Card} />
       {title && <meta name="twitter:title" content={title} />}
+  )
       {description && <meta name="twitter:description" content={description} />}
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
+  )
+      {og Image && <meta name="twitter:image" content={og Image} />}
+  )
     </Helmet>
   )
-  };
-
-export default MetaManager;
+  }
+  )
+export default Meta;; Manager
