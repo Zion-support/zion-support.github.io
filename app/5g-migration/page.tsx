@@ -29,7 +29,6 @@ const FiveGMigrationPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-import React, { Suspense } from 'react';
         title="5G Migration Services - Zion Tech Group"
         description="Expert 5G migration services to transition your business to next-generation wireless technology."
       />

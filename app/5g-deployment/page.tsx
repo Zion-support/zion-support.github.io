@@ -29,7 +29,6 @@ const FiveGDeploymentPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-import React, { Suspense } from 'react';
         title="5G Deployment Services - Zion Tech Group"
         description="Professional 5G deployment services to implement next-generation wireless networks."
       />

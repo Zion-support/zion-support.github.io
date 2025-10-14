@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -17,18 +17,28 @@ interface LayoutShift extends PerformanceEntry {
   value: number;
 }
 
+const getScoreColor = (value: number | undefined, thresholds: { good: number; poor: number }) => {
+  if (!value) return 'text-gray-400';
+  if (value <= thresholds.good) return 'text-green-400';
+  if (value <= thresholds.poor) return 'text-yellow-400';
+  return 'text-red-400';
+};
+
 const PerformanceMonitor = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+
   useEffect(() => {
     // Only run in production
     if (process.env.NODE_ENV !== 'production') return;
 
-    const metrics: PerformanceMetrics = {};
+    const metricsData: PerformanceMetrics = {};
 
     // Measure Largest Contentful Paint (LCP)
     const lcpObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
-      metrics.lcp = lastEntry.startTime;
+      metricsData.lcp = lastEntry.startTime;
+      setMetrics({ ...metricsData });
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
@@ -38,7 +48,8 @@ const PerformanceMonitor = () => {
       entries.forEach((entry) => {
         const fidEntry = entry as PerformanceEventTiming;
         if (fidEntry.processingStart) {
-          metrics.fid = fidEntry.processingStart - fidEntry.startTime;
+          metricsData.fid = fidEntry.processingStart - fidEntry.startTime;
+          setMetrics({ ...metricsData });
         }
       });
     });
@@ -54,7 +65,8 @@ const PerformanceMonitor = () => {
           clsValue += layoutShiftEntry.value;
         }
       });
-      metrics.cls = clsValue;
+      metricsData.cls = clsValue;
+      setMetrics({ ...metricsData });
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
 
@@ -63,7 +75,8 @@ const PerformanceMonitor = () => {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
-          metrics.fcp = entry.startTime;
+          metricsData.fcp = entry.startTime;
+          setMetrics({ ...metricsData });
         }
       });
     });
@@ -72,19 +85,20 @@ const PerformanceMonitor = () => {
     // Measure Time to First Byte (TTFB)
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
-      metrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      metricsData.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+      setMetrics({ ...metricsData });
     }
 
     // Send metrics after page load
     const sendMetrics = () => {
-      if (Object.keys(metrics).length > 0) {
+      if (Object.keys(metricsData).length > 0) {
         // Send to analytics service
         if (process.env.NODE_ENV === 'development') {
-          console.warn('Performance Metrics:', metrics);
+          console.warn('Performance Metrics:', metricsData);
         }
         
         // You can send to your analytics service here
-        // Example: analytics.track('performance_metrics', metrics);
+        // Example: analytics.track('performance_metrics', metricsData);
       }
     };
 

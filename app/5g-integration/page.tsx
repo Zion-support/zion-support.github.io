@@ -29,7 +29,6 @@ const FiveGIntegrationPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-import React, { Suspense } from 'react';
         title="5G Integration Services - Zion Tech Group"
         description="Professional 5G integration services to connect your business with next-generation wireless technology."
       />

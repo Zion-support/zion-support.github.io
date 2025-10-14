@@ -30,7 +30,6 @@ const FiveGConsultingPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-import React, { Suspense } from 'react';
         title="5G Consulting Services - Zion Tech Group"
         description="Expert 5G consulting services to help your business leverage next-generation wireless technology."
       />

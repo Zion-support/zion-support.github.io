@@ -1,33 +1,9 @@
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 import React from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 const FiveGOptimizationPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            5G Optimization Services
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Optimize your 5G network performance with our expert services.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-import React, { Suspense } from 'react';
-export default FiveGOptimizationPage;
-
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
@@ -54,12 +30,66 @@ export default FiveGOptimizationPage;
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
-import React, { Suspense } from 'react';
         </div>
       </section>
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
+      {/* Services Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Our 5G Optimization Services
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We provide comprehensive 5G optimization services to ensure your network operates at peak performance.
+            </p>
+          </div>
 
-const page = React.lazy(() => import('./page'));
-export default page;
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Network Performance Tuning</h3>
+              <p className="text-gray-600 mb-4">
+                Optimize your 5G network parameters for maximum throughput and minimal latency.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Coverage Optimization</h3>
+              <p className="text-gray-600 mb-4">
+                Enhance signal coverage and eliminate dead zones in your 5G network.
+              </p>
+            </div>
+
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Capacity Planning</h3>
+              <p className="text-gray-600 mb-4">
+                Plan and optimize network capacity to handle current and future traffic demands.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gray-900 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Optimize Your 5G Network?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Contact our experts today to discuss your 5G optimization needs and get started.
+          </p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
+          >
+            Get Started
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default FiveGOptimizationPage;

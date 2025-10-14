@@ -4,27 +4,9 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import js from "@eslint/js"
-import globals from "globals"
-import reactHooks from "eslint-plugin-react-hooks"
-import reactRefresh from "eslint-plugin-react-refresh"
-import tseslint from "typescript-eslint"
+import globals from 'globals';
+import tseslint from 'typescript-eslint';
 
-export default [
-  {
-    ignores: [
-      "app-broken/**",
-      "app-disabled/**", 
-      "temp-broken/**",
-      "temp-disabled/**",
-      "**/*.cjs",
-      "**/*.js",
-      "api/**",
-      "scripts/**"
-    ]
-  },
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
 export default tseslint.config(
   {
     ignores: [
@@ -56,6 +38,7 @@ export default tseslint.config(
         },
       },
       globals: {
+        ...globals.browser,
         console: 'readonly',
         PerformanceObserver: 'readonly',
         describe: 'readonly',
@@ -73,19 +56,6 @@ export default tseslint.config(
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-    files: ["**/*.{ts,tsx}"],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true
-        }
-      }
-    },
-    plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -109,51 +79,40 @@ export default tseslint.config(
     },
   },
   {
-    ignores: ['dist/**', 'node_modules/**', '*.config.js', '*.config.mjs'],
-  },
-];
-      "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^[A-Z]" }],
-      "@typescript-eslint/no-explicit-any": "off",
-      "no-console": "off"
-      "@typescript-eslint/no-explicit-any": "warn",
-      "no-console": ["warn", { "allow": ["warn", "error"] }]
-    }
-  },
-  {
-    files: ["public/sw.js"],
+    files: ['public/sw.js'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
         ...globals.serviceworker,
-        self: "readonly",
-        caches: "readonly",
-        fetch: "readonly",
-        URL: "readonly",
-        location: "readonly",
-        clients: "readonly"
+        self: 'readonly',
+        caches: 'readonly',
+        fetch: 'readonly',
+        URL: 'readonly',
+        location: 'readonly',
+        clients: 'readonly'
       }
     },
     rules: {
-      "@typescript-eslint/no-unused-vars": "off",
-      "no-console": "off"
+      '@typescript-eslint/no-unused-vars': 'off',
+      'no-console': 'off'
     }
   },
   {
-    files: ["jest.setup.js"],
+    files: ['jest.setup.js'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
         ...globals.jest,
-        global: "readonly",
-        console: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly"
+        global: 'readonly',
+        console: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
       }
     },
     rules: {
-      "@typescript-eslint/no-unused-vars": "off",
-      "no-console": "off",
-      "@typescript-eslint/no-require-imports": "off"
+      '@typescript-eslint/no-unused-vars': 'off',
+      'no-console': 'off',
+      '@typescript-eslint/no-require-imports': 'off'
     }
   }
-)
+);

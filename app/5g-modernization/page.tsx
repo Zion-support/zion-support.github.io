@@ -29,7 +29,6 @@ const FiveGModernizationPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-import React, { Suspense } from 'react';
         title="5G Modernization Services - Zion Tech Group"
         description="Professional 5G modernization services to upgrade your network infrastructure."
       />

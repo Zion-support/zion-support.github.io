@@ -29,7 +29,6 @@ const FiveGMaintenancePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-import React, { Suspense } from 'react';
         title="5G Maintenance Services - Zion Tech Group"
         description="Professional 5G maintenance services to keep your network running optimally."
       />
