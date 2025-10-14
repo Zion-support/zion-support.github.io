@@ -1,44 +1,54 @@
-import React from "react"
-import { Helmet } from "react-helmet-async"
-const ServicesPage: React.FC = () => {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function ServicesPage() {
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive AI solutions, cybersecurity, cloud infrastructure, and digital transformation services." />
+        <title>Services Page - Zion Tech Group</title>
+        <meta name="description" content="Professional services page services by Zion Tech Group." />
       </Helmet>
-      
-      <div className="min-h-screen bg-slate-90 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 l,g:px-8 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth
-            </p>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Services Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional services page solutions tailored to your business needs.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge services page solutions.
+              </p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored services page implementations for your specific requirements.
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your services page needs.
+              </p>
+            </div>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-80"/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">AI Solutions</h3>
-              <p className="text-gray-300 mb-6">Advanced artificial intelligence and machine learning solutions to transform your business.</p>
-              <a href=""/ai-solutions" className="text-purple-40 hover:text-purple-30 font-semibold">Learn More →</a>
-            </div>
-            
-            <div className="bg-slate-80"/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">Cybersecurity</h3>
-              <p className="text-gray-300 mb-6">Comprehensive security solutions to protect your digital assets and infrastructure.</p>
-              <a href=""/cybersecurity" className="text-purple-40 hover:text-purple-30 font-semibold">Learn More →</a>
-            </div>
-            
-            <div className="bg-slate-80"/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-4">Cloud Solutions</h3>
-              <p className="text-gray-300 mb-6">Scalable cloud solutions and infrastructure management for modern businesses.</p>
-              <a href=""/cloud-solutions" className="text-purple-40 hover:text-purple-30 font-semibold">Learn More →</a>
-            </div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
           </div>
         </div>
       </div>
-    </>;
-  )
+    </div>
+  );
 }
-export default ServicesPage;

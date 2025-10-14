@@ -1,62 +1,54 @@
-import React from "react";"
-import { Helmet } from "react-helmet-async";"
-export default function 5GSolutionsPage() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+export default function FiveGSolutionsPage() {
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>5GSolutionsPage - Zion Tech Group</title>
-        <meta name="description" content="Professional 5gsolutionspage services by Zion Tech Group." />
+        <title>5 G Solutions Page - Zion Tech Group</title>
+        <meta name="description" content="Professional 5 g solutions page services by Zion Tech Group." />
       </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-10">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-90 mb-6">
-              5GSolutionsPage
-            </h1>
-            <p className="text-xl text-gray-60 max-w-3xl mx-auto">
-              Professional 5gsolutionspage services by Zion Tech Group.
-            </p>
-          </div>
-        </section>
-
-        {/* Content Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-90 mb-4">Professional Service</h3>
-                <p className="text-gray-60">High-quality professional services tailored to your needs.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-90 mb-4">Expert Team</h3>
-                <p className="text-gray-60">Experienced professionals with deep industry knowledge.</p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-90 mb-4">24/7 Support</h3>
-                <p className="text-gray-60">Round-the-clock support to ensure your success.</p>
-              </div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            5 G Solutions Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional 5 g solutions page solutions tailored to your business needs.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge 5 g solutions page solutions.
+              </p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored 5 g solutions page implementations for your specific requirements.
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your 5 g solutions page needs.
+              </p>
             </div>
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gray-900">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact us today to learn more about our services and how they can benefit your organization.
-            </p>
-            <button className="bg-blue-60 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-70 transition-colors">
-              Get Started
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
             </button>
           </div>
-        </section>
+        </div>
       </div>
-    </>
-  )
+    </div>
+  );
 }

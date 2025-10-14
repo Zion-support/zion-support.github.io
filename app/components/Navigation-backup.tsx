@@ -1,15 +1,12 @@
-import React from "react";
-"use client";
-export default function ComponentsPage() {
+import React from 'react';
 
+const NavigationBackup: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">Navigation-backup</h2>
+      <p className="text-gray-600">Navigation-backup component is under development.</p>
     </div>
-  )
-}
+  );
+};
+
+export default NavigationBackup;

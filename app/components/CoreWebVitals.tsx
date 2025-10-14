@@ -1,55 +1,54 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-"use client";
-export default function Page() {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+export default function CoreWebVitals() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>CoreWebVitals - Zion Tech Group</title>
-        <meta name="description" content="Professional corewebvitals services by Zion Tech Group." />
+        <title>Core Web Vitals - Zion Tech Group</title>
+        <meta name="description" content="Professional core web vitals services by Zion Tech Group." />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-90 mb-8">
-            CoreWebVitals;
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Core Web Vitals
           </h1>
-          <p className="text-xl text-gray-60 mb-8">
-            Professional corewebvitals solutions tailored to your business needs.;
+          <p className="text-xl text-gray-600 mb-8">
+            Professional core web vitals solutions tailored to your business needs.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <div className="bg-blue-50 border border-blue-20 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-90 mb-2">
-                Expert Solutions;
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
               </h3>
-              <p className="text-blue-70">
-                Our team of experts delivers cutting-edge corewebvitals solutions.;
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge core web vitals solutions.
               </p>
             </div>
-            <div className="bg-green-50 border border-green-20 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-green-90 mb-2">
-                Custom Implementation;
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
               </h3>
-              <p className="text-green-70">
-                Tailored corewebvitals implementations for your specific requirements.;
+              <p className="text-green-700">
+                Tailored core web vitals implementations for your specific requirements.
               </p>
             </div>
-            <div className="bg-purple-50 border border-purple-20 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-purple-90 mb-2">
-                24/7 Support;
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
               </h3>
-              <p className="text-purple-70">
-                Round-the-clock support for all your corewebvitals needs.;
+              <p className="text-purple-700">
+                Round-the-clock support for all your core web vitals needs.
               </p>
             </div>
           </div>
           <div className="mt-12">
-            <button className="bg-blue-60 text-white px-8 py-3 rounded-lg hover:bg-blue-70 transition-colors">
-              Get Started Today;
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
             </button>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
