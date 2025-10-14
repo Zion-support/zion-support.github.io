@@ -62,7 +62,6 @@ function App() {
 if (typeof window !== 'undefined') {
   // Monitor Core Web Vitals
   import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-<<<<<<< HEAD
     const logMetric = (metric: unknown) => {
       if (process.env.NODE_ENV === 'development') {
         console.warn('Web Vital:', metric);
@@ -72,28 +71,6 @@ if (typeof window !== 'undefined') {
     onFCP(logMetric);
     onLCP(logMetric);
     onTTFB(logMetric);
-=======
-    onCLS((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.log('CLS:', metric);
-      }
-    });
-    onFCP((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.log('FCP:', metric);
-      }
-    });
-    onLCP((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.log('LCP:', metric);
-      }
-    });
-    onTTFB((metric) => {
-      if (process.env.NODE_ENV === 'development') {
-        console.log('TTFB:', metric);
-      }
-    });
->>>>>>> 097a992ca525 (Fix TypeScript errors and ESLint warnings)
   });
 
   // Monitor bundle size
