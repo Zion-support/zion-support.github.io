@@ -1,0 +1,449 @@
+import { Shield, ArrowRight, Globe, Database, Phone, Cpu } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { 
+  XMarkIcon, 
+  HomeIcon, 
+  UserGroupIcon, 
+  BriefcaseIcon, 
+  CurrencyDollarIcon, 
+  DocumentTextIcon,
+  ChatBubbleLeftRightIcon,
+  CogIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+  MapIcon,
+  CloudIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  DevicePhoneMobileIcon,
+  ServerIcon,
+  CodeBracketIcon,
+  WrenchScrewdriverIcon,
+  ChartBarIcon,
+  LockClosedIcon,
+  Cog6ToothIcon,
+  SparklesIcon,
+  RocketLaunchIcon,
+  BeakerIcon,
+  HeartIcon,
+  ShieldExclamationIcon,
+  DocumentDuplicateIcon,
+  AcademicCapIcon,
+  PresentationChartLineIcon,
+  CommandLineIcon,
+  PuzzlePieceIcon,
+  ArrowRightIcon
+} from '@heroicons/react/24/outline';
+
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const location = useLocation();
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location = useLocation()
+  const [expandedItems, setExpandedItems] = useState<string[]>([])
+  const isActive = (path: string) => {
+    return location.pathname === path}
+  const toggleExpanded = (item: string) => {
+    setExpandedItems(prev => 
+      prev.includes(item) 
+        ? prev.filter(i => i !== item)
+        : [...prev, item]
+
+  const navigation = [
+    { name: "Home", href: "/", icon: HomeIcon },
+    { name: "About", href: "/about", icon: InformationCircleIcon },
+    { 
+      name: "Services", 
+      href: "/services", 
+      icon: BriefcaseIcon,
+      submenu: [
+      ]
+    },
+    { name: 'Solutions', href: '/solutions', icon: GlobeAltIcon },'''
+    { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon },'''
+    { name: 'Blog', href: '/blog', icon: AcademicCapIcon },'''
+    { name: 'Resources', href: '/resources', icon: PlayIcon },'''
+    { name: 'FAQ', href: '/faq', icon: QuestionMarkCircleIcon },'''
+    { name: 'Contact', href: '/contact', icon: PhoneIcon }'''
+  ];
+
+  if (!isOpen) return null;
+
+  return (
+<>    <div className="fixed inset-0 z-50 md:hidden">"
+      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose}></div>"
+      <div className="relative flex flex-col w-64 h-full bg-slate-900">"
+        <div className="flex items-center justify-between p-4 border-b border-slate-700">"
+          <span className="text-xl font-bold text-white">Menu</span>"
+          <button onClick={onClose} className="text-gray-400 hover:text-white">"
+            <XMarkIcon className="w-6 h-6" />"
+          </button>
+        </>
+        <nav className="flex-1 p-4 space-y-2 overflow-y-auto">"
+          {navigation.map((link) => (
+            <div key={link.name}></div>
+              {link.submenu ? (
+                <div></div>
+                  <button;
+                    onClick={() => toggleExpanded(link.name)
+                    className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded
+                  >
+                    <div className="flex items-center">"
+                      <link.icon className="w-5 h-5 mr-3" />"
+                      {link.name}
+                    </div>
+                    <ChevronDownIcon;
+                      className={`w-4 h-4 transition-transform ${````
+                        expandedItems.includes(link.name) ? 'rotate-180' : '''''
+                      }`} ````
+                    /></ChevronDownIcon>
+                  </button>
+                  {expandedItems.includes(link.name) && (
+                    <div className="ml-4 mt-2 space-y-1">"
+                      {link.submenu.map((subLink) => (
+                        <Link;
+                          key={subLink.name}
+                          to={subLink.href}
+                          className={`flex items-center px-3 py-2 text-sm transition-colors ${````
+                            isActive(subLink.href)
+                              ? 'text-blue-400 bg-blue-900/20''''
+                              : 'text-gray-400 hover:text-white hover:bg-slate-800''''
+                          }`}````
+                          onClick={onClose}></Link>
+                          <subLink.icon className="w-4 h-4 mr-3" />"
+                          {subLink.name}
+                        </Link>
+                      ))
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link;
+                </Link>
+              )
+            </div>
+        </nav>
+const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+
+  const toggleSection = (section: string) => {
+    setExpandedSections(prev => 
+      prev.includes(section) 
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
+    );
+  };
+
+  const navigationSections = [
+    {
+      id: 'ai-services',''
+      title: 'AI Services',''
+      icon: <Brain className="w-5 h-5" />,
+      color: 'from-blue-500 to-cyan-500',''
+      href: '/ai-services',''
+      items: [
+        { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },'"'"
+        { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },'"'"
+        { label: 'AI Content Generation Pro', href: '/ai-content-generation-pro', icon: <FileText className="w-4 h-4" /> },'"'"
+        { label: 'AI Customer Support Chatbot', href: '/ai-customer-support-chatbot', icon: <MessageSquare className="w-4 h-4" /> },'"'"
+        { label: 'AI Code Assistant Pro', href: '/ai-code-assistant-pro', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', icon: <TrendingUp className="w-4 h-4" /> },'"'"
+        { label: 'AI Automation Platform', href: '/ai-automation-platform', icon: <Zap className="w-4 h-4" /> },'"'"
+        { label: 'AI Data Analytics Pro', href: '/ai-data-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> },'"'"
+        { label: 'AI Marketing Automation', href: '/ai-marketing-automation', icon: <TrendingUp className="w-4 h-4" /> },'"'"
+        { label: 'AI HR & Recruitment Pro', href: '/ai-hr-recruitment-pro', icon: <Users className="w-4 h-4" /> },'"'"
+        { label: 'AI Financial Analysis', href: '/ai-financial-analysis', icon: <DollarSign className="w-4 h-4" /> },'"'"
+        { label: 'AI Supply Chain Optimizer', href: '/ai-supply-chain-optimizer', icon: <Globe className="w-4 h-4" /> },'"'"
+        { label: 'AI Voice Assistant Pro', href: '/ai-voice-assistant-pro', icon: <MessageSquare className="w-4 h-4" /> },'"'"
+        { label: 'AI Image Recognition Pro', href: '/ai-image-recognition-pro', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: <Clock className="w-4 h-4" /> },'"'"
+        { label: 'AI Sentiment Analysis Pro', href: '/ai-sentiment-analysis-pro', icon: <TrendingUp className="w-4 h-4" /> },'"'"
+        { label: 'AI Recommendation Engine', href: '/ai-recommendation-engine', icon: <Star className="w-4 h-4" /> },'"'"
+        { label: 'AI Fraud Detection Pro', href: '/ai-fraud-detection-pro', icon: <Shield className="w-4 h-4" /> },'"'"
+        { label: 'AI Language Translation', href: '/ai-language-translation', icon: <Globe className="w-4 h-4" /> },'"'"
+        { label: 'AI Chatbot Enterprise', href: '/ai-chatbot-enterprise', icon: <MessageSquare className="w-4 h-4" /> },'"'"
+        { label: 'AI Data Mining Pro', href: '/ai-data-mining-pro', icon: <BarChart3 className="w-4 h-4" /> },'"'"
+        { label: 'AI Video Analysis', href: '/ai-video-analysis', icon: <Play className="w-4 h-4" /> },'"'"
+        { label: 'AI Time Series Forecasting', href: '/ai-time-series-forecasting', icon: <TrendingUp className="w-4 h-4" /> },'"'"
+        { label: 'AI NLP Text Analysis', href: '/ai-nlp-text-analysis', icon: <FileText className="w-4 h-4" /> }'"'"
+      ]
+    },
+    {
+      id: 'it-services',''
+      title: 'IT Services',''
+      icon: <Shield className="w-5 h-5" />,
+      color: 'from-green-500 to-emerald-500',''
+      href: '/services',''
+      items: [
+        { label: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },'"'"
+        { label: 'Blockchain Development', href: '/blockchain-development', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: 'IoT Solutions', href: '/iot-solutions', icon: <Globe className="w-4 h-4" /> },'"'"
+        { label: 'AR/VR Development', href: '/ar-vr-development', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: 'DevOps Solutions', href: '/devops-solutions', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: 'Mobile Development', href: '/mobile-development', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: 'Web Development', href: '/web-development', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: 'IT Support', href: '/it-support', icon: <HelpCircle className="w-4 h-4" /> },'"'"
+        { label: 'Network Infrastructure', href: '/network-infrastructure', icon: <Globe className="w-4 h-4" /> },'"'"
+        { label: 'IT Consulting', href: '/it-consulting', icon: <Users className="w-4 h-4" /> },'"'"
+        { label: 'Cybersecurity Audit', href: '/cybersecurity-audit', icon: <Shield className="w-4 h-4" /> },'"'"
+        { label: 'Data Center Services', href: '/data-center-services', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: 'Asset Management', href: '/asset-management', icon: <BarChart3 className="w-4 h-4" /> }'"'"
+      ]
+    },
+    {
+      id: 'micro-saas',''
+      title: 'Micro SAAS',''
+      icon: <Zap className="w-5 h-5" />,
+      color: 'from-purple-500 to-pink-500',''
+      href: '/micro-saas',''
+      items: [
+        { label: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> },'"'"
+        { label: 'Zion Security Shield', href: '/zion-security-shield', icon: <Shield className="w-4 h-4" /> },'"'"
+        { label: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Inventory Manager', href: '/zion-ai-inventory-manager', icon: <BarChart3 className="w-4 h-4" /> },'"'"
+        { label: 'Zion HR Assistant Pro', href: '/zion-hr-assistant-pro', icon: <Users className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Accounting Suite', href: '/zion-ai-accounting-suite', icon: <DollarSign className="w-4 h-4" /> },'"'"
+        { label: 'Zion E-commerce Optimizer', href: '/zion-ecommerce-optimizer', icon: <TrendingUp className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Customer Insights', href: '/zion-ai-customer-insights', icon: <Users className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Lead Scoring', href: '/zion-ai-lead-scoring', icon: <Star className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Document Processor', href: '/zion-ai-document-processor', icon: <FileText className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Social Listener', href: '/zion-ai-social-listener', icon: <Globe className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Email Optimizer', href: '/zion-ai-email-optimizer', icon: <Mail className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Meeting Assistant', href: '/zion-ai-meeting-assistant', icon: <Calendar className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Expense Tracker', href: '/zion-ai-expense-tracker', icon: <DollarSign className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Survey Builder', href: '/zion-ai-survey-builder', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Chatbot Builder', href: '/zion-ai-chatbot-builder', icon: <MessageSquare className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Workflow Automation', href: '/zion-ai-workflow-automation', icon: <Zap className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI SEO Optimizer', href: '/zion-ai-seo-optimizer', icon: <TrendingUp className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Data Warehouse', href: '/zion-ai-data-warehouse', icon: <Cloud className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Mobile App Builder', href: '/zion-ai-mobile-app-builder', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI API Manager', href: '/zion-ai-api-manager', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Backup Manager', href: '/zion-ai-backup-manager', icon: <Cloud className="w-4 h-4" /> },'"'"
+        { label: 'Zion AI Testing Automation', href: '/zion-ai-testing-automation', icon: <CheckCircle className="w-4 h-4" /> }'"'"
+      ]
+    },
+    {
+      id: '5g-solutions',''
+      title: '5G Solutions',''
+      icon: <Globe className="w-5 h-5" />,
+      color: 'from-orange-500 to-red-500',''
+      href: '/5g-solutions',''
+      items: [
+        { label: '5G Data Analytics', href: '/5g-data-analytics', icon: <BarChart3 className="w-4 h-4" /> },'"'"
+        { label: '5G Edge Computing', href: '/5g-edge-computing', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: '5G Implementation', href: '/5g-implementation', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: '5G Mobile Applications', href: '/5g-mobile-applications', icon: <Settings className="w-4 h-4" /> },'"'"
+        { label: '5G Network Infrastructure', href: '/5g-network-infrastructure', icon: <Globe className="w-4 h-4" /> },'"'"
+        { label: '5G Private Networks', href: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },'"'"
+        { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions', icon: <Globe className="w-4 h-4" /> }'"'"
+      ]
+    }
+  ];
+
+  const aiServices = [
+    { name: 'AI Analytics', href: '/ai-analytics', icon: ChartBarIcon },
+    { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
+    { name: 'AI Healthcare', href: '/ai-healthcare-diagnostics', icon: HeartIcon },
+    { name: 'AI Automation', href: '/ai-automation-platform', icon: CogIcon },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: DocumentTextIcon },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: ChatBubbleLeftRightIcon },
+    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: ShieldExclamationIcon },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: ChartBarIcon }
+  ];
+
+  const itServices = [
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
+    { name: 'IT Services', href: '/it-services', icon: CpuChipIcon },
+    { name: 'Web Development', href: '/web-development', icon: GlobeAltIcon },
+    { name: 'Mobile Development', href: '/mobile-development', icon: DevicePhoneMobileIcon },
+    { name: 'Database Management', href: '/database-management', icon: ServerIcon },
+    { name: 'Custom Software', href: '/custom-software', icon: CodeBracketIcon },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', icon: LockClosedIcon },
+    { name: 'System Integration', href: '/system-integration', icon: WrenchScrewdriverIcon }
+  ];
+
+  const businessSolutions = [
+    { name: 'Micro SaaS', href: '/micro-saas', icon: RocketLaunchIcon },
+    { name: 'Cloud Services', href: '/cloud-services', icon: ServerIcon },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: SparklesIcon },
+    { name: 'Process Automation', href: '/process-automation', icon: Cog6ToothIcon },
+    { name: 'Data Migration', href: '/data-migration', icon: ArrowRightIcon },
+    { name: 'Performance Optimization', href: '/performance-optimization', icon: ChartBarIcon },
+    { name: 'API Development', href: '/api-development', icon: CommandLineIcon },
+    { name: 'Legacy Modernization', href: '/legacy-modernization', icon: BeakerIcon }
+  ];
+
+  const additionalLinks = [
+    { name: 'Privacy Policy', href: '/privacy', icon: ShieldCheckIcon },
+    { name: 'Terms of Service', href: '/terms', icon: DocumentTextIcon },
+    { name: 'Cookie Policy', href: '/cookies', icon: DocumentTextIcon },
+    { name: 'Sitemap', href: '/sitemap', icon: MapIcon },
+    { name: 'Our Team', href: '/team', icon: UserGroupIcon },
+    { name: 'Documentation', href: '/docs', icon: DocumentDuplicateIcon },
+    { name: 'Careers', href: '/careers', icon: BriefcaseIcon },
+    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon }
+  ];
+
+  const serviceSections = [
+    { title: 'AI Services', links: aiServices, icon: CpuChipIcon, key: 'ai' },
+    { title: 'IT Services', links: itServices, icon: CpuChipIcon, key: 'it' },
+    { title: 'Business Solutions', links: businessSolutions, icon: PuzzlePieceIcon, key: 'business' }
+  ];
+
+  const isActive = (href: string) => location.pathname === href;
+
+const Sidebar: React.FC = () => {
+  return (
+    <>
+      {/* Overlay */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          onClick={onClose}
+        />
+      )}
+
+      {/* Sidebar */}
+      <div className={`
+        fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 to-slate-800 transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+      `}>
+        <div className="flex flex-col h-full">
+          {/* Header */}
+          <div className="flex items-center justify-between p-6 border-b border-slate-700">
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <CpuChipIcon className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-white">Zion Tech</span>
+            </div>
+            <button
+              onClick={onClose}
+              className="lg:hidden p-2 rounded-lg hover:bg-slate-700 transition-colors"
+            >
+              <XMarkIcon className="w-6 h-6 text-white" />
+            </button>
+          </div>
+
+          {/* Navigation */}
+          <nav className="flex-1 overflow-y-auto p-6 space-y-6">
+            {/* Main Links */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                Main Navigation
+              </h3>
+              <ul className="space-y-2">
+                {mainLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      onClick={onClose}
+                      className={`
+                        flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors
+                        ${isActive(link.href) 
+                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white' 
+                          : 'text-gray-300 hover:bg-slate-700 hover:text-white'
+                        }
+                      `}
+                    >
+                      <link.icon className="w-5 h-5" />
+                      <span>{link.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Service Sections */}
+            {serviceSections.map((section) => (
+              <div key={section.key}>
+                <button
+                  onClick={() => toggleSection(section.key)}
+                  className="flex items-center justify-between w-full px-3 py-2 text-left text-sm font-semibold text-gray-400 uppercase tracking-wider hover:text-white transition-colors"
+                >
+                  <div className="flex items-center space-x-3">
+                    <section.icon className="w-5 h-5" />
+                    <span>{section.title}</span>
+                  </div>
+                  <ArrowRightIcon 
+                    className={`w-4 h-4 transition-transform ${
+                      expandedSections.includes(section.key) ? 'rotate-90' : ''
+                    }`} 
+                  />
+                </button>
+                {expandedSections.includes(section.key) && (
+                  <ul className="mt-2 space-y-1 ml-8">
+                    {section.links.map((link) => (
+                      <li key={link.name}>
+                        <Link
+                          to={link.href}
+                          onClick={onClose}
+                          className={`
+                            flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors
+                            ${isActive(link.href) 
+                              ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white' 
+                              : 'text-gray-400 hover:bg-slate-700 hover:text-white'
+                            }
+                          `}
+                        >
+                          <link.icon className="w-4 h-4" />
+                          <span>{link.name}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+
+            {/* Additional Links */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">
+                Additional
+              </h3>
+              <ul className="space-y-2">
+                {additionalLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      to={link.href}
+                      onClick={onClose}
+                      className={`
+                        flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors
+                        ${isActive(link.href) 
+                          ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white' 
+                          : 'text-gray-400 hover:bg-slate-700 hover:text-white'
+                        }
+                      `}
+                    >
+                      <link.icon className="w-4 h-4" />
+                      <span>{link.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </nav>
+
+          {/* Footer */}
+          <div className="p-6 border-t border-slate-700">
+            <div className="text-center">
+              <p className="text-sm text-gray-400">
+                © 2024 Zion Tech Group
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                All rights reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Sidebar;
