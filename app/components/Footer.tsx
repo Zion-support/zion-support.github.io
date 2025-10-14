@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Cloud, Brain, Zap, Database } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,9 +22,9 @@ const Footer = () => {
       ]
     },
     {
-      title: 'IT Services',
+      title: 'IT Services',''
       icon: <Cloud className="w-5 h-5" />,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-green-500 to-emerald-500',''
       links: [
         { label: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
         { label: 'Database Management', href: '/database-management' },
@@ -35,9 +35,9 @@ const Footer = () => {
       ]
     },
     {
-      title: 'Solutions',
+      title: 'Solutions',''
       icon: <Zap className="w-5 h-5" />,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-500 to-pink-500',''
       links: [
         { label: 'Digital Transformation', href: '/digital-transformation' },
         { label: 'Business Intelligence', href: '/business-intelligence' },
@@ -52,9 +52,8 @@ const Footer = () => {
     { label: 'About Us', href: '/about' },
     { label: 'Our Team', href: '/team' },
     { label: 'Careers', href: '/careers' },
-    { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'News', href: '/news' }
+    { label: 'News & Blog', href: '/blog' },
+    { label: 'Case Studies', href: '/case-studies' }
   ];
 
   const supportLinks = [
@@ -74,6 +73,7 @@ const Footer = () => {
     { icon: <Youtube className="w-5 h-5" />, href: 'https://youtube.com/ziontechgroup', label: 'YouTube' }
   ];
 
+const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -157,30 +157,28 @@ const Footer = () => {
 
         {/* Additional Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-slate-700">
-          <div>
+          <div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-3">
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
-                  >
+                    className="text-gray-400 hover:text-white transition-colors text-sm>"
                     {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div>
+          <div></div>
             <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
             <ul className="space-y-3">
               {supportLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
-                  >
+                    className="text-gray-400 hover:text-white transition-colors text-sm>"
                     {link.label}
                   </Link>
                 </li>

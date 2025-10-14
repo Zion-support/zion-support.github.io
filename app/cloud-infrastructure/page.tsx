@@ -43,8 +43,10 @@ const CloudInfrastructurePage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
+"
+}
 };
 
 export default CloudInfrastructurePage;

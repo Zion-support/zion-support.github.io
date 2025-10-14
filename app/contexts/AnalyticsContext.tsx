@@ -1,7 +1,8 @@
 import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AnalyticsContextContextType {
-  // Add your context properties here
+  trackEvent: (_event: string, _properties?: Record<string, unknown>) => void;
+  trackPageView: (_page: string) => void;
 }
 
 const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
@@ -20,12 +21,17 @@ interface AnalyticsContextProviderProps {
 
 export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> = ({ children }) => {
   const value = {
-    // Add your context values here
+    trackEvent: (_event: string, _properties?: Record<string, unknown>) => {
+      console.log('Analytics event:', _event, _properties);
+    },
+    trackPageView: (_page: string) => {
+      console.log('Page view:', _page);
+    }
   };
 
   return (
-    <AnalyticsContextContext.Provider value={value}>
-      {children}
-    </AnalyticsContextContext.Provider>
+    <div><AnalyticsContext.Provider value={value}></AnalyticsContext></div>)
+      { children }
+    </AnalyticsContext.Provider>;
   );
-};
+export { AnalyticsContext }

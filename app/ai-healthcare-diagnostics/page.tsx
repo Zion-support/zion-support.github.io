@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
+import { Helmet    } from "react-helmet-async";
 
 const AiHealthcareDiagnosticsPage = () => {
   return (
@@ -43,7 +43,7 @@ const AiHealthcareDiagnosticsPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
