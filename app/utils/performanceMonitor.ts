@@ -4,7 +4,9 @@ export const performanceMonitor = {
     fn()
     const end = performance.now()
     const duration = end - start
-    console.log(`${name} took ${duration.toFixed(2)}ms`)
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`${name} took ${duration.toFixed(2)}ms`)
+    }
     return duration
   },
   
@@ -13,7 +15,9 @@ export const performanceMonitor = {
     await fn()
     const end = performance.now()
     const duration = end - start
-    console.log(`${name} took ${duration.toFixed(2)}ms`)
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`${name} took ${duration.toFixed(2)}ms`)
+    }
     return duration
   },
   

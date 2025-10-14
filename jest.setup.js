@@ -1,5 +1,10 @@
-import '@testing-library/jest-dom';
-import React from 'react';
+require('@testing-library/jest-dom');
+const React = require('react');
+
+// Polyfills for Node.js environment
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 // Mock react-router-dom
 global.jest = {

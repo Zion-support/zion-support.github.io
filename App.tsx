@@ -36,8 +36,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch(_error: Error, _errorInfo: React.ErrorInfo) {
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // TODO: Send to error reporting service
+    }
   }
 
   render() {
@@ -59,16 +62,32 @@ function App() {
 if (typeof window !== 'undefined') {
   // Monitor Core Web Vitals
   import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-    onCLS(console.log);
-    onFCP(console.log);
-    onLCP(console.log);
-    onTTFB(console.log);
+    onCLS((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('CLS:', metric);
+      }
+    });
+    onFCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('FCP:', metric);
+      }
+    });
+    onLCP((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('LCP:', metric);
+      }
+    });
+    onTTFB((metric) => {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('TTFB:', metric);
+      }
+    });
   });
 
   // Monitor bundle size
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
-      if (entry.entryType === 'navigation') {
+      if (entry.entryType === 'navigation' && process.env.NODE_ENV === 'development') {
         console.log('Page load time:', (entry as PerformanceNavigationTiming).loadEventEnd - (entry as PerformanceNavigationTiming).loadEventStart, 'ms');
       }
     }
@@ -76,7 +95,7 @@ if (typeof window !== 'undefined') {
   observer.observe({ entryTypes: ['navigation'] });
 }
 
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
       console.log('Zion Tech Group App initialized');
     }
   }, []);
