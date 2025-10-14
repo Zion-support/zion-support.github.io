@@ -1,71 +1,72 @@
-import React, { useState } from "react";
-import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
+    name: ''
+    email: ''
+    company: ''
+    phone: ''
+    subject: ''
     message: ''
   });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  }
+    })}
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
     setIsSubmitted(true);
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    }, 3000);
-  };
-
+    setIsSubmitting(false);
+  }
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      details: "kleber@ziontechgroup.com",
-      description: "Send us an email anytime"
+
+      icon: 'Phone',      title: 'Phone',
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    setIsSubmitted(true)
+    setIsSubmitting(false)}
+  const contactInfo = [
+    {
+
+      title: 'Phone',
+      value: '+1 (555) 123-4567',
+      description: 'Mon-Fri 9AM-6PM EST'
     },
     {
-      icon: <Smartphone className="w-6 h-6" />,
-      title: "Phone",
-      details: "+1 302 464 0950",
-      description: "Call us during business hours"
+      icon: 'Email'
+      title: 'Email'
+      value: 'contact@ziontechgroup.com'
+      description: 'We respond within 24 hours'
     },
     {
-      icon: <MapPin className="w-6 h-6" />,
-      title: "Address",
-      details: "364 E Main St STE 1008",
-      description: "Middletown DE 19709"
+      icon: 'Location'
+      title: 'Address'
+      value: '123 Tech Street, Suite 100'
+      description: 'San Francisco, CA 94105'
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Business Hours",
-      details: "Mon - Fri: 9:00 AM - 6:00 PM",
-      description: "EST Time Zone"
+      icon: 'Clock'
+
+      description: '9:00 AM - 6:00 PM EST'
     }
+  ]
+  const subjects = [
+    'AI Services'
+    'IT Services'
+    'Services'
+    'Micro SAAS'
+    'Digital Transformation'
+    '5G Implementation'
+    'Other'
   ];
 
   const services = [
@@ -84,7 +85,8 @@ export default function Contact() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+"
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>Contact - Zion Tech Group</title>
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions" />
@@ -270,7 +272,177 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Contact Form */}
+
+            Send us a Message
+          </h2>
+          
+          {isSubmitted ? ("
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center"></div>""
+              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6"></div>""
+                <Circle className="w-8 h-8 text-white" />"
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
+              <p className="text-gray-300 mb-6">
+                Thank you for contacting us. We&apos;ll get back to you within 24 hours.
+              </p>
+              <button)
+                onClick={() => {
+                  setIsSubmitted(false)
+                  setFormData({
+                    name: ''
+                    email: ''
+                    company: ''
+                    phone: ''
+                    subject: ''
+                    message: ''
+                  });
+                }}
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+              >
+                Send Another Message
+              </button>
+            </div>)
+          ) : ("
+            <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">""
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <div></div>"
+                  <label htmlFor="name" className="block text-white font-medium mb-2">"
+                    Full Name *
+                  </label>
+                  <input
+"
+                    type="text""
+                    id="name""
+                    name="name"
+                    value={ formData.name }
+                    onChange={ handleChange }
+
+                    required"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"""
+                    placeholder="Your full name""
+                  />
+                </div>
+                <div></div>"
+                  <label htmlFor="email" className="block text-white font-medium mb-2">"
+                    Email Address *
+                  </label>
+                  <input
+"
+                    type="email""
+                    id="email""
+                    name="email"
+                    value={ formData.email }
+                    onChange={ handleChange }
+
+                    required"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"""
+                    placeholder="your.email@company.com""
+                  />
+                </div>
+              </div>
+"
+              <div className="grid md:grid-cols-2 gap-6 mb-6"></div>
+
+                <div></div>"
+                  <label htmlFor="company" className="block text-white font-medium mb-2">"
+                    Company
+                  </label>
+                  <input
+"
+                    type="text""
+                    id="company""
+                    name="company"
+                    value={ formData.company }
+                    onChange={ handleChange }"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                    placeholder="Your company name"
+
+                  />
+                </div>
+                <div></div>"
+                  <label htmlFor="phone" className="block text-white font-medium mb-2">"
+                    Number
+                  </label>
+                  <input
+"
+                    type="tel""
+                    id="phone""
+                    name="phone"
+                    value={ formData.phone }
+                    onChange={ handleChange }"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"")
+                    placeholder="+1 (555) 123-4567"
+                  />
+                </div>
+              </div>
+"
+              <div className="mb-6"></div>"
+                <label htmlFor="subject" className="block text-white font-medium mb-2">
+                  Subject *
+                </label>
+                <select"
+                  id="subject""
+                  name="subject"
+                  value={ formData.subject }
+                  onChange={ handleChange }
+
+                  required"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent""
+                >
+"
+                  <option value="">Select a subject</option>
+                  { subjects.map((subject, index) => ( }
+
+                    <option key={index} value={subject}>
+                      {subject}
+                    </option>
+))}
+                </select>
+              </div>
+"
+              <div className="mb-8"></div>"
+                <label htmlFor="message" className="block text-white font-medium mb-2">
+                  Message *
+                </label>
+                <textarea"
+                  id="message""
+                  name="message"
+                  value={ formData.message }
+                  onChange={ handleChange }
+                  required
+                  rows={ 6 }"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none""
+                  placeholder="Tell us about your project or how we can help you..."
+                />
+              </div>
+"
+              <div className="text-center"></div>
+                <button"
+                  type="submit"
+                  disabled={ isSubmitting }"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+
+                >
+                  { isSubmitting ? (
+                    <>"
+                      <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div></div>"
+                      Sending...
+                    </>)
+                  ) : (
+                    <>
+                      Send Message
+"
+                      <Send className="w-5 h-5 ml-2 inline" />
+                    </>});
+                </button>
+              </div>
+            </form>
+)}
+        </div>
+      </section>
+
     </div>
-  );
-}
+  )}

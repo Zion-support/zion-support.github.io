@@ -1,11 +1,13 @@
-// Next.js type definitions
-
-declare module 'next' {
+// Next.js type declarations;
+declare module 'next' {';
+  interface NextApiRequest {
+    user?: any;}
   interface NextConfig {
-    experimental?: {
-      appDir?: boolean;
-    };
-  }
+    // Add any Next.js specific types here;}
 }
-
-export {};
+// Export a utility function;
+export const nextUtil = () => {
+  // Implementation;
+  return true;}
+export default nextUtil;
+;

@@ -1,222 +1,73 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-const features = [
-    {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
-    }
-  ];
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CFO",
-      company: "TechCorp",
-      content: "The AI financial analysis platform has revolutionized our decision-making process.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Investment Manager",
-      company: "FinancePro",
-      content: "Incredible accuracy and insights that have improved our portfolio performance.",
-      rating: 5
-    }
-  ];
-export default function AICustomerSupportChatbot() {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechSupport Solutions",
-      role: "Customer Success Manager",
-      content: "Our AI chatbot has reduced response time by 80% and increased customer satisfaction by 40%. It handles 90% of inquiries automatically.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Plus",
-      role: "Operations Director",
-      content: "The chatbot understands context perfectly and escalates complex issues to humans seamlessly. Our support team can focus on high-value tasks.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "SaaS Platform Inc",
-      role: "Head of Support",
-      content: "24/7 availability with consistent quality responses. Our customers love the instant help and our team loves the reduced workload.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
-  const chatbotFeatures = [
-    {
-      category: "Core Features",
-      items: [
-        "Natural Language Processing",
-        "Multi-language Support",
-        "Context Awareness",
-        "Real-time Responses",
-      ],
-    },
-    {
-      category: "Integration",
-      items: [
-        "API Integration",
-        "CRM Integration",
-        "Database Connectivity",
-        "Third-party Tools",
-      ],
-    },
-    {
-      category: "Analytics",
-      items: [
-        "Conversation Analytics",
-        "Performance Metrics",
-        "User Insights",
-        "Custom Reports",
-      ],
-    },
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$299",
-      features: ["Basic chatbot", "Email support", "Standard templates"],
-      description: "Perfect for small businesses getting started",
-      period: "/month",
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$799",
-      features: ["Advanced AI", "Priority support", "Custom integrations"],
-      description: "Ideal for growing businesses with complex needs",
-      period: "/month",
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "$1999",
-      features: ["Full customization", "24/7 support", "Dedicated manager"],
-      description: "Complete solution for large organizations",
-      period: "/month",
-      popular: false,
-    },
-  ];
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: "Natural Language Processing",
-      description:
-        "Advanced AI understands context, intent, and provides human-like responses",
-    },
-    {
-      icon: <Clock className="w-6 h-6 text-purple-400" />,
-      title: "24/7 Availability",
-      description:
-        "Provide instant support around the clock without additional staffing costs",
-    },
-    {
-      icon: <Target className="w-6 h-6 text-yellow-400" />,
-      title: "Intelligent Routing",
-      description:
-        "Automatically route complex queries to the right human agents when needed",
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: "Analytics & Insights",
-      description:
-        "Track customer satisfaction, response times, and identify improvement opportunities",
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Customer Success Manager",
-      company: "TechCorp",
-      content: "The AI chatbot has reduced our support tickets by 70% while improving customer satisfaction. It's incredibly intelligent and handles complex queries perfectly.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      role: "Operations Director",
-      company: "InnovateLabs",
-      content: "Implementation was seamless and the results were immediate. Our customers love the instant responses and our team can focus on more complex issues.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Head of Support",
-      company: "DataFlow Inc",
-      content: "The analytics and insights provided by the chatbot help us understand our customers better. It's been a game-changer for our support operations.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
-export default function AiCustomerSupportChatbotPage() {
+'use client'
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-white">;
       <Helmet>
-        <title>Ai Customer Support Chatbot - Zion Tech Group</title>
-        <meta name="description" content="Ai Customer Support Chatbot solutions by Zion Tech Group" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Customer Support Chatbot</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai customer support chatbot solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Page;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional page solutions tailored to your business needs.</p>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge page solutions.</p>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">
+                Tailored page implementations for your specific requirements.</p>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your page needs.</p>
             </div>
+          </div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today,
+            </button>
           </div>
         </div>
       </div>
     </div>
   );
 }
-
-}
+            Page</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional page solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions</h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge page solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation</h3>
+              <p className="text-green-700">
+                Tailored page implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support</h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your page needs.</p></div></div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today</button></div></div></div></div>
+  )}

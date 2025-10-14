@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
     <lastmod>2025-10-13T12:22:24.346Z</lastmod>
@@ -60,37 +58,289 @@
     <loc>https://ziontechgroup.com/demo</loc>
     <lastmod>2025-10-13T12:22:24.346Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/support</loc>
     <lastmod>2025-10-13T12:22:24.346Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/consultation</loc>
     <lastmod>2025-10-13T12:22:24.346Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/team</loc>
     <lastmod>2025-10-13T12:22:24.346Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/careers</loc>
     <lastmod>2025-10-13T12:22:24.346Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/case-studies</loc>
     <lastmod>2025-10-13T12:22:24.346Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/it-training</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/landing-page-builder</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/machine-learning</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/machine-learning-ops</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/managed-it</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/marketing-tools</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/ai-content-writer</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/ai-content-writer-pro</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/ai-customer-support-chatbot</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/ai-email-marketing-automation</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/ai-expense-tracker</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/ai-inventory-manager</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/ai-project-manager</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/ai-social-media-scheduler</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/analytics-dashboard</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/appointment-scheduler</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/chat-analytics</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/content-generator</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/contract-manager</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/document-processor</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/email-marketing</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/email-signature</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/employee-directory</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/expense-tracker</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/inventory-management</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/lead-scoring</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/seo-optimizer</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/social-manager</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas/support-bot</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas-services/ai-analytics-dashboard</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas-services/ai-chatbot-builder</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas-services/ai-content-generator</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas-services/ai-email-assistant</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas-services/ai-lead-generation</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas-services</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/mobile-app-development</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/mobile-development</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/network-design</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/network-infrastructure</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/network-security</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/network-solutions</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/news</loc>
@@ -102,7 +352,25 @@
     <loc>https://ziontechgroup.com/press</loc>
     <lastmod>2025-10-13T12:22:24.346Z</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/not-found</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/offline</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/</loc>
+    <lastmod>2025-10-14T00:33:49.437Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/partners</loc>
