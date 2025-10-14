@@ -1,67 +1,30 @@
-const fs = require('fs');
-const path = require('path');
-
-// Simple wrapper function to replace withSentry
-// const withSentry = (handler) => handler;
-
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'onsite-requests.json');
-
-function handler(req, res) {
+// API endpoint for onsite service requests
+export default function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, email, company, phone, message, location } = req.body || {};
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-
-  let existing = [];
-  try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8');
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
-    }
-  } catch (error) {
-    // Log error for debugging in development
-    console.error('Error reading existing requests:', error);
-    existing = [];
-  }
-
-  const newRequest = {
-    id: Date.now().toString(),
-    name,
-    email,
-    company,
-    phone,
-    message,
-    location,
-    timestamp: new Date().toISOString()
-  };
-
-  existing.push(newRequest);
-
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
-    res.statusCode = 200;
+  try {    const data = fs.readFileSync(file, 'utf8');    const requests = JSON.parse(data);
+    
+    const newRequest = {
+      id: Date.now().toString(),
+      ...req.body,
+      status: 'pending',
+      createdAt: new Date().toISOString()
+    };
+    
+    requests.push(newRequest);
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
+    
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-      id: newRequest.id
+      message: 'Onsite request submitted successfully' 
     }));
   } catch (error) {
-    // Log error for debugging in development
+    console.error('Error:', error);
     console.error('Error saving onsite request:', error);
-    res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
 }
-
-module.exports = handler;

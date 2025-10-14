@@ -1,97 +1,73 @@
-import React, { useEffect } from 'react'
-
-const MobileOptimizer: React.FC = () => {
-  useEffect(() => {
-    // Prevent zoom on input focus for iOS
-    const preventZoom = () => {
-      const viewport = document.querySelector('meta[name="viewport"]')
-      if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-      }
-    }
-
-    // Add touch-friendly classes
-    const addTouchClasses = () => {
-      const buttons = document.querySelectorAll('button, a, [role="button"]')
-      buttons.forEach(button => {
-        if (!button.classList.contains('touch-manipulation')) {
-          button.classList.add('touch-manipulation')
-        }
-      })
-    }
-
-    // Optimize images for mobile
-    const optimizeImagesForMobile = () => {
-      const images = document.querySelectorAll('img')
-      images.forEach(img => {
-        const imageElement = img as HTMLImageElement
-        if (!imageElement.loading) {
-          imageElement.loading = 'lazy'
-        }
-        if (!imageElement.decoding) {
-          imageElement.decoding = 'async'
-        }
-      })
-    }
-
-    // Add mobile-specific event listeners
-    const addMobileEventListeners = () => {
-      // Prevent double-tap zoom
-      let lastTouchEnd = 0
-      document.addEventListener('touchend', (event) => {
-        const now = new Date().getTime()
-        if (now - lastTouchEnd <= 300) {
-          event.preventDefault()
-        }
-        lastTouchEnd = now
-      }, false)
-
-      // Add haptic feedback for supported devices
-      const addHapticFeedback = (element: Element) => {
-        element.addEventListener('touchstart', () => {
-          if ('vibrate' in navigator) {
-            navigator.vibrate(10) // Short vibration
-          }
-        })
-      }
-
-      const interactiveElements = document.querySelectorAll('button, a, [role="button"]')
-      interactiveElements.forEach(addHapticFeedback)
-    }
-
-    // Optimize scroll performance
-    const optimizeScrollPerformance = () => {
-      let ticking = false
-      const updateScrollPosition = () => {
-        // Add scroll-based optimizations here
-        ticking = false
-      }
-
-      const requestTick = () => {
-        if (!ticking) {
-          requestAnimationFrame(updateScrollPosition)
-          ticking = true
-        }
-      }
-
-      window.addEventListener('scroll', requestTick, { passive: true })
-    }
-
-    // Initialize mobile optimizations
-    preventZoom()
-    addTouchClasses()
-    optimizeImagesForMobile()
-    addMobileEventListeners()
-    optimizeScrollPerformance()
-
-    // Cleanup
-    return () => {
-      window.removeEventListener('touchend', () => {})
-      window.removeEventListener('scroll', () => {})
-    }
-  }, [])
-
-  return null
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client'
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>MobileOptimizer - Zion Tech Group</title>
+        <meta name="description" content="Professional mobileoptimizer services by Zion Tech Group." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            MobileOptimizer;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional mobileoptimizer solutions tailored to your business needs.</p>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge mobileoptimizer solutions.</p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">
+                Tailored mobileoptimizer implementations for your specific requirements.</p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your mobileoptimizer needs.</p>
+            </div>
+          </div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today,
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-export default MobileOptimizer
+            MobileOptimizer</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional mobileoptimizer solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions</h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge mobileoptimizer solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation</h3>
+              <p className="text-green-700">
+                Tailored mobileoptimizer implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support</h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your mobileoptimizer needs.</p></div></div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today</button></div></div></div></div>
+  )}

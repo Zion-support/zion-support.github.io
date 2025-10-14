@@ -1,65 +1,73 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client'
-import React from 'react'
-
-import { ArrowRight, Mail, Brain } from 'lucide-react';
-
-export default function PWAInstaller() {
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+export default function Page() {
   return (
-    <div className={`fixed bottom-4 left-4 right-4 z-50 ${className}`}>
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-4 shadow-lg">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <Download className="w-5 h-5 text-white" />
-            </div>
-            <div>
-              <h3 className="text-white font-semibold">Install App</h3>
-              <p className="text-gray-300 text-sm">Install this app for a better experience</p>
-            </div>
-          </div>
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={handleInstall}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2"
-            >
-              <Download className="w-4 h-4" />
-              <span>Install</span>
-            </button>
-            <button
-              onClick={handleDismiss}
-              className="text-gray-400 hover:text-white transition-colors duration-200"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-      </section>
-}}
-  ];const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>PWAInstaller | Zion Tech Group</title>
-        <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
+        <title>PWAInstaller - Zion Tech Group</title>
+        <meta name="description" content="Professional pwainstaller services by Zion Tech Group." />
       </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            PWAInstaller;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional pwainstaller solutions tailored to your business needs.</p>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge pwainstaller solutions.</p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">
+                Tailored pwainstaller implementations for your specific requirements.</p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your pwainstaller needs.</p>
+            </div>
+          </div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today,
+            </button>
+          </div>
         </div>
+      </div>
+    </div>
+  );
 }
+            PWAInstaller</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional pwainstaller solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions</h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge pwainstaller solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation</h3>
+              <p className="text-green-700">
+                Tailored pwainstaller implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support</h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your pwainstaller needs.</p></div></div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today</button></div></div></div></div>
+  )}

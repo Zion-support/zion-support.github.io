@@ -4,49 +4,43 @@ import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Remove merge conflict markers from a file"""
-    try:
+    """Fix merge conflicts in a file by keeping the newer version (after     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Remove merge conflict markers and keep only the content between <<<<<<< HEAD and =======
-        # This keeps the "ours" version (HEAD)
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?\n>>>>>>> [^\n]+\n?'
-        content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
+        # Check if file has merge conflicts
+        if '' not in content:
+            return False
         
-        # Remove any remaining conflict markers
-        content = re.sub(r'<<<<<<< HEAD.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'>>>>>>> [^\n]+.*?\n', '', content, flags=re.DOTALL)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        
-        print(f"Fixed merge conflicts in: {file_path}")
-        return True
-    except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        # Split by merge conflict markers
+        parts = re.split(r'.*?\n(.*?)\n    except Exception as e:
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/JavaScript files in the app directory
+    # Find all TypeScript and JavaScript files
     patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'app/**/*.js',
-        'app/**/*.jsx'
+        '**/*.tsx',
+        '**/*.ts',
+        '**/*.jsx',
+        '**/*.js'
     ]
     
-    files_to_fix = []
+    files_processed = 0
+    files_fixed = 0
+    
     for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and other directories
+            if 'node_modules' in file_path or '.git' in file_path:
+                continue
+                
+            files_processed += 1
+            if fix_merge_conflicts(file_path):
+                files_fixed += 1
+                print(f"Fixed merge conflicts in: {file_path}")
     
-    fixed_count = 0
-    for file_path in files_to_fix:
-        if fix_merge_conflicts(file_path):
-            fixed_count += 1
-    
-    print(f"Fixed merge conflicts in {fixed_count} files")
+    print(f"\nProcessed {files_processed} files, fixed {files_fixed} files with merge conflicts")
 
 if __name__ == "__main__":
     main()

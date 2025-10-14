@@ -1,15 +1,27 @@
-import React, { Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import Header from './app/components/Header'
-import Footer from './app/components/Footer'
-import ErrorBoundary from './app/components/ErrorBoundary'
-import EnhancedPerformanceMonitor from './app/components/EnhancedPerformanceMonitor'
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
-import LoadingSpinner from './app/components/LoadingSpinner'
-import MobileOptimizer from './app/components/MobileOptimizer'
-import Breadcrumb from './app/components/Breadcrumb'
-import CookieConsent from './app/components/CookieConsent'
+import React, { Suspense, useEffect, useState, useCallback } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import "./app/styles/futuristic.css";
+import "./app/styles/accessibility-enhanced.css";
+import Navigation from "./app/components/Navigation";
+import Footer from "./app/components/Footer";
+import Sidebar from "./app/components/Sidebar";
+import HomePage from "./app/page";
+import { LoadingPage } from "./app/components/LoadingStates";
+import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import CoreWebVitals from "./app/components/CoreWebVitals";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import EnhancedSEO from "./app/components/EnhancedSEO";
+import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
+import ImprovedAccessibility from "./app/components/ImprovedAccessibility";
+import ImprovedPerformanceMonitor from "./app/components/ImprovedPerformanceMonitor";
 
 // Main Pages
 import HomePage from './app/page'
@@ -81,17 +93,109 @@ import ResourcesPage from './app/resources/page'
 import FiveGSolutionsPage from './app/5g-solutions/page'
 
 // AI Services
-import AITranslationServicesPage from './app/ai-translation-services/page'
+const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
+const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
+const AICustomerSupportPage = React.lazy(() => import("./app/ai-customer-support/page"));
+const AICybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
+const AIDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics-pro/page"));
+const AIDocumentProcessingPage = React.lazy(() => import("./app/ai-document-processing/page"));
+const AIMarketingAutomationPage = React.lazy(() => import("./app/ai-marketing-automation/page"));
+const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
+const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
+const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
 // IT Services
-import ServerManagementPage from './app/server-management/page'
+const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
+const DevOpsServicesPage = React.lazy(() => import("./app/devops-services/page"));
+const ITConsultingPage = React.lazy(() => import("./app/it-consulting/page"));
+const NetworkSecurityPage = React.lazy(() => import("./app/network-security/page"));
+const SoftwareDevelopmentPage = React.lazy(() => import("./app/software-development/page"));
+const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/page"));
+const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 
-// Micro SaaS Services
-import ContractManagerPage from './app/micro-saas/contract-manager/page'
-import EmailSignaturePage from './app/micro-saas/email-signature/page'
-import EmployeeDirectoryPage from './app/micro-saas/employee-directory/page'
+// Zion Services
+const ZionAnalyticsPage = React.lazy(() => import("./app/zion-analytics/page"));
+const ZionAIPlatformPage = React.lazy(() => import("./app/zion-ai-platform/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
+const ZionCloudInfrastructurePage = React.lazy(() => import("./app/zion-cloud-infrastructure/page"));
 
-const App: React.FC = () => {
+// 5G Solutions
+const FiveGNetworkOptimizationPage = React.lazy(() => import("./app/5g-network-optimization/page"));
+const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
+const FiveGIoTIntegrationPage = React.lazy(() => import("./app/5g-iot-integration/page"));
+
+// Micro SAAS
+const ProjectManagementPage = React.lazy(() => import("./app/project-management/page"));
+const CustomerRelationshipPage = React.lazy(() => import("./app/customer-relationship/page"));
+const InventoryManagementPage = React.lazy(() => import("./app/inventory-management/page"));
+const FinancialManagementPage = React.lazy(() => import("./app/financial-management/page"));
+const EmployeeManagementPage = React.lazy(() => import("./app/employee-management/page"));
+const SocialMediaManagementPage = React.lazy(() => import("./app/social-media-management/page"));
+const EmailMarketingPage = React.lazy(() => import("./app/email-marketing/page"));
+const WebsiteBuilderPage = React.lazy(() => import("./app/website-builder/page"));
+const TaskManagementPage = React.lazy(() => import("./app/task-management/page"));
+
+// Additional AI Services
+const AIAutomationPlatformPage = React.lazy(() => import("./app/ai-automation-platform/page"));
+const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
+const AIFinancialAnalysisPage = React.lazy(() => import("./app/ai-financial-analysis/page"));
+const AIHealthcareDiagnosticsPage = React.lazy(() => import("./app/ai-healthcare-diagnostics/page"));
+const AIHolographicWorkspacePage = React.lazy(() => import("./app/ai-holographic-workspace/page"));
+const AIHRRecruitmentProPage = React.lazy(() => import("./app/ai-hr-recruitment-pro/page"));
+const AIImageRecognitionProPage = React.lazy(() => import("./app/ai-image-recognition-pro/page"));
+const AIPoweredDevOpsPage = React.lazy(() => import("./app/ai-powered-devops/page"));
+const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/ai-powered-email-analyzer/page"));
+const AIQuantumComputingPage = React.lazy(() => import("./app/ai-quantum-computing/page"));
+const AISupplyChainOptimizerPage = React.lazy(() => import("./app/ai-supply-chain-optimizer/page"));
+const AITranslationServicePage = React.lazy(() => import("./app/ai-translation-service/page"));
+
+// Other pages
+const BlockchainWeb3Page = React.lazy(() => import("./app/blockchain-web3/page"));
+const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
+const CareersPage = React.lazy(() => import("./app/careers/page"));
+
+function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = useCallback(() => {
+    setIsSidebarOpen(prev => !prev);
+  }, []);
+
+  const closeSidebar = useCallback(() => {
+    setIsSidebarOpen(false);
+  }, []);
+
+  useEffect(() => {
+    // Initialize performance monitoring
+    if (typeof window !== 'undefined') {
+      // Preload critical resources
+      const preloadCriticalResources = () => {
+        const criticalImages = [
+          '/images/hero-bg.jpg',
+          '/images/logo.png',
+        ];
+        
+        criticalImages.forEach(src => {
+          const link = document.createElement('link');
+          link.rel = 'preload';
+          link.as = 'image';
+          link.href = src;
+          document.head.appendChild(link);
+        });
+      };
+
+      preloadCriticalResources();
+    }
+  }, []);
+
+  const toggleSidebar = useCallback(() => {
+    setSidebarOpen(prev => !prev);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingPage />;
+  }
+
   return (
     <HelmetProvider>
       <ErrorBoundary>
@@ -198,6 +302,6 @@ const App: React.FC = () => {
       </ErrorBoundary>
     </HelmetProvider>
   );
-};
+}
 
 export default App;

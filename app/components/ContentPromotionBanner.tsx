@@ -1,77 +1,96 @@
-'use client';
-
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-
-interface ContentPromotionBannerProps {
-  title?: string;
-  subtitle?: string;
-  features?: string[];
-  buttonText?: string;
-  onButtonClick?: () => void;
-  variant?: 'default' | 'premium' | 'limited';
-}
-
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
-  title = "Unlock Premium Features",
-  subtitle = "Get access to advanced tools and exclusive content",
-  features = [
-    "Advanced Analytics",
-    "Priority Support",
-    "Custom Integrations",
-    "24/7 Monitoring"
-  ],
-  buttonText = "Upgrade Now",
-  onButtonClick,
-  variant = 'default'
-}) => {
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'premium':
-        return 'bg-gradient-to-r from-purple-600 to-pink-600';
-      case 'limited':
-        return 'bg-gradient-to-r from-red-600 to-orange-600';
-      default:
-        return 'bg-gradient-to-r from-blue-600 to-purple-600';
-    }
-  };
-
+import { Helmet } from 'react-helmet-async';
+'use client'
+export default function Page() {
   return (
-    <div className={`relative overflow-hidden rounded-2xl ${getVariantStyles()} p-8 text-white`}>
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12"></div>
-      </div>
-      
-      <div className="relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-          <div className="flex-1">
-            <h3 className="text-2xl lg:text-3xl font-bold mb-2">{title}</h3>
-            <p className="text-lg text-white/90 mb-4">{subtitle}</p>
-            
-            <div className="grid grid-cols-2 gap-2 mb-6">
-              {features.map((feature, index) => (
-                <div key={index} className="flex items-center text-sm">
-                  <CheckCircle className="w-4 h-4 mr-2 text-green-300" />
-                  <span>{feature}</span>
-                </div>
-              ))}
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>ContentPromotionBanner - Zion Tech Group</title>
+        <meta name="description" content="Professional contentpromotionbanner services by Zion Tech Group." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            ContentPromotionBanner;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional contentpromotionbanner solutions tailored to your business needs.</p>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge contentpromotionbanner solutions.</p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">
+                Tailored contentpromotionbanner implementations for your specific requirements.</p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your contentpromotionbanner needs.</p>
             </div>
           </div>
-          
-          <div className="flex-shrink-0">
-            <button
-              onClick={onButtonClick}
-              className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
-            >
-              {buttonText}
-              <ArrowRight className="w-4 h-4" />
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today,
             </button>
+          </div>
+        </div>
+        "
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">"
+            <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>"
+            <p className="text-gray-300">
+              Our team of experts provides cutting-edge solutions tailored to your specific needs.
+            </p>
+          </div>
+          "
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">"
+            <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>"
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your systems run smoothly at all times.
+            </p>
+          </div>
+          "
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">"
+            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>"
+            <p className="text-gray-300">
+              Track record of delivering successful projects and exceeding client expectations.
+            </p>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default ContentPromotionBanner;
+}
+            ContentPromotionBanner</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional contentpromotionbanner solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions</h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge contentpromotionbanner solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation</h3>
+              <p className="text-green-700">
+                Tailored contentpromotionbanner implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support</h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your contentpromotionbanner needs.</p></div></div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today</button></div></div></div></div>
+  )}

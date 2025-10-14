@@ -1,218 +1,119 @@
-/**
- * Error Boundary Configuration
- * Centralized configuration for error handling across the application
- */
-export interface ErrorBoundaryConfig {/**
-   * Whether to log errors to console*/
-  /**
-   * Whether to show detailed error messages*/
-  /**
-   * Whether to send errors to external service*/
-  /**
-   * Error reporting endpoint*/
-  reportingEndpoint?: string;/**
-   * Whether to show error overlay in development*/
-  /**
-   * Maximum number of errors to store*/
-  /**
-   * Custom error messages by error type*/
-  customMessages: Record<string, string>;/**
-   * Fallback UI components*/
-  fallbackComponents: {}
-    default: React.ComponentType<{ error: Error; resetError: () => void }>
-    network: React.ComponentType<{ error: Error; resetError: () => void }>
-    notFound: React.ComponentType<{ error: Error; resetError: () => void }>}}
-/**
- * Default error messages
- */
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client'
+const ErrorBoundaryConfig: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Error Boundary Config - Zion Tech Group</title>
+        <meta name="description" content="Professional error boundary config services by Zion Tech Group." />
+      </Helmet> }
+      { /* Hero Section */ }"
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Error Boundary Config;
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional error boundary config services;
+            designed to help your business grow and succeed.;
+          </p>
+        </div>
+      </section>
+      {/* Content Section */}
+            Error Boundary Config</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional error boundary config services
+            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive error boundary config;
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Expert consultation;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Ongoing support;
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our error boundary config services?</p>
+              <a;
+                href="$1"
+                className="$1"
+              >
+                Contact Us,
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
-          
+      { /* CTA Section */ }"""
+      <section className="py-16 px-4 bg-blue-600">"""
+        <div className=max-w-4xl mx-auto text-center></div>
+          <h2 className="text-3xl font-bold text-white mb-6">""
+
+            Ready to Get Started?;
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let&apos;s discuss how our error boundary config 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
           >
-            
-            />
-          </svg>
+            Get Started Today;
+          </a>
         </div>
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-          Oops! Something went wrong
-  
-        <p className="mt-2 text-center text-gray-600">
-
-/**
- * Default error messages*/
-
-};/**
- * Get error boundary configuration based on environment*/
-      notFound: NotFoundFallback,}
-    },}}
-
-/**
- * Default error fallback component*/
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
-          
-            viewBox="0 0 24 24">
-            
-            />
-          </svg>
-        </div>
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-          Oops! Something went wrong
-        </h2>
-        <p className="mt-2 text-center text-gray-600">
-          {error.message || 'An unexpected error occurred'}
-        </p>
-        {process.env['NODE_ENV'] === 'development' && (}
-          <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>)}
-        <div className="mt-6 flex gap-4"></div>
-          
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Try Again
-  
-            onClick={() => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-            Go Home
-  
-        </div>
-      </div>
+      </section>
     </div>
-  )}
-/**
- * Network error fallback component
- */
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
-          
-          >
-            
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Try Again
-          </button>
-          
-            onClick={() => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-            Go Home
-          </button>
-        </div>
-      </div>
-    </div>)}
-
-/**
- * Network error fallback component*/
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
-          
-            viewBox="0 0 24 24">
-            
-            />
-          </svg>
-        </div>
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
-        <p className="mt-2 text-center text-gray-600">
-          Unable to connect to the server. Please check your internet connection and try again.
-        </p>
-        <div className="mt-6"></div>
-          
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Retry Connection
-  
-        </div>
-      </div>
-    </div>
-  )}
-/**
- * Not found error fallback component
- */
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full text-center"></div>
-        <h1 className="text-6xl font-bold text-gray-900">404</h1>
-        <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
-        <p className="mt-2 text-gray-600">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6 flex gap-4 justify-center"></div>
-          
-            onClick={() => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Go Home
-  
-            onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-            Go Back
-  
-        </div>
-      </div>
-    </div>
-  )}
-/**
- * Get error type from error object
- */
-    return 'network'
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Retry Connection
-          </button>
-        </div>
-      </div>
-    </div>)}
-
-/**
- * Not found error fallback component*/
-function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full text-center"></div>
-        <h1 className="text-6xl font-bold text-gray-900">404</h1>
-        <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
-        <p className="mt-2 text-gray-600">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6 flex gap-4 justify-center"></div>
-          
-            onClick={() => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Go Home
-          </button>
-          
-            onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-            Go Back
-          </button>
-        </div>
-      </div>
-    </div>)}
-
-/**
- * Get error type from error object*/
-export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {if (error.message.includes('Network') || error.message.includes('fetch')) {return 'network'}
-  }
-  if (error.message.includes('404') || error.message.includes('not found')) {return 'notFound'}
-  }
-  if (error.message.includes('timeout')) {return 'timeout'}
-  }
-  if (error.message.includes('500') || error.message.includes('server')) {return 'serverError'}
-  }
-  if (error.message.includes('validation')) {return 'validation'}
-  }
-  return 'default'}
-/**
- * Format error for logging
- */
-  }}
-export default getErrorBoundaryConfig
-  </button>
-  </button>
-  </button>
-  </path>
-  </button>
-  </button>
-  </h2>
-  </path>
-
-/**
- * Format error for logging*/
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',}
-  }}
-
+  )
+}
+                We provide comprehensive error boundary config
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support</li></ul></div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our error boundary config services?</p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                Contact Us</a></div></div></div></section>{/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our error boundary config'
+            services can help you achieve your goals.</p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+            Get Started Today</a></div></section></div>
+export default ErrorBoundaryConfig

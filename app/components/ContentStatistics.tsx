@@ -1,123 +1,73 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-
-
-interface StatItem {
-  id: string;
-  value: number;
-  label: string;
-  icon: React.ComponentType<{ className?: string }>;
-  suffix?: string;
-  prefix?: string;
-}
-
-interface ContentStatisticsProps {
-  stats?: StatItem[];
-  animationDuration?: number;
-  className?: string;
-}
-
-const ContentStatistics: React.FC<ContentStatisticsProps> = ({
-  stats = [
-    {
-      id: 'users',
-      value: 1200,
-      label: 'Active Users',
-      icon: Users,
-      suffix: '+'
-    },
-    {
-      id: 'projects',
-      value: 99.8,
-      label: 'Success Rate',
-      icon: Award,
-      suffix: '%'
-    },
-    {
-      id: 'uptime',
-      value: 99.9,
-      label: 'Uptime',
-      icon: CheckCircle,
-      suffix: '%'
-    },
-    {
-      id: 'performance',
-      value: 300,
-      label: 'Performance Boost',
-      icon: Zap,
-      suffix: '%'
-    }
-  ],
-  animationDuration = 2000,
-  className = ''
-}) => {
-  const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
-
-  useEffect(() => {
-    const animateValue = (start: number, end: number, duration: number, key: string) => {
-      const startTime = performance.now();
-      
-      const animate = (currentTime: number) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        
-        // Easing function
-        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-        const currentValue = start + (end - start) * easeOutCubic;
-        
-        setAnimatedValues(prev => ({
-          ...prev,
-          [key]: currentValue
-        }));
-        
-        if (progress < 1) {
-          requestAnimationFrame(animate);
-        }
-      };
-      
-      requestAnimationFrame(animate);
-    };
-
-    stats.forEach(stat => {
-      animateValue(0, stat.value, animationDuration, stat.id);
-    });
-  }, [stats, animationDuration]);
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client'
+export default function Page() {
   return (
-    <div className={`grid grid-cols-2 lg:grid-cols-4 gap-6 ${className}`}>
-      {stats.map((stat) => {
-        const animatedValue = animatedValues[stat.id] || 0;
-        const IconComponent = stat.icon;
-        
-        return (
-          <div
-            key={stat.id}
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
-          >
-            <div className="flex justify-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
-                <IconComponent className="w-6 h-6 text-white" />
-              </div>
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>ContentStatistics - Zion Tech Group</title>
+        <meta name="description" content="Professional contentstatistics services by Zion Tech Group." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            ContentStatistics;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional contentstatistics solutions tailored to your business needs.</p>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge contentstatistics solutions.</p>
             </div>
-            
-            <div className="text-3xl font-bold text-white mb-2">
-              {stat.prefix}
-              {stat.suffix === '%' 
-                ? animatedValue.toFixed(1)
-                : Math.floor(animatedValue).toLocaleString()
-              }
-              {stat.suffix}
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">
+                Tailored contentstatistics implementations for your specific requirements.</p>
             </div>
-            
-            <div className="text-gray-300 text-sm">
-              {stat.label}
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your contentstatistics needs.</p>
             </div>
           </div>
-        );
-      })}
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today,
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
-};
-
-export default ContentStatistics;
+}
+            ContentStatistics</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional contentstatistics solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions</h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge contentstatistics solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation</h3>
+              <p className="text-green-700">
+                Tailored contentstatistics implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support</h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your contentstatistics needs.</p></div></div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today</button></div></div></div></div>
+  )}

@@ -1,45 +1,13 @@
-// Type definitions for Next.js
-      NODE_ENV: 'development' | 'production' | 'test'
-      NEXT_PUBLIC_API_URL: string
-      NEXT_PUBLIC_APP_URL: string
-      DATABASE_URL: string
-      NEXTAUTH_SECRET: string
-      NEXTAUTH_URL: string
-    }
-  }
+// Next.js type declarations;
+declare module 'next' {';
+  interface NextApiRequest {
+    user?: any;}
+  interface NextConfig {
+    // Add any Next.js specific types here;}
 }
-      id: string
-      email: string
-      name: string
-    }
-  }
-}
-
-  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
-  export default content;
-}
-  const content: string;
-}
-
-  const content: string;
-}
-
-  const content: string;
-}
-
-  const content: string;
-}
-
-  const content: string;
-}
-
-  const content: string;
-}
-
-  const content: string;
-}
-
-  const content: string;
-}
-
-export {};
+// Export a utility function;
+export const nextUtil = () => {
+  // Implementation;
+  return true;}
+export default nextUtil;
+;

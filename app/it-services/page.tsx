@@ -164,7 +164,7 @@ const ITServicesPage: React.FC = () => {
   ]
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Services - Comprehensive Technology Solutions | Zion Tech Group</title>
         <meta name="description" content="Expert IT services including cloud migration, cybersecurity, database management, and network infrastructure. 99.9% uptime guarantee with 24/7 support." />

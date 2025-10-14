@@ -1,125 +1,133 @@
-'use client'
-import React from 'react'
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import { ArrowRight, Brain } from 'lucide-react';
-const SEOEnhancer: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+interface SEOEnhancerProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+  type?: string;
+  structuredData?: unknown;
+}
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions','
+  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.','
+  keywords = ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],'
+  image = '/images/og-image.jpg','
+  url = typeof window !== 'undefined' ? window.location.href : '','
+  type = 'website','
+  structuredData;
+}) => {
+  useEffect(() => {
+    // Add structured data to the page;
+    if (structuredData) {;
+      const script = document.createElement('script');
+      script.type = 'application/ld+json'
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+      return () => {
+        if (document.head.contains(script)) {
+          document.head.removeChild(script);
+        }
+      };
     }
+    return undefined;
+  }, [structuredData]);
+  // Generate meta tags;
+  const metaTags = [{ name: 'description', content: description },';
+    { name: 'keywords', content: keywords.join(', ') },';
+    { name: 'author', content: 'Zion Tech Group' },';
+    { name: 'robots', content: '_index, follow' },';
+    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },';
+    // Open Graph tags;
+    { property: 'og:title', content: title },';
+    { property: 'og:description', content: description },';
+    { property: 'og:image', content: image },';
+    { property: 'og:url', content: url },';
+    { property: 'og:type', content: type },';
+    { property: 'og:site_name', content: 'Zion Tech Group' },';
+    // Twitter d tags;
+    { name: 'twitter:card', content: 'summary_large_image' },';
+    { name: 'twitter:title', content: title },';
+    { name: 'twitter:description', content: description },';
+    { name: 'twitter:image', content: image },';
+    // Additional SEO tags;
+    { name: 'theme-color', content: '#0066cc' },';
+    { name: 'msapplication-TileColor', content: '#0066cc' },';
+    { name: 'apple-mobile-web-app-capable', content: 'yes' },';
+    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },';
   ];
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+          document.head.removeChild(script)}
+      }}
+    return undefined}, [structuredData])
+  // Generate meta tags
+  const metaTags = [{ name: 'description', content: description },'{ name: 'keywords', content: keywords.join(', ') },'{ name: 'author', content: 'Zion Tech Group' },'{ name: 'robots', content: '_index, follow' },'{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' },'
+    // Open Graph tags{ property: 'og:title', content: title },'{ property: 'og:description', content: description },'{ property: 'og:image', content: image },'{ property: 'og:url', content: url },'{ property: 'og:type', content: type },'{ property: 'og:site_name', content: 'Zion Tech Group' },'
+    // Twitter d tags{ name: 'twitter:card', content: 'summary_large_image' },'{ name: 'twitter:title', content: title },'{ name: 'twitter:description', content: description },'{ name: 'twitter:image', content: image },'
+    // Additional SEO tags{ name: 'theme-color', content: '#0066cc' },'{ name: 'msapplication-TileColor', content: '#0066cc' },'{ name: 'apple-mobile-web-app-capable', content: 'yes' },'{ name: 'apple-mobile-web-app-status-bar-style', content: 'default' },'
+  ]
   return (
-    <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${className}`}>
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-            <Search className="w-5 h-5 text-white" />
-          </div>
-          <div>
-            <h3 className="text-white font-semibold">SEO Enhancer</h3>
-            <p className="text-gray-300 text-sm">Analyze and optimize your SEO performance</p>
-          </div>
-        </div>
-        <button
-          onClick={analyzeSEO}
-          disabled={isAnalyzing}
-          className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
-        >
-          {isAnalyzing ? (
-            <>
-              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-              <span>Analyzing...</span>
-            </>
-          ) : (
-            <>
-              <Search className="w-4 h-4" />
-              <span>Analyze</span>
-            </>
-          )}
-        </button>
-      </div>
-
-      {/* SEO Score */}
-      <div className="text-center mb-6">
-        <div className="relative w-32 h-32 mx-auto mb-4">
-          <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 100 100">
-            <circle
-              cx="50"
-              cy="50"
-              r="40"
-              stroke="currentColor"
-              strokeWidth="8"
-              fill="none"
-              className="text-gray-700"
-            />
-            <circle
-              cx="50"
-              cy="50"
-              r="40"
-              stroke="currentColor"
-              strokeWidth="8"
-              fill="none"
-              strokeDasharray={`${2 * Math.PI * 40}`}
-              strokeDashoffset={`${2 * Math.PI * 40 * (1 - seoScore / 100)}`}
-              className={`${getScoreColor(seoScore)} transition-all duration-1000`}
-            />
-          </svg>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className={`text-2xl font-bold ${getScoreColor(seoScore)}`}>
-              {seoScore}
-            </span>
-          </div>
-        </div>
-        <div className="text-white font-semibold">SEO Score</div>
-        <div className="text-gray-400 text-sm">
-          {seoScore >= 90 ? 'Excellent' : seoScore >= 70 ? 'Good' : 'Needs Improvement'}
-        </div>
-      </div>
-
-      {/* Recommendations */}
-      {recommendations.length > 0 && (
-        <div>
-          <h4 className="text-white font-semibold mb-3 flex items-center">
-            <Target className="w-5 h-5 text-blue-500 mr-2" />
-            Recommendations
-          </h4>
-          <div className="space-y-2">
-            {recommendations.map((recommendation, index) => (
-              <div key={index} className="flex items-start text-gray-300 text-sm">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                {recommendation}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
+    <Helmet>
+      <title>{title}</title>
+      {metaTags.map((tag, _index) => (}
+        <meta key={_index} {...tag} />
+))}
+      {/* Canonical URL */}
+      <link rel="canonical" href={url} />
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* DNS prefetch for performance */}
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    </Helmet>
   )
 }
+// Default structured data for the organization;
+      <link rel="canonical" href={url} />{/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />{/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />{/* DNS prefetch for performance */}
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></Helmet>
+  )}
+// Default structured data for the organization
+const  {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zion Tech Group",
+  "description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.",
+  "url": "https://ziontechgroup.com",
+  "logo": "https://ziontechgroup.com/images/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-555-0123",
+    "contactType": "customer service",
+    "availableLanguage": "English"},
+  "sameAs": ["https://www.linkedin.com/company/zion-tech-group",
+    "https://twitter.com/ziontechgroup",
+    "https://github.com/zion-tech-group"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Tech Street",
+    "addressLocality": "San Francisco",
+    "addressRegion": "CA",
+    "postalCode": "94105",
+    "addressCountry": "US";
+  
+};
+
+    "addressCountry": "US"
+};
+
+export default SEOEnhancer

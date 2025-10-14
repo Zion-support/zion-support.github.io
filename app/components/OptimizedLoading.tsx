@@ -1,42 +1,19 @@
-import React from 'react'
-import { Loader2 } from 'lucide-react'
+import { ArrowRight } from "lucide-react";
 
-interface OptimizedLoadingProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl'
-  text?: string
-  fullScreen?: boolean
-  className?: string
-}
-
-const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({
-  size = 'md',
-  text = 'Loading...',
-  fullScreen = false,
-  className = ''
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
-  }
-
-  const containerClasses = fullScreen
-    ? 'fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50'
-    : 'flex items-center justify-center p-4'
-
+export default function OptimizedLoading() {
   return (
-    <div className={`${containerClasses} ${className}`}>
-      <div className="flex flex-col items-center space-y-4">
-        <Loader2 className={`${sizeClasses[size]} text-cyan-500 animate-spin`} />
-        {text && (
-          <p className="text-gray-300 text-sm font-medium animate-pulse">
-            {text}
-          </p>
-        )}
+    <div className="optimized-loading-container">
+      <div className="loading-content">
+        <div className="spinner"></div>
+        <p>Loading...</p>
       </div>
+      <Link
+        to="/contact"
+        className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+      >
+        Contact Us
+        <ArrowRight className="w-5 h-5 ml-2" />
+      </Link>
     </div>
-  )
+  );
 }
-
-export default OptimizedLoading

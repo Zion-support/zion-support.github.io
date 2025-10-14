@@ -1,64 +1,73 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 'use client'
-import React, { useEffect } from 'react'
-  children: React.ReactNode}
-    // Security enhancement logic
-    
-        'Referrer-Policy': 'strict-origin-when-cross-origin'
-      }
-
-      // Add CSP meta tag
-      const cspMeta = document.createElement('meta')
-      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy')
-      cspMeta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;")
-      document.head.appendChild(cspMeta)
-
-      // Add security event listeners
-      const handleSecurityEvent = (event: Event) => {
-        console.log('Security event detected:', event.type)
-      }
-
-      window.addEventListener('beforeunload', handleSecurityEvent)
-      window.addEventListener('unload', handleSecurityEvent)
-
-      return () => {
-        window.removeEventListener('beforeunload', handleSecurityEvent)
-        window.removeEventListener('unload', handleSecurityEvent)
-        document.head.removeChild(cspMeta)
-      }
-    }
-
-    const cleanup = enhanceSecurity()
-    return cleanup
-  }, [])
-
+export default function Page() {
   return (
-    <div className={`security-enhanced ${className}`}>
-      {children}
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Enhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional securityenhancer services by Zion Tech Group." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Enhancer;
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional securityenhancer solutions tailored to your business needs.</p>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions;
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge securityenhancer solutions.</p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation;
+              </h3>
+              <p className="text-green-700">
+                Tailored securityenhancer implementations for your specific requirements.</p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support;
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your securityenhancer needs.</p>
+            </div>
+          </div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today,
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {useEffect(() => {// Security enhancement logic
-    
-    $3
+            Enhancer</h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional securityenhancer solutions tailored to your business needs.</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions</h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge securityenhancer solutions.</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation</h3>
+              <p className="text-green-700">
+                Tailored securityenhancer implementations for your specific requirements.</p></div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support</h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your securityenhancer needs.</p></div></div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today</button></div></div></div></div>
   )}
-        'Referrer-Policy': 'strict-origin-when-cross-origin'}
-      };// Add CSP meta tag
-      
-      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
-      document.head.appendChild(cspMeta)
-      // Disable right-click context menu
-        e.preventDefault()})
-      // Disable F12 and other dev tools shortcuts
-          e.preventDefault()}
-      })}
-    enhanceSecurity()}, [])
-  return <React.Fragment>{children}</React.Fragment>}
-export default SecurityEnhancer
-  </SecurityEnhancerProps>
-
-      // Disable right-click context menu
-      document.addEventListener('contextmenu', (e) => {e.preventDefault()}
-      });// Disable F12 and other dev tools shortcuts
-      document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
-        }

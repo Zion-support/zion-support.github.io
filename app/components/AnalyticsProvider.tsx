@@ -1,55 +1,29 @@
-'use client';
+import React, { useEffect } from 'react';
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';  return <>{children}</>;
+};
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export function useAnalytics() {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-}
-
+export default AnalyticsProvider; cursor/analyze-improve-and-deploy-application-30da
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+  children,
+}) => {
   useEffect(() => {
-    // Initialize analytics
-    // Analytics initialization logic here
-  }, []);
-
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
-    }
-  };
-
-  const trackPageView = (pageName: string) => {
+    // Initialize Google Analytics if available
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageName,
+        page_title: document.title,
         page_location: window.location.href,
       });
     }
-  };
+  }, []);
 
-  const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-  };
+  return <>{children}</>; cursor/analyze-improve-and-deploy-application-30da
+};
 
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-}
+export default AnalyticsProvider;
+};
+
+export default AnalyticsProvider;

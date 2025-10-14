@@ -1,69 +1,35 @@
-'use client';
-
 import React from 'react';
+import { Loader2 } from 'lucide-react';
 
-interface LoadingStatesProps {
-  type?: 'spinner' | 'skeleton' | 'dots' | 'pulse';
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-}
+        <div className="w-16 h-16 mx-auto mb-4">
+          <Loader2 className="w-16 h-16 text-cyan-400 animate-spin" />
+        </div>
+        <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
+        <p className="text-gray-300">Please wait while we load the content</p>export default LoadingPage; cursor/analyze-improve-and-deploy-application-30da
+export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
+  return (
+    <div className="animate-pulse">
+      {Array.from({ length: lines }).map((_, index) => (
+        <div
+          key={index}
+          className="h-4 bg-gray-700 rounded mb-2"
+          style={{ width: `${Math.random() * 40 + 60}%` }}
+        />
+      ))}
+    </div>
+  );
+};
 
-const LoadingStates: React.FC<LoadingStatesProps> = ({ 
-  type = 'spinner', 
-  size = 'md',
-  className = '' 
-}) => {
+export const Spinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
   };
 
-  const renderSpinner = () => (
-    return (
-    <div className={`animate-spin rounded-full border-b-2 border-white ${sizeClasses[size]} ${className}`}></div>
+  return (
+    <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />
   );
+};
 
-  const renderSkeleton = () => (
-    return (
-    <div className={`animate-pulse ${className}`}>
-      return (
-    <div className="space-y-3">
-        return (
-    <div className="h-4 bg-gray-700 rounded w-3/4"></div>
-        return (
-    <div className="h-4 bg-gray-700 rounded w-1/2"></div>
-        return (
-    <div className="h-4 bg-gray-700 rounded w-5/6"></div>
-      </div>
-    </div>
-  );
-
-  const renderDots = () => (
-    return (
-    <div className={`flex space-x-1 ${className}`}>
-      {[0, 1, 2].map((i) => (
-        <div
-          key={i}
-          className={`bg-white rounded-full animate-bounce ${sizeClasses[size]}`}
-          style={{ animationDelay: `${i * 0.1}s` }}
-        ></div>
-      ))}
-    </div>
-  );
-
-  const renderPulse = () => (
-    return (
-    <div className={`bg-gray-700 rounded animate-pulse ${sizeClasses[size]} ${className}`}></div>
-  );
-
-  switch (type) {
-    case 'skeleton':
-      return renderSkeleton();
-    case 'dots':
-      return renderDots();
-    case 'pulse':
-      return renderPulse();
-    default:
-      return renderSpinner();
-  }
+export default LoadingPage;

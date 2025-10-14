@@ -1,201 +1,73 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Common unused imports that appear frequently
-const commonUnusedImports = [
-  'Helmet',
-  'Star',
-  'Users',
-  'Globe',
-  'Smartphone',
-  'FileText',
-  'Clock',
-  'Search',
-  'Filter',
-  'Download',
-  'Upload',
-  'Monitor',
-  'Cpu',
-  'Shield',
-  'Lock',
-  'Network',
-  'AlertTriangle',
-  'TrendingUp',
-  'Video',
-  'Music',
-  'DollarSign',
-  'CreditCard',
-  'Calendar',
-  'Bell',
-  'Plus',
-  'Edit3',
-  'Trash2',
-  'Eye',
-  'Zap',
-  'Target',
-  'Play',
-  'Pause',
-  'RefreshCw',
-  'Settings',
-  'Edit',
-  'Share2',
-  'Activity',
-  'PieChart',
-  'Server',
-  'Wifi',
-  'Cloud',
-  'Terminal',
-  'GitBranch',
-  'Layers',
-  'Workflow',
-  'Bot',
-  'Sparkles',
-  'Wand2',
-  'Lightbulb',
-  'Rocket',
-  'Award',
-  'Trophy',
-  'Medal',
-  'Crown',
-  'Diamond',
-  'Gem',
-  'Heart',
-  'ThumbsUp',
-  'ThumbsDown',
-  'MessageCircle',
-  'Phone',
-  'MapPin',
-  'Github',
-  'Linkedin',
-  'Twitter',
-  'Instagram',
-  'Facebook',
-  'Youtube',
-  'Twitch',
-  'Discord',
-  'Slack',
-  'Figma',
-  'Notion',
-  'Trello',
-  'Asana',
-  'Monday',
-  'Jira',
-  'Confluence',
-  'Airtable',
-  'Miro',
-  'Loom',
-  'Zoom',
-  'Teams',
-  'Google',
-  'Microsoft',
-  'Apple',
-  'Amazon',
-  'Netflix',
-  'Spotify',
-  'Adobe',
-  'Salesforce',
-  'Hubspot',
-  'Shopify',
-  'WooCommerce',
-  'Stripe',
-  'Paypal',
-  'Square',
-  'QuickBooks',
-  'Xero',
-  'FreshBooks',
-  'Wave',
-  'Mint',
-  'YNAB',
-  'Link',
-  'BarChart3',
-  'CheckCircle'
+// List of files with unused imports
+const filesToFix = [
+  'app/ai-customer-sentiment-tracker/page.tsx',
+  'app/ai-powered-devops/page.tsx',
+  'app/ai-quantum-computing/page.tsx',
+  'app/ai-quantum-financial-oracle/page.tsx',
+  'app/ai-sentiment-analysis-pro/page.tsx',
+  'app/ai-services/page.tsx',
+  'app/ai-space-mission-optimizer/page.tsx'
 ];
 
-function fixUnusedImports(filePath) {
+// Common unused imports to remove
+const unusedImports = [
+  'Link', 'Shield', 'Globe', 'Star', 'Users', 'Award', 'Clock', 'Zap', 'Brain',
+  'Frown', 'Database', 'PieChart', 'Target', 'TrendingUp', 'Cpu', 'Mic', 'Layers',
+  'Box', 'Search', 'Settings', 'Sparkles', 'Smartphone', 'Lock', 'Calendar',
+  'Filter', 'Download', 'Upload', 'Share', 'Bell', 'Heart', 'ThumbsUp', 'Wifi',
+  'Battery', 'Camera', 'Headphones', 'Video', 'Music', 'BookOpen', 'Lightbulb',
+  'Puzzle', 'Gamepad2', 'ShoppingCart', 'CreditCard', 'Wallet', 'Banknote',
+  'Coins', 'Gift', 'Tag', 'Percent', 'Calculator', 'Activity', 'Grid', 'List',
+  'Map', 'Compass', 'Navigation', 'Globe2', 'WifiOff', 'Signal', 'Bluetooth',
+  'Usb', 'HardDrive', 'MemoryStick', 'Printer', 'Scanner', 'Fax', 'Voicemail',
+  'Headset', 'Speaker', 'Volume2', 'VolumeX', 'Play', 'Pause', 'Stop', 'SkipBack',
+  'SkipForward', 'RotateCcw', 'RotateCw', 'Shuffle', 'Repeat', 'Repeat1',
+  'Shuffle2', 'Maximize', 'Minimize', 'Square', 'Circle', 'Triangle', 'Hexagon',
+  'Octagon', 'Diamond', 'Moon', 'Sun', 'Sunrise', 'Sunset', 'CloudRain',
+  'CloudSnow', 'CloudLightning', 'Wind', 'Droplets', 'Thermometer', 'Gauge',
+  'Timer', 'Stopwatch', 'Hourglass', 'DollarSign', 'Eye', 'Rocket', 'MessageSquare',
+  'Smile', 'LineChart', 'ArrowRight', 'MapPin', 'BarChart3'
+];
+
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Find all import statements
-    const importRegex = /import\s+{([^}]+)}\s+from\s+['"][^'"]+['"];?/g;
-    const imports = content.match(importRegex);
-
-    if (imports) {
-      imports.forEach(importStatement => {
-        // Extract the import source
-        const sourceMatch = importStatement.match(/from\s+['"]([^'"]+)['"]/);
-        if (!sourceMatch) return;
-
-        const source = sourceMatch[1];
-        
-        // Extract the imported items
-        const itemsMatch = importStatement.match(/{\s*([^}]+)\s*}/);
-        if (!itemsMatch) return;
-
-        const items = itemsMatch[1]
-          .split(',')
-          .map(item => item.trim())
-          .filter(item => item);
-
-        // Check which items are actually used in the file
-        const usedItems = items.filter(item => {
-          // Remove any type annotations or aliases
-          const cleanItem = item.split(' as ')[0].split(':')[0].trim();
-          return content.includes(cleanItem) && !commonUnusedImports.includes(cleanItem);
-        });
-
-        // If some items are unused, create a new import statement
-        if (usedItems.length !== items.length) {
-          const newImportStatement = usedItems.length > 0 
-            ? `import { ${usedItems.join(', ')} } from '${source}';`
-            : '';
-          
-          content = content.replace(importStatement, newImportStatement);
-          modified = true;
-        }
+    const fullPath = path.join(__dirname, filePath);
+    let content = fs.readFileSync(fullPath, 'utf8');
+    
+    // Remove unused imports from lucide-react
+    const importRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
+    
+    content = content.replace(importRegex, (match, imports) => {
+      const importList = imports.split(',').map(imp => imp.trim());
+      const usedImports = importList.filter(imp => {
+        const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
+        return !unusedImports.includes(cleanImp);
       });
-    }
-
-    // Also fix unused variables
-    const lines = content.split('\n');
-    const newLines = lines.map(line => {
-      // Remove unused variable declarations
-      if (line.includes('const [') && line.includes('] = useState') && line.includes('// eslint-disable')) {
-        return line.replace(/const\s+\[[^]]+\]\s*=\s*useState[^;]+;/, '');
+      
+      if (usedImports.length === 0) {
+        return ''; // Remove entire import if no imports are used
       }
       
-      // Remove unused variable declarations that are clearly unused
-      if (line.includes('const [') && line.includes('] = useState') && !line.includes('useState(')) {
-        const match = line.match(/const\s+\[([^,]+),\s*set[A-Z][^\]]+\]\s*=\s*useState/);
-        if (match) {
-          const varName = match[1];
-          if (!content.includes(varName) || content.split(varName).length < 3) {
-            return '';
-          }
-        }
-      }
-      
-      return line;
+      return `import { ${usedImports.join(', ')} } from 'lucide-react';`;
     });
-
-    if (modified || newLines.some((line, index) => line !== lines[index])) {
-      fs.writeFileSync(filePath, newLines.join('\n'));
-      console.log(`Fixed unused imports in: ${filePath}`);
-    }
+    
+    // Remove unused Link imports
+    content = content.replace(/import\s*{\s*Link\s*}\s*from\s*['"]react-router-dom['"];?\n?/g, '');
+    
+    // Remove unused variables
+    content = content.replace(/const\s+benefits\s*=\s*[^;]+;/g, '');
+    
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Find all TypeScript and JavaScript files
-const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: __dirname });
+// Fix all files
+filesToFix.forEach(fixFile);
 
-console.log(`Found ${files.length} files to process...`);
-
-files.forEach(file => {
-  const fullPath = path.join(__dirname, file);
-  fixUnusedImports(fullPath);
-});
-
-console.log('Unused imports cleanup completed!');
+console.log('Unused imports fixed!');

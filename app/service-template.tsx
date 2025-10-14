@@ -1,103 +1,119 @@
-import React from 'react'
-
-
-import { ArrowRight } from 'lucide-react';
-
-interface ServicePageProps {
-  title: string
-  description: string
-  icon: React.ReactNode
-  benefits: string[]
-  features: string[]
-  pricing: string
-  seoTitle: string
-  seoDescription: string
-  seoKeywords: string
-}
-
-export default function ServicePageTemplate({
-  title,
-  description,
-  icon,
-  benefits,
-  features,
-  pricing,
-  seoTitle,
-  seoDescription,
-  seoKeywords
-}: ServicePageProps) {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client'
+const ServiceTemplate: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>{seoTitle}</title>
-        <meta name="description" content={seoDescription} />
-        <meta name="keywords" content={seoKeywords} />
-      </Helmet>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-6">
-            {icon}
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            {title}
+        <title>Service Template - Zion Tech Group</title>
+        <meta name="description" content="Professional service template services by Zion Tech Group." />
+      </Helmet> }
+      { /* Hero Section */ }"
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Service Template;
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            {description}
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional service template services;
+            designed to help your business grow and succeed.;
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/about"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              Learn More
-            </Link>
+        </div>
+      </section>
+      {/* Content Section */}
+            Service Template</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional service template services
+            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive service template;
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Expert consultation;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Ongoing support;
+                </li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our service template services?</p>
+              <a;
+                href="$1"
+                className="$1"
+              >
+                Contact Us,
+              </a>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <div>
-            <h2 className="text-3xl font-bold text-white mb-6">Key Benefits</h2>
-            <ul className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h2 className="text-3xl font-bold text-white mb-6">Features</h2>
-            <ul className="space-y-4">
-              {features.map((feature, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle className="w-6 h-6 text-cyan-400 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+      { /* CTA Section */ }"""
+      <section className="py-16 px-4 bg-blue-600">"""
+        <div className=max-w-4xl mx-auto text-center></div>
+          <h2 className="text-3xl font-bold text-white mb-6">""
 
-        <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Pricing</h2>
-          <p className="text-2xl font-bold text-cyan-400 mb-6">{pricing}</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            Ready to Get Started?;
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let&apos;s discuss how our service template 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
           >
-            Contact Us for Details
-          </Link>
+            Get Started Today;
+          </a>
         </div>
-      </div>
+      </section>
     </div>
   )
 }
+                We provide comprehensive service template
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support</li></ul></div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our service template services?</p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                Contact Us</a></div></div></div></section>{/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our service template'
+            services can help you achieve your goals.</p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+            Get Started Today</a></div></section></div>
+export default ServiceTemplate

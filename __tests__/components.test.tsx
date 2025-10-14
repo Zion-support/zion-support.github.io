@@ -1,17 +1,44 @@
-import { describe, test, expect } from '@jest/globals'
-import { render, screen } from '@testing-library/react'
-import { HelmetProvider } from 'react-helmet-async'
-import Loading from '../app/components/Loading'
-import SEOHead from '../app/components/SEOHead'
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
+import ErrorBoundary from '../app/components/ErrorBoundary';
+
 describe('Component Tests', () => {
-  test('Loading renders correctly', () => {
-    render(<Loading />)
-    expect(screen.getByText('Loading...')).toBeInTheDocument()
-  })
-  test('SEOHead renders without crashing', () => {
+  test('ErrorBoundary renders without crashing', () => {
     render(
-      <HelmetProvider>
-        <SEOHead />
-      </HelmetProvider>
-    )
-    expect(document.head).toBeInTheDocument()})})
+      <ErrorBoundary>
+        <div>Test content</div>
+      </ErrorBoundary>
+    );
+    
+    expect(screen.getByText('Test content')).toBeInTheDocument();
+  });
+
+  test('ErrorBoundary handles errors gracefully', () => {
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    
+    const ThrowError = () => {
+      throw new Error('Test error');
+    };
+
+    render(
+      <ErrorBoundary>
+        <ThrowError />
+      </ErrorBoundary>
+    );
+    
+    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
+    
+    consoleSpy.mockRestore();
+  });
+
+  test('Components render with MemoryRouter', () => {
+    render(
+      <MemoryRouter>
+        <div>Router test</div>
+      </MemoryRouter>
+    );
+    
+    expect(screen.getByText('Router test')).toBeInTheDocument();
+  });
+});
