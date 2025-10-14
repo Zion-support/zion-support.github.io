@@ -1,61 +1,40 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { ErrorBoundary } from 'react-error-boundary';
 
 // Components
-import Navigation from './app/components/Navigation';
+import Header from './app/components/Header';
 import Footer from './app/components/Footer';
-import AnalyticsProvider from './app/components/AnalyticsProvider';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import SEOOptimizer from './app/components/SEOOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import CustomErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import MetaManager from './app/components/MetaManager';
-import EnhancedAnalytics from './app/components/EnhancedAnalytics';
-import AdvancedLoadingStates from './app/components/AdvancedLoadingStates';
 
 // Pages
-import HomePage from './app/page';
-import AboutPage from './app/about/page';
-import ServicesPage from './app/services/page';
-import ContactPage from './app/contact/page';
+import HomePage from './app/pages/HomePage';
+import AboutPage from './app/pages/AboutPage';
+import ServicesPage from './app/pages/ServicesPage';
+import ContactPage from './app/pages/ContactPage';
+import BlogPage from './app/pages/BlogPage';
+import DemoPage from './app/pages/DemoPage';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <ErrorBoundary fallback={<div>Something went wrong.</div>}>
-      <HelmetProvider>
-        <AnalyticsProvider>
-          <PerformanceOptimizer>
-            <AccessibilityEnhancer />
-            <SEOOptimizer />
-            <MetaManager />
-            <PerformanceMonitor />
-            <EnhancedAnalytics />
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <Navigation />
-                <main className="relative z-10" id="main-content" role="main">
-                  <Suspense fallback={<AdvancedLoadingStates />}>
-                    <CustomErrorBoundary>
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                      </Routes>
-                    </CustomErrorBoundary>
-                  </Suspense>
-                </main>
-                <Footer />
-              </div>
-            </Router>
-          </PerformanceOptimizer>
-        </AnalyticsProvider>
-      </HelmetProvider>
-    </ErrorBoundary>
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-gray-900">
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/demo" element={<DemoPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
-}
+};
 
 export default App;

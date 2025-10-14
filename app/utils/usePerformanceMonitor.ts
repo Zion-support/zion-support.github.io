@@ -17,7 +17,7 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
     
     const measurePerformance = () => {
       const loadTime = performance.now() - startTime;
-      const memoryUsage = (performance as any).memory?.usedJSHeapSize;
+      const memoryUsage = (performance as unknown as { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;
       
       setMetrics({
         loadTime,
