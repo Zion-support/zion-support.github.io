@@ -1,5 +1,5 @@
 export const errorHandler = {
-  handle: (_error: Error, context?: string) => {
+  handle: (_error: Error, _context?: string) => {
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
