@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const Page = (): React.JSX.Element => {
+function FiveGReliabilityPage() {
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8" />,
@@ -117,5 +117,3 @@ const Page = (): React.JSX.Element => {
 };
 
 
-const page = React.lazy(() => import('./page'));
-export default page;
