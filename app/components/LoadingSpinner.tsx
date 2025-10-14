@@ -1,4 +1,4 @@
-'use client';import React from 'react';
+import React from 'react';
 import { Loader2 } from 'lucide-react';
 
 interface LoadingSpinnerProps {
@@ -6,21 +6,34 @@ interface LoadingSpinnerProps {
   text?: string;
   fullScreen?: boolean;
   className?: string;
+  color?: 'primary' | 'secondary' | 'white';
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-text = 'Loading...',
+  text = 'Loading...',
   fullScreen = false,
-  className = ''
-  color = 'primary',
-  text,
-  fullScreen = false,
-  className = ''
+  className = '',
+  color = 'primary'
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  const colorClasses = {
+    primary: 'text-purple-600',
+    secondary: 'text-cyan-600',
+    white: 'text-white'
+  };
+
+  const spinner = (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <Loader2 className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`} />
+      {text && (
+        <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
           {text}
         </p>
       )}
@@ -29,23 +42,13 @@ text = 'Loading...',
 
   if (fullScreen) {
     return (
-<div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
-        <div className="bg-slate-800 rounded-lg p-8 shadow-xl">
-          {spinner}
-        </div>      </div>
+      <div className="fixed inset-0 bg-white dark:bg-slate-900 flex items-center justify-center z-50">
+        {spinner}
+      </div>
     );
   }
 
   return spinner;
-lg: 'w-12 h-12'
-  }
-  return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-purple-600`}></div>
-      {text && (
-        <p className="mt-2 text-sm text-gray-400">{text}</p>
-      )}
-    </div>
-  );
-}
+};
+
 export default LoadingSpinner;
