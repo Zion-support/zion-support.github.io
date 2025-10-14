@@ -1,9 +1,9 @@
 import React from 'react'
 import { useEffect, Node } from 'react'
 interface PerformanceOptimizerProps {
-  children: Node}
+  children: "Node"}
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer: "React.FC<PerformanceOptimizerProps> = ({ children"}) => {
   useEffect(() => {
     // Performance optimization code''
     const optimizeImages = () => {
@@ -14,7 +14,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         }
       });
     }
-    const optimizeFonts = () => {
+    const optimizeFonts = () => {;
       // Preload critical fonts;''
       const link = document.createElement('link');''
       link.rel = 'preload';''

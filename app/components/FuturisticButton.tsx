@@ -1,13 +1,13 @@
 import React from 'react'
 interface FuturisticButtonProps {
-  children: React.ReactNode
+  children: "React.ReactNode"
   className?: string
   variant?: 'primary' | 'secondary' | 'outline''
   size?: 'sm' | 'md' | 'lg''
   icon?: React.ReactNode
   onClick?: () => void
   type?: 'button' | 'submit' | 'reset'}'
-const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
+const FuturisticButton: "React.FC<FuturisticButtonProps> = ({"
   children, 
   className = '',''
   variant = 'primary',''
@@ -26,7 +26,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     md: 'px-6 py-3 text-base',';
     lg: 'px-8 py-4 text-lg';
   }
-  children: React.ReactNode;
+  children: "React.ReactNode;"
   className?: string;''
   variant?: 'primary' | 'secondary' | 'outline';''
   size?: 'sm' | 'md' | 'lg';
@@ -35,7 +35,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   type?: 'button' | 'submit' | 'reset';}'
 }
 
-const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
+const FuturisticButton: "React.FC<FuturisticButtonProps> = ({"
   children, ''
   className = '',';''
   variant = 'primary',';''
@@ -51,10 +51,10 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     outline: 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white focus:ring-blue-500';}'
   };
 
-  const sizeClasses = {''
-    sm: 'px-4 py-2 text-sm',';''
-    md: 'px-6 py-3 text-base',';''
-    lg: 'px-8 py-4 text-lg';}'
+  const sizeClasses = {'';
+    sm: "'px-4 py-2 text-sm'",';''
+    md: "'px-6 py-3 text-base'",';''
+    lg: "'px-8 py-4 text-lg';"}'
   };
 
   return (

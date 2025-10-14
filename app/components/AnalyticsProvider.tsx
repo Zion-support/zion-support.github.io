@@ -24,8 +24,8 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     console.log('Analytics Identify:', userId, traits);
     if (typeof window !== 'undefined' && (window as any).gtag) {'
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {'
-        user_id: userId,
-        custom_map: traits
+        user_id: "userId",
+        custom_map: "traits"
       });
     }
   }
@@ -33,8 +33,8 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     console.log('Analytics Page:', name, properties);
     if (typeof window !== 'undefined' && (window as any).gtag) {'
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {'
-        page_title: name,
-        page_location: window.location.href,
+        page_title: "name",
+        page_location: "window.location.href",
         ...properties
       });
     }
@@ -47,7 +47,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     }
   }, []);
 
-  const value: AnalyticsContextType = {
+  const value: "AnalyticsContextType = {"
     track,
     identify,
     page;
@@ -55,7 +55,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   };
 
   return (
-    <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value="{value}">
       {children}
     </AnalyticsContext.Provider>
   );

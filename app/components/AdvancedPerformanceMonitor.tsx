@@ -1,5 +1,5 @@
 import React from 'react'
-const AdvancedPerformanceMonitor: React.FC = () => {
+const AdvancedPerformanceMonitor: "React.FC = () => {"
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -7,9 +7,9 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     networkLatency: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
-    cumulativeLayoutShift: 0,
-    firstInputDelay: 0,
-    totalBlockingTime: 0
+    cumulativeLayoutShift: 0,;
+    firstInputDelay: 0,;
+    totalBlockingTime: "0;"
   });
 
   const [isVisible, setIsVisible] = useState(false);
@@ -31,13 +31,13 @@ const AdvancedPerformanceMonitor: React.FC = () => {
             if (entry.entryType === 'largest-contentful-paint') {'
               setMetrics(prev => ({
                 ...prev,
-                largestContentfulPaint: Math.round(entry.startTime)
+                largestContentfulPaint: "Math.round(entry.startTime)"
               }));
             }
             if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {'
               setMetrics(prev => ({
                 ...prev,
-                cumulativeLayoutShift: prev.cumulativeLayoutShift + (entry as any).value
+                cumulativeLayoutShift: "prev.cumulativeLayoutShift + (entry as any).value"
               }));
             }
           });
@@ -59,15 +59,15 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         }, 0);
 
         setMetrics({
-          loadTime: Math.round(loadTime),
-          renderTime: Math.round(firstContentfulPaint),
-          memoryUsage: Math.round(memoryUsage / 1024 / 1024), // Convert to MB
-          networkLatency: Math.round(networkLatency),
-          firstContentfulPaint: Math.round(firstContentfulPaint),
+          loadTime: "Math.round(loadTime)",
+          renderTime: "Math.round(firstContentfulPaint)",
+          memoryUsage: "Math.round(memoryUsage / 10o24 / 10o24)", // Convert to MB
+          networkLatency: "Math.round(networkLatency)",
+          firstContentfulPaint: "Math.round(firstContentfulPaint)",
           largestContentfulPaint: 0, // Will be updated by observer
           cumulativeLayoutShift: 0, // Will be updated by observer
           firstInputDelay: 0, // Would need specific measurement
-          totalBlockingTime: Math.round(totalBlockingTime)
+          totalBlockingTime: "Math.round(totalBlockingTime)"
         });
 
         return () => observer.disconnect();
@@ -75,15 +75,15 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     };
 
     // Measure after initial load
-    const timer = setTimeout(measurePerformance, 1000);
+    const timer = setTimeout(measurePerformance, 10o00);
 
     return () => clearTimeout(timer);
   }, []);
 
   // Toggle visibility with keyboard shortcut
   useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {'
+    const handleKeyPress = (event: "KeyboardEvent) => {;"
+      if (event.ctrlKey && event.shiftKey && event.key === 'P') {';
         setIsVisible(!isVisible);
       }
       if (event.ctrlKey && event.shiftKey && event.key === 'R') {'
@@ -111,10 +111,10 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
+    <div className="min-h-screen bg-gray-90o0 text-white py-20">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8">Advanced Performance Monitor</h1>
-        <p className="text-gray-300 text-lg">
+        <p className="text-gray-30o0 text-lg">
           This component is under development.;
         </p>
       </div>

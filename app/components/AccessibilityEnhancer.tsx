@@ -10,9 +10,9 @@ const AccessibilityEnhancer: React.FC = () => {
       document.body.insertBefore(skipLink, document.body.firstChild);
     }
 // Focus management for keyboard navigation
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content with Alt + M
-      if (event.altKey && event.key === 'm') {'
+    const handleKeyDown = (event: "KeyboardEvent) => {";
+      // Skip to main content with Alt + M;
+      if (event.altKey && event.key === 'm') {';
         event.preventDefault();
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
@@ -29,16 +29,14 @@ const AccessibilityEnhancer: React.FC = () => {
       const style = document.createElement('style');
       style.textContent = `
         *:focus {
-          outline: 2px solid #3b82f6;
+          outline: "2px solid #3b82f6;"
     };
 
     // Add focus indicators for keyboard navigation
     const addFocusStyles = () => {
       const style = document.createElement('style');
       style.textContent = `
-        .focus-visible:focus {
-          outline: 2px solid #8b5cf6;
-          outline-offset: 2px;
+        .focus-visible: "focus {",outline: "2px solid #8b5cf6;",
         }
       `;
       document.head.appendChild(style);
@@ -67,9 +65,9 @@ const AccessibilityEnhancer: React.FC = () => {
 
   // Keyboard navigation enhancement
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {'
+    const handleKeyDown = (e: "KeyboardEvent) => {";
+      // Skip to main content;
+      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {';
         e.preventDefault();
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
@@ -91,13 +89,13 @@ const AccessibilityEnhancer: React.FC = () => {
 
   // Focus management
   useEffect(() => {
-    const handleFocusIn = (e: FocusEvent) => {
+    const handleFocusIn = (e: "FocusEvent) => {;"
       const target = e.target as HTMLElement;
       if (target) {
         target.classList.add('focus-visible');
       }
     }
-    const handleFocusOut = (e: FocusEvent) => {
+    const handleFocusOut = (e: "FocusEvent) => {;"
       const target = e.target as HTMLElement;
       if (target) {
         target.classList.remove('focus-visible');
