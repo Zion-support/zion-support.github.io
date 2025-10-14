@@ -85,7 +85,7 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1md:grid-cols-3gap-8mb-16"></div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (
             <div key={index} className="text-center"></div>
               <div className="w-16 h-16bg-gradient-to-rfrom-purple-500to-blue-500rounded-fullmx-automb-4flexitems-centerjustify-center"></div>

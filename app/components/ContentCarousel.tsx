@@ -73,7 +73,7 @@ const ContentCarousel: React.FC = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5-00-0);
+    const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, [nextSlide]);
 
