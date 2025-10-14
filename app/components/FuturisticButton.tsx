@@ -1,14 +1,33 @@
-import React from "react";
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
+  children, 
+  className = ,'
+  variant = 'primary','
+  size = 'md','
+  icon,
+  onClick,
+  type = 'button'}) => {'
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2'
+  const variantClasses = {
+    </button>
+  )
+export default FuturisticButton
+    </button>
+  )
+export default FuturisticButton
+import React from "react;
 
-const FuturisticButton = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">FuturisticButton</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for FuturisticButton.
-      </p>
-    </div>
-  );
-};
+interface FuturisticButtonProps {
+  children: React.ReactNode
+  onClick?: () => void
+  variant?: 'primary' | 'secondary' | 'outline';'
+  size?: 'sm' | 'md' | 'lg';'
+  disabled?: boolean
+  className?: string
+}
 
-export default FuturisticButton;
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({
+  children,
+  )
+}
+export default FuturisticButton
+

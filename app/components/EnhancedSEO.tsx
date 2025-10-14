@@ -1,52 +1,51 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface EnhancedSEOProps {
-  title: string;
-  description: string;
-  keywords: string;
-  canonical: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-}
-
-const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
+  description: string
+  keywords: string
+  canonical: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: object
+  noIndex?: boolean
+const EnhancedSEO: React.FC<SEOProps> = ({
   title,
   description,
-  keywords,
-  canonical,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
+  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions',
+  canonicalUrl,'
+  ogImage = '/api/placeholder/1200/630','
+  ogType = 'website','
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noIndex = false,
+  noFollow = false
 }) => {
+    '@context': 'https://schema.org',
+  noFollow = false}
+}) => {'
+  const siteName = 'Zion Tech Group
+  const siteUrl = 'https://ziontechgroup.com'}'
+  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl';`"`'"``'"`
+  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`";`"`'"``'"`
+  const defaultStructuredData = {'
+    '@context': 'https://schema.org','
+    '@type': 'Organization',
+    name: siteName,
+    },
+    sameAs: ['
+      'https://www.linkedin.com/company/zion-tech-group','
+      'https://github.com/ziontechgroup','
+      'https://twitter.com/ziontechgroup'
+    ]
+  }
+  const mergedStructuredData = structuredData || defaultStructuredData
+  const mergedStructuredData = structuredData || defaultStructuredData
   return (
-    <Helmet>
+<>    <Helmet></Helmet>
+      { /* Basic Meta Tags */ }
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={canonical} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </script>
     </Helmet>
-  );
-};
-
-export default EnhancedSEO;
+  )}
+export default EnhancedSEO
+  )
+export default EnhancedSEO
+  return (
