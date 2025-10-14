@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -43,6 +44,14 @@ const LazyLoadingPage = () => {
           </div>
         </div>
       </div>
+=======
+import React from 'react':;
+export default function LazyLoading() {;
+return (
+    <div>
+      <h1>LazyLoading</h1>
+      <p>This component is under development.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
     </div>
   );
 };

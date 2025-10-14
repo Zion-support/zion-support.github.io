@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 export const useUseAnalyticsContext = () => {
   const [data, setData] = useState(null);
@@ -15,3 +16,7 @@ export const useUseAnalyticsContext = () => {
     // Add your hook methods here
   };
 };
+=======
+import { useAnalytics } from '../contexts/AnalyticsContext':;
+export { useAnalytics };
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64

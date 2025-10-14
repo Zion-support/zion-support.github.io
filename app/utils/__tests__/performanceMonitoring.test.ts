@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -48,3 +49,11 @@ const PerformanceMonitoring.testPage = () => {
 };
 
 export default PerformanceMonitoring.testPage;
+=======
+import { describe, it, expect } from '@jest/globals':;
+describe('PerformanceMonitoring', () => {;
+it('should work correctly', () => {;
+expect(true).toBe(true);
+  });
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64

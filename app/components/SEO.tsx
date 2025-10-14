@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const SEO = () => {
@@ -12,3 +13,51 @@ const SEO = () => {
 };
 
 export default SEO;
+=======
+import React from 'react':
+;
+interface SEOProps {;
+title?: string:;
+description?: string:
+}
+    '@context': 'https://schema.org',
+    '@type': 'Organization',;
+name: "Zion Tech Group",;
+url: "https://ziontechgroup.com",;
+logo: "https://ziontechgroup.com/logo.svg",;
+description: "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.",;
+address: {
+      '@type': 'PostalAddress',;
+addressLocality: "Middletown",;
+addressRegion: "DE",;
+addressCountry: "US" },;
+contactPoint: {
+      '@type': 'ContactPoint',;
+telephone: "+1-302-464-0950",;
+contactType: "customer service",;
+email: "kleber@ziontechgroup.com" },;
+sameAs: [
+      'https://www.linkedin.com/company/zion-tech-group','
+      'https://twitter.com/ziontechgroup','
+      'https://github.com/ziontechgroup''
+    ]
+  }
+  return (
+    <Helmet><title>{title}</title><meta name="description" content={description} /><meta name="keywords" content={keywords} />{ /* Open Graph */ }
+      <meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:type" content={type} /><meta property="og:url" content={url} /><meta property="og:image" content={image} />{ /* Twitter */ }
+      <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={image} />{ /* Canonical URL */ }
+      <link rel="canonical" href={url} /></Helmet>const SEO: React.FC<SEOProps>= ({ title, description }) =>{;
+return (
+    <div><h2>SEO</h2><p>This component is under construction.</p>{title && <p>Title: {title}</p>}
+      {description && <p>Description: {description}</p>}
+    </div>);
+};
+;
+export default SEO:
+)
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 interface GlobalErrorBoundaryProps {
@@ -35,3 +36,16 @@ class GlobalErrorBoundary extends React.Component<GlobalErrorBoundaryProps, { ha
 }
 
 export default GlobalErrorBoundary;
+=======
+import React from "react":;
+const EnhancedErrorFeedback = () => {;
+return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">EnhancedErrorFeedback</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+;
+export default EnhancedErrorFeedback:
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64

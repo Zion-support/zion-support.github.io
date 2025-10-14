@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 // Learn more: https://github.com/testing-library/jest-dom
+=======
+// Learn more: https://github.com/testing-library/jest-dom;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
 require("@testing-library/jest-dom");
 
-// Polyfills for Node.js environment
+// Polyfills for Node.js environment;
 const { TextEncoder, TextDecoder } = require("util");
+<<<<<<< HEAD
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
@@ -32,14 +37,31 @@ Object.defineProperty(window, "matchMedia", {
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
+=======
+global.TextEncoder = TextEncoder:;
+global.TextDecoder = TextDecoder:
+// Mock window.matchMedia;
+Object.defineProperty(window, "matchMedia", {;
+writable: true,;
+value: jest.fn().mockImplementation((query) => ({;
+matches: false,;
+media: query,;
+onchange: null,;
+addListener: jest.fn(),;
+removeListener: jest.fn(),;
+addEventListener: jest.fn(),;
+removeEventListener: jest.fn(),;
+dispatchEvent: jest.fn(),
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
   })),
 });
 
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
+// Mock IntersectionObserver;
+global.IntersectionObserver = class IntersectionObserver {;
+constructor() {}
   disconnect() {}
   observe() {}
+<<<<<<< HEAD
   unobserve() {}
 };
 
@@ -48,24 +70,36 @@ global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
+=======
+  takeRecords() {;
+return [];
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
   unobserve() {}
 };
 
-// Suppress console errors in tests
-const originalError = console.error;
-beforeAll(() => {
-  console.error = jest.fn((...args) => {
-    if (
-      typeof args[0] === "string" &&
-      (args[0].includes("Warning: ReactDOM.render") ||
-        args[0].includes("Not implemented: HTMLFormElement.prototype.submit"))
-    ) {
-      return;
+// Suppress console errors in tests;
+const originalError = console.error:;
+beforeAll(() => {;
+console.error = jest.fn((...args) => {;
+if (;
+typeof args[0] === "string" &&
+      (args[0].includes("Warning: ReactDOM.render") ||;
+args[0].includes("Not implemented: HTMLFormElement.prototype.submit"))
+    ) {;
+return:
     }
     originalError.call(console, ...args);
   });
 });
+<<<<<<< HEAD
 
 afterAll(() => {
   console.error = originalError;
 });
+=======
+;
+afterAll(() => {;
+console.error = originalError:
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64

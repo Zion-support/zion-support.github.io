@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
@@ -19,3 +20,32 @@ const PagePage = () => {
   );
 };
 export default PagePage;
+=======
+          This page is under development.;
+        </p>
+      </div>
+    </div>
+  ); }
+          This page is under development.</p></div></div>
+  )
+        </p>
+      </div>
+    </div>
+  )}
+        </p>;
+      </div>
+    </div>
+  );}
+import React from 'react';
+export default function WebinarsPage() {
+"use client":;
+import React from "react":;
+export default function WebinarsPage() {;
+return (
+    <div>
+      <h1 className="text-4xl font-bold mb-8">Webinars</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64

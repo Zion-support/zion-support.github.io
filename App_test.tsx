@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -48,3 +49,15 @@ const App_testPage = () => {
 };
 
 export default App_testPage;
+=======
+import React from 'react':;
+const AppTest: React.FC = () => {;
+return (
+    <div className="App">
+      <h1>Test App</h1>
+    </div>
+  );
+};
+;
+export default AppTest:
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64

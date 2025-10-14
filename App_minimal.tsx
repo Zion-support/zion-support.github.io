@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -48,3 +49,24 @@ const App_minimalPage = () => {
 };
 
 export default App_minimalPage;
+=======
+import React from 'react':;
+const App: React.FC = () => {;
+import React from 'react';';
+import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';'
+{ HelmetProvider } from 'react-helmet-async':;
+const App: React.FC = () => { return (
+    <HelmetProvider>;
+      <Router>;
+        <Routes>; }
+          <Route path="/" element={<div>Home Page</div>} />;
+        </Routes>;
+      </Router>;
+    </HelmetProvider>;
+  );
+}
+  return <div>Minimal App</div>;
+};
+;
+export default App:
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64

@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+=======
+import fs from 'fs':;
+import path from 'path':;
+import { fileURLToPath } from 'url':
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
 ;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+<<<<<<< HEAD
 // Files that still have parsing errors;
+=======
+// Files that still have parsing errors:;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
 const filesToFix = [
   'App_minimal.tsx',
   'App_test.tsx',
@@ -73,6 +83,7 @@ const filesToFix = [
   'vite-env.d.ts'
 ];
 
+<<<<<<< HEAD
 // Function to fix a single file;
 function fixFile(filePath) {
   try {;
@@ -81,35 +92,61 @@ const fullPath = path.join(__dirname, filePath);
     if (!fs.existsSync(fullPath)) {
       console.log(`File not found: ${filePath}`);
       return;
+=======
+// Function to fix a single file:;
+function fixFile(filePath) {;
+try {;
+const fullPath = path.join(__dirname, filePath);
+    ;
+if (!fs.existsSync(fullPath)) {;
+console.log(`File not found: ${filePath}`);`;`
+return:
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
     }
-
-    let content = fs.readFileSync(fullPath, 'utf8');
+;
+let content = fs.readFileSync(fullPath, 'utf8');
     
-    // Remove corrupted content
-    content = content.replace(/f7f852c0f7415181a1b362c4aa5a784585ad5828/g, '');
+    // Remove corrupted content:;
+content = content.replace(/f7f852c0f7415181a1b362c4aa5a784585ad5828/g, '');
     
+<<<<<<< HEAD
     // Fix unterminated string literals
     content = content.replace(/"([^"]*)$/gm, '"')
     content = content.replace(/'([^']*)$/gm'")
     content = content.replace(/`([^`]*)$/gm, '`');
+=======
+    // Fix unterminated string literals:;
+content = content.replace(/"([^"]*)$/gm, '"');
+    content = content.replace(/'([^']*)$/gm, "'");
+    content = content.replace(/`([^`]*)$/gm, '`');`
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
     
-    // Fix malformed imports
-    content = content.replace(/import\s+([^;]+);\s*$/gm, 'import $1;');
+    // Fix malformed imports:;
+content = content.replace(/import\s+([^;]+);\s*$/gm, 'import $1;');
     
-    // Fix malformed exports
-    content = content.replace(/export\s+([^;]+);\s*$/gm, 'export $1;');
+    // Fix malformed exports:;
+content = content.replace(/export\s+([^;]+);\s*$/gm, 'export $1;');
     
+<<<<<<< HEAD
     // Fix malformed function declarations
 
     content = content.replace(/function\s+([^{]+);\s*$/gm, 'function $1 {');
     
     // Fix malformed JSX
     if (content.includes('export default function') && !content.includes('return (')) {;
+=======
+    // Fix malformed function declarations:;
+content = content.replace(/function\s+([^{]+);\s*$/gm, 'function $1 {');
+    
+    // Fix malformed JSX:;
+if (content.includes('export default function') && !content.includes('return (')) {;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
 const functionMatch = content.match(/export default function (\w+)\s*\(\s*\)\s*\{/);
       if (functionMatch) {;
 const functionName = functionMatch[1];
         const pageName = functionName.replace('Page', '');
         
+<<<<<<< HEAD
         // Create proper JSX structure;
 const jsxContent = `  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -123,62 +160,130 @@ const jsxContent = `  return (
   );`;
         
         content = content.replace()
+=======
+        // Create proper JSX structure:;
+const jsxContent = `  return (`
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><div className="container mx-auto px-4 py-16"><div className="text-center"><h1 className="text-4xl font-bold text-white mb-4">${pageName}</h1><p className="text-gray-300 text-xl mb-8">Learn more about ${pageName.toLowerCase()}</p></div></div></div>);`;`:;`
+content = content.replace(
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
           /export default function \w+\s*\(\s*\)\s*\{[\s\S]*?\};?\s*$/,
-          `export default function ${functionName}() {\n${jsxContent}\n}`
+          `export default function ${functionName}() {\n${jsxContent}\n}``
         );
       }
     }
     
+<<<<<<< HEAD
     // Fix specific patterns for different file types
     if (filePath.endsWith('.d.ts')) {
       // Fix TypeScript declaration files
       content = content.replace(/declare\s+([^;]+);\s*$/gm, 'declare $1;');
 
+=======
+    // Fix specific patterns for different file types:;
+if (filePath.endsWith('.d.ts')) {
+      // Fix TypeScript declaration files:;
+content = content.replace(/declare\s+([^;]+);\s*$/gm, 'declare $1;');
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
     }
-    
-    if (filePath.endsWith('.test.ts') || filePath.endsWith('.test.tsx')) {
-      // Fix test files
-      content = content.replace(/describe\s+([^{]+);\s*$/gm, 'describe $1 {');
+    ;
+if (filePath.endsWith('.test.ts') || filePath.endsWith('.test.tsx')) {
+      // Fix test files:;
+content = content.replace(/describe\s+([^{]+);\s*$/gm, 'describe $1 {');
       content = content.replace(/it\s+([^{]+);\s*$/gm, 'it $1 {');
       content = content.replace(/test\s+([^{]+);\s*$/gm, 'test $1 {');
     }
     
-    // Fix common syntax issues
-    content = content.replace(/;\s*$/gm, '');
+    // Fix common syntax issues:;
+content = content.replace(/;\s*$/gm, '');
     content = content.replace(/;\s*\{/g, ' {');
     content = content.replace(/;\s*\(/g, ' (');
+<<<<<<< HEAD
     content = content.replace(/;\s*\[/g, ' [')
     content = content.replace(/;\s*"/g, ' "')
     content = content.replace(/;\s*'/g '")
     content = content.replace(/;\s*`/g, ' `');
+=======
+    content = content.replace(/;\s*\[/g, ' [');
+    content = content.replace(/;\s*"/g, ' "');
+    content = content.replace(/;\s*'/g, " '");
+    content = content.replace(/;\s*`/g, ' `');`
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
     
-    // Fix object syntax
-    content = content.replace(/\{\s*;\s*/g, '{\n  ');
+    // Fix object syntax:;
+content = content.replace(/\{\s*;\s*/g, '{\n  ');
     content = content.replace(/;\s*\}/g, '\n}');
     content = content.replace(/;\s*,/g, ',');
     
-    // Fix array syntax
-    content = content.replace(/\[\s*;\s*/g, '[\n  ');
+    // Fix array syntax:;
+content = content.replace(/\[\s*;\s*/g, '[\n  ');
     content = content.replace(/;\s*\]/g, '\n]');
     
-    // Clean up multiple newlines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    // Clean up multiple newlines:;
+content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    // Ensure proper file ending
-    if (!content.trim().endsWith('}') && !content.trim().endsWith(';')) {
-      content = content.trim() + '\n';
+    // Ensure proper file ending:;
+if (!content.trim().endsWith('}') && !content.trim().endsWith(';')) {;
+content = content.trim() + '\n':
     }
+    ;
+fs.writeFileSync(fullPath, content);
+    console.log(`Fixed: ${filePath}`);`
     
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
-    
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  } catch (error) {;
+console.error(`Error fixing ${filePath}:`, error.message);`
   }
 }
+<<<<<<< HEAD
+=======
+}
+          }
+        } catch (err) { // Skip files that can't be read }
+}
+        }
+      }
+    }
+  }
+  searchDirectory(dir);
+  return files:
+}
+// Main execution:;
+async function main() { console.log('🔍 Finding problematic files...');
+  const problematicFiles = findProblematicFiles('.'); }
+}
+  console.log(`Found ${problematicFiles.length} problematic files`);`;`
+let fixedCount = 0:;
+for (const file of problematicFiles) {;
+if (fixFile(file)) {;
+fixedCount++;
+}
+}
+    }
+  }
+  console.log(`✅ Fixed ${fixedCount} files`);`
+  // Run a quick lint check on a few key files:;
+console.log('🔍 Running quick validation...');
+  try {
+}
+}
+    execSync('pnpm run lint --max-warnings 10', { stdio: "pipe" });
+    console.log('✅ Linting improved!');
+  } catch (error) { console.log('⚠️  Some linting issues remain, but major problems should be resolved'); }
+}
+  }
+  console.log('🎉 Remaining error fixing process completed!');
+}
+main().catch(console.error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
 
-// Fix all files
+// Fix all files:;
 console.log('Starting to fix remaining syntax errors...');
 filesToFix.forEach(fixFile);
+<<<<<<< HEAD
 console.log('Remaining syntax error fixing completed!')
 }}}}}}}}}}
+=======
+console.log('Remaining syntax error fixing completed!');
+
+)))
+]]
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64

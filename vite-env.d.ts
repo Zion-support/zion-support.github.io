@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -48,3 +49,10 @@ const ViteEnv.dPage = () => {
 };
 
 export default ViteEnv.dPage;
+=======
+}
+interface ImportMeta {readonly env: ImportMetaEnv}
+}
+/// <reference types="vite/client" />
+  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64

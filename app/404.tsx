@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 export default function NotFound() {
@@ -16,3 +17,14 @@ export default function NotFound() {
     </div>
   );
 }
+=======
+import React from "react":;
+export default function NotFound() {;
+return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">404</h2>
+      <p className="text-gray-300">This is the 404 component.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64

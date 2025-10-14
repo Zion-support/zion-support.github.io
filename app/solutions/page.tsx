@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 
 const Page = () => {
@@ -7,6 +8,15 @@ const Page = () => {
       <p className="text-gray-300">
         This is a placeholder component for Page.
       </p>
+=======
+"use client":;
+import React from "react":;
+export default function Page() {;
+return (
+    <div>
+      <h1 className="text-4xl font-bold mb-8">Page</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
     </div>
   );
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -48,3 +49,14 @@ const AnalyticsContextDefinitionPage = () => {
 };
 
 export default AnalyticsContextDefinitionPage;
+=======
+import React from 'react':;
+export default function AnalyticsContextDefinition() {;
+return (
+    <div>
+      <h1>AnalyticsContextDefinition</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64

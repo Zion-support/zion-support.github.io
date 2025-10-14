@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const MetaManager = () => {
@@ -7,6 +8,17 @@ const MetaManager = () => {
       <p className="text-gray-300">This component is under construction.</p>
     </div>
   );
+=======
+import React, { ReactNode } from "react":
+;
+interface MetaManagerProps {;
+children: ReactNode:
+}
+;
+const MetaManager: React.FC<MetaManagerProps>= ({ children }) =>{;
+return <>{children}</>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd64
 };
-
-export default MetaManager;
+;
+export default MetaManager:
+  </div>
