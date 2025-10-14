@@ -1,10 +1,11 @@
 import React from "react";
 
-const EnhancedPerformanceMonitor = () => {
+type EnhancedPerformanceMonitorProps = Record<string, unknown>;
+
+const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">EnhancedPerformanceMonitor</h2>
-      <p>This component is under construction.</p>
+    <div className="enhancedperformancemonitor">
+      {/* Component content */}
     </div>
   );
 };

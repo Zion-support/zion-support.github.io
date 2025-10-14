@@ -1,10 +1,11 @@
 import React from "react";
 
-const StructuredData = () => {
+type StructuredDataProps = Record<string, unknown>;
+
+const StructuredData: React.FC<StructuredDataProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">StructuredData</h2>
-      <p>This component is under construction.</p>
+    <div className="structureddata">
+      {/* Component content */}
     </div>
   );
 };

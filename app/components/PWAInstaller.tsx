@@ -1,10 +1,11 @@
 import React from "react";
 
-const PWAInstaller = () => {
+type PWAInstallerProps = Record<string, unknown>;
+
+const PWAInstaller: React.FC<PWAInstallerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">PWAInstaller</h2>
-      <p>This component is under construction.</p>
+    <div className="pwainstaller">
+      {/* Component content */}
     </div>
   );
 };

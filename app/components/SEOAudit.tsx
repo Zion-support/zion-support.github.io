@@ -1,10 +1,11 @@
 import React from "react";
 
-const SEOAudit = () => {
+type SEOAuditProps = Record<string, unknown>;
+
+const SEOAudit: React.FC<SEOAuditProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">SEOAudit</h2>
-      <p>This component is under construction.</p>
+    <div className="seoaudit">
+      {/* Component content */}
     </div>
   );
 };

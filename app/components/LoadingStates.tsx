@@ -1,10 +1,11 @@
 import React from "react";
 
-const LoadingStates = () => {
+type LoadingStatesProps = Record<string, unknown>;
+
+const LoadingStates: React.FC<LoadingStatesProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">LoadingStates</h2>
-      <p>This component is under construction.</p>
+    <div className="loadingstates">
+      {/* Component content */}
     </div>
   );
 };

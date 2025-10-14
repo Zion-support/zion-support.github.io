@@ -1,5 +1,4 @@
-// structuredData utility
-export const structuredData = () => {
-  // Implementation here
-  return null;
+// Utility functions
+export const utilityFunction = () => {
+  // Implementation
 };

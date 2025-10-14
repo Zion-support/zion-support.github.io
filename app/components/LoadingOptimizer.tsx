@@ -1,10 +1,11 @@
 import React from "react";
 
-const LoadingOptimizer = () => {
+type LoadingOptimizerProps = Record<string, unknown>;
+
+const LoadingOptimizer: React.FC<LoadingOptimizerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">LoadingOptimizer</h2>
-      <p>This component is under construction.</p>
+    <div className="loadingoptimizer">
+      {/* Component content */}
     </div>
   );
 };

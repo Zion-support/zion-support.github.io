@@ -1,10 +1,11 @@
 import React from "react";
 
-const WebVitalsTracker = () => {
+type WebVitalsTrackerProps = Record<string, unknown>;
+
+const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">WebVitalsTracker</h2>
-      <p>This component is under construction.</p>
+    <div className="webvitalstracker">
+      {/* Component content */}
     </div>
   );
 };

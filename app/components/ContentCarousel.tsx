@@ -1,10 +1,11 @@
 import React from "react";
 
-const ContentCarousel = () => {
+type ContentCarouselProps = Record<string, unknown>;
+
+const ContentCarousel: React.FC<ContentCarouselProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ContentCarousel</h2>
-      <p>This component is under construction.</p>
+    <div className="contentcarousel">
+      {/* Component content */}
     </div>
   );
 };

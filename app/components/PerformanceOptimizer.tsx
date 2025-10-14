@@ -1,11 +1,13 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
-interface PerformanceOptimizerProps {
-  children: ReactNode;
-}
+type PerformanceOptimizerProps = Record<string, unknown>;
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  return <>{children}</>;
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = () => {
+  return (
+    <div className="performanceoptimizer">
+      {/* Component content */}
+    </div>
+  );
 };
 
 export default PerformanceOptimizer;

@@ -1,10 +1,11 @@
 import React from "react";
 
-const LazyWrapper = () => {
+type LazyWrapperProps = Record<string, unknown>;
+
+const LazyWrapper: React.FC<LazyWrapperProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">LazyWrapper</h2>
-      <p>This component is under construction.</p>
+    <div className="lazywrapper">
+      {/* Component content */}
     </div>
   );
 };

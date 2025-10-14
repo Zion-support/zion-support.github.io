@@ -1,10 +1,11 @@
 import React from "react";
 
-const OptimizedLoadingSpinner = () => {
+type OptimizedLoadingSpinnerProps = Record<string, unknown>;
+
+const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">OptimizedLoadingSpinner</h2>
-      <p>This component is under construction.</p>
+    <div className="optimizedloadingspinner">
+      {/* Component content */}
     </div>
   );
 };

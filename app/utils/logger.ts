@@ -1,4 +1,4 @@
-// Logger - Basic implementation
-export default function Logger() {
-  return null;
-}
+// Utility functions
+export const utilityFunction = () => {
+  // Implementation
+};

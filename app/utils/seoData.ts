@@ -1,5 +1,4 @@
-// seoData utility
-export const seoData = () => {
-  // Implementation here
-  return null;
+// Utility functions
+export const utilityFunction = () => {
+  // Implementation
 };

@@ -1,10 +1,11 @@
 import React from "react";
 
-const ServiceCardSkeleton = () => {
+type ServiceCardSkeletonProps = Record<string, unknown>;
+
+const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ServiceCardSkeleton</h2>
-      <p>This component is under construction.</p>
+    <div className="servicecardskeleton">
+      {/* Component content */}
     </div>
   );
 };

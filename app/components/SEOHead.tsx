@@ -1,10 +1,11 @@
 import React from "react";
 
-const SEOHead = () => {
+type SEOHeadProps = Record<string, unknown>;
+
+const SEOHead: React.FC<SEOHeadProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">SEOHead</h2>
-      <p>This component is under construction.</p>
+    <div className="seohead">
+      {/* Component content */}
     </div>
   );
 };

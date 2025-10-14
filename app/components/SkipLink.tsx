@@ -1,10 +1,11 @@
 import React from "react";
 
-const SkipLink = () => {
+type SkipLinkProps = Record<string, unknown>;
+
+const SkipLink: React.FC<SkipLinkProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">SkipLink</h2>
-      <p>This component is under construction.</p>
+    <div className="skiplink">
+      {/* Component content */}
     </div>
   );
 };

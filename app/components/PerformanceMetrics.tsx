@@ -1,10 +1,11 @@
 import React from "react";
 
-const PerformanceMetrics = () => {
+type PerformanceMetricsProps = Record<string, unknown>;
+
+const PerformanceMetrics: React.FC<PerformanceMetricsProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">PerformanceMetrics</h2>
-      <p>This component is under construction.</p>
+    <div className="performancemetrics">
+      {/* Component content */}
     </div>
   );
 };

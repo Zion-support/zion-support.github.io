@@ -1,10 +1,11 @@
 import React from "react";
 
-const AdvancedSEOOptimizer_new = () => {
+type AdvancedSEOOptimizer_newProps = Record<string, unknown>;
+
+const AdvancedSEOOptimizer_new: React.FC<AdvancedSEOOptimizer_newProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">AdvancedSEOOptimizer_new</h2>
-      <p>This component is under construction.</p>
+    <div className="advancedseooptimizer_new">
+      {/* Component content */}
     </div>
   );
 };

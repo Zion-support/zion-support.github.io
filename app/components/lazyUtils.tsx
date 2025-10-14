@@ -1,12 +1,13 @@
 import React from "react";
 
-const LazyUtils = () => {
+type lazyUtilsProps = Record<string, unknown>;
+
+const lazyUtils: React.FC<lazyUtilsProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">LazyUtils</h2>
-      <p>This component is under construction.</p>
+    <div className="lazyutils">
+      {/* Component content */}
     </div>
   );
 };
 
-export default LazyUtils;
+export default lazyUtils;

@@ -1,10 +1,11 @@
 import React from "react";
 
-const AdDashboard = () => {
+type AdDashboardProps = Record<string, unknown>;
+
+const AdDashboard: React.FC<AdDashboardProps> = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">AdDashboard</h2>
-      <p>This component is under construction.</p>
+    <div className="addashboard">
+      {/* Component content */}
     </div>
   );
 };
