@@ -53,84 +53,27 @@ const PagePage = () => {
             </Link>
           </div>
         </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex items-center justify-center mb-4">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-300">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Cloud Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end cloud infrastructure services designed to meet the unique needs of your business.
+        
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Cloud Migration</h3>
+            <p className="text-gray-300">
+              Seamlessly migrate your applications and data to the cloud with minimal downtime.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  {feature.icon}
-                  <h3 className="text-xl font-semibold text-white ml-4">
-                    {feature.title}
-                  </h3>
-                </div>
-                <p className="text-gray-300">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Cloud Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Complete cloud infrastructure management and optimization services.
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Auto Scaling</h3>
+            <p className="text-gray-300">
+              Automatically scale your infrastructure based on demand to optimize costs and performance.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
-                    <ArrowRight className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-                <p className="text-gray-300">
-                  {service}
-                </p>
-              </div>
-            ))}
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Security & Compliance</h3>
+            <p className="text-gray-300">
+              Enterprise-grade security and compliance solutions to protect your cloud infrastructure.
+            </p>
           </div>
         </div>
       </section>
