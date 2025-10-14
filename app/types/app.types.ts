@@ -6,8 +6,6 @@ export interface User {
 }
 
 export interface Service {
-  id: string;
-  name: string;
   description: string;
   category: string;
   features: string[];
@@ -17,25 +15,18 @@ export interface Service {
     enterprise: number;
   };
   icon: string;
-}
 
 export interface AnalyticsEvent {
   action: string;
-  category: string;
   label?: string;
   value?: number;
-}
 
 export interface ContactForm {
-  name: string;
-  email: string;
   company: string;
   message: string;
   phone?: string;
-}
 
 export interface BlogPost {
-  id: string;
   title: string;
   content: string;
   excerpt: string;
@@ -43,20 +34,11 @@ export interface BlogPost {
   publishedAt: string;
   tags: string[];
   slug: string;
-}
 
 export interface Testimonial {
-  id: string;
-  name: string;
-  company: string;
-  content: string;
   avatar?: string;
   rating: number;
-}
 
 export interface FAQ {
-  id: string;
   question: string;
   answer: string;
-  category: string;
-}
