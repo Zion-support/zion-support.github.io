@@ -61,7 +61,7 @@ const MetaManager: React.FC<MetaManagerProps> = ({ title = "Zion Tech Group - Ad
         "logo": {
           "@type": "ImageObject",
           "url": "https://ziontechgroup.com/logo.svg"
-        };
+        }
       },
       ...(type === "article"&& {
         "datePublished": publishedTime,
