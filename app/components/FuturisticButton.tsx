@@ -1,8 +1,3 @@
-  className?: string;
-}
-
-const FuturisticButton: React.FC<FuturisticButtonProps> = ({
-  children,
 import React from "react";
 
 const FuturisticButton = () => {
