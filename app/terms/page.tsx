@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;'
+import { Helmet } from 'react-helmet-async;'
 const TermsPage = () => {
   return (
     <>
@@ -19,9 +19,7 @@ const TermsPage = () => {
               For any legal questions, please contact us at kleber@ziontechgroup.com
             </p>
           </div>
-        </div>
-      </div>
-    </>
+        
   );
 };
 

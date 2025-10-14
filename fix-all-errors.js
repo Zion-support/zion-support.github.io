@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
+import fs from 'fs;'
+import path from 'path;'
+import { execSync } from 'child_process;'
 
 // Function to recursively find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+function findFiles(dir, extensions = ['.ts, '.tsx', .js', '.jsx]) {'
   let results = [];
   const list = fs.readdirSync(dir);
   
@@ -15,7 +15,7 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
     
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other common directories
-      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
+      if (!['node_modules, '.git', dist', 'build, '.next'].includes(file)) {
         results = results.concat(findFiles(filePath, extensions));
       }
     } else {
@@ -44,7 +44,7 @@ function fixSyntaxErrors(content) {
   let fixed = content;
   
   // Fix unterminated string literals
-  fixed = fixed.replace(/(['"`])([^'"`]*?)(\n|$)/g, (match, quote, str, newline) => {
+  fixed = fixed.replace(/(['"`])([^'"`]*?)(\n|$)/g, (match, quote, str, newline) => {`
     if (str.includes(quote)) return match;
     return quote + str + quote + ';' + newline;
   });
@@ -74,11 +74,11 @@ function fixFilePatterns(content, filePath) {
   let fixed = content;
   
   // Fix common import issues
-  fixed = fixed.replace(/import\s+{\s*}\s+from\s+['"][^'"]+['"];?\s*\n/g, '');
+  fixed = fixed.replace(/import\s+{\s*}\s+from\s+['"][^'"]+["];?\s*\n/g, '');
   
   // Fix empty components
-  if (filePath.includes('components/') && fixed.includes('export default function') && !fixed.includes('return')) {
-    fixed = fixed.replace(/(export default function[^{]+{)([\s\S]*?)(})/g, '$1\n  return <div>Component placeholder</div>;\n$3');
+  if (filePath.includes('components/') && fixed.includes(export default function') && !fixed.includes('return)) {'
+    fixed = fixed.replace(/(export default function[^{]+{)([\s\S]*?)(})/g, '$1\n  return <div>Component placeholder</div>;\n$3);'
   }
   
   return fixed;
@@ -87,7 +87,7 @@ function fixFilePatterns(content, filePath) {
 // Main function to process files
 function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8);'
     let originalContent = content;
     
     // Fix merge conflicts
@@ -101,22 +101,22 @@ function processFile(filePath) {
     
     // Only write if content changed
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      fs.writeFileSync(filePath, content, 'utf8);'
+      console.log(`Fixed: ${filePath}`);`
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);`
     return false;
   }
 }
 
 // Main execution
-console.log('Starting comprehensive error fix...');
+console.log('Starting comprehensive error fix...);'
 
-const files = findFiles('./app');
+const files = findFiles('./app);'
 let fixedCount = 0;
 
 files.forEach(file => {
@@ -125,10 +125,10 @@ files.forEach(file => {
   }
 });
 
-console.log(`\nFixed ${fixedCount} files.`);
+console.log(`\nFixed ${fixedCount} files.`);`
 
 // Also fix root level files
-const rootFiles = ['./App.tsx', './main.tsx', './index.html'];
+const rootFiles = ['./App.tsx, './main.tsx', ./index.html'];'
 rootFiles.forEach(file => {
   if (fs.existsSync(file)) {
     if (processFile(file)) {
@@ -137,5 +137,5 @@ rootFiles.forEach(file => {
   }
 });
 
-console.log(`Total files fixed: ${fixedCount}`);
-console.log('Error fixing completed!');
+console.log(`Total files fixed: ${fixedCount}`);`
+console.log(Error fixing completed!');'

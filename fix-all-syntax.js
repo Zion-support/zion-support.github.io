@@ -1,45 +1,45 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs;'
+import path from 'path;'
 
 // Function to fix all syntax errors in a file
 function fixAllSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8);'
     let modified = false;
 
     // Fix all patterns systematically
     const patterns = [
       // Fix stray semicolons in JSX
-      { from: />;/g, to: '>' },
+      { from: />;/g, to: '> },'
       
       // Fix stray quotes after closing parentheses
-      { from: /\);'/g, to: ');' },
+      { from: /\);'/g, to: );' },'
       
       // Fix unterminated string literals in JSX
-      { from: /'>/g, to: '>' },
+      { from: />/g, to: '>' },
       
       // Fix stray quotes in JSX text content
-      { from: /<\/p>';/g, to: '</p>' },
-      { from: /<\/div>';/g, to: '</div>' },
-      { from: /<\/React.Fragment>';/g, to: '</React.Fragment>' },
-      { from: /<\/h1>';/g, to: '</h1>' },
-      { from: /<\/h2>';/g, to: '</h2>' },
-      { from: /<\/h3>';/g, to: '</h3>' },
-      { from: /<\/span>';/g, to: '</span>' },
+      { from: /<\/p>';/g, to: '</p> },'
+      { from: /<\/div>';/g, to: </div>' },'
+      { from: /<\/React.Fragment>;/g, to: '</React.Fragment>' },
+      { from: /<\/h1>';/g, to: '</h1> },'
+      { from: /<\/h2>';/g, to: </h2>' },'
+      { from: /<\/h3>;/g, to: '</h3>' },
+      { from: /<\/span>';/g, to: '</span> },'
       
       // Fix function names that start with numbers
-      { from: /export default function 404\(\)/g, to: 'export default function NotFound()' },
+      { from: /export default function 404\(\)/g, to: 'export default function NotFound() },'
       
       // Fix missing closing braces
-      { from: /return null;\s*$/gm, to: 'return null;\n}' },
+      { from: /return null;\s*$/gm, to: 'return null;\n} },'
       
       // Fix stray quotes at end of return statements
-      { from: /\s+\)';$/gm, to: '\n  );' },
+      { from: /\s+\)';$/gm, to: \n  );' },'
       
       // Fix any remaining stray quotes in JSX
-      { from: /';\s*$/gm, to: ';' },
+      { from: /;\s*$/gm, to: ';' },
     ];
 
     for (const pattern of patterns) {
@@ -52,11 +52,11 @@ function fixAllSyntaxErrors(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);`
       return true;
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);`
   }
   return false;
 }
@@ -75,12 +75,12 @@ function findTsxFiles(dir) {
         
         if (stat.isDirectory()) {
           traverse(fullPath);
-        } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        } else if (item.endsWith('.tsx') || item.endsWith(.ts')) {'
           files.push(fullPath);
         }
       }
     } catch (error) {
-      // Skip directories we can't read
+      // Skip directories we cant read'
     }
   }
   
@@ -89,15 +89,15 @@ function findTsxFiles(dir) {
 }
 
 // Main execution
-console.log('Starting comprehensive syntax error fixes...');
+console.log('Starting comprehensive syntax error fixes...);'
 
-const directories = ['./app', './src'];
+const directories = ['./app, './src'];'
 let totalFixed = 0;
 
 for (const dir of directories) {
   if (fs.existsSync(dir)) {
     const tsxFiles = findTsxFiles(dir);
-    console.log(`Processing ${tsxFiles.length} files in ${dir}...`);
+    console.log(`Processing ${tsxFiles.length} files in ${dir}...`);`
     
     for (const file of tsxFiles) {
       if (fixAllSyntaxErrors(file)) {
@@ -107,4 +107,4 @@ for (const dir of directories) {
   }
 }
 
-console.log(`Total fixed: ${totalFixed} files.`);
+console.log(`Total fixed: ${totalFixed} files.`);`

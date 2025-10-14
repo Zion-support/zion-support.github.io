@@ -1,24 +1,24 @@
 #!/usr/bin/env node
-import fs from 'fs'
+import fs from 'fs
 import path from 'path'
-console.log('🔧 Final comprehensive syntax fix...')
+console.log(🔧 Final comprehensive syntax fix...')'
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8')
+    let content = fs.readFileSync(filePath, utf8')'
     let modified = false
     // Fix common syntax errors
     const fixes = [
-      // Fix import statements missing 'from'
-      { pattern: /import\s+(\w+)\s+(\w+)-(\w+)/g, replacement: "import $1 from '$2-$3';" },
-      { pattern: /import\s+(\w+)\s+(\w+)-(\w+)-(\w+);/g, replacement: "import $1 from '$2-$3-$4';" },
-      { pattern: /import\s+(\w+)\s+(\w+)-(\w+)-(\w+)-(\w+);/g, replacement: "import $1 from '$2-$3-$4-$5';" },
+      // Fix import statements missing from'
+      { pattern: /import\s+(\w+)\s+(\w+)-(\w+)/g, replacement: "import $1 from '$2-$3;" },'
+      { pattern: /import\s+(\w+)\s+(\w+)-(\w+)-(\w+);/g, replacement: "import $1 from '$2-$3-$4;" },'
+      { pattern: /import\s+(\w+)\s+(\w+)-(\w+)-(\w+)-(\w+);/g, replacement: "import $1 from '$2-$3-$4-$5;" },'
       // Fix destructuring imports
-      { pattern: /import\s+{\s*([^}]+)\s*}\s+(\w+)-(\w+)/g, replacement: "import { $1 } from '$2-$3';" },
-      { pattern: /import\s+{\s*([^}]+)\s*}\s+(\w+)-(\w+)-(\w+);/g, replacement: "import { $1 } from '$2-$3-$4';" },
+      { pattern: /import\s+{\s*([^}]+)\s*}\s+(\w+)-(\w+)/g, replacement: "import { $1 } from '$2-$3;" },'
+      { pattern: /import\s+{\s*([^}]+)\s*}\s+(\w+)-(\w+)-(\w+);/g, replacement: "import { $1 } from '$2-$3-$4;" },'
       // Fix React imports
-      { pattern: /import\s+React\s+from\s+['"]react['"]?/gi, replacement: "import React from 'react';" },
+      { pattern: /import\s+React\s+from\s+['"]react["]?/gi, replacement: "import React from 'react';" },
       // Fix other common imports
-      { pattern: /import\s+(\w+)\s+from\s+['"]([^'"]+)['"]?/g, replacement: "import $1 from '$2';" },
+      { pattern: /import\s+(\w+)\s+from\s+['"]([^'"]+)["]?/g, replacement: "import $1 from '$2';" },
       // Fix function declarations
       { pattern: /function\s+(\w+)\s*\(\s*\)\s*{/g, replacement: "function $1() {" },
       // Fix JSX syntax
@@ -40,11 +40,11 @@ function fixFile(filePath) {
     })
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8')
-      console.log(`✅ Fixed: ${filePath}`)
+      console.log(`✅ Fixed: ${filePath}`)`
       return true
     }
   } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`)
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`)`
   }
   return false
 }
@@ -55,7 +55,7 @@ function fixDirectory(dirPath) {
     const fullPath = path.join(dirPath, item)
     const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {
-      if (!['node_modules', '.git', 'dist', 'build'].includes(item)) {
+      if (!['node_modules', .git', 'dist, 'build'].includes(item)) {
         fixedCount += fixDirectory(fullPath)
       }
     } else if (stat.isFile()) {
@@ -70,8 +70,8 @@ function fixDirectory(dirPath) {
 }
 try {
   const fixedCount = fixDirectory('/workspace')
-  console.log(`🎉 Fixed ${fixedCount} files!`)
+  console.log(`🎉 Fixed ${fixedCount} files!`)`
 } catch (error) {
-  console.error('❌ Error during fix process:', error.message)
+  console.error('❌ Error during fix process:', error.message)'
   process.exit(1)
 }

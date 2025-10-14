@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom;'
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
@@ -17,7 +17,7 @@ global.ResizeObserver = class ResizeObserver {
 };
 
 // Mock matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, 'matchMedia, {'
   writable: true,
   value: jest.fn().mockImplementation(query => ({
     matches: false,
@@ -32,14 +32,14 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock scrollTo
-Object.defineProperty(window, 'scrollTo', {
+Object.defineProperty(window, 'scrollTo, {'
   writable: true,
   value: jest.fn(),
 });
 
 =======
-'use client';
-import React from 'react'; import { Helmet } from 'react-helmet-async'; export default function Jest.setup.js() {} return ( <>Helme t><//titl e>Jest.setup.js - Zion Tech Group</titl e><//meta nam e="description" conten t="Professional jest.setup.js services by Zion Tech Group." />"" </Helme t><//div classNam e="min-h-screen bg-white">"" {/* Hero Section */} <section classNam e="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"" <div classNam e="max-w-6xl mx-auto text-center">
+'use client;'
+import React from 'react; import { Helmet } from 'react-helmet-async'; export default function Jest.setup.js() {} return ( <>Helme t><//titl e>Jest.setup.js - Zion Tech Group</titl e><//meta nam e="description" conten t="Professional jest.setup.js services by Zion Tech Group." />"" </Helme t><//div classNam e="min-h-screen bg-white">"" {/* Hero Section */} <section classNam e="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"" <div classNam e="max-w-6xl mx-auto text-center">
       </div>
       </div>
       </div>

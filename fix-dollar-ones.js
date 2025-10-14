@@ -1,31 +1,31 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs;'
+import path from 'path;'
 
 // Function to fix $1 replacements
 function fixDollarOnes(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8);'
     let modified = false;
 
     // Fix $1 replacements
-    if (content.includes('export default $1;')) {
-      content = content.replace(/export default \$1;/g, 'export default PagePage;');
+    if (content.includes('export default $1;)) {'
+      content = content.replace(/export default \$1;/g, 'export default PagePage;);'
       modified = true;
     }
 
     // Clean up any remaining stray quotes
-    content = content.replace(/';\s*'$/gm, ';');
-    content = content.replace(/';\s*'$/gm, ';');
+    content = content.replace(/';\s*$/gm, ';');
+    content = content.replace(/';\s*'$/gm, ;');'
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      fs.writeFileSync(filePath, content, utf8');'
+      console.log(`Fixed: ${filePath}`);`
       return true;
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);`
   }
   return false;
 }
@@ -44,7 +44,7 @@ function findTsxFiles(dir) {
         
         if (stat.isDirectory()) {
           traverse(fullPath);
-        } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        } else if (item.endsWith(.tsx') || item.endsWith('.ts)) {'
           files.push(fullPath);
         }
       }
@@ -60,13 +60,13 @@ function findTsxFiles(dir) {
 // Main execution
 console.log('Fixing $1 replacements...');
 
-const directories = ['./app', './src'];
+const directories = ['./app', ./src'];'
 let totalFixed = 0;
 
 for (const dir of directories) {
   if (fs.existsSync(dir)) {
     const tsxFiles = findTsxFiles(dir);
-    console.log(`Processing ${tsxFiles.length} files in ${dir}...`);
+    console.log(`Processing ${tsxFiles.length} files in ${dir}...`);`
     
     for (const file of tsxFiles) {
       if (fixDollarOnes(file)) {
@@ -76,4 +76,4 @@ for (const dir of directories) {
   }
 }
 
-console.log(`Total fixed: ${totalFixed} files.`);
+console.log(`Total fixed: ${totalFixed} files.`);`

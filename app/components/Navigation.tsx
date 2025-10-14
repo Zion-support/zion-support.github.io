@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import React, { useState } from 'react;'
+import { Link } from 'react-router-dom;'
+import { Menu, X, ChevronDown } from 'lucide-react;'
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const services = [
-    { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SAAS', href: '/micro-saas' }
+    { name: 'AI Solutions, href: '/ai-solutions' },
+    { name: 'Cybersecurity', href: /cybersecurity' },'
+    { name: Cloud Infrastructure', href: '/cloud-infrastructure },'
+    { name: 'Digital Transformation, href: '/digital-transformation' },
+    { name: 'IT Services', href: /it-services' },'
+    { name: Micro SAAS', href: '/micro-saas }'
   ];
 
   return (

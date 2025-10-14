@@ -1,29 +1,29 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs;'
+import path from 'path;'
 
 // Function to fix remaining syntax issues
 function fixRemainingIssues(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8);'
     let modified = false;
 
     // Fix various patterns
     const patterns = [
       // Fix missing quotes in import statements
-      { from: /import { Helmet  } from 'react-helmet-async;/g, to: "import { Helmet } from 'react-helmet-async';" },
-      { from: /import { Helmet } from 'react-helmet-async;/g, to: "import { Helmet } from 'react-helmet-async';" },
-      { from: /import { Helmet} from 'react-helmet-async;/g, to: "import { Helmet } from 'react-helmet-async';" },
+      { from: /import { Helmet  } from 'react-helmet-async;/g, to: "import { Helmet } from react-helmet-async';" },'
+      { from: /import { Helmet } from react-helmet-async;/g, to: "import { Helmet } from 'react-helmet-async';" },
+      { from: /import { Helmet} from 'react-helmet-async;/g, to: "import { Helmet } from 'react-helmet-async;" },'
       
       // Fix extra closing braces
-      { from: /^}\s*$/gm, to: '' },
+      { from: /^}\s*$/gm, to: ' },'
       
       // Fix any remaining unterminated strings
-      { from: /'react-helmet-async;/g, to: "'react-helmet-async';" },
+      { from: /'react-helmet-async;/g, to: "react-helmet-async';" },'
       
       // Fix any remaining stray quotes
-      { from: /';\s*$/gm, to: ';' },
+      { from: /;\s*$/gm, to: ';' },
     ];
 
     for (const pattern of patterns) {
@@ -40,11 +40,11 @@ function fixRemainingIssues(filePath) {
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath}`);`
       return true;
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);`
   }
   return false;
 }
@@ -63,12 +63,12 @@ function findTsxFiles(dir) {
         
         if (stat.isDirectory()) {
           traverse(fullPath);
-        } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        } else if (item.endsWith('.tsx') || item.endsWith(.ts')) {'
           files.push(fullPath);
         }
       }
     } catch (error) {
-      // Skip directories we can't read
+      // Skip directories we cant read'
     }
   }
   
@@ -77,15 +77,15 @@ function findTsxFiles(dir) {
 }
 
 // Main execution
-console.log('Fixing remaining syntax issues...');
+console.log('Fixing remaining syntax issues...);'
 
-const directories = ['./app', './src'];
+const directories = ['./app, './src'];'
 let totalFixed = 0;
 
 for (const dir of directories) {
   if (fs.existsSync(dir)) {
     const tsxFiles = findTsxFiles(dir);
-    console.log(`Processing ${tsxFiles.length} files in ${dir}...`);
+    console.log(`Processing ${tsxFiles.length} files in ${dir}...`);`
     
     for (const file of tsxFiles) {
       if (fixRemainingIssues(file)) {
@@ -95,4 +95,4 @@ for (const dir of directories) {
   }
 }
 
-console.log(`Total fixed: ${totalFixed} files.`);
+console.log(`Total fixed: ${totalFixed} files.`);`

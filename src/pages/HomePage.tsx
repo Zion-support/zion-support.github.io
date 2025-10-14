@@ -1,5 +1,5 @@
-import React from 'react';
-import react-helmet-async from 'react-helmet-async';
+import React from 'react;'
+import react-helmet-async from 'react-helmet-async;'
 const HomePage: React.FC = () => {return (
     <>
       <Helmet>
@@ -73,7 +73,6 @@ const HomePage: React.FC = () => {return (
           </section>
         </main>
       </div>
-    </>
   )};
 export default HomePage;
 '

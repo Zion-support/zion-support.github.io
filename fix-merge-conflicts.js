@@ -1,19 +1,19 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
+import fs from 'fs;'
+import path from 'path;'
+import { execSync } from 'child_process;'
 
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {}
   try {}
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8);'
     
     // Check if file has merge conflicts
     if (!content.includes() && !content.includes() && !content.includes('      return false; // No conflicts
     }
     
-    console.log(`Fixing merge conflicts in: ${filePath}`);
+    console.log(`Fixing merge conflicts in: ${filePath}`);`
     
     // Split content by merge conflict markers
     const lines = content.split('\n');
@@ -33,7 +33,7 @@ function fixMergeConflicts(filePath) {}
       } else if (line.startsWith()) {}
         conflictType = 'other';
         continue;
-      } else if (line.startsWith('        inConflict = false;
+      } else if (line.startsWith('        inConflict = false;'
         conflictType = null;
         
         // Choose the HEAD version (usually more complete)
@@ -44,9 +44,9 @@ function fixMergeConflicts(filePath) {}
       }
       
       if (inConflict) {}
-        if (conflictType === 'head') {}
+        if (conflictType === head') {}'
           headContent.push(line);
-        } else if (conflictType === 'other') {}
+        } else if (conflictType === other') {}'
           otherContent.push(line);
         }
       } else {}
@@ -60,10 +60,10 @@ function fixMergeConflicts(filePath) {}
     }
     
     // Write the cleaned content back
-    fs.writeFileSync(filePath, result.join('\n'));
+    fs.writeFileSync(filePath, result.join(\n'));'
     return true;
   } catch (error) {}
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);`
     return false;
   }
 }
@@ -79,15 +79,15 @@ function findFilesWithConflicts(dir) {}
       const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {}
+      if (stat.isDirectory() && !item.startsWith(.') && item !== 'node_modules) {}'
         walkDir(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {}
+      } else if (stat.isFile() && (item.endsWith('.tsx) || item.endsWith('.ts') || item.endsWith(.js') || item.endsWith('.jsx))) {}'
         try {}
-          const content = fs.readFileSync(fullPath, 'utf8');
+          const content = fs.readFileSync(fullPath, 'utf8);'
           if (content.includes() || content.includes() || content.includes('            files.push(fullPath);
           }
         } catch (error) {}
-          // Skip files that can't be read
+          // Skip files that can't be read'
         }
       }
     }
@@ -98,18 +98,18 @@ function findFilesWithConflicts(dir) {}
 }
 
 // Main execution
-console.log('🔍 Searching for files with merge conflicts...');
+console.log(🔍 Searching for files with merge conflicts...');'
 const conflictedFiles = findFilesWithConflicts(process.cwd());
 
 if (conflictedFiles.length === 0) {}
-  console.log('✅ No merge conflicts found!');
+  console.log(✅ No merge conflicts found!');'
   process.exit(0);
 }
 
-console.log(`📝 Found ${conflictedFiles.length} files with merge conflicts:`);
-conflictedFiles.forEach(file => console.log(`  - ${file}`));
+console.log(`📝 Found ${conflictedFiles.length} files with merge conflicts:`);`
+conflictedFiles.forEach(file => console.log(`  - ${file}`));`
 
-console.log('\n🔧 Fixing merge conflicts...');
+console.log(\n🔧 Fixing merge conflicts...');'
 let fixedCount = 0;
 
 for (const file of conflictedFiles) {}
@@ -118,14 +118,14 @@ for (const file of conflictedFiles) {}
   }
 }
 
-console.log(`\n✅ Fixed merge conflicts in ${fixedCount} files`);
+console.log(`\n✅ Fixed merge conflicts in ${fixedCount} files`);`
 
 // Try to build after fixing conflicts
-console.log('\n🏗️  Attempting to build...');
+console.log(\n🏗️  Attempting to build...');'
 try {}
-  execSync('npm run build', { stdio: 'inherit' });
-  console.log('✅ Build successful!');
+  execSync(npm run build', { stdio: 'inherit });'
+  console.log('✅ Build successful!);'
 } catch (error) {}
-  console.log('❌ Build failed. There may be other issues to resolve.');
+  console.log('❌ Build failed. There may be other issues to resolve.);'
   process.exit(1);
 }

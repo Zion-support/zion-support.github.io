@@ -1,4 +1,6 @@
 // 404 - Basic implementation
 export default function NotFound() {
-  return null;
+  return (
+    <div>Page content</div>
+  );
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;'
 interface Props {children: ReactNode}
 
 interface State {hasError: boolean;
@@ -11,7 +11,7 @@ class ErrorBoundary extends Component<Props, State> {public state: State = {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {'
-    console.error('Uncaught error:', error, errorInfo);
+    console.error(Uncaught error:', error, errorInfo);'
   }
 
   public render() {
@@ -21,7 +21,7 @@ class ErrorBoundary extends Component<Props, State> {public state: State = {
           <div className="text-center">"
             <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>"
             <p className="text-gray-300 mb-6">"
-              We're sorry, but something unexpected happened. Please try refreshing the page.'
+              Were sorry, but something unexpected happened. Please try refreshing the page.'
             </p>
             <button;
               onClick={() => window.location.reload()}
@@ -29,10 +29,9 @@ class ErrorBoundary extends Component<Props, State> {public state: State = {
             >
               Refresh Page;
             </button>
-          </div>
-        </div>
-      );
-    }
+          
+  );
+}
 
     return this.props.children;
   }

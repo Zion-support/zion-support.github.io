@@ -1,5 +1,5 @@
-import React from 'react';
-import react-helmet-async from 'react-helmet-async';
+import React from 'react;'
+import react-helmet-async from 'react-helmet-async;'
 const ContactPage: React.FC = () => {
   return (
     <>
@@ -84,9 +84,7 @@ const ContactPage: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </>
+        
   );
 };
 export default ContactPage;

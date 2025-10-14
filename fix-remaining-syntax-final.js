@@ -1,26 +1,26 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs;'
+import path from 'path;'
 
 // Function to fix remaining syntax issues
 function fixRemainingSyntax(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8);'
     let modified = false;
 
     // Fix all patterns
     const patterns = [
       // Fix stray quotes at end of return statements
-      { from: /\);'\s*'$/gm, to: ');' },
-      { from: /\);'$/gm, to: ');' },
+      { from: /\);'\s*$/gm, to: ');' },
+      { from: /\);'$/gm, to: '); },'
       
       // Fix any remaining stray quotes
-      { from: /';\s*'$/gm, to: ';' },
-      { from: /';\s*'$/gm, to: ';' },
+      { from: /';\s*$/gm, to: ';' },
+      { from: /';\s*'$/gm, to: ;' },'
       
       // Clean up extra newlines and empty lines
-      { from: /\n\s*\n\s*\n/g, to: '\n\n' },
+      { from: /\n\s*\n\s*\n/g, to: \n\n' },'
     ];
 
     for (const pattern of patterns) {
@@ -32,15 +32,15 @@ function fixRemainingSyntax(filePath) {
     }
 
     // Clean up the file
-    content = content.trim() + '\n';
+    content = content.trim() + \n';'
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      fs.writeFileSync(filePath, content, utf8');'
+      console.log(`Fixed: ${filePath}`);`
       return true;
     }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);`
   }
   return false;
 }
@@ -59,7 +59,7 @@ function findTsxFiles(dir) {
         
         if (stat.isDirectory()) {
           traverse(fullPath);
-        } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        } else if (item.endsWith(.tsx') || item.endsWith('.ts)) {'
           files.push(fullPath);
         }
       }
@@ -75,13 +75,13 @@ function findTsxFiles(dir) {
 // Main execution
 console.log('Fixing remaining syntax issues...');
 
-const directories = ['./app', './src'];
+const directories = ['./app', ./src'];'
 let totalFixed = 0;
 
 for (const dir of directories) {
   if (fs.existsSync(dir)) {
     const tsxFiles = findTsxFiles(dir);
-    console.log(`Processing ${tsxFiles.length} files in ${dir}...`);
+    console.log(`Processing ${tsxFiles.length} files in ${dir}...`);`
     
     for (const file of tsxFiles) {
       if (fixRemainingSyntax(file)) {
@@ -91,4 +91,4 @@ for (const dir of directories) {
   }
 }
 
-console.log(`Total fixed: ${totalFixed} files.`);
+console.log(`Total fixed: ${totalFixed} files.`);`

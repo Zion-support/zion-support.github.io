@@ -1,4 +1,4 @@
-import React, { useEffect, ReactNode } from 'react';
+import React, { useEffect, ReactNode } from 'react;'
 
 interface PerformanceOptimizerProps {
   children: ReactNode;
@@ -7,10 +7,10 @@ interface PerformanceOptimizerProps {
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
+      const images = document.querySelectorAll('img);'
       images.forEach((img) => {
-        if (!img.hasAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
+        if (!img.hasAttribute('loading)) {'
+          img.setAttribute('loading, 'lazy');
         }
       });
     };
@@ -28,12 +28,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
     const optimizeResources = () => {
       // Preload critical resources
-      const criticalResources = ['/css/critical.css', '/js/critical.js'];
+      const criticalResources = ['/css/critical.css', /js/critical.js'];'
       criticalResources.forEach((resource) => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
+        const link = document.createElement(link');'
+        link.rel = preload';'
         link.href = resource;
-        link.as = resource.endsWith('.css') ? 'style' : 'script';
+        link.as = resource.endsWith(.css') ? 'style : 'script';'
         document.head.appendChild(link);
       );
     };

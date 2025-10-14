@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Brain, ArrowRight } from 'lucide-react';
+import React from 'react;'
+import { Link } from 'react-router-dom;'
+import { Mail, Phone, MapPin, Github, Twitter, Linkedin, Brain, ArrowRight } from 'lucide-react;'
 const Footer = () => {
     const currentYear = new Date().getFullYear();
   
   const services = [
-    { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'IT Services', href: '/it-services' },
-    { name: 'Micro SAAS', href: '/micro-saas' }
+    { name: 'AI Solutions, href: '/ai-solutions' },
+    { name: 'Cybersecurity', href: /cybersecurity' },'
+    { name: Cloud Infrastructure', href: '/cloud-infrastructure },'
+    { name: 'Digital Transformation, href: '/digital-transformation' },
+    { name: 'IT Services', href: /it-services' },'
+    { name: Micro SAAS', href: '/micro-saas }'
   ];
 
   return (

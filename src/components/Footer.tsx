@@ -1,41 +1,41 @@
-import { memo } from 'react';
-import { Link } from 'react-router-dom';
-import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
+import { memo } from 'react;'
+import { Link } from 'react-router-dom;'
+import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react;'
 const Footer = memo(() => {
   const services = [
-    { name: 'AI Services', url: '/ai-services' },
-    { name: 'IT Solutions', url: '/it-services' },
-    { name: 'Cloud Services', url: '/cloud-services' },
-    { name: 'Cybersecurity', url: '/cybersecurity' }
+    { name: 'AI Services, url: '/ai-services' },
+    { name: 'IT Solutions', url: /it-services' },'
+    { name: Cloud Services', url: '/cloud-services },'
+    { name: 'Cybersecurity, url: '/cybersecurity' }
 
   ];
   const solutions = [
-    { name: 'Quantum Computing', url: '/quantum-computing' },
-    { name: 'Autonomous Systems', url: '/autonomous-systems' },
-    { name: 'Blockchain Web3', url: '/blockchain-web3' },
-    { name: 'IoT Edge Computing', url: '/iot-edge-computing' }
+    { name: 'Quantum Computing', url: /quantum-computing' },'
+    { name: Autonomous Systems', url: '/autonomous-systems },'
+    { name: 'Blockchain Web3, url: '/blockchain-web3' },
+    { name: 'IoT Edge Computing', url: /iot-edge-computing' }'
 
   ];
   const company = [
-    { name: 'About Us', url: '/about' },
-    { name: 'Team', url: '/team' },
-    { name: 'Careers', url: '/careers' },
-    { name: 'News', url: '/news' }
+    { name: About Us', url: '/about },'
+    { name: 'Team, url: '/team' },
+    { name: 'Careers', url: /careers' },'
+    { name: News', url: '/news }'
 
   ];
   const support = [
-    { name: 'Documentation', url: '/documentation' },'
-    { name: 'Support', url: '/support' },'
-    { name: 'FAQ', url: '/faq' },'
-    { name: 'Contact', url: '/contact' }'
+    { name: 'Documentation, url: '/documentation' },
+    { name: 'Support', url: /support' },'
+    { name: FAQ', url: '/faq },'
+    { name: 'Contact, url: '/contact' }
   ];
   const socialLinks = [
-    { name: 'Facebook', icon: Facebook, url: '#' },'
-    { name: 'Twitter', icon: Twitter, url: '#' },'
-    { name: 'LinkedIn', icon: Linkedin, url: '#' },'
-    { name: 'Instagram', icon: Instagram, url: '#' },'
-    { name: 'YouTube', icon: Youtube, url: '#' },'
-    { name: 'GitHub', icon: Github, url: '#' }'
+    { name: 'Facebook', icon: Facebook, url: #' },'
+    { name: Twitter', icon: Twitter, url: '# },'
+    { name: 'LinkedIn, icon: Linkedin, url: '#' },
+    { name: 'Instagram', icon: Instagram, url: #' },'
+    { name: YouTube', icon: Youtube, url: '# },'
+    { name: 'GitHub, icon: Github, url: '#' }
   ];
   return (
     <footer className="bg-gray-900 text-white">"
@@ -187,5 +187,5 @@ const Footer = memo(() => {
     </footer>
   );
 });
-Footer.displayName = 'Footer;
+Footer.displayName = 'Footer;'
 export default Footer;
