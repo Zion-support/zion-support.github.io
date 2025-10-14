@@ -1,55 +1,33 @@
-import React, { lazy, ComponentType, ComponentProps, Suspense } from 'react';
+import React, { lazy, ComponentType, Suspense } from 'react';
 
 // Higher-order component for lazy loading
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function withLazyLoading<T extends ComponentType<any>>(
+export function withLazyLoading<T extends ComponentType<Record<string, unknown>>>(
   Component: T,
   fallback?: React.ReactNode,
 ) {
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   
-<<<<<<< HEAD
-  const WrappedComponent = (props: ComponentProps<T>) => (
-=======
-  return (props: ComponentProps<T>) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-71c6
+  const WrappedComponent = (props: Record<string, unknown>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      <LazyComponent {...(props as any)} />
+      <LazyComponent {...props} />
     </Suspense>
   );
-<<<<<<< HEAD
-  
-  WrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name || 'Component'})`;
-  
+  WrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name})`;
   return WrappedComponent;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-71c6
 }
 
 // Utility function to create lazy-loaded components
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function createLazyComponent<T extends ComponentType<any>>(
+export function createLazyComponent<T extends ComponentType<Record<string, unknown>>>(
   importFunction: () => Promise<{ default: T }>,
   fallback?: React.ReactNode,
 ) {
   const LazyComponent = lazy(importFunction);
   
-<<<<<<< HEAD
-  const WrappedComponent = (props: ComponentProps<T>) => (
-=======
-  return (props: ComponentProps<T>) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-71c6
+  const WrappedComponent = (props: Record<string, unknown>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      <LazyComponent {...(props as any)} />
+      <LazyComponent {...props} />
     </Suspense>
   );
-<<<<<<< HEAD
-  
-  WrappedComponent.displayName = `createLazyComponent(Component)`;
-  
+  WrappedComponent.displayName = `createLazyComponent`;
   return WrappedComponent;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-71c6
 }
