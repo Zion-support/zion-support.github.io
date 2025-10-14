@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 'use client';
+<<<<<<< HEAD
 export default function Infrastructure() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -11,8 +12,20 @@ export default function Infrastructure() {
         <title>Infrastructure | Zion Tech Group</title>
         <meta name="description" content="Professional Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="cloud infrastructure, cloud services, IT services, Zion Tech Group, cloud computing" />
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function CloudInfrastructure() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Cloud Infrastructure | Zion Tech Group</title>
+        <meta name="description" content="Professional cloud infrastructure services by Zion Tech Group." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
       </Helmet>
       <div className="container mx-auto px-4 py-16">
+<<<<<<< HEAD
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
             Infrastructure <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
@@ -90,10 +103,20 @@ export default function Infrastructure() {
               Get Started Today;
             </button>
           </div>
+=======
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">
+            Cloud Infrastructure Solutions
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Professional cloud infrastructure services tailored to your business needs.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
             </button>;
           </div>;
         </div>;
@@ -106,3 +129,6 @@ export default function Infrastructure() {
               Get Started Today</button></div></div></div></div>
   )}
 '
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1

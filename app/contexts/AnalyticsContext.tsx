@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { createContext, useContext, useState, useEffect } from 'react'
 'use client'
 interface AnalyticsContextType {
@@ -13,8 +14,17 @@ interface AnalyticsContextType {
   trackPageView: (pageName: string) => void;
   setUser: (userId: string, properties?: Record<string, any>) => void;
   isEnabled: boolean;}
+=======
+'use client';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
+
+interface AnalyticsContextType {
+  trackEvent: (event: string, properties?: Record<string, any>) => void;
+  trackPageView: (page: string) => void;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+<<<<<<< HEAD
 const  ({ children }) => {
   const [isEnabled, setIsEnabled] = useState(false)
   const [userId, setUserId] = useState<string | null>(null)
@@ -70,13 +80,38 @@ const  ({ children }) => {
   };
   return (
     <AnalyticsContext.Provider value={value}>
+=======
+
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  const trackEvent = (event: string, properties?: Record<string, any>) => {
+    // Analytics tracking implementation
+    console.log('Analytics Event:', event, properties);
+  };
+
+  const trackPageView = (page: string) => {
+    // Page view tracking implementation
+    console.log('Page View:', page);
+  };
+
+  return (
+    <AnalyticsContext.Provider value={{ trackEvent, trackPageView }}>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
       {children}
     </AnalyticsContext.Provider>
   );
 }
+<<<<<<< HEAD
     <AnalyticsContext.Provider value={value}>{children}
     </AnalyticsContext.Provider>
   )}
 export { AnalyticsContext }
 };
 export { AnalyticsContext };'
+=======
+
+export { AnalyticsContext };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1

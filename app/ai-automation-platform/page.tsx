@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react'
 import EnhancedSEO from '../components/EnhancedSEO'
 import ResponsiveContainer from '../components/ResponsiveContainer'
@@ -7,6 +8,12 @@ import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-reac
 import EnhancedSEO from '../components/EnhancedSEO';'
 import ResponsiveContainer from '../components/ResponsiveContainer';'
 import FuturisticCard from '../components/FuturisticCard';'
+=======
+import { ArrowRight, Zap, Brain, CheckCircle, TrendingUp, Settings, Workflow } from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import FuturisticCard from '../components/FuturisticCard';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
 import FuturisticButton from '../components/FuturisticButton';
 const AIAutomationPlatform = () => {
   const features = [

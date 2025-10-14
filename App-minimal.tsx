@@ -1,5 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
 // Minimal working App component
 function App() {
   return (

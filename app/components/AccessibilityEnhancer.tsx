@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -151,3 +152,18 @@ export default AccessibilityEnhancer;
   return null;
 };
 export default AccessibilityEnhancer;
+=======
+import React from 'react';
+
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
+  return (
+    <div className="accessibility-enhanced">
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1

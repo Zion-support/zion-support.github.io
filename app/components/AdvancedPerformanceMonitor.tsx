@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import React, { useEffect, useState } from 'react';
 interface PerformanceMetrics {
@@ -106,6 +107,11 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
     return 'text-red-400';
   };
+=======
+import React from 'react';
+
+export default function AdvancedPerformanceMonitor() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -116,6 +122,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
     <div className="fixed bottom-4 right-4 bg-slate-800/95 backdrop-blur-sm border border-slate-700 rounded-lg p-4 shadow-lg z-50 max-w-sm">
       <div className="flex items-center justify-between mb-3">
@@ -192,3 +199,6 @@ export default AdvancedPerformanceMonitor;
           This component is under development.</p></div></div>
   )}
 export default AdvancedPerformanceMonitor
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1

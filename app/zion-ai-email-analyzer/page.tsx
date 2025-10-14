@@ -4,13 +4,23 @@ import { Helmet } from 'react-helmet-async'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 'use client';
+<<<<<<< HEAD
 export default function ZionAIEmailAnalyzer() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ZionAIEmailAnalyzerPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
       <Helmet>
         <title>Zion AI Email Analyzer | Zion Tech Group</title>
         <meta name="description" content="Professional AI Email Analyzer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -106,3 +116,21 @@ export default function ZionAIEmailAnalyzer() {
   );}
 }
 '
+=======
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Zion AI Email Analyzer
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI-powered email analysis and optimization solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ZionAIEmailAnalyzerPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
