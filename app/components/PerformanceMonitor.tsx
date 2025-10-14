@@ -83,7 +83,7 @@ const PerformanceMonitor: React.FC = () => {
         <div className="fixed bottom-4 right-4 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64 z-50">
           <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
 
-          <$3 className="space-y-2 text-xs">
+          <div className="space-y-2 text-xs">
             <div className="flex justify-between">
               <span>FCP:</span>
               <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
@@ -121,8 +121,8 @@ const PerformanceMonitor: React.FC = () => {
               </span>
             </div>
           </div>
-
-          <$3 className="mt-3 pt-2 border-t border-gray-200">
+          
+          <div className="mt-3 pt-2 border-t border-gray-200">
             <div className="text-xs text-gray-500">
               <div>Good: Green | Needs Improvement: Yellow | Poor: Red</div>
               <div className="mt-1">Press Ctrl+Shift+P to toggle</div>

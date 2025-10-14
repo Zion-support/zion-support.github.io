@@ -19,6 +19,7 @@ const Footer: React.FC = () => {
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
     { name: 'Micro SaaS', href: '/micro-saas-solutions' }
+  ];
 
   const company = [
     { name: 'About Us', href: '/about' },
@@ -27,6 +28,7 @@ const Footer: React.FC = () => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
+  ];
 
   const support = [
     { name: 'Help Center', href: '/support' },
@@ -35,6 +37,7 @@ const Footer: React.FC = () => {
     { name: 'API Reference', href: '/api-docs' },
     { name: 'Status', href: '/status' },
     { name: 'Community', href: '/community' }
+  ];
 
   const legal = [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -43,6 +46,7 @@ const Footer: React.FC = () => {
     { name: 'GDPR', href: '/gdpr' },
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' }
+  ];
 
   return (
     <footer className="bg-slate-900 text-white">

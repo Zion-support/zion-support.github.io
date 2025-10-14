@@ -133,7 +133,8 @@ const ITSolutionsPage: React.FC = () => {
       benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],
       useCases: ["Help desk", "System maintenance", "User support"],
       href: "/it-support"
-    }
+      }
+    ];
 
   const features = [
     {
@@ -156,6 +157,7 @@ const ITSolutionsPage: React.FC = () => {
       description: "Security is built into every solution we deliver.",
       icon: ShieldCheckIcon
     }
+  ];
 
   return (
     <>

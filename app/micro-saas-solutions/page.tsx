@@ -132,7 +132,8 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       benefits: ["Time savings", "Better tracking", "Tax compliance"],
       useCases: ["Expense management", "Financial tracking", "Tax preparation"],
       href: "/micro-saas/ai-expense-tracker"
-    }
+      }
+    ];
 
   const features = [
     {
@@ -155,6 +156,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       description: "Round-the-clock support to ensure your success.",
       icon: UserGroupIcon
     }
+  ];
 
   return (
     <>

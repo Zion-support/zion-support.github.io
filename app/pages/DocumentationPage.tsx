@@ -79,7 +79,7 @@ export default function DocumentationPage() {
           <div className="w-full h-full bg-gradient-to-br from-green-900/20 to-emerald-900/20"></div>
         </div>
 
-        <$3 className="relative z-10 container mx-auto px-4 text-center">
+        <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
@@ -97,7 +97,7 @@ export default function DocumentationPage() {
               integrate and use our services effectively.
             </p>
 
-            <$3 className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 to="#quick-start" 
                 className="group bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
@@ -129,7 +129,7 @@ export default function DocumentationPage() {
             </p>
           </div>
 
-          <$3 className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             {quickStart.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -155,7 +155,7 @@ export default function DocumentationPage() {
             </p>
           </div>
 
-          <$3 className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {sections.map((section, index) => (
               <div key={index} className="bg-slate-800 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
                 <div className="flex items-center mb-6">

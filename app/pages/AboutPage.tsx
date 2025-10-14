@@ -17,6 +17,7 @@ const AboutPage: React.FC = () => {
     { number: '25+', label: 'Happy Clients', icon: UsersIcon },
     { number: '99%', label: 'Success Rate', icon: CheckCircleIcon },
     { number: '4+', label: 'Years Experience', icon: ClockIcon }
+  ];
 
   const values = [
     {
@@ -39,6 +40,7 @@ const AboutPage: React.FC = () => {
       description: 'We strive for excellence in everything we do, delivering high-quality solutions.',
       icon: RocketLaunchIcon
     }
+  ];
 
   const team = [
     {
@@ -65,6 +67,7 @@ const AboutPage: React.FC = () => {
       description: 'Cybersecurity expert ensuring our solutions meet the highest security standards.',
       image: '/images/team/emily.jpg'
     }
+  ];
 
   return (
     <>
@@ -74,7 +77,7 @@ const AboutPage: React.FC = () => {
         <meta name="keywords" content="about us, team, mission, values, Zion Tech Group, AI experts, IT professionals" />
       </Helmet>
 
-      <$3 className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">

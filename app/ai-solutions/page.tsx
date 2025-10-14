@@ -129,9 +129,11 @@ export default function AISolutionsPage() {
       price: "Starting at $1,500/month",
       benefits: ["Expert guidance", "Strategic planning", "Risk mitigation"],
       useCases: ["AI transformation", "Technology adoption", "Process improvement"],
-      href: "/ai-consulting"
-    }
-const AISolutionsPage: React.FC = () => {
+        href: "/ai-consulting"
+      }
+    ];
+
+  const AISolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>

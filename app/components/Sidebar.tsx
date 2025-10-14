@@ -63,6 +63,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
+  ];
 
   const additionalLinks = [
     { name: 'Privacy Policy', href: '/privacy', icon: ShieldCheckIcon },
@@ -70,6 +71,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Our Team', href: '/team', icon: UserGroupIcon },
     { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
     { name: 'Careers', href: '/careers', icon: BriefcaseIcon }
+  ];
 
   const isActive = (path: string) => {
     return location.pathname === path;
@@ -109,7 +111,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </button>
         </div>
 
-        <$3 className="mt-4">
+        <nav className="mt-4">
           {navigation.map((item) => (
             <div key={item.name}>
               {item.submenu ? (
