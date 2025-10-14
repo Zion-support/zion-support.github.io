@@ -17,8 +17,8 @@ export const securityHeaders = {
   
   getHeaders: () => {
     return {
-      ...this.headers,
-      'Content-Security-Policy': Object.entries(this.csp)
+      ...securityHeaders.headers,
+      'Content-Security-Policy': Object.entries(securityHeaders.csp)
         .map(([key, values]) => `${key} ${values.join(' ')}`)
         .join('; ')
     };

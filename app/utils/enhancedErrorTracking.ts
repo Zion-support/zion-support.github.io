@@ -23,7 +23,7 @@ export const enhancedErrorTracking = {
   },
   
   trackPerformanceError: (error: Error, performanceData: any) => {
-    this.trackError(error, {
+    enhancedErrorTracking.trackError(error, {
       performance: performanceData,
       error_type: 'performance'
     });

@@ -39,6 +39,15 @@ import SolutionsPage from './app/pages/SolutionsPage';
 import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
+import CookiesPage from './app/cookies/page';
+import SitemapPage from './app/sitemap/page';
+import MicroSaasPage from './app/micro-saas/page';
+import ItServicesPage from './app/it-services/page';
+import CloudServicesPage from './app/cloud-services/page';
+import AIPoweredEmailAnalyzerPage from './app/ai-powered-email-analyzer/page';
+import SmartInventoryOptimizerPage from './app/smart-inventory-optimizer/page';
+import AICustomerSentimentTrackerPage from './app/ai-customer-sentiment-tracker/page';
+import SmartExpenseCategorizerPage from './app/smart-expense-categorizer/page';
 // Service Pages
 import AIServicesPage from './app/pages/AIServicesPage';
 import ITServicesPage from './app/pages/ITServicesPage';
@@ -125,19 +134,19 @@ function App() {
 // Performance monitoring
 if (typeof window !== 'undefined') {
   // Monitor Core Web Vitals
-  import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-    getCLS(console.log);
-    getFID(console.log);
-    getFCP(console.log);
-    getLCP(console.log);
-    getTTFB(console.log);
+  import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+    onCLS(console.log);
+    onFCP(console.log);
+    onLCP(console.log);
+    onTTFB(console.log);
   });
 
   // Monitor bundle size
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
       if (entry.entryType === 'navigation') {
-        console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart, 'ms');
+        const navEntry = entry as PerformanceNavigationTiming;
+        console.log('Page load time:', navEntry.loadEventEnd - navEntry.loadEventStart, 'ms');
       }
     }
   });
