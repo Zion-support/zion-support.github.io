@@ -1,10 +1,8 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import path from "path";
-;
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 const resolve = path.resolve;
-;
-export default defineConfig({
+export default defineConfig({;
   plugins: [;
     react({
       // Enable React Fast Refresh;
@@ -35,8 +33,8 @@ alias: {,
             assetInfo.name &&
             /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
           ) {
-            return `assets/images/[name]-[hash][extname]`;
-          }
+            return `assets/images/[name]-[hash][extname]`;``````
+          }```````
           return `assets/[name]-[hash][extname]`;
         },
         chunkFileNames: "assets/js/[name]-[hash].js",
@@ -49,10 +47,10 @@ alias: {,
     open: false,
     cors: true,
 hmr: {,
-      overlay: true,
-    },
-  },
-  optimizeDeps: {
-include: ['react', 'react-dom', 'react-router-dom'],
-  },
-});
+      overlay: true,`
+    },``
+  },```
+  optimizeDeps: {````
+include: ['react', 'react-dom', 'react-router-dom'],`````
+  },``````
+});```````

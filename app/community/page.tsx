@@ -1,10 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, MessageCircle, Star, TrendingUp, Calendar, Award, BookOpen, Code, Lightbulb, Share2 } from 'lucide-react';
-;
 const CommunityPage: React.FC = () => {
   const communityStats = [{ label: 'Active Members', value: '2, 500+', icon: Users, }, {label: 'Discussions', value: '15, 000+', icon: MessageCircle, }, {label: 'Solutions', value: '8, 500+', icon: Lightbulb, }, {label: 'Projects Shared', value: '1, 200+', icon: Share2, }];
-;
   const recentDiscussions = [{
       id: 1, title: 'Best practices for AI model deployment in production', author: 'Sarah Chen', replies: 24, views: 156, lastActivity: '2 hours ago', category: 'AI Development', tags: ['deployment', 'production', 'best-practices'],
 solved: true,
@@ -43,7 +41,6 @@ solved: false,
 solved: true,
     }
   ];
-;
   const categories = [{
       name: 'AI Development', description: 'General AI development discussions', icon: Code, color: 'text-blue-600', bgColor: 'bg-blue-50', posts: 1250, }, {
       name: 'Machine Learning', description: 'ML algorithms, models, and techniques', icon: TrendingUp, color: 'text-green-600', bgColor: 'bg-green-50', posts: 890, }, {
@@ -51,7 +48,6 @@ solved: true,
       name: 'Showcase', description: 'Share your AI projects and achievements', icon: Star, color: 'text-orange-600', bgColor: 'bg-orange-50', posts: 320, }, {
       name: 'Troubleshooting', description: 'Get help with technical issues', icon: Lightbulb, color: 'text-red-600', bgColor: 'bg-red-50', posts: 480, }, {
       name: 'Feature Requests', description: 'Suggest new features and improvements', icon: MessageCircle, color: 'text-indigo-600', bgColor: 'bg-indigo-50', posts: 150, }];
-;
   const featuredProjects = [{
       title: 'AI-Powered E-commerce Recommendation Engine', author: 'Emma Wilson', description: 'Built a sophisticated recommendation system using our AI API that increased sales by 35%', image: '/images/projects/recommendation-engine.jpg', likes: 45, comments: 12, tags: ['recommendation-engine', 'e-commerce', 'machine-learning'],
     },
@@ -74,7 +70,6 @@ tags: ['sentiment-analysis', 'dashboard', 'real-time'],
 tags: ['content-moderation', 'automation', 'nlp'],
     }
   ];
-;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -82,17 +77,15 @@ tags: ['content-moderation', 'automation', 'nlp'],
         <meta name="description" content="Join our developer community. Share projects, get help, and connect with other AI developers using Zion Tech Group services." />
         <meta name="keywords" content="developer community, AI community, developer forum, project showcase, technical discussions" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">;
+          <h1>;
             Developer Community
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+          <p>;
             Connect with fellow developers, share your projects, get help, and learn from the community.
           </p>
-          
           {/* Community Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {communityStats.map((stat, index) => (
@@ -105,7 +98,6 @@ tags: ['content-moderation', 'automation', 'nlp'],
               </div>
             ))}
           </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">;
@@ -117,25 +109,23 @@ tags: ['content-moderation', 'automation', 'nlp'],
           </div>
         </div>
       </section>
-
       {/* Categories */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Discussion Categories</h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {categories.map((category, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105 cursor-pointer">
                 <div className="flex items-center mb-4">
-                  <div className={`w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mr-4`}>
+                  <div className={`w-12 h-12 ${category.bgColor} rounded-lg flex items-center justify-center mr-4`}>```````
                     <category.icon className={`w-6 h-6 ${category.color}`} />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">{category.name}</h3>
-                    <p className="text-sm text-gray-500">{category.posts} posts</p>
+                    <p>{category.posts} posts</p>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-4">{category.description}</p>
+                <p>{category.description}</p>
                 <button className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors">;
                   View Discussions
                 </button>
@@ -144,7 +134,6 @@ tags: ['content-moderation', 'automation', 'nlp'],
           </div>
         </div>
       </section>
-
       {/* Recent Discussions */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -154,7 +143,6 @@ tags: ['content-moderation', 'automation', 'nlp'],
               Start Discussion
             </button>
           </div>
-          
           <div className="space-y-4">
             {recentDiscussions.map((discussion) => (
               <div key={discussion.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
@@ -194,12 +182,10 @@ tags: ['content-moderation', 'automation', 'nlp'],
           </div>
         </div>
       </section>
-
       {/* Featured Projects */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Projects</h2>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredProjects.map((project, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -208,7 +194,7 @@ tags: ['content-moderation', 'automation', 'nlp'],
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
+                  <p>{project.description}</p>
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-sm text-gray-500">by {project.author}</span>
                     <div className="flex items-center space-x-4 text-sm text-gray-500">
@@ -238,14 +224,13 @@ tags: ['content-moderation', 'automation', 'nlp'],
           </div>
         </div>
       </section>
-
       {/* Join Community CTA */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">;
             Ready to Join Our Community?
           </h2>
-          <p className="text-xl text-purple-100 mb-8">;
+          <p>;
             Connect with thousands of developers building amazing AI applications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -255,11 +240,10 @@ tags: ['content-moderation', 'automation', 'nlp'],
             <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-3 rounded-lg font-semibold transition-colors">;
               Learn More
             </button>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-};
-
-export default CommunityPage;
+          </div>`
+        </div>``
+      </section>```
+    </div>````
+  );`````
+};``````
+export default CommunityPage;```````

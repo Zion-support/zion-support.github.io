@@ -1,3 +1,2 @@
-import { useAnalytics    } from "../contexts/AnalyticsContext";";
-
+import ../contexts/AnalyticsContext from '../contexts/AnalyticsContext';
 export { useAnalytics };

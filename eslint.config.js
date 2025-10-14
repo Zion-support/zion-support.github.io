@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    ignores: '[',
+    ignores: [
       'app-broken/**',
       'app-disabled/**',
       'dist/**',
@@ -61,6 +61,7 @@ export default tseslint.config(
         MediaQueryListEvent: "readonly",
         PerformanceObserver: "readonly",
         PerformanceNavigationTiming: "readonly",
+        PerformanceEventTiming: "readonly",
         HTMLInputElement: "readonly",
         HTMLTextAreaElement: "readonly",
         HTMLSelectElement: "readonly",
@@ -91,23 +92,8 @@ export default tseslint.config(
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true;
+          jsx: true
         }
-      },
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        PerformanceEventTiming: 'readonly'
       }
     },
     plugins: {

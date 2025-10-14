@@ -1,40 +1,32 @@
 'use client';
-
 import React, { useState } from 'react';
 import { Mail, ArrowRight } from 'lucide-react';
-;
 const ContentNewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1000));
-    ;
     setIsSubmitted(true);
     setIsSubmitting(false);
-    setEmail('');
-    
+    setEmail();
     // Reset after 3 seconds;
     setTimeout(() => setIsSubmitted(false), 3000);
   };
-
   if (isSubmitted) {
     return (
       <section className="mb-16" aria-labelledby="newsletter-heading">
         <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-8 rounded-xl text-center">
           <div className="text-4xl mb-4">✅</div>
           <h2 className="text-2xl font-bold mb-2">Thank You!</h2>
-          <p className="text-green-100">You've been successfully subscribed to our newsletter.</p>
+          <p>You've been successfully subscribed to our newsletter.</p>
         </div>
       </section>
     );
   }
-
   return (
     <section className="mb-16" aria-labelledby="newsletter-heading">
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-8 rounded-xl">
@@ -42,10 +34,9 @@ const ContentNewsletterSignup: React.FC = () => {
           <h2 id="newsletter-heading" className="text-2xl sm:text-3xl font-bold mb-4">;
             Stay Updated with AI Innovation
           </h2>
-          <p className="text-purple-100 mb-6">;
+          <p>;
             Get the latest insights on AI technology, industry trends, and exclusive offers delivered to your inbox.
           </p>
-          
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <div className="flex-1 relative">
               <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -74,8 +65,7 @@ const ContentNewsletterSignup: React.FC = () => {
               )}
             </button>
           </form>
-          
-          <p className="text-xs text-purple-200 mt-4">;
+          <p>;
             We respect your privacy. Unsubscribe at any time.
           </p>
         </div>
@@ -83,6 +73,4 @@ const ContentNewsletterSignup: React.FC = () => {
     </section>
   );
 };
-
 export default ContentNewsletterSignup;
-;

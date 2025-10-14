@@ -1,6 +1,6 @@
-import React from 'react';;'
-import { Link } from 'react-router-dom';;'
-import SEO from '../components/SEO;'
+import React from react;
+import { Link } from react-router-dom;
+import SEO from '../components/SEO;
 import { CloudIcon,
   ServerIcon,
   CpuChipIcon,
@@ -9,7 +9,7 @@ import { CloudIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon';' } from '@heroicons/react/24/outline;';'
+  MapPinIcon; } from ';@heroicons/react/24/outline;
 export default function CloudSolutionsPage() {
   const services = [
     {
@@ -43,9 +43,9 @@ export default function CloudSolutionsPage() {
     { name: 'Google Cloud Platform', logo: 'GCP' },'
     { name: 'IBM Cloud', logo: 'IBM' },'
     { name: 'Oracle Cloud', logo: 'Oracle' },'
-    { name: 'DigitalOcean', logo: 'DO' }'
-  ]
-import { Helmet } from 'react-helmet-async';'
+    { name: 'DigitalOcean', logo: 'DO' }';
+  ];
+import react-helmet-async from 'react-helmet-async';
 const CloudSolutionsPage: React.FC = () => {
   return (
     <>
@@ -55,8 +55,8 @@ const CloudSolutionsPage: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
         <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">CloudSolutionsPage</h1>"
-          <p className="text-gray-300">This page is under construction.</p>"
+          <h1>CloudSolutionsPage</h1>"
+          <p>This page is under construction.</p>"
         </div>
       </div>
     </>

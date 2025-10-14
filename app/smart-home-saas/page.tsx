@@ -1,5 +1,4 @@
-import ResponsiveContainer from '../components/ResponsiveContainer';'
-
+import ResponsiveContainer from '../components/ResponsiveContainer';
 const SmartHomeSAAS = () => {
   return (
     <>
@@ -7,15 +6,14 @@ const SmartHomeSAAS = () => {
         <title>Smart Home SAAS - Zion Tech Group</title>
         <meta name="description" content="Comprehensive smart home management and automation platform." />"
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
         <section className="py-20">"
           <ResponsiveContainer></ResponsiveContainer>
             <div className="text-center">"
-              <h1 className="text-5xl md: 'text-7xl font-bold text-white mb-6">"','
+              <h1>"','
                 Smart Home SAAS;
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+              <p>"
                 Comprehensive smart home management and automation platform.
               </p>
               <Link to="/contact">"
@@ -31,5 +29,4 @@ const SmartHomeSAAS = () => {
     </>
   );
 };
-
 export default SmartHomeSAAS;

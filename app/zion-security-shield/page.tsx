@@ -1,7 +1,6 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Mail, Phone, MapPin } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-;
+import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 export default function ZionSecurityShield() {
   const features = [{
       title: "Real-time Threat Detection", description: "Advanced AI-powered monitoring that detects and responds to security threats in real-time across your entire infrastructure.", icon: <Eye className="w-6 h-6" />, benefits: ["24/7 Monitoring", "Instant Alerts", "Threat Intelligence", "Automated Response"],
@@ -22,16 +21,14 @@ benefits: ["Malware Protection", "Ransomware Defense", "Device Management", "Pol
       title: "Compliance Management",
       description: "Automated compliance monitoring and reporting for GDPR, HIPAA, SOC 2, and other regulatory requirements.",
       icon: <CheckCircle className="w-6 h-6" />,
-benefits: ["Regulatory Compliance", "Automated Reports", "Audit Trails", "Policy Templates"],
-    }
+benefits: ["Regulatory Compliance", "Automated Reports", "Audit Trails", "Policy Templates"],;
+    };
   ];
-;
   const securityServices = [{
       title: "Security Monitoring", description: "24/7 monitoring of your network, systems, and applications for potential security threats.", price: "Starting at $99/month", }, {
       title: "Vulnerability Scanning", description: "Regular security assessments to identify and prioritize vulnerabilities in your infrastructure.", price: "Starting at $149/month", }, {
       title: "Incident Response", description: "Rapid response and containment services when security incidents occur.", price: "Starting at $199/month", }, {
       title: "Security Training", description: "Employee security awareness training and phishing simulation programs.", price: "Starting at $79/month", }];
-;
   const pricingPlans = [{
       name: "Essential", price: "$149", period: "/month", description: "Basic security monitoring for small businesses", features: [, "Real-time threat detection", "Basic vulnerability scanning", "Email support", "Monthly security reports", "Up to 10 endpoints"],
 popular: false,
@@ -53,9 +50,7 @@ features: ["AI-powered threat detection", "Continuous vulnerability scanning", "
 popular: false,
     }
   ];
-;
   const complianceStandards = [{name: "GDPR", description: "General Data Protection Regulation", }, {name: "HIPAA", description: "Health Insurance Portability and Accountability Act", }, {name: "SOC 2", description: "Service Organization Control 2", }, {name: "PCI DSS", description: "Payment Card Industry Data Security Standard", }, {name: "ISO 27001", description: "Information Security Management", }, {name: "NIST", description: "National Institute of Standards and Technology", }];
-;
   return (
     <>
       <Helmet>
@@ -69,12 +64,10 @@ popular: false,
           content="cybersecurity, threat detection, security monitoring, vulnerability assessment, endpoint protection, compliance management, AI security"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%, rgba(239, 68, 68, 0.3), transparent_50%)]"></div>
-        
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -84,7 +77,6 @@ popular: false,
                 <span className="text-red-300 text-sm font-semibold">Micro SAAS Solution</span>
               </div>
             </div>
-            
             <div className="inline-block">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">;
                 Zion Security
@@ -94,12 +86,10 @@ popular: false,
                 <div className="absolute -inset-1 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 rounded-lg blur opacity-30 animate-pulse"></div>
               </h1>
             </div>
-            
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">;
+            <p>;
               Advanced AI-powered cybersecurity monitoring and threat detection designed for small to medium businesses. ;
               Protect your digital assets with 24/7 security monitoring and automated incident response.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link;
                 to="/contact"
@@ -115,7 +105,6 @@ popular: false,
                 View Demo
               </Link>
             </div>
-
             {/* Key Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
@@ -133,7 +122,6 @@ popular: false,
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -143,11 +131,10 @@ popular: false,
                   Advanced Security Features
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+              <p>;
                 Comprehensive cybersecurity protection powered by AI and machine learning to keep your business safe.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div;
@@ -155,7 +142,6 @@ popular: false,
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10 relative overflow-hidden"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-red-500/5 to-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
                   <div className="relative z-10">
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       {feature.icon}
@@ -163,7 +149,7 @@ popular: false,
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-red-300 transition-colors">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">
+                    <p>
                       {feature.description}
                     </p>
                     <div className="space-y-2">
@@ -180,7 +166,6 @@ popular: false,
             </div>
           </div>
         </section>
-
         {/* Security Services */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-6xl mx-auto">
@@ -190,11 +175,10 @@ popular: false,
                   Security Services
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+              <p>;
                 Comprehensive security services to protect your business from evolving cyber threats.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {securityServices.map((service, index) => (
                 <div;
@@ -202,14 +186,13 @@ popular: false,
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
-                  <p className="text-gray-300 mb-3">{service.description}</p>
+                  <p>{service.description}</p>
                   <div className="text-red-400 font-bold">{service.price}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -219,19 +202,18 @@ popular: false,
                   Security Plans
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+              <p>;
                 Choose the security plan that fits your business needs. All plans include a 14-day free trial.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div;
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${,
-                    plan.popular 
-                      ? 'border-red-500/50 shadow-red-500/20' 
-: 'border-white/20 hover:border-red-500/30',
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${,````
+                    plan.popular`````
+                      ? 'border-red-500/50 shadow-red-500/20'``````
+: 'border-white/20 hover:border-red-500/30',```````
                   }`}
                 >
                   {plan.popular && (
@@ -241,31 +223,28 @@ popular: false,
                       </div>
                     </div>
                   )}
-                  
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-red-400">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
-                    <p className="text-gray-300 mt-2">{plan.description}</p>
+                    <p>{plan.description}</p>
                   </div>
-                  
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Link;
-                    to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 shadow-lg hover:shadow-red-500/25',
-: 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900',
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />`
+                        <span className="text-gray-300">{feature}</span>``
+                      </li>```
+                    ))}````
+                  </ul>`````
+                  <Link;``````
+                    to="/contact"```````
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${````
+                      plan.popular`````
+? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700 shadow-lg hover:shadow-red-500/25',``````
+: 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900',```````
                     }`}
                   >
                     {plan.popular ? 'Start Free Trial' : 'Get Started',}
@@ -275,7 +254,6 @@ popular: false,
             </div>
           </div>
         </section>
-
         {/* Compliance Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-6xl mx-auto">
@@ -285,11 +263,10 @@ popular: false,
                   Compliance Standards
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+              <p>;
                 Meet regulatory requirements with automated compliance monitoring and reporting.
               </p>
             </div>
-            
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {complianceStandards.map((standard, index) => (
                 <div;
@@ -308,7 +285,6 @@ popular: false,
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
@@ -316,11 +292,10 @@ popular: false,
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
                 Ready to Secure Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">;
+              <p>;
                 Don&apos;t wait for a security breach. Protect your business with Zion Security Shield today. ;
                 Start your free trial or contact us for a security assessment.
               </p>
-              
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -328,14 +303,14 @@ popular: false,
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
-                  <p className="text-red-400">kleber@ziontechgroup.com</p>
+                  <p>kleber@ziontechgroup.com</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
-                  <p className="text-red-400">+1 302 464 0950</p>
+                  <p>+1 302 464 0950</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-3">
@@ -345,7 +320,6 @@ popular: false,
                   <p className="text-red-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link;
                   to="/contact"
@@ -361,10 +335,10 @@ popular: false,
                   Security Assessment
                 </Link>
               </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
+            </div>`
+          </div>``
+        </section>```
+      </div>````
+    </>`````
+  );``````
+}```````

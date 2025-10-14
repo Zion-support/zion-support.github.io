@@ -1,6 +1,6 @@
-import { Menu, X } from 'lucide-react';'
+import lucide-react from 'lucide-react';
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 const EnhancedHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const toggleMenu = () => {
@@ -13,7 +13,7 @@ const EnhancedHeader: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2'></Link>'
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center'></div>'
-              <span className="text-white font-bold text-lg'>Z;'
+              <span className="text-white font-bold text-lg'>Z;
             <span className="text-white font-bold text-xl'>Zion Tech Group;'
           {/* Desktop Navigation */}
           <nav className="hidden md: 'flex items-center space-x-8">','
@@ -46,4 +46,4 @@ const EnhancedHeader: React.FC = () => {
         )}
   )
 }
-export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></nav>
+export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></nav>;

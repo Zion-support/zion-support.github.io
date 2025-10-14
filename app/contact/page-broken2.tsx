@@ -1,5 +1,4 @@
-import { ArrowRight } from "lucide-react";"
-
+import lucide-react from 'lucide-react';
 const Pagebroken2Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
@@ -10,7 +9,6 @@ const Pagebroken2Page = () => {
           content="Professional page broken2 services by Zion Tech Group"
         /></meta>
       </Helmet>
-
       <div className="pt-20 pb-16 px-4 sm: 'px-6 lg:px-8">"','
         <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl md: 'text-6xl font-bold text-white mb-6">"','
@@ -18,7 +16,7 @@ const Pagebroken2Page = () => {
               Page Broken2;
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+          <p>"
             Professional page broken2 services by Zion Tech Group;
           </p>
           <div className="flex flex-col sm: 'flex-row gap-4 justify-center">"','
@@ -41,5 +39,4 @@ const Pagebroken2Page = () => {
     </div>
   );
 };
-
 export default Pagebroken2Page;

@@ -24,13 +24,12 @@ url: 'https://ziontechgroup.com/logo.png',
     ...(section && {articleSection: section,}),
     ...(tags.length > 0 && {keywords: tags.join(', '),})
   };
-;
   return (
   <>
     <Helmet></Helmet>
       <title>{title}</title>
       {structuredData && (
-        <script type="application/ld+json">""
+        <script type="application/ld+json">
           {JSON.stringify(structuredData
   </>
 );

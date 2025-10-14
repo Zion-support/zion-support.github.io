@@ -1,6 +1,6 @@
-import React from 'react';;'
-import { Link } from 'react-router-dom';;'
-import SEO from '../components/SEO;'
+import React from react;
+import { Link } from react-router-dom;
+import SEO from '../components/SEO;
 import { ShieldCheckIcon,
   LockClosedIcon,
   EyeIcon,
@@ -9,7 +9,7 @@ import { ShieldCheckIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon';' } from '@heroicons/react/24/outline;';'
+  MapPinIcon; } from ';@heroicons/react/24/outline;
 export default function CybersecurityPage() {
   const services = [
     {
@@ -43,9 +43,9 @@ export default function CybersecurityPage() {
     { name: 'GDPR', status: 'Compliant' },'
     { name: 'HIPAA', status: 'Compliant' },'
     { name: 'PCI DSS', status: 'Compliant' },'
-    { name: 'NIST', status: 'Compliant' }'
-  ]
-import { Helmet } from 'react-helmet-async';'
+    { name: 'NIST', status: 'Compliant' }';
+  ];
+import react-helmet-async from 'react-helmet-async';
 const CybersecurityPage: React.FC = () => {
   return (
     <>
@@ -55,8 +55,8 @@ const CybersecurityPage: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
         <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">CybersecurityPage</h1>"
-          <p className="text-gray-300">This page is under construction.</p>"
+          <h1>CybersecurityPage</h1>"
+          <p>This page is under construction.</p>"
         </div>
       </div>
     </>

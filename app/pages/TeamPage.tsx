@@ -1,6 +1,6 @@
-import React from 'react';;'
-import { Link } from 'react-router-dom';;'
-import SEO from '../components/SEO;'
+import React from react;
+import { Link } from react-router-dom;
+import SEO from '../components/SEO;
 import { UserGroupIcon,
   AcademicCapIcon,
   BriefcaseIcon,
@@ -8,15 +8,15 @@ import { UserGroupIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon';' } from '@heroicons/react/24/outline;';'
+  MapPinIcon; } from ';@heroicons/react/24/outline;
 export default function TeamPage() {
   const team = [
     {
       name: 'Kleber Santos','
       role: 'CEO & Founder','
       bio: 'Technology visionary with over 10 years of experience in AI and IT solutions.','
-      image: '/images/team/kleber-santos.jpg','
-      linkedin: 'https://linkedin.com/in/kleber-santos','
+      image: '/images/team/kleber-santos.jpg',';
+      linkedin: 'https://linkedin.com/in/kleber-santos',';
       twitter: 'https://twitter.com/kleber_santos;'
     },
     {
@@ -82,7 +82,7 @@ export default function TeamPage() {
       description: 'We maintain the highest ethical standards in all our business practices.;'
     }
   ]
-import { Helmet } from 'react-helmet-async';'
+import react-helmet-async from 'react-helmet-async';
 const TeamPage: React.FC = () => {
   return (
     <>
@@ -92,8 +92,8 @@ const TeamPage: React.FC = () => {
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
         <div className="text-center">"
-          <h1 className="text-4xl font-bold mb-4">TeamPage</h1>"
-          <p className="text-gray-300">This page is under construction.</p>"
+          <h1>TeamPage</h1>"
+          <p>This page is under construction.</p>"
         </div>
       </div>
     </>

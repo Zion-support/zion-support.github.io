@@ -1,11 +1,10 @@
 
-
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';'
-import { 
-  CpuChipIcon, 
-  CloudIcon, 
+import React from 'react';
+import react-helmet-async from 'react-helmet-async';
+import react-router-dom from 'react-router-dom';
+import {
+  CpuChipIcon,
+  CloudIcon,
   ShieldCheckIcon,
   CloudIcon,
   GlobeAltIcon,
@@ -13,8 +12,7 @@ import {
   BriefcaseIcon,
   ArrowRightIcon,
   CheckIcon;
-} from '@heroicons/react/24/outline';'
-
+} from '@heroicons/react/24/outline;
 const SolutionsPage: React.FC = () => {
   const solutions = [
     {
@@ -102,7 +100,6 @@ const SolutionsPage: React.FC = () => {
       href: '/it-solutions'
     }
   ];
-
   return (
     <>
       <Helmet></Helmet>
@@ -110,23 +107,21 @@ const SolutionsPage: React.FC = () => {
         <meta name="description" content="Comprehensive technology solutions including AI, cybersecurity, cloud infrastructure, micro SaaS, 5G technology, and IT services." />"
         <meta name="keywords" content="technology solutions, AI solutions, cybersecurity, cloud computing, micro SaaS, 5G technology, IT services" />"
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">"
         <div className="absolute inset-0 opacity-20">"
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>"
         </div>
-        
         <div className="relative z-10 container mx-auto px-4 text-center">"
           <div className="max-w-4xl mx-auto">"
-            <h1 className="text-6xl md: 'text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">"','
+            <h1>"','
               Technology Solutions;
             </h1>
-            <p className="text-xl md: 'text-2xl text-gray-300 mb-8 leading-relaxed">"','
+            <p>"','
               Comprehensive Solutions for Modern Businesses;
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">"
-              From AI and cybersecurity to cloud infrastructure and 5G technology, 
+            <p>"
+              From AI and cybersecurity to cloud infrastructure and 5G technology,
               we provide end-to-end solutions that drive digital transformation and business growth.
             </p>
             <Link;
@@ -139,7 +134,6 @@ const SolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Solutions Grid */}
       <section className="py-20 bg-slate-900">"
         <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
@@ -147,11 +141,10 @@ const SolutionsPage: React.FC = () => {
             <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6 gradient-text">"','
               Technology Solutions;
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+            <p>"
               Comprehensive technology solutions designed to meet your business needs;
             </p>
           </div>
-          
           <div className="grid md: 'grid-cols-2 lg:grid-cols-3 gap-8">"','
             {solutions.map((solution, index) => (
               <div key={index} className="bg-slate-800 rounded-xl p-8 hover: 'bg-slate-700 transition-all duration-300 group">"','
@@ -161,11 +154,9 @@ const SolutionsPage: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white">{solution.title}</h3>"
                 </div>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed">"
+                <p>"
                   {solution.description}
                 </p>
-                
                 <ul className="space-y-3 mb-6">"
                   {solution.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">"
@@ -174,7 +165,6 @@ const SolutionsPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                
                 <Link;
                   to={solution.href}
                   className="inline-flex items-center text-purple-400 hover: 'text-purple-300 font-semibold group-hover:gap-2 transition-all"','
@@ -187,14 +177,13 @@ const SolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">"
         <div className="max-w-4xl mx-auto px-4 sm: 'px-6 lg:px-8 text-center">"','
           <h2 className="text-4xl md: 'text-5xl font-bold text-white mb-6">"','
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">"
+          <p>"
             Let's discuss how our solutions can help you achieve your business goals'
           </p>
           <div className="flex flex-col sm: 'flex-row gap-4 justify-center">"','
@@ -216,5 +205,4 @@ const SolutionsPage: React.FC = () => {
     </>
   );
 };
-
 export default SolutionsPage;

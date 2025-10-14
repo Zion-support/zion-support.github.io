@@ -1,6 +1,5 @@
-import React from 'react';'
-import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react";"
-
+import React from 'react';
+import lucide-react from 'lucide-react';
 interface GenericServicePageProps {
   title: 'string;','
   description: 'string;','
@@ -8,9 +7,8 @@ interface GenericServicePageProps {
   features: 'string[];','
   benefits: 'string[];','
   pricing?: string;
-  category: "AI" | "IT" | "MicroSAAS" | "Emerging";"
+  category: "AI" | "IT" | "MicroSAAS" | "Emerging;
 }
-
 const GenericServicePage: React.FC<GenericServicePageProps> = ({
   title,
   description,
@@ -26,10 +24,8 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
     MicroSAAS: "from-green-500 to-emerald-600","
     Emerging: "from-orange-500 to-red-600","
   };
-
   const categoryColor =
-    categoryColors[category] || "from-cyan-500 to-purple-600";"
-
+    categoryColors[category] || "from-cyan-500 to-purple-600;
   return (
     <>
       <Helmet></Helmet>
@@ -39,20 +35,20 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
           name="keywords"
           content={`${title.toLowerCase()}, AI solutions, IT services, ${category.toLowerCase()}`}
         /></meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">"
-        <main className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','
-          {/* Hero Section */}
-          <section className="text-center py-16">"
-            <div className="flex justify-center mb-8">"
-              <div;
+      </Helmet>`
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">"``
+        <main className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">"','```
+          {/* Hero Section */}````
+          <section className="text-center py-16">"`````
+            <div className="flex justify-center mb-8">"``````
+              <div;```````
                 className={`p-4 rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`}
               ></div>
                 <Icon className="w-12 h-12 text-white" />"
               </div>
             </div>
-            <h1 className="text-5xl font-bold text-white mb-6">{title}</h1>"
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+            <h1>{title}</h1>"
+            <p>"
               {description}
             </p>
             {pricing && (
@@ -77,14 +73,13 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </a>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="py-16">"
             <div className="text-center mb-12">"
               <h2 className="text-3xl font-bold text-white mb-4">"
                 Key Features;
               </h2>
-              <p className="text-lg text-gray-300">"
+              <p>"
                 Comprehensive {title.toLowerCase()} solutions designed to drive;
                 your business forward;
               </p>
@@ -105,14 +100,13 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="py-16">"
             <div className="text-center mb-12">"
               <h2 className="text-3xl font-bold text-white mb-4">"
                 Why Choose Our {title}?
               </h2>
-              <p className="text-lg text-gray-300">"
+              <p>"
                 Experience the difference with our proven expertise and;
                 cutting-edge technology;
               </p>
@@ -127,7 +121,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                     <h3 className="text-lg font-semibold text-white mb-2">"
                       {benefit}
                     </h3>
-                    <p className="text-gray-300">"
+                    <p>"
                       Leverage our expertise to maximize your business potential;
                       with {title.toLowerCase()}
                     </p>
@@ -136,7 +130,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               ))}
             </div>
           </section>
-
           {/* Stats Section */}
           <section className="py-16">"
             <div className="text-center mb-12">"
@@ -168,13 +161,12 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="py-16 text-center">"
             <h2 className="text-3xl font-bold text-white mb-4">"
               Ready to Get Started?
             </h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">"
+            <p>"
               Join hundreds of companies that trust Zion Tech Group for their{" "}"
               {title.toLowerCase()} needs. Get a free consultation today.
             </p>
@@ -195,10 +187,10 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </a>
             </div>
           </section>
-        </main>
-      </div>
-    </>
-  );
-};
-
-export default GenericServicePage;
+        </main>`
+      </div>``
+    </>```
+  );````
+};`````
+export default GenericServicePage;``````
+```````

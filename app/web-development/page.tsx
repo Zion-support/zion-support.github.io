@@ -1,16 +1,15 @@
-import React from "react";
-import { Helmet    } from "react-helmet-async";
-;
+import React from 'react';
+import { Helmet    } from 'react-helmet-async';
   return (
-<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Page - Zion Tech Group" /></meta>""
+        <meta name="description" content="Page - Zion Tech Group" /></meta>
       </Helmet>
-      <div className="container mx-auto px-4 py-16"></div>""
+      <div className="container mx-auto px-4 py-16"></div>
     </>
-        <div className="text-center"></div>""
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>""
+        <div className="text-center"></div>
+          <h1>Page</h1>
           <p className="text-gray-300 text-lg"></p>
             This page is under construction. Please check back later.
           </p>
@@ -29,7 +28,6 @@ import { Helmet    } from "react-helmet-async";
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -45,7 +43,7 @@ import { Helmet    } from "react-helmet-async";
                   </div>
                   <h3 className="text-xl font-semibold text-white">{service.title}</h3>
                 </div>
-                <p className="text-gray-300 mb-4">{service.description}</p>
+                <p>{service.description}</p>
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
@@ -65,7 +63,6 @@ import { Helmet    } from "react-helmet-async";
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -81,7 +78,6 @@ import { Helmet    } from "react-helmet-async";
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -94,40 +90,39 @@ import { Helmet    } from "react-helmet-async";
                 <span className="text-2xl font-bold text-white">1</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>
-              <p className="text-gray-300">We analyze your requirements and create a detailed project plan.</p>
+              <p>We analyze your requirements and create a detailed project plan.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Design</h3>
-              <p className="text-gray-300">We create wireframes and mockups for your approval.</p>
+              <p>We create wireframes and mockups for your approval.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">3</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Development</h3>
-              <p className="text-gray-300">We build your application using modern technologies and best practices.</p>
+              <p>We build your application using modern technologies and best practices.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">4</span>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Deployment</h3>
-              <p className="text-gray-300">We deploy your application and provide ongoing support.</p>
+              <p>We deploy your application and provide ongoing support.</p>
             </div>
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">;
             Ready to Build Your Web Application?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">;
+          <p>;
             Let's discuss your project and create something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -148,6 +143,5 @@ import { Helmet    } from "react-helmet-async";
     </div>
   )};
 };
-
 >>>>>>> origin/main;
  cursor/fix-errors-and-merge-to-main-54ad;
