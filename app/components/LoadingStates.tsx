@@ -5,7 +5,6 @@ export const LoadingPage = () => (
     <div className="text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
       <p className="text-white">Loading...</p>
-
     </div>
   </div>
 );
@@ -16,19 +15,10 @@ export const LoadingSpinner = ({ size = 'md' }) => {
     md: 'h-8 w-8',
     lg: 'h-12 w-12'
   };
-=======
-import { Helmet } from 'react-helmet-async';
-'use client'
-export default function Page() {
->>>>>>> cursor/fix-errors-and-merge-to-main-96de
 
   return (
     <div className={`animate-spin rounded-full border-b-2 border-blue-500 ${sizes[size]}`}></div>
   );
 };
 
-
-const LoadingStates = () => <LoadingPage />;
-
-export default LoadingStates;
-
+export default LoadingSpinner;
