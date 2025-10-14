@@ -1,5 +1,5 @@
 import { useState, useEffect, ReactNode } from 'react';
-import { AnalyticsContext, AnalyticsContextType } from './AnalyticsContext.types';
+import { AnalyticsContext, AnalyticsContextType } from './AnalyticsContextDefinition';
 
 interface AnalyticsProviderProps {
   children: ReactNode;
