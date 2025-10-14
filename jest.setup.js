@@ -1,6 +1,11 @@
 require('@testing-library/jest-dom');
 const React = require('react');
 
+// Polyfill for TextEncoder and TextDecoder
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
   const React = require('react');
