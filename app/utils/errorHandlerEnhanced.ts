@@ -18,12 +18,11 @@ export consterrorHandlerEnhanced= {
       window.gtag('event', 'exception', {
         description: _error.message,
         fatal: false,
-        custom_parameters: context
-      })
+        custom_parameters: context;
+      });
         description: error.message,
-        fatal: false
+        fatal: false;
       })
-    }
     
     return {
       message: 'Something went wrong. Please try again.',

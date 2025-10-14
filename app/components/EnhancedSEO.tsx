@@ -1,36 +1,3 @@
-import { Helmet } from 'react-helmet-async';
-
-interface EnhancedSEOProps {
-  title: string
-  description: string
-  keywords?: string
-  canonicalUrl?: string
-  ogImage?: string
-const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
-  title,
-  description,
-  keywords,
-  canonicalUrl,
-  ogImage;
-})  => {
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      {canonicalUrl && <Link rel="canonical" href={canonicalUrl} />}
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-<meta property="og: type" content="website" />
-      {ogImage && <meta property="og:image" content={ogImage} />}
-      {/* Twitter Card */}
-      <meta name="twitter: card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      {ogImage && <meta name="twitter:image" content={ogImage} />}
-  </Helmet>)
-}
-export default EnhancedSEO
-</EnhancedSEOProps>
-}
+import React, { Suspense } from 'react'; import { Helmet } from 'react-helmet-async'; interface Enhanced SEOProps {title: string; description: string; keywords?: string; canonical Url?: string; og Image?: string }, const Enhanced SEO: React.FC<Enhanced SEO Props> = ({title, description, keywords, canonical Url, og Image } )=> {return (
+      <Helmet> <title> {title }</title> <meta name="description"content= {description }/> {keywords && <meta name="keywords"content= {keywords }/> }, {canonical Url && <linkre l="canonical"href= {canonical Url }/> }, {/* Open Graph */ }, <metapropert y="og:title"content= {title }/> <metapropert y="og:description"content= {description }/> <metapropert y="og: type"content="website" />; {og Image && <metapropert y="og:image"content= {og Image }/> }, {/* Twitter Card */ }, <meta name="twitter: card"content="summary_large_image" />; <meta name="twitter:title"content= {title }/> <meta name="twitter:description"content= {description }/> {og Image && <meta name="twitter:image"content= {og Image }/> }, 
+      </Helmet> )}; export default Enhanced SEO;

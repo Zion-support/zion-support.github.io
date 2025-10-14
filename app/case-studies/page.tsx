@@ -1,22 +1,3 @@
-import React, { Suspense } from 'react'
-import { Helmet } from 'react-helmet-async'
-const CaseStudiesPage: React.FC = () => {
-  return (
-    <>Helmet>
-        <title>Case Studies | Zion Tech Group | Success Stories & Client Results</title>
-        <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions. Real results from real clients." />
-        <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation, client results" />
-        <meta Property="og:title" content="Case Studies - Zion Tech Group" />
-        <meta property="og:description" content="Success stories and client results from our AI and IT solutions" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://ziontechgroup.com/case-studies"
-        />
-      </Helmet>
-
-
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-9 00 via-purple-9 0 0 to-slate-9 0 0">
         <div className="container mx-auto px-4 py-1 6">
           <div className="text-center">
@@ -50,4 +31,29 @@ export default CaseStudiesPage
 </div>
 </div>
 </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1dac
+=======
+import React, { Suspense } from 'react'; import { Helmet } from 'react-helmet-async'; const Case Studies Page: React.FC = ( )=> {return (
+    <> 
+      <Helmet> <title>Case studies - Zion Tech Group</title> <meta name="description"content="Professional Case studies solutions and services" /> <meta name="keywords"content="case, studies" /> 
+      </Helmet> 
+      <div className="min-h-screen bg-gradient-to-br from-slate-900-via-purple-900-to-slate-900"> 
+        <div className="container mx-auto px 4 py-16"> 
+          <div className="text-center">"> <h1 className="text 4 xl font-bold text-white mb-8">Case studies</h1> <p className="text xl text gray-300 mb-8"> Professional Case studies solutions and services </p> 
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">; <div className="bg blue 50 border border-blue-200 rounded-lg p-6"> <h3 className="text lg font semibold text-blue-900 mb-2"> Expert Solutions </h3> <p className="text-blue-700"> Our team of experts delivers cutting-edge solutions. </p> 
+          </div> 
+          </div> <div className="bg green 50-border border-green-20-rounded-lgp-6"> <h3 className="text lg font semibold text-purple-900 mb-2"> </h3> <p className=" [^" ]*"> Tailored implementations for your specific requirements. </p><div className="bg purple 50 border border-purple-200 rounded-lg p-6"> <h3 className="text lg font semibold text-purple-900 mb-2"> </h3> <p className=" [^" ]*"> Round-the-clock support for all your needs. 
+          
+        </div>
+      </div>
+    </div> 
+          
+        </div>
+      </div>
+    </div> 
+          </div> 
+    </>
+  );
+};
+
+export default Case Studies Page;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3e4e

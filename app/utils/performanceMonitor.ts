@@ -13,16 +13,18 @@ export constperformanceMonitor= {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'performance_measurement', {
         name: name,
-        duration: duration
-      })
+        duration: duration;
+      });
     if (typeof window !== 'undefined') {
       window.gtag('event', 'performance_measure', {
         measure_name: name,
-        measure_value: duration
+        measure_value: duration;
       })
     }
-    
-    return duration},
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(`${name} took ${duration.toFixed(2)}ms`)
+    return duration
+  },
   
   measureAsync: async (name: string, fn: () => Promise<void>) => {
     const start= performance.now()
@@ -33,31 +35,25 @@ export constperformanceMonitor= {
     if (typeof window !== 'undefined') {
       window.gtag('event', 'performance_measure', {
         measure_name: name,
-        measure_value: duration
+        measure_value: duration;
       })
     if (process.env.NODE_ENV === 'development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)
     }
-    
-    if (typeof window !=='undefined') {
-      window.gtag('event','performance_measure',{
-        metric_name: name,
-        value: duration
-      })
-    }
-    
-    return duration},
+    return duration
+  },
+  
   mark: (name: string) => {
     if (typeof window !=='undefined' && 'performance' in window) {
       performance.mark(name)
     }
   },
   
-  measureBetween: (startMark: string, endMark: string, name: string) => {
+  measureBetween: (startMark: string, endMark: string;, name: string) => {
     try {
-      performance.measure(name, startMark, endMark)
-      const measure = performance.getEntriesByName(name)[0]
-      const Duration = measure.duration
+      performance.measure(name, startMark, endMark);
+      const measure = performance.getEntriesByName(name)[0];
+      const Duration = measure.duration;
     } catch {
       // Error handled silently
   measure: (name: string, startMark: string, endMark: string) => {
@@ -65,5 +61,3 @@ export constperformanceMonitor= {
       const measure = performance.getEntriesByName(name)[0]
       console.warn(`${name} took ${measure.duration.toFixed(2)}ms`)
 }}}}
-</void>
-}}}}}

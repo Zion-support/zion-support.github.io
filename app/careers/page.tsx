@@ -1,33 +1,3 @@
-'use client';
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Star, CheckCircle, Zap, Heart, Brain, Rocket } from 'lucide-react';
-
-interface JobPosition {
-  id: string;
-  title: string;
-  department: string;
-  location: string;
-  type: string;
-  experience: string;
-  posted: string;
-  description: string;
-  requirements: string[];
-  featured: boolean;
-}
-
-const CareersPage: React.FC = () => {
-  return (
-    <>Helmet>
-        <title>Careers - Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and autonomous systems. Explore open positions and career opportunities." />
-        <meta name="keywords" content="tech careers, AI jobs, quantum computingjobs, software engineering, remote work, tech company" />
-        <link rel="canonical" href="https://ziontechgroup.com/careers" />
-      </Helmet>
-
-
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-9 00 via-purple-9 0 0 to-slate-9 0 0">
         <div className="container mx-auto px-4 py-1 6">
           <div className="text-center">
@@ -61,4 +31,29 @@ export default CareersPage
 </div>
 </div>
 </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-1dac
+=======
+import React, { Suspense } from 'react'; import { Helmet } from 'react-helmet-async'; const Careers Page: React.FC = ( )=> {return (
+    <> 
+      <Helmet> <title>Careers - Zion Tech Group</title> <meta name="description"content="Professional Careers solutions and services" /> <meta name="keywords"content="careers" /> 
+      </Helmet> 
+      <div className="min-h-screen bg-gradient-to-br from-slate-900-via-purple-900-to-slate-900"> 
+        <div className="container mx-auto px 4 py-16"> 
+          <div className="text-center">"> <h1 className="text 4 xl font-bold text-white mb-8">Careers</h1> <p className="text xl text gray-300 mb-8"> Professional Careers solutions and services </p> 
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">; <div className="bg blue 50 border border-blue-200 rounded-lg p-6"> <h3 className="text lg font semibold text-blue-900 mb-2"> Expert Solutions </h3> <p className="text-blue-700"> Our team of experts delivers cutting-edge solutions. </p> 
+          </div> 
+          </div> <div className="bg green 50-border border-green-20-rounded-lgp-6"> <h3 className="text lg font semibold text-purple-900 mb-2"> </h3> <p className=" [^" ]*"> Tailored implementations for your specific requirements. </p><div className="bg purple 50 border border-purple-200 rounded-lg p-6"> <h3 className="text lg font semibold text-purple-900 mb-2"> </h3> <p className=" [^" ]*"> Round-the-clock support for all your needs. 
+          
+        </div>
+      </div>
+    </div> 
+          
+        </div>
+      </div>
+    </div> 
+          </div> 
+    </>
+  );
+};
+
+export default Careers Page;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3e4e

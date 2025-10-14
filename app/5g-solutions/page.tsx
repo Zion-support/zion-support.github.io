@@ -1,45 +1,73 @@
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-const FiveGSolutionsPage: React.FC = () => {
+const FiveGSolutionsPage = () => {
+  const services = [
+    {
+      title: '5G Solutions Strategy',
+      description: 'Comprehensive 5g solutions strategies tailored to your business needs.',
+    },
+    {
+      title: 'Security Assessment',
+      description: 'Complete security evaluation for 5g solutions implementation.',
+    },
+    {
+      title: 'Team Training',
+      description: 'Expert training for your team on 5g solutions technologies and best practices.',
+    },
+  ];
+
   return (
-    <>Helmet>
-        <title>5G Solutions</title>
-        <meta
-          name="description"
-          content="Professional 5G Solutions solutions and services"
-        />
-        <meta name="keywords" content="5G, solutions" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-9 00 via-purple-9 0 0 to-slate-9 0 0">
-        <div className="container mx-auto px-4 py-1 6">
-          <div className="text-center">
-            <h1 className="text-4 xl font-bold text-white mb-8">5g solutions</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional 5g solutions solutions and services</p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-1 2">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions</h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.</p>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation</h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.</p><div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support</h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.</p>
+    <div className="min-h-screen bg-gray-50">
+      <EnhancedSEO
+        title="5G Solutions - Zion Tech Group"
+        description="Professional 5G solutions by Zion Tech Group. Expert solutions for your business needs."
+      />
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            5G Solutions
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Expert guidance for your 5g solutions transformation journey
+          </p>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 mb-4">
+                {service.description}
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Learn More
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
             </div>
+          ))}
+        </div>
+        
+        <div className="text-center">
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+          >
+            Get Started
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-  )
-}
-export default FiveGSolutionsPage
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+export default FiveGSolutionsPage;

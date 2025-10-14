@@ -11,7 +11,7 @@ export constenhancedErrorHandler= {
     
     return {
       message: 'Something went wrong. Please try again.',
-      code: 'GENERIC_ERROR'
+      code: 'GENERIC_ERROR';
   },
   
   handleApiError: (error: unknown) => {
@@ -30,7 +30,7 @@ export constenhancedErrorHandler= {
       case 500:
         return { message: 'Server error', code: 'SERVER_ERROR' }
       default:
-        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' ;}
+        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' ;};
   getErrorMessage: (error: any) => {
     if (error.response?.status) {
       switch (error.response.status) {
@@ -43,4 +43,3 @@ export constenhancedErrorHandler= {
     
     return { message: error.message || 'Unknown error';, code: 'UNKNOWN_ERROR' ;}
 }}}}
-}}}

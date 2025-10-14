@@ -1,18 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const AppPage: React.FC = () => {
-  return (
-    <HelmetProvider></HelmetProvider>
-      <Router></Router>
-        <div className="A pp">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="*" element={<HomePage />} />
-          </Routes>
-      </Router>
-  )
-}
+import {Browser Routeras Router, Routes, Route, Helmet Provider }from 'react-router-dom'; import Home Page from './page'; function App ( ){return (<Helmet Provider> <Router> <div className="App"> <Routes> <Routepat h="/"element= {<Home Page /> }/> <Routepat h="*"element= {<Home Page /> }/> </Routes> 
+          </div> </Router> </Helmet Provider> );
+};
 
 export default App
 </div>

@@ -1,92 +1,97 @@
-const fs = require('fs');
-const { glob } = require('glob');
+#!/usr/bin/env node
 
-async function fixFile(filePath) {
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
+
+// Function to fix JSX attribute issues
+function fixJSXAttributes(content) {
+  let fixed = content;
+
+  // Fix spaces in JSX attributes
+  fixed = fixed.replace(/<(\w+)(\w+)\s*=/g, '<$1 $2=');
+  fixed = fixed.replace(/<(\w+)\s+(\w+)\s*=/g, '<$1 $2=');
+  
+  // Fix specific patterns
+  fixed = fixed.replace(/<metaproperty\s*=/g, '<meta property=');
+  fixed = fixed.replace(/<linkrel\s*=/g, '<link rel=');
+  fixed = fixed.replace(/<divclassName\s*=/g, '<div className=');
+  fixed = fixed.replace(/<h1className\s*=/g, '<h1 className=');
+  fixed = fixed.replace(/<h2className\s*=/g, '<h2 className=');
+  fixed = fixed.replace(/<h3className\s*=/g, '<h3 className=');
+  fixed = fixed.replace(/<pclassName\s*=/g, '<p className=');
+  fixed = fixed.replace(/<spanclassName\s*=/g, '<span className=');
+  fixed = fixed.replace(/<aclassName\s*=/g, '<a className=');
+  fixed = fixed.replace(/<buttonclassName\s*=/g, '<button className=');
+  fixed = fixed.replace(/<sectionclassName\s*=/g, '<section className=');
+  fixed = fixed.replace(/<articleclassName\s*=/g, '<article className=');
+  fixed = fixed.replace(/<mainclassName\s*=/g, '<main className=');
+  fixed = fixed.replace(/<navclassName\s*=/g, '<nav className=');
+  fixed = fixed.replace(/<headerclassName\s*=/g, '<header className=');
+  fixed = fixed.replace(/<footerclassName\s*=/g, '<footer className=');
+  fixed = fixed.replace(/<ulclassName\s*=/g, '<ul className=');
+  fixed = fixed.replace(/<liclassName\s*=/g, '<li className=');
+  fixed = fixed.replace(/<imgclassName\s*=/g, '<img className=');
+  fixed = fixed.replace(/<inputclassName\s*=/g, '<input className=');
+  fixed = fixed.replace(/<formclassName\s*=/g, '<form className=');
+  fixed = fixed.replace(/<labelclassName\s*=/g, '<label className=');
+  fixed = fixed.replace(/<selectclassName\s*=/g, '<select className=');
+  fixed = fixed.replace(/<optionclassName\s*=/g, '<option className=');
+  fixed = fixed.replace(/<textareaclassName\s*=/g, '<textarea className=');
+
+  // Fix className values with missing spaces
+  fixed = fixed.replace(/className="([^"]*?)([a-z])([A-Z])([^"]*?)"/g, 'className="$1$2 $3$4"');
+  fixed = fixed.replace(/className="([^"]*?)([a-z])(\d+)([^"]*?)"/g, 'className="$1$2-$3$4"');
+  fixed = fixed.replace(/className="([^"]*?)(\d+)([a-z])([^"]*?)"/g, 'className="$1$2-$3$4"');
+
+  // Fix specific broken patterns
+  fixed = fixed.replace(/min-h-screenbg-slate-9/g, 'min-h-screen bg-slate-900');
+  fixed = fixed.replace(/text-centermb-1/g, 'text-center mb-12');
+  fixed = fixed.replace(/container mx-auto px-4 py-2/g, 'container mx-auto px-4 py-20');
+
+  // Fix JSX comments
+  fixed = fixed.replace(/\/\* Hero Section \*\/\s*,\s*/g, '/* Hero Section */\n        ');
+
+  return fixed;
+}
+
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixJSXAttributes(content);
     
-    // Fix broken JSX attributes
-    content = content
-      // Fix class Name -> className
-      .replace(/class\s+Name/g, 'className')
-      .replace(/class\s+name/g, 'className')
-      
-      // Fix other common JSX attributes that got broken
-      .replace(/for\s+Name/g, 'htmlFor')
-      .replace(/for\s+name/g, 'htmlFor')
-      
-      // Fix broken attribute names with spaces
-      .replace(/(\w+)\s+Name\s*=/g, '$1=')
-      .replace(/(\w+)\s+name\s*=/g, '$1=')
-      
-      // Fix broken element names with spaces
-      .replace(/<(\w+)\s+(\d+)/g, '<$1$2')
-      .replace(/<(\w+)\s+(\w+)/g, '<$1$2')
-      
-      // Fix broken className values with spaces
-      .replace(/className="([^"]*?)\s+([^"]*?)"/g, 'className="$1$2"')
-      
-      // Fix broken JSX elements
-      .replace(/<(\w+)\s+(\w+)\s*>/g, '<$1$2>')
-      .replace(/<\/(\w+)\s+(\w+)\s*>/g, '</$1$2>')
-      
-      // Fix broken attribute values
-      .replace(/="([^"]*?)\s+([^"]*?)"/g, '="$1$2"')
-      
-      // Fix specific patterns
-      .replace(/containermx-auto/g, 'container mx-auto')
-      .replace(/text-4\s+xlfont-bold/g, 'text-4xl font-bold')
-      .replace(/text-xltext-gray-300/g, 'text-xl text-gray-300')
-      .replace(/gridmd:grid-cols-2/g, 'grid md:grid-cols-2')
-      .replace(/bg-blue-50\s+border/g, 'bg-blue-50 border')
-      .replace(/border-blue-200\s+rounded-lg/g, 'border-blue-200 rounded-lg')
-      .replace(/rounded-lg\s+p-6/g, 'rounded-lg p-6')
-      .replace(/text-lg\s+font-semibold/g, 'text-lg font-semibold')
-      .replace(/text-blue-900mb-2/g, 'text-blue-900 mb-2')
-      .replace(/text-blue-700/g, 'text-blue-700')
-      .replace(/text-center/g, 'text-center')
-      .replace(/min-h-screen/g, 'min-h-screen')
-      .replace(/bg-gradient-to-br/g, 'bg-gradient-to-br')
-      .replace(/from-slate-900/g, 'from-slate-900')
-      .replace(/via-purple-900/g, 'via-purple-900')
-      .replace(/to-slate-900/g, 'to-slate-900')
-      .replace(/px-4\s+py-16/g, 'px-4 py-16')
-      .replace(/mb-8/g, 'mb-8')
-      .replace(/mt-12/g, 'mt-12')
-      .replace(/gap-8/g, 'gap-8')
-      .replace(/lg:grid-cols-3/g, 'lg:grid-cols-3')
-      .replace(/md:grid-cols-2/g, 'md:grid-cols-2');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed);
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-async function main() {
-  try {
-    const files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
-    
-    console.log(`Found ${files.length} files to process...`);
-    
-    let fixedCount = 0;
-    for (const file of files) {
-      if (await fixFile(file)) {
-        fixedCount++;
-      }
+// Main function
+function main() {
+  const pattern = 'app/**/*.tsx';
+  const files = glob.sync(pattern);
+  
+  console.log(`Found ${files.length} TSX files to process...`);
+  
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (processFile(file)) {
+      fixedCount++;
     }
-    
-    console.log(`Fixed ${fixedCount} files.`);
-  } catch (error) {
-    console.error('Error:', error);
-  }
+  });
+  
+  console.log(`Fixed ${fixedCount} files`);
 }
 
-main();
+if (require.main === module) {
+  main();
+}
+
+module.exports = { fixJSXAttributes, processFile };

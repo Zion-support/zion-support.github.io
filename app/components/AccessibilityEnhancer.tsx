@@ -1,97 +1,3 @@
-import React, { useEffect, useState } from 'react'
-const AccessibilityEnhancer: React.FC = () => {
-  const [isHighContrast, setIsHighContrast] = useState(false)
-  const [isReducedMotion, setIsReducedMotion] = useState(false)
-  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal')
-  useEffect(() => {
-    const root = document.documentElement
-    // High contrast mode
-    if (isHighContrast) {
-      root.classList.add('high-contrast')
-    } else {
-      root.classList.remove('high-contrast')
-    }
-import React, { useEffect } from 'react';
-
-interface Props {
-  children: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
-  useEffect(() => {
-    if (enableScreenReaderSupport) {
-      // Add screenreaderannouncementsconstannounceToScreenReader= (message: string) => {
-        const announcement= document.createElement('div');
-        announcement.setAttribute('aria-live', 'polite');
-        announcement.setAttribute('aria-atomic', 'true');
-        announcement.className='sr-only';
-        announcement.text Content=message;
-        document.body.appendChild(announcement);
-        
-        setTimeout(() => {
-          document.body.removeChild(announcement);
-        }, 1000);
-      };
-
-      // Announce pagechangesconstobserver= new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-            const addedNode= mutation.addedNodes[0] as Element;
-            if (addedNode && addedNode.nodeType === Node.ELEMENT_NODE) {
-              const heading= addedNode.querySelector('h1, h2, h3, h4, h5, h6');
-              if (heading) {
-                announceToScreenReader(`pageUpdated: ${heading.textContent}`);
-              }
-            }
-          }
-        });
-      });
-
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true
-      });
-
-      return () => observer.disconnect();
-    }
-  }, [enableScreenReaderSupport]);
-
-  useEffect(() => {
-    if (enableFocusManagement) {
-      // Focus managementformodalsanddropdownsconstmanageFocus= (event: FocusEvent) => {
-        const target= event.target as Element;
-        if (target && target.closest('[role="dialog"], [role="menu"], [role="listbox"]')) {
-          const focusableElements= target.closest('[role="dialog"], [role="menu"], [role="listbox"]')?.querySelectorAll(
-            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-          );
-          
-          if (focusableElements && focusableElements.length > 0) {
-            const firstElement= focusableElements[0] as HTMLElement;
-            const lastElement= focusableElements[focusableElements.length - 1] as HTMLElement;
-            
-            if (event.key === 'Tab') {
-              if (event.shiftKey && target=== firstElement) {
-                event.preventDefault();
-                lastElement.focus();
-              } else if (!event.shiftKey && target=== lastElement) {
-                event.preventDefault();
-                firstElement.focus();
-              }
-            }
-          }
-        }
-      };
-
-      document.addEventListener('keydown', manageFocus);
-      return () => document.removeEventListener('keydown', manageFocus);
-    }
-  }, [enableFocusManagement]);
-
-  return null;
-};
-
-export default AccessibilityEnhancer;
-=======
 
     // Reduced motion mode
     if (isReducedMotion) {
@@ -193,3 +99,9 @@ export default AccessibilityEnhancer;
 }
 
 export default AccessibilityEnhancer
+=======
+import React, {use Effect, use State }from 'react'; const Accessibility Enhancer: React.FC = ( )=> {const [is High Contrast, set Is High Contrast ]= use State (false ); const [is Reduced Motion, set Is Reduced Motion ]= use State (false ); const [font Size, set Font Size ]= use State<'small' | 'normal' | 'large' | 'extra-large'> ('normal' ); use Effect ( ( )=> {const root = document.document Element; // High contrast mode if (is High Contrast ){root.class List.add ('high-contrast' ); }else {root.class List.remove ('high-contrast' ); }// Reduced motion mode if (is Reduced Motion ){root.class List.add ('reduced-motion' ); }else {root.class List.remove ('reduced-motion' ); }// Font size adjustment root.style.set Property ('--font-size-multiplier', font Size === 'large' ? '1.2' : font Size === 'extra-large' ? '1.4' : font Size === 'small' ? '0.9' : '1' ); }, [is High Contrast, is Reduced Motion, font Size ]); // Keyboard navigation enhancement use Effect ( ( )=> {const handle Key Down = (e: Keyboard Event )=> {// Skip to main content if (e.key === 'Tab' && e.shift Key && e.target === document.body ){e.prevent Default ( ); const main = document.query Selector ('main' ); if (main ){ (main as HTMLElement ).focus ( ); } } }; document.add Event Listener ('keydown', handle Key Down ); return ( )=> document.remove Event Listener ('keydown', handle Key Down ); }, [ ]); // Add ARIA landmarks use Effect ( ( )=> {const add Aria Landmarks = ( )=> {const main = document.query Selector ('main' ); if (main && !main.get Attribute ('role' ) ){main.set Attribute ('role', 'main' ); }const nav = document.query Selector ('nav' ); if (nav && !nav.get Attribute ('role' ) ){nav.set Attribute ('role', 'navigation' ); }const footer = document.query Selector ('footer' ); if (footer && !footer.get Attribute ('role' ) ){footer.set Attribute ('role', 'contentinfo' ); } }; add Aria Landmarks ( ); }, [ ]); // Add alt text to images without alt attributes use Effect ( ( )=> {const add Alt Text = ( )=> {const images = document.query Selector All ('img:not ( [alt ])' ); images.for Each ( (img, index )=> {if (!img.get Attribute ('alt' ) ){img.set Attribute ('alt', `Image $ {index + 1 }` ); } } ); }; add Alt Text ( ); }, [ ]); return (<div className="accessibility controls fixed bottom 4 left-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg"> <h3 className="text white font semibold mb-3">Accessibility</h3> <div className="space y 3"> <label className="flex items center space x-2 text-white text-sm"> <input type="checkbox"checked= {is High Contrast }on Change= { (e )=> set Is High Contrast (e.target.checked )}className="rounded"/> <span>High Contrast</span> </label> <label className="flex items center space x-2 text-white text-sm"> <input type="checkbox"checked= {is Reduced Motion }on Change= { (e )=> set Is Reduced Motion (e.target.checked )}className="rounded"/> <span>Reduce Motion</span> </label> <div className="space y 1"> <label className="text white text sm">Font Size</label> <select value= {font Size }on Change= { (e )=> set Font Size (e.target.value as 'small' | 'normal' | 'large' | 'extra-large' )}className="w full bg slate-700 text-white rounded px-2 py-1 text-sm"> <option value="small">Small</option> <option value="normal">Normal</option> <option value="large">Large</option> <option value="extra-large">Extra Large</option> </select> 
+          
+        </div>
+      </div>
+    </div> ); }; export default Accessibility Enhancer;

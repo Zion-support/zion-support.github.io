@@ -1,25 +1,17 @@
-import { Helmet } from 'react-helmet-async';
-
-const NotFoundPage: React.FC = () => {
-  return (
-    <>Helmet>
-        <title>404 - Page Not Found</title>
-        <meta
-          name="description"
-          content="The page you are looking for does not exist."
-        />
-        <meta name="keywords" content="404, not found, error" />
+    <>
+      <Helmet>
+        <title>404 - Zion Tech Group</title>
+        <meta name="description" content="Page not found - Zion Tech Group" />
+        <meta name="keywords" content="404, page not found" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">
-              404 - Page Not Found
-            </h1>
+            <h1 className="text-4xl font-bold text-white mb-8">404</h1>
             <p className="text-xl text-gray-300 mb-8">
-              The page you are looking for does not exist.
+              Page not found
             </p>
-            <div className="md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
                   Expert Solutions
@@ -49,7 +41,7 @@ const NotFoundPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default NotFoundPage
