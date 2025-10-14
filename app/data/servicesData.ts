@@ -2,7 +2,7 @@ export interface Service {
   id: string;
   title: string,
         description: string;
-ursor/fix-errors-and-merge-to-main-94a7
+
   shortDescription: string;
   category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT';
   icon: string;
@@ -71,7 +71,7 @@ export const services: Service[] = [
     contactInfo: {
       phone: '+1-302-464-0950',
       email: 'ai@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/ai-solutions;
+      website: 'https://ziontechgroup.;
     },
     href: '/ai-solutions;
   },
@@ -179,7 +179,7 @@ export const services: Service[] = [
     contactInfo: {
       phone: '+1-302-464-0950',
       email: 'cloud@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/cloud-infrastructure;
+      website: 'https://ziontechgroup.;
     },
     href: '/cloud-infrastructure;
   },
@@ -231,7 +231,7 @@ export const services: Service[] = [
     contactInfo: {
       phone: '+1-302-464-0950',
       email: 'transformation@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/digital-transformation;
+      website: 'https://ziontechgroup.;
     },
     href: '/digital-transformation;
   },
@@ -283,7 +283,7 @@ export const services: Service[] = [
     contactInfo: {
       phone: '+1-302-464-0950',
       email: '5g@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/5g-solutions;
+      website: 'https://ziontechgroup.;
     },
     href: '/5g-solutions;
   },
@@ -335,7 +335,7 @@ export const services: Service[] = [
     contactInfo: {
       phone: '+1-302-464-0950',
       email: 'saas@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/micro-saas-solutions;
+      website: 'https://ziontechgroup.;
     },
     href: '/micro-saas-solutions;
   }

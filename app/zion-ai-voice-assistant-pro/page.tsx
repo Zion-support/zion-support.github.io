@@ -1,12 +1,12 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
 'use client';
 export default function ZionAIVoiceAssistantPro() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
         <title>Zion AI Voice Assistant Pro | Zion Tech Group</title>
-        <meta name="description" content="Professional AI Voice Assistant Pro services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="description" content="Professional AI Voice Assistant Pro services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
       </Helmet>
       <div className="container mx-auto px-4 py-16">;
         <div className="text-center mb-16">;
@@ -66,6 +66,7 @@ export default function ZionAIVoiceAssistantPro() {
       </div>
     </div>
   );}
-}
+}'
 '
-ursor/fix-errors-and-merge-to-main-94a7
+
+'

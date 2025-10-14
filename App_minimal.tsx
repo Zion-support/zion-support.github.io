@@ -1,11 +1,11 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
+import React from 'react';'
+import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';'
 { HelmetProvider } from 'react-helmet-async';
 const App: React.FC = () => {
   return (
-    <HelmetProvider>
-      <Router>
-        <Routes>
+    <HelmetProvider></HelmetProvider>
+      <Router></Router>
+        <Routes></Routes>
           <Route path="/" element={<div>Home Page</div>} />
         </Routes>
       </Router>
@@ -14,3 +14,4 @@ const App: React.FC = () => {
 ursor/fix-errors-and-merge-to-main-94a7
 
 export default App;
+'

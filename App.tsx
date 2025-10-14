@@ -18,49 +18,49 @@ import EnhancedSEO from "./app/components/EnhancedSEO";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';'
 import { HelmetProvider } from 'react-helmet-async';
 
-// Components
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
+// Components'
+import Navigation from './app/components/Navigation';'
+import Footer from './app/components/Footer';'
+import ErrorBoundary from './app/components/ErrorBoundary';'
+import PerformanceMonitor from './app/components/PerformanceMonitor';'
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 
 
 
 
 
-// Page Components
-import HomePage from './app/page';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import BlogPage from './app/pages/BlogPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
-import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
-import AISolutionsPage from './app/ai-solutions/page';
+// Page Components'
+import HomePage from './app/page';'
+import AboutPage from './app/pages/AboutPage';'
+import ContactPage from './app/pages/ContactPage';'
+import ServicesPage from './app/pages/ServicesPage';'
+import BlogPage from './app/pages/BlogPage';'
+import TutorialsPage from './app/pages/TutorialsPage';'
+import DemoPage from './app/pages/DemoPage';'
+import SupportPage from './app/pages/SupportPage';'
+import PrivacyPage from './app/pages/PrivacyPage';'
+import TermsPage from './app/pages/TermsPage';'
+import PricingPage from './app/pages/PricingPage';'
+import SolutionsPage from './app/pages/SolutionsPage';'
+import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';'
+import AISolutionsPage from './app/ai-solutions/page';'
 import ITSolutionsPage from './app/it-solutions/page';
-
-// Service Pages'
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
+'
+// Service Pages''
+import AIServicesPage from './app/pages/AIServicesPage';'
+import ITServicesPage from './app/pages/ITServicesPage';'
+import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';'
+import DigitalTransformationPage from './app/pages/DigitalTransformationPage';'
+import CaseStudiesPage from './app/pages/CaseStudiesPage';'
 import CareersPage from './app/pages/CareersPage';
 
-// Additional Pages
-import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
-import TeamPage from './app/pages/TeamPage';
+// Additional Pages'
+import MicroSaaSPage from './app/pages/MicroSaaSPage';'
+import FiveGSolutionsPage from './app/pages/5GSolutionsPage';'
+import TeamPage from './app/pages/TeamPage';'
 import DocumentationPage from './app/pages/DocumentationPage';
 
 // New Innovative Micro SAAS Services
@@ -128,23 +128,23 @@ function App() {
   }, []);
 
   useEffect(() => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
+    // Initialize performance monitoring'
+    if (typeof window !== 'undefined') {'
       console.log('Zion Tech Group App initialized');
     }
   }, []);
 
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-slate-900 flex">
+    <ErrorBoundary></ErrorBoundary>
+      <HelmetProvider></HelmetProvider>
+        <Router></Router>
+          <div className="min-h-screen bg-slate-900 flex"></div>
             <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-            <div className="flex-1 flex flex-col">
+            <div className="flex-1 flex flex-col"></div>
               <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
-              <main className="relative z-10 flex-1" id="main-content" role="main">
-                <ErrorBoundary>
-                  <Routes>
+              <main className="relative z-10 flex-1" id="main-content" role="main"></main>
+                <ErrorBoundary></ErrorBoundary>
+                  <Routes></Routes>
                     {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -173,11 +173,11 @@ function App() {
 
                   {/* Catch all route */}
                   <Route path="*" element={
-                    <div className="min-h-screen flex items-center justify-center bg-slate-900">
-                      <div className="text-center">
+                    <div className="min-h-screen flex items-center justify-center bg-slate-900"></Route>
+                      <div className="text-center"></div>
                         <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
                         <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                        <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
+                        <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300"></a>
                           Go Home
                         </a>
 
@@ -187,9 +187,9 @@ function App() {
                 </Routes>
               </ErrorBoundary>
             </main>
-            <Footer />
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
+            <Footer></Footer>
+            <PerformanceMonitor></PerformanceMonitor>
+            <AccessibilityEnhancer></AccessibilityEnhancer>
           </div>
         </div>
       </Router>
@@ -202,4 +202,4 @@ function App() {
   );
 }
 
-export default App;
+export default App;'

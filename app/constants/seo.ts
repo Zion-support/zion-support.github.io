@@ -4,7 +4,7 @@ export const DEFAULT_SEO = {
   title: 'ZionTechGroup-AdvancedAIandITSolutions',
   description: 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',
   keywords: ['AI', 'IT solutions', 'automation', 'digital transformation', 'Zion Tech Group'],
-  image: '/images/og-image.jpg',
+  image: '/.jpg',
   type: 'website',
 } as const;
 export const META_TAGS = {
@@ -26,7 +26,7 @@ export const defaultStructuredData = {
     "availableLanguage": "English"""
   },"""
   "sameAs": ["""
-    "https://www.linkedin.com/company/zion-tech-group","""
+    "https://www.linkedin.com/","""
     "https://twitter.com/ziontechgroup","""
     "https://www.facebook.com/ziontechgroup"""
   ]

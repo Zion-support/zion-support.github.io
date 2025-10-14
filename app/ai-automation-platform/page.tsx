@@ -1,7 +1,7 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';'
+import EnhancedSEO from '../components/EnhancedSEO';'
+import ResponsiveContainer from '../components/ResponsiveContainer';'
+import FuturisticCard from '../components/FuturisticCard';'
 import FuturisticButton from '../components/FuturisticButton';
 
 const AIAutomationPlatform = () => {
@@ -39,31 +39,29 @@ const AIAutomationPlatform = () => {
   
 
   return (
-    <>
+    <></>
       <EnhancedSEO
         title="AI Automation Platform - Intelligent Process Automation | Zion Tech Group"
         description="Transform your business with AI-powered automation. Workflow automation, smart decision making, and process optimization for modern enterprises."
         keywords="AI automation, workflow automation, process optimization, business automation, intelligent automation, RPA"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      /></EnhancedSEO>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relative overflow-hidden">
+        <section className="relative overflow-hidden"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
-          <ResponsiveContainer>
-            <div className="relative z-10 text-center py-20">
-              <div className="flex items-center justify-center mb-6">
-
+          <ResponsiveContainer></ResponsiveContainer>
+            <div className="relative z-10 text-center py-20"></div>
+              <div className="flex items-center justify-center mb-6"></div>
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 AI Automation Platform
               </h1>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8"></p>
                 Transform your business with AI-powered automation. 
                 Automate workflows, optimize processes, and make intelligent decisions at scale.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <FuturisticButton
                   icon={<Right className="w-5 h-5" />}
                 >
@@ -72,7 +70,7 @@ const AIAutomationPlatform = () => {
                 <FuturisticButton
                   variant="outline"
 
-                >
+                ></FuturisticButton>
                   View Demo
                 </FuturisticButton>
               </div>
@@ -81,27 +79,27 @@ const AIAutomationPlatform = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
-          <ResponsiveContainer>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-20"></section>
+          <ResponsiveContainer></ResponsiveContainer>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 Advanced Automation Features
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
                 Everything you need to automate and optimize your business processes.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               {features.map((feature, index) => (
-                <FuturisticCard key={index} className="text-center">
-                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center`}>
+                <FuturisticCard key={index} className="text-center"></FuturisticCard>
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center`}></div>
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">
+                  <h3 className="text-xl font-semibold text-white mb-4"></h3>
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
+                  <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base"></p>
                     {feature.description}
                   </p>
                 </FuturisticCard>
@@ -111,21 +109,21 @@ const AIAutomationPlatform = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-500/5 to-purple-500/5">
-          <ResponsiveContainer>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <section className="py-20 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></section>
+          <ResponsiveContainer></ResponsiveContainer>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 Why Choose AI Automation Platform?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Experience intelligent automation that transforms your business operations.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
-                  <Circle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg"></div>
+                  <Circle className="w-6 h-6 text-green-400 flex-shrink-0" /></Circle>
                   <span className="text-white font-medium">{benefit}</span>
                 </div>
               ))}
@@ -134,19 +132,19 @@ const AIAutomationPlatform = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20">
-          <ResponsiveContainer>
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+        <section className="py-20"></section>
+          <ResponsiveContainer></ResponsiveContainer>
+            <div className="text-center"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
                 Ready to Automate Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
                 Join thousands of businesses already using AI automation to streamline their operations.
               </p>
               <FuturisticButton
                 size="lg"
 
-              >
+              ></FuturisticButton>
                 Start Your Automation Journey
               </FuturisticButton>
             </div>
@@ -157,4 +155,5 @@ const AIAutomationPlatform = () => {
   )};
 
 export default AIAutomationPlatform
-ursor/fix-errors-and-merge-to-main-94a7
+
+'

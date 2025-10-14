@@ -1,10 +1,10 @@
 
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './App';
+import React from 'react';'
+import { createRoot } from 'react-dom/client';'
+import App from './App';'
 import './index.css';
 
-// Ensure scheduler is properly initialized
+// Ensure scheduler is properly initialized'
 if (typeof window !== 'undefined') {
   // Fix for scheduler unstable_now error
   if (!window.performance || !window.performance.now) {
@@ -12,17 +12,17 @@ if (typeof window !== 'undefined') {
     window.performance.now = window.performance.now || (() => Date.now());
   }
 }
-
+'
 const container = document.getElementById('root');
-if (!container) {
+if (!container) {'
   throw new Error('Root element not found');
 }
 
 const root = createRoot(container);
 
 root.render(
-  <React.StrictMode>
-    <App />
+  <React.StrictMode></React>
+    <App></App>
   </React.StrictMode>
 );
 
@@ -31,11 +31,12 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("/sw.js")
-      .then((registration) => {
+      .then((registration) => {'
         console.log('Service Worker registered successfully');
       })
-      .catch((error) => {
+      .catch((error) => {'
         console.log('Service Worker registration failed');
       });
   });
 }
+'

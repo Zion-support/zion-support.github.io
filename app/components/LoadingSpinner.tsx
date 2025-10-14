@@ -1,9 +1,9 @@
 
 
-import React from 'react';
+import React from 'react';'
 import { Loader2 } from 'lucide-react';
 
-interface LoadingSpinnerProps {
+interface LoadingSpinnerProps {'
   size?: 'sm' | 'md' | 'lg' | 'xl';
 
 
@@ -11,19 +11,19 @@ interface LoadingSpinnerProps {
   fullScreen?: boolean;
   className?: string;
 }
-ursor/fix-errors-and-merge-to-main-94a7
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({'
   size = 'md',
 
 
 
 }) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
+  const sizeClasses = {'
+    sm: 'w-4 h-4','
     md: 'w-8 h-8',
-
-    lg: 'w-12 h-12',
+'
+    lg: 'w-12 h-12','
     xl: 'w-16 h-16'
   };
 
@@ -35,7 +35,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   return spinner;
 
 
-    <div className={`flex flex-col items-center justify-center ${className}`}>
+    <div className={`flex flex-col items-center justify-center ${className}`}></div>
       <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-purple-600`}></div>
       {text && (
         <p className="mt-2 text-sm text-gray-400">{text}</p>
@@ -47,4 +47,4 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 };
 
-export default LoadingSpinner;
+export default LoadingSpinner;'

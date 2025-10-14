@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
-ursor/fix-errors-and-merge-to-main-94a7
+
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, MessageCircle, Phone, Mail, Clock, CheckCircle, Star, Users, Shield, Zap, Globe, BarChart3, Settings, HelpCircle, BookOpen, FileText, Calendar, Award, Target } from "lucide-react";
+import { ArrowRight, Search, MessageCircle, Phone, Mail, Clock, CheckCircle, Star, Users, Shield, Zap, Globe, BarChart3, Settings, HelpCircle, BookOpen, FileText, Calendar, Award, Target } from "lucide-react";'
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const SupportPage = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+const SupportPage = () => {'
+  const [searchQuery, setSearchQuery] = useState('');'
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const supportCategories = [
-    { id: 'all', label: 'All Topics', icon: <HelpCircle className="w-5 h-5" /> },
-    { id: 'getting-started', label: 'Getting Started', icon: <Zap className="w-5 h-5" /> },
-    { id: 'ai-services', label: 'AI Services', icon: <BarChart3 className="w-5 h-5" /> },
-    { id: 'cloud', label: 'Cloud & Infrastructure', icon: <Globe className="w-5 h-5" /> },
-    { id: 'security', label: 'Security', icon: <Shield className="w-5 h-5" /> },
+  const supportCategories = ['
+    { id: 'all', label: 'All Topics', icon: <HelpCircle className="w-5 h-5" /> },'
+    { id: 'getting-started', label: 'Getting Started', icon: <Zap className="w-5 h-5" /> },'
+    { id: 'ai-services', label: 'AI Services', icon: <BarChart3 className="w-5 h-5" /> },'
+    { id: 'cloud', label: 'Cloud & Infrastructure', icon: <Globe className="w-5 h-5" /> },'
+    { id: 'security', label: 'Security', icon: <Shield className="w-5 h-5" /> },'
     { id: 'billing', label: 'Billing & Account', icon: <Settings className="w-5 h-5" /> }
   ];
 
   const faqItems = [
     {
       id: 1,
-      question: "How do I get started with Zion Tech Group services?",
+      question: "How do I get started with Zion Tech Group services?",'
       answer: "Getting started is easy! Simply contact us through our consultation form or call us directly. We'll schedule a free consultation to understand your needs and recommend the best solutions for your business.",
       category: "getting-started",
       featured: true
@@ -118,7 +118,7 @@ const SupportPage = () => {
       description: "Complete guide to setting up your Zion Tech Group services",
       type: "Guide",
       icon: <BookOpen className="w-6 h-6" />,
-      link: "/docs/getting-started"
+      link: "/"
     },
     {
       title: "API Documentation",
@@ -149,7 +149,7 @@ const SupportPage = () => {
     { number: "24/7", label: "Support Available", icon: <Users className="w-6 h-6" /> },
     { number: "95%", label: "Customer Satisfaction", icon: <Star className="w-6 h-6" /> }
   ];
-
+'
   const filteredFAQs = selectedCategory === 'all' 
     ? faqItems 
     : faqItems.filter(item => item.category === selectedCategory);
@@ -162,32 +162,31 @@ const SupportPage = () => {
     : filteredFAQs;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
         title="Support - Zion Tech Group | 24/7 Technical Support"
         description="Get 24/7 technical support from Zion Tech Group. Live chat, phone support, documentation, and expert help for all your AI and technology needs."
         keywords="technical support, customer service, help desk, AI support, cloud support, 24/7 support"
         canonical="https://ziontechgroup.com/support"
-      />
-      
+      /></EnhancedSEO>
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>'
             We're Here to
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></span>
               {" "}Help
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>'
             Get 24/7 support from our expert team. Whether you need technical assistance, have questions about our services, or want to explore new possibilities, we're here for you.
-ursor/fix-errors-and-merge-to-main-94a7
+
           </p>
           
           {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-8">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+          <div className="max-w-2xl mx-auto mb-8"></div>
+            <div className="relative"></div>
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /></Search>
               <input
                 type="text"
                 placeholder="Search for help, documentation, or answers..."
@@ -201,12 +200,12 @@ ursor/fix-errors-and-merge-to-main-94a7
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="text-center group"></div>
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                   {stat.icon}
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -218,52 +217,52 @@ ursor/fix-errors-and-merge-to-main-94a7
       </section>
 
       {/* Support Channels */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>
                 How Can We Help?
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Choose the support channel that works best for you. All channels are available 24/7.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {supportChannels.map((channel, index) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden text-center"
-              >
+              ></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10">
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="relative z-10"></div>
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg"></div>
                     {channel.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors"></h3>
                     {channel.title}
                   </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
+                  <p className="text-gray-300 mb-4 leading-relaxed"></p>
                     {channel.description}
                   </p>
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center justify-center space-x-2 text-sm text-gray-300">
-                      <Clock className="w-4 h-4" />
+                  <div className="space-y-2 mb-6"></div>
+                    <div className="flex items-center justify-center space-x-2 text-sm text-gray-300"></div>
+                      <Clock className="w-4 h-4" /></Clock>
                       <span>{channel.availability}</span>
                     </div>
-                    <div className="flex items-center justify-center space-x-2 text-sm text-cyan-400 font-semibold">
-                      <Target className="w-4 h-4" />
+                    <div className="flex items-center justify-center space-x-2 text-sm text-cyan-400 font-semibold"></div>
+                      <Target className="w-4 h-4" /></Target>
                       <span>{channel.responseTime}</span>
                     </div>
                   </div>
                   <a
                     href={channel.link}
                     className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-                  >
+                  ></a>
                     Get Help
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
                   </a>
                 </div>
               </div>
@@ -273,28 +272,28 @@ ursor/fix-errors-and-merge-to-main-94a7
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>
                 Frequently Asked Questions
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Find quick answers to common questions about our services and solutions.
             </p>
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
             {supportCategories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg'
+                  selectedCategory === category.id'
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg''
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
@@ -305,27 +304,27 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
 
           {/* FAQ Items */}
-          <div className="space-y-6">
+          <div className="space-y-6"></div>
             {searchResults.map((item) => (
               <div
                 key={item.id}
-                className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${
+                className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${'
                   item.featured ? 'ring-2 ring-cyan-500/50' : ''
                 }`}
-              >
+              ></div>
                 {item.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute top-4 right-4"></div>
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold"></span>
                       Popular
                     </span>
                   </div>
                 )}
                 
-                <div className="pr-20">
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                <div className="pr-20"></div>
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors"></h3>
                     {item.question}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 leading-relaxed"></p>
                     {item.answer}
                   </p>
                 </div>
@@ -334,8 +333,8 @@ ursor/fix-errors-and-merge-to-main-94a7
           </div>
 
           {searchResults.length === 0 && (
-            <div className="text-center py-12">
-              <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <div className="text-center py-12"></div>
+              <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" /></HelpCircle>
               <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
               <p className="text-gray-300">Try searching with different keywords or browse our categories.</p>
             </div>
@@ -344,47 +343,47 @@ ursor/fix-errors-and-merge-to-main-94a7
       </section>
 
       {/* Resources Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"></span>
                 Helpful Resources
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Explore our comprehensive documentation, guides, and resources to get the most out of our services.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {resources.map((resource, index) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
-              >
+              ></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10">
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="relative z-10"></div>
+                  <div className="flex items-center space-x-3 mb-4"></div>
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                       {resource.icon}
                     </div>
-                    <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-xs font-medium">
+                    <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-xs font-medium"></span>
                       {resource.type}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors"></h3>
                     {resource.title}
                   </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4"></p>
                     {resource.description}
                   </p>
                   <a
                     href={resource.link}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group"
-                  >
+                  ></a>
                     Learn More
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" /></ArrowRight>
                   </a>
                 </div>
               </div>
@@ -394,37 +393,38 @@ ursor/fix-errors-and-merge-to-main-94a7
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Still Need Help?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>'
               Can't find what you're looking for? Our support team is ready to help you with any questions or issues.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <Link
                 to="/contact"
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              >
+              ></Link>
                 Contact Support
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
               </Link>
               <a
                 href="tel:+13024640950"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
-              >
+              ></a>
                 Call Us Now
               </a>
             </div>
           </div>
         </div>
       </section>
-ursor/fix-errors-and-merge-to-main-94a7
+
     </div>
   );
 };
 
 export default SupportPage;
-ursor/fix-errors-and-merge-to-main-94a7
+
+'

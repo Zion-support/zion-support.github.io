@@ -1,17 +1,17 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
 'use client';
 const CriticalResourcePreloader: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
+    <div className="min-h-screen bg-white"></div>
+      <Helmet></Helmet>
         <title>Critical Resource Preloader - Zion Tech Group</title>
-        <meta name="description" content="Professional critical resource preloader services by Zion Tech Group." />
+        <meta name="description" content="Professional critical resource preloader services by Zion Tech Group." /></meta>
       </Helmet>
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100"></section>
+        <div className="max-w-6xl mx-auto text-center"></div>
+          <h1 className="text-5xl font-bold text-gray-900 mb-6"></h1>
             Critical Resource Preloader;
           </h1>;
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
@@ -22,15 +22,15 @@ const CriticalResourcePreloader: React.FC = () => {
       </section>;
       {/* Content Section */}
             Critical Resource Preloader</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
             Professional critical resource preloader services
             designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+      <section className="py-16 px-4"></section>
+        <div className="max-w-6xl mx-auto"></div>
+          <div className="grid md:grid-cols-2 gap-12 items-center"></div>
+            <div></div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-gray-600 mb-6"></p>
                 We provide comprehensive critical resource preloader;
                 solutions tailored to your specific needs and requirements.;
               </p>;
@@ -54,7 +54,7 @@ const CriticalResourcePreloader: React.FC = () => {
               <p className="mb-6">;
                 Ready to transform your business with our critical resource preloader services?;
               </p>;
-              <a>
+              <a></a>
                 href="/contact";
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
               >;
@@ -70,11 +70,11 @@ const CriticalResourcePreloader: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-6">;
             Ready to Get Started?;
           </h2>;
-          <p className="text-xl text-blue-100 mb-8">;
+          <p className="text-xl text-blue-100 mb-8">;'
             Let's discuss how our critical resource preloader';
             services can help you achieve your goals.;
           </p>;
-          <a>
+          <a></a>
             href="/contact";
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
           >;
@@ -82,10 +82,11 @@ const CriticalResourcePreloader: React.FC = () => {
           </a>;
         </div>
       </section>;
-ursor/fix-errors-and-merge-to-main-94a7
+
     </div>
   );
 };
 
 export default CriticalResourcePreloader;
-ursor/fix-errors-and-merge-to-main-94a7
+
+'

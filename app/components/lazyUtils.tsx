@@ -1,7 +1,7 @@
 import React, { lazy, ComponentType, ComponentProps, Suspense } from 'react';
-ursor/fix-errors-and-merge-to-main-94a7
+
 // Higher-order component for lazy loading;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any;
+// eslint-disable-next-line @;
 export function withLazyLoading<T extends ComponentType<any>>(
   Component: T,
   fallback?: React.ReactNode;
@@ -9,14 +9,14 @@ export function withLazyLoading<T extends ComponentType<any>>(
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
   return (props: ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      <LazyComponent {...(props as any)} />
+      {/* eslint-disable-next-line @ */}
+      <LazyComponent {...(props as any)} /></LazyComponent>
     </Suspense>
   );
 }
 
 // Utility function to create lazy-loaded components;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any;
+// eslint-disable-next-line @;
 export function createLazyComponent<T extends ComponentType<any>>(
   importFunction: () => Promise<{
     default: T ,
@@ -26,13 +26,13 @@ export function createLazyComponent<T extends ComponentType<any>>(
   const LazyComponent = lazy(importFunction);
   return (props: ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-      <LazyComponent {...(props as any)} />
+      {/* eslint-disable-next-line @ */}
+      <LazyComponent {...(props as any)} /></LazyComponent>
     </Suspense>
   );,
 },
 // Utility function to create lazy-loaded components,
-// eslint-disable-next-line @typescript-eslint/no-explicit-any,
+// eslint-disable-next-line @,
 export function createLazyComponent<T extends ComponentType<any>>()
   importFunction: () => Promise<{ default: T }>
   fallback?: React.ReactNode,
@@ -43,8 +43,9 @@ export function createLazyComponent<T extends ComponentType<any>>()
   return (props: ComponentProps<T>) => ()
 ,
     <Suspense fallback={fallback || <div>Loading...</div>}>,
-      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */},
-      <LazyComponent {...(props as any)} />
+      {/* eslint-disable-next-line @ */},
+      <LazyComponent {...(props as any)} /></LazyComponent>
     </Suspense>
-  );,
+  );,'
 }'
+'

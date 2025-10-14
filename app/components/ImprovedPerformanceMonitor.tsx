@@ -1,3 +1,4 @@
+import React from 'react';
 import { Activity, TrendingUp } from 'lucide-react';
 
 interface PerformanceMetrics {
@@ -33,47 +34,47 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }, [onMetricsUpdate]);
 
   useEffect(() => {
-    // Only run in browser
+    // Only run in browser'
     if (typeof window === 'undefined') return;
 
     // Load web-vitals library dynamically
     const loadWebVitals = async () => {
-      try {
+      try {'
         const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
         
         // Measure Core Web Vitals
         getCLS((metric) => {
-          updateMetrics({ cls: metric.value });
+          updateMetrics({ cls: metric.value });'
           if (logMetrics) console.log('CLS:', metric);
         });
 
         getFID((metric) => {
-          updateMetrics({ fid: metric.value });
+          updateMetrics({ fid: metric.value });'
           if (logMetrics) console.log('FID:', metric);
         });
 
         getFCP((metric) => {
-          updateMetrics({ fcp: metric.value });
+          updateMetrics({ fcp: metric.value });'
           if (logMetrics) console.log('FCP:', metric);
         });
 
         getLCP((metric) => {
-          updateMetrics({ lcp: metric.value });
+          updateMetrics({ lcp: metric.value });'
           if (logMetrics) console.log('LCP:', metric);
         });
 
         getTTFB((metric) => {
-          updateMetrics({ ttfb: metric.value });
+          updateMetrics({ ttfb: metric.value });'
           if (logMetrics) console.log('TTFB:', metric);
         });
 
-      } catch (error) {
+      } catch (error) {'
         console.warn('Failed to load web-vitals:', error);
       }
     };
 
     // Monitor memory usage
-    const monitorMemory = () => {
+    const monitorMemory = () => {'
       if ('memory' in performance) {
         const memory = (performance as any).memory;
         updateMetrics({ 
@@ -83,7 +84,7 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     };
 
     // Monitor connection
-    const monitorConnection = () => {
+    const monitorConnection = () => {'
       if ('connection' in navigator) {
         const connection = (navigator as any).connection;
         updateMetrics({ 
@@ -94,18 +95,18 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Monitor performance entries
     const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
+      for (const entry of list.getEntries()) {'
         if (entry.entryType === 'largest-contentful-paint') {
-          updateMetrics({ lcp: entry.startTime });
+          updateMetrics({ lcp: entry.startTime });'
         } else if (entry.entryType === 'first-input') {
-          updateMetrics({ fid: entry.processingStart - entry.startTime });
+          updateMetrics({ fid: entry.processingStart - entry.startTime });'
         } else if (entry.entryType === 'layout-shift') {
           if (!(entry as any).hadRecentInput) {
             updateMetrics({ 
               cls: (metrics.cls || 0) + (entry as any).value 
             });
-          }
-        } else if (entry.entryType === 'paint') {
+          }'
+        } else if (entry.entryType === 'paint') {'
           if (entry.name === 'first-contentful-paint') {
             updateMetrics({ fcp: entry.startTime });
           }
@@ -119,26 +120,26 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     monitorConnection();
 
     // Set up observers
-    try {
+    try {'
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-    } catch (e) {
+    } catch (e) {'
       console.warn('Performance Observer not supported:', e);
     }
 
     // Monitor memory every 5 seconds
     const memoryInterval = setInterval(monitorMemory, 5000);
 
-    // Monitor connection changes
+    // Monitor connection changes'
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
+      const connection = (navigator as any).connection;'
       connection.addEventListener('change', monitorConnection);
     }
 
     return () => {
       observer.disconnect();
-      clearInterval(memoryInterval);
+      clearInterval(memoryInterval);'
       if ('connection' in navigator) {
-        const connection = (navigator as any).connection;
+        const connection = (navigator as any).connection;'
         connection.removeEventListener('change', monitorConnection);
       }
     };
@@ -157,16 +158,16 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return Math.max(0, score);
   };
 
-  const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-400';
-    if (score >= 70) return 'text-yellow-400';
+  const getScoreColor = (score: number) => {'
+    if (score >= 90) return 'text-green-400';'
+    if (score >= 70) return 'text-yellow-400';'
     return 'text-red-400';
   };
 
-  const getScoreLabel = (score: number) => {
-    if (score >= 90) return 'Excellent';
-    if (score >= 70) return 'Good';
-    if (score >= 50) return 'Needs Improvement';
+  const getScoreLabel = (score: number) => {'
+    if (score >= 90) return 'Excellent';'
+    if (score >= 70) return 'Good';'
+    if (score >= 50) return 'Needs Improvement';'
     return 'Poor';
   };
 
@@ -177,20 +178,20 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed bottom-4 right-4 z-50"></div>
       <button
         onClick={() => setIsVisible(!isVisible)}
         className="bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover:bg-slate-700/90 transition-colors"
         title="Performance Monitor"
       >
-        <Activity className="w-5 h-5" />
+        <Activity className="w-5 h-5" /></Activity>
       </button>
 
       {isVisible && (
-        <div className="absolute bottom-16 right-0 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold flex items-center gap-2">
-              <TrendingUp className="w-5 h-5" />
+        <div className="absolute bottom-16 right-0 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white"></div>
+          <div className="flex items-center justify-between mb-4"></div>
+            <h3 className="text-lg font-semibold flex items-center gap-2"></h3>
+              <TrendingUp className="w-5 h-5" /></TrendingUp>
               Performance
             </h3>
             <button
@@ -202,81 +203,81 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
 
           {/* Performance Score */}
-          <div className="mb-4">
-            <div className="flex items-center justify-between mb-2">
+          <div className="mb-4"></div>
+            <div className="flex items-center justify-between mb-2"></div>
               <span className="text-sm text-gray-300">Overall Score</span>
-              <span className={`font-bold ${getScoreColor(performanceScore)}`}>
+              <span className={`font-bold ${getScoreColor(performanceScore)}`}></span>
                 {performanceScore}/100
               </span>
             </div>
-            <div className="w-full bg-slate-700 rounded-full h-2">
+            <div className="w-full bg-slate-700 rounded-full h-2"></div>
               <div
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  performanceScore >= 90 ? 'bg-green-400' :
+                className={`h-2 rounded-full transition-all duration-300 ${'
+                  performanceScore >= 90 ? 'bg-green-400' :'
                   performanceScore >= 70 ? 'bg-yellow-400' : 'bg-red-400'
                 }`}
                 style={{ width: `${performanceScore}%` }}
               />
             </div>
-            <p className="text-xs text-gray-400 mt-1">
+            <p className="text-xs text-gray-400 mt-1"></p>
               {getScoreLabel(performanceScore)}
             </p>
           </div>
 
           {/* Metrics */}
-          <div className="space-y-2 text-sm">
+          <div className="space-y-2 text-sm"></div>
             {metrics.lcp && (
-              <div className="flex justify-between">
-                <span className="text-gray-300">LCP</span>
+              <div className="flex justify-between"></div>
+                <span className="text-gray-300">LCP</span>'
                 <span className={metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.lcp.toFixed(0)}ms
                 </span>
               </div>
             )}
             {metrics.fid && (
-              <div className="flex justify-between">
-                <span className="text-gray-300">FID</span>
+              <div className="flex justify-between"></div>
+                <span className="text-gray-300">FID</span>'
                 <span className={metrics.fid > 100 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.fid.toFixed(0)}ms
                 </span>
               </div>
             )}
             {metrics.cls && (
-              <div className="flex justify-between">
-                <span className="text-gray-300">CLS</span>
+              <div className="flex justify-between"></div>
+                <span className="text-gray-300">CLS</span>'
                 <span className={metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.cls.toFixed(3)}
                 </span>
               </div>
             )}
             {metrics.fcp && (
-              <div className="flex justify-between">
-                <span className="text-gray-300">FCP</span>
+              <div className="flex justify-between"></div>
+                <span className="text-gray-300">FCP</span>'
                 <span className={metrics.fcp > 1800 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.fcp.toFixed(0)}ms
                 </span>
               </div>
             )}
             {metrics.ttfb && (
-              <div className="flex justify-between">
-                <span className="text-gray-300">TTFB</span>
+              <div className="flex justify-between"></div>
+                <span className="text-gray-300">TTFB</span>'
                 <span className={metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}>
                   {metrics.ttfb.toFixed(0)}ms
                 </span>
               </div>
             )}
             {metrics.memory && (
-              <div className="flex justify-between">
+              <div className="flex justify-between"></div>
                 <span className="text-gray-300">Memory</span>
-                <span className="text-cyan-400">
+                <span className="text-cyan-400"></span>
                   {metrics.memory.toFixed(1)}MB
                 </span>
               </div>
             )}
             {metrics.connection && (
-              <div className="flex justify-between">
+              <div className="flex justify-between"></div>
                 <span className="text-gray-300">Connection</span>
-                <span className="text-cyan-400">
+                <span className="text-cyan-400"></span>
                   {metrics.connection}
                 </span>
               </div>
@@ -288,4 +289,4 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   );
 };
 
-export default ImprovedPerformanceMonitor;
+export default ImprovedPerformanceMonitor;'

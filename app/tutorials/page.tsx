@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';'
 import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react';
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
@@ -66,31 +66,30 @@ const TutorialsPage: React.FC = () => {
 const Page = () => {
   const features = [
     {
-      icon: <CheckCircle className="w-8 h-8" />,
-      title: 'Advanced Features',
+      icon: <CheckCircle className="w-8 h-8" />,'
+      title: 'Advanced Features','
       description: 'Cutting-edge technology for maximum efficiency'
     },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Secure & Reliable',
+      icon: <Shield className="w-8 h-8" />,'
+      title: 'Secure & Reliable','
       description: 'Enterprise-grade security and 99.9% uptime'
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Expert Support',
+      icon: <Users className="w-8 h-8" />,'
+      title: 'Expert Support','
       description: '24/7 support from our team of specialists'
     }
   ];
 
   return (
-    <>
+    <></>
       <EnhancedSEO 
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      /></EnhancedSEO>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -120,7 +119,7 @@ const Page = () => {
           <div className="max-w-7xl mx-auto">;
             <div className="flex flex-wrap justify-center gap-4">;
               {categories.map((category, _index) => (
-                <button>
+                <button></button>
                   key={_index}
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300";
                 >;
@@ -198,7 +197,8 @@ const Page = () => {
       </div>
     </>
   )};
-
+'
 const page = React.lazy(() => import('./page'));
 export default page;
-ursor/fix-errors-and-merge-to-main-94a7
+
+'

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';'
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
@@ -6,16 +6,16 @@ interface SEOHeadProps {
   description?: string;
   keywords?: string;
   image?: string;
-  url?: string;
+  url?: string;'
   type?: 'website' | 'article' | 'product';
   structuredData?: any}
 
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions'
-  description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.'
-  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group'
-  image = '/og-image.svg'
-  url = 'https://ziontechgroup.com'
+const SEOHead: React.FC<SEOHeadProps> = ({'
+  title = 'Zion Tech Group - Advanced AI and IT Solutions''
+  description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.''
+  keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group''
+  image = '/og-image.svg''
+  url = 'https://ziontechgroup.com''
   type = 'website'
   structuredData
 }) => {
@@ -68,22 +68,22 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   const finalStructuredData = structuredData || defaultStructuredData
   return (
-    <Helmet>
+    <Helmet></Helmet>
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={url} />
+      <meta name="description" content={description} /></meta>
+      <meta name="keywords" content={keywords} /></meta>
+      <meta property="og:title" content={title} /></meta>
+      <meta property="og:description" content={description} /></meta>
+      <meta property="og:image" content={image} /></meta>
+      <meta property="og:url" content={url} /></meta>
+      <meta property="og:type" content={type} /></meta>
+      <meta name="twitter:card" content="summary_large_image" /></meta>
+      <meta name="twitter:title" content={title} /></meta>
+      <meta name="twitter:description" content={description} /></meta>
+      <meta name="twitter:image" content={image} /></meta>
+      <link rel="canonical" href={url} /></link>
       {structuredData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"></script>
 {JSON.stringify(structuredData)}
         </script>
 )}
@@ -91,3 +91,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   )};
 
 export default SEOHead;
+'

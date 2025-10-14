@@ -1,38 +1,43 @@
 
+import React from 'react';'
+import { Brain, BarChart3, Zap, FileText, MessageSquare, Shield, Users, TrendingUp, CheckCircle } from 'lucide-react';
+
 const AiServicesPage: React.FC = () => {
   const services = [{
       icon: Brain,'
-      title: 'AI Consulting',';
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',';
-      color: 'from-purple-500 to-pink-500'';}
+      title: 'AI Consulting','
+      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.','
+      color: 'from-purple-500 to-pink-500'
     },
     {
       icon: BarChart3,'
-      title: 'AI Analytics',';
-      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',';
-      color: 'from-blue-500 to-cyan-500'';}
+      title: 'AI Analytics','
+      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.','
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Zap,'
-      title: 'AI Automation',';
-      description: 'Intelligent automation solutions to streamline your business processes.',';
-      color: 'from-green-500 to-emerald-500'';}
+      title: 'AI Automation','
+      description: 'Intelligent automation solutions to streamline your business processes.','
+      color: 'from-green-500 to-emerald-500'
     },
     {
       icon: FileText,'
-      title: 'AI Content Generation',';
-      description: 'AI-powered content creation for marketing, documentation, and communication.',';
-      color: 'from-orange-500 to-red-500'';}
+      title: 'AI Content Generation','
+      description: 'AI-powered content creation for marketing, documentation, and communication.','
+      color: 'from-orange-500 to-red-500'
     },
     {
       icon: MessageSquare,'
-      title: 'AI Customer Service',';
-      description: 'Intelligent chatbots and customer service solutions powered by AI.',';
-      color: 'from-indigo-500 to-purple-500'';}
+      title: 'AI Customer Service','
+      description: 'Intelligent chatbots and customer service solutions powered by AI.','
+      color: 'from-indigo-500 to-purple-500'
     },
     {
-
-
+      icon: Shield,'
+      title: 'AI Security','
+      description: 'Advanced AI-powered security solutions to protect your digital assets.','
+      color: 'from-red-500 to-pink-500'
     }
   ];
 
@@ -40,14 +45,14 @@ const AiServicesPage: React.FC = () => {
     {
       name: "Dr. Sarah Johnson",
       company: "MedTech Solutions",
-      role: "CTO",
+      role: "CTO",'
       content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",
       rating: 5
     },
     {
       name: "Michael Chen",
       company: "E-commerce Plus",
-      role: "CEO",
+      role: "CEO",'
       content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",
       rating: 5
     },
@@ -60,14 +65,14 @@ const AiServicesPage: React.FC = () => {
     }
   ];
 
-ursor/fix-errors-and-merge-to-main-94a7
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
         <title>AI Services - Comprehensive AI Solutions | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with our comprehensive AI services including analytics, automation, content generation, customer service, marketing, and healthcare solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI analytics, AI automation, AI content generation, AI customer service, AI marketing, AI healthcare" />
-        <meta name="canonical" content="https://ziontechgroup.com/ai-services" />
+        <meta name="description" content="Transform your business with our comprehensive AI services including analytics, automation, content generation, customer service, marketing, and healthcare solutions." /></meta>
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, AI analytics, AI automation, AI content generation, AI customer service, AI marketing, AI healthcare" /></meta>
+        <meta name="canonical" content="https://ziontechgroup." /></meta>
       </Helmet>
       <FuturisticBackground>;
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
@@ -165,7 +170,8 @@ ursor/fix-errors-and-merge-to-main-94a7
     </>
   );
 };
-
+'
 const page = React.lazy(() => import('./page'));
 export default page;
-ursor/fix-errors-and-merge-to-main-94a7
+
+'

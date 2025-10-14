@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
+import React, { Suspense, lazy, ComponentType } from 'react';'
 import LoadingSpinner from './LoadingSpinner';
 
 interface LazyWrapperProps {
@@ -10,7 +10,7 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({
   fallback = <LoadingSpinner size="lg" text="Loading component..." /> }
 }) => {
   return (}
-    <Suspense fallback={fallback}>
+    <Suspense fallback={fallback}></Suspense>
       {children}
     </Suspense>
   )};
@@ -24,9 +24,10 @@ export const withLazyLoading = <P extends object>(
 ) => {}
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }))
   return (props: P) => (
-    <LazyWrapper fallback={fallback}>
-      <LazyComponent {...props} />
+    <LazyWrapper fallback={fallback}></LazyWrapper>
+      <LazyComponent {...props} /></LazyComponent>
     </LazyWrapper>
   )};
 
 export default LazyWrapper;
+'
