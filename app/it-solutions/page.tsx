@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Server, Shield, Cloud, Database } from 'lucide-react';
+import { Server, Shield, Cloud } from 'lucide-react';
 
-const Page: React.FC = () => {
+const ITSolutionsPage: React.FC = () => {
 
   return (
     <>
@@ -45,4 +45,4 @@ const Page: React.FC = () => {
 };
 
 const page = React.lazy(() => import('./page'));
-export default page;
+export default ITSolutionsPage;
