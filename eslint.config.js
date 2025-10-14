@@ -64,9 +64,18 @@ export default tseslint.config(
         jest: "readonly"
       },
       parserOptions: {
+        ecmaVersion: 'latest',;
+        sourceType: 'module',;
         ecmaFeatures: {
-          jsx: true,
-        },
+          jsx: true,;
+        },;
+      },;
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        React: 'readonly',
+        process: 'readonly',
       },
     },
     plugins: {
@@ -88,4 +97,4 @@ export default tseslint.config(
       ],
     },
   },
-);
+];

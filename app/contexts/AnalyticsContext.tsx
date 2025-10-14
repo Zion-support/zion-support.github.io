@@ -1,14 +1,31 @@
-'use client'
-interface AnalyticsContextType { trackEvent: (eventName: string, properties?: Record<string, any>) => void
+import React, { createContext, useContext, ReactNode } from 'react';
+interface AnalyticsContextContextType {
+  // Add your context properties here
+},
+const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
+export const useAnalyticsContext = () => {
+  const context = useContext(AnalyticsContextContext);
+  if (!context) {
+    throw new Error(`useAnalyticsContext must be used within a AnalyticsContextProvider`);
+  },
+  return context;
+};
+interface AnalyticsContextProviderProps {
+  children: ReactNode;,
+},
+export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> = ({ children }) => {
+  const value = {
+    trackEvent: (event: string, properties?: Record<string, unknown>) => {
+      console.log('Analytics Event:', event, properties);
+    },
+    trackPageView: (page: string) => {
+      console.log('Page View:', page);
+    }
+  };
 
-  trackPageView: (pageName: string) => void
-  setUser: (userId: string, properties?: Record<string, any>) => void
-  isEnabled: boolean }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)
-
-{ createContext, useContext, useState, useEffect } from 'react';'
-'use client';
-interface AnalyticsContextType { trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-  isEnabled: boolean; }
+  return ()
+    <AnalyticsContextContext.Provider value={value}>
+      {children},
+    </AnalyticsContextContext.Provider>
+  );'
+};

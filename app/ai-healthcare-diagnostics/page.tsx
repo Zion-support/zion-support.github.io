@@ -1,17 +1,62 @@
-import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from "lucide-react
->>>>>>> origin/main
-import { Helmet }    from "react-helmet-async"
-const HomePage = () => {"
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+const AiHealthcareDiagnosticsPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-      <Helmet><title>Home - Zion Tech Group</title><meta name="description" content="Home - Zion Tech Group" /></Helmet><div className="container mx-auto px-4 py-16"><div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
-          <p className="text-gray-300 text-lg"
-            This page is under construction. Please check back later.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Healthcare Diagnostics - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered healthcare diagnostic solutions by Zion Tech Group." />
+        <meta name="keywords" content="AI healthcare, medical diagnostics, healthcare AI, medical imaging" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI Healthcare Diagnostics
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Revolutionize healthcare with our AI-powered diagnostic solutions that improve accuracy and efficiency.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+            >
+              <span>Learn More</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link 
+              to="/demo"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              Schedule Demo
+            </Link>
+          </div>
         </div>
-      </div>)
-    </div>)
-  );
-};
-export default HomePage;
+        
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Medical Imaging AI</h3>
+            <p className="text-gray-300">
+              Advanced AI algorithms for analyzing medical images with unprecedented accuracy.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Diagnostic Assistance</h3>
+            <p className="text-gray-300">
+              AI-powered tools that assist healthcare professionals in making accurate diagnoses.
+            </p>
+          </div>
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Patient Monitoring</h3>
+            <p className="text-gray-300">
+              Continuous monitoring and analysis of patient data for early intervention.
+            </p>
+          </div>
+        </div>
+      </section>
+
+export default AiHealthcareDiagnosticsPage;

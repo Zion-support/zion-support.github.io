@@ -19,4 +19,5 @@ const AppPage = () => {
     </div>
   );
 };
+
 export default AppPage;

@@ -1,9 +1,9 @@
-const fs = require('fs'
-const path = require('path'
-const { execSync } = require('child_process'
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 
-// Get all TypeScript/JavaScript files
-function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx'
+// Get all TypeScript/TSX files
+function getAllTsxFiles(dir) {
   let results = [];
   const list = fs.readdirSync(dir);
   
@@ -13,14 +13,11 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx'
     
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other directories
-      if (!['node_modules', '.git', 'dist', '.next', 'out'
-        results = results.concat(getAllFiles(filePath, extensions));
+      if (!['node_modules', '.git', 'dist', 'build'].includes(file)) {
+        results = results.concat(getAllTsxFiles(filePath));
       }
-    } else {
-      const ext = path.extname(file);
-      if (extensions.includes(ext)) {
-        results.push(filePath);
-      }
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      results.push(filePath);
     }
   });
   
@@ -30,128 +27,21 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx'
 // Fix unused imports in a file
 function fixUnusedImports(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8'
-    let modified = false;
+    console.log(`Fixing ${filePath}...`);
     
-    // Remove unused imports from lucide-react
-    const lucideImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']lucide-react[
-    const matches = content.match(lucideImportRegex);
+    // Use ESLint to fix unused imports
+    execSync(`npx eslint "${filePath}" --fix --quiet`, { stdio: 'pipe' });
     
-    if (matches) {
-      matches.forEach(match => {
-        // Extract the imports
-        const importMatch = match.match(/import\s*{\s*([^}]+)\s*}\s*from\s*["']lucide-react[
-        if (importMatch) {
-          const imports = importMatch[1].split(','
-          const usedImports = [];
-          
-          // Check which imports are actually used in the file
-          imports.forEach(imp => {
-            const cleanImp = imp.replace(/\s+as\s+\w+/, ''
-            const regex = new RegExp(`\\b${cleanImp}\\b`
-            if (regex.test(content.replace(match, ''
-              usedImports.push(imp);
-            }
-          });
-          
-          if (usedImports.length !== imports.length) {
-            if (usedImports.length > 0) {
-              const newImport = `
-              content = content.replace(match, newImport);
-            } else {
-              content = content.replace(match, ''
-            }
-            modified = true;
-          }
-        }
-      });
-    }
-    
-    // Remove unused React imports
-    const reactImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']react[
-    const reactMatches = content.match(reactImportRegex);
-    
-    if (reactMatches) {
-      reactMatches.forEach(match => {
-        const importMatch = match.match(/import\s*{\s*([^}]+)\s*}\s*from\s*["']react[
-        if (importMatch) {
-          const imports = importMatch[1].split(','
-          const usedImports = [];
-          
-          imports.forEach(imp => {
-            const cleanImp = imp.replace(/\s+as\s+\w+/, ''
-            const regex = new RegExp(`\\b${cleanImp}\\b`
-            if (regex.test(content.replace(match, ''
-              usedImports.push(imp);
-            }
-          });
-          
-          if (usedImports.length !== imports.length) {
-            if (usedImports.length > 0) {
-              const newImport = `
-              content = content.replace(match, newImport);
-            } else {
-              content = content.replace(match, ''
-            }
-            modified = true;
-          }
-        }
-      });
-    }
-    
-    // Remove unused react-router-dom imports
-    const routerImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["']react-router-dom[
-    const routerMatches = content.match(routerImportRegex);
-    
-    if (routerMatches) {
-      routerMatches.forEach(match => {
-        const importMatch = match.match(/import\s*{\s*([^}]+)\s*}\s*from\s*["']react-router-dom[
-        if (importMatch) {
-          const imports = importMatch[1].split(','
-          const usedImports = [];
-          
-          imports.forEach(imp => {
-            const cleanImp = imp.replace(/\s+as\s+\w+/, ''
-            const regex = new RegExp(`\\b${cleanImp}\\b`
-            if (regex.test(content.replace(match, ''
-              usedImports.push(imp);
-            }
-          });
-          
-          if (usedImports.length !== imports.length) {
-            if (usedImports.length > 0) {
-              const newImport = `
-              content = content.replace(match, newImport);
-            } else {
-              content = content.replace(match, ''
-            }
-            modified = true;
-          }
-        }
-      });
-    }
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed unused imports in: ${filePath}`
-    }
-    
+    console.log(`✓ Fixed ${filePath}`);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`
+    console.log(`⚠ Could not auto-fix ${filePath}: ${error.message}`);
   }
 }
 
 // Main execution
-console.log('Fixing unused imports...'
+const files = getAllTsxFiles('./app');
+console.log(`Found ${files.length} TypeScript files to process...`);
 
-const files = getAllFiles('./app'
-files.forEach(file => {
-  fixUnusedImports(file);
-});
+files.forEach(fixUnusedImports);
 
-// Fix App.tsx
-fixUnusedImports('./App.tsx'
-
-console.log('Done fixing unused imports!'
->>>>>>> origin/main
->>>>>>> origin/main
+console.log('Done fixing unused imports!');
