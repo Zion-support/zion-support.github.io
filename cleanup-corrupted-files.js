@@ -93,9 +93,43 @@ function shouldKeepFile(filePath) {
 
 // Function to delete corrupted files;
 async function cleanupCorruptedFiles() {
-  
   console.log('Cleaning up corrupted files...');
   
   // Find all TypeScript and TSX files;
   const patterns = [
-    'app/**
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    '**/*.tsx',
+    '**/*.ts'
+  ];
+  
+  let deletedCount = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { 
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'src/**'] 
+    });
+    
+    for (const file of files) {
+      if (!shouldKeepFile(file)) {
+        try {
+          fs.unlinkSync(file);
+          console.log(`Deleted: ${file}`);
+          deletedCount++;
+        } catch (error) {
+          console.error(`Error deleting ${file}:`, error.message);
+        }
+      }
+    }
+  }
+  
+  console.log(`Deleted ${deletedCount} corrupted files`);
+}
+
+// Main execution;
+async function main() {
+  await cleanupCorruptedFiles();
+  console.log('Cleanup completed!');
+}
+
+main().catch(console.error);

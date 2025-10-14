@@ -1,15 +1,12 @@
+import React from 'react;
+// Analytics Context Definition;
 export interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackEvent: (event: AnalyticsEvent) => void;
   trackPageView: (page: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
+  setUserProperties: (properties: Record<string, any>) => void;
 }
-
-export interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
-export interface AnalyticsEvent {
-  name: string;
-  properties?: Record<string, any>;
-  timestamp: number;
+export const defaultAnalyticsContext: AnalyticsContextType = {
+    trackEvent: () => {,
+  },
+  trackPageView: () => {},
 }

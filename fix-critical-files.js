@@ -9,19 +9,18 @@ function createCleanPage(filePath) {
   const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, '') + 'Page';
   const pageTitle = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
   
-  return `import React from 'react';
+  return `import React from "react";
 import { Helmet } from "react-helmet-async";
 
 const ${componentName} = () => {
   return (
-    
-    <div>
-    <Helmet />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
         <title>${pageTitle} - Zion Tech Group</title>
         <meta name="description" content="${pageTitle} - Zion Tech Group" />
       </Helmet>
-      <div>
-    <div className="text-center"></div>
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center"></div>
           <h1 className="text-4xl font-bold text-white mb-8">${pageTitle}</h1>
           <p className="text-gray-300 text-lg"></p>
             This page is under construction. Please check back later.
@@ -37,7 +36,6 @@ export default ${componentName};`;
 
 // Function to create a clean main.tsx;
 function createCleanMain() {
-  
   return `import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
@@ -51,8 +49,8 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode></React>
-    <HelmetProvider />
-      <BrowserRouter />
+    <HelmetProvider></HelmetProvider>
+      <BrowserRouter></BrowserRouter>
         <App />
       </BrowserRouter>
     </HelmetProvider>
@@ -62,7 +60,6 @@ root.render(
 
 // Function to create a clean App.tsx;
 function createCleanApp() {
-  
   return `import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -74,15 +71,13 @@ import ServicesPage from './services/page';
 import ContactPage from './contact/page';
 
 function App() {
-  
   return (
-    
-    <div>
-    <Helmet />
+    <div className="App"></div>
+      <Helmet></Helmet>
         <title>Zion Tech Group - AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
       </Helmet>
-      <Routes />
+      <Routes></Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
@@ -97,24 +92,22 @@ export default App;`;
 
 // Function to create a clean home page;
 function createCleanHomePage() {
-  
   return `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
-    
-    <div>
-    <Helmet />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
         <title>Zion Tech Group - AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions for businesses worldwide." />
       </Helmet>
       
       {/* Hero Section */}
       <section className="py-20 px-4"></section>
-        <div>
-    <h1 className="text-5xl font-bold text-white mb-6"></h1>
+        <div className="container mx-auto text-center"></div>
+          <h1 className="text-5xl font-bold text-white mb-6"></h1>
             Welcome to Zion Tech Group;
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
@@ -124,12 +117,14 @@ const HomePage = () => {
           <div className="flex flex-col sm: 'flex-row gap-4 justify-center">',
             <Link;
               to="/services"
-              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover: 'from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"></Link>
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover: 'from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"',
+            ></Link>
               Our Services;
             </Link>
             <Link;
               to="/contact"
-              className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover: 'bg-purple-400 hover:text-white transition-all duration-300"></Link>
+              className="px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover: 'bg-purple-400 hover:text-white transition-all duration-300"',
+            ></Link>
               Get In Touch;
             </Link>
           </div>
@@ -138,23 +133,23 @@ const HomePage = () => {
 
       {/* Services Preview */}
       <section className="py-20 px-4"></section>
-        <div>
-    <h2 className="text-4xl font-bold text-white text-center mb-12">Our Services</h2>
+        <div className="container mx-auto"></div>
+          <h2 className="text-4xl font-bold text-white text-center mb-12">Our Services</h2>
           <div className="grid md: 'grid-cols-3 gap-8">',
-            <div>
-    <h3 className="text-xl font-semibold text-white mb-4">AI Solutions</h3>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
+              <h3 className="text-xl font-semibold text-white mb-4">AI Solutions</h3>
               <p className="text-gray-300"></p>
                 Cutting-edge artificial intelligence solutions to automate and optimize your business processes.
               </p>
             </div>
-            <div>
-    <h3 className="text-xl font-semibold text-white mb-4">IT Services</h3>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
+              <h3 className="text-xl font-semibold text-white mb-4">IT Services</h3>
               <p className="text-gray-300"></p>
                 Comprehensive IT services including cloud infrastructure, cybersecurity, and digital transformation.
               </p>
             </div>
-            <div>
-    <h3 className="text-xl font-semibold text-white mb-4">Consulting</h3>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
+              <h3 className="text-xl font-semibold text-white mb-4">Consulting</h3>
               <p className="text-gray-300"></p>
                 Expert consulting services to help you navigate the digital landscape and achieve your goals.
               </p>
@@ -191,7 +186,7 @@ console.log('Fixed page.tsx');
 const aboutPath = './app/about/page.tsx';
 if (fs.existsSync(aboutPath)) {
   const aboutContent = fs.readFileSync(aboutPath, 'utf8');
-  if (aboutContent.includes('Unterminated string literal') || aboutContent.includes(';)) {
+  if (aboutContent.includes('Unterminated string literal') || aboutContent.includes('')) {
     fs.writeFileSync(aboutPath, createCleanPage(aboutPath));
     console.log('Fixed about/page.tsx');
   }

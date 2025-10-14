@@ -9,24 +9,24 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import Sidebar from './app/components/Sidebar';
-import HomePage from './app/page';
+import Navigation from "./app/components/Navigation";
+import Footer from "./app/components/Footer";
+import Sidebar from "./app/components/Sidebar";
+import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/EnhancedLoadingStates";
-import AdvancedPerformanceEnhancer from './app/components/AdvancedPerformanceEnhancer';
-import AdvancedPerformanceOptimizer from './app/components/AdvancedPerformanceOptimizer';
-import EnhancedSEOOptimizer from './app/components/EnhancedSEOOptimizer';
-import EnhancedAccessibilityManager from './app/components/EnhancedAccessibilityManager';
+import AdvancedPerformanceEnhancer from "./app/components/AdvancedPerformanceEnhancer";
+import AdvancedPerformanceOptimizer from "./app/components/AdvancedPerformanceOptimizer";
+import EnhancedSEOOptimizer from "./app/components/EnhancedSEOOptimizer";
+import EnhancedAccessibilityManager from "./app/components/EnhancedAccessibilityManager";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-import Breadcrumb from './app/components/Breadcrumb';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import AnalyticsProvider from './app/components/AnalyticsProvider';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import WebVitalsTracker from './app/components/WebVitalsTracker';
-import FuturisticBackground from './app/components/FuturisticBackground';
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import FuturisticBackground from "./app/components/FuturisticBackground";
 
 // Lazy load pages for better performance;
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -81,7 +81,6 @@ const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const CareersPage = React.lazy(() => import("./app/careers/page"));
 
 function App() {
-  
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handleSidebarToggle = () => {
@@ -93,20 +92,19 @@ function App() {
   };
 
   return (
-    
-    <GlobalErrorBoundary />
-      <EnhancedErrorBoundary />
+    <GlobalErrorBoundary></GlobalErrorBoundary>
+      <EnhancedErrorBoundary></EnhancedErrorBoundary>
         <HelmetProvider></Helmet>
-          <AccessibilityEnhancer />
-            <Router />
-              <div>
-    <FuturisticBackground />
+          <AccessibilityEnhancer></AccessibilityEnhancer>
+            <Router></Router>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+                <FuturisticBackground />
                 <Navigation onSidebarToggle={handleSidebarToggle} />
                 <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
                 <Breadcrumb />
                 <main id="main-content" role="main"></main>
                   <Suspense fallback={<LoadingPage />}>
-                    <Routes />
+                    <Routes></Routes>
                       <Route path="/" element={<HomePage />} />
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />

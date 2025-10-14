@@ -1,4 +1,4 @@
-';';
+'use client';';
 
 import { CacheManager, CacheStorage    } from "./cacheManager";";
 interface ApiCacheConfig {
@@ -36,7 +36,7 @@ export class ApiCache {
   async fetch<T>(;
     url: string,
     options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig />
+    cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
   ): Promise<T> {
     const cacheKey = this.getCacheKey(url, options);
     const mergedConfig = { ...this.config, ...cacheConfig };
@@ -44,7 +44,7 @@ export class ApiCache {
     if (this.cache.has(cacheKey)) {
       return this.cache.get(cacheKey) as T;
     }
-    // Check if there's a pending request';
+    // Check if there's a pending request'';
     if (mergedConfig.deduplicate && this.pendingRequests.has(cacheKey)) {
       const pending = this.pendingRequests.get(cacheKey);
       if (pending && Date.now() - pending.timestamp < 30000) {
@@ -142,7 +142,7 @@ timestamp: Date.now(),
   async prefetch<T>(;
     url: string,
     options: RequestInit = {},
-    cacheConfig?: Partial<ApiCacheConfig />
+    cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
   ): Promise<void> {
     try {
       await this.fetch<T>(url, options, cacheConfig);
@@ -182,7 +182,7 @@ export const defaultApiCache = new ApiCache({
 export async function cachedFetch<T>(;
   url: string,
   options?: RequestInit,
-  cacheConfig?: Partial<ApiCacheConfig />
+  cacheConfig?: Partial<ApiCacheConfig></ApiCacheConfig>
 ): Promise<T> {
   return defaultApiCache.fetch<T>(url, options, cacheConfig);
 }
@@ -191,14 +191,14 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
   const cache = new ApiCache();
   return {
     get: <T>(path: string, options?: RequestInit) =>;
-      cache.fetch<T>(`${baseUrl}${path}`, {...defaultOptions, ...options, method: 'GET',}),''';`;
+      cache.fetch<T>(`${baseUrl}${path}`, {...defaultOptions, ...options, method: 'GET',}),'``'`;
     post: <T>(path: string, body: unknown, options?: RequestInit) =>;
       cache.fetch<T>(`${baseUrl}${path}`, {```
         ...defaultOptions,
         ...options,
-        method: 'POST',';
+        method: 'POST','';
         headers: {
-          'Content-Type': 'application/json',';
+          'Content-Type': 'application/json',''
           ...(defaultOptions.headers || {}),
           ...(options?.headers || {})
         },
@@ -208,16 +208,16 @@ export function createCachedApi(baseUrl: string, defaultOptions: RequestInit = {
       cache.fetch<T>(`${baseUrl}${path}`, {```
         ...defaultOptions,
         ...options,
-        method: 'PUT',';
+        method: 'PUT','';
         headers: {
-          'Content-Type': 'application/json',';
+          'Content-Type': 'application/json',''
           ...(defaultOptions.headers || {}),
           ...(options?.headers || {})
         },
         body: JSON.stringify(body)
       }),
     delete: <T>(path: string, options?: RequestInit) =>;
-      cache.fetch<T>(`${baseUrl}${path}`, {...defaultOptions, ...options, method: 'DELETE',}),''';`;
+      cache.fetch<T>(`${baseUrl}${path}`, {...defaultOptions, ...options, method: 'DELETE',}),'``'`;
     invalidate: (pattern: string | RegExp) => cache.invalidate(pattern),
     clear: () => cache.clear(),
     stats: () => cache.getStats(),

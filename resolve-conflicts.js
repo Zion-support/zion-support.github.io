@@ -43,6 +43,31 @@ function processFile(filePath) {
 
 // Main function
 async function main() {
-  
   const patterns = [
-    '**
+    '**/*.tsx',
+    '**/*.ts',
+    '**/*.js',
+    '**/*.jsx'
+  ];
+  
+  let totalFiles = 0;
+  let resolvedFiles = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    for (const file of files) {
+      totalFiles++;
+      if (processFile(file)) {
+        resolvedFiles++;
+      }
+    }
+  }
+  
+  console.log(`\nProcessed ${totalFiles} files, resolved conflicts in ${resolvedFiles} files`);
+}
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+
+export { resolveConflicts, processFile };

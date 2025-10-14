@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
+import { defineConfig } from 'vite';;
+import react from '@vitejs/plugin-react';;
+import path from 'path';;
 
 const resolve = path.resolve;
 
@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react({
       // Enable React Fast Refresh
-      include: "**/*.{jsx,tsx}",
+      fastRefresh: true
     }),
   ],
   resolve: {
@@ -73,7 +73,6 @@ export default defineConfig({
           if (id.includes('node_modules')) {
             return 'vendor';
           }
-          return undefined;
         },
         assetFileNames: (assetInfo) => {
           if (

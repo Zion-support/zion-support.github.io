@@ -10,46 +10,48 @@ function fixSyntaxErrors(filePath) {
     let originalContent = content;
     
     // Fix unterminated string literals;
-    content = content.replace(/import React from 'react';"/g, 'import React from 'react';');
+    content = content.replace(/import React from "react";"/g, 'import React from "react";');
     content = content.replace(/import { Helmet } from "react-helmet-async";"/g, 'import { Helmet } from "react-helmet-async";');
     content = content.replace(/import { Link } from "react-router-dom";"/g, 'import { Link } from "react-router-dom";');
-    content = content.replace(/import { [^}]+ } from "lucide-react";"/g, (match) => match.replace(/'/g, ';));
+    content = content.replace(/import { [^}]+ } from "lucide-react";"/g, (match) => match.replace(/"/g, ''));
     
     // Fix malformed JSX;
     content = content.replace(/return \("/g, 'return (');
     content = content.replace(/<Helmet><\/Helmet>/g, '<Helmet>');
     content = content.replace(/<\/Helmet>"/g, '</Helmet>');
-    content = content.replace(/<div className="[^"><\/div>"/g, (match) => {
-      const className = match.match(/className="([^">`;
+    content = content.replace(/<div className="[^"]*"><\/div>"/g, (match) => {
+      const className = match.match(/className="([^"]*)"/)?.[1] || '';
+      return `<div className="${className}">`;
     });
-    content = content.replace(/<h1[^>]*>[^<]*<\/h1>"/g, (match) => match.replace(/'/g, ';));
-    content = content.replace(/<p[^>]*>[^<]*<\/p>"/g, (match) => match.replace(/'/g, ';));
-    content = content.replace(/<title>[^<]*<\/title>"/g, (match) => match.replace(/'/g, ';));
-    content = content.replace(/<meta[^>]*\/>"/g, (match) => match.replace(/'/g, ';));
+    content = content.replace(/<h1[^>]*>[^<]*<\/h1>"/g, (match) => match.replace(/"/g, ''));
+    content = content.replace(/<p[^>]*>[^<]*<\/p>"/g, (match) => match.replace(/"/g, ''));
+    content = content.replace(/<title>[^<]*<\/title>"/g, (match) => match.replace(/"/g, ''));
+    content = content.replace(/<meta[^>]*\/>"/g, (match) => match.replace(/"/g, ''));
     
     // Fix function declarations;
     content = content.replace(/\);"/g, ');');
     content = content.replace(/};"/g, '};');
-    content = content.replace(/export default [^;]+;"/g, (match) => match.replace(/'/g, ';));
+    content = content.replace(/export default [^;]+;"/g, (match) => match.replace(/"/g, ''));
     
     // Fix extra semicolons;
-    content = content.replace(/;+/g, ';');
+    content = content.replace(/;;+/g, ';');
     content = content.replace(/;\s*;/g, ';');
     
     // Fix unterminated strings in JSX;
-    content = content.replace(/"([^']*?)\n/g, ';$1"\n');
+    content = content.replace(/"([^"]*?)\n/g, '"$1"\n');
     
     // Remove empty lines with just quotes;
-    content = content.replace(/^\s*'\s*$/gm, ';);
+    content = content.replace(/^\s*"\s*$/gm, '');
     
     // Fix malformed object properties;
     content = content.replace(/icon: Brain, "/g, 'icon: Brain,');
     content = content.replace(/title: "Innovation", "/g, 'title: "Innovation",');
-    content = content.replace(/description: "[^"]*", "/g, (match) => match.replace(/'/g, ';));
+    content = content.replace(/description: "[^"]*", "/g, (match) => match.replace(/"/g, ''));
     
     // Fix JSX structure issues;
-    content = content.replace(/<div className="[^"><\/div>"/g, (match) => {
-      const className = match.match(/className="([^">`;
+    content = content.replace(/<div className="[^"]*"><\/div>"/g, (match) => {
+      const className = match.match(/className="([^"]*)"/)?.[1] || '';
+      return `<div className="${className}">`;
     });
     
     // Fix array syntax;
@@ -64,19 +66,18 @@ function fixSyntaxErrors(filePath) {
       const fileName = path.basename(filePath, '.tsx');
       const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, '') + 'Page';
       
-      content = `import React from 'react';
+      content = `import React from "react";
 import { Helmet } from "react-helmet-async";
 
 const ${componentName} = () => {
   return (
-    
-    <div>
-    <Helmet />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
         <title>${fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group</title>
         <meta name="description" content="${fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group" />
       </Helmet>
-      <div>
-    <div className="text-center"></div>
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center"></div>
           <h1 className="text-4xl font-bold text-white mb-8">${fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h1>
           <p className="text-gray-300 text-lg"></p>
             This page is under construction. Please check back later.

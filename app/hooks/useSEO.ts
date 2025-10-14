@@ -1,19 +1,21 @@
-import { useEffect } from 'react';
+import React from 'react';;;
+import { Helmet } from 'react-helmet-async';;;
 
-export const useSEO = (title: string, description: string, keywords: string) => {
+
+export const useSEO = (structuredData?: unknown) => {
   useEffect(() => {
-    if (typeof document !== 'undefined') {
-      document.title = title;
-      
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', description);
-      }
-      
-      const metaKeywords = document.querySelector('meta[name="keywords"]');
-      if (metaKeywords) {
-        metaKeywords.setAttribute('content', keywords);
-      }
+    // Add structured data to the page;
+    if (structuredData) {
+      const script = document.createElement('script')';
+      script.type = 'application/ld+json;
+      script.text = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+      return () => {
+        if (document.head.contains(script)) {
+          document.head.removeChild(script);
+        }
+      };
     }
-  }, [title, description, keywords]);
+    return undefined;
+  }, [structuredData]);
 };

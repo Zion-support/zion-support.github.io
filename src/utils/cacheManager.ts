@@ -1,11 +1,11 @@
-';';
+'use client';';
 
 import { logger    } from "./logger";";
 import { performanceMonitoring    } from "./performanceMonitoring";";
 export enum CacheStorage {
   Memory="memory"
   LocalStorage="localStorage"
-  SessionStorage = 'sessionStorage';
+  SessionStorage = 'sessionStorage'''
 }
 export interface CacheOptions {;
   ttl?: number; // Time to live in milliseconds;
@@ -63,11 +63,11 @@ export class CacheManager {
       }
     }
     // Clean localStorage;
-    if (typeof window !== 'undefined' && window.localStorage) {';
+    if (typeof window !== 'undefined' && window.localStorage) {'';
       const keysToRemove: string[] = [];
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key && key.startsWith('cache_')) {';
+        if (key && key.startsWith('cache_')) {'';
           try {
             const item = localStorage.getItem(key);
             if (item) {
@@ -102,12 +102,12 @@ export class CacheManager {
       timestamp: Date.now(),
       ttl;
     };
-    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');'';`;
+    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');``'`;
     if (this.storage === CacheStorage.Memory) {
       this.memoryCache.set(key, entry);
     } else if (;
       this.storage === CacheStorage.LocalStorage &&;
-      typeof window !== 'undefined' &&';
+      typeof window !== 'undefined' &&'';
       window.localStorage;
     ) {
       try {
@@ -119,7 +119,7 @@ export class CacheManager {
       }
     } else if (;
       this.storage === CacheStorage.SessionStorage &&;
-      typeof window !== 'undefined' &&';
+      typeof window !== 'undefined' &&'';
       window.sessionStorage;
     ) {
       try {
@@ -133,13 +133,13 @@ export class CacheManager {
   }
   ;
   get<T>(key: string): T | undefined {
-    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');'';`;
+    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count');``'`;
     let entry: CacheEntry<T> | null = null;
     if (this.storage === CacheStorage.Memory) {
       entry = (this.memoryCache.get(key) as CacheEntry<T> | undefined) || null;
     } else if (;
       this.storage === CacheStorage.LocalStorage &&;
-      typeof window !== 'undefined' &&';
+      typeof window !== 'undefined' &&'';
       window.localStorage;
     ) {
       try {
@@ -152,7 +152,7 @@ export class CacheManager {
       }
     } else if (;
       this.storage === CacheStorage.SessionStorage &&;
-      typeof window !== 'undefined' &&';
+      typeof window !== 'undefined' &&'';
       window.sessionStorage;
     ) {
       try {
@@ -166,17 +166,17 @@ export class CacheManager {
     }
     if (!entry) {
       this.stats.misses++;
-      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');'';`;
+      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count');``'`;
       return undefined;
     }
     if (this.isExpired(entry)) {
       this.delete(key);
       this.stats.misses++;
-      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');'';`;
+      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count');``'`;
       return undefined;
     }
     this.stats.hits++;
-    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count');'';`;
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count');``'`;
     return entry.value;
   }
   ;
@@ -189,13 +189,13 @@ export class CacheManager {
       this.memoryCache.delete(key);
     } else if (;
       this.storage === CacheStorage.LocalStorage &&;
-      typeof window !== 'undefined' &&';
+      typeof window !== 'undefined' &&'';
       window.localStorage;
     ) {
       localStorage.removeItem(this.getStorageKey(key));
     } else if (;
       this.storage === CacheStorage.SessionStorage &&;
-      typeof window !== 'undefined' &&';
+      typeof window !== 'undefined' &&'';
       window.sessionStorage;
     ) {
       sessionStorage.removeItem(this.getStorageKey(key));
@@ -208,13 +208,13 @@ export class CacheManager {
     }
     if (;
       this.storage === CacheStorage.LocalStorage &&;
-      typeof window !== 'undefined' &&';
+      typeof window !== 'undefined' &&'';
       window.localStorage;
     ) {
       const keysToRemove: string[] = [];
       for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        if (key && key.startsWith('cache_')) {';
+        if (key && key.startsWith('cache_')) {'';
           keysToRemove.push(key);
         }
       }
@@ -222,13 +222,13 @@ export class CacheManager {
     }
     if (;
       this.storage === CacheStorage.SessionStorage &&;
-      typeof window !== 'undefined' &&';
+      typeof window !== 'undefined' &&'';
       window.sessionStorage;
     ) {
       const keysToRemove: string[] = [];
       for (let i = 0; i < sessionStorage.length; i++) {
         const key = sessionStorage.key(i);
-        if (key && key.startsWith('cache_')) {';
+        if (key && key.startsWith('cache_')) {'';
           keysToRemove.push(key);
         }
       }
@@ -249,7 +249,7 @@ export class CacheManager {
     const start = performance.now();
     const value = fn();
     const duration = performance.now() - start;
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');'';`
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');``'`
     // Handle both sync and async values;
     if (value instanceof Promise) {
       return value.then(resolvedValue => {
@@ -273,7 +273,7 @@ export class CacheManager {
     const start = performance.now();
     const value = await fn();
     const duration = performance.now() - start;
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');'';`;
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms');``'`;
     this.set(key, value, options);
     return value;
   }
@@ -309,11 +309,11 @@ export class CacheManager {
   } {
     let localStorageSize = 0;
     let sessionStorageSize = 0;
-    if (typeof window !== 'undefined') {';
+    if (typeof window !== 'undefined') {'';
       if (window.localStorage) {
         for (let i = 0; i < localStorage.length; i++) {
           const key = localStorage.key(i);
-          if (key && key.startsWith('cache_')) {';
+          if (key && key.startsWith('cache_')) {'';
             localStorageSize++;
           }
         }
@@ -321,7 +321,7 @@ export class CacheManager {
       if (window.sessionStorage) {
         for (let i = 0; i < sessionStorage.length; i++) {
           const key = sessionStorage.key(i);
-          if (key && key.startsWith('cache_')) {';
+          if (key && key.startsWith('cache_')) {'';
             sessionStorageSize++;
           }
         }

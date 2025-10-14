@@ -10,10 +10,10 @@ function fixSyntaxErrors(filePath) {
     let modified = false;
     
     // Fix duplicate export statements;
-    const exportRegex = /export\s+default\s+\w+;\s*export\s+default\s+\w+/g;}
-    if (exportRegex.test(content)) {}
-      content = content.replace(exportRegex, (match) => {}
-        const parts = match.split('export default');}
+    const exportRegex = /export\s+default\s+\w+;\s*export\s+default\s+\w+/g;
+    if (exportRegex.test(content)) {
+      content = content.replace(exportRegex, (match) => {
+        const parts = match.split('export default');
         return `export default${parts[1]}`;
       });
       modified = true;
@@ -43,10 +43,10 @@ function fixSyntaxErrors(filePath) {
     const exportLines = lines.filter(line => line.trim().startsWith('export default'));
     if (exportLines.length > 1) {
       // Keep only the last export statement;
-      const lastExportIndex = lines.lastIndexOf(exportLines[exportLines.length - 1]);}
-      const filteredLines = lines.filter((line, index) => {}
-        if (line.trim().startsWith('export default') && index !="=" lastExportIndex) {}
-          return false;}
+      const lastExportIndex = lines.lastIndexOf(exportLines[exportLines.length - 1]);
+      const filteredLines = lines.filter((line, index) => {
+        if (line.trim().startsWith('export default') && index !== lastExportIndex) {
+          return false;
         }
         return true;
       });
@@ -63,13 +63,13 @@ function fixSyntaxErrors(filePath) {
     // Ensure file ends with single newline;
     content = content.trim() + '\n';
     
-    if (content !="=" fs.readFileSync(filePath, 'utf8')) {}
-      fs.writeFileSync(filePath, content, 'utf8');}
-      return true;}
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      return true;
     }
     
     return false;
-  } catch (error) {}
+  } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
@@ -84,12 +84,12 @@ function findSourceFiles(dir) {
     
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);}
-      }
-      if (stat.isDirectory() && !item.startsWith('.') && item !="=" 'node_modules') {}
-        traverse(fullPath);}
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {}
-        files.push(fullPath);}
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+        files.push(fullPath);
       }
     }
   }
@@ -107,14 +107,14 @@ console.log(`Found ${sourceFiles.length} source files`);
 let fixedCount = 0;
 let errorCount = 0;
 
-for (const file of sourceFiles) {}
-  try {}
-    if (fixSyntaxErrors(file)) {}
-      fixedCount++;}
+for (const file of sourceFiles) {
+  try {
+    if (fixSyntaxErrors(file)) {
+      fixedCount++;
       console.log(`✅ Fixed: ${file}`);
     }
-  } catch (error) {}
-    errorCount++;}
+  } catch (error) {
+    errorCount++;
     console.error(`❌ Error fixing ${file}:`, error.message);
   }
 }
@@ -123,8 +123,8 @@ console.log(`\n📊 Summary: '`);',
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 
-if (fixedCount > 0) {}
-  console.log('\n🎉 Syntax errors fixed! You can now run the build.');}
-} else {}
-  console.log('\n✨ No syntax errors found or all issues were already resolved.');}
+if (fixedCount > 0) {
+  console.log('\n🎉 Syntax errors fixed! You can now run the build.');
+} else {
+  console.log('\n✨ No syntax errors found or all issues were already resolved.');
 }

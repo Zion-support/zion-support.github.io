@@ -1,4 +1,4 @@
-';'
+'use client';'
 
 // import { ErrorHandler    } from "./errorHandler";";
 import { performanceMetrics    } from "./performanceMetrics";"
@@ -12,7 +12,7 @@ class ErrorHandler {
     return ErrorHandler.instance;
   }
   handleNetworkError(error: Error, url: string, config?: unknown): void {
-// console.error('Network error:', { error: error.message, url, config,});
+// console.error('Network error:', { error: error.message, url, config,});'
   }
 }
 export interface APIConfig {
@@ -59,7 +59,7 @@ export class APIInterceptor {
   private pendingRequests: Map<string, Promise<APIResponse>> = new Map();
   constructor(config: Partial<APIConfig> = {}) {
     this.config = {
-      baseURL: config.baseURL || '',';
+      baseURL: config.baseURL || '','';
       timeout: config.timeout || 30000,
       retryAttempts: config.retryAttempts || 3,
       retryDelay: config.retryDelay || 1000,
@@ -81,7 +81,7 @@ export class APIInterceptor {
     const fullConfig = this.prepareRequest(config);
     const cacheKey = this.getCacheKey(fullConfig);
     // Check cache for GET requests;
-    if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {';
+    if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {'';
       const cachedResponse = this.getFromCache(cacheKey);
       if (cachedResponse) {
         return cachedResponse as APIResponse<T>;
@@ -97,7 +97,7 @@ export class APIInterceptor {
     try {
       const response = await requestPromise;
       // Cache successful GET requests;
-      if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {';
+      if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {'';
         this.setInCache(cacheKey, response);
       }
       return response;
@@ -216,7 +216,7 @@ return this.request<T>({ ...config, url, method: 'PATCH', body,});'
   }
   ;
   private buildURL(config: RequestConfig): string {
-let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL,}${config.url}`;'';`;
+let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL,}${config.url}`;``'`;
     if (config.params) {
       const params = new URLSearchParams();
       Object.entries(config.params).forEach(([key, value]) => {
@@ -246,10 +246,10 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL,}$
   ;
   private async parseResponse<T>(response: Response): Promise<T> {
     const contentType = response.headers.get('content-type');';
-    if (contentType?.includes('application/json')) {';
+    if (contentType?.includes('application/json')) {'';
       return await response.json();
     }
-    if (contentType?.includes('text/')) {';
+    if (contentType?.includes('text/')) {'';
       return (await response.text()) as T;
     }
     return (await response.blob()) as T;

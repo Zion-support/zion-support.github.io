@@ -1,50 +1,34 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
 
-export default function Page() {
+
   return (
-    <>
+    <React.Fragment>
       <Helmet>
-        <title>BlogPage - Zion Tech Group</title>
-        <meta name="description" content="Professional BlogPage solutions and services" />
-        <meta name="keywords" content="blogpage" />
+        <title>Blog - Zion Tech Group</title>
+        <meta name=';;description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />
+        <meta name="keywords" content="technology blog, AI insights, cybersecurity tips, cloud computing, digital transformation" />
+        <meta property="og:title" content="Blog - Zion Tech Group" />
+        <meta property="og:description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/blog" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">BlogPage</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional BlogPage solutions and services
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid">
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">
+              Our Blog
+            </h1>
+            <p className="text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Insights, trends, and expert knowledge on AI, cybersecurity, cloud computing, and digital transformation.
             </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
-      </div>
-    </>
-  );
-}
+
+

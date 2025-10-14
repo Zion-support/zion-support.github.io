@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
-import fs from 'fs';";
-import path from 'path';";
+import fs from "fs";";
+import path from "path";";
 import { fileURLToPath     } from "url";";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,7 +13,7 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
     const fullPath = path.join(dirPath, file);
     if (fs.statSync(fullPath).isDirectory()) {
       // Skip node_modules and other common directories;
-      if (!['node_modules', '.git', '.next', 'dist', 'out', 'build'].includes(file)) {';
+      if (!['node_modules', '.git', '.next', 'dist', 'out', 'build'].includes(file)) {'';
         getAllFiles(fullPath, arrayOfFiles);
       };
     } else {
@@ -58,7 +58,7 @@ function resolveMergeConflicts(content) {
   }
 
   return {
-    content: resolvedLines.join('\n'),';
+    content: resolvedLines.join('\n'),'';
     conflictsResolved: conflictCount;
   };
 }
@@ -71,28 +71,28 @@ function fixSyntaxIssues(content) {
   // Fix common JSX issues;
   const fixes = [;
     // Fix unclosed JSX tags;
-    { pattern: /<(\w+)([^>]*?)(?<////!\s)\s*>/g, replacement: '<$1$2>' },';
+    { pattern: /<(\w+)([^>]*?)(?<////!\s)\s*>/g, replacement: '<$1$2>' },'';
     // Fix missing closing tags (basic cases);
-    { pattern: /<////(\w+)([^>]*?)>\s*$/gm, replacement: '<$1$2></$1>' },';
+    { pattern: /<////(\w+)([^>]*?)>\s*$/gm, replacement: '<$1$2></$1>' },'';
     // Fix malformed quotes;
-    { pattern: /'/g, replacement: ';' },';';
-    { pattern: /'/g, replacement: '; },';;
+    { pattern: /"/g, replacement: '"' },'"'";
+    { pattern: /'/g, replacement: "'" },'"'";
     // Fix common React issues;
-    { pattern: /className=/g, replacement: 'className=' },';
-    { pattern: /onClick=/g, replacement: 'onClick=' },';
+    { pattern: /className=/g, replacement: 'className=' },'';
+    { pattern: /onClick=/g, replacement: 'onClick=' },'';
     // Fix import statements;
-    { pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['']([^';]+)[';];?/g, replacement: 'import { $1     } from "$2'; },';';
+    { pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, replacement: 'import { $1     } from "$2"; },'"'";
     // Fix export statements;
-    { pattern: /export\s+default\s+([^;]+);?/g, replacement: 'export default $1; },';
+    { pattern: /export\s+default\s+([^;]+);?/g, replacement: 'export default $1; },'';
     // Fix function declarations;
-    { pattern: /function\s+(\w+)\s*\(/g, replacement: 'function $1(' },';
+    { pattern: /function\s+(\w+)\s*\(/g, replacement: 'function $1(' },'';
     // Fix arrow functions;
-    { pattern: /const\s+(\w+)\s*=\s*\(/g, replacement: 'const $1 = (' },';
+    { pattern: /const\s+(\w+)\s*=\s*\(/g, replacement: 'const $1 = (' },'';
     // Fix missing semicolons;
-    { pattern: /(\w+)\s*$/gm, replacement: '$1; },';
+    { pattern: /(\w+)\s*$/gm, replacement: '$1; },'';
     // Fix React component issues;
-    { pattern: /React\.FC/g, replacement: 'React.FC' },';
-    { pattern: /React\.Component/g, replacement: 'React.Component' },';
+    { pattern: /React\.FC/g, replacement: 'React.FC' },'';
+    { pattern: /React\.Component/g, replacement: 'React.Component' },'';
   ];
 
   fixes.forEach(fix => {
@@ -108,7 +108,6 @@ function fixSyntaxIssues(content) {
 
 // Main function;
 function main() {
-  
   console.log('🔍 Scanning for files with merge conflicts...');';
   const allFiles = getAllFiles(process.cwd());
   const filesWithConflicts = [];

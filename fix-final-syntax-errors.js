@@ -15,7 +15,7 @@ function fixFinalSyntaxErrors(filePath) {
       if (titleMatch) {
         return `const data = [
       {
-            title: '${titleMatch[1]}',
+        title: '${titleMatch[1]}',
         client: '${titleMatch[2]}',
         industry: '${titleMatch[3]}'`;
       }
@@ -26,7 +26,7 @@ function fixFinalSyntaxErrors(filePath) {
     content = content.replace(/title:\s*'[^']*',\s*;\s*client:\s*'[^']*',\s*;\s*industry:\s*'[^']*',/g, (match) => {
       const titleMatch = match.match(/title:\s*'([^']*)',\s*;\s*client:\s*'([^']*)',\s*;\s*industry:\s*'([^']*)',/);
       if (titleMatch) {
-        return `    title: '${titleMatch[1]}',
+        return `title: '${titleMatch[1]}',
         client: '${titleMatch[2]}',
         industry: '${titleMatch[3]}'`;
       }
@@ -45,8 +45,7 @@ function fixFinalSyntaxErrors(filePath) {
     // Fix stray semicolons in object properties;
     content = content.replace(/;\s*client:/g, ',\n        client: ');'
     content = content.replace(/;\s*industry:/g, ',\n        industry: ');'
-    content = content.replace(/;\s*description:/g, ',\n            description: ');'
-  }
+    content = content.replace(/;\s*description:/g, ',\n        description: ');'
     content = content.replace(/;\s*results:/g, ',\n        results: ');'
     
     // Fix malformed array syntax;

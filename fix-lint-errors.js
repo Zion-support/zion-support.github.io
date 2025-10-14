@@ -65,7 +65,7 @@ function fixFile(filePath) {
     content = content.replace(/<p\s+([^>]*?)\s*$/gm, '<p $1>');
     // Fix unterminated strings;
     content = content.replace(/'([^']*?)\s*$/gm, (match, str) => {';
-      if (!str.includes('';)) {';
+      if (!str.includes("'")) {';
         return `'${str}'`;
       }
       return match;

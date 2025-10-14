@@ -1,50 +1,103 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Page() {
+import React from 'react;
+import { Link } from ';;react-router-dom;
+import SEO from '../components/SEO;
+import { UserGroupIcon,
+  AcademicCapIcon,
+  BriefcaseIcon,
+  StarIcon,
+  ArrowRightIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  MapPinIcon';;
+} from '@heroicons/react/24/outline;
+export default function TeamPage() {
+  const team = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      bio: 'Technology visionary with over 10 years of experience in AI and IT solutions.',
+      image: '/images/.jpg',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/kleber_santos;
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      bio: 'Expert in cloud architecture and cybersecurity with a passion for innovation.',
+      image: '/images/.jpg',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/sarah_johnson;
+    },
+    {
+      name: 'Michael Chen',
+      role: 'Lead AI Engineer',
+      bio: 'Machine learning specialist focused on developing cutting-edge AI solutions.',
+      image: '/images/.jpg',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/michael_chen;
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'Head of Design',
+      bio: 'Creative director with expertise in user experience and interface design.',
+      image: '/images/.jpg',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/emily_rodriguez;
+    },
+    {
+      name: 'David Kim',
+      role: 'DevOps Engineer',
+      bio: 'Infrastructure specialist ensuring scalable and reliable cloud solutions.',
+      image: '/images/.jpg',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/david_kim;
+    },
+    {
+      name: 'Lisa Wang',
+      role: 'Project Manager',
+      bio: 'Experienced project manager ensuring timely delivery of complex solutions.',
+      image: '/images/.jpg',
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/lisa_wang;
+    }
+  ]
+  const values = [
+    {
+      icon: StarIcon,
+      title: 'Excellence',
+      description: 'We strive for excellence in everything we do, delivering the highest quality solutions.;'
+    },
+    {
+      icon: UserGroupIcon,
+      title: 'Collaboration',
+      description: 'We believe in the power of teamwork and collaboration to achieve great results.;'
+    },
+    {
+      icon: AcademicCapIcon,
+      title: 'Innovation',
+      description: 'We continuously innovate and stay ahead of technology trends.;'
+    },
+    {
+      icon: BriefcaseIcon,
+      title: 'Integrity',
+      description: 'We maintain the highest ethical standards in all our business practices.;'
+    }
+  ]
+import { Helmet } from 'react-helmet-async;
+const TeamPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>TeamPage - Zion Tech Group</title>
-        <meta name="description" content="Professional TeamPage solutions and services" />
-        <meta name="keywords" content="teampage" />
+        <meta name=';;description" content="TeamPage - Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">TeamPage</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional TeamPage solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">TeamPage</h1>
+          <p className="text-gray-300">This page is under construction.</p>
         </div>
       </div>
     </>
-  );
+  )}
+
 }

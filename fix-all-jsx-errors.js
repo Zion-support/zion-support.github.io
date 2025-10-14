@@ -154,7 +154,6 @@ function fixJSXErrors(filePath) {
 
 // Main execution;
 async function main() {
-  
   console.log('Starting comprehensive JSX error fixes...');
   
   // Find all page.tsx files;

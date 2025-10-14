@@ -108,7 +108,6 @@ function fixJSXErrors(filePath) {
 
 // Main execution;
 async function main() {
-  
   console.log('Starting JSX error fixes v2...');
   
   // Find all page.tsx files;

@@ -1,4 +1,4 @@
-';';
+'use client';';
 
 export interface RateLimitConfig {;
   windowMs: number; // Time window in milliseconds;
@@ -17,7 +17,7 @@ export class RateLimiter {
   private config: RateLimitConfig;
   constructor(config: RateLimitConfig) {
     this.config = {
-      message: 'Too many requests, please try again later.',';
+      message: 'Too many requests, please try again later.','';
       skipSuccessfulRequests: false,
       skipFailedRequests: false,
       ...config;
@@ -72,7 +72,7 @@ export const rateLimiters = {
   strict: new RateLimiter({
     windowMs: 60 * 1000,
     max: 10,
-    message: 'Too many requests. Please try again in a minute.';
+    message: 'Too many requests. Please try again in a minute.'''
   }),
   // Standard: 100 requests per 15 minutes;
   standard: new RateLimiter({
@@ -88,13 +88,13 @@ export const rateLimiters = {
   api: new RateLimiter({
     windowMs: 60 * 1000,
     max: 60,
-message: 'API rate limit exceeded. Please try again later.';,
+message: 'API rate limit exceeded. Please try again later.''',
   }),
   // Authentication: 5 login attempts per 15 minutes;
   auth: new RateLimiter({
     windowMs: 15 * 60 * 1000,
     max: 5,
-    message: 'Too many login attempts. Please try again later.',';
+    message: 'Too many login attempts. Please try again later.','';
     skipSuccessfulRequests: true;
   })
 };
@@ -119,17 +119,17 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
     if (!allowed) {
       return new Response(;
         JSON.stringify({
-          error: 'Rate limit exceeded',';
+          error: 'Rate limit exceeded','';
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
         }),
         {
           status: 429,
 headers: {,
-'Content-Type': 'application/json',';,
-'Retry-After': String(Math.ceil((resetTime - Date.now()) / 1000)),';,
-'X-RateLimit-Limit': String(limiter['config'].max),';,
-'X-RateLimit-Remaining': String(remaining),';,
-'X-RateLimit-Reset': String(resetTime)';,
+'Content-Type': 'application/json','',
+'Retry-After': String(Math.ceil((resetTime - Date.now()) / 1000)),'',
+'X-RateLimit-Limit': String(limiter['config'].max),'',
+'X-RateLimit-Remaining': String(remaining),'',
+'X-RateLimit-Reset': String(resetTime)'',
           }
         }
       );

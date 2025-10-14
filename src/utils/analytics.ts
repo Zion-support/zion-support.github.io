@@ -1,5 +1,5 @@
-';';
-import React from 'react';"
+'use client';';
+import React from "react";"
 
 // Declare gtag function for Google Analytics;
 declare global {
@@ -22,19 +22,19 @@ class AnalyticsService {
   private queue: AnalyticsEvent[] = [];
   private readonly maxQueueSize = 100;
   public config = {
-    gaId: 'GA_MEASUREMENT_ID';
+    gaId: 'GA_MEASUREMENT_ID'''
   }
   ;
   initialize(): void {
     if (this.isInitialized) return;
     try {
-      // Check if we're in a browser environment';
-      if (typeof window === 'undefined') return';
+      // Check if we're in a browser environment'';
+      if (typeof window === 'undefined') return''
       // Process queued events;
       this.processQueue();
       this.isInitialized = true;
     } catch (error) {
-// console.error('Analytics initialization failed:', error)';,
+// console.error('Analytics initialization failed:', error)'',
     }
   }
   ;
@@ -46,7 +46,7 @@ class AnalyticsService {
       }
       // Send to Google Analytics if available;
       if (this.hasGtag()) {
-        gtag('event', event.action, {';
+        gtag('event', event.action, {'';
           event_category: event.category,
           event_label: event.label,
           value: event.value,
@@ -54,43 +54,43 @@ class AnalyticsService {
         })
       }
       // Log in development;
-      if (process.env['NODE_ENV'] === 'development') {';
+      if (process.env['NODE_ENV'] === 'development') {''
         }
     } catch (error) {
-// console.error('Failed to track event:', error)';,
+// console.error('Failed to track event:', error)'',
     }
   }
   ;
   trackPageView(path: string, title?: string): void {
     try {
       if (this.hasGtag()) {
-        gtag('config', this.config.gaId, {';
+        gtag('config', this.config.gaId, {'';
           page_path: path,
           page_title: title;
         })
       }
     } catch (error) {
-// console.error('Failed to track page view:', error)';,
+// console.error('Failed to track page view:', error)'',
     }
   }
   ;
   identifyUser(user: AnalyticsUser): void {
     try {
       if (this.hasGtag() && user.id) {
-        gtag('config', this.config.gaId, {';
+        gtag('config', this.config.gaId, {'';
           user_id: user.id,
           ...user.properties;
         })
       }
     } catch (error) {
-// console.error('Failed to identify user:', error)';,
+// console.error('Failed to identify user:', error)'',
     }
   }
   ;
   trackError(error: Error, metadata?: Record<string, unknown>): void {
     this.trackEvent({
-      action: 'error',';
-      category: 'exception',';
+      action: 'error','';
+      category: 'exception','';
       label: error.message,
       metadata: {
         stack: error.stack,
@@ -107,7 +107,7 @@ class AnalyticsService {
   ): void {
     try {
       if (this.hasGtag()) {
-        gtag('event', 'timing_complete', {';
+        gtag('event', 'timing_complete', {'';
           name: variable,
           value: Math.round(value),
           event_category: category,
@@ -115,34 +115,34 @@ class AnalyticsService {
         });
       }
     } catch (error) {
-// console.error('Failed to track timing:', error)';,
+// console.error('Failed to track timing:', error)'',
     }
   }
   ;
   trackPerformance(metric: string, value: number, metadata?: Record<string, unknown>): void {
     try {
       this.trackEvent({
-        action: 'performance',';
-        category: 'web_vitals',';
+        action: 'performance','';
+        category: 'web_vitals','';
         label: metric,
         value: Math.round(value),
         metadata;
       })
     } catch (error) {
-// console.error('Failed to track performance:', error)';,
+// console.error('Failed to track performance:', error)'',
     }
   }
   ;
   private hasGtag(): boolean {
     return (;
-      typeof window !== 'undefined' &&';
-      typeof window.gtag === 'function';
+      typeof window !== 'undefined' &&'';
+      typeof window.gtag === 'function'''
     )
   }
   ;
   private getGtagId(): string {
     // Return the tracking ID from environment or config;
-    return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID';
+    return process.env['NEXT_PUBLIC_GA_ID'] || 'GA_MEASUREMENT_ID'''
   }
   ;
   private queueEvent(event: AnalyticsEvent): void {
@@ -178,7 +178,7 @@ export const trackTiming = (;
 ) => analytics.trackTiming(category, variable, value, label);
 export const identifyUser = (user: AnalyticsUser) => analytics.identifyUser(user)
 // Initialize on import;
-if (typeof window !== 'undefined') {';
+if (typeof window !== 'undefined') {'';
   analytics.initialize()
 }
 export default analytics;

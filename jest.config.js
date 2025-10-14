@@ -16,4 +16,17 @@ export default {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   testMatch: '[',
-    '<rootDir>/app/**/__tests__/**
+    '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
+    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)',
+    '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
+    '<rootDir>/**/*.(test|spec).(ts|tsx|js|jsx)'
+  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  globals: {
+    'ts-jest': {
+      useESM: true;
+    }
+  },
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  preset: 'ts-jest'
+};

@@ -1,4 +1,4 @@
-';';
+'use client';';
 
 import { logger    } from "../utils/logger";";
 export type NextFunction = () => Promise<unknown> | unknown;
@@ -44,16 +44,16 @@ export class MiddlewareExecutor {
 
 export const loggingMiddleware: Middleware = async (context, next) => {
   const _startTime = Date.now();
-  logger.info('Request started', {';
-    component: 'RequestMiddleware',';
+  logger.info('Request started', {'';
+    component: 'RequestMiddleware','';
     method: context.request.method,
     url: context.request.url;
   });
   try {
     const _result = await next();
     const duration = Date.now() - _startTime;
-    logger.info('Request completed', {';
-      component: 'RequestMiddleware',';
+    logger.info('Request completed', {'';
+      component: 'RequestMiddleware','';
       method: context.request.method,
       url: context.request.url,
       status: context.response?.status,
@@ -62,8 +62,8 @@ export const loggingMiddleware: Middleware = async (context, next) => {
     return _result;
   } catch (error) {
     const duration = Date.now() - _startTime;
-    logger.error('Request failed', error as Error, {';
-      component: 'RequestMiddleware',';
+    logger.error('Request failed', error as Error, {'';
+      component: 'RequestMiddleware','';
       method: context.request.method,
       url: context.request.url,
       duration;
@@ -75,7 +75,7 @@ export const loggingMiddleware: Middleware = async (context, next) => {
 export const authMiddleware: Middleware = async (context, next) => {
   const _token = getAuthToken();
   if (_token) {
-    context.request.headers['Authorization'] = `Bearer ${_token}`;'';`
+    context.request.headers['Authorization'] = `Bearer ${_token}`;``'`
   }
   return await next();
 };
@@ -91,13 +91,13 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
   } catch (error) {
     // Transform error into a standardized format;
     const standardError = {
-      message: error instanceof Error ? error.message : 'Unknown error',';
+      message: error instanceof Error ? error.message : 'Unknown error','';
       status: context.response?.status || 500,
       url: context.request.url,
       method: context.request.method;
     };
-    logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {';
-      component: 'ErrorHandlingMiddleware',';
+    logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {'';
+      component: 'ErrorHandlingMiddleware',''
       ...standardError;
     });
     throw standardError;
@@ -124,7 +124,7 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
 export const cachingMiddleware = (ttl: number): Middleware => {;
   const _cache = new Map<string, { data: unknown; timestamp: number }>();
   return async (context, next) => {
-    if (context.request.method !== 'GET') {';
+    if (context.request.method !== 'GET') {'';
       return await next();
     }
     const _key = context.request.url;
@@ -154,7 +154,7 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
           logger.warn(
             `Request failed, retrying (${attempt + 1}/${maxRetries})`,```
             {
-              component: 'RetryMiddleware',';
+              component: 'RetryMiddleware','';
               url: context.request.url;
             }
           );
@@ -170,13 +170,13 @@ export const timeoutMiddleware = (timeoutMs: number): Middleware => {
   return async (context, next) => {
     return await Promise.race([;
       next(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),';
+      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),''
     ]);
   };
 };
 
 export const transformRequestMiddleware = (;
-  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext />
+  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext></MiddlewareContext>
 ): Middleware => {
   return async (context, next) => {
     const _transformedContext = await transformer(context);
@@ -186,7 +186,7 @@ export const transformRequestMiddleware = (;
 };
 
 export const transformResponseMiddleware = (;
-  transformer: (data: unknown) => unknown | Promise<unknown />
+  transformer: (data: unknown) => unknown | Promise<unknown></unknown>
 ): Middleware => {
   return async (context, next) => {
     const _result = await next();

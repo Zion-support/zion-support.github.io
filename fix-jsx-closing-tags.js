@@ -48,6 +48,27 @@ async function fixJSXFile(filePath) {
 }
 
 async function main() {
-  
   const patterns = [
-    'app/**
+    'app/**/*.tsx',
+    'src/**/*.tsx',
+    '*.tsx'
+  ];
+  
+  let totalFixed = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { 
+      cwd: process.cwd(),
+      ignore: ['node_modules/**']
+    });
+    for (const file of files) {
+      if (await fixJSXFile(file)) {
+        totalFixed++;
+      }
+    }
+  }
+  
+  console.log(`\nTotal JSX files fixed: ${totalFixed}`);
+}
+
+main().catch(console.error);

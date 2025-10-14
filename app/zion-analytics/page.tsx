@@ -1,53 +1,34 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-function Page() {
+import ResponsiveContainer from '../components/ResponsiveContainer;
+const ZionAnalytics = () => {
   return (
     <>
       <Helmet>
-        <title>Zion analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional Zion analytics solutions and services" />
-        <meta name="keywords" content="zion, analytics" />
+        <title>Zion Analytics - Zion Tech Group</title>
+        <meta name=';;description" content="Advanced analytics platform powered by Zion AI technology." />
       </Helmet>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Zion analytics</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional Zion analytics solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
+        <section className="py-20">
+          <ResponsiveContainer>
+            <div className="text-center">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                Zion <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Analytics</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Advanced analytics platform powered by Zion AI technology for comprehensive business intelligence.
+              </p>
+              <Link to="/contact">
+                <FuturisticButton size="lg">
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </FuturisticButton>
+              </Link>
             </div>
-          </div>
-        </div>
+          </ResponsiveContainer>
+        </section>
       </div>
     </>
   );
-}
+};
 
-const page = React.lazy(() => import('./page'));
-export default page;
+export default ZionAnalytics

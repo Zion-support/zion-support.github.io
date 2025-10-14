@@ -1,93 +1,83 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { glob } = require('glob');
 
-// Function to fix specific remaining errors
-function fixRemainingErrors(content) {
-  // Fix unterminated string literals in imports
-  content = content.replace(/import\s+([^;]+);$/gm, 'import $1;');
-  
-  // Fix malformed JSX attributes
-  content = content.replace(/type="text/g, 'type="text"');
-  content = content.replace(/id="name/g, 'id="name"');
-  content = content.replace(/name="name/g, 'name="name"');
-  content = content.replace(/placeholder="Your full name/g, 'placeholder="Your full name"');
-  content = content.replace(/className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent/g, 'className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"');
-  
-  // Fix missing closing tags
-  content = content.replace(/<input([^>]*?)(?<!\/)>/g, '<input$1 />');
-  content = content.replace(/<textarea([^>]*?)(?<!\/)>/g, '<textarea$1></textarea>');
-  
-  // Fix malformed object properties
-  content = content.replace(/name: ,'/g, "name: '',");
-  content = content.replace(/email: ,'/g, "email: '',");
-  content = content.replace(/company: ,'/g, "company: '',");
-  content = content.replace(/message: /g, "message: ''");
-  
-  // Fix string literals with missing quotes
-  content = content.replace(/title: 'Email','/g, "title: 'Email',");
-  content = content.replace(/details: 'contact@ziontech\.com','/g, "details: 'contact@ziontech.com',");
-  content = content.replace(/description: 'Send us an email anytime/g, "description: 'Send us an email anytime'");
-  
-  // Fix console.log statements
-  content = content.replace(/console\.log\('Form submitted:', formData\);'/g, "console.log('Form submitted:', formData);");
-  
-  // Fix JSX fragments
-  content = content.replace(/<>\s*<section/g, '<>\n      <section');
-  content = content.replace(/<\/section>\s*<\/>/g, '</section>\n    </>');
-  
-  // Fix missing closing div tags
-  content = content.replace(/<div([^>]*?)>\s*<form/g, '<div$1>\n              <form');
-  content = content.replace(/<\/form>\s*<\/div>/g, '</form>\n            </div>');
-  
-  // Fix malformed JSX expressions
-  content = content.replace(/<info\.icon className="h-6 w-6 text-blue-600" \/>/g, '<info.icon className="h-6 w-6 text-blue-600" />');
-  
-  // Fix missing closing tags in lists
-  content = content.replace(/<li className="flex items-center">\s*<div className="w-2 h-2 bg-blue-500 rounded-full mr-3"><\/div>\s*([^<]+)\s*<\/li>/g, '<li className="flex items-center">\n                    <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>\n                    $1\n                  </li>');
-  
-  return content;
-}
-
-// Function to process a single file
-function processFile(filePath) {
+// Function to fix remaining syntax errors
+function fixFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixRemainingErrors(content);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix unterminated string literals in object properties
+    content = content.replace(/description:\s*'([^']*?)\n\s*}/g, "description: '$1'\n    }");
+    content = content.replace(/description:\s*"([^"]*?)\n\s*}/g, 'description: "$1"\n    }');
     
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
+    // Fix malformed JSX closing tags - remove incorrect replacements
+    content = content.replace(/<\/\$1>/g, '');
+    content = content.replace(/<\/\$1/g, '');
+    
+    // Fix self-closing tags that are malformed
+    content = content.replace(/<(\w+)\s+[^>]*><\/\1>/g, '<$1 />');
+    
+    // Fix JSX fragments
+    content = content.replace(/<><\/>/g, '<></>');
+    
+    // Fix unterminated JSX elements
+    content = content.replace(/(<[^>]+)>\s*<\/\1>/g, '$1></$1>');
+    
+    // Fix missing closing tags in JSX
+    content = content.replace(/(<div[^>]*>)\s*<\/div>\s*<\/div>/g, '$1</div>');
+    
+    // Fix malformed Link components
+    content = content.replace(/<Link([^>]*)>\s*<\/Link>/g, '<Link$1></Link>');
+    
+    // Fix unterminated comments
+    content = content.replace(/\/\*\s*([^*]*?)\n\s*\*\//g, '/* $1 */');
+    
+    // Fix specific patterns that are causing issues
+    content = content.replace(/import\s+([^'"`]+)\s+from\s+['"`]([^'"`]+)['"`];/g, "import $1 from '$2';");
+    
+    // Fix JSX structure issues
+    content = content.replace(/return\s*\(\s*<>\s*<\/>\s*/g, 'return (\n    <>\n      ');
+    content = content.replace(/<>\s*<\/>\s*<([^>]+)>\s*<\/\1>/g, '<$1></$1>');
+    
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
+      modified = true;
     }
-    return false;
+    
+    return modified;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Main function to fix all files
-async function fixAllFiles() {
+async function main() {
+  // Find all TypeScript and JavaScript files
   const patterns = [
-    'app/components/**/*.tsx',
     'app/**/*.tsx',
-    '__tests__/**/*.tsx'
+    'app/**/*.ts',
+    '*.tsx',
+    '*.ts'
   ];
-  
+
   let totalFixed = 0;
-  
+
   for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
+    const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**'] });
+    
     for (const file of files) {
-      if (processFile(file)) {
+      if (fixFile(file)) {
         totalFixed++;
       }
     }
   }
-  
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+
+  console.log(`\nFixed ${totalFixed} files`);
 }
 
-// Run the fix
-fixAllFiles().catch(console.error);
+main().catch(console.error);

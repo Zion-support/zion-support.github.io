@@ -154,7 +154,7 @@ function fixRemainingJsxErrors(content, filePath) {
   changes += (content.match(/\}\s*\)\s*\)/g) || []).length;
 
   // Fix unterminated string literals;
-  fixed = fixed.replace(/"([^']*)$/gm, ';$1';);
+  fixed = fixed.replace(/"([^"]*)$/gm, '"$1"');
   changes += (content.match(/"([^"]*)$/gm) || []).length;
 
   // Fix missing commas in object literals;
@@ -216,8 +216,25 @@ function processFile(filePath) {
 
 // Main function;
 async function main() {
-  
   console.log('Starting remaining JSX syntax error fixes...');
   
   // Find all TypeScript/JavaScript files in the app directory;
-  const pattern = 'app/**
+  const pattern = 'app/**/*.{ts,tsx,js,jsx}';
+  const files = await glob(pattern);
+  
+  let totalChanges = 0;
+  let filesProcessed = 0;
+  
+  files.forEach(file => {
+    const changes = processFile(file);
+    totalChanges += changes;
+    if (changes > 0) {
+      filesProcessed++;
+    }
+  });
+  
+  console.log(`\nCompleted! Fixed ${totalChanges} issues across ${filesProcessed} files.`);
+}
+
+// Run the script;
+main().catch(console.error);
