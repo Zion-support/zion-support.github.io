@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react;
 import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";
 
 interface FormData {
-  name: 'string;','
-  email: 'string;','
-  phone: 'string;','
-  company: 'string;','
-  message: 'string;','
-  service: 'string;','
-  budget: 'string;','
+  name: 'string','
+  email: 'string','
+  phone: 'string','
+  company: 'string','
+  message: 'string','
+  service: 'string','
+  budget: 'string','
   timeline: string;
 }
 interface FormErrors {
@@ -395,4 +395,4 @@ disabled={isSubmitting;
   );
 };
 
-export default ImprovedContactForm;'
+export default ImprovedContactForm'

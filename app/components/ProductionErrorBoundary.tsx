@@ -1,11 +1,11 @@
-import React from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import React from 'react;
+import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react;
 interface Props {
-  children: 'ReactNode;','
+  children: 'ReactNode','
   fallback?: ReactNode;
 }
 interface State {
-  hasError: 'boolean;','
+  hasError: 'boolean','
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;
@@ -70,7 +70,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
     // Generate or retrieve session ID'
     let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;'
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`'
       sessionStorage.setItem('sessionId', sessionId);
     }
     return sessionId;
@@ -188,4 +188,4 @@ class ProductionErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default ProductionErrorBoundary;'
+export default ProductionErrorBoundary'

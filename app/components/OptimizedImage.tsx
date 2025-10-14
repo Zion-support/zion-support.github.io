@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react';'
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useRef, useEffect } from 'react''
+import { Helmet } from 'react-helmet-async;
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -9,7 +9,7 @@ interface OptimizedImageProps {
   priority?: boolean;
   placeholder?: string;
   sizes?: string;
-  quality?: number;'
+  quality?: number'
   loading?: 'lazy' | 'eager'
   onLoad?: () => void;
   onError?: () => void}
@@ -40,7 +40,7 @@ const observer = new IntersectionObserver()
           observer.disconnect()}
       },
       {
-        threshold: 0.1,;'
+        threshold: 0.1,'
         rootMargin: '50px'}
       });
     if (imgRef.current) {
@@ -117,7 +117,7 @@ const observer = new IntersectionObserver()
             sizes={sizes}
             onLoad={handleLoad}
             onError={handleError}
-            className={`transition-opacity duration-300 ${;'
+            className={`transition-opacity duration-300 ${'
               isLoaded ? 'opacity-100' : 'opacity-0'}
             }`}
             style={{'

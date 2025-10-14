@@ -1,12 +1,12 @@
-import { Shield } from 'lucide-react';'
-import React from 'react';
+import { Shield } from 'lucide-react''
+import React from 'react;
 import { CpuChipIcon,
   CloudIcon,
   CogIcon,
 
   ChartBarIcon,'
   ShieldCheckIcon''
-  RocketLaunchIcon } from '@heroicons/react/24/outline';
+  RocketLaunchIcon } from '@heroicons/react/24/outline;
 const Services: React.FC = () => {
   const services = [{,'
       icon: CpuChipIcon''
@@ -85,8 +85,8 @@ const Services: React.FC = () => {
                   </li>
                 )})}
               </ul>
-              <div className="mt-6">
-                <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:underline">
+              <div className="mt-6"></div>
+                <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:underline"></button>
                   Learn More →
                 </button>
               </div>
@@ -103,7 +103,7 @@ const Services: React.FC = () => {
             <p className="text-xl mb-6 opacity-90">''
               Let's discuss how our solutions can help you achieve your goals.
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"></button>
               Get Free Consultation;
             </button>
           </div>
@@ -111,7 +111,7 @@ const Services: React.FC = () => {
       </div>
     </section>
   );,
-};'
+}'
 "'
 export default Services;
 '

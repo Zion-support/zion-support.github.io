@@ -4,19 +4,19 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({ ;
   variant = 'default}) => {';
   const baseClasses="rounded-xl p-6 border border-white/20 backdrop-blur-sm" variantClasses = {
   children: React.ReactNode;
-  className?: string;'
+  className?: string'
   variant?: 'default' | 'glow' | 'gradient'}
 
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ '
   children, ''
-  className = ''';'
+  className = ''''
   variant = 'default'';}'
 }) => {''
-  const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';'
+  const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm''
   const variantClasses = {''
-    default: 'bg-white/10'';'
-    glow: 'bg-white/10 shadow-lg shadow-blue-500/20'';'
+    default: 'bg-white/10'''
+    glow: 'bg-white/10 shadow-lg shadow-blue-500/20'''
     gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'';}
   };
 

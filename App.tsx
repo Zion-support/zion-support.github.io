@@ -18,50 +18,46 @@ import EnhancedSEO from "./app/components/EnhancedSEO";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';'
-import { HelmetProvider } from 'react-helmet-async';
-
-// Components'
-import Navigation from './app/components/Navigation';'
-import Footer from './app/components/Footer';'
-import ErrorBoundary from './app/components/ErrorBoundary';'
-import PerformanceMonitor from './app/components/PerformanceMonitor';'
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+// Additional imports are already defined above
+import Footer from './app/components/Footer''
+import ErrorBoundary from './app/components/ErrorBoundary''
+import PerformanceMonitor from './app/components/PerformanceMonitor''
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer;
 
 
 
 
 
 // Page Components'
-import HomePage from './app/page';'
-import AboutPage from './app/pages/AboutPage';'
-import ContactPage from './app/pages/ContactPage';'
-import ServicesPage from './app/pages/ServicesPage';'
-import BlogPage from './app/pages/BlogPage';'
-import TutorialsPage from './app/pages/TutorialsPage';'
-import DemoPage from './app/pages/DemoPage';'
-import SupportPage from './app/pages/SupportPage';'
-import PrivacyPage from './app/pages/PrivacyPage';'
-import TermsPage from './app/pages/TermsPage';'
-import PricingPage from './app/pages/PricingPage';'
-import SolutionsPage from './app/pages/SolutionsPage';'
-import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';'
-import AISolutionsPage from './app/ai-solutions/page';'
-import ITSolutionsPage from './app/it-solutions/page';
+import HomePage from './app/page''
+import AboutPage from './app/pages/AboutPage''
+import ContactPage from './app/pages/ContactPage''
+import ServicesPage from './app/pages/ServicesPage''
+import BlogPage from './app/pages/BlogPage''
+import TutorialsPage from './app/pages/TutorialsPage''
+import DemoPage from './app/pages/DemoPage''
+import SupportPage from './app/pages/SupportPage''
+import PrivacyPage from './app/pages/PrivacyPage''
+import TermsPage from './app/pages/TermsPage''
+import PricingPage from './app/pages/PricingPage''
+import SolutionsPage from './app/pages/SolutionsPage''
+import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page''
+import AISolutionsPage from './app/ai-solutions/page''
+import ITSolutionsPage from './app/it-solutions/page;
 '
 // Service Pages''
-import AIServicesPage from './app/pages/AIServicesPage';'
-import ITServicesPage from './app/pages/ITServicesPage';'
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';'
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';'
-import CaseStudiesPage from './app/pages/CaseStudiesPage';'
-import CareersPage from './app/pages/CareersPage';
+import AIServicesPage from './app/pages/AIServicesPage''
+import ITServicesPage from './app/pages/ITServicesPage''
+import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage''
+import DigitalTransformationPage from './app/pages/DigitalTransformationPage''
+import CaseStudiesPage from './app/pages/CaseStudiesPage''
+import CareersPage from './app/pages/CareersPage;
 
 // Additional Pages'
-import MicroSaaSPage from './app/pages/MicroSaaSPage';'
-import FiveGSolutionsPage from './app/pages/5GSolutionsPage';'
-import TeamPage from './app/pages/TeamPage';'
-import DocumentationPage from './app/pages/DocumentationPage';
+import MicroSaaSPage from './app/pages/MicroSaaSPage''
+import FiveGSolutionsPage from './app/pages/5GSolutionsPage''
+import TeamPage from './app/pages/TeamPage''
+import DocumentationPage from './app/pages/DocumentationPage;
 
 // New Innovative Micro SAAS Services
 const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
@@ -195,4 +191,4 @@ function App() {
   );
 }
 
-export default App;'
+export default App'

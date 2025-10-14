@@ -1,9 +1,9 @@
-import { Users } from 'lucide-react';'
-import React from 'react';
+import { Users } from 'lucide-react''
+import React from 'react;
 import { CheckIcon, 
   UsersIcon, '
   TrophyIcon, ''
-  LightBulbIcon } from '@heroicons/react/24/outline';
+  LightBulbIcon } from '@heroicons/react/24/outline;
 const About: React.FC = () => {'
   const stats = [','
     { icon: UsersIcon, value: '500+', label: 'Happy Clients' }''
@@ -41,27 +41,27 @@ const About: React.FC = () => {'
               Our mission is to empower businesses with innovative technology that drives ,
               growth, efficiency, and success.
             </p>
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start">
+            <div className="space-y-4 mb-8"></div>
+              <div className="flex items-start"></div>
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                <p className="text-gray-600">
+                <p className="text-gray-600"></p>
                   <strong className="text-gray-900">Expert Team:</strong> Our team consists of
                   highly skilled professionals with deep expertise in AI, cloud computing, ;
                   and enterprise software development.
                 </p>
               </div>
     </>
-              <div className="flex items-start">
+              <div className="flex items-start"></div>
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                <p className="text-gray-600">
+                <p className="text-gray-600"></p>
                   <strong className="text-gray-900">Proven Track Record:</strong> We have
                   successfully delivered hundreds of projects for clients across various ;
                   industries and company sizes.
                 </p>
               </div>
-              <div className="flex items-start">
+              <div className="flex items-start"></div>
                 <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
-                <p className="text-gray-600">
+                <p className="text-gray-600"></p>
                   <strong className="text-gray-900">Cutting-Edge Technology:</strong> We
                   leverage the latest technologies and best practices to deliver ;
                   innovative solutions that give our clients a competitive advantage.
@@ -92,16 +92,16 @@ const About: React.FC = () => {'
                 enabling businesses of all sizes to compete and thrive in the
                 digital economy.
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
+              <div className="space-y-4"></div>
+                <div className="flex items-center"></div>
                   <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
                   <span>Innovation-driven approach</span>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center"></div>
                   <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
                   <span>Client-focused solutions</span>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center"></div>
                   <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
                   <span>Sustainable growth strategies</span>
                 </div>
@@ -134,7 +134,7 @@ const About: React.FC = () => {'
       </div>
     </section>
   );
-};'
+}'
 "'
 export default About;
 

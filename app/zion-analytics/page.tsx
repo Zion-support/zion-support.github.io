@@ -1,4 +1,4 @@
-import ResponsiveContainer from '../components/ResponsiveContainer';
+import ResponsiveContainer from '../components/ResponsiveContainer;
 const ZionAnalytics = () => {
   return (
     <></>
@@ -31,4 +31,4 @@ const ZionAnalytics = () => {
   );
 };
 
-export default ZionAnalytics;'
+export default ZionAnalytics'

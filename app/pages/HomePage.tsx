@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import SEOHead from '../components/SEOHead';
+import React from 'react''
+import { Link } from 'react-router-dom''
+import SEOHead from '../components/SEOHead;
 import { 
   ArrowRightIcon, 
 
@@ -14,12 +14,12 @@ import {
   MapPinIcon,
   RocketLaunchIcon,
   SparklesIcon,'
-  BoltIcon;'}'
-} from '@heroicons/react/24/outline';'
-import FuturisticBackground from '../components/FuturisticBackground';'
-import NeonButton from '../components/NeonButton';'
-import AnimatedCard from '../components/AnimatedCard';'
-import { services } from '../data/servicesData';
+  BoltIcon'}'
+} from '@heroicons/react/24/outline''
+import FuturisticBackground from '../components/FuturisticBackground''
+import NeonButton from '../components/NeonButton''
+import AnimatedCard from '../components/AnimatedCard''
+import { services } from '../data/servicesData;
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",
@@ -85,7 +85,7 @@ import { services } from '../data/servicesData';
             <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light"></p>
               Advanced AI and IT Solutions for Modern Businesses;
             </p>
-            <p>
+            <p></p>
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, ;
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
@@ -114,7 +114,7 @@ import { services } from '../data/servicesData';
               Comprehensive technology solutions designed to accelerate your business growth with real, proven results;
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"></div>
             {featuredServices.map((service, index) => (
               <AnimatedCard key={service.id} glowColor={service.glowColor} className="group"></AnimatedCard>
                 <div className="text-center mb-6>"
@@ -122,7 +122,7 @@ import { services } from '../data/servicesData';
                   <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
                   <p>{service.shortDescription}</p>
                 </div>
-                <div className="space-y-3 mb-6">
+                <div className="space-y-3 mb-6"></div>
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-gray-300"></div>
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3></div>"

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;
 const EnhancedFooter = () => {
   return (
     <div className="min-h-screen bg-white"></div>

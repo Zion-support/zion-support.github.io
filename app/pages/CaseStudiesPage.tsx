@@ -1,13 +1,13 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+import { Link } from 'react-router-dom;
 import { ArrowRightIcon,
   CheckIcon,
   ChartBarIcon,
   TrendingUpIcon,
   ClockIcon,
   CurrencyDollarIcon'
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline;
 
 
 const CaseStudiesPage: React.FC = () => {
@@ -185,7 +185,9 @@ const CaseStudiesPage: React.FC = () => {
                 View More Cases;
 const CaseStudiesPage: React.FC = () => {
   return (
-<>    <div></div>
+<>
+      <div></div>
+    </>
       <Helmet></Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore our successful projects and case studies at Zion Tech Group." />"
@@ -235,6 +237,7 @@ const CaseStudiesPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
+    </>
         <title>CaseStudiesPage - Zion Tech Group</title>
         <meta name="description" content="CaseStudiesPage - Zion Tech Group" />"
       </Helmet>

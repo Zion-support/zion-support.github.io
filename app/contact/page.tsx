@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react';
+import React, { useState } from 'react''
+import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react;
 
 export default function ContactPage()    {
   const [formData, setFormData] = useState({'

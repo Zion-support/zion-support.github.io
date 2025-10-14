@@ -1,7 +1,7 @@
 
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+import { Link } from 'react-router-dom;
 import { BriefcaseIcon,
   MapPinIcon,
   ClockIcon,
@@ -11,7 +11,7 @@ import { BriefcaseIcon,
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon'
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline;
 
 const CareersPage: React.FC = () => {
   const positions = [
@@ -190,17 +190,17 @@ const CareersPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
               </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6"></div>
+                <h3 className="text-lg font-semibold text-purple-900 mb-2"></h3>
                   Culture;
                 </h3>
-                <p>
+                <p></p>
                   Collaborative, innovative, and inclusive work environment.
                 </p>
               </div>
             </div>
-            <div className="mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            <div className="mt-12"></div>
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
                 View Open Positions;
               </button>
             </div>
@@ -209,11 +209,12 @@ const CareersPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
+    </>
         <title>CareersPage - Zion Tech Group</title>
         <meta name="description" content="CareersPage - Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
+        <div className="text-center"></div>
           <h1>CareersPage</h1>
           <p>This page is under construction.</p>
         </div>

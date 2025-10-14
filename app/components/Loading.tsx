@@ -1,7 +1,7 @@
-import React from 'react';'
-import { Brain, Zap, Shield, Globe } from 'lucide-react';
+import React from 'react''
+import { Brain, Zap, Shield, Globe } from 'lucide-react;
 interface LoadingProps {
-  message?: string;'
+  message?: string'
   size?: 'sm' | 'md' | 'lg';
 }
 
@@ -52,7 +52,7 @@ const Loading: React.FC<LoadingProps> = ({
       </section>;
             Ready to Get Started?;
           </h2>;
-          <p className="text-xl text-blue-100 mb-8">;'
+          <p className="text-xl text-blue-100 mb-8">'
             Let's discuss how our loading';
             services can help you achieve your goals.;
           </p>;

@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react;
+import { Link } from 'react-router-dom;
 interface Props {
-  children: 'ReactNode;','
+  children: 'ReactNode','
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 interface State {
-  hasError: 'boolean;','
-  error: 'Error | null;','
-  errorInfo: 'ErrorInfo | null;','
+  hasError: 'boolean','
+  error: 'Error | null','
+  errorInfo: 'ErrorInfo | null','
   errorId: string;
 }
 class ComprehensiveErrorBoundary extends Component<Props, State> {
@@ -164,4 +164,4 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default ComprehensiveErrorBoundary;'
+export default ComprehensiveErrorBoundary'

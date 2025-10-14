@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react;
 
-import EnhancedSEO from '../components/EnhancedSEO';
+import EnhancedSEO from '../components/EnhancedSEO;
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -9,8 +9,8 @@ import {
   GlobeAltIcon,
   ArrowRightIcon,
   CheckIcon,'
-  StarIcon;'}'
-} from '@heroicons/react/24/outline';
+  StarIcon'}'
+} from '@heroicons/react/24/outline;
 
 
 const Page = () => {

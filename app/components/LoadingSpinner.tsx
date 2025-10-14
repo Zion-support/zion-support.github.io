@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 
 
-import React from 'react';'
-import { Loader2 } from 'lucide-react';
+import React from 'react''
+import { Loader2 } from 'lucide-react;
 
 interface LoadingSpinnerProps {'
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -50,4 +50,4 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({'
 
 };
 
-export default LoadingSpinner;'
+export default LoadingSpinner'

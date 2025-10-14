@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react;
 import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react";
 
 interface GenericServicePageProps {
-  title: 'string;','
-  description: 'string;','
-  icon: 'React.ComponentType<any>;','
-  features: 'string[];','
-  benefits: 'string[];','
+  title: 'string','
+  description: 'string','
+  icon: 'React.ComponentType<any>','
+  features: 'string[]','
+  benefits: 'string[]','
   pricing?: string;
   category: "AI" | "IT" | "MicroSAAS" | "Emerging;
 }

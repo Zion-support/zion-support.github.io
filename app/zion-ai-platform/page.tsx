@@ -1,4 +1,4 @@
-import ResponsiveContainer from '../components/ResponsiveContainer';
+import ResponsiveContainer from '../components/ResponsiveContainer;
 const ZionAIPlatform = () => {
   return (
     <></>
@@ -31,4 +31,4 @@ const ZionAIPlatform = () => {
   );
 };
 
-export default ZionAIPlatform;'
+export default ZionAIPlatform'

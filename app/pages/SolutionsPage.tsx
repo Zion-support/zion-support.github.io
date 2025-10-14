@@ -1,8 +1,8 @@
 
 
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+import { Link } from 'react-router-dom;
 import { CpuChipIcon, 
   CloudIcon,
   ShieldCheckIcon,
@@ -12,7 +12,7 @@ import { CpuChipIcon,
   BriefcaseIcon,
   ArrowRightIcon,
   CheckIcon'
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline;
 
 const SolutionsPage: React.FC = () => {
   const solutions = [

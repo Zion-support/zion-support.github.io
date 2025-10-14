@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Helmet , Right,  User,  Calendar  } from 'lucide-react';
+import React from 'react''
+import { Helmet , Right,  User,  Calendar  } from 'lucide-react;
 
 const Page = () => {
   const features = [

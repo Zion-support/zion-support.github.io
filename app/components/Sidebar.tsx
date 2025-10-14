@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react''
+import { Link, useLocation } from 'react-router-dom;
 
 import { 
   XMarkIcon,
@@ -17,7 +17,7 @@ import {
   CpuChipIcon,
   SignalIcon,
   UserGroupIcon'
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline;
 
 interface SidebarProps {
   isOpen: boolean
@@ -138,4 +138,4 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default Sidebar;'
+export default Sidebar'

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Activity, TrendingUp } from 'lucide-react';
+import React from 'react;
+import { Activity, TrendingUp } from 'lucide-react;
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -39,23 +39,23 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         
         // Measure Core Web Vitals
         getCLS((metric) => {
-          updateMetrics({ cls: metric.value });'
+          updateMetrics({ cls: metric.value })'
           if (logMetrics) console.log('CLS:', metric);
         });
         getFID((metric) => {
-          updateMetrics({ fid: metric.value });'
+          updateMetrics({ fid: metric.value })'
           if (logMetrics) console.log('FID:', metric);
         });
         getFCP((metric) => {
-          updateMetrics({ fcp: metric.value });'
+          updateMetrics({ fcp: metric.value })'
           if (logMetrics) console.log('FCP:', metric);
         });
         getLCP((metric) => {
-          updateMetrics({ lcp: metric.value });'
+          updateMetrics({ lcp: metric.value })'
           if (logMetrics) console.log('LCP:', metric);
         });
         getTTFB((metric) => {
-          updateMetrics({ ttfb: metric.value });'
+          updateMetrics({ ttfb: metric.value })'
           if (logMetrics) console.log('TTFB:', metric);
         });
 
@@ -87,9 +87,9 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {'
         if (entry.entryType === 'largest-contentful-paint') {
-          updateMetrics({ lcp: entry.startTime });'
+          updateMetrics({ lcp: entry.startTime })'
         } else if (entry.entryType === 'first-input') {
-          updateMetrics({ fid: entry.processingStart - entry.startTime });'
+          updateMetrics({ fid: entry.processingStart - entry.startTime })'
         } else if (entry.entryType === 'layout-shift') {
           if (!(entry as any).hadRecentInput) {
             updateMetrics({
@@ -119,14 +119,14 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     // Monitor connection changes'
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection;'
+      const connection = (navigator as any).connection'
       connection.addEventListener('change', monitorConnection);
     }
     return () => {
       observer.disconnect();
-      clearInterval(memoryInterval);'
+      clearInterval(memoryInterval)'
       if ('connection' in navigator) {
-        const connection = (navigator as any).connection;'
+        const connection = (navigator as any).connection'
         connection.removeEventListener('change', monitorConnection);
       }
     };
@@ -143,15 +143,15 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   };
 
   const getScoreColor = (score: number) => {'
-    if (score >= 90) return 'text-green-400';'
-    if (score >= 70) return 'text-yellow-400';'
+    if (score >= 90) return 'text-green-400''
+    if (score >= 70) return 'text-yellow-400''
     return 'text-red-400';
   };
 
   const getScoreLabel = (score: number) => {'
-    if (score >= 90) return 'Excellent';'
-    if (score >= 70) return 'Good';'
-    if (score >= 50) return 'Needs Improvement';'
+    if (score >= 90) return 'Excellent''
+    if (score >= 70) return 'Good''
+    if (score >= 50) return 'Needs Improvement''
     return 'Poor';
   };
   const performanceScore = getPerformanceScore();
@@ -268,4 +268,4 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   );
 };
 
-export default ImprovedPerformanceMonitor;'
+export default ImprovedPerformanceMonitor'

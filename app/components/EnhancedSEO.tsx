@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';
+import React from 'react''
+import { Helmet } from 'react-helmet-async;
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
@@ -28,9 +28,9 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   noIndex = false,
   noFollow = false}'
 }) => {''
-  const siteName = 'Zion Tech Group';'
+  const siteName = 'Zion Tech Group''
   const siteUrl = 'https://ziontechgroup.com';}'
-  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;''
+  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl''
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
   
   // Enhanced meta description with better length control

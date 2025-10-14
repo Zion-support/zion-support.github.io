@@ -1,5 +1,5 @@
-import React, { useState } from 'react';'
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react''
+import { Link, useLocation } from 'react-router-dom;
 
 import { 
   Menu, 
@@ -9,7 +9,7 @@ import {
   Zap, 
   Globe,
   ChevronDown'
-} from 'lucide-react';
+} from 'lucide-react;
 
 interface NavigationProps {
   onSidebarToggle?: () => void;

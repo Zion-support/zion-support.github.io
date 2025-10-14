@@ -1,5 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Logger } from '../utils/logger';
+import React, { Component, ErrorInfo, ReactNode } from 'react;
+import { Logger } from '../utils/logger;
 interface ErrorBoundaryState {
   hasError: boolean;
   error: Error | null;
@@ -152,17 +152,17 @@ const errorReport: ErrorReport = {,
       }
       // Default error UI;
       return (
-        <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
-          <div className='sm:mx-auto sm:w-full sm:max-w-md'>
-            <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
-              <div className='text-center'>
-                <div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'>
+        <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'></div>
+          <div className='sm:mx-auto sm:w-full sm:max-w-md'></div>
+            <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'></div>
+              <div className='text-center'></div>
+                <div className='mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100'></div>
                   <svg;
                     className="h-6 w-6 text-red-600"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke='currentColor'
-                  >
+                  ></svg>
                     <path;
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -180,37 +180,37 @@ const errorReport: ErrorReport = {,
                 </p>
               </div>
               {process.env.NODE_ENV === 'development' && (
-                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
+                <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'></div>
                   <h3 className='text-sm font-medium text-red-800'>;
                     Error Details:
                   </h3>
-                  <div className='mt-2 text-sm text-red-700'>
-                    <p>
+                  <div className='mt-2 text-sm text-red-700'></div>
+                    <p></p>
                       <strong>Error ID:</strong> {this.state.errorId}
                     </p>
-                    <p>
+                    <p></p>
                       <strong>Message:</strong> {this.state.error?.message}
                     </p>
-                    <details className='mt-2'>
+                    <details className='mt-2'></details>
                       <summary className='cursor-pointer font-medium'>;
                         Stack Trace
                       </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>
+                      <pre className='mt-2 text-xs overflow-auto'></pre>
                         {this.state.error?.stack}
                       </pre>
                     </details>
-                    <details className='mt-2'>
+                    <details className='mt-2'></details>
                       <summary className='cursor-pointer font-medium'>;
                         Component Stack
                       </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>
+                      <pre className='mt-2 text-xs overflow-auto'></pre>
                         {this.state.errorInfo?.componentStack}
                       </pre>
                     </details>
                   </div>
                 </div>
               )}
-              <div className='mt-6 space-y-3'>
+              <div className='mt-6 space-y-3'></div>
                 {this.props.enableRetry &&;
                   this.retryCount < this.maxRetries && (
                     <button;
@@ -234,7 +234,7 @@ const errorReport: ErrorReport = {,
                   Go to Homepage
                 </button>
               </div>
-              <div className='mt-6 text-center'>
+              <div className='mt-6 text-center'></div>
                 <p className='text-xs text-gray-500'>;
                   If this problem persists, please contact our support team;
                   at&nbsp;

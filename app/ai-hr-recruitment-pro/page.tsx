@@ -1,9 +1,9 @@
-import React from 'react';'
-import { ArrowRight, CheckCircle, UserCheck, FileText } from 'lucide-react';'
-import EnhancedSEO from '../components/EnhancedSEO';'
-import ResponsiveContainer from '../components/ResponsiveContainer';'
-import FuturisticCard from '../components/FuturisticCard';'
-import FuturisticButton from '../components/FuturisticButton';
+import React from 'react''
+import { ArrowRight, CheckCircle, UserCheck, FileText } from 'lucide-react''
+import EnhancedSEO from '../components/EnhancedSEO''
+import ResponsiveContainer from '../components/ResponsiveContainer''
+import FuturisticCard from '../components/FuturisticCard''
+import FuturisticButton from '../components/FuturisticButton;
 
 const AIHRRecruitmentPro = () => {
   const features = [

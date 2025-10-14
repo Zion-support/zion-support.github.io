@@ -1,5 +1,5 @@
-import React from 'react';;'
-import { Link } from 'react-router-dom';;'
+import React from 'react;
+import { Link } from 'react-router-dom;
 import SEO from '../components/SEO;
 import { DocumentTextIcon,
   CodeBracketIcon,
@@ -8,7 +8,7 @@ import { DocumentTextIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,'
-  MapPinIcon';'
+  MapPinIcon''
 } from '@heroicons/react/24/outline;
 export default function DocumentationPage() {
   const sections = [
@@ -63,7 +63,7 @@ export default function DocumentationPage() {
     { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },'
     { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }
   ]'
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;
 const DocumentationPage: React.FC = () => {
   return (
     <></>

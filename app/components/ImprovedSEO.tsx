@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 interface ImprovedSEOProps {
   title?: string;
   description?: string;
@@ -133,4 +133,4 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({'
   );
 };
 
-export default ImprovedSEO;'
+export default ImprovedSEO'

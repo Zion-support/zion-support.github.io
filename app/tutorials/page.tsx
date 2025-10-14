@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react';
+import React from 'react''
+import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react;
 const TutorialsPage: React.FC = () => {
   const tutorials = [{
       id: 1,

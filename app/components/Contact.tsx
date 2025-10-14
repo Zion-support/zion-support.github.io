@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react;
 import { EnvelopeIcon, 
   PhoneIcon, '
   MapPinIcon''
-  ClockIcon } from '@heroicons/react/24/outline';
+  ClockIcon } from '@heroicons/react/24/outline;
 const Contact: React.FC = () => {,'
   const [formData, setFormData] = useState({''
     name: ''''
@@ -20,7 +20,7 @@ const Contact: React.FC = () => {,'
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();'
+    e.preventDefault()'
     // Handle form submission','
     console.log('Form submitted:', formData);
   };
@@ -179,20 +179,20 @@ const Contact: React.FC = () => {,'
               <h4 className="text-lg font-semibold text-gray-900 mb-3"></h4>
                 Why Choose Us?
               </h4>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
+              <ul className="space-y-2 text-gray-600"></ul>
+                <li className="flex items-center"></li>
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                   Free initial consultation;
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center"></li>
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                   Customized solutions;
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center"></li>
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                   24/7 support available;
                 </li>
-                <li className="flex items-center">
+                <li className="flex items-center"></li>
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                   Proven track record;
                 </li>
@@ -204,7 +204,7 @@ const Contact: React.FC = () => {,'
       </div>
     </section>
   );
-};'
+}'
 "'
 export default Contact;
 

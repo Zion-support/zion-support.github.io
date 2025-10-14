@@ -1,15 +1,15 @@
-import React from 'react';
-import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react';
+import React from 'react;
+import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react;
 interface AccessibilitySettings {
-  highContrast: 'boolean;','
-  largeText: 'boolean;','
-  reducedMotion: 'boolean;','
-  screenReader: 'boolean;','
-  keyboardNavigation: 'boolean;','
+  highContrast: 'boolean','
+  largeText: 'boolean','
+  reducedMotion: 'boolean','
+  screenReader: 'boolean','
+  keyboardNavigation: 'boolean','
   focusVisible: boolean;
 }
 interface ImprovedAccessibilityProps {
-  children: 'React.ReactNode;','
+  children: 'React.ReactNode','
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
@@ -85,10 +85,10 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
     const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content'
       if (event.key === 'Tab' && event.shiftKey && event.altKey) {
-        event.preventDefault();'
+        event.preventDefault()'
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
-          mainContent.focus();'
+          mainContent.focus()'
           mainContent.scrollIntoView({ behavior: 'smooth' });
         }
       }
@@ -108,20 +108,20 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
       setSettings(prev => ({ ...prev, focusVisible: false }));
     };
 '
-    document.addEventListener('keydown', handleKeyDown);'
+    document.addEventListener('keydown', handleKeyDown)'
     document.addEventListener('mousedown', handleMouseDown);
 
     return () => {'
-      document.removeEventListener('keydown', handleKeyDown);'
+      document.removeEventListener('keydown', handleKeyDown)'
       document.removeEventListener('mousedown', handleMouseDown);
     };
   }, [settings.keyboardNavigation, isVisible]);
   // Announce changes to screen readers;
   const announceToScreenReader = useCallback((message: string) => {
     if (settings.screenReader) {'
-      const announcement = document.createElement('div');'
-      announcement.setAttribute('aria-live', 'polite');'
-      announcement.setAttribute('aria-atomic', 'true');'
+      const announcement = document.createElement('div')'
+      announcement.setAttribute('aria-live', 'polite')'
+      announcement.setAttribute('aria-atomic', 'true')'
       announcement.className = 'sr-only';
       announcement.textContent = message;
       document.body.appendChild(announcement);
@@ -132,7 +132,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
   }, [settings.screenReader]);
   const toggleSetting = (key: keyof AccessibilitySettings) => {
     setSettings(prev => {
-      const newSettings = { ...prev, [key]: !prev[key] };'
+      const newSettings = { ...prev, [key]: !prev[key] }'
       announceToScreenReader(`${key} ${newSettings[key] ? 'enabled' : 'disabled'}`);
       return newSettings;
     });
@@ -287,10 +287,10 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         href="#main-content"
         className="sr-only focus: 'not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50"','
         onClick={(e) => {
-          e.preventDefault();'
+          e.preventDefault()'
           const mainContent = document.getElementById('main-content');
           if (mainContent) {
-            mainContent.focus();'
+            mainContent.focus()'
             mainContent.scrollIntoView({ behavior: 'smooth' });
           }
         }}
@@ -301,7 +301,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
       {/* Accessibility Styles */}
       <style jsx global>{`
         .high-contrast {
-          --tw-bg-opacity: '1;','
+          --tw-bg-opacity: '1','
           --tw-text-opacity: 1;
         }
         .high-contrast * {
@@ -319,27 +319,27 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
         .large-text h5 { font-size: 1.25rem; }
         .large-text h6 { font-size: 1.125rem; }
         .reduced-motion * {
-          animation-duration: '0.01ms !important;','
-          animation-iteration-count: '1 !important;','
+          animation-duration: '0.01ms !important','
+          animation-iteration-count: '1 !important','
           transition-duration: 0.01ms !important;
         }
         .keyboard-navigation *:focus {
-          outline: '2px solid #06b6d4 !important;','
+          outline: '2px solid #06b6d4 !important','
           outline-offset: 2px !important;
         }
         .focus-visible *:focus {
-          outline: '2px solid #06b6d4 !important;','
+          outline: '2px solid #06b6d4 !important','
           outline-offset: 2px !important;
         }
         .sr-only {
-          position: 'absolute;','
-          width: '1px;','
-          height: '1px;','
-          padding: '0;','
-          margin: '-1px;','
-          overflow: 'hidden;','
+          position: 'absolute','
+          width: '1px','
+          height: '1px','
+          padding: '0','
+          margin: '-1px','
+          overflow: 'hidden','
           clip: rect(0, 0, 0, 0);
-          white-space: 'nowrap;','
+          white-space: 'nowrap','
           border: 0;
         }
         
@@ -358,4 +358,4 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
   );
 };
 
-export default ImprovedAccessibility;'
+export default ImprovedAccessibility'

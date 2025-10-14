@@ -1,4 +1,4 @@
-import ResponsiveContainer from '../components/ResponsiveContainer';
+import ResponsiveContainer from '../components/ResponsiveContainer;
 const SocialMediaManagementSAAS = () => {
   return (
     <></>

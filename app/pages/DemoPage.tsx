@@ -1,8 +1,8 @@
 
 
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+import { Link } from 'react-router-dom;
 import { PlayIcon,
   CpuChipIcon,
   ShieldCheckIcon,
@@ -13,7 +13,7 @@ import { PlayIcon,
   CheckIcon,
   PhoneIcon,
   EnvelopeIcon'
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline;
 
 const DemoPage: React.FC = () => {
   const demos = [

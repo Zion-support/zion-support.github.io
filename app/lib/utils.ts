@@ -1,4 +1,4 @@
-import tailwind-merge from 'tailwind-merge';
+import tailwind-merge from 'tailwind-merge;
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }

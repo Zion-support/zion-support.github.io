@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-'use client';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+'use client;
 const Image: React.FC = () => {
   return (
     <div className="min-h-screen bg-white"></div>
@@ -38,11 +38,11 @@ const Image: React.FC = () => {
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                   Custom solutions;
                 </li>"
-                <li className="flex items-center">
+                <li className="flex items-center"></li>
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
                   Expert consultation;
                 </li>"
-                <li className="flex items-center">
+                <li className="flex items-center"></li>
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
                   Ongoing support;
                 </li>
@@ -67,7 +67,7 @@ const Image: React.FC = () => {
           </h2>
           <p className="text-xl text-blue-100 mb-8"></p>
           </h2>
-          <p className="text-xl text-blue-100 mb-8">;'
+          <p className="text-xl text-blue-100 mb-8">'
             Let's discuss how our image'
             services can help you achieve your goals.;
           </p>;

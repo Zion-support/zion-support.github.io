@@ -18,7 +18,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       canvas.height = window.innerHeight;
     };
 
-    resizeCanvas();'
+    resizeCanvas()'
     window.addEventListener('resize', resizeCanvas);
 
     // Animated particles

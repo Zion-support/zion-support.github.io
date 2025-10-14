@@ -1,5 +1,5 @@
-import React from 'react';;'
-import { Link } from 'react-router-dom';;'
+import React from 'react;
+import { Link } from 'react-router-dom;
 import SEO from '../components/SEO;
 import { UserGroupIcon,
   AcademicCapIcon,
@@ -8,7 +8,7 @@ import { UserGroupIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,'
-  MapPinIcon';'
+  MapPinIcon''
 } from '@heroicons/react/24/outline;
 export default function TeamPage() {
   const team = [
@@ -83,7 +83,7 @@ export default function TeamPage() {
       description: 'We maintain the highest ethical standards in all our business practices.;
     }
   ]'
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;
 const TeamPage: React.FC = () => {
   return (
     <></>

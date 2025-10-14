@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+import { Link } from 'react-router-dom;
 import { ArrowPathIcon,
   UserGroupIcon,
   CloudIcon,
@@ -8,7 +8,7 @@ import { ArrowPathIcon,
   ArrowRightIcon,
   CheckIcon,
   ChartBarIcon'
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline;
 
 
 const DigitalTransformationPage: React.FC = () => {
@@ -226,8 +226,8 @@ const DigitalTransformationPage: React.FC = () => {
                 <p className="text-gray-300">{phase.description}</p>
               </div>
             </div>
-            <div className="mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            <div className="mt-12"></div>
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
                 Get Started Today;
               </button>
             </div>
@@ -236,11 +236,12 @@ const DigitalTransformationPage: React.FC = () => {
   return (
     <>
       <Helmet></Helmet>
+    </>
         <title>DigitalTransformationPage - Zion Tech Group</title>
         <meta name="description" content="DigitalTransformationPage - Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
+        <div className="text-center"></div>
           <h1>DigitalTransformationPage</h1>
           <p>This page is under construction.</p>
         </div>

@@ -1,6 +1,6 @@
-import React, { Component, ReactNode } from 'react';'
-import { Link } from 'react-router-dom';'
-import { ArrowPathIcon, HomeIcon } from '@heroicons/react/24/outline';
+import React, { Component, ReactNode } from 'react''
+import { Link } from 'react-router-dom''
+import { ArrowPathIcon, HomeIcon } from '@heroicons/react/24/outline;
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;

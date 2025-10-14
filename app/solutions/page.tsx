@@ -1,6 +1,6 @@
 'use client';
-import React from 'react';
-import react-helmet-async from 'react-helmet-async';
+import React from 'react;
+import react-helmet-async from 'react-helmet-async;
 const Page = () => {
   return (
     <div></div>"

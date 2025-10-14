@@ -1,5 +1,5 @@
-import React from 'react';;'
-import { Link } from 'react-router-dom';;'
+import React from 'react;
+import { Link } from 'react-router-dom;
 import SEO from '../components/SEO;
 import { GlobeAltIcon,
   CpuChipIcon,
@@ -9,7 +9,7 @@ import { GlobeAltIcon,
   ArrowRightIcon,
   PhoneIcon,
   EnvelopeIcon,'
-  MapPinIcon';'
+  MapPinIcon''
 } from '@heroicons/react/24/outline;
 export default function MicroSaaSPage() {
   const services = [
@@ -46,7 +46,7 @@ export default function MicroSaaSPage() {
     { name: 'Real Estate', description: 'Property management tools' },'
     { name: 'Manufacturing', description: 'Production optimization' }
   ]'
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async;
 const MicroSaaSPage: React.FC = () => {
   return (
     <></>

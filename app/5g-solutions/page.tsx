@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Helmet, Right, Wifi, Circle, Zap, Globe, Smartphone, CheckCircle, Shield } from 'lucide-react';
+import React from 'react''
+import { Helmet, Right, Wifi, Circle, Zap, Globe, Smartphone, CheckCircle, Shield } from 'lucide-react;
 
 const Page = () => {
   const features = [
@@ -207,16 +207,16 @@ const Page = () => {
             Contact our experts to discuss your 5G implementation strategy
 
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div className="bg-white p-6 rounded-lg shadow-md"></div>
               <h3 className="text-xl font-semibold mb-3">Feature 1</h3>
               <p>Description of feature 1</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg shadow-md"></div>
               <h3 className="text-xl font-semibold mb-3">Feature 2</h3>
               <p>Description of feature 2</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg shadow-md"></div>
               <h3 className="text-xl font-semibold mb-3">Feature 3</h3>
               <p>Description of feature 3</p>
             </div>

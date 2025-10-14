@@ -1,6 +1,6 @@
-import { Star } from 'lucide-react';'
-import React from 'react';'
-import Link from 'next/link';
+import { Star } from 'lucide-react''
+import React from 'react''
+import Link from 'next/link;
 const InnovationLabsPage: React.FC = () => {
     return (
     <div className="min-h-screen bg-gray-50"></div>

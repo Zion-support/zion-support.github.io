@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react''
     highContrast: false''
     fontSize: 'normal',
     reducedMotion: false,
@@ -6,11 +6,11 @@ import React from 'react';'
   }
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    // Enhanced accessibility features;'
+    // Enhanced accessibility features'
     const addSkipLinks = () => {''
-      const skipLink = document.createElement('a');''
-      skipLink.href = '#main-content';'
-      skipLink.textContent = 'Skip to main content';'
+      const skipLink = document.createElement('a')''
+      skipLink.href = '#main-content''
+      skipLink.textContent = 'Skip to main content''
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink, document.body.firstChild)};
 
@@ -45,18 +45,18 @@ border: 0;
     // Listen for system preference changes'
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')'
     const handleChange = () => {
-      setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))};'
+      setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))}'
     mediaQuery.addEventListener('change', handleChange);
 
     const setupKeyboardNavigation = () => {'
-      // Enhanced keyboard navigation;''
-      document.addEventListener('keydown', (e) => {';'
-        if (e.key === 'Tab') {';'
+      // Enhanced keyboard navigation''
+      document.addEventListener('keydown', (e) => {''
+        if (e.key === 'Tab') {''
           document.body.classList.add('keyboard-navigation');}
         }
-      });'
+      })'
 ''
-      document.addEventListener('mousedown', () => {';'
+      document.addEventListener('mousedown', () => {''
         document.body.classList.remove('keyboard-navigation');}
       });
     };
@@ -68,8 +68,8 @@ border: 0;
     setupKeyboardNavigation();
     applyAccessibilityEnhancements()
     // Listen for preference changes;
-    const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');'";
-    const contrastMediaQuery = window.matchMedia('(prefers-contrast: high)');'";
+    const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')'";
+    const contrastMediaQuery = window.matchMedia('(prefers-contrast: high)')'";
     const handleMotionChange = () => {
       setIsReducedMotion(e.matches);
     const handleContrastChange = () => {
@@ -121,7 +121,7 @@ border: 0;
     return () => {
       // Cleanup if needed}}, [])
   useEffect(() => {
-    applyAccessibilitySettings(settings);'
+    applyAccessibilitySettings(settings)'
     localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings]);
 
   const applyAccessibilitySettings = (settings: AccessibilitySettings) => {
@@ -153,7 +153,7 @@ border: 0;
 
   // Add CSS for accessibility features
   useEffect(() => {'
-    const style = document.createElement('style');'
+    const style = document.createElement('style')'
     style.id = 'enhanced-accessibility-styles'
     style.textContent = `
       .high-contrast {

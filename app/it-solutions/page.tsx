@@ -1,7 +1,7 @@
 
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+import { Link } from 'react-router-dom;
 import { ServerIcon,
   CloudIcon,
   ShieldCheckIcon,
@@ -10,7 +10,7 @@ import { ServerIcon,
   CheckIcon,
   PhoneIcon,
   EnvelopeIcon'
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline;
 
 const ITSolutionsPage: React.FC = () => {
   const services = [

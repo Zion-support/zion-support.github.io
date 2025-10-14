@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';
+import React from 'react''
+import { Helmet } from 'react-helmet-async;
 export default function ServicesData() {
   return (
     <div className="min-h-screen bg-white"></div>

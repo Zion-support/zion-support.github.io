@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';'
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react''
+import { Link, useLocation } from 'react-router-dom;
 import { ArrowRight, 
   ChevronDown, 
   Menu, 
@@ -27,12 +27,12 @@ import { ArrowRight,
   CheckCircle,
   DollarSign,
   Play'
-} from 'lucide-react';
+} from 'lucide-react;
 
 const ImprovedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);'
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)'
   const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
 
@@ -702,11 +702,11 @@ const ImprovedNavigation = () => {
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                   Custom solutions;
                 </li>"
-                <li className="flex items-center">
+                <li className="flex items-center"></li>
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
                   Expert consultation;
                 </li>"
-                <li className="flex items-center">
+                <li className="flex items-center"></li>
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
                   Ongoing support;
                 </li>
@@ -729,7 +729,7 @@ const ImprovedNavigation = () => {
       </section>;
             Ready to Get Started?;
           </h2>;
-          <p className="text-xl text-blue-100 mb-8">;'
+          <p className="text-xl text-blue-100 mb-8">'
             Let's discuss how our improved navigation';
             services can help you achieve your goals.;
           </p>;

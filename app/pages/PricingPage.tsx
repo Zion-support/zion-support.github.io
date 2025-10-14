@@ -1,8 +1,8 @@
 
 
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+import { Link } from 'react-router-dom;
 import { CurrencyDollarIcon,
   CheckIcon,
   ArrowRightIcon,
@@ -11,7 +11,7 @@ import { CurrencyDollarIcon,
   CpuChipIcon,
   ShieldCheckIcon,
   CloudIcon'
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline;
 
 const PricingPage: React.FC = () => {
   const plans = [

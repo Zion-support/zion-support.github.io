@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-'use client';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+'use client;
 const FuturisticTextEnhanced: React.FC = () => {
   return (
     <div className="min-h-screen bg-white"></div>
@@ -38,11 +38,11 @@ const FuturisticTextEnhanced: React.FC = () => {
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                   Custom solutions;
                 </li>"
-                <li className="flex items-center">
+                <li className="flex items-center"></li>
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
                   Expert consultation;
                 </li>"
-                <li className="flex items-center">
+                <li className="flex items-center"></li>
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
                   Ongoing support;
                 </li>
@@ -65,7 +65,7 @@ const FuturisticTextEnhanced: React.FC = () => {
       </section>;
             Ready to Get Started?;
           </h2>;
-          <p className="text-xl text-blue-100 mb-8">;'
+          <p className="text-xl text-blue-100 mb-8">'
             Let's discuss how our futuristic text enhanced';
             services can help you achieve your goals.;
           </p>;

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 interface AdvancedSEOProps {
-  title: 'string;','
-  description: 'string;','
+  title: 'string','
+  description: 'string','
   keywords?: string;
   canonical?: string;
   ogTitle?: string;
@@ -54,9 +54,9 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   const fullOgTitle = ogTitle || fullTitle;
   const fullOgDescription = ogDescription || description;
   const fullTwitterTitle = twitterTitle || fullTitle;
-  const fullTwitterDescription = twitterDescription || description;'
+  const fullTwitterDescription = twitterDescription || description'
   const fullOgImage = ogImage || 'https://ziontechgroup.com/api/placeholder/1200/630';
-  const fullTwitterImage = twitterImage || fullOgImage;'
+  const fullTwitterImage = twitterImage || fullOgImage'
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
   const currentDate = new Date().toISOString();
   // Default structured data for organization;
@@ -240,4 +240,4 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   );
 };
 
-export default AdvancedSEO;'
+export default AdvancedSEO'

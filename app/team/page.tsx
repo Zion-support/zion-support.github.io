@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react;
 
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mail, Linkedin, Github, Twitter, Award, Users, Brain, Shield, Zap, Globe, BarChart3, CheckCircle, Star, Clock } from "lucide-react";'
-import EnhancedSEO from '../components/EnhancedSEO';
+import { ArrowRight, Mail, Linkedin, Github, Twitter, Award, Users, Brain, Shield, Zap, Globe, BarChart3, CheckCircle, Star, Clock } from "lucide-react"'
+import EnhancedSEO from '../components/EnhancedSEO;
 
 export default function TeamPage() {
   const teamMembers = [

@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-'use client';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+'use client;
 const Main: React.FC = () => {
   return (
     <div className="min-h-screen bg-white"></div>
@@ -70,7 +70,7 @@ const Main: React.FC = () => {
           <h2 className="text-3xl font-bold text-white mb-6">;
             Ready to Get Started?;
           </h2>;
-          <p className="text-xl text-blue-100 mb-8">;'
+          <p className="text-xl text-blue-100 mb-8">'
             Let's discuss how our main';
             services can help you achieve your goals.;
           </p>;

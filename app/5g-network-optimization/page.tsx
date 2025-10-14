@@ -1,4 +1,4 @@
-import ResponsiveContainer from '../components/ResponsiveContainer';
+import ResponsiveContainer from '../components/ResponsiveContainer;
 const FiveGNetworkOptimization = () => {
   return (
     <></>
@@ -31,4 +31,4 @@ const FiveGNetworkOptimization = () => {
   );
 };
 
-export default FiveGNetworkOptimization;'
+export default FiveGNetworkOptimization'

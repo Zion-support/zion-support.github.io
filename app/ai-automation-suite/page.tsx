@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-'use client';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+'use client;
 export default function Page() {
   return (
     <div className="min-h-screen bg-white"></div>
@@ -24,11 +24,11 @@ export default function Page() {
                 Our team of experts delivers cutting-edge page solutions.;
               </p>;
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg shadow-md"></div>
               <h3 className="text-xl font-semibold mb-3">Feature 2</h3>
               <p>Description of feature 2</p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg shadow-md"></div>
               <h3 className="text-xl font-semibold mb-3">Feature 3</h3>
               <p>Description of feature 3</p>
             </div>

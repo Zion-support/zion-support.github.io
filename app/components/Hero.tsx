@@ -1,17 +1,17 @@
-import React from 'react';''
-import { Link } from 'react-router-dom';''
-import { ArrowRightIcon, PlayIcon } from '@heroicons/react/24/outline';
+import React from 'react'''
+import { Link } from 'react-router-dom'''
+import { ArrowRightIcon, PlayIcon } from '@heroicons/react/24/outline;
 
 const Hero: React.FC = () => {
   return (
-<>    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+<>    <section className="relative min-h-screen flex items-center justify-center overflow-hidden"></section>
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <div className="absolute inset-0 bg-black opacity-20"></div>
     </>
       </div>
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden"></div>
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
         <div className="absolute top-40 left-1/2 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
               AI & Technology
             </span>
           </h1>
-          <p>
+          <p></p>
             Leading provider of AI and IT solutions, empowering businesses to scale, ;
             innovate, and succeed in the digital age.
           </p>
@@ -46,16 +46,16 @@ const Hero: React.FC = () => {
             </button>
           </div>
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"></div>
+            <div className="text-center"></div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">500+</div>
               <div className="text-gray-300">Projects Completed</div>
             </div>
-            <div className="text-center">
+            <div className="text-center"></div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">99%</div>
               <div className="text-gray-300">Client Satisfaction</div>
             </div>
-            <div className="text-center">
+            <div className="text-center"></div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
               <div className="text-gray-300">Support Available</div>
             </div>
@@ -63,14 +63,14 @@ const Hero: React.FC = () => {
         </div>
       </div>
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"></div>
+        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center"></div>
           <div className="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
   );
-};'
+}'
 "'
 export default Hero;
 '

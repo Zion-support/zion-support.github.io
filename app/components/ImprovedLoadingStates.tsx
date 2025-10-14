@@ -1,5 +1,5 @@
-import React from 'react';
-import { Loader2, Brain, Zap, Shield } from 'lucide-react';
+import React from 'react;
+import { Loader2, Brain, Zap, Shield } from 'lucide-react;
 
 interface LoadingSpinnerProps {'
   size?: 'sm' | 'md' | 'lg';
@@ -98,7 +98,7 @@ interface ServiceLoadingProps {
 }
 export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) => {
   const getServiceIcon = (service: string) => {'
-    if (service.toLowerCase().includes('ai')) return <Brain className="w-8 h-8 text-cyan-400" />;'
+    if (service.toLowerCase().includes('ai')) return <Brain className="w-8 h-8 text-cyan-400" />'
     if (service.toLowerCase().includes('security')) return <Shield className="w-8 h-8 text-purple-400" />;
     return <Zap className="w-8 h-8 text-blue-400" />;
   };
@@ -118,4 +118,4 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
   );
 };
 
-export default LoadingPage;'
+export default LoadingPage'

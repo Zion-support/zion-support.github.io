@@ -1,7 +1,7 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';
+import React from 'react''
+import { Link } from 'react-router-dom''
+import { Helmet } from 'react-helmet-async''
+import { Link } from 'react-router-dom;
 import { ArrowRightIcon, 
   ShieldCheckIcon, 
   CloudIcon,
@@ -9,8 +9,8 @@ import { ArrowRightIcon,
   GlobeAltIcon,
   SignalIcon,
   BriefcaseIcon'
-} from '@heroicons/react/24/outline';'
-import FuturisticBackground from './components/FuturisticBackground';
+} from '@heroicons/react/24/outline''
+import FuturisticBackground from './components/FuturisticBackground;
 
 const HomePage: React.FC = () => {
   const structuredData = {

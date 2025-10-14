@@ -1,14 +1,14 @@
 
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+import { Link } from 'react-router-dom;
 import { AcademicCapIcon,
   PlayIcon,
   DocumentTextIcon,
   ClockIcon,
   UserGroupIcon,
   ArrowRightIcon'
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline;
 
 const TutorialsPage: React.FC = () => {
   const tutorials = [

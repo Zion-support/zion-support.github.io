@@ -1,5 +1,5 @@
-import React from 'react';'
-'use client';
+import React from 'react''
+'use client;
       {/* Content Section */}'
 import React from 'react''
 'use client'{/* Content Section */}
@@ -26,9 +26,9 @@ import React from 'react''
                 </li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p>
+              <p></p>
                 Ready to transform your business with our skip link services?;
               </p>;
               <a></a>
@@ -40,5 +40,5 @@ import React from 'react''
             </div>
           </div>
         </div>'
-      </section>;'
+      </section>'
 '

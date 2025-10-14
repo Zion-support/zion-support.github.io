@@ -1,12 +1,12 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';
+import React from 'react''
+import { Helmet } from 'react-helmet-async;
 interface EnhancedMetaTagsProps {
   title: string;
   description: string;
   keywords?: string;
   canonical?: string;
-  ogImage?: string;'
-  ogType?: 'website' | 'article' | 'product';'
+  ogImage?: string'
+  ogType?: 'website' | 'article' | 'product''
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   noIndex?: boolean,
   structuredData?: Record<string, any></string>
@@ -35,7 +35,7 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
   tags = [],
 }) => {'
   const siteUrl = 'https: //ziontechgroup.com',
-  const finalCanonical = canonical || `${siteUrl}${window.location.pathname}`;'
+  const finalCanonical = canonical || `${siteUrl}${window.location.pathname}`'
   const finalOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
 
   // Generate structured data

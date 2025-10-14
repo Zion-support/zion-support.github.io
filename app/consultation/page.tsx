@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Link } from 'react-router-dom';
+import React from 'react''
+import { Helmet } from 'react-helmet-async''
+import { Link } from 'react-router-dom;
 import { Calendar, 
   Clock, 
   CheckCircle, 
@@ -16,8 +16,8 @@ import { Calendar,
   Users,
   Award,
   BarChart3'
-} from 'lucide-react';'
-import EnhancedSEO from '../components/EnhancedSEO';
+} from 'lucide-react''
+import EnhancedSEO from '../components/EnhancedSEO;
 
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({'

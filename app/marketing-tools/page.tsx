@@ -1,31 +1,31 @@
-import React from 'react';'
-import { ArrowRight } from 'lucide-react';'
-import { CheckCircle } from 'lucide-react';'
-import { Star } from 'lucide-react';'
-import { Users } from 'lucide-react';'
-import { Clock } from 'lucide-react';'
-import { DollarSign } from 'lucide-react';'
-import { Shield } from 'lucide-react';'
-import { Code } from 'lucide-react';'
-import { Database } from 'lucide-react';'
-import { Mail } from 'lucide-react';'
-import { Settings } from 'lucide-react';'
-import { Target } from 'lucide-react';'
-import { TrendingUp } from 'lucide-react';'
-import { PieChart } from 'lucide-react';'
-import { MessageSquare } from 'lucide-react';'
-import { Heart } from 'lucide-react';'
-import { Globe } from 'lucide-react';'
-import { Smartphone } from 'lucide-react';'
-import { Network } from 'lucide-react';'
-import { Lock } from 'lucide-react';'
-import { Cpu } from 'lucide-react';'
-import { Wifi } from 'lucide-react';'
-import { Building2 } from 'lucide-react';'
-import { Briefcase } from 'lucide-react';'
-import { Lightbulb } from 'lucide-react';'
-import { Link } from 'react-router-dom';'
-import EnhancedSEO from '../components/EnhancedSEO';
+import React from 'react''
+import { ArrowRight } from 'lucide-react''
+import { CheckCircle } from 'lucide-react''
+import { Star } from 'lucide-react''
+import { Users } from 'lucide-react''
+import { Clock } from 'lucide-react''
+import { DollarSign } from 'lucide-react''
+import { Shield } from 'lucide-react''
+import { Code } from 'lucide-react''
+import { Database } from 'lucide-react''
+import { Mail } from 'lucide-react''
+import { Settings } from 'lucide-react''
+import { Target } from 'lucide-react''
+import { TrendingUp } from 'lucide-react''
+import { PieChart } from 'lucide-react''
+import { MessageSquare } from 'lucide-react''
+import { Heart } from 'lucide-react''
+import { Globe } from 'lucide-react''
+import { Smartphone } from 'lucide-react''
+import { Network } from 'lucide-react''
+import { Lock } from 'lucide-react''
+import { Cpu } from 'lucide-react''
+import { Wifi } from 'lucide-react''
+import { Building2 } from 'lucide-react''
+import { Briefcase } from 'lucide-react''
+import { Lightbulb } from 'lucide-react''
+import { Link } from 'react-router-dom''
+import EnhancedSEO from '../components/EnhancedSEO;
 
 const Page = () => {
   const features = [
@@ -108,18 +108,18 @@ const Page = () => {
                     {feature.icon}
                   </div>
                 </div>
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <h4 className="font-semibold text-white mb-3">Features:</h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2"></ul>
                     {tool.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="text-center">
+                <div className="text-center"></div>
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
                   <a;
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title,}`}

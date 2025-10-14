@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react;
 
 interface PerformanceMetrics {
   cls: number | null;
@@ -49,13 +49,13 @@ const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     // Only run in browser;
-    if (typeof window === 'undefined') return;'"
+    if (typeof window === 'undefined') return'"
     // Get performance metrics;
     const getPerformanceMetrics = () => {;
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'";
-      const paintEntries = performance.getEntriesByType('paint');'";
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');'";
-      const lcp = performance.getEntriesByType('largest-contentful-paint');'";
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming'";
+      const paintEntries = performance.getEntriesByType('paint')'";
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')'";
+      const lcp = performance.getEntriesByType('largest-contentful-paint')'";
       setMetrics({
         cls: 0, // Would need to be calculated with observer;
         inp: 0, // Would need to be calculated with observer;
