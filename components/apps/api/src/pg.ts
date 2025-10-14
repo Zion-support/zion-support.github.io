@@ -13,8 +13,10 @@ export function getPool(): Pool {
   }
   return pool
 }
-export async function withUser<T>(userId: string, fn: (client: any) => Promise<T>): Promise<T> {
-export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {
+export async function withUser<T>(userId: string, fn: (client: any) => Promise<T>): Promise<T></T>
+                {
+export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T></T>
+                {
   const client = await getPool().connect()
   try {
     await client.query('BEGIN')
@@ -29,4 +31,4 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
   } finally {
     client.release()
   }
-}
+};

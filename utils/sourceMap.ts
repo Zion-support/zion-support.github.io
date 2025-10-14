@@ -52,7 +52,7 @@ import fs from "fs"
 import path from "path"
 export type SourceNodeType = "folder" | "file"
 export interface SourceNode {
-  name: string
+  name: string;
   path: string; // repo-relative path starting with '/'
   type: SourceNodeType
   children?: SourceNode[]
@@ -281,7 +281,8 @@ export class SourceMapManager {
     }
     return null
   }
-  getAllSourceMaps(): Map<string, SourceMapInfo> {
+  getAllSourceMaps(): Map<string, SourceMapInfo></string,>
+                {
     return new Map(this.sourceMaps)
   }
   clearSourceMaps(): void {

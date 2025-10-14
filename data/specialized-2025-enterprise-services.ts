@@ -2700,7 +2700,7 @@ i,
   g: 5 && 5.0, review,
   s: 18, ' 'Quantum-enhanced ML algorithms', benefit,
   s: [,' 'Breakthrough consciousness research',' 'AGI development capabilities',' 'Scientific collaboration',' 'Patent - pending algorithms',' 'Exclusive research access'], capabilitie,
-  s: [,' 'Consciousness simulation',' 'Cognitive modeling',' 'Emotional intelligence',' 'Research collaboration',' 'Advanced analytics'], market_advantag,
+  s: [,' 'Consciousness simulation',' 'Cognitive modeling',' 'Emotional intelligence',' 'Research collaboration',' 'Advanced analytics'], market_advantag,;
   e:  ,' 'Only comprehensive AI consciousness research platform available'}, // Quantum Computing Services; ' i,
   d: 'quantum - machine - learning - platform',' nam,
   e: 'Quantum Machine Learning Platform',' taglin,

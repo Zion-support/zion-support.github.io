@@ -9,7 +9,7 @@
   q: NextApiRequest) re,
   s: NextApiResponse ) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
-  errorReport: ErrorReport = req.body} // Validate required fields if (!errorReport.error || !errorReport.error.message) {/* TODO: Fix JSX expression */}
+  errorReport: ErrorReport = req.body} // Validate required fields if (!errorReport.error || !errorReport.error.message) {/* TODO: Fix JSX expression */};
   r: 'Missing required fields' })} // Add timestamp if not provided if (!errorReport.timestamp) { errorReport.timestamp = new Date().toISOString()} // Add to error reports errorReports.push(errorReport); // Log for debugging' // console.error('Error,
   Report: ' {/* TODO: Fix JSX expression */}
   l: errorReport.url} timestam)
@@ -38,7 +38,8 @@
   d: 'POST'} header,
   s: {' 'Content-Type': 'application/json' }) bod,
   y: JSON.stringify(errorReport) })} } catch (error) {/* TODO: Fix JSX expression */}
-  services: '} error)} } function parseStackTrace(stack?: string) {if (!stack) return []; ' return stack.split('\n').map(line => { const match = line.match(/at\\s+(.+?)\\s+\\((.+?):(\\d+):(\\d+)\\)/)} if (match) {/* TODO: Fix JSX expression */}
+  services: '} error)} } function parseStackTrace(stack?: string) {if (!stack) return []; ' return stack.split('\n').map(line =>
+                { const match = line.match(/at\\s+(.+?)\\s+\\((.+?):(\\d+):(\\d+)\\)/)} if (match) {/* TODO: Fix JSX expression */}
   o: parseInt(match[3])} coln,
   o: parseInt(match[4]) }} return {/* TODO: Fix JSX expression */}
   o: 0} coln,

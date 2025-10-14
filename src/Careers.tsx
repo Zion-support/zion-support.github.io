@@ -1,11 +1,8 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';import { SEO  } from '@/components/SEO';
+import { GradientHeading  } from '@/components/GradientHeading';import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 export default function Careers() {
   const [activeDepartment, setActiveDepartment] = useState('all')
   const departments = [
@@ -44,13 +41,10 @@ export default function Careers() {
       name: 'Cloud & Infrastructure',
       icon: Cloud,
       color: 'from-green-500 to-emerald-500'
-    }
-import { Link } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { 
-  Briefcase, 
+    };
+import { Link , Link  } from 'react-router-dom';import React, { useState } from 'react';
+import { motion  } from 'framer-motion';
+import { Briefcase, 
   Users, 
   Heart, 
   Zap, 
@@ -90,9 +84,8 @@ import {
   CheckCircle,
   Code,
   Settings,
-  Eye
-} from 'lucide-react'
-export default function Careers() {
+  Eye;
+ } from 'lucide-react';export default function Careers() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedDepartment, setSelectedDepartment] = useState('all')
   const [selectedLocation, setSelectedLocation] = useState('all')
@@ -118,9 +111,8 @@ export default function Careers() {
     { id: 'full-time', name: 'Full-time', count: 20 },
     { id: 'part-time', name: 'Part-time', count: 2 },
     { id: 'contract', name: 'Contract', count: 2 }
-import { motion } from 'framer-motion'
-import { 
-  Briefcase, 
+import { motion  } from 'framer-motion';
+import { Briefcase, 
   Users, 
   Award, 
   MapPin, 
@@ -138,9 +130,8 @@ import {
   CheckCircle,
   Globe,
   Heart,
-  Zap
-} from 'lucide-react'
-export default function Careers() {
+  Zap;
+ } from 'lucide-react';export default function Careers() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedDepartment, setSelectedDepartment] = useState('all')
   const [selectedLocation, setSelectedLocation] = useState('all')
@@ -223,15 +214,13 @@ export default function Careers() {
   Star,
   TrendingUp
 } from 'lucide-react'
-import { Badge } from '../components/ui/badge'
-import { Card } from '../components/ui/card'
-import { Button } from '../components/ui/button'
-import { Input } from '../components/ui/input'
-import { Textarea } from '../components/ui/textarea'
+import { Badge  } from '../components/ui/badge';
+import { Card  } from '../components/ui/card';import { Button  } from '../components/ui/button';
+import { Input  } from '../components/ui/input';import { Textarea } from '../components/ui/textarea'
 import FuturisticNeonButton from '../components/ui/FuturisticNeonButton'
 import FuturisticAnimatedBackground from '../components/ui/FuturisticAnimatedBackground'
 import { SEO } from '../components/SEO'
-const Careers: React.FC = () => {
+const Careers: React.FC  = () => {
   const [selectedDepartment, setSelectedDepartment] = useState<string>('all')
   const [isApplying, setIsApplying] = useState<string | null>(null)
   const departments = [
@@ -885,7 +874,8 @@ export default function Careers() {
       ]
     }
   ]
-  const filteredPositions = openPositions.filter(position => {
+  const filteredPositions = openPositions.filter(position =>
+                {
     const matchesDepartment = selectedDepartment === 'all' || position.department === selectedDepartment
     const matchesLocation = selectedLocation === 'all' || position.location === selectedLocation
     const matchesType = selectedType === 'all' || position.type === selectedType
@@ -896,63 +886,63 @@ export default function Careers() {
   })
   const featuredPositions = filteredPositions.filter(position => position.featured)
   const regularPositions = filteredPositions.filter(position => !position.featured)
-  const filteredJobs = jobOpenings.filter(job => {
+  const filteredJobs = jobOpenings.filter(job =>
+                {
     const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment
     const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation
     return matchesDepartment && matchesLocation
   })
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate"></div>
+                {/* Hero Section */}
+                <div className="relative overflow-hidden"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 to-zion-purple/20"></div>
-        <div className="relative container mx-auto px-4 py-24">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+        <div className="relative container mx-auto px-4 py-24"></div>
+          <div className="text-center max-w-4xl mx-auto"></div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               Join Our Mission to
               <span className="text-gradient block">Transform the Future</span>
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
+                </h1>
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed"></p>
               Be part of a team that's pushing the boundaries of AI, quantum computing, and emerging technologies. 
               Help us build solutions that transform businesses and shape the future of technology.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 text-zion-cyan">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 text-zion-cyan"></div>
                 <Users className="h-5 w-5" />
                 <span className="text-white">24 Open Positions</span>
-              </div>
-              <div className="flex items-center space-x-2 text-zion-cyan">
+                </div>
+              <div className="flex items-center space-x-2 text-zion-cyan"></div>
                 <Globe className="h-5 w-5" />
                 <span className="text-white">Remote & Hybrid Options</span>
-              </div>
-              <div className="flex items-center space-x-2 text-zion-cyan">
+                </div>
+              <div className="flex items-center space-x-2 text-zion-cyan"></div>
                 <Star className="h-5 w-5" />
                 <span className="text-white">Competitive Benefits</span>
-              </div>
+                </div>
             </div>
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+                {/* Hero Section */}
+                <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
+                {/* Hero Section */}
+                <section className="relative pt-32 pb-20 overflow-hidden"></section>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center max-w-4xl mx-auto"></div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               Join Our Mission to
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></span>
                 {" "}Transform the Future
               </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Be part of a team that's pushing the boundaries of AI, quantum technology, and cybersecurity. 
               Help us build solutions that will shape the future of business and technology.
             </p>
-            
-            {/* Search Bar */}
-            <div className="relative max-w-2xl mx-auto mb-8">
+                {/* Search Bar */}
+                <div className="relative max-w-2xl mx-auto mb-8"></div>
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
               <input
                 type="text"
@@ -963,7 +953,7 @@ export default function Careers() {
               />
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div>
               <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -977,26 +967,26 @@ export default function Careers() {
               >
                 Learn About Us
               </Link>
-            </div>
+                </div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
+          ></motion.div
+>
+            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6"></div>
               <Briefcase className="w-4 h-4 mr-2" />
               Join Our Team
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"></h1>
               Build the Future with Us
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8"></p>
               Join our team of innovators, researchers, and technology leaders who are shaping the future of AI, quantum computing, and enterprise technology.
             </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
-              <div className="relative">
+                {/* Search Bar */}
+                <div className="max-w-2xl mx-auto"></div>
+              <div className="relative"></div>
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -1006,18 +996,17 @@ export default function Careers() {
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20"
                 />
               </div>
-            </div>
+                </div>
           </motion.div>
-        </div>
+                </div>
       </section>
-
-      {/* Filters Section */}
-      <section className="pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
-            {/* Departments */}
-            <div className="flex flex-wrap gap-3">
-              {departments.map((dept) => (
+                {/* Filters Section */}
+                <section className="pb-12 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between"></div>
+                {/* Departments */}
+                <div className="flex flex-wrap gap-3"></div>
+                {departments.map((dept) => (
                 <$2 />
                   key={dept.id}
                   onClick={() => setSelectedDepartment(dept.id)}
@@ -1027,17 +1016,16 @@ export default function Careers() {
                       : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
                   }`}
                 >
-                  {dept.name}
-                  <span className="ml-2 px-2 py-1 bg-gray-700/50 rounded-full text-xs">
-                    {dept.count}
-                  </span>
+                {dept.name}
+                <span className="ml-2 px-2 py-1 bg-gray-700/50 rounded-full text-xs"></span>
+                {dept.count}
+                </span>
                 </button>
               ))}
-            </div>
-
-            {/* Locations & Types */}
-            <div className="flex flex-wrap gap-2">
-              {locations.map((location) => (
+                </div>
+                {/* Locations & Types */}
+                <div className="flex flex-wrap gap-2"></div>
+                {locations.map((location) => (
                 <$2 />
                   key={location.id}
                   onClick={() => setSelectedLocation(location.id)}
@@ -1047,8 +1035,8 @@ export default function Careers() {
                       : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
                   }`}
                 >
-                  {location.name}
-                  <span className="ml-1 text-xs opacity-75">({location.count})</span>
+                {location.name}
+                <span className="ml-1 text-xs opacity-75">({location.count})</span>
                 </button>
               ))}
               {jobTypes.map((type) => (
@@ -1061,14 +1049,13 @@ export default function Careers() {
                       : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
                   }`}
                 >
-                  {type.name}
-                  <span className="ml-1 text-xs opacity-75">({type.count})</span>
+                {type.name}
+                <span className="ml-1 text-xs opacity-75">({type.count})</span>
                 </button>
               ))}
-            </div>
-import { Link } from 'react-router-dom'
-import { 
-  Users, 
+                </div>;
+import { Link  } from 'react-router-dom';
+import { Users, 
   Zap, 
   Globe, 
   Heart, 
@@ -1080,9 +1067,8 @@ import {
   DollarSign,
   Send,
   CheckCircle,
-  AlertCircle
-} from 'lucide-react'
-const Careers = () => {
+  AlertCircle;
+ } from 'lucide-react';const Careers  = () => {
   const [selectedDepartment, setSelectedDepartment] = useState<string>('all')
   const [searchTerm, setSearchTerm] = useState<string>('')
   const departments = [
@@ -1217,7 +1203,8 @@ const Careers = () => {
       ]
     }
   ]
-  const filteredJobs = jobListings.filter(job => {
+  const filteredJobs = jobListings.filter(job =>
+                {
     const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment
     const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -1490,7 +1477,8 @@ const Careers = () => {
       postedDate: "2025-01-03"
     }
   ]
-  const filteredJobs = jobOpenings.filter(job => {
+  const filteredJobs = jobOpenings.filter(job =>
+                {
     const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.department.toLowerCase().includes(searchTerm.toLowerCase())
@@ -1500,7 +1488,8 @@ const Careers = () => {
   })
   const featuredJobs = filteredJobs.filter(job => job.featured)
   const regularJobs = filteredJobs.filter(job => !job.featured)
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString: string) =>
+                {
     const date = new Date(dateString)
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
@@ -1560,10 +1549,9 @@ const Careers = () => {
       icon: '💰',
       title: 'Competitive Pay',
       description: 'Above-market salaries with equity options'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { 
-  Users, 
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { Users, 
   Briefcase, 
   MapPin, 
   Clock, 
@@ -1576,9 +1564,8 @@ import {
   Target,
   TrendingUp,
   Award,
-  Lightbulb
-} from 'lucide-react'
-const Careers = () => {
+  Lightbulb;
+ } from 'lucide-react';const Careers  = () => {
   const openPositions = [
     {
       title: "Senior AI Engineer",
@@ -1714,17 +1701,17 @@ const Careers = () => {
         keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
         canonical="https://ziontechgroup.com/careers"
       />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20"></main>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6"></h1>
               Join Our Team
             </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed"></p>
               Build the future of technology with us. Join a team of innovators, 
               problem-solvers, and visionaries transforming businesses worldwide.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div>
               <$2 />
                 href="#open-positions"
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
@@ -1737,90 +1724,90 @@ const Careers = () => {
               >
                 Contact Us
               </Link>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* Company Values */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                {/* Company Values */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
               Our Values
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto"></p>
               These core principles guide everything we do and shape our company culture.
             </p>
-          </div>
+                </div>
           
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+                {/* Header Section */}
+                <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8"></div>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6"></h1>
             Join Our Team
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
             Help us build the future of AI and technology. Join a team of innovators, problem-solvers, and visionaries.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"></button>
               View Open Positions
             </button>
-            <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/20 transition-all duration-300">
+            <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/20 transition-all duration-300"></button>
               Submit Application
             </button>
-          </div>
+                </div>
         </div>
-      </div>
-
-      {/* Values Section */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                </div>
+                {/* Values Section */}
+                <div className="px-4 sm:px-6 lg:px-8 pb-16"></div>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Our Values
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               The principles that guide everything we do
             </p>
-          </div>
+                </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
-                <h3 className="text-xl font-semibold text-cyan-400 mb-3">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {values.map((value, index) => (
+              <div key={index} className="text-center p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300"></div>
+                <h3 className="text-xl font-semibold text-cyan-400 mb-3"></h3>
+                {value.title}
+                </h3>
+                <p className="text-gray-300"></p>
+                {value.description}
+                </p>
+                </div>
             ))}
-          </div>
-        </div>
-      {/* Benefits Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
+                </div>
+                </div>
+                {/* Benefits Section */}
+                <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-12"></div>
           <h2 className="text-3xl font-bold text-white mb-4">Why Work With Us</h2>
-          <p className="text-zion-slate-light text-lg">
+          <p className="text-zion-slate-light text-lg"></p>
             We invest in our people because they're our greatest asset
           </p>
-        </div>
+                </div>
       </section>
-
-      {/* Job Openings */}
-      <section id="openings" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                {/* Job Openings */}
+                <section id="openings" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
               Open Positions
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto"></p>
               Find the perfect role for your skills and career goals.
             </p>
-          </div>
-
-          {/* Department Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {departments.map((dept) => (
+                </div>
+                {/* Department Filter */}
+                <div className="flex flex-wrap justify-center gap-3 mb-12"></div>
+                {departments.map((dept) => (
               <$2 />
                 key={dept.id}
                 onClick={() => setSelectedDepartment(dept.id)}
@@ -1831,74 +1818,88 @@ const Careers = () => {
                 }`}
               >
                 <dept.icon className="w-4 h-4" />
-                <span>{dept.name}</span>
-                <span className="text-xs bg-gray-700 px-2 py-1 rounded-full">
-                  {dept.count}
+                <span></span>
+                {dept.name}
                 </span>
-              </button>
+                <span className="text-xs bg-gray-700 px-2 py-1 rounded-full"></span>
+                {dept.count}
+                </span>
+                </button>
             ))}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-            <div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24"></div>
+            <div></div>
               <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
-              <p className="text-zion-slate-light text-lg mb-6">
+              <p className="text-zion-slate-light text-lg mb-6"></p>
                 At Zion, we're not just building a marketplace; we're creating a new paradigm for how AI and 
                 technology are accessed, shared, and implemented globally.
               </p>
-              <p className="text-zion-slate-light text-lg mb-6">
+              <p className="text-zion-slate-light text-lg mb-6"></p>
                 Our team is passionate about democratizing access to cutting-edge technology and connecting 
                 talented individuals with meaningful opportunities. We value innovation, collaboration, and 
                 impact in everything we do.
               </p>
-              <p className="text-zion-slate-light text-lg">
+              <p className="text-zion-slate-light text-lg"></p>
                 If you're excited about shaping the future of AI and technology while working in a dynamic, 
                 remote-first environment with a mission-driven team, we'd love to meet you.
               </p>
-            </div>
-            <div className="rounded-lg overflow-hidden">
+                </div>
+            <div className="rounded-lg overflow-hidden"></div>
               <img loading="lazy" 
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600" 
                 alt="Team collaboration" 
                 className="object-cover w-full h-full"
               />
             </div>
-          </div>
+                </div>
           
-          <div className="space-y-6">
-            {filteredJobs.map((job) => (
-              <div key={job.id} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                  <div className="mb-4 lg:mb-0">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <h3 className="text-2xl font-bold">{job.title}</h3>
-                      {job.urgent && (
-                        <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full border border-red-500/30">
+          <div className="space-y-6"></div>
+                {filteredJobs.map((job) => (
+              <div key={job.id} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300"></div>
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6"></div>
+                  <div className="mb-4 lg:mb-0"></div>
+                    <div className="flex items-center space-x-3 mb-2"></div>
+                      <h3 className="text-2xl font-bold"></h3>
+                {job.title}
+                </h3>
+                {job.urgent && (
+                        <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full border border-red-500/30"></span>
                           Urgent
                         </span>
                       )}
-                    </div>
-                    <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm">
-                      <div className="flex items-center space-x-1">
+                </div>
+                    <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm"></div>
+                      <div className="flex items-center space-x-1"></div>
                         <Building className="w-4 h-4" />
-                        <span>{departments.find(d => d.id === job.department)?.name}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
+                        <span></span>
+                {departments.find(d => d.id === job.department)?.name}
+                </span>
+                </div>
+                      <div className="flex items-center space-x-1"></div>
                         <MapPin className="w-4 h-4" />
-                        <span>{job.location}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
+                        <span></span>
+                {job.location}
+                </span>
+                </div>
+                      <div className="flex items-center space-x-1"></div>
                         <Clock className="w-4 h-4" />
-                        <span>{job.type}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
+                        <span></span>
+                {job.type}
+                </span>
+                </div>
+                      <div className="flex items-center space-x-1"></div>
                         <Briefcase className="w-4 h-4" />
-                        <span>{job.experience}</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
+                        <span></span>
+                {job.experience}
+                </span>
+                </div>
+                      <div className="flex items-center space-x-1"></div>
                         <DollarSign className="w-4 h-4" />
-                        <span>{job.salary}</span>
-                      </div>
+                        <span></span>
+                {job.salary}
+                </span>
+                </div>
                     </div>
-                  </div>
+                </div>
                   <$2 />
                     to={`/careers/${job.id}`}
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 flex items-center justify-center space-x-2"
@@ -1908,291 +1909,307 @@ const Careers = () => {
                   </Link>
                 </div>
                 
-                <p className="text-gray-300 mb-4">{job.description}</p>
+                <p className="text-gray-300 mb-4"></p>
+                {job.description}
+                </p>
                 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6"></div>
+                  <div></div>
                     <h4 className="font-semibold mb-3 text-purple-400">Requirements</h4>
-                    <ul className="space-y-2">
-                      {job.requirements.map((req, idx) => (
-                        <li key={idx} className="flex items-center space-x-2">
+                    <ul className="space-y-2"></ul>
+                {job.requirements.map((req, idx) => (
+                        <li key={idx} className="flex items-center space-x-2"></li>
                           <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                          <span className="text-gray-300 text-sm">{req}</span>
-                        </li>
+                          <span className="text-gray-300 text-sm"></span>
+                {req}
+                </span>
+                </li>
                       ))}
-                    </ul>
-      <section className="py-20 bg-black/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+                </ul>
+      <section className="py-20 bg-black/20"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-4"></h2>
               Our Values
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-300"></p>
               The principles that guide everything we do
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {companyValues.map((value, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                {companyValues.map((value, index) => (
               <$2 />
                 key={index}
                 className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                <div className={`w-16 h-16 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mx-auto mb-4`}></div>
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-gray-300 text-sm">{value.description}</p>
-              </div>
+                <h3 className="text-lg font-semibold text-white mb-2"></h3>
+                {value.title}
+                </h3>
+                <p className="text-gray-300 text-sm"></p>
+                {value.description}
+                </p>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Benefits Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+                {/* Benefits Section */}
+                <section className="py-20"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-4"></h2>
               Why Work With Us?
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-300"></p>
               We invest in our people because they're our greatest asset
             </p>
-          </div>
+                </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {benefits.map((category, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                {benefits.map((category, index) => (
               <$2 />
                 key={index}
                 className="bg-gray-800/50 rounded-xl border border-gray-700 p-6"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
-                <div className="space-y-3">
-                  {category.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex items-center gap-3">
+                <h3 className="text-xl font-semibold text-white mb-4"></h3>
+                {category.category}
+                </h3>
+                <div className="space-y-3"></div>
+                {category.items.map((item, itemIndex) => (
+                    <div key={itemIndex} className="flex items-center gap-3"></div>
                       <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                      <span className="text-gray-300">{item.name}</span>
-                    </div>
+                      <span className="text-gray-300"></span>
+                {item.name}
+                </span>
+                </div>
                   ))}
                 </div>
-      {/* Company Culture */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+                {/* Company Culture */}
+                <section className="py-20"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4"></h2>
               Why Work at Zion Tech Group?
             </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto"></p>
               We're building more than just technology - we're building a culture 
               of innovation, collaboration, and continuous growth.
             </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center">
+                </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {companyValues.map((value, index) => (
+              <div key={index} className="text-center"></div>
+                <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center"></div>
                   <value.icon className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                  {value.title}
+                <h3 className="text-xl font-semibold text-zion-blue-dark mb-3"></h3>
+                {value.title}
                 </h3>
-                <p className="text-zion-slate">
-                  {value.description}
+                <p className="text-zion-slate"></p>
+                {value.description}
                 </p>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Featured Positions */}
+                {/* Featured Positions */}
       {featuredPositions.length > 0 && (
-        <section className="pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+        <section className="pb-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-12"></div>
               <h2 className="text-3xl font-bold text-white mb-4">Featured Positions</h2>
               <p className="text-gray-300">High-priority roles with immediate openings</p>
-            </div>
+                </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {featuredPositions.map((position, index) => (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                {featuredPositions.map((position, index) => (
                 <motion.div
                   key={position.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
+                ></motion.div
+>
+                  <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center"></div>
                     <Briefcase className="w-16 h-16 text-cyan-400" />
                   </div>
                   
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full border border-cyan-500/30">
+                  <div className="p-6"></div>
+                    <div className="flex items-center gap-4 mb-4"></div>
+                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full border border-cyan-500/30"></span>
                         Featured
                       </span>
-                      <span className="text-gray-400 text-sm capitalize">{position.department}</span>
-                    </div>
+                      <span className="text-gray-400 text-sm capitalize"></span>
+                {position.department}
+                </span>
+                </div>
                     
-                    <h3 className="text-2xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors duration-200">
-                      {position.title}
-                    </h3>
+                    <h3 className="text-2xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors duration-200"></h3>
+                {position.title}
+                </h3>
                     
-                    <p className="text-gray-300 mb-4 leading-relaxed">
-                      {position.description}
-                    </p>
+                    <p className="text-gray-300 mb-4 leading-relaxed"></p>
+                {position.description}
+                </p>
                     
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-4 text-sm text-gray-400">
-                        <div className="flex items-center gap-2">
+                    <div className="flex items-center justify-between mb-4"></div>
+                      <div className="flex items-center gap-4 text-sm text-gray-400"></div>
+                        <div className="flex items-center gap-2"></div>
                           <MapPin className="w-4 h-4" />
-                          {locations.find(l => l.id === position.location)?.name}
-                        </div>
-                        <div className="flex items-center gap-2">
+                {locations.find(l => l.id === position.location)?.name}
+                </div>
+                        <div className="flex items-center gap-2"></div>
                           <Clock className="w-4 h-4" />
-                          {position.experience}
-                        </div>
-                        <div className="flex items-center gap-2">
+                {position.experience}
+                </div>
+                        <div className="flex items-center gap-2"></div>
                           <Users className="w-4 h-4" />
-                          {position.applications} applications
+                {position.applications} applications
                         </div>
-                      </div>
+                </div>
                     </div>
                     
-                    <div className="mb-4">
+                    <div className="mb-4"></div>
                       <h4 className="font-semibold text-gray-300 mb-2">Key Requirements:</h4>
-                      <ul className="space-y-1">
-                        {position.requirements.slice(0, 3).map((req, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <ul className="space-y-1"></ul>
+                {position.requirements.slice(0, 3).map((req, idx) => (
+                          <li key={idx} className="flex items-center text-sm text-gray-400"></li>
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-      {/* Benefits */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+                {/* Benefits */}
+                <section className="py-20 bg-white"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4"></h2>
               Benefits & Perks
             </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto"></p>
               We believe in taking care of our team. Here's what we offer to support 
               your professional and personal growth.
             </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-zinc-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-4 flex items-center justify-center">
+                </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {benefits.map((benefit, index) => (
+              <div key={index} className="bg-zinc-50 rounded-xl p-6 text-center hover:shadow-lg transition-shadow"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-4 flex items-center justify-center"></div>
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
-                  {benefit.title}
+                <h3 className="text-lg font-semibold text-zion-blue-dark mb-2"></h3>
+                {benefit.title}
                 </h3>
-                <p className="text-zion-slate text-sm">
-                  {benefit.description}
+                <p className="text-zion-slate text-sm"></p>
+                {benefit.description}
                 </p>
-      </div>
-
-      {/* Benefits Section */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                </div>
+                {/* Benefits Section */}
+                <div className="px-4 sm:px-6 lg:px-8 pb-16"></div>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Why Work With Us
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               We offer more than just a job - we offer a career with purpose
             </p>
-          </div>
+                </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {benefits.map((benefit, index) => (
+              <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300"></div>
+                <div className="text-4xl mb-4"></div>
+                {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3"></h3>
+                {benefit.title}
+                </h3>
+                <p className="text-gray-300"></p>
+                {benefit.description}
+                </p>
+                </div>
             ))}
-          </div>
-        </div>
-                    <div>
+                </div>
+                </div>
+                    <div></div>
                       <h4 className="font-semibold text-zion-blue-dark mb-2">Benefits:</h4>
-                      <ul className="space-y-1">
-                        {job.benefits.map((benefit, index) => (
-                          <li key={index} className="flex items-start text-sm text-zion-slate">
+                      <ul className="space-y-1"></ul>
+                {job.benefits.map((benefit, index) => (
+                          <li key={index} className="flex items-start text-sm text-zion-slate"></li>
                             <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 mt-2 flex-shrink-0"></div>
-                            {benefit}
-                          </li>
+                {benefit}
+                </li>
                         ))}
-                      </ul>
-                    </div>
+                </ul>
+                </div>
                   </div>
                 </div>
               ))
             )}
-    <div className="min-h-screen bg-background">
+                <div className="min-h-screen bg-background"></div>
       <SEO 
         title="Careers - Join Zion Tech Group" 
         description="Join our team and help build the future of technology. Explore career opportunities at Zion Tech Group."
         keywords="careers, jobs, Zion Tech Group, employment, tech jobs, AI jobs"
         canonical="https://ziontechgroup.com/careers"
       />
-
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                {/* Hero Section */}
+                <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             Join Our <span className="text-zion-cyan">Team</span>
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+                </h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8"></p>
             Help us build the future of technology. We're looking for passionate, 
             innovative minds to join our mission.
           </p>
-          <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark">
+          <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark"></Button>
             <a href="#open-positions">View Open Positions</a>
-          </Button>
+                </Button>
         </div>
-      </section>
-
-      {/* Why Work With Us */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                </section>
+                {/* Why Work With Us */}
+                <section className="py-20"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-16">Why Work With Us?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors">
-                <CardHeader className="text-center">
-                  <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    {benefit.icon}
-                  </div>
-                  <CardTitle className="text-zion-cyan">{benefit.title}</CardTitle>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {benefits.map((benefit, index) => (
+              <Card key={index} className="bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors"></Card>
+                <CardHeader className="text-center"></CardHeader>
+                  <div className="w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                {benefit.icon}
+                </div>
+                  <CardTitle className="text-zion-cyan"></CardTitle>
+                {benefit.title}
+                </CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-zion-slate-light text-center">
-                    {benefit.description}
-                  </p>
+                <CardContent></CardContent>
+                  <p className="text-zion-slate-light text-center"></p>
+                {benefit.description}
+                </p>
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      </div>
-
-      {/* Open Positions */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                </div>
+                {/* Open Positions */}
+                <div className="px-4 sm:px-6 lg:px-8 pb-16"></div>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Open Positions
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Find your next opportunity to make a difference
             </p>
-          </div>
+                </div>
 
-          <div className="space-y-6">
+          <div className="space-y-6"></div>
     "Innovation at the core of everything we do",
     "Customer success drives our decisions",
     "Continuous learning and improvement",
@@ -2201,166 +2218,179 @@ const Careers = () => {
     "Collaboration and teamwork excellence"
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mr-4">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+                {/* Hero Section */}
+                <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <div className="flex items-center justify-center mb-6"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mr-4"></div>
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"></h1>
                 Join Our Team
               </h1>
-            </div>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+                </div>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Help us build the future of AI and technology. Join a team of innovators, problem-solvers, and visionaries.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"></button>
                 View Open Positions
               </button>
-              <button className="px-8 py-4 border border-blue-400/50 text-blue-400 font-semibold rounded-lg hover:bg-blue-400/20 transition-all duration-300">
+              <button className="px-8 py-4 border border-blue-400/50 text-blue-400 font-semibold rounded-lg hover:bg-blue-400/20 transition-all duration-300"></button>
                 Learn About Culture
               </button>
-            </div>
+                </div>
           </div>
-        </div>
-        
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                </div>
+                {/* Background Elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none"></div>
           <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-ping"></div>
           <div className="absolute top-40 right-20 w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-blue-400 rounded-full animate-bounce"></div>
-        </div>
+                </div>
       </section>
-
-      {/* Values Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Values Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Our Values & Culture
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               We're building more than technology - we're building a culture of innovation, collaboration, and growth
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {values.map((value, index) => (
-              <div key={index} className="flex items-center space-x-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                {values.map((value, index) => (
+              <div key={index} className="flex items-center space-x-4"></div>
                 <CheckCircle className="w-6 h-6 text-blue-400 flex-shrink-0" />
-                <span className="text-gray-300 text-lg">{value}</span>
-              </div>
+                <span className="text-gray-300 text-lg"></span>
+                {value}
+                </span>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Benefits Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Why Work With Us?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               We offer competitive benefits and a supportive environment where you can thrive and grow
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {benefits.map((benefit, index) =>
+                {
               const Icon = benefit.icon
               return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6"></div>
                     <Icon className="w-8 h-8 text-blue-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-4"></h3>
+                {benefit.title}
+                </h3>
+                  <p className="text-gray-300"></p>
+                {benefit.description}
+                </p>
                 </div>
               )
             })}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Open Positions Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Open Positions Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Open Positions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Join our team and help shape the future of AI and technology
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {openPositions.map((position, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300">
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-white">{position.title}</h3>
-                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full border border-blue-400/30">
-                    {position.type}
-                  </span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                {openPositions.map((position, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300"></div>
+                <div className="flex items-start justify-between mb-4"></div>
+                  <h3 className="text-xl font-semibold text-white"></h3>
+                {position.title}
+                </h3>
+                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-sm rounded-full border border-blue-400/30"></span>
+                {position.type}
+                </span>
                 </div>
                 
-                <div className="space-y-3 mb-6">
-                  <div className="flex items-center space-x-4 text-sm text-gray-300">
-                    <div className="flex items-center space-x-2">
+                <div className="space-y-3 mb-6"></div>
+                  <div className="flex items-center space-x-4 text-sm text-gray-300"></div>
+                    <div className="flex items-center space-x-2"></div>
                       <Briefcase className="w-4 h-4 text-blue-400" />
-                      <span>{position.department}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
+                      <span></span>
+                {position.department}
+                </span>
+                </div>
+                    <div className="flex items-center space-x-2"></div>
                       <MapPin className="w-4 h-4 text-blue-400" />
-                      <span>{position.location}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
+                      <span></span>
+                {position.location}
+                </span>
+                </div>
+                    <div className="flex items-center space-x-2"></div>
                       <Clock className="w-4 h-4 text-blue-400" />
-                      <span>{position.experience}</span>
-                    </div>
+                      <span></span>
+                {position.experience}
+                </span>
+                </div>
                   </div>
                 </div>
                 
                     <h4 className="font-semibold mb-3 text-purple-400">Benefits</h4>
-                    <ul className="space-y-2">
-                      {job.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center space-x-2">
+                    <ul className="space-y-2"></ul>
+                {job.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center space-x-2"></li>
                           <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                          <span className="text-gray-300 text-sm">{benefit}</span>
-    <div className="min-h-screen bg-background relative overflow-hidden">
+                          <span className="text-gray-300 text-sm"></span>
+                {benefit}
+                </span>
+    <div className="min-h-screen bg-background relative overflow-hidden"></div>
       <SEO 
         title="Careers - Join Zion Tech Group" 
         description="Join our team of innovators and technology experts. Explore career opportunities at Zion Tech Group."
         keywords="careers, jobs, employment, Zion Tech Group, technology careers, remote jobs"
         canonical="https://ziontechgroup.com/careers"
       />
-
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Hero Section */}
+                <section className="relative pt-32 pb-20 overflow-hidden"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+          ></motion.div
+>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white"></h1>
               Join Our
-              <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"></span>
                 Team
               </span>
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+                </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8"></p>
               Be part of a team that's shaping the future of technology. Work on cutting-edge projects, 
               learn from experts, and grow your career with us.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 href="#open-positions"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
@@ -2375,7 +2405,7 @@ const Careers = () => {
                 Contact Us
                 <Mail className="w-5 h-5" />
               </Link>
-            </div>
+                </div>
       description: 'Our solutions help businesses worldwide transform and succeed in the digital age.',
       color: 'from-blue-500 to-cyan-500'
     },
@@ -2393,38 +2423,38 @@ const Careers = () => {
         keywords="careers, jobs, employment, Zion Tech Group, technology jobs, AI jobs, remote work"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20"></div>
+                {/* Hero Section */}
+                <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"></section>
+          <div className="absolute inset-0 overflow-hidden"></div>
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
-          </div>
+                </div>
           
           <motion.div 
             className="max-w-7xl mx-auto text-center relative z-10"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
+          ></motion.div>
             <motion.h1 
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            ></motion.h1>
               Join Our
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400"></span>
                 {" "}Innovation Team
               </span>
-            </motion.h1>
+                </motion.h1>
             
             <motion.p 
               className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-            >
+            ></motion.p>
               Be part of a team that's revolutionizing technology and shaping the future. 
               We're looking for passionate individuals who want to make a real impact.
             </motion.p>
@@ -2434,43 +2464,42 @@ const Careers = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-            >
+            ></motion.div>
               <$2 />
                 href="#open-positions"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
                 View Open Positions
-                <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </a>
+                </a>
               <$2 />
                 href="mailto:careers@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 hover:border-gray-500 transition-all duration-300 transform hover:scale-105"
               >
                 Contact HR
               </a>
-            </motion.div>
+                </motion.div>
           </motion.div>
-        </section>
-
-        {/* Why Work With Us */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
+                </section>
+                {/* Why Work With Us */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            ></motion.div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"></h2>
                 Why Work With Zion Tech Group?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 We're not just another tech company. We're a team of innovators, problem-solvers, and future-shapers.
               </p>
-            </motion.div>
+                </motion.div>
             
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -2478,40 +2507,46 @@ const Careers = () => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-            >
-              {values.map((value, index) => (
+            ></motion.div>
+                {values.map((value, index) => (
                 <motion.div
                   key={index}
                   className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20"
                   variants={fadeInUp}
                   whileHover={{ scale: 1.02 }}
-                >
-                  <div className="text-5xl mb-4">{value.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{value.description}</p>
+                ></motion.div
+>
+                  <div className="text-5xl mb-4"></div>
+                {value.icon}
+                </div>
+                  <h3 className="text-xl font-semibold text-white mb-3"></h3>
+                {value.title}
+                </h3>
+                  <p className="text-gray-300 leading-relaxed"></p>
+                {value.description}
+                </p>
                 </motion.div>
               ))}
-            </motion.div>
-          </div>
+                </motion.div>
+                </div>
         </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+                {/* Benefits Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            ></motion.div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"></h2>
                 Benefits & Perks
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 We take care of our team so you can focus on doing your best work
               </p>
-            </motion.div>
+                </motion.div>
             
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -2519,40 +2554,46 @@ const Careers = () => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-            >
-              {benefits.map((benefit, index) => (
+            ></motion.div>
+                {benefits.map((benefit, index) => (
                 <motion.div
                   key={index}
                   className="text-center p-6 bg-white/10 backdrop-blur-lg rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300"
                   variants={fadeInUp}
                   whileHover={{ scale: 1.02 }}
-                >
-                  <div className="text-5xl mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
+                ></motion.div
+>
+                  <div className="text-5xl mb-4"></div>
+                {benefit.icon}
+                </div>
+                  <h3 className="text-xl font-semibold text-white mb-3"></h3>
+                {benefit.title}
+                </h3>
+                  <p className="text-gray-300 leading-relaxed"></p>
+                {benefit.description}
+                </p>
                 </motion.div>
               ))}
-            </motion.div>
-          </div>
+                </motion.div>
+                </div>
         </section>
-
-        {/* Open Positions */}
-        <section id="open-positions" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
+                {/* Open Positions */}
+                <section id="open-positions" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div 
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            ></motion.div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"></h2>
                 Open Positions
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Ready to join our team? Check out our current openings and find your perfect fit
               </p>
-            </motion.div>
+                </motion.div>
             
             <motion.div 
               className="grid grid-cols-1 lg:grid-cols-2 gap-8"
@@ -2560,84 +2601,88 @@ const Careers = () => {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-            >
-              {openPositions.map((position, index) => (
+            ></motion.div>
+                {openPositions.map((position, index) => (
                 <motion.div
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/15"
                   variants={fadeInUp}
                   whileHover={{ scale: 1.02 }}
-                >
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-semibold text-white">{position.title}</h3>
-                    <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
-                      {position.type}
-                    </span>
-                  </div>
+                ></motion.div
+>
+                  <div className="flex justify-between items-start mb-4"></div>
+                    <h3 className="text-xl font-semibold text-white"></h3>
+                {position.title}
+                </h3>
+                    <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full"></span>
+                {position.type}
+                </span>
+                </div>
                   
-                  <div className="flex items-center text-gray-400 text-sm mb-4 space-x-4">
-                    <span className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex items-center text-gray-400 text-sm mb-4 space-x-4"></div>
+                    <span className="flex items-center"></span>
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                       </svg>
-                      {position.department}
-                    </span>
-                    <span className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {position.department}
+                </span>
+                    <span className="flex items-center"></span>
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                       </svg>
-                      {position.location}
-                    </span>
-                    <span className="flex items-center">
-                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {position.location}
+                </span>
+                    <span className="flex items-center"></span>
+                      <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
                       </svg>
-                      {position.experience}
-                    </span>
-                  </div>
+                {position.experience}
+                </span>
+                </div>
                   
-                  <p className="text-gray-300 mb-4 leading-relaxed">{position.description}</p>
+                  <p className="text-gray-300 mb-4 leading-relaxed"></p>
+                {position.description}
+                </p>
                   
-                  <div className="mb-4">
+                  <div className="mb-4"></div>
                     <h4 className="text-sm font-semibold text-white mb-2">Required Skills:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {position.skills.map((skill, skillIndex) => (
+                    <div className="flex flex-wrap gap-2"></div>
+                {position.skills.map((skill, skillIndex) => (
                         <$2 />
                           key={skillIndex}
                           className="px-3 py-1 bg-blue-600/20 text-blue-300 text-sm rounded-full border border-blue-600/30"
                         >
-                          {skill}
-                        </span>
+                {skill}
+                </span>
                       ))}
-                    </div>
-                  </div>
+                </div>
+                </div>
                   
                   <$2 />
                     href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}
                     className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Apply Now
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
-                  </a>
+                </a>
                 </motion.div>
               ))}
-            </motion.div>
-          </div>
+                </motion.div>
+                </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-          <div className="max-w-4xl mx-auto text-center px-4">
+                {/* CTA Section */}
+                <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50"></section>
+          <div className="max-w-4xl mx-auto text-center px-4"></div>
             <motion.h2 
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-            >
+            ></motion.h2>
               Don't See Your Perfect Role?
             </motion.h2>
             <motion.p 
@@ -2646,7 +2691,7 @@ const Careers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            ></motion.p>
               We're always looking for talented individuals to join our team. 
               Send us your resume and let's discuss how you can contribute to our mission.
             </motion.p>
@@ -2655,77 +2700,81 @@ const Careers = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-            >
+            ></motion.div
+>
               <$2 />
                 href="mailto:careers@ziontechgroup.com?subject=General Application"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
                 Send Your Resume
-                <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </a>
+                </a>
             </motion.div>
-          </div>
+                </div>
         </section>
-      </div>
+                </div>
     </>
   )
 }
             {openPositions.map((position, index) => (
-              <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm">
-                        {position.department}
-                      </span>
-                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm">
-                        {position.location}
-                      </span>
-                      <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm">
-                        {position.type}
-                      </span>
-                      <span className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm">
-                        {position.experience}
-                      </span>
-                    </div>
+              <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300"></div>
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4"></div>
+                  <div></div>
+                    <h3 className="text-xl font-semibold text-white mb-2"></h3>
+                {position.title}
+                </h3>
+                    <div className="flex flex-wrap gap-2 mb-3"></div>
+                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm"></span>
+                {position.department}
+                </span>
+                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm"></span>
+                {position.location}
+                </span>
+                      <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm"></span>
+                {position.type}
+                </span>
+                      <span className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm"></span>
+                {position.experience}
+                </span>
+                </div>
                   </div>
-                  <button className="lg:ml-4 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300">
+                  <button className="lg:ml-4 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300"></button>
                     Apply Now
                   </button>
                 </div>
                 
-                <p className="text-gray-300 mb-4">{position.description}</p>
+                <p className="text-gray-300 mb-4"></p>
+                {position.description}
+                </p>
                 
-                <div>
+                <div></div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Required Skills:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {position.skills.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="px-2 py-1 bg-gray-700 text-gray-300 rounded text-sm">
-                        {skill}
-                      </span>
+                  <div className="flex flex-wrap gap-2"></div>
+                {position.skills.map((skill, skillIndex) => (
+                      <span key={skillIndex} className="px-2 py-1 bg-gray-700 text-gray-300 rounded text-sm"></span>
+                {skill}
+                </span>
                     ))}
-                  </div>
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+                </div>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
+                {/* Hero Section */}
+                <div className="relative overflow-hidden"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               Join Our Team
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Help us shape the future of technology. Join a team of innovators, 
               researchers, and industry experts committed to transforming businesses 
               through cutting-edge AI solutions.
             </p>
-            
-            {/* Search and Filter */}
-            <div className="max-w-4xl mx-auto mb-8">
-              <div className="relative mb-6">
+                {/* Search and Filter */}
+                <div className="max-w-4xl mx-auto mb-8"></div>
+              <div className="relative mb-6"></div>
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -2736,250 +2785,261 @@ const Careers = () => {
                 />
               </div>
               
-              <div className="flex flex-wrap gap-4 justify-center">
-                <div className="flex items-center gap-2">
+              <div className="flex flex-wrap gap-4 justify-center"></div>
+                <div className="flex items-center gap-2"></div>
                   <Filter className="w-4 h-4 text-gray-400" />
                   <select
                     value={selectedDepartment}
                     onChange={(e) => setSelectedDepartment(e.target.value)}
                     className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
-                    {departments.map((dept) => (
-                      <option key={dept} value={dept}>{dept}</option>
+                {departments.map((dept) => (
+                      <option key={dept} value={dept}></option>
+                {dept}
+                </option>
                     ))}
-                  </select>
+                </select>
                 </div>
                 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2"></div>
                   <MapPin className="w-4 h-4 text-gray-400" />
                   <select
                     value={selectedLocation}
                     onChange={(e) => setSelectedLocation(e.target.value)}
                     className="px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
-                    {locations.map((location) => (
-                      <option key={location} value={location}>{location}</option>
+                {locations.map((location) => (
+                      <option key={location} value={location}></option>
+                {location}
+                </option>
                     ))}
-                  </select>
+                </select>
                 </div>
               </div>
-            </div>
+                </div>
 
-            <div className="flex items-center justify-center space-x-8 text-gray-400">
-              <div className="flex items-center">
+            <div className="flex items-center justify-center space-x-8 text-gray-400"></div>
+              <div className="flex items-center"></div>
                 <Building className="w-5 h-5 mr-2" />
-                <span>{jobOpenings.length} Open Positions</span>
-              </div>
-              <div className="flex items-center">
+                <span></span>
+                {jobOpenings.length} Open Positions</span>
+                </div>
+              <div className="flex items-center"></div>
                 <Globe className="w-5 h-5 mr-2" />
                 <span>Multiple Locations</span>
-              </div>
-              <div className="flex items-center">
+                </div>
+              <div className="flex items-center"></div>
                 <Users className="w-5 h-5 mr-2" />
                 <span>Growing Team</span>
-              </div>
+                </div>
             </div>
-          </div>
+                </div>
         </div>
-      </div>
-
-      {/* Featured Jobs */}
+                </div>
+                {/* Featured Jobs */}
       {featuredJobs.length > 0 && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20"></div>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Positions</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {featuredJobs.map((job) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                {featuredJobs.map((job) => (
               <$2 />
                 key={job.id}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-medium rounded-full">
+                <div className="p-6"></div>
+                  <div className="flex items-center gap-2 mb-4"></div>
+                    <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-medium rounded-full"></span>
                       Featured
                     </span>
-                    <span className="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
-                      {job.department}
-                    </span>
-                  </div>
+                    <span className="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full"></span>
+                {job.department}
+                </span>
+                </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
-                    {job.title}
-                  </h3>
+                  <h3 className="text-2xl font-bold text-white mb-4 leading-tight"></h3>
+                {job.title}
+                </h3>
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {job.description}
-                  </p>
+                  <p className="text-gray-300 mb-6 leading-relaxed"></p>
+                {job.description}
+                </p>
                   
-                  <div className="flex items-center space-x-6 mb-6 text-sm text-gray-400">
-                    <div className="flex items-center">
+                  <div className="flex items-center space-x-6 mb-6 text-sm text-gray-400"></div>
+                    <div className="flex items-center"></div>
                       <MapPin className="w-4 h-4 mr-2" />
-                      {job.location}
-                    </div>
-                    <div className="flex items-center">
+                {job.location}
+                </div>
+                    <div className="flex items-center"></div>
                       <Clock className="w-4 h-4 mr-2" />
-                      {job.type}
-                    </div>
-                    <div className="flex items-center">
+                {job.type}
+                </div>
+                    <div className="flex items-center"></div>
                       <Users className="w-4 h-4 mr-2" />
-                      {job.experience}
-                    </div>
-                  </div>
+                {job.experience}
+                </div>
+                </div>
                   
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Requirements</h4>
-                    <ul className="space-y-1">
-                      {job.requirements.slice(0, 3).map((req, index) => (
-                        <li key={index} className="text-gray-300 text-sm flex items-start">
+                    <ul className="space-y-1"></ul>
+                {job.requirements.slice(0, 3).map((req, index) => (
+                        <li key={index} className="text-gray-300 text-sm flex items-start"></li>
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0" />
-                          {req}
-                        </li>
+                {req}
+                </li>
                       ))}
-                    </ul>
-                  </div>
+                </ul>
+                </div>
                   
-                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group"></button>
                     Apply Now
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                   </button>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       )}
 
       {/* All Job Openings */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <h2 className="text-3xl font-bold text-white mb-8 text-center">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20"></div>
+        <h2 className="text-3xl font-bold text-white mb-8 text-center"></h2>
           All Open Positions
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {regularJobs.map((job) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                {regularJobs.map((job) => (
             <$2 />
               key={job.id}
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
             >
-              <div className="p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
-                    {job.department}
-                  </span>
+              <div className="p-6"></div>
+                <div className="flex items-center gap-2 mb-4"></div>
+                  <span className="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full"></span>
+                {job.department}
+                </span>
                 </div>
                 
-                <h3 className="text-xl font-bold text-white mb-4 leading-tight">
-                  {job.title}
+                <h3 className="text-xl font-bold text-white mb-4 leading-tight"></h3>
+                {job.title}
                 </h3>
                 
-                <p className="text-gray-300 mb-6 text-sm leading-relaxed line-clamp-3">
-                  {job.description}
+                <p className="text-gray-300 mb-6 text-sm leading-relaxed line-clamp-3"></p>
+                {job.description}
                 </p>
                 
-                <div className="flex items-center space-x-4 mb-6 text-sm text-gray-400">
-                  <div className="flex items-center">
+                <div className="flex items-center space-x-4 mb-6 text-sm text-gray-400"></div>
+                  <div className="flex items-center"></div>
                     <MapPin className="w-4 h-4 mr-2" />
-                    {job.location}
-                  </div>
-                  <div className="flex items-center">
+                {job.location}
+                </div>
+                  <div className="flex items-center"></div>
                     <Clock className="w-4 h-4 mr-2" />
-                    {job.type}
-                  </div>
+                {job.type}
+                </div>
                 </div>
                 
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <h4 className="text-xs font-semibold text-cyan-400 mb-2">Requirements</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {job.requirements.slice(0, 2).map((req, index) => (
+                  <div className="flex flex-wrap gap-1"></div>
+                {job.requirements.slice(0, 2).map((req, index) => (
                       <$2 />
                         key={index}
                         className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded text-center"
                       >
-                        {req.split(' ').slice(0, 3).join(' ')}...
+                {req.split(' ').slice(0, 3).join(' ')}...
                       </span>
                     ))}
-                  </div>
+                </div>
                 </div>
                 
-                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group"></button>
                   Apply Now
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                 </button>
-              </div>
+                </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Company Values */}
-      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                </div>
+                </div>
+                {/* Company Values */}
+                <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {companyValues.map((value, index) =>
+                {
               const Icon = value.icon
               return (
                 <$2 />
                   key={index}
                   className="text-center"
                 >
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                     <Icon className="w-10 h-10 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3"></h3>
+                {value.title}
+                </h3>
+                  <p className="text-gray-300"></p>
+                {value.description}
+                </p>
                 </div>
               )
             })}
-          </div>
-        </div>
+                </div>
+                </div>
       </div>
-
-      {/* Benefits */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                {/* Benefits */}
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Work With Us</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {benefits.map((benefit, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {benefits.map((benefit, index) =>
+                {
             const Icon = benefit.icon
             return (
               <$2 />
                 key={index}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4"></div>
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
-              </div>
-      {/* Application Process */}
-      <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+                <h3 className="text-lg font-semibold text-white mb-3"></h3>
+                {benefit.title}
+                </h3>
+                <p className="text-gray-300 text-sm"></p>
+                {benefit.description}
+                </p>
+                </div>
+                {/* Application Process */}
+                <section className="py-20 bg-zion-blue-dark"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold mb-6">Application Process</h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto"></p>
               Our hiring process is designed to be transparent, efficient, and focused on finding 
               the right fit for both you and our team.
             </p>
-          </div>
+                </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8"></div>
             )
           })}
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
+                </div>
+                </div>
+                {/* CTA Section */}
+                <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700"></div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
+          <div className="text-center"></div>
+            <h2 className="text-3xl font-bold text-white mb-6"></h2>
               Don't See the Right Fit?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               We're always looking for talented individuals. Send us your resume and 
               let's discuss how you can contribute to our mission.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 href="mailto:careers@ziontechgroup.com"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
@@ -2993,201 +3053,228 @@ const Careers = () => {
               >
                 Contact Us
               </Link>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
-      {/* Open Positions */}
-      <section id="open-positions" className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Open Positions */}
+                <section id="open-positions" className="py-20"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-16">Open Positions</h2>
-          <div className="grid gap-6">
-            {openPositions.map((position) => (
-              <Card key={position.id} className={`bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors ${position.featured ? 'ring-2 ring-zion-cyan' : ''}`}>
-                <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div>
-                      <div className="flex items-center gap-3 mb-2">
-                        <CardTitle className="text-xl text-white">{position.title}</CardTitle>
-                        {position.featured && (
+          <div className="grid gap-6"></div>
+                {openPositions.map((position) => (
+              <Card key={position.id} className={`bg-zion-blue-dark border-zion-purple/20 hover:border-zion-purple/40 transition-colors ${position.featured ? 'ring-2 ring-zion-cyan' : ''}`}></Card>
+                <CardHeader></CardHeader>
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4"></div>
+                    <div></div>
+                      <div className="flex items-center gap-3 mb-2"></div>
+                        <CardTitle className="text-xl text-white"></CardTitle>
+                {position.title}
+                </CardTitle>
+                {position.featured && (
                           <Badge className="bg-zion-cyan text-zion-blue-dark">Featured</Badge>
                         )}
-                      </div>
-                      <div className="flex flex-wrap gap-2 text-sm text-zion-slate-light">
-                        <span className="flex items-center gap-1">
+                </div>
+                      <div className="flex flex-wrap gap-2 text-sm text-zion-slate-light"></div>
+                        <span className="flex items-center gap-1"></span>
                           <Briefcase className="w-4 h-4" />
-                          {position.department}
-                        </span>
-                        <span className="flex items-center gap-1">
+                {position.department}
+                </span>
+                        <span className="flex items-center gap-1"></span>
                           <MapPin className="w-4 h-4" />
-                          {position.location}
-                        </span>
-                        <span className="flex items-center gap-1">
+                {position.location}
+                </span>
+                        <span className="flex items-center gap-1"></span>
                           <Clock className="w-4 h-4" />
-                          {position.type}
-                        </span>
-                        <span className="flex items-center gap-1">
+                {position.type}
+                </span>
+                        <span className="flex items-center gap-1"></span>
                           <Star className="w-4 h-4" />
-                          {position.experience}
-                        </span>
-                        <span className="flex items-center gap-1">
+                {position.experience}
+                </span>
+                        <span className="flex items-center gap-1"></span>
                           <DollarSign className="w-4 h-4" />
-                          {position.salary}
-                        </span>
-                      </div>
+                {position.salary}
+                </span>
+                </div>
                     </div>
-                    <Button asChild className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark">
-                      <a href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}>
+                    <Button asChild className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark"></Button>
+                      <a href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}></a>
                         Apply Now
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
-                    </Button>
+                </Button>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <p className="text-zion-slate-light mb-4">{position.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {position.skills.map((skill, index) => (
-                      <Badge key={index} variant="outline" className="border-zion-purple/30 text-zion-slate-light">
-                        {skill}
-                      </Badge>
+                <CardContent></CardContent>
+                  <p className="text-zion-slate-light mb-4"></p>
+                {position.description}
+                </p>
+                  <div className="flex flex-wrap gap-2"></div>
+                {position.skills.map((skill, index) => (
+                      <Badge key={index} variant="outline" className="border-zion-purple/30 text-zion-slate-light"></Badge>
+                {skill}
+                </Badge>
                     ))}
-                  </div>
+                </div>
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Application Process */}
-      <section className="py-20 bg-zion-blue-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Application Process */}
+                <section className="py-20 bg-zion-blue-dark/50"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-16">Application Process</h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl">
+          <div className="grid md:grid-cols-4 gap-8"></div>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl"></div>
                 1
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Apply</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 Submit your application with resume and cover letter
               </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl">
+                </div>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl"></div>
                 2
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Review</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 Our team reviews your application within 48 hours
               </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl">
+                </div>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl"></div>
                 3
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Interview</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 Technical and cultural fit interviews
               </p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl">
+                </div>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4 text-zion-blue-dark font-bold text-xl"></div>
                 4
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Offer</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 Welcome to the Zion Tech Group team!
               </p>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-blue">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+                {/* CTA Section */}
+                <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-blue"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          <h2 className="text-3xl font-bold text-white mb-6"></h2>
             Don't See the Right Role?
           </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto"></p>
             We're always looking for talented individuals to join our team. 
             Send us your resume and we'll keep you in mind for future opportunities.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark">
-              <a href="mailto:careers@ziontechgroup.com?subject=General Application">
+          <div className="flex flex-wrap justify-center gap-4"></div>
+            <Button asChild size="lg" className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue-dark"></Button>
+              <a href="mailto:careers@ziontechgroup.com?subject=General Application"></a>
                 Send General Application
               </a>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue-dark">
+                </Button>
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-zion-blue-dark"></Button>
               <Link to="/contact">Get in Touch</Link>
-            </Button>
+                </Button>
           </div>
-        </div>
+                </div>
 export default Careers
 export default Careers
 export default Careers
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <span className="text-2xl font-bold text-white">1</span>
-              </div>
+                </div>
               <h3 className="text-xl font-semibold mb-3">Application</h3>
               <p className="text-zion-slate-light">Submit your resume and cover letter through our portal</p>
-            </div>
+                </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <span className="text-2xl font-bold text-white">2</span>
-              </div>
+                </div>
               <h3 className="text-xl font-semibold mb-3">Screening</h3>
               <p className="text-zion-slate-light">Initial review and phone screening with our team</p>
-            </div>
+                </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <span className="text-2xl font-bold text-white">3</span>
-              </div>
+                </div>
               <h3 className="text-xl font-semibold mb-3">Interview</h3>
               <p className="text-zion-slate-light">Technical assessment and team interviews</p>
-            </div>
+                </div>
             
-            <div className="text-center">
-              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <span className="text-2xl font-bold text-white">4</span>
-              </div>
+                </div>
               <h3 className="text-xl font-semibold mb-3">Offer</h3>
               <p className="text-zion-slate-light">Welcome to the Zion Tech Group family!</p>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-purple-dark via-zion-blue to-zion-blue-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                {/* CTA Section */}
+                <section className="py-20 bg-gradient-to-br from-zion-purple-dark via-zion-blue to-zion-blue-dark"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
           <h2 className="text-4xl font-bold mb-6">Ready to Make History?</h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"></p>
             Join us in building the future of technology. Your next adventure starts here.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="#open-positions">
-              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <Link to="#open-positions"></Link>
+              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"></button>
                 Browse Openings
               </button>
-            </Link>
-            <Link to="/about">
-              <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+                </Link>
+            <Link to="/about"></Link>
+              <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"></button>
                 Learn More About Us
               </button>
-            </Link>
+                </Link>
           </div>
-        </div>
+                </div>
       </section>
-    </div>
+                </div>
       </main>
     
   )
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section>
+                </div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </ul></ul>
+                </li></li>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>

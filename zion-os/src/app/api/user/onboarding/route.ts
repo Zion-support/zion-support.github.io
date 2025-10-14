@@ -1,6 +1,5 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { getServerSession } from 'next-auth'
-import { prisma } from '@/lib/prisma'
+import { NextRequest, NextResponse  } from 'next/server';
+import { getServerSession  } from 'next-auth';import { prisma } from '@/lib/prisma'
 export async function POST(request: NextRequest) {
   try {
     const session = await getServerSession()
@@ -74,7 +73,6 @@ export async function POST(request: NextRequest) {
     console.error("Onboarding completion error:", error)
     return NextResponse.json(
       { error: "Internal server error" }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       { status: 500 }
     )
   }
@@ -114,10 +112,9 @@ export async function POST(request: NextRequest) { try {
     )
   }
 }
-}
-import { NextRequest, NextResponse } from "next/server"
-import { getServerSession } from "next-auth"
-import { prisma } from "@/lib/prisma"
+};
+import { NextRequest, NextResponse  } from 'next/server';
+import { getServerSession  } from 'next-auth';import { prisma } from "@/lib/prisma"
 export async function POST(request: NextRequest) {
   try {
     const session = await getServerSession()
@@ -153,3 +150,4 @@ export async function POST(request: NextRequest) {
     )
   }
 }
+;

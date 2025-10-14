@@ -12,3 +12,4 @@ export async function register(name: string, email: string, password: string) {
   const data = await res.json().catch(() => ({}))
   return { res, data }
 }
+;

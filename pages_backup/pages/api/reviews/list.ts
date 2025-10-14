@@ -34,11 +34,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     const all = await readReviews()
     // Include reviews where both sides have submitted and both are approved and not removed
-    const filtered = all && all.filter((r) => {
+    const filtered = all && all.filter((r) =>
+                {
       if (r && r.removed || !r && r.approved) return false
       const matchesTarget =
         r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId
-    const filtered = all.filter((r) => {
+    const filtered = all.filter((r) =>
+                {
       if (r.removed |!r.approved) return false
       const matchesTarget =
         r.toRole === (targetType as "talent" | "client") && r.toId === targetId
@@ -62,7 +64,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
       )
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-      .map((r) => {
+      .map((r) =>
+                {
         let authorName = r && r.fromId
         if (r && r.fromRole === "talent") {
           const t = TALENT_PROFILES && TALENT_PROFILES.find((tp) => tp && tp.slug === r && r.fromId)
@@ -75,7 +78,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         (a, b) =>
           new Date (b.created_at).get_time () - new Date (a.created_at).get_time (),
       )
-      .map ((r) => {
+      .map ((r) =>
+                {
         let author_name = r.from_id
         // Check condition
 if ( {) {
@@ -190,10 +194,12 @@ export default async function handler(req, res) {
 
     const all = await readReviews()
     // Include reviews where both sides have submitted and both are approved and not removed
-    const filtered = all.filter((r) => {
+    const filtered = all.filter((r) =>
+                {
       if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
       .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
-      .map((r) => {
+      .map((r) =>
+                {
         let authorName = r.fromId
         if (r.fromRole === 'talent') {
           const t = TALENT_PROFILES.find((tp) => tp.slug === r.fromId)
@@ -271,4 +277,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

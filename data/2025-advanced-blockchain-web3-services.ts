@@ -577,4 +577,4 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     rating: 4.7,
     reviews: 45
   }
-]
+];

@@ -35,11 +35,13 @@ function bufferToStream(buffer: Buffer): Readable {
   stream.push(null)
   return stream
 }
-export async function addJSON(content: unknown): Promise<IpfsResult> {
+export async function addJSON(content: unknown): Promise<IpfsResult></IpfsResult>
+                {
   const json = Buffer.from(JSON.stringify(content, null, 2))
   return addBuffer(json, 'data.json')
 }
-export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<IpfsResult> {
+export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<IpfsResult></IpfsResult>
+                {
   await lazyLoadDeps()
   // 1) Try Web3.Storage
   const web3Token = env('WEB3_STORAGE_TOKEN')
@@ -72,7 +74,8 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
   }
   return { cid: '', provider: 'none' }
 }
-export async function addDirectory(dirPath: string): Promise<IpfsResult> {
+export async function addDirectory(dirPath: string): Promise<IpfsResult></IpfsResult>
+                {
   await lazyLoadDeps()
   // Prefer Web3.Storage for directories
   const web3Token = env('WEB3_STORAGE_TOKEN')
@@ -102,7 +105,7 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
       const cid = await client.put(files, { wrapWithDirectory: true })
       return { cid, provider: 'web3.storage' }
     }
-  }
+  };
   // Pinata bulk upload (pack as CAR is better; for now add recursively via local ipfs)
   const ipfsUrl = env('IPFS_API') || 'http://127.0.0.1:5001'
   if (createIpfsClient) {
@@ -133,7 +136,8 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
   // As a last resort, try Pinata pinByHash after local add (requires prior add)
   return { cid: '', provider: 'none' }
 }
-export async function publishManifesto(topic: string, message: string): Promise<boolean> {
+export async function publishManifesto(topic: string, message: string): Promise<boolean></boolean>
+                {
   await lazyLoadDeps()
   const ipfsUrl = env('IPFS_API') || 'http://127.0.0.1:5001'
   if (!createIpfsClient) return false

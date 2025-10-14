@@ -7,7 +7,6 @@ export function getUserFromRequest(req: any): User | null {
   }
   return user
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { NextApiRequest, NextApiResponse } from 'next'
 export type CurrentUser = {
   userId: string
@@ -36,3 +35,4 @@ export function requireUser(
   }
   return user
 }
+;

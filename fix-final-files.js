@@ -29,20 +29,22 @@ interface ${componentName}Props {/* TODO: Fix JSX expression */}
 const ${componentName}: React.FC<${componentName}Props> = ({ 
   className = '', 
   children
-}) => {
+}) =>
+                {
   return (
-    <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
-      {children || (
-        <div className="p-4 text-center text-gray-600">
+    <div className={\`${componentName.toLowerCase()}-component \${className}\`}></div>
+                {children || (
+        <div className="p-4 text-center text-gray-600"></div>
 const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
-      {/* TODO: Fix JSX expression */}
-          <h3 className="text-lg font-semibold mb-2">${componentName}
-          <p>Component</p> placeholder - implementation needed
+}) =>
+                {/* TODO: Fix JSX expression */}
+                <div className={\`${componentName.toLowerCase()}-component \${className}\`}></div>
+                {/* TODO: Fix JSX expression */}
+                <h3 className="text-lg font-semibold mb-2">${componentName}
+                <p>Component</p> placeholder - implementation needed
       )}
   )
-}
+};
 export default ${componentName};`
 `
   } else if (isTs) {
@@ -100,4 +102,6 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 // filesToFix.forEach(fixFile)
 // 
 
-}"`</div></div></div></h3>
+}"`</div>
+                </div></div>
+                </h3>

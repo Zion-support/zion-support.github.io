@@ -5,7 +5,7 @@ function removeConsoleLogs(filePath) {
   try {
     let _content = fs.readFileSync(filePath, 'utf8')
     let _modified = false
-    // Remove console.log statements (but keep console.error and console.warn for debugging)
+    // Remove console.log statements (but keep console.error and console.warn for debugging);
     const _consoleLogRegex = /^\s*console\.log\([^)]*\);\s*$/gm
     const _consoleLogMultiLineRegex = /^\s*console\.log\(\s*[^)]*\s*\);\s*$/gm
 //     const originalContent = content
@@ -42,7 +42,8 @@ async function processFiles() {/* TODO: Fix JSX expression */}
         '**/*.spec.*'
       ]
     })
-    files.forEach(file => {
+    files.forEach(file =>
+                {
     )
       totalFiles++;)
       if (removeConsoleLogs(file)) {
@@ -50,7 +51,8 @@ async function processFiles() {/* TODO: Fix JSX expression */}
   }
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
     })
-    files.forEach(file => {/* TODO: Fix JSX expression */}
+    files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
       })
     })
   })

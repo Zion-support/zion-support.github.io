@@ -37,11 +37,11 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     // General fixes
     const replacements = [
       // Fix import paths for components
-      {
+      {;
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacement: "import { useRouter } from '../utils/navigation';"},
       // Fix import paths for root-level files
-      {
+      {;
         pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacement: "import { Metadata } from './types/next';"},
       {
@@ -52,13 +52,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         replacemen,
   t: "import { useRouter } from '../utils/navigation';"},
       // Fix import paths for root-level files
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */};
   n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacemen,"
   t: "import { Metadata } from './types/next';"},
       {/* TODO: Fix JSX expression */}
       }]
-    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
+    replacements.forEach(({ pattern, replacement }) =>
+                {/* TODO: Fix JSX expression */}
       }
     })
     if (modified) {/* TODO: Fix JSX expression */}
@@ -70,7 +71,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 function processDirectory(dirPath) {
 
-  items.forEach(item => {)
+  items.forEach(item =>
+                {)
 )
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath)

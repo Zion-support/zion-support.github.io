@@ -11,13 +11,14 @@ const initialState: WishlistState = {
   items: []}
   items: [],
 }
-export const getApiUrl = () => {
+export const getApiUrl  = () => {
   const env = (import.meta as any)?.env ?? process.env
   return env.VITE_API_URL || env.API_URL || ''
 }
 export const loadWishlistFromDB = createAsyncThunk<WishlistItem[], string>(
   'wishlist/loadFromDB',
-  async (userId: string) => {
+  async (userId: string) =>
+                {
     const res = await fetch(`${getApiUrl()}/wishlist?userId=${userId}`)
     if (!res.ok) throw new Error('Failed to load')
     return (await res.json()) as WishlistItem[]
@@ -38,12 +39,14 @@ const wishlistSlice = createSlice({
     }},
     },
   },
-  extraReducers: (builder) => {
-    builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
+  extraReducers: (builder) =>
+                {
+    builder.addCase(loadWishlistFromDB.fulfilled, (state, action) =>
+                {
       state.items = action.payload
     })
   }})
   },
 })
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions
-export default wishlistSlice.reducer
+export default wishlistSlice.reducer;

@@ -58,8 +58,10 @@ class UserExperienceEnhancer {
     if (!this.config.enableSmoothScrolling) return
     // Add smooth scrolling to all anchor links
     
-    links.forEach(link => {
-      link.addEventListener('click', (e) => {
+    links.forEach(link =>
+                {
+      link.addEventListener('click', (e) =>
+                {
         e.preventDefault()
         const targetId = link.getAttribute('href')?.substring(1)
         const targetElement = document.getElementById(targetId || '')
@@ -73,7 +75,8 @@ $4})
     })
     // Add smooth scrolling to window
     window.scrollTo = new Proxy(window.scrollTo, {
-    apply: (target, thisArg, args) => {
+    apply: (target, thisArg, args) =>
+                {
         if (args[0] && typeof args[0] === 'object' && args[0].behavior !== 'smooth') {
           args[0].behavior = 'smooth'
   }
@@ -85,22 +88,28 @@ $4})
     if (!this.config.enableLoadingStates) return
     // Add loading states to buttons
     const buttons = document.querySelectorAll('button[type="submit"], button[data-loading]')
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
+    buttons.forEach(button =>
+                {
+      button.addEventListener('click', () =>
+                {
         this.showLoadingState(button as HTMLButtonElement)
   })
     })
     // Add loading states to forms
     const forms = document.querySelectorAll('form')
-    forms.forEach(form => {
-    form.addEventListener('submit', () => {
+    forms.forEach(form =>
+                {
+    form.addEventListener('submit', () =>
+                {
         this.showFormLoadingState(form)
   })
     })
     // Add loading states to links
     const links = document.querySelectorAll('a[data-loading]')
-    links.forEach(link => {
-    link.addEventListener('click', () => {
+    links.forEach(link =>
+                {
+    link.addEventListener('click', () =>
+                {
         this.showLinkLoadingState(link as HTMLAnchorElement)
   })
     })
@@ -120,7 +129,8 @@ $4})
     // Store original state
     this.loadingStates.set(button.id || 'button', true)
     // Reset after 3 seconds (or when action completes)
-    setTimeout(() => {
+    setTimeout(() =>
+                {
       this.hideLoadingState(button, originalText)
   }, 3000)
   }
@@ -143,7 +153,8 @@ $4})
     
     // Disable all form inputs
     const inputs = form.querySelectorAll('input, textarea, select, button')
-    inputs.forEach(input => {
+    inputs.forEach(input =>
+                {
     (input as HTMLElement).setAttribute('disabled', 'true')
   })
   }
@@ -163,11 +174,13 @@ $4})
   private setupErrorBoundaries(): void {
     if (!this.config.enableErrorBoundaries) return
     // Global error handler
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', (event) =>
+                {
       this.handleError(event.error, 'JavaScript Error')
   })
     // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', (event) =>
+                {
     this.handleError(event.reason, 'Unhandled Promise Rejection')
   })
     // Error boundary for React components (if using React)
@@ -199,7 +212,8 @@ $4})
     document.body.appendChild(errorDiv),
     
     // Auto-remove after 5 seconds
-    setTimeout(() => {
+    setTimeout(() =>
+                {
       errorDiv.remove()
   }, 5000)
   }
@@ -227,7 +241,8 @@ $4})
   }
   private trackUserInteractions(): void {
     // Track clicks
-    document.addEventListener('click', (event) => {
+    document.addEventListener('click', (event) =>
+                {
       const target = event.target as HTMLElement
       const interactionData = {
         type: 'click',
@@ -241,7 +256,8 @@ $4})
       this.sendAnalytics('user_interaction', interactionData)
     })
     // Track form submissions
-    document.addEventListener('submit', (event) => {
+    document.addEventListener('submit', (event) =>
+                {
       const form = event.target as HTMLFormElement
       const formData = {
         type: 'form_submit',
@@ -253,7 +269,8 @@ $4})
       this.sendAnalytics('form_submit', formData)
     })
     // Track scroll depth
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () =>
+                {
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
       if (scrollDepth > maxScrollDepth) {
         maxScrollDepth = scrollDepth
@@ -263,7 +280,8 @@ $4})
   }
   private trackPerformanceMetrics(): void {
     if ('performance' in window) {
-      window.addEventListener('load', () => {
+      window.addEventListener('load', () =>
+                {
         const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
         const metrics = {
           pageLoadTime: perfData.loadEventEnd - perfData.navigationStart,
@@ -282,13 +300,15 @@ $4})
     // Simple satisfaction tracking based on user behavior
     let satisfactionScore = 100
     // Decrease score for errors
-    window.addEventListener('error', () => {
+    window.addEventListener('error', () =>
+                {
       satisfactionScore -= 10
       this.metrics.userSatisfaction = Math.max(0, satisfactionScore)
   })
     // Decrease score for slow interactions
     let lastInteractionTime = Date.now()
-    document.addEventListener('click', () => {
+    document.addEventListener('click', () =>
+                {
     const interactionTime = Date.now() - lastInteractionTime
       if (interactionTime > 1000) {
         satisfactionScore -= 5
@@ -353,7 +373,8 @@ $4})
       { name: 'msapplication-config', content: '/browserconfig.xml' },
       { name: 'theme-color', content: '#4f46e5' }
     ]
-    metaTags.forEach(tag => {
+    metaTags.forEach(tag =>
+                {
     const meta = document.createElement('meta')
       meta.setAttribute('name', tag.name)
       meta.setAttribute('content', tag.content)
@@ -362,12 +383,15 @@ $4})
   }
   private setupServiceWorker(): void {
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
+      window.addEventListener('load', () =>
+                {
         navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
+          .then((registration) =>
+                {
             console.log('SW registered: ', registration)
   })
-          .catch((registrationError) => {
+          .catch((registrationError) =>
+                {
     console.log('SW registration failed: ', registrationError)
   })
       })
@@ -376,7 +400,8 @@ $4})
   private setupInstallPrompt(): void {
     let deferredPrompt: any,
     
-    window.addEventListener('beforeinstallprompt', (e) => {
+    window.addEventListener('beforeinstallprompt', (e) =>
+                {
       e.preventDefault()
       deferredPrompt = e
       // Show install button
@@ -388,9 +413,11 @@ $4})
     installButton.textContent = 'Install App'
     installButton.className = 'fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50',
     
-    installButton.addEventListener('click', () => {
+    installButton.addEventListener('click', () =>
+                {
       deferredPrompt.prompt()
-      deferredPrompt.userChoice.then((choiceResult: any) => {
+      deferredPrompt.userChoice.then((choiceResult: any) =>
+                {
         if (choiceResult.outcome === 'accepted') {
           console.log('User accepted the install prompt')
   }
@@ -403,10 +430,12 @@ $4})
   private setupOfflineSupport(): void {
     if (!this.config.enableOfflineSupport) return
     // Show offline indicator
-    window.addEventListener('online', () => {
+    window.addEventListener('online', () =>
+                {
       this.showOfflineIndicator(false)
   })
-    window.addEventListener('offline', () => {
+    window.addEventListener('offline', () =>
+                {
     this.showOfflineIndicator(true)
   })
   }
@@ -433,7 +462,8 @@ $4})
   }
   private setupPushService(): void {
     if ('serviceWorker' in navigator && 'PushManager' in window) {
-      navigator.serviceWorker.ready.then((registration) => {
+      navigator.serviceWorker.ready.then((registration) =>
+                {
         // Subscribe to push notifications
         this.subscribeToPush(registration)
   })
@@ -443,10 +473,12 @@ $4})
     registration.pushManager.subscribe({
       userVisibleOnly: true,
       applicationServerKey: 'your-vapid-public-key' // Replace with actual VAPID key
-    }).then((subscription) => {
+    }).then((subscription) =>
+                {
       console.log('Push subscription:', subscription)
       // Send subscription to server
-    }).catch((error) => {
+    }).catch((error) =>
+                {
     console.log('Push subscription failed:', error)
   })
   }
@@ -460,7 +492,8 @@ $4})
   }
     
     // Listen for changes
-    prefersDark.addEventListener('change', (e) => {
+    prefersDark.addEventListener('change', (e) =>
+                {
     if (e.matches) {
         document.documentElement.classList.add('dark')
   } else {
@@ -475,7 +508,8 @@ $4})
     toggle.className = 'dark-mode-toggle fixed top-4 right-4 bg-gray-200 dark: bg-gray-800 text-gray-800 dark:text-gray-200 p-2 rounded-full shadow-lg z-50'
     toggle.innerHTML = '🌙',
     toggle.setAttribute('aria-label', 'Toggle dark mode')
-    toggle.addEventListener('click', () => {
+    toggle.addEventListener('click', () =>
+                {
       document.documentElement.classList.toggle('dark')
       const isDark = document.documentElement.classList.contains('dark')
       toggle.innerHTML = isDark ? '☀️' : '🌙'
@@ -493,8 +527,10 @@ $4})
   private setupAnimations(): void {
     if (!this.config.enableAnimations) return
     // Add intersection observer for animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) =>
+                {
+      entries.forEach(entry =>
+                {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-in')
   }
@@ -508,7 +544,8 @@ $4})
     // Load user preferences from localStorage
     const preferences = JSON.parse(localStorage.getItem('userPreferences') || '{}')
     // Apply preferences
-    Object.entries(preferences).forEach(([key, value]) => {
+    Object.entries(preferences).forEach(([key, value]) =>
+                {
     if (key === 'darkMode') {
         document.documentElement.classList.toggle('dark', value as boolean)
   }
@@ -518,7 +555,8 @@ $4})
   private setupPerformanceMonitoring(): void {
     // Monitor performance metrics
     if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) =>
+                {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'measure') {
             this.metrics.performanceScore = this.calculatePerformanceScore(entry)
@@ -530,7 +568,8 @@ $4})
   }
   private setupAccessibilityMonitoring(): void {
     // Monitor accessibility metrics
-    const accessibilityObserver = new MutationObserver(() => {
+    const accessibilityObserver = new MutationObserver(() =>
+                {
       this.metrics.accessibilityScore = this.calculateAccessibilityScore()
   })
     accessibilityObserver.observe(document.body, {

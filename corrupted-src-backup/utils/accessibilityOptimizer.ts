@@ -45,7 +45,8 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
 
   private optimizeARIALabels(): void {
     const _elements = document.querySelectorAll('button, input, select, textarea, a, img')
-    elements.forEach(element => {
+    elements.forEach(element =>
+                {
       const improvements: string[] = [];)
       let _score = 0,)
 )
@@ -83,7 +84,8 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
   private optimizeKeyboardNavigation(): void {
     const focusableElements = document.querySelectorAll('button, input, select, textarea, a, [tabindex]')
     )
-    focusableElements.forEach(element => {)
+    focusableElements.forEach(element =>
+                {)
       const improvements: string[] = [];)
       let _score = 0,)
 )
@@ -115,7 +117,8 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
 
   private optimizeColorContrast(): void {
     const _elements = document.querySelectorAll('*')
-    elements.forEach(element => {)
+    elements.forEach(element =>
+                {)
       const _styles = window.getComputedStyle(element)
       const improvements: string[] = []
       let _score = 0,
@@ -148,7 +151,8 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
   private optimizeFocusManagement(): void {
     const focusableElements = document.querySelectorAll('button, input, select, textarea, a, [tabindex]')
     )
-    focusableElements.forEach(element => {)
+    focusableElements.forEach(element =>
+                {)
       const improvements: string[] = [];)
       let _score = 0,)
 )
@@ -175,7 +179,8 @@ class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
 
   private optimizeScreenReaderSupport(): void {
     const _elements = document.querySelectorAll('*')
-    elements.forEach(element => {)
+    elements.forEach(element =>
+                {)
       const improvements: string[] = [];)
       let _score = 0,)
 )

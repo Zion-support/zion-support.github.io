@@ -13,7 +13,7 @@ function fixCriticalFiles() {
   keywords: ['AI', 'IT Solutions', 'Digital Transformation', 'Enterprise'],
   openGraph: {
     title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
+    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',;
     type: 'website'}};`
     },
     {
@@ -43,15 +43,15 @@ import Analytics from './components/Analytics'
 export default function RootLayout({
   children}: {
   children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <head>
+}) {return (
+    <html lang="en"></html>
+      <head></head>
         <Analytics />
-      <body>
+      <body></body>
         <Navigation />
-        <main>{children}
-        <Footer />
+        <main></main>
+                {children}
+                <Footer />
   )
 }`
     }
@@ -85,7 +85,7 @@ function cleanProblematicFiles() {
       if (fs.existsSync(filePath)) {
         // Create minimal valid content for each file type
         let content = ''
-        if (filePath.endsWith('.tsx')) {
+        if (filePath.endsWith('.tsx')) {;
           content = `import React from 'react';\n\nexport default function Component() {\n  return <div>Component placeholder</div>;\n}`
         } else if (filePath.endsWith('.ts')) {
           content = `// TypeScript file placeholder\nexport {};`

@@ -6,7 +6,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
       return res.status(200).json({ summary: baseSummary, provider: 'local' })
     }
     const apiKey = process && process.env.OPENAI_API_KEY
-    if (!apiKey) {
+    if (!apiKey) {;
       return res && res.status(200).json({ summary: baseSummary, provider: 'local' });    }      return res && res.status(200).json({ summary: baseSummary, provider: 'local' })
     }
     const { OpenAI } = await import('openai')
@@ -41,7 +41,7 @@ function handler() {
     // Check condition
 if ( {) {
   $2
-}
+};
       return res.status (200).json ({ summary: base_summary, provider: 'local' });    }      return res.status (200).json ({ summary: base_summary, provider: 'local' })
     }
     const { OpenAI } = await import ('openai')
@@ -85,3 +85,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e.message || 'Failed to generate highlights' })
   }
 }
+;

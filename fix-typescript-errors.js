@@ -28,7 +28,7 @@ const patterns = [
   { regex: /\/\/\s*(const|let|var)\s+(\w+)\s*=/g, replacement: '$1 $2 =' },
   // Match commented-out variable assignments
   { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 =' },
-  // Match commented-out variable references
+  // Match commented-out variable references;
   { regex: /\/\/\s*(\w+)\s*[;)]/g, replacement: '$1' },
   // Match commented-out object property assignments
   { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2' },
@@ -41,9 +41,11 @@ function fixFile(filePath) {
     let modified = false
     // Fix 1: Missing closing braces in useState objects
     const useStatePattern = /useState\(\s*\{([^}]+)\s*$/gm
-    content = content.replace(useStatePattern, (match, objContent) => {
+    content = content.replace(useStatePattern, (match, objContent) =>
+                {
       if (!objContent.includes('}')) {
-    patterns.forEach(pattern => {)
+    patterns.forEach(pattern =>
+                {)
       if (newContent !== content) {
         content = newContent
         modified = true
@@ -72,7 +74,8 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     })
     // Fix 2: Fix malformed JSX attributes with quotes
     const malformedJsxPattern = /(\w+)=['"]([^'"]*['"][^'"]*)['"]/g
-    content = content.replace(malformedJsxPattern, (match, attr, value) => {
+    content = content.replace(malformedJsxPattern, (match, attr, value) =>
+                {
       if (value.includes('"') && value.includes("'")) {
         modified = true
         const fixedValue = value.replace(/"/g, '&quot;').replace(/'/g, '&#39;')
@@ -82,7 +85,8 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     })
     // Fix 3: Fix missing closing tags in JSX
     const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm
-    content = content.replace(unclosedTagPattern, (match, tagName, attributes) => {
+    content = content.replace(unclosedTagPattern, (match, tagName, attributes) =>
+                {
       // Check if this is actually unclosed by looking ahead
       const lines = content.split('\n')
       const matchIndex = content.indexOf(match)
@@ -95,11 +99,13 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
       
       modified = true
-      return `${match}</${tagName}>`
+      return `${match}
+                </${tagName}>`
     })
     // Fix 4: Fix missing commas in object literals
     const missingCommaPattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g
-    content = content.replace(missingCommaPattern, (match, key1, value1, key2) => {
+    content = content.replace(missingCommaPattern, (match, key1, value1, key2) =>
+                {
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {
         modified = true
         return `${key1}: ${value1.trim()},\n    ${key2}:`
@@ -108,14 +114,16 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     })
     // Fix 5: Fix malformed SVG URLs in className
     const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g
-    content = content.replace(svgUrlPattern, (match, svgContent) => {
+    content = content.replace(svgUrlPattern, (match, svgContent) =>
+                {
       const encodedSvg = encodeURIComponent(svgContent)
       modified = true
       return `bg-[url('data:image/svg+xml,${encodedSvg}')]`
     })
     // Fix 6: Fix missing closing parentheses in function calls
     const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g
-    content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
+    content = content.replace(missingParenPattern, (match, funcCall, nextToken) =>
+                {
       if (!funcCall.includes(')') && !nextToken.startsWith(')')) {
         modified = true
         return `${funcCall})\n    ${nextToken}`
@@ -124,7 +132,8 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     })
     // Fix 7: Fix reserved word usage (like 'false' as identifier)
     const reservedWordPattern = /:\s*(false|true|null|undefined)\s*([}])/g
-    content = content.replace(reservedWordPattern, (match, reserved, separator) => {
+    content = content.replace(reservedWordPattern, (match, reserved, separator) =>
+                {
       modified = true
       return `: ${reserved}${separator}`
     })
@@ -144,13 +153,15 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
 console.log('Starting TypeScript error fixes...')
 let fixedCount = 0
-filesToFix.forEach(filePath => {
+filesToFix.forEach(filePath =>
+                {
   const fullPath = path.join(__dirname, filePath)
   if (fs.existsSync(fullPath)) {
 async function main() {
   
   
-  files.forEach(file => {)
+  files.forEach(file =>
+                {)
     if (fixFile(fullPath)) {
       fixedCount++
     }
@@ -164,7 +175,8 @@ async function main() {
 
 async function main() {/* TODO: Fix JSX expression */}
 }
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
     })
   })
 console.log(`Fixed ${fixedCount} files.`)

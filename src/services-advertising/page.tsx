@@ -1,12 +1,11 @@
-import { Link } from 'react-router-dom'
-import { ArrowLeft, ArrowRight, Target, CheckCircle, Star } from 'lucide-react'
-export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
+import { Link  } from 'react-router-dom';
+import { ArrowLeft, ArrowRight, Target, CheckCircle, Star  } from 'lucide-react';export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   return (<div>Coming Soon</div>)
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}"
+          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+                {/* Header */}"
       <header className="bg-white shadow-sm border-b"></header>"
         < className="max-w-7xl mx-auto px-4,$2 />
   sm:px-6,"
@@ -16,19 +15,18 @@ export default function ServicesAdvertisingPage() {/* TODO: Fix JSX expression *
             <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
 // Back to Home
 import React from 'react',
-export default function ServicesAdvertisingPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-4">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
+export default function ServicesAdvertisingPage() {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+                {/* Header */}
+                <header className="bg-white shadow-sm border-b"></header>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-4"></div>
+          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200"></Link>
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home,
   
         </div>
-      </header>
-      {/* Hero Section */}"
+                </header>
+                {/* Hero Section */}"
       <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></section>"
         <div className="absolute inset-0 bg-black opacity-20"></div>"
         < className="relative max-w-7xl mx-auto px-4,$2 />
@@ -50,7 +48,7 @@ AI-Powered Advertising Solutions,"
 // Transform your advertising campaigns with our breakthrough AI technology. Achieve 95% targeting accuracy,
 //               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics. Our proven
               methodology has helped 500+ businesses increase their advertising effectiveness while reducing costs.
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <$2 />
                 href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center"
 // >
@@ -59,7 +57,7 @@ AI-Powered Advertising Solutions,"
 href="#services" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
                 View Our Services,
       </section>
-      {/* Key Metrics */}"
+                {/* Key Metrics */}"
       <section className="py-16 bg-white"></section>"
         < className="max-w-7xl mx-auto px-4,$2 />
   sm:px-6,"
@@ -83,8 +81,8 @@ Our AI-powered advertising delivers measurable business impact,"
               <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>"
               <div className="text-gray-600">Campaign Optimization
       {/* Services Section */}"
-      <section id="services" className="py-16 bg-gray-50">
-AI Advertising Solutions
+      <section id="services" className="py-16 bg-gray-50"></section>
+AI Advertising Solutions;
               Comprehensive AI-powered advertising services for maximum impact;"
           < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
@@ -93,16 +91,16 @@ AI Advertising Solutions
   hover:shadow-xl transition-shadow duration-200"></div>"
               <div className="text-blue-600 text-4xl mb-4"></div>"
               <h3 className="text-xl font-semibold mb-3">AI-Powered Targeting</h3>"
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 mb-4"></p>
 Advanced machine learning algorithms that identify and target your ideal customers with 95% accuracy."
-              <ul className="text-sm text-gray-600 space-y-1">
+              <ul className="text-sm text-gray-600 space-y-1"></ul>
                 <li> Behavioral analysis
                 <li> Predictive modeling
                 <li> Real-time optimization
                 <li> Lookalike audience creation
                 <li> Cross-platform targeting
               </ul>"
-              <div className="mt-4 text-sm text-green-600 font-semibold">
+              <div className="mt-4 text-sm text-green-600 font-semibold"></div>
                 Market,
   Price: $2,000-5,000/month | Our,
   Price: $1,200/month;"
@@ -166,7 +164,8 @@ Transparent Pricing
             < className="bg-white border-2 border-gray-200 rounded-lg p-8,"$2 />
   hover:border-blue-500 transition-colors duration-200"></div>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>"
-              <div className="text-4xl font-bold text-blue-600 mb-2">$1,200<span className="text-lg text-gray-500">/month</span></div>"
+              <div className="text-4xl font-bold text-blue-600 mb-2">$1,200<span className="text-lg text-gray-500">/month</span>
+                </div>"
               <div className="text-sm text-green-600 font-semibold mb-6">Save 40% vs market rates</div>"
               <ul className="space-y-3 mb-8"></ul>"
                 <li className="flex items-center"></li>"
@@ -184,7 +183,8 @@ Transparent Pricing
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>"
                 <span className="bg-yellow-400 text-yellow-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>"
               <h3 className="text-2xl font-bold mb-4">Professional</h3>"
-              <div className="text-4xl font-bold mb-2">$2,500<span className="text-lg text-blue-200">/month</span></div>"
+              <div className="text-4xl font-bold mb-2">$2,500<span className="text-lg text-blue-200">/month</span>
+                </div>"
               <div className="text-sm text-green-300 font-semibold mb-6">Save 50% vs market rates</div>"
                   <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
                   <span>Up to $50K ad spend
@@ -196,7 +196,8 @@ Transparent Pricing
               < className="w-full bg-white text-blue-600,"$2 />
   hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200"></button>"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>"
-              <div className="text-4xl font-bold text-blue-600 mb-2">$5,000<span className="text-lg text-gray-500">/month</span></div>"
+              <div className="text-4xl font-bold text-blue-600 mb-2">$5,000<span className="text-lg text-gray-500">/month</span>
+                </div>"
               <div className="text-sm text-green-600 font-semibold mb-6">Save 60% vs market rates
                   <span>Unlimited ad spend
                   <span>Full AI suite
@@ -206,11 +207,11 @@ Transparent Pricing
                   <span>White-label options
                 Contact Sales
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></section>
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4"></h2>
 Ready to Transform Your Advertising?
-          <p className="text-xl mb-8 text-blue-100">
+          <p className="text-xl mb-8 text-blue-100"></p>
             Get a free AI advertising assessment and discover how we can boost your ROI by 300%
               className="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors duration-200 inline-flex items-center" Get Free Assessment
               href="/case-studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
@@ -218,14 +219,38 @@ Ready to Transform Your Advertising?
   ),
 }
 export default ServicesAdvertisingPage</p>
-  </h2>
+                </h2>
   </div>
-  </section>
+                </section>
   </div>
+                </div>
   </div>
+                </Link>
   </div>
-  </Link>
+                </Link>
   </div>
-  </Link>
-  </div>
-</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></h3></h3></h3></h3></h3></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
+                </span></span>
+                </span></span>
+                </span></span>
+                </span></span>
+                </span></span>
+                </span></span>
+                </span></span>
+                </span></h3>
+                </h3></h3>
+                </h3></h3>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li>

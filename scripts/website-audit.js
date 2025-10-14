@@ -34,7 +34,8 @@ function scanDirectory(dir, basePath = '') {
 // Scan the app directory for pages
 scanDirectory(appDir)
 console.log(`📄 Found ${allPages.length} pages: `),
-allPages.forEach(page => {),
+allPages.forEach(page =>
+                {),
   console.log(`  ✅ ${page.path}`)
 })
 // Check for missing pages referenced in Footer
@@ -51,20 +52,23 @@ while ((match = hrefRegex.exec(footerContent)) !== null) {
   }
 
 console.log(`\n🔗 Found ${footerLinks.length} links in Footer: `),
-footerLinks.forEach(link => {),
+footerLinks.forEach(link =>
+                {),
   console.log(`  📎 ${link}`)
 })
 // Check which footer links are missing pages
 const missingPages = []
 const existingRoutes = allPages.map(p => p.path)
-footerLinks.forEach(link => {
+footerLinks.forEach(link =>
+                {
     )
   if (link.startsWith('/') && !existingRoutes.includes(link)) {
     missingPages.push(link)
   }
 })
 console.log(`\n❌ Missing pages (${missingPages.length}):`)
-missingPages.forEach(page => {)
+missingPages.forEach(page =>
+                {)
   console.log(`  🚫 ${page}`)
 })
 // Check for other common missing pages
@@ -93,7 +97,8 @@ const additionalMissing = commonPages.filter(page => )
 )
 if (additionalMissing.length > 0) {
   console.log(`\n📋 Additional common pages to consider (${additionalMissing.length}):`)
-  additionalMissing.forEach(page => {)
+  additionalMissing.forEach(page =>
+                {)
     console.log(`  💡 ${page}`)
   })
 }
@@ -101,7 +106,8 @@ if (additionalMissing.length > 0) {
 // Check for broken internal links in existing pages
 console.log(`\n🔍 Checking for broken internal links in existing pages...`)
 const brokenLinks = []
-allPages.forEach(page => {
+allPages.forEach(page =>
+                {
     )
   try {)
     const content = fs.readFileSync(page.file, 'utf8')
@@ -123,7 +129,8 @@ allPages.forEach(page => {
 })
 if (brokenLinks.length > 0) {
   console.log(`\n🔗 Broken internal links found (${brokenLinks.length}):`)
-  brokenLinks.forEach(({ page, brokenLink }) => {
+  brokenLinks.forEach(({ page, brokenLink }) =>
+                {
     console.log(`  ❌ ${page} → ${brokenLink}`)
   })
 } else {
@@ -157,4 +164,4 @@ console.log(`  2. Fix broken internal links`)
 console.log(`  3. Test all links on the live website`)
 console.log(`  4. Improve navigation structure`),
 ,
-console.log(`\n✅ Website audit completed!`)
+console.log(`\n✅ Website audit completed!`);

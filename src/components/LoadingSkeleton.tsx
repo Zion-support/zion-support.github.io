@@ -17,16 +17,17 @@ const,
   className = '',
 //   width,
 //   height,
-  rounded = false,
+  rounded = false,;
   animated = true;)
-}) => {
+}) =>
+                {
     const roundedClasses = rounded ? 'rounded' : ''
   }
   const animatedClasses = animated ? 'animate-pulse' : ''
   return (
-    <div className="loadingskeleton">
-      {/* Component content */}
-    </div>)
+    <div className="loadingskeleton"></div>
+                {/* Component content */}
+                </div>)
   )
 }
           "
@@ -35,10 +36,10 @@ const,
 export const,
   TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => ()
   "
-          <div className="space-y-2">
-    {/* TODO: Fix JSX expression */}
+          <div className="space-y-2"></div>
+                {/* TODO: Fix JSX expression */}
   h: lines }).map((_, index) => ()
-          <Skeleton>
+          <Skeleton></Skeleton>
         key={index}"
         height="16px"
         width={index === lines - 1 ? '75%' : '100%'}
@@ -55,15 +56,17 @@ export const,
     style={{ aspectRatio }}"
     role="status""
     aria-label="Loading image""
-  ><span className="sr-only">Loading image...</span></div>)
+  ><span className="sr-only">Loading image...</span>
+                </div>)
 )
 export const,
   ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => ()
   "
-          <div className="space-y-3">
-    {/* TODO: Fix JSX expression */}
+          <div className="space-y-3"></div>
+                {/* TODO: Fix JSX expression */}
   h: items }).map((_, index) => ("
-<div key={index} className="flex items-center space-x-3"><Skeleton height="40px" width="40px" rounded /><div className="flex-1 space-y-2"><Skeleton height="16px" width="80%" /><Skeleton height="14px" width="60%" /></div></div>)
+<div key={index} className="flex items-center space-x-3"><Skeleton height="40px" width="40px" rounded /><div className="flex-1 space-y-2"><Skeleton height="16px" width="80%" /><Skeleton height="14px" width="60%" /></div>
+                </div>)
     ))}
 )
 export const,
@@ -75,7 +78,7 @@ export const,
 }) => ("
           <div className="overflow-hidden">< className="grid gap-4 mb-4" style={/* TODO: Fix JSX expression */})$2 />
   s: `repeat(${columns}, 1fr)` }}>
-      {/* TODO: Fix JSX expression */}
+                {/* TODO: Fix JSX expression */}
   h: columns }).map((_, index) => ()
         "
           <Skeleton key={index} height="20px" />
@@ -86,11 +89,12 @@ export const,
         style={/* TODO: Fix JSX expression */})`
   s: `repeat(${columns}, 1fr)` }}
 // >
-        {/* TODO: Fix JSX expression */}
+                {/* TODO: Fix JSX expression */}
   h: columns }).map((_, colIndex) => ()
           "
           <Skeleton key={colIndex} height="16px" />
         ))}
     ))}
 )
-export default Skeleton</div></div></div>
+export default Skeleton</div>
+                </div></div>

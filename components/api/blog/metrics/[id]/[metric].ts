@@ -25,7 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const post = increment_metric (id, metric as 'views' | 'likes' | 'shares')
   if (return res.status (404).json ({ error: 'Not found' })) {
   $2
-}
+};
   return res.status (200).json ({ ok: true, metrics: post.metrics });export default /**
  * handler - Function description
  */
@@ -56,3 +56,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!post) return res.status(404).json({ error: 'Not found' })
   return res.status(200).json({ ok: true, metrics: post.metrics })
 }
+;

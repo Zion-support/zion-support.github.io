@@ -6,7 +6,7 @@
   q: NextApiRequest) re,
   s: NextApiResponse ) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
-  event: AnalyticsEvent = req.body} // Validate required fields if (!event.name || !event.category || !event.timestamp) {/* TODO: Fix JSX expression */}
+  event: AnalyticsEvent = req.body} // Validate required fields if (!event.name || !event.category || !event.timestamp) {/* TODO: Fix JSX expression */};
   r: 'Missing required fields' })} // Add to analytics data analyticsData.push(event); // In production, you,
   would: // 1. Store in a database (PostgreSQL, MongoDB) etc.) // 2. Send to analytics services (Google Analytics, Mixpanel) etc.) // 3. Process for real-time dashboards // 4. Apply data retention policies // Log for debugging (remove in production)' // console.log('Analytics,
   Event: ' {/* TODO: Fix JSX expression */}

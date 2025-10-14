@@ -19,7 +19,7 @@ export function Switch({
   'aria-label': ariaLabel,
   ...props
 }: SwitchProps) {
-  const handleToggle = () => {
+  const handleToggle  = () => {
     if (!disabled && onCheckedChange) {
       onCheckedChange(!checked);
     }
@@ -41,7 +41,8 @@ export function Switch({
       )}
       id={id}
       {...props}
-    >
+    ></button
+>
       <span
         className={cn(
           'pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform',

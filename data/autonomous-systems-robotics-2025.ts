@@ -300,4 +300,4 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [
     rating: 4.7,
     reviews: 62
   }
-]
+];

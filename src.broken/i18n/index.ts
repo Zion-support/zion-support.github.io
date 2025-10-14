@@ -36,7 +36,8 @@ i18n
     }})
     },
   })
-  .catch(error => {
+  .catch(error =>
+                {
     logErrorToProduction('Error initializing i18next or its detector:', { data: error })
     // This helps prevent an unhandled promise rejection if init fails.
   })
@@ -45,7 +46,8 @@ i18n
     // For RTL language support
     document.documentElement.dir = i18n.dir()
     // Listen for language changes to update RTL/LTR direction
-    i18n.on('languageChanged', (lng) => {
+    i18n.on('languageChanged', (lng) =>
+                {
       document.documentElement.dir = i18n.dir()
   // Save language preference to cookie and localStorage
   Cookies.set('zion_language', lng, { expires: 365 })
@@ -53,4 +55,4 @@ i18n
   // If user is authenticated, save language preference to profile
   // This will be implemented in the LanguageContext
 })
-export default i18n
+export default i18n;

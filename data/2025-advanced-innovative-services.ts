@@ -68,7 +68,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     icon: '🌍',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/metaverse-development-platform',
+    link: 'https://ziontechgroup.com/metaverse-development-platform',;
     marketPosition: 'Comprehensive metaverse platform; competes with Roblox, Unity, Unreal Engine.',
     targetAudience: 'Game developers, Brands, Educational institutions',
     trialDays: 21,

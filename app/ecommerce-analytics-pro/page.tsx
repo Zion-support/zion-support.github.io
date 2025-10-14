@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight}}from 'lucide-react';
-const EcommerceAnalyticsProPage: React.FC = () => {,
-=======
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react'
-const EcommerceAnalyticsProPage: React.FC = () => {
->>>>>>> origin/main
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
+import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight  } from 'lucide-react';const EcommerceAnalyticsProPage: React.FC  = () => {
   const features = [
     {
       icon: BarChart,
@@ -30,83 +21,48 @@ const EcommerceAnalyticsProPage: React.FC = () => {
       description: 'Dynamic pricing recommendations based on market conditions and competitor analysis.',},
     {icon: Target,
       title: 'Conversion Tracking',
-<<<<<<< HEAD
-      description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.',}]
-  return(<React.Fragment>)</React.Fragment>
-      <Helmet />
-=======
       description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
     }
   ]
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
->>>>>>> origin/main
         <title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
-=======
-    <React.Fragment>
-      </React><Helmet>
+    <React.Fragment></React.Fragment>
+      </React><Helmet></Helmet>
         </Helmet><title>E-commerce Analytics Pro | Zion Tech Group - Advanced E-commerce Intelligence</title>
->>>>>>> origin/main
         <meta name="description" content="Transform your e-commerce business with AI-powered analytics. Track sales, optimize inventory, and maximize revenue with our comprehensive analytics platform." />
         <meta name="keywords" content="e-commerce analytics, sales tracking, inventory optimization, revenue analytics, customer insights, e-commerce intelligence" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
-                E-commerce Analytics Pro,
-  </
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.</p>
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
-              {features.map((feature, index) => (
-                <div;
-                  key={index}className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-400/50 transition-all duration-300">,</div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
-                    <feature.icon className="w-8 h-8 text-white" />
-=======
-        </div><section className="py-20 px-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        </div><section className="py-20 px-4"></section>
           </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
+            </div><div className="text-center mb-16"></div>
+              </div><h1 className="text-4xl md: text-6xl font-bold text-white mb-6"></h1>
                 E-commerce Analytics Pro,
   
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
                 Transform your e-commerce business with AI-powered analytics that drive growth, optimize operations, and maximize revenue.
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {features.map((feature, index) => (
                 </div><$2 />
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                  </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6"></div>
                     </div><feature.icon className="w-8 h-8 text-white" />
->>>>>>> origin/main
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description</p>}</p>
+                  <h3 className="text-xl font-bold text-white mb-4"></h3>
+                {feature.title}
+                </h3>
+                  <p className="text-gray-300"></p>
+                {feature.description</p>}
+                </p>
                 </div>
               ))}
-            </div>
-          </div>
+                </div>
+                </div>
         </section>
-      </div>
+                </div>
     </>
-<<<<<<< HEAD
-  );
-};
-
-<<<<<<< HEAD
-export default EcommerceAnalyticsProPage;
-  </h1>
-=======
 export default EcommerceAnalyticsProPage
   </h1>
->>>>>>> origin/main
-=======
   )
 }
 export default EcommerceAnalyticsProPage
@@ -114,12 +70,18 @@ export default EcommerceAnalyticsProPage
                 <$2 />
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mb-6"></div>
                     <feature.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}
-                  <p className="text-gray-300">{feature.description}
+                  <h3 className="text-xl font-bold text-white mb-4"></h3>
+                {feature.title}
+                <p className="text-gray-300"></p>
+                {feature.description}
               ))}
   )
 }
-export default EcommerceAnalyticsProPage</div></div></div></div></div></p></p></h1></h3></section>
->>>>>>> origin/main
+export default EcommerceAnalyticsProPage</div>
+                </div></div>
+                </div></div>
+                </p></p>
+                </h1></h3>
+                </section>

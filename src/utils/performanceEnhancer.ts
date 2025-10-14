@@ -42,9 +42,11 @@ class PerformanceEnhancer {
   }
 
   private observePerformance(): void {if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {}
-      try {const observer = new PerformanceObserver((list) => {}
+      try {const observer = new PerformanceObserver((list) =>
+                {}
           const entries = list.getEntries()
-          entries.forEach((entry) => {
+          entries.forEach((entry) =>
+                {
     // Process performance entries
   }
             console.log('Performance)

@@ -60,7 +60,8 @@ export class AccessibilityUtils {
   }
 
   private setupKeyboardNavigation() {
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEvent) =>
+                {
       // Handle escape key
       if (event.key === 'Escape') {
         this.handleEscapeKey()
@@ -94,7 +95,8 @@ export class AccessibilityUtils {
 
   private setupHighContrastSupport() {
     const mediaQuery = window.matchMedia('(prefers-contrast: high)')
-    const handleContrastChange = (e: MediaQueryListEvent) => {
+    const handleContrastChange = (e: MediaQueryListEvent) =>
+                {
       if (e.matches) {
         document.body.classList.add('high-contrast')
         this.announceToScreenReader('High contrast mode enabled')
@@ -161,10 +163,12 @@ export class AccessibilityUtils {
     `
     document.head.appendChild(style)
     // Track focus changes
-    document.addEventListener('focusin', (event) => {
+    document.addEventListener('focusin', (event) =>
+                {
       this.handleFocusIn(event)
     })
-    document.addEventListener('focusout', (event) => {
+    document.addEventListener('focusout', (event) =>
+                {
       this.handleFocusOut(event)
     })
   }
@@ -175,7 +179,8 @@ export class AccessibilityUtils {
       { href: '#navigation', text: 'Skip to navigation' },
       { href: '#footer', text: 'Skip to footer' }
     ]
-    skipLinks.forEach(link => {
+    skipLinks.forEach(link =>
+                {
       const skipLink = document.createElement('a')
       skipLink.href = link.href
       skipLink.textContent = link.text
@@ -196,7 +201,8 @@ export class AccessibilityUtils {
 
   private setupReducedMotionSupport() {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
-    const handleMotionChange = (e: MediaQueryListEvent) => {
+    const handleMotionChange = (e: MediaQueryListEvent) =>
+                {
       if (e.matches) {
         document.body.classList.add('reduced-motion')
         this.announceToScreenReader('Reduced motion mode enabled')
@@ -279,7 +285,8 @@ export class AccessibilityUtils {
       { selector: 'aside', role: 'complementary', label: 'Sidebar' },
       { selector: 'header', role: 'banner', label: 'Page header' }
     ]
-    landmarks.forEach(landmark => {
+    landmarks.forEach(landmark =>
+                {
       const element = document.querySelector(landmark.selector)
       if (element && !element.getAttribute('role')) {
         element.setAttribute('role', landmark.role)
@@ -291,7 +298,8 @@ export class AccessibilityUtils {
   private addARIALabelsToElements() {
     // Add ARIA labels to buttons without text
     const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])')
-    buttons.forEach((button, index) => {
+    buttons.forEach((button, index) =>
+                {
       const icon = button.querySelector('svg')
       if (icon && !button.textContent?.trim()) {
         button.setAttribute('aria-label', `Button ${index + 1}`)
@@ -299,12 +307,14 @@ export class AccessibilityUtils {
     })
     // Add ARIA labels to images without alt text
     const images = document.querySelectorAll('img:not([alt])')
-    images.forEach((img, index) => {
+    images.forEach((img, index) =>
+                {
       img.setAttribute('alt', `Image ${index + 1}`)
     })
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])')
-    inputs.forEach((input) => {
+    inputs.forEach((input) =>
+                {
       const label = document.querySelector(`label[for="${input.id}"]`)
       if (label) {
         input.setAttribute('aria-labelledby', label.id || `label-${input.id}`)
@@ -313,9 +323,12 @@ export class AccessibilityUtils {
   }
 
   private observeNewElements() {
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
+    const observer = new MutationObserver((mutations) =>
+                {
+      mutations.forEach((mutation) =>
+                {
+        mutation.addedNodes.forEach((node) =>
+                {
           if (node.nodeType === Node.ELEMENT_NODE) {
             this.addARIALabelsToElement(node as Element)
           }
@@ -411,7 +424,8 @@ export class AccessibilityUtils {
     )
     const firstElement = focusableElements[0] as HTMLElement
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
-    const handleTabKey = (e: KeyboardEvent) => {
+    const handleTabKey = (e: KeyboardEvent) =>
+                {
       if (e.key === 'Tab') {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
@@ -427,14 +441,16 @@ export class AccessibilityUtils {
       }
     }
     container.addEventListener('keydown', handleTabKey)
-    return () => {
+    return () =>
+                {
       container.removeEventListener('keydown', handleTabKey)
     }
   }
 
   public cleanup() {
     // Remove event listeners
-    this.eventListeners.forEach(({ element, event, handler }) => {
+    this.eventListeners.forEach(({ element, event, handler }) =>
+                {
       element.removeEventListener(event, handler)
     })
     // Disconnect observers

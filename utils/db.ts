@@ -61,7 +61,8 @@ export interface DatabaseConfig {
   password: string
   ssl?: boolean
 }
-export interface QueryResult<T = any> {
+export interface QueryResult<T = any></T>
+                {
   rows: T[]
   rowCount: number
   fields: any[]
@@ -71,15 +72,18 @@ export class DatabaseManager {
   constructor(config: DatabaseConfig) {
     this.config = config
   }
-  async connect(): Promise<void> {
+  async connect(): Promise<void></void>
+                {
     // Mock connection - in production, this would establish a real database connection
     console.log('Connected to database')
   }
-  async disconnect(): Promise<void> {
+  async disconnect(): Promise<void></void>
+                {
     // Mock disconnection - in production, this would close the database connection
     console.log('Disconnected from database')
   }
-  async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {
+  async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>>
+                {
     // Mock query execution - in production, this would execute real SQL
     console.log('Executing query:', sql, params)
     return {
@@ -88,7 +92,8 @@ export class DatabaseManager {
       fields: []
     }
   }
-  async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {
+  async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T></T>
+                {
     // Mock transaction - in production, this would wrap the callback in a real transaction
     try {
       return await callback(this)
@@ -120,11 +125,10 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   items.push(item)
   writeJsonFile<T[]>(fileName, items)
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, [])
   items.push(item)
   writeJsonFile<T[]>(fileName, items)
 }
+;

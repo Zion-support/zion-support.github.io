@@ -148,7 +148,8 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
   const _files = fs.readdirSync(functionsDir)
   let _removedCount = 0
   let _keptCount = 0
-  files.forEach(file => {
+  files.forEach(file =>
+                {
     )
     if (file.endsWith('.js') || file.endsWith('.ts')) {
       if (shouldRemoveFunction(file)) {
@@ -159,7 +160,8 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
   } catch (error) {}
       } else {
         keptCount++
-  files.forEach(file => {/* TODO: Fix JSX expression */})
+  files.forEach(file =>
+                {/* TODO: Fix JSX expression */})
         } catch (error) {/* TODO: Fix JSX expression */}
         }
       } else {/* TODO: Fix JSX expression */}
@@ -169,4 +171,4 @@ function cleanupFunctions() {/* TODO: Fix JSX expression */}
 }
 
 // Run the cleanup
-cleanupFunctions()
+cleanupFunctions();

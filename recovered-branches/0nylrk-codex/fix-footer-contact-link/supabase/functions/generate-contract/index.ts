@@ -11,7 +11,8 @@ interface Milestone {
   dueDate: string
   estimatedHours: number
 }
-serve(async (req) => {
+serve(async (req) =>
+                {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
@@ -65,7 +66,8 @@ serve(async (req) => {
       prompt += `
       The project will be divided into the following milestones:
       `
-      milestones.forEach((milestone: Milestone, index: number) => {
+      milestones.forEach((milestone: Milestone, index: number) =>
+                {
         prompt += `
         Milestone ${index + 1}: ${milestone.title}
         - Description: ${milestone.description}
@@ -134,4 +136,4 @@ serve(async (req) => {
       }
     )
   }
-})
+});

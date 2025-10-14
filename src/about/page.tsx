@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
-
-const AboutPage: React.FC = () => {
-=======
 'use client'
-import React from 'react'
-import { Brain, Shield, Target, Users } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import { Users, Target, Brain, Shield } from 'lucide-react'
-import Footer from '../components/Footer'
-const AboutPage: React.FC = () => {
+import React from 'react';
+import { Brain, Shield, Target, Users  } from 'lucide-react';
+import { Link  } from 'react-router-dom';import { Link  } from 'react-router-dom';
+import { Users, Target, Brain, Shield  } from 'lucide-react';import Footer from '../components/Footer'
+const AboutPage: React.FC  = () => {
   const team = [
     {
       name: 'Kleber Santos',
@@ -53,15 +44,14 @@ const AboutPage: React.FC = () => {
       title: 'Partnership',
       description: 'We work closely with our clients as strategic technology partners.'}]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
           <h1 className="text-5xl font-bold text-white mb-6">About Zion Tech Group
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
             We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react'
 export default function AboutPage() {
->>>>>>> origin/main
   const teamMembers = [
     {
       name: 'Kleber Santos',
@@ -158,65 +148,65 @@ export default function AboutPage() {
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+                {/* Hero Section */}
+                <section className="relative py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
             About <span className="text-cyan-400">Zion Tech Group
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
             We are pioneers in AI and IT solutions, transforming businesses through innovative technology and expert guidance.
-        <div className='prose prose-lg max-w-none'>
-          <div className='bg-white rounded-lg shadow-lg p-8 mb-8'>
+        <div className='prose prose-lg max-w-none'></div>
+          <div className='bg-white rounded-lg shadow-lg p-8 mb-8'></div>
             <h2 className='text-2xl font-bold text-gray-900 mb-4'>Our Mission
-            <p className='text-gray-600 mb-4'>
+            <p className='text-gray-600 mb-4'></p>
               At Zion Tech Group, we are dedicated to transforming
               businesses through cutting-edge AI and IT solutions. Our
               mission is to empower organizations with the technology they
               need to thrive in the digital age.
-            <p className='text-gray-600'>
+            <p className='text-gray-600'></p>
               We combine deep technical expertise with innovative thinking
               to deliver solutions that drive real business value.
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"></div>
+          <div className="text-center"></div>
             <Users className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">Expert Team
             <p className="text-gray-300">50+ skilled professionals
-          <div className="text-center">
+          <div className="text-center"></div>
             <Target className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">Focused Solutions
             <p className="text-gray-300">Tailored to your needs
-          <div className="text-center">
+          <div className="text-center"></div>
             <Brain className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">AI Innovation
             <p className="text-gray-300">Cutting-edge technology
-          <div className="text-center">
+          <div className="text-center"></div>
             <Shield className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-white mb-2">Secure & Reliable
             <p className="text-gray-300">Enterprise-grade security
         {/* Stats Section */}
-        <section className="py-16 bg-white rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                    {stat.number}
-                  <div className="text-gray-600 font-medium">
-                    {stat.label}
+                <section className="py-16 bg-white rounded-xl mb-16"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+                {stats.map((stat, index) => (
+                <div key={index} className="text-center"></div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2"></div>
+                {stat.number}
+                <div className="text-gray-600 font-medium"></div>
+                {stat.label}
               ))}
         {/* Mission Section */}
-        <section className="py-20 bg-gray-50 rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <section className="py-20 bg-gray-50 rounded-xl mb-16"></section>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"></div>
+              <div></div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"></h2>
                   Our Mission,
   
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-lg text-gray-600 mb-6"></p>
                   To democratize access to advanced AI technology and empower businesses of all sizes 
                   to achieve their full potential through innovative digital solutions.
-                <p className="text-lg text-gray-600 mb-8">
+                <p className="text-lg text-gray-600 mb-8"></p>
                   We believe that every business deserves access to cutting-edge technology that can 
                   transform their operations, improve efficiency, and drive growth.
                 <$2 />
@@ -225,66 +215,66 @@ export default function AboutPage() {
                   Get in Touch,
   
               </div>
-              <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="bg-white rounded-xl shadow-lg p-8"></div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision
-                <p className="text-gray-600">
+                <p className="text-gray-600"></p>
                   To be the world's leading provider of AI-powered business solutions, 
                   helping organizations across all industries achieve digital transformation 
                   and sustainable growth in the age of artificial intelligence.
         {/* Values Section */}
-        <section className="py-20 bg-white rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <section className="py-20 bg-white rounded-xl mb-16"></section>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Our Values
   
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600"></p>
                 The principles that guide everything we do,
   
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {values.map((value, index) => (
+                <div key={index} className="text-center"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <value.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {value.title}
-                  <p className="text-gray-600">
-                    {value.description}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3"></h3>
+                {value.title}
+                <p className="text-gray-600"></p>
+                {value.description}
               ))}
         {/* Team Section */}
-        <section className="py-20 bg-gray-50 rounded-xl mb-16">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                <section className="py-20 bg-gray-50 rounded-xl mb-16"></section>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Meet Our Team
   
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600"></p>
                 The experts behind our innovative solutions,
   
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {team.map((member, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
-                  <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                    <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                {team.map((member, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden"></div>
+                  <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center"></div>
+                    <div className="w-32 h-32 bg-gray-300 rounded-full flex items-center justify-center"></div>
                       <Users className="w-16 h-16 text-gray-600" />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {member.name}
-                    <p className="text-blue-600 font-semibold mb-3">
-                      {member.role}
-                    <p className="text-gray-600">
-                      {member.bio}
+                  <div className="p-6"></div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2"></h3>
+                {member.name}
+                <p className="text-blue-600 font-semibold mb-3"></p>
+                {member.role}
+                <p className="text-gray-600"></p>
+                {member.bio}
               ))}
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl"></section>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Ready to Work With Us?
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"></p>
               Let's discuss how we can help transform your business with our AI-powered solutions.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 to="/contact"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
@@ -296,183 +286,186 @@ export default function AboutPage() {
                 Join Our Team,
   
             </div>
-          </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-=======
-        </section>
-      </div>
->>>>>>> origin/main
-      {/* Stats Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
-                  {stat.number}
-                <div className="text-gray-600 font-medium">
-                  {stat.label}
                 </div>
-      <section className="relative py-20 lg: py-32 overflow-hidden">
+        </section>
+                </div>
+                {/* Stats Section */}
+                <section className="py-16 bg-white"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+                {stats.map((stat, index) => (
+              <div key={index} className="text-center"></div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2"></div>
+                {stat.number}
+                <div className="text-gray-600 font-medium"></div>
+                {stat.label}
+                </div>
+      <section className="relative py-20 lg: py-32 overflow-hidden"></section>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+        <div className="container mx-auto px-4 relative z-10"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse"></h1>
               About Zion Tech Group,
   
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed"></p>
               Leading the future of AI-powered enterprise solutions with cutting-edge technology, 
               innovative thinking, and unwavering commitment to client success.
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
                 <Award className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">ISO 27001 Certified
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
                 <Shield className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">Enterprise Security
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
                 <Globe className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">Global Reach
       {/* Mission & Vision */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                <section className="py-20"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center"></div>
+            <div></div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6"></h2>
                 Our Mission,
   
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-300 mb-6 leading-relaxed"></p>
                 To democratize artificial intelligence and cutting-edge technology for enterprises worldwide, 
                 enabling them to achieve unprecedented levels of efficiency, innovation, and growth.
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
+              <div className="space-y-4"></div>
+                <div className="flex items-start space-x-3"></div>
                   <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300">Transform businesses through AI-powered solutions
-                <div className="flex items-start space-x-3">
+                <div className="flex items-start space-x-3"></div>
                   <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300">Accelerate digital transformation initiatives
-                <div className="flex items-start space-x-3">
+                <div className="flex items-start space-x-3"></div>
                   <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300">Drive sustainable innovation and growth
-            <div>
-              <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
+            <div></div>
+              <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6"></h2>
                 Our Vision,
   
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-300 mb-6 leading-relaxed"></p>
                 To be the world's leading provider of AI and quantum computing solutions, 
                 creating a future where technology seamlessly integrates with human potential 
                 to solve the world's most complex challenges.
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg">
+              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg"></div>
                 <h3 className="text-xl font-bold text-white mb-3">Core Values
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
+                <div className="space-y-3"></div>
+                  <div className="flex items-center space-x-3"></div>
                     <Brain className="w-5 h-5 text-cyan-400" />
                     <span className="text-gray-300">Innovation & Excellence
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-3"></div>
                     <Shield className="w-5 h-5 text-purple-400" />
                     <span className="text-gray-300">Integrity & Trust
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-3"></div>
                     <Users className="w-5 h-5 text-green-400" />
                     <span className="text-gray-300">Collaboration & Respect
       {/* Values */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+                <section className="py-20 bg-slate-800/50"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4"></h2>
               Our Values
   
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto"></p>
               The principles that guide everything we do and shape our culture,
   
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {values.map((value, index) => (
+              <div key={index} className="text-center group"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <value.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">{value.title}
-                <p className="text-gray-300 text-sm leading-relaxed">{value.description}
+                <h3 className="text-xl font-bold text-white mb-3"></h3>
+                {value.title}
+                <p className="text-gray-300 text-sm leading-relaxed"></p>
+                {value.description}
             ))}
       {/* Team */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+                <section className="py-20"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4"></h2>
               Meet Our Team,
   
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto"></p>
               World-class experts in AI, quantum computing, and enterprise technology
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center group hover:bg-slate-700/50 transition-all duration-300">
-                <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl font-bold text-white">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                <h3 className="text-xl font-bold text-white mb-2">{member.name}
-                <p className="text-cyan-400 font-medium mb-3">{member.role}
-                <p className="text-gray-300 text-sm mb-4">{member.bio}
-                <div className="flex flex-wrap justify-center gap-2">
-                  {member.expertise.map((skill, skillIndex) => (
-                    <span key={skillIndex} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">
-                      {skill}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {teamMembers.map((member, index) => (
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center group hover:bg-slate-700/50 transition-all duration-300"></div>
+                <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
+                  <span className="text-2xl font-bold text-white"></span>
+                {member.name.split(' ').map(n => n[0]).join('')}
+                <h3 className="text-xl font-bold text-white mb-2"></h3>
+                {member.name}
+                <p className="text-cyan-400 font-medium mb-3"></p>
+                {member.role}
+                <p className="text-gray-300 text-sm mb-4"></p>
+                {member.bio}
+                <div className="flex flex-wrap justify-center gap-2"></div>
+                {member.expertise.map((skill, skillIndex) => (
+                    <span key={skillIndex} className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded"></span>
+                {skill}
                   ))}
             ))}
       {/* Achievements */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+                <section className="py-20 bg-slate-800/50"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4"></h2>
               Our Achievements
   
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto"></p>
               Numbers that speak to our impact and success,
   
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {achievements.map((achievement, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {achievements.map((achievement, index) => (
+              <div key={index} className="text-center"></div>
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                   <achievement.icon className="w-10 h-10 text-white" />
-                <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
-                  {achievement.number}
-                <div className="text-gray-300 font-medium">
-                  {achievement.label}
+                <div className="text-3xl lg:text-4xl font-bold text-white mb-2"></div>
+                {achievement.number}
+                <div className="text-gray-300 font-medium"></div>
+                {achievement.label}
             ))}
       {/* Timeline */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+                <section className="py-20"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4"></h2>
               Our Journey
   
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto"></p>
               Key milestones in our company's growth and innovation,
   
           </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">
-              {timeline.map((item, index) => (
-                <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-slate-800/50 p-6 rounded-lg">
-                      <div className="text-cyan-400 font-bold text-lg mb-2">{item.year}
-                      <h3 className="text-xl font-bold text-white mb-2">{item.title}
-                      <p className="text-gray-300">{item.description}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900">
-                  <div className="w-1/2">
+          <div className="max-w-4xl mx-auto"></div>
+            <div className="relative"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"></div>
+                {timeline.map((item, index) => (
+                <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}></div>
+                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}></div>
+                    <div className="bg-slate-800/50 p-6 rounded-lg"></div>
+                      <div className="text-cyan-400 font-bold text-lg mb-2"></div>
+                {item.year}
+                <h3 className="text-xl font-bold text-white mb-2"></h3>
+                {item.title}
+                <p className="text-gray-300"></p>
+                {item.description}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"></div>
+                  <div className="w-1/2"></div>
               ))}
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
+                <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700"></section>
+        <div className="container mx-auto px-4 text-center"></div>
+          <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6"></h2>
             Ready to Transform Your Business?
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto"></p>
             Join hundreds of enterprises that have already transformed their operations with our AI solutions.
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <$2 />
               href="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center">
@@ -486,45 +479,104 @@ export default function AboutPage() {
               Free Consultation
   
           </div>
-        </div>
+                </div>
       </section>
-    </div>
-<<<<<<< HEAD
-  );
-};
-
-export default AboutPage;
-=======
+                </div>
   ),
 }
-  </a>
-  </a>
+                </a>
+                </a>
   </p>
-  </h2>
+                </h2>
   </p>
-  </h2>
+                </h2>
   </p>
-  </h2>
+                </h2>
   </p>
+                </h2>
   </h2>
-  </h2>
-  </h2>
+                </h2>
   </h1>
+                </div>
   </div>
-  </div>
-  </section>
+                </section>
   </Link>
-  </Link>
+                </Link>
   </p>
-  </h2>
+                </h2>
   </p>
-  </h2>
+                </h2>
   </Link>
+                </h2>
   </h2>
-  </h2>
-  </section>
+                </section>
   </div>
+                </div>
   </div>
-  </div>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></section></section></section></section></section></section></section></section></section></section>
->>>>>>> origin/main
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></span>
+                </span></span>
+                </span></span>
+                </span></span>
+                </span></span>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </h1></h1>
+                </h2></h2>
+                </h3></h3>
+                </h3></h3>
+                </h3></h3>
+                </h3></h3>
+                </h3></h3>
+                </h3></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section>
+;

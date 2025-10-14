@@ -1,7 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { requireUser } from '../../../../utils/api/auth'
-import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects'
-import { Milestone } from '../../../../utils/types/milestones'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser  } from '../../../../utils/api/auth';
+import { addMilestone, getProject, assertParticipantOrAdmin, isClient  } from '../../../../utils/api/projects';import { Milestone } from '../../../../utils/types/milestones'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res)
   if (!user) return
@@ -56,7 +55,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
-    const body = req.body as Partial<Milestone>
+    const body = req.body as Partial<Milestone></Milestone>
     if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {
       res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' })
       return
@@ -118,7 +117,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(403).json({ error: 'Only client (or admin) can add milestones' })
       return
     }
-    const body = req.body as Partial<Milestone>
+    const body = req.body as Partial<Milestone></Milestone>
     if (
       !body |
       !body.title |
@@ -156,8 +155,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('AllowGET, POST')
   res.status(405).end('Method Not Allowed')
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
     res.status (404).json ({ error: "Project not found" })
     return
@@ -187,7 +184,7 @@ if ( {) {
         .json ({ error: "Only client (or admin) can add milestones" })
       return
     }
-    const body = req.body as Partial < Milestone>
+    const body = req.body as Partial < Milestone></>
     // Check condition
 if ( {) {
   $2
@@ -210,3 +207,4 @@ if ( {) {
   res.set_header ("Allow", "GET, POST")
   res.status (405).end ("Method Not Allowed")
 }
+;

@@ -1,52 +1,10 @@
-<<<<<<< HEAD
+import React from 'react'
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { microSaasServices, aiServices, itServices, specializedServices } from '../data/2025-comprehensive-real-services-enhanced';
-
-const ServicesPage: React.FC = () => {
-  const aiServicesData = aiServices.map(service => ({
-    icon: Brain,
-    title: service.name,
-    description: service.description,
-    features: service.features.slice(0, 4),
-    price: `Starting at $${service.pricing.starter.price.toLocaleString()}/month`,
-    popular: service.pricing.starter.price < 3000,
-    link: service.website.replace('https://ziontechgroup.com', '')
-  }));
-
-  const itServicesData = itServices.map(service => ({
-    icon: Database,
-    title: service.name,
-    description: service.description,
-    features: service.features.slice(0, 4),
-    price: `Starting at $${service.pricing.starter.price.toLocaleString()}/month`,
-    popular: service.pricing.starter.price < 2000,
-    link: service.website.replace('https://ziontechgroup.com', '')
-  }));
-
-  const microSaasServicesData = microSaasServices.map(service => ({
-    icon: BarChart3,
-    title: service.name,
-    description: service.description,
-    features: service.features.slice(0, 4),
-    price: `$${service.pricing.starter.price}/month`,
-    popular: service.pricing.starter.price < 200,
-    link: service.website.replace('https://ziontechgroup.com', '')
-  }));
-
-=======
-import React from 'react'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react'
-import Navigation from '../components/Navigation'
+import { Link  } from 'react-router-dom';
+import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap  } from 'lucide-react';import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-const ServicesPage: React.FC = () => {
+const ServicesPage: React.FC  = () => {
   const aiServices = [
     {
       icon: Brain,
@@ -215,7 +173,6 @@ const ServicesPage: React.FC = () => {
       link: '/ai-content-generation'
     }
   ]
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const benefits = [
     {
       icon: TrendingUp,
@@ -237,385 +194,271 @@ const ServicesPage: React.FC = () => {
       title: 'Fast Delivery',
       description: 'Quick implementation with minimal downtime'
     }
-<<<<<<< HEAD
-  ];
-
-=======
   ]
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   const stats = [
     { label: 'Projects Completed', value: '500+' },
     { label: 'Happy Clients', value: '200+' },
     { label: 'Uptime Guarantee', value: '99.9%' },
     { label: 'Support Available', value: '24/7' }
-<<<<<<< HEAD
-  ];
-
-=======
   ]
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer 
         title="AI & IT Services - Zion Tech Group"
         description="Comprehensive AI and IT solutions including AI services, automation, cybersecurity, cloud services, and micro SAAS applications. Starting from $39/month."
         keywords="AI services, IT solutions, micro SAAS, automation, cybersecurity, cloud services, business intelligence"
       />
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                {/* Hero Section */}
+                <section className="pt-24 pb-16"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               Our Services
-<<<<<<< HEAD
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions designed to transform your business operations and drive growth
-            </p>
-=======
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Comprehensive AI and IT solutions designed to transform your business operations and drive growth
   
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 href="tel:+13024640950"
                 className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call (302) 464-0950
-<<<<<<< HEAD
-              </a>
-              <Link
-                to="/contact"
-                className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-              >
-                Get Free Consultation
-              </Link>
-=======
   
               <$2 />
                 to="/contact"
                 className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 Get Free Consultation,
   
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             </div>
-          </div>
+                </div>
         </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                  {stat.value}
-                <div className="text-gray-300 text-sm md:text-base">
-                  {stat.label}
+                </section>
+                {/* Stats Section */}
+                <section className="py-16 bg-white/5"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+                {stats.map((stat, index) => (
+              <div key={index} className="text-center"></div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2"></div>
+                {stat.value}
+                <div className="text-gray-300 text-sm md:text-base"></div>
+                {stat.label}
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       {/* AI Services Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
-              AI Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced artificial intelligence solutions to automate, optimize, and transform your business
-            </p>
-=======
+                <section className="py-24"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               AI Services,
   
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Advanced artificial intelligence solutions to automate, optimize, and transform your business
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServicesData.map((service, index) => (
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {aiServicesData.map((service, index) => (
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
                 {service.popular && (
-                  <div className="flex items-center justify-center mb-4">
-<<<<<<< HEAD
-                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-=======
+                  <div className="flex items-center justify-center mb-4"></div>
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 )}
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-4"></div>
                   <service.icon className="h-8 w-8 text-cyan-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{service.title}
-                <p className="text-gray-300 mb-4">{service.description}
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                  <h3 className="text-xl font-semibold text-white"></h3>
+                {service.title}
+                <p className="text-gray-300 mb-4"></p>
+                {service.description}
+                <ul className="space-y-2 mb-6"></ul>
+                {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      {feature}
+                {feature}
                   ))}
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}
-                  <$2 />
+                <div className="text-center"></div>
+                  <div className="text-2xl font-bold text-cyan-400 mb-4"></div>
+                {service.price}
+                <$2 />
                     to={service.link}
-<<<<<<< HEAD
-                    className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-=======
                     className="bg-cyan-500 hover: bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
                     Learn More,
   
                 </div>
-              </div>
+                </div>
             ))}
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       {/* IT Services Section */}
-      <section className="py-24 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <section className="py-24 bg-white/5"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               IT Services
-<<<<<<< HEAD
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Robust IT infrastructure and support services to keep your business running smoothly
-            </p>
-=======
   
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Robust IT infrastructure and support services to keep your business running smoothly,
   
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServicesData.map((service, index) => (
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {itServicesData.map((service, index) => (
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
                 {service.popular && (
-                  <div className="flex items-center justify-center mb-4">
-<<<<<<< HEAD
-                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-=======
+                  <div className="flex items-center justify-center mb-4"></div>
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 )}
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-4"></div>
                   <service.icon className="h-8 w-8 text-blue-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{service.title}
-                <p className="text-gray-300 mb-4">{service.description}
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                  <h3 className="text-xl font-semibold text-white"></h3>
+                {service.title}
+                <p className="text-gray-300 mb-4"></p>
+                {service.description}
+                <ul className="space-y-2 mb-6"></ul>
+                {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      {feature}
+                {feature}
                   ))}
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-400 mb-4">{service.price}
-                  <$2 />
+                <div className="text-center"></div>
+                  <div className="text-2xl font-bold text-blue-400 mb-4"></div>
+                {service.price}
+                <$2 />
                     to={service.link}
-<<<<<<< HEAD
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-=======
                     className="bg-blue-500 hover: bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
                     Learn More,
   
                 </div>
-              </div>
+                </div>
             ))}
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       {/* Micro SAAS Services Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
-              Micro SAAS Solutions
-            </h2>
-=======
+                <section className="py-24"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Micro SAAS Solutions,
   
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasServicesData.map((service, index) => (
-              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {microSaasServicesData.map((service, index) => (
+              <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ${service.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
                 {service.popular && (
-                  <div className="flex items-center justify-center mb-4">
-<<<<<<< HEAD
-                    <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-=======
+                  <div className="flex items-center justify-center mb-4"></div>
                     <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 )}
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-4"></div>
                   <service.icon className="h-8 w-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{service.title}
-                <p className="text-gray-300 mb-4">{service.description}
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                  <h3 className="text-xl font-semibold text-white"></h3>
+                {service.title}
+                <p className="text-gray-300 mb-4"></p>
+                {service.description}
+                <ul className="space-y-2 mb-6"></ul>
+                {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      {feature}
+                {feature}
                   ))}
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-400 mb-4">{service.price}
-                  <$2 />
+                <div className="text-center"></div>
+                  <div className="text-2xl font-bold text-purple-400 mb-4"></div>
+                {service.price}
+                <$2 />
                     to={service.link}
-<<<<<<< HEAD
-                    className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-                  >
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-=======
                     className="bg-purple-500 hover: bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
                     Learn More,
   
                 </div>
-              </div>
+                </div>
             ))}
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       {/* Benefits Section */}
-      <section className="py-24 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <section className="py-24 bg-white/5"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Why Choose Zion Tech Group?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
-              We deliver exceptional results with proven expertise and cutting-edge technology
-            </p>
-=======
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               We deliver exceptional results with proven expertise and cutting-edge technology,
   
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-cyan-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {benefits.map((benefit, index) => (
+              <div key={index} className="text-center"></div>
+                <div className="bg-cyan-500/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                   <benefit.icon className="h-8 w-8 text-cyan-400" />
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}
-                <p className="text-gray-300">{benefit.description}
+                <h3 className="text-xl font-semibold text-white mb-2"></h3>
+                {benefit.title}
+                <p className="text-gray-300"></p>
+                {benefit.description}
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       {/* CTA Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <section className="py-24"></section>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl p-12 text-center"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Ready to Transform Your Business?
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto"></p>
               Contact us today to discuss how our AI and IT solutions can help your organization thrive.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 href="tel:+13024640950"
                 className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors hover:bg-gray-100 flex items-center justify-center"
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call (302) 464-0950
-<<<<<<< HEAD
-              </a>
-              <Link
-=======
   
               <$2 />
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
                 to="/contact"
                 className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 px-8 py-3 rounded-lg font-semibold transition-colors"
               >
                 Get Free Consultation
-<<<<<<< HEAD
-              </Link>
-=======
   
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
             </div>
-          </div>
+                </div>
         </div>
-      </section>
+                </section>
 
       <Footer />
     </div>
-<<<<<<< HEAD
-  );
-};
-
-export default ServicesPage;
-
-
-=======
   ),
 }
 export default ServicesPage</Link>
-  </a>
+                </a>
   </p>
-  </Link>
+                </Link>
   </span>
-  </h2>
+                </h2>
   </Link>
-  </span>
+                </span>
   </p>
-  </h2>
+                </h2>
   </Link>
-  </span>
+                </span>
   </p>
-  </h2>
+                </h2>
   </Link>
-  </a>
+                </a>
   </p>
-  </h1>
+                </h1>
   </SEOOptimizer>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></h2></h3></h3></h3></h3></ul></ul></ul></li></li></li></section></section></section></section></section>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></p>
+                </p></p>
+                </p></p>
+                </p></h2>
+                </h3></h3>
+                </h3></h3>
+                </ul></ul>
+                </ul></li>
+                </li></li>
+                </section></section>
+                </section></section>
+                </section>
+;

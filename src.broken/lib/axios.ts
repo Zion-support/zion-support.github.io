@@ -1,8 +1,8 @@
 import axios from 'axios'
 import { safeStorage } from '@/utils/safeStorage'
-type FulfilledFn = (value: any) => any | Promise<any>
-type RejectedFn = (error: any) => any | Promise<any>
-class InterceptorManager {
+type FulfilledFn = (value: any) => any | Promise<any></any>
+type RejectedFn = (error: any) => any | Promise<any></any>
+class InterceptorManager {;
   handlers: { fulfilled?: FulfilledFn; rejected?: RejectedFn }[] = []
   use(fulfilled?: FulfilledFn, rejected?: RejectedFn) {
     this.handlers.push({ fulfilled, rejected })
@@ -11,8 +11,8 @@ class InterceptorManager {
 export interface AxiosInstance {
   defaults: { headers: { common: Record<string, string> } }
   interceptors: { response: InterceptorManager }
-  get(url: string, config?: { params?: Record<string, any> } & RequestInit): Promise<any>
-  post(url: string, data?: any, config?: RequestInit): Promise<any>
+  get(url: string, config?: { params?: Record<string, any> } & RequestInit): Promise<any></any>
+  post(url: string, data?: any, config?: RequestInit): Promise<any></any>
 }
 export function create(config: { baseURL?: string; withCredentials?: boolean } = {}): AxiosInstance {
   const baseURL = config.baseURL || ''
@@ -49,7 +49,8 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
   }
   // Request interceptor
   instance.interceptors.request.use(
-    (config: any) => {
+    (config: any) =>
+                {
       // Add auth token if available
       if (typeof window !== 'undefined') {
         const token = safeStorage.getItem('auth-token')
@@ -59,14 +60,16 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       }
       return config
     },
-    (error: any) => {
+    (error: any) =>
+                {
       return Promise.reject(error)
     }
   )
   // Response interceptor
   instance.interceptors.response.use(
     (response: any) => response,
-    (error: any) => {
+    (error: any) =>
+                {
       if (error?.response?.status === 401) {
         // Handle unauthorized access
         if (typeof window !== 'undefined') {
@@ -80,4 +83,6 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
   return instance
 }
 // Export the function instead of calling it immediately to avoid temporal dead zone issues
-export default createAxiosInstance</$1></a></a></a>
+export default createAxiosInstance</$1>
+                </a></a>
+                </a>

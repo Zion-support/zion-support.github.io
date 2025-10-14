@@ -5,7 +5,8 @@ export function useWebSocketReconnection(options: unknown =  {}) {
   const [attemptCount, setAttemptCount] = useState(0)
   const timeoutRef: unknown = useRef<NodeJS.Timeout | null>(null)
   const attemptReconnection: unknown = useCallback(
-    (callback: () => void) => {
+    (callback: () => void) =>
+                {
       if (attemptCount >= (options.maxAttempts || 5)) {
         setIsReconnecting(false)
         return
@@ -15,13 +16,15 @@ export function useWebSocketReconnection(options: unknown =  {}) {
       const delay: unknown =
         (options.delay || 1000) *
         Math.pow(options.backoffMultiplier || 2, attemptCount)
-      timeoutRef.current = setTimeout(() => {
+      timeoutRef.current = setTimeout(() =>
+                {
         callback()
       }, delay)
     },
     [attemptCount, options],
   )
-  const resetReconnection: unknown = useCallback(() => {
+  const resetReconnection: unknown = useCallback(() =>
+                {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current)
       timeoutRef.current = null
@@ -35,4 +38,4 @@ export function useWebSocketReconnection(options: unknown =  {}) {
     attemptReconnection,
     resetReconnection
   }
-}
+};

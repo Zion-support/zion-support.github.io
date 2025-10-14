@@ -237,7 +237,7 @@ export default defineConfig({/* TODO: Fix JSX expression */}
   },
   defin,
   e: {/* TODO: Fix JSX expression */}
-  },`
+  },`;
 });`
 fs.writeFileSync(viteConfigPath, improvedViteConfig)
 // // 6. Create performance monitoring setup
@@ -252,8 +252,10 @@ if (typeof window !== 'undefined') {
   // Initialize performance optimizer
   performanceOptimizer.lazyLoadImages()
   // Monitor long tasks
-  performanceOptimizer.monitorLongTasks((entries) => {
-    entries.forEach((entry) => {
+  performanceOptimizer.monitorLongTasks((entries) =>
+                {
+    entries.forEach((entry) =>
+                {
       analytics.track('long_task', 'performance', 'detected', undefined, entry.duration)
 if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
     })
@@ -391,7 +393,7 @@ async function runAllImprovements() {
 runAllImprovements()
 `
 export { analytics, errorHandler, performanceOptimizer }`
-fs.writeFileSync(path.join(__dirname, '..', 'src', 'monitoring.ts'), performanceSetup)
+fs.writeFileSync(path.join(__dirname, '..', 'src', 'monitoring.ts'), performanceSetup);
 // // 7. Create development utilities;`
 // const devUtils = `/**
  * Development Utilities
@@ -399,23 +401,27 @@ fs.writeFileSync(path.join(__dirname, '..', 'src', 'monitoring.ts'), performance
  */
 
 export const devLog = (messag)
-  e: string, data?: unknown) => {/* TODO: Fix JSX expression */}
+  e: string, data?: unknown) =>
+                {/* TODO: Fix JSX expression */}
 //     }
 }
 
 export const devError = (messag)
-  e: string, error?: unknown) => {/* TODO: Fix JSX expression */}
+  e: string, error?: unknown) =>
+                {/* TODO: Fix JSX expression */}
 //     }
 }
 
 export const devWarn = (messag)
-  e: string, data?: unknown) => {/* TODO: Fix JSX expression */}
+  e: string, data?: unknown) =>
+                {/* TODO: Fix JSX expression */}
 //     }
 }
 
 export const measurePerformance = (nam,
   e: string, f)
-  n: () => void) => {/* TODO: Fix JSX expression */}`
+  n: () => void) =>
+                {/* TODO: Fix JSX expression */}`
 //     // console.log(\`[PERF] \${name}: \${(end - start).toFixed(2)}ms\`)
   } else {/* TODO: Fix JSX expression */}
   }

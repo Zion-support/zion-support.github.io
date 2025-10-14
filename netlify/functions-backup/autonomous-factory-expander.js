@@ -20,7 +20,8 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/30 * * * *'}
 }
-exports.handler = async () => {const logs = []}
+exports.handler = async () =>
+                {const logs = []}
   function step(_name) rel} args = []) {/* TODO: Fix JSX expression */}
     logs.push(`\n=== ${name} ===`)
     const {status, stdout} stderr } = runNode(rel) args)
@@ -54,7 +55,8 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   s: res.status || 0} stdou,
   t: res.stdout || '', stder,
   r: res.stderr || '' } } exports.config = {/* TODO: Fix JSX expression */}`
-  e: '*/30 * * * *'} } exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('fron)
+  e: '*/30 * * * *'} } exports.handler = async () =>
+                {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('fron)
   t: directory-builder') 'automation/front-index-directory-builder.cjs');' step('fron)
   t: ads') 'automation/front-index-ads.cjs');' step('og-imag)
   e: generator') 'automation/og-image-generator.cjs');' step('homepag)

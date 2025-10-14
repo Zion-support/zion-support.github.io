@@ -349,4 +349,4 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
     rating: 4.6,
     reviews: 38
   }
-]
+];

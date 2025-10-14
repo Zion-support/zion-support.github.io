@@ -1,4 +1,4 @@
-// import {NextApiRequest} NextApiResponse } from 'next' interface PerformanceData {/* TODO: Fix JSX expression */}
+// import {NextApiRequest} NextApiResponse } from 'next' interface PerformanceData {/* TODO: Fix JSX expression */};
   s: { fcp?: number; lcp?: number; fid?: number, cls?: number} ttfb?: number} fmp?: number}} export default function handler(re)
   q: NextApiRequest) re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}

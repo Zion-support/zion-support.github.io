@@ -4,7 +4,8 @@ function getClient(): OpenAI | null {
   if (!apiKey) return null
   return new OpenAI({ apiKey })
 }
-export async function generateText(prompt: string, system?: string): Promise<string> {
+export async function generateText(prompt: string, system?: string): Promise<string></string>
+                {
   const client = getClient()
   if (!client) {
     return `AI disabled. Mock response for prompt: ${prompt.slice(0, 120)}...`
@@ -21,3 +22,4 @@ export async function generateText(prompt: string, system?: string): Promise<str
   })
   return resp.choices?.[0]?.message?.content || ''
 }
+;

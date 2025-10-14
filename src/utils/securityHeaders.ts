@@ -76,8 +76,9 @@ export const,
  */
 export function getSecurityHeaders()
   customConfig?: Partial
-          <SecurityHeadersConfig>
-): Record<string, string> {const headers: Record<string, string> = {}
+          <SecurityHeadersConfig></SecurityHeadersConfig>
+): Record<string, string></string,>
+                {const headers: Record<string, string> = {}
   // TODO: Add content,
 
 }
@@ -123,8 +124,9 @@ export function getSecurityHeaders()
  */
 export function getNextSecurityHeaders()
   customConfig?: Partial
-          <SecurityHeadersConfig>
-): Array<{ key: string, value: string }> {
+          <SecurityHeadersConfig></SecurityHeadersConfig>
+): Array<{ key: string, value: string }></{>
+                {
     // TODO: Add content
   }
 

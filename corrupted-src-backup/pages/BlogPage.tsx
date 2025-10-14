@@ -1,3 +1,3 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-export default BlogPage
+export default BlogPage;

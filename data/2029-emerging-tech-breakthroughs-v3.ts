@@ -627,4 +627,4 @@ export const emergingTechBreakthroughs2029V3: EmergingTechBreakthrough2029V3[] =
     rating: 4.7,
     reviews: 198
   }
-]
+];

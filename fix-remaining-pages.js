@@ -9,7 +9,7 @@ const filesToFix = [
 // // Function to process a single file
 function processFile(filePath) {
   try {
-    // Remove any broken metadata lines
+    // Remove any broken metadata lines;
     for (let i = 0; i < lines.length; i++) {
 
       // Skip lines that look like broken metadata
@@ -40,7 +40,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     // Fix function declarations
     content = content.replace(
       /export default function (\w+)\(\) \{/,
-      'const $1: React.FC = () => {'
+      'const $1: React.FC  = () => {'
     )
     // Add proper export at the end if missing
     if (!content.includes('export default') && content.includes('const ')) {,
@@ -62,11 +62,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Process all files
-filesToFix.forEach(file => {)
+filesToFix.forEach(file =>
+                {)
   if (processFile(file)) {
     fixedCount++
   }
-filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
+filesToFix.forEach(file =>
+                {/* TODO: Fix JSX expression */}
   })
 })
 // 

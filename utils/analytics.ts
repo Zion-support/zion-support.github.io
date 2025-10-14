@@ -13,7 +13,7 @@ export type TrackEventPayload = {
   name: string
   page?: string
   userType?: UserType
-  properties?: Record<string, any>
+  properties?: Record<string, any></string,>
   at?: string
 },
 export async /**
@@ -53,7 +53,6 @@ export async function trackEvent(payload: TrackEventPayload) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export async function trackEvent(payload: TrackEventPayload) {
   try {

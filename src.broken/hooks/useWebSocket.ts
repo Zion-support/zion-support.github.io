@@ -5,17 +5,20 @@ export function useWebSocket(options: unknown)  {
   const wsRef: unknown = useRef<WebSocket | null>(null)
   const reconnectAttemptsRef: unknown = useRef(0)
   const reconnectTimeoutRef: unknown = useRef<NodeJS.Timeout | null>(null)
-  const connect: unknown = useCallback(() => {
+  const connect: unknown = useCallback(() =>
+                {
     try {
       const ws: unknown = new WebSocket(options.url)
       wsRef.current = ws
-      ws.onopen = () => {
+      ws.onopen = () =>
+                {
         setIsConnected(true)
         setError(null)
         reconnectAttemptsRef.current = 0
         options.onOpen?.()
       }
-      ws.onmessage = (event) => {
+      ws.onmessage = (event) =>
+                {
         try {
           const data: unknown = JSON.parse(event.data)
           options.onMessage?.(data)
@@ -23,7 +26,8 @@ export function useWebSocket(options: unknown)  {
           options.onMessage?.(event.data)
         }
       }
-      ws.onclose = () => {
+      ws.onclose = () =>
+                {
         setIsConnected(false)
         options.onClose?.()
         if (reconnectAttemptsRef.current < (options.maxReconnectAttempts || 5)) {
@@ -34,7 +38,8 @@ export function useWebSocket(options: unknown)  {
           )
         }
       }
-      ws.onerror = (event) => {
+      ws.onerror = (event) =></>
+                {
         setError('WebSocket error occurred')
         options.onError?.(event)
       }
@@ -42,7 +47,8 @@ export function useWebSocket(options: unknown)  {
       setError('Failed to create WebSocket connection')
     }
   }, [options])
-  const disconnect: unknown = useCallback(() => {
+  const disconnect: unknown = useCallback(() =>
+                {
     if (reconnectTimeoutRef.current) {
       clearTimeout(reconnectTimeoutRef.current)
       reconnectTimeoutRef.current = null
@@ -55,7 +61,8 @@ export function useWebSocket(options: unknown)  {
     reconnectAttemptsRef.current = options.maxReconnectAttempts || 5
   }, [options.maxReconnectAttempts])
   const sendMessage: unknown = useCallback(
-    (data: unknown) => {
+    (data: unknown) =>
+                {
       if (wsRef.current && isConnected) {
         wsRef.current.send(
           typeof data === string' ? data : JSON.stringify(data),
@@ -64,9 +71,11 @@ export function useWebSocket(options: unknown)  {
     },
     [isConnected],
   )
-  useEffect(() => {
+  useEffect(() =>
+                {
     connect()
-    return () => {
+    return () =>
+                {
       disconnect()
     }
   }, [connect, disconnect])
@@ -77,4 +86,4 @@ export function useWebSocket(options: unknown)  {
     disconnect,
     connect
   }
-}
+};

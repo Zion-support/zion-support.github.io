@@ -1,13 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { requireUser } from "../../../../../utils/api/auth"
-import {
-  getProject,
+import type { NextApiRequest, NextApiResponse } from "next";
+import { requireUser  } from '../../../../../utils/api/auth';
+import { getProject,
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,
-  isTalent,
-} from "../../../../../utils/api/projects"
-import { isMilestoneStatus } from "../../../../../utils/types/milestones"
+  isTalent,;
+ } from '../../../../../utils/api/projects';import { isMilestoneStatus } from "../../../../../utils/types/milestones"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res)
   if (!user) return
@@ -15,10 +13,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     projectId: string
     milestoneId: string
   }
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { requireUser } from '../../../../../utils/api/auth'
-import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects'
-import { isMilestoneStatus } from '../../../../../utils/types/milestones'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser  } from '../../../../../utils/api/auth';
+import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent  } from '../../../../../utils/api/projects';import { isMilestoneStatus } from '../../../../../utils/types/milestones'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res)
   if (!user) return
@@ -93,10 +90,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { requireUser } from '../../../../../utils/api/auth'
-import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects'
-import { isMilestoneStatus } from '../../../../../utils/types/milestones'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { requireUser  } from '../../../../../utils/api/auth';
+import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent  } from '../../../../../utils/api/projects';import { isMilestoneStatus } from '../../../../../utils/types/milestones'
 export default function handler(req, res) {
   try {
   const user = requireUser(req, res)
@@ -258,5 +254,4 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

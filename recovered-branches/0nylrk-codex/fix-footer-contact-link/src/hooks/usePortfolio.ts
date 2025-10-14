@@ -1,14 +1,13 @@
-import { useState, useCallback } from 'react'
-import { PortfolioProject } from '@/types/resume'
-import { supabase } from '@/integrations/supabase/client'
-import { useAuth } from '@/hooks/useAuth'
-import { toast } from '@/hooks/use-toast'
+import { useState, useCallback  } from 'react';
+import { PortfolioProject  } from '@/types/resume';import { supabase  } from '@/integrations/supabase/client';
+import { useAuth  } from '@/hooks/useAuth';import { toast } from '@/hooks/use-toast'
 export function usePortfolio() {
   const { user } = useAuth()
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [projects, setProjects] = useState<PortfolioProject[]>([])
-  const fetchProjects = useCallback(async () => {
+  const fetchProjects = useCallback(async () =>
+                {
     if (!user) {
       setError('You must be logged in to access portfolio projects')
       return []
@@ -32,7 +31,8 @@ export function usePortfolio() {
       setIsLoading(false)
     }
   }, [user])
-  const addProject = async (project: PortfolioProject): Promise<string | null> => {
+  const addProject = async (project: PortfolioProject): Promise<string | null> =>
+                {
     if (!user) {
       setError('You must be logged in to add a portfolio project')
       return null
@@ -74,7 +74,8 @@ export function usePortfolio() {
       setIsLoading(false)
     }
   }
-  const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
+  const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> =>
+                {
     if (!user) {
       setError('You must be logged in to update a portfolio project')
       return false
@@ -115,7 +116,8 @@ export function usePortfolio() {
       setIsLoading(false)
     }
   }
-  const deleteProject = async (projectId: string): Promise<boolean> => {
+  const deleteProject = async (projectId: string): Promise<boolean> =>
+                {
     if (!user) {
       setError('You must be logged in to delete a portfolio project')
       return false
@@ -158,3 +160,4 @@ export function usePortfolio() {
     deleteProject
   }
 }
+;

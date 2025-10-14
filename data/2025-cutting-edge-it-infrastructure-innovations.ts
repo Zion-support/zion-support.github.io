@@ -260,4 +260,4 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [
     website: 'https://ziontechgroup.com',
     slug: '/autonomous-data-center-management-platform'
   }
-]
+];

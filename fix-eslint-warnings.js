@@ -21,7 +21,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 
 // Fix console statements
 function fixConsoleStatements(content) {
-  // Remove console.log, console.warn, console.error, console.info, console.debug
+  // Remove console.log, console.warn, console.error, console.info, console.debug;
   content = content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm, '')
   // Remove console statements that are part of multi-line expressions
   content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, '')
@@ -34,8 +34,10 @@ function fixUnusedVariables(content) {
   content = content.replace(/^\s*(const|let|var)\s+_\w+\s*=.*?;\s*$/gm, '')
   content = content.replace(/^\s*(const|let|var)\s+\w+\s*=.*?;\s*\/\/.*unused.*$/gm, '')
   // Prefix unused parameters with underscore
-  content = content.replace(/function\s*\(([^)]*)\)/g, (_match, _params) => {
-    return match.replace(/\b(\w+)\b/g, (_param) => {
+  content = content.replace(/function\s*\(([^)]*)\)/g, (_match, _params) =>
+                {
+    return match.replace(/\b(\w+)\b/g, (_param) =>
+                {
       if (param.includes('_') || param === 'props' || param === 'event' || param === 'index') {
         return param
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
@@ -55,20 +57,23 @@ function fixUnusedImports(content) {
   // Remove unused imports (basic approach)
   
   // Find all used identifiers
-  lines.forEach(line => {)
+  lines.forEach(line =>
+                {)
     if (matches) {
       matches.forEach(match => usedIdentifiers.add(match))
 function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     }
   })
   // Remove unused import lines
-  const filteredLines = lines.filter(line => {)
+  const filteredLines = lines.filter(line =>
+                {)
     if (importMatch) {
       if (importedItems) {
         return hasUsedItems
-  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */}
+  const filteredLines = lines.filter(line =>
+                {/* TODO: Fix JSX expression */}
       }
-    }
+    };
     return true;)
   })
   return filteredLines.join('\n')
@@ -78,7 +83,8 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
 function main() {
 
   
-  files.forEach(file => {)
+  files.forEach(file =>
+                {)
     try {)
       // Apply fixes;)
       content = fixConsoleStatements(content)
@@ -93,7 +99,8 @@ function main() {
 
 function main() {/* TODO: Fix JSX expression */}
 }
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
       })
     } catch (error) {/* TODO: Fix JSX expression */}
     }

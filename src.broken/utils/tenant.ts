@@ -55,8 +55,10 @@ export function createTenant(branding: TenantBranding): Tenant {
 }
 export function updateTenant(tenantId: string, partial: Partial<Omit<Tenant, 'id' | 'apiKey'>>): Tenant | undefined {
   let result: Tenant | undefined = undefined
-  updateJsonFile<TenantsFile>(FILE, (curr) => {
-    const tenants = (curr.tenants || []).map(t => {
+  updateJsonFile<TenantsFile>(FILE, (curr) =>
+                {
+    const tenants = (curr.tenants || []).map(t =>
+                {
       if (t.id !== tenantId) return t
       const updated: Tenant = { ...t, ...partial, branding: { ...t.branding, ...(partial as any).branding }, updatedAt: new Date().toISOString() }
       result = updated
@@ -68,8 +70,10 @@ export function updateTenant(tenantId: string, partial: Partial<Omit<Tenant, 'id
 }
 export function rotateTenantApiKey(tenantId: string): Tenant | undefined {
   let result: Tenant | undefined = undefined
-  updateJsonFile<TenantsFile>(FILE, (curr) => {
-    const tenants = (curr.tenants || []).map(t => {
+  updateJsonFile<TenantsFile>(FILE, (curr) =>
+                {
+    const tenants = (curr.tenants || []).map(t =>
+                {
       if (t.id !== tenantId) return t
       const updated: Tenant = { ...t, apiKey: crypto.randomBytes(24).toString('hex'), updatedAt: new Date().toISOString() }
       result = updated
@@ -78,4 +82,4 @@ export function rotateTenantApiKey(tenantId: string): Tenant | undefined {
     return { tenants }
   }, FALLBACK)
   return result
-}
+};

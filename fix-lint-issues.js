@@ -6,13 +6,16 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix unused variables by prefixing with underscore
 function fixUnusedVariables(content) {
-  // Fix unused variables in destructuring assignments
-  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {
-    const fixedVars = vars.split(',').map(v => {)
+  // Fix unused variables in destructuring assignments;
+  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) =>
+                {
+    const fixedVars = vars.split(',').map(v =>
+                {)
       const trimmed = v.trim()
       if (trimmed && !trimmed.startsWith('_') && !trimmed.includes(':')) {
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
-  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
+  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) =>
+                {/* TODO: Fix JSX expression */}
         return `_${trimmed}`
       }
       return trimmed
@@ -20,20 +23,26 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
     return `const { ${fixedVars} } = ${assignment};`
   })
   // Fix unused variables in function parameters
-  content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
-    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
+  content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) =>
+                {
+    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) =>
+                {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
-  content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {/* TODO: Fix JSX expression */}`
+  content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) =>
+                {/* TODO: Fix JSX expression */}`
         return `_${varName}`
       }
       return varName
     })
   })
   // Fix arrow function parameters
-  content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
-    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) => {
+  content = content.replace(/\([^)]*\)\s*=>/g, (match) =>
+                {
+    return match.replace(/\b([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, (varName) =>
+                {
       if (varName !== 'function' && varName !== 'async' && !varName.startsWith('_')) {
-  content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}`
+  content = content.replace(/\([^)]*\)\s*=>/g, (match) =>
+                {/* TODO: Fix JSX expression */}`
         return `_${varName}`
       }
       return varName
@@ -59,7 +68,8 @@ function fixAnyTypes(content) {
 // Function to fix JSX parsing errors
 function fixJSXErrors(content) {
   // Fix unclosed JSX tags
-  content = content.replace(/<div([^>]*)>(?!.*<\/div>)/gs, (match, attrs) => {
+  content = content.replace(/<div([^>]*)>(?!.*<\/div>)/gs, (match, attrs) =>
+                {
     if (!content.includes('</div>')) {
       return match + '</div>'
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
@@ -75,9 +85,12 @@ function fixJSXErrors(content) {/* TODO: Fix JSX expression */}
     return match
   })
   // Fix JSX expressions with multiple parent elements
-  content = content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {
-  content = content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) => {/* TODO: Fix JSX expression */}`
-    return `<div>${match.replace(/<>\s*|<\/>/g, '')}</div>`
+  content = content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) =>
+                {
+  content = content.replace(/<>\s*<[^>]+>.*?<\/[^>]+>\s*<[^>]+>.*?<\/[^>]+>\s*<\/>/gs, (match) =>
+                {/* TODO: Fix JSX expression */}`
+    return `<div>${match.replace(/<>\s*|<\/>/g, '')}
+                </div>`
   })
   return content
 }
@@ -97,17 +110,19 @@ function removeUnusedImports(content) {
   }
   
   // Filter import lines
-  const filteredLines = lines.filter(line => {)
+  const filteredLines = lines.filter(line =>
+                {)
     if (line.trim().startsWith('import')) {
       // Extract imported names
 function removeUnusedImports(content) {/* TODO: Fix JSX expression */}
   }
   
   // Filter import lines
-  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */})
+  const filteredLines = lines.filter(line =>
+                {/* TODO: Fix JSX expression */})
       const importMatch = line.match(/import\s*{([^}]+)}/)
       if (importMatch) {/* TODO: Fix JSX expression */}
-      }
+      };
       return true; // Keep default imports and other patterns
     }
     return true

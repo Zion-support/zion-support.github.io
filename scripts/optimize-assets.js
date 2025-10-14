@@ -9,7 +9,8 @@ function optimizeCSS() {
 //   const cssPath = path.join(process.cwd(), '.next/static/css')
   if (fs.existsSync(cssPath)) {
     const _files = fs.readdirSync(cssPath)
-    files.forEach(file => {)
+    files.forEach(file =>
+                {)
       if (file.endsWith('.css')) {
 //         const filePath = path.join(cssPath, file)
         let _content = fs.readFileSync(filePath, 'utf8')
@@ -18,7 +19,7 @@ function optimizeCSS() {
 function optimizeCSS() {/* TODO: Fix JSX expression */}
 }
 //   const cssPath = path.join(process.cwd(), '.next/static/css')
-  if (fs.existsSync(cssPath)) {/* TODO: Fix JSX expression */}
+  if (fs.existsSync(cssPath)) {/* TODO: Fix JSX expression */};
         content = content.replace(/;\s*}/g, '}')
         content = content.replace(/,\s+/g, ',')
         fs.writeFileSync(filePath, content)
@@ -32,7 +33,8 @@ function optimizeJS() {
 //   const jsPath = path.join(process.cwd(), '.next/static/chunks')
   if (fs.existsSync(jsPath)) {
     const _files = fs.readdirSync(jsPath)
-    files.forEach(file => {)
+    files.forEach(file =>
+                {)
       if (file.endsWith('.js')) {
 //         const filePath = path.join(jsPath, file)
         let _content = fs.readFileSync(filePath, 'utf8')

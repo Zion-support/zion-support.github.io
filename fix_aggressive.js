@@ -8,9 +8,10 @@ import { fileURLToPath } from 'url'
 function fixCorruptedSyntax(text) {
 
   //Fix import statements that got completely corrupted
-  fixed = fixed.replace(
+  fixed = fixed.replace(;
     /import\s*React,\s*\{([^}]+)\}\s*from\s*['"]react['"];?/g,
-    (match, imports) => {
+    (match, imports) =>
+                {
       //Clean up the imports by removing extra commas and spaces
       const cleanImports = imports
         .replace(/,\s*,/g, ',')
@@ -18,20 +19,23 @@ function fixCorruptedSyntax(text) {
         .trim()
 function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
     /import\s*React,\s*\{([^}]+)\}\s*from\s*['"]react['"];?/g,
-    (match, imports) => {/* TODO: Fix JSX expression */}
+    (match, imports) =>
+                {/* TODO: Fix JSX expression */}
     }
   )
   //Fix corrupted import statements
-  fixed = fixed.replace(
+  fixed = fixed.replace(;
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
-    (match, imports, module) => {
+    (match, imports, module) =>
+                {
       const cleanImports = imports
         .replace(/,\s*,/g, ',')
         .replace(/\s*,\s*/g, ', ')
         .trim()
   fixed = fixed.replace(")
     /import\s*\{([^}]+)\}\s*from\s*['"]([^'"]+)['"];?/g,
-    (match, imports, module) => {/* TODO: Fix JSX expression */}
+    (match, imports, module) =>
+                {/* TODO: Fix JSX expression */}
     }
   )
   //Fix corrupted variable declarations
@@ -71,7 +75,8 @@ function fixCorruptedSyntax(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*([^)]*)\s*\)/g, '$1($2)')
   //Fix corrupted arrow functions
   fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{
-    /g, match => {
+    /g, match =>
+                {
     return match.replace(/\s+/g, ' ').trim()
   })
   //Fix corrupted string literals

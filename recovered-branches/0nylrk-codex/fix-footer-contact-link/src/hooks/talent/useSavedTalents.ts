@@ -1,16 +1,16 @@
-import { useState, useEffect } from "react"
-import { supabase } from "@/integrations/supabase/client"
-import { TalentProfile } from "@/types/talent"
-import { toast } from "@/hooks/use-toast"
-import { useAuthStatus } from "@/hooks/talent"
+import { useState, useEffect  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';import { TalentProfile  } from '@/types/talent';
+import { toast  } from '@/hooks/use-toast';import { useAuthStatus } from "@/hooks/talent"
 export function useSavedTalents() {
   const { isAuthenticated, userDetails } = useAuthStatus()
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([])
   const [savedTalentIds, setSavedTalentIds] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(true)
   // Fetch saved talents
-  useEffect(() => {
-    const fetchSavedTalents = async () => {
+  useEffect(() =>
+                {
+    const fetchSavedTalents = async () =>
+                {
       if (!isAuthenticated || !userDetails.id) {
         setIsLoading(false)
         return
@@ -52,7 +52,8 @@ export function useSavedTalents() {
     fetchSavedTalents()
   }, [isAuthenticated, userDetails.id])
   // Toggle save talent
-  const toggleSaveTalent = async (talent: TalentProfile) => {
+  const toggleSaveTalent = async (talent: TalentProfile) =>
+                {
     if (!isAuthenticated || !userDetails.id || !talent.id) {
       toast({
         title: "Authentication required",
@@ -106,7 +107,8 @@ export function useSavedTalents() {
     }
   }
   // Check if talent is saved
-  const isTalentSaved = (talentId: string) => {
+  const isTalentSaved = (talentId: string) =>
+                {
     return savedTalentIds.includes(talentId)
   }
   return {
@@ -117,3 +119,4 @@ export function useSavedTalents() {
     isTalentSaved
   }
 }
+;

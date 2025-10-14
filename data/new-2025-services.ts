@@ -8431,7 +8431,7 @@ review,
   e: '$3.5B+ AI safety & governance',' growth_rat,
   e: '200% annual growth',' varian,
   t: 'holographic - matrix', contact_inf,
-  o: contact, feature,
+  o: contact, feature,;
   s: [;' 'Prompt / output policy engine_jailbreak and injection detectionPII redaction and audit trail_hallucination and grounding score_dashboards and CI quality gates' ], popula,
   r: true,' ico,
   n: '🛡️'' colo,

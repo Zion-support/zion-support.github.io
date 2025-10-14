@@ -74,3 +74,4 @@ return res
     return res.status(500).json({ error: e.message || 'Failed to queue emails' })
   }
 }
+;

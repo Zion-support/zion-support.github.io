@@ -17,7 +17,7 @@ export function getUserFromRequest(req: any): User | null {
   return null
 }
 export function assertTalentOrClientForOffer(
-  req: NextApiRequest
+  req: NextApiRequest;
   offer: { clientId: string; talentSlug: string }
   req: NextApiRequest,
   offer: { clientId: string; talentSlug: string },
@@ -85,8 +85,7 @@ if ( {) {
   }
   return user
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import { NextApiRequest } from "next"
+import { NextApiRequest } from "next";
 type DemoUser = { id: string; role: "client" | "talent"; talentSlug?: string }
 export function getDemoUser(req: NextApiRequest): DemoUser {
   // Prefer headers for server-side calls; fallback to cookies-like header or defaults

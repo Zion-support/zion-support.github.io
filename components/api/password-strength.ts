@@ -1,6 +1,5 @@
  password.toLowerCase () .includes (pattern) )
 password.toLowerCase () .includes (pattern) )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength']
 // Check condition
 if (strength = 'very - weak') {
@@ -62,7 +61,7 @@ interface PasswordStrengthResult {
 }
 export default async function handler(
   req: NextApiRequest
-  res: NextApiResponse<PasswordStrengthResult | { error: string }>
+  res: NextApiResponse<PasswordStrengthResult | { error: string }></PasswordStrengthResult>
 ) {
   }
   try {
@@ -76,7 +75,7 @@ export default async function handler(
     const hasLowercase = /[a-z]/.test(password)
     const hasNumbers = /\d/.test(password)
     // Calculate score
-    let score = 0
+    let score = 0;
     score -= hasCommonPatterns ? 20 : 0; // Penalty for common patterns    const charsetSize = (hasUppercase ? 26 : 0) + (hasLowercase ? 26 : 0) +
                        (hasNumbers ? 10 : 0) + (hasSymbols ? 32 : 0)
     // Calculate score
@@ -101,7 +100,7 @@ interface PasswordStrengthResult {
 }
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<PasswordStrengthResult | { error: string }>
+  res: NextApiResponse<PasswordStrengthResult | { error: string }></PasswordStrengthResult>
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -115,7 +114,7 @@ export default async function handler(
     const length = password.length
     const hasUppercase = /[A-Z]/.test(password)
     const hasLowercase = /[a-z]/.test(password)
-    const hasNumbers = /\d/.test(password)
+    const hasNumbers = /\d/.test(password);
     const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)
     // Check for common patterns
     const commonPatterns = [
@@ -361,7 +360,6 @@ interface PasswordStrengthResult {
     hasLowercase: boolean
     hasNumbers: boolean
     hasSymbols: boolean
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!password |typeof password !== 'string') {
       return res.status(400).json({ error: 'Password is required' })
     }
@@ -369,7 +367,7 @@ interface PasswordStrengthResult {
     const length = password.length
     const hasUppercase = /[A-Z]/.test(password)
     const hasLowercase = /[a-z]/.test(password)
-    const hasNumbers = /\d/.test(password)
+    const hasNumbers = /\d/.test(password);
     const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)
     // Check for common patterns
     const commonPatterns = [

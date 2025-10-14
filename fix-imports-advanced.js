@@ -19,7 +19,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Define replacements with dynamic paths
     const replacements = [
-      {
+      {;
         pattern: /import\s+Link\s+from\s+'next\/link';/g
         replacement: `import Link from '${utilsPath}link';`},
       {
@@ -63,7 +63,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         replacement: "// 'use client'; // Removed for Vite compatibility",
       {/* TODO: Fix JSX expression */}
       }]
-    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
+    replacements.forEach(({ pattern, replacement }) =>
+                {/* TODO: Fix JSX expression */}
       }
     })
     if (modified) {/* TODO: Fix JSX expression */}
@@ -75,7 +76,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 function processDirectory(dirPath) {
 
-  items.forEach(item => {)
+  items.forEach(item =>
+                {)
 )
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath)

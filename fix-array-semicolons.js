@@ -4,8 +4,9 @@ import fs from 'fs'
 function fixArraySemicolons(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
-    // Fix semicolons after arrays in object properties
-    content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
+    // Fix semicolons after arrays in object properties;
+    content = content.replace(/:\s*\[[^\]]+\];/g, (match) =>
+                {
       return match.replace(';', '')
 function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
     })
@@ -38,11 +39,13 @@ function main() {/* TODO: Fix JSX expression */}
   ]
   console.log('Fixing array semicolons...')
   let fixedCount = 0
-  files.forEach(file => {)
+  files.forEach(file =>
+                {)
     if (fs.existsSync(file)) {
       if (fixArraySemicolons(file)) {
         fixedCount++
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
       }
     })
   })

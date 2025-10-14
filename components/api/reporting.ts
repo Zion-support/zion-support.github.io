@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-    {
+    {;
       funnel: { stage: string; count: number }[]
       timeToHireDays: number
       costPerHireUsd?: number
@@ -38,10 +38,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   }
   if (method === 'POST') {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const updated = updateJsonFile<ReportingData>(
       FILE
-      curr => {
+      curr =>
+                {
         const next = curr && curr.byTenant || {}
         next[tenantId] = {
           funnel: funnel |next[tenantId]?.funnel |[]
@@ -61,7 +61,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     )
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }
-  return res && res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
+  return res && res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) =>
+                {
       const next = curr && curr.byTenant || {}
       next[tenantId] = {
         funnel: funnel |next[tenantId]?.funnel |[]
@@ -112,7 +113,8 @@ if ( {) {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {}
     const updated = updateJsonFile < ReportingData>(
       FILE,
-      curr => {
+      curr =>
+                {
         const next = curr.by_tenant || {}
         next[tenant_id] = {
           funnel: funnel || next[tenant_id]?.funnel || [],
@@ -131,7 +133,8 @@ if ( {) {
       FALLBACK)
     return res.status (200).json (updated.by_tenant[tenant_id])
   }
-  return res.status (405).json ({ error: 'Method not allowed' });    const updated = updateJsonFile < ReportingData>(FILE, (curr) => {
+  return res.status (405).json ({ error: 'Method not allowed' });    const updated = updateJsonFile < ReportingData>(FILE, (curr) =>
+                {
       const next = curr.by_tenant || {}
       next[tenant_id] = {
         funnel: funnel || next[tenant_id]?.funnel || []
@@ -145,15 +148,14 @@ if ( {) {
 return res.status (405).json ({ error: 'Method not allowed' })
 }
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {}
-import { authenticateRequest } from '@/utils/auth'
-import { readJsonFile, updateJsonFile } from '@/utils/fileDb'
-interface ReportingData {
+import { authenticateRequest  } from '@/utils/auth';
+import { readJsonFile, updateJsonFile  } from '@/utils/fileDb';interface ReportingData {
   byTenant: Record<string, {
     funnel: { stage: string; count: number }[]
     timeToHireDays: number
     costPerHireUsd?: number
     updatedAt: string
-  }>
+  }></string,>
 }
 const FILE = 'reporting.json'
 const FALLBACK: ReportingData = { byTenant: {} }
@@ -169,7 +171,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   if (method === 'POST') {
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {}
-    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
+    const updated = updateJsonFile<ReportingData>(FILE, (curr) =>
+                {
       const next = curr.byTenant || {}
       next[tenantId] = {
         funnel: funnel || next[tenantId]?.funnel || [],

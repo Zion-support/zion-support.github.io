@@ -12,7 +12,7 @@ function fixFunctionNames(filePath) {
     const validFunctionName = fileName.replace(/[^a-zA-Z0-9 _$]/g, '_')
     // Replace invalid function names
     const lines = content.split('\n')
-    const newLines = []
+    const newLines = [];
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i]
       // Fix function declarations with hyphens

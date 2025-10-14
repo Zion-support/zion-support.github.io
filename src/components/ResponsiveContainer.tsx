@@ -26,7 +26,8 @@ const,
   className = '',
   breakpoints = {},
 //   fallback)
-}) => {/* TODO: Fix JSX expression */}
+}) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const [isClient, setIsClient] = useState(false)
@@ -38,12 +39,14 @@ const,
   h: 1024 })
   const isLargeDesktop = useMediaQuery({/* TODO: Fix JSX expression */})
   h: 1280 })
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     setIsClient(true)
   }, [])
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     if (!isClient) return
@@ -69,9 +72,11 @@ const,
   O: Add content,}
 }
     return fallback || 
-          <div className={className}>{children}</div>
+          <div className={className}></div>
+                {children}
+                </div>
   }
-  const getResponsiveClasses = () => {/* TODO: Fix JSX expression */}
+  const getResponsiveClasses  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const baseClasses = className
@@ -79,23 +84,24 @@ const,
     return `${baseClasses} ${responsiveClasses}`.trim()
   }
   return (
-    <div className="responsivecontainer">
-      {/* Component content */}
-    </div>)
+    <div className="responsivecontainer"></div>
+                {/* Component content */}
+                </div>)
   )
 }
 // Hook for responsive values
 export const useResponsiveValue = {}
-          <T,>(value,
+                <T,>(value,
   s: {
     // sm?: T
   }
 // md?: T
 // lg?: T
 // xl?: T
-// '2xl'?: T
+// '2xl'?: T;
 // default?: T;)
-}): T => {/* TODO: Fix JSX expression */}
+}): T =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const isMobile = useMediaQuery({/* TODO: Fix JSX expression */})
@@ -129,7 +135,7 @@ export const useResponsiveValue = {}
   return values.default || values.lg || values.md || values.sm || ({} as T)
 }
 // Hook for responsive breakpoints
-export const useBreakpoint = () => {/* TODO: Fix JSX expression */}
+export const useBreakpoint  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const isMobile = useMediaQuery({/* TODO: Fix JSX expression */})

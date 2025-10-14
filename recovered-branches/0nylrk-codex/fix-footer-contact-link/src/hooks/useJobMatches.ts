@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react"
-import { supabase } from "@/integrations/supabase/client"
-import { toast } from "@/hooks/use-toast"
-import { JobMatch } from "@/types/jobs"
-export function useJobMatches(jobId: string) {
+import { useState, useEffect  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';import { toast  } from '@/hooks/use-toast';
+import { JobMatch  } from '@/types/jobs';export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [isProcessing, setIsProcessing] = useState(false)
-  const fetchMatches = async () => {
+  const fetchMatches = async () =>
+                {
     setIsLoading(true)
     try {
       const { data, error } = await supabase
@@ -42,7 +41,8 @@ export function useJobMatches(jobId: string) {
       setIsLoading(false)
     }
   }
-  const triggerAIMatching = async () => {
+  const triggerAIMatching = async () =>
+                {
     setIsProcessing(true)
     try {
       const response = await supabase.functions.invoke('job-talent-matcher', {
@@ -69,7 +69,8 @@ export function useJobMatches(jobId: string) {
       setIsProcessing(false)
     }
   }
-  useEffect(() => {
+  useEffect(() =>
+                {
     fetchMatches()
   }, [jobId])
   return {

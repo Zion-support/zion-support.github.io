@@ -43,7 +43,8 @@ export class SEOUtils {
     } = data
     let metaTags = ''
     // Basic meta tags
-    metaTags += `<title>${this.escapeHtml(title)}</title>\n`
+    metaTags += `<title>${this.escapeHtml(title)}
+                </title>\n`
     metaTags += `<meta name="description" content="${this.escapeHtml(description)}">\n`
     metaTags += `<meta name="keywords" content="${keywords.join(', ')}">\n`
     metaTags += `<meta name="author" content="${this.escapeHtml(author)}">\n`
@@ -75,7 +76,8 @@ export class SEOUtils {
       metaTags += `<meta property="article:section" content="${this.escapeHtml(section)}">\n`
     }
     if (tags && tags.length > 0) {
-      tags.forEach(tag => {
+      tags.forEach(tag =>
+                {
         metaTags += `<meta property="article:tag" content="${this.escapeHtml(tag)}">\n`
       })
     }
@@ -202,15 +204,19 @@ export class SEOUtils {
   /**
    * Generate sitemap data
    */
-  static generateSitemapData(pages: Array<{url: string, lastmod: string, changefreq: string, priority: string}>): string {
-    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
+  static generateSitemapData(pages: Array<{url: string, lastmod: string, changefreq: string, priority: string}>): string {let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n'
     sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    pages.forEach(page => {
+    pages.forEach(page =>
+                {
       sitemap += '  <url>\n'
-      sitemap += `    <loc>${page.url}</loc>\n`
-      sitemap += `    <lastmod>${page.lastmod}</lastmod>\n`
-      sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`
-      sitemap += `    <priority>${page.priority}</priority>\n`
+      sitemap += `    <loc>${page.url}
+                </loc>\n`
+      sitemap += `    <lastmod>${page.lastmod}
+                </lastmod>\n`
+      sitemap += `    <changefreq>${page.changefreq}
+                </changefreq>\n`
+      sitemap += `    <priority>${page.priority}
+                </priority>\n`
       sitemap += '  </url>\n'
     })
     sitemap += '</urlset>'
@@ -341,4 +347,5 @@ Disallow: /private/`
   }
 }
 
-export default SEOUtils</$1></li></li>
+export default SEOUtils</$1>
+                </li></li>

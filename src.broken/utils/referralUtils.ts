@@ -1,6 +1,5 @@
-import { format } from 'date-fns'
-import { apiClient } from './apiClient'
-/**
+import { format  } from 'date-fns';
+import { apiClient  } from './apiClient';/**
  * Formats a date for display in the referral system
  * @param date Date or string to format
  * @returns Formatted date string
@@ -69,3 +68,4 @@ export async function trackReferral(userId: string, email: string) {
   }
   return false
 }
+;

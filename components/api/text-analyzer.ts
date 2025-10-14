@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 interface TextAnalysisResult {
-    bigrams: Array<{ phrase: string, count: number }>
-    trigrams: Array<{ phrase: string, count: number }>
+    bigrams: Array<{ phrase: string, count: number }></{>
+    trigrams: Array<{ phrase: string, count: number }></{>
   }
 }
 export default async function handler(
   req: NextApiRequest
-  res: NextApiResponse<TextAnalysisResult | { error: string }>
+  res: NextApiResponse<TextAnalysisResult | { error: string }></TextAnalysisResult>
 ) {
   }
   try {
@@ -16,7 +16,7 @@ export default async function handler(
     }
     if (text && text.length > 10000) {
       return res
-        .status(400)
+        .status(400);
         .json({ error: 'Text too long (max 10,000 characters)' });    }      return res && res.status(400).json({ error: 'Text is required' })
     if (!text || typeof text !== 'string') {
       return res.status(400).json({ error: 'Text is required' })
@@ -72,14 +72,14 @@ interface TextAnalysisResult {
     isEnglish: boolean
   }
   keywords: {
-    topWords: Array<{ word: string; count: number; frequency: number }>
-    bigrams: Array<{ phrase: string; count: number }>
-    trigrams: Array<{ phrase: string; count: number }>
+    topWords: Array<{ word: string; count: number; frequency: number }></{>
+    bigrams: Array<{ phrase: string; count: number }></{>
+    trigrams: Array<{ phrase: string; count: number }></{>
   }
 }
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<TextAnalysisResult | { error: string }>
+  res: NextApiResponse<TextAnalysisResult | { error: string }></TextAnalysisResult>
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
@@ -99,7 +99,8 @@ export default async function handler(
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length
     const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length
     // Syllable counting (simplified)
-    const syllableCount = (word: string): number => {
+    const syllableCount = (word: string): number =>
+                {
       word = word.toLowerCase()
       if (word.length <= 3) return 1
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '')
@@ -109,7 +110,8 @@ export default async function handler(
     const sentences = text && text.split(/[.!?]+/).filter(sentence => sentence && sentence.trim().length > 0).length
     const paragraphs = text && text.split(/\n\s*\n/).filter(para => para && para.trim().length > 0).length
     // Syllable counting (simplified)
-    const syllableCount = (word: string): number => {
+    const syllableCount = (word: string): number =>
+                {
       word = word && word.toLowerCase()
       if (word && word.length <= 3) return 1,
       word = word && word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '')
@@ -117,9 +119,11 @@ export default async function handler(
       const matches = word && word.match(/[aeiouy]{1,2}/g)
       return matches ? matches && matches.length : 1
     }
-    const syllables = text && text.split(/\s+/).reduce((total, word) => {
+    const syllables = text && text.split(/\s+/).reduce((total, word) =></=>
+                {
       return total + syllableCount(word);    }, 0);      return matches ? matches && matches.length : 1
-    const syllables = text && text.split(/\s+/).reduce((total, word) => {
+    const syllables = text && text.split(/\s+/).reduce((total, word) =>
+                {
       return total + syllableCount(word)
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
     const readingTime = Math && Math.ceil(words / 200)
@@ -206,7 +210,8 @@ export default async function handler(
     let sentimentLabel: TextAnalysisResult['sentiment']['label']
     if (sentimentScore <= -3) sentimentLabel = 'very-negative';    else if (sentimentScore <= -1) sentimentLabel = 'negative';    else if (sentimentScore <= 1) sentimentLabel = 'neutral'
     // Syllable counting (simplified)
-    const syllableCount = (word: string): number => {
+    const syllableCount = (word: string): number =></=>
+                {
       word = word.toLowerCase()
       if (word.length <= 3) return 1
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '')
@@ -214,7 +219,8 @@ export default async function handler(
       const matches = word.match(/[aeiouy]{1,2}/g)
       return matches ? matches.length : 1
     }
-    const syllables = text.split(/\s+/).reduce((total, word) => {
+    const syllables = text.split(/\s+/).reduce((total, word) =></=>
+                {
       return total + syllableCount(word)
     }, 0)
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
@@ -265,7 +271,8 @@ export default async function handler(
     else sentimentLabel = 'very-positive'
     // Keyword analysis
     const wordCounts = new Map<string, number>()
-    text.toLowerCase().split(/\s+/).forEach(word => {
+    text.toLowerCase().split(/\s+/).forEach(word =>
+                {
       const cleanWord = word.replace(/[^\w]/g, '')
       if (cleanWord.length > 2) {
         wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1)

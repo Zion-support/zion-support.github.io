@@ -1,59 +1,14 @@
-<<<<<<< HEAD
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Megaphone, 
-=======
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { 
+import { Link  } from 'react-router-dom';
+import { Brain, ;
+import { motion  } from 'framer-motion';import { 
   Brain, 
-import { motion } from 'framer-motion'
-import { 
-  Brain, 
->>>>>>> origin/main
   Target, 
   BarChart3, 
   Zap, 
   CheckCircle, 
   ArrowRight, 
   Brain, 
-<<<<<<< HEAD
-  TrendingUp 
-} from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-
-export default function AIMarketingAutomation() {
-  return (
-    <>
-      <SEOHead
-        title="AI Marketing Automation - Zion Tech Group"
-        description="Revolutionary AI-powered marketing automation platform that optimizes campaigns, personalizes content, and maximizes ROI."
-        keywords="AI marketing, marketing automation, campaign optimization, personalization, marketing AI"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
-        {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-800/20 to-red-800/20"></div>
-          <div className="max-w-7xl mx-auto relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-orange-500/20 rounded-full px-6 py-3 mb-6">
-                <Megaphone className="w-5 h-5 text-orange-400" />
-                <span className="text-orange-300 font-medium">AI Marketing Automation</span>
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-                Intelligent
-                <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent block">
-                  Marketing Solutions
-                </span>
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Revolutionary AI-powered marketing automation platform that optimizes campaigns, 
-                personalizes content, and maximizes ROI with unprecedented efficiency.
-              </p>
-            </div>
-=======
   Mail, 
   MessageSquare,
   Calendar,
@@ -69,13 +24,12 @@ export default function AIMarketingAutomation() {
   Clock,
   DollarSign
 } from 'lucide-react'
-  Shield, 
-import { Link } from 'react-router-dom'
-import { 
-  Target, 
+  Shield, ;
+import { Link  } from 'react-router-dom';
+import { Target, 
   TrendingUp, 
   Users, 
-const AIMarketingAutomation: React.FC = () => {
+const AIMarketingAutomation: React.FC  = () => {
   Clock,
   Award,
   Brain,
@@ -83,20 +37,17 @@ const AIMarketingAutomation: React.FC = () => {
   Eye,
   Lock,
   PieChart,
-  LineChart
-} from 'lucide-react'
-const AIMarketingAutomation = () => {
+  LineChart;
+ } from 'lucide-react';const AIMarketingAutomation  = () => {
   const features = [
     {
       icon: Brain,
       title: "AI-Powered Campaign Optimization",
-import { Link } from 'react-router-dom'
-import { 
-  Target, 
+import { Link  } from 'react-router-dom';
+import { Target, 
   TrendingUp, 
-  Users, 
-import { SEO } from '../../components/SEO'
-import { 
+  Users, ;
+import { SEO  } from '../../components/SEO';import { 
   Target, 
   TrendingUp, 
   Users, 
@@ -123,10 +74,9 @@ import {
     },
     {
       icon: Users,
-      title: "Personalized Content Generation",
-import { Link } from 'react-router-dom'
-import { 
-  Target, 
+      title: "Personalized Content Generation",;
+import { Link  } from 'react-router-dom';
+import { Target, 
   BarChart3, 
   Users, 
   Mail, 
@@ -149,11 +99,9 @@ import {
   ShoppingCart,
   Building,
   FileText,
-  Share2
-} from 'lucide-react'
-import { Link } from 'react-router-dom'
-import { Brain, Target, Users, BarChart3, Zap, Shield, ArrowRight, CheckCircle, TrendingUp } from 'lucide-react'
-export default function AIMarketingAutomation() {
+  Share2;
+ } from 'lucide-react';import { Link  } from 'react-router-dom';
+import { Brain, Target, Users, BarChart3, Zap, Shield, ArrowRight, CheckCircle, TrendingUp  } from 'lucide-react';export default function AIMarketingAutomation() {
   const features = [
     {
       icon: Brain,
@@ -214,9 +162,8 @@ export default function AIMarketingAutomation() {
       icon: TrendingUp,
       title: "Predictive Performance Modeling",
       description: "AI-driven forecasting to predict campaign performance and optimize strategies."
-import { Link } from 'react-router-dom'
-import { 
-  Target, 
+import { Link  } from 'react-router-dom';
+import { Target, 
   TrendingUp, 
   Users, 
   BarChart3, 
@@ -229,9 +176,8 @@ import {
   Star,
   Palette,
   Monitor,
-  Smartphone
-} from 'lucide-react'
-export default function AIMarketingAutomation() {
+  Smartphone;
+ } from 'lucide-react';export default function AIMarketingAutomation() {
   const services = [
     {
       title: 'AI-Powered Campaign Management',
@@ -358,7 +304,7 @@ export default function AIMarketingAutomation() {
   Brain,
   Palette
 } from 'lucide-react'
-const AIMarketingAutomation = () => {
+const AIMarketingAutomation  = () => {
   const features = [
     {
       icon: Brain,
@@ -818,70 +764,71 @@ export default function AIMarketingAutomation() {
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+                {/* Hero Section */}
+                <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+                {/* Hero Section */}
+                <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">
+          ></motion.div
+>
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <div className="mb-8"></div>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6"></div>
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Marketing Automation
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               Transform Your Marketing with
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> AI Intelligence</span>
-            </h1>
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6">
+                </h1>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
+                {/* Hero Section */}
+                <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <div className="mb-8"></div>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6"></div>
               <Target className="w-4 h-4 mr-2" />
               AI-Powered Marketing Automation
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"></h1>
               Transform Your Marketing with
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent"></span>
                 {" "}AI Intelligence
               </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Automate your marketing campaigns with cutting-edge AI that learns, optimizes, and delivers results. 
               From email marketing to social media, our platform handles it all intelligently.
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Leverage the power of artificial intelligence to automate, optimize, and scale your marketing campaigns. 
               Our AI-driven platform delivers personalized experiences that convert prospects into loyal customers.
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+                {/* Hero Section */}
+                <div className="relative overflow-hidden"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
-        <div className="relative z-10 container mx-auto px-4 py-24">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
+        <div className="relative z-10 container mx-auto px-4 py-24"></div>
+          <div className="text-center max-w-4xl mx-auto"></div>
+            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6"></div>
               <Target className="w-4 h-4 mr-2" />
               AI-Powered Marketing Automation
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></h1>
               Supercharge Your
               <br />
               Marketing with AI
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8"></p>
               Transform your marketing campaigns with intelligent automation that learns, 
               optimizes, and delivers personalized experiences at scale.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
@@ -895,38 +842,38 @@ export default function AIMarketingAutomation() {
               >
                 View Case Studies
               </Link>
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
+            <div className="flex justify-center mb-6"></div>
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center"></div>
                 <Brain className="w-10 h-10 text-white" />
               </div>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></h1>
               AI Marketing Automation
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
               Transform your marketing with intelligent automation powered by artificial intelligence. 
               Optimize campaigns, personalize experiences, and drive results at scale.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"></button>
                 Get Started
               </button>
-              <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
+              <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200"></button>
                 Watch Demo
               </button>
-            </div>
+                </div>
           </motion.div>
-        </div>
+                </div>
       </section>
-
+                {/* Features Section */}
       {/* Features Section */}
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
-              >
+              ></motion.div
+>
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
@@ -936,197 +883,200 @@ export default function AIMarketingAutomation() {
               >
                 Watch Demo
               </Link>
-            </div>
+                </div>
           </div>
-          
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
-            <div className="text-center">
+                {/* Key Metrics */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16"></div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-purple-400 mb-2">300%</div>
               <div className="text-gray-400">Average ROI Increase</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-pink-400 mb-2">85%</div>
               <div className="text-gray-400">Time Saved on Campaigns</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-blue-400 mb-2">2.5x</div>
               <div className="text-gray-400">Lead Generation Boost</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
               <div className="text-gray-400">Automated Optimization</div>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Features Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Powerful AI Features That Drive Results
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Our AI marketing automation platform combines cutting-edge technology with proven marketing strategies 
               to deliver exceptional results for your business.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <div className="p-3 rounded-lg bg-purple-500/20 mr-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
+                <div className="flex items-center mb-6"></div>
+                  <div className="p-3 rounded-lg bg-purple-500/20 mr-4"></div>
                     <feature.icon className="w-8 h-8 text-purple-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white"></h3>
+                {feature.title}
+                </h3>
                 </div>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-gray-400">
+                <p className="text-gray-300 mb-4"></p>
+                {feature.description}
+                </p>
+                <ul className="space-y-2"></ul>
+                {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-400"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
                 Get Started
               </Link>
-              <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300">
+              <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"></button>
                 Watch Demo
               </button>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
-
-      {/* Key Benefits */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                {/* Key Benefits */}
+                <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white"></h2>
             Why Choose AI Marketing Automation?
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
             Our AI-powered platform delivers intelligent marketing automation that 
             continuously learns and optimizes for maximum performance.
           </p>
-        </div>
+                </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {features.map((feature, index) =>
+                {
             const Icon = feature.icon
             return (
-              <div key={index} className="bg-gray-800/50 rounded-2xl p-6 hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
+              <div key={index} className="bg-gray-800/50 rounded-2xl p-6 hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center mb-6"></div>
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                <h3 className="text-xl font-semibold mb-4 text-white"></h3>
+                {feature.title}
+                </h3>
+                <p className="text-gray-300 mb-4"></p>
+                {feature.description}
+                </p>
+                <ul className="space-y-2"></ul>
+                {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400"></li>
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-    <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-pink-900">
+    <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-pink-900"></div>
       <SEO 
         title="AI Marketing Automation Platform - Zion Tech Group" 
         description="Revolutionize your marketing with AI-powered automation. Personalized campaigns, intelligent targeting, and automated optimization."
         keywords="AI marketing automation, marketing automation, AI content generation, customer targeting, campaign optimization"
         canonical="https://ziontechgroup.com/services/ai-marketing-automation"
       />
-
-      {/* Hero Section with Futuristic Background */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
+                {/* Hero Section with Futuristic Background */}
+                <section className="relative overflow-hidden"></section>
+        <div className="absolute inset-0"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-600/20 to-cyan-500/20"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1),transparent_50%)]"></div>
-        </div>
+                </div>
         
-        <div className="relative z-10 container mx-auto px-4 py-24 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-full text-purple-400 text-sm font-medium mb-6">
+        <div className="relative z-10 container mx-auto px-4 py-24 text-center"></div>
+          <div className="mb-8"></div>
+            <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-full text-purple-400 text-sm font-medium mb-6"></div>
               <Target className="w-4 h-4 mr-2" />
               AI-Powered Marketing Automation
             </div>
-          </div>
+                </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent"></span>
               AI Marketing Automation
             </span>
-            <span className="block text-3xl md:text-4xl text-gray-300 mt-4">
+            <span className="block text-3xl md:text-4xl text-gray-300 mt-4"></span>
               Transform Marketing with Intelligent Automation
             </span>
-          </h1>
+                </h1>
           
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
             Leverage artificial intelligence to automate your marketing campaigns, personalize customer experiences, 
             and optimize performance in real-time. Our AI platform handles everything from content creation to 
             campaign optimization.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+          <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"></button>
               <span className="relative z-10">Start Free Trial</span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
-            <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+                </button>
+            <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105"></button>
               Schedule Demo
             </button>
-          </div>
-
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="text-center">
+                </div>
+                {/* Key Metrics */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto"></div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-purple-400 mb-2">3.5x</div>
               <div className="text-gray-400 text-sm">Email Open Rates</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-pink-400 mb-2">2.8x</div>
               <div className="text-gray-400 text-sm">Conversion Rates</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
               <div className="text-gray-400 text-sm">Cost Reduction</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-green-400 mb-2">5.2x</div>
               <div className="text-gray-400 text-sm">ROI Improvement</div>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-black/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                {/* Features Section */}
+                <section className="py-20 bg-black/50"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4"></h2>
               Powerful AI Marketing Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our AI-powered platform combines cutting-edge technology with marketing expertise 
               to deliver results that drive business growth.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {features.map((feature, index) => (
+              <div key={index} className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"></div>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
+                <h3 className="text-xl font-semibold text-white mb-3"></h3>
+                {feature.title}
                 </h3>
-                <p className="text-gray-300 mb-4">
-                  {feature.description}
+                <p className="text-gray-300 mb-4"></p>
+                {feature.description}
                 </p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                <ul className="space-y-2"></ul>
+                {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400"></li>
                       <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                      {benefit}
-                    </li>
+                {benefit}
+                </li>
                   ))}
                 </ul>
             whileInView={{ opacity: 1, y: 0 }}
@@ -1134,17 +1084,17 @@ export default function AIMarketingAutomation() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6"></h2>
               Powerful AI-Powered Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our AI marketing automation platform combines cutting-edge technology with proven marketing strategies 
               to deliver exceptional results for your business.
             </p>
-          </motion.div>
+                </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {features.map((feature, index) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -1152,278 +1102,244 @@ export default function AIMarketingAutomation() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300"
-              >
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+              ></motion.div
+>
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                <h3 className="text-xl font-semibold mb-3"></h3>
+                {feature.title}
+                </h3>
+                <p className="text-gray-300"></p>
+                {feature.description}
+                </p>
+                {/* Features Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4"></h2>
               Powerful Features That Drive Results
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Our AI marketing automation platform combines cutting-edge technology with proven strategies 
               to deliver exceptional results for your business.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {features.map((feature, index) => (
               <$2 />
                 key={index}
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-4"></div>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3"></h3>
+                {feature.title}
+                </h3>
+                <p className="text-gray-300"></p>
+                {feature.description}
+                </p>
+                </div>
               </div>
-              </div>
-              </div>
+                </div>
               </motion.div>
             ))}
->>>>>>> origin/main
-          </div>
-        </section>
-
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Marketing Features</h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Advanced AI capabilities that transform marketing strategies and campaign performance
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {[
-                {
-                  icon: Target,
-                  title: 'Smart Targeting',
-                  description: 'AI-powered audience targeting with 95% accuracy'
-                },
-                {
-                  icon: BarChart3,
-                  title: 'Campaign Optimization',
-                  description: 'Real-time campaign optimization and performance tracking'
-                },
-                {
-                  icon: Brain,
-                  title: 'Content Personalization',
-                  description: 'Dynamic content personalization based on user behavior'
-                },
-                {
-                  icon: Zap,
-                  title: 'Automated Workflows',
-                  description: 'Automated marketing workflows and lead nurturing'
-                },
-                {
-                  icon: TrendingUp,
-                  title: 'ROI Maximization',
-                  description: 'Maximize ROI with intelligent budget allocation and optimization'
-                },
-                {
-                  icon: CheckCircle,
-                  title: 'Quality Assurance',
-                  description: 'Ensure consistent brand messaging and campaign quality'
-                }
-              ].map((feature, index) => (
-                <div key={index} className="bg-white/80 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 hover:border-orange-500/50 transition-colors">
-                  <feature.icon className="w-12 h-12 text-orange-500 mb-6" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
                 </div>
-              ))}
-            </div>
-=======
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                </section>
+                {/* Use Cases Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Comprehensive Marketing Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
+                {/* Benefits Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          ></motion.div
+>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6"></h2>
               Why Choose AI Marketing Automation?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Experience the future of marketing with intelligent automation that learns, adapts, and optimizes 
               your campaigns for maximum impact.
             </p>
-          </motion.div>
+                </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
               From email campaigns to social media management, our AI platform handles every aspect of your marketing strategy.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300 text-center">
-                <div className="p-4 rounded-lg bg-purple-500/20 inline-block mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                {useCases.map((useCase, index) => (
+              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300 text-center"></div>
+                <div className="p-4 rounded-lg bg-purple-500/20 inline-block mb-4"></div>
                   <useCase.icon className="w-8 h-8 text-purple-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{useCase.description}</p>
-                <ul className="space-y-1 text-sm">
-                  {useCase.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-400">
+                <h3 className="text-lg font-semibold text-white mb-3"></h3>
+                {useCase.title}
+                </h3>
+                <p className="text-gray-300 mb-4 text-sm"></p>
+                {useCase.description}
+                </p>
+                <ul className="space-y-1 text-sm"></ul>
+                {useCase.features.map((feature, idx) => (
+                    <li key={idx} className="text-gray-400"></li>
                       • {feature}
-                    </li>
+                </li>
                   ))}
                 </ul>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                {/* Benefits Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4"></h2>
               Why Choose AI Marketing Automation?
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Experience unprecedented growth and efficiency with our intelligent marketing solutions.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+            <div className="space-y-6"></div>
+                {benefits.slice(0, 3).map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                  <span className="text-gray-300 text-lg"></span>
+                {benefit}
+                </span>
                 </div>
               ))}
-            </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
+                </div>
+            <div className="space-y-6"></div>
+                {benefits.slice(3).map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
+                  <span className="text-gray-300 text-lg"></span>
+                {benefit}
+                </span>
                 </div>
               ))}
-            </div>
-      {/* Marketing Channels Section */}
-      <section className="py-20 bg-purple-900/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                </div>
+                {/* Marketing Channels Section */}
+                <section className="py-20 bg-purple-900/30"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4"></h2>
               Multi-Channel Marketing Automation
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Orchestrate campaigns across all your marketing channels with intelligent automation 
               and unified analytics.
             </p>
->>>>>>> origin/main
-          </div>
+                </div>
         </section>
-
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gray-900">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-=======
-      {/* Success Metrics Section */}
-      <section className="py-20 bg-black/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                {/* Success Metrics Section */}
+                <section className="py-20 bg-black/50"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4"></h2>
               Proven Results
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               See the measurable impact our AI marketing automation platform delivers for businesses.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {successMetrics.map((metric, index) => (
-              <div key={index} className="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
-                <div className="text-4xl font-bold text-purple-400 mb-2">{metric.metric}</div>
-                <div className="text-white font-semibold mb-2">{metric.description}</div>
-                <div className="text-gray-400 text-sm">{metric.detail}</div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {successMetrics.map((metric, index) => (
+              <div key={index} className="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300"></div>
+                <div className="text-4xl font-bold text-purple-400 mb-2"></div>
+                {metric.metric}
+                </div>
+                <div className="text-white font-semibold mb-2"></div>
+                {metric.description}
+                </div>
+                <div className="text-gray-400 text-sm"></div>
+                {metric.detail}
+                </div>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Pricing Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Choose Your Plan
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Flexible pricing options designed to scale with your business growth and marketing needs.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                {pricing.map((plan, index) => (
               < key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${$2 />
                 plan.popular 
                   ? 'border-purple-500/50 scale-105' 
                   : 'border-gray-700 hover:border-gray-600'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-      <section className="py-20 bg-purple-900/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium"></span>
+      <section className="py-20 bg-purple-900/30"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4"></h2>
               Transparent Pricing Plans
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Choose the plan that fits your marketing needs. All plans include a 14-day free trial.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+                {pricingPlans.map((plan, index) => (
               < key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${$2 />
                 plan.popular 
                   ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' 
                   : 'border-gray-700/50 hover:border-purple-500/50'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold"></span>
                       Most Popular
                     </span>
-                  </div>
+                </div>
                 )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-purple-400 mb-2">{plan.price}</div>
-                  <p className="text-gray-400">{plan.description}</p>
+                <div className="text-center mb-8"></div>
+                  <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                {plan.name}
+                </h3>
+                  <div className="text-4xl font-bold text-purple-400 mb-2"></div>
+                {plan.price}
+                </div>
+                  <p className="text-gray-400"></p>
+                {plan.description}
+                </p>
                 </div>
                 
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
+                <ul className="space-y-4 mb-8"></ul>
+                {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
+                {feature}
+                </li>
                   ))}
                 </ul>
                 
@@ -1432,62 +1348,69 @@ export default function AIMarketingAutomation() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+            ></motion.div
+>
               <h3 className="text-2xl font-semibold mb-6">Key Benefits</h3>
-              <div className="space-y-4">
+              <div className="space-y-4"></div>
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
+                  <div key={index} className="flex items-center space-x-3"></div>
                     <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
+                    <span className="text-gray-300"></span>
+                {benefit}
+                </span>
+                </div>
                 ))}
-              </div>
-            </motion.div>
+                </div>
+                </motion.div>
 
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+            ></motion.div
+>
               <h3 className="text-2xl font-semibold mb-6">Use Cases</h3>
-              <div className="space-y-4">
+              <div className="space-y-4"></div>
                 {useCases.map((useCase, index) => (
-                  <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
-                    <h4 className="font-semibold text-cyan-400 mb-2">{useCase.title}</h4>
-                    <p className="text-gray-300 text-sm">{useCase.description}</p>
-                  </div>
+                  <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4"></div>
+                    <h4 className="font-semibold text-cyan-400 mb-2"></h4>
+                {useCase.title}
+                </h4>
+                    <p className="text-gray-300 text-sm"></p>
+                {useCase.description}
+                </p>
+                </div>
                 ))}
-              </div>
-            </motion.div>
+                </div>
+                </motion.div>
                 < className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${$2 />
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105'
                     : 'bg-gray-700 text-white hover:bg-gray-600'
                 }`}>
-                  {plan.cta}
+                {plan.cta}
                 </button>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* CTA Section */}
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+                {/* CTA Section */}
+                <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+                {/* Hero Section */}
+                <div className="relative overflow-hidden"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16"></div>
+          <div className="text-center"></div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></h1>
               AI Marketing Automation
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
               Transform your marketing with AI-powered automation that personalizes experiences, 
               optimizes campaigns, and drives measurable results across all channels.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
@@ -1495,45 +1418,43 @@ export default function AIMarketingAutomation() {
                 Start Your Free Trial
               </Link>
               <$2 />
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
->>>>>>> origin/main
+          ></motion.div
+>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6"></h2>
               Ready to Transform Your Marketing?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Get started with our AI Marketing Automation platform and maximize your marketing ROI.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center gap-2 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center gap-2 justify-center"></button>
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500/10 transition-all">
+              <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500/10 transition-all"></button>
                 Schedule Demo
               </button>
-<<<<<<< HEAD
-=======
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+                {/* CTA Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6"></h2>
             Ready to Transform Your Marketing?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p>
             Join thousands of businesses that have already revolutionized their marketing with AI automation.
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
             Ready to Transform Your Marketing?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p>
             Join thousands of businesses that have already revolutionized their marketing with AI-powered automation. 
             Start your free trial today and see the difference AI can make.
                 to="/case-studies"
@@ -1541,23 +1462,16 @@ export default function AIMarketingAutomation() {
               >
                 View Success Stories
               </Link>
->>>>>>> origin/main
-            </div>
+                </div>
           </div>
-        </section>
+                </section>
       </div>
-<<<<<<< HEAD
-    </>
-  );
-}
-=======
-
-      {/* Services Section */}
-      <div className="py-20 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+                {/* Services Section */}
+                <div className="py-20 bg-black/20"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold mb-4">AI Marketing Automation Services</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Comprehensive solutions that combine artificial intelligence with marketing expertise
     "Increase conversion rates by 40-60%",
     "Reduce marketing costs by 30-50%",
@@ -1567,211 +1481,233 @@ export default function AIMarketingAutomation() {
     "Data-driven marketing decisions"
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mr-4">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+                {/* Hero Section */}
+                <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <div className="flex items-center justify-center mb-6"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mr-4"></div>
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"></h1>
                 AI Marketing Automation
               </h1>
-            </div>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+                </div>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Automate your marketing with AI intelligence that personalizes customer experiences and drives results
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105"></button>
                 Start Free Trial
               </button>
-              <button className="px-8 py-4 border border-purple-400/50 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/20 transition-all duration-300">
+              <button className="px-8 py-4 border border-purple-400/50 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/20 transition-all duration-300"></button>
                 Watch Demo
               </button>
-            </div>
+                </div>
           </div>
-        </div>
-        
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                </div>
+                {/* Background Elements */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none"></div>
           <div className="absolute top-20 left-10 w-2 h-2 bg-purple-400 rounded-full animate-ping"></div>
           <div className="absolute top-40 right-20 w-3 h-3 bg-pink-400 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-purple-400 rounded-full animate-bounce"></div>
-        </div>
+                </div>
       </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Features Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Intelligent Marketing Automation Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our AI-powered platform automates complex marketing tasks while delivering personalized experiences
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {features.map((feature, index) =>
+                {
               const Icon = feature.icon
               return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6">
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6"></div>
                     <Icon className="w-8 h-8 text-purple-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-4"></h3>
+                {feature.title}
+                </h3>
+                  <p className="text-gray-300"></p>
+                {feature.description}
+                </p>
                 </div>
               )
             })}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Use Cases Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Marketing Automation Use Cases
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Discover how AI marketing automation is revolutionizing customer engagement across industries
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                {useCases.map((useCase, index) =>
+                {
               const Icon = useCase.icon
               return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50"></div>
+                  <div className="flex items-start space-x-4"></div>
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center flex-shrink-0"></div>
                       <Icon className="w-6 h-6 text-purple-400" />
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                      <p className="text-gray-300">{useCase.description}</p>
-                    </div>
+                    <div></div>
+                      <h3 className="text-xl font-semibold text-white mb-3"></h3>
+                {useCase.title}
+                </h3>
+                      <p className="text-gray-300"></p>
+                {useCase.description}
+                </p>
+                </div>
                   </div>
                 </div>
               )
             })}
-          </div>
-        </div>
+                </div>
+                </div>
               </div>
             )
           })}
-        </div>
-      </div>
-
-      {/* Use Cases */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                </div>
+                </div>
+                {/* Use Cases */}
+                <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white"></h2>
             Industry Applications
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
             See how AI Marketing Automation is transforming businesses across different industries.
           </p>
-        </div>
+                </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {useCases.map((useCase, index) => (
-            <div key={index} className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50">
-              <div className="flex items-center mb-4">
-                <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                  {useCase.industry}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                {useCases.map((useCase, index) => (
+            <div key={index} className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50"></div>
+              <div className="flex items-center mb-4"></div>
+                <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full"></span>
+                {useCase.industry}
                 </span>
-              </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title}</h3>
-              <p className="text-gray-300 mb-4">{useCase.description}</p>
-              <div className="space-y-2">
+                </div>
+              <h3 className="text-xl font-semibold mb-3 text-white"></h3>
+                {useCase.title}
+                </h3>
+              <p className="text-gray-300 mb-4"></p>
+                {useCase.description}
+                </p>
+              <div className="space-y-2"></div>
                 {useCase.metrics.map((metric, idx) => (
-                  <div key={idx} className="flex items-center text-sm">
+                  <div key={idx} className="flex items-center text-sm"></div>
                     <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                    <span className="text-cyan-400 font-medium">{metric}</span>
-                  </div>
+                    <span className="text-cyan-400 font-medium"></span>
+                {metric}
+                </span>
+                </div>
                 ))}
-              </div>
-            </div>
+                </div>
+                </div>
           ))}
-        </div>
-      </div>
-
-      {/* Technologies */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                </div>
+                </div>
+                {/* Technologies */}
+                <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white"></h2>
             Powered by Cutting-Edge Technology
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
             Built on the latest AI and marketing technology for maximum performance and results.
           </p>
-        </div>
+                </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {technologies.map((tech, index) =>
+                {
             const Icon = tech.icon
             return (
-              <div key={index} className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="bg-gray-800/50 rounded-2xl p-6 text-center hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50"></div>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{tech.name}</h3>
-                <p className="text-gray-300">{tech.description}</p>
-              </div>
+                <h3 className="text-xl font-semibold mb-3 text-white"></h3>
+                {tech.name}
+                </h3>
+                <p className="text-gray-300"></p>
+                {tech.description}
+                </p>
+                </div>
             )
           })}
-        </div>
-      </div>
-
-      {/* Pricing */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                </div>
+                </div>
+                {/* Pricing */}
+                <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white"></h2>
             Choose Your Plan
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
             Flexible pricing options designed to scale with your marketing needs.
           </p>
-        </div>
+                </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {pricingTiers.map((tier, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+                {pricingTiers.map((tier, index) => (
             < key={index} className={`relative bg-gray-800/50 rounded-2xl p-8 border ${$2 />
               tier.popular 
                 ? 'border-cyan-500 shadow-lg shadow-cyan-500/20' 
                 : 'border-gray-700/50'
             }`}>
-              {tier.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-full">
+                {tier.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                  <span className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-medium rounded-full"></span>
                     Most Popular
                   </span>
                 </div>
               )}
-              
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-2 text-white">{tier.name}</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-white">{tier.price}</span>
-                  <span className="text-gray-400">{tier.period}</span>
+                <div className="text-center mb-8"></div>
+                <h3 className="text-2xl font-bold mb-2 text-white"></h3>
+                {tier.name}
+                </h3>
+                <div className="mb-4"></div>
+                  <span className="text-4xl font-bold text-white"></span>
+                {tier.price}
+                </span>
+                  <span className="text-gray-400"></span>
+                {tier.period}
+                </span>
                 </div>
-                <p className="text-gray-300">{tier.description}</p>
-              </div>
+                <p className="text-gray-300"></p>
+                {tier.description}
+                </p>
+                </div>
               
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-3 mb-8"></ul>
                 {tier.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center text-gray-300">
+                  <li key={idx} className="flex items-center text-gray-300"></li>
                     <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    {feature}
-                  </li>
+                {feature}
+                </li>
                 ))}
-              </ul>
+                </ul>
               
               <$2 />
                 to="/contact"
@@ -1783,52 +1719,51 @@ export default function AIMarketingAutomation() {
               >
                 Get Started
               </Link>
-            </div>
+                </div>
           ))}
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                </div>
+                </div>
+                {/* CTA Section */}
+                <div className="container mx-auto px-4 py-16"></div>
+        <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white"></h2>
             Ready to Transform Your Marketing?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join leading organizations that are already leveraging AI-powered marketing 
             automation to drive growth and customer engagement.
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+                {/* Hero Section */}
+                <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></div>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <div className="flex justify-center mb-6"></div>
+            <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl flex items-center justify-center"></div>
               <Target className="w-10 h-10 text-white" />
             </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+                </div>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent"></h1>
             AI Marketing Automation
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
             Revolutionize your marketing with AI-powered automation that delivers personalized experiences, 
             optimizes campaigns in real-time, and drives unprecedented growth for your business.
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
-      <div className="container mx-auto px-4 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20"></div>
+      <div className="container mx-auto px-4 py-12"></div>
+                {/* Hero Section */}
+                <div className="text-center mb-16"></div>
+          <div className="flex justify-center mb-6"></div>
+            <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center"></div>
               <Target className="w-10 h-10 text-white" />
             </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             AI Marketing Automation
           </h1>
-          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
+          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8"></p>
             Transform your marketing with intelligent automation that personalizes campaigns, 
             optimizes performance, and drives results across all channels.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <$2 />
               to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
@@ -1842,36 +1777,36 @@ export default function AIMarketingAutomation() {
             >
               Schedule Demo
             </Link>
-          </div>
-      <section className="py-20 bg-gradient-to-r from-purple-900/50 via-pink-900/50 to-cyan-900/50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                </div>
+      <section className="py-20 bg-gradient-to-r from-purple-900/50 via-pink-900/50 to-cyan-900/50"></section>
+        <div className="container mx-auto px-4 text-center"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
             Ready to Automate Your Marketing?
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
             Join thousands of businesses that have already transformed their marketing with 
             AI-powered automation.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+          <div className="flex flex-wrap justify-center gap-4"></div>
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"></button>
               <span className="relative z-10">Start Free Trial</span>
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
-            <button className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+                </button>
+            <button className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold rounded-lg transition-all duration-300 hover:scale-105"></button>
               Schedule Demo
             </button>
-          </div>
+                </div>
           
-          <div className="mt-8 text-center">
-            <p className="text-gray-400 text-sm">
+          <div className="mt-8 text-center"></div>
+            <p className="text-gray-400 text-sm"></p>
               Need enterprise pricing? <a href="/contact" className="text-purple-400 hover:text-purple-300 underline">Contact our sales team</a>
-            </p>
+                </p>
           </div>
-            </div>
+                </div>
           </motion.div>
-        </div>
+                </div>
       </section>
-    </div>
+                </div>
   )
 }
 }
@@ -1905,125 +1840,145 @@ export default function AIMarketingAutomation() {
             >
               Request Demo
             </Link>
-          </div>
+                </div>
         </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                </section>
+                {/* Benefits Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Why Choose AI Marketing Automation?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Transform your marketing from manual processes to intelligent, automated systems that scale
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-4"></div>
                 <CheckCircle className="w-6 h-6 text-purple-400 flex-shrink-0" />
-                <span className="text-gray-300 text-lg">{benefit}</span>
-              </div>
+                <span className="text-gray-300 text-lg"></span>
+                {benefit}
+                </span>
+                </div>
             ))}
-          </div>
-        </div>
-
-        {/* Features Grid */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+                </div>
+                </div>
+                {/* Features Grid */}
+                <div className="mb-20"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
             Powerful Marketing Automation Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {features.map((feature, index) =>
+                {
               const Icon = feature.icon
               return (
-                <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
+                <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4"></div>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-zion-slate-light">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3"></h3>
+                {feature.title}
+                </h3>
+                  <p className="text-zion-slate-light"></p>
+                {feature.description}
+                </p>
                 </div>
               )
             })}
-          </div>
-        </div>
-
-        {/* Benefits Section */}
-        <div className="mb-20">
-          <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white text-center mb-8">
+                </div>
+                </div>
+                {/* Benefits Section */}
+                <div className="mb-20"></div>
+          <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8"></div>
+            <h2 className="text-3xl font-bold text-white text-center mb-8"></h2>
               Proven Marketing Results
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light">{benefit}</span>
+                  <span className="text-zion-slate-light"></span>
+                {benefit}
+                </span>
                 </div>
               ))}
-            </div>
-          </div>
+                </div>
+                </div>
         </div>
-
-        {/* Use Cases */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+                {/* Use Cases */}
+                <div className="mb-20"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
             Industry Applications
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6">
-                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
-                <p className="text-zion-slate-light mb-4">{useCase.description}</p>
-                <div className="space-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                {useCases.map((useCase, index) => (
+              <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6"></div>
+                <h3 className="text-2xl font-bold text-white mb-4"></h3>
+                {useCase.industry}
+                </h3>
+                <p className="text-zion-slate-light mb-4"></p>
+                {useCase.description}
+                </p>
+                <div className="space-y-2"></div>
                   <h4 className="font-semibold text-zion-cyan">Key Metrics:</h4>
-                  {useCase.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex items-center space-x-2">
+                {useCase.metrics.map((metric, metricIndex) => (
+                    <div key={metricIndex} className="flex items-center space-x-2"></div>
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                      <span className="text-zion-slate-light text-sm">{metric}</span>
-                    </div>
+                      <span className="text-zion-slate-light text-sm"></span>
+                {metric}
+                </span>
+                </div>
                   ))}
                 </div>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
-
-        {/* Pricing */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+                </div>
+                </div>
+                {/* Pricing */}
+                <div className="mb-20"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
             Transparent Pricing
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                {pricing.map((plan, index) => (
               < key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${$2 />
                 plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
                     </span>
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
-                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-zion-slate-light mt-2">{plan.description}</p>
                 </div>
-                <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
+                )}
+                <div className="text-center mb-6"></div>
+                  <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                {plan.name}
+                </h3>
+                  <div className="flex items-baseline justify-center"></div>
+                    <span className="text-4xl font-bold text-zion-cyan"></span>
+                {plan.price}
+                </span>
+                    <span className="text-zion-slate-light ml-1"></span>
+                {plan.period}
+                </span>
+                </div>
+                  <p className="text-zion-slate-light mt-2"></p>
+                {plan.description}
+                </p>
+                </div>
+                <ul className="space-y-3 mb-6"></ul>
+                {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3"></li>
                       <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
-                    </li>
+                      <span className="text-zion-slate-light"></span>
+                {feature}
+                </span>
+                </li>
                   ))}
                 </ul>
                 <$2 />
@@ -2036,22 +1991,21 @@ export default function AIMarketingAutomation() {
                 >
                   Get Started
                 </Link>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
+                </div>
+                </div>
+                {/* CTA Section */}
+                <div className="text-center"></div>
+          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8"></div>
+            <h2 className="text-3xl font-bold text-white mb-4"></h2>
               Ready to Automate Your Marketing?
             </h2>
-            <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
+            <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto"></p>
               Join thousands of marketers already using our AI-powered automation platform 
               to create personalized campaigns that convert.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
@@ -2064,90 +2018,113 @@ export default function AIMarketingAutomation() {
               >
                 Schedule Consultation
               </Link>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
-    </div>
+                </div>
   )
 }
 export default AIMarketingAutomation
 }
 }
 }
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                </section>
+                {/* CTA Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
             Ready to Automate Your Marketing?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p>
             Join forward-thinking companies using AI to create personalized marketing experiences that convert.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-400 transition-all duration-300 transform hover:scale-105"></button>
               Start Free Trial
             </button>
-              <button className="px-8 py-4 border border-purple-400/50 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/20 transition-all duration-300">
+              <button className="px-8 py-4 border border-purple-400/50 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/20 transition-all duration-300"></button>
                 Schedule Demo
               </button>
-          </div>
+                </div>
         </div>
-      </section>
-
-      {/* Navigation Links */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
+                </section>
+                {/* Navigation Links */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12"></div>
             <h3 className="text-2xl font-bold text-white mb-4">Explore More Services</h3>
             <p className="text-gray-300">Discover our complete range of AI and technology solutions</p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link to="/services/ai-business-intelligence" className="group">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
-                <div className="flex items-center justify-between">
-                  <div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
+            <Link to="/services/ai-business-intelligence" className="group"></Link>
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300"></div>
+                <div className="flex items-center justify-between"></div>
+                  <div></div>
                     <h4 className="text-lg font-semibold text-white group-hover:text-purple-400 transition-colors">AI Business Intelligence</h4>
                     <p className="text-gray-300 text-sm">Transform data into actionable insights</p>
-                  </div>
+                </div>
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                 </div>
-              </div>
+                </div>
             </Link>
             
-            <Link to="/services/ai-hr-recruitment" className="group">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
-                <div className="flex items-center justify-between">
-                  <div>
+            <Link to="/services/ai-hr-recruitment" className="group"></Link>
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300"></div>
+                <div className="flex items-center justify-between"></div>
+                  <div></div>
                     <h4 className="text-lg font-semibold text-white group-hover:text-purple-400 transition-colors">AI HR & Recruitment</h4>
                     <p className="text-gray-300 text-sm">Revolutionize talent acquisition and management</p>
-                  </div>
+                </div>
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                 </div>
-              </div>
+                </div>
             </Link>
             
-            <Link to="/services/ai-legal-tech" className="group">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300">
-                <div className="flex items-center justify-between">
-                  <div>
+            <Link to="/services/ai-legal-tech" className="group"></Link>
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300"></div>
+                <div className="flex items-center justify-between"></div>
+                  <div></div>
                     <h4 className="text-lg font-semibold text-white group-hover:text-purple-400 transition-colors">AI Legal Tech</h4>
                     <p className="text-gray-300 text-sm">Streamline legal processes with AI</p>
-                  </div>
+                </div>
                   <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                 </div>
-              </div>
+                </div>
             </Link>
-          </div>
+                </div>
         </div>
-      </section>
+                </section>
     </div>
   )
 }
 export default AIMarketingAutomation
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section></section></section></section></section>
->>>>>>> origin/main
+                </div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></span>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></ul>
+                </ul></li>
+                </li></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section>

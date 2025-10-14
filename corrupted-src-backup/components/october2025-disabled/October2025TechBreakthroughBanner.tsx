@@ -6,138 +6,142 @@ impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t'
 impo, r, t { Targ, e, t } fr, o, m 'luci, d, e-rea, c, t'
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t'
 impo, r, t { Sparkl, e, s } fr, o, m 'luci, d, e-rea, c, t'
-const October2025TechBreakthroughBanne, r = () => { 
-  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ })
+const October2025TechBreakthroughBanne, r  = () => { 
+  return(<div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' ></div,>
+                {/* Animated, Backgroun, d */ })
       <div, className='absolute, inse, t-0, opacit, y-20'>)
         <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' />
         <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 2, 0%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent_, 5, 0%)]' />
   return (
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ }
-      <div, className='absolute, inse, t-0, opacit, y-20'>
+    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' ></div,>
+                {/* Animated, Backgroun, d */ }
+                <div, className='absolute, inse, t-0, opacit, y-20'></div,>
         <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' />
         <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 2, 0%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent_, 5, 0%)]' />
         <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 20% 8, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.3),transparent_, 5, 0%)]' />
-      {/* Animated, Gri, d */}
+                {/* Animated, Gri, d */}
+                <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-image:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' />
       <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-image:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' />
-      <div, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-image:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' />
-      <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12'>
-        {/* Breaking, News, Bad, g, e */}
-        <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-3, m, b-8'>
-          <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50'>
+      <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12'></div,>
+                {/* Breaking, News, Bad, g, e */}
+                <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-3, m, b-8'></div,>
+          <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50'></div,>
             <Sparkles, className='w-5 h-5' />
-const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression */}
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' > {/* Animated, Backgroun, d */ }
-      <div, className='absolute, inse, t-0, opacit, y-20'>
+const October2025TechBreakthroughBanne, r  = () => {/* TODO: Fix JSX expression */}
+                <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidd, e, n' ></div,>
+                {/* Animated, Backgroun, d */ }
+                <div, className='absolute, inse, t-0, opacit, y-20'></div,>
         <div, className='absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 50% 5, 0%,rg, b, a(1, 2, 0,2, 1, 9,2, 5, 5,0.3),transparent_, 5, 0%)]' />
         <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 80% 2, 0%,rg, b, a(79,2, 0, 9,1, 9, 7,0.3),transparent_, 5, 0%)]' />
         <div, classNam, e = 'absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 20% 8, 0%,rg, b, a(99,1, 0, 2,2, 4, 1,0.3),transparent_, 5, 0%)]' />
-      {/* Animated, Gri, d */}
-      <, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-imag,$2 />
+                {/* Animated, Gri, d */}
+                <, classNam, e = 'absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(rg, b, a(25, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(90d, e, g,rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0.03)_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x] [ma, s, k-imag,$2 />
   e:radi, a, l-gradie, n, t(ellipse, 8, 0% 50% at, 5, 0% 5, 0%,#0, 0, 0,transpare, n, t)]' />
-      <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12'>
-        {/* Breaking, News, Bad, g, e */}
-        <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-3, m, b-8'>
-          <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50'>
+      <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12'></div,>
+                {/* Breaking, News, Bad, g, e */}
+                <div, classNam, e = 'flex, item, s-center, justif, y-center, ga, p-3, m, b-8'></div,>
+          <div, className='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-sm, animat, e-pulse, shado, w-lg, shado, w-cy, a, n-5, 0, 0/50'></div,>
             <Sparkles, className='w-5 h-5' />
             <sp, a, n>BREAKTHROUGH, OCTOBE, R , 1, 20, 2, 5
             <Sparkles, classNam, e = 'w-5 h-5' />
-        {/* Main, Headlin, e */}
-        <div, className='te, x, t-center, m, b-10'>
-          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-t, i, g, h, t'>
+                {/* Main, Headlin, e */}
+                <div, className='te, x, t-center, m, b-10'></div,>
+          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-t, i, g, h, t'></h2,>
             🚀{' '}
-            <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-t, i, g, h, t'>
+                <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t'></span,>
+          <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-t, i, g, h, t'></h2,>
             🚀{' '}
-            <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-              3, Revolutionary, Enterprise Technologi, e, s</$1>{' '}
+                <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transpare, n, t'></span,>
+              3, Revolutionary, Enterprise Technologi, e, s</$1>
+                {' '}
             🚀
-          <p, className='te, x, t-xl, m, d: te, x, t-2xl, tex, t-cy, a, n-100, fon, t-medi, u, m'>
+          <p, className='te, x, t-xl, m, d: te, x, t-2xl, tex, t-cy, a, n-100, fon, t-medi, u, m'></p,>
             ⚡ Quant, u, m-Safe, Cryptograph, y • Autonomous, Risk, Management •
             AI-Powered, Digital, Twins
         {/* Key, Metrics, Gr, i, d */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10'>
-          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r:bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'>
+                <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10'></div,>
+          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r:bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div,>
             <div, className='te, x, t-cy, a, n-300, tex, t-4xl, fon, t-bold, m, b-2'>99.97%
-            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
               Quantum, Attack, Protection
-            <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'>
-            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+            <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'></div,>
+            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
               Quantum, Attack, Protection
-            <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'>
+            <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'></div,>
               Futu, r, e-Proof, Securit, y
-          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r:bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'>
+          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r:bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div,>
             <div, className='te, x, t-bl, u, e-300, tex, t-4xl, fon, t-bold, m, b-2'>98.9%
-            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
               Risk, Prediction, Accuracy
-            <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'>
-            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+            <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'></div,>
+            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
               Risk, Prediction, Accuracy
-            <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'>
+            <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'></div,>
               90+ Days, Early, Warning
-          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r:bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'>
+          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r:bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div,>
             <div, className='te, x, t-indi, g, o-300, tex, t-4xl, fon, t-bold, m, b-2'>99.4%
-            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
               Digital, Twin, Accuracy
-            <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'>
-            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+            <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div,>
+            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
               Digital, Twin, Accuracy
-            <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'>
+            <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div,>
               Re, a, l-World, Fidelit, y
-          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r:bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'>
+          <div, className='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r:bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div,>
             <div, className='te, x, t-purp, l, e-300, tex, t-4xl, fon, t-bold, m, b-2'>$15, 1, B
-            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
               Combined, Annual, Value
-            <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'>
-            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+            <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'></div,>
+            <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
               Combined, Annual, Value
-            <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'>
+            <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'></div,>
               Fortune, 500, Average
         {/* Featured, Content, Car, d, s */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'>
-          {/* Quant, u, m-Safe, Cryptogra, p, h, y */}
-          <div, classNam, e = 'group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/80, t, o-cy, a, n-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5'>
-            <div, className='flex, item, s-center, ga, p-3, m, b-4'>
-              <div, className='p-3, rounde, d-xl, b, g-cy, a, n-5, 0, 0/20, grou, p-hov, e, r:bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s'>
+                <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'></div,>
+                {/* Quant, u, m-Safe, Cryptogra, p, h, y */}
+                <div, classNam, e = 'group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/80, t, o-cy, a, n-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5'></div,>
+            <div, className='flex, item, s-center, ga, p-3, m, b-4'></div,>
+              <div, className='p-3, rounde, d-xl, b, g-cy, a, n-5, 0, 0/20, grou, p-hov, e, r:bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s'></div,>
                 <Lock, className='w-8 h-8, tex, t-cy, a, n-3, 0, 0' />
-              <div, className='fl, e, x-1'>
-                <div, className='te, x, t-xs, fon, t-bold, tex, t-cy, a, n-300, uppercase, tracking-wide, m, b-1'>
+              <div, className='fl, e, x-1'></div,>
+                <div, className='te, x, t-xs, fon, t-bold, tex, t-cy, a, n-300, uppercase, tracking-wide, m, b-1'></div,>
                   Quantum, Securit, y
-                <div, className='te, x, t-sm, tex, t-cy, a, n-100, fon, t-medi, u, m'>
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'>
-          {/* Quant, u, m-Safe, Cryptogra, p, h, y */}
-          <div, classNam, e = 'group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/80, t, o-cy, a, n-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5'>
-            <div, className='flex, item, s-center, ga, p-3, m, b-4'>
-              <div, className='p-3, rounde, d-xl, b, g-cy, a, n-5, 0, 0/20, grou, p-hov, e, r:bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s'>
+                <div, className='te, x, t-sm, tex, t-cy, a, n-100, fon, t-medi, u, m'></div,>
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'></div,>
+                {/* Quant, u, m-Safe, Cryptogra, p, h, y */}
+                <div, classNam, e = 'group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/80, t, o-cy, a, n-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5'></div,>
+            <div, className='flex, item, s-center, ga, p-3, m, b-4'></div,>
+              <div, className='p-3, rounde, d-xl, b, g-cy, a, n-5, 0, 0/20, grou, p-hov, e, r:bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s'></div,>
                 <Lock, className='w-8 h-8, tex, t-cy, a, n-3, 0, 0' />
-              <div, className='fl, e, x-1'>
-                <div, className='te, x, t-xs, fon, t-bold, tex, t-cy, a, n-300, uppercase, tracking-wide, m, b-1'>
+              <div, className='fl, e, x-1'></div,>
+                <div, className='te, x, t-xs, fon, t-bold, tex, t-cy, a, n-300, uppercase, tracking-wide, m, b-1'></div,>
                   Quantum, Securit, y
-                <div, className='te, x, t-sm, tex, t-cy, a, n-100, fon, t-medi, u, m'>
+                <div, className='te, x, t-sm, tex, t-cy, a, n-100, fon, t-medi, u, m'></div,>
                   NI, S, T-Approv, e, d • Producti, o, n-Rea, d, y
-            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-300, transitio, n-colo, r, s'>
-            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-300, transitio, n-colo, r, s'>
+            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-300, transitio, n-colo, r, s'></h3,>
+            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-300, transitio, n-colo, r, s'></h3,>
               Quant, u, m-Safe, Cryptography, Revolution
-            <div, className='spa, c, e-y-2, m, b-4'>
-              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'>
+            <div, className='spa, c, e-y-2, m, b-4'></div,>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'></div,>
                 <Shield, className='w-4 h-4, tex, t-cy, a, n-4, 0, 0' />
                 <sp, a, n>99.97% Quantum, Attack, Protection
-              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'></div,>
                 <Zap, className='w-4 h-4, tex, t-cy, a, n-4, 0, 0' />
                 <sp, a, n>67% Cost, Reduction, vs Lega, c, y
-              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'></div,>
                 <Target, className='w-4 h-4, tex, t-cy, a, n-4, 0, 0' />
                 <sp, a, n>$78.3B, Digital, Assets Protect, e, d
-              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'></div,>
                 <Award, className='w-4 h-4, tex, t-cy, a, n-4, 0, 0' />
                 <Shield, className='w-4 h-4, tex, t-cy, a, n-4, 0, 0' />
                 <sp, a, n>99.97% Quantum, Attack, Protection
-              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'></div,>
                 <Zap, className='w-4 h-4, tex, t-cy, a, n-4, 0, 0' />
                 <sp, a, n>67% Cost, Reduction, vs Lega, c, y
-              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'></div,>
                 <Target, className='w-4 h-4, tex, t-cy, a, n-4, 0, 0' />
                 <sp, a, n>$78.3B, Digital, Assets Protect, e, d
-              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-cy, a, n-100, tex, t-sm'></div,>
                 <Award, className='w-4 h-4, tex, t-cy, a, n-4, 0, 0' />
                 <sp, a, n>845x, RO, I • 10-Year, Futur, e-Proofi, n, g
             <, t, o='/bl, o, g/ai-20, 2, 5-o, c, t-01-quant, u, m-sa, f, e-cryptograp, h, y-enterpri, s, e-<syste, m, s'$2 />
@@ -148,45 +152,45 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             >
               Read, Full, Analysis
               <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-          {/* Autonomous, Risk, Manageme, n, t */}
-          <div, classNam, e = 'group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-bl, u, e-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5'>
-            <div, className='flex, item, s-center, ga, p-3, m, b-4'>
-              <div, className='p-3, rounde, d-xl, b, g-bl, u, e-5, 0, 0/20, grou, p-hov, e, r:bg-bl, u, e-5, 0, 0/30, transitio, n-colo, r, s'>
+                {/* Autonomous, Risk, Manageme, n, t */}
+                <div, classNam, e = 'group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-bl, u, e-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5'></div,>
+            <div, className='flex, item, s-center, ga, p-3, m, b-4'></div,>
+              <div, className='p-3, rounde, d-xl, b, g-bl, u, e-5, 0, 0/20, grou, p-hov, e, r:bg-bl, u, e-5, 0, 0/30, transitio, n-colo, r, s'></div,>
                 <TrendingUp, className='w-8 h-8, tex, t-bl, u, e-3, 0, 0' />
-              <div, className='fl, e, x-1'>
-                <div, className='te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wide, m, b-1'>
+              <div, className='fl, e, x-1'></div,>
+                <div, className='te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wide, m, b-1'></div,>
                   Risk, Intelligenc, e
-                <div, className='te, x, t-sm, tex, t-bl, u, e-100, fon, t-medi, u, m'>
+                <div, className='te, x, t-sm, tex, t-bl, u, e-100, fon, t-medi, u, m'></div,>
                 <TrendingUp, className='w-8 h-8, tex, t-bl, u, e-3, 0, 0' />
-              <div, className='fl, e, x-1'>
-                <div, className='te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wide, m, b-1'>
+              <div, className='fl, e, x-1'></div,>
+                <div, className='te, x, t-xs, fon, t-bold, tex, t-bl, u, e-300, uppercase, tracking-wide, m, b-1'></div,>
                   Risk, Intelligenc, e
-                <div, className='te, x, t-sm, tex, t-bl, u, e-100, fon, t-medi, u, m'>
+                <div, className='te, x, t-sm, tex, t-bl, u, e-100, fon, t-medi, u, m'></div,>
                   AI-Power, e, d • Autonomo, u, s
-            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
-            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
+            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3,>
+            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'></h3,>
               Autonomous, Risk, Management Platfo, r, m
-            <div, className='spa, c, e-y-2, m, b-4'>
-              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'>
+            <div, className='spa, c, e-y-2, m, b-4'></div,>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'></div,>
                 <Shield, className='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
                 <sp, a, n>98.9% Risk, Prediction, Accuracy
-              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'></div,>
                 <Zap, className='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
                 <sp, a, n>84% Cost, Reduction, in Operatio, n, s
-              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'></div,>
                 <Target, className='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
                 <sp, a, n>$127B, Losses, Prevented Annual, l, y
-              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'></div,>
                 <Award, className='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
                 <Shield, className='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
                 <sp, a, n>98.9% Risk, Prediction, Accuracy
-              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'></div,>
                 <Zap, className='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
                 <sp, a, n>84% Cost, Reduction, in Operatio, n, s
-              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'></div,>
                 <Target, className='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
                 <sp, a, n>$127B, Losses, Prevented Annual, l, y
-              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-bl, u, e-100, tex, t-sm'></div,>
                 <Award, className='w-4 h-4, tex, t-bl, u, e-4, 0, 0' />
                 <s, p, a, n>, 2,8, 3, 6% R, O, I • 24/7, Monitorin, g
             <, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-ri, s, k-manageme, n, t-platfo, r, m-<revoluti, o, n'$2 />
@@ -197,45 +201,45 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             >
               Explore, Platfor, m
               <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-          {/* AI-Powered, Digital, Twi, n, s */}
-          <div, classNam, e = 'group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/80, t, o-indi, g, o-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5'>
-            <div, className='flex, item, s-center, ga, p-3, m, b-4'>
-              <div, className='p-3, rounde, d-xl, b, g-indi, g, o-5, 0, 0/20, grou, p-hov, e, r:bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s'>
+                {/* AI-Powered, Digital, Twi, n, s */}
+                <div, classNam, e = 'group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/80, t, o-indi, g, o-9, 5, 0/80, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-400, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/30, hove, r:sca, l, e-1, 0, 5'></div,>
+            <div, className='flex, item, s-center, ga, p-3, m, b-4'></div,>
+              <div, className='p-3, rounde, d-xl, b, g-indi, g, o-5, 0, 0/20, grou, p-hov, e, r:bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s'></div,>
                 <Target, className='w-8 h-8, tex, t-indi, g, o-3, 0, 0' />
-              <div, className='fl, e, x-1'>
-                <div, className='te, x, t-xs, fon, t-bold, tex, t-indi, g, o-300, uppercase, tracking-wide, m, b-1'>
+              <div, className='fl, e, x-1'></div,>
+                <div, className='te, x, t-xs, fon, t-bold, tex, t-indi, g, o-300, uppercase, tracking-wide, m, b-1'></div,>
                   Digital, Intelligenc, e
-                <div, className='te, x, t-sm, tex, t-indi, g, o-100, fon, t-medi, u, m'>
+                <div, className='te, x, t-sm, tex, t-indi, g, o-100, fon, t-medi, u, m'></div,>
                 <Target, className='w-8 h-8, tex, t-indi, g, o-3, 0, 0' />
-              <div, className='fl, e, x-1'>
-                <div, className='te, x, t-xs, fon, t-bold, tex, t-indi, g, o-300, uppercase, tracking-wide, m, b-1'>
+              <div, className='fl, e, x-1'></div,>
+                <div, className='te, x, t-xs, fon, t-bold, tex, t-indi, g, o-300, uppercase, tracking-wide, m, b-1'></div,>
                   Digital, Intelligenc, e
-                <div, className='te, x, t-sm, tex, t-indi, g, o-100, fon, t-medi, u, m'>
+                <div, className='te, x, t-sm, tex, t-indi, g, o-100, fon, t-medi, u, m'></div,>
                   Re, a, l-Ti, m, e • Se, l, f-Learni, n, g
-            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'>
-            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'>
+            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'></h3,>
+            <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'></h3,>
               Ne, x, t-Gen, A, I-Powered, Digital, Twins
-            <div, className='spa, c, e-y-2, m, b-4'>
-              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'>
+            <div, className='spa, c, e-y-2, m, b-4'></div,>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'></div,>
                 <Shield, className='w-4 h-4, tex, t-indi, g, o-4, 0, 0' />
                 <sp, a, n>99.4% Physic, a, l-Digital, Accurac, y
-              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'></div,>
                 <Zap, className='w-4 h-4, tex, t-indi, g, o-4, 0, 0' />
                 <sp, a, n>87% Downtime, Reductio, n
-              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'></div,>
                 <Target, className='w-4 h-4, tex, t-indi, g, o-4, 0, 0' />
                 <sp, a, n>$23.7B, Annual, Value Creati, o, n
-              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'></div,>
                 <Award, className='w-4 h-4, tex, t-indi, g, o-4, 0, 0' />
                 <Shield, className='w-4 h-4, tex, t-indi, g, o-4, 0, 0' />
                 <sp, a, n>99.4% Physic, a, l-Digital, Accurac, y
-              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'></div,>
                 <Zap, className='w-4 h-4, tex, t-indi, g, o-4, 0, 0' />
                 <sp, a, n>87% Downtime, Reductio, n
-              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'></div,>
                 <Target, className='w-4 h-4, tex, t-indi, g, o-4, 0, 0' />
                 <sp, a, n>$23.7B, Annual, Value Creati, o, n
-              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'>
+              <div, className='flex, item, s-center, ga, p-2, tex, t-indi, g, o-100, tex, t-sm'></div,>
                 <Award, className='w-4 h-4, tex, t-indi, g, o-4, 0, 0' />
                 <s, p, a, n>, 5,5, 7, 5% R, O, I • 94% Failure, Predictio, n
             <, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-01-ne, x, t-g, e, n-digit, a, l-twi, n, s-enterpri, s, e-<transformati, o, n'$2 />
@@ -246,90 +250,90 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             >
               Discover, Technolog, y
               <Link, className='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-        {/* Why, These, Technologies Ma, t, t, e, r */}
-        <div, classNam, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-whi, t, e/20, m, b-8'>
-          <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
-          <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
+                {/* Why, These, Technologies Ma, t, t, e, r */}
+                <div, classNam, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-whi, t, e/20, m, b-8'></div,>
+          <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'></h3,>
+          <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'></h3,>
             🎯 Why, These, Technologies Are, Gam, e-Change, r, s
-          <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-6'>
-            <div, className='te, x, t-cent, e, r'>
-              <div, className='te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2'>
+          <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-6'></div,>
+            <div, className='te, x, t-cent, e, r'></div,>
+              <div, className='te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2'></div,>
                 3-5, Year, s
-              <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
                 Quantum, Threat, Window
-              <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'>
-              <div, className='te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2'>
+              <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'></div,>
+              <div, className='te, x, t-cy, a, n-300, tex, t-3xl, fon, t-bold, m, b-2'></div,>
                 3-5, Year, s
-              <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
                 Quantum, Threat, Window
-              <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'>
+              <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'></div,>
                 Deploy, quantu, m-safe, security, NOW before, i, t's, too, late
-            <div, className='te, x, t-cent, e, r'>
-              <div, className='te, x, t-bl, u, e-300, tex, t-3xl, fon, t-bold, m, b-2'>
+            <div, className='te, x, t-cent, e, r'></div,>
+              <div, className='te, x, t-bl, u, e-300, tex, t-3xl, fon, t-bold, m, b-2'></div,>
                 90+ Da, y, s
-              <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
                 Risk, Prediction, Lead Ti, m, e
-              <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'>
-              <div, className='te, x, t-bl, u, e-300, tex, t-3xl, fon, t-bold, m, b-2'>
+              <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'></div,>
+              <div, className='te, x, t-bl, u, e-300, tex, t-3xl, fon, t-bold, m, b-2'></div,>
                 90+ Da, y, s
-              <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
                 Risk, Prediction, Lead Ti, m, e
-              <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'>
+              <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'></div,>
                 Prevent, crises, before they, happen, with AI, foresigh, t
-            <div, className='te, x, t-cent, e, r'>
-              <div, className='te, x, t-indi, g, o-300, tex, t-3xl, fon, t-bold, m, b-2'>
+            <div, className='te, x, t-cent, e, r'></div,>
+              <div, className='te, x, t-indi, g, o-300, tex, t-3xl, fon, t-bold, m, b-2'></div,>
                 100, m, s
-              <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
                 Digital, Twin, Sync Spe, e, d
-              <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'>
-              <div, className='te, x, t-indi, g, o-300, tex, t-3xl, fon, t-bold, m, b-2'>
+              <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div,>
+              <div, className='te, x, t-indi, g, o-300, tex, t-3xl, fon, t-bold, m, b-2'></div,>
                 100, m, s
-              <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-medi, u, m'></div,>
                 Digital, Twin, Sync Spe, e, d
-              <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'>
+              <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div,>
                 Re, a, l-time, operational, intelligence at, your, fingertips
         {/* Industry, Applicati, o, n, s */}
-        <div, classNam, e = 'mb-8'>
-          <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
-          <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'>
+                <div, classNam, e = 'mb-8'></div,>
+          <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'></h3,>
+          <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r'></h3,>
             🌐 Proven, Results, Across Industri, e, s
-          <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4'>
-            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'>
+          <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4'></div,>
+            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div,>
               <div, className='te, x, t-2xl, m, b-2'>🏭
-              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
-              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div,>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div,>
                 Manufacturi, n, g
               <div, className='te, x, t-cy, a, n-200, tex, t-xs, m, t-1'>127 x, ROI, Average
-            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'>
+            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div,>
               <div, className='te, x, t-2xl, m, b-2'>🏦
-              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
-              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div,>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div,>
                 Financial, Service, s
               <div, className='te, x, t-bl, u, e-200, tex, t-xs, m, t-1'>845 x, ROI, Average
-            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-indi, g, o-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'>
+            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-indi, g, o-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div,>
               <div, className='te, x, t-2xl, m, b-2'>🏥
               <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>Healthca, r, e
-              <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'>
-              <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'>
+              <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div,>
+              <div, className='te, x, t-indi, g, o-200, tex, t-xs, m, t-1'></div,>
                 47x, ROI, Average
-            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'>
+            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div,>
               <div, className='te, x, t-2xl, m, b-2'>⚡
-              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div,>
                 Ener, g, y & Utiliti, e, s
-              <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'>
-              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
+              <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'></div,>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div,>
                 Ener, g, y & Utiliti, e, s
-              <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'>
+              <div, className='te, x, t-purp, l, e-200, tex, t-xs, m, t-1'></div,>
                 89x, ROI, Average
-            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'>
+            <div, className='te, x, t-cente, r, p-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-xl, border, border-whi, t, e/20, hove, r:bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'></div,>
               <div, className='te, x, t-2xl, m, b-2'>🏙️
-              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
-              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div,>
+              <div, className='te, x, t-white, tex, t-sm, fon, t-semibo, l, d'></div,>
                 Smart, Citie, s
               <div, className='te, x, t-pi, n, k-200, tex, t-xs, m, t-1'>34 x, ROI, Average
         {/* Call, to, Acti, o, n */}
-        <div, classNam, e = 'te, x, t-cent, e, r'>
-          <div, className='inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-center, justif, y-cent, e, r'>
+                <div, classNam, e = 'te, x, t-cent, e, r'></div,>
+          <div, className='inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-center, justif, y-cent, e, r'></div,>
             <, t, o='/<bl, o, g'$2 />
               className='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, vi, a-bl, u, e-500, t, o-indi, g, o-500, hove, r:fr, o, m-cy, a, n-400, hove, r:v, i, a-bl, u, e-400, hove, r:to-indi, g, o-400, tex, t-white, fon, t-bold, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, hove, r:sca, l, e-105, tex, t-lg'
             >
@@ -341,7 +345,7 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             >
               Get, Free, Assessment
               <Link, className='w-6 h-6' />
-          <p, className='te, x, t-cy, a, n-200, tex, t-sm, m, t-4'>
+          <p, className='te, x, t-cy, a, n-200, tex, t-sm, m, t-4'></p,>
             ⚡ <stro, n, g>Limited, Tim, e</stro, n, g>: Free, technology, assessment for, qualified, enterprises • No, obligatio, n
             ⚡</p> <stro, n, g>Limited, Tim, e</stro, n, g>: Free, technology, assessment for, qualified, enterprises • No, obligatio, n
             >
@@ -353,11 +357,11 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             >
               Get, Free, Assessment
               <Link, className='w-6 h-6' />
-          <p, className='te, x, t-cy, a, n-200, tex, t-sm, m, t-4'>
+          <p, className='te, x, t-cy, a, n-200, tex, t-sm, m, t-4'></p,>
             ⚡ <stro, n, g>Limited, Tim, e</stro, n, g>: Free, technology, assessment for, qualified, enterprises • No, obligatio, n
         {/* Trust, Indicat, o, r, s */}
-        <div, classNam, e = 'mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r'>
-          <div, className='te, x, t-cy, a, n-200, tex, t-sm, m, b-3'>
+                <div, classNam, e = 'mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r'></div,>
+          <div, className='te, x, t-cy, a, n-200, tex, t-sm, m, b-3'></div,>
             <stro, n, g>Trusted, by, Fortune 500, Leader, s</stro, n, g> • 89+ Enterprise, Deployment, s • $25, 1, B+ Value, Create, d
         <div, classNam, e = 'mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r'></div>
           <div, className='te, x, t-cy, a, n-200, tex, t-sm, m, b-3'></div>
@@ -372,10 +376,100 @@ const October2025TechBreakthroughBanne, r = () => {/* TODO: Fix JSX expression *
             <sp, a, n>✅ GDPR, Complian, t</sp, a, n>
             <sp, a, n>•</sp, a, n>
             <sp, a, n>✅ 99.99% Uptime, SL, A</sp, a, n>
-          </div>
+                </div>
         </div>
-      </div>
+                </div>
     </di, v>
   )
 }
-export default October2025 TechBreakthroughBanner</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></Link></p></p></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3>
+export default October2025 TechBreakthroughBanner</$1>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </span></span>
+                </Link></Link>
+                </Link></Link>
+                </Link></Link>
+                </Link></Link>
+                </Link></Link>
+                </p></p>
+                </h2></h2>
+                </h3></h3>
+                </h3></h3>
+                </h3></h3>
+                </h3></h3>
+                </h3></h3>

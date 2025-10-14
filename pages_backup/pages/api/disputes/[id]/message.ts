@@ -1,10 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { getDisputeById, upsertDispute } from "../../../../utils/fsdb"
-import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,
-} from "../../../../utils/auth"
-export default async function handler(
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getDisputeById, upsertDispute  } from '../../../../utils/fsdb';
+import { parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+ } from '../../../../utils/auth';export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
@@ -47,10 +45,9 @@ res.setHeader("Allow", "POST")
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST'])
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { getDisputeById, upsertDispute } from '../../../../utils/fsdb'
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth'
-export default async function handler(req, res) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getDisputeById, upsertDispute  } from '../../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin  } from '../../../../utils/auth';export default async function handler(req, res) {
   try {
   const { id } = req.query
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
@@ -111,4 +108,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -12,7 +12,8 @@ global.TextDecoder = TextDecoder as typeof globalThis.TextDecoder
 const originalConsoleError = console.error
 // eslint-disable-next-line no-console
 const __originalConsoleError = console.error
-console.error = (...args) => {
+console.error = (...args) =>
+                {
     // TODO: Add content
   }
 }
@@ -20,7 +21,8 @@ console.error = (...args) => {
 // eslint-disable-next-line no-console
 const originalConsoleError = console.error
 // eslint-disable-next-line no-console
-console.error = (...args) => {
+console.error = (...args) =>
+                {
     const message = args[0]?.toString?.() || args[0]?.message || ''
   if (message.includes('Not implemented: navigation') ||
       message.includes('navigation (except hash changes)')) {// TODO: Add content
@@ -80,16 +82,18 @@ global.fetch = jest.fn()
 const originalConsoleWarn = console.warn
 // eslint-disable-next-line no-console
 const originalConsoleInfo = console.info,
-console.warn = (...args) => {
+console.warn = (...args) =>
+                {
     // TODO: Add content
   }
 }
 // eslint-disable-next-line no-console
-console.warn = (...args) => {
+console.warn = (...args) =>
+                {
   const message = args[0]?.toString?.() || ''
   if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
   // TODO: Add content,
-}
+};
     return; // Suppress JSDOM navigation warnings
 // Mock window.location
 delete (window as unknown as Record
@@ -99,7 +103,8 @@ delete (window as unknown as Record
   }
 }
 // eslint-disable-next-line no-console
-console.info = (...args) => {
+console.info = (...args) =>
+                {
     const message = args[0]?.toString?.() || ''
   if (message.includes('ReactDOM.render is no longer supported')) {
     return
@@ -118,7 +123,8 @@ global.PerformanceObserver = class MockPerformanceObserver {
 }
 // Suppress JSDOM navigation warnings
 // eslint-disable-next-line no-console
-console.error = (...args) => {
+console.error = (...args) =>
+                {
   if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
     return; // Suppress JSDOM navigation warnings
   }

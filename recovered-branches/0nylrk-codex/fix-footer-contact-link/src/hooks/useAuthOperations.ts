@@ -1,18 +1,18 @@
-import { useState, useEffect } from "react"
-import { supabase } from "@/integrations/supabase/client"
-import type { UserProfile } from "@/types/auth"
-import { toast } from "@/hooks/use-toast"
-import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils"
-import { cleanupAuthState } from "@/utils/authUtils"
+import { useState, useEffect  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';import type { UserProfile } from "@/types/auth";
+import { toast  } from '@/hooks/use-toast';
+import { trackReferral, checkUrlForReferralCode  } from '@/utils/referralUtils';import { cleanupAuthState } from "@/utils/authUtils"
 export function useAuthOperations(
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>,
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
 ) {
   // Check for referral code in URL when the hook is first used
-  useEffect(() => {
+  useEffect(() =>
+                {
     checkUrlForReferralCode()
-  }, [])
-  const login = async ({ email, password }: { email: string; password: string }) => {
+  }, []);
+  const login = async ({ email, password }: { email: string; password: string }) =>
+                {
     setIsLoading(true)
     try {
       // Clean up any stale auth state before login
@@ -49,7 +49,8 @@ export function useAuthOperations(
       setIsLoading(false)
     }
   }
-  const signup = async ({ email, password, display_name }) => {
+  const signup = async ({ email, password, display_name }) =>
+                {
     setIsLoading(true)
     try {
       const { data, error } = await supabase.auth.signUp({
@@ -94,7 +95,8 @@ export function useAuthOperations(
       setIsLoading(false)
     }
   }
-  const logout = async () => {
+  const logout = async () =>
+                {
     setIsLoading(true)
     try {
       const { error } = await supabase.auth.signOut()
@@ -125,7 +127,8 @@ export function useAuthOperations(
       setIsLoading(false)
     }
   }
-  const resetPassword = async (email: string) => {
+  const resetPassword = async (email: string) =>
+                {
     setIsLoading(true)
     try {
       const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
@@ -159,7 +162,8 @@ export function useAuthOperations(
       setIsLoading(false)
     }
   }
-  const updateProfile = async (profileData: Partial<UserProfile>) => {
+  const updateProfile = async (profileData: Partial<UserProfile>) =>
+                {
     setIsLoading(true)
     try {
       if (!profileData || !profileData.id) {
@@ -187,7 +191,8 @@ export function useAuthOperations(
         return { error: error.message }
       }
       // Optimistically update the local user state
-      setUser((prevUser) => {
+      setUser((prevUser) =>
+                {
         if (prevUser) {
           return { ...prevUser, ...profileData }
         }
@@ -212,7 +217,8 @@ export function useAuthOperations(
       setIsLoading(false)
     }
   }
-  const loginWithGoogle = async () => {
+  const loginWithGoogle = async () =>
+                {
     setIsLoading(true)
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
@@ -231,7 +237,8 @@ export function useAuthOperations(
       setIsLoading(false)
     }
   }
-  const loginWithFacebook = async () => {
+  const loginWithFacebook = async () =>
+                {
     setIsLoading(true)
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
@@ -250,7 +257,8 @@ export function useAuthOperations(
       setIsLoading(false)
     }
   }
-  const loginWithTwitter = async () => {
+  const loginWithTwitter = async () =>
+                {
     setIsLoading(true)
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
@@ -269,7 +277,8 @@ export function useAuthOperations(
       setIsLoading(false)
     }
   }
-  const loginWithWeb3 = async () => {
+  const loginWithWeb3 = async () =>
+                {
     setIsLoading(true)
     try {
       const ethereum = (window as any).ethereum

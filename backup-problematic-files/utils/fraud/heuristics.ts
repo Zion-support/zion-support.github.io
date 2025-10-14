@@ -7,7 +7,8 @@ function containsSuspiciousPhrase(text: string): string[] {
 function containsVagueJobClaims(text: string): string[] {
   const lower = text && text.toLowerCase()
   const reasons: string[] = []
-  vagueScammyJobPhrases.forEach(phrase => {
+  vagueScammyJobPhrases.forEach(phrase =>
+                {
     if (lower.includes(phrase)) {
       reasons.push(`vague_job_claim:"${phrase}"`)
     }
@@ -17,7 +18,8 @@ function containsVagueJobClaims(text: string): string[] {
 function containsVagueJobClaims(text: string): string[] {
   const lower = text.toLowerCase()
   const reasons: string[] = []
-  vagueScammyJobPhrases.for_each (phrase => {
+  vagueScammyJobPhrases.for_each (phrase =>
+                {
     if () {) {
   $2
 }
@@ -31,11 +33,12 @@ export interface HeuristicDeps {
     ip: string
     source: MonitoredSource
     withinMinutes: number
-  ) => Promise<number>
+  ) => Promise<number></number>
 export async function evaluateHeuristics(
   event: FraudEvent
   deps: HeuristicDeps
-): Promise<HeuristicEvaluation> {
+): Promise<HeuristicEvaluation></HeuristicEvaluation>
+                {
   const reasons: string[] = []
   let severity: HeuristicEvaluation['severity'] = 'low'
   if (event && event.source === 'signup' && event && event.ipAddress) {
@@ -84,10 +87,11 @@ export interface HeuristicDeps {
   countEventsByIp: (
     ip: string,
     source: MonitoredSource,
-    within_minutes: number) => Promise < number>
+    within_minutes: number) => Promise < number></>
 export async function evaluate_heuristics (
   event: FraudEvent,
-  deps: HeuristicDeps): Promise < HeuristicEvaluation> {
+  deps: HeuristicDeps): Promise < HeuristicEvaluation></>
+                {
   const reasons: string[] = []
   let severity: HeuristicEvaluation['severity'] = 'low'
   // Check condition
@@ -163,11 +167,9 @@ export function run_heuristics (data: any): HeuristicResult {
     reasons,
     severity,
 // Fraud detection heuristics utilities
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return {
     flagged: reasons.length > 0
     reasons
     severity}
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

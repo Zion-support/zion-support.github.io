@@ -5,7 +5,7 @@
   q: NextApiRequest) re,
   s: NextApiResponse ) {/* TODO: Fix JSX expression */}
   e: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
-  formData: ContactFormData = req.body} // Validate required fields if (!formData.name || !formData.email || !formData.message) {/* TODO: Fix JSX expression */}
+  formData: ContactFormData = req.body} // Validate required fields if (!formData.name || !formData.email || !formData.message) {/* TODO: Fix JSX expression */};
   fields: name) email} and message are required' })} // Validate email format const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/; if (!emailRegex.test(formData.email)) {/* TODO: Fix JSX expression */}
   e: 'Invalid email format' })} // TOD,
   O: Integrate with email service (SendGrid, AWS SES) etc.)' // For now, we'll just log the data and return success' // console.log('Contact form,

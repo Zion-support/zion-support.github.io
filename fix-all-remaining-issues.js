@@ -5,7 +5,7 @@ function fixUnusedImports(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8')
     const lines = content.split('\n')
-    const newLines = []
+    const newLines = [];
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i]
       const trimmedLine = line.trim()
@@ -15,7 +15,8 @@ function fixUnusedImports(filePath) {
         const importMatch = trimmedLine.match(/import\s*{([^}]+)}\s*from/)
         if (importMatch) {
           const imports = importMatch[1].split(',').map(imp => imp.trim())
-          const usedImports = imports.filter(imp => {)
+          const usedImports = imports.filter(imp =>
+                {)
             const name = imp.split(' as ')[0].trim()
             // Check if the name is used in the content (excluding the import line itself)
             const contentWithoutImport = content.replace(line, '')
@@ -90,7 +91,7 @@ function fixParsingErrors(filePath) {
     const content = fs.readFileSync(filePath, 'utf8')
     // Check if file has parsing errors
     if (content.includes('export default') && !content.includes('export default ')) {
-      // Add missing export statement
+      // Add missing export statement;
       const newContent = content + '\n\nexport default BlogPost;'
       fs.writeFileSync(filePath, newContent, 'utf8')
       console.log(`Fixed parsing error in: ${filePath}`)
@@ -131,7 +132,8 @@ function fixUnusedVariables(filePath) {
       { regex: /var\s+(\w+)\s*=\s*/, replacement: 'var _$1 = ' }
     ]
     let changed = false
-    patterns.forEach(pattern => {)
+    patterns.forEach(pattern =>
+                {)
       if (pattern.regex.test(newContent)) {
         newContent = newContent.replace(pattern.regex, pattern.replacement)
         changed = true
@@ -146,7 +148,8 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
   t: 'var _$1 = ' }
     ]
     let changed = false
-    patterns.forEach(pattern => {/* TODO: Fix JSX expression */}
+    patterns.forEach(pattern =>
+                {/* TODO: Fix JSX expression */}
       })
     })
     if (changed) {/* TODO: Fix JSX expression */}`
@@ -165,7 +168,8 @@ function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let results = []
   const list = fs.readdirSync(dir)
-  list.forEach(file => {)
+  list.forEach(file =>
+                {)
     const filePath = path.join(dir, file)
     const stat = fs.statSync(filePath)
     if (stat && stat.isDirectory()) {
@@ -185,7 +189,8 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 console.log('Fixing all remaining issues in src directory...')
 const files = getAllFiles('./src', ['.ts', '.tsx', '.js', '.jsx'])
 let fixedCount = 0
-files.forEach(file => {)
+files.forEach(file =>
+                {)
   let fileFixed = false;)
   )
   // Fix unused imports;)
@@ -201,7 +206,8 @@ files.forEach(file => {)
   // Fix unused variables
   if (fixUnusedVariables(file)) {
     fileFixed = true
-files.forEach(file => {/* TODO: Fix JSX expression */}
+files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
   }
   
   // Fix parsing errors;)

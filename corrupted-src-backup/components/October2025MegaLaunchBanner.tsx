@@ -1,7 +1,8 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t"
-const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
+const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () =>
+                {
   const, megaArticle, s = [
     {
       ti, t, l
@@ -9,7 +10,8 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
       descripti, o, n: "Se, l, f-healing, infrastructure, achieving 99.9% upti, m, e","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-autonomo, u, s-devo, p, s-platfor, m, s","
       catego, r, y: "DevO, p, s & Infrastructu, r, e"
-const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () =>
+                {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -25,7 +27,8 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";'
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";'
-const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
+const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () =>
+                {
   const, megaArticle, s = [
     {
       ti, t, l
@@ -33,7 +36,8 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
       descripti, o, n: "Se, l, f-healing, infrastructure, achieving 99.9% upti, m, e","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-autonomo, u, s-devo, p, s-platfor, m, s","
       catego, r, y: "DevO, p, s & Infrastructu, r, e"
-const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () =>
+                {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -48,13 +52,13 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     {/* TODO: Fix JSX expression */}
     }
   ]
-  return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">
-      <div, className="te, x, t-center, m, b-8">
-        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
+  return(<div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8"></div,>
+      <div, className="te, x, t-center, m, b-8"></div,>
+        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4"></div,>
   return (
-    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">
-      <div, className="te, x, t-center, m, b-8">
-        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
+    <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8"></div,>
+      <div, className="te, x, t-center, m, b-8"></div,>
+        <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4"></div,>
           <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e  />
           <h2, className="te, x, t-4xl, fon, t-bo, l, d">OCTOBER, 2025, MEGA LAUN, C, H
           <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e  />
@@ -103,11 +107,17 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
             classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e,"
   r:sca, l, e-1, 0, 5"
           ></Li>"
-            <div, className="te, x, t-sm, tex, t-purp, l, e-200, m, b-2">{artic, l, e.catego, r, y}</d, i, v>";"
-            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2">{artic, l, e.tit, l, e}</h3>";"
-            <p, className="te, x, t-purp, l, e-100, tex, t-sm">{artic, l, e.descripti, o, n}</p>"</$1>)
+            <div, className="te, x, t-sm, tex, t-purp, l, e-200, m, b-2"></div,>
+                {artic, l, e.catego, r, y}
+                </d, i, v>";"
+            <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2"></h3,>
+                {artic, l, e.tit, l, e}
+                </h3>";"
+            <p, className="te, x, t-purp, l, e-100, tex, t-sm"></p,>
+                {artic, l, e.descripti, o, n}
+                </p>"</$1>)
         ))}
-      <div, className="te, x, t-cent, e, r">"
+                <div, className="te, x, t-cent, e, r">"
         <Li, n, k
       <div, className="te, x, t-cent, e, r">"
         <Li, n, k
@@ -118,14 +128,24 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
   to="/bl, o, g""
           classNa, m, e="bg-white, tex, t-purp, l, e-600, hove, r: bg-purp, l, e-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, inlin, e-flex, item, s-center, ga, p-2, transitio, n-all, duratio, n-300, hov, e,"
   r:sca, l, e-1, 0, 5"
-        >
+        ></Li,>
           Read, All, 7 Articl, e, s;"
           <Link, className="w-5 h-5  /></Link>"
           <Link, className="w-5 h-5" />"</Li, n, k>
-      </d, i, v>
+                </d, i, v>
     </d, i, v>
   )
 }
 export default October2025MegaLaunchBanner
 }}"
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Link></p></p></h2>
+</div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></Link>
+                </p></p>
+                </h2>

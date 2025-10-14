@@ -17,7 +17,7 @@ function fixParsingErrors(filePath) {
     let modified = false
     // Fix missing closing parenthesis before closing brace
     const lines = content.split('\n')
-    const newLines = []
+    const newLines = [];
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i]
       // Check if this line ends with }; and the previous line doesn't have a closing parenthesis
@@ -49,9 +49,11 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Process all blog files
-blogFiles.forEach(file => {)
+blogFiles.forEach(file =>
+                {)
   fixParsingErrors(file)
-blogFiles.forEach(file => {/* TODO: Fix JSX expression */})
+blogFiles.forEach(file =>
+                {/* TODO: Fix JSX expression */})
 })
 `
 console.log(`Processed ${blogFiles.length} blog files`);`

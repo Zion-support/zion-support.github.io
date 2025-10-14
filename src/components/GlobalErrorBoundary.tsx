@@ -9,7 +9,8 @@ interface State {
   error?: Error,
   errorInfo?: ErrorInfo
   }
-class GlobalErrorBoundary extends Component<Props, State> {
+class GlobalErrorBoundary extends Component<Props, State></Props,>
+                {
   constructor(props: Props) {
     super(props),
     this.state = { hasError: false }
@@ -41,21 +42,21 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
       // Default error UI
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>
             <div className="text-6xl mb-4">⚠️
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-6"></p>
               We're sorry, but something unexpected happened. Please try refreshing the page.
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="text-left bg-black/20 rounded-lg p-4 mb-6">
-                <summary className="cursor-pointer text-cyan-400 font-medium mb-2">
+              <details className="text-left bg-black/20 rounded-lg p-4 mb-6"></details>
+                <summary className="cursor-pointer text-cyan-400 font-medium mb-2"></summary>
                   Error Details (Development Only)
-                <pre className="text-xs text-red-400 overflow-auto">
-                  {this.state.error.toString()}
+                <pre className="text-xs text-red-400 overflow-auto"></pre>
+                {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
             )}
-            <div className="space-y-3">
+                <div className="space-y-3"></div>
               <$2 />
                 onClick={() => window.location.reload()}
                 className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
@@ -68,12 +69,16 @@ class GlobalErrorBoundary extends Component<Props, State> {
                 href="/"
                 className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200">
                 Go Home</span>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       ),
     }
     return this.props.children
   }
 }
-export { GlobalErrorBoundary }</div></div></div></div></p></p></h1>
+export {GlobalErrorBoundary }
+                </div>
+                </div></div>
+                </div></p>
+                </p></h1>;

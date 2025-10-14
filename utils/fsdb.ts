@@ -29,11 +29,11 @@ export function writeJson<T>(filePath: string, data: T): void {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2))
 }
 
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
+export async function ensureDisputeUploadDir(caseId: string): Promise<string></string>
+                {
   const dir = getDisputeUploadDir(caseId)
   await mkdir(dir, { recursive: true })
   return dir
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch (error) {
   } catch (error) {
     const dir = path && path.dirname(filePath),
@@ -45,11 +45,11 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
     console && console.error('Error writing file:', error)
   }
-export async function createDispute(dispute: DisputeCase): Promise<void> {
+export async function createDispute(dispute: DisputeCase): Promise<void></void>
+                {
   const all = await readAllDisputes()
   all && all.push(dispute)
 import fs from 'fs'
@@ -84,22 +84,26 @@ async function ensureBaseFiles() {
     await writeFile(DISPUTES_FILE, JSON.stringify({ disputes: [] }, null, 2), 'utf8')
   }
 }
-export async function readAllDisputes(): Promise<DisputeCase[]> {
+export async function readAllDisputes(): Promise<DisputeCase[]></DisputeCase[]>
+                {
   await ensureBaseFiles()
   const raw = await readFile(DISPUTES_FILE, 'utf8')
   const data = JSON.parse(raw) as { disputes: DisputeCase[] }
   return data.disputes || []
 }
-export async function writeAllDisputes(disputes: DisputeCase[]): Promise<void> {
+export async function writeAllDisputes(disputes: DisputeCase[]): Promise<void></void>
+                {
   await ensureBaseFiles()
   const data = { disputes }
   await writeFile(DISPUTES_FILE, JSON.stringify(data, null, 2), 'utf8')
 }
-export async function getDisputeById(id: string): Promise<DisputeCase | undefined> {
+export async function getDisputeById(id: string): Promise<DisputeCase | undefined></DisputeCase>
+                {
   const all = await readAllDisputes()
   return all.find(d => d.id === id)
 }
-export async function upsertDispute(updated: DisputeCase): Promise<void> {
+export async function upsertDispute(updated: DisputeCase): Promise<void></void>
+                {
   const all = await readAllDisputes()
   const idx = all.findIndex(d => d.id === updated.id)
   if (idx >= 0) {
@@ -109,7 +113,8 @@ export async function upsertDispute(updated: DisputeCase): Promise<void> {
   }
   await writeAllDisputes(all)
 }
-export async function createDispute(dispute: DisputeCase): Promise<void> {
+export async function createDispute(dispute: DisputeCase): Promise<void></void>
+                {
   const all = await readAllDisputes()
   all.push(dispute)
   await writeAllDisputes(all)
@@ -117,7 +122,8 @@ export async function createDispute(dispute: DisputeCase): Promise<void> {
 export function getDisputeUploadDir(caseId: string): string {
   return path.join(UPLOADS_ROOT, caseId)
 }
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
+export async function ensureDisputeUploadDir(caseId: string): Promise<string></string>
+                {
   const dir = getDisputeUploadDir(caseId)
   await mkdir(dir, { recursive: true })
   return dir
@@ -126,13 +132,12 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
 export function getDisputeUploadDir(caseId: string): string {
   return path.join(UPLOADS_ROOT, caseId)
 }
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
+export async function ensureDisputeUploadDir(caseId: string): Promise<string></string>
+                {
   const dir = getDisputeUploadDir(caseId)
   await mkdir(dir, { recursive: true })
   return dir
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+;

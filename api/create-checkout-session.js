@@ -51,4 +51,4 @@ async function handler(req, res) {
   }
 }
 
-export default withErrorLogging(handler)
+export default withErrorLogging(handler);

@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react'
-import { supabase } from '@/integrations/supabase/client'
-export interface WhitelabelTenant {
+import { useState, useEffect  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';export interface WhitelabelTenant {
   id: string
   brand_name: string
   subdomain: string
@@ -24,8 +23,10 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  useEffect(() => {
-    const loadTenant = async () => {
+  useEffect(() =>
+                {
+    const loadTenant = async () =>
+                {
       setIsLoading(true)
       setError(null)
       // If running in the browser, bail out early when offline
@@ -92,8 +93,10 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
 export function useTenantAdminStatus(tenantId?: string) {
   const [isAdmin, setIsAdmin] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
-  useEffect(() => {
-    const checkAdminStatus = async () => {
+  useEffect(() =>
+                {
+    const checkAdminStatus = async () =>
+                {
       if (!tenantId) {
         setIsAdmin(false)
         setIsLoading(false)

@@ -2,10 +2,9 @@
 messages: [ {
   role: 'system', content: 'You are a helpful assistant.' 
 // Create utility
-export const Create = () => {
+export const Create  = () => {
   // Implementation here
   return null
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 {
   role: 'user', content: prompt
@@ -25,7 +24,8 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
 const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json')
-async function loadRequests(): Promise<any[]> {
+async function loadRequests(): Promise<any[]></any[]>
+                {
   try {
     const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8')
     return JSON.parse(raw)
@@ -63,7 +63,7 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' })
   const { name, email, budget, timeline, description, talentSlug } =
     req.body |{}
-  if (!name |!email |!description)
+  if (!name |!email |!description);
     return res.status(400).json({ error: 'Missing required fields' });    const content = response.choices[0]?.message?.content |''
     const typeMatch = content.match(/type\s*:\s*(.+)$/im)
     return { summary: content.trim(), type: typeMatch ? typeMatch[1].trim() : 'unknown' }
@@ -215,4 +215,4 @@ return res.status (200).json ({ id, status: 'ok' })
 }
   return res.status(200).json({ id, status: 'ok' })
 }
-</a>
+                </a>

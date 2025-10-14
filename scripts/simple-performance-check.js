@@ -109,5 +109,5 @@ const report = {/* TODO: Fix JSX expression */}
     'Regular cleanup of unused functions']
 }
 
-fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2))
+fs.writeFileSync('performance-report.json', JSON.stringify(report, null, 2));
 report.improvements.forEach(improvement => // console.log(`  ${improvement}`));"`

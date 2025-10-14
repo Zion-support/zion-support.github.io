@@ -13,7 +13,8 @@ interface Message {
 interface RequestBody {
   messages: Message[]
 }
-serve(async (req) => {
+serve(async (req) =>
+                {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
@@ -62,4 +63,4 @@ serve(async (req) => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })
   }
-})
+});

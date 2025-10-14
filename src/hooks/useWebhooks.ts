@@ -10,12 +10,13 @@ export interface Webhook {
   lastTriggered?: string;
 }
 
-export const useWebhooks = () => {
+export const useWebhooks  = () => {
   const [webhooks, setWebhooks] = useState<Webhook[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchWebhooks = async () => {
+  const fetchWebhooks = async () =>
+                {
     setLoading(true);
     setError(null);
     try {
@@ -48,7 +49,8 @@ export const useWebhooks = () => {
     }
   };
 
-  const createWebhook = async (webhook: Omit<Webhook, 'id' | 'createdAt'>) => {
+  const createWebhook = async (webhook: Omit<Webhook, 'id' | 'createdAt'>) =>
+                {
     setLoading(true);
     setError(null);
     try {
@@ -67,7 +69,8 @@ export const useWebhooks = () => {
     }
   };
 
-  const updateWebhook = async (id: string, updates: Partial<Webhook>) => {
+  const updateWebhook = async (id: string, updates: Partial<Webhook>) =>
+                {
     setLoading(true);
     setError(null);
     try {
@@ -84,7 +87,8 @@ export const useWebhooks = () => {
     }
   };
 
-  const deleteWebhook = async (id: string) => {
+  const deleteWebhook = async (id: string) =>
+                {
     setLoading(true);
     setError(null);
     try {
@@ -97,7 +101,8 @@ export const useWebhooks = () => {
     }
   };
 
-  useEffect(() => {
+  useEffect(() =>
+                {
     fetchWebhooks();
   }, []);
 

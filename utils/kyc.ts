@@ -30,7 +30,8 @@ export interface KycProfile {
     by: string
     action: string
     details?: any
-  }>
+  }></{
+>
 // KYC (Know Your Customer) utilities
 export interface KycProfile {
   userId: string
@@ -124,7 +125,8 @@ export interface KycProfile {
     by: string
     action: string
     details?: any
-  }>
+  }></{
+>
 }
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = []
@@ -157,7 +159,6 @@ if ( {) {
     missing
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export type KycRole = 'client' | 'talent' | 'enterprise'
 export type KycStatus =
   | 'not_started'
@@ -199,7 +200,8 @@ export interface KycProfile {
   createdAt: string; // ISO
   auditTrail: Array<{ at: string; by: string; action: string; details?: Record<string, unknown> }>
 }
-export function getRequiredDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {
+export function getRequiredDocuments(role: KycRole): Array<KycDocumentMeta['kind']></KycDocumentMeta['kind']>
+                {
   if (role === 'client') {
     return ['government_id_front', 'government_id_back', 'selfie']
   }
@@ -208,7 +210,8 @@ export function getRequiredDocuments(role: KycRole): Array<KycDocumentMeta['kind
   }
   return ['government_id_front', 'government_id_back']; // talent
 }
-export function getOptionalDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {
+export function getOptionalDocuments(role: KycRole): Array<KycDocumentMeta['kind']></KycDocumentMeta['kind']>
+                {
   if (role === 'talent') {
     return ['academic_certificate']
   }

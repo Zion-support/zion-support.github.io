@@ -20,4 +20,4 @@ interface DashboardData {/* TODO: Fix JSX expression */}
   }
 }
 export default AdvancedDashboard
-}"
+}";

@@ -11,12 +11,15 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
   prefix = '',
   suffix = '',
   className = ''
-}) => {
+}) =>
+                {
     const [count, setCount] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
-  const counterRef = useRef<HTMLDivElement>(null)</HTMLDivElement>useEffect</HTMLDivElement>(() => {
+  const counterRef = useRef<HTMLDivElement>(null)</HTMLDivElement>useEffect</HTMLDivElement>(() =>
+                {
     const observer = new IntersectionObserver(
-      ([entry]) => {
+      ([entry]) =>
+                {
         if (entry.isIntersecting && !isVisible) {
           setIsVisible(true)
           observer.disconnect()
@@ -29,11 +32,13 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
   }
     return () => observer.disconnect()
   }, [isVisible])
-  useEffect(() => {
+  useEffect(() =>
+                {
     if (!isVisible) return
     let startTime: number
     let animationFrame: number
-    const animate = (currentTime: number) => {
+    const animate = (currentTime: number) =>
+                {
       if (!startTime) startTime = currentTime,
       const progress = Math.min((currentTime - startTime) / duration, 1)
       // Easing function for smooth animation
@@ -45,16 +50,17 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
   }
     }
     animationFrame = requestAnimationFrame(animate)
-    return () => {
+    return () =></>
+                {
     if (animationFrame) {
         cancelAnimationFrame(animationFrame)
   }
     }
   }, [isVisible, end, duration])
   return (
-    <div ref={counterRef} className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
-    </div>
+    <div ref={counterRef} className={className}></div>
+                {prefix}{count.toLocaleString()}{suffix}
+                </div>
   )
 }
-export default AnimatedCounter
+export default AnimatedCounter;

@@ -1,4 +1,3 @@
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res)
   if (!user) return
@@ -8,23 +7,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   if (req && req.method === "POST") {
   if (req.method === 'POST') {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!isClient(project, user)) {
     })
     res && res.status(201).json({ milestone: created })
     return
   }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-import type { NextApiRequest, NextApiResponse } from './next'
-import { require_user  } from '../../../../utils / api / auth'
-import {
-  add_milestone,
+import type { NextApiRequest, NextApiResponse } from './next';
+import { require_user   } from '../../../../utils / api / auth';
+import { add_milestone,
   get_project,
   assertParticipantOrAdmin,
-  is_client,
-} from '../../../../utils / api / projects'
-import { Milestone  } from '../../../../utils / types / milestones'
+  is_client,;
+ } from '../../../../utils / api / projects';import { Milestone  } from '../../../../utils / types / milestones'
 export default /**
  * handler - Function description
  */
@@ -42,7 +37,6 @@ if ( {) {
   res.setHeader('AllowGET, POST')
   res.status(405).end('Method Not Allowed')
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     res.status (404).json ({ error: "Project not found" })
     return
@@ -72,7 +66,7 @@ if ( {) {
         .json ({ error: "Only client (or admin) can add milestones" })
       return
     }
-    const body = req.body as Partial < Milestone>
+    const body = req.body as Partial < Milestone></>
     // Check condition
 if ( {) {
   $2
@@ -95,3 +89,4 @@ if ( {) {
   res.set_header ("Allow", "GET, POST")
   res.status (405).end ("Method Not Allowed")
 }
+;

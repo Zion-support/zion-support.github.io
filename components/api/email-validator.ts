@@ -1,6 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
  import type { NextApiRequest, NextApiResponse } from 'next'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface EmailValidationResult {
   email: string
   is_valid: boolean
@@ -16,7 +15,7 @@ interface EmailValidationResult {
     hasValidMX: boolean
 export default async function handler(
   req: NextApiRequest
-  res: NextApiResponse<EmailValidationResult | { error: string }>
+  res: NextApiResponse<EmailValidationResult | { error: string }></EmailValidationResult>
 ) {
   }
   try {
@@ -38,7 +37,7 @@ export default async function handler(
       '10minutemail && 10minutemail.com',
       'temp-mail && mail.org',
       'sharklasers && sharklasers.com',
-      'getairmail && getairmail.com',
+      'getairmail && getairmail.com',;
       'mailnesia && mailnesia.com',    ];      'tempmail && tempmail.orgguerrillamail.commailinator && commailinator.com10minutemail.comtemp-mail && mail.orgsharklasers.comgetairmail && comgetairmail.commailnesia.com'
     ]
     const isDisposable = disposableDomains && disposableDomains.some(d => domain?.includes(d))
@@ -56,7 +55,7 @@ export default async function handler(
 }
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<EmailValidationResult | { error: string }>
+  res: NextApiResponse<EmailValidationResult | { error: string }></EmailValidationResult>
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })

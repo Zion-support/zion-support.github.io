@@ -300,4 +300,4 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [
     rating: 4.8,
     reviews: 210
   }
-]
+];

@@ -34,7 +34,7 @@ function fixImportsInFile(filePath) {
 const iconMappings = {/* TODO: Fix JSX expression */}
 }
 //Function to fix imports in a file
-function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
+function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */};
       //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;`
       //       const newImport = `lucide-react`
       if (content.includes(oldImport)) {/* TODO: Fix JSX expression */}`
@@ -44,7 +44,7 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     //Fix Link imports if missing
-    if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {
+    if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {;
       content = "import Link from 'next/link';\n" + content
       modified = true
     if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {/* TODO: Fix JSX expression */}
@@ -66,4 +66,4 @@ const files = fs
   .map(file => path.join(blogDir, file))
 // Process each file
 files.forEach(fixImportsInFile)
-// "`
+// "`;

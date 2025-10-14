@@ -18,7 +18,7 @@ async function main() {
     console && console.log('No seeds file found at', seedsPath)
     process && process.exit(0)
   }
-  const seeds = JSON && JSON.parse(fs && fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>
+  const seeds = JSON && JSON.parse(fs && fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }></{>
   const outDir = path && path.join(process && process.cwd(), 'datapage-metadataseo')
   fs && fs.mkdirSync(outDir, { recursive: true })
   for (const s of seeds) {
@@ -48,7 +48,7 @@ function main() {
     console.log ('No seeds file found at', seeds_path)
     process.exit (0)
   }
-  const seeds = JSON.parse (fs.readFileSync (seeds_path, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }>
+  const seeds = JSON.parse (fs.readFileSync (seeds_path, 'utf8')) as Array<{ prompt: string, region?: string, service?: string }></{>
   const out_dir = path.join (process.cwd (), 'datapage - metadataseo')
   fs.mkdir_sync (out_dir, { recursive: true })
   for (const s of seeds) {
@@ -79,10 +79,10 @@ async function main() {
     }
   }
 }
-main ().catch ((e) => { console.error (e), process.exit (1) })
-main().catch((e) => { console.error(e), process.exit(1) })
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+main ().catch ((e) =>
+                { console.error (e), process.exit (1) })
+main().catch((e) =>
+                { console.error(e), process.exit(1) })
 /* eslint-disable no-console */
 import fs from 'fs'
 import path from 'path'
@@ -96,8 +96,8 @@ async function main() {
   if (!fs.existsSync(seedsPath)) {
     console.log('No seeds file found at', seedsPath)
     process.exit(0)
-  }
-  const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string; region?: string; service?: string }>
+  };
+  const seeds = JSON.parse(fs.readFileSync(seedsPath, 'utf8')) as Array<{ prompt: string; region?: string; service?: string }></{>
   const outDir = path.join(process.cwd(), 'data', 'page-metadata', 'seo')
   fs.mkdirSync(outDir, { recursive: true })
   for (const s of seeds) {
@@ -108,4 +108,5 @@ async function main() {
     }
   }
 }
-main().catch((e) => { console.error(e); process.exit(1); })
+main().catch((e) =>
+                { console.error(e); process.exit(1); })

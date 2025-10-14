@@ -40,3 +40,4 @@ function main() {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
+;

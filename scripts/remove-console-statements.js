@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import { glob } from 'glob'
 // Patterns to match console statements
-const consolePatterns = [
+const consolePatterns = [;
   /console\.log\([^)]*\);?/g,
   /console\.warn\([^)]*\);?/g,
   /console\.error\([^)]*\);?/g,
@@ -53,7 +53,8 @@ function processFile(filePath) {
     let newContent = content
     let fileRemovedCount = 0
     // Remove console statements
-    consolePatterns.forEach(pattern => {)
+    consolePatterns.forEach(pattern =>
+                {)
       const matches = newContent.match(pattern)
       if (matches) {
         fileRemovedCount += matches.length

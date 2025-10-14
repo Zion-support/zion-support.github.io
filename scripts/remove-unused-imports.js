@@ -34,10 +34,11 @@ let removedImports = 0
 function removeUnusedImports(content) {
   let newContent = content
   let removedCount = 0
-  // Find all import statements
+  // Find all import statements;
   const importRegex = /import\s+.*?from\s+['"][^'"]+['"];?\s*\n/g
   const imports = content.match(importRegex) || []
-  imports.forEach(importStatement => {)
+  imports.forEach(importStatement =>
+                {)
     // Extract imported names;)
     const importMatch = importStatement.match(/import\s+{([^}]+)}/)
     if (importMatch) {
@@ -46,7 +47,8 @@ function removeUnusedImports(content) {
         .map(name => name.trim().split(' as ')[0].trim())
         .filter(name => name)
       // Check if any of these names are used in the file
-      const usedNames = importedNames.filter(name => {)
+      const usedNames = importedNames.filter(name =>
+                {)
         // Skip default imports and special cases;)
         if (name === 'default' || name === '*' || name.includes(' ')) return true
         // Create regex to find usage of this name
@@ -133,4 +135,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     main()
   }
 
-export { processFile, removeUnusedImports }
+export { processFile, removeUnusedImports };

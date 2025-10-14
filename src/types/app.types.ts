@@ -16,7 +16,7 @@ export interface PerformanceMetrics {
   ttfb?: number; // Time to First Byte
   fmp?: number; // First Meaningful Paint
   customMetrics?: Record
-          <string>
+          <string></string>
 }
 /**
  * Performance Report Interface

@@ -1,7 +1,7 @@
-import { supabase } from "@/integrations/supabase/client"
-import { toast } from "@/hooks/use-toast"
-export const useSocialAuth = () => {
-  const loginWithGoogle = async () => {
+import { supabase  } from '@/integrations/supabase/client';
+import { toast  } from '@/hooks/use-toast';export const useSocialAuth  = () => {
+  const loginWithGoogle = async () =>
+                {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google"})
@@ -25,7 +25,8 @@ export const useSocialAuth = () => {
       })
     }
   }
-  const loginWithFacebook = async () => {
+  const loginWithFacebook = async () =>
+                {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "facebook"})
@@ -49,7 +50,8 @@ export const useSocialAuth = () => {
       })
     }
   }
-  const loginWithTwitter = async () => {
+  const loginWithTwitter = async () =>
+                {
     try {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "twitter"})

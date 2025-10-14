@@ -78,7 +78,7 @@ export function deepMerge
           <string, unknown>,
 // sourceValue as Record
           <string, unknown>
-
+</string,>
         ) as T[Extract<keyof T, string>]
       } else {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -100,7 +100,8 @@ export function flattenObject()
   prefix = '',
   separator = '.'
 
-): Record<string, unknown> {
+): Record<string, unknown></string,>
+                {
     // TODO: Add content
   }
 
@@ -142,7 +143,8 @@ export function unflattenObject()
           <string, unknown>,
   separator = '.'
 
-): Record<string, unknown> {
+): Record<string, unknown></string,>
+                {
     // TODO: Add content
   }
 
@@ -171,7 +173,7 @@ export function unflattenObject()
 }
           current[k] = current[k] || {}
           current = current[k] as Record
-          <string>
+          <string></>
         }
       }
     }
@@ -187,12 +189,14 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
   keys: K[]
 
 ): Pick,
-          <T, K> {/* TODO: Fix JSX expression */}
+          <T, K></T,>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const result = {} as Pick
-          <T>
-  keys.forEach(key => {/* TODO: Fix JSX expression */}
+          <T></T>
+  keys.forEach(key =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
     if (key in obj) {/* TODO: Fix JSX expression */}
@@ -214,17 +218,19 @@ export function omit
   keys: K[]
 
 ): Omit,
-          <T, K> {/* TODO: Fix JSX expression */}
+          <T, K></T,>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const result = { ...obj }
-  keys.forEach(key => {/* TODO: Fix JSX expression */}
+  keys.forEach(key =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     delete result[key];)
   })
   return result as Omit
-          <T>
+          <T></T>
 }
 /**
  * Group array items by a key
@@ -235,11 +241,13 @@ export function groupBy<T>()
   key: keyof T | ((item: T) => string | number)
 
 ): Record,
-          <string, T[]> {/* TODO: Fix JSX expression */}
+          <string, T[]></string,>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   return array.reduce()
-    (result, item) => {/* TODO: Fix JSX expression */}
+    (result, item) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key])
@@ -247,7 +255,7 @@ export function groupBy<T>()
       return result
     },
     {} as Record
-          <string, T[]>
+          <string, T[]></string,>
   )
 }
 /**
@@ -265,7 +273,8 @@ export function unique<T>(array: T[], key?: keyof T): T[] {
     return Array.from(new Set(array))
   }
   const seen = new Set()
-  return array.filter(item => {/* TODO: Fix JSX expression */}
+  return array.filter(item =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const value = item[key];)
@@ -294,7 +303,8 @@ export function sortBy
   }
 
 }
-  return [...array].sort((a, b) => {/* TODO: Fix JSX expression */}
+  return [...array].sort((a, b) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     for (let i = 0; i;)

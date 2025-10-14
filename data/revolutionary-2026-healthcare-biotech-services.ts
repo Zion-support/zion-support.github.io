@@ -300,4 +300,4 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     rating: 4.8,
     reviews: 123
   }
-]
+];

@@ -1,4 +1,5 @@
-const, October2025FeaturedContentBanne, r = () => {
+const, October2025FeaturedContentBanne, r = () =>
+                {
   const, featuredConten, t = [
     {
       tit, l, e: "Enterprise, AI, Value Realizati, o, n"
@@ -136,7 +137,8 @@ const, October2025FeaturedContentBanne, r = () => {
       sta, t, s: [,
         { val, u, e: "<100, m, s", lab, e, l: "P95, Latenc, y" },"
         { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" },"
-const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */}
+const, October2025FeaturedContentBanne, r = () =></100,>
+                {/* TODO: Fix JSX expression */}
         { val, u, e: "9, 0, d", lab, e, l: "To, Outcome, s" }"
         { val, u, e: "K, P, I", lab, e, l: "Linked, Gate, s" }"
         { val, u, e: "$$", lab, e, l: "Predictable, Cos, t" }
@@ -208,8 +210,8 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4">"
       <div, className="container, m, x-auto, ma, x-w-7, x, l">"
         {/* Head, e, r */}
-        <div, className="text-center mb-12">
-          <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e">
+                <div, className="text-center mb-12"></div,>
+          <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e"></div,>
             <Sparkles, className="w-5 h-5, m, r-2  />
             🚀 NEW, CONTENT, RELEASE - Octobe, r, 1, 20, 2, 5
             <Sparkles, className="w-5 h-5, m, l-2  />
@@ -239,13 +241,15 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         {/* Featured, Content, Cards */})
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";)
-          {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
+          {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) =>
+                {
             const, Ico, n = conte, n, t.ic, o, n
             return(<Li, n, k
         {/* Featured, Content, Cards */}
+                <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"
-          {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => {
+          {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) =>
+                {
             const, Ico, n = conte, n, t.ic, o, n
             return (
               <Li, n, k
@@ -254,18 +258,18 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                 classNa, m, e="group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
   r:shad, o, w-2, x, l"
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r }}
-              >
+              ></Li,>
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`
-                <div, className="relativ, e, p-8">
-                  {/* Ic, o, n & Tit, l, e */}
-                  <div, className="flex, item, s-start, m, b-6">
+                <div, className="relativ, e, p-8"></div,>
+                {/* Ic, o, n & Tit, l, e */}
+                <div, className="flex, item, s-start, m, b-6"></div,>
                     <div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`
                       <Icon, className="w-8 h-8, tex, t-whi, t, e  />
-                    <div, className="fl, e, x-1">
+                    <div, className="fl, e, x-1"></div,>
                       <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
                 <div, className="relativ, e, p-8">"
                   {/* Ic, o, n & Tit, l, e */}
-                  <div, className="flex, item, s-start, m, b-6">"
+                <div, className="flex, item, s-start, m, b-6">"
                     <div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`
                       <Icon, className="w-8 h-8, tex, t-whi, t, e" />"
                     <div, className="fl, e, x-1">"
@@ -281,8 +285,8 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                 sty, l, e={{ borderCol, o, r: conte, n, t.borderCol, o, r }}
               >
                 <div, className={`absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradie, n, t} opaci, t, y-50, grou, p-hov, e, r:opaci, t, y-70, transitio, n-opaci, t, y`}></d, i, v>`;`"
-                <div, className="relativ, e, p-8">
-                  {/* Ic, o, n & Tit, l, e */}"
+                <div, className="relativ, e, p-8"></div,>
+                {/* Ic, o, n & Tit, l, e */}"
                   <div, className="flex, item, s-start, m, b-6"></div>`
                     <div, className={`p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} round, e, d-xl, m, r-4`}>`;`"
                       <Icon, className="w-8 h-8, tex, t-whi, t, e  />
@@ -297,19 +301,19 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                     <div, className="fl, e, x-1">";"
                       <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
                         {conte, n, t.tit, l, e}
-                      </h3>"
+                </h3>"
                       <p, className="te, x, t-gr, a, y-300, tex, t-sm">"
                         {conte, n, t.descripti, o, n}
-                  </d, i, v>)
+                </d, i, v>)
                   {/* Sta, t, s */})
                   <div, className="grid, gri, d-co, l, s-3, ga, p-4, m, b-6">";)
                     {conte, n, t.sta, t, s.m, a, p((st, a, t, i, d, x) => (
-                      <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">
+                      <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10"></div,>
                       <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">"
                   {/* Sta, t, s */}
-                  <div, className="grid, gri, d-co, l, s-3, ga, p-4, m, b-6">"
+                <div, className="grid, gri, d-co, l, s-3, ga, p-4, m, b-6">"
                     {conte, n, t.sta, t, s.m, a, p((st, a, t, i, d, x) => (
-                      <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">
+                      <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10"></div,>
                       <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">"
                   {/* Sta, t, s */}"
                   <div, className="grid, gri, d-co, l, s-3, ga, p-4, m, b-6">"
@@ -318,11 +322,13 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
                       <div, ke, y={i, d, x} classNa, m, e="te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10">";`
                         <div, className={`te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} bg-cl, i, p-text, tex, t-transpare, n, t`}>`;`
                           {st, a, t.val, u, e}
-                        </d, i, v>"
-                        <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">{st, a, t.lab, e, l}</d, i, v>"</$1>)
+                </d, i, v>"
+                        <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1"></div,>
+                {st, a, t.lab, e, l}
+                </d, i, v>"</$1>)
                     ))}
                   {/* C, T, A */}
-                  <div, className="flex, item, s-center, justif, y-betwe, e, n">
+                <div, className="flex, item, s-center, justif, y-betwe, e, n"></div,>
                     <span, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Published, October, 1, 20, 2, 5
                     <div, className={`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m`}>`;`
                       Read, Full, Article
@@ -347,7 +353,7 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
             )
           })}
         {/* Bottom, CT, A */}
-        <div, className="te, x, t-cent, e, r">"
+                <div, className="te, x, t-cent, e, r">"
           <div, className="inli, n, e-flex, item, s-center, spac, e-x-4">"
             <Li, n, k
         <div, className="te, x, t-cent, e, r">"
@@ -362,7 +368,7 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
   to="/bl, o, g""
               classNa, m, e="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove,"
   r:sca, l, e-105, inlin, e-flex, item, s-cent, e, r"
-            >
+            ></Li,>
               Explore, All, Articles;"
               <TrendingUp, className="w-5 h-5, m, l-2  /></TrendingUp>"
               <TrendingUp, className="w-5 h-5, m, l-2" />"
@@ -371,16 +377,16 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
             <Li, n, k;"
   to="/conta, c, t""
               classNa, m, e="px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r"
-            >
+            ></Li,>
               Get, a, Free Consultati, o, n;"
               <Link, className="w-5 h-5, m, l-2  /></Link>"
               <Link, className="w-5 h-5, m, l-2" />"
         {/* Value, Propositio, n */}
-        <div, className="mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8">
+                <div, className="mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8"></div,>
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">"
         <div, className="mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8">"
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">"
-            <d, i, v>
+            <d, i, v></d,>
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2">$31.1M</d, i, v>"
         {/* Value, Propositio, n */}"
         <div, className="mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8"></div>"
@@ -399,12 +405,55 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
             <d, i, v></d>"
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-yell, o, w-400, m, b-2">1, 0, 0%</d, i, v>";"
               <div, className="te, x, t-gr, a, y-300, tex, t-sm">Enterprise, Read, y</d, i, v>"</d, i, v>
-          </d, i, v>
+                </d, i, v>
         </d, i, v>
-      </d, i, v>
+                </d, i, v>
     </d, i, v>
   )
 }
 export default October2025FeaturedContentBanner
 "`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></Link></Link></Link></p></p></h2></h2></h2></h3></h3>
+</div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </span></span>
+                </span></span>
+                </Link></Link>
+                </Link></p>
+                </p></h2>
+                </h2></h2>
+                </h3></h3>

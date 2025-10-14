@@ -1,9 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 import { readJsonFile, writeJsonFile } from "../../../utils/db"
-import type { Job } from "../../../utils/types"
-import { rateLimit } from "../../../utils/rateLimit"
-import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth"
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { Job } from "../../../utils/types";
+import { rateLimit  } from '../../../utils/rateLimit';
+import { getRequestUserEmail, isAdminEmail  } from '../../../utils/auth';export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return
   const { id } = req && req.query
@@ -52,10 +51,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { readJsonFile, writeJsonFile } from '../../../utils/db'
-import type { Job } from '../../../utils/types'
-import { rateLimit } from '../../../utils/rateLimit'
-import { getRequestUserEmail, isAdminEmail } from '../../../utils/auth'
-const FILE = 'jobs.json'
+import type { Job } from '../../../utils/types';
+import { rateLimit  } from '../../../utils/rateLimit';
+import { getRequestUserEmail, isAdminEmail  } from '../../../utils/auth';const FILE = 'jobs.json'
 export default function handler(req, res) {
   try {
   if (!rateLimit(req, res)) return,

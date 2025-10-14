@@ -5,13 +5,15 @@ import { glob } from 'glob'
 // Performance optimization patterns
 const optimizations = {
     // Remove unused CSS classes
-  removeUnusedCSS: (content) => {,
+  removeUnusedCSS: (content) =>
+                {,
     // This is a simplified version - in production, use tools like PurgeCSS
     return content
   },
 
   // Optimize images (placeholder - would need actual image processing)
-  optimizeImages: (content) => {
+  optimizeImages: (content) =>
+                {
     ,
     // Replace large image references with optimized versions
     return content
@@ -21,10 +23,12 @@ const optimizations = {
   },
 
   // Minify inline styles
-  minifyInlineStyles: (content) => {,
-    return content.replace(/style="([^"]*)"/g, (match, styles) => {
+  minifyInlineStyles: (content) =>
+                {,
+    return content.replace(/style="([^"]*)"/g, (match, styles) =>
+                {
       const minified = styles
-        .replace(/\s+/g, ' ')
+        .replace(/\s+/g, ' ');
         .replace(/;\s*/g, ';')
         .replace(/:\s*/g, ':')
         .trim()
@@ -33,7 +37,8 @@ const optimizations = {
   },
 
   // Remove empty lines and extra whitespace
-  removeExtraWhitespace: (content) => {,
+  removeExtraWhitespace: (content) =>
+                {,
     return content
       .replace(/\n\s*\n\s*\n/g, '\n\n')
       .replace(/[ \t]+$/gm, '')
@@ -41,7 +46,8 @@ const optimizations = {
   },
 
   // Optimize React components
-  optimizeReactComponents: (content) => {
+  optimizeReactComponents: (content) =>
+                {
     // Add React.memo to functional components
     if (content.includes('const ') && content.includes(': React.FC')) {
       content = content.replace(
@@ -58,7 +64,8 @@ const optimizations = {
   },
 
   // Add performance hints
-  addPerformanceHints: (content) => {
+  addPerformanceHints: (content) =>
+                {
     // Add preload hints for critical resources,
     if (content.includes('<head>')) {
       const preloadHints = `
@@ -106,7 +113,8 @@ function processFile(filePath) {
     let newContent = content
     let fileOptimizations = 0
     // Apply optimizations
-    Object.entries(optimizations).forEach(([name, optimizer]) => {
+    Object.entries(optimizations).forEach(([name, optimizer]) =>
+                {
       const before = newContent
       newContent = optimizer(newContent)
       if (newContent !== before) {
@@ -152,5 +160,6 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     main()
   }
 
-export { processFile, optimizations }
-</li></li></li>
+export {processFile, optimizations }
+                </li>
+                </li></li>

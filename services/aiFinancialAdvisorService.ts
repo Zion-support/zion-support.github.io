@@ -118,7 +118,7 @@ export interface InvestmentRecommendation {
   id: string
   market: string
   analysis: string,
-  key_metrics: Record < string, number>
+  key_metrics: Record < string, number></>
     type: string
     currentPrice: number
   }
@@ -151,7 +151,7 @@ export interface MarketAnalysis {
   id: string
   market: string
   analysis: string
-  keyMetrics: Record<string, number>
+  keyMetrics: Record<string, number></string,>
   trends: string[]
   risks: string[]
   opportunities: string[]
@@ -166,7 +166,7 @@ export interface MarketAnalysis {
   summary: string
   goals: FinancialGoal[],
   investment_strategy: {
-    asset_allocation: Record < string, number>
+    asset_allocation: Record < string, number></>
     rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually',
     risk_management: string[]
   }
@@ -186,7 +186,7 @@ export interface FinancialPlan {
   summary: string
   goals: FinancialGoal[]
   investmentStrategy: {
-    assetAllocation: Record<string, number>
+    assetAllocation: Record<string, number></string,>
     rebalancingFrequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually'
     riskManagement: string[]
   }
@@ -220,8 +220,8 @@ export interface FinancialPlan {
 }
   userId: string
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
-  parameters: Record<string, any>
-  preferences?: Record<string, any>
+  parameters: Record<string, any></string,>
+  preferences?: Record<string, any></string,>
 }
     property: boolean
     recommendations: string[]
@@ -244,8 +244,8 @@ export interface FinancialPlan {
 export interface FinancialRequest {
   userId: string
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
-  parameters: Record<string, any>
-  preferences?: Record<string, any>
+  parameters: Record<string, any></string,>
+  preferences?: Record<string, any></string,>
 }
 export interface FinancialResponse {
   success: boolean
@@ -262,7 +262,8 @@ export class AIFinancialAdvisorService {
 export class AIFinancialAdvisorService {
   private apiKey: string
   }
-  async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
+  async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio></InvestmentPortfolio>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
         headers: {
@@ -277,7 +278,8 @@ export class AIFinancialAdvisorService {
       throw error
     }
   }
-  async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
+  async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]></InvestmentRecommendation[]>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/recommendations`, {
         method: 'POST',
@@ -295,7 +297,8 @@ export class AIFinancialAdvisorService {
       throw error
     }
   }
-  async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
+  async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan></FinancialPlan>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/plan`, {
         method: 'POST',
@@ -313,7 +316,8 @@ export class AIFinancialAdvisorService {
       throw error
     }
   }
-  async trackFinancialGoals(userId: string): Promise<FinancialGoal[]> {
+  async trackFinancialGoals(userId: string): Promise<FinancialGoal[]></FinancialGoal[]>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${userId}`, {
         headers: {
@@ -328,7 +332,8 @@ export class AIFinancialAdvisorService {
       throw error
     }
   }
-  async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
+  async getMarketAnalysis(market: string): Promise<MarketAnalysis></MarketAnalysis>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/market-analysis/${market}`, {
         headers: {
@@ -358,7 +363,8 @@ export class AIFinancialAdvisorService {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
   }
-  async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
+  async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio></InvestmentPortfolio>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
         headers: {
@@ -375,7 +381,8 @@ export class AIFinancialAdvisorService {
       throw error
     }
   }
-  async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
+  async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]></InvestmentRecommendation[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/recommendations`, {
         method: 'POST',
@@ -395,7 +402,8 @@ export class AIFinancialAdvisorService {
       throw error
     }
   }
-  async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
+  async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan></FinancialPlan>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/plan`, {
         method: 'POST',
@@ -415,7 +423,8 @@ export class AIFinancialAdvisorService {
       throw error
     }
   }
-  async trackFinancialGoals(userId: string): Promise<FinancialGoal[]> {
+  async trackFinancialGoals(userId: string): Promise<FinancialGoal[]></FinancialGoal[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/goals/${userId}`, {
         headers: {
@@ -432,7 +441,8 @@ export class AIFinancialAdvisorService {
       throw error
     }
   }
-  async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
+  async getMarketAnalysis(market: string): Promise<MarketAnalysis></MarketAnalysis>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/market-analysis/${market}`, {
         headers: {
@@ -450,17 +460,20 @@ export class AIFinancialAdvisorService {
     }
   }
   async rebalancePortfolio(portfolioId: string, targetAllocation: Record<string, number>): Promise<{
-    currentAllocation: Record<string, number>
-    targetAllocation: Record<string, number>
+    currentAllocation: Record<string, number></{
+>
+    targetAllocation: Record<string, number></string,>
     rebalancingActions: Array<{
       action: 'buy' | 'sell'
       symbol: string
       quantity: number
       estimatedCost: number
-    }>
+    }></{
+>
     estimatedFees: number
     expectedImpact: string
-  }> {
+  }>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
         method: 'POST',
@@ -482,9 +495,11 @@ export class AIFinancialAdvisorService {
     estimatedNeeds: number
     monthlyContribution: number
     projectedValue: number
-    assumptions: Record<string, any>
+    assumptions: Record<string, any></{
+>
     recommendations: string[]
-  }> {
+  }>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/retirement-calculator`, {
         method: 'POST',
@@ -518,7 +533,9 @@ export class AIFinancialAdvisorService {
     this.api_key = api_key,
     this.base_url = base_url
   }
-  async analyze_portfolio (portfolio_id: string): Promise < InvestmentPortfolio> {
+  async analyze_portfolio (portfolio_id: string): Promise < InvestmentPortfolio></{
+>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / financial / portfolio/${portfolio_id}/analyze`, {
         headers: {
@@ -536,7 +553,8 @@ if ( {) {
       throw error
     }
   }
-  async getInvestmentRecommendations (user_id: string, risk_tolerance: string, investment_horizon: number): Promise < InvestmentRecommendation[]> {
+  async getInvestmentRecommendations (user_id: string, risk_tolerance: string, investment_horizon: number): Promise < InvestmentRecommendation[]></>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / financial / recommendations`, {
         method: 'POST',
@@ -557,7 +575,8 @@ if ( {) {
       throw error
     }
   }
-  async createFinancialPlan (request: FinancialRequest): Promise < FinancialPlan> {
+  async createFinancialPlan (request: FinancialRequest): Promise < FinancialPlan></>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / financial / plan`, {
         method: 'POST',
@@ -578,7 +597,8 @@ if ( {) {
       throw error
     }
   }
-  async trackFinancialGoals (user_id: string): Promise < FinancialGoal[]> {
+  async trackFinancialGoals (user_id: string): Promise < FinancialGoal[]></>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / financial / goals/${user_id}`, {
         headers: {
@@ -596,7 +616,8 @@ if ( {) {
       throw error
     }
   }
-  async getMarketAnalysis (market: string): Promise < MarketAnalysis> {
+  async getMarketAnalysis (market: string): Promise < MarketAnalysis></>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / financial / market - analysis/${market}`, {
         headers: {
@@ -615,17 +636,20 @@ if ( {) {
     }
   }
   async rebalance_portfolio (portfolio_id: string, target_allocation: Record < string, number>): Promise<{
-    current_allocation: Record < string, number>
-    target_allocation: Record < string, number>
+    current_allocation: Record < string, number></{
+>
+    target_allocation: Record < string, number></>
     rebalancing_actions: Array<{
       action: 'buy' | 'sell'
       symbol: string
       quantity: number,
       estimated_cost: number
-    }>
+    }></{
+>
     estimated_fees: number,
     expected_impact: string
-  }> {
+  }>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / financial / portfolio/${portfolio_id}/rebalance`, {
         method: 'POST',
@@ -650,9 +674,11 @@ if ( {) {
     estimated_needs: number
     monthly_contribution: number
     projected_value: number,
-    assumptions: Record < string, any>
+    assumptions: Record < string, any></{
+>
     recommendations: string[]
-  }> {
+  }>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / financial / retirement - calculator`, {
         method: 'POST',
@@ -697,10 +723,12 @@ if ( {) {
     reportId: string
     downloadUrl: string
     summary: string
-    keyMetrics: Record<string, any>
+    keyMetrics: Record<string, any></{
+>
     recommendations: string[]
     nextSteps: string[]
-  }> {
+  }>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/report`, {
         method: 'POST',
@@ -747,10 +775,12 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
     report_id: string
     download_url: string
     summary: string,
-    key_metrics: Record < string, any>
+    key_metrics: Record < string, any></{
+>
     recommendations: string[],
     next_steps: string[]
-  }> {
+  }>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / financial / report`, {
         method: 'POST',
@@ -773,7 +803,8 @@ if ( {) {
     }>
     estimatedFees: number
     expectedImpact: string
-  }> {
+  }>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
         method: 'POST',
@@ -797,9 +828,11 @@ if ( {) {
     estimatedNeeds: number
     monthlyContribution: number
     projectedValue: number
-    assumptions: Record<string, any>
+    assumptions: Record<string, any></{
+>
     recommendations: string[]
-  }> {
+  }>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/retirement-calculator`, {
         method: 'POST',
@@ -824,8 +857,10 @@ if ( {) {
     estimatedSavings: number
     implementation: string[]
     risks: string[]
-    deadlines: Record<string, Date>
-  }> {
+    deadlines: Record<string, Date></{
+>
+  }>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/tax-optimization`, {
         method: 'POST',
@@ -849,10 +884,12 @@ if ( {) {
     reportId: string
     downloadUrl: string
     summary: string
-    keyMetrics: Record<string, any>
+    keyMetrics: Record<string, any></{
+>
     recommendations: string[]
     nextSteps: string[]
-  }> {
+  }>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/report`, {
         method: 'POST',

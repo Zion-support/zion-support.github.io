@@ -1,10 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
-    const offerings = readJsonFile('deal/offerings && offerings.json', {
-import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage'
-import { requireSuperadminApi } from '../../../../utils / api / auth'
-export default /**
+    const offerings = readJsonFile('deal/offerings && offerings.json', {;
+import { readJsonFile, writeJsonFile  } from '../../../../utils / api / storage';
+import { requireSuperadminApi  } from '../../../../utils / api / auth';export default /**
  * handler - Function description
  */
 function handler() {
@@ -82,11 +81,8 @@ if ( {) {
     writeJsonFile ('deal / offerings.json', offerings)
     return res.status (200).json (offerings)
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage'
-import { requireSuperadminApi } from '../../../../utils/api/auth'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import { readJsonFile, writeJsonFile  } from '../../../../utils/api/storage';
+import { requireSuperadminApi  } from '../../../../utils/api/auth';export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
   if (req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings.json', { safe: true, equity: true, token: false })

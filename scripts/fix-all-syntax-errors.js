@@ -25,7 +25,8 @@ function fixFile(filePath) {
     try {
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
-    fixes.forEach(fix => {)
+    fixes.forEach(fix =>
+                {)
       const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
         content = newContent
@@ -71,10 +72,11 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 const files = findFiles('./app')
 let fixedCount = 0
 console.log(`Found ${files.length} files to process...`)
-files.forEach(file => {
+files.forEach(file =>
+                {
     )
   if (fixFile(file)) {
     fixedCount++
   }
 })
-console.log(`\n🎉 Syntax fix complete! Modified ${fixedCount} files.`)
+console.log(`\n🎉 Syntax fix complete! Modified ${fixedCount} files.`);

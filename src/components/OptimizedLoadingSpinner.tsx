@@ -15,7 +15,8 @@ interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 const,
   OptimizedLoadingSpinner: React.FC,
           <OptimizedLoadingSpinnerProps> = memo()
-  ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
+  ({ size = 'md', color = 'primary', className = '' }) =>
+                {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}
       m,
   d: 'w-8 h-8',
@@ -34,7 +35,7 @@ const,
     }
     return (<div>Coming Soon</div>)
   )
-          <div>
+          <div></div>
 className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
         role="status""
         aria-label="Loading"
@@ -60,14 +61,15 @@ className="opacity-75""
             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
 // />
           </svg>
-      </div>
+                </div>
     ),
   }
 )
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
 export default OptimizedLoadingSpinner
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
-  ({ size = 'md', color = 'primary', className = '' }) => {
+  ({ size = 'md', color = 'primary', className = '' }) =>
+                {
       sm: 'w-4 h-4',
       md: 'w-8 h-8',
       lg:     ,
@@ -88,7 +90,8 @@ $4}
           fill="none"
           viewBox="0 0 24 24"
           xmlns="http: //www.w3.org/2000/svg"
-        >
+        ></svg
+>
           <circle
             className="opacity-25"
             cx="12"
@@ -103,9 +106,10 @@ $4}
             d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
           />
         </svg>
-      </div>
+                </div>
     ),
   }
 )
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
-export default OptimizedLoadingSpinner</div></p></a>
+export default OptimizedLoadingSpinner</div>
+                </p></a>;

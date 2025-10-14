@@ -26,7 +26,7 @@ declare module '*.gif' {
 interface Window {
   "__NEXT_DATA__": any}
 // Global types
-type AnyObject = Record<string, any>
+type AnyObject = Record<string, any></string,>
 type Nullable<T> = T | null
 type Optional<T> = T | undefined;'
 ';'

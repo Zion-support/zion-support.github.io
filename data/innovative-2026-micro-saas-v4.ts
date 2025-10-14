@@ -508,4 +508,4 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
     rating: 4.9,
     reviews: 98
   }
-]
+];

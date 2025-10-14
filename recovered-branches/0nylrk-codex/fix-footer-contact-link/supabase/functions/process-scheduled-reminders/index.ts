@@ -1,6 +1,5 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1"
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!
+import { serve  } from 'https://deno.land/std@0.168.0/http/server.ts';
+import { createClient  } from 'https://esm.sh/@supabase/supabase-js@2.7.1';const supabaseUrl = Deno.env.get("SUPABASE_URL")!
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -8,7 +7,8 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type"}
     "authorization, x-client-info, apikey, content-type",
 }
-serve(async (req: Request) => {
+serve(async (req: Request) =>
+                {
   // Handle CORS
   if (req.method === "OPTIONS") {
     return new Response(null, {

@@ -1,68 +1,36 @@
-import Link from 'next/link'
-import { useRouter  } from 'next/router'
-import { Logo  } from '@/components/header/Logo'
-import { PointsBadge  } from '@/components/loyalty/PointsBadge'
-import { UserMenu  } from '@/components/header/UserMenu'
-import { LanguageSelector  } from '@/components/header/LanguageSelector'
-import { ModeToggle  } from '@/components/ModeToggle'
-import { useAuth  } from '@/hooks/useAuth'
-import { useIsMobile  } from '@/hooks/use-mobile'
-import { useMessaging  } from '@/context/MessagingContext'
-import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput'
-import { generateSearchSuggestions  } from '@/data/marketplaceData'
-import { slugify  } from '@/lib/slugify'
-import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation'
-import { MobileMenu  } from '@/components/header/MobileMenu'
-import { MobileBottomNav  } from '@/components/header/MobileBottomNav'
-import { useState } from 'react'
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { Logo } from '@/components/header/Logo'
-import { PointsBadge } from '@/components/loyalty/PointsBadge'
-import { UserMenu } from '@/components/header/UserMenu'
-import { LanguageSelector } from '@/components/header/LanguageSelector'
-import { ModeToggle } from '@/components/ModeToggle'
-import { useAuth } from '@/hooks/useAuth'
-import { useIsMobile } from '@/hooks/use-mobile'
-import { useMessaging } from '@/context/MessagingContext'
-import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput'
-import { generateSearchSuggestions } from '@/data/marketplaceData'
-import { slugify } from '@/lib/slugify'
-import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation'
-import { MobileMenu } from '@/components/header/MobileMenu'
-import { MobileBottomNav } from '@/components/header/MobileBottomNav'
-
-
-
-
-
-import { Menu, X } from 'lucide-react'
-import { useTranslation  } from 'react-i18next'
-import { CartDrawer  } from '@/components/cart/CartDrawer'
-import { LoginModal } from '@/components/auth/LoginModal'
-import { useState } from 'react'
-import { log_debug, logErrorToProduction } from '@/utils / production_logger'
-import Link from 'next / link'
-import { use_router } from 'next / router'
-import { Logo } from '@/components / header / Logo'
-import { PointsBadge } from '@/components / loyalty / PointsBadge'
-import { UserMenu } from '@/components / header / UserMenu'
-import { LanguageSelector } from '@/components / header / LanguageSelector'
-import { ModeToggle } from '@/components / ModeToggle'
-import { use_auth } from '@/hooks / use_auth'
-import { useIsMobile } from '@/hooks / use - mobile'
-import { use_messaging } from '@/context / MessagingContext'
-import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput'
-import { generateSearchSuggestions } from '@/data / marketplace_data'
-import { slugify } from '@/lib / slugify'
-import { ResponsiveNavigation } from '@/components / navigation / ResponsiveNavigation'
-import { MobileMenu } from '@/components / header / MobileMenu'
-import { MobileBottomNav } from '@/components / header / MobileBottomNav'
-import { Menu, X } from 'lucide-react'
-import { use_translation } from 'react - i18next'
-import { CartDrawer } from '@/components / cart / CartDrawer'
-import { LoginModal } from '@/components / auth / LoginModal'
+import Link from 'next/link';
+import { useRouter   } from 'next/router';
+import { Logo   } from '@/components/header/Logo';import { PointsBadge   } from '@/components/loyalty/PointsBadge';
+import { UserMenu   } from '@/components/header/UserMenu';import { LanguageSelector   } from '@/components/header/LanguageSelector';
+import { ModeToggle   } from '@/components/ModeToggle';import { useAuth   } from '@/hooks/useAuth';
+import { useIsMobile   } from '@/hooks/use-mobile';import { useMessaging   } from '@/context/MessagingContext';
+import { EnhancedSearchInput   } from '@/components/search/EnhancedSearchInput';import { generateSearchSuggestions   } from '@/data/marketplaceData';
+import { slugify   } from '@/lib/slugify';import { ResponsiveNavigation   } from '@/components/navigation/ResponsiveNavigation';
+import { MobileMenu   } from '@/components/header/MobileMenu';import { MobileBottomNav   } from '@/components/header/MobileBottomNav';
+import { useState  } from 'react';import { logDebug, logErrorToProduction } from '@/utils/productionLogger'
+import Link from 'next/link';
+import { useRouter  } from 'next/router';
+import { Logo  } from '@/components/header/Logo';import { PointsBadge  } from '@/components/loyalty/PointsBadge';
+import { UserMenu  } from '@/components/header/UserMenu';import { LanguageSelector  } from '@/components/header/LanguageSelector';
+import { ModeToggle  } from '@/components/ModeToggle';import { useAuth  } from '@/hooks/useAuth';
+import { useIsMobile  } from '@/hooks/use-mobile';import { useMessaging  } from '@/context/MessagingContext';
+import { EnhancedSearchInput  } from '@/components/search/EnhancedSearchInput';import { generateSearchSuggestions  } from '@/data/marketplaceData';
+import { slugify  } from '@/lib/slugify';import { ResponsiveNavigation  } from '@/components/navigation/ResponsiveNavigation';
+import { MobileMenu  } from '@/components/header/MobileMenu';import { MobileBottomNav  } from '@/components/header/MobileBottomNav';
+import { Menu, X  } from 'lucide-react';import { useTranslation   } from 'react-i18next';
+import { CartDrawer   } from '@/components/cart/CartDrawer';import { LoginModal  } from '@/components/auth/LoginModal';
+import { useState  } from 'react';import { log_debug, logErrorToProduction } from '@/utils / production_logger'
+import Link from 'next / link';
+import { use_router  } from 'next / router';
+import { Logo  } from '@/components / header / Logo';import { PointsBadge  } from '@/components / loyalty / PointsBadge';
+import { UserMenu  } from '@/components / header / UserMenu';import { LanguageSelector  } from '@/components / header / LanguageSelector';
+import { ModeToggle  } from '@/components / ModeToggle';import { use_auth  } from '@/hooks / use_auth';
+import { useIsMobile  } from '@/hooks / use - mobile';import { use_messaging  } from '@/context / MessagingContext';
+import { EnhancedSearchInput  } from '@/components / search / EnhancedSearchInput';import { generateSearchSuggestions  } from '@/data / marketplace_data';
+import { slugify  } from '@/lib / slugify';import { ResponsiveNavigation  } from '@/components / navigation / ResponsiveNavigation';
+import { MobileMenu  } from '@/components / header / MobileMenu';import { MobileBottomNav  } from '@/components / header / MobileBottomNav';
+import { Menu, X  } from 'lucide-react';import { use_translation  } from 'react - i18next';
+import { CartDrawer  } from '@/components / cart / CartDrawer';import { LoginModal } from '@/components / auth / LoginModal'
 export /**
  * PrimaryNav - Function description
  */
@@ -85,12 +53,14 @@ function PrimaryNav() {
     // context not available
 
   }
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) =>
+                {
     e.preventDefault()
 
   }
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = (e: React.FormEvent) =>
+                {
+    e.preventDefault();
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -136,7 +106,8 @@ export function PrimaryNav() {
     // context not available
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) =>
+                {
     e.preventDefault(),
     const trimmed = query.trim(),
     if (trimmed) {
@@ -150,12 +121,11 @@ export function PrimaryNav() {
 
 
         data-testid='header'>
-        <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'>
+        <div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'></div>
           <Logo />
-          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-
-          <div className='hidden lg:block order-1 flex-shrink-0'>
-
+                {/* Navigation - hidden on mobile and tablets, shown on desktop */}
+                <div className='hidden lg:block order-1 flex-shrink-0'>
+</div>
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
 
@@ -168,29 +138,27 @@ export function PrimaryNav() {
         aria-label="Primary"
         data-testid="header"
       >
-        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
+        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap"></div>
           <Logo />
-          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className='hidden lg:block order-1 flex-shrink-0'>
+                {/* Navigation - hidden on mobile and tablets, shown on desktop */}
+                <div className='hidden lg:block order-1 flex-shrink-0'></div>
             <ResponsiveNavigation
               openLoginModal={returnToPath => setLoginOpen(true)}
             />          </div>
-          
-          {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className="hidden lg:block order-1 flex-shrink-0">
+                {/* Navigation - hidden on mobile and tablets, shown on desktop */}
+                <div className="hidden lg:block order-1 flex-shrink-0"></div>
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
           </div>
-          
-
-
-          {/* Actions container with responsive layout */}
-          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
-            {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
+                {/* Actions container with responsive layout */}
+                <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0"></div>
+                {/* Search form with clamped width */}
+                <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}></form>
               <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
-                onSelectSuggestion={sugg => {
+                onSelectSuggestion={sugg =></EnhancedSearchInput
+>
+                {
 
                   log_debug ('PrimaryNav search suggestion selected:', {
                     suggestion: sugg,
@@ -219,12 +187,14 @@ if ( {) {
                     router.push (`/search?q=${encodeURIComponent (sugg.text)}`)
                   }
 
-                onSelectSuggestion={sugg => {
+                onSelectSuggestion={sugg =>
+                {
                   logDebug('PrimaryNav search suggestion selected:', {
                     suggestion: sugg,
                   });                  // Handle different suggestion types with proper navigation
                   if (sugg && sugg.id) {
-                onSelectSuggestion={(sugg) => {
+                onSelectSuggestion={(sugg) =>
+                {
                   logDebug('PrimaryNav search suggestion selected:', { suggestion: sugg }),
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
@@ -274,12 +244,12 @@ if ( {) {
                 }}
                 searchSuggestions = {suggestions,}
               /></$1>
-            {/* Compact actions group */}
-            <div className='flex items-center gap-1'>
+                {/* Compact actions group */}
+                <div className='flex items-center gap-1'></div>
               <PointsBadge />
               <CartDrawer /></$1>
-            {/* Compact controls group */}
-            <div className='flex items-center gap-1 border-l border-primary/20 pl-1 ml-1'>
+                {/* Compact controls group */}
+                <div className='flex items-center gap-1 border-l border-primary/20 pl-1 ml-1'></div>
                   set_query ('')
                   // Track analytics event
                   // Check condition
@@ -329,97 +299,89 @@ if ( {) {
                 }}
                 searchSuggestions={suggestions}
               /></$1>
-            {/* Compact actions group */}
-
-            <div className="flex items-center gap-1">
+                {/* Compact actions group */}
+                <div className="flex items-center gap-1"></div>
               <PointsBadge />
               <CartDrawer />
             </div>
-            
-
-
-
-
-
-
-            {/* Compact controls group */}
-            <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
+                {/* Compact controls group */}
+                <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1"></div>
               <ModeToggle />
               <LanguageSelector />
             </div>
-            
-            {/* Auth links - flex wrap for very small screens */}
-            <div className="flex items-center gap-1 flex-wrap">
-              {!isLoggedIn && (
+                {/* Auth links - flex wrap for very small screens */}
+                <div className="flex items-center gap-1 flex-wrap"></div>
+                {!isLoggedIn && (
                 <>
                   <$2 />
                     href='/auth/login'
                     className='text-sm hover:text-primary whitespace-nowrap'
                     data-testid='login-link'
-                    onClick={e => {
+                    onClick={e =>
+                {
                       e.preventDefault()
                       setLoginOpen(true) }}
                   >
                     href="/auth/login"
                     className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
-                    onClick={(e) => {
+                    onClick={(e) =>
+                {
                       e.preventDefault(),
                       setLoginOpen(true)
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1"></div>
               <PointsBadge />
               <CartDrawer /></$1>
-            {/* Compact controls group */}
-            <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>
+                {/* Compact controls group */}
+                <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'></div>
               <ModeToggle />
               <LanguageSelector /></$1>
-            {/* Auth links - flex wrap for very small screens */}
-
-                  <;$2 />
+                {/* Auth links - flex wrap for very small screens */}
+                <;$2 />
                     href="/auth/login"
                     className="text-sm hover: text-primary whitespace-nowrap"
                     data-testid="login-link"
-                    onClick={(e) => {
+                    onClick={(e) =>
+                {
                       e.preventDefault()
                       setLoginOpen(true)
                     }}
                   >
-                    {t('auth.login')}
-                  </Link>
-                    onClick={e => {
+                {t('auth.login')}
+                </Link>
+                    onClick={e =>
+                {
                       e && e.preventDefault()
                       setLoginOpen(true);                    }}
                   >
-                    {t('auth && auth.login')}
-                  </Link>
+                {t('auth && auth.login')}
+                </Link>
                   <$2 />
                     href="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
                   >
-                    {t('auth.signup')}
-                  </Link>
+                {t('auth.signup')}
+                </Link>
                 </>
               )}
               {isLoggedIn && <UserMenu />}
+                </div>
+                </$1>
+                {/* Tablet view (md to lg) - simplified controls */}
+                <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
 
 
 
-            </div></$1>
-          {/* Tablet view (md to lg) - simplified controls */}
-
-          <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
-
-
-
-
+</div>
             <ModeToggle />
             <LanguageSelector />
-            {!isLoggedIn && (
+                {!isLoggedIn && (
               <$2 />
                 href='/auth/login'
                 className='text-sm hover:text-primary'
                 data-testid='login-link'
-                onClick={e => {
+                onClick={e =>
+                {
                   e.preventDefault()
                   setLoginOpen(true) }}
 
@@ -427,123 +389,122 @@ if ( {) {
                 href="/auth/login"
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
-                onClick={(e) => {
+                onClick={(e) =>
+                {
                   e.preventDefault(),
                   setLoginOpen(true)
-          <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
+          <div className="hidden md: flex lg:hidden items-center gap-2 order-2"></div>
             <ModeToggle />
             <LanguageSelector />
-            {!isLoggedIn && (
+                {!isLoggedIn && (
               <;$2 />
                 href="/auth/login"
                 className="text-sm hover:text-primary"
                 data-testid="login-link"
-                onClick={(e) => {
+                onClick={(e) =>
+                {
                   e.preventDefault()
                   setLoginOpen(true)
                 }}
               >
                 {t('auth.login')}
-              </Link>
+                </Link>
             )}
             {isLoggedIn && <UserMenu />}
 
-                onClick={e => {
+                onClick={e =>
+                {
                   e && e.preventDefault()
                   setLoginOpen(true);                }}
               >
                 {t('auth && auth.login')}
-              </Link>
+                </Link>
             )}
             {isLoggedIn && <UserMenu />}
-
-          </div>
-            <div className='flex items - center gap - 1 flex - wrap'>
-              {!isLoggedIn && (
+                </div>
+            <div className='flex items - center gap - 1 flex - wrap'></div>
+                {!isLoggedIn && (
                 <>
                   <;$2 />
                     href='/auth / login'
                     className='text - sm hover:text - primary whitespace - nowrap'
                     data - testid='login - link'
-                    on_click={e => {
+                    on_click={e =>
+                {
                       e.prevent_default ()
                       setLoginOpen (true) }}
                   >
-                    {t ('auth.login')}
-                  </Link>
+                {t ('auth.login')}
+                </Link>
                   <;$2 />
                     href='/signup'
                     className='text - sm hover:text - primary whitespace - nowrap'
                   >
-                    {t ('auth.signup')}
-                  </Link>
+                {t ('auth.signup')}
+                </Link>
                 </>)}
               {isLoggedIn && <UserMenu />}
-            </div></$1>
-          {/* Tablet view (md to lg) - simplified controls */}
-          <div className='hidden md:flex lg:hidden items - center gap - 2 order - 2'>
+                </div>
+                </$1>
+                {/* Tablet view (md to lg) - simplified controls */}
+                <div className='hidden md:flex lg:hidden items - center gap - 2 order - 2'></div>
             <ModeToggle />
             <LanguageSelector />
-            {!isLoggedIn && (
+                {!isLoggedIn && (
               <;$2 />
                 href='/auth / login'
                 className='text - sm hover:text - primary'
                 data - testid='login - link'
-                on_click={e => {
+                on_click={e =>
+                {
                   e.prevent_default ()
                   setLoginOpen (true) }}
               >
                 {t ('auth.login')}
-              </Link>)}
+                </Link>)}
             {isLoggedIn && <UserMenu />}
-          </div>
-              {isLoggedIn && <UserMenu  />}
-            </div>
-          </div>
-          {/* Mobile menu button */}
-          <$2 />
+                </div>
+                {isLoggedIn && <UserMenu  />}
+                </div>
+                </div>
+                {/* Mobile menu button */}
+                <$2 />
             className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}          >
           </div>
-          {/* Mobile menu button */}
-          <$2 />
+                {/* Mobile menu button */}
+                <$2 />
             className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
           >
-
-
-
-
-
-
-            {mobileMenuOpen ? (
+                {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
               <Menu className="h-6 w-6" />
             )}
-          </button>
-        </div>
+                </button>
+                </div>
       </header>
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-60 pt-16">
+                {mobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 z-60 pt-16"></div>
           <$2 />
             className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden='true'          />
-          <div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>
+          <div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'></div>
             <MobileMenu
               unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={returnToPath => setLoginOpen(true)}            />
           </div>
-        </div>
+                </div>
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+                <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   )
 }
@@ -554,28 +515,40 @@ return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/2
 }searchSuggestions= {
   suggestions
 }/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> < onClick={$2 />
-  (e) => {
-  > {'
+  (e) =>
+                {
+  >
+                {'
   t ('auth.login') "
-}</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {'
+}
+                </Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" ></Link>
+                {'
   t ('auth.signup')
-}</Link> </>)
-}{
-  isLoggedIn && <UserMenu />
-}</div> </div> <ModeToggle /> <LanguageSelector /> {"
+}
+                </Link> </>)
+}{isLoggedIn && <UserMenu />
+}
+                </div>
+                </div> <ModeToggle /> <LanguageSelector />
+                {"
   !isLoggedIn && (< href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={$2 />
-  (e) => {
+  (e) =>
+                {
   e.preventDefault ()
 setLoginOpen (true)
 }'
 }t ('auth.login')
-}</Link>)
-}{
-  isLoggedIn && <UserMenu />
-}</div> {
-  /* Mobile menu button */ "
-}<button) : (<Menu className="h-6 w-6" />) "
-}</button> </div> </header> < className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={$2 />
+}
+                </Link>)
+}{isLoggedIn && <UserMenu />
+}
+                </div>
+                {/* Mobile menu button */ "
+}
+                <button) : (<Menu className="h-6 w-6" />) "
+}
+                </button>
+                </div> </header> < className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={$2 />
   () => setMobileMenuOpen (false) "
 }aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
   unreadCount
@@ -583,7 +556,8 @@ setLoginOpen (true)
   () => setMobileMenuOpen (false)
 }openLoginModal= {
   (returnToPath) => setLoginOpen (true)
-}/> </div> </div>)
+}/> </div>
+                </div>)
 }{
   isMobile && <MobileBottomNav unreadCount= {
 
@@ -591,7 +565,8 @@ setLoginOpen (true)
 
 
 }/>
-}<LoginModal isOpen= {
+}
+                <LoginModal isOpen= {
   loginOpen
 }onOpenChange= {
   setLoginOpen
@@ -612,34 +587,34 @@ setLoginOpen (true)
             on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
             aria - expanded={mobileMenuOpen}
             aria - label={t ('general.toggle_mobile_menu')}          >
-            {mobileMenuOpen ? (
+                {mobileMenuOpen ? (
               <X className='h - 6 w - 6' />) : (
               <Menu className='h - 6 w - 6' />)}
-          </button>
+                </button>
 }}
               transition={{ duration: 0.3 }}"
               className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">"
-              <div className="px-4 py-6 space-y-4">
+              <div className="px-4 py-6 space-y-4"></div>
                 {services.map((category, index) => (
                   <div key={index}>"
-                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">
-                      {category.category}
-                    </h3>"
-                    <div className="space-y-2 ml-4">
-                      {category.items.map((service: unknown, serviceIndex: unknown
+                    <h3 className="text-sm font-semibold text-cyan-400 mb-2"></h3>
+                {category.category}
+                </h3>"
+                    <div className="space-y-2 ml-4"></div>
+                {category.items.map((service: unknown, serviceIndex: unknown
                         <$2 />
                           key={serviceIndex}
                           to={service.path}"
                           className="block text-gray-300 hover:text-white transition-colors duration-200"
                           onClick={( setIsOpen(false)}
                         >
-                          {service.name}
-                        </Link>
+                {service.name}
+                </Link>
                       ))}
-                    </div>
-                  </div>
+                </div>
+                </div>
                 ))}
-                <div className="pt-4 border-t border-white/10 space-y-2">
+                <div className="pt-4 border-t border-white/10 space-y-2"></div>
                   <                    to="/solutions"$2 />
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
@@ -666,10 +641,10 @@ setLoginOpen (true)
                   </Link>
                 </div>
               </div>
-            </motion.div>
+                </motion.div>
           )}
-        </AnimatePresence>
-      </nav>
+                </AnimatePresence>
+                </nav>
     </header>
   )}
 '"`
@@ -679,25 +654,27 @@ setLoginOpen (true)
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
-          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto"></div>
             <MobileMenu
               unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={(returnToPath) => setLoginOpen(true)}
-            /></$1></$1></$1>
-      {mobileMenuOpen && (
-        <div className='lg:hidden fixed inset - 0 z - 60 pt - 16'>
+            /></$1>
+                </$1></$1>
+                {mobileMenuOpen && (
+        <div className='lg:hidden fixed inset - 0 z - 60 pt - 16'></div>
           <;$2 />
             className='absolute inset - 0 bg - black / 50 backdrop - blur - sm'
             on_click={() => setMobileMenuOpen (false)}
             aria - hidden='true'          />
-          <div className='relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem)] overflow - y-auto'>
+          <div className='relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem)] overflow - y-auto'></div>
             <MobileMenu
               unread_count={unread_count}
               on_close={() => setMobileMenuOpen (false)}
-              openLoginModal={returnToPath => setLoginOpen (true)}            /></$1></$1>)}
+              openLoginModal={returnToPath => setLoginOpen (true)}            /></$1>
+                </$1>)}
       {is_mobile && <MobileBottomNav unread_count={unread_count} />}
-      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />
+                <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />
     </>)
 }
 
@@ -708,28 +685,40 @@ return (<> <header className="sticky top - 0 z - 70 w - full border - b border -
 }search_suggestions= {
   suggestions
 }/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> < on_click={$2 />
-  (e) => {
-  > {'
+  (e) =>
+                {
+  >
+                {'
   t ('auth.login') "
-}</Link> <Link href="/signup" className="text - sm hover:text - primary whitespace - nowrap" > {'
+}
+                </Link> <Link href="/signup" className="text - sm hover:text - primary whitespace - nowrap" ></Link>
+                {'
   t ('auth.signup')
-}</Link> </>)
-}{
-  isLoggedIn && <UserMenu />
-}</div> </div> <ModeToggle /> <LanguageSelector /> {"
+}
+                </Link> </>)
+}{isLoggedIn && <UserMenu />
+}
+                </div>
+                </div> <ModeToggle /> <LanguageSelector />
+                {"
   !isLoggedIn && (< href="/auth / login" className="text - sm hover:text - primary" data - testid="login - link" on_click={$2 />
-  (e) => {
+  (e) =>
+                {
   e.prevent_default ()
 setLoginOpen (true)
 }'
 }t ('auth.login')
-}</Link>)
-}{
-  isLoggedIn && <UserMenu />
-}</div> {
-  /* Mobile menu button */ "
-}<button) : (<Menu className="h - 6 w - 6" />) "
-}</button> </div> </header> < className="absolute inset - 0 bg - black / 50 backdrop - blur - sm" on_click={$2 />
+}
+                </Link>)
+}{isLoggedIn && <UserMenu />
+}
+                </div>
+                {/* Mobile menu button */ "
+}
+                <button) : (<Menu className="h - 6 w - 6" />) "
+}
+                </button>
+                </div> </header> < className="absolute inset - 0 bg - black / 50 backdrop - blur - sm" on_click={$2 />
   () => setMobileMenuOpen (false) "
 }aria - hidden="true" /> <div className="relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem) ] overflow - y-auto" > <MobileMenu unread_count= {
   unread_count
@@ -737,12 +726,14 @@ setLoginOpen (true)
   () => setMobileMenuOpen (false)
 }openLoginModal= {
   (returnToPath) => setLoginOpen (true)
-}/> </div> </div>)
+}/> </div>
+                </div>)
 }{
   is_mobile && <MobileBottomNav unread_count= {
   unread_count
 }/>
-}<LoginModal is_open= {
+}
+                <LoginModal is_open= {
   login_open
 }onOpenChange= {
   setLoginOpen
@@ -760,28 +751,25 @@ setLoginOpen (true)
 }}
               transition={{ duration: 0.3 }}"
               className="lg:hidden bg - slate - 900 / 95 backdrop - blur - md border - t border - white / 10">"
-              <div className="px - 4 py - 6 space - y-4">
+              <div className="px - 4 py - 6 space - y-4"></div>
                 {services.map ((category, index) => (
                   <div key={index}>"
-                    <h3 className="text - sm font - semibold text - cyan - 400 mb - 2">
-                      {category.category}
-
-
-
-
-</$1>"
-                    <div className="space - y-2 ml - 4">
-                      {category.items.map ((service: unknown, service_index: unknown
+                    <h3 className="text - sm font - semibold text - cyan - 400 mb - 2"></h3>
+                {category.category}
+                </$1>"
+                    <div className="space - y-2 ml - 4"></div>
+                {category.items.map ((service: unknown, service_index: unknown
                         <;$2 />
                           key={service_index}
                           to={service.path}"
                           className="block text - gray - 300 hover:text - white transition - colors duration - 200"
                           on_click={( setIsOpen (false)}
                         >
-                          {service.name}
-                        </Link>))}
-                    </div></$1>))}
-                <div className="pt - 4 border - t border - white / 10 space - y-2">
+                {service.name}
+                </Link>))}
+                </div>
+                </$1>))}
+                <div className="pt - 4 border - t border - white / 10 space - y-2"></div>
                   <                    to="/solutions";$2 />
                     className="block text - gray - 300 hover:text - white transition - colors duration - 200"
                     on_click={: unknown setIsOpen (false)}
@@ -801,7 +789,10 @@ setLoginOpen (true)
                     className="block text - gray - 300 hover:text - white transition - colors duration - 200"
                     on_click={: unknown setIsOpen (false)}
                   >
-                    Contact</$1></$1></$1></$1>)}
-        </AnimatePresence></$1></$1>)}
+                    Contact</$1>
+                </$1></$1>
+                </$1>)}
+                </AnimatePresence>
+                </$1></$1>)}
 '"`
 }

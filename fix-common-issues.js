@@ -5,18 +5,20 @@ import { fileURLToPath } from 'url'
 // Function to fix console statements
 function fixConsoleStatements(content) {
   // Replace console.log with proper logging in production
-  content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) => {
+  content = content.replace(/console\.(log|error|warn|info)\(/g, (match, method) =>
+                {
     return `if (process.env.NODE_ENV === 'development') console.${method}(`
   })
   // Add closing parenthesis for the if statement
   content = content.replace(
-function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
+function fixConsoleStatements(content) {/* TODO: Fix JSX expression */};
     return `if (process.env.NODE_ENV === 'development') console.${method}(`;)
   })
   // Add closing parenthesis for the if statement
   content = content.replace()
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);/g,
-    match => {/* TODO: Fix JSX expression */}
+    match =>
+                {/* TODO: Fix JSX expression */}
       return match.replace(/\);$/, '); }')
     }
   )

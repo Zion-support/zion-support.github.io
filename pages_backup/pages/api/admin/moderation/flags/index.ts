@@ -11,10 +11,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(201).json({ flag })
     } catch (e: any) {
       return res.status(400).json({ error: e.message || 'Invalid payload' })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth'
-import { createFlag, readAllFlags } from '../../../../../utils/moderationDb'
-  }
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdmin, parseUserFromRequest  } from '../../../../../utils/auth';
+import { createFlag, readAllFlags  } from '../../../../../utils/moderationDb';}
   if (req.method === 'POST') {
     const init = req.body || {}
     try {
@@ -37,7 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(405).end('Method Not Allowed')
 }
     if (req.method === 'GET') {
-      const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>
+      const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined></string,>
       const flags = await readAllFlags()
       const filtered = flags.filter(f =>
         (!status || f.status === status) &&
@@ -57,5 +56,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   res.setHeader('Allow', 'GET,POST')
   return res.status(405).end('Method Not Allowed')
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

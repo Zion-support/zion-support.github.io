@@ -118,7 +118,8 @@ export interface EnhancedMicroSaasService {
     role: string
     content: string
     rating: number
-  }>
+  }></{
+>
   tags: string[]
   isFeatured?: boolean
   isNew?: boolean
@@ -701,21 +702,23 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     isNew: true
   }
 ]
-export const getServiceByCategory = (category: string) => {
+export const getServiceByCategory = (category: string) =>
+                {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => 
     service.category.toLowerCase() === category.toLowerCase()
   )
 }
-export const getFeaturedServices = () => {
+export const getFeaturedServices  = () => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isFeatured)
 }
-export const getNewServices = () => {
+export const getNewServices  = () => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isNew)
 }
-export const getPopularServices = () => {
+export const getPopularServices  = () => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.isPopular)
 }
-export const getServiceById = (id: string) => {
+export const getServiceById = (id: string) =>
+                {
   return ENHANCED_MICRO_SAAS_SERVICES.find(service => service.id === id)
 }
     marketPosition: "AI-powered HR automation",
@@ -800,7 +803,8 @@ export const MICRO_SAAS_PRICING_TIERS = [
   { name: "Professional", price: "$299-799", features: ["Advanced features", "Priority support", "Up to 25 users"] },
   { name: "Enterprise", price: "$799+", features: ["Custom features", "24/7 support", "Unlimited users"] }
 ]
-export const searchServices = (query: string) => {
+export const searchServices = (query: string) =>
+                {
   const searchTerm = query.toLowerCase()
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service =>
     service.name.toLowerCase().includes(searchTerm) ||

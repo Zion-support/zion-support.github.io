@@ -15,7 +15,7 @@ export interface ApplyToJobModalProps {
   job: Job
   isOpen: boolean
   onClose: () => void
-  onApplySuccess?: (jobId: string) => Promise<void>
+  onApplySuccess?: (jobId: string) => Promise<void></void>
 }
 export interface Job {
   id: string,
@@ -30,10 +30,9 @@ export interface ApplyToJobModalProps {
   job: Job,
   isOpen: boolean,
   onClose: () => void
-  onApplySuccess?: (jobId: string) => Promise<void>
+  onApplySuccess?: (jobId: string) => Promise<void></void>
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onClose: () => void
-  onApplySuccess?: (jobId: string) => Promise<void>
+  onApplySuccess?: (jobId: string) => Promise<void></void>
 }

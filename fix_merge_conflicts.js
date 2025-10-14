@@ -34,7 +34,8 @@ function resolveMergeConflicts(filePath) {
 
 let fixedCount = 0
 let errorCount = 0
-conflictFiles.forEach(filePath => {
+conflictFiles.forEach(filePath =></<<<<<<>
+                {
   if (fs.existsSync(filePath)) {
     if (resolveMergeConflicts(filePath)) {
       fixedCount++
@@ -46,4 +47,4 @@ conflictFiles.forEach(filePath => {
 console.log(`\nSummary:`)
 console.log(`- Files processed: ${conflictFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)
-console.log(`- Errors: ${errorCount}`)
+console.log(`- Errors: ${errorCount}`);

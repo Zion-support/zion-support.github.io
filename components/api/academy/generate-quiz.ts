@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import OpenAI from 'openai'
   const { moduleTitle, moduleContent } = req && req.body || {}
   const apiKey = process && process.env.OPENAI_API_KEY
-  const fallback = () => {
+  const fallback  = () => {
     return res && res.status(200).json({
       questions: [
         {
@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { moduleTitle, moduleContent } = req.body || {}
   const apiKey = process.env.OPENAI_API_KEY
-  const fallback = () => {
+  const fallback  = () => {
     return res.status(200).json({
       questions: [
         {
@@ -62,7 +62,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     })
     const text = completion.choices?.[0]?.message?.content ?? ''
     try {
-      const json = JSON.parse(text)
+      const json = JSON.parse(text);
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' }
         { role: 'user', content: prompt }]
       temperature: 0.2})

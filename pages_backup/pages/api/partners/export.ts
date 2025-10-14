@@ -12,7 +12,7 @@ export default async function handler(
       "placeholder-key"
   try {
     if (usingPlaceholder) {
-      const csv =
+      const csv =;
         "event;timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00:00:00Z"
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
@@ -25,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     if (usingPlaceholder) {
       const csv = 'event,timestamp\nvisit,2025-01-01T00:00:00Z\nsignup,2025-01-02T00:00:00Z'
-      res.setHeader('Content-Type', 'text/csv')
+      res.setHeader('Content-Type', 'text/csv');
       res.setHeader('Content-Disposition', `attachment; filename="${code}-referrals.csv"`)
       return res.status(200).send(csv)
     }

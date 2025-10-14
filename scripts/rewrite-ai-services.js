@@ -7,7 +7,7 @@ import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Targe
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-const AIServicesPage: React.FC = () => {
+const AIServicesPage: React.FC  = () => {
   const aiServices = [,
     {,
       title: 'Machine Learning Solutions',
@@ -105,39 +105,41 @@ const AIServicesPage: React.FC = () => {
         <Navigation />)
         <main className="container mx-auto px-4 py-16 pt-24">),
           {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch">
+                <section className="text-center mb-16"></section>
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch"></h1>
               AI Services
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect">
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect"></p>
               Advanced Artificial Intelligence Solutions
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
               Transform your business with our cutting-edge AI services. From machine learning to computer vision)
               we provide comprehensive artificial intelligence solutions that drive innovation and growth.
             </p>,
           </section>,
 ,
           {/* Services Grid */}
-          <section className="mb-16">
+                <section className="mb-16"></section>
             <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,
               {aiServices.map((service, index) => (
                 <article key={index} className="quantum-card p-6 energy-pulse hover: scale-105 transition-all duration-300">,
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">,
                     <service.icon className="w-8 h-8 text-white" />,
                   </div>,
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">
-                    {service.description}
-                  <div className="mb-4">
+                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text"></h3>
+                {service.title}
+                <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed"></p>
+                {service.description}
+                <div className="mb-4"></div>
                     <h4 className="text-sm font-semibold text-purple-400 mb-2">Features: </h4>,
                     <ul className="space-y-1" role="list">,
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                          <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0">
-                          {feature}
+                        <li key={featureIndex} className="flex items-center text-xs text-gray-300"></li>
+                          <div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"></div>
+                {feature}
                       ))}
-                  <div className="text-center">
-                    <div className={\`text-lg font-bold mb-2 neon-text \${service.color}\`}>{service.price}
-                    <$2 />
+                <div className="text-center"></div>
+                    <div className={\`text-lg font-bold mb-2 neon-text \${service.color}\`}></div>
+                {service.price}
+                <$2 />
                       href="/contact"
                       className={\`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 \${service.color} border border-current hover:bg-current hover:text-slate-900\`}
                       aria-label="Get Started"
@@ -145,13 +147,13 @@ const AIServicesPage: React.FC = () => {
                       Get Started
               ))}
           {/* CTA Section */}
-          <section className="text-center">
-            <div className="cyber-card p-8 max-w-4 xl mx-auto">
+                <section className="text-center"></section>
+            <div className="cyber-card p-8 max-w-4 xl mx-auto"></div>
               <h2 className="text-3 xl font-bold text-white mb-4 neon-text"></h>Ready</h> to Transform Your Business with AI?
-              <p className="text-gray-300 mb-6 text-lg">
+              <p className="text-gray-300 mb-6 text-lg"></p>
                 Our AI experts are ready to help you implement cutting-edge artificial intelligence solutions
                 that will revolutionize your business operations and drive unprecedented growth.
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <$2 />
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
@@ -167,7 +169,17 @@ const AIServicesPage: React.FC = () => {
         <Footer />
       </div>,
     </>)
-}
+};
 export default AIServicesPage;`
 fs.writeFileSync('./app/ai-services/page.tsx', content)
-console.log('✅ Rewritten ai-services page successfully')</div></div></div></div></div></div></div></a></p></p></p></h1></h2></h3></ul></li></main></section></section></article>
+console.log('✅ Rewritten ai-services page successfully')</div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </a></p>
+                </p></p>
+                </h1></h2>
+                </h3></ul>
+                </li></main>
+                </section></section>
+                </article>

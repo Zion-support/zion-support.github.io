@@ -9,13 +9,16 @@ function fixCommentBlocks(content) {
   // Fix malformed console.log comments
   content = content.replace(
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
-    (match, method, body) => {
-      const fixedBody = body.split('\n').map(line => {)
+    (match, method, body) =>
+                {
+      const fixedBody = body.split('\n').map(line =>
+                {)
         if (line.trim() && !line.trim().startsWith('//')) {
           return '// ' + line.trim()
 function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
-    (match, method, body) => {/* TODO: Fix JSX expression */}
+    (match, method, body) =>
+                {/* TODO: Fix JSX expression */}
         }
         return line
       }).join('\n')
@@ -25,13 +28,16 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
   // Fix malformed comment blocks that are missing proper commenting
   content = content.replace(
     /\/\/ [^:]*:\s*\{([^}]+)\}/gs,
-    (match, body) => {
-      const fixedBody = body.split('\n').map(line => {)
+    (match, body) =>
+                {
+      const fixedBody = body.split('\n').map(line =>
+                {)
         if (line.trim() && !line.trim().startsWith('//')) {
           return '// ' + line.trim()
   content = content.replace()
     /\/\/ [^:]*:\s*\{([^}]+)\}/gs,
-    (match, body) => {/* TODO: Fix JSX expression */}
+    (match, body) =>
+                {/* TODO: Fix JSX expression */}
         }
         return line
       }).join('\n')
@@ -41,16 +47,19 @@ function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
   // Fix specific patterns we've seen
   content = content.replace(
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
-    (match, method, body) => {
+    (match, method, body) =>
+                {
       const lines = body.split('\n')
-      const fixedLines = lines.map(line => {)
+      const fixedLines = lines.map(line =>
+                {)
         if (line.trim() && !line.trim().startsWith('//')) {
           return '// ' + line.trim()
   content = content.replace()
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
-    (match, method, body) => {/* TODO: Fix JSX expression */}
+    (match, method, body) =>
+                {/* TODO: Fix JSX expression */}
         }
-        return line
+        return line;
       });`
       return `// console.${method}(...): {\n${fixedLines.join('\n')}\n// }`
     }

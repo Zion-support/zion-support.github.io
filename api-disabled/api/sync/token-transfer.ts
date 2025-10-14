@@ -52,13 +52,15 @@ export default async function handler(re,
   if (sig) headers['x-zion-signature'] = sig
   await Promise.all(state.config.peers;)
       .filter(p => !p.paused)
-      .map(async peer => {)
+      .map(async peer =>
+                {)
         //         const url = new URL('/api/sync/publish', peer.baseUrl).toString()
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {
           // ignore
-      .map(async peer => {/* TODO: Fix JSX expression */})
+      .map(async peer =>
+                {/* TODO: Fix JSX expression */})
   t: 5000 })
         } catch {/* TODO: Fix JSX expression */}
         }

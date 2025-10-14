@@ -341,7 +341,8 @@ export async function validateAsync()
   e: string) => Promise,
           <ValidationResult>,
 
-  value: string): Promise<ValidationResult> {
+  value: string): Promise<ValidationResult></ValidationResult>
+                {
     // TODO: Add content
   }
 

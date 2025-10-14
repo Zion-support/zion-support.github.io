@@ -31,23 +31,23 @@ export interface CompetitorAnalysis {
   opportunities: string[]
   threats: string[]
   pricing_strategy: string,
-  feature_comparison: Record < string, boolean>
-  socialMediaPresence: Record < string, number>
+  feature_comparison: Record < string, boolean></>
+  socialMediaPresence: Record < string, number></>
   last_updated: Date
 }
   id: string
   name: string
   size: number
   growth_rate: number,
-  demographics: Record < string, any>
-  psychographics: Record < string, any>
-  buying_behavior: Record < string, any>
+  demographics: Record < string, any></>
+  psychographics: Record < string, any></>
+  buying_behavior: Record < string, any></>
   pain_points: string[],
   solutions: string[]
 }
   pricingStrategy: string
-  featureComparison: Record<string, boolean>
-  socialMediaPresence: Record<string, number>
+  featureComparison: Record<string, boolean></string,>
+  socialMediaPresence: Record<string, number></string,>
   lastUpdated: Date
 }
 export interface MarketSegment {
@@ -55,9 +55,9 @@ export interface MarketSegment {
   name: string
   size: number
   growthRate: number
-  demographics: Record<string, any>
-  psychographics: Record<string, any>
-  buyingBehavior: Record<string, any>
+  demographics: Record<string, any></string,>
+  psychographics: Record<string, any></string,>
+  buyingBehavior: Record<string, any></string,>
   painPoints: string[]
   solutions: string[]
 }
@@ -111,7 +111,8 @@ export class AIMarketResearchService {
 export class AIMarketResearchService {
   private apiKey: string
   }
-  async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
+  async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]></MarketTrend[]>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {
         method: 'POST',
@@ -129,7 +130,8 @@ export class AIMarketResearchService {
       throw error
     }
   }
-  async analyzeCompetitors(request: MarketResearchRequest): Promise<CompetitorAnalysis[]> {
+  async analyzeCompetitors(request: MarketResearchRequest): Promise<CompetitorAnalysis[]></CompetitorAnalysis[]>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/competitors`, {
         method: 'POST',
@@ -147,7 +149,8 @@ export class AIMarketResearchService {
       throw error
     }
   }
-  async segmentMarket(request: MarketResearchRequest): Promise<MarketSegment[]> {
+  async segmentMarket(request: MarketResearchRequest): Promise<MarketSegment[]></MarketSegment[]>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/segments`, {
         method: 'POST',
@@ -165,7 +168,8 @@ export class AIMarketResearchService {
       throw error
     }
   }
-  async generateComprehensiveReport(request: MarketResearchRequest): Promise<MarketReport> {
+  async generateComprehensiveReport(request: MarketResearchRequest): Promise<MarketReport></MarketReport>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/comprehensive`, {
         method: 'POST',
@@ -183,7 +187,8 @@ export class AIMarketResearchService {
       throw error
     }
   }
-  async getRealTimeInsights(keyword: string): Promise<MarketTrend[]> {
+  async getRealTimeInsights(keyword: string): Promise<MarketTrend[]></MarketTrend[]>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {
         headers: {
@@ -198,7 +203,8 @@ export class AIMarketResearchService {
       throw error
     }
   }
-  async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
+  async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string></string>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/export/${reportId}`, {
         method: 'POST',
@@ -216,7 +222,8 @@ export class AIMarketResearchService {
       throw error
     }
   }
-  async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {
+  async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string></string>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/schedule`, {
         method: 'POST',
@@ -316,7 +323,8 @@ export class AIMarketResearchService {
     this.api_key = api_key,
     this.base_url = base_url
   }
-  async analyzeMarketTrends (request: MarketResearchRequest): Promise < MarketTrend[]> {
+  async analyzeMarketTrends (request: MarketResearchRequest): Promise < MarketTrend[]></>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / trends`, {
         method: 'POST',
@@ -337,7 +345,8 @@ if ( {) {
       throw error
     }
   }
-  async analyze_competitors (request: MarketResearchRequest): Promise < CompetitorAnalysis[]> {
+  async analyze_competitors (request: MarketResearchRequest): Promise < CompetitorAnalysis[]></>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / competitors`, {
         method: 'POST',
@@ -358,7 +367,8 @@ if ( {) {
       throw error
     }
   }
-  async segment_market (request: MarketResearchRequest): Promise < MarketSegment[]> {
+  async segment_market (request: MarketResearchRequest): Promise < MarketSegment[]></>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / segments`, {
         method: 'POST',
@@ -379,7 +389,8 @@ if ( {) {
       throw error
     }
   }
-  async generateComprehensiveReport (request: MarketResearchRequest): Promise < MarketReport> {
+  async generateComprehensiveReport (request: MarketResearchRequest): Promise < MarketReport></>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / comprehensive`, {
         method: 'POST',
@@ -400,7 +411,8 @@ if ( {) {
       throw error
     }
   }
-  async getRealTimeInsights (keyword: string): Promise < MarketTrend[]> {
+  async getRealTimeInsights (keyword: string): Promise < MarketTrend[]></>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / realtime?keyword=${encodeURIComponent (keyword)}`, {
         headers: {
@@ -418,7 +430,8 @@ if ( {) {
       throw error
     }
   }
-  async export_report (report_id: string, format: 'pdf' | 'csv' | 'excel'): Promise < string> {
+  async export_report (report_id: string, format: 'pdf' | 'csv' | 'excel'): Promise < string></>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / export/${report_id}`, {
         method: 'POST',
@@ -439,7 +452,8 @@ if ( {) {
       throw error
     }
   }
-  async schedule_report (request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise < string> {
+  async schedule_report (request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise < string></>
+                {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / schedule`, {
         method: 'POST',
@@ -472,7 +486,8 @@ export class AIMarketResearchService {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
   }
-  async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
+  async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]></MarketTrend[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/trends`, {
         method: 'POST',
@@ -492,7 +507,8 @@ export class AIMarketResearchService {
       throw error
     }
   }
-  async analyzeCompetitors(request: MarketResearchRequest): Promise<CompetitorAnalysis[]> {
+  async analyzeCompetitors(request: MarketResearchRequest): Promise<CompetitorAnalysis[]></CompetitorAnalysis[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/competitors`, {
         method: 'POST',
@@ -512,7 +528,8 @@ export class AIMarketResearchService {
       throw error
     }
   }
-  async segmentMarket(request: MarketResearchRequest): Promise<MarketSegment[]> {
+  async segmentMarket(request: MarketResearchRequest): Promise<MarketSegment[]></MarketSegment[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/segments`, {
         method: 'POST',
@@ -532,7 +549,8 @@ export class AIMarketResearchService {
       throw error
     }
   }
-  async generateComprehensiveReport(request: MarketResearchRequest): Promise<MarketReport> {
+  async generateComprehensiveReport(request: MarketResearchRequest): Promise<MarketReport></MarketReport>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/comprehensive`, {
         method: 'POST',
@@ -552,7 +570,8 @@ export class AIMarketResearchService {
       throw error
     }
   }
-  async getRealTimeInsights(keyword: string): Promise<MarketTrend[]> {
+  async getRealTimeInsights(keyword: string): Promise<MarketTrend[]></MarketTrend[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {
         headers: {
@@ -569,7 +588,8 @@ export class AIMarketResearchService {
       throw error
     }
   }
-  async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
+  async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string></string>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/export/${reportId}`, {
         method: 'POST',
@@ -589,7 +609,8 @@ export class AIMarketResearchService {
       throw error
     }
   }
-  async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {
+  async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string></string>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/market-research/schedule`, {
         method: 'POST',

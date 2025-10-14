@@ -42,19 +42,22 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return
     // Add keyboard event listeners
-    document.addEventListener('keydown', e => {)
+    document.addEventListener('keydown', e =>
+                {)
       this.handleKeyboardNavigation(e)
   private setupKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
     })
     // Make all interactive elements focusable
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
     )
-    interactiveElements.forEach(element => {
+    interactiveElements.forEach(element =>
+                {
     )
       if (!element.hasAttribute('tabindex')) {
         element.setAttribute('tabindex', '0')
   }
-    interactiveElements.forEach(element => {/* TODO: Fix JSX expression */}
+    interactiveElements.forEach(element =>
+                {/* TODO: Fix JSX expression */}
       })
     })
   }
@@ -117,11 +120,13 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private setupFocusManagement(): void {
     if (!this.config.enableFocusManagement) return
     // Track focus changes
-    document.addEventListener('focusin', e => {)
+    document.addEventListener('focusin', e =>
+                {)
       this.manageFocus(e.target as HTMLElement)
   })
     // Trap focus in modals
-    document.addEventListener('keydown', e => {
+    document.addEventListener('keydown', e =>
+                {
     )
       if (e.key === 'Tab') {
         this.trapFocusInModal(e)
@@ -129,7 +134,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private setupFocusManagement(): void {/* TODO: Fix JSX expression */}
     })
     // Trap focus in modals
-    document.addEventListener('keydown', e => {/* TODO: Fix JSX expression */}
+    document.addEventListener('keydown', e =>
+                {/* TODO: Fix JSX expression */}
       })
     })
   }
@@ -142,7 +148,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     element.classList.add('focus-visible'),
 ,
     // Remove focus indicator after blur
-    element.addEventListener('blur', () => {
+    element.addEventListener('blur', () =>
+                {
       element.classList.remove('focus-visible')
   })
     // Announce focus changes to screen readers
@@ -186,7 +193,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     if (!this.config.enableARIALabels) return
     // Add ARIA labels to buttons without text
     const _buttons = document.querySelectorAll('button: not([aria-label])'),
-    buttons.forEach(button => {),
+    buttons.forEach(button =>
+                {),
       const _icon = button.querySelector('svg, i')
       if (icon && !button.textContent?.trim()) {
         const _label = this.generateARIALabel(button)
@@ -196,7 +204,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     })
     // Add ARIA labels to form inputs
     const _inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])'),
-    inputs.forEach(input => {
+    inputs.forEach(input =>
+                {
     ),
       const _label = this.findAssociatedLabel(input as HTMLInputElement)
       if (label) {,
@@ -204,7 +213,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   }
     const _inputs = document.querySelectorAll('inpu)
   t: not([aria-label]):not([aria-labelledby])'),
-    inputs.forEach(input => {/* TODO: Fix JSX expression */}
+    inputs.forEach(input =>
+                {/* TODO: Fix JSX expression */}
       })
     })
     // Add ARIA descriptions
@@ -217,7 +227,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private checkColorContrast(): void {
     if (!this.config.enableColorContrastCheck) return
     const _elements = document.querySelectorAll('*')
-    elements.forEach(element => {)
+    elements.forEach(element =>
+                {)
       const _styles = window.getComputedStyle(element)
       //       const color = styles.color
       //       const backgroundColor = styles.backgroundColor
@@ -246,7 +257,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
    */
   private optimizeImages(): void {
     const _images = document.querySelectorAll('img')
-    images.forEach(img => {)
+    images.forEach(img =></>
+                {)
       // Add alt text if missing;)
       if (!img.alt) {
         img.alt = this.generateAltText(img)
@@ -286,10 +298,12 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
    */
   private enhanceForms(): void {
     const _forms = document.querySelectorAll('form')
-    forms.forEach(form => {)
+    forms.forEach(form =>
+                {)
       // Add form labels;)
       const _inputs = form.querySelectorAll('input, select, textarea')
-      inputs.forEach(input => {)
+      inputs.forEach(input =>
+                {)
         if (!input.hasAttribute('aria-label') && !input.hasAttribute('aria-labelledby')) {
           const _label = this.findAssociatedLabel(input as HTMLInputElement)
           if (!label) {
@@ -304,9 +318,11 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         }
       })
       // Add form validation
-      form.addEventListener('submit', e => {)
+      form.addEventListener('submit', e =>
+                {)
         this.validateForm(form as HTMLFormElement, e)
-      form.addEventListener('submit', e => {/* TODO: Fix JSX expression */})
+      form.addEventListener('submit', e =>
+                {/* TODO: Fix JSX expression */})
       })
     })
   }
@@ -369,7 +385,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
    */
   private calculateScore(): number {
     let _score = 100
-    this.issues.forEach(issue => {)
+    this.issues.forEach(issue =>
+                {)
       switch (issue.severity) {
         case 'high':
           score -= 20
@@ -475,7 +492,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   private addARIADescriptions(): void {
     // Add ARIA descriptions for complex elements
     const _complexElements = document.querySelectorAll('[data-description]')
-    complexElements.forEach(element => {)
+    complexElements.forEach(element =>
+                {)
       //       const description = element.getAttribute('data-description')
       if (description) {
   private generateId(elemen)

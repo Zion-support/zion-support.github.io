@@ -1,6 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
-import { ServiceVariant } from '../types/service-variants'
-export interface AdvancedAIAutomationService {
+import { ServiceVariant , ServiceVariant  } from '../types/service-variants';export interface AdvancedAIAutomationService {
   id: string
   name: string
   tagline: string
@@ -695,7 +693,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     icon: '💰',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-sales-intelligence',
+    link: 'https://ziontechgroup.com/ai-autonomous-sales-intelligence',;
     marketPosition: 'First autonomous sales intelligence platform; competes with SalesLoft, Outreach, and HubSpot Sales.',
     targetAudience: ['Sales teams', 'B2B companies', 'enterprise software', 'consulting firms'],
     trialDays: 14,

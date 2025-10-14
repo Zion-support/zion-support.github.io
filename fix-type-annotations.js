@@ -10,7 +10,8 @@ function fixTypeAnnotations(content) {
   content = content.replace(
 function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
     /\{\/\*\/\s*([^}]+)\s*\/\*\/\}/g,
-    (match, body) => {/* TODO: Fix JSX expression */}
+    (match, body) =>
+                {/* TODO: Fix JSX expression */}
       return `{ ${body.trim()} }`
     }
   )
@@ -34,7 +35,7 @@ function fixTypeAnnotations(content) {/* TODO: Fix JSX expression */}
   e: number }')
   )
   // Fix variable name issues
-  content = content.replace()
+  content = content.replace();
     /const _memory = \([^)]+\)\.memory;\s*memoryUsage = memory\?/g,
     'const _memory = (performance as {/* TODO: Fix JSX expression */})
   e: number } }).memory;\n          memoryUsage = _memory?.'

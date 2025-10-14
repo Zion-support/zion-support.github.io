@@ -49,7 +49,8 @@ let errorLogs: ErrorData[] = []
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-): Promise<void> {
+): Promise<void></void>
+                {
   if (req.method === 'POST') {
     try {
       const performanceReport = req['body'],
@@ -247,3 +248,4 @@ function calculateAverages(metrics: PerformanceData[]) {
   },
   }
 }
+;

@@ -13,13 +13,14 @@ function cleanUnusedImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
-    // Fix lucide-react imports
+    // Fix lucide-react imports;
     const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/)
     if (lucideImportMatch) {
       const imports = lucideImportMatch[1].split(',').map(imp => imp.trim())
       const usedImports = []
       // Check which imports are actually used in the file
-      imports.forEach(imp => {)
+      imports.forEach(imp =>
+                {)
         const cleanImp = imp.replace(/\s*as\s+\w+/, '').trim()
         if (content.includes(`<${cleanImp}`) || content.includes(`${cleanImp}.`) || content.includes(`${cleanImp}(`)) {
           usedImports.push(imp)
@@ -38,7 +39,8 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
         modified = true
     // Remove unused component imports
     const componentImports = ['Navigation', 'Footer', 'SEOOptimizer']
-    componentImports.forEach(comp => {)
+    componentImports.forEach(comp =></${cleanImp}`)>
+                {)
       const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g')
       if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {
         content = content.replace(importRegex, '')
@@ -63,16 +65,19 @@ function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message)
 // Process all page files
-pageFiles.forEach(file => {)
+pageFiles.forEach(file =></${comp}`)>
+                {)
   cleanUnusedImports(file)
-    componentImports.forEach(comp => {/* TODO: Fix JSX expression */}")`
+    componentImports.forEach(comp =>
+                {/* TODO: Fix JSX expression */}")`
       const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');`
       if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {/* TODO: Fix JSX expression */}`
   d: ${path.relative(__dirname, filePath)}`)
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message)
 // Process all page files
-pageFiles.forEach(file => {/* TODO: Fix JSX expression */})`
+pageFiles.forEach(file =></${comp}`)>
+                {/* TODO: Fix JSX expression */})`
 console.log(`Processed ${pageFiles.length} page files`)
       const trimmedLine = line.trim()
       // Check if this is an import line
@@ -81,7 +86,8 @@ console.log(`Processed ${pageFiles.length} page files`)
         const importMatch = trimmedLine.match(/import\s*{([^}]+)}\s*from/)
         if (importMatch) {
           const imports = importMatch[1].split(',').map(imp => imp.trim())
-          const usedImports = imports.filter(imp => {)
+          const usedImports = imports.filter(imp =>
+                {)
             const name = imp.split(' as ')[0].trim()
             // Check if the name is used in the content (excluding the import line itself)
             const contentWithoutImport = content.replace(line, '')
@@ -127,7 +133,8 @@ console.log(`Processed ${pageFiles.length} page files`)
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let results = []
   const list = fs.readdirSync(dir)
-  list.forEach(file => {)
+  list.forEach(file =></>
+                {)
     )
     if (stat && stat.isDirectory()) {
       // Skip node_modules and other common directories
@@ -141,9 +148,10 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 console.log('Fixing all unused imports in src directory...')
 const files = getAllFiles('./src', ['.ts', '.tsx', '.js', '.jsx'])
 let fixedCount = 0
-files.forEach(file => {)
+files.forEach(file =>
+                {)
   if (removeUnusedImportsFromFile(file)) {
     fixedCount++
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}`
 console.log(`Fixed ${fixedCount} files`)
-"`
+"`;

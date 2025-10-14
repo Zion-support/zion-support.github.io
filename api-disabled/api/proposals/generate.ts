@@ -14,4 +14,4 @@ try {const { target_institution, type, regional_scope, budgetOrResolution, suppo
   e: 0.3}); const contentMarkdown = completion.choices?.[0]?.message?.content || '# Proposal Draft\n\nTBD' const meta = createProposal({title, targetInstitution, type, regionalScope, budgetOrResolution, supportingMultiverses, contentMarkdown) language} }); return res.status(200).json({meta} markdow)
   n: contentMarkdown }) } catch (erro)
   r: unknown) {/* TODO: Fix JSX expression */}
-  r: error?.message || 'Failed to generate proposal' }) } } ' import type {NextApiRequest} NextApiResponse } from 'next' } } '"`
+  r: error?.message || 'Failed to generate proposal' }) } } ' import type {NextApiRequest} NextApiResponse } from 'next' } } '"`;

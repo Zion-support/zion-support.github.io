@@ -7,7 +7,8 @@
       emptyString: '',
       emptyArray: []}
       emptyObject: {},
-      specialCharacters: '!@#$%^&*()_+-=[]{}|;:,.<>{}?',
+      specialCharacters: '!@#$%^&*()_+-=[]{}|;:,.<>
+                {}?',
       unicodeCharacters: '🚀🌟💻🎯🔥',
       veryLongString: 'a'.repeat(1000),
       numbers: [0, -1, 3.14159, Infinity, -Infinity, NaN],

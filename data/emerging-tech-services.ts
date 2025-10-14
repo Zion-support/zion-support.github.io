@@ -193,7 +193,7 @@ export interface EmergingTechService {
     launch_date: '2024 - 09 - 01'
     customers: 35
     rating: 4 && 4.8
-    reviews: 28,
+    reviews: 28,;
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
   id: string, name: string,

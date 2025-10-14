@@ -28,25 +28,32 @@ function fixTsxFile(filePath) {
     let modified = false
     // Fix 1: Fix malformed JSX with missing opening tags
     const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g,
-    content = content.replace(malformedJsxPattern, (match, tagName, attributes, text) => {
+    content = content.replace(malformedJsxPattern, (match, tagName, attributes, text) =></]+)/g,
+>
+                {
       if (text.trim()) {
         modified = true
-        return `<${tagName}${attributes}>${text}</${tagName}>`
+        return `<${tagName}${attributes}>${text}
+                </${tagName}>`
       }
       return match
     })
     // Fix 2: Fix self-closing tags that should have content
     const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g,
-    content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
+    content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) =></]+)/g,
+>
+                {
       if (text.trim() && !text.includes('<')) {
         modified = true
-        return `<${tagName}${attributes}>${text}</${tagName}>`
+        return `<${tagName}${attributes}>${text}
+                </${tagName}>`
       }
       return match
     })
     // Fix 3: Fix missing closing braces in object literals
     const missingBracePattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g
-    content = content.replace(missingBracePattern, (match, key1, value1, key2) => {
+    content = content.replace(missingBracePattern, (match, key1, value1, key2) =>
+                {
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {
         modified = true
         return `${key1}: ${value1.trim()},\n    ${key2}:`
@@ -55,14 +62,16 @@ function fixTsxFile(filePath) {
     })
     // Fix 4: Fix malformed SVG URLs
     const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g
-    content = content.replace(svgUrlPattern, (match, svgContent) => {
+    content = content.replace(svgUrlPattern, (match, svgContent) =>
+                {
       const encodedSvg = encodeURIComponent(svgContent)
       modified = true
       return `bg-[url('data:image/svg+xml,${encodedSvg}')]`
     })
     // Fix 5: Fix missing closing parentheses in function calls
     const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g,
-    content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
+    content = content.replace(missingParenPattern, (match, funcCall, nextToken) =>
+                {
       if (!funcCall.includes(')') && !nextToken.startsWith(')')) {
         modified = true
         return `${funcCall})\n    ${nextToken}`
@@ -71,16 +80,20 @@ function fixTsxFile(filePath) {
     })
     // Fix 6: Fix JSX elements with missing content between tags
     const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g,
-    content = content.replace(emptyJsxPattern, (match, tagName, attributes, content) => {
+    content = content.replace(emptyJsxPattern, (match, tagName, attributes, content) =></\n]+)/g,
+>
+                {
       if (content.trim()) {
         modified = true
-        return `<${tagName}${attributes}>${content}</${tagName}>`
+        return `<${tagName}${attributes}>${content}
+                </${tagName}>`
       }
       return match
     })
     // Fix 7: Fix malformed className attributes with quotes
     const malformedClassPattern = /className="([^"]*"[^"]*)"([^>]*)>/g,
-    content = content.replace(malformedClassPattern, (match, className, rest) => {
+    content = content.replace(malformedClassPattern, (match, className, rest) =>
+                {;
       const fixedClassName = className.replace(/"/g, '&quot;')
       modified = true
       return `className="${fixedClassName}"${rest}>`
@@ -133,7 +146,8 @@ console.log('Starting comprehensive TypeScript fixes...')
 const appDir = path.join(__dirname, 'app')
 const tsxFiles = getAllTsxFiles(appDir)
 let fixedCount = 0
-tsxFiles.forEach(filePath => {
+tsxFiles.forEach(filePath =>
+                {
     if (fixTsxFile(filePath)) {
     fixedCount++
   }

@@ -147,8 +147,8 @@ titl,
   const categories = [...new Set(iotServices.map(service => service.category))]
   return (<div>Coming Soon</div>)
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}"
+          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+                {/* Hero Section */}"
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20"></section>"
           <div className="absolute inset-0 bg-black opacity-20"></div>"
           < className="relative max-w-7xl mx-auto px-4,$2 />
@@ -173,8 +173,8 @@ titl,
   hover: text-cyan-600 transition-colors"></button>
 Schedule Demo,
               </div>
-        </section>
-        {/* Key Benefits */}"
+                </section>
+                {/* Key Benefits */}"
         <section className="py-16 bg-white"></section>"
           < className="max-w-7xl mx-auto px-4,$2 />
   sm:px-6,"
@@ -184,7 +184,7 @@ Schedule Demo,
   md:text-4xl font-bold text-gray-900 mb-4">
 // Why Choose Our IoT & Edge Services?
           </h2>"
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-600">;
 Expert IoT engineers delivering scalable, secure, and intelligent connected solutions;"
             < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
@@ -207,8 +207,8 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                 <p className="text-gray-600">Successfully deployed 500+ IoT projects across industries
         {/* Services by Category */}
         {categories.map(category => ()}"
-          <section key={category} className="py-16 bg-gray-50">
-                  {category} Solutions
+          <section key={category} className="py-16 bg-gray-50"></section>
+                {category} Solutions
                   Specialized {category.toLowerCase()} services for connected and intelligent systems;"
               < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
@@ -221,39 +221,48 @@ Expert IoT engineers delivering scalable, secure, and intelligent connected solu
                     "
           < key={index} className="bg-white rounded-lg shadow-lg p-6,"$2 />
   hover:shadow-xl transition-shadow"></div>"
-                      <div className="text-4xl mb-4">{service.icon}</div>"
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>"
-                      <p className="text-gray-600 mb-4">{service.description}</p>"
+                      <div className="text-4xl mb-4"></div>
+                {service.icon}
+                </div>"
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3"></h3>
+                {service.title}
+                </h3>"
+                      <p className="text-gray-600 mb-4"></p>
+                {service.description}
+                </p>"
                       <div className="mb-4"></div>"
                         <div className="flex items-center justify-between mb-2"></div>"
-                          <span className="text-2xl font-bold text-cyan-600">{service.price}</span>"
+                          <span className="text-2xl font-bold text-cyan-600"></span>
+                {service.price}
+                </span>"
                           <span className="text-sm text-gray-500">Marke,
-  t: {service.marketPrice}</span>"
-                        <div className="text-sm text-green-600 font-semibold">
+  t: {service.marketPrice}
+                </span>"
+                        <div className="text-sm text-green-600 font-semibold"></div>
 Save up to 40% vs market rates;"
                         <h4 className="font-semibold text-gray-900 mb-2">Key,
   Features:</h4>"
-                        <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => ()}"
+                        <ul className="space-y-1"></ul>
+                {service.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
+                {feature}
                           ))}
-                        </ul>"
+                </ul>"
                         <h4 className="font-semibold text-gray-900 mb-2">Technologie,
   s:</h4>"
-                        <div className="flex flex-wrap gap-2">
-                          {service.technologies.map((tech, techIndex) => ()}"
-          <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded">
-                              {tech}
-                            </span>"
+                        <div className="flex flex-wrap gap-2"></div>
+                {service.technologies.map((tech, techIndex) => ()}"
+          <span key={techIndex} className="bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded"></span>
+                {tech}
+                </span>"
                       <div className="mb-6"></div>"
                         <h4 className="font-semibold text-gray-900 mb-2">Business,
   Benefits:
                           {service.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="flex items-center text-sm text-gray-600"></li>"
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                              {benefit}"
+                {benefit}"
 < className="w-full bg-cyan-600 text-white py-2 px-4 rounded-lg font-semibold,"$2 />
   hover: bg-cyan-700 transition-colors"></button>
                         Get IoT Consultation,
@@ -301,9 +310,9 @@ Ready to Connect Your World?"
           </a>
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
                 ✉️ kleber@ziontechgroup.com,
-            <div className="mt-8 text-sm text-cyan-200">
+            <div className="mt-8 text-sm text-cyan-200"></div>
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   )
 }
 export default IotEdgePage</div>
-</p></h4>
+                </p></h4>

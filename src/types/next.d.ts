@@ -41,7 +41,7 @@ export interface Metadata {/* TODO: Fix JSX expression */}
       width?: number
       height?: number
       alt?: string,
-    }>
+    }></{/*>
     locale?: string
     type?: string
     authors?: Array

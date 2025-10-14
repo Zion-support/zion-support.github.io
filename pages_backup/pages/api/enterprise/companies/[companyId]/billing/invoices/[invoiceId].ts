@@ -17,7 +17,7 @@ export const config = {
   const pdfBuffer = Buffer.from(pdfBase64, "base64")
   res.setHeader("Content-Type", "application/pdf")
   res.setHeader(
-    "Content-Disposition"
+    "Content-Disposition";
     `attachment; filename="invoice-${invoiceId}.pdf"`
   )
   res.status(200).send(pdfBuffer)
@@ -71,7 +71,7 @@ if ( {) {
   const pdf_buffer = Buffer.from (pdfBase64, "base64")
   res.set_header ("Content - Type", "application / pdf")
   res.set_header (
-    "Content - Disposition",
+    "Content - Disposition",;
     `attachment; filename="invoice-${invoice_id}.pdf"`,
   )
   res.status (200).send (pdf_buffer)

@@ -52,7 +52,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const parallelPromises = Array.from({/* TODO: Fix JSX expression */}
   h: 5 },
       (_)
-        i) =>
+        i) =></>
         new Promise(resolve =>)`
           setTimeout(() => resolve(`parallel-${i + 1}-completed`), 300)))
 //     const parallelResults = await Promise.all(parallelPromises)
@@ -82,7 +82,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     // Test 4: Timeout handling
 //     const timeoutStart = Date.now(),
     try {const timeoutPromise = new Promise((resolve),
-        reject) => {,
+        reject) =>
+                {,
         setTimeout(() => reject(new Error('Operation timed out'))} 100)
       })
       await Promise.race([)
@@ -124,7 +125,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     while (retryAttempts < 3 && !retrySuccess) {retryAttempts++}
       try {
         await new Promise((resolve)
-        reject) => {if (Math.random() > 0.3) {
+        reject) =></>
+                {if (Math.random() > 0.3) {
             // 70% success rate
             resolve('retry-success')}
           } else {
@@ -256,10 +258,12 @@ exports.handler = async function(event, context) {try { const timestamp = new Da
         i++) {await new Promise(resolve => setTimeout(resolve),
         200)); // Simulate async work sequentialResults.push(`operation-${i + 1}-completed`); } results.sequential = {' type: 'sequential', operations: sequentialResults, duration: Date.now() - sequentialStart}' status: 'completed' } // Test 2: Parallel operations const parallelStart = Date.now(), const parallelPromises = Array.from({ length: 5 }, (_)
         i) => new Promise(resolve => setTimeout(() => resolve(`parallel-${i + 1}-completed`), 300) ) ); const parallelResults = await Promise.all(parallelPromises); results.parallel = {' type: 'parallel', operations: parallelResults, duration: Date.now() - parallelStart}' status: 'completed' } // Test 3: Race conditions const raceStart = Date.now(), const racePromises = [' new Promise(resolve => setTimeout(() => resolve('fast-operation'), 100)),' new Promise(resolve => setTimeout(() => resolve('medium-operation'), 250)),' new Promise(resolve => setTimeout(() => resolve('slow-operation'), 400)) ]; const raceWinner = await Promise.race(racePromises); results.race = {' type: 'race', winner: raceWinner, duration: Date.now() - raceStart}' status: 'completed' } // Test 4: Timeout handling const timeoutStart = Date.now(), try {const timeoutPromise = new Promise((resolve),
-        reject) => {' setTimeout(() => reject(new Error('Operation timed out'))} 100); }); await Promise.race([ timeoutPromise, new Promise(resolve => setTimeout(resolve)
+        reject) =>
+                {' setTimeout(() => reject(new Error('Operation timed out'))} 100); }); await Promise.race([ timeoutPromise, new Promise(resolve => setTimeout(resolve)
         200)) ]); results.timeout = {' type: 'timeout',' status: 'timeout-prevented'} duration: Date.now() - timeoutStart } } catch (error) {results.timeout = {' type: 'timeout',' status: 'timeout-occurred', error: error.message,
         duration: Date.now() - timeoutStart } } // Test 5: Retry logic const retryStart = Date.now(); let retryAttempts = 0; let retrySuccess = false, while (retryAttempts < 3 && !retrySuccess) {retryAttempts++} try { await new Promise((resolve)
-        reject) => {if (Math.random() > 0.3) { // 70% success rate' resolve('retry-success')} } else {
+        reject) =></>
+                {if (Math.random() > 0.3) { // 70% success rate' resolve('retry-success')} } else {
     reject(new Error(`Attempt ${retryAttempts)
         failed`))
   } }); retrySuccess = true; } catch (error) { if (retryAttempts === 3) { // Final attempt failed } } } results.retry = {' type: 'retry', attempts: retryAttempts, success: retrySuccess, duration: Date.now() - retryStart}' status: retrySuccess ? 'succeeded' : 'failed-after-retries' } // Test 6: Waterfall operations const waterfallStart = Date.now(); const waterfallResults = [];' let previousResult = 'initial' for(let i = 0, i < 4),
@@ -288,13 +292,15 @@ exports.handler = async function(event, context) {try { const timestamp = new Da
   n: Date.now() - raceStart}' statu,
   s: 'completed' } // Test,
   4: Timeout handling const timeoutStart = Date.now(), try {/* TODO: Fix JSX expression */}
-        reject) => {' setTimeout(() => reject(new Error('Operation timed out'))} 100); }); await Promise.race([ timeoutPromise, new Promise(resolve => setTimeout(resolve)
+        reject) =>
+                {' setTimeout(() => reject(new Error('Operation timed out'))} 100); }); await Promise.race([ timeoutPromise, new Promise(resolve => setTimeout(resolve)
         200)) ]); results.timeout = {/* TODO: Fix JSX expression */}
   s: 'timeout-prevented'} duratio,
   n: Date.now() - timeoutStart } } catch (error) {/* TODO: Fix JSX expression */}
   n: Date.now() - timeoutStart } } // Test,
   5: Retry logic const retryStart = Date.now(); let retryAttempts = 0; let retrySuccess = false, while (retryAttempts < 3 && !retrySuccess) {retryAttempts++} try {/* TODO: Fix JSX expression */}
-        reject) => {if (Math.random() > 0.3) { // 70% success rate' resolve('retry-success')} } else {/* TODO: Fix JSX expression */}`
+        reject) =></>
+                {if (Math.random() > 0.3) { // 70% success rate' resolve('retry-success')} } else {/* TODO: Fix JSX expression */}`
         failed`)); } }); retrySuccess = true; } catch (error) { if (retryAttempts === 3) { // Final attempt failed } } } results.retry = {/* TODO: Fix JSX expression */}
   n: Date.now() - retryStart}' statu,
   s: retrySuccess ? 'succeeded' : 'failed-after-retries' } // Test,

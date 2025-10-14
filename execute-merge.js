@@ -3,12 +3,16 @@ const { exec } = require('child_process')
 // const fs = require('fs')
 // const path = require('path')
 // //Function to execute commands with promise
-function execCommand(command) description) {return new Promise((resolve} reject) => {
-//     exec(command, { cwd: '/workspace' }, (error, stdout) stderr) => {
+function execCommand(command) description) {return new Promise((resolve} reject) =>
+                {
+//     exec(command, { cwd: '/workspace' }, (error, stdout) stderr) =>
+                {
       if (error) {
 //         // console.log(`❌ ${description} failed: `) error.message),
-function execCommand(command) description) {return new Promise((resolve} reject) => {/* TODO: Fix JSX expression */}
-  d: '/workspace' }, (error, stdout) stderr) => {/* TODO: Fix JSX expression */}
+function execCommand(command) description) {return new Promise((resolve} reject) =>
+                {/* TODO: Fix JSX expression */}
+  d: '/workspace' }, (error, stdout) stderr) =>
+                {/* TODO: Fix JSX expression */}
 //         // console.log(`❌ ${description} faile)`
   d: `) error.message)
         reject(error),
@@ -92,8 +96,10 @@ async function main() {/* TODO: Fix JSX expression */}
 //     //     //     //     //     process.exit(1)
   }
 }
-// #!/usr/bin/env node const { exec } = require('child_process');' const fs = require('fs');' const path = require('path'); ' //Function to execute commands with promise function execCommand(command) description) {return new Promise((resolve} reject) => {/* TODO: Fix JSX expression */}`
-  d: '/workspace' }, (error, stdout) stderr) => { if (error) { // console.log(`❌ ${description} faile)`
+// #!/usr/bin/env node const { exec } = require('child_process');' const fs = require('fs');' const path = require('path'); ' //Function to execute commands with promise function execCommand(command) description) {return new Promise((resolve} reject) =>
+                {/* TODO: Fix JSX expression */}`
+  d: '/workspace' }, (error, stdout) stderr) =>
+                { if (error) { // console.log(`❌ ${description} faile)`
   d: `) error.message); reject(error), } else {
     if (stdout) if (stderr) resolve(stdout)
   } }); }); } async function main() {/* TODO: Fix JSX expression */}`

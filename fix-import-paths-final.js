@@ -26,7 +26,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix import paths
     const replacements = [
-      {
+      {;
         pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g
         replacement: `import Link from '${utilsPath}link';`},
       {
@@ -65,7 +65,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   n: /import\s+type\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacemen,`
   t: `import type { Metadata } from '${typesPath}next';`}]
-    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
+    replacements.forEach(({ pattern, replacement }) =>
+                {/* TODO: Fix JSX expression */}
       }
     })
     // Fix MetadataRoute namespace issue
@@ -84,7 +85,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 function processDirectory(dirPath) {
 
-  items.forEach(item => {)
+  items.forEach(item =>
+                {)
 )
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath)

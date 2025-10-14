@@ -4,7 +4,7 @@
   q: 'NextApiRequest')re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   e: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
-  k: 'errorReport.componentStack'}timestam,
+  k: 'errorReport.componentStack'}timestam,;
   p: 'errorReport.timestamp';userAgen,
   t: 'errorReport.userAgent';ur,
   l: 'errorReport.url' }); res.status(200).json({/* TODO: Fix JSX expression */})
@@ -16,7 +16,7 @@
   q: NextApiRequest)re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   e: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
-  k: errorReport.componentStack}timestam,
+  k: errorReport.componentStack}timestam,;
   p: errorReport.timestamp;userAgen,
   t: errorReport.userAgent;ur,
   l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */})
@@ -28,7 +28,7 @@
   q: NextApiRequest)re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   e: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
-  k: errorReport.componentStack}timestam,
+  k: errorReport.componentStack}timestam,;
   p: errorReport.timestamp;userAgen,
   t: errorReport.userAgent;ur,
   l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */})
@@ -40,7 +40,7 @@
   q: NextApiRequest)re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   e: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
-  k: errorReport.componentStack}timestam,
+  k: errorReport.componentStack}timestam,;
   p: errorReport.timestamp;userAgen,
   t: errorReport.userAgent;ur,
   l: errorReport.url }); res.status(200).json({/* TODO: Fix JSX expression */})

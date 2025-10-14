@@ -17,7 +17,7 @@ function fixLintIssues(filePath) {
     return false
   }
     
-//     // Fix 1: Remove unused React imports (keep if JSX is used),
+//     // Fix 1: Remove unused React imports (keep if JSX is used),;
     if (content.includes('import React from \'react\';') && !content.includes('<') && !content.includes('React.')) {
     ,
       content = content.replace(/import React from 'react';\n?/g, '')
@@ -39,7 +39,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     }
     
     // Fix,
-  2: Remove unused Helmet imports,
+  2: Remove unused Helmet imports,;
     if (content.includes('import { Helmet } from \'react-helmet-async\';') && !content.includes('<Helmet')) {/* TODO: Fix JSX expression */}
       content = content.replace(/import { Helmet } from 'react-helmet-async';\n?/g, '')
       modified = true
@@ -108,7 +108,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix,
   6: Remove unused useCallback imports,
     if (content.includes('useCallback') && !content.includes('useCallback(')) {/* TODO: Fix JSX expression */}
-      if (content.includes('import { useCallback }')) {/* TODO: Fix JSX expression */}
+      if (content.includes('import { useCallback }')) {/* TODO: Fix JSX expression */};
         content = content.replace(/import { useCallback } from 'react';\n?/g, '')
       }
       modified = true
@@ -122,7 +122,7 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix,
   7: Remove unused lazy imports,
     if (content.includes('lazy') && !content.includes('lazy(')) {/* TODO: Fix JSX expression */}
-      if (content.includes('import { lazy }')) {/* TODO: Fix JSX expression */}
+      if (content.includes('import { lazy }')) {/* TODO: Fix JSX expression */};
         content = content.replace(/import { lazy } from 'react';\n?/g, '')
       }
       modified = true

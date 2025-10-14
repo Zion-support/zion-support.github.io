@@ -1,8 +1,7 @@
 'use client'
-import React from 'react'
-import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react'
-import { Link } from 'react-router-dom'
-const AISchedulerPage: React.FC = () => {
+import React from 'react';
+import { Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target } from 'lucide-react';
+import { Link  } from 'react-router-dom';const AISchedulerPage: React.FC  = () => {
   const features = [
     {
       icon: Calendar,
@@ -93,24 +92,24 @@ $4}
       role: 'Project Manager',
       content: 'Client meetings are now perfectly coordinated. Our client satisfaction scores improved by 35%.',
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 pt-24">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+                {/* Hero Section */}
+                <section className="container mx-auto px-4 py-16 pt-24"></section>
+        <div className="text-center mb-16"></div>
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6"></div>
             <Calendar className="w-10 h-10 text-white" />
           </div>
-          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6"></h1>
             AI Scheduler
   
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium"></p>
             Intelligent Meeting & Event Scheduling,
   
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
             Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
             the best meeting times, coordinate complex team schedules, and optimize your calendar 
             for maximum productivity.
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <$2 />
               href="tel:+13024640950"
               className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">
@@ -123,8 +122,8 @@ $4}
               Start Free Trial,
   
         {/* Key Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-          <div className="text-center">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16"></div>
+          <div className="text-center"></div>
             <div className="text-4xl font-bold text-cyan-400 mb-2">5+
             <div className="text-white font-semibold mb-2">Hours Saved
             <div className="text-gray-300 text-sm">Per week on scheduling tasks
@@ -138,50 +137,60 @@ $4}
             <div className="text-white font-semibold mb-2">Conflict-Free
             <div className="text-gray-300 text-sm">Scheduling guaranteed
         {/* Features Section */}
-        <section className="mb-16">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
+                <section className="mb-16"></section>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center"></h2>
             Smart Scheduling Features,
   
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300"></div>
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}
-                <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}
-                <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}
+                <h3 className="text-xl font-bold text-white mb-3"></h3>
+                {feature.title}
+                <p className="text-gray-300 mb-4 leading-relaxed"></p>
+                {feature.description}
+                <div className="text-cyan-400 font-semibold text-sm"></div>
+                {feature.benefit}
             ))}
         {/* Integrations Section */}
             Works with Your Favorite Tools
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {integrations.map((integration, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">
-                <div className="text-4xl mb-3">{integration.icon}
-                <h3 className="text-lg font-bold text-white mb-2">{integration.name}
-                <p className="text-gray-300 text-sm">{integration.description}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+                {integrations.map((integration, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300"></div>
+                <div className="text-4xl mb-3"></div>
+                {integration.icon}
+                <h3 className="text-lg font-bold text-white mb-2"></h3>
+                {integration.name}
+                <p className="text-gray-300 text-sm"></p>
+                {integration.description}
         {/* Pricing Section */}
             Simple, Transparent Pricing
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+                {pricingPlans.map((plan, index) => (
               < key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${$2 />
                 plan.popular 
                   ? 'border-cyan-400 scale-105' 
                   : 'border-slate-700 hover:border-cyan-500/50'
               }`}>
                 {plan.popular && (
-                  <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">
+                  <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"></div>
                     Most Popular
                 )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}
-                <p className="text-gray-300 mb-6">{plan.description}
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">{plan.price}
-                  <span className="text-gray-300">{plan.period}
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                {plan.name}
+                <p className="text-gray-300 mb-6"></p>
+                {plan.description}
+                <div className="mb-6"></div>
+                  <span className="text-4xl font-bold text-white"></span>
+                {plan.price}
+                <span className="text-gray-300"></span>
+                {plan.period}
+                <ul className="space-y-3 mb-8"></ul>
+                {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
+                {feature}
+                </li>
                 </ul>
                 < className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${$2 />
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600'
@@ -190,22 +199,25 @@ $4}
   
         {/* Testimonials */}
             What Our Users Say
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20"></div>
+                <div className="flex items-center mb-4"></div>
+                {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}
-                  <div className="text-cyan-400 text-sm">{testimonial.role}
-                  <div className="text-gray-400 text-sm">{testimonial.company}
+                <div></div>
+                  <div className="font-semibold text-white"></div>
+                {testimonial.name}
+                <div className="text-cyan-400 text-sm"></div>
+                {testimonial.role}
+                <div className="text-gray-400 text-sm"></div>
+                {testimonial.company}
         {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">
-          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+                <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"></section>
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-6"></h2>
             Ready to Master Your Schedule?
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches 
             and maximize productivity.
   ),
@@ -213,31 +225,44 @@ $4}
 export default AISchedulerPage
 import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Brain, Target, Shield, Globe, Phone, Mail } from 'lucide-react'
 export default AISchedulerPage</p>
-  </h2>
+                </h2>
   </section>
+                </div>
   </div>
+                </div>
   </div>
+                </button>
   </div>
+                </div>
   </div>
-  </button>
+                </div>
   </div>
+                </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
+                </div>
   </h2>
+                </div>
   </div>
-  </div>
-  </Link>
+                </Link>
   </a>
-  </div>
+                </div>
   </p>
-  </p>
+                </p>
   </h1>
-  </div>
+                </div>
   </section>
-  </div>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></p></p></p></p></h3></h3></h3></section>
+                </div>
+</div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></span>
+                </span></p>
+                </p></p>
+                </p></h3>
+                </h3></h3>
+                </section>;

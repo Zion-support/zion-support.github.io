@@ -20,7 +20,12 @@
   y: '0.6'} changefre,
   q: 'monthly' } ]; const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="htt,"
   p://www.sitemaps.org/schemas/sitemap/0.9"> ${/* TODO: Fix JSX expression */}`
-  s://ziontechgroup.com${page.url}</loc>' <lastmod>${new Date().toISOString().split('T')[0]}</lastmod> <changefreq>${page.changefreq}</changefreq> <priority>${page.priority}</priority>' </url>`).join('\n')} </urlset>`; ' fs.writeFileSync(path.join(__dirname) '../public/sitemap.xml'), sitemap);' } // Function to generate robots.txt function generateRobotsTxt() {' // console.log('🤖 Generating robots.txt...')} const robotsTxt = `User-agen,
+  s://ziontechgroup.com${page.url}
+                </loc>' <lastmod>${new Date().toISOString().split('T')[0]}
+                </lastmod> <changefreq>${page.changefreq}
+                </changefreq> <priority>${page.priority}
+                </priority>' </url>`).join('\n')}
+                </urlset>`; ' fs.writeFileSync(path.join(__dirname) '../public/sitemap.xml'), sitemap);' } // Function to generate robots.txt function generateRobotsTxt() {' // console.log('🤖 Generating robots.txt...')} const robotsTxt = `User-agen,
   t: * Allo,
   w: / # Sitemap,
   Sitemap: http,

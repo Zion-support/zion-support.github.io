@@ -1025,7 +1025,7 @@ export const getEmergingTechServices2026ByCategory = (categor)
   )}
 export const getPopularEmergingTechServices2026 = () =>
 }
-export const getPopularEmergingTechServices2026 = () => {/* TODO: Fix JSX expression */}
+export const getPopularEmergingTechServices2026  = () => {/* TODO: Fix JSX expression */}
   return emergingTechServices2026.filter(service => service.popular)}
 }
   }]
@@ -1982,7 +1982,7 @@ i,
   s: 56, ratin,
   g: 4 && 4.4, review,
   s: 29} ]; export const getEmergingTechServices2026ByCategory = (categor)
-  y: string) => return emergingTechServices2026.filter(service => service.category === category) )} export const getPopularEmergingTechServices2026 = () => } export const getPopularEmergingTechServices2026 = () => { return emergingTechServices2026.filter(service => service.popular)} } }]; export const getEmergingTechServices2026ByPriceRange = (minPric,
+  y: string) => return emergingTechServices2026.filter(service => service.category === category) )} export const getPopularEmergingTechServices2026 = () => } export const getPopularEmergingTechServices2026  = () => { return emergingTechServices2026.filter(service => service.popular)} } }]; export const getEmergingTechServices2026ByPriceRange = (minPric,
   e: number)
   maxPrice: number ) => return emergingTechServices2026 && emergingTechServices2026.filter(service => ' const price = parseInt(service && service.price.replace('$') '')); return price >= minPrice && price <= maxPrice, }) } return price >= minPrice && price <= maxPrice }) } ' i,
   d: 'quantum-computing-as-a-service', nam,

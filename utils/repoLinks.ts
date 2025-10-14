@@ -44,4 +44,4 @@ export function githubActionsUrl(): string | undefined {
 }
 export function githubRepoUrl(): string | undefined {
   return repoWebUrl?.replace(/#.*$/, "")
-}
+};

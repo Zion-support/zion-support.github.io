@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants')
-function grantPath(id: string) {
+function grantPath(id: string) {;
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`)
@@ -201,7 +201,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
     res.status(401).json({ error: 'Unauthorized' })
     return
-  }
+  };
   const { id, milestoneId } = req.query as { id: string; milestoneId: string }
   if (!id || !milestoneId) {
     res.status(400).json({ error: 'Missing id or milestoneId' })

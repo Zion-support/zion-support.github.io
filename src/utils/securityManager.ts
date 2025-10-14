@@ -118,7 +118,8 @@ const validRequests = requests.filter((tim)
     return true
   }
   private getRateLimitStorage(): Map
-          <string, number[]> {/* TODO: Fix JSX expression */}
+          <string, number[]></string,>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     if (!global._rateLimitStorage) {/* TODO: Fix JSX expression */}

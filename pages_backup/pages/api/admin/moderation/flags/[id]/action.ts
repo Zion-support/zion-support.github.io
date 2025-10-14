@@ -8,12 +8,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('AllowPOST'),
   return res.status(405).end('Method Not Allowed')
 }
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth'
-import { updateFlagStatus } from '../../../../../../utils/moderationDb'
-import type { ModerationStatus } from '../../../../../../types/moderation'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdmin, parseUserFromRequest  } from '../../../../../../utils/auth';
+import { updateFlagStatus  } from '../../../../../../utils/moderationDb';import type { ModerationStatus } from '../../../../../../types/moderation'
       await updateFlagStatus(id, status, adminNotes)
       res.json({ success: true })
     } else {
@@ -25,3 +22,4 @@ import type { ModerationStatus } from '../../../../../../types/moderation'
     return res.status(500).json({ error: "Internal server error" })
   }
 }
+;

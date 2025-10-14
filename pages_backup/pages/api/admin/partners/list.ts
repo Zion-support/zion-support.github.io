@@ -51,7 +51,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
         ],
       })
 import type { NextApiRequest, NextApiResponse } from 'next'
-    if (req.method === 'GET') {
+    if (req.method === 'GET') {;
       const usingPlaceholder = true; // Set to false when real data is available
       if (usingPlaceholder) {
         return res.status(200).json({ 

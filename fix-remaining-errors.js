@@ -4,10 +4,11 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Get all files with errors
-const getAllFilesWithErrors = () => {
+const getAllFilesWithErrors  = () => {
   const srcDir = path.join(__dirname, 'src')
   const files = []
-  const scanDirectory = (dir) => {
+  const scanDirectory = (dir) =>
+                {
     const items = fs.readdirSync(dir)
     for (const item of items) {
       const fullPath = path.join(dir, item)
@@ -23,7 +24,7 @@ const getAllFilesWithErrors = () => {
   return files
 }
 // Fix all remaining syntax errors
-const fixRemainingErrors = () => {
+const fixRemainingErrors  = () => {
   const files = getAllFilesWithErrors()
   let fixedCount = 0
   for (const filePath of files) {
@@ -32,7 +33,7 @@ const fixRemainingErrors = () => {
       let modified = false
       // Fix component names with spaces or special characters
       const componentNameMatch = content.match(/const\s+([A-Za-z0-9\s\-]+)Page: \s*React\.FC/)
-      if (componentNameMatch) {,
+      if (componentNameMatch) {,;
         const oldName = componentNameMatch[1];,
         const newName = oldName
           .replace(/\s+/g, '')

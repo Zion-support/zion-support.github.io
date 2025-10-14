@@ -9,4 +9,4 @@ export const certificationSchema = z.object({
   credential_url: z.string().optional()})
   credential_url: z.string().optional(),
 })
-export type CertificationFormValues = z.infer<typeof certificationSchema>
+export type CertificationFormValues = z.infer<typeof certificationSchema>;

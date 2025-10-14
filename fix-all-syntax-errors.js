@@ -7,10 +7,11 @@ import { execSync } from 'child_process'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Get all files with errors
-const getAllFilesWithErrors = () => {
+const getAllFilesWithErrors  = () => {
   const srcDir = path.join(__dirname, 'src')
   const files = []
-  const scanDirectory = (dir) => {
+  const scanDirectory = (dir) =>
+                {
     const items = fs.readdirSync(dir)
     for (const item of items) {
       const fullPath = path.join(dir, item)
@@ -26,7 +27,8 @@ const getAllFilesWithErrors = () => {
   return files
 }
 // Template for a simple coming soon page
-const createComingSoonPage = (filePath) => {
+const createComingSoonPage = (filePath) =>
+                {
   const relativePath = path.relative(path.join(__dirname, 'src'), filePath)
   const fileName = path.basename(filePath, '.tsx')
   // Skip if it's a component or special file
@@ -39,13 +41,12 @@ const createComingSoonPage = (filePath) => {
 import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const ${title}Page: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+const ${title}Page: React.FC  = () => {return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <Navigation />)
       <div className="flex items-center justify-center min-h-screen">)
         <div className="text-center">),
           <h1 className="text-4xl font-bold text-white mb-4">${title}
-          <p className="text-gray-300 mb-8">Coming Soon - Advanced ${title.toLowerCase()} solutions
+                <p className="text-gray-300 mb-8">Coming Soon - Advanced ${title.toLowerCase()} solutions
           <$2 />
             to="/contact" 
             className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors"
@@ -53,14 +54,15 @@ const ${title}Page: React.FC = () => {
             Contact Us
       <Footer />,
     </div>)
-}
+};
 export default ${title}Page;`
   }
   
   return null
 }
 // Check if file has syntax errors by trying to parse it
-const hasSyntaxErrors = (filePath) => {
+const hasSyntaxErrors = (filePath) =>
+                {
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   try {
@@ -87,7 +89,7 @@ function fixSyntaxErrors(filePath) {
   }
 }
 // Fix all files
-const fixAllFiles = () => {
+const fixAllFiles  = () => {
   const files = getAllFilesWithErrors()
   let fixedCount = 0
   for (const filePath of files) {
@@ -249,9 +251,8 @@ try {
   } else {
     console.log(`⚠️  ${count} syntax errors still remain`)
   }
-} catch (error) {
-  console.log('✅ No syntax errors found')
+} catch (error) {console.log('✅ No syntax errors found')
 }
-
-
-</div></div></p></h1>
+                </div>
+                </div></p>
+                </h1>

@@ -108,12 +108,12 @@ export interface CustomerServiceMetrics {
   averageResolutionTime: number
   customerSatisfaction: number
   firstResponseTime: number
-  ticketVolumeByCategory: Record<string, number>
+  ticketVolumeByCategory: Record<string, number></string,>
   agentPerformance: Record<string, {
     ticketsResolved: number
     averageResolutionTime: number
     customerSatisfaction: number
-  }>
+  }></string,>
 }
 export interface CustomerServiceRequest {
   customerId: string
@@ -136,7 +136,8 @@ export class AICustomerServiceService {
 export class AICustomerServiceService {
   private apiKey: string
   }
-  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse></CustomerServiceResponse>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets`, {
         method: 'POST',
@@ -153,7 +154,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async getTicket(ticketId: string): Promise<CustomerTicket> {
+  async getTicket(ticketId: string): Promise<CustomerTicket></CustomerTicket>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         headers: {
@@ -175,7 +177,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
+  async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket></CustomerTicket>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         method: 'PATCH',
@@ -199,7 +202,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {
+  async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage></CustomerMessage>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
         method: 'POST',
@@ -218,7 +222,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async generateAIResponse(ticketId: string): Promise<AIResponse> {
+  async generateAIResponse(ticketId: string): Promise<AIResponse></AIResponse>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
         method: 'POST',
@@ -236,7 +241,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
+  async getCustomerProfile(customerId: string): Promise<CustomerProfile></CustomerProfile>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/customers/${customerId}`, {
         headers: {
@@ -253,7 +259,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics> {
+  async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics></CustomerServiceMetrics>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
         headers: {
@@ -267,7 +274,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
+  async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]></CustomerTicket[]>
+                {
     try {
       const params = new URLSearchParams({ query, ...filters })
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {
@@ -290,7 +298,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async autoAssignTickets(): Promise<{ assigned: number, failed: number }> {
+  async autoAssignTickets(): Promise<{ assigned: number, failed: number }></{>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/auto-assign`, {
         method: 'POST',
@@ -305,7 +314,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
+  async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string></string>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/reports`, {
         method: 'POST',
@@ -399,7 +409,7 @@ export interface CustomerServiceMetrics {
     ticketsResolved: number,
     averageResolutionTime: number,
     customerSatisfaction: number
-  }>
+  }></string>
 }
 
 export interface CustomerServiceRequest {
@@ -429,7 +439,8 @@ export class AICustomerServiceService {
     this.baseUrl = baseUrl
   }
 
-  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse></CustomerServiceResponse>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {
         method: 'POST',
@@ -448,7 +459,8 @@ export class AICustomerServiceService {
     }
   }
 
-  async getTicket(ticketId: string): Promise<CustomerTicket> {
+  async getTicket(ticketId: string): Promise<CustomerTicket></CustomerTicket>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         headers: {
@@ -472,7 +484,8 @@ export class AICustomerServiceService {
     }
   }
 
-  async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
+  async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket></CustomerTicket>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         method: 'PATCH',
@@ -498,7 +511,8 @@ export class AICustomerServiceService {
     }
   }
 
-  async addMessage(ticketId: string, message: Omit<CustomerMessage 'id' | 'timestamp'>): Promise<CustomerMessage> {
+  async addMessage(ticketId: string, message: Omit<CustomerMessage 'id' | 'timestamp'>): Promise<CustomerMessage></CustomerMessage>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
         method: 'POST',
@@ -519,7 +533,8 @@ export class AICustomerServiceService {
     }
   }
 
-  async generateAIResponse(ticketId: string): Promise<AIResponse> {
+  async generateAIResponse(ticketId: string): Promise<AIResponse></AIResponse>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
         method: 'POST',
@@ -539,7 +554,8 @@ export class AICustomerServiceService {
     }
   }
 
-  async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
+  async getCustomerProfile(customerId: string): Promise<CustomerProfile></CustomerProfile>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${customerId}`, {
         headers: {
@@ -558,7 +574,8 @@ export class AICustomerServiceService {
     }
   }
 
-  async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics> {
+  async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics></CustomerServiceMetrics>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
         headers: {
@@ -574,7 +591,8 @@ export class AICustomerServiceService {
     }
   }
 
-  async searchTickets(query: string, filters?: Record<string any>): Promise<CustomerTicket[]> {
+  async searchTickets(query: string, filters?: Record<string any>): Promise<CustomerTicket[]></CustomerTicket[]>
+                {
     try {
       const params = new URLSearchParams({ query, ...filters }),
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/search?${params}`, {
@@ -599,7 +617,8 @@ export class AICustomerServiceService {
     }
   }
 
-  async autoAssignTickets(): Promise<{ assigned: number, failed: number }> {
+  async autoAssignTickets(): Promise<{ assigned: number, failed: number }></{>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {
         method: 'POST',
@@ -616,7 +635,8 @@ export class AICustomerServiceService {
     }
   }
 
-  async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
+  async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string></string>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {
         method: 'POST',
@@ -649,7 +669,8 @@ export class AICustomerServiceService {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
   }
-  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
+  async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse></CustomerServiceResponse>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {
         method: 'POST',
@@ -669,7 +690,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async getTicket(ticketId: string): Promise<CustomerTicket> {
+  async getTicket(ticketId: string): Promise<CustomerTicket></CustomerTicket>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         headers: {
@@ -695,7 +717,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
+  async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket></CustomerTicket>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         method: 'PATCH',
@@ -724,7 +747,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {
+  async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage></CustomerMessage>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
         method: 'POST',
@@ -747,7 +771,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async generateAIResponse(ticketId: string): Promise<AIResponse> {
+  async generateAIResponse(ticketId: string): Promise<AIResponse></AIResponse>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
         method: 'POST',
@@ -768,7 +793,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
+  async getCustomerProfile(customerId: string): Promise<CustomerProfile></CustomerProfile>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${customerId}`, {
         headers: {
@@ -788,7 +814,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics> {
+  async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics></CustomerServiceMetrics>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
         headers: {
@@ -804,7 +831,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
+  async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]></CustomerTicket[]>
+                {
     try {
       const params = new URLSearchParams({ query, ...filters })
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/search?${params}`, {
@@ -831,7 +859,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async autoAssignTickets(): Promise<{ assigned: number; failed: number }> {
+  async autoAssignTickets(): Promise<{ assigned: number; failed: number }></{>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {
         method: 'POST',
@@ -848,7 +877,8 @@ export class AICustomerServiceService {
       throw error
     }
   }
-  async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
+  async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string></string>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {
         method: 'POST',

@@ -8,7 +8,7 @@ import type {
   MilestonesUpdatePayload,
 } from '../../../../types/grants'
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants')
-function grantPath(id: string) {
+function grantPath(id: string) {;
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants'
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')
 function grantPath(id: string) {
@@ -27,7 +27,7 @@ function writeGrant(record: GrantApplication) {
     'utf8'
   )
 function isAuthorized(req: NextApiRequest) {
-  const header = req && req.headers.authorization || ''
+  const header = req && req.headers.authorization || '';
   const token = header && header.replace('Bearer ', '');  return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication
 }
 function writeGrant(record: GrantApplication) {
@@ -92,7 +92,7 @@ function write_grant() {
  * is_authorized - Function description
  */
 function is_authorized() {
-  const header = req.headers.authorization || ''
+  const header = req.headers.authorization || '';
   const token = header.replace ('Bearer ', '');  return JSON.parse (fs.readFileSync (p, 'utf8')) as GrantApplication
 }
 /**
@@ -153,7 +153,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     existing.updatedAt = new Date().toISOString()
   if (req && req.method === 'GET') {
     const existing = readGrant(id)
-    if (!existing) return res && res.status(404).json({ error: 'Not found' })
+    if (!existing) return res && res.status(404).json({ error: 'Not found' });
     return res && res.status(200).json({ milestones: existing && existing.milestones || [] });  }    return res && res.status(200).json({ milestones: existing && existing.milestones || [] })
   }
   if (req && req.method === 'POST') {

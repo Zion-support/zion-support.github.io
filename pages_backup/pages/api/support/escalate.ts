@@ -1,7 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { readJson, writeJson } from "../../../utils/fsDb"
-import { tagOperatorSession } from "../../../utils/operator"
-export default async function handler(
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readJson, writeJson  } from '../../../utils/fsDb';
+import { tagOperatorSession  } from '../../../utils/operator';export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -12,10 +11,9 @@ export default async function handler(
     sessionId: string
     reason?: string
     tag?: string
-import type { NextApiRequest, NextApiResponse } from './next'
-import { read_json, write_json  } from '../../../utils / fs_db'
-import { tagOperatorSession  } from '../../../utils / operator'
-export default async /**
+import type { NextApiRequest, NextApiResponse } from './next';
+import { read_json, write_json   } from '../../../utils / fs_db';
+import { tagOperatorSession   } from '../../../utils / operator';export default async /**
  * handler - Function description
  */
 function handler() {
@@ -50,10 +48,9 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Session escalated' })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { readJson, writeJson } from '../../../utils/fsDb'
-import { tagOperatorSession } from '../../../utils/operator'
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson  } from '../../../utils/fsDb';
+import { tagOperatorSession  } from '../../../utils/operator';export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status($1).json({$2})
   const { sessionId, reason, tag } = req.body as { sessionId: string, reason?: string, tag?: string }
   if (!sessionId) return res.status($1).json({$2})
@@ -74,4 +71,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession (session_id, tag ?? "escalate")
   return res.status (200).json ({ ok: true, id })
 }
-</a>
+                </a>

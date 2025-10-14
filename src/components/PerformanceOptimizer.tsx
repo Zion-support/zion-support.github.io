@@ -15,7 +15,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableCodeSplitting = true,
   enableResourceHints = true,
   enableServiceWorker = true
-}) => {
+}) =>
+                {
   const [optimizationStatus, setOptimizationStatus] = useState({
     imagesOptimized: 0,
     lazyLoaded: 0,
@@ -24,7 +25,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     resourceHints: 0,
     serviceWorker: false
   })
-  useEffect(() => {
+  useEffect(() =>
+                {
     if (enableImageOptimization) {
       optimizeImages()
   }
@@ -44,10 +46,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     registerServiceWorker()
   }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker])
-  const optimizeImages = () => {
+  const optimizeImages  = () => {
     const images = document.querySelectorAll('img')
     let optimized = 0
-    images.forEach((img) => {
+    images.forEach((img) =>
+                {
       // Add loading="lazy" for images below the fold
       if (img.getBoundingClientRect().top > window.innerHeight) {
         img.setAttribute('loading', 'lazy')
@@ -66,10 +69,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
     setOptimizationStatus(prev => ({ ...prev, imagesOptimized: optimized }))
   }
-  const setupLazyLoading = () => {
+  const setupLazyLoading  = () => {
     if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+      const observer = new IntersectionObserver((entries) =>
+                {
+        entries.forEach((entry) =>
+                {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement
             if (img.dataset.src) {
@@ -88,9 +93,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }))
     }
   }
-  const preloadCriticalResources = () => {
+  const preloadCriticalResources  = () => {
     const criticalResources = [
-      {
+      {;
         href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600,700&display=swap',
         as: 'style',
         type: 'text/css'
@@ -101,7 +106,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         type: 'text/css'
       }
     ]
-    criticalResources.forEach((resource) => {
+    criticalResources.forEach((resource) =>
+                {
     const link = document.createElement('link')
       link.rel = 'preload'
       link.href = resource.href
@@ -113,11 +119,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }))
   }
-  const setupCodeSplitting = () => {
+  const setupCodeSplitting  = () => {
     // This would be handled by Next.js dynamic imports
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }))
   }
-  const addResourceHints = () => {
+  const addResourceHints  = () => {
     const hints = [
       { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
       { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
@@ -126,7 +132,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
     ]
-    hints.forEach((hint) => {
+    hints.forEach((hint) =>
+                {
     const link = document.createElement('link')
       link.rel = hint.rel
       link.href = hint.href
@@ -137,7 +144,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     })
     setOptimizationStatus(prev => ({ ...prev, resourceHints: hints.length }))
   }
-  const registerServiceWorker = async () => {
+  const registerServiceWorker = async () =>
+                {
     if ('serviceWorker' in navigator) {
       try {
         const registration = await navigator.serviceWorker.register('/sw.js')
@@ -148,9 +156,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
   }
   // Performance monitoring
-  useEffect(() => {
+  useEffect(() =>
+                {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) =>
+                {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             // Track LCP

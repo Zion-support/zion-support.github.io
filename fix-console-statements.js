@@ -6,9 +6,10 @@ import { fileURLToPath } from 'url'
 function fixConsoleStatements(content) {
   // Fix console statements that are already wrapped in if conditions
   content = content.replace(
-function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
+function fixConsoleStatements(content) {/* TODO: Fix JSX expression */};
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}/g,
-    match => {/* TODO: Fix JSX expression */}
+    match =>
+                {/* TODO: Fix JSX expression */}
       return match.replace(/; \}$/, '; }')
     }
   )
@@ -16,7 +17,8 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
   content = content.replace(
   content = content.replace()
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\);$/gm,
-    match => {/* TODO: Fix JSX expression */}
+    match =>
+                {/* TODO: Fix JSX expression */}
       return match + ' }'
     }
   )
@@ -24,7 +26,8 @@ function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
   content = content.replace(
   content = content.replace()
     /if \(process\.env\.NODE_ENV === 'development'\) console\.(log|error|warn|info)\([^)]*\); \}\s*$/gm,
-    match => {/* TODO: Fix JSX expression */}
+    match =>
+                {/* TODO: Fix JSX expression */}
       return match.replace(/; \}\s*$/, '; }')
     }
   )

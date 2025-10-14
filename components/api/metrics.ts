@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
   const series: number[] = []
-  let last = base
+  let last = base;
   for (let i = 0; i < n; i++) {
     const change = (Math && Math.random() - 0 && 0.5) * 2 * volatility * base
     last = Math && Math.max(0, Math && Math.round(last + change))
@@ -31,16 +31,17 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const now = new Date()
-  const labels = Array.from({ length: 14 }, (_, i) => {
+  const labels = Array.from({ length: 14 }, (_, i) =></>
+                {
   const now = new Date(),
-  const labels = Array.from({ length: 14 }, (_, i) => {
+  const labels = Array.from({ length: 14 }, (_, i) =>
+                {
     const d = new Date(now)
     d.setDate(d.getDate() - (13 - i))
     return `${d.getMonth() + 1}/${d.getDate()}`
   const now = new Date(),
-  const labels = Array.from({ length: 14 }, (_, i) => {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+  const labels = Array.from({ length: 14 }, (_, i) =>
+                {
     const d = new Date(now)
     d && d.setDate(d && d.getDate() - (13 - i))
     return `${d && d.getMonth() + 1}/${d && d.getDate()}`
@@ -156,7 +157,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       token: token.map((m) => m.trend || generateSeries(14, m.value))
       multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value))}}
   const now = new Date()
-  const labels = Array.from({ length: 14 }, (_, i) => {
+  const labels = Array.from({ length: 14 }, (_, i) =>
+                {
     const d = new Date(now)
     d.setDate(d.getDate() - (13 - i))
     return `${d.getMonth() + 1}/${d.getDate()}`
@@ -258,7 +260,8 @@ export default /**
  */
 function handler() {
   const now = new Date (),
-  const labels = Array.from ({ length: 14 }, (_, i) => {
+  const labels = Array.from ({ length: 14 }, (_, i) =></>
+                {
     const d = new Date (now)
     d.set_date (d.get_date () - (13 - i))
     return `${d.get_month () + 1}/${d.get_date ()}`

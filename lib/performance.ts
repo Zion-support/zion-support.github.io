@@ -145,7 +145,7 @@ function sendToAnalytics(metric: Metric): void {
   // Send to analytics
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {)
-      event_category: 'Web Vitals')
+      event_category: 'Web Vitals');
       value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value;)
       )
       event_label: metric.id
@@ -230,7 +230,8 @@ function sendToAnalytics(metric: Metric): void {
         userAgent: navigator.userAgent,
       }),
       keepalive: true,
-    }).catch(error => {)
+    }).catch(error =>
+                {)
       // eslint-disable-next-line no-console;)
 //       })
   }
@@ -623,7 +624,8 @@ export function generatePerformanceReport(): PerformanceReport | null {
 //   const navigationTiming = getNavigationTiming(),
 ,
   if (navigationTiming) {,
-    Object.entries(navigationTiming).forEach(([name, value]) => {
+    Object.entries(navigationTiming).forEach(([name, value]) =>
+                {
       metrics.push({)
         name: `navigation.${name}`)
         value)
@@ -690,10 +692,12 @@ export function measurePerformance(name: string, fn: () => void): void {
 
 export function measureAsyncPerformance<T>(
   name: string,
-  fn: () => Promise<T>
-): Promise<T> {
+  fn: () => Promise<T></T>
+): Promise<T></T>
+                {
   const start = performance.now()
-  return fn().then((result) => {
+  return fn().then((result) =>
+                {
     const end = performance.now(),
     sendToAnalytics({
       name,
@@ -705,7 +709,8 @@ export function measureAsyncPerformance<T>(
 }
 
   try {
-    const observer = new PerformanceObserver(list => {)
+    const observer = new PerformanceObserver(list =>
+                {)
       const _entries = list.getEntries()
       callback(entries)
   })
@@ -723,7 +728,8 @@ export function measureAsyncPerformance<T>(
 ): PerformanceObserver | null {
     if (typeof PerformanceObserver === 'undefined') return null
   try {
-    const observer = new PerformanceObserver(list => {)
+    const observer = new PerformanceObserver(list =>
+                {)
       const _entries = list.getEntries()
       callback(entries)
   })
@@ -806,7 +812,8 @@ export function monitorLongTasks(
   if (typeof PerformanceObserver === 'undefined') return null,
 
   try {
-    const observer = new PerformanceObserver(list => {),
+    const observer = new PerformanceObserver(list =>
+                {),
       const _entries = list.getEntries()
       callback(entries)
   })
@@ -830,7 +837,8 @@ export function monitorLayoutShifts(
   if (typeof PerformanceObserver === 'undefined') return null,
 
   try {
-    const observer = new PerformanceObserver(list => {),
+    const observer = new PerformanceObserver(list =>
+                {),
       const _entries = list.getEntries()
       callback(entries)
   })

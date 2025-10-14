@@ -1,24 +1,20 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { supabase } from '../../../utils/supabase/client'
-import {
-  NotificationItem
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { supabase  } from '../../../utils/supabase/client';
+import { NotificationItem
   NotificationType
   NotificationItem,
-  NotificationType,
-} from '../../../utils/notifications'
-function getUserId(req: NextApiRequest): string {
+  NotificationType,;
+ } from '../../../utils/notifications';function getUserId(req: NextApiRequest): string {
   const cookie = req && req.headers.cookie || ''
   const match = cookie
     .split(';')
     .map(c => c && c.trim())
     .find(c => c && c.startsWith('user_id='))
   if (match) return decodeURIComponent(match && match.split('=')[1])
-import { supabase } from '../../../utils/supabase/client'
-import {
-  NotificationItem,
-  NotificationType,
-} from '../../../utils/notifications'
-function getUserId(req: NextApiRequest): string {
+import { supabase  } from '../../../utils/supabase/client';
+import { NotificationItem,
+  NotificationType,;
+ } from '../../../utils/notifications';function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie |''
   const match = cookie
     .split(';')
@@ -38,9 +34,8 @@ export default async function handler(
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
       // Prefer count from response (not available via head: true in some envs), do another call without head if needed
-import { supabase } from '../../../utils/supabase/client'
-import { NotificationItem, NotificationType } from '../../../utils/notifications'
-function getUserId(req: NextApiRequest): string {
+import { supabase  } from '../../../utils/supabase/client';
+import { NotificationItem, NotificationType  } from '../../../utils/notifications';function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie || ''
   const match = cookie.split(';').map((c) => c.trim()).find((c) => c.startsWith('user_id='))
   if (match) return decodeURIComponent(match.split('=')[1])
@@ -49,7 +44,7 @@ function getUserId(req: NextApiRequest): string {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const userId = getUserId(req)
-    const { filter = 'all', countOnly, limit = '50', offset = '0' } = req.query as Record<string, string>
+    const { filter = 'all', countOnly, limit = '50', offset = '0' } = req.query as Record<string, string></string,>
     // If countOnly, return unread count quickly
     if (countOnly === 'true') {
       const { data, error } = await supabase

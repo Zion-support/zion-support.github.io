@@ -26,7 +26,8 @@ interface GeneratedNewsletterContent {
   body: string
   cta: string
 }
-serve(async (req) => {
+serve(async (req) =>
+                {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -193,4 +194,4 @@ serve(async (req) => {
       status: 500,
     })
   }
-})
+});

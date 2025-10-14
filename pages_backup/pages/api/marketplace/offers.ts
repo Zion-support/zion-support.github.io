@@ -2,43 +2,34 @@
   assertTalentOrClientForOffer
   getDemoUser
 } from "../../../utils/marketplace/auth"
-import {
-  getOfferById
+import { getOfferById
   listOffers
   saveOffer
-  saveProject
-import { v4 as uuidv4 } from "uuid"
-import {
-  assertClient,
+  saveProject;
+import { v4 as uuidv4  } from 'uuid';
+import { assertClient,
   assertTalentOrClientForOffer,
-  getDemoUser,
-} from "../../../utils/marketplace/auth"
-import {
+  getDemoUser,;
+ } from '../../../utils/marketplace/auth';import {
   getOfferById,
   listOffers,
   saveOffer,
   saveProject,
 } from "../../../utils/marketplace/store"
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth"
-import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store"
-import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types"
-import type { NextApiRequest, NextApiResponse } from './next'
-import { v4 as uuidv4  } from './uuid'
-import {
-  assert_client,
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4  } from 'uuid';
+import { assertClient, assertTalentOrClientForOffer, getDemoUser  } from '../../../utils/marketplace/auth';import { getOfferById, listOffers, saveOffer, saveProject  } from '../../../utils/marketplace/store';
+import { Offer, PaymentTerms, Project  } from '../../../utils/marketplace/types';import type { NextApiRequest, NextApiResponse } from './next';
+import { v4 as uuidv4   } from './uuid';
+import { assert_client,
   assertTalentOrClientForOffer,
-  getDemoUser,
-} from '../../../utils / marketplace / auth'
-import {
-  getOfferById,
+  getDemoUser,;
+ } from '../../../utils / marketplace / auth';import { getOfferById,
   list_offers,
   save_offer,
-  save_project,
-} from '../../../utils / marketplace / store'
-import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / types'
-/**
+  save_project,;
+ } from '../../../utils / marketplace / store';
+import { Offer, PaymentTerms, Project   } from '../../../utils / marketplace / types';/**
  * bad - Function description
  */
 function bad() {
@@ -417,7 +408,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           startDateIso: existing && existing.startDateIso,
           status: "ACTIVE",
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           documents: existing.agreementUrl
             ? [
                 {

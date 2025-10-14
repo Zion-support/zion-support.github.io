@@ -2,19 +2,22 @@ import React, { useEffect } from 'react'
 interface AccessibilityEnhancerProps {
     children: React.ReactNode
   }
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-    </AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) =>
+                {
+    </AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() =>
+                {
     // Add keyboard navigation support
-    const handleKeyDown = (event: KeyboardEvent) => {
+    const handleKeyDown = (event: KeyboardEvent) =>
+                {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation')
   }
     }
-    const handleMouseDown = () => {
+    const handleMouseDown  = () => {
     document.body.classList.remove('keyboard-navigation')
   }
     // Add focus indicators
-    const addFocusIndicators = () => {
+    const addFocusIndicators  = () => {
     const style = document.createElement('style')
       style.textContent = `
         .keyboard-navigation *:focus {
@@ -25,9 +28,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       document.head.appendChild(style)
     }
     // Add ARIA labels to interactive elements
-    const enhanceAccessibility = () => {
+    const enhanceAccessibility  = () => {
     const buttons = document.querySelectorAll('button: not([aria-label])'),
-      buttons.forEach(button => {
+      buttons.forEach(button =>
+                {
         if (!button.getAttribute('aria-label') && button.textContent) {
           button.setAttribute('aria-label', button.textContent.trim())
   }
@@ -36,7 +40,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     button.setAttribute('role', 'button')
   }
       const links = document.querySelectorAll('a: not([aria-label])'),
-      links.forEach(link => {
+      links.forEach(link =>
+                {
     if (!link.getAttribute('aria-label') && link.textContent) {
           link.setAttribute('aria-label', link.textContent.trim())
   }
@@ -49,14 +54,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       })
       // Add ARIA labels to images
       const images = document.querySelectorAll('img: not([alt])'),
-      images.forEach(img => {
+      images.forEach(img =>
+                {
     if (!img.getAttribute('alt')) {
           img.setAttribute('alt', '')
   }
       })
       // Add ARIA labels to form inputs
       const inputs = document.querySelectorAll('input: not([aria-label])'),
-      inputs.forEach(input => {
+      inputs.forEach(input =>
+                {
         const label = document.querySelector(`label[for="${input.getAttribute('id')}"]`)
         if (label && !input.getAttribute('aria-label')) {
     input.setAttribute('aria-label', label.textContent?.trim() || '')
@@ -73,12 +80,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     enhanceAccessibility()
     document.addEventListener('keydown', handleKeyDown)
     document.addEventListener('mousedown', handleMouseDown)
-    return () => {
+    return () =>
+                {
     document.removeEventListener('keydown', handleKeyDown)
       document.removeEventListener('mousedown', handleMouseDown)
   }
   }, [])
-  return <React.Fragment>{children}</React.Fragment>
+  return <React.Fragment></React.Fragment>
+                {children}
+                </React.Fragment>
 import React, { useEffect, useState } from 'react'
 interface AccessibilitySettings {
     highContrast: boolean
@@ -86,13 +96,14 @@ interface AccessibilitySettings {
   fontSize: 'small' | 'medium' | 'large',
   focusVisible: boolean
   }
-const AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer: React.FC  = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
     focusVisible: false})
-  useEffect(() => {
+  useEffect(() =>
+                {
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches,
@@ -122,7 +133,8 @@ const AccessibilityEnhancer: React.FC = () => {
     root.classList.remove('focus-visible')
   }
     // Add keyboard navigation support
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) =>
+                {
     // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
         const mainContent = document.querySelector('main, [role="main"]')
@@ -140,19 +152,22 @@ const AccessibilityEnhancer: React.FC = () => {
       }
     }
     document.addEventListener('keydown', handleKeyDown)
-    return () => {
+    return () =>
+                {
     document.removeEventListener('keydown', handleKeyDown)
   }
   }, [settings])
   // Add ARIA live region for announcements
-  useEffect(() => {
+  useEffect(() =>
+                {
     const liveRegion = document.createElement('div')
     liveRegion.setAttribute('aria-live', 'polite')
     liveRegion.setAttribute('aria-atomic', 'true')
     liveRegion.className = 'sr-only'
     liveRegion.id = 'live-region'
     document.body.appendChild(liveRegion)
-    return () => {
+    return () =>
+                {
       const existingLiveRegion = document.getElementById('live-region')
       if (existingLiveRegion) {
         existingLiveRegion.remove()
@@ -160,8 +175,9 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, [])
   // Announce page changes
-  useEffect(() => {
-    const announcePageChange = () => {
+  useEffect(() =>
+                {
+    const announcePageChange  = () => {
       const liveRegion = document.getElementById('live-region')
       if (liveRegion) {
         const pageTitle = document.title
@@ -177,10 +193,10 @@ const AccessibilityEnhancer: React.FC = () => {
     return null
   }
   return (
-    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
+    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50"></div>
       <div className="mb-2 font-bold">Accessibility Settings
-      <div className="space-y-2">
-        <label className="flex items-center space-x-2">
+      <div className="space-y-2"></div>
+        <label className="flex items-center space-x-2"></label>
           <input
             type="checkbox"
             checked={settings.highContrast}
@@ -188,7 +204,7 @@ const AccessibilityEnhancer: React.FC = () => {
             className="rounded"
           />
           <span>High Contrast
-        <label className="flex items-center space-x-2">
+        <label className="flex items-center space-x-2"></label>
           <input
             type="checkbox"
             checked={settings.reducedMotion}
@@ -196,7 +212,7 @@ const AccessibilityEnhancer: React.FC = () => {
             className="rounded"
           />
           <span>Reduced Motion
-        <div>
+        <div></div>
           <label className="block mb-1">Font Size:
           <select
             value={settings.fontSize}
@@ -205,7 +221,7 @@ const AccessibilityEnhancer: React.FC = () => {
             <option value="small">Small
             <option value="medium">Medium
             <option value="large">Large
-        <label className="flex items-center space-x-2">
+        <label className="flex items-center space-x-2"></label>
           <input
             type="checkbox"
             checked={settings.focusVisible}
@@ -213,10 +229,11 @@ const AccessibilityEnhancer: React.FC = () => {
             className="rounded"
           />
           <span>Focus Visible</span>
-        </label>
+                </label>
       </div>
-    </div>
+                </div>
   )
 }
 export default AccessibilityEnhancer</AccessibilitySettings>
-</div></div></span></span>
+                </div></div>
+                </span></span>;

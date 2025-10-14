@@ -1,5 +1,6 @@
 // Search parser utilities
-export const parseSearchQuery = (query: string) => {
+export const parseSearchQuery = (query: string) =>
+                {
   // Add search query parsing functionality here
   return {
     keywords: []
@@ -36,7 +37,8 @@ export const parseSearchQuery = (query: string) => {
     type: null
   }
 }
-export const searchAll = (parsed: any, access: any) => {
+export const searchAll = (parsed: any, access: any) =>
+                {
   // Add search functionality here
   return {
     all: [],
@@ -45,14 +47,13 @@ export const searchAll = (parsed: any, access: any) => {
     projects: []
   }
 }
-export const suggestDidYouMean = (query: string) => {
+export const suggestDidYouMean = (query: string) =>
+                {
   // Add did you mean functionality here
   return null
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export type SearchType = 'all' | 'talent' | 'jobs' | 'projects'
 export type ParsedFilters = {
   type: SearchType
@@ -136,7 +137,8 @@ function extractKeywords(text: string): string[] {
     .filter(Boolean)
     .filter((w) => w.length > 2 && !['show', 'me', 'with', 'and', 'for', 'the', 'a', 'an', 'to', 'by', 'of', 'under', 'over', 'in'].includes(w))
 }
-export async function parseQueryToFilters(query: string): Promise<ParsedFilters> {
+export async function parseQueryToFilters(query: string): Promise<ParsedFilters></ParsedFilters>
+                {
   const base: ParsedFilters = {
     type: extractType(query),
     skills: extractSkills(query),

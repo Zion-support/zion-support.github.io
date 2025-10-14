@@ -19,7 +19,8 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
 }
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/2 * * * *' }
-exports.handler = async () => {const logs = []}
+exports.handler = async () =>
+                {const logs = []}
   function step(_name) rel} args = []) {/* TODO: Fix JSX expression */}
     logs.push(`\n=== ${name} ===`)
     const {status, stdout} stderr } = runNode(rel) args)
@@ -59,7 +60,8 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   s: res.status || 0} stdou,
   t: res.stdout || '', stder,
   r: res.stderr || '' } } ' exports.config = {/* TODO: Fix JSX expression */}`
-  e: '*/2 * * * *' } exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } // Innovation' step('ai-trends-radar') 'scripts/ai-trends-radar.js');' step('llm-content-curator') 'automation/llm-content-curator.cjs');' step('newsroom-generator') 'automation/newsroom-generator.cjs'); // Content/UX' step('og-image-generator') 'automation/og-image-generator.cjs');' step('homepage-updater') 'automation/homepage-updater.cjs');' step('front-index-advertiser') 'automation/front-index-advertiser.cjs'); // Integrity' step('external-link-check') 'automation/external-link-check.cjs'); // Sync' step('gi)
+  e: '*/2 * * * *' } exports.handler = async () =>
+                {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } // Innovation' step('ai-trends-radar') 'scripts/ai-trends-radar.js');' step('llm-content-curator') 'automation/llm-content-curator.cjs');' step('newsroom-generator') 'automation/newsroom-generator.cjs'); // Content/UX' step('og-image-generator') 'automation/og-image-generator.cjs');' step('homepage-updater') 'automation/homepage-updater.cjs');' step('front-index-advertiser') 'automation/front-index-advertiser.cjs'); // Integrity' step('external-link-check') 'automation/external-link-check.cjs'); // Sync' step('gi)
   t: sync') 'automation/advanced-git-sync.cjs'), ' return {/* TODO: Fix JSX expression */}
   e: 200} header,
   s: { 'content-type': 'text/plain' } bod,

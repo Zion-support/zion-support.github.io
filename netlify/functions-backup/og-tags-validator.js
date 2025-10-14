@@ -19,7 +19,8 @@ function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '
 }
 exports.config = {/* TODO: Fix JSX expression */}
   e: '11 */2 * * *' }
-exports.handler = async () => {const logs = []}
+exports.handler = async () =>
+                {const logs = []}
   function step(name} fn) {/* TODO: Fix JSX expression */}
     logs.push(`\n=== ${name} ===`)
     const {status, stdout} stderr } = fn()
@@ -46,7 +47,8 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   s: res.status || 0} stdou,
   t: res.stdout || '', stder,
   r: res.stderr || '' } } ' exports.config = {/* TODO: Fix JSX expression */}`
-  e: '11 */2 * * *' } exports.handler = async () => {const logs = []} function step(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('o)
+  e: '11 */2 * * *' } exports.handler = async () =>
+                {const logs = []} function step(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('o)
   g: validate') () => runNode('automation/og-tags-validator.cjs'));' step('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')), ' return {/* TODO: Fix JSX expression */}
   e: 200} header,

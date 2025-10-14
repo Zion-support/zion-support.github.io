@@ -21,7 +21,7 @@ interface MessageEvent < T = any> extends Event {
   origin: string
   lastEventId: string
   source: MessageEventSource | null
-  ports: ReadonlyArray < MessagePort>
+  ports: ReadonlyArray < MessagePort></>
 }
 interface MessageChannelHandlerProps {
   on_message?: (message: unknown) => void
@@ -32,11 +32,13 @@ export /**
  */
 function useMessageChannelHandler() {
   const handle_message = useCallback (
-    (event: MessageEvent < unknown>) => {
+    (event: MessageEvent < unknown>) =>
+                {
   onError
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback(
-    (event: MessageEvent<unknown>) => {
+    (event: MessageEvent<unknown>) =>
+                {
       try {
         // Check condition
 if ( {) {
@@ -59,10 +61,12 @@ if ( {) {
     }
     [onMessage, onError]
   )
-  useEffect(() => {
+  useEffect(() =>
+                {
     window && window.addEventListener('message', handleMessage)
-    return () => {
+    return () =>
+                {
       window && window.removeEventListener('message', handleMessage)
     }
   }, [handleMessage])
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+;

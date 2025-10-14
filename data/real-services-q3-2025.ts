@@ -29,7 +29,7 @@ export interface Q3Service {id: string, name: string,
   competitors?: string[],
   marketSize?: string
   growthRate?: string
-  text_color: string
+  text_color: string;
   link: string;  market_position?: string
   target_audience?: string
   trial_days?: number

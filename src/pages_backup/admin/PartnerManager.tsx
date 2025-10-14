@@ -6,25 +6,14 @@ onViewDetails, }
 
 
 
-import { use_router } from 'next / router'
-import { Button  } from '@/components / ui / button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card'
-import { Input  } from '@/components / ui / input'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow  } from '@/components / ui / table'
-import { Badge  } from '@/components / ui / badge'
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger  } from '@/components / ui / dialog'
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs'
-import { Alert, AlertDescription, AlertTitle  } from '@/components / ui / alert'
-import { toast  } from '@/hooks / use - toast'
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'import { supabase  } from '@/integrations / supabase / client'
-import { logErrorToProduction } from '@/utils / production_logger'
-import { EmptyState  } from '@/components / ui / empty - state'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
-
-interface PartnerProfile {
+import { use_router  } from 'next / router';
+import { Button   } from '@/components / ui / button';import { Card, CardContent, CardDescription, CardHeader, CardTitle   } from '@/components / ui / card';
+import { Input   } from '@/components / ui / input';import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow   } from '@/components / ui / table';
+import { Badge   } from '@/components / ui / badge';import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger   } from '@/components / ui / dialog';
+import { Tabs, TabsContent, TabsList, TabsTrigger   } from '@/components / ui / tabs';import { Alert, AlertDescription, AlertTitle   } from '@/components / ui / alert';
+import { toast   } from '@/hooks / use - toast';import { Check, Flag, Search, Settings, X, Users  } from 'lucide-react';
+import { supabase   } from '@/integrations / supabase / client';import { logErrorToProduction  } from '@/utils / production_logger';
+import { EmptyState   } from '@/components / ui / empty - state';interface PartnerProfile {
   id: string,
   user_id: string,
   name: string,
@@ -33,7 +22,7 @@ interface PartnerProfile {
   niche: string,
   audience_size: string,
 
-  social_media?: Record<string, string>
+  social_media?: Record<string, string></string,>
   website?: string
   bio?: string
   payout_method?: string
@@ -58,14 +47,16 @@ export default function PartnerManager() {
   const [commissionRate, setCommissionRate] = useState(25)
   const { user, isAuthenticated } = useAuth()
   const router = useRouter()
-  useEffect((,) => {
+  useEffect((,) =>
+                {
     if (!isAuthenticated) {
       router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners'))
       return
     }
     fetchPartners()
   }, [isAuthenticated, router])
-  const fetchPartners = async () => {
+  const fetchPartners = async () =>
+                {
     try {
       setIsLoading(true)
       // In a real application, check admin permissions here
@@ -76,7 +67,9 @@ export default function PartnerManager() {
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>
       default:
-        return <Badge variant="outline">{status}</Badge>
+        return <Badge variant="outline"></Badge>
+                {status}
+                </Badge>
   partners
   isLoading
   onViewDetails, }
@@ -100,7 +93,8 @@ export default function PartnerManager() {
   const { user, isAuthenticated } = useAuth(),
   const router = useRouter(),
 
-  useEffect(() => {
+  useEffect(() =>
+                {
     if (!isAuthenticated) {
       router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners')),
       return
@@ -115,9 +109,9 @@ import { Badge } from "@/components/ui/badge",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
-import { toast } from "@/hooks/use-toast",
-import { Check, Flag, Search, Settings, X, Users } from 'lucide-react'
-import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",;
+import { Check, Flag, Search, Settings, X, Users  } from 'lucide-react';
+import { supabase  } from '@/integrations/supabase/client';,
 import { logErrorToProduction } from '@/utils/productionLogger',
 import { EmptyState } from "@/components/ui/empty-state",
 interface PartnerProfile {
@@ -150,7 +144,8 @@ function PartnerManager() {
   const [commission_rate, setCommissionRate] = useState (25)
   const { user, is_authenticated } = use_auth ()
   const router = use_router ()
-  useEffect ((, ) => {
+  useEffect ((, ) =>
+                {
     // Check condition
 if ( {) {
   $2
@@ -160,7 +155,8 @@ if ( {) {
     }
   },
 
-  const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
+  const filterPartners = (partners: PartnerProfile[], status: string, query: string) =>
+                {
     let filtered = partners,
     
     // Filter by status
@@ -176,7 +172,8 @@ if ( {) {
       setIsLoading(false)
     }
   },
-  const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
+  const filterPartners = (partners: PartnerProfile[], status: string, query: string) =>
+                {
     let filtered = partners,
     // Filter by status
     if (status !== "all") {
@@ -197,28 +194,33 @@ if ( {) {
     setFilteredPartners(filtered)
   },
 
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) =>
+                {
     setSearchQuery(e.target.value),
     filterPartners(partners, activeTab, e.target.value)
   },
 
-  const handleTabChange = (value: string) => {
+  const handleTabChange = (value: string) =>
+                {
     setActiveTab(value),
     filterPartners(partners, value, searchQuery)
   },
 
-  const handleViewDetails = (partner: PartnerProfile) => {
+  const handleViewDetails = (partner: PartnerProfile) =>
+                {
     setSelectedPartner(partner),
     setIsDetailsOpen(true)
   },
 
-  const handleOpenSettings = (partner: PartnerProfile) => {
+  const handleOpenSettings = (partner: PartnerProfile) =>
+                {
     setSelectedPartner(partner),
     setCommissionRate(partner.commission_rate || 25),
     setIsSettingsOpen(true)
   },
 
-  const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
+  const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') =>
+                {
     try {
       // In a real app, this would update the database
       setPartners(partners.map(p => 
@@ -249,7 +251,8 @@ if ( {) {
     }
   },
 
-  const handleSaveSettings = async () => {
+  const handleSaveSettings = async () =>
+                {
     if (!selectedPartner) return,
     
     try {
@@ -279,24 +282,29 @@ if ( {) {
 
     setFilteredPartners(filtered)
   },
-  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) =>
+                {
     setSearchQuery(e.target.value),
     filterPartners(partners, activeTab, e.target.value)
   },
-  const handleTabChange = (value: string) => {
+  const handleTabChange = (value: string) =>
+                {
     setActiveTab(value),
     filterPartners(partners, value, searchQuery)
   },
-  const handleViewDetails = (partner: PartnerProfile) => {
+  const handleViewDetails = (partner: PartnerProfile) =>
+                {
     setSelectedPartner(partner),
     setIsDetailsOpen(true)
   },
-  const handleOpenSettings = (partner: PartnerProfile) => {
+  const handleOpenSettings = (partner: PartnerProfile) =>
+                {
     setSelectedPartner(partner),
     setCommissionRate(partner.commission_rate || 25),
     setIsSettingsOpen(true)
   },
-  const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') => {
+  const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejected') =>
+                {
     try {
       // In a real app, this would update the database
       setPartners(partners.map(p =>
@@ -323,7 +331,8 @@ if ( {) {
         variant: "destructive"})
     }
   },
-  const handleSaveSettings = async () => {
+  const handleSaveSettings = async () =>
+                {
     if (!selectedPartner) return,
     try {
       // Update commission rate
@@ -348,7 +357,8 @@ if ( {) {
         variant: "destructive"})
     }
   },
-  const getAudienceSizeLabel = (size: string) => {
+  const getAudienceSizeLabel = (size: string) =>
+                {
     switch (size) {
       case 'under1k': return 'Under 1,000',
       case '1k-10k': return '1,000 - 10,000',
@@ -359,8 +369,8 @@ if ( {) {
     }
   },
 
-  const getStatusBadge = (status: string) => {
-    switch (status) {
+  const getStatusBadge = (status: string) =>
+                {switch (status) {
       case 'pending':
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,
       case 'approved':
@@ -368,19 +378,22 @@ if ( {) {
       case 'rejected':
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,
       default:
-        return <Badge variant="outline">{status}</Badge>
+        return <Badge variant="outline"></Badge>
+                {status}
+                </Badge>
     }
   },
 
-  const getFraudFlagBadge = (flags: number = 0) => {
+  const getFraudFlagBadge = (flags: number = 0) =>
+                {
     if (flags === 0) return null,
     
     return (
-      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
+      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1"></Badge>
         <Flag className="h-3 w-3" />
   },
-  const getStatusBadge = (status: string) => {
-    switch (status) {
+  const getStatusBadge = (status: string) =>
+                {switch (status) {
       case 'pending':
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,
       case 'approved':
@@ -388,75 +401,83 @@ if ( {) {
       case 'rejected':
         return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,
       default:
-        return <Badge variant="outline">{status}</Badge>
+        return <Badge variant="outline"></Badge>
+                {status}
+                </Badge>
     }
   },
-  const getFraudFlagBadge = (flags: number = 0) => {
-    if (flags === 0) return null,
+  const getFraudFlagBadge = (flags: number = 0) =>
+                {if (flags === 0) return null,
     return (
-      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
+      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1"></Badge>
         <Flag className="h-3 w-3" />
-        {flags}
-      </Badge>
+                {flags}
+                </Badge>
     )
   },
   return (
-    <div className="container max-w-7xl py-10">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-        <div>
+    <div className="container max-w-7xl py-10"></div>
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8"></div>
+        <div></div>
           <h1 className="text-3xl font-bold tracking-tight text-white">Partner Management</h1>
-          <p className="text-zion-slate-light">Approve and manage affiliate partners</p></$1></$1>
-      <Card className="bg-zion-blue-dark border-zion-blue-light mb-8">
-        <CardHeader className="pb-3">
-          <CardTitle>Overview</CardTitle></$1>
-        <CardContent>
-          <div className="grid gap-4 md:grid-cols-3">
-            <Card className="bg-zion-blue border-zion-blue-light">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-zion-slate-light">
+          <p className="text-zion-slate-light">Approve and manage affiliate partners</p>
+                </$1></$1>
+      <Card className="bg-zion-blue-dark border-zion-blue-light mb-8"></Card>
+        <CardHeader className="pb-3"></CardHeader>
+          <CardTitle>Overview</CardTitle>
+                </$1>
+        <CardContent></CardContent>
+          <div className="grid gap-4 md:grid-cols-3"></div>
+            <Card className="bg-zion-blue border-zion-blue-light"></Card>
+              <CardHeader className="pb-2"></CardHeader>
+                <CardTitle className="text-sm font-medium text-zion-slate-light"></CardTitle>
                   Pending Applications</$1>
-                <div className="text-2xl font-bold text-white">
-                  {partners.filter(p => p.status === 'pending').length}
-                </div></$1>
-              <CardContent className="pt-0">
-                <p className="text-xs text-zion-slate-light">
-                  Partners waiting for review and approval</$1></$1></$1>
-            <Card className="bg-zion-blue border-zion-blue-light">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-zion-slate-light">
-                  Active Partners</$1>
-                <div className="text-2xl font-bold text-white">
-                  {partners.filter(p => p.status === 'approved').length}
-                </div></$1>
-              <CardContent className="pt-0">
-                <p className="text-xs text-zion-slate-light">
-                  Currently approved and active partners</$1></$1></$1>
-            <Card className="bg-zion-blue border-zion-blue-light">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-zion-slate-light">
-                  Fraud Flags</$1>
-                <div className="text-2xl font-bold text-white">
-                  {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
+                <div className="text-2xl font-bold text-white"></div>
+                {partners.filter(p => p.status === 'pending').length}
                 </div>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-xs text-zion-slate-light">
+                </$1>
+              <CardContent className="pt-0"></CardContent>
+                <p className="text-xs text-zion-slate-light"></p>
+                  Partners waiting for review and approval</$1>
+                </$1></$1>
+            <Card className="bg-zion-blue border-zion-blue-light"></Card>
+              <CardHeader className="pb-2"></CardHeader>
+                <CardTitle className="text-sm font-medium text-zion-slate-light"></CardTitle>
+                  Active Partners</$1>
+                <div className="text-2xl font-bold text-white"></div>
+                {partners.filter(p => p.status === 'approved').length}
+                </div>
+                </$1>
+              <CardContent className="pt-0"></CardContent>
+                <p className="text-xs text-zion-slate-light"></p>
+                  Currently approved and active partners</$1>
+                </$1></$1>
+            <Card className="bg-zion-blue border-zion-blue-light"></Card>
+              <CardHeader className="pb-2"></CardHeader>
+                <CardTitle className="text-sm font-medium text-zion-slate-light"></CardTitle>
+                  Fraud Flags</$1>
+                <div className="text-2xl font-bold text-white"></div>
+                {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
+                </div>
+                </CardHeader>
+              <CardContent className="pt-0"></CardContent>
+                <p className="text-xs text-zion-slate-light"></p>
                   Total potential fraud flags detected
                 </p>
-              </CardContent>
+                </CardContent>
             </Card>
-          </div>
+                </div>
         </CardContent>
-      </Card>
+                </Card>
 
-      <Card className="bg-zion-blue-dark border-zion-blue-light">
-        <CardHeader className="pb-3 flex flex-col md:flex-row justify-between md:items-center gap-4">
-          <div>
+      <Card className="bg-zion-blue-dark border-zion-blue-light"></Card>
+        <CardHeader className="pb-3 flex flex-col md:flex-row justify-between md:items-center gap-4"></CardHeader>
+          <div></div>
             <CardTitle>Partners</CardTitle>
             <CardDescription>Manage partnership applications and settings</CardDescription>
-          </div>
-          <div className="w-full md:w-80">
-            <div className="relative">
+                </div>
+          <div className="w-full md:w-80"></div>
+            <div className="relative"></div>
               <Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light" />
               <Input
                 placeholder="Search partners..."
@@ -465,18 +486,18 @@ if ( {) {
                 onChange={handleSearch}
               />
             </div>
-          </div>
+                </div>
         </CardHeader>
-        <CardContent>
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="space-y-4">
-            <TabsList className="grid grid-cols-4 w-full md:w-auto">
+        <CardContent></CardContent>
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="space-y-4"></Tabs>
+            <TabsList className="grid grid-cols-4 w-full md:w-auto"></TabsList>
               <TabsTrigger value="pending">Pending</TabsTrigger>
               <TabsTrigger value="approved">Approved</TabsTrigger>
               <TabsTrigger value="rejected">Rejected</TabsTrigger>
               <TabsTrigger value="all">All</TabsTrigger>
-            </TabsList>
+                </TabsList>
             
-            <TabsContent value="pending" className="space-y-4">
+            <TabsContent value="pending" className="space-y-4"></TabsContent>
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
@@ -488,7 +509,7 @@ if ( {) {
               />
             </TabsContent>
             
-            <TabsContent value="approved" className="space-y-4">
+            <TabsContent value="approved" className="space-y-4"></TabsContent>
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
@@ -500,7 +521,7 @@ if ( {) {
               />
             </TabsContent>
             
-            <TabsContent value="rejected" className="space-y-4">
+            <TabsContent value="rejected" className="space-y-4"></TabsContent>
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
@@ -512,7 +533,7 @@ if ( {) {
               />
             </TabsContent>
             
-            <TabsContent value="all" className="space-y-4">
+            <TabsContent value="all" className="space-y-4"></TabsContent>
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
@@ -521,91 +542,106 @@ if ( {) {
                 onOpenSettings={handleOpenSettings}
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
-              /></$1></$1></$1></$1>
-      {/* Partner Details Dialog */}
-      <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}>
-        <DialogContent className="sm:max-w-lg bg-zion-blue border-zion-blue-light">
-          <DialogHeader>
+              /></$1>
+                </$1></$1>
+                </$1>
+                {/* Partner Details Dialog */}
+                <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}></Dialog>
+        <DialogContent className="sm:max-w-lg bg-zion-blue border-zion-blue-light"></DialogContent>
+          <DialogHeader></DialogHeader>
             <DialogTitle>Partner Details</DialogTitle>
-            <DialogDescription>
+            <DialogDescription></DialogDescription>
               Review the details of the partner application
             </DialogDescription>
-          </DialogHeader>
-          
-          {selectedPartner && (
-            <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-2">
-                <div>
+                </DialogHeader>
+                {selectedPartner && (
+            <div className="space-y-4"></div>
+              <div className="grid grid-cols-2 gap-2"></div>
+                <div></div>
                   <p className="text-xs text-zion-slate-light">Name</p>
-                  <p className="font-medium text-white">{selectedPartner.name}</p>
+                  <p className="font-medium text-white"></p>
+                {selectedPartner.name}
+                </p>
                 </div>
-                <div>
+                <div></div>
                   <p className="text-xs text-zion-slate-light">Status</p>
-                  <div>{getStatusBadge(selectedPartner.status)}</div>
+                  <div></div>
+                {getStatusBadge(selectedPartner.status)}
+                </div>
                 </div>
               </div>
               
-              <div>
+              <div></div>
                 <p className="text-xs text-zion-slate-light">Bio</p>
-                <p className="text-white">{selectedPartner.bio || "No bio provided"}</p>
-              </div>
+                <p className="text-white"></p>
+                {selectedPartner.bio || "No bio provided"}
+                </p>
+                </div>
               
-              <div className="grid grid-cols-2 gap-2">
-                <div>
+              <div className="grid grid-cols-2 gap-2"></div>
+                <div></div>
                   <p className="text-xs text-zion-slate-light">Niche</p>
-                  <p className="text-white">{selectedPartner.niche}</p>
+                  <p className="text-white"></p>
+                {selectedPartner.niche}
+                </p>
                 </div>
-                <div>
+                <div></div>
                   <p className="text-xs text-zion-slate-light">Audience Size</p>
-                  <p className="text-white">{getAudienceSizeLabel(selectedPartner.audience_size)}</p>
+                  <p className="text-white"></p>
+                {getAudienceSizeLabel(selectedPartner.audience_size)}
+                </p>
                 </div>
               </div>
-              
-              {selectedPartner.website && (
-                <div>
+                {selectedPartner.website && (
+                <div></div>
                   <p className="text-xs text-zion-slate-light">Website</p>
-                  <p className="text-zion-cyan">{selectedPartner.website}</p>
+                  <p className="text-zion-cyan"></p>
+                {selectedPartner.website}
+                </p>
                 </div>
               )}
 
               {selectedPartner.social_media && Object.keys(selectedPartner.social_media).length > 0 && (
-                <div>
+                <div></div>
                   <p className="text-xs text-zion-slate-light">Social Media</p>
-                  <div className="grid grid-cols-2 gap-2">
-                    {Object.entries(selectedPartner.social_media).map(([platform, handle]) => (
-                      <p key={platform} className="text-white">
-                        <span className="font-medium">{platform}: </span>
-                        {handle}
-                      </p>
+                  <div className="grid grid-cols-2 gap-2"></div>
+                {Object.entries(selectedPartner.social_media).map(([platform, handle]) => (
+                      <p key={platform} className="text-white"></p>
+                        <span className="font-medium"></span>
+                {platform}: </span>
+                {handle}
+                </p>
                     ))}
-                  </div></$1>
-              )}
-              
-              <div className="grid grid-cols-2 gap-2">
-                <div>
-                  <p className="text-xs text-zion-slate-light">Payout Method</p>
-                  <p className="text-white capitalize">{selectedPartner.payout_method || "Not specified"}</p>
                 </div>
-                <div>
+                </$1>
+              )}
+                <div className="grid grid-cols-2 gap-2"></div>
+                <div></div>
+                  <p className="text-xs text-zion-slate-light">Payout Method</p>
+                  <p className="text-white capitalize"></p>
+                {selectedPartner.payout_method || "Not specified"}
+                </p>
+                </div>
+                <div></div>
                   <p className="text-xs text-zion-slate-light">Commission Rate</p>
-                  <p className="text-white">{selectedPartner.commission_rate || 25}%</p>
+                  <p className="text-white"></p>
+                {selectedPartner.commission_rate || 25}%</p>
                 </div>
               </div>
-              
-              {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && (
-                <Alert className="bg-red-900/20 border-red-900/50 text-red-500">
-                  <AlertTitle className="flex items-center gap-2">
+                {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && (
+                <Alert className="bg-red-900/20 border-red-900/50 text-red-500"></Alert>
+                  <AlertTitle className="flex items-center gap-2"></AlertTitle>
                     <Flag className="h-4 w-4" />
                     Potential Fraud Detected ({selectedPartner.fraud_flags})
                   </AlertTitle>
-                  <AlertDescription>
+                  <AlertDescription></AlertDescription>
                     This application has triggered our fraud detection system. Review carefully before approving.
                   </AlertDescription>
                 </Alert>
               )}
               
               {selectedPartner.status === 'pending' && (
-                <div className="flex justify-end gap-2 mt-4">
+                <div className="flex justify-end gap-2 mt-4"></div>
                   <Button 
                     variant="destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
@@ -617,30 +653,33 @@ if ( {) {
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
                   >
                     <Check className="h-4 w-4 mr-1" />
-                    Approve</$1></$1>
+                    Approve</$1>
+                </$1>
               )}
-            </div>
+                </div>
           )}
-        </DialogContent></$1>
-      {/* Partner Settings Dialog */}
-      <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>
-        <DialogContent className="bg-zion-blue border-zion-blue-light">
-          <DialogHeader>
+                </DialogContent>
+                </$1>
+                {/* Partner Settings Dialog */}
+                <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}></Dialog>
+        <DialogContent className="bg-zion-blue border-zion-blue-light"></DialogContent>
+          <DialogHeader></DialogHeader>
             <DialogTitle>Partner Settings</DialogTitle>
-            <DialogDescription>
+            <DialogDescription></DialogDescription>
               Configure commission rates and other settings
             </DialogDescription>
-          </DialogHeader>
-          
-          {selectedPartner && (
-            <div className="space-y-4">
-              <div>
+                </DialogHeader>
+                {selectedPartner && (
+            <div className="space-y-4"></div>
+              <div></div>
                 <label className="text-sm font-medium text-white">Partner Name</label>
-                <p className="text-zion-slate-light">{selectedPartner.name}</p>
-              </div>
+                <p className="text-zion-slate-light"></p>
+                {selectedPartner.name}
+                </p>
+                </div>
               
-              <div>
-                <label className="text-sm font-medium text-white" htmlFor="commission-rate">
+              <div></div>
+                <label className="text-sm font-medium text-white" htmlFor="commission-rate"></label>
                   Commission Rate (%)
                 </label>
                 <Input
@@ -651,22 +690,23 @@ if ( {) {
                   value={commissionRate}
                   onChange={(e) => setCommissionRate(parseInt(e.target.value))}
                 />
-                <p className="text-xs text-zion-slate-light mt-1">
+                <p className="text-xs text-zion-slate-light mt-1"></p>
                   Percentage of reward granted to this partner for successful referrals
                 </p>
-              </div>
+                </div>
               
-              <DialogFooter>
+              <DialogFooter></DialogFooter>
                 <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>
                   Cancel
                 </Button>
-                <Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark">
+                <Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark"></Button>
                   Save Changes
                 </Button>
-              </DialogFooter>
+                </DialogFooter>
             </div>
           )}
-        </DialogContent></$1></$1>
+                </DialogContent>
+                </$1></$1>
   )
 }
 
@@ -691,14 +731,15 @@ function PartnerTable({
 }: PartnerTableProps) {
   if (isLoading) {
     return (
-      <div className="text-center py-8">
-        <p className="text-zion-slate-light">Loading partner data...</p></$1>
+      <div className="text-center py-8"></div>
+        <p className="text-zion-slate-light">Loading partner data...</p>
+                </$1>
     )
   }
   
   if (partners.length === 0) {
     return (
-      <div className="py-8">
+      <div className="py-8"></div>
         <EmptyState
           icon={<Users className="h-8 w-8" />}
           title="No Partners Found"
@@ -710,33 +751,39 @@ function PartnerTable({
   }
 
   return (
-    <Table>
-      <TableHeader>
-        <TableRow className="hover:bg-transparent">
+    <Table></Table>
+      <TableHeader></TableHeader>
+        <TableRow className="hover:bg-transparent"></TableRow>
           <TableHead>Name</TableHead>
           <TableHead>Niche</TableHead>
           <TableHead>Audience</TableHead>
           <TableHead>Status</TableHead>
           <TableHead>Date</TableHead>
-          <TableHead className="text-right">Actions</TableHead></$1></$1>
-      <TableBody>
-        {partners.map((partner) => (
-          <TableRow key={partner.id} className="border-zion-blue-light hover:bg-zion-blue-light/10">
-            <TableCell className="font-medium text-white">
-              <div className="flex items-center gap-2">
+          <TableHead className="text-right">Actions</TableHead>
+                </$1></$1>
+      <TableBody></TableBody>
+                {partners.map((partner) => (
+          <TableRow key={partner.id} className="border-zion-blue-light hover:bg-zion-blue-light/10"></TableRow>
+            <TableCell className="font-medium text-white"></TableCell>
+              <div className="flex items-center gap-2"></div>
                 {partner.name}
                 {getFraudFlagBadge(partner.fraud_flags)}
-              </div></$1>
-            <TableCell>{partner.niche}</TableCell>
-            <TableCell>
-              {partner.audience_size.replace('k,000').replace('- - ').replace('overOver ')}
-            </TableCell>
-            <TableCell>{getStatusBadge(partner.status)}</TableCell>
-            <TableCell>
-              {new Date(partner.created_at).toLocaleDateString()}
-            </TableCell>
-            <TableCell className="text-right">
-              <div className="flex justify-end gap-2">
+                </div>
+                </$1>
+            <TableCell></TableCell>
+                {partner.niche}
+                </TableCell>
+            <TableCell></TableCell>
+                {partner.audience_size.replace('k,000').replace('- - ').replace('overOver ')}
+                </TableCell>
+            <TableCell></TableCell>
+                {getStatusBadge(partner.status)}
+                </TableCell>
+            <TableCell></TableCell>
+                {new Date(partner.created_at).toLocaleDateString()}
+                </TableCell>
+            <TableCell className="text-right"></TableCell>
+              <div className="flex justify-end gap-2"></div>
                 {partner.status === 'pending' && (
                   <>
                     <Button 
@@ -747,7 +794,7 @@ function PartnerTable({
                     >
                       <X className="h-4 w-4" />
                       <span className="sr-only">Reject</span>
-                    </Button>
+                </Button>
                     <Button 
                       variant="ghost"
                       size="sm"
@@ -756,10 +803,9 @@ function PartnerTable({
                     >
                       <Check className="h-4 w-4" />
                       <span className="sr-only">Approve</span>
-                    </Button>
+                </Button>
                   </>
                 )}
-                
                 <Button 
                   variant="ghost" 
                   size="sm"
@@ -775,8 +821,12 @@ function PartnerTable({
                   size="sm"
                   onClick={() => onViewDetails(partner)}
                 >
-                  View</$1></$1></$1></$1>
+                  View</$1>
+                </$1></$1>
+                </$1>
         ))}
-      </TableBody></$1>
+                </TableBody>
+                </$1>
   )
 }
+;

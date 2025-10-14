@@ -40,19 +40,19 @@ export interface APIParameter {
 }
 export interface APIRequestBody {
   required: boolean
-  content: Record<string, APIContent>
+  content: Record<string, APIContent></string,>
   description?: string
 }
 export interface APIContent {
   schema: APISchema
   example?: any
-  examples?: Record<string, APIExample>
+  examples?: Record<string, APIExample></string,>
 }
 export interface APIResponse {
   code: string
   description: string
-  content?: Record<string, APIContent>
-  headers?: Record<string, APIHeader>
+  content?: Record<string, APIContent></string,>
+  headers?: Record<string, APIHeader></string,>
 }
 export interface APIHeader {
   description: string
@@ -63,7 +63,7 @@ export interface APISchema {
   type?: string
   format?: string
   description?: string
-  properties?: Record<string, APISchema>
+  properties?: Record<string, APISchema></string,>
   items?: APISchema
   required?: string[]
   enum?: any[]
@@ -92,12 +92,12 @@ export interface APIExample {
 export interface ExampleRequest {
   method: string
   url: string
-  headers: Record<string, string>
+  headers: Record<string, string></string,>
   body?: any
 }
 export interface ExampleResponse {
   status: number
-  headers: Record<string, string>
+  headers: Record<string, string></string,>
   body: any
 }
 export interface RateLimit {
@@ -116,7 +116,7 @@ export interface DocumentationConfig {
   includeSchemas: boolean
   includeAuthentication: boolean
   includeRateLimits: boolean
-  customStyling?: Record<string, any>
+  customStyling?: Record<string, any></string,>
   branding?: {
     logo?: string
     primaryColor?: string
@@ -136,7 +136,8 @@ export class APIDocGeneratorService {
   async generateDocumentation(
     sourcePath: string,
     config: DocumentationConfig
-  ): Promise<APIDocumentation> {
+  ): Promise<APIDocumentation></APIDocumentation>
+                {
     const documentation: APIDocumentation = {
       id: `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       name: this.extractProjectName(sourcePath),
@@ -185,7 +186,9 @@ export class APIDocGeneratorService {
     schemas: APISchema[]
     languages: string[]
     frameworks: string[]
-  }> {
+  }></{
+>
+                {
     const endpoints: APIEndpoint[] = []
     const schemas: APISchema[] = []
     const languages: string[] = []
@@ -221,7 +224,8 @@ export class APIDocGeneratorService {
       frameworks: uniqueFrameworks
     }
   }
-  private async scanDirectory(path: string): Promise<string[]> {
+  private async scanDirectory(path: string): Promise<string[]></string[]>
+                {
     // Simulate directory scanning
     return [
       'src/routes/users.js',
@@ -482,11 +486,13 @@ export class APIDocGeneratorService {
     ]
     return schemas
   }
-  private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
+  private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]></APIExample[]>
+                {
     const examples: APIExample[] = []
     return schemas
   }
-  private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
+  private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]></APIExample[]>
+                {
     const examples: APIExample[] = []
     for (const endpoint of endpoints.slice(0, 3)) { // Limit to first 3 endpoints
       examples.push({
@@ -562,15 +568,18 @@ export class APIDocGeneratorService {
     const parts = sourcePath.split('/')
     return parts[parts.length - 1] || 'API Documentation'
   }
-  private async extractVersion(sourcePath: string): Promise<string> {
+  private async extractVersion(sourcePath: string): Promise<string></string>
+                {
     // Simulate version extraction from package.json, requirements.txt, etc.
     return '1.0.0'
   }
-  private async extractDescription(sourcePath: string): Promise<string> {
+  private async extractDescription(sourcePath: string): Promise<string></string>
+                {
     // Simulate description extraction from README, package.json, etc.
     return 'Comprehensive API documentation automatically generated from source code'
   }
-  private async extractBaseUrl(sourcePath: string): Promise<string> {
+  private async extractBaseUrl(sourcePath: string): Promise<string></string>
+                {
     // Simulate base URL extraction from configuration files
     return 'https://api.example.com'
   }
@@ -588,15 +597,17 @@ export class APIDocGeneratorService {
   async exportDocumentation(
     documentation: APIDocumentation,
     format: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi'
-  ): Promise<string> {
+  ): Promise<string></string>
+                {
     // Simulate export functionality
     const timestamp = new Date().toISOString()
     return `Documentation exported in ${format.toUpperCase()} format at ${timestamp}`
   }
   async updateDocumentation(
     documentationId: string,
-    changes: Partial<APIDocumentation>
-  ): Promise<APIDocumentation> {
+    changes: Partial<APIDocumentation></APIDocumentation>
+  ): Promise<APIDocumentation></APIDocumentation>
+                {
     // Simulate documentation update
     return {
       ...changes,

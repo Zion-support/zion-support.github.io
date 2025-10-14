@@ -8,7 +8,8 @@ const appTsxPath = '/workspace/app/App.tsx'
 const appContent = fs.readFileSync(appTsxPath, 'utf8')
 // Extract routes from App.tsx
 const routeMatches = appContent.match(/<Route path="([^"]+)" element={<[^}]+} \/>/g)
-const definedRoutes = routeMatches ? routeMatches.map(match => {
+const definedRoutes = routeMatches ? routeMatches.map(match =>
+                {
   const pathMatch = match.match(/path="([^"]+)"/)
   return pathMatch ? pathMatch[1] : null
 }).filter(Boolean) : []
@@ -49,7 +50,8 @@ const navigationTsxPath = '/workspace/app/components/Navigation.tsx'
 const navContent = fs.readFileSync(navigationTsxPath, 'utf8')
 // Extract href values from Navigation
 const hrefMatches = navContent.match(/href: '([^']+)'/g)
-const navRoutes = hrefMatches ? hrefMatches.map(match => {
+const navRoutes = hrefMatches ? hrefMatches.map(match =>
+                {
   const hrefMatch = match.match(/href: '([^']+)'/)
   return hrefMatch ? hrefMatch[1] : null
 }).filter(Boolean) : []
@@ -71,4 +73,4 @@ console.log(`Missing routes: ${missingRoutes.length}`)
 console.log(`Missing pages: ${missingPages.length}`)
 console.log(`Navigation routes: ${navRoutes.length}`)
 console.log(`Navigation routes without pages: ${navMissingPages.length}`)
-console.log(`Navigation routes without route definitions: ${navMissingRoutes.length}`)
+console.log(`Navigation routes without route definitions: ${navMissingRoutes.length}`);

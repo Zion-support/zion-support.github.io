@@ -32,4 +32,17 @@ function fixMainPage() {
 
 console.log('🔧 Fixing main page.tsx...')
 fixMainPage()
-console.log('🎉 Main page fixes completed!')</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></button></a></p></ul></li>
+console.log('🎉 Main page fixes completed!')</div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></span>
+                </button></a>
+                </p></ul>
+                </li>;

@@ -7,18 +7,23 @@ const __dirname = path.dirname(__filename)
 // Function to fix JSX tags that were incorrectly prefixed with underscores
 function fixJSXTags(content) {
   // Fix JSX opening tags
-  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)/g, (match, tagName) => {
-function fixJSXTags(content) {/* TODO: Fix JSX expression */}
+  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)/g, (match, tagName) =></(_[a-zA-Z][a-zA-Z0-9]*)/g,>
+                {
+function fixJSXTags(content) {/* TODO: Fix JSX expression */};
     return `<${tagName.substring(1)}`; // Remove the underscore
   })
   // Fix JSX closing tags
-  content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {
-  content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
+  content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) =>
+                {
+  content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) =>
+                {/* TODO: Fix JSX expression */}`
     return `</${tagName.substring(1)}>`; // Remove the underscore
   })
   // Fix self-closing JSX tags
-  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {
-  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
+  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) =>
+                {
+  content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) =>
+                {/* TODO: Fix JSX expression */}`
     return `<${tagName.substring(1)} />`; // Remove the underscore
   })
   return content
@@ -27,26 +32,32 @@ function fixJSXTags(content) {/* TODO: Fix JSX expression */}
 // Function to fix variable names that were incorrectly prefixed with underscores in destructuring
 function fixDestructuringVariables(content) {
   // Fix destructuring in function parameters
-  content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
+  content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) =>
+                {
     return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1')
   })
   // Fix arrow function parameters
-  content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
+  content = content.replace(/\([^)]*\)\s*=>/g, (match) =>
+                {
     return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1')
   })
   // Fix destructuring assignments
-  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {
-    const fixedVars = vars.split(',').map(v => {)
+  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) =>
+                {
+    const fixedVars = vars.split(',').map(v =>
+                {)
       const trimmed = v.trim()
       if (trimmed.startsWith('_') && trimmed.length > 1) {
         return trimmed.substring(1)
 function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
   })
   // Fix arrow function parameters
-  content = content.replace(/\([^)]*\)\s*=>/g, (match) => {/* TODO: Fix JSX expression */}
+  content = content.replace(/\([^)]*\)\s*=>/g, (match) =>
+                {/* TODO: Fix JSX expression */}
   })
   // Fix destructuring assignments
-  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
+  content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) =>
+                {/* TODO: Fix JSX expression */}
       }
       return trimmed
     }).join(', ');`

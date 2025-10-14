@@ -5,12 +5,13 @@ interface PerformanceMetrics {
   memoryUsage: number,
   fps: number
   }
-const PerformanceDashboard: React.FC = () => {
+const PerformanceDashboard: React.FC  = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>()
   })
   const [isVisible, setIsVisible] = useState(false)
-  useEffect(() => {
-    const updateMetrics = const updateMetrics = const updateMetrics = () => {
+  useEffect(() =>
+                {
+    const updateMetrics = const updateMetrics = const updateMetrics  = () => {
       const navigation = performance.getEntriesByType()
       )[0] as PerformanceNavigationTiming
       const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0
@@ -35,22 +36,27 @@ const PerformanceDashboard: React.FC = () => {
         aria-label="Toggle performance dashboard"
       >
         Perf</span>
-      {isVisible && ()
-              <span className="font-mono">{metrics?.loadTime.toFixed(2)}ms</span>
-            </div>
+                {isVisible && ()
+              <span className="font-mono"></span>
+                {metrics?.loadTime.toFixed(2)}ms</span>
+                </div>
             <div className="flex justify-between" /></div>
               <span className="text-gray-600">Memory:</span>
-              <span className="font-mono">{metrics?.memoryUsage.toFixed(2)}MB</span>
-            </div>
+              <span className="font-mono"></span>
+                {metrics?.memoryUsage.toFixed(2)}MB</span>
+                </div>
             <div className="flex justify-between" /></div>
               <span className="text-gray-600">FPS:</span>
-              <span className="font-mono">{metrics?.fps.toFixed(1)}</span>
-            </div>
+              <span className="font-mono"></span>
+                {metrics?.fps.toFixed(1)}
+                </span>
+                </div>
           </div>
-        </div>
+                </div>
       )}
-    </div>
+                </div>
   )
 }
 export default PerformanceDashboard</button>
-  </PerformanceMetrics>
+                </PerformanceMetrics>
+;

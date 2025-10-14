@@ -25,12 +25,13 @@ function fixSyntaxErrors(filePath) {
     const originalContent = content
     // Fix common syntax issues
     
-    // 1. Fix missing semicolons after array declarations
+    // 1. Fix missing semicolons after array declarations;
     content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?\])\s*$/gm, '$1;')
     // 2. Fix missing commas in arrays (look for patterns like } followed by {)
     content = content.replace(/}\s*\n\s*{/g, '},\n    {')
     // 3. Fix missing semicolons after const declarations
-    content = content.replace(/(\s+const\s+\w+\s*=\s*[^;]+)\s*$/gm, (match) => {
+    content = content.replace(/(\s+const\s+\w+\s*=\s*[^;]+)\s*$/gm, (match) =>
+                {
       if (!match.trim().endsWith(';') && !match.trim().endsWith('}') && !match.trim().endsWith(')')) {
         return match + ';'
       }
@@ -40,7 +41,8 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/<React\.Fragment>\s*$/gm, '<>')
     content = content.replace(/<\/React\.Fragment>\s*$/gm, '</>')
     // 5. Fix missing closing brackets for arrays
-    content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?)(\s*)(\n\s*const|\n\s*return|\n\s*function|\n\s*export)/gm, (match, arrayPart, spaces, nextPart) => {
+    content = content.replace(/(\s+const\s+\w+\s*=\s*\[[\s\S]*?)(\s*)(\n\s*const|\n\s*return|\n\s*function|\n\s*export)/gm, (match, arrayPart, spaces, nextPart) =>
+                {
       if (!arrayPart.trim().endsWith(']')) {
         return arrayPart + ']' + spaces + nextPart
       }
@@ -53,7 +55,8 @@ function fixSyntaxErrors(filePath) {
     // 8. Fix malformed JSX - ensure proper structure
     content = content.replace(/return\s*\(\s*<>\s*$/gm, 'return (\n    <>\n')
     // 9. Fix missing closing tags for main sections
-    content = content.replace(/<main[^>]*>[\s\S]*?<\/section>\s*$/gm, (match) => {
+    content = content.replace(/<main[^>]*>[\s\S]*?<\/section>\s*$/gm, (match) =>
+                {
       if (!match.includes('</main>')) {
         return match + '\n      </main>\n    </>\n  );\n}'
       }
@@ -88,7 +91,8 @@ const tsFiles = getAllTsFiles('./app')
 console.log(`Found ${tsFiles.length} TypeScript files to check`)
 let fixedCount = 0
 let errorCount = 0
-tsFiles.forEach(filePath => {
+tsFiles.forEach(filePath =>
+                {
   if (fs.existsSync(filePath)) {
     if (fixSyntaxErrors(filePath)) {
       fixedCount++

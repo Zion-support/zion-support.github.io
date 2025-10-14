@@ -44,11 +44,10 @@ const GuidesPage = lazy(() => import('./guides/page'))
 const SitemapPage = lazy(() => import('./sitemap/page'))
 const NotFoundPage = lazy(() => import('./not-found'))
 const OfflinePage = lazy(() => import('./offline/page'))
-// Utils
-import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer } from './utils/performanceOptimizer'
-import { logger } from './utils/logger'
-import performanceMonitor from './utils/performanceMonitor'
+// Utils;
+import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, performanceOptimizer  } from './utils/performanceOptimizer';
+import { logger  } from './utils/logger';import performanceMonitor from './utils/performanceMonitor'
 import seoOptimizer from './utils/seoOptimizer'
 import accessibilityEnhancer from './utils/accessibilityEnhancer'
 // Styles
-import './globals.css'
+import './globals.css';

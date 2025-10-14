@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react"
-import { toast } from "@/hooks/use-toast"
-import { useAuth } from "@/hooks/useAuth"
-import { supabase } from "@/integrations/supabase/client"
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals"
+import { useState, useEffect  } from 'react';
+import { toast  } from '@/hooks/use-toast';import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals"
 export function useReferrals() {
   const { user } = useAuth()
   const [referralCode, setReferralCode] = useState<ReferralCode | null>(null)
@@ -16,7 +14,8 @@ export function useReferrals() {
     totalRewards: 0})
     totalRewards: 0,
   })
-  useEffect(() => {
+  useEffect(() =>
+                {
     if (user) {
       fetchReferralCode()
       fetchReferralStats()
@@ -24,7 +23,8 @@ export function useReferrals() {
       fetchRewards()
     }
   }, [user])
-  const fetchReferralCode = async () => {
+  const fetchReferralCode = async () =>
+                {
     try {
       setIsLoading(true)
       const { data, error } = await supabase
@@ -43,7 +43,8 @@ export function useReferrals() {
       setIsLoading(false)
     }
   }
-  const fetchReferrals = async () => {
+  const fetchReferrals = async () =>
+                {
     try {
       if (!user) return
       const { data, error } = await supabase
@@ -57,7 +58,8 @@ export function useReferrals() {
       console.error("Error fetching referrals:", error)
     }
   }
-  const fetchRewards = async () => {
+  const fetchRewards = async () =>
+                {
     try {
       if (!user) return
       const { data, error } = await supabase
@@ -71,7 +73,8 @@ export function useReferrals() {
       console.error("Error fetching rewards:", error)
     }
   }
-  const fetchReferralStats = async () => {
+  const fetchReferralStats = async () =>
+                {
     try {
       if (!user) return
       // Get total referrals
@@ -90,7 +93,8 @@ export function useReferrals() {
       const totalReferrals = referrals ? referrals.length : 0
       const pendingReferrals = referrals ? referrals.filter(r => r.status === 'pending').length : 0
       const completedReferrals = referrals ? referrals.filter(r => r.status === 'completed').length : 0
-      const totalRewards = rewards ? rewards.reduce((sum, item) => {
+      const totalRewards = rewards ? rewards.reduce((sum, item) =>
+                {
         return sum + (item.amount || 0)
       }, 0) : 0
       setStats({
@@ -103,7 +107,8 @@ export function useReferrals() {
       console.error("Error fetching referral stats:", error)
     }
   }
-  const generateReferralCode = async () => {
+  const generateReferralCode = async () =>
+                {
     try {
       if (!user) {
         toast({
@@ -138,13 +143,13 @@ export function useReferrals() {
     }
   }
   // Get the referral link for the current user
-  const getReferralLink = () => {
+  const getReferralLink  = () => {
     if (!referralCode) return ""
     const baseUrl = window.location.origin
     return `${baseUrl}/?ref=${referralCode.code}`
   }
   // Copy the referral link to clipboard
-  const copyReferralLink = () => {
+  const copyReferralLink  = () => {
     const link = getReferralLink()
     if (link) {
       navigator.clipboard.writeText(link)
@@ -164,7 +169,8 @@ export function useReferrals() {
     }
   }
   // Share on social media platforms
-  const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') => {
+  const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') =>
+                {
     const link = getReferralLink()
     const text = "Join Zion AI marketplace for AI talent and opportunities!"
     if (!link) {
@@ -207,3 +213,4 @@ export function useReferrals() {
     fetchRewards,   // Added this method for refreshing rewards
   }
 }
+;

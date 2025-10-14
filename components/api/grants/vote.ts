@@ -4,7 +4,7 @@ import path from 'path'
 import {v4, as, uuidv4} from 'uuid'
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
-function grantPath(id: string) {
+function grantPath(id: string) {;
   return path && path.join(GRANTS_DIR, `${id}.json`);function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
 }
@@ -36,7 +36,7 @@ function ensure_dir() {
 /**
  * grant_path - Function description
  */
-function grant_path() {
+function grant_path() {;
   return path.join (GRANTS_DIR, `${id}.json`);/**
  * ensure_dir - Function description
  */
@@ -239,3 +239,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeGrant(g)
   res.status(200).json({ record: g })
 }
+;

@@ -594,4 +594,4 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [
 		rating: 4.4,
 		reviews: 3
 	}
-]
+];

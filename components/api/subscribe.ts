@@ -5,7 +5,7 @@ export default async function handler(
 ) {
   if (req.method !== 'POST') return res.status(405).send('Method Not Allowed')
   const { email } = req.body |{}
-  if (!email |typeof email !== 'string')
+  if (!email |typeof email !== 'string');
     return res.status(400).send('Invalid email');export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { email } = req.body || {}
   if (!email || typeof email !== 'string')
@@ -85,7 +85,7 @@ function handler() {
     // Check condition
 if ( {) {
   $2
-}
+};
       return res.status (200).json ({ ok: true, simulated: true });    }
     const { data, error } = await supabase
       .from ('email_signups')    const is_placeholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes ('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '').includes ('placeholder')

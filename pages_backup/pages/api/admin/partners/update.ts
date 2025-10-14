@@ -43,4 +43,4 @@ import type { NextApiRequest, NextApiResponse } from 'next'
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

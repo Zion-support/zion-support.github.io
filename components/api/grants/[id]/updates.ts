@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import {v4, as, uuidv4} from 'uuid'
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants')
-function grantPath(id: string) {
+function grantPath(id: string) {;
   return path && path.join(GRANTS_DIR, `${id}.json`);const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants')
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`)
@@ -173,3 +173,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', 'GET, POST')
   res.status(405).end('Method Not Allowed')
 }
+;

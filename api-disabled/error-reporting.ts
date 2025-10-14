@@ -27,7 +27,8 @@
   d: 'POST'} header,
   s: {' 'Content-Type': 'application/json' }) bod,
   y: JSON.stringify(errorReport) })} } catch (error) {/* TODO: Fix JSX expression */}
-  services: '} error)} } function parseStackTrace(stack?: string) {if (!stack) return []; ' return stack.split('\n').map(line => { const match = line.match(/at\\s+(.+?)\\s+\\((.+?):(\\d+):(\\d+)\\)/)} if (match) {/* TODO: Fix JSX expression */}
+  services: '} error)} } function parseStackTrace(stack?: string) {if (!stack) return []; ' return stack.split('\n').map(line =>
+                { const match = line.match(/at\\s+(.+?)\\s+\\((.+?):(\\d+):(\\d+)\\)/)} if (match) {/* TODO: Fix JSX expression */}
   o: parseInt(match[3])} coln,
   o: parseInt(match[4]) }} return {/* TODO: Fix JSX expression */}
   o: 0} coln,

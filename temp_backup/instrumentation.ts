@@ -13,7 +13,7 @@ let Sentry: any = null
 let onRequestError: any = null
 async function initializeSentryOrMock() {
   if (process.env['NEXT_RUNTIME'] === 'edge') {
-    console.log('instrumentation.ts: Edge runtime detected. Forcing Sentry mock.')
+    console.log('instrumentation.ts: Edge runtime detected. Forcing Sentry mock.');
     const mockSentry = await import('./src/utils/sentry-mock'); // Ensure this path is correct
     Sentry = mockSentry.default
     onRequestError = mockSentry.onRequestError; // Ensure mock provides this if used
@@ -108,7 +108,8 @@ export async function register() {
         }
         return event
       },
-      initialScope: (scope: any) => {
+      initialScope: (scope: any) =></>
+                {
         if (SENTRY_RELEASE) {
           scope.setTag("release", SENTRY_RELEASE)
         }

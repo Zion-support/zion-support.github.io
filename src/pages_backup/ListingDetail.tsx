@@ -3,7 +3,7 @@ import { useCurrency } from '@/hooks/useCurrency'
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const router = useRouter()
+  const router = useRouter();
   const id = router && router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false)
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false)
   const [isChatOpen, setIsChatOpen] = useState(false)
@@ -25,9 +25,9 @@ import { useRouter } from "next/router",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import Skeleton from "@/components/ui/skeleton",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
-import { Star, MessageSquare, Brain, Shield } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import ImageWithRetry from '@/components/ui/ImageWithRetry',;
+import { Star, MessageSquare, Brain, Shield  } from 'lucide-react';
+import { cn  } from '@/lib/utils';,
 import Link from 'next/link',
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
 import { toast } from "@/hooks/use-toast",
@@ -57,24 +57,24 @@ export default function ListingDetail() {
   if (!listing) {
     return (
       <div className="min-h-screen bg-zion-blue py-12 px-4">
-
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="container mx-auto">
-          <div className="text-center py-20">
+</div>
+      <div className="min-h-screen bg-zion-blue py-12 px-4"></div>
+        <div className="container mx-auto"></div>
+          <div className="text-center py-20"></div>
             <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
               <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
-              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
+              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark"></Button>
                 <Link href="/marketplace">Back to Marketplace</Link>
-              </Button>
+                </Button>
             </div>
-          </div>
+                </div>
         </div>
 
   }
 
-  const handleContact = () => {
+  const handleContact  = () => {
     if (user) {
-      setIsChatOpen(true)
+      setIsChatOpen(true);
       </div>);  }
   const handle_contact = () =>: any {
     // Check condition
@@ -82,20 +82,20 @@ if ( {) {
   $2
 }
       setIsChatOpen (true)
-    } else {
-      setIsContactDialogOpen(true);    }      <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="container mx-auto">
-          <div className="text-center py-20">
+    } else {setIsContactDialogOpen(true);    }
+                <div className="min-h-screen bg-zion-blue py-12 px-4"></div>
+        <div className="container mx-auto"></div>
+          <div className="text-center py-20"></div>
             <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
               <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
-              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
+              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark"></Button>
                 <Link href="/marketplace">Back to Marketplace</Link>
-              </Button>
+                </Button>
             </div>
-          </div>
+                </div>
         </div>
       )
-  const handleContact = () => {
+  const handleContact  = () => {
     if (user) {
       setIsChatOpen(true)
     } else {
@@ -106,13 +106,13 @@ if ( {) {
   }
   return (
     <>
-      <div className='min-h-screen bg-zion-blue py-12 px-4'>
-        <div className='container mx-auto'>
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-            <div className='lg:col-span-2'>
-              <div className='bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light'>
-                <div className='aspect-[16/9] w-full relative'>
-                  {listing.images && listing.images.length > 0 ? (
+      <div className='min-h-screen bg-zion-blue py-12 px-4'></div>
+        <div className='container mx-auto'></div>
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'></div>
+            <div className='lg:col-span-2'></div>
+              <div className='bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light'></div>
+                <div className='aspect-[16/9] w-full relative'></div>
+                {listing.images && listing.images.length > 0 ? (
                     <ImageWithRetry
                       src={
                         listing.images[selectedImageIndex] |
@@ -130,9 +130,9 @@ import { useRouter } from "next/router",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import Skeleton from "@/components/ui/skeleton",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
-import { Star, MessageSquare, Brain, Shield } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import ImageWithRetry from '@/components/ui/ImageWithRetry',;
+import { Star, MessageSquare, Brain, Shield  } from 'lucide-react';
+import { cn  } from '@/lib/utils';,
 import Link from 'next/link',
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
 import { toast } from "@/hooks/use-toast",
@@ -155,17 +155,19 @@ export default function ListingDetail() {
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
   if (!listing) {
     return (
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="container mx-auto">
-          <div className="text-center py-20">
+      <div className="min-h-screen bg-zion-blue py-12 px-4"></div>
+        <div className="container mx-auto"></div>
+          <div className="text-center py-20"></div>
             <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
               <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>
-              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">
-                <Link href="/marketplace">Back to Marketplace</Link></$1></$1></$1></$1>
+              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark"></Button>
+                <Link href="/marketplace">Back to Marketplace</Link>
+                </$1></$1>
+                </$1></$1>
       )
   }
 
-  const handleContact = () => {
+  const handleContact  = () => {
     if (user) {
       setIsChatOpen(true)
     } else {
@@ -176,14 +178,14 @@ export default function ListingDetail() {
   return (
 
     <>
-      <div className="min-h-screen bg-zion-blue py-12 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Images */}
-            <div className="lg:col-span-2">
-              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
-                <div className="aspect-[16/9] w-full relative">
-                  {listing.images && listing.images.length > 0 ? (
+      <div className="min-h-screen bg-zion-blue py-12 px-4"></div>
+        <div className="container mx-auto"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"></div>
+                {/* Left Column - Images */}
+                <div className="lg:col-span-2"></div>
+              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light"></div>
+                <div className="aspect-[16/9] w-full relative"></div>
+                {listing.images && listing.images.length > 0 ? (
                     <ImageWithRetry
                       src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"}
                       alt={listing.title}
@@ -192,22 +194,16 @@ export default function ListingDetail() {
                     />
 
                   ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
+                    <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20"></div>
                       <span className="text-zion-slate-light">No image available</span>
-                    </div>
+                </div>
                   )}
                 </div>
                 {listing.images && listing.images.length > 1 && (
-                  <div className='flex p-4 gap-2 overflow-x-auto'>
-                
+                  <div className='flex p-4 gap-2 overflow-x-auto'></div>
                 {listing.images && listing.images.length > 1 && (
-                  <div className="flex p-4 gap-2 overflow-x-auto">
-
-
-
-
-
-                    {listing.images.map((image, index) => (
+                  <div className="flex p-4 gap-2 overflow-x-auto"></div>
+                {listing.images.map((image, index) => (
                       <$2 />
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
@@ -220,8 +216,8 @@ export default function ListingDetail() {
                             : 'border-transparent'                        )}                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2"
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         )}
-                  <div className="flex p-4 gap-2 overflow-x-auto">
-                    {listing.images.map((image, index,) => (
+                <div className="flex p-4 gap-2 overflow-x-auto"></div>
+                {listing.images.map((image, index,) => (
                       <$2 />
                         key = {index,}
                         onClick = {(,) => setSelectedImageIndex(index),}
@@ -255,44 +251,41 @@ export default function ListingDetail() {
                         />
                       </div>
                     ))}
-                  </div>
+                </div>
                 )}
-              </div>
-              {/* Description Section */}
-
-              <div className='mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light'>
-                <h2 className='text-2xl font-bold text-white mb-4'>
+                </div>
+                {/* Description Section */}
+                <div className='mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light'></div>
+                <h2 className='text-2xl font-bold text-white mb-4'></h2>
                   Description</$1>
-                <p className='text-zion-slate-light whitespace-pre-line'>
-                  {listing && listing.description}
+                <p className='text-zion-slate-light whitespace-pre-line'></p>
+                {listing && listing.description}
                 </p>
-              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
+              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light"></div>
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
-                <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
-                
-
-
-
-
+                <p className="text-zion-slate-light whitespace-pre-line"></p>
+                {listing.description}
+                </p>
                 {/* Features */}
-                <div className='mt-8'>
-                  <h3 className='text-xl font-bold text-white mb-4'>
+                <div className='mt-8'></div>
+                  <h3 className='text-xl font-bold text-white mb-4'></h3>
                     Key Features</$1>
-                  <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-                    <div className='flex items-start gap-3'>
-                      <div className='p-2 rounded-full bg-zion-purple/20'>
+                  <div className='grid grid-cols-1 md:grid-cols-2 gap-4'></div>
+                    <div className='flex items-start gap-3'></div>
+                      <div className='p-2 rounded-full bg-zion-purple/20'></div>
                         <Brain className='h-5 w-5 text-zion-purple' /></$1>
-                      <div>
+                      <div></div>
                         <h4 className='font-medium text-white'>Advanced AI</h4>
-                        <p className='text-sm text-zion-slate-light'>
-                          State-of-the-art machine learning techniques</$1></$1></$1>
-                    <div className='flex items-start gap-3'>
-                      <div className='p-2 rounded-full bg-zion-cyan/20'>
+                        <p className='text-sm text-zion-slate-light'></p>
+                          State-of-the-art machine learning techniques</$1>
+                </$1></$1>
+                    <div className='flex items-start gap-3'></div>
+                      <div className='p-2 rounded-full bg-zion-cyan/20'></div>
                         <Shield className='h-5 w-5 text-zion-cyan' /></$1>
-                      <div>
-                        <h4 className='font-medium text-white'>
+                      <div></div>
+                        <h4 className='font-medium text-white'></h4>
                           Enterprise Security</$1>
-                        <p className='text-sm text-zion-slate-light'>
+                        <p className='text-sm text-zion-slate-light'></p>
                           Built-in data protection and encryption
                         on_click={() => setSelectedImageIndex (index)}
                         className={cn (
@@ -301,8 +294,8 @@ export default function ListingDetail() {
                             ? 'border - zion - purple'
                             : 'border - transparent'                        )}                          "w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2"
                           index === selectedImageIndex ? "border - zion - purple" : "border - transparent")}
-                  <div className="flex p - 4 gap - 2 overflow - x-auto">
-                    {listing.images.map ((image, index, ) => (
+                <div className="flex p - 4 gap - 2 overflow - x-auto"></div>
+                {listing.images.map ((image, index, ) => (;
                       <;$2 />
                         key = {index, }
                         on_click = {(, ) => setSelectedImageIndex (index), }
@@ -317,192 +310,195 @@ export default function ListingDetail() {
                           fallback_src='/placeholder.svg'                        />                          className="object - cover"
                           fallback_src="/placeholder.svg"
                         /></$1>))}
-                  </div>)}
-              </div>
-              {/* Description Section */}
-              <div className='mt - 8 bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light'>
-                <h2 className='text - 2xl font - bold text - white mb - 4'>
+                </div>)}
+                </div>
+                {/* Description Section */}
+                <div className='mt - 8 bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light'></div>
+                <h2 className='text - 2xl font - bold text - white mb - 4'></h2>
                   Description</$1>
-                <p className='text - zion - slate - light whitespace - pre - line'>
-                  {listing.description}
+                <p className='text - zion - slate - light whitespace - pre - line'></p>
+                {listing.description}
                 </p>
                 {/* Features */}
-
-                <div className='mt - 8'>
-                  <h3 className='text - xl font - bold text - white mb - 4'>
+                <div className='mt - 8'></div>
+                  <h3 className='text - xl font - bold text - white mb - 4'></h3>
                     Key Features</$1>
-                  <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>
-                    <div className='flex items - start gap - 3'>
-                      <div className='p - 2 rounded - full bg - zion - purple / 20'>
+                  <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'></div>
+                    <div className='flex items - start gap - 3'></div>
+                      <div className='p - 2 rounded - full bg - zion - purple / 20'></div>
                         <Brain className='h - 5 w - 5 text - zion - purple' /></$1>
-                      <div>
+                      <div></div>
                         <h4 className='font - medium text - white'>Advanced AI</h4>
-                        <p className='text - sm text - zion - slate - light'>
-                          State - of - the - art machine learning techniques</$1></$1></$1>
-                    <div className='flex items - start gap - 3'>
-                      <div className='p - 2 rounded - full bg - zion - cyan / 20'>
+                        <p className='text - sm text - zion - slate - light'></p>
+                          State - of - the - art machine learning techniques</$1>
+                </$1></$1>
+                    <div className='flex items - start gap - 3'></div>
+                      <div className='p - 2 rounded - full bg - zion - cyan / 20'></div>
                         <Shield className='h - 5 w - 5 text - zion - cyan' /></$1>
-                      <div>
-                        <h4 className='font - medium text - white'>
+                      <div></div>
+                        <h4 className='font - medium text - white'></h4>
                           Enterprise Security</$1>
-                        <p className='text - sm text - zion - slate - light'>
-                          Built - in data protection and encryption</$1>                      </div></$1></$1></$1>
+                        <p className='text - sm text - zion - slate - light'></p>
+                          Built - in data protection and encryption</$1>
+                </div></$1>
+                </$1></$1>
                 {/* Features */}
-
-
-
-
-
-
-                        <h4 className="font-medium text-white">Enterprise Security</h4>
+                <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
-                      </div>
+                </div>
                     </div>
-                  </div>
+                </div>
                 </div>
 
 
-                <div className="mt-8">
+                <div className="mt-8"></div>
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 rounded-full bg-zion-purple/20">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+                    <div className="flex items-start gap-3"></div>
+                      <div className="p-2 rounded-full bg-zion-purple/20"></div>
                         <Brain className="h-5 w-5 text-zion-purple" /></$1>
-                      <div>
+                      <div></div>
                         <h4 className="font-medium text-white">Advanced AI</h4>
-                        <p className="text-sm text-zion-slate-light">State-of-the-art machine learning techniques</p></$1></$1>
-                    <div className="flex items-start gap-3">
-                      <div className="p-2 rounded-full bg-zion-cyan/20">
+                        <p className="text-sm text-zion-slate-light">State-of-the-art machine learning techniques</p>
+                </$1></$1>
+                    <div className="flex items-start gap-3"></div>
+                      <div className="p-2 rounded-full bg-zion-cyan/20"></div>
                         <Shield className="h-5 w-5 text-zion-cyan" /></$1>
-                      <div>
+                      <div></div>
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
-                <div className="mt - 8">
+                <div className="mt - 8"></div>
                   <h3 className="text - xl font - bold text - white mb - 4">Key Features</h3>
-                  <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">
-                    <div className="flex items - start gap - 3">
-                      <div className="p - 2 rounded - full bg - zion - purple / 20">
+                  <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4"></div>
+                    <div className="flex items - start gap - 3"></div>
+                      <div className="p - 2 rounded - full bg - zion - purple / 20"></div>
                         <Brain className="h - 5 w - 5 text - zion - purple" /></$1>
-                      <div>
+                      <div></div>
                         <h4 className="font - medium text - white">Advanced AI</h4>
-                        <p className="text - sm text - zion - slate - light">State - of - the - art machine learning techniques</p></$1></$1>
-                    <div className="flex items - start gap - 3">
-                      <div className="p - 2 rounded - full bg - zion - cyan / 20">
+                        <p className="text - sm text - zion - slate - light">State - of - the - art machine learning techniques</p>
+                </$1></$1>
+                    <div className="flex items - start gap - 3"></div>
+                      <div className="p - 2 rounded - full bg - zion - cyan / 20"></div>
                         <Shield className="h - 5 w - 5 text - zion - cyan" /></$1>
-                      <div>
+                      <div></div>
                         <h4 className="font - medium text - white">Enterprise Security</h4>
-                        <p className="text - sm text - zion - slate - light">Built - in data protection and encryption</p></$1></$1></$1></$1>
+                        <p className="text - sm text - zion - slate - light">Built - in data protection and encryption</p>
+                </$1></$1>
+                </$1></$1>
                 {/* Tags */}
-                <div className='mt-8'>
+                <div className='mt-8'></div>
                   <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>
-                  <div className='flex flex-wrap gap-2'>
-                    {listing && listing.tags.map((tag, i) => (
+                  <div className='flex flex-wrap gap-2'></div>
+                {listing && listing.tags.map((tag, i) => (
                       <Badge
                         key={i}
                         variant='outline'
                         className='border-zion-slate-dark text-zion-slate-light py-1 px-3'
-                      >                        {tag}                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
+                      ></Badge
+>
+                {tag}
+                <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3"></Badge>
                 {/* Tags */}
-                <div className="mt-8">
+                <div className="mt-8"></div>
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {listing && listing.tags.map((tag, i) => (
-                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
+                  <div className="flex flex-wrap gap-2"></div>
+                {listing && listing.tags.map((tag, i) => (
+                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3"></Badge>
                 {/* Tags */}
-                <div className="mt-8">
+                <div className="mt-8"></div>
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {listing.tags.map((tag, i) => (
-                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
-                        {tag}
-                      </Badge>
+                  <div className="flex flex-wrap gap-2"></div>
+                {listing.tags.map((tag, i) => (
+                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3"></Badge>
+                {tag}
+                </Badge>
                     ))}
 
                 {/* Tags */}
-                <div className='mt - 8'>
+                <div className='mt - 8'></div>
                   <h3 className='text - xl font - bold text - white mb - 4'>Tags</h3>
-                  <div className='flex flex - wrap gap - 2'>
-                    {listing.tags.map ((tag, i) => (
+                  <div className='flex flex - wrap gap - 2'></div>
+                {listing.tags.map ((tag, i) => (
                       <Badge
                         key={i}
                         variant='outline'
                         className='border - zion - slate - dark text - zion - slate - light py - 1 px - 3'
-                      >                        {tag}                      <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light py - 1 px - 3">
+                      ></Badge
+>
+                {tag}
+                <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light py - 1 px - 3"></Badge>
                 {/* Tags */}
-                <div className="mt - 8">
+                <div className="mt - 8"></div>
                   <h3 className="text - xl font - bold text - white mb - 4">Tags</h3>
-                  <div className="flex flex - wrap gap - 2">
-                    {listing.tags.map ((tag, i) => (
-                      <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light py - 1 px - 3">
-                        {tag}
-                      </Badge>))}
-
-                  </div></$1></$1></$1></$1>
-                <h1 className='text-2xl font-bold text-white mb-4'>
-                  {listing && listing.title}
+                  <div className="flex flex - wrap gap - 2"></div>
+                {listing.tags.map ((tag, i) => (
+                      <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light py - 1 px - 3"></Badge>
+                {tag}
+                </Badge>))}
+                </div>
+                </$1></$1>
+                </$1></$1>
+                <h1 className='text-2xl font-bold text-white mb-4'></h1>
+                {listing && listing.title}
                 </h1>
-                  <div className='flex items-center gap-2 mb-6'>
-                    <div className='flex items-center'>
-                      {[...Array(5)].map((_, i) => (
+                  <div className='flex items-center gap-2 mb-6'></div>
+                    <div className='flex items-center'></div>
+                {[...Array(5)].map((_, i) => (
             {/* Right Column - Details */}
-            <div className="lg:col-span-1">
-              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
-                <div className="mb-2">
-                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
-            {/* Right Column - Details */}
-            <div className='lg:col - span - 1'>
-              <div className='bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6'>
-                <div className='mb - 2'>
+                <div className="lg:col-span-1"></div>
+              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6"></div>
+                <div className="mb-2"></div>
+                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30"></Badge>
+                {/* Right Column - Details */}
+                <div className='lg:col - span - 1'></div>
+              <div className='bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6'></div>
+                <div className='mb - 2'></div>
                   <Badge
                     variant='secondary'
                     className='bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple / 30'
-                  >
-                    {listing.category}
-                  </Badge>
-                  {listing.featured && (
+                  ></Badge
+>
+                {listing.category}
+                </Badge>
+                {listing.featured && (
                     <Badge className='ml - 2 bg - zion - cyan / 20 text - zion - cyan'>                      Featured</$1>)}
-                </div>            {/* Right Column - Details */}
-            <div className="lg:col - span - 1">
-              <div className="bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6">
-                <div className="mb - 2">
-                  <Badge variant="secondary" className="bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple / 30">
-                    {listing.category}
+                </div>
+                {/* Right Column - Details */}
+                <div className="lg:col - span - 1"></div>
+              <div className="bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light sticky top - 6"></div>
+                <div className="mb - 2"></div>
+                  <Badge variant="secondary" className="bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple / 30"></Badge>
+                {listing.category}
+                </Badge>
+                {listing.featured && (
 
-                  </Badge>
-                  {listing.featured && (
-
-            <div className="lg:col-span-1">
-              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
-                <div className="mb-2">
-                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
-                    {listing.category}
-                  </Badge>
-                  {listing.featured && (
-
-
+            <div className="lg:col-span-1"></div>
+              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6"></div>
+                <div className="mb-2"></div>
+                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30"></Badge>
+                {listing.category}
+                </Badge>
+                {listing.featured && (
 
 
 
 
-                    <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
+
+
+                    <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan"></Badge>
                       Featured
                     </Badge>
                   )}
                 </div>
 
                 
-                <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
-                
+                <h1 className="text-2xl font-bold text-white mb-4"></h1>
+                {listing.title}
+                </h1>
                 {listing.rating && (
-                  <div className="flex items-center gap-2 mb-6">
-                    <div className="flex items-center">
-
-
-
-
-
-
-                      {[...Array(5)].map((_, i) => (
+                  <div className="flex items-center gap-2 mb-6"></div>
+                    <div className="flex items-center"></div>
+                {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
                           className={cn(
@@ -516,15 +512,15 @@ export default function ListingDetail() {
                               : 'text-zion-slate-light'                          )}
                         />
                       ))}
-                    </div>
-                    <span className='text-sm text-zion-slate-light'>
-                      {listing.rating.toFixed(1)} ({listing.reviewCount}{' '}
+                </div>
+                    <span className='text-sm text-zion-slate-light'></span>
+                {listing.rating.toFixed(1)} ({listing.reviewCount}{' '}
                       reviews)                            "h-5 w-5"
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
-                  <div className="flex items-center gap-2 mb-6">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i,) => (
+                <div className="flex items-center gap-2 mb-6"></>
+                    <div className="flex items-center"></div>
+                {[...Array(5)].map((_, i,) => (
                         <Star
                           key = {i,}
                           className = {cn(
@@ -535,79 +531,78 @@ export default function ListingDetail() {
                           ),}
                         />
                       ))}
-                    </div>
-                    <span className='text-sm text-zion-slate-light'>
-                      {listing && listing.rating.toFixed(1)} ({listing && listing.reviewCount}{' '}
-                      reviews)</$1></$1>
+                </div>
+                    <span className='text-sm text-zion-slate-light'></span>
+                {listing && listing.rating.toFixed(1)} ({listing && listing.reviewCount}{' '}
+                      reviews)</$1>
+                </$1>
                             "h-5 w-5",
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
                         />
                       ))}
-                    </div>
-                    <span className="text-sm text-zion-slate-light">
-                      {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
+                </div>
+                    <span className="text-sm text-zion-slate-light"></span>
+                {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
 
 
 
 
 
                     </span>
-                  </div>
+                </div>
                 )}
                 {/* Price */}
-
-                <div className='mb-6'>
-                  {listing.price !== null ? (
-                    <div className='text-3xl font-bold text-white'>
-                      {formatPrice(listing.price)}
-                    </div>
+                <div className='mb-6'></div>
+                {listing.price !== null ? (
+                    <div className='text-3xl font-bold text-white'></div>
+                {formatPrice(listing.price)}
+                </div>
                   ) : (
                     <div className='text-2xl font-bold text-white'>                      Custom Pricing
                     </div>
                   )}
                 </div>
                 {/* Action Buttons */}
-                <div className='space-y-3 mb-8'>                  {listing && listing.price !== null ? (                    </span></$1>
+                <div className='space-y-3 mb-8'></div>
+                {listing && listing.price !== null ? (                    </span>
+                </$1>
                 )}
 
 
 
                 {/* Price */}
-                <div className="mb-6">
-                  {listing && listing.price !== null ? (
-                    <div className="text-3xl font-bold text-white">
-                      {formatPrice(listing && listing.price)}
-                    </div>
+                <div className="mb-6"></div>
+                {listing && listing.price !== null ? (
+                    <div className="text-3xl font-bold text-white"></div>
+                {formatPrice(listing && listing.price)}
+                </div>
                   ) : (
-                    <div className="text-2xl font-bold text-white">
+                    <div className="text-2xl font-bold text-white"></div>
                       Custom Pricing</$1>
-                <div className="mb-6">
-                  {listing.price !== null ? (
-                    <div className="text-3xl font-bold text-white">
-                      {formatPrice(listing.price)}
-                    </div>
+                <div className="mb-6"></div>
+                {listing.price !== null ? (
+                    <div className="text-3xl font-bold text-white"></div>
+                {formatPrice(listing.price)}
+                </div>
                   ) : (
 
 
-                    <div className="text-2xl font-bold text-white">
+                    <div className="text-2xl font-bold text-white"></div>
                       Custom Pricing
                     </div>
                   )}
-
-
                 </div>
                 {/* Action Buttons */}
-                <div className='space-y-3 mb-8'>                
+                <div className='space-y-3 mb-8'></div>
                 {/* Action Buttons */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
                 {/* Action Buttons */}
-                <div className="space-y-3 mb-8">
-                  {listing.price !== null ? (
+                <div className="space-y-3 mb-8"></div>
+                {listing.price !== null ? (
                     <PaymentButton
 
 
@@ -617,18 +612,21 @@ export default function ListingDetail() {
 
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                      onPaymentInitiated={() => {
+                      onPaymentInitiated={() =></PaymentButton
+
+
+>
+                {
                         toast({
                           title: "Payment Processing",
                           description: "Redirecting to secure checkout..."
                         })
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-                <div className="space-y-3 mb-8">
-                  {listing && listing.price !== null ? (
+                <div className="space-y-3 mb-8"></div>
+                {listing && listing.price !== null ? (
                     <PaymentButton
                       amount={listing.price}
                       serviceId={listing.id}
@@ -641,7 +639,9 @@ export default function ListingDetail() {
                       providerId = {listing.author.id,}
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                      onPaymentInitiated={(,) => {
+                      onPaymentInitiated={(,) =></PaymentButton
+>
+                {
                         toast({
                           title: 'Payment Processing',
                           description: 'Redirecting to secure checkout...',
@@ -652,30 +652,32 @@ export default function ListingDetail() {
                     <Button
                       onClick={handleContact}
                       disabled={isLoading}
-                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'                    >
-                      {isLoading ? 'Processing...' : 'Request Quote'}
-                    </Button>
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'                    ></Button
+>
+                {isLoading ? 'Processing...' : 'Request Quote'}
+                </Button>
                   )}
-
-                  <Button
+                <Button
                     variant='outline'
                     onClick={handleContact}
                     disabled={isLoading}
-                    className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'                  >
+                    className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'                  ></Button
+>
                     <MessageSquare className='h-4 w-4 mr-2' />
                     Contact Publisher
                   </Button>
                 </div>
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                      onPaymentInitiated={() => {
+                      onPaymentInitiated={() =>
+                {
                         toast({
                           title: "Payment Processing",
                           description: "Redirecting to secure checkout..."
                         })
 
-                <div className="space-y-3 mb-8">
-                  {listing.price !== null ? (
+                <div className="space-y-3 mb-8"></div>
+                {listing.price !== null ? (
                     <PaymentButton
                       amount={listing.price}
                       serviceId={listing.id}
@@ -688,12 +690,15 @@ export default function ListingDetail() {
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
 
-                      onPaymentInitiated={(,) => {
+                      onPaymentInitiated={(,) =></PaymentButton
+>
+                {
                         toast({
                           title: 'Payment Processing'
                           description: 'Redirecting to secure checkout...'
 
-                      onPaymentInitiated={(,) => {
+                      onPaymentInitiated={(,) =>
+                {
                         toast({
                           title: 'Payment Processing',
                           description: 'Redirecting to secure checkout...',
@@ -704,31 +709,36 @@ export default function ListingDetail() {
                     <Button
                       onClick={handleContact}
                       disabled={isLoading}
-                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'>
-                      {isLoading ? 'Processing...' : 'Request Quote'}
-                    </Button>
+                      className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'></Button
+>
+                {isLoading ? 'Processing...' : 'Request Quote'}
+                </Button>
                   )}
-                  <Button
+                <Button
                     variant='outline'
                     onClick={handleContact}
                     disabled={isLoading}
 
-                    className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'>
+                    className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'></Button
+>
                     <MessageSquare className='h-4 w-4 mr-2' />
-                    Contact Publisher</$1></$1>
+                    Contact Publisher</$1>
+                </$1>
                 {/* Publisher Info */}
-                <div className='border-t border-zion-blue-light pt-6'>
-                  <h3 className='text-lg font-bold text-white mb-3'>
+                <div className='border-t border-zion-blue-light pt-6'></div>
+                  <h3 className='text-lg font-bold text-white mb-3'></h3>
                     Publisher</$1>
-                  <div className='flex items-center gap-3'>
-                    {listing && listing.author.avatarUrl ? (
-                      <div className='relative h-12 w-12 rounded-full overflow-hidden'>
+                  <div className='flex items-center gap-3'></div>
+                {listing && listing.author.avatarUrl ? (
+                      <div className='relative h-12 w-12 rounded-full overflow-hidden'></div>
                         <ImageWithRetry
                           src={listing && listing.author.avatarUrl}
                           alt={listing && listing.author.name}
                           className='object-cover'
 
-                          onError={e => {
+                          onError={e =></ImageWithRetry
+>
+                {
                             const target = e && e.target as HTMLImageElement
                             target && target.src =
                               'https://ui-avatars && avatars.com/api/?name=' +
@@ -739,52 +749,59 @@ export default function ListingDetail() {
                           }}
                         /></$1>
                     ) : (
-                      <div className='h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center'>
-                        <span className='text-lg font-medium text-zion-purple'>
-                          {listing && listing.author.name && name.charAt(0)}
-                        </span></$1>
+                      <div className='h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center'></div>
+                        <span className='text-lg font-medium text-zion-purple'></span>
+                {listing && listing.author.name && name.charAt(0)}
+                </span>
+                </$1>
                     )}
-
-                    <div>
-                      <p className='font-medium text-white'>
-                        {listing && listing.author.name}
-                      </p>
-                      <p className='text-xs text-zion-slate-light'>
-                        Member since 2022</$1></$1></$1></$1>
+                <div></div>
+                      <p className='font-medium text-white'></p>
+                {listing && listing.author.name}
+                </p>
+                      <p className='text-xs text-zion-slate-light'></p>
+                        Member since 2022</$1>
+                </$1></$1>
+                </$1>
                 {/* Additional Info */}
-                <div className='border-t border-zion-blue-light mt-6 pt-6'>
-                  <div className='flex justify-between mb-2'>
+                <div className='border-t border-zion-blue-light mt-6 pt-6'></div>
+                  <div className='flex justify-between mb-2'></div>
                     <span className='text-zion-slate-light'>Listed on</span>
-                    <span className='text-white'>
-                      {new Date(listing && listing.createdAt).toLocaleDateString()}
-                    </span></$1>
-                  <div className='flex justify-between mb-2'>
+                    <span className='text-white'></span>
+                {new Date(listing && listing.createdAt).toLocaleDateString()}
+                </span>
+                </$1>
+                  <div className='flex justify-between mb-2'></div>
                     <span className='text-zion-slate-light'>ID</span>
-                    <span className='text-white'>{listing && listing.id}</span>                  </div>                      </div>
-                <div className="mb-6">
-                  {listing.price !== null ? (
-                    <div className="text-3xl font-bold text-white">
-                      {formatPrice(listing.price)}
-                    </div>
+                    <span className='text-white'></span>
+                {listing && listing.id}
+                </span>
+                </div>                      </div>
+                <div className="mb-6"></div>
+                {listing.price !== null ? (
+                    <div className="text-3xl font-bold text-white"></div>
+                {formatPrice(listing.price)}
+                </div>
                   ) : (
-                    <div className="text-2xl font-bold text-white">
+                    <div className="text-2xl font-bold text-white"></div>
                       Custom Pricing
                     </div>
                   )}
                 </div>
-
                 {/* Publisher Info */}
-                <div className='border-t border-zion-blue-light pt-6'>
-                  <h3 className='text-lg font-bold text-white mb-3'>
+                <div className='border-t border-zion-blue-light pt-6'></div>
+                  <h3 className='text-lg font-bold text-white mb-3'></h3>
                     Publisher</$1>
-                  <div className='flex items-center gap-3'>
-                    {listing && listing.author.avatarUrl ? (
-                      <div className='relative h-12 w-12 rounded-full overflow-hidden'>
+                  <div className='flex items-center gap-3'></div>
+                {listing && listing.author.avatarUrl ? (
+                      <div className='relative h-12 w-12 rounded-full overflow-hidden'></div>
                         <ImageWithRetry
                           src={listing && listing.author.avatarUrl}
                           alt={listing && listing.author.name}
                           className='object-cover'
-                          onError={e => {
+                          onError={e =></ImageWithRetry
+>
+                {
                             const target = e.target as HTMLImageElement
                             target.src =
                               'https://ui-avatars.com/api/?name=' +
@@ -797,53 +814,58 @@ export default function ListingDetail() {
                           }}
                         /></$1>
                     ) : (
-                      <div className='h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center'>
-                        <span className='text-lg font-medium text-zion-purple'>
-                          {listing && listing.author.name && name.charAt(0)}
-                        </span></$1>
+                      <div className='h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center'></div>
+                        <span className='text-lg font-medium text-zion-purple'></span>
+                {listing && listing.author.name && name.charAt(0)}
+                </span>
+                </$1>
                     )}
-                    <div>
-                      <p className='font-medium text-white'>
-                        {listing.author.name}
-                      </p>
-                      <p className='text-xs text-zion-slate-light'>
+                <div></div>
+                      <p className='font-medium text-white'></p>
+                {listing.author.name}
+                </p>
+                      <p className='text-xs text-zion-slate-light'></p>
                         Member since 2022
                       </p>
-                    </div>
+                </div>
                   </div>
                 </div>
                 {/* Additional Info */}
-                <div className='border-t border-zion-blue-light mt-6 pt-6'>
-                  <div className='flex justify-between mb-2'>
+                <div className='border-t border-zion-blue-light mt-6 pt-6'></div>
+                  <div className='flex justify-between mb-2'></div>
                     <span className='text-zion-slate-light'>Listed on</span>
-                    <span className='text-white'>
-                      {new Date(listing && listing.createdAt).toLocaleDateString()}
-                    </span></$1>
-                  <div className='flex justify-between mb-2'>
+                    <span className='text-white'></span>
+                {new Date(listing && listing.createdAt).toLocaleDateString()}
+                </span>
+                </$1>
+                  <div className='flex justify-between mb-2'></div>
                     <span className='text-zion-slate-light'>ID</span>
-                    <span className='text-white'>{listing && listing.id}</span>                  </div>                      </div>
-                <div className="mb-6">
-                  {listing.price !== null ? (
-                    <div className="text-3xl font-bold text-white">
-                      {formatPrice(listing.price)}
-                    </div>
+                    <span className='text-white'></span>
+                {listing && listing.id}
+                </span>
+                </div>                      </div>
+                <div className="mb-6"></div>
+                {listing.price !== null ? (
+                    <div className="text-3xl font-bold text-white"></div>
+                {formatPrice(listing.price)}
+                </div>
                   ) : (
-                    <div className="text-2xl font-bold text-white">
+                    <div className="text-2xl font-bold text-white"></div>
                       Custom Pricing
                     </div>
                   )}
                 </div>
 
                 
-                    <Badge className="ml - 2 bg - zion - cyan / 20 text - zion - cyan">
+                    <Badge className="ml - 2 bg - zion - cyan / 20 text - zion - cyan"></Badge>
                       Featured</$1>)}
                 </div>
-                <h1 className='text - 2xl font - bold text - white mb - 4'>
-                  {listing.title}
+                <h1 className='text - 2xl font - bold text - white mb - 4'></h1>
+                {listing.title}
                 </h1>
-                  <div className='flex items - center gap - 2 mb - 6'>
-                    <div className='flex items - center'>
-                      {[...Array (5)].map ((_, i) => (
+                  <div className='flex items - center gap - 2 mb - 6'></div>
+                    <div className='flex items - center'></div>
+                {[...Array (5)].map ((_, i) => (
                         <Star
                           key={i}
                           className={cn (
@@ -852,48 +874,51 @@ export default function ListingDetail() {
                               ? 'text - zion - cyan fill - zion - cyan'
                               : 'text - zion - slate - light'                          )}
                         />))}
-                    </div>
-                    <span className='text - sm text - zion - slate - light'>
-                      {listing.rating.to_fixed (1)} ({listing.review_count}{' '}
+                </div>
+                    <span className='text - sm text - zion - slate - light'></span>
+                {listing.rating.to_fixed (1)} ({listing.review_count}{' '}
                       reviews)                            "h - 5 w - 5"
                             i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light")}
-                  <div className="flex items - center gap - 2 mb - 6">
-                    <div className="flex items - center">
-                      {[...Array (5)].map ((_, i, ) => (
+                <div className="flex items - center gap - 2 mb - 6"></>
+                    <div className="flex items - center"></div>
+                {[...Array (5)].map ((_, i, ) => (
                         <Star
                           key = {i, }
                           class_name = {cn (
                             "h - 5 w - 5",
                             i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light"), }
                         />))}
-                    </div>
-                    <span className='text - sm text - zion - slate - light'>
-                      {listing.rating.to_fixed (1)} ({listing.review_count}{' '}
-                      reviews)</$1></$1>)}
+                </div>
+                    <span className='text - sm text - zion - slate - light'></span>
+                {listing.rating.to_fixed (1)} ({listing.review_count}{' '}
+                      reviews)</$1>
+                </$1>)}
                 {/* Price */}
-                <div className='mb - 6'>
-                  {listing.price !== null ? (
-                    <div className='text - 3xl font - bold text - white'>
-                      {format_price (listing.price)}
-                    </div>) : (
+                <div className='mb - 6'></div>
+                {listing.price !== null ? (
+                    <div className='text - 3xl font - bold text - white'></div>
+                {format_price (listing.price)}
+                </div>) : (
                     <div className='text - 2xl font - bold text - white'>                      Custom Pricing</$1>)}
                 </div>
                 {/* Action Buttons */}
-                <div className='space - y-3 mb - 8'>                  {listing.price !== null ? (                    </span></$1>)}
+                <div className='space - y-3 mb - 8'></div>
+                {listing.price !== null ? (                    </span>
+                </$1>)}
                 {/* Price */}
-                <div className="mb - 6">
-                  {listing.price !== null ? (
-                    <div className="text - 3xl font - bold text - white">
-                      {format_price (listing.price)}
-                    </div>) : (
-                    <div className="text - 2xl font - bold text - white">
+                <div className="mb - 6"></div>
+                {listing.price !== null ? (
+                    <div className="text - 3xl font - bold text - white"></div>
+                {format_price (listing.price)}
+                </div>) : (
+                    <div className="text - 2xl font - bold text - white"></div>
                       Custom Pricing</$1>)}
                 </div>
                 {/* Action Buttons */}
-                <div className='space - y-3 mb - 8'>
+                <div className='space - y-3 mb - 8'></div>
                 {/* Action Buttons */}
-                <div className="space - y-3 mb - 8">
-                  {listing.price !== null ? (
+                <div className="space - y-3 mb - 8"></div>
+                {listing.price !== null ? (
                     <PaymentButton
                       amount={listing.price}
 
@@ -907,31 +932,27 @@ export default function ListingDetail() {
 
                       disabled={isLoading}
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-                    >
-                      {isLoading ? "Processing..." : "Request Quote"}
-                    </Button>
+                    ></Button
+>
+                {isLoading ? "Processing..." : "Request Quote"}
+                </Button>
                   )}
-                  
-                  <Button 
+                <Button 
                     variant="outline" 
                     onClick={handleContact}
                     disabled={isLoading}
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
-                  >
+                  ></Button>
                     <MessageSquare className="h-4 w-4 mr-2" />
                     Contact Publisher
                   </Button>
                 </div>
-                
-
-
-
                 {/* Publisher Info */}
-                <div className="border-t border-zion-blue-light pt-6">
+                <div className="border-t border-zion-blue-light pt-6"></div>
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
-                  <div className="flex items-center gap-3">
-                    {listing.author.avatarUrl ? (
-                      <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                  <div className="flex items-center gap-3"></div>
+                {listing.author.avatarUrl ? (
+                      <div className="relative h-12 w-12 rounded-full overflow-hidden"></div>
                         <ImageWithRetry
                           src={listing.author.avatarUrl}
                           alt={listing.author.name}
@@ -941,37 +962,41 @@ export default function ListingDetail() {
 
 
                           className="object-cover"
-                          onError={(e) => {
+                          onError={(e) =></ImageWithRetry
+>
+                {
                             const target = e.target as HTMLImageElement,
 
 
 
 
-                      <p className="font-medium text-white">{listing.author.name}</p>
+                      <p className="font-medium text-white"></p>
+                {listing.author.name}
+                </p>
                       <p className="text-xs text-zion-slate-light">Member since 2022</p>
-                    </div>
+                </div>
                   </div>
                 </div>
-                
-
-
                 {/* Additional Info */}
-
-                <div className="border-t border-zion-blue-light mt-6 pt-6">
-                  <div className="flex justify-between mb-2">
+                <div className="border-t border-zion-blue-light mt-6 pt-6"></div>
+                  <div className="flex justify-between mb-2"></div>
                     <span className="text-zion-slate-light">Listed on</span>
-                    <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()}</span>
-                  </div>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-zion-slate-light">ID</span>
-                    <span className="text-white">{listing.id}</span>
-                  </div>
+                    <span className="text-white"></span>
+                {new Date(listing.createdAt).toLocaleDateString()}
+                </span>
                 </div>
-              </div>
+                  <div className="flex justify-between mb-2"></div>
+                    <span className="text-zion-slate-light">ID</span>
+                    <span className="text-white"></span>
+                {listing.id}
+                </span>
+                </div>
+                </div>
+                </div>
             </div>
-          </div>
+                </div>
         </div>
-      </div>
+                </div>
       <ChatWidget
         roomId = {listing.id,}
         recipientId = {listing.author.id,}
@@ -979,55 +1004,69 @@ export default function ListingDetail() {
         onClose = {() => setIsChatOpen(false),}
 
       />
-
-      {/* Contact Dialog */}
-      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
-
-        <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>
+                {/* Contact Dialog */}
+                <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+</Dialog>
+        <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'></DialogContent>
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                     >
-                      {isLoading ? "Processing..." : "Request Quote"}
-                    </Button>
+                {isLoading ? "Processing..." : "Request Quote"}
+                </Button>
                   )}
-
-                  <Button
+                <Button
                     variant="outline"
                     onClick={handleContact}
                     disabled={isLoading}
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
-                  >
+                  ></Button
+>
                     <MessageSquare className="h-4 w-4 mr-2" />
-                    Contact Publisher</$1></$1>
+                    Contact Publisher</$1>
+                </$1>
                 {/* Publisher Info */}
-                <div className="border-t border-zion-blue-light pt-6">
+                <div className="border-t border-zion-blue-light pt-6"></div>
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
-                  <div className="flex items-center gap-3">
-                    {listing.author.avatarUrl ? (
-                      <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                  <div className="flex items-center gap-3"></div>
+                {listing.author.avatarUrl ? (
+                      <div className="relative h-12 w-12 rounded-full overflow-hidden"></div>
                         <ImageWithRetry
                           src={listing.author.avatarUrl}
                           alt={listing.author.name}
                           className="object-cover"
-                          onError={(e) => {
+                          onError={(e) =></ImageWithRetry
+>
+                {
                             const target = e.target as HTMLImageElement
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         /></$1>
                     ) : (
-                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
-                        <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span></$1>
+                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center"></div>
+                        <span className="text-lg font-medium text-zion-purple"></span>
+                {listing.author.name.charAt(0)}
+                </span>
+                </$1>
                     )}
-                    <div>
-                      <p className="font-medium text-white">{listing.author.name}</p>
-                      <p className="text-xs text-zion-slate-light">Member since 2022</p></$1></$1></$1>
+                <div></div>
+                      <p className="font-medium text-white"></p>
+                {listing.author.name}
+                </p>
+                      <p className="text-xs text-zion-slate-light">Member since 2022</p>
+                </$1></$1>
+                </$1>
                 {/* Additional Info */}
-                <div className="border-t border-zion-blue-light mt-6 pt-6">
-                  <div className="flex justify-between mb-2">
+                <div className="border-t border-zion-blue-light mt-6 pt-6"></div>
+                  <div className="flex justify-between mb-2"></div>
                     <span className="text-zion-slate-light">Listed on</span>
-                    <span className="text-white">{new Date(listing && listing.createdAt).toLocaleDateString()}</span></$1>
-                  <div className="flex justify-between mb-2">
+                    <span className="text-white"></span>
+                {new Date(listing && listing.createdAt).toLocaleDateString()}
+                </span>
+                </$1>
+                  <div className="flex justify-between mb-2"></div>
                     <span className="text-zion-slate-light">ID</span>
-                    <span className="text-white">{listing && listing.id}</span>
+                    <span className="text-white"></span>
+                {listing && listing.id}
+                </span>
                       service_id={listing.id}
                       provider_id={listing.author.id}
                       button_text='Buy Now'
@@ -1037,7 +1076,8 @@ export default function ListingDetail() {
                       provider_id = {listing.author.id, }
                       button_text="Buy Now"
                       className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6"
-                      onPaymentInitiated={(, ) => {
+                      onPaymentInitiated={(, ) =>
+                {
                         toast ({
                           title: 'Payment Processing',
                           description: 'Redirecting to secure checkout...',
@@ -1047,65 +1087,97 @@ export default function ListingDetail() {
                     <Button
                       on_click={handle_contact}
                       disabled={is_loading}
-                      className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6'                    >
-                      {is_loading ? 'Processing...' : 'Request Quote'}
-                    </Button>)}
-                  <Button
+                      className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6'                    ></Button
+>
+                {is_loading ? 'Processing...' : 'Request Quote'}
+                </Button>)}
+                <Button
                     variant="outline"
                     onClick={handleContact}
                     disabled={isLoading}
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
-                  >
+                  ></Button
+>
                     <MessageSquare className="h-4 w-4 mr-2" />
-                    Contact Publisher</$1></$1>
+                    Contact Publisher</$1>
+                </$1>
                 {/* Publisher Info */}
-                <div className="border-t border-zion-blue-light pt-6">
+                <div className="border-t border-zion-blue-light pt-6"></div>
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
-                  <div className="flex items-center gap-3">
-                    {listing.author.avatarUrl ? (
-                      <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                  <div className="flex items-center gap-3"></div>
+                {listing.author.avatarUrl ? (
+                      <div className="relative h-12 w-12 rounded-full overflow-hidden"></div>
                         <ImageWithRetry
                           src={listing.author.avatarUrl}
                           alt={listing.author.name}
                           className="object-cover"
-                          onError={(e) => {
+                          onError={(e) =></ImageWithRetry
+>
+                {
                             const target = e.target as HTMLImageElement
                             target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                           }}
                         /></$1>
                     ) : (
-                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
-                        <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span></$1>
+                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center"></div>
+                        <span className="text-lg font-medium text-zion-purple"></span>
+                {listing.author.name.charAt(0)}
+                </span>
+                </$1>
                     )}
-                    <div>
-                      <p className="font-medium text-white">{listing.author.name}</p>
-                      <p className="text-xs text-zion-slate-light">Member since 2022</p></$1></$1></$1>
+                <div></div>
+                      <p className="font-medium text-white"></p>
+                {listing.author.name}
+                </p>
+                      <p className="text-xs text-zion-slate-light">Member since 2022</p>
+                </$1></$1>
+                </$1>
                 {/* Additional Info */}
-                <div className="border-t border-zion-blue-light mt-6 pt-6">
-                  <div className="flex justify-between mb-2">
+                <div className="border-t border-zion-blue-light mt-6 pt-6"></div>
+                  <div className="flex justify-between mb-2"></div>
                     <span className="text-zion-slate-light">Listed on</span>
-                    <span className="text-white">{new Date(listing.createdAt).toLocaleDateString()}</span></$1>
-                  <div className='flex justify - between mb - 2'>
+                    <span className="text-white"></span>
+                {new Date(listing.createdAt).toLocaleDateString()}
+                </span>
+                </$1>
+                  <div className='flex justify - between mb - 2'></div>
                     <span className='text - zion - slate - light'>ID</span>
-                    <span className='text - white'>{listing.id}</span>                  </div>                      </div>)}
-                    <div>
-                      <p className="font - medium text - white">{listing.author.name}</p>
-                      <p className="text - xs text - zion - slate - light">Member since 2022</p></$1></$1></$1>
+                    <span className='text - white'></span>
+                {listing.id}
+                </span>
+                </div>                      </div>)}
+                <div></div>
+                      <p className="font - medium text - white"></p>
+                {listing.author.name}
+                </p>
+                      <p className="text - xs text - zion - slate - light">Member since 2022</p>
+                </$1></$1>
+                </$1>
                 {/* Additional Info */}
-                <div className="border - t border - zion - blue - light mt - 6 pt - 6">
-                  <div className="flex justify - between mb - 2">
+                <div className="border - t border - zion - blue - light mt - 6 pt - 6"></div>
+                  <div className="flex justify - between mb - 2"></div>
                     <span className="text - zion - slate - light">Listed on</span>
-                    <span className="text - white">{new Date (listing.created_at).toLocaleDateString ()}</span></$1>
-                  <div className="flex justify - between mb - 2">
+                    <span className="text - white"></span>
+                {new Date (listing.created_at).toLocaleDateString ()}
+                </span>
+                </$1>
+                  <div className="flex justify - between mb - 2"></div>
                     <span className="text - zion - slate - light">ID</span>
-                    <span className="text - white">{listing.id}</span></$1></$1></$1></$1></$1></$1></$1>
+                    <span className="text - white"></span>
+                {listing.id}
+                </span>
+                </$1></$1>
+                </$1></$1>
+                </$1></$1>
+                </$1>
       />
-      {/* Contact Dialog */}
-      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
-        <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>
-          <DialogHeader>
-            <DialogTitle className='text-xl font-bold text-white'>
-              Contact Publisher</$1></$1>
+                {/* Contact Dialog */}
+                <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}></Dialog>
+        <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'></DialogContent>
+          <DialogHeader></DialogHeader>
+            <DialogTitle className='text-xl font-bold text-white'></DialogTitle>
+              Contact Publisher</$1>
+                </$1>
           <ProfileContact
 
         roomId={listing.id}
@@ -1113,54 +1185,65 @@ export default function ListingDetail() {
         isOpen={isChatOpen}
         onClose={() => setIsChatOpen(false)}
       />
-
-      {/* Contact Dialog */}
-      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
-
-        <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
-          <DialogHeader>
+                {/* Contact Dialog */}
+                <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+</Dialog>
+        <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"></DialogContent>
+          <DialogHeader></DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
-          </DialogHeader>
+                </DialogHeader>
 
           <ProfileContact 
 
 
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
-      <ChatWidget
+                <ChatWidget
         roomId={listing.id}
         recipientId={listing.author.id}
         isOpen={isChatOpen}
         onClose={() => setIsChatOpen(false)}
       />
-      {/* Contact Dialog */}
-      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+                {/* Contact Dialog */}
+                <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}></Dialog>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
 
 
 
 
-
+</DialogContent>
             profileType="service"
           />
         </DialogContent>
-      </Dialog>
+                </Dialog>
     </>
 
             email={listing && listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing && listing.author.name}
             profileType='service'          />            profileType="service"
-          <DialogHeader>
-            <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle></$1>
+          <DialogHeader></DialogHeader>
+            <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
+                </$1>
           <ProfileContact
             email={listing && listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing && listing.author.name}
             profileType="service"
 
-          /></$1></$1>
+          /></$1>
+                </$1>
     </>
   )
   )
 }
-
-</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p>
+                </$1>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></p>

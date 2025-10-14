@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import fs from 'fs'
-// // const fixedContent = `import React from 'react'
+// // const fixedContent = `import React from 'react';
 export default ContactPage;`
 `
 // Write the fixed content

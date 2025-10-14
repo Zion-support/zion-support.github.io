@@ -47,12 +47,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-};
-
-=======
 }
->>>>>>> origin/main
 export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
   // AI-POWERED SOCIAL MEDIA MANAGEMENT
   {
@@ -104,11 +99,6 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     aiCapabilities: ['AI Content Creation', 'Engagement Optimization', 'Trend Prediction', 'Automated Scheduling'],
     marketDisruption: 'First AI platform to create original content automatically, disrupting traditional social media management'
   },
-<<<<<<< HEAD
-  // AI-POWERED CUSTOMER FEEDBACK ANALYZER
-  {
-    id: 'ai-customer-feedback-analyzer',
-=======
   // INTELLIGENT EMAIL MARKETING
   {
     id: 'ai-email-marketing-platform',
@@ -514,7 +504,6 @@ export default innovativeMicroSaasSolutions2025
 export const innovativeMicroSaasSolutions2025 = [
   {
     id: 'ai-powered-customer-feedback-analyzer',
->>>>>>> origin/main
     name: 'AI-Powered Customer Feedback Analyzer',
     tagline: 'Intelligent feedback analysis with 95.8% accuracy',
     price: '$199',
@@ -562,10 +551,4 @@ export const innovativeMicroSaasSolutions2025 = [
     aiCapabilities: ['Sentiment Analysis', 'Multi-language Processing', 'Real-time Analysis', 'Automated Insights'],
     marketDisruption: 'First platform to achieve 95.8% accuracy in sentiment analysis, revolutionizing customer feedback processing'
   }
-<<<<<<< HEAD
-];
-
-export default innovativeMicroSaasSolutions2025;
-=======
 ]
->>>>>>> origin/main

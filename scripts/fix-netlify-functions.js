@@ -28,7 +28,7 @@ function fixNetlifyFunction(content) {/* TODO: Fix JSX expression */}
     .replace(/\n\s*\n\s*\n/g, '\n\n')
     .replace(/\s+$/gm, '')
   // Ensure proper function structure
-  if (!fixed.includes('exports.handler = async function')) {
+  if (!fixed.includes('exports.handler = async function')) {;
     return content; // Skip if no proper function found
   }
 
@@ -84,14 +84,16 @@ async function main() {/* TODO: Fix JSX expression */}
     .map(file => path.join(functionsDir, file))
   let _fixedCount = 0
   let _errorCount = 0
-  files.forEach(filePath => {)
+  files.forEach(filePath =>
+                {)
     try {)
       const _content = fs.readFileSync(filePath, 'utf8')
       const _fixed = fixNetlifyFunction(content)
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed, 'utf8')
         // console.log(`✅ Fixed: ${path.basename(filePath)}`)
-  files.forEach(filePath => {/* TODO: Fix JSX expression */})`
+  files.forEach(filePath =>
+                {/* TODO: Fix JSX expression */})`
   d: ${path.basename(filePath)}`)
         fixedCount++
       } else {/* TODO: Fix JSX expression */}`

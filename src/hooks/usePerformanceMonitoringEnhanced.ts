@@ -1,14 +1,15 @@
 
 'use client'
-export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
+export const usePerformanceMonitoring  = () => {/* TODO: Fix JSX expression */}
 import { useEffect, useCallback } from 'react'
-export const _usePerformanceMonitoring = () => {
+export const _usePerformanceMonitoring  = () => {
     // TODO: Add content
   }
 
 }
   const reportWebVitals = useCallback((metri)
-  c: any) => {/* TODO: Fix JSX expression */}
+  c: any) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const body = JSON.stringify(metric)
@@ -21,21 +22,24 @@ export const _usePerformanceMonitoring = () => {
   O: Add content,}
 }
       fetch(url, {/* TODO: Fix JSX expression */})
-  e: true }).catch(() => {/* TODO: Fix JSX expression */}
+  e: true }).catch(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         // Analytics reporting failed
       })
     }
   }, [])
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     if (typeof window !== 'undefined' && 'performance' in window) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       // Monitor Core Web Vitals
-const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+const observer = new PerformanceObserver((list) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
@@ -56,3 +60,4 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
   return { reportWebVitals }
 }
 
+;

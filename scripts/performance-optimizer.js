@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 // Performance optimization script
-const optimizePerformance = () => {
+const optimizePerformance  = () => {
     console.log('Running performance optimizations...')
   // This is a placeholder for performance optimizations
   // In a real implementation, you would:

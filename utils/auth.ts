@@ -26,7 +26,8 @@ if ( {) {
     throw error
   }
 }
-export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }></{>
+                {
   try {
     const user = parseUserFromRequest (req)
     ensure_admin (user)
@@ -62,7 +63,8 @@ export function ensureAdmin(user: User): void {
     throw error
   }
 }
-export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
+export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }></{>
+                {
   try {
     const user = parseUserFromRequest(req)
     ensureAdmin(user)
@@ -114,7 +116,7 @@ export function upsertUser(user: DemoUser): void {
     demoUsers.push(user)
   }
 }
-export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
+export function setUserCookie(res: NextApiResponse, user: DemoUser): void {;
   res.setHeader('Set-Cookie', `user=${JSON.stringify(user)}; Path=/; HttpOnly`)
 }
 export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
@@ -188,3 +190,4 @@ export function isAdminEmail(email: string | null | undefined): boolean {
   const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean)
   return admins.includes(email.toLowerCase())
 }
+;

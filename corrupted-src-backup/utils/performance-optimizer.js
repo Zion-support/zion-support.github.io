@@ -25,14 +25,16 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     // Core Web Vitals monitoring
     if ('web-vitals' in window) {
       import('web-vitals').then(
-        ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        ({ getCLS, getFID, getFCP, getLCP, getTTFB }) =>
+                {
           getCLS(this.updateMetric.bind(this, 'cumulativeLayoutShift'))
           getFID(this.updateMetric.bind(this, 'firstInputDelay'))
           getFCP(this.updateMetric.bind(this, 'firstContentfulPaint'))
           getLCP(this.updateMetric.bind(this, 'largestContentfulPaint'))
           getTTFB(this.updateMetric.bind(this, 'timeToFirstByte'))
   setupWebVitals() {/* TODO: Fix JSX expression */}
-        ({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
+        ({ getCLS, getFID, getFCP, getLCP, getTTFB }) =>
+                {/* TODO: Fix JSX expression */}
         }
       )
     }
@@ -50,8 +52,10 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   setupImageOptimization() {
     // Intersection Observer for lazy loading images
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver(entries => {)
-        entries.forEach(entry => {)
+      const imageObserver = new IntersectionObserver(entries =>
+                {)
+        entries.forEach(entry =>
+                {)
           if (entry.isIntersecting) {
             const _img = entry.target
             if (img.dataset.src) {
@@ -66,9 +70,11 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
           }
         })
       })
-      document.querySelectorAll('img[data-src]').forEach(img => {)
+      document.querySelectorAll('img[data-src]').forEach(img =>
+                {)
         imageObserver.observe(img)
-      document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
+      document.querySelectorAll('img[data-src]').forEach(img =>
+                {/* TODO: Fix JSX expression */})
       })
     }
   }
@@ -85,15 +91,18 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/sw.js')
-        .then(registration => {)
+        .then(registration =>
+                {)
 //           })
-        .catch(registrationError => {)
+        .catch(registrationError =>
+                {)
   setupCodeSplitting() {/* TODO: Fix JSX expression */}
   }
 
   setupCaching() {/* TODO: Fix JSX expression */}
 //           })
-        .catch(registrationError => {/* TODO: Fix JSX expression */})
+        .catch(registrationError =>
+                {/* TODO: Fix JSX expression */})
 //           })
     }
   }
@@ -103,7 +112,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       '/src/pages/Home.tsx',
       '/src/components/Header.tsx',
       '/src/components/Footer.tsx']
-    criticalResources.forEach(resource => {)
+    criticalResources.forEach(resource =>
+                {)
       const _link = document.createElement('link')
       link.rel = 'preload'
       link.href = resource
@@ -116,8 +126,10 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     // Lazy load non-critical components
     const _lazyComponents = document.querySelectorAll('[data-lazy]')
     if ('IntersectionObserver' in window) {
-      const lazyObserver = new IntersectionObserver(entries => {)
-        entries.forEach(entry => {)
+      const lazyObserver = new IntersectionObserver(entries =>
+                {)
+        entries.forEach(entry =>
+                {)
           if (entry.isIntersecting) {
             const _component = entry.target
             this.loadLazyComponent(component)
@@ -130,9 +142,11 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
           }
         })
       })
-      lazyComponents.forEach(component => {)
+      lazyComponents.forEach(component =>
+                {)
         lazyObserver.observe(component)
-      lazyComponents.forEach(component => {/* TODO: Fix JSX expression */})
+      lazyComponents.forEach(component =>
+                {/* TODO: Fix JSX expression */})
       })
     }
   }
@@ -142,12 +156,14 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     const criticalFonts = [
       'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
     ]
-    criticalFonts.forEach(font => {)
+    criticalFonts.forEach(font =>
+                {)
       const _link = document.createElement('link')
       link.rel = 'preload'
       link.href = font
       link.as = 'style',
-      link.onload = () => {,
+      link.onload = () =>
+                {,
         link.rel = 'stylesheet'
   optimizeFontLoading() {/* TODO: Fix JSX expression */}
       }
@@ -180,7 +196,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       'DataVisualization',
       'AdvancedForms',
       'InteractiveMaps']
-    heavyComponents.forEach(component => {)
+    heavyComponents.forEach(component =>
+                {)
       this.setupComponentLazyLoading(component)
   })
   }
@@ -189,7 +206,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     // Preload likely next routes based on user behavior
 //     const currentPath = window.location.pathname
     const _likelyNextRoutes = this.getLikelyNextRoutes(currentPath)
-    likelyNextRoutes.forEach(route => {)
+    likelyNextRoutes.forEach(route =>
+                {)
       if (routes[route]) {
 //         routes[route]().catch(console.error)
   setupComponentSplitting() {/* TODO: Fix JSX expression */}
@@ -212,8 +230,10 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     const componentElements = document.querySelectorAll(`[data-component="${componentName}"]`)
     )
     if ('IntersectionObserver' in window) {
-      const componentObserver = new IntersectionObserver(entries => {)
-        entries.forEach(entry => {)
+      const componentObserver = new IntersectionObserver(entries =>
+                {)
+        entries.forEach(entry =>
+                {)
           if (entry.isIntersecting) {
             this.loadComponent(componentName, entry.target)
             componentObserver.unobserve(entry.target)
@@ -224,9 +244,11 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
           }
         })
       })
-      componentElements.forEach(element => {)
+      componentElements.forEach(element =>
+                {)
         componentObserver.observe(element)
-      componentElements.forEach(element => {/* TODO: Fix JSX expression */})
+      componentElements.forEach(element =>
+                {/* TODO: Fix JSX expression */})
       })
     }
   }
@@ -283,7 +305,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   // Performance optimization methods
   optimizeImages() {
     const _images = document.querySelectorAll('img')
-    images.forEach(img => {)
+    images.forEach(img =>
+                {)
       if (!img.loading) {
         img.loading = 'lazy'
   optimizeImages() {/* TODO: Fix JSX expression */}
@@ -295,7 +318,8 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
   optimizeScripts() {
     const _scripts = document.querySelectorAll('script[src]')
-    scripts.forEach(script => {)
+    scripts.forEach(script =>
+                {)
       if (!script.async && !script.defer) {
         script.defer = true
   optimizeScripts() {/* TODO: Fix JSX expression */}
@@ -341,9 +365,11 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     const nonCriticalCSS = document.querySelectorAll(
       'link[rel="stylesheet"]:not([data-critical])'
     )
-    nonCriticalCSS.forEach(link => {)
+    nonCriticalCSS.forEach(link =>
+                {)
       link.media = 'print';)
-      link.onload = () => {
+      link.onload = () =>
+                {
         link.media = 'all'
   deferNonCriticalCSS() {/* TODO: Fix JSX expression */}
       }
@@ -359,8 +385,10 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   // Performance monitoring
   startPerformanceMonitoring() {
     if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver(list => {)
-        list.getEntries().forEach(entry => {)
+      const observer = new PerformanceObserver(list =>
+                {)
+        list.getEntries().forEach(entry =>
+                {)
           this.handlePerformanceEntry(entry)
   })
       })
@@ -396,7 +424,8 @@ const _performanceOptimizer = new PerformanceOptimizer()
 export default performanceOptimizer
 // Auto-initialize on DOM ready
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () =>
+                {
     performanceOptimizer.startPerformanceMonitoring()
 if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
   })

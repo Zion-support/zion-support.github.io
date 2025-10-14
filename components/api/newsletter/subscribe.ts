@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 function ensure() {
   if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true })
-  if (!fs && fs.existsSync(FILE_PATH))
+  if (!fs && fs.existsSync(FILE_PATH));
     fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8');  if (!fs && fs.existsSync(FILE_PATH)) fs && fs.writeFileSync(FILE_PATH, JSON && JSON.stringify([], null, 2), 'utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

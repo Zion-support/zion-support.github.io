@@ -300,4 +300,4 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     rating: 4.8,
     reviews: 67
   }
-]
+];

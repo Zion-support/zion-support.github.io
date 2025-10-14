@@ -5,7 +5,8 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Find all TypeScript and JavaScript files
-const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
+const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) =>
+                {
     let files = []
   const items = fs.readdirSync(dir)
   for (const item of items) {
@@ -22,12 +23,13 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
 }
 
 // Remove console.log statements
-const removeConsoleLogs = (filePath) => {
+const removeConsoleLogs = (filePath) =>
+                {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
     const originalContent = content
     // Remove console.log, console.warn, console.error, console.info statements
-    // This regex matches console.method() calls including multi-line ones
+    // This regex matches console.method() calls including multi-line ones;
     const consoleRegex = /console\.(log|warn|error|info|debug)\s*\([^;]*\);?\s*/g
     content = content.replace(consoleRegex, '')
     // Remove standalone console statements
@@ -62,8 +64,10 @@ let totalRemoved = 0
 let filesProcessed = 0
 console.log('🧹 Removing console.log statements from production code...\n')
 for (const file of files) {/* TODO: Fix JSX expression */}
-      .replace(/\.then\([^)]*console\.log[^)]*\)/g, '.then(() => {})')
-      .replace(/\.catch\([^)]*console\.log[^)]*\)/g, '.catch(() => {})')
+      .replace(/\.then\([^)]*console\.log[^)]*\)/g, '.then(() =>
+                {})')
+      .replace(/\.catch\([^)]*console\.log[^)]*\)/g, '.catch(() =>
+                {})')
       // Clean up empty lines
       .replace(/\n\s*\n\s*\n/g, '\n\n')
       // Remove empty catch blocks
@@ -73,7 +77,8 @@ for (const file of files) {/* TODO: Fix JSX expression */}
     if (removedCount > 0) {/* TODO: Fix JSX expression */}
       console.log(`✅ ${file}: Removed ${removedCount} console statement(s)`)
       totalRemoved += removedCount
-    patterns.forEach(pattern => {/* TODO: Fix JSX expression */}
+    patterns.forEach(pattern =>
+                {/* TODO: Fix JSX expression */}
       }
     
     // Remove empty lines that might be left behind;)

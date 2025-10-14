@@ -2,7 +2,7 @@
 }
  trace: on-first-retry' 
 // Playwright.config utility
-export const Playwright.config = () => {
+export const Playwright.config  = () => {
   // Implementation here
   return null
 }

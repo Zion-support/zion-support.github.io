@@ -20,7 +20,6 @@ export function getClientIp(req: any): string {
   }
   return remoteAddress |'unknown'
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import type { NextApiRequest } from 'next'
 export function extractClientIp(req: NextApiRequest): string | null {
   const xff = (req.headers['x-forwarded-for'] as string) || ''
@@ -29,3 +28,4 @@ export function extractClientIp(req: NextApiRequest): string | null {
   if (ip.startsWith('::ffff:')) return ip.substring(7)
   return ip
 }
+;

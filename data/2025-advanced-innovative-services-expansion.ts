@@ -1224,7 +1224,7 @@ export const,
       'Weather forecasting'
       'Sustainability analytics'
       'Custom model development'],
-    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'}
+    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'};
 ];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
     ]
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy',
@@ -5133,7 +5133,7 @@ export const,
     customers: 23
     rating: 4.7
     reviews: 17,
-    benefits: [,
+    benefits: [,;
       '30% improvement in prediction accuracy50% reduction in modeling timeReal-time monitoringEnvironmental complianceExpert consultation'];,
     capabilities: [}
       'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'

@@ -1,10 +1,7 @@
-import { useState } from 'react'
-import { useAuth } from '@/hooks/useAuth'
-import { supabase } from '@/integrations/supabase/client'
-import { toast } from 'sonner'
-import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from '@/types/smart-contracts'
-import { TalentProfile } from '@/types/talent'
-import { ContractFormValues } from "@/components/contracts/components/ContractForm"
+import { useState  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';import { supabase  } from '@/integrations/supabase/client';
+import { toast  } from 'sonner';import { BlockchainNetwork, DeploymentOptions, SmartContractInfo  } from '@/types/smart-contracts';
+import { TalentProfile  } from '@/types/talent';import { ContractFormValues } from "@/components/contracts/components/ContractForm"
 export function useSmartContracts() {
   const { user } = useAuth()
   const [isLoading, setIsLoading] = useState(false)
@@ -13,7 +10,8 @@ export function useSmartContracts() {
     values: ContractFormValues, 
     talent: TalentProfile, 
     clientName: string
-  ): Promise<string> => {
+  ): Promise<string> =>
+                {
     try {
       setIsLoading(true)
       const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
@@ -47,7 +45,8 @@ export function useSmartContracts() {
   const deploySmartContract = async (
     contractCode: string,
     options: DeploymentOptions
-  ): Promise<SmartContractInfo | null> => {
+  ): Promise<SmartContractInfo | null> =>
+                {
     if (!user?.id) {
       toast.error("You must be logged in to deploy a contract")
       return null
@@ -89,3 +88,4 @@ export function useSmartContracts() {
     deploymentStatus
   }
 }
+;

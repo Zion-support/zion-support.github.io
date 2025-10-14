@@ -3,12 +3,10 @@ import type { NextApiRequest, NextApiResponse } from 'next'
     const { status, topic, tag, author, limit, offset } = req.query
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query
-    let posts = readPosts()
-import { v4 as uuidv4 } from 'uuid'
-import { BlogPost } from '@/utils/types/blog'
-import { readPosts, writePosts } from '@/utils/data/blogStore'
-import { requireAdmin } from '@/utils/api/auth'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+    let posts = readPosts();
+import { v4 as uuidv4  } from 'uuid';
+import { BlogPost  } from '@/utils/types/blog';import { readPosts, writePosts  } from '@/utils/data/blogStore';
+import { requireAdmin  } from '@/utils/api/auth';export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req.query
     let posts = readPosts()
@@ -23,7 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   if (req.method === 'POST') {
     if (!requireAdmin(req, res)) return
-    const body = req.body as Partial<BlogPost>
+    const body = req.body as Partial<BlogPost></BlogPost>
     if (!body.title || !body.slug || !body.author || !body.publishDate) {
       return res.status(400).json({ error: 'Missing required fields' })
     }

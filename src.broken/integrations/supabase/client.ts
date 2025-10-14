@@ -1,6 +1,5 @@
-import { createClient } from '@supabase/supabase-js'
-import { captureException } from '@/lib/sentry'
-// Export the createClient function directly for any part of the app that might need to call it.
+import { createClient  } from '@supabase/supabase-js';
+import { captureException  } from '@/lib/sentry';// Export the createClient function directly for any part of the app that might need to call it.
 // However, direct usage of `supabase` instance is preferred.
 export { createClient }
 // Export the actual supabase client instance (which could be SupabaseClient | null)
@@ -46,7 +45,8 @@ if (process.env.NODE_ENV === 'development' && process.env.DEBUG_ENV_CONFIG === '
   }})
 }
 // Enhanced helper function to check online status
-async function checkOnline(): Promise<boolean> {
+async function checkOnline(): Promise<boolean></boolean>
+                {
   if (typeof navigator !== 'undefined' && 'onLine' in navigator) {
     return navigator.onLine
   }

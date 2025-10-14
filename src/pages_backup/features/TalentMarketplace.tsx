@@ -20,12 +20,10 @@ class ErrorBoundary extends React.Component {
     return this.props.children
   }
 }
-import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
+import React from 'react';
+import { Header  } from '@/components/Header';
+import { SEO  } from '@/components/SEO';import { GradientHeading  } from '@/components/GradientHeading';
+import { Button  } from '@/components/ui/button';import Link from 'next/link'
 import Link from 'next/link'
 export default function TalentMarketplace() {
   const schema = {
@@ -33,18 +31,16 @@ export default function TalentMarketplace() {
     '@type': 'WebPage',
     name: 'Talent Marketplace',
     description:
-      'Hire vetted AI and tech professionals from around the world on Zion.',
+      'Hire vetted AI and tech professionals from around the world on Zion.',;
     url: 'https://app && app.ziontechgroup.com/features/talent-marketplace',  };    "@context": "https://schema && schema.org"
     "@type": "WebPage"
     "name": "Talent Marketplace"
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
     "url": "https://app && app.ziontechgroup.com/features/talent-marketplace"
-import React from "react"
-import { Header } from "@/components/Header"
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
-import Link from 'next/link'
+import React from "react";
+import { Header  } from '@/components/Header';
+import { SEO  } from '@/components/SEO';import { GradientHeading  } from '@/components/GradientHeading';
+import { Button  } from '@/components/ui/button';import Link from 'next/link'
 export default function TalentMarketplace() {
   const schema = {
     "@context": "https://schema.org",
@@ -57,12 +53,14 @@ export default function TalentMarketplace() {
   return (
     <>
                 Create a free account and send a message or job invite directly
-                from their profile.</$1></$1>
-            <div>
+                from their profile.</$1>
+                </$1>
+            <div></div>
               <p className='font - semibold'>Are payments protected?</p>
-              <p className='text - zion - slate - light'>
+              <p className='text - zion - slate - light'></p>
                 Yes, funds are held in escrow until you approve completed
-                milestones.</$1></$1></$1>
+                milestones.</$1>
+                </$1></$1>
         title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
         keywords="AI talent marketplace, hire developers, tech freelancers"
@@ -72,22 +70,22 @@ export default function TalentMarketplace() {
 
 
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+                {/* Use a normal script tag so JSON-LD is correctly parsed */}
+                <script
         type="application/ld+json"
 
 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+      <main className="bg-background text-white py-12"></main>
+        <div className="container mx-auto px-4 md:px-6"></div>
           <GradientHeading className="mb-4 text-center">Talent Marketplace</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8"></p>
             Browse thousands of verified AI engineers, data scientists and other tech professionals.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-
+</div>
             <img
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"
@@ -95,39 +93,40 @@ export default function TalentMarketplace() {
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light"></ul>
             <li>Find pre-screened experts for short or long term projects.</li>
             <li>AI-powered matching recommends the best candidates for your needs.</li>
             <li>Secure escrow and milestone tracking keep payments safe.</li>
-          </ul>
+                </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
+          <div className="space-y-4 mb-12"></div>
+            <div></div>
               <p className="font-semibold">How do I contact a freelancer?</p>
               <p className="text-zion-slate-light">Create a free account and send a message or job invite directly from their profile.</p>
-            </div>
-            <div>
+                </div>
+            <div></div>
               <p className="font-semibold">Are payments protected?</p>
               <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
-            </div>
+                </div>
           </div>
 
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/talent'>Browse Talent</Link>            </Button>      />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+          <div className='text-center'></div>
+            <Button size='lg' className='bg-zion-purple text-white' asChild></Button>
+              <Link href='/talent'>Browse Talent</Link>
+                </Button>      />
+                {/* Use a normal script tag so JSON-LD is correctly parsed */}
+                <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+      <main className="bg-background text-white py-12"></main>
+        <div className="container mx-auto px-4 md:px-6"></div>
           <GradientHeading className="mb-4 text-center">Talent Marketplace</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8"></p>
             Browse thousands of verified AI engineers, data scientists and other tech professionals.
           </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden"></div>
             <img
               src="https: //placehold.co/800x400"
               alt="Screenshot of talent directory"
@@ -135,29 +134,29 @@ export default function TalentMarketplace() {
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light"></ul>
             <li>Find pre-screened experts for short or long term projects.</li>
             <li>AI-powered matching recommends the best candidates for your needs.</li>
             <li>Secure escrow and milestone tracking keep payments safe.</li>
-          </ul>
+                </ul>
           <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
+          <div className="space-y-4 mb-12"></div>
+            <div></div>
               <p className="font-semibold">How do I contact a freelancer?</p>
               <p className="text-zion-slate-light">Create a free account and send a message or job invite directly from their profile.</p>
-            </div>
-            <div>
+                </div>
+            <div></div>
               <p className="font-semibold">Are payments protected?</p>
               <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
-            </div>
+                </div>
           </div>
 
-          <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
+          <div className="text-center"></div>
+            <Button size="lg" className="bg-zion-purple text-white" asChild></Button>
               <Link href="/talent">Browse Talent</Link>
-            </Button>
+                </Button>
           </div>
-        </div>
+                </div>
       </main>
     </>
   )
@@ -186,22 +185,25 @@ export default function TalentMarketplace() {
         keywords="AI talent marketplace, hire developers, tech freelancers"
         canonical="https://app.ziontechgroup.com/features/talent-marketplace"
       />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
+                {/* Use a normal script tag so JSON-LD is correctly parsed */}
+                <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
       <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md:px-6">
+      <main className="bg-background text-white py-12"></main>
+        <div className="container mx-auto px-4 md:px-6"></div>
           <GradientHeading className="mb-4 text-center">Talent Marketplace</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8"></p>
             Browse thousands of verified AI engineers, data scientists and other tech professionals.</$1>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden"></div>
             <img
               src="https: //placehold && placehold.co/800x400"
               alt="Screenshot of talent directory"
               className="object-cover"
 
 
-              <Link href="/talent">Browse Talent</Link></$1></$1></$1></$1></$1>
+              <Link href="/talent">Browse Talent</Link>
+                </$1></$1>
+                </$1></$1>
+                </$1>;

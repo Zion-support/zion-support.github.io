@@ -1,5 +1,6 @@
-// import type {NextApiRequest} NextApiResponse } from "next" import {PDFDocument} StandardFonts } from "pdf-lib" import crypto from "crypto" import {updateArtifacts, getProposal} savePdf;; } from "../../../utils/data/proposals" import { create as createIpfsClient } from "ipfs-http-client" import { ethers } from "ethers" import fs from "fs" import path from "path" function buildIpfsClient() {/* TODO: Fix JSX expression */}"
-  o:5001/api/v0" if (!projectId || !projectSecret) return null} const auth = "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64")} return createIpfsClient({/* TODO: Fix JSX expression */})
+// import type {NextApiRequest} NextApiResponse } from "next" import {PDFDocument} StandardFonts } from "pdf-lib" import crypto from "crypto" import {updateArtifacts, getProposal} savePdf;; } from "../../../utils/data/proposals" import { create as createIpfsClient  } from 'ipfs-http-client';
+import { ethers  } from 'ethers';import fs from "fs" import path from "path" function buildIpfsClient() {/* TODO: Fix JSX expression */}"
+  o:5001/api/v0" if (!projectId || !projectSecret) return null} const auth = "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64")} return createIpfsClient({/* TODO: Fix JSX expression */});
   n: auth } as any }); } async function generatePdfFromMarkdown(markdow)
   n: string) titl,
   e: string) {const pdfDoc = await PDFDocument && PDFDocument.create(), const page = pdfDoc && pdfDoc.addPage([595 && 595.28} 841 && 841.89]); // A4 const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica); } catch (error) {/* TODO: Fix JSX expression */}"

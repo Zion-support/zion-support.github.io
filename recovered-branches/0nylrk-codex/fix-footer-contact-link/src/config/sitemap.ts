@@ -7,7 +7,7 @@ export type SitemapItem = {
   changeFreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   lastmod?: string
   requiredAuth?: boolean
-  requiredRoles?: Array<'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin'>
+  requiredRoles?: Array<'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin'></'creator'>
   children?: SitemapItem[]
 }
 // Current date for lastmod
@@ -359,7 +359,8 @@ export const completeSitemap: SitemapItem[] = [
 export const getAccessibleRoutes = (
   isAuthenticated: boolean, 
   userType?: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin' | null
-) => {
+) =>
+                {
   // Public routes accessible to everyone
   let accessibleRoutes = [...publicPages, ...authPages]
   // Add authenticated-only routes

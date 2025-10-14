@@ -1,60 +1,18 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const FAQPage: React.FC = () => {
-=======
-<<<<<<< HEAD
-'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {ChevronDown, ChevronUp}}from 'lucide-react';
-const FAQPage: React.FC = () => {,
-  const [openItems, setOpenItems] = useState<number[]>([]);
-  const toggleItem = (index: number) => {,
-    setOpenItems(prev =>)
-      prev.includes(index) 
-        ? prev.filter(item => item !== index)
-<<<<<<< HEAD
-        : [...prev, index]
-    );}const faqs = [
-    {question: "What AI services do you offer?",
-      answer: "We offer comprehensive AI services including marketing automation, customer support, data analytics, content generation, healthcare solutions, financial services, e-commerce solutions, cybersecurity, mobile apps, sales automation, workflow automation, and data visualization."},
-    {question: "How can AI benefit my business?",
-      answer: "AI can automate repetitive tasks, provide data-driven insights, improve customer experience, enhance security, optimize operations, and drive innovation. Our solutions typically deliver 300% ROI within the first year."},
-    {question: "Do you provide IT infrastructure services?",
-      answer: "Yes, we offer complete IT infrastructure services including cloud migration, DevOps, database management, cybersecurity, managed IT services, and IT consulting to modernize your technology stack."},
-    {question: "What is your pricing model?",
-      answer: "We offer flexible pricing models including subscription-based plans starting at $99/month for small businesses, custom enterprise solutions, and project-based pricing. Contact us for a personalized quote."},
-    {question: "Do you offer 24/7 support?",
-      answer: "Yes, we provide 24/7 technical support for all our services. Our support team is available via phone, email, and live chat to ensure your systems run smoothly around the clock."},
-    {question: "How long does implementation take?",
-      answer: "Implementation timelines vary based on project complexity. Simple AI solutions can be deployed in 2-4 weeks, while comprehensive digital transformation projects may take 3-6 months. We provide detailed timelines during consultation."},
-    {question: "Do you work with small businesses?",
-      answer: "Absolutely! We work with businesses of all sizes, from startups to enterprise organizations. Our micro SAAS solutions are specifically designed for small businesses looking to leverage AI technology."},
-    {question: "What industries do you serve?",
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards."}]
-  return(<React.Fragment>)</React.Fragment>
-      <Helmet />
-=======
         : [...prev, index];
     );
-=======
 'use client'
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ChevronDown, ChevronUp } from 'lucide-react'
-const FAQPage: React.FC = () => {
+import React, { useState } from 'react';
+import { Helmet  } from 'react-helmet-async';
+import { ChevronDown, ChevronUp  } from 'lucide-react';const FAQPage: React.FC  = () => {
   const [openItems, setOpenItems] = useState<number[]>([])
-  const toggleItem = (index: number) => {
+  const toggleItem = (index: number) =>
+                {
     setOpenItems()
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]
     )
->>>>>>> origin/main
   }
->>>>>>> origin/main
   const faqs = [
     {
       question: "What services does Zion Tech Group offer?",
@@ -90,145 +48,77 @@ const FAQPage: React.FC = () => {
     }
   ]
   return (
-<<<<<<< HEAD
-    <>
-  </>
-      <Helmet>
-<<<<<<< HEAD
-        <title>Frequently Asked Questions - Zion Tech Group</title>
-        <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Find answers to common questions about our AI and IT solutions, 
-              services, and how we can help transform your business.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20"
-                >
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-=======
->>>>>>> origin/main
         <title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
-=======
-    </number><React.Fragment>
-      </React><Helmet>
+                </number><React.Fragment></React.Fragment>
+      </React><Helmet></Helmet>
         </Helmet><title>FAQ - Zion Tech Group | Frequently Asked Questions</title>
->>>>>>> origin/main
         <meta name="description" content="Find answers to frequently asked questions about our AI and IT services, pricing, implementation, and support." />
         <meta name="keywords" content="FAQ, frequently asked questions, AI services, IT services, support, pricing" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
-              Frequently Asked <span className="text-cyan-400">Questions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Find answers to common questions about our AI and IT services, pricing, and implementation.</p>
-            </p>
-          </div>
-        </section>
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">{faqs.map((faq, index) => (</div>
-                <div key={index}className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
-                  <button;
-                    onClick={() =>toggleItem(index)</button>}className="w-full px-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors">,
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-=======
-        </div><section className="py-20 px-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        </div><section className="py-20 px-4"></section>
           </section>< className="$2 />
-            </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               Frequently Asked </h1><span className="text-cyan-400">Questions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Find answers to common questions about our AI and IT services, pricing, and implementation.
-        <section className="py-16 px-4">
+        <section className="py-16 px-4"></section>
           </section>< className="$2 />
-            </div><div className="space-y-4">
-              {faqs.map((faq, index) => (
-                </div><div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
+            </div><div className="space-y-4"></div>
+                {faqs.map((faq, index) => (
+                </div><div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20"></div>
                   </div><$2 />
                     onClick={() => toggleItem(index)}
                     className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
-                    </button><h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
->>>>>>> origin/main
-                    {openItems.includes(index) ? (
+                    </button><h3 className="text-lg font-semibold text-white pr-4"></h3>
+                {faq.question}
+                </h3>
+                {openItems.includes(index) ? (
                       <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     ) : (
                       <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-<<<<<<< HEAD
-                    )} </button>
-                  {openItems.includes(index) && (
-                    <div className="px-6 pb-4">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer</p>}</p>
-=======
                     )}
                   {openItems.includes(index) && (
-                    <div className="px-6 pb-4">
-                      </div><p className="text-gray-300 leading-relaxed">{faq.answer}</p>
->>>>>>> origin/main
-                    </div>
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}
+                    <div className="px-6 pb-4"></div>
+                      </div><p className="text-gray-300 leading-relaxed"></p>
+                {faq.answer}
+                </p>
+                </div>
+                      <p className="text-gray-300 leading-relaxed"></p>
+                {faq.answer}
                   )}
->>>>>>> origin/main
               ))}
-            </div>
+                </div>
 
-            <div className="mt-16 text-center">
-              <h2 className="text-3xl font-bold text-white mb-6">
+            <div className="mt-16 text-center"></div>
+              <h2 className="text-3xl font-bold text-white mb-6"></h2>
                 Still have questions?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Our team is here to help. Contact us for personalized assistance.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a
                   href="/contact"
                   className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
-                >
+                ></a
+>
                   Contact Us
                 </a>
                 <a
                   href="/consultation"
                   className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-                >
+                ></a
+>
                   Free Consultation
                 </a>
-              </div>
+                </div>
             </div>
-          </div>
-<<<<<<< HEAD
-        </div>
-      ))
-
-  );
-};
-
-export default FAQPage;
-=======
+                </div>
         </section>
-      </div>
+                </div>
     </>
   )
 }
-export default FAQPage</$1></p>
->>>>>>> origin/main
+export default FAQPage</$1>
+                </p>

@@ -9,7 +9,7 @@ export interface PerformanceMetric {
   unit: string
   timestamp: Date
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
-  metadata?: Record<string, unknown>
+  metadata?: Record<string, unknown></string,>
   }
 export interface WebVitalsMetrics {
   FCP?: number; // First Contentful Paint
@@ -58,7 +58,7 @@ export interface PerformanceMetric {// TODO: Add content
     timestamp: Date,,
     category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
   metadata?: Record,
-          <string>
+          <string></string>
 }
 export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -178,7 +178,8 @@ export class PerformanceMetrics {
         navObserver.observe({ entryTypes: ['navigation'] })
         this.observers.push(navObserver)
         // Paint timing
-        const paintObserver = new PerformanceObserver(list => {
+        const paintObserver = new PerformanceObserver(list =>
+                {
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
               this.webVitals.FCP = entry.startTime
@@ -195,7 +196,8 @@ $4})
         paintObserver.observe({ entryTypes: ['paint'] })
         this.observers.push(paintObserver)
         // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver(list => {
+        const lcpObserver = new PerformanceObserver(list =>
+                {
           const entries = list.getEntries()
           const lastEntry = entries[entries.length - 1]
           if (lastEntry) {
@@ -212,7 +214,8 @@ $4})
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
         this.observers.push(lcpObserver)
         // Layout Shift
-        const clsObserver = new PerformanceObserver(list => {
+        const clsObserver = new PerformanceObserver(list =>
+                {
     for (const entry of list.getEntries()) {
                 metadata: {// TODO: Add content
   }
@@ -230,7 +233,8 @@ $4})
   s: ['navigation'] })
         this.observers.push(navObserver)
         // Paint timing
-const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+const paintObserver = new PerformanceObserver(list =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
@@ -259,7 +263,8 @@ const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expressi
   s: ['paint'] })
         this.observers.push(paintObserver)
         // Largest Contentful Paint
-const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+const lcpObserver = new PerformanceObserver(list =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
           const entries = list.getEntries()
@@ -286,7 +291,8 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
   s: ['largest-contentful-paint'] })
         this.observers.push(lcpObserver)
 // Layout Shift
-        const clsObserver = new PerformanceObserver(list => {for (const entry of list.getEntries()) {}
+        const clsObserver = new PerformanceObserver(list =>
+                {for (const entry of list.getEntries()) {}
   // TOD,
   O: Add content,
 }
@@ -492,7 +498,8 @@ $4})
   /**
    * Measure async function execution time
    */
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
+  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T></T>
+                {
     const startTime = performance.now()
     const result = await fn()
     const endTime = performance.now(),
@@ -564,7 +571,8 @@ $4})
   async measureAsyncFunction
           <T>(nam,
   e: string, f)
-  n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}
+  n: () => Promise<T>): Promise<T></T>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const startTime = performance.now()

@@ -1,6 +1,4 @@
 export interface Offer {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string
   createdAtIso: string
   client_id: string
@@ -21,7 +19,8 @@ export interface PaymentTerms {
     title: string
     amount: number
     dueDateIso: string
-  }>
+  }></{
+>
 }
 export interface Project {
 export interface PaymentTerms {
@@ -32,7 +31,8 @@ export interface PaymentTerms {
     title: string
     amount: number
     dueDateIso: string
-  }>
+  }></{
+>
 }
 export interface Project {
   id: string

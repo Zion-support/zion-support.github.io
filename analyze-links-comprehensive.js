@@ -2,8 +2,8 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
+import { execSync  } from 'child_process';
+import { fileURLToPath  } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -53,7 +53,8 @@ function extractLinks(content, filePath) {
 
   const links = new Set();
   
-  linkPatterns.forEach(pattern => {
+  linkPatterns.forEach(pattern =>
+                {
     let match;
     while ((match = pattern.exec(content)) !== null) {
       let link = match[1];
@@ -106,7 +107,8 @@ console.log('📁 Scanning for page files...');
 findPageFiles(appDir);
 
 console.log(`Found ${allPages.size} page routes:`);
-Array.from(allPages).sort().forEach(page => {
+Array.from(allPages).sort().forEach(page =>
+                {
   console.log(`  - ${page}`);
 });
 
@@ -134,7 +136,8 @@ console.log(`Found ${componentFiles.length} component files to analyze`);
 
 // Analyze all files
 const fileAnalysis = [];
-componentFiles.forEach(file => {
+componentFiles.forEach(file =>
+                {
   const analysis = analyzeFile(file);
   if (analysis.links.length > 0) {
     fileAnalysis.push(analysis);
@@ -149,10 +152,12 @@ console.log(`Files with links: ${fileAnalysis.length}`);
 console.log('\n❌ Broken Links Analysis:');
 const brokenLinksByFile = {};
 
-fileAnalysis.forEach(analysis => {
+fileAnalysis.forEach(analysis =>
+                {
   const brokenInFile = [];
   
-  analysis.links.forEach(link => {
+  analysis.links.forEach(link =>
+                {
     if (!allPages.has(link)) {
       brokenInFile.push(link);
       if (!brokenLinks.includes(link)) {
@@ -168,15 +173,18 @@ fileAnalysis.forEach(analysis => {
 });
 
 console.log(`Found ${brokenLinks.length} broken links:`);
-brokenLinks.sort().forEach(link => {
+brokenLinks.sort().forEach(link =>
+                {
   console.log(`  - ${link}`);
 });
 
 // Show broken links by file
 console.log('\n📄 Broken Links by File:');
-Object.entries(brokenLinksByFile).forEach(([file, links]) => {
+Object.entries(brokenLinksByFile).forEach(([file, links]) =>
+                {
   console.log(`\n${file}:`);
-  links.forEach(link => {
+  links.forEach(link =>
+                {
     console.log(`  - ${link}`);
   });
 });
@@ -184,7 +192,8 @@ Object.entries(brokenLinksByFile).forEach(([file, links]) => {
 // Generate missing pages list
 console.log('\n📝 Missing Pages to Create:');
 const missingPagesSorted = [...new Set(missingPages)].sort();
-missingPagesSorted.forEach(page => {
+missingPagesSorted.forEach(page =>
+                {
   console.log(`  - ${page}`);
 });
 
@@ -200,7 +209,8 @@ const navigationLinks = [
 
 const missingNavLinks = navigationLinks.filter(link => !allPages.has(link));
 console.log(`Missing navigation pages: ${missingNavLinks.length}`);
-missingNavLinks.forEach(link => {
+missingNavLinks.forEach(link =>
+                {
   console.log(`  - ${link}`);
 });
 

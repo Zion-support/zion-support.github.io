@@ -8,14 +8,15 @@ function fixJSXSyntax(content) {
   //Fix function declarations with malformed comments
   fixed = fixed.replace(
     /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {'
+    'const $1: React.FC  = () => {'
   )
 ,
   //Fix malformed JSX elements that are self-closing but shouldn't be
   //Pattern: <div></div> followed by content that should be inside
   fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>')
   //Fix malformed JSX elements with attributes
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>')
+  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3>
+                </$1>')
   //Fix array syntax issues
   fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{')
   //Fix object syntax issues
@@ -24,7 +25,7 @@ function fixJSXSyntax(content) {
   fixed = fixed.replace(
 function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
     /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {/* TODO: Fix JSX expression */}
+    'const $1: React.FC  = () => {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{/* TODO: Fix JSX expression */})
     /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
@@ -53,7 +54,8 @@ function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
-    fixes.forEach(fix => {
+    fixes.forEach(fix =>
+                {
       const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
         content = newContent
@@ -114,4 +116,4 @@ if (import.meta.url === `fil)`
 }
 
 export { fixJSXSyntax, processFile }
-}"`</div>
+}"`</div>;

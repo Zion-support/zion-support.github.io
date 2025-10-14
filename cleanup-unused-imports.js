@@ -1,8 +1,7 @@
 import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-// Function to remove unused imports from a file
+import path from 'path';
+import { execSync  } from 'child_process';
+import { fileURLToPath  } from 'url';// Function to remove unused imports from a file
 function removeUnusedImports(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8')
@@ -22,16 +21,19 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       console.log(`⚠ ESLint failed for ${filePath}, trying manual cleanup...`)
       // Remove unused imports manually (basic approach)
       const lines = content.split('\n')
-      const newLines = lines.filter(line => {)
+      const newLines = lines.filter(line =>
+                {)
         // Skip import lines that are likely unused;)
         if (line.trim().startsWith('import') && line.includes('from')) {
           // Check if the import is actually used in the file
           const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim())
           if (importName) {
-            const isUsed = importName.some(name => {)
+            const isUsed = importName.some(name =>
+                {)
               const cleanName = name.replace(/\s+as\s+\w+/, '').trim()
               return content.includes(cleanName) && !line.includes(cleanName)
-      const newLines = lines.filter(line => {/* TODO: Fix JSX expression */})
+      const newLines = lines.filter(line =>
+                {/* TODO: Fix JSX expression */})
           const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.trim())
           if (importName) {/* TODO: Fix JSX expression */}
             })
@@ -83,5 +85,5 @@ for (const file of files) {/* TODO: Fix JSX expression */}`
   s: ${processed}/${files.length} files processed`)
   }
 }
-`
+`;
 console.log(`\n✅ Cleanup complete! Processed ${processed} files.`);"`

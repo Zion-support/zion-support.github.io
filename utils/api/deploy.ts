@@ -24,7 +24,8 @@ function writeTextFile(filePath: string, content: string) {ensureDir(path.dirnam
 }
 function nowIso(): string {return new Date().toISOString()
 }
-export async function performDeploy(input: DeployInput): Promise<DeployResult> {const version = "Zion OS v1.0"
+export async function performDeploy(input: DeployInput): Promise<DeployResult></DeployResult>
+                {const version = "Zion OS v1.0"
   const logs: DeployLogEntry[] = []
   const assets: GeneratedAsset[] = []
 function toSlug(name: string): string {
@@ -46,7 +47,8 @@ function writeTextFile(filePath: string, content: string) {
 function nowIso(): string {
   return new Date().toISOString()
 }
-export async function performDeploy(input: DeployInput): Promise<DeployResult> {
+export async function performDeploy(input: DeployInput): Promise<DeployResult></DeployResult>
+                {
   const version = "Zion OS v1.0"
   const logs: DeployLogEntry[] = []
   const assets: GeneratedAsset[] = []
@@ -167,7 +169,8 @@ function writeTextFile(filePath: string, content: string) {ensureDir(path.dirnam
 }
 function nowIso(): string {return new Date().toISOString()
 }
-export async function performDeploy(input: DeployInput): Promise<DeployResult> {const version = "Zion OS v1.0"
+export async function performDeploy(input: DeployInput): Promise<DeployResult></DeployResult>
+                {const version = "Zion OS v1.0"
   const logs: DeployLogEntry[] = []
   const assets: GeneratedAsset[] = []
   const instanceSlug = toSlug(input.instanceName)
@@ -245,7 +248,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       `# Public Roadmap\n\n- Q1: Launch core modules\n- Q2: DAO consolidation\n- Q3: Nation builder\n`
     )
     assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" })
-    writeTextFile(
+    writeTextFile(;
 import fs from './fs';,
 import path from './path';,
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset  } from '../types / zion';,
@@ -276,7 +279,8 @@ function writeTextFile() {
 function now_iso (): string {
   return new Date ().toISOString ()
 }
-export async function perform_deploy (input: DeployInput): Promise < DeployResult> {
+export async function perform_deploy (input: DeployInput): Promise < DeployResult></>
+                {
   const version = "Zion OS v1.0",
   const logs: DeployLogEntry[] = [],
   const assets: GeneratedAsset[] = [],

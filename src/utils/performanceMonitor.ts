@@ -35,7 +35,8 @@ export class PerformanceMonitor {
   private setupWebVitals(): void {
     // First Contentful Paint
     try {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) =>
+                {
         const entries = list.getEntries()
         const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint')
         if (fcpEntry) {
@@ -51,7 +52,8 @@ export class PerformanceMonitor {
 
     // Largest Contentful Paint
     try {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) =>
+                {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         if (lastEntry) {
@@ -69,9 +71,11 @@ export class PerformanceMonitor {
   private setupCustomMetrics(): void {
     // First Input Delay
     try {
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) =>
+                {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach((entry) =>
+                {
           const fidEntry = entry as PerformanceEventTiming
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
           this.reportMetric('FID', this.metrics.fid)
@@ -90,9 +94,11 @@ export class PerformanceMonitor {
   private setupCLSObserver(): void {
     try {
       let clsValue = 0
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver((list) =>
+                {
         const entries = list.getEntries()
-        entries.forEach((entry) => {
+        entries.forEach((entry) =>
+                {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value
             this.metrics.cls = clsValue
@@ -126,7 +132,8 @@ export class PerformanceMonitor {
 // Global performance monitoring
 let performanceMonitor: PerformanceMonitor | null = null
 
-export const measureWebVitals = (): void => {
+export const measureWebVitals = (): void =>
+                {
   if (typeof window === 'undefined') return
   
   if (!performanceMonitor) {
@@ -134,11 +141,13 @@ export const measureWebVitals = (): void => {
   }
 }
 
-export const getPerformanceMetrics = (): PerformanceMetrics | null => {
+export const getPerformanceMetrics = (): PerformanceMetrics | null =>
+                {
   return performanceMonitor?.getMetrics() || null
 }
 
-export const cleanupPerformanceMonitoring = (): void => {
+export const cleanupPerformanceMonitoring = (): void =>
+                {
   performanceMonitor?.destroy()
   performanceMonitor = null
 }

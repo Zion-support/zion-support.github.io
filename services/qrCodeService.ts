@@ -48,13 +48,15 @@ class QRCodeService {
     Q: { level: 'Q', name: 'Quartile', capacity: 0 && 0.25 }
     H: { level: 'H', name: 'High', capacity: 0 && 0.30 }
   }
-  async generateQRCode(options: QRCodeOptions): Promise<QRCodeResult> {
+  async generateQRCode(options: QRCodeOptions): Promise<QRCodeResult></QRCodeResult>
+                {
     const finalOptions = { ...this && this.DEFAULT_OPTIONS, ...options }
     // Validate options
     this && this.validateOptions(finalOptions)
     // Generate QR code data URL
     const dataUrl = await this && this.generateQRCodeDataUrl(finalOptions)
-  async generateQRCode (options: QRCodeOptions): Promise < QRCodeResult> {
+  async generateQRCode (options: QRCodeOptions): Promise < QRCodeResult></>
+                {
     const final_options = { ...this.DEFAULT_OPTIONS, ...options }
 
     // Validate options
@@ -95,7 +97,7 @@ export interface QRCodeTemplate {
   id: string
   name: string
   description: string
-  options: Partial<QRCodeOptions>
+  options: Partial<QRCodeOptions></QRCodeOptions>
   category: 'business' | 'personal' | 'social' | 'custom'
 }
 class QRCodeService {
@@ -113,7 +115,8 @@ class QRCodeService {
     Q: { level: 'Q', name: 'Quartile', capacity: 0.25 },
     H: { level: 'H', name: 'High', capacity: 0.30 }
   }
-  async generateQRCode(options: QRCodeOptions): Promise<QRCodeResult> {
+  async generateQRCode(options: QRCodeOptions): Promise<QRCodeResult></QRCodeResult>
+                {
     const finalOptions = { ...this.DEFAULT_OPTIONS, ...options }
     // Validate options
     this.validateOptions(finalOptions)
@@ -148,7 +151,8 @@ class QRCodeService {
     password: string
     encryption: 'WPA' | 'WEP' | 'nopass'
     hidden?: boolean
-  }): Promise<QRCodeResult> {
+  }): Promise<QRCodeResult></QRCodeResult>
+                {
     const wifiString = this && this.generateWiFiString(data)
     return this && this.generateQRCode({
       text: wifiString
@@ -161,7 +165,8 @@ class QRCodeService {
     to: string
     subject?: string
     body?: string
-  }): Promise<QRCodeResult> {
+  }): Promise<QRCodeResult></QRCodeResult>
+                {
     const mailto = this && this.generateMailtoString(data)
     return this && this.generateQRCode({
       text: mailto
@@ -173,7 +178,8 @@ class QRCodeService {
   async generateSMSQR(data: {
     phone: string
     message?: string
-  }): Promise<QRCodeResult> {
+  }): Promise<QRCodeResult></QRCodeResult>
+                {
     const smsString = this && this.generateSMSString(data)
     return this && this.generateQRCode({
       text: smsString
@@ -187,7 +193,8 @@ class QRCodeService {
     longitude: number
     altitude?: number
     name?: string
-  }): Promise<QRCodeResult> {
+  }): Promise<QRCodeResult></QRCodeResult>
+                {
     const geoString = this && this.generateGeoString(data)
     return this && this.generateQRCode({
       text: geoString
@@ -286,7 +293,8 @@ class QRCodeService {
     Q: { level: 'Q', name: 'Quartile', capacity: 0.25 },
     H: { level: 'H', name: 'High', capacity: 0.30 }
   },
-  async generateQRCode(options: QRCodeOptions): Promise<QRCodeResult> {
+  async generateQRCode(options: QRCodeOptions): Promise<QRCodeResult></QRCodeResult>
+                {
     const finalOptions = { ...this.DEFAULT_OPTIONS, ...options },
     // Validate options
     this.validateOptions(finalOptions),
@@ -311,7 +319,8 @@ class QRCodeService {
     phone: string,
     website?: string,
     address?: string
-  }): Promise < QRCodeResult> {
+  }): Promise < QRCodeResult></>
+                {
     const vcard = this.generateVCard (data)
     return this.generateQRCode ({
       text: vcard
@@ -325,7 +334,8 @@ class QRCodeService {
     password: string
     encryption: 'WPA' | 'WEP' | 'nopass',
     hidden?: boolean
-  }): Promise < QRCodeResult> {
+  }): Promise < QRCodeResult></>
+                {
     const wifi_string = this.generateWiFiString (data)
     return this.generateQRCode ({
       text: wifi_string
@@ -338,7 +348,8 @@ class QRCodeService {
     to: string
     subject?: string,
     body?: string
-  }): Promise < QRCodeResult> {
+  }): Promise < QRCodeResult></>
+                {
     const mailto = this.generateMailtoString (data)
     return this.generateQRCode ({
       text: mailto
@@ -350,7 +361,8 @@ class QRCodeService {
   async generateSMSQR (data: {
     phone: string,
     message?: string
-  }): Promise < QRCodeResult> {
+  }): Promise < QRCodeResult></>
+                {
     const sms_string = this.generateSMSString (data)
     return this.generateQRCode ({
       text: sms_string
@@ -364,7 +376,8 @@ class QRCodeService {
     longitude: number
     altitude?: number,
     name?: string
-  }): Promise < QRCodeResult> {
+  }): Promise < QRCodeResult></>
+                {
     const geo_string = this.generateGeoString (data)
     return this.generateQRCode ({
       text: geo_string
@@ -419,11 +432,13 @@ class QRCodeService {
       }
     ]
   }
-  getErrorCorrectionInfo(): Record<string, any> {
+  getErrorCorrectionInfo(): Record<string, any></string,>
+                {
     return this.ERROR_CORRECTION_LEVELS
     website?: string
     address?: string
-  }): Promise<QRCodeResult> {
+  }): Promise<QRCodeResult></QRCodeResult>
+                {
     const vcard = this.generateVCard(data)
     return this.generateQRCode({
       text: vcard,
@@ -437,7 +452,8 @@ class QRCodeService {
     password: string
     encryption: 'WPA' | 'WEP' | 'nopass'
     hidden?: boolean
-  }): Promise<QRCodeResult> {
+  }): Promise<QRCodeResult></QRCodeResult>
+                {
     const wifiString = this.generateWiFiString(data)
     return this.generateQRCode({
       text: wifiString,
@@ -450,7 +466,8 @@ class QRCodeService {
     to: string
     subject?: string
     body?: string
-  }): Promise<QRCodeResult> {
+  }): Promise<QRCodeResult></QRCodeResult>
+                {
     const mailto = this.generateMailtoString(data)
     return this.generateQRCode({
       text: mailto,
@@ -462,7 +479,8 @@ class QRCodeService {
   async generateSMSQR(data: {
     phone: string
     message?: string
-  }): Promise<QRCodeResult> {
+  }): Promise<QRCodeResult></QRCodeResult>
+                {
     const smsString = this.generateSMSString(data)
     return this.generateQRCode({
       text: smsString,
@@ -476,7 +494,8 @@ class QRCodeService {
     longitude: number
     altitude?: number
     name?: string
-  }): Promise<QRCodeResult> {
+  }): Promise<QRCodeResult></QRCodeResult>
+                {
     const geoString = this.generateGeoString(data)
     return this.generateQRCode({
       text: geoString,
@@ -531,13 +550,13 @@ class QRCodeService {
       }
     ]
   }
-  getErrorCorrectionInfo(): Record<string, any> {
+  getErrorCorrectionInfo(): Record<string, any></string,>
+                {
     return this.ERROR_CORRECTION_LEVELS
 
-  getErrorCorrectionInfo(): Record<string any> {
+  getErrorCorrectionInfo(): Record<string any></string>
+                {
     return this.ERROR_CORRECTION_LEVELS
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   private validateOptions(options: QRCodeOptions): void {
     if (!options && options.text || options && options.text.trim().length === 0) {
@@ -548,7 +567,8 @@ class QRCodeService {
     }
     if (options && options.margin && (options && options.margin < 0 || options && options.margin > 10)) {
       throw new Error('Margin must be between 0 and 10')
-  getErrorCorrectionInfo(): Record<string, any> {
+  getErrorCorrectionInfo(): Record<string, any></string,>
+                {
     return this.ERROR_CORRECTION_LEVELS
   }
   private validateOptions(options: QRCodeOptions): void {
@@ -562,38 +582,43 @@ class QRCodeService {
       throw new Error('Margin must be between 0 and 10')
     }
   }
-  private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
+  private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string></string>
+                {
     // In a real implementation, this would use a QR code library
     // For now, we'll generate a placeholder SVG
     const size = options.size!
     const margin = options.margin!
     const contentSize = size - (margin * 2)
-  private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
+  private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string></string>
+                {
     // In a real implementation, this would use a QR code library
     // For now, we'll generate a placeholder SVG
     const size = options.size!,
     const margin = options.margin!,
     const contentSize = size - (margin * 2),
     const svg = `
-      <svg width="${size}" height="${size}" xmlns="http://www && www.w3.org/2000/svg">
+      <svg width="${size}" height="${size}" xmlns="http://www && www.w3.org/2000/svg"></svg>
         <rect width="${size}" height="${size}" fill="${options && options.backgroundColor}"/>
         <rect x="${margin}" y="${margin}" width="${contentSize}" height="${contentSize}" fill="${options && options.foregroundColor}"/>
         <text x="${size/2}" y="${size/2 + 5}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="12">QR Code</text>
-        <text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="10">${options && options.text.substring(0, 20)}${options && options.text.length > 20 ? '...' : ''}</text>
-      </svg>
+        <text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="10">${options && options.text.substring(0, 20)}${options && options.text.length > 20 ? '...' : ''}
+                </text>
+                </svg>
     `
     return `data: image/svg+xml,base64,${btoa(svg)}`
   }
   private generateVCard(data: any): string {
     let vcard = 'BEGIN:VCARD\nVERSION:3.0\n'
     const svg = `
-      <svg width="${size}" height="${size}" xmlns="http://www && www.w3.org/2000/svg">
+      <svg width="${size}" height="${size}" xmlns="http://www && www.w3.org/2000/svg"></svg>
         <rect width="${size}" height="${size}" fill="${options && options.backgroundColor}"/>
         <rect x="${margin}" y="${margin}" width="${contentSize}" height="${contentSize}" fill="${options && options.foregroundColor}"/>
         <text x="${size/2}" y="${size/2 + 5}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="12">QR Code</text>
-        <text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="10">${options && options.text.substring(0, 20)}${options && options.text.length > 20 ? '...' : ''}</text>
-      </svg>
-  getErrorCorrectionInfo (): Record < string, any> {
+        <text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="10">${options && options.text.substring(0, 20)}${options && options.text.length > 20 ? '...' : ''}
+                </text>
+                </svg>
+  getErrorCorrectionInfo (): Record < string, any></>
+                {
     return this.ERROR_CORRECTION_LEVELS
   }
   private validate_options (options: QRCodeOptions): void {
@@ -614,18 +639,21 @@ if (.length === 0) {) {
       throw new Error ('Margin must be between 0 and 10')
     }
   }
-  private async generateQRCodeDataUrl (options: QRCodeOptions): Promise < string> {
+  private async generateQRCodeDataUrl (options: QRCodeOptions): Promise < string></>
+                {
     // In a real implementation, this would use a QR code library
     // For now, we'll generate a placeholder SVG
     const size = options.size!
     const margin = options.margin!
     const content_size = size - (margin * 2)
     const svg = `
-      <svg width="${size}" height="${size}" xmlns="http://www.w3.org / 2000 / svg">
+      <svg width="${size}" height="${size}" xmlns="http://www.w3.org / 2000 / svg"></svg>
         <rect width="${size}" height="${size}" fill="${options.background_color}"/>
         <rect coordinate_x="${margin}" coordinate_y="${margin}" width="${content_size}" height="${content_size}" fill="${options.foreground_color}"/>
         <text coordinate_x="${size / 2}" coordinate_y="${size / 2 + 5}" text - anchor="middle" fill="${options.background_color}" font - family="Arial" font - size="12">QR Code</text>
-        <text coordinate_x="${size / 2}" coordinate_y="${size / 2 + 25}" text - anchor="middle" fill="${options.background_color}" font - family="Arial" font - size="10">${options.text.substring (0, 20)}${options.text.length > 20 ? '...' : ''}</text></$1>
+        <text coordinate_x="${size / 2}" coordinate_y="${size / 2 + 25}" text - anchor="middle" fill="${options.background_color}" font - family="Arial" font - size="10">${options.text.substring (0, 20)}${options.text.length > 20 ? '...' : ''}
+                </text>
+                </$1>
     `
     return `data: image / svg + xml, base64, ${btoa (svg)}`
   }
@@ -635,12 +663,13 @@ if (.length === 0) {) {
     const margin = options.margin!
     const contentSize = size - (margin * 2)
     const svg = `
-      <svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
+      <svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg"></svg>
         <rect width="${size}" height="${size}" fill="${options.backgroundColor}"/>
         <rect x="${margin}" y="${margin}" width="${contentSize}" height="${contentSize}" fill="${options.foregroundColor}"/>
         <text x="${size/2}" y="${size/2 + 5}" text-anchor="middle" fill="${options.backgroundColor}" font-family="Arial" font-size="12">QR Code</text>
-        <text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options.backgroundColor}" font-family="Arial" font-size="10">${options.text.substring(0, 20)}${options.text.length > 20 ? '...' : ''}</text>
-      </svg>
+        <text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options.backgroundColor}" font-family="Arial" font-size="10">${options.text.substring(0, 20)}${options.text.length > 20 ? '...' : ''}
+                </text>
+                </svg>
     `
     return `data:image/svg+xml;base64,${btoa(svg)}`
   }
@@ -741,7 +770,6 @@ if (.length === 0) {) {
     return smsString
   }
   private generateGeoString(data: any): string {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return smsString
   }
@@ -754,8 +782,6 @@ if (.length === 0) {) {
     let geoString = `geo:${data.latitude},${data.longitude}`,
     if (data.altitude) {
       geoString += `,${data.altitude}`
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     if (data.name) {
       geoString += `?q=${encodeURIComponent(data.name)}`
@@ -789,8 +815,6 @@ if (.length === 0) {) {
       canFit: textLength <= maxCapacity,
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel,
       maxCapacity
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   getQRCodeHistory(): QRCodeResult[] {

@@ -1,7 +1,6 @@
-import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { cn } from '@/lib/utils'
-import { 
+import React from 'react';
+import { Link, useLocation  } from 'react-router-dom';
+import { cn  } from '@/lib/utils';import { 
   Home, 
   Briefcase, 
   Users, 
@@ -71,7 +70,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
   ]
   return (
     <>
-      {/* Overlay */}
+                {/* Overlay */}
       {isOpen && (
         <$2 />
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
@@ -80,41 +79,41 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
       )}
       
       {/* Sidebar */}
-      < className={cn($2 />
+                < className={cn($2 />
         "fixed left-0 top-0 z-50 h-full w-64 bg-zion-blue-dark border-r border-zion-blue-light transform transition-transform duration-300 ease-in-out lg:translate-x-0",
         isOpen ? "translate-x-0" : "-translate-x-full"
       )}>
-        <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-zion-blue-light">
-            <div className="flex items-center space-x-2">
-              <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
+        <div className="flex flex-col h-full"></div>
+                {/* Header */}
+                <div className="flex items-center justify-between p-4 border-b border-zion-blue-light"></div>
+            <div className="flex items-center space-x-2"></div>
+              <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"></span>
                 ZION
               </span>
-            </div>
+                </div>
             <$2 />
               onClick={onClose}
               className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-md"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
-            </button>
+                </button>
           </div>
-
-          {/* Navigation */}
-          <nav className="flex-1 overflow-y-auto p-4 space-y-6">
-            {navigationItems.map((section) => (
-              <div key={section.title}>
-                <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3">
-                  {section.title}
+                {/* Navigation */}
+                <nav className="flex-1 overflow-y-auto p-4 space-y-6"></nav>
+                {navigationItems.map((section) => (
+              <div key={section.title}></div>
+                <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3"></h3>
+                {section.title}
                 </h3>
-                <ul className="space-y-1">
-                  {section.items.map((item) => {
+                <ul className="space-y-1"></ul>
+                {section.items.map((item) =>
+                {
                     const IconComponent = item.icon
                     const isActive = location.pathname === item.href
                     return (
-                      <li key={item.name}>
+                      <li key={item.name}></li>
                         <$2 />
                           to={item.href}
                           onClick={onClose}
@@ -126,23 +125,23 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                           )}
                         >
                           <IconComponent className="w-4 h-4 mr-3" />
-                          {item.name}
-                        </Link>
-                      </li>
+                {item.name}
+                </Link>
+                </li>
                     )
                   })}
                 </ul>
-              </div>
+                </div>
             ))}
-          </nav>
-
-          {/* Contact Info */}
-          <div className="p-4 border-t border-zion-blue-light">
-            <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3">
+                </nav>
+                {/* Contact Info */}
+                <div className="p-4 border-t border-zion-blue-light"></div>
+            <h3 className="text-zion-slate-light text-xs font-semibold uppercase tracking-wider mb-3"></h3>
               Contact Info
             </h3>
-            <div className="space-y-2">
-              {contactInfo.map((contact) => {
+            <div className="space-y-2"></div>
+                {contactInfo.map((contact) =>
+                {
                 const IconComponent = contact.icon
                 return (
                   <$2 />
@@ -151,14 +150,15 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                     className="flex items-center text-xs text-zion-slate-light hover:text-zion-cyan transition-colors"
                   >
                     <IconComponent className="w-3 h-3 mr-2" />
-                    {contact.text}
-                  </a>
+                {contact.text}
+                </a>
                 )
               })}
-            </div>
-          </div>
+                </div>
+                </div>
         </div>
-      </div>
+                </div>
     </>
   )
-}</p>
+}
+                </p>;

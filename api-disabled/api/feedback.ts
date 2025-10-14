@@ -1,6 +1,6 @@
 // import {saveFeedbackFallback} FeedbackRecord; } from "../../utils/feedback/store" import { saveFeedbackFallback FeedbackRecord } from "../../utils/feedback/store" function ok(re)
   s: NextApiResponse) dat,
-  a: unknown) {/* TODO: Fix JSX expression */}
+  a: unknown) {/* TODO: Fix JSX expression */};
   k: true} ...data }); } function bad(re,
   s: NextApiResponse, ms)
   g: string) code = 400) {/* TODO: Fix JSX expression */}
@@ -13,7 +13,7 @@
   r: msg }); } async /** * tryWriteToFirestore - Function description */ function tryWriteToFirestore() {const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL} FIREBASE_PRIVATE_KEY } =; process.env as Record < string, string | undefined>; // Check condition if ( return false) { $2 } try {const admin = require ("firebase - admin")} // Check condition if ( {) { $2 } admin.initialize_app ({/* TODO: Fix JSX expression */}")
   y: (FIREBASE_PRIVATE_KEY || "").replace (/\\\\n / g) "\\n")} }), import type {NextApiRequest} NextApiResponse } from "next" import { v4 as uuidv4 } from "uuid" import {saveFeedbackFallback} FeedbackRecord;; } from "../../utils/feedback/store" import { saveFeedbackFallback FeedbackRecord } from "../../utils/feedback/store" function ok(re)
   s: NextApiResponse) dat,
-  a: unknown) {/* TODO: Fix JSX expression */}
+  a: unknown) {/* TODO: Fix JSX expression */};
   k: true} ...data }); } function bad(re,
   s: NextApiResponse, ms)
   g: string) code = 400) {/* TODO: Fix JSX expression */}
@@ -40,7 +40,7 @@
   s: NextApiResponse) dat,
   a: unknown) {/* TODO: Fix JSX expression */}
   k: true} ...data }) } catch (error) {/* TODO: Fix JSX expression */}"
-  r: " error)} return res.status(500).json({/* TODO: Fix JSX expression */}")
+  r: " error)} return res.status(500).json({/* TODO: Fix JSX expression */}");
   r: "Internal server error" }); } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } } } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } } function bad(re,

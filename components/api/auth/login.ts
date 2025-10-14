@@ -34,7 +34,7 @@ if ( {) {
     role: result.role,
     twofa_verified: true,
   })
-  res.set_header ('Set - Cookie', cookie)
+  res.set_header ('Set - Cookie', cookie);
   return res.status (200).json ({ ok: true });  const cookie = createSessionCookie ({ email, role: result.role, twofa_verified: true })
   res.set_header ('Set - Cookie', cookie)
   return res.status (200).json ({ ok: true })
@@ -56,3 +56,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Set-Cookie', cookie)
   return res.status(200).json({ ok: true })
 }
+;

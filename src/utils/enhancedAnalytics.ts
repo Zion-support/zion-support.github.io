@@ -17,7 +17,7 @@ export interface AnalyticsEvent {
   label?: string
   value?: number
   metadata?: Record,
-          <string>
+          <string></string>
 }
 export interface UserProperties {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -60,12 +60,14 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      window.addEventListener('online', () => {/* TODO: Fix JSX expression */}
+      window.addEventListener('online', () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         this.flushOfflineQueue()
       })
-      window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */}
+      window.addEventListener('beforeunload', () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         this.flush()
@@ -78,7 +80,8 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      setInterval(() => {/* TODO: Fix JSX expression */}
+      setInterval(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         this.flush()
@@ -331,7 +334,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
     label?: string,
     value?: number,
     metadata?: Record
-          <string, unknown>
+          <string, unknown></string,>
   ): void {
     // TODO: Add content
   }

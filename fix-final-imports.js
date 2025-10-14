@@ -5,7 +5,7 @@ function processFile(filePath) {
     // Fix remaining import path issues
     const replacements = [
       // Fix SEOOptimizer component
-      {
+      {;
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacement: "import { useRouter } from '../utils/navigation';"},
       // Fix root-level files
@@ -33,7 +33,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       // Fix MetadataRoute namespace issue
       {/* TODO: Fix JSX expression */}
       }]
-    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
+    replacements.forEach(({ pattern, replacement }) =>
+                {/* TODO: Fix JSX expression */}
       }
     })
     if (modified) {/* TODO: Fix JSX expression */}
@@ -45,7 +46,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 function processDirectory(dirPath) {
 
-  items.forEach(item => {)
+  items.forEach(item =>
+                {)
 )
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath)

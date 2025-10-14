@@ -300,4 +300,4 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     rating: 4.9,
     reviews: 23
   }
-]
+];

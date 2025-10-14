@@ -17,10 +17,8 @@ export function getSupabaseClient(): ZionSupabase {try {
     }
     // Server-side: create a new client per call to avoid cross-request state
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
-  } catch {return undefined
-import { createClient, SupabaseClient } from '@supabase/supabase-js'
-import { createClient, SupabaseClient } from '@supabase/supabase-js'
-export type ZionSupabase = SupabaseClient | undefined
+  } catch {return undefined;
+import { createClient, SupabaseClient , createClient, SupabaseClient  } from '@supabase/supabase-js';export type ZionSupabase = SupabaseClient | undefined
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL || ''
 const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.SUPABASE_ANON_KEY || ''
 let browserClient: SupabaseClient | undefined

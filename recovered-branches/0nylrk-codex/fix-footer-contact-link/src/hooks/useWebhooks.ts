@@ -1,8 +1,6 @@
-import { useState } from "react"
-import { useAuth } from "@/hooks/useAuth"
-import { supabase } from "@/integrations/supabase/client"
-import { toast } from "@/hooks/use-toast"
-export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired'
+import { useState  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';import { supabase  } from '@/integrations/supabase/client';
+import { toast  } from '@/hooks/use-toast';export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired'
 export interface Webhook {
   id: string
   name: string
@@ -24,7 +22,7 @@ export function useWebhooks() {
   const [error, setError] = useState<string | null>(null)
   const [testResult, setTestResult] = useState<TestWebhookResult | null>(null)
   // Helper to get the base URL for webhook functions
-  const getWebhookUrl = () => {
+  const getWebhookUrl  = () => {
     // import.meta may be undefined when this hook is executed in a Node
     // environment (e.g. during server side rendering or tests). Using optional
     // chaining avoids a TypeError in those cases and falls back to process.env.
@@ -33,7 +31,8 @@ export function useWebhooks() {
     return `${url}/functions/v1/webhook-manager`
   }
   // Fetch user's webhooks
-  const fetchWebhooks = async () => {
+  const fetchWebhooks = async () =>
+                {
     if (!user) return
     setLoading(true)
     setError(null)
@@ -69,7 +68,8 @@ export function useWebhooks() {
     }
   }
   // Create new webhook
-  const createWebhook = async (name: string, url: string, eventTypes: WebhookEventType[], secret?: string) => {
+  const createWebhook = async (name: string, url: string, eventTypes: WebhookEventType[], secret?: string) =>
+                {
     if (!user) return
     setLoading(true)
     setError(null)
@@ -118,7 +118,8 @@ export function useWebhooks() {
     }
   }
   // Toggle webhook active status
-  const toggleWebhook = async (webhookId: string, isActive: boolean) => {
+  const toggleWebhook = async (webhookId: string, isActive: boolean) =>
+                {
     if (!user) return
     setLoading(true)
     setError(null)
@@ -164,7 +165,8 @@ export function useWebhooks() {
     }
   }
   // Delete webhook
-  const deleteWebhook = async (webhookId: string) => {
+  const deleteWebhook = async (webhookId: string) =>
+                {
     if (!user) return
     setLoading(true)
     setError(null)
@@ -208,7 +210,8 @@ export function useWebhooks() {
     }
   }
   // Test webhook
-  const testWebhook = async (webhookId: string, eventType: WebhookEventType) => {
+  const testWebhook = async (webhookId: string, eventType: WebhookEventType) =>
+                {
     if (!user) return
     setLoading(true)
     setError(null)

@@ -1,4 +1,3 @@
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
   const { userId, amount, reason, metadata } = req.body |{}
@@ -62,4 +61,4 @@ export default function handler(req, res) {
 }
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

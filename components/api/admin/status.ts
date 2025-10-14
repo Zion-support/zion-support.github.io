@@ -1,13 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
-import {
-  getSessionFromReq
+import { getSessionFromReq
   isInternalAgentRequest
   getSessionFromReq,
-  isInternalAgentRequest,
-} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  isInternalAgentRequest,;
+, getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth';export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req)
   const internal = isInternalAgentRequest(req)
   if (!session && !internal) {
@@ -31,7 +29,7 @@ if ( {) {
 }
     res.status (401).json ({ error: 'Unauthorized' })
     return
-  }
+  };
   const dataDir = path.join(process.cwd(), 'data', 'admin');  const statusPath = path.join(dataDir, 'agents-status.json');    return
   }
   const dataDir = path.join(process.cwd(), 'dataadmin')
@@ -63,3 +61,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     : { items: [], updatedAt: null }
   res.status(200).json({ status, insights })
 }
+;

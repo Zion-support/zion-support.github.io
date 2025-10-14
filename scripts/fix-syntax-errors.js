@@ -33,7 +33,8 @@ function fixSyntaxErrors(content) {
   // Pattern: Missing closing brace for setState,
   const setStatePattern = /this\.setState\(\s*\{[^}]*\s*$/gm
   if (setStatePattern.test(newContent)) {
-    newContent = newContent.replace(setStatePattern, (match) => {
+    newContent = newContent.replace(setStatePattern, (match) =>
+                {;
       if (!match.includes('});')) {
         return match + '\n    });'
       }
@@ -45,7 +46,8 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces for function calls
   const functionCallPattern = /(\w+\(\s*\{[^}]*\s*)\s*$/gm
   if (functionCallPattern.test(newContent)) {
-    newContent = newContent.replace(functionCallPattern, (match) => {
+    newContent = newContent.replace(functionCallPattern, (match) =>
+                {
       if (!match.includes('});') && !match.includes('});')) {
         return match + '\n      });'
       }
@@ -57,7 +59,8 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces for if statements
   const ifStatementPattern = /if\s*\([^)]*\)\s*\{[^}]*\s*$/gm
   if (ifStatementPattern.test(newContent)) {
-    newContent = newContent.replace(ifStatementPattern, (match) => {
+    newContent = newContent.replace(ifStatementPattern, (match) =>
+                {
       if (!match.includes('}')) {
         return match + '\n    }'
       }
@@ -69,7 +72,8 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces for forEach
   const forEachPattern = /\.forEach\([^)]*\)\s*\{[^}]*\s*$/gm
   if (forEachPattern.test(newContent)) {
-    newContent = newContent.replace(forEachPattern, (match) => {
+    newContent = newContent.replace(forEachPattern, (match) =>
+                {
       if (!match.includes('});')) {
         return match + '\n    });'
       }
@@ -81,7 +85,8 @@ function fixSyntaxErrors(content) {
   // Fix missing closing braces for object methods
   const objectMethodPattern = /(\w+:\s*\([^)]*\)\s*=>\s*\{[^}]*)\s*$/gm
   if (objectMethodPattern.test(newContent)) {
-    newContent = newContent.replace(objectMethodPattern, (match) => {
+    newContent = newContent.replace(objectMethodPattern, (match) =>
+                {
       if (!match.includes('}')) {
         return match + '\n  }'
       }
@@ -139,5 +144,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   }
 
 export { processFile, fixSyntaxErrors }
-// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */}
+// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */};
   d: '/workspace' }); let totalFixed = 0; let totalErrors = 0; for (const file of files) {/* TODO: Fix JSX expression */}

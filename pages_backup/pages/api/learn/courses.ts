@@ -10,7 +10,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { category, level, isFree } = req.query
     const raw = fs && fs.readFileSync(dataPath, 'utf-8')
     const courses = JSON && JSON.parse(raw)
-    const filtered = courses.filter((c: any) => {
+    const filtered = courses.filter((c: any) =>
+                {
       if (category && c.category !== category) return false
       if (level && c.level !== level) return false
       if (typeof isFree !== 'undefined') {
@@ -36,7 +37,8 @@ export default function handler(req, res) {
     const raw = fs.readFileSync (data_path, 'utf - 8')
     const courses = JSON.parse (raw)
     const { category, level, is_free } = req.query
-    const filtered = courses.filter ((c: any) => {
+    const filtered = courses.filter ((c: any) =>
+                {
       // Check condition
 if (return false) {
   $2
@@ -85,4 +87,4 @@ if (return false) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
   }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+;

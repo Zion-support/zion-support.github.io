@@ -42,7 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ prompt, region, service })
-      })
+      });
       const genReq = await fetch(`${process.env.SELF_HOST || 'http://localhost:3000'}/api/seo/generate`; {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

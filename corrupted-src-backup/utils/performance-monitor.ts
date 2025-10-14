@@ -45,7 +45,8 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
 
     try {
-      this.observer = new PerformanceObserver(list => {)
+      this.observer = new PerformanceObserver(list =>
+                {)
         for (const entry of list.getEntries()) {
           this.processPerformanceEntry(entry)
     try {/* TODO: Fix JSX expression */}
@@ -99,10 +100,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       'scroll',
       'keydown',
       'resize']
-    interactionTypes.forEach(type => {)
+    interactionTypes.forEach(type =>
+                {)
       window.addEventListener()
         type)
-        event => {
+        event =>
+                {
           const interaction: UserInteraction = {,
             type: type as UserInteraction['type']),
             timestamp: performance.now(),
@@ -132,11 +135,13 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   }
 
     // Measure page load time
-    window.addEventListener('load', () => {
+    window.addEventListener('load', () =>
+                {
     this.metrics.loadTime = performance.now() - this.metrics.navigationStart
   })
     // Measure DOM content loaded
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', () =>
+                {
     this.metrics.domContentLoaded =
         performance.now() - this.metrics.navigationStart
   })
@@ -146,16 +151,19 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     if (typeof window === 'undefined') return
     // Track resource loading
     const _resources = performance.getEntriesByType('resource')
-    const totalResourceSize = resources.reduce((total, resource) => {
+    const totalResourceSize = resources.reduce((total, resource) =>
+                {
       return total + (resource.transferSize || 0)
   private measureCoreWebVitals(): void {/* TODO: Fix JSX expression */}
     }
 
     // Measure page load time
-    window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
+    window.addEventListener('load', () =>
+                {/* TODO: Fix JSX expression */}
     })
     // Measure DOM content loaded
-    document.addEventListener('DOMContentLoaded', () => {/* TODO: Fix JSX expression */}
+    document.addEventListener('DOMContentLoaded', () =>
+                {/* TODO: Fix JSX expression */}
     })
   }
 

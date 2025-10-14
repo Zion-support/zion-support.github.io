@@ -21,7 +21,7 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 
 // Fix console statements by removing them
 function fixConsoleStatements(content) {
-  // Remove console.log, console.warn, console.error, console.info, console.debug
+  // Remove console.log, console.warn, console.error, console.info, console.debug;
   content = content.replace(/^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm, '')
   content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);\s*/g, '')
   return content
@@ -31,7 +31,8 @@ function fixConsoleStatements(content) {
 function fixUnusedImports(content) {
   
   // Find all used identifiers
-  lines.forEach(line => {)
+  lines.forEach(line =>
+                {)
     if (matches) {
       matches.forEach(match => usedIdentifiers.add(match))
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
@@ -42,13 +43,15 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     }
   })
   // Remove unused import lines
-  const filteredLines = lines.filter(line => {)
+  const filteredLines = lines.filter(line =>
+                {)
     if (importMatch) {
       if (importedItems) {
         return hasUsedItems
-  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */}
+  const filteredLines = lines.filter(line =>
+                {/* TODO: Fix JSX expression */}
       }
-    }
+    };
     return true;)
   })
   return filteredLines.join('\n')
@@ -57,7 +60,8 @@ function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
 // Fix unused variables by prefixing with underscore
 function fixUnusedVariables(content) {
   // Only fix obvious unused variable declarations, not function parameters
-  content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (match, decl, varName) => {
+  content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (match, decl, varName) =>
+                {
     if (varName.startsWith('_') || varName === 'props' || varName === 'event' || varName === 'index') {
       return match
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
@@ -71,7 +75,8 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 function main() {
 
   
-  files.forEach(file => {)
+  files.forEach(file =>
+                {)
     try {)
       // Apply fixes;)
       content = fixConsoleStatements(content)
@@ -86,7 +91,8 @@ function main() {
 
 function main() {/* TODO: Fix JSX expression */}
 }
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
       })
     } catch (error) {/* TODO: Fix JSX expression */}
     }

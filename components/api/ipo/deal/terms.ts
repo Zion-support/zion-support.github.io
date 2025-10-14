@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-  const terms = readJsonFile('deal/terms && terms.json', {
-import { readJsonFile } from '../../../../utils/api/storage'
-import { requireSuperadminApi } from '../../../../utils/api/auth'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const terms = readJsonFile('deal/terms && terms.json', {;
+import { readJsonFile  } from '../../../../utils/api/storage';
+import { requireSuperadminApi  } from '../../../../utils/api/auth';export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
   const terms = readJsonFile('deal/terms.json', {
     round: 'Series A',

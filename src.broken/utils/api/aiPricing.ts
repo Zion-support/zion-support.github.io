@@ -1,7 +1,7 @@
 import OpenAI from 'openai'
 export type ClientBudgetRequest = {
   title: string
-  category: string
+  category: string;
   timelineWeeks?: number; // e.g., 2 for a 2-week contract
   scope?: string; // brief description or scope size
   experienceLevel?: 'junior' | 'mid' | 'senior'
@@ -123,7 +123,8 @@ function computeHeuristicTalentRate(input: TalentRateRequest): TalentRateSuggest
     source: 'heuristic',
   }
 }
-async function callOpenAIForClientBudget(input: ClientBudgetRequest): Promise<BudgetSuggestion | null> {
+async function callOpenAIForClientBudget(input: ClientBudgetRequest): Promise<BudgetSuggestion | null></BudgetSuggestion>
+                {
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return null
   try {
@@ -174,7 +175,8 @@ Constraints:
     return null
   }
 }
-async function callOpenAIForTalentRate(input: TalentRateRequest): Promise<TalentRateSuggestion | null> {
+async function callOpenAIForTalentRate(input: TalentRateRequest): Promise<TalentRateSuggestion | null></TalentRateSuggestion>
+                {
   const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return null
   try {
@@ -222,7 +224,8 @@ Constraints:
     return null
   }
 }
-export async function generateClientBudgetSuggestion(input: ClientBudgetRequest): Promise<BudgetSuggestion> {
+export async function generateClientBudgetSuggestion(input: ClientBudgetRequest): Promise<BudgetSuggestion></BudgetSuggestion>
+                {
   const heuristic = computeHeuristicClientBudget(input)
   const llm = await callOpenAIForClientBudget(input)
   if (!llm) return heuristic
@@ -241,7 +244,8 @@ export async function generateClientBudgetSuggestion(input: ClientBudgetRequest)
     source: 'hybrid',
   }
 }
-export async function generateTalentRateSuggestion(input: TalentRateRequest): Promise<TalentRateSuggestion> {
+export async function generateTalentRateSuggestion(input: TalentRateRequest): Promise<TalentRateSuggestion></TalentRateSuggestion>
+                {
   const heuristic = computeHeuristicTalentRate(input)
   const llm = await callOpenAIForTalentRate(input)
   if (!llm) return heuristic

@@ -30,34 +30,38 @@ function fixReactMemo(content) {
     let newContent = content
   let fixed = false
   // Fix React.memo syntax issues
-  // Pattern 1: const Component: React.FC = React.memo(() => {,
+  // Pattern 1: const Component: React.FC = React.memo(() =>
+                {,
   const pattern1 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g
   if (pattern1.test(newContent)) {,
-    newContent = newContent.replace(pattern1, 'const $1: React.FC = () => {'),
+    newContent = newContent.replace(pattern1, 'const $1: React.FC  = () => {'),
     fixed = true
   }
 
-  // Pattern 2: const Component = React.memo(() => {
+  // Pattern 2: const Component = React.memo(() =>
+                {
     ,
   const pattern2 = /const\s+(\w+)\s*=\s*React\.memo\(\(\)\s*=>\s*\{/g
   if (pattern2.test(newContent)) {,
-    newContent = newContent.replace(pattern2, 'const $1 = () => {')
+    newContent = newContent.replace(pattern2, 'const $1  = () => {')
     fixed = true
   }
 
-  // Pattern 3: const Component: React.FC = React.memo((props) => {
-    ,
+  // Pattern 3: const Component: React.FC = React.memo((props) =>
+                {
+    ,;
   const pattern3 = /const\s+(\w+):\s*React\.FC\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
   if (pattern3.test(newContent)) {,
-    newContent = newContent.replace(pattern3, 'const $1: React.FC = () => {'),
+    newContent = newContent.replace(pattern3, 'const $1: React.FC  = () => {'),
     fixed = true
   }
 
-  // Pattern 4: const Component = React.memo((props) => {
+  // Pattern 4: const Component = React.memo((props) =>
+                {
     ,
   const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
   if (pattern4.test(newContent)) {,
-    newContent = newContent.replace(pattern4, 'const $1 = () => {')
+    newContent = newContent.replace(pattern4, 'const $1  = () => {')
     fixed = true
   }
 

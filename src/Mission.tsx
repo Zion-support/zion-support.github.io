@@ -10,10 +10,9 @@ import React from 'react'
     {
       number: '100%',
       label: 'Carbon Neutral',
-      description: 'Committed to sustainable technology development'
-import { Link } from 'react-router-dom'
-import { 
-  Target, 
+      description: 'Committed to sustainable technology development';
+import { Link  } from 'react-router-dom';
+import { Target, 
   Heart, 
   Users, 
   Globe, 
@@ -27,9 +26,8 @@ import {
   Building,
   Star,
   TrendingUp,
-  Eye
-} from 'lucide-react'
-export default function Mission() {
+  Eye;
+ } from 'lucide-react';export default function Mission() {
   const coreValues = [
     {
       title: "Innovation First",
@@ -206,288 +204,320 @@ export default function Mission() {
   ]
   return (
       {/* Mission Pillars */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white"></h2>
               Our Mission Pillars
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto"></p>
               Four core pillars that guide our mission and drive our impact across the technology landscape.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {missionPillars.map((pillar, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                {missionPillars.map((pillar, index) => (
               <$2 />
                 key={index}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 group"
               >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${pillar.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${pillar.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}></div>
                   <pillar.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{pillar.title}</h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">{pillar.description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-4"></h3>
+                {pillar.title}
+                </h3>
+                <p className="text-gray-400 mb-6 leading-relaxed"></p>
+                {pillar.description}
+                </p>
                 
-                <div>
+                <div></div>
                   <h4 className="text-sm font-medium text-gray-300 mb-3">Key Goals:</h4>
-                  <ul className="space-y-2">
-                    {pillar.goals.map((goal, goalIndex) => (
-                      <li key={goalIndex} className="flex items-start space-x-2 text-sm text-gray-400">
+                  <ul className="space-y-2"></ul>
+                {pillar.goals.map((goal, goalIndex) => (
+                      <li key={goalIndex} className="flex items-start space-x-2 text-sm text-gray-400"></li>
                         <CheckCircle className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
-                        <span>{goal}</span>
-                      </li>
+                        <span></span>
+                {goal}
+                </span>
+                </li>
                     ))}
-                  </ul>
+                </ul>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Strategic Goals Timeline */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                {/* Strategic Goals Timeline */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white"></h2>
               Strategic Roadmap
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto"></p>
               Our strategic goals and milestones for the next five years, driving innovation 
               and transformation across industries.
             </p>
-          </div>
+                </div>
           
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-cyan-500 to-blue-600"></div>
+          <div className="relative"></div>
+                {/* Timeline line */}
+                <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-cyan-500 to-blue-600"></div>
             
-            <div className="space-y-12">
-              {strategicGoals.map((goal, index) => (
+            <div className="space-y-12"></div>
+                {strategicGoals.map((goal, index) => (
                 < key={index} className={`relative flex items-center ${$2 />
                   index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                 }`}>
-                  {/* Timeline dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full border-4 border-gray-900"></div>
-                  
-                  {/* Content */}
-                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
-                      <div className="flex items-center space-x-3 mb-3">
-                        <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${goal.color} flex items-center justify-center`}>
+                {/* Timeline dot */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full border-4 border-gray-900"></div>
+                {/* Content */}
+                <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}></div>
+                    <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700"></div>
+                      <div className="flex items-center space-x-3 mb-3"></div>
+                        <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${goal.color} flex items-center justify-center`}></div>
                           <goal.icon className="w-4 h-4 text-white" />
                         </div>
-                        <span className="text-2xl font-bold text-cyan-400">{goal.year}</span>
-                      </div>
-                      <h3 className="text-xl font-semibold mb-2 text-white">{goal.title}</h3>
-                      <p className="text-gray-400">{goal.description}</p>
-                    </div>
+                        <span className="text-2xl font-bold text-cyan-400"></span>
+                {goal.year}
+                </span>
+                </div>
+                      <h3 className="text-xl font-semibold mb-2 text-white"></h3>
+                {goal.title}
+                </h3>
+                      <p className="text-gray-400"></p>
+                {goal.description}
+                </p>
+                </div>
                   </div>
                 </div>
               ))}
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+                <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
+                {/* Hero Section */}
+                <div className="relative overflow-hidden"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               Our Mission
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8"></p>
               To democratize cutting-edge technology and empower businesses worldwide to achieve 
               extraordinary results through AI, quantum computing, and innovative digital solutions. 
               We believe that every organization, regardless of size, should have access to the 
               transformative power of advanced technology.
             </p>
-            <div className="flex items-center justify-center space-x-8 text-gray-400">
-              <div className="flex items-center">
+            <div className="flex items-center justify-center space-x-8 text-gray-400"></div>
+              <div className="flex items-center"></div>
                 <Target className="w-5 h-5 mr-2" />
                 <span>Clear Vision</span>
-              </div>
-              <div className="flex items-center">
+                </div>
+              <div className="flex items-center"></div>
                 <Heart className="w-5 h-5 mr-2" />
                 <span>Passionate Purpose</span>
-              </div>
-              <div className="flex items-center">
+                </div>
+              <div className="flex items-center"></div>
                 <Globe className="w-5 h-5 mr-2" />
                 <span>Global Impact</span>
-              </div>
+                </div>
             </div>
-          </div>
+                </div>
         </div>
-      </div>
-
-      {/* Core Values */}
-                <p className="text-gray-400 leading-relaxed">{value.description}</p>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+                </div>
+                {/* Core Values */}
+                <p className="text-gray-400 leading-relaxed"></p>
+                {value.description}
+                </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20"></div>
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Core Values</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {coreValues.map((value, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {coreValues.map((value, index) =>
+                {
             const Icon = value.icon
             return (
               <$2 />
                 key={index}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4"></div>
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center">{value.title}</h3>
-                <p className="text-gray-300 text-sm mb-4 text-center">{value.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center"></h3>
+                {value.title}
+                </h3>
+                <p className="text-gray-300 text-sm mb-4 text-center"></p>
+                {value.description}
+                </p>
                 
-                <ul className="space-y-2">
-                  {value.details.map((detail, idx) => (
-                    <li key={idx} className="text-gray-300 text-xs flex items-start">
+                <ul className="space-y-2"></ul>
+                {value.details.map((detail, idx) => (
+                    <li key={idx} className="text-gray-300 text-xs flex items-start"></li>
                       <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-1.5 mr-2 flex-shrink-0" />
-                      {detail}
-                    </li>
+                {detail}
+                </li>
                   ))}
                 </ul>
-              </div>
+                </div>
             )
           })}
-        </div>
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                  {metric.number}
-      </div>
-
-      {/* Mission Pillars */}
-      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                </div>
+              <div key={index} className="text-center"></div>
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2"></div>
+                {metric.number}
+                </div>
+                {/* Mission Pillars */}
+                <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Mission Pillars</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {missionPillars.map((pillar, index) => {
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                {missionPillars.map((pillar, index) =>
+                {
               const Icon = pillar.icon
               return (
                 <$2 />
                   key={index}
                   className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500"
                 >
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                  <div className="flex items-center mb-4"></div>
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4"></div>
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white">{pillar.title}</h3>
-                  </div>
+                    <h3 className="text-xl font-bold text-white"></h3>
+                {pillar.title}
+                </h3>
+                </div>
                   
-                  <p className="text-gray-300 mb-6">{pillar.description}</p>
+                  <p className="text-gray-300 mb-6"></p>
+                {pillar.description}
+                </p>
                   
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Goals</h4>
-                    <ul className="space-y-2">
-                      {pillar.goals.map((goal, idx) => (
-                        <li key={idx} className="text-gray-300 text-sm flex items-start">
+                    <ul className="space-y-2"></ul>
+                {pillar.goals.map((goal, idx) => (
+                        <li key={idx} className="text-gray-300 text-sm flex items-start"></li>
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-1.5 mr-2 flex-shrink-0" />
-                          {goal}
-                        </li>
+                {goal}
+                </li>
                       ))}
-                    </ul>
-                  </div>
+                </ul>
+                </div>
                   
-                  <div>
+                  <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Success Metrics</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {pillar.metrics.map((metric, idx) => (
+                    <div className="flex flex-wrap gap-2"></div>
+                {pillar.metrics.map((metric, idx) => (
                         <$2 />
                           key={idx}
                           className="px-3 py-1 bg-gray-600 text-gray-300 text-xs rounded-full"
                         >
-                          {metric}
-                        </span>
+                {metric}
+                </span>
                       ))}
-                    </div>
-                  </div>
+                </div>
+                </div>
                 </div>
               )
             })}
-          </div>
-        </div>
+                </div>
+                </div>
       </div>
-
-      {/* Impact Areas */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                {/* Impact Areas */}
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Impact</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {impactAreas.map((area, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                {impactAreas.map((area, index) =>
+                {
             const Icon = area.icon
             return (
               <$2 />
                 key={index}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4"></div>
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3 text-center">{area.title}</h3>
-                <p className="text-gray-300 text-sm mb-4 text-center">{area.description}</p>
+                <h3 className="text-lg font-semibold text-white mb-3 text-center"></h3>
+                {area.title}
+                </h3>
+                <p className="text-gray-300 text-sm mb-4 text-center"></p>
+                {area.description}
+                </p>
                 
-                <ul className="space-y-2">
-                  {area.impact.map((item, idx) => (
-                    <li key={idx} className="text-gray-300 text-xs flex items-start">
+                <ul className="space-y-2"></ul>
+                {area.impact.map((item, idx) => (
+                    <li key={idx} className="text-gray-300 text-xs flex items-start"></li>
                       <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-1.5 mr-2 flex-shrink-0" />
-                      {item}
-                    </li>
+                {item}
+                </li>
                   ))}
                 </ul>
-              </div>
+                </div>
             )
           })}
-        </div>
-      </div>
-
-      {/* Future Vision */}
-      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                </div>
+                </div>
+                {/* Future Vision */}
+                <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Future Vision</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {futureVision.map((vision, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"></div>
+                {futureVision.map((vision, index) => (
               <$2 />
                 key={index}
                 className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500"
               >
-                <div className="text-center mb-6">
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-2xl">{vision.year}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{vision.title}</h3>
-                  <p className="text-gray-300 text-sm">{vision.description}</p>
+                <div className="text-center mb-6"></div>
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                    <span className="text-white font-bold text-2xl"></span>
+                {vision.year}
+                </span>
+                </div>
+                  <h3 className="text-xl font-bold text-white mb-2"></h3>
+                {vision.title}
+                </h3>
+                  <p className="text-gray-300 text-sm"></p>
+                {vision.description}
+                </p>
                 </div>
                 
-                <div>
+                <div></div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Milestones</h4>
-                  <ul className="space-y-2">
-                    {vision.milestones.map((milestone, idx) => (
-                      <li key={idx} className="text-gray-300 text-sm flex items-start">
+                  <ul className="space-y-2"></ul>
+                {vision.milestones.map((milestone, idx) => (
+                      <li key={idx} className="text-gray-300 text-sm flex items-start"></li>
                         <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-1.5 mr-2 flex-shrink-0" />
-                        {milestone}
-                      </li>
+                {milestone}
+                </li>
                     ))}
-                  </ul>
+                </ul>
                 </div>
-                <div className="text-lg font-semibold text-white mb-2">{metric.label}</div>
-                <p className="text-sm text-gray-300">{metric.description}</p>
-              </div>
+                <div className="text-lg font-semibold text-white mb-2"></div>
+                {metric.label}
+                </div>
+                <p className="text-sm text-gray-300"></p>
+                {metric.description}
+                </p>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </div>
-
-      </div>
-      {/* Call to Action */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+                </div>
+                {/* Call to Action */}
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
+        <div className="text-center"></div>
+          <h2 className="text-3xl font-bold text-white mb-6"></h2>
             Join Us in Our Mission
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Whether you're a client looking to transform your business, a partner wanting to 
             collaborate, or a team member passionate about making a difference, we invite you 
             to be part of our journey to democratize technology and create positive global impact.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <$2 />
               to="/contact"
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
@@ -501,10 +531,12 @@ export default function Mission() {
             >
               Join Our Team
             </Link>
-          </div>
+                </div>
         </div>
-      </div>
+                </div>
     </div>
   )
 }
-export default Mission</$1></div></p></section>
+export default Mission</$1>
+                </div></p>
+                </section>

@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-export default {
-=======
 module.exports = {
   preset: 'ts-jest',
->>>>>>> origin/main
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
@@ -18,20 +14,7 @@ module.exports = {
     '^@/content/(.*)$': '<rootDir>/content/$1'
   },
   transform: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: 'tsconfig.json',
-      useESM: true
-    }],
-    '^.+\\.(js|jsx)$': 'babel-jest'
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
->>>>>>> origin/main
     '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
       presets: [
         ['@babel/preset-env', { targets: { node: 'current' } }],
@@ -39,14 +22,7 @@ module.exports = {
         '@babel/preset-typescript'
       ]
     }]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
@@ -69,16 +45,5 @@ module.exports = {
   ],
   transformIgnorePatterns: [
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
-<<<<<<< HEAD
-  ],
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  globals: {
-    'ts-jest': {
-      useESM: true
-    }
-  }
-};
-=======
   ]
 }
->>>>>>> origin/main

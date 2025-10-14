@@ -361,7 +361,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [
 		icon: '📇',
 		color: 'from-teal-600 to-emerald-700',
 		textColor: 'text-teal-300',
-		link: 'https://ziontechgroup.com/micro-crm-local-business',
+		link: 'https://ziontechgroup.com/micro-crm-local-business',;
 		marketPosition: 'Easier than enterprise CRMs; perfect for local shops.',
 		targetAudience: 'Local businesses, clinics, services',
 		trialDays: 14,

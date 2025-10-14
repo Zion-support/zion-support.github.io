@@ -2,33 +2,37 @@
 
 'use client'
 // PerformanceMetrics interface removed as it's not used in this hook
-export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
+export const _usePerformanceMonitoring  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const { trackPerformance } = useAnalytics()
   const reportMetric = useCallback()
     (nam,
   e: string, valu)
-  e: number) => {/* TODO: Fix JSX expression */}
+  e: number) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       trackPerformance(name, value)
     },
 //     [trackPerformance]
   )
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      return () => {}
+      return () =>
+                {}
     }
     try {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       // LCP - Largest Contentful Paint
-const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+const lcpObserver = new PerformanceObserver(list =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
         const entries = list.getEntries()
@@ -38,13 +42,15 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
       lcpObserver.observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] })
       // FID - First Input Delay
-const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+const fidObserver = new PerformanceObserver(list =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
         const entries = list.getEntries()
 //         entries.forEach()
           (entr)
-  y: PerformanceEntry & { processingStart?: number }) => {/* TODO: Fix JSX expression */}
+  y: PerformanceEntry & { processingStart?: number }) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
             const fid =
@@ -56,7 +62,8 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
       fidObserver.observe({/* TODO: Fix JSX expression */})
   s: ['first-input'] })
 // CLS - Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+      const clsObserver = new PerformanceObserver(list =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
         const entries = list.getEntries()
@@ -69,7 +76,8 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
               hadRecentInput?: boolean
               value?: number
             }
-          ) => {/* TODO: Fix JSX expression */}
+          ) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
             if (!entry.hadRecentInput && entry.value) {/* TODO: Fix JSX expression */}
@@ -84,11 +92,13 @@ const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
       clsObserver.observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] })
       // FCP - First Contentful Paint
-const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+const fcpObserver = new PerformanceObserver(list =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
         const entries = list.getEntries()
-        entries.forEach(entry => {/* TODO: Fix JSX expression */}
+        entries.forEach(entry =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
           if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
@@ -101,11 +111,13 @@ const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
       fcpObserver.observe({/* TODO: Fix JSX expression */})
   s: ['paint'] })
       // TTFB - Time to First Byte
-const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+const navigationObserver = new PerformanceObserver(list =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
         const entries = list.getEntries()
-        entries.forEach((entry) => {/* TODO: Fix JSX expression */}
+        entries.forEach((entry) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           if (entry.entryType === 'navigation') {/* TODO: Fix JSX expression */}
@@ -120,11 +132,13 @@ const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX exp
       navigationObserver.observe({/* TODO: Fix JSX expression */})
   s: ['navigation'] })
       // Resource timing
-const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+const resourceObserver = new PerformanceObserver(list =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
         const entries = list.getEntries()
-        entries.forEach((entry) => {/* TODO: Fix JSX expression */}
+        entries.forEach((entry) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           if (entry.entryType === 'resource') {/* TODO: Fix JSX expression */}
@@ -144,7 +158,8 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
       resourceObserver.observe({/* TODO: Fix JSX expression */})
   s: ['resource'] })
       // Cleanup
-      return () => {/* TODO: Fix JSX expression */}
+      return () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         lcpObserver.disconnect()
@@ -157,14 +172,16 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      return () => {}
+      return () =>
+                {}
     }
   }, [reportMetric])
   // Monitor page load performance
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const handleLoad = () => {/* TODO: Fix JSX expression */}
+    const handleLoad  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       if (typeof window === 'undefined') return
@@ -186,7 +203,8 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
           totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
 
         }
-        Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
+        Object.entries(metrics).forEach(([key, value]) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           reportMetric(key.toUpperCase(), value)

@@ -1,7 +1,6 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { 
-  Building, 
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
+import { Building, 
   Zap, 
   Target, 
   Shield, 
@@ -27,9 +26,8 @@ import {
   DollarSign,
   ChartBar,
   Clock,
-  Award
-} from 'lucide-react'
-  Brain, 
+  Award;
+ } from 'lucide-react';Brain, 
   Cpu, 
   Zap, 
   Target, 
@@ -81,10 +79,9 @@ import {
 import SEOHead from '../components/SEOHead'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, TrendingUp, Users, DollarSign, Clock, Star } from 'lucide-react'
-const CaseStudies: React.FC = () => {
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { ArrowRight, TrendingUp, Users, DollarSign, Clock, Star  } from 'lucide-react';const CaseStudies: React.FC  = () => {
   const caseStudies = [
     {
   Building, 
@@ -103,7 +100,7 @@ const CaseStudies: React.FC = () => {
   Cpu,
   Database
 } from 'lucide-react'
-const CaseStudies = () => {
+const CaseStudies  = () => {
   const caseStudies = [
     {
       company: "Global Financial Services",
@@ -233,11 +230,9 @@ const CaseStudies = () => {
   ShoppingCart,
   GraduationCap
 } from 'lucide-react'
-import { CASE_STUDIES } from "@/data/case-studies"
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { CASE_STUDIES  } from '@/data/case-studies';
+import { SEO  } from '@/components/SEO';import { GradientHeading  } from '@/components/GradientHeading';
+import { Card, CardContent, CardFooter  } from '@/components/ui/card';import { Button } from "@/components/ui/button"
 import Link from "next/link"
 export default function CaseStudies() {
   const caseStudies = [
@@ -395,10 +390,9 @@ export default function CaseStudies() {
       ],
       technologies: ["Quantum Cryptography", "AI Security", "SOC2 Compliance"],
       icon: Shield,
-import React from 'react'
-import { SEOHead } from '../components/SEOHead'
-import { Link } from 'react-router-dom'
-import { 
+import React from 'react';
+import { SEOHead  } from '../components/SEOHead';
+import { Link  } from 'react-router-dom';import { 
   Building, 
   Users, 
   TrendingUp, 
@@ -415,7 +409,7 @@ import {
   Zap,
   BarChart3
 } from 'lucide-react'
-const CaseStudies = () => {
+const CaseStudies  = () => {
   const caseStudies = [
     {
       id: 1,
@@ -658,7 +652,7 @@ const CaseStudies = () => {
   Globe,
   ShoppingBag
 } from 'lucide-react'
-const CaseStudies = () => {
+const CaseStudies  = () => {
   const caseStudies = [
     {
       id: 1,
@@ -896,10 +890,9 @@ export default function CaseStudies() {
     "Micro SAAS Solutions",
     "AI Research & Development"
   ]
-import React from 'react'
-import { motion } from 'framer-motion'
-import { CheckCircle, TrendingUp, Users, DollarSign, Clock, Target } from 'lucide-react'
-const CaseStudies = () => {
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { CheckCircle, TrendingUp, Users, DollarSign, Clock, Target  } from 'lucide-react';const CaseStudies  = () => {
   const caseStudies = [
     {
       id: 1,
@@ -994,10 +987,9 @@ const CaseStudies = () => {
         roi: "380%",
         timeframe: "36 months",
         teamSize: "25 network engineers"
-import React from 'react'
-import { motion } from 'framer-motion'
-import { CheckCircle, Star, TrendingUp, Users, Globe, Shield } from 'lucide-react'
-export default function CaseStudies() {
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { CheckCircle, Star, TrendingUp, Users, Globe, Shield  } from 'lucide-react';export default function CaseStudies() {
   const caseStudies = [
     {
       id: 1,
@@ -1188,10 +1180,9 @@ export default function CaseStudies() {
       }
     }
   }
-import { Link } from 'react-router-dom'
-import { ArrowRight, Building2, TrendingUp, Users, Award, Clock, DollarSign, CheckCircle, Star, Zap, Shield, Globe, Target, Brain, Rocket } from 'lucide-react'
-import { SEO } from '@/components/SEO'
-const CaseStudies = () => {
+import { Link  } from 'react-router-dom';
+import { ArrowRight, Building2, TrendingUp, Users, Award, Clock, DollarSign, CheckCircle, Star, Zap, Shield, Globe, Target, Brain, Rocket  } from 'lucide-react';import { SEO } from '@/components/SEO'
+const CaseStudies  = () => {
   const caseStudies = [
     {
       id: 1,
@@ -1339,215 +1330,227 @@ const CaseStudies = () => {
       position: "Chief Information Officer",
       company: "Regional Healthcare Network"
     },
-    {
-      quote: "The AI trading platform delivered exceptional results and significantly improved our market performance.",
+    {quote: "The AI trading platform delivered exceptional results and significantly improved our market performance.",
       author: "Robert Williams",
       position: "Head of Technology",
       company: "Investment Firm"
     }
-    <>
-      <Helmet>
+                <>
+      <Helmet></Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore real-world case studies and success stories from Zion Tech Group clients. See how we've helped businesses transform through technology." />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
+                {/* Hero Section */}
+                <section className="relative pt-32 pb-20 overflow-hidden"></section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]"></div>
           
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+            <div className="flex items-center justify-center mb-6"></div>
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4"></div>
                 <Building className="w-8 h-8 text-white" />
               </div>
-            </div>
+                </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Success Stories
-              <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"></span>
                 & Case Studies
               </span>
-            </h1>
+                </h1>
             
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"></p>
               Discover how our AI-powered solutions have transformed businesses across industries. 
               Real results, measurable impact, and proven success stories from organizations 
               that trusted Zion Tech Group.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-500 hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/25">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-500 hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/25"></button>
                 View All Case Studies
               </button>
-              <button className="px-8 py-4 border-2 border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10 font-semibold rounded-xl transition-all duration-300">
+              <button className="px-8 py-4 border-2 border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10 font-semibold rounded-xl transition-all duration-300"></button>
                 Share Your Story
               </button>
-            </div>
+                </div>
           </div>
-        </section>
-
-        {/* Metrics Section */}
-        <section className="py-20 relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                </section>
+                {/* Metrics Section */}
+                <section className="py-20 relative"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
                 Proven Results
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Our solutions deliver measurable, impactful results across all industries 
                 and business sizes.
               </p>
-            </div>
+                </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {metrics.map((metric, index) => {
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {metrics.map((metric, index) =>
+                {
                 const Icon = metric.icon
                 return (
-                  <div key={index} className="group">
-                    <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
-                      <div className="w-16 h-16 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <div key={index} className="group"></div>
+                    <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 h-full hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"></div>
+                      <div className="w-16 h-16 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300"></div>
                         <Icon className="w-8 h-8 text-yellow-400" />
                       </div>
-                      <div className="text-4xl font-bold text-yellow-400 mb-2">{metric.value}</div>
-                      <h3 className="text-xl font-bold text-white mb-2">{metric.title}</h3>
-                      <p className="text-gray-300 text-sm">{metric.description}</p>
-                    </div>
+                      <div className="text-4xl font-bold text-yellow-400 mb-2"></div>
+                {metric.value}
+                </div>
+                      <h3 className="text-xl font-bold text-white mb-2"></h3>
+                {metric.title}
+                </h3>
+                      <p className="text-gray-300 text-sm"></p>
+                {metric.description}
+                </p>
+                </div>
                   </div>
                 )
               })}
-            </div>
-          </div>
+                </div>
+                </div>
         </section>
-
-        {/* Case Studies Section */}
-        <section className="py-20 relative bg-gray-900/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                {/* Case Studies Section */}
+                <section className="py-20 relative bg-gray-900/30"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
                 Featured Case Studies
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Explore detailed case studies showcasing real implementations, 
                 challenges overcome, and measurable results achieved.
               </p>
-            </div>
+                </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => {
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                {caseStudies.map((study, index) =>
+                {
                 const Icon = study.icon
                 return (
-                  <div key={index} className="group">
-                    <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-2xl p-8 h-full hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                      <div className="flex items-center justify-between mb-6">
-                        <div className={`w-16 h-16 bg-gradient-to-r ${study.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <div key={index} className="group"></div>
+                    <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-2xl p-8 h-full hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-105"></div>
+                      <div className="flex items-center justify-between mb-6"></div>
+                        <div className={`w-16 h-16 bg-gradient-to-r ${study.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}></div>
                           <Icon className="w-8 h-8 text-white" />
                         </div>
-                        <span className="text-sm text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full">
-                          {study.industry}
-                        </span>
-                      </div>
+                        <span className="text-sm text-gray-400 bg-gray-700/50 px-3 py-1 rounded-full"></span>
+                {study.industry}
+                </span>
+                </div>
                       
-                      <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
+                      <h3 className="text-2xl font-bold text-white mb-4"></h3>
+                {study.title}
+                </h3>
                       
-                      <div className="space-y-4 mb-6">
-                        <div>
+                      <div className="space-y-4 mb-6"></div>
+                        <div></div>
                           <h4 className="text-sm font-semibold text-yellow-400 mb-1">Challenge</h4>
-                          <p className="text-gray-300 text-sm">{study.challenge}</p>
-                        </div>
-                        <div>
+                          <p className="text-gray-300 text-sm"></p>
+                {study.challenge}
+                </p>
+                </div>
+                        <div></div>
                           <h4 className="text-sm font-semibold text-cyan-400 mb-1">Solution</h4>
-                          <p className="text-gray-300 text-sm">{study.solution}</p>
-                        </div>
+                          <p className="text-gray-300 text-sm"></p>
+                {study.solution}
+                </p>
+                </div>
                       </div>
                       
-                      <div>
+                      <div></div>
                         <h4 className="text-sm font-semibold text-green-400 mb-2">Results</h4>
-                        <ul className="space-y-1">
-                          {study.results.map((result, resultIndex) => (
-                            <li key={resultIndex} className="flex items-start space-x-2">
+                        <ul className="space-y-1"></ul>
+                {study.results.map((result, resultIndex) => (
+                            <li key={resultIndex} className="flex items-start space-x-2"></li>
                               <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                              <span className="text-gray-300 text-sm">{result}</span>
-                            </li>
+                              <span className="text-gray-300 text-sm"></span>
+                {result}
+                </span>
+                </li>
                           ))}
-                        </ul>
-                      </div>
+                </ul>
+                </div>
                     </div>
-                  </div>
+                </div>
                 )
               })}
-            </div>
-          </div>
+                </div>
+                </div>
         </section>
-
-        {/* Industries Section */}
-        <section className="py-20 relative">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                {/* Industries Section */}
+                <section className="py-20 relative"></section>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
                 Industries We Serve
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Our solutions have been successfully implemented across diverse industries, 
                 delivering measurable results and transformative impact.
               </p>
-            </div>
+                </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-              {industries.map((industry, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 h-full hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-yellow-400 transition-colors duration-300">
-                      {industry}
-                    </h3>
-                  </div>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-6"></div>
+                {industries.map((industry, index) => (
+                <div key={index} className="group"></div>
+                  <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 h-full hover:border-yellow-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"></div>
+                    <h3 className="text-lg font-semibold text-white group-hover:text-yellow-400 transition-colors duration-300"></h3>
+                {industry}
+                </h3>
+                </div>
                 </div>
               ))}
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
+                <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6"></h1>
               Success Stories
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Discover how organizations across industries have transformed their operations 
               with Zion Tech Group's AI-powered solutions. Real results, real impact.
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
+                {/* Hero Section */}
+                <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <div className="mb-8"></div>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6"></div>
               <Award className="w-4 h-4 mr-2" />
               Success Stories & Case Studies
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"></h1>
               Real Results from
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent"></span>
                 {" "}Real Clients
               </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Discover how leading organizations across industries have transformed their operations 
               with Zion Tech Group's AI-powered solutions. See the measurable impact and real ROI.
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900"></div>
+                {/* Hero Section */}
+                <section className="relative pt-32 pb-20 overflow-hidden"></section>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center max-w-4xl mx-auto"></div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               Success Stories That
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></span>
                 {" "}Transform Industries
               </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Discover how leading organizations leverage Zion Tech Group's cutting-edge AI and quantum technologies 
               to achieve breakthrough results and competitive advantages.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div>
               <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -1561,7 +1564,7 @@ const CaseStudies = () => {
               >
                 Explore Our Services
               </Link>
-            </div>
+                </div>
 
 import React from 'react'
 import { 
@@ -1716,7 +1719,7 @@ export default function CaseStudies() {
   Award,
   ArrowRight
 } from 'lucide-react'
-const CaseStudies = () => {
+const CaseStudies  = () => {
   const caseStudies = [
     {
       id: 1,
@@ -1827,8 +1830,8 @@ const CaseStudies = () => {
     ? caseStudies 
     : caseStudies.filter(study => study.category === selectedCategory)
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white"></div>
+                {/* Hero Section */}
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -1841,8 +1844,8 @@ const CaseStudies = () => {
     }
   }
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
+                {/* Hero Section */}
       title: "AI-Powered Manufacturing Transformation",
       company: "Global Manufacturing Corp",
       industry: "Manufacturing",
@@ -1958,10 +1961,9 @@ const CaseStudies = () => {
     "Blockchain",
     "Robotic Process Automation"
   ]
-import React from 'react'
-import { motion } from 'framer-motion'
-import { 
-  Building, 
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Building, 
   Users, 
   TrendingUp, 
   Shield, 
@@ -1970,9 +1972,8 @@ import {
   CheckCircle,
   ArrowRight,
   Star,
-  Award
-} from 'lucide-react'
-export default function CaseStudies() {
+  Award;
+ } from 'lucide-react';export default function CaseStudies() {
   const caseStudies = [
     {
       id: 1,
@@ -2072,15 +2073,14 @@ export default function CaseStudies() {
     }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+      <Helmet></Helmet>
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Explore real-world success stories and case studies from Zion Tech Group. See how our AI, 5G, and technology solutions transform businesses across industries." />
         <meta name="keywords" content="case studies, success stories, AI transformation, 5G implementation, technology ROI, business transformation" />
         <link rel="canonical" href="https://ziontechgroup.com/case-studies" />
       </Helmet>
-
-      {/* Hero Section */}
+                {/* Hero Section */}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -2103,25 +2103,25 @@ export default function CaseStudies() {
     { label: "Security Certifications", value: "15+", icon: Shield }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate-darker">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate-darker"></motion.p>
+                {/* Hero Section */}
+                <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
+          ></motion.h1>
             Success Stories That
             <span className="bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"> Transform Industries</span>
-          </motion.h1>
+                </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8"
-          >
+          ></motion.p>
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -2133,35 +2133,35 @@ export default function CaseStudies() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <span className="flex items-center gap-2">
+          ></motion.div>
+            <span className="flex items-center gap-2"></span>
               <CheckCircle className="w-4 h-4 text-green-400" />
               AI & Machine Learning
             </span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2"></span>
               <CheckCircle className="w-4 h-4 text-green-400" />
               Quantum Computing
             </span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2"></span>
               <CheckCircle className="w-4 h-4 text-green-400" />
               Autonomous Systems
             </span>
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2"></span>
               <CheckCircle className="w-4 h-4 text-green-400" />
               Cybersecurity
             </span>
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6"></h1>
               Success Stories
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Discover how leading organizations across industries are transforming their 
               operations with Zion Tech Group's cutting-edge technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 Start Your Success Story
               </button>
-              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"></button>
                 Download Case Studies
               </button>
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
@@ -2175,19 +2175,18 @@ export default function CaseStudies() {
               >
                 Request Demo
               </Link>
-            </div>
+                </div>
           </motion.div>
             Discover how Zion Tech Group's innovative solutions have revolutionized businesses across industries, 
             delivering measurable results and sustainable growth.
           </motion.p>
-        </div>
+                </div>
       </section>
 
 import React from 'react'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Star, TrendingUp, Users, DollarSign, Clock, Target, Award, CheckCircle, Lightbulb, Zap, Shield, Globe, Database, Cloud, Brain, Atom, Rocket, Wifi, Building2 } from 'lucide-react'
-const CaseStudies = () => {
+import React, { useState } from 'react';
+import { Link  } from 'react-router-dom';
+import { ArrowRight, Star, TrendingUp, Users, DollarSign, Clock, Target, Award, CheckCircle, Lightbulb, Zap, Shield, Globe, Database, Cloud, Brain, Atom, Rocket, Wifi, Building2  } from 'lucide-react';const CaseStudies  = () => {
   const caseStudies = [
     {
       id: 1,
@@ -2314,60 +2313,60 @@ const CaseStudies = () => {
     { name: "AI Content", count: caseStudies.filter(cs => cs.category === "AI Content").length, icon: Lightbulb }
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate"></div>
+                {/* Hero Section */}
+                <div className="relative overflow-hidden"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 to-zion-purple/20"></div>
-        <div className="relative container mx-auto px-4 py-24">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+        <div className="relative container mx-auto px-4 py-24"></div>
+          <div className="text-center max-w-4xl mx-auto"></div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               Success Stories That
               <span className="text-gradient block">Transform Businesses</span>
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
+                </h1>
+            <p className="text-xl text-zion-slate-light mb-8 leading-relaxed"></p>
               Discover how leading organizations leverage Zion Tech Group's innovative solutions 
               to achieve breakthrough results and competitive advantages.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 text-zion-cyan">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="flex items-center space-x-2 text-zion-cyan"></div>
                 <CheckCircle className="h-5 w-5" />
                 <span className="text-white">Proven Results</span>
-              </div>
-              <div className="flex items-center space-x-2 text-zion-cyan">
+                </div>
+              <div className="flex items-center space-x-2 text-zion-cyan"></div>
                 <Award className="h-5 w-5" />
                 <span className="text-white">Industry Recognition</span>
-              </div>
-              <div className="flex items-center space-x-2 text-zion-cyan">
+                </div>
+              <div className="flex items-center space-x-2 text-zion-cyan"></div>
                 <TrendingUp className="h-5 w-5" />
                 <span className="text-white">Measurable Impact</span>
-              </div>
+                </div>
             </div>
-          </div>
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+                </div>
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+          ></motion.div
+>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"></h1>
               Success Stories
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
               Discover how Zion Tech Group has transformed businesses across industries with cutting-edge AI, 
               quantum technology, and innovative solutions that drive real results.
             </p>
-          </motion.div>
+                </motion.div>
         </div>
-      </section>
-
-      {/* Filters Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
-            {/* Industry Filter */}
-            <div className="flex flex-wrap gap-3">
-              {industries.map((industry) => (
+                </section>
+                {/* Filters Section */}
+                <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/30"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="flex flex-col lg:flex-row gap-6 justify-center items-center"></div>
+                {/* Industry Filter */}
+                <div className="flex flex-wrap gap-3"></div>
+                {industries.map((industry) => (
                 <$2 />
                   key={industry.id}
                   onClick={() => setSelectedIndustry(industry.id)}
@@ -2378,14 +2377,15 @@ const CaseStudies = () => {
                   }`}
                 >
                   <industry.icon className="w-4 h-4" />
-                  <span>{industry.name}</span>
+                  <span></span>
+                {industry.name}
+                </span>
                 </button>
               ))}
-            </div>
-
-            {/* Service Filter */}
-            <div className="flex flex-wrap gap-3">
-              {services.map((service) => (
+                </div>
+                {/* Service Filter */}
+                <div className="flex flex-wrap gap-3"></div>
+                {services.map((service) => (
                 <$2 />
                   key={service.id}
                   onClick={() => setSelectedService(service.id)}
@@ -2396,72 +2396,73 @@ const CaseStudies = () => {
                   }`}
                 >
                   <service.icon className="w-4 h-4" />
-                  <span>{service.name}</span>
-      <div className="relative overflow-hidden">
+                  <span></span>
+                {service.name}
+                </span>
+      <div className="relative overflow-hidden"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-purple-900/50"></div>
-        <div className="relative z-10 container mx-auto px-4 py-24">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+        <div className="relative z-10 container mx-auto px-4 py-24"></div>
+          <div className="text-center max-w-4xl mx-auto"></div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></h1>
               Success Stories
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8"></p>
               Discover how Zion Tech Group has transformed businesses across industries with cutting-edge technology solutions
             </p>
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               Success Stories
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Discover how organizations are transforming their businesses with Zion Tech Group's 
               cutting-edge solutions and achieving remarkable results.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
+            <div className="flex flex-wrap justify-center gap-4"></div>
+                {categories.map((category) => (
                 <$2 />
                   key={category}
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+                <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
+                {/* Hero Section */}
+                <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          </motion.div>
-        </div>
+                </motion.div>
+                </div>
       </section>
-
-      {/* Case Studies Grid */}
-      <section className="pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+                {/* Case Studies Grid */}
+                <section className="pb-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div 
             className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          ></motion.div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               Success Stories That
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500"> Transform</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Discover how Zion Tech Group has empowered organizations across industries with cutting-edge AI solutions, 
               quantum technology, and digital transformation services.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white"></div>
                 <span className="font-semibold">50+</span> Successful Projects
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
+              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white"></div>
                 <span className="font-semibold">95%</span> Client Satisfaction
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
+              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white"></div>
                 <span className="font-semibold">$15M+</span> Client ROI
               </div>
-            </div>
+                </div>
           </motion.div>
       title: 'Healthcare AI Transformation',
       company: 'Regional Medical Center',
@@ -2585,357 +2586,401 @@ const CaseStudies = () => {
     'Blockchain'
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header Section */}
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+                {/* Header Section */}
+                <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></div>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6"></h1>
             Case Studies
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
             Discover how organizations across industries are transforming their businesses with Zion Tech Group solutions.
           </p>
-          
-          {/* Filters */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
-            <select className="px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
-              {industries.map((industry) => (
-                <option key={industry} value={industry}>{industry}</option>
+                {/* Filters */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto"></div>
+            <select className="px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"></select>
+                {industries.map((industry) => (
+                <option key={industry} value={industry}></option>
+                {industry}
+                </option>
               ))}
-            </select>
-            <select className="px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
-              {technologies.map((tech) => (
-                <option key={tech} value={tech}>{tech}</option>
+                </select>
+            <select className="px-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"></select>
+                {technologies.map((tech) => (
+                <option key={tech} value={tech}></option>
+                {tech}
+                </option>
               ))}
-            </select>
-          </div>
+                </select>
+                </div>
         </div>
-      </div>
+                </div>
 
       </div>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <h2 className="text-3xl font-bold text-white mb-12 text-center"></h2>
             All Case Studies
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.filter(cs => !cs.featured).map((caseStudy) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {caseStudies.filter(cs => !cs.featured).map((caseStudy) => (
               <$2 />
                 key={caseStudy.id}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 group"
               >
                 {/* Case Study Image */}
-                <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-300">
-                  {caseStudy.image}
+                <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 flex items-center justify-center text-6xl group-hover:scale-110 transition-transform duration-300"></div>
+                {caseStudy.image}
                 </div>
-
                 {/* Case Study Content */}
-                <div className="p-6">
-                  {/* Company and Industry */}
-                  <div className="flex items-center space-x-2 mb-3">
+                <div className="p-6"></div>
+                {/* Company and Industry */}
+                <div className="flex items-center space-x-2 mb-3"></div>
                     <Building className="w-4 h-4 text-cyan-400" />
-                    <span className="text-sm text-gray-400">{caseStudy.company}</span>
+                    <span className="text-sm text-gray-400"></span>
+                {caseStudy.company}
+                </span>
                     <span className="text-gray-500">•</span>
-                    <span className="text-sm text-gray-400">{caseStudy.industry}</span>
-                      </span>
+                    <span className="text-sm text-gray-400"></span>
+                {caseStudy.industry}
+                </span>
+                </span>
                     ))}
-                  </div>
-
-                  {/* Title */}
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
-                    {caseStudy.title}
-                  </h3>
-
-                  {/* Challenge */}
-                  <p className="text-gray-400 mb-4 line-clamp-2">
-                    {caseStudy.challenge}
-                  </p>
-
-                  {/* Key Results */}
-                  <div className="mb-4">
+                </div>
+                {/* Title */}
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200"></h3>
+                {caseStudy.title}
+                </h3>
+                {/* Challenge */}
+                <p className="text-gray-400 mb-4 line-clamp-2"></p>
+                {caseStudy.challenge}
+                </p>
+                {/* Key Results */}
+                <div className="mb-4"></div>
                     <h4 className="font-medium text-white mb-2">Key Results:</h4>
-                    <ul className="space-y-1">
-                      {caseStudy.results.slice(0, 2).map((result, index) => (
-                        <li key={index} className="flex items-center space-x-2 text-sm">
+                    <ul className="space-y-1"></ul>
+                {caseStudy.results.slice(0, 2).map((result, index) => (
+                        <li key={index} className="flex items-center space-x-2 text-sm"></li>
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                          <span className="text-gray-300 line-clamp-1">{result}</span>
-      <section className="pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+                          <span className="text-gray-300 line-clamp-1"></span>
+                {result}
+                </span>
+      <section className="pb-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div 
             className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-          >
-            {caseStudies.map((study) => (
+          ></motion.div>
+                {caseStudies.map((study) => (
               <motion.div
                 key={study.id}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
                 variants={itemVariants}
                 whileHover={{ y: -5, scale: 1.02 }}
-              >
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 text-xs font-medium bg-cyan-500/20 text-cyan-400 rounded-full mb-3">
-                    {study.industry}
-                  </span>
-                  <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3>
-                  <p className="text-gray-400 text-sm mb-4">Client: {study.client}</p>
+              ></motion.div
+>
+                <div className="mb-4"></div>
+                  <span className="inline-block px-3 py-1 text-xs font-medium bg-cyan-500/20 text-cyan-400 rounded-full mb-3"></span>
+                {study.industry}
+                </span>
+                  <h3 className="text-xl font-bold text-white mb-2"></h3>
+                {study.title}
+                </h3>
+                  <p className="text-gray-400 text-sm mb-4">Client: {study.client}
+                </p>
                 </div>
 
-                <div className="space-y-4">
-                  <div>
+                <div className="space-y-4"></div>
+                  <div></div>
                     <h4 className="font-semibold text-gray-300 mb-2">Challenge</h4>
-                    <p className="text-gray-400 text-sm">{study.challenge}</p>
-                  </div>
+                    <p className="text-gray-400 text-sm"></p>
+                {study.challenge}
+                </p>
+                </div>
 
-                  <div>
+                  <div></div>
                     <h4 className="font-semibold text-gray-300 mb-2">Solution</h4>
-                    <p className="text-gray-400 text-sm">{study.solution}</p>
-                  </div>
+                    <p className="text-gray-400 text-sm"></p>
+                {study.solution}
+                </p>
+                </div>
 
-                  <div>
+                  <div></div>
                     <h4 className="font-semibold text-gray-300 mb-2">Results</h4>
-                    <ul className="space-y-1">
-                      {study.results.map((result, index) => (
-                        <li key={index} className="flex items-start gap-2 text-sm text-gray-400">
+                    <ul className="space-y-1"></ul>
+                {study.results.map((result, index) => (
+                        <li key={index} className="flex items-start gap-2 text-sm text-gray-400"></li>
                           <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-      {/* Industry Overview */}
-      <section className="py-20 bg-black/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+                {/* Industry Overview */}
+                <section className="py-20 bg-black/20"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-4xl font-bold text-white mb-4"></h2>
               Trusted Across Industries
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-300"></p>
               Our solutions have delivered measurable results across diverse sectors
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {industries.map((industry) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"></div>
+                {industries.map((industry) => (
               <$2 />
                 key={industry.name}
                 className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
               >
-                <CardContent className="p-6 flex-1 flex flex-col gap-4">
+                <CardContent className="p-6 flex-1 flex flex-col gap-4"></CardContent>
                   <img loading="lazy" src={study.companyLogo} alt={`${study.company} logo`} className="h-10 w-auto" />
-                  <h3 className="text-xl font-bold text-white">{study.title}</h3>
-                  <p className="text-zion-slate-light line-clamp-3">{study.excerpt}</p>
+                  <h3 className="text-xl font-bold text-white"></h3>
+                {study.title}
+                </h3>
+                  <p className="text-zion-slate-light line-clamp-3"></p>
+                {study.excerpt}
+                </p>
                 </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <Button variant="link" className="text-zion-cyan p-0" asChild>
+                <CardFooter className="p-6 pt-0"></CardFooter>
+                  <Button variant="link" className="text-zion-cyan p-0" asChild></Button>
                     <Link href={`/case-studies/${study.slug}`}>Read More →</Link>
-                  </Button>
+                </Button>
                 </CardFooter>
-              </Card>
+                </Card>
             ))}
-          </div>
-        </section>
+                </div>
+                </section>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Featured Case Studies
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Explore real-world examples of how our AI solutions have delivered 
               measurable results for organizations like yours.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {caseStudies.map((study, index) => (
               <$2 />
                 key={index}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="flex items-center mb-4">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${study.color} rounded-lg flex items-center justify-center mr-3`}>
+                <div className="flex items-center mb-4"></div>
+                  <div className={`w-12 h-12 bg-gradient-to-r ${study.color} rounded-lg flex items-center justify-center mr-3`}></div>
                     <study.icon className="w-6 h-6 text-white" />
                   </div>
-                  {/* Meta Information */}
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center space-x-2">
+                {/* Meta Information */}
+                <div className="flex items-center justify-between text-sm text-gray-500 mb-4"></div>
+                    <div className="flex items-center space-x-2"></div>
                       <Clock className="w-4 h-4" />
-                      <span>{caseStudy.duration}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
+                      <span></span>
+                {caseStudy.duration}
+                </span>
+                </div>
+                    <div className="flex items-center space-x-2"></div>
                       <Users className="w-4 h-4" />
-                      <span>{caseStudy.teamSize}</span>
-                    </div>
+                      <span></span>
+                {caseStudy.teamSize}
+                </span>
+                </div>
                   </div>
-
-                  {/* Read More Button */}
-                  <button className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 group-hover:scale-105">
+                {/* Read More Button */}
+                <button className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"></button>
                     <span>Read Full Case Study</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
                 
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge</h4>
-                  <p className="text-gray-300 text-sm">{study.challenge}</p>
+                  <p className="text-gray-300 text-sm"></p>
+                {study.challenge}
+                </p>
                 </div>
                 
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution</h4>
-                  <p className="text-gray-300 text-sm">{study.solution}</p>
+                  <p className="text-gray-300 text-sm"></p>
+                {study.solution}
+                </p>
                 </div>
                 
-                <div>
+                <div></div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Results</h4>
-                  <ul className="space-y-1">
-                    {study.results.map((result, resultIndex) => (
-                      <li key={resultIndex} className="flex items-center text-gray-300 text-sm">
+                  <ul className="space-y-1"></ul>
+                {study.results.map((result, resultIndex) => (
+                      <li key={resultIndex} className="flex items-center text-gray-300 text-sm"></li>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {result}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+                {result}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
-                  <div className="pt-4 border-t border-gray-700/50">
-                    <div className="grid grid-cols-3 gap-4 text-center">
-                      <div>
-                        <div className="text-2xl font-bold text-cyan-400">{study.metrics.roi}</div>
-                        <div className="text-xs text-gray-400">ROI</div>
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold text-blue-400">{study.metrics.timeframe}</div>
-                        <div className="text-xs text-gray-400">Timeline</div>
-                      </div>
-                      <div>
-                        <div className="text-2xl font-bold text-purple-400">{study.metrics.teamSize}</div>
-                        <div className="text-xs text-gray-400">Team</div>
-                      </div>
-                    </div>
-                  </div>
+                  <div className="pt-4 border-t border-gray-700/50"></motion.div
+>
+                    <div className="grid grid-cols-3 gap-4 text-center"></div>
+                      <div></div>
+                        <div className="text-2xl font-bold text-cyan-400"></div>
+                {study.metrics.roi}
                 </div>
-              </motion.div>
+                        <div className="text-xs text-gray-400">ROI</div>
+                </div>
+                      <div></div>
+                        <div className="text-2xl font-bold text-blue-400"></div>
+                {study.metrics.timeframe}
+                </div>
+                        <div className="text-xs text-gray-400">Timeline</div>
+                </div>
+                      <div></div>
+                        <div className="text-2xl font-bold text-purple-400"></div>
+                {study.metrics.teamSize}
+                </div>
+                        <div className="text-xs text-gray-400">Team</div>
+                </div>
+                    </div>
+                </div>
+                </div>
+                </motion.div>
             ))}
-          </motion.div>
-        </div>
+                </motion.div>
+                </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+                {/* CTA Section */}
+                <section className="pb-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <motion.div 
             className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
+          ></motion.div>
+            <h2 className="text-4xl font-bold text-white mb-4"></h2>
               Real Results, Real Impact
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Explore detailed case studies showcasing the transformative power of our 
               technology solutions across diverse industries and use cases.
             </p>
-          </motion.div>
-      <section className="pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
+                </motion.div>
+      <section className="pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {caseStudies.map((study, index) => (
               <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 20 }}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid gap-8 md:grid-cols-2">
-            {caseStudies.map((study, index) => (
+                <section className="py-16 px-4 sm:px-6 lg:px-8"></motion.div
+>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid gap-8 md:grid-cols-2"></div>
+                {caseStudies.map((study, index) => (
               <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full">
-                      {study.industry}
-                    </span>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-zion-cyan">{study.metrics.roi}</div>
+              ></motion.div
+>
+                <div className="mb-6"></div>
+                  <div className="flex items-center justify-between mb-4"></div>
+                    <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full"></span>
+                {study.industry}
+                </span>
+                    <div className="text-right"></div>
+                      <div className="text-2xl font-bold text-zion-cyan"></div>
+                {study.metrics.roi}
+                </div>
                       <div className="text-xs text-zion-slate-light">ROI</div>
-                    </div>
+                </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{study.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{study.company}</p>
-      {/* Category Filter */}
-      <div className="container mx-auto px-4 py-12">
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
+                  <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                {study.title}
+                </h3>
+                  <p className="text-zion-slate-light mb-4"></p>
+                {study.company}
+                </p>
+                {/* Category Filter */}
+                <div className="container mx-auto px-4 py-12"></div>
+        <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
+                {categories.map((category) => (
             <$2 />
               key={category.name}
               className="flex items-center space-x-2 px-6 py-3 rounded-full bg-zion-slate-dark hover:bg-zion-cyan/20 border border-zion-cyan/30 text-white hover:text-zion-cyan transition-all duration-300 group"
             >
               <category.icon className="h-4 w-4" />
-              <span>{category.name}</span>
-              <span className="bg-zion-cyan/20 text-zion-cyan px-2 py-1 rounded-full text-xs">
+              <span></span>
+                {category.name}
+                </span>
+              <span className="bg-zion-cyan/20 text-zion-cyan px-2 py-1 rounded-full text-xs"></span>
                 {category.count}
-              </span>
-            </button>
+                </span>
+                </button>
           ))}
-        </div>
-
-        {/* Case Studies Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {caseStudies.map((study) => (
+                </div>
+                {/* Case Studies Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                {caseStudies.map((study) => (
             <$2 />
               key={study.id}
               className="bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/10 transition-all duration-300 group"
             >
-              {/* Header */}
-              <div className="flex items-start justify-between mb-6">
-                <div className="flex items-center space-x-3">
-                  <div className="p-3 bg-zion-cyan/20 rounded-lg group-hover:bg-zion-cyan/30 transition-colors">
+                {/* Header */}
+                <div className="flex items-start justify-between mb-6"></div>
+                <div className="flex items-center space-x-3"></div>
+                  <div className="p-3 bg-zion-cyan/20 rounded-lg group-hover:bg-zion-cyan/30 transition-colors"></div>
                     <study.icon className="h-6 w-6 text-zion-cyan" />
                   </div>
-                  <div>
-                    <span className="text-zion-cyan text-sm font-medium">{study.category}</span>
-                    <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
-                      {study.title}
-                    </h3>
-                  </div>
+                  <div></div>
+                    <span className="text-zion-cyan text-sm font-medium"></span>
+                {study.category}
+                </span>
+                    <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors"></h3>
+                {study.title}
+                </h3>
                 </div>
-                <div className="flex space-x-1">
-                  {[...Array(5)].map((_, i) => (
+                </div>
+                <div className="flex space-x-1"></div>
+                {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-              </div>
-
-              {/* Company Info */}
-              <div className="mb-6">
-                <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-3">
-                  <div className="flex items-center space-x-2">
+                </div>
+                {/* Company Info */}
+                <div className="mb-6"></div>
+                <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-3"></div>
+                  <div className="flex items-center space-x-2"></div>
                     <Building2 className="h-4 w-4" />
-                    <span>{study.company}</span>
-                  </div>
-                  <div className="flex items-center space-x-2">
+                    <span></span>
+                {study.company}
+                </span>
+                </div>
+                  <div className="flex items-center space-x-2"></div>
                     <Globe className="h-4 w-4" />
-                    <span>{study.industry}</span>
-                  </div>
+                    <span></span>
+                {study.industry}
+                </span>
+                </div>
 
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <h4 className="text-sm font-semibold text-gray-400 mb-3">Technologies Used</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {study.technologies.map((tech) => (
+                    <div className="flex flex-wrap gap-2"></div>
+                {study.technologies.map((tech) => (
                         <$2 />
                           key={tech}
                           className="px-3 py-1 bg-gray-700/50 text-cyan-400 text-sm rounded-full border border-gray-600"
                         >
-                          {tech}
-                        </span>
+                {tech}
+                </span>
                       ))}
-                    </div>
-                  </div>
+                </div>
+                </div>
 
                   <$2 />
                     to="/contact"
@@ -2946,71 +2991,83 @@ const CaseStudies = () => {
                   </Link>
                 </div>
               </div>
-      {/* Featured Case Studies */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                {/* Featured Case Studies */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4"></h2>
               Featured Success Stories
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Explore our most impactful client transformations and the technologies that made them possible.
             </p>
             ))}
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {caseStudies.filter(cs => cs.featured).map((caseStudy) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                {caseStudies.filter(cs => cs.featured).map((caseStudy) => (
               <$2 />
                 key={caseStudy.id}
                 className="p-8 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="flex items-start justify-between mb-6">
-                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${caseStudy.color} flex items-center justify-center`}>
+                <div className="flex items-start justify-between mb-6"></div>
+                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${caseStudy.color} flex items-center justify-center`}></div>
                     <caseStudy.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div className="text-right">
-                    <div className="text-sm text-gray-400">{caseStudy.industry}</div>
-                    <div className="text-lg font-semibold text-white">{caseStudy.company}</div>
-                  </div>
+                  <div className="text-right"></div>
+                    <div className="text-sm text-gray-400"></div>
+                {caseStudy.industry}
+                </div>
+                    <div className="text-lg font-semibold text-white"></div>
+                {caseStudy.company}
+                </div>
+                </div>
                 </div>
                 
-                <h3 className="text-2xl font-bold text-white mb-4">{caseStudy.title}</h3>
+                <h3 className="text-2xl font-bold text-white mb-4"></h3>
+                {caseStudy.title}
+                </h3>
                 
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-blue-400 mb-2">Challenge</h4>
-                  <p className="text-gray-300">{caseStudy.challenge}</p>
+                  <p className="text-gray-300"></p>
+                {caseStudy.challenge}
+                </p>
                 </div>
                 
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-green-400 mb-2">Solution</h4>
-                  <p className="text-gray-300">{caseStudy.solution}</p>
+                  <p className="text-gray-300"></p>
+                {caseStudy.solution}
+                </p>
                 </div>
                 
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-purple-400 mb-2">Results</h4>
-                  <ul className="space-y-2">
-                    {caseStudy.results.map((result, index) => (
-                      <li key={index} className="flex items-center space-x-2">
+                  <ul className="space-y-2"></ul>
+                {caseStudy.results.map((result, index) => (
+                      <li key={index} className="flex items-center space-x-2"></li>
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{result}</span>
-                      </li>
+                        <span className="text-gray-300 text-sm"></span>
+                {result}
+                </span>
+                </li>
                     ))}
-                  </ul>
+                </ul>
                 </div>
                 
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-cyan-400 mb-2">Technologies Used</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {caseStudy.technologies.map((tech, index) => (
+                  <div className="flex flex-wrap gap-2"></div>
+                {caseStudy.technologies.map((tech, index) => (
                       <$2 />
                         key={index}
                         className="px-3 py-1 rounded-full bg-gray-700/50 text-gray-300 text-sm border border-gray-600"
                       >
-                        {tech}
-                      </span>
+                {tech}
+                </span>
                     ))}
-                  </div>
+                </div>
                 </div>
                 
                 <$2 />
@@ -3020,88 +3077,107 @@ const CaseStudies = () => {
                   Read Full Case Study
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-              </div>
+                </div>
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${study.color} p-3 mb-4`}>
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${study.color} p-3 mb-4`}></div>
                   <study.icon className="w-full h-full text-white" />
                 </div>
                 
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-300 mb-2">
-                    {study.industry}
-                  </span>
-                  <h3 className="text-xl font-bold text-white mb-2">{study.title}</h3>
-                  <p className="text-gray-400 text-sm mb-3">{study.company}</p>
+                <div className="mb-4"></div>
+                  <span className="inline-block px-3 py-1 bg-gray-700/50 rounded-full text-sm text-gray-300 mb-2"></span>
+                {study.industry}
+                </span>
+                  <h3 className="text-xl font-bold text-white mb-2"></h3>
+                {study.title}
+                </h3>
+                  <p className="text-gray-400 text-sm mb-3"></p>
+                {study.company}
+                </p>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <h4 className="font-semibold text-gray-300 mb-2">Challenge:</h4>
-                  <p className="text-gray-400 text-sm mb-3">{study.challenge}</p>
+                  <p className="text-gray-400 text-sm mb-3"></p>
+                {study.challenge}
+                </p>
                   
                   <h4 className="font-semibold text-gray-300 mb-2">Solution:</h4>
-                  <p className="text-gray-400 text-sm mb-3">{study.solution}</p>
+                  <p className="text-gray-400 text-sm mb-3"></p>
+                {study.solution}
+                </p>
                 </div>
 
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <h4 className="font-semibold text-gray-300 mb-2">Results:</h4>
-                  <ul className="space-y-1">
-                    {study.results.map((result, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredCaseStudies.map((study) => (
-            <div key={study.id} className="bg-gray-800/50 rounded-2xl p-6 hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50">
-              <div className="mb-6">
-                <div className="w-full h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl mb-4 flex items-center justify-center">
-                  <div className="text-center">
+                  <ul className="space-y-1"></ul>
+                {study.results.map((result, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-400"></li>
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {filteredCaseStudies.map((study) => (
+            <div key={study.id} className="bg-gray-800/50 rounded-2xl p-6 hover:bg-gray-700/50 transition-all duration-300 border border-gray-700/50 hover:border-cyan-500/50"></div>
+              <div className="mb-6"></div>
+                <div className="w-full h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl mb-4 flex items-center justify-center"></div>
+                  <div className="text-center"></div>
                     <Building className="w-16 h-16 text-cyan-400 mx-auto mb-2" />
-                    <p className="text-gray-400 text-sm">{study.industry}</p>
-                  </div>
+                    <p className="text-gray-400 text-sm"></p>
+                {study.industry}
+                </p>
                 </div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                    {study.category}
-                  </span>
-                  <span className="text-gray-400 text-sm">{study.client}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white">{study.title}</h3>
-              </div>
+                <div className="flex items-center justify-between mb-3"></div>
+                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full"></span>
+                {study.category}
+                </span>
+                  <span className="text-gray-400 text-sm"></span>
+                {study.client}
+                </span>
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white"></h3>
+                {study.title}
+                </h3>
+                </div>
 
-              <div className="space-y-4">
-                <div>
+              <div className="space-y-4"></div>
+                <div></div>
                   <h4 className="font-semibold text-cyan-400 mb-2">Challenge</h4>
-                  <p className="text-gray-300 text-sm">{study.challenge}</p>
+                  <p className="text-gray-300 text-sm"></p>
+                {study.challenge}
+                </p>
                 </div>
 
-                <div>
+                <div></div>
                   <h4 className="font-semibold text-purple-400 mb-2">Solution</h4>
-                  <p className="text-gray-300 text-sm">{study.solution}</p>
+                  <p className="text-gray-300 text-sm"></p>
+                {study.solution}
+                </p>
                 </div>
 
-                <div>
+                <div></div>
                   <h4 className="font-semibold text-green-400 mb-2">Results</h4>
-                  <ul className="space-y-1">
-                    {study.results.map((result, index) => (
-                      <li key={index} className="flex items-center text-gray-300 text-sm">
+                  <ul className="space-y-1"></ul>
+                {study.results.map((result, index) => (
+                      <li key={index} className="flex items-center text-gray-300 text-sm"></li>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
+          ></motion.div
+>
             <h2 className="text-4xl font-bold text-white mb-4">Featured Case Studies</h2>
             <p className="text-xl text-gray-300">Real results from real clients across various industries</p>
-          </motion.div>
+                </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {caseStudies.map((study, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                {caseStudies.map((study, index) => (
               <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -3109,91 +3185,101 @@ const CaseStudies = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
-              >
+              ></motion.div
+>
                 {/* Header */}
-                <div className="flex items-start justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{study.title}</h3>
-                    <div className="flex items-center gap-4 text-sm text-gray-400">
-                      <span className="flex items-center gap-2">
+                <div className="flex items-start justify-between mb-6"></div>
+                  <div></div>
+                    <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                {study.title}
+                </h3>
+                    <div className="flex items-center gap-4 text-sm text-gray-400"></div>
+                      <span className="flex items-center gap-2"></span>
                         <Users className="w-4 h-4" />
-                        {study.client}
-                      </span>
-                      <span className="flex items-center gap-2">
+                {study.client}
+                </span>
+                      <span className="flex items-center gap-2"></span>
                         <Target className="w-4 h-4" />
-                        {study.industry}
-                      </span>
-                    </div>
+                {study.industry}
+                </span>
+                </div>
                   </div>
-                  <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg p-2">
+                  <div className="bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg p-2"></div>
                     <Award className="w-6 h-6 text-white" />
                   </div>
                 </div>
-
                 {/* Challenge & Solution */}
-                <div className="space-y-4 mb-6">
-                  <div>
+                <div className="space-y-4 mb-6"></div>
+                  <div></div>
                     <h4 className="text-lg font-semibold text-cyan-400 mb-2">Challenge</h4>
-                    <p className="text-gray-300">{study.challenge}</p>
-                  </div>
-                  <div>
+                    <p className="text-gray-300"></p>
+                {study.challenge}
+                </p>
+                </div>
+                  <div></div>
                     <h4 className="text-lg font-semibold text-cyan-400 mb-2">Solution</h4>
-                    <p className="text-gray-300">{study.solution}</p>
-                  </div>
+                    <p className="text-gray-300"></p>
+                {study.solution}
+                </p>
                 </div>
-
+                </div>
                 {/* Results */}
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <h4 className="text-lg font-semibold text-cyan-400 mb-3">Results</h4>
-                  <ul className="space-y-2">
-                    {study.results.map((result, idx) => (
-                      <li key={idx} className="flex items-center gap-3 text-gray-300">
+                  <ul className="space-y-2"></ul>
+                {study.results.map((result, idx) => (
+                      <li key={idx} className="flex items-center gap-3 text-gray-300"></li>
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        {result}
-                      </li>
+                {result}
+                </li>
                     ))}
-                  </ul>
+                </ul>
                 </div>
 
-                <div>
+                <div></div>
                   <h4 className="font-semibold text-blue-400 mb-2">Technologies</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {study.technologies.map((tech, index) => (
-                      <span key={index} className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded">
-                        {tech}
-                      </span>
+                  <div className="flex flex-wrap gap-2"></div>
+                {study.technologies.map((tech, index) => (
+                      <span key={index} className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded"></span>
+                {tech}
+                </span>
                     ))}
-                  </div>
+                </div>
                 </div>
                 {/* Metrics Grid */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  {Object.entries(study.metrics).map(([key, value]) => (
-                    <div key={key} className="bg-white/5 rounded-lg p-3 text-center">
-                      <div className="text-2xl font-bold text-cyan-400">{value}</div>
-                      <div className="text-xs text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
-                    </div>
+                <div className="grid grid-cols-2 gap-4 mb-6"></div>
+                {Object.entries(study.metrics).map(([key, value]) => (
+                    <div key={key} className="bg-white/5 rounded-lg p-3 text-center"></div>
+                      <div className="text-2xl font-bold text-cyan-400"></div>
+                {value}
+                </div>
+                      <div className="text-xs text-gray-400 capitalize"></div>
+                {key.replace(/([A-Z])/g, ' $1')}
+                </div>
+                </div>
                   ))}
                 </div>
-
                 {/* Technologies & Details */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {study.technologies.map((tech) => (
-                    <span key={tech} className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm">
-                      {tech}
-                    </span>
+                <div className="flex flex-wrap gap-2 mb-4"></div>
+                {study.technologies.map((tech) => (
+                    <span key={tech} className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm"></span>
+                {tech}
+                </span>
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between text-sm text-gray-400">
-                  <span>Duration: {study.duration}</span>
-                  <span>Team: {study.teamSize}</span>
+                <div className="flex items-center justify-between text-sm text-gray-400"></div>
+                  <span>Duration: {study.duration}
+                </span>
+                  <span>Team: {study.teamSize}
+                </span>
                 </div>
               </motion.div>
             ))}
-          </div>
-              </div>
+                </div>
+                </div>
 
-              <div className="mt-6 pt-4 border-t border-gray-700/50">
+              <div className="mt-6 pt-4 border-t border-gray-700/50"></div>
                 <$2 />
                   to={`/case-studies/${study.id}`}
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
@@ -3201,57 +3287,66 @@ const CaseStudies = () => {
                   Read Full Case Study
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-              </div>
+                </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* All Case Studies Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                </div>
+                </div>
+                {/* All Case Studies Grid */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4"></h2>
               All Success Stories
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Browse our complete collection of client success stories across all industries and technologies.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {caseStudies.map((caseStudy) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                {caseStudies.map((caseStudy) => (
               <$2 />
                 key={caseStudy.id}
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${caseStudy.color} flex items-center justify-center`}>
+                <div className="flex items-start justify-between mb-4"></div>
+                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${caseStudy.color} flex items-center justify-center`}></div>
                     <caseStudy.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-right">
-                    <div className="text-xs text-gray-400">{caseStudy.industry}</div>
-                    <div className="text-sm font-semibold text-white">{caseStudy.company}</div>
-                  </div>
+                  <div className="text-right"></div>
+                    <div className="text-xs text-gray-400"></div>
+                {caseStudy.industry}
+                </div>
+                    <div className="text-sm font-semibold text-white"></div>
+                {caseStudy.company}
+                </div>
+                </div>
                 </div>
                 
-                <h3 className="text-lg font-bold text-white mb-3">{caseStudy.title}</h3>
+                <h3 className="text-lg font-bold text-white mb-3"></h3>
+                {caseStudy.title}
+                </h3>
                 
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <h4 className="text-sm font-semibold text-blue-400 mb-1">Challenge</h4>
-                  <p className="text-gray-300 text-sm line-clamp-2">{caseStudy.challenge}</p>
+                  <p className="text-gray-300 text-sm line-clamp-2"></p>
+                {caseStudy.challenge}
+                </p>
                 </div>
                 
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <h4 className="text-sm font-semibold text-green-400 mb-1">Results</h4>
-                  <ul className="space-y-1">
-                    {caseStudy.results.slice(0, 2).map((result, index) => (
-                      <li key={index} className="flex items-center space-x-2">
+                  <ul className="space-y-1"></ul>
+                {caseStudy.results.slice(0, 2).map((result, index) => (
+                      <li key={index} className="flex items-center space-x-2"></li>
                         <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-xs">{result}</span>
-                      </li>
+                        <span className="text-gray-300 text-xs"></span>
+                {result}
+                </span>
+                </li>
                     ))}
-                  </ul>
+                </ul>
                 </div>
                 
                 <$2 />
@@ -3261,186 +3356,196 @@ const CaseStudies = () => {
                   Read More
                   <ArrowRight className="w-3 h-3 ml-1" />
                 </Link>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Industry Breakdown */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                {/* Industry Breakdown */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4"></h2>
               Success Across Industries
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Our AI solutions have delivered measurable results across diverse industry sectors.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industries.map((industry, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                {industries.map((industry, index) => (
               <$2 />
                 key={index}
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4"></div>
                   <industry.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{industry.name}</h3>
-                <p className="text-gray-400">{industry.count} success stories</p>
-              </div>
+                <h3 className="text-xl font-semibold text-white mb-2"></h3>
+                {industry.name}
+                </h3>
+                <p className="text-gray-400"></p>
+                {industry.count} success stories</p>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Testimonials */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                {/* Testimonials */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4"></h2>
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Hear directly from the leaders who have experienced our AI transformation firsthand.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                {testimonials.map((testimonial, index) => (
               <$2 />
                 key={index}
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
               >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                <div className="flex items-center mb-4"></div>
+                {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 
-                <blockquote className="text-gray-300 mb-6 italic">
+                <blockquote className="text-gray-300 mb-6 italic"></blockquote>
                   "{testimonial.quote}"
                 </blockquote>
                 
-                <div>
-                  <div className="font-semibold text-white">{testimonial.author}</div>
-                  <div className="text-gray-400 text-sm">{testimonial.position}</div>
+                <div></div>
+                  <div className="font-semibold text-white"></div>
+                {testimonial.author}
+                </div>
+                  <div className="text-gray-400 text-sm"></div>
+                {testimonial.position}
+                </div>
                 </div>
               </div>
             ))}
-          </div>
-
-                <div className="pt-4 border-t border-white/10">
-                  <div className="flex justify-between text-sm text-zion-slate-light">
-                    <span>Timeline: {study.metrics.timeframe}</span>
-                    <span>Team: {study.metrics.teamSize}</span>
-                  </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
 
-          {filteredCaseStudies.length === 0 && (
-            <div className="text-center py-20">
+                <div className="pt-4 border-t border-white/10"></div>
+                  <div className="flex justify-between text-sm text-zion-slate-light"></div>
+                    <span>Timeline: {study.metrics.timeframe}
+                </span>
+                    <span>Team: {study.metrics.teamSize}
+                </span>
+                </div>
+                </div>
+                </motion.div>
+            ))}
+                </div>
+                {filteredCaseStudies.length === 0 && (
+            <div className="text-center py-20"></div>
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-semibold text-gray-300 mb-2">No Case Studies Found</h3>
               <p className="text-gray-500">Try adjusting your filters to see more results.</p>
-            </div>
+                </div>
           )}
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+                {industries.map((industry, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center"
-              >
-                <h3 className="text-lg font-semibold text-white">{industry}</h3>
-              </motion.div>
+              ></motion.div
+>
+                <h3 className="text-lg font-semibold text-white"></h3>
+                {industry}
+                </h3>
+                </motion.div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Technologies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+                {/* Technologies Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
+          ></motion.div
+>
+            <h2 className="text-4xl font-bold text-white mb-4"></h2>
               Technologies We Deploy
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Cutting-edge technologies that drive innovation and deliver measurable 
               business results for our clients.
             </p>
-          </motion.div>
+                </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+                {technologies.map((tech, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center"
-              >
-                <h3 className="text-lg font-semibold text-white">{tech}</h3>
-              </motion.div>
+              ></motion.div
+>
+                <h3 className="text-lg font-semibold text-white"></h3>
+                {tech}
+                </h3>
+                </motion.div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+                {/* CTA Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white"></h2>
             Ready to Write Your Success Story?
           </h2>
-          <p className="text-xl text-gray-400 mb-8">
+          <p className="text-xl text-gray-400 mb-8"></p>
             Let's discuss how our AI and technology solutions can transform your business 
             and deliver measurable results like the ones you see above.
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
             Ready to Write Your Success Story?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p>
             Join the organizations that have already transformed their operations with 
             Zion Tech Group's AI-powered solutions. Let's discuss how we can help you achieve similar results.
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6"></h2>
             Ready to Write Your Success Story?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p>
             Join the growing list of organizations that have transformed their operations with Zion Tech Group's AI solutions.
-      <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+          <h2 className="text-4xl font-bold text-white mb-6"></h2>
             Ready to Write Your Success Story?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Join the ranks of industry leaders who have transformed their operations with our AI and quantum technologies.
-      <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white"></h2>
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
             Let's discuss how our innovative solutions can drive your success story. 
             Schedule a consultation with our experts today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <$2 />
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -3485,118 +3590,128 @@ const CaseStudies = () => {
             >
               Explore Our Solutions
             </Link>
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl font-bold text-white mb-6"></h2>
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-400 mb-8">
+          <p className="text-xl text-gray-400 mb-8"></p>
             Let's discuss how our technology solutions can help you achieve similar 
             results and drive your business forward.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"></button>
               <span>Schedule a Consultation</span>
               <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="inline-flex items-center space-x-2 px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200">
+            <button className="inline-flex items-center space-x-2 px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200"></button>
               <span>View Our Services</span>
               <ArrowRight className="w-5 h-5" />
             </button>
-          </div>
-      <section className="pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+                </div>
+      <section className="pb-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <motion.div 
             className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20"></motion.div>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+          ></motion.div
+>
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-12 border border-cyan-500/30"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
+          ></motion.div
+>
+            <h2 className="text-4xl font-bold text-white mb-6"></h2>
               Ready to Write Your Success Story?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-      <section className="pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+            <p className="text-xl text-gray-300 mb-8"></p>
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+      <section className="pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
               {/* Challenge & Solution */}
-              <div className="space-y-4 mb-6">
-                <div>
+                <div className="space-y-4 mb-6"></motion.div
+>
+                <div></div>
                   <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
-                  <p className="text-zion-slate-light text-sm">{study.challenge}</p>
+                  <p className="text-zion-slate-light text-sm"></p>
+                {study.challenge}
+                </p>
                 </div>
-                <div>
+                <div></div>
                   <h4 className="text-zion-cyan font-semibold mb-2">Solution</h4>
-                  <p className="text-zion-slate-light text-sm">{study.solution}</p>
+                  <p className="text-zion-slate-light text-sm"></p>
+                {study.solution}
+                </p>
                 </div>
               </div>
-
-              {/* Results */}
-              <div className="mb-6">
+                {/* Results */}
+                <div className="mb-6"></div>
                 <h4 className="text-zion-cyan font-semibold mb-3">Results</h4>
-                <div className="grid grid-cols-1 gap-2">
-                  {study.results.map((result, index) => (
-                    <div key={index} className="flex items-center space-x-2 text-sm text-zion-slate-light">
+                <div className="grid grid-cols-1 gap-2"></div>
+                {study.results.map((result, index) => (
+                    <div key={index} className="flex items-center space-x-2 text-sm text-zion-slate-light"></div>
                       <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
-                      <span>{result}</span>
-                    </div>
+                      <span></span>
+                {result}
+                </span>
+                </div>
                   ))}
                 </div>
-              </div>
-
-              {/* Technologies & Metrics */}
-              <div className="space-y-4 mb-6">
-                <div>
+                </div>
+                {/* Technologies & Metrics */}
+                <div className="space-y-4 mb-6"></div>
+                <div></div>
                   <h4 className="text-zion-cyan font-semibold mb-2">Technologies Used</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {study.technologies.map((tech, index) => (
+                  <div className="flex flex-wrap gap-2"></div>
+                {study.technologies.map((tech, index) => (
                       <$2 />
                         key={index}
                         className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
                       >
-                        {tech}
-                      </span>
+                {tech}
+                </span>
                     ))}
-                  </div>
+                </div>
                 </div>
                 
-                <div className="grid grid-cols-3 gap-4 text-sm">
-                  <div className="text-center">
+                <div className="grid grid-cols-3 gap-4 text-sm"></div>
+                  <div className="text-center"></div>
                     <Clock className="h-5 w-5 text-zion-cyan mx-auto mb-1" />
                     <div className="text-zion-slate-light">Duration</div>
-                    <div className="text-white font-semibold">{study.duration}</div>
-                  </div>
-                  <div className="text-center">
+                    <div className="text-white font-semibold"></div>
+                {study.duration}
+                </div>
+                </div>
+                  <div className="text-center"></div>
                     <Users className="h-5 w-5 text-zion-cyan mx-auto mb-1" />
                     <div className="text-zion-slate-light">Team Size</div>
-                    <div className="text-white font-semibold">{study.teamSize}</div>
-                  </div>
-                  <div className="text-center">
+                    <div className="text-white font-semibold"></div>
+                {study.teamSize}
+                </div>
+                </div>
+                  <div className="text-center"></div>
                     <Target className="h-5 w-5 text-zion-cyan mx-auto mb-1" />
                     <div className="text-zion-slate-light">Success Rate</div>
                     <div className="text-white font-semibold">100%</div>
-                  </div>
                 </div>
-              </div>
-
-              {/* CTA */}
-              <div className="flex items-center justify-between">
+                </div>
+                </div>
+                {/* CTA */}
+                <div className="flex items-center justify-between"></div>
                 <$2 />
                   to={`/case-studies/${study.id}`}
                   className="text-zion-cyan hover:text-white transition-colors font-medium group-hover:underline"
@@ -3605,20 +3720,19 @@ const CaseStudies = () => {
                 </Link>
                 <ArrowRight className="h-4 w-4 text-zion-cyan group-hover:translate-x-1 transition-transform" />
               </div>
-            </div>
+                </div>
           ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-12 max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4">
+                </div>
+                {/* CTA Section */}
+                <div className="text-center mt-16"></div>
+          <div className="bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-12 max-w-4xl mx-auto"></div>
+            <h2 className="text-3xl font-bold text-white mb-4"></h2>
               Ready to Create Your Success Story?
             </h2>
-            <p className="text-zion-slate-light mb-8 text-lg">
+            <p className="text-zion-slate-light mb-8 text-lg"></p>
               Let's discuss how Zion Tech Group can transform your business with cutting-edge AI solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 to="/contact"
                 className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30 flex items-center justify-center space-x-2"
@@ -3633,11 +3747,11 @@ const CaseStudies = () => {
                 <span>Explore Services</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
-    </div>
+                </div>
   ]
   return (
     <>
@@ -3647,22 +3761,23 @@ const CaseStudies = () => {
         keywords="case studies, client success stories, digital transformation, AI solutions, cybersecurity, technology consulting"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-        {/* Hero Section */}
-        <motion.section 
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900"></div>
+                {/* Hero Section */}
+                <motion.section 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
           className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8"
-        >
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
+        ></motion.section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center"></div>
               <motion.div
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2 }}
                 className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8"
-              >
+              ></motion.div
+>
                 <Award className="w-4 h-4 mr-2" />
                 Proven Results & Success Stories
               </motion.div>
@@ -3672,30 +3787,30 @@ const CaseStudies = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.3 }}
                 className="text-4xl md:text-6xl font-bold text-white mb-6"
-              >
+              ></motion.h1>
                 Client
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"></span>
                   Success Stories
                 </span>
-              </motion.h1>
+                </motion.h1>
               
               <motion.p 
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
                 className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto"
-              >
+              ></motion.p>
                 Discover how we've helped businesses across industries achieve remarkable results through innovative technology solutions and strategic digital transformation.
               </motion.p>
-            </div>
+                </div>
           </div>
-        </motion.section>
-
-        {/* Metrics Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {metrics.map((metric, index) => {
+                </motion.section>
+                {/* Metrics Section */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+                {metrics.map((metric, index) =>
+                {
                 const Icon = metric.icon
                 return (
                   <motion.div
@@ -3705,39 +3820,45 @@ const CaseStudies = () => {
                     transition={{ delay: index * 0.1, duration: 0.8 }}
                     viewport={{ once: true }}
                     className="text-center"
-                  >
-                    <div className="inline-flex p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mb-4">
+                  ></motion.div
+>
+                    <div className="inline-flex p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 mb-4"></div>
                       <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
-                    <div className="text-gray-300">{metric.label}</div>
-                  </motion.div>
+                    <div className="text-3xl font-bold text-white mb-2"></div>
+                {metric.value}
+                </div>
+                    <div className="text-gray-300"></div>
+                {metric.label}
+                </div>
+                </motion.div>
                 )
               })}
-            </div>
-          </div>
+                </div>
+                </div>
         </section>
-
-        {/* Case Studies Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+                {/* Case Studies Grid */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            ></motion.div
+>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 Featured Case Studies
               </h2>
-              <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+              <p className="text-gray-300 text-lg max-w-3xl mx-auto"></p>
                 Real results from real clients across diverse industries
               </p>
-            </motion.div>
+                </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => {
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                {caseStudies.map((study, index) =>
+                {
                 const Icon = study.icon
                 return (
                   <motion.div
@@ -3747,89 +3868,100 @@ const CaseStudies = () => {
                     transition={{ delay: index * 0.1, duration: 0.8 }}
                     viewport={{ once: true }}
                     className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300"
-                  >
-                    <div className="flex items-center mb-6">
-                      <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${study.color} mr-4`}>
+                  ></motion.div
+>
+                    <div className="flex items-center mb-6"></div>
+                      <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${study.color} mr-4`}></div>
                         <Icon className="w-6 h-6 text-white" />
                       </div>
-                      <div>
-                        <div className="text-sm text-blue-300 font-medium">{study.category}</div>
-                        <h3 className="text-xl font-bold text-white">{study.title}</h3>
-                      </div>
+                      <div></div>
+                        <div className="text-sm text-blue-300 font-medium"></div>
+                {study.category}
+                </div>
+                        <h3 className="text-xl font-bold text-white"></h3>
+                {study.title}
+                </h3>
+                </div>
                     </div>
                     
-                    <div className="space-y-4 mb-6">
-                      <div>
+                    <div className="space-y-4 mb-6"></div>
+                      <div></div>
                         <div className="text-sm text-gray-400 font-medium">Client</div>
-                        <div className="text-gray-300">{study.client}</div>
-                      </div>
-                      <div>
+                        <div className="text-gray-300"></div>
+                {study.client}
+                </div>
+                </div>
+                      <div></div>
                         <div className="text-sm text-gray-400 font-medium">Challenge</div>
-                        <div className="text-gray-300">{study.challenge}</div>
-                      </div>
-                      <div>
+                        <div className="text-gray-300"></div>
+                {study.challenge}
+                </div>
+                </div>
+                      <div></div>
                         <div className="text-sm text-gray-400 font-medium">Solution</div>
-                        <div className="text-gray-300">{study.solution}</div>
-                      </div>
+                        <div className="text-gray-300"></div>
+                {study.solution}
+                </div>
+                </div>
                     </div>
 
-                    <div className="mb-6">
+                    <div className="mb-6"></div>
                       <div className="text-sm text-gray-400 font-medium mb-3">Key Results</div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {study.results.map((result, idx) => (
-                          <div key={idx} className="flex items-center text-sm text-gray-300">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2"></div>
+                {study.results.map((result, idx) => (
+                          <div key={idx} className="flex items-center text-sm text-gray-300"></div>
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {result}
-                          </div>
+                {result}
+                </div>
                         ))}
-                      </div>
-                    </div>
+                </div>
+                </div>
 
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {study.technologies.map((tech, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs rounded-full">
-                          {tech}
-                        </span>
+                    <div className="flex flex-wrap gap-2 mb-6"></div>
+                {study.technologies.map((tech, idx) => (
+                        <span key={idx} className="px-3 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs rounded-full"></span>
+                {tech}
+                </span>
                       ))}
-                    </div>
+                </div>
 
-                    <div className="flex justify-between text-sm text-gray-400">
-                      <div>
+                    <div className="flex justify-between text-sm text-gray-400"></div>
+                      <div></div>
                         <Clock className="w-4 h-4 inline mr-1" />
-                        {study.duration}
-                      </div>
-                      <div>
+                {study.duration}
+                </div>
+                      <div></div>
                         <Users className="w-4 h-4 inline mr-1" />
-                        {study.teamSize}
-                      </div>
-                    </div>
+                {study.teamSize}
+                </div>
+                </div>
                   </motion.div>
                 )
               })}
-            </div>
-          </div>
+                </div>
+                </div>
         </section>
-
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
-          <div className="max-w-7xl mx-auto">
+                {/* Testimonials Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20"></section>
+          <div className="max-w-7xl mx-auto"></div>
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            ></motion.div
+>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 What Our Clients Say
               </h2>
-              <p className="text-gray-300 text-lg max-w-3xl mx-auto">
+              <p className="text-gray-300 text-lg max-w-3xl mx-auto"></p>
                 Hear directly from the leaders who trusted us with their digital transformation
               </p>
-            </motion.div>
+                </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={index}
                   initial={{ y: 20, opacity: 0 }}
@@ -3837,46 +3969,53 @@ const CaseStudies = () => {
                   transition={{ delay: index * 0.1, duration: 0.8 }}
                   viewport={{ once: true }}
                   className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10"
-                >
-                  <div className="flex mb-4">
-                    {[...Array(5)].map((_, i) => (
+                ></motion.div
+>
+                  <div className="flex mb-4"></div>
+                {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
-                  </div>
-                  <blockquote className="text-gray-300 mb-6 italic">
+                </div>
+                  <blockquote className="text-gray-300 mb-6 italic"></blockquote>
                     "{testimonial.quote}"
                   </blockquote>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.author}</div>
-                    <div className="text-sm text-gray-400">{testimonial.position}</div>
-                    <div className="text-sm text-blue-300">{testimonial.company}</div>
-                  </div>
+                  <div></div>
+                    <div className="font-semibold text-white"></div>
+                {testimonial.author}
+                </div>
+                    <div className="text-sm text-gray-400"></div>
+                {testimonial.position}
+                </div>
+                    <div className="text-sm text-blue-300"></div>
+                {testimonial.company}
+                </div>
+                </div>
                 </motion.div>
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
                 >
-                  {category}
+                {category}
                 </button>
               ))}
-            </div>
-          </div>
+                </div>
+                </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-4xl mx-auto text-center">
+                {/* CTA Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
             <motion.div
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            ></motion.div
+>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 Ready to Become Our Next Success Story?
               </h2>
-              <p className="text-xl text-blue-100 mb-8">
+              <p className="text-xl text-blue-100 mb-8"></p>
                 Let's discuss how we can help transform your business with innovative technology solutions
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <$2 />
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105"
@@ -3890,30 +4029,30 @@ const CaseStudies = () => {
                 >
                   Explore Services
                 </Link>
-              </div>
+                </div>
             </motion.div>
-          </div>
+                </div>
         </section>
-      </div>
+                </div>
     </>
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-3xl p-12 border border-cyan-500/20"
           >
             <Award className="w-16 h-16 text-cyan-400 mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Ready to Write Your Success Story?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Join the growing list of companies that have transformed their business with Zion Tech Group's 
               innovative solutions. Let's discuss how we can help you achieve similar results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"></button>
                 Schedule a Consultation
               </button>
-              <button className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">
+              <button className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300"></button>
                 View More Case Studies
               </button>
-            </div>
+                </div>
           </motion.div>
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
@@ -3925,22 +4064,22 @@ const CaseStudies = () => {
             >
               Explore Services
             </Link>
-          </div>
+                </div>
               Join the ranks of successful organizations that have transformed their business with Zion Tech Group's 
               cutting-edge solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"></button>
                 Start Your Project
               </button>
-              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300">
+              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"></button>
                 Schedule Consultation
               </button>
-            </div>
+                </div>
           </motion.div>
-        </div>
+                </div>
       </div>
-    </div>
+                </div>
     <>
       <SEOHead 
         title="Case Studies - Zion Tech Group"
@@ -3950,25 +4089,25 @@ const CaseStudies = () => {
         url="https://ziontechgroup.com/case-studies"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-        {/* Hero Section */}
-        <section className="relative pt-20 pb-16 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
+                {/* Hero Section */}
+                <section className="relative pt-20 pb-16 overflow-hidden"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-blue-900/20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+            <div className="text-center"></div>
+              <div className="flex justify-center mb-6"></div>
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center"></div>
                   <BarChart3 className="w-10 h-10 text-white" />
                 </div>
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 Success Stories That Inspire
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
                 Discover how organizations across industries have transformed their businesses 
                 with our AI-powered solutions. Real results, measurable impact, proven success.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <$2 />
                   to="/contact"
                   className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
@@ -3981,33 +4120,33 @@ const CaseStudies = () => {
                 >
                   Request Demo
                 </Link>
-              </div>
+                </div>
             </div>
-          </div>
+                </div>
         </section>
-        {/* CTA Section */}
-        <section className="py-20 relative">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/30 rounded-3xl p-12">
+                {/* CTA Section */}
+                <section className="py-20 relative"></section>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
+            <div className="bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/30 rounded-3xl p-12"></div>
               <Lightbulb className="w-20 h-20 text-yellow-400 mx-auto mb-6" />
-              <h2 className="text-4xl font-bold text-white mb-6">
+              <h2 className="text-4xl font-bold text-white mb-6"></h2>
                 Ready to Write Your Success Story?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Join the growing list of organizations that have transformed their business 
                 with Zion Tech Group's AI-powered solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-500 hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/25">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-500 hover:to-orange-500 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-yellow-500/25"></button>
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </button>
-                <button className="px-8 py-4 border-2 border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10 font-semibold rounded-xl transition-all duration-300">
+                <button className="px-8 py-4 border-2 border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10 font-semibold rounded-xl transition-all duration-300"></button>
                   Contact Sales
                 </button>
-              </div>
+                </div>
             </div>
-    { name: "Manufacturing", icon: Factory, count: "25+ projects" },
+                { name: "Manufacturing", icon: Factory, count: "25+ projects" },
     { name: "Healthcare", icon: Hospital, count: "15+ projects" },
     { name: "Financial Services", icon: Shield, count: "20+ projects" },
     { name: "Retail", icon: ShoppingCart, count: "18+ projects" },
@@ -4032,18 +4171,18 @@ const CaseStudies = () => {
         }}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-        {/* Hero Section */}
-        <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="mb-8">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
+                {/* Hero Section */}
+                <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto text-center"></div>
+            <div className="mb-8"></div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
                 Case Studies
               </h1>
-              <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto"></p>
                 Discover how our AI-powered solutions have transformed businesses across industries. Real results, real impact, real success stories.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <$2 />
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
@@ -4057,167 +4196,191 @@ const CaseStudies = () => {
                 >
                   Explore Services
                 </Link>
-              </div>
+                </div>
             </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-3">
+                {/* Stats */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"></div>
+                {stats.map((stat, index) => (
+                <div key={index} className="text-center"></div>
+                  <div className="flex justify-center mb-3"></div>
                     <stat.icon className="h-8 w-8 text-cyan-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-sm font-medium text-cyan-300 mb-1">{stat.label}</div>
-                  <div className="text-xs text-gray-400">{stat.description}</div>
+                  <div className="text-3xl font-bold text-white mb-2"></div>
+                {stat.value}
+                </div>
+                  <div className="text-sm font-medium text-cyan-300 mb-1"></div>
+                {stat.label}
+                </div>
+                  <div className="text-xs text-gray-400"></div>
+                {stat.description}
+                </div>
                 </div>
               ))}
-            </div>
-          </div>
+                </div>
+                </div>
         </section>
-
-        {/* Case Studies Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                {/* Case Studies Section */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
                 Success Stories
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Real projects, real results, real transformation. See how our solutions have delivered measurable impact.
               </p>
-            </div>
+                </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {caseStudies.map((study, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
-                  <div className="flex items-start mb-6">
-                    <div className="flex-shrink-0">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                {caseStudies.map((study, index) => (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-cyan-500 transition-all duration-300"></div>
+                  <div className="flex items-start mb-6"></div>
+                    <div className="flex-shrink-0"></div>
                       <study.icon className="h-12 w-12 text-cyan-400" />
                     </div>
-                    <div className="ml-4">
-                      <div className="inline-block bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium mb-3">
-                        {study.industry}
-                      </div>
-                      <h3 className="text-2xl font-semibold text-white mb-2">{study.title}</h3>
-                      <p className="text-gray-300 mb-4">{study.description}</p>
-                    </div>
+                    <div className="ml-4"></div>
+                      <div className="inline-block bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium mb-3"></div>
+                {study.industry}
+                </div>
+                      <h3 className="text-2xl font-semibold text-white mb-2"></h3>
+                {study.title}
+                </h3>
+                      <p className="text-gray-300 mb-4"></p>
+                {study.description}
+                </p>
+                </div>
                   </div>
                   
-                  <div className="space-y-4">
-                    <div>
+                  <div className="space-y-4"></div>
+                    <div></div>
                       <h4 className="text-lg font-semibold text-cyan-400 mb-2">Challenge</h4>
-                      <p className="text-gray-300 text-sm">{study.challenge}</p>
-                    </div>
+                      <p className="text-gray-300 text-sm"></p>
+                {study.challenge}
+                </p>
+                </div>
                     
-                    <div>
+                    <div></div>
                       <h4 className="text-lg font-semibold text-cyan-400 mb-2">Solution</h4>
-                      <p className="text-gray-300 text-sm">{study.solution}</p>
-                    </div>
+                      <p className="text-gray-300 text-sm"></p>
+                {study.solution}
+                </p>
+                </div>
                     
-                    <div>
+                    <div></div>
                       <h4 className="text-lg font-semibold text-cyan-400 mb-2">Results</h4>
-                      <ul className="space-y-1">
-                        {study.results.map((result, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <ul className="space-y-1"></ul>
+                {study.results.map((result, idx) => (
+                          <li key={idx} className="flex items-center text-sm text-gray-300"></li>
                             <CheckCircle className="h-4 w-4 text-cyan-400 mr-2" />
-                            {result}
-                          </li>
+                {result}
+                </li>
                         ))}
-                      </ul>
-                    </div>
+                </ul>
+                </div>
                     
-                    <div>
+                    <div></div>
                       <h4 className="text-lg font-semibold text-cyan-400 mb-2">Impact</h4>
-                      <p className="text-gray-300 text-sm">{study.impact}</p>
-                    </div>
+                      <p className="text-gray-300 text-sm"></p>
+                {study.impact}
+                </p>
+                </div>
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
+                </div>
+                </div>
         </section>
-
-        {/* Industries Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                {/* Industries Section */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
                 Industries We Serve
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
                 Our expertise spans across multiple industries, delivering tailored solutions for unique business challenges.
               </p>
-            </div>
+                </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {industries.map((industry, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex justify-center mb-3">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"></div>
+                {industries.map((industry, index) => (
+                <div key={index} className="text-center"></div>
+                  <div className="flex justify-center mb-3"></div>
                     <industry.icon className="h-12 w-12 text-cyan-400" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
-                  <p className="text-sm text-cyan-300">{industry.count}</p>
+                  <h3 className="text-lg font-semibold text-white mb-2"></h3>
+                {industry.name}
+                </h3>
+                  <p className="text-sm text-cyan-300"></p>
+                {industry.count}
+                </p>
                 </div>
               ))}
-            </div>
-          </div>
+                </div>
+                </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                {/* CTA Section */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Ready to Write Your Success Story?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Join hundreds of companies that have transformed their business with our AI-powered solutions.
       {/* Case Studies Grid */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {caseStudies.map((study) => (
-              <div key={study.id} className="bg-white/5 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="px-4 sm:px-6 lg:px-8 pb-16"></div>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                {caseStudies.map((study) => (
+              <div key={study.id} className="bg-white/5 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"></div>
                 {/* Header */}
-                <div className="p-6 border-b border-gray-700">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="text-4xl">{study.image}</div>
-                    <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded-full">
-                      {study.readTime}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold text-cyan-400 mb-2">{study.title}</h3>
-                  <p className="text-gray-300 text-sm mb-3">{study.company}</p>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded-full">
-                      {study.industry}
-                    </span>
-                  </div>
+                <div className="p-6 border-b border-gray-700"></div>
+                  <div className="flex items-start justify-between mb-4"></div>
+                    <div className="text-4xl"></div>
+                {study.image}
                 </div>
-
+                    <span className="text-xs text-gray-400 bg-gray-700 px-2 py-1 rounded-full"></span>
+                {study.readTime}
+                </span>
+                </div>
+                  <h3 className="text-xl font-bold text-cyan-400 mb-2"></h3>
+                {study.title}
+                </h3>
+                  <p className="text-gray-300 text-sm mb-3"></p>
+                {study.company}
+                </p>
+                  <div className="flex items-center gap-2"></div>
+                    <span className="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded-full"></span>
+                {study.industry}
+                </span>
+                </div>
+                </div>
                 {/* Content */}
-                <div className="p-6 space-y-4">
-                  <div>
+                <div className="p-6 space-y-4"></div>
+                  <div></div>
                     <h4 className="font-semibold text-white mb-2">Challenge</h4>
-                    <p className="text-gray-300 text-sm">{study.challenge}</p>
-                  </div>
+                    <p className="text-gray-300 text-sm"></p>
+                {study.challenge}
+                </p>
+                </div>
                   
-                  <div>
+                  <div></div>
                     <h4 className="font-semibold text-white mb-2">Solution</h4>
-                    <p className="text-gray-300 text-sm">{study.solution}</p>
-                  </div>
+                    <p className="text-gray-300 text-sm"></p>
+                {study.solution}
+                </p>
+                </div>
                   
-                  <div>
+                  <div></div>
                     <h4 className="font-semibold text-white mb-2">Results</h4>
-                    <ul className="space-y-1">
-                      {study.results.map((result, index) => (
-                        <li key={index} className="text-gray-300 text-sm flex items-center">
+                    <ul className="space-y-1"></ul>
+                {study.results.map((result, index) => (
+                        <li key={index} className="text-gray-300 text-sm flex items-center"></li>
                           <span className="text-cyan-400 mr-2">✓</span>
-                          {result}
-import React from 'react'
-import { SEO } from '@/components/SEO'
-import { Link } from 'react-router-dom'
-export default function CaseStudies() {
+                {result}
+import React from 'react';
+import { SEO  } from '@/components/SEO';
+import { Link  } from 'react-router-dom';export default function CaseStudies() {
   const caseStudies = [
     {
       id: 1,
@@ -4313,7 +4476,7 @@ export default function CaseStudies() {
   ]
   const industries = ['All', 'Healthcare', 'Financial Services', 'Manufacturing', 'Government', 'Retail', 'Energy & Utilities']
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background"></div>
       <SEO 
         title="Case Studies - Zion Tech Group" 
         description="Explore real-world success stories and results from Zion Tech Group's innovative technology solutions"
@@ -4321,56 +4484,65 @@ export default function CaseStudies() {
         canonical="https://ziontechgroup.com/case-studies"
       />
 
-      <div className="container mx-auto px-4 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient">
+      <div className="container mx-auto px-4 py-12"></div>
+                {/* Hero Section */}
+                <div className="text-center mb-16"></div>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gradient"></h1>
             Case Studies
           </h1>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
             Discover how our innovative AI, quantum computing, and autonomous solutions 
             are transforming businesses across industries. Real results, measurable impact, 
             and proven success stories.
           </p>
-        </div>
-
-        {/* Featured Case Study */}
-        <div className="mb-16">
+                </div>
+                {/* Featured Case Study */}
+                <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white mb-8">Featured Success Story</h2>
-          {caseStudies.filter(study => study.featured).map((study) => (
-            <div key={study.id} className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 border border-cyan-500/20">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="px-3 py-1 bg-cyan-500 text-white text-sm font-medium rounded-full">
-                      {study.industry}
-                    </span>
+                {caseStudies.filter(study => study.featured).map((study) => (
+            <div key={study.id} className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-3xl p-8 border border-cyan-500/20"></div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
+                <div></div>
+                  <div className="flex items-center gap-3 mb-4"></div>
+                    <span className="px-3 py-1 bg-cyan-500 text-white text-sm font-medium rounded-full"></span>
+                {study.industry}
+                </span>
                     <span className="text-gray-400 text-sm">Featured Case Study</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{study.title}</h3>
-                  <p className="text-cyan-400 font-semibold mb-4">{study.client}</p>
+                </div>
+                  <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                {study.title}
+                </h3>
+                  <p className="text-cyan-400 font-semibold mb-4"></p>
+                {study.client}
+                </p>
                   
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
-                    <p className="text-gray-300">{study.challenge}</p>
-                  </div>
+                    <p className="text-gray-300"></p>
+                {study.challenge}
+                </p>
+                </div>
                   
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
-                    <p className="text-gray-300">{study.solution}</p>
-                  </div>
+                    <p className="text-gray-300"></p>
+                {study.solution}
+                </p>
+                </div>
                   
-                  <div className="mb-6">
+                  <div className="mb-6"></div>
                     <h4 className="text-lg font-semibold text-white mb-3">Results</h4>
-                    <ul className="space-y-2">
-                      {study.results.map((result, index) => (
-                        <li key={index} className="flex items-start">
+                    <ul className="space-y-2"></ul>
+                {study.results.map((result, index) => (
+                        <li key={index} className="flex items-start"></li>
                           <span className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          <span className="text-gray-300">{result}</span>
-                        </li>
+                          <span className="text-gray-300"></span>
+                {result}
+                </span>
+                </li>
                       ))}
-                    </ul>
-                  </div>
+                </ul>
+                </div>
                   
       title: 'AI-Powered Financial Services Transformation',
       company: 'Global Bank Corp',
@@ -4469,115 +4641,114 @@ export default function CaseStudies() {
   ]
   const categories = ['All', 'AI & Automation', 'Healthcare AI', 'Industrial AI', 'Retail AI', 'Government Tech', 'EdTech']
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+                {/* Hero Section */}
+                <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden"></section>
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-blue-900/20"></div>
         <div className="absolute inset-0 bg-gray-800/20"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/50 text-cyan-400 text-sm font-medium mb-6">
+        <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
+          <div className="mb-8"></div>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/50 text-cyan-400 text-sm font-medium mb-6"></div>
               <TrendingUp className="w-4 h-4 mr-2" />
               Success Stories
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6"></h1>
               Case Studies
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
               Discover how organizations across industries are transforming their operations 
               with our cutting-edge AI and technology solutions.
             </p>
-          </div>
+                </div>
         </div>
-      </section>
-
-      {/* Filter Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
+                </section>
+                {/* Filter Section */}
+                <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="flex flex-wrap justify-center gap-4"></div>
+                {categories.map((category) => (
               <$2 />
                 key={category}
                 className="px-6 py-3 rounded-xl border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/20 transition-all duration-300 font-medium"
               >
                 {category}
-              </button>
+                </button>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </div>
-
-      {/* Case Studies Grid */}
-                  <$2 />
+                {/* Case Studies Grid */}
+                <$2 />
                     to={`/case-studies/${study.id}`}
                     className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium"
                   >
                     Read Full Case Study
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </Link>
+                </Link>
                 </div>
                 
-                <div className="w-full h-80 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
-                  <svg className="w-16 h-16 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-full h-80 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center"></div>
+                  <svg className="w-16 h-16 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
               </div>
-            </div>
+                </div>
           ))}
-        </div>
-
-        {/* All Case Studies Grid */}
-        <div className="mb-16">
+                </div>
+                {/* All Case Studies Grid */}
+                <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white mb-8">All Case Studies</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.filter(study => !study.featured).map((study) => (
-              <div key={study.id} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
-                <div className="w-full h-48 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-t-2xl flex items-center justify-center">
-                  <svg className="w-12 h-12 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {caseStudies.filter(study => !study.featured).map((study) => (
+              <div key={study.id} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 group"></div>
+                <div className="w-full h-48 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-t-2xl flex items-center justify-center"></div>
+                  <svg className="w-12 h-12 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs font-medium rounded-full">
-                      {study.industry}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
-                    {study.title}
-                  </h3>
-                  <p className="text-cyan-400 font-semibold text-sm mb-3">{study.client}</p>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
-                    {study.challenge}
-                  </p>
+                <div className="p-6"></div>
+                  <div className="flex items-center gap-3 mb-3"></div>
+                    <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs font-medium rounded-full"></span>
+                {study.industry}
+                </span>
+                </div>
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200"></h3>
+                {study.title}
+                </h3>
+                  <p className="text-cyan-400 font-semibold text-sm mb-3"></p>
+                {study.client}
+                </p>
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3"></p>
+                {study.challenge}
+                </p>
                   <$2 />
                     to={`/case-studies/${study.id}`}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium group"
                   >
                     Read Case Study
-                    <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </Link>
+                </Link>
                 </div>
-              </div>
+                </div>
             ))}
-          </div>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 rounded-3xl p-12 border border-cyan-500/30">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                </div>
+                {/* CTA Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 rounded-3xl p-12 border border-cyan-500/30"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
               Ready to Write Your Success Story?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Join the ranks of successful organizations that have transformed their operations with our solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors duration-200"
@@ -4590,7 +4761,7 @@ export default function CaseStudies() {
               >
                 Explore Services
               </Link>
-            </div>
+                </div>
           </div>
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30 inline-flex items-center"
               >
@@ -4603,133 +4774,132 @@ export default function CaseStudies() {
               >
                 Explore Our Solutions
               </Link>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
-    </div>
+                </div>
   )
 }
 }
 export default CaseStudies</$1>
-
-        {/* Success Metrics */}
-        <div className="bg-gradient-to-r from-green-900/20 to-teal-900/20 rounded-3xl p-8 border border-green-500/20 mb-16">
-          <div className="text-center mb-12">
+                {/* Success Metrics */}
+                <div className="bg-gradient-to-r from-green-900/20 to-teal-900/20 rounded-3xl p-8 border border-green-500/20 mb-16"></div>
+          <div className="text-center mb-12"></div>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Studies</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
               Discover how Zion Tech Group has helped businesses across industries achieve their digital transformation goals.
             </p>
-          </div>
+                </div>
           
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <p className="text-gray-600 text-center">
+          <div className="bg-white rounded-lg shadow-lg p-8"></div>
+            <p className="text-gray-600 text-center"></p>
               Case studies coming soon. We're working on showcasing our client success stories.
             </p>
-          </div>
+                </div>
         </div>
-      </div>
+                </div>
     </>
   )
 }
-        </div>
-      </section>
+                </div>
+                </section>
     </div>
   )
 }
 export default CaseStudies
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {caseStudies.map((study) => (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {caseStudies.map((study) => (
             <$2 />
               key={study.id}
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
             >
-              {/* Category Badge */}
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-medium rounded-full">
-                  {study.category}
+                {/* Category Badge */}
+                <div className="mb-4"></div>
+                <span className="inline-block px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-medium rounded-full"></span>
+                {study.category}
                 </span>
-              </div>
-
-              {/* Company Info */}
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
+                </div>
+                {/* Company Info */}
+                <div className="flex items-center mb-4"></div>
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3"></div>
                   <Building className="w-6 h-6 text-white" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white">{study.company}</h3>
-                  <p className="text-sm text-gray-400">{study.industry}</p>
+                <div></div>
+                  <h3 className="text-lg font-semibold text-white"></h3>
+                {study.company}
+                </h3>
+                  <p className="text-sm text-gray-400"></p>
+                {study.industry}
+                </p>
                 </div>
               </div>
-
-              {/* Title */}
-              <h4 className="text-xl font-bold text-white mb-4 leading-tight">
+                {/* Title */}
+                <h4 className="text-xl font-bold text-white mb-4 leading-tight"></h4>
                 {study.title}
-              </h4>
-
-              {/* Challenge */}
-              <div className="mb-4">
+                </h4>
+                {/* Challenge */}
+                <div className="mb-4"></div>
                 <h5 className="text-sm font-semibold text-cyan-400 mb-2">Challenge</h5>
-                <p className="text-gray-300 text-sm">{study.challenge}</p>
-              </div>
-
-              {/* Solution */}
-              <div className="mb-4">
+                <p className="text-gray-300 text-sm"></p>
+                {study.challenge}
+                </p>
+                </div>
+                {/* Solution */}
+                <div className="mb-4"></div>
                 <h5 className="text-sm font-semibold text-cyan-400 mb-2">Solution</h5>
-                <p className="text-gray-300 text-sm">{study.solution}</p>
-              </div>
-
-              {/* Results */}
-              <div className="mb-4">
+                <p className="text-gray-300 text-sm"></p>
+                {study.solution}
+                </p>
+                </div>
+                {/* Results */}
+                <div className="mb-4"></div>
                 <h5 className="text-sm font-semibold text-cyan-400 mb-2">Results</h5>
-                <ul className="space-y-1">
-                  {study.results.map((result, index) => (
-                    <li key={index} className="flex items-center text-gray-300 text-sm">
+                <ul className="space-y-1"></ul>
+                {study.results.map((result, index) => (
+                    <li key={index} className="flex items-center text-gray-300 text-sm"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {result}
-                    </li>
+                {result}
+                </li>
                   ))}
                 </ul>
-              </div>
-
-              {/* Technologies */}
-              <div className="mb-6">
+                </div>
+                {/* Technologies */}
+                <div className="mb-6"></div>
                 <h5 className="text-sm font-semibold text-cyan-400 mb-2">Technologies Used</h5>
-                <div className="flex flex-wrap gap-2">
-                  {study.technologies.map((tech, index) => (
+                <div className="flex flex-wrap gap-2"></div>
+                {study.technologies.map((tech, index) => (
                     <$2 />
                       key={index}
                       className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
                     >
-                      {tech}
-                    </span>
+                {tech}
+                </span>
                   ))}
                 </div>
-              </div>
-
-              {/* CTA Button */}
-              <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
+                </div>
+                {/* CTA Button */}
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group"></button>
                 View Full Case Study
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
               </button>
-            </div>
+                </div>
           ))}
-        </div>
-      </div>
-
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                </div>
+                </div>
+                {/* CTA Section */}
+                <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20"></div>
+          <div className="text-center"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Ready to Write Your Success Story?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Let's discuss how our solutions can transform your business and deliver 
               measurable results like the ones you see above.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
@@ -4743,11 +4913,65 @@ export default CaseStudies
               >
                 Explore Our Services
               </Link>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
-    </div>
+                </div>
   )
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></p></p></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+                </div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </ul></ul>
+                </ul></ul>
+                </ul></ul>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section></section>
+                </section>

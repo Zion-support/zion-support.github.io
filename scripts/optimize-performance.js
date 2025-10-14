@@ -63,7 +63,7 @@ function createPerformanceMonitor() {
   `
   // console.log(`\n📊 Performance Analysis)`
   Summary: `),`
-  // console.log(`   Total components)`
+  // console.log(`   Total components)`;
   analyzed: ${totalFiles}`);`
   // console.log(`   Components with optimization)`
   opportunities: ${optimizedFiles}`)
@@ -75,7 +75,7 @@ function createPerformanceMonitor() {/* TODO: Fix JSX expression */}
   const performanceMonitorContent = `import React, { useEffect, useState } from 'react'
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
-
+;
 export default PerformanceMonitor;`
 `
   fs.writeFileSync('app/components/PerformanceMonitor.tsx', performanceMonitorContent)
@@ -98,7 +98,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className = '',
   priority = false
-  }) => {
+  }) =>
+                {
   return(<img
       src={src}
       alt={alt}
@@ -112,7 +113,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         height: height ? \`\${height}px\` : 'auto'
 const,
   OptimizedImage: React.FC<OptimizedImageProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+}) =>
+                {/* TODO: Fix JSX expression */}
       src={src}
       alt={alt}
       width={width}
@@ -128,7 +130,7 @@ const,
     /></img>
   )
 }
-
+;
 export default OptimizedImage;`
 `
   fs.writeFileSync('app/components/OptimizedImage.tsx', imageOptimizationContent)

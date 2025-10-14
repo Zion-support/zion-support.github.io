@@ -2,7 +2,8 @@ import { supabase } from "@/integrations/supabase/client"
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes"
 export const quoteRequestService = {
   // Get all quote requests (for admin)
-  getAll: async () => {
+  getAll: async () =>
+                {
     const { data, error } = await supabase
       .from('quote_requests')
       .select(`
@@ -21,7 +22,8 @@ export const quoteRequestService = {
     })) as QuoteRequest[]
   },
   // Get quote requests for a specific talent
-  getByTalentId: async (talentId: string) => {
+  getByTalentId: async (talentId: string) =>
+                {
     const { data, error } = await supabase
       .from('quote_requests')
       .select('*')
@@ -31,7 +33,8 @@ export const quoteRequestService = {
     return data as QuoteRequest[]
   },
   // Get a single quote request by id
-  getById: async (id: string) => {
+  getById: async (id: string) =>
+                {
     const { data, error } = await supabase
       .from('quote_requests')
       .select(`
@@ -50,7 +53,8 @@ export const quoteRequestService = {
     } as QuoteRequest
   },
   // Update quote request status
-  updateStatus: async (id: string, status: QuoteStatus) => {
+  updateStatus: async (id: string, status: QuoteStatus) =>
+                {
     const updates: any = { status }
     // If marking as responded, set replied_at
     if (status === 'responded') {
@@ -76,7 +80,8 @@ export const quoteRequestService = {
     return data[0] as QuoteRequest
   },
   // Archive/Unarchive a quote request
-  toggleArchive: async (id: string, isArchived: boolean) => {
+  toggleArchive: async (id: string, isArchived: boolean) =>
+                {
     const { data, error } = await supabase
       .from('quote_requests')
       .update({ is_archived: isArchived })
@@ -86,7 +91,8 @@ export const quoteRequestService = {
     return data[0] as QuoteRequest
   },
   // Delete a quote request
-  delete: async (id: string) => {
+  delete: async (id: string) =>
+                {
     const { error } = await supabase
       .from('quote_requests')
       .delete()
@@ -94,4 +100,4 @@ export const quoteRequestService = {
     if (error) throw error
     return true
   }
-}
+};

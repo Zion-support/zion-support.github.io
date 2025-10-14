@@ -96,7 +96,7 @@ export class AppError extends Error {
     message: string,
     public category: ErrorCategory = ErrorCategory.UNKNOWN,
     public severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    public metadata?: Record<string, unknown>
+    public metadata?: Record<string, unknown></string,>
   ) {
   // TODO: Add items]
 //     /ResizeObserver loop/i,
@@ -197,7 +197,7 @@ export class AppError extends Error {
     public,
   severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     public metadata?: Record
-          <string, unknown>
+          <string, unknown></string,>
   ) {
     // TODO: Add content
   }

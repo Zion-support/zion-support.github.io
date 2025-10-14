@@ -1,7 +1,7 @@
 // Note: This is a Vite project, not Next.js
 // Using a generic request type instead of NextApiRequest
 type ApiRequest = {
-  headers: Record<string, string | string[] | undefined>
+  headers: Record<string, string | string[] | undefined></string,>
   [key: string]: any
 }
 export interface Session {
@@ -28,7 +28,7 @@ export function isInternalAgentRequest(req: ApiRequest): boolean {
   const internalAgents = ['zion-bot', 'internal-agent', 'automation']
   return internalAgents.some(agent => userAgentString.toLowerCase().includes(agent))
 }
-export const isAdmin = () => {
+export const isAdmin  = () => {
   // Placeholder implementation
   return true
 }
@@ -80,7 +80,8 @@ export function isModerator(session: AdminSession | null): boolean {
   return ['admin', 'super_admin', 'moderator'].includes(session.user.role)
 }
 export function requireAdminAuth(handler: (req: NextApiRequest, res: NextApiResponse, session: AdminSession) => void) {
-  return (req: NextApiRequest, res: NextApiResponse) => {
+  return (req: NextApiRequest, res: NextApiResponse) =>
+                {
     const session = req.session as AdminSession
     if (!isAdminAuthenticated(session)) {
       return res.status(401).json({ error: 'Admin authentication required' })
@@ -89,7 +90,8 @@ export function requireAdminAuth(handler: (req: NextApiRequest, res: NextApiResp
   }
 }
 export function requireSuperAdmin(handler: (req: NextApiRequest, res: NextApiResponse, session: AdminSession) => void) {
-  return (req: NextApiRequest, res: NextApiResponse) => {
+  return (req: NextApiRequest, res: NextApiResponse) =>
+                {
     const session = req.session as AdminSession
     if (!isSuperAdmin(session)) {
       return res.status(403).json({ error: 'Super admin access required' })
@@ -98,8 +100,10 @@ export function requireSuperAdmin(handler: (req: NextApiRequest, res: NextApiRes
   }
 }
 export function requirePermission(permission: string) {
-  return (handler: (req: NextApiRequest, res: NextApiResponse, session: AdminSession) => void) => {
-    return (req: NextApiRequest, res: NextApiResponse) => {
+  return (handler: (req: NextApiRequest, res: NextApiResponse, session: AdminSession) => void) =>
+                {
+    return (req: NextApiRequest, res: NextApiResponse) =>
+                {
       const session = req.session as AdminSession
       if (!hasAdminPermission(session, permission)) {
         return res.status(403).json({ error: `Permission '${permission}' required` })
@@ -108,7 +112,8 @@ export function requirePermission(permission: string) {
     }
   }
 }
-export async function authenticateAdmin(email: string, password: string): Promise<AdminUser | null> {
+export async function authenticateAdmin(email: string, password: string): Promise<AdminUser | null></AdminUser>
+                {
   // Mock authentication - in production, this would verify credentials against a database
   const user = adminUsers.find(u => u.email === email)
   if (user && password === 'admin123') { // Mock password
@@ -149,11 +154,11 @@ export const is_admin = () =>: any {
 }
 }
 // Stub admin auth utility - placeholder for missing functionality
-export const requireAdminAuth = () => {
+export const requireAdminAuth  = () => {
   // Placeholder implementation
   return true
 }
-export const isAdmin = () => {
+export const isAdmin  = () => {
   // Placeholder implementation
   return true
-}
+};

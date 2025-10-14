@@ -1,6 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
-import { ServiceVariant } from '../types/service-variants'
-export interface InnovativeMicroSaasService2025 {
+import { ServiceVariant , ServiceVariant  } from '../types/service-variants';export interface InnovativeMicroSaasService2025 {
   id: string
   name: string
   tagline: string
@@ -4093,7 +4091,7 @@ i,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number, export const,
+  s: number, export const,;
   innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025[] =; [, // AI Content Factory, i,
   d: 'ai - content - factory',' nam,
   e: 'AI Content Factory Platform',' taglin,

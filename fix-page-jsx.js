@@ -46,7 +46,8 @@ function fixPageJSX() {
       { pattern: /<(\w+)><\/\1>/g, replacement: '<$1></$1>' },
       
       // Fix broken closing tags
-      { pattern: /<\/\w+><\/\w+>/g, replacement: (match) => {
+      { pattern: /<\/\w+><\/\w+>/g, replacement: (match) =>
+                {
         const firstTag = match.match(/<\/(\w+)>/)[1]
         return `</${firstTag}>`
       }}
@@ -75,4 +76,10 @@ function fixPageJSX() {
   }
 }
 
-fixPageJSX()</div></span></button></a></p></h1></h2></h3></ul></li></main></section></footer>
+fixPageJSX()</div>
+                </span></button>
+                </a></p>
+                </h1></h2>
+                </h3></ul>
+                </li></main>
+                </section></footer>;

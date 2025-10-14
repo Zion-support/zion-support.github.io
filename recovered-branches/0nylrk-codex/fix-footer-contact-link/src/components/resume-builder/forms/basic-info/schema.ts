@@ -11,4 +11,4 @@ export const basicInfoSchema = z.object({
   hourlyRate: z.number().positive().optional()})
   hourlyRate: z.number().positive().optional(),
 })
-export type BasicInfoFormData = z.infer<typeof basicInfoSchema>
+export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;

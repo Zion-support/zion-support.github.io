@@ -1335,7 +1335,7 @@ export const innovativeITInfrastructureServices2025 = [ pricin,
   e: ' 'Data center operators, cloud providers, enterprise businesses, colocation facilities' competitiveAdvantag,
   e: ' 'AI-powered autonomous operations, comprehensive energy optimization, and predictive maintenance capabilities' useCase,
   s: [' 'Data center operations automation'' 'Energy efficiency optimization'' 'Predictive maintenance'' 'Capacity planning and optimization'' 'Cost reduction and management' ] integration,
-  s: [' 'Data center infrastructure'' 'Monitoring systems'' 'Energy management'' 'Security platforms'' 'Compliance tools' ] complianc,
+  s: [' 'Data center infrastructure'' 'Monitoring systems'' 'Energy management'' 'Security platforms'' 'Compliance tools' ] complianc,;
   e: [ ' 'SOC2',' 'ISO 27001',' 'Uptime Institute',' 'Energy Star',' 'Industry-specific regulations']; }];' i,
   d: 'quantum-edge-computing-orchestrator', nam,
   e: 'Quantum Edge Computing Orchestrator',' descriptio,

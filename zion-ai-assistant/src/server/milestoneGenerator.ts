@@ -1,6 +1,7 @@
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js"
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY |process.env.OPENAI_API_TOKEN
-async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {if (!OPENAI_API_KEY) return null
+async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null></SuggestedMilestoneItem[]>
+                {if (!OPENAI_API_KEY) return null
   const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\": [...]`
   const user = {
     scopeOfWork: input.scopeOfWork
@@ -72,10 +73,12 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
   }
   return milestones
 }
-export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {const ai = await callOpenAI(input)
+export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse></>
+                {const ai = await callOpenAI(input)
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js",
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,
-async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {
+async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null></SuggestedMilestoneItem[]>
+                {
   if (!OPENAI_API_KEY) return null,
   const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\": [...]`,
   const user = {
@@ -149,12 +152,14 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
   return milestones
 }
 
-export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {
+export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse></>
+                {
   const ai = await callOpenAI(input)
-  const milestones = ai && ai.length ? ai : createHeuristicPlan(input)
+  const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared / types.js';,
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,
-async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null> {
+async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null></>
+                {
   // Check condition
 if (return null, ) {
   $2
@@ -162,7 +167,8 @@ if (return null, ) {
   const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3 - 7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week - based deadlines. Output ONLY valid JSON object with key "milestones": [...]`,
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js"
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN
-async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {
+async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null></SuggestedMilestoneItem[]>
+                {
   if (!OPENAI_API_KEY) return null
   const system = `You are an expert project planner. Given a scope of work, start and end date, and project type, propose 3-7 phased milestones. Each milestone must include: title, description, suggestedDueDateIso (ISO 8601 within the provided range), estimatedEffortHours (integer). Tailor phases to the project type. Prefer week-based deadlines. Output ONLY valid JSON object with key \"milestones\": [...]`
   const user = {
@@ -285,7 +291,8 @@ function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilesto
   }
   return milestones
 }
-export async function generate_milestones (input: MilestoneSuggestionInput): Promise < MilestoneSuggestionResponse> {
+export async function generate_milestones (input: MilestoneSuggestionInput): Promise < MilestoneSuggestionResponse></>
+                {
   const ai = await callOpenAI (input)
   const milestones = ai && ai.length ? ai : createHeuristicPlan (input)
   return { milestones }
@@ -306,7 +313,7 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
   }
   const pool = titlesByType[input.projectType] || titlesByType.Other
   const milestones: SuggestedMilestoneItem[] = []
-  let phaseStart = new Date(start)
+  let phaseStart = new Date(start);
   for (let i = 0; i < phases; i++) {
     const due = new Date(phaseStart)
     due.setDate(due.getDate() + perPhaseDays)
@@ -324,7 +331,8 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
   }
   return milestones
 }
-export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {
+export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse></>
+                {
   const ai = await callOpenAI(input)
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input)
   return { milestones }

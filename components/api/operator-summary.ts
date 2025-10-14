@@ -22,7 +22,7 @@ export default async function handler(
         ?.value || 0
     const summary = [
       `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`
-      `DAO engagement at ${voters}% voter participation with active delegates`
+      `DAO engagement at ${voters}% voter participation with active delegates`;
       `Token momentum: ${wallets} active wallets; daily volume around ${Number(tx).toLocaleString()}`
       `Multiverse scale: ${instances} active sub-instances with cross-instance flows`
       `Treasury stable and contributors earning consistently across regions`

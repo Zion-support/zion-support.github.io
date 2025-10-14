@@ -13,7 +13,8 @@ const fixes = [
   // Fix malformed div tags
   {
     pattern: /<div className="[^"]*">\s*<\/div><\/div>/g,
-    replacement: (match) => {
+    replacement: (match) =>
+                {
       const className = match.match(/className="([^"]*)"/)?.[1]
       return `<div className="${className}">`
     }
@@ -39,4 +40,5 @@ for (const fix of fixes) {
 
 // Write the fixed content back
 fs.writeFileSync('/workspace/app/components/Footer.tsx', content, 'utf8')
-console.log('Fixed Footer.tsx malformed JSX tags')</$1></div>
+console.log('Fixed Footer.tsx malformed JSX tags')</$1>
+                </div>;

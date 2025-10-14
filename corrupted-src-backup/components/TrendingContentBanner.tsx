@@ -3,7 +3,8 @@ impo, r, t { Shie, l, d } fr, o, m "luci, d, e-rea, c, t";"
 import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";'
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "luci, d, e-rea, c, t";'
-const, TrendingContentBanne, r: Rea, c, t.FC = () => {
+const, TrendingContentBanne, r: Rea, c, t.FC = () =>
+                {
   con, s, t [currentInd, e, x, setCurrentInd, e, x] = useSta, t, e(0)
   const, trendingItem, s = [
     {
@@ -164,7 +165,8 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {
       ic, o, n: Shie, l, d
       li, n, k: "/bl, o, g/gen, a, i-da, t, a-governan, c, e-quicksta, r, t-20, 2, 5","
       bad, g, e: "H, O, T"
-const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+const, TrendingContentBanne, r: Rea, c, t.FC = () =>
+                {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -195,12 +197,14 @@ const, TrendingContentBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expressio
     {/* TODO: Fix JSX expression */}
     }
   ]
-  useEffe, c, t(() => {/* TODO: Fix JSX expression */}
+  useEffe, c, t(() =>
+                {/* TODO: Fix JSX expression */}
     }, 40, 0, 0)
     return () => clearInterv, a, l(interv, a, l)
   }, [trendingIte, m, s.leng, t, h])
   const, currentIte, m = trendingIte, m, s[currentInd, e, x]
-  const, getBadgeColo, r = (bad, g, e: stri, n, g) => {
+  const, getBadgeColo, r = (bad, g, e: stri, n, g) =>
+                {
     swit, c, h (bad, g, e) {
 ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e'
 ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e'
@@ -217,10 +221,10 @@ defa, u, l
   }
   const, Ico, n = currentIt, e, m.ic, o, n
   return(<div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
-      <div, className="flex, item, s-center, justif, y-betwe, e, n">
-        <div, className="fl, e, x-1">
-          <div, className="flex, item, s-center, ga, p-3, m, b-3">
-            <div, className="flex, item, s-center, ga, p-2">
+      <div, className="flex, item, s-center, justif, y-betwe, e, n"></div,>
+        <div, className="fl, e, x-1"></div,>
+          <div, className="flex, item, s-center, ga, p-3, m, b-3"></div,>
+            <div, className="flex, item, s-center, ga, p-2"></div,>
               <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e  />
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
@@ -233,10 +237,10 @@ defa, u, l
             </d, i, v>)
   return (
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
-      <div, className="flex, item, s-center, justif, y-betwe, e, n">
-        <div, className="fl, e, x-1">
-          <div, className="flex, item, s-center, ga, p-3, m, b-3">
-            <div, className="flex, item, s-center, ga, p-2">
+      <div, className="flex, item, s-center, justif, y-betwe, e, n"></div,>
+        <div, className="fl, e, x-1"></div,>
+          <div, className="flex, item, s-center, ga, p-3, m, b-3"></div,>
+            <div, className="flex, item, s-center, ga, p-2"></div,>
               <TrendingUp, className="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e  />
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W
     <div, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">"
@@ -248,7 +252,7 @@ defa, u, l
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>"
             <div, className={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.bad, g, e)} anima, t, e-boun, c, e`}>`;`
               {currentIt, e, m.bad, g, e}
-          <div, className="flex, item, s-start, ga, p-4">
+                <div, className="flex, item, s-start, ga, p-4"></div,>
             <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">"
               <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-hov, e, r: sca, l, e-110, transitio, n-transfo, r, m/>"
           <div, className="flex, item, s-start, ga, p-4">"
@@ -262,8 +266,9 @@ defa, u, l
               <div, className="flex, item, s-center, ga, p-2, m, b-1">"
                 <span, className="te, x, t-xs, fon, t-medium, tex, t-zi, o, n-sla, t, e-light, uppercase, tracking-wid, e, r">"
                   {currentIt, e, m.catego, r, y}
-              <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"
-  const, getBadgeColo, r = (bad, g, e: stri, n, g) => {/* TODO: Fix JSX expression */}
+                <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"
+  const, getBadgeColo, r = (bad, g, e: stri, n, g) =>
+                {/* TODO: Fix JSX expression */}
 }
   }
   const, Ico, n = currentIt, e, m.ic, o, n
@@ -284,7 +289,7 @@ defa, u, l
               <span, className="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>"</$1>)
             <div, className={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.bad, g, e)} anima, t, e-boun, c, e`}>`;`
               {currentIt, e, m.bad, g, e}
-          </d, i, v>"
+                </d, i, v>"
           <div, className="flex, item, s-start, ga, p-4"></div>"
             <div, className="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">""
               <Icon, className="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-hov, e, r: sca, l, e-110, transitio, n-transfo, r, m/>""
@@ -296,50 +301,58 @@ defa, u, l
               <div, className="flex, item, s-center, ga, p-2, m, b-1">";"
                 <span, className="te, x, t-xs, fon, t-medium, tex, t-zi, o, n-sla, t, e-light, uppercase, tracking-wid, e, r">"
                   {currentIt, e, m.catego, r, y}
-              </d, i, v>"
+                </d, i, v>"
               <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">""
               <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"
                 {currentIt, e, m.tit, l, e}
-              </h3>"
+                </h3>"
               <p, className="te, x, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-3">"
                 {currentIt, e, m.descripti, o, n}
-              <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t">
-                <div, className="flex, item, s-center, ga, p-1">
+                <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t"></div,>
+                <div, className="flex, item, s-center, ga, p-1"></div,>
                   <Eye, className="w-3 h-3  />
-                  <sp, a, n>{currentIt, e, m.vie, w, s} vie, w, s
-                <div, className="flex, item, s-center, ga, p-1">
+                  <sp, a, n></sp,>
+                {currentIt, e, m.vie, w, s} vie, w, s
+                <div, className="flex, item, s-center, ga, p-1"></div,>
                   <Clock, className="w-3 h-3  />
-                  <sp, a, n>{currentIt, e, m.readTi, m, e} re, a, d
-                <div, className="flex, item, s-center, ga, p-1">
+                  <sp, a, n></sp,>
+                {currentIt, e, m.readTi, m, e} re, a, d
+                <div, className="flex, item, s-center, ga, p-1"></div,>
                   <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0  />
               <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t">"
                 <div, className="flex, item, s-center, ga, p-1">"
                   <Eye, className="w-3 h-3" />"
-                  <sp, a, n>{currentIt, e, m.vie, w, s} vie, w, s
+                  <sp, a, n></sp,>
+                {currentIt, e, m.vie, w, s} vie, w, s
                 <div, className="flex, item, s-center, ga, p-1">"
                   <Clock, className="w-3 h-3" />"
-                  <sp, a, n>{currentIt, e, m.readTi, m, e} re, a, d
+                  <sp, a, n></sp,>
+                {currentIt, e, m.readTi, m, e} re, a, d
                 <div, className="flex, item, s-center, ga, p-1">"
               </p>"
               <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t"></div>"
                 <div, className="flex, item, s-center, ga, p-1"></div>"
                   <Eye, className="w-3 h-3  />
-                  <sp, a, n>{currentIt, e, m.vie, w, s} vie, w, s
+                  <sp, a, n></sp,>
+                {currentIt, e, m.vie, w, s} vie, w, s
                 </d, i, v>"
                 <div, className="flex, item, s-center, ga, p-1"></div>"
                   <Clock, className="w-3 h-3  />
-                  <sp, a, n>{currentIt, e, m.readTi, m, e} re, a, d
+                  <sp, a, n></sp,>
+                {currentIt, e, m.readTi, m, e} re, a, d
                 </d, i, v>"
                 <div, className="flex, item, s-center, ga, p-1"></div>"
                   <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0  /></Star>"
               <div, className="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t">";"
                 <div, className="flex, item, s-center, ga, p-1">";"
                   <Eye, className="w-3 h-3" />"
-                  <sp, a, n>{currentIt, e, m.vie, w, s} vie, w, s
+                  <sp, a, n></sp,>
+                {currentIt, e, m.vie, w, s} vie, w, s
                 </d, i, v>"
                 <div, className="flex, item, s-center, ga, p-1">";"
                   <Clock, className="w-3 h-3" />"
-                  <sp, a, n>{currentIt, e, m.readTi, m, e} re, a, d
+                  <sp, a, n></sp,>
+                {currentIt, e, m.readTi, m, e} re, a, d
                 </d, i, v>"
                 <div, className="flex, item, s-center, ga, p-1">";"
                   <Star, className="w-3 h-3, tex, t-yell, o, w-4, 0, 0" />"
@@ -385,20 +398,56 @@ defa, u, l
                />
             ))}
       {/* Progress, ba, r */}
-      <div, className="mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">"
+                <div, className="mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">"
         <d, i, v
       <div, className="mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">"
         <d, i, v 
   classNa, m, e="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"
           sty, l, e={{ wid, t, h: `${((currentInd, e, x + 1) / trendingIte, m, s.leng, t, h) * 1, 0, 0}%` }}`;`  />
-      {/* Progress, ba, r */}"
+                {/* Progress, ba, r */}"
       <div, className="mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">"
         <d, i, v;"
   classNa, m, e="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"`
           sty, l, e={{ wid, t, h: `${((currentInd, e, x + 1) / trendingIte, m, s.leng, t, h) * 1, 0, 0}%` }}`;`  /></d>
-      </d, i, v>
+                </d, i, v>
     </d, i, v>
   )
 }
 export default TrendingContentBanner;"`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></Link></Link></h3></h3>
+</div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></span>
+                </span></span>
+                </span></span>
+                </span></span>
+                </span></Link>
+                </Link></h3>
+                </h3>
