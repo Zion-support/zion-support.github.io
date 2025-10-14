@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   BarChart3, 
-  TrendingUp, 
-  Users, 
-  DollarSign, 
   Zap, 
   Shield, 
   Globe, 
@@ -14,19 +11,8 @@ import {
   Star,
   Phone,
   Mail,
-  MapPin,
-  Download,
   Play,
-  Pause,
-  RefreshCw,
-  Settings,
-  Eye,
-  Filter,
-  Calendar,
-  Target,
-  PieChart,
-  LineChart,
-  Activity
+  Target
 } from 'lucide-react';
 
 const AiAnalyticsDashboardProPage: React.FC = () => {
