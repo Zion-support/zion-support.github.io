@@ -1,6 +1,6 @@
-import fs from 'fs;
-import path from 'path;
-import { execSync } from 'child_process;
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
 #!/usr/bin// Fixed regex;
 console.log('Starting merge conflict resolution...'';
     let content = fs.readFileSync(filePath, 'utf8'';

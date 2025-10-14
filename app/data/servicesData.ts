@@ -528,7 +528,6 @@ export const services: Service[] = [
     href: '/iot-platform-solution',
     glowColor: 'yellow'
   }
-];
 
 export const getServicesByCategory = (category: Service['category']) => {
   return services.filter(service => service.category === category);

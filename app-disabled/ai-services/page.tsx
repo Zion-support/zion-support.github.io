@@ -1,15 +1,12 @@
 import React from 'react';
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client;
 
 import react;
 
-import { Helmet } from  from 'react;
+import { Helmet } from  from 'react';
 
-import { Helmet } from 'react-helmet-async';
-
-import { Box, Mic, } from 'lucide-react;
+import { Box, Mic, } from 'lucide-react';
 
 import from ../components
 import Footer from ../components
@@ -24,8 +21,6 @@ const AIServicesPagePage: React.FC = () => {const features = [;;;
     n: title: 'AI-Powered Intelligence,
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.,
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis]
-import { Helmet } from 'react-helmet-async';
-import { Box, Mic, } from 'lucide-react';
 import ../components/ from '../components/';
 import Footer from '../components/Footer';
 import { Circle, Right, Star, } from 'lucide-react';
@@ -139,8 +134,8 @@ import { Circle, Right, Star, } from 'lucide-react';
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI services including content generation, chatbots, analytics, and automation solutions for modern businesses." />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
+
+      <$3 className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>

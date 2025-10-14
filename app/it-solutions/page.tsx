@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -137,7 +134,6 @@ const ITSolutionsPage: React.FC = () => {
       useCases: ["Help desk", "System maintenance", "User support"],
       href: "/it-support"
     }
-  ];
 
   const features = [
     {
@@ -160,12 +156,6 @@ const ITSolutionsPage: React.FC = () => {
       description: "Security is built into every solution we deliver.",
       icon: ShieldCheckIcon
     }
-  ];
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
   return (
     <>
@@ -174,8 +164,8 @@ import { Helmet } from 'react-helmet-async';
         <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, and consulting services." />
         <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, IT consulting, network solutions" />
       </Helmet>
-      
-      <div className="min-h-screen bg-white">
+
+      <$3 className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
@@ -280,11 +270,5 @@ import { Helmet } from 'react-helmet-async';
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 export default ITSolutionsPage;
-=======
-};
-
-export default ITSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

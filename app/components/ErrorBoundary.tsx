@@ -9,12 +9,8 @@ interface Props {
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
 error: Error | null;
   errorInfo: ErrorInfo | null;  error: Error | null;
-=======
-  error: Error | null;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   errorInfo: ErrorInfo | null;
 }
 
@@ -37,7 +33,6 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     if (this.props.onError) {
@@ -46,15 +41,6 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 // Log error to console in development    if (process.env.NODE_ENV === 'development') {
-=======
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
@@ -68,12 +54,7 @@ class ErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null
     });
-<<<<<<< HEAD
   }
-=======
-  };
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -83,18 +64,17 @@ class ErrorBoundary extends Component<Props, State> {
 
       // Default error UI
       return (
-<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
           <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
             <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
 <AlertTriangle className="w-8 h-8 text-red-400" />              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
+
+            <$3 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            
-            <p className="text-gray-300 mb-6">
+
+            <$3 className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
 We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
@@ -120,7 +100,7 @@ Error Details (Development Only)                </summary>
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3">
+            <$3 className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={this.handleRetry}
                 className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
@@ -128,8 +108,8 @@ Error Details (Development Only)                </summary>
                 <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
-              
-              <Link
+
+              <$3
                 to="/"
 className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"              >
                 <Home className="w-4 h-4" />
@@ -137,26 +117,12 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
               </Link>
             </div>
 
-            <div className="mt-6 pt-6 border-t border-slate-700">
+            <$3 className="mt-6 pt-6 border-t border-slate-700">
               <p className="text-sm text-gray-400">
                 If this problem persists, please{' '}
                 <Link to="/contact" className="text-purple-400 hover:text-purple-300">
                   contact our support team
                 </Link>
-=======
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
-              <AlertTriangle className="w-6 h-6 text-red-600" />
-            </div>
-            
-            <div className="text-center">
-              <h1 className="text-lg font-medium text-gray-900 mb-2">
-                Something went wrong
-              </h1>
-              <p className="text-sm text-gray-500 mb-6">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
               </p>
               
               {process.env.NODE_ENV === 'development' && this.state.error && (
@@ -170,8 +136,8 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
                   </pre>
                 </details>
               )}
-              
-              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+
+              <$3 className="flex flex-col sm:flex-row gap-3 justify-center">
                 <button
                   onClick={this.handleReset}
                   className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -179,8 +145,8 @@ className="flex items-center justify-center gap-2 border-2 border-purple-400 tex
                   <RefreshCw className="w-4 h-4 mr-2" />
                   Try Again
                 </button>
-                
-                <Link
+
+                <$3
                   to="/"
                   className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                 >

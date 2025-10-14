@@ -19,24 +19,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       errorId: ''
-<<<<<<< HEAD
     }
   }
-=======
-    }}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-<<<<<<< HEAD
     }
   }
-=======
-    }}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -68,18 +60,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         url: window.location.href
       }
       // Example: Send to error tracking service
-<<<<<<< HEAD
       // errorTrackingService.captureException(error, { extra: errorData });
       
       console.error('Error logged to service:', errorData);
     } catch (loggingError) {
       console.error('Failed to log error to service:', loggingError);
     }
-=======
-      // errorTrackingService.captureException(error, { extra: errorData })
-      console.error('Error logged to service:', errorData)} catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError)}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   }
   private handleRetry = () => {
     this.setState({
@@ -87,7 +73,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       errorId: ''
-<<<<<<< HEAD
     });
   }
   private handleReload = () => {
@@ -96,13 +81,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private handleGoHome = () => {
     window.location.href = '/';
   }
-=======
-    })}
-  private handleReload = () => {
-    window.location.reload()}
-  private handleGoHome = () => {
-    window.location.href = '/'}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -116,8 +94,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <title>Error - Zion Tech Group</title>
             <meta name="robots" content="noindex, nofollow" />
           </Helmet>
-          
-          <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
+
+          <$3 className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
             <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
               {/* Error Icon */}
               <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
@@ -166,16 +144,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 >
                   Try Again
                 </button>
-                
-                <div className="flex space-x-3">
+
+                <$3 className="flex space-x-3">
                   <button
                     onClick={this.handleGoHome}
                     className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
                   >
                     Go Home
                   </button>
-                  
-                  <button
+
+                  <$3
                     onClick={this.handleReload}
                     className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
                   >

@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Right, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react'
-import FuturisticBackground from '../components/FuturisticBackground'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const AiServicesPage: React.FC = () => {
   const services = [
     {
@@ -37,67 +30,28 @@ const AiServicesPage: React.FC = () => {
       color: 'from-orange-500 to-red-500'
     },
     {
-<<<<<<< HEAD
       icon: MessageSquare,
       title: 'AI Chatbots',
       description: 'Intelligent chatbots and virtual assistants for customer support.',
-=======
-      icon: MessageCircle,
-      title: 'AI Customer Service',
-      description: 'Intelligent chatbots and customer service solutions powered by AI.',
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       color: 'from-indigo-500 to-purple-500'
     },
     {
       icon: Shield,
       title: 'AI Security',
-<<<<<<< HEAD
       description: 'AI-powered security solutions to protect your business from threats.',
       color: 'from-red-500 to-pink-500'
-=======
-      description: 'AI-powered security solutions to protect your business and data.',
-      color: 'from-cyan-500 to-blue-500'
-    }
-  ]
-  const features = [
-    {
-      title: 'Custom AI Solutions',
-      description: 'Tailored AI implementations designed specifically for your business needs.',
-      icon: '🤖'
-    },
-    {
-      title: 'Machine Learning Models',
-      description: 'Advanced ML models trained on your data for optimal performance.',
-      icon: '🧠'
-    },
-    {
-      title: 'Real-time Processing',
-      description: 'High-performance AI systems that process data in real-time.',
-      icon: '⚡'
-    },
-    {
-      title: 'Scalable Architecture',
-      description: 'AI solutions that grow with your business and handle increasing loads.',
-      icon: '📈'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
   ]
   return (
     <div className="min-h-screen bg-slate-900">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Comprehensive AI services including consulting, analytics, automation, and more." />
-=======
-        <meta name="description" content="Comprehensive AI services including consulting, analytics, automation, and custom solutions." />
-        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation, consulting" />
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       </Helmet>
-      
-      <FuturisticBackground />
-      
-<<<<<<< HEAD
-      <div className="relative z-10">
+
+      <$3 />
+
+      <$3 className="relative z-10">
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
@@ -152,36 +106,15 @@ const AiServicesPage: React.FC = () => {
                 Get Started
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-300">
-=======
-      <div className="relative z-10 min-h-screen bg-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Services
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge artificial intelligence solutions. 
-              From consulting to implementation, we deliver AI that drives real results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-lg transition-all duration-300">
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
                 Learn More
               </button>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
     </div>
   );
 };
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">

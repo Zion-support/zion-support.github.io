@@ -91,7 +91,6 @@ const urlsToCache = [
   '/static/css/main.css',
   '/static/js/main.js',
   '/manifest.json'
-];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

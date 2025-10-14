@@ -61,8 +61,8 @@ export default function MicroSaaSPage() {
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-pink-900/20 to-rose-900/20"></div>
         </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
+
+        <$3 className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center">
@@ -79,8 +79,8 @@ export default function MicroSaaSPage() {
               Scalable micro SaaS applications designed to solve specific business problems 
               with cost-effective, modern solutions that grow with your business.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 to="/contact" 
                 className="group bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
@@ -111,8 +111,8 @@ export default function MicroSaaSPage() {
               Comprehensive micro SaaS development and management services
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
+
+          <$3 className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -146,8 +146,8 @@ export default function MicroSaaSPage() {
             <p className="text-xl text-gray-300 mb-12">
               Custom micro SaaS solutions for various industries and business verticals
             </p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+
+            <$3 className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
               {industries.map((industry, index) => (
                 <div key={index} className="bg-slate-800 p-6 rounded-lg border border-slate-600 hover:border-pink-500 transition-colors">
                   <div className="text-white font-semibold text-lg mb-2">{industry.name}</div>
@@ -166,8 +166,8 @@ export default function MicroSaaSPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Our Development Process
             </h2>
-            
-            <div className="grid md:grid-cols-4 gap-8 mb-12">
+
+            <$3 className="grid md:grid-cols-4 gap-8 mb-12">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">1</span>
@@ -197,8 +197,8 @@ export default function MicroSaaSPage() {
                 <p className="text-gray-300">Launching and maintaining your solution</p>
               </div>
             </div>
-            
-            <Link 
+
+            <$3 
               to="/contact" 
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
@@ -218,8 +218,8 @@ export default function MicroSaaSPage() {
             <p className="text-xl text-gray-300 mb-12">
               Let's discuss how we can create the perfect solution for your business
             </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+
+            <$3 className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-pink-400" />
                 <span>+1-302-464-0950</span>
@@ -233,8 +233,8 @@ export default function MicroSaaSPage() {
                 <span>Middletown, DE</span>
               </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300"

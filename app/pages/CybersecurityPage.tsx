@@ -61,8 +61,8 @@ export default function CybersecurityPage() {
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-red-900/20 to-orange-900/20"></div>
         </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
+
+        <$3 className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center">
@@ -79,8 +79,8 @@ export default function CybersecurityPage() {
               Comprehensive cybersecurity services designed to protect your digital assets, 
               data, and infrastructure from evolving threats and ensure regulatory compliance.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 to="/contact" 
                 className="group bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
@@ -111,8 +111,8 @@ export default function CybersecurityPage() {
               Comprehensive security solutions tailored to your business needs
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
+
+          <$3 className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-red-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -146,8 +146,8 @@ export default function CybersecurityPage() {
             <p className="text-xl text-gray-300 mb-12">
               We maintain the highest standards of security and compliance to protect your business
             </p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+
+            <$3 className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
               {compliance.map((item, index) => (
                 <div key={index} className="bg-slate-800 p-4 rounded-lg border border-slate-600">
                   <div className="text-white font-semibold mb-2">{item.name}</div>
@@ -166,8 +166,8 @@ export default function CybersecurityPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Why Choose Our Cybersecurity Solutions?
             </h2>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+
+            <$3 className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="text-4xl font-bold text-red-400 mb-2">24/7</div>
                 <div className="text-gray-300">Security Monitoring</div>
@@ -181,8 +181,8 @@ export default function CybersecurityPage() {
                 <div className="text-gray-300">Average Response Time</div>
               </div>
             </div>
-            
-            <Link 
+
+            <$3 
               to="/contact" 
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
@@ -202,8 +202,8 @@ export default function CybersecurityPage() {
             <p className="text-xl text-gray-300 mb-12">
               Let's discuss how our cybersecurity solutions can protect your digital assets
             </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+
+            <$3 className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-red-400" />
                 <span>+1-302-464-0950</span>
@@ -217,8 +217,8 @@ export default function CybersecurityPage() {
                 <span>Middletown, DE</span>
               </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300"

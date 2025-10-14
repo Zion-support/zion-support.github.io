@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 'use client';'use client';
-=======
-'use client';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -138,7 +133,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       useCases: ["Expense management", "Financial tracking", "Tax preparation"],
       href: "/micro-saas/ai-expense-tracker"
     }
-  ];
 
   const features = [
     {
@@ -161,12 +155,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       description: "Round-the-clock support to ensure your success.",
       icon: UserGroupIcon
     }
-  ];
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 
   return (
     <>
@@ -175,8 +163,8 @@ import { Helmet } from 'react-helmet-async';
         <meta name="description" content="Discover our comprehensive micro SaaS solutions designed to streamline your business operations." />
         <meta name="keywords" content="micro SaaS, AI solutions, business automation, productivity tools" />
       </Helmet>
-      
-      <div className="min-h-screen bg-white">
+
+      <$3 className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
@@ -281,11 +269,5 @@ import { Helmet } from 'react-helmet-async';
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 export default MicroSaaSSolutionsPage;
-=======
-};
-
-export default MicroSaaSSolutionsPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

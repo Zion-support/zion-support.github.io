@@ -34,7 +34,7 @@ function fixFile(filePath) {
       fs.writeFileSync(filePath, content);
       return true;
     }
-    
+
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -44,7 +44,7 @@ function fixFile(filePath) {
 
 function findFilesToFix(dir) {
   const files = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
     

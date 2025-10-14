@@ -98,8 +98,8 @@ export default function TeamPage() {
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
+
+        <$3 className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center">
@@ -131,8 +131,8 @@ export default function TeamPage() {
               Talented professionals committed to excellence and innovation
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <$3 className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="text-center">
@@ -173,8 +173,8 @@ export default function TeamPage() {
             <p className="text-xl text-gray-300 mb-12">
               The principles that guide our team and drive our success
             </p>
-            
-            <div className="grid md:grid-cols-2 gap-8">
+
+            <$3 className="grid md:grid-cols-2 gap-8">
               {values.map((value, index) => (
                 <div key={index} className="bg-slate-800 p-8 rounded-lg border border-slate-600">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-6">
@@ -199,8 +199,8 @@ export default function TeamPage() {
             <p className="text-xl text-gray-300 mb-12">
               We're always looking for talented individuals to join our growing team
             </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+
+            <$3 className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
                 <div className="text-gray-300">Team Members</div>
@@ -214,8 +214,8 @@ export default function TeamPage() {
                 <div className="text-gray-300">Remote Friendly</div>
               </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/careers" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
@@ -243,8 +243,8 @@ export default function TeamPage() {
             <p className="text-xl text-gray-300 mb-12">
               Let's discuss how our team can help transform your business
             </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+
+            <$3 className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-purple-400" />
                 <span>+1-302-464-0950</span>
@@ -258,8 +258,8 @@ export default function TeamPage() {
                 <span>Middletown, DE</span>
               </div>
             </div>
-            
-            <Link 
+
+            <$3 
               to="/contact" 
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >

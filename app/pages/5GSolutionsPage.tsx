@@ -61,8 +61,8 @@ export default function FiveGSolutionsPage() {
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-indigo-900/20 to-purple-900/20"></div>
         </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
+
+        <$3 className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center">
@@ -79,8 +79,8 @@ export default function FiveGSolutionsPage() {
               Transform your business with cutting-edge 5G solutions including network infrastructure, 
               edge computing, IoT applications, and smart city implementations.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 to="/contact" 
                 className="group bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
@@ -111,8 +111,8 @@ export default function FiveGSolutionsPage() {
               Comprehensive 5G solutions for businesses of all sizes
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
+
+          <$3 className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -146,8 +146,8 @@ export default function FiveGSolutionsPage() {
             <p className="text-xl text-gray-300 mb-12">
               Revolutionary applications enabled by 5G technology
             </p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+
+            <$3 className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
               {applications.map((application, index) => (
                 <div key={index} className="bg-slate-800 p-6 rounded-lg border border-slate-600 hover:border-indigo-500 transition-colors">
                   <div className="text-white font-semibold text-lg mb-2">{application.name}</div>
@@ -166,8 +166,8 @@ export default function FiveGSolutionsPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Why Choose Our 5G Solutions?
             </h2>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+
+            <$3 className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="text-4xl font-bold text-indigo-400 mb-2">1ms</div>
                 <div className="text-gray-300">Ultra-Low Latency</div>
@@ -181,8 +181,8 @@ export default function FiveGSolutionsPage() {
                 <div className="text-gray-300">Devices per km²</div>
               </div>
             </div>
-            
-            <Link 
+
+            <$3 
               to="/contact" 
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
@@ -202,8 +202,8 @@ export default function FiveGSolutionsPage() {
             <p className="text-xl text-gray-300 mb-12">
               Let's discuss how 5G solutions can revolutionize your business
             </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+
+            <$3 className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-indigo-400" />
                 <span>+1-302-464-0950</span>
@@ -217,8 +217,8 @@ export default function FiveGSolutionsPage() {
                 <span>Middletown, DE</span>
               </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300"

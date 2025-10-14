@@ -6,7 +6,6 @@ const urlsToCache = [
   '/manifest.json',
   '/favicon.svg',
   '/logo192.png'
-];
 
 // Install event - cache resources
 self.addEventListener('install', (event) => {

@@ -9,7 +9,7 @@ console.log('🔧 Starting comprehensive error fixing process...');
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
   const files = [];
-  
+
   function searchDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
     
@@ -71,7 +71,7 @@ function findFilesWithConflicts(dir) {
       console.log(`✅ Fixed merge conflicts in: ${filePath}`);
       return true;
     }
-    
+
     return false;
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
@@ -111,7 +111,7 @@ function fixUnterminatedStrings(filePath) {
       
       fixedLines.push(line);
     }
-    
+
     const fixedContent = fixedLines.join('\n');
     
     if (fixedContent !== originalContent) {
@@ -119,7 +119,7 @@ function fixUnterminatedStrings(filePath) {
       console.log(`✅ Fixed unterminated strings in: ${filePath}`);
       return true;
     }
-    
+
     return false;
   } catch (error) {
     console.error(`❌ Error fixing strings in ${filePath}:`, error.message);
@@ -145,7 +145,7 @@ async function main() {
   // Also check for unterminated strings in all TypeScript/JavaScript files
   console.log('🔍 Checking for unterminated strings...');
   const allTsFiles = [];
-  
+
   function findTsFiles(dir) {
     const items = fs.readdirSync(dir);
     for (const item of items) {

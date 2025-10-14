@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
-import path from 'path;
+import fs from 'fs';
+import path from 'path';
 function cleanFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -39,7 +39,7 @@ function cleanFile(filePath) {
       fs.writeFileSync(filePath, content);
       return true;
     }
-    
+
     return false;
   } catch (error) {
     console.error(`Error cleaning ${filePath}:`, error.message);
@@ -49,7 +49,7 @@ function cleanFile(filePath) {
 
 function findFilesToClean(dir) {
   const files = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
     

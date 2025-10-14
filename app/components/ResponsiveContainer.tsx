@@ -5,16 +5,9 @@ interface ResponsiveContainerProps {
 
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ children, className = '' }) => {'
   return (
-<<<<<<< HEAD
     <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
       {children}
     </div>
   );
 }
 export default ResponsiveContainer;
-=======
-    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>{children}
-    </div>
-  )}
-export default ResponsiveContainer
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

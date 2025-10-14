@@ -1,8 +1,8 @@
 import React from 'react';
-import ./components/ from './components/;
-import Footer from './components/Footer;
-import LoadingSpinner from './components/LoadingSpinner;
-import ErrorBoundary from './components/ErrorBoundary;
+import ./components/ from './components/';
+import Footer from './components/Footer';
+import LoadingSpinner from './components/LoadingSpinner';
+import ErrorBoundary from './components/ErrorBoundary';
 // Lazy load pages for better performance;
 const Page = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));

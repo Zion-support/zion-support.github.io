@@ -1,5 +1,5 @@
-import { apiClient } from '../utils/apiClient;
-import logger from '../utils/logger;
+import { apiClient } from '../utils/apiClient';
+import logger from '../utils/logger';
 'use client';
 /**;
  * Base Service Class;

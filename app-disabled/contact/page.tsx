@@ -47,26 +47,28 @@ message: ']
   }, []);
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
-      
-        <title>Contact Us - Zion Tech Group | Get in Touch<
+
+        <$3>Contact Us - Zion Tech Group | Get in Touch<
         <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get a free consultation, quote, or support. Call +1-302-464-0950 or email kleber@ziontechgroup.com 
-        <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support 
+
+        <$3 name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support 
       <
 
       <{/* Hero Section *
       <section className="relative py-20 px-4 overflow-hidden>)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }}
 
-        <div className="relative max-w-7xl mx-auto text-center>
+        <$3 className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }}
+
+        <$3 className="relative max-w-7xl mx-auto text-center>
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Contact - Zion Tech Group</title>
         <meta name="description" content="Contact Zion Tech Group for advanced AI and IT solutions" />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
+
+      <$3 className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
             Contact Us
@@ -77,7 +79,7 @@ message: ']
       
       {/* Hero Section */}
 
-      <section className="relative py-20 px-4 overflow-hidden></section>
+      <$3 className="relative py-20 px-4 overflow-hidden></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }} />
         <div className="relative max-w-7xl mx-auto text-center></div>
@@ -92,7 +94,7 @@ message: ']
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <$3 className="max-w-4xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
             <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
             <p className="text-gray-300">
@@ -127,8 +129,8 @@ message: ']
                         />
                       </div>
                     </div>
-                    
-                    <div>
+
+                    <$3>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your company name"
@@ -136,7 +138,7 @@ message: ']
                     </div>
                   </div>
 
-                  <div>
+                  <$3>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
@@ -178,7 +180,8 @@ message: ']
               
               {submitStatus === 'success' && (<div className=mb-6 p-4 bg-green-500/20 border border-green-500
                   <Circle className="w-5 h-5 text-green-400 mr-2 
-                  <span className="text-green-400>Message sent successfully!<
+
+                  <$3 className="text-green-400>Message sent successfully!<
                 <)
               )}
 
@@ -201,7 +204,7 @@ message: ']
                   
                 <
 
-                <button
+                <$3
                   type="submit"
                   disabled = { isSubmitting };
                   className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 disabled:opacity-50 disable,
@@ -212,8 +215,8 @@ message: ']
                       Sending...
                     <)
                   ) : (<>
-                      
-              <div>
+
+              <$3>
                 <h2 className="text-3xl font-bold text-white mb-6">Get in touch<
                 <p className="text-gray-300 mb-8">
                   We're here to help you succeed. Reach out to us through any of the channels below, 
@@ -221,38 +224,38 @@ message: ']
                 <
               <
 
-              <div className="space-y-6>
+              <$3 className="space-y-6>
                 <div className="flex items-start space-x-4>
                   <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0>
-                    
-                    <h3 className="text-lg font-semibold text-white mb-1><
+
+                    <$3 className="text-lg font-semibold text-white mb-1><
                     <p className="text-gray-300>+1-302-464-0950<
                     <p className="text-sm text-gray-400>Mon-Fri 9AM-6PM EST<
                   <
                 <
 
-                <div className="flex items-start space-x-4>
+                <$3 className="flex items-start space-x-4>
                   <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0>
-                    
-                    <h3 className="text-lg font-semibold text-white mb-1>Email<
+
+                    <$3 className="text-lg font-semibold text-white mb-1>Email<
                     <p className="text-gray-300>kleber@ziontechgroup.com<
                     <p className="text-sm text-gray-400">Well respond within 24 hours<
                   <
                 <
 
-                <div className="flex items-start space-x-4>
+                <$3 className="flex items-start space-x-4>
                   <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0>
-                    
-                    <h3 className="text-lg font-semibold text-white mb-1>Office<
+
+                    <$3 className="text-lg font-semibold text-white mb-1>Office<
                     <p className="text-gray-300>364 E Main St STE 1008<
                     <p className="text-gray-300>Middletown, DE 19709<
                   <
                 <
 
-                <div className="flex items-start space-x-4>
+                <$3 className="flex items-start space-x-4>
                   <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0>
-                    
-                    <h3 className="text-lg font-semibold text-white mb-1>Business Hours<
+
+                    <$3 className="text-lg font-semibold text-white mb-1>Business Hours<
                     <p className="text-gray-300>Monday - Friday: 9:00 AM - 6:00 PM<
                     <p className="text-gray-300>Saturday: 10:00 AM - 4:00 PM<
                     <p className="text-gray-300>Sunda,
@@ -265,7 +268,7 @@ message: ']
         <
       <
 
-      <Footer 
+      <$3 
     <
   );
 

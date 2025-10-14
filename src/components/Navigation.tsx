@@ -1,7 +1,7 @@
 import React from 'react';
-import { useState, useEffect } from 'react;
-import { } from 'react-router-dom;
-import { ChevronDown, Menu, X, Right, Star, Square, } from 'lucide-react;
+import { useState, useEffect } from 'react';
+import { } from 'react-router-dom';
+import { ChevronDown, Menu, X, Right, Star, Square, } from 'lucide-react';
 const : React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -27,9 +27,8 @@ const : React.FC = () => {
     setMicroSaasOpen(false);
     setIsOpen(false);
   }
-  ];
 
-              <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group;
+              <$3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group;
               <p className="text-xs text-cyan-400">AI & IT Solutions;
             <to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
               About;

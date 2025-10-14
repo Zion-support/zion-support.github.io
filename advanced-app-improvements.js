@@ -16,6 +16,6 @@ export function createAdvancedMonitoring() {
       redisClient: () => ({ connected: true })
     }
   };
-  
+
   return monitoringFiles;
 }

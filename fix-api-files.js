@@ -1,5 +1,5 @@
-import fs from 'fs;
-import path from 'path;
+import fs from 'fs';
+import path from 'path';
 #!/usr/bin// Fixed regex;
   content = content.replace(/} catch \(error\) \{\s*console\.error\('Error:', error\);\s*\} catch \(error\) \{\s*console\.error\('API Error:', error\);\s*res\.statusCode = 500;\s*res\.setHeader\('Content-Type', 'application\/json'\);\s*res\.end\(JSON\.stringify\(\{ error: 'Internal server error'';
       console.error('API Error:'';

@@ -14,7 +14,6 @@ import {
   RocketLaunchIcon,
   SparklesIcon,
   BoltIcon
-<<<<<<< HEAD
 } from '@heroicons/react/24/outline';
 import FuturisticBackground from '../components/FuturisticBackground';
 import NeonButton from '../components/NeonButton';
@@ -24,14 +23,6 @@ import { services } from '../data/servicesData';
 export default function HomePage()  {
 
   const structuredData = {    "@context": "https://schema.org",
-=======
-} from '@heroicons/react/24/outline'
-import FuturisticBackground from '../components/FuturisticBackground'
-import NeonButton from '../components/NeonButton'
-import AnimatedCard from '../components/AnimatedCard'
-import { services } from '../data/servicesData'
-    "@context": "https://schema.org",
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     "@type": "WebSite",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
@@ -50,8 +41,8 @@ import { services } from '../data/servicesData'
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
         structuredData={structuredData}
       />
-      
-      <FuturisticBackground />
+
+      <$3 />
       
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -68,16 +59,16 @@ import { services } from '../data/servicesData'
                 <RocketLaunchIcon className="w-8 h-8 text-pink-400 animate-bounce delay-200" />
               </div>
             </div>
-            
-            <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light">
+
+            <$3 className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light">
               Advanced AI and IT Solutions for Modern Businesses
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <NeonButton to="/contact" variant="primary" size="lg">
                 Get Started Today
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
@@ -102,8 +93,8 @@ import { services } from '../data/servicesData'
               Comprehensive technology solutions designed to accelerate your business growth with real, proven results
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+          <$3 className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {featuredServices.map((service, index) => (
               <AnimatedCard key={service.id} glowColor={service.glowColor} className="group">
                 <div className="text-center mb-6">
@@ -111,8 +102,8 @@ import { services } from '../data/servicesData'
                   <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.shortDescription}</p>
                 </div>
-                
-                <div className="space-y-3 mb-6">
+
+                <$3 className="space-y-3 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-gray-300">
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3"></div>
@@ -120,16 +111,16 @@ import { services } from '../data/servicesData'
                     </div>
                   ))}
                 </div>
-                
-                <div className="mb-6">
+
+                <$3 className="mb-6">
                   <div className="text-center">
                     <span className="text-3xl font-bold text-white">${service.pricing.basic}</span>
                     <span className="text-gray-400 text-sm ml-2">/month</span>
                   </div>
                   <p className="text-gray-400 text-sm text-center mt-1">Starting from</p>
                 </div>
-                
-                <div className="flex flex-col gap-3">
+
+                <$3 className="flex flex-col gap-3">
                   <NeonButton to={service.href} variant="primary" size="sm">
                     Learn More
                     <ArrowRightIcon className="w-4 h-4 ml-2" />
@@ -141,8 +132,8 @@ import { services } from '../data/servicesData'
               </AnimatedCard>
             ))}
           </div>
-          
-          <div className="text-center mt-12">
+
+          <$3 className="text-center mt-12">
             <NeonButton to="/services" variant="primary" size="lg">
               View All Services
               <ArrowRightIcon className="w-5 h-5 ml-2" />
@@ -166,8 +157,8 @@ import { services } from '../data/servicesData'
                 and achieve unprecedented growth.
               </p>
             </div>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+
+            <$3 className="grid md:grid-cols-3 gap-8 mb-16">
               <AnimatedCard glowColor="purple" className="text-center">
                 <div className="text-6xl font-bold text-purple-400 mb-4 animate-pulse">50+</div>
                 <div className="text-xl text-gray-300 mb-2">Projects Completed</div>
@@ -184,8 +175,8 @@ import { services } from '../data/servicesData'
                 <div className="text-gray-400 text-sm">Projects delivered on time and within budget</div>
               </AnimatedCard>
             </div>
-            
-            <div className="text-center">
+
+            <$3 className="text-center">
               <NeonButton to="/about" variant="primary" size="lg">
                 Learn More About Us
                 <ArrowRightIcon className="w-5 h-5 ml-2" />
@@ -208,8 +199,8 @@ import { services } from '../data/servicesData'
                 Let's discuss how our technology solutions can drive your business forward
               </p>
             </div>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
+
+            <$3 className="grid md:grid-cols-3 gap-8 mb-16">
               <AnimatedCard glowColor="purple" className="text-center">
                 <PhoneIcon className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Phone</h3>
@@ -229,8 +220,8 @@ import { services } from '../data/servicesData'
                 <p className="text-gray-400 text-sm mt-2">364 E Main St STE 1008</p>
               </AnimatedCard>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-6 justify-center">
               <NeonButton to="/contact" variant="primary" size="lg">
                 Get In Touch
                 <ArrowRightIcon className="w-5 h-5 ml-2" />

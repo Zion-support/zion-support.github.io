@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import fs from 'fs;
-import path from 'path;
+import fs from 'fs';
+import path from 'path';
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -37,7 +37,7 @@ function fixFile(filePath) {
       fs.writeFileSync(filePath, content);
       return true;
     }
-    
+
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -47,7 +47,7 @@ function fixFile(filePath) {
 
 function findFilesToFix(dir) {
   const files = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
     

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -12,9 +11,6 @@ import {
   CheckIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
-=======
-import React from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
@@ -107,8 +103,8 @@ const ServicesPage: React.FC = () => {
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
+
+        <$3 className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
               Our Services
@@ -147,7 +143,7 @@ const ServicesPage: React.FC = () => {
                   <h3 className="text-3xl font-bold text-white">{category.title}</h3>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <$3 className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
                       <div className="flex justify-between items-start mb-4">
@@ -158,12 +154,12 @@ const ServicesPage: React.FC = () => {
                           {service.price}
                         </span>
                       </div>
-                      
-                      <p className="text-gray-300 mb-6 leading-relaxed">
+
+                      <$3 className="text-gray-300 mb-6 leading-relaxed">
                         {service.description}
                       </p>
 
-                      <ul className="space-y-2 mb-6">
+                      <$3 className="space-y-2 mb-6">
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center text-gray-300">
                             <CheckIcon className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
@@ -172,7 +168,7 @@ const ServicesPage: React.FC = () => {
                         ))}
                       </ul>
 
-                      <Link 
+                      <$3 
                         to="/contact" 
                         className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all"
                       >
@@ -196,8 +192,8 @@ const ServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-12">
               Let's discuss your project requirements and find the perfect solution for your business
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
@@ -217,11 +213,6 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </>
-<<<<<<< HEAD
   );
 }
 export default ServicesPage;
-=======
-  )}
-export default ServicesPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

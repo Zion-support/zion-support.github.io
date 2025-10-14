@@ -1,24 +1,9 @@
-import { memo } from 'react;
-import { } from 'react-router-dom;
-import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circle } from 'lucide-react;
+import { memo } from 'react';
+import { } from 'react-router-dom';
+import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circle } from 'lucide-react';
 &apos;use client&apos;
-  ];
 
-  ];
-
-  ];
-
-  ];
-
-  ];
-
-  ];
-
-  ];
-
-  ];
-
-                  <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group;
+                  <$3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group;
                   <p className="text-sm text-cyan-400">AI & IT Solutions;
             <p className="text-gray-300 text-sm leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 

@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Right, User } from 'lucide-react';
 
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Right, User, Calendar } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
 const BlogPage: React.FC = () => {
   const categories = [
     { id: "all", name: "All Posts", count: 12 },
@@ -86,7 +80,7 @@ const BlogPage: React.FC = () => {
         <meta name="keywords" content="blog, AI insights, IT trends, cybersecurity, cloud computing, technology news" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <$3 className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -129,10 +123,7 @@ const BlogPage: React.FC = () => {
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
 
-<<<<<<< HEAD
-                      <div className="w-4 h-4 mr-1" />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+                      <$3 className="w-4 h-4 mr-1" />
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">
@@ -180,11 +171,6 @@ const BlogPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
 export default BlogPage;
-=======
-  )}
-export default BlogPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

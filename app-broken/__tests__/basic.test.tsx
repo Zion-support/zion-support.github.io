@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react;
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom;
 /* global describe, test, expect, it, beforeEach */
 describe('Basic Tests', () => {';

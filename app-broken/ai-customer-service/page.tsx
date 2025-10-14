@@ -19,7 +19,7 @@ export default function AiCustomerService()   {
         </div>
         <div className="text-center">
 
-          <p className="text-gray-300">Coming Soon - AI Customer Service Solutions</p>
+          <$3 className="text-gray-300">Coming Soon - AI Customer Service Solutions</p>
         </div>
       </div>
     </div>

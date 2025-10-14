@@ -78,8 +78,8 @@ export default function DocumentationPage() {
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-green-900/20 to-emerald-900/20"></div>
         </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
+
+        <$3 className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
@@ -96,8 +96,8 @@ export default function DocumentationPage() {
               Comprehensive documentation, API references, and guides to help you 
               integrate and use our services effectively.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 to="#quick-start" 
                 className="group bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
@@ -128,8 +128,8 @@ export default function DocumentationPage() {
               Get up and running with our services in just a few steps
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
+
+          <$3 className="grid md:grid-cols-4 gap-8">
             {quickStart.map((step, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -154,8 +154,8 @@ export default function DocumentationPage() {
               Browse our comprehensive documentation by category
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
+
+          <$3 className="grid md:grid-cols-2 gap-8">
             {sections.map((section, index) => (
               <div key={index} className="bg-slate-800 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
                 <div className="flex items-center mb-6">
@@ -196,8 +196,8 @@ export default function DocumentationPage() {
             <p className="text-xl text-gray-300 mb-12">
               Get started quickly with our code examples and sample implementations
             </p>
-            
-            <div className="bg-slate-800 p-8 rounded-xl border border-slate-600 mb-8">
+
+            <$3 className="bg-slate-800 p-8 rounded-xl border border-slate-600 mb-8">
               <h3 className="text-xl font-bold text-white mb-4">Basic API Call Example</h3>
               <pre className="text-left text-green-400 overflow-x-auto">
                 <code>{`// Initialize the client
@@ -213,8 +213,8 @@ const response = await client.ai.generateText({
 console.log(response.data);`}</code>
               </pre>
             </div>
-            
-            <div className="grid md:grid-cols-3 gap-6">
+
+            <$3 className="grid md:grid-cols-3 gap-6">
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-600">
                 <h4 className="text-white font-semibold mb-2">JavaScript/Node.js</h4>
                 <p className="text-gray-400 text-sm mb-4">Complete examples for web applications</p>
@@ -251,8 +251,8 @@ console.log(response.data);`}</code>
             <p className="text-xl text-gray-300 mb-12">
               Can't find what you're looking for? Our support team is here to help
             </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+
+            <$3 className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-green-400" />
                 <span>+1-302-464-0950</span>
@@ -266,8 +266,8 @@ console.log(response.data);`}</code>
                 <span>Middletown, DE</span>
               </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/support" 
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"

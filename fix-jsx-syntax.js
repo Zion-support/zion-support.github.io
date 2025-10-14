@@ -21,7 +21,7 @@ function findFilesWithJSXErrors(dir, fileList = []) {
       }
     }
   });
-  
+
   return fileList;
 }
 

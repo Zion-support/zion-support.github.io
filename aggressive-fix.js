@@ -52,14 +52,12 @@ export default function ${serviceName}() {
       description: 'Targeted solutions designed for your specific needs.',
       benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support']
     }
-  ];
 
   const stats = [
     { label: 'Projects Completed', value: '100+' },
     { label: 'Success Rate', value: '98%' },
     { label: 'Client Satisfaction', value: '99%' },
     { label: 'Years Experience', value: '5+' }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -67,8 +65,8 @@ export default function ${serviceName}() {
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description}" />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
+
+      <$3 className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
             ${title}
@@ -77,8 +75,8 @@ export default function ${serviceName}() {
             ${description}
           </p>
         </div>
-        
-        <div className="text-center">
+
+        <$3 className="text-center">
           <p className="text-gray-300">Coming Soon - ${title} Solutions</p>
         </div>
       </div>

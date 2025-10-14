@@ -11,7 +11,6 @@ function fixHtmlEntities(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
 
-    
     // Fix common HTML entities
     const fixes = [
       { from: /&apos;/g, to: "'" },
@@ -21,7 +20,6 @@ function fixHtmlEntities(filePath) {
       { from: /&amp;/g, to: '&' },
 
       { from: /&rbrace;/g, to: '}' },      { from: /&lbrace;/g, to: '{' }
-    ];
     
     let hasChanges = false;
     fixes.forEach(fix => {
@@ -37,7 +35,6 @@ function fixHtmlEntities(filePath) {
       return true;
     }
 
-    
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -47,7 +44,7 @@ function fixHtmlEntities(filePath) {
 
 function findTsxFiles(dir) {
   const files = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
     

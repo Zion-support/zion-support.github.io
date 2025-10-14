@@ -29,7 +29,6 @@ const pages = [
   { url: '/terms', priority: '0.3', changefreq: 'yearly' },
   { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
   { url: '/solutions', priority: '0.8', changefreq: 'monthly' }
-];
 
 const generateSitemap = () => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

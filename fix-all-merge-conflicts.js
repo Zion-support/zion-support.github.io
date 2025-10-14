@@ -46,7 +46,7 @@ function fixAllMergeConflicts(dir) {
       }
     }
   }
-  
+
   return fixedCount;
 }
 

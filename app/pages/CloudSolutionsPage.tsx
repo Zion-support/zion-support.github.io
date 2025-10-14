@@ -61,8 +61,8 @@ export default function CloudSolutionsPage() {
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-blue-900/20 to-cyan-900/20"></div>
         </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
+
+        <$3 className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center">
@@ -79,8 +79,8 @@ export default function CloudSolutionsPage() {
               Comprehensive cloud infrastructure services designed to optimize performance, 
               reduce costs, and ensure scalability for your business applications and data.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 to="/contact" 
                 className="group bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
@@ -111,8 +111,8 @@ export default function CloudSolutionsPage() {
               End-to-end cloud solutions tailored to your business requirements
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
+
+          <$3 className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -146,8 +146,8 @@ export default function CloudSolutionsPage() {
             <p className="text-xl text-gray-300 mb-12">
               We work with all major cloud providers to give you the best solution
             </p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+
+            <$3 className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
               {platforms.map((platform, index) => (
                 <div key={index} className="bg-slate-800 p-6 rounded-lg border border-slate-600 hover:border-blue-500 transition-colors">
                   <div className="text-white font-semibold text-center">{platform.logo}</div>
@@ -166,8 +166,8 @@ export default function CloudSolutionsPage() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Why Choose Our Cloud Solutions?
             </h2>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+
+            <$3 className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
                 <div className="text-4xl font-bold text-blue-400 mb-2">50%</div>
                 <div className="text-gray-300">Cost Reduction</div>
@@ -181,8 +181,8 @@ export default function CloudSolutionsPage() {
                 <div className="text-gray-300">Support & Monitoring</div>
               </div>
             </div>
-            
-            <Link 
+
+            <$3 
               to="/contact" 
               className="inline-flex items-center gap-2 bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
@@ -202,8 +202,8 @@ export default function CloudSolutionsPage() {
             <p className="text-xl text-gray-300 mb-12">
               Let's discuss how our cloud solutions can transform your business
             </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+
+            <$3 className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <PhoneIcon className="w-6 h-6 text-blue-400" />
                 <span>+1-302-464-0950</span>
@@ -217,8 +217,8 @@ export default function CloudSolutionsPage() {
                 <span>Middletown, DE</span>
               </div>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"

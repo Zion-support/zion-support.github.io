@@ -24,22 +24,15 @@ const FiveGSolutionsPage: React.FC = () => {
     {
       icon: Wifi,
 
-<<<<<<< HEAD
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
   ]
   const solutions = [
     {
 
-<<<<<<< HEAD
       title: '5G Network Infrastructure',      description: 'Complete 5G network setup and optimization',
-=======
-      description: 'Complete 5G network setup and optimization',
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
     },
@@ -54,10 +47,6 @@ const FiveGSolutionsPage: React.FC = () => {
       description: 'IoT device connectivity and management platform',
       price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
     }
   ]
   return (
@@ -77,17 +66,17 @@ const FiveGSolutionsPage: React.FC = () => {
               <Wifi className="w-4 h-4 text-blue-400 mr-2" />
               <span className="text-blue-400 text-sm font-medium">Next-Gen Connectivity</span>
             </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+
+            <$3 className="text-4xl md:text-6xl font-bold text-white mb-6">
               5G <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
             </h1>
-            
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+
+            <$3 className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
               Transform your business with ultra-fast 5G connectivity. Experience lightning-fast speeds, 
               low latency, and seamless IoT integration for the digital future.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <$3 className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center">
                 Get Started
                 <Right className="w-5 h-5 ml-2" />
@@ -112,7 +101,7 @@ const FiveGSolutionsPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <$3 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
               const IconComponent = feature.icon
               return (
@@ -148,7 +137,7 @@ const FiveGSolutionsPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <$3 className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300">
                 <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
@@ -185,11 +174,6 @@ const FiveGSolutionsPage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 }
 export default FiveGSolutionsPage;
-=======
-  )}
-export default FiveGSolutionsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { } from 'react-router-dom;
-import { User, Right, Filter } from 'lucide-react;
-import Footer from '../components/Footer;
+import { } from 'react-router-dom';
+import { User, Right, Filter } from 'lucide-react';
+import Footer from '../components/Footer';
 export default function Blog() {
 interface BlogPost {
   id: number;  title: string;
@@ -29,7 +29,6 @@ const BlogPage: React.FC = () => {
       date: '2024-01-05',';
       readTime: '6 min read'';
     }
-  ];
 
 const categories = ['All Posts',';
     'AI & Machine Learning',';
@@ -38,7 +37,7 @@ const categories = ['All Posts',';
     'Computing',';
     'Data Analytics',';
     'Business Strategy'';
-  ];
+
 'use client';
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState(');

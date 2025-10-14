@@ -1,7 +1,7 @@
 import React from 'react';
 import react;
 
-import from  from 'react;
+import from  from 'react';
 
 import from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -164,10 +164,10 @@ import { Right, Star, } from 'lucide-react';
         <meta property="og:url" content="https://ziontechgroup.com/case-studies />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
+      <$3 className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         {/* Hero Section */}
 
-        <section className="py-20 px-4>
+        <$3 className="py-20 px-4>
           <div className="max-w-7xl mx-auto text-center>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6>
               Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400>Stories</span>
@@ -179,7 +179,7 @@ import { Right, Star, } from 'lucide-react';
 
         {/* Stats Section */}
 
-        <section className="py-16 px-4>
+        <$3 className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8>
                   <div className="mb-6">
@@ -193,7 +193,7 @@ import { Right, Star, } from 'lucide-react';
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between">
+                  <$3 className="flex items-center justify-between">
                     <div className="text-sm text-gray-400">
                       <span className="block">Team: {study.teamSize}</span>
                       <span className="block">Duration: {study.duration}</span>
@@ -210,8 +210,8 @@ import { Right, Star, } from 'lucide-react';
                       <div className="text-6xl font-bold mb-4">{study.results.roi}</div>
                       <div className="text-2xl font-semibold mb-2">Return on Investment</div>
                       <div className="text-lg opacity-75 mb-8">{study.company}</div>
-                      
-                      <div className="grid grid-cols-2 gap-6">
+
+                      <$3 className="grid grid-cols-2 gap-6">
                         <div className="text-center">
                           <className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
                           <div className="text-xl font-bold">{study.results.conversion}</div>
@@ -233,17 +233,17 @@ import { Right, Star, } from 'lucide-react';
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
 
-                <div key={index} className="text-center>
+                <$3 key={index} className="text-center>
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-4>
                     <stat.icon className="w-8 h-8 text-white />
         {/* Case Studies Grid */}
 
-        <section className="py-16 px-4>
+        <$3 className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8>
               {caseStudies.map((study) => (
 
-                <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group>
+                <$3 key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group>
                   <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative>
                     <div className="absolute inset-0 bg-black/20></div>
                     <div className="absolute bottom-4 left-4 right-4>
@@ -256,10 +256,10 @@ import { Right, Star, } from 'lucide-react';
                       <ul className="space-y-2>
                         {study.results.map((result, index) => (
 
-                          <li key={index} className="flex items-center text-gray-300 text-sm>
+                          <$3 key={index} className="flex items-center text-gray-300 text-sm>
                             <Circle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 />
 
-        <section className="py-16 px-4>
+        <$3 className="py-16 px-4>
           <div className="max-w-4xl mx-auto text-center>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20>
               <h2 className="text-3xl font-bold text-white mb-6>

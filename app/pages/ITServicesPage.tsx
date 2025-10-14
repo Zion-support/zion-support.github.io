@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react;
+import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react';
 const ITServicesPage: React.FC = () => {
   const services = [{
       icon: Server,
@@ -39,7 +38,6 @@ const ITServicesPage: React.FC = () => {
       description: 'Organize, secure, and optimize your data infrastructure for better insights and compliance.',';
       features: ['Database Design', 'Data Backup', 'Data Migration', 'Performance Tuning']';
     }
-  ];
 const ITServicesPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -97,67 +95,11 @@ const ITServicesPage: React.FC = () => {
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Request Quote;
-=======
-
-const ITServicesPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Professional IT services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              IT Services
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Professional IT services tailored to your business needs.
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge IT solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored IT implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your IT needs.
-                </p>
-              </div>
-            </div>
-            <div className="mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Get Started Today
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
               </button>
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </div>;  );
 }
 export default ITServicesPage;
-=======
-    </>
-  );
-};
-
-export default ITServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

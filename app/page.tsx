@@ -57,7 +57,7 @@ const HomePage: React.FC = () => {
         <meta name="description" content="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, cybersecurity, digital transformation" />
       </Helmet>
-      
+
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">

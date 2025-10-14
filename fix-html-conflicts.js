@@ -1,6 +1,6 @@
-import fs from 'fs;
-import path from 'path;
-import { fileURLToPath } from 'url;
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 #!/usr/bin// Fixed regex;
     let content = fs.readFileSync(filePath, 'utf8'';
     if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>'';

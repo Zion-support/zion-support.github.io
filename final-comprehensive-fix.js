@@ -85,7 +85,7 @@ function fixFileComprehensively(filePath) {
       console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
-    
+
     return false;
   } catch (error) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
@@ -96,7 +96,7 @@ function fixFileComprehensively(filePath) {
 // Function to find all problematic files
 function findProblematicFiles(dir) {
   const files = [];
-  
+
   function searchDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
     

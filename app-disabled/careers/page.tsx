@@ -1,4 +1,4 @@
-import { useState } from 'react;
+import { useState } from 'react';
 
 import { Helmet } from 'react-helmet-async';'lucide-react;
 
@@ -7,7 +7,7 @@ interface JobPosition {
 }
   id: number;
 
-import { Right, Circle, } from 'lucide-react;
+import { Right, Circle, } from 'lucide-react';
 
 const PagePage: React.FC = () => {}
   title: string;
@@ -257,10 +257,10 @@ import { Right, Circle, Star, } from 'lucide-react';
         <meta property="og:url" content="https://ziontechgroup.com/careers />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
+      <$3 className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         {/* Hero Section */}
 
-        <section className="pt-24 pb-16 px-4">          <div className="max-w-7xl mx-auto text-center>
+        <$3 className="pt-24 pb-16 px-4">          <div className="max-w-7xl mx-auto text-center>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6>
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent>
                 Page
@@ -272,7 +272,7 @@ import { Right, Circle, Star, } from 'lucide-react';
             
             {/* Filter Controls */}
 
-            <div className="flex flex-wrap justify-center gap-4 mb-8>
+            <$3 className="flex flex-wrap justify-center gap-4 mb-8>
               <select
                 value={selectedDepartment}
 
@@ -303,15 +303,16 @@ import { Right, Circle, Star, } from 'lucide-react';
                   </div>
                 </div>
 
-                  <option key={dept.id} value={dept.id} className="bg-slate-800>
+                  <$3 key={dept.id} value={dept.id} className="bg-slate-800>
                 {locations.map((loc) => (
 
-                  <option key={loc.id} value={loc.id} className="bg-slate-800>
+                  <$3 key={loc.id} value={loc.id} className="bg-slate-800>
         </section>
   return (<div>
         <title>eers - Zion Tech Group | Join Our Team<
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture. 
-        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs 
+
+        <$3 name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs 
       <
         <section className="py-20 px-4">
         </section>
@@ -323,9 +324,10 @@ import { Right, Circle, Star, } from 'lucide-react';
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         <section className="relative py-20 px-4 overflow-hidden>)
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }}
 
-          <div className="relative max-w-7xl mx-auto text-center>
+          <$3 className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }}
+
+          <$3 className="relative max-w-7xl mx-auto text-center>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6>
               Join Our Team
             <
@@ -339,17 +341,17 @@ import { Right, Circle, Star, } from 'lucide-react';
 
         {featuredPositions.length > 0 && (
 
-          <section className="py-16 px-4>
+          <$3 className="py-16 px-4>
             <div className="max-w-7xl mx-auto>
               <h2 className="text-3xl font-bold text-white mb-12 text-center>Featured Positions</h2>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8>
                 {featuredPositions.map((position) => (
 
-                  <div key={position.id} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 hover:border-cyan-400/50 transition-all duration-300 group>
+                  <$3 key={position.id} className="bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8 hover:border-cyan-400/50 transition-all duration-300 group>
                     <div className="flex items-start justify-between mb-6>
               {values.map((value, index) => (
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <$3 className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
                   <div className="flex justify-center mb-4">
@@ -373,14 +375,14 @@ import { Right, Circle, Star, } from 'lucide-react';
 
         {/* All Positions */}
 
-        <section className="py-16 px-4>
+        <$3 className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
             <h2 className="text-3xl font-bold text-white mb-12 text-center>All Open Positions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6>
               {regularPositions.map((position) => (
             {regularPositions.length === 0 && (
 
-              <div className="text-center py-16>
+              <$3 className="text-center py-16>
                 <div className="text-6xl mb-4>🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-4>No positions found</h3>
                 <p className="text-gray-300 mb-8>Try adjusting your filters or check back later for new opportunities</p>
@@ -397,9 +399,9 @@ import { Right, Circle, Star, } from 'lucide-react';
                 >                <div></div>
                   {position.featured && (
 
-                  <p className="text-gray-300 mb-6>{position.description}</p>
+                  <$3 className="text-gray-300 mb-6>{position.description}</p>
                       {position.requirements.length > 3 && (
 
-                        <li className="text-sm text-gray-400>
+                        <$3 className="text-sm text-gray-400>
             </div>  ));)
 export default eersPage;

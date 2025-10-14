@@ -30,7 +30,7 @@ function fixMergeConflicts(filePath) {
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
   const files = [];
-  
+
   function walkDir(currentPath) {
     const items = fs.readdirSync(currentPath);
     
