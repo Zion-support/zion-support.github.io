@@ -26,23 +26,6 @@ export default function ContactPage() {
                   Our team of experts delivers cutting-edge solutions.
                 </p>
               </div>
-<<<<<<< HEAD
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-=======
               <div>
                 <h2 className="text-2xl font-semibold mb-6">Send us a Message</h2>"
                 <form className="space-y-4">"
@@ -95,7 +78,6 @@ export default function ContactPage() {
                     Send Message;
                   </button>
                 </form>
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
               </div>
             </div>
           </div>

@@ -17,15 +17,6 @@ export default function HomePage() {
             <p className="text-xl text-gray-600 mb-8">
               Professional homepage services by Zion Tech Group.
             </p>
-<<<<<<< HEAD
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-=======
             <div className="flex justify-center space-x-4">
               <a
                 href="/contact"
@@ -52,7 +43,6 @@ export default function HomePage() {
                 <h3 className="text-xl font-semibold mb-4">AI Solutions</h3>"
                 <p className="text-gray-300">"
                   Advanced artificial intelligence solutions for your business needs.
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
                 </p>
               </div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
@@ -72,10 +62,6 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-        </div>
-=======
           </section>
           <section className="text-center">"
             <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>"
@@ -92,7 +78,6 @@ export default function HomePage() {
             </a>
           </section>
         </main>
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
       </div>
     </>
   );

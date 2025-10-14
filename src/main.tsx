@@ -1,12 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function main() {
-=======
 
 const Main: React.FC = () => {
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
   return (
     <>
       <Helmet>
@@ -53,12 +49,8 @@ const Main: React.FC = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default Main;
 
 
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

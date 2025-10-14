@@ -4,43 +4,6 @@ const fs = require('fs')
 const path = require('path')
 const glob = require('glob')
 
-<<<<<<< HEAD
-// Common patterns to fix
-const fixes = [
-  // Fix malformed import statements
-  {
-    pattern: /import React from  from 'react';/g,
-    replacement: "import React from 'react'
-  },
-  {
-    pattern: /import React from 'react';'use client'/g,
-    replacement: "import React from 'react';\n'use client
-  },
-  {
-    pattern: /import React from 'react';'react-helmet-async';/g,
-    replacement: "import React from 'react';\nimport { Helmet } from 'react-helmet-async'
-  },
-  
-  // Fix malformed strings with extra quotes
-  {
-    pattern: /title: "([^"]*)"",/g,
-    replacement: 'title: "$1",
-  },
-  {
-    pattern: /description: "([^"]*)"",/g,
-    replacement: 'description: "$1",
-  },
-  {
-    pattern: /color: "([^"]*)"",/g,
-    replacement: 'color: "$1",
-  },
-  
-  // Fix duplicate properties
-  {
-    pattern: /color: "([^"]*)",\s*color: "([^"]*)",/g,
-    replacement: 'color: "$1",
-  },
-=======
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {}
   let fixed = content;
@@ -75,7 +38,6 @@ function fixSyntaxErrors(content) {}
   // Fix missing commas in object properties
   fixed = fixed.replace(/(\w+):\s*"([^"]*)"\s*(?=\w+:)/g, '$1: "$2",');
 
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
   
   // Fix malformed JSX closing tags
   {
@@ -89,13 +51,6 @@ function fixSyntaxErrors(content) {}
     replacement: '}
   },
   
-<<<<<<< HEAD
-// Fix malformed JSX fragments
-  {
-    pattern: /<>\s*<\/>\s*$/gm,
-    replacement: 
-  },
-=======
   // Fix missing semicolons after variable declarations
   fixed = fixed.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?!;)\n/g, (match) => {}
     if (!match.trim().endsWith(';')) {}
@@ -104,7 +59,6 @@ function fixSyntaxErrors(content) {}
     return match;
   });
 
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
   
   // Fix unterminated string literals
   {
@@ -125,57 +79,6 @@ function fixSyntaxErrors(content) {}
   }
 ]
 
-<<<<<<< HEAD
-// Get all TypeScript files
-const files = glob.sync('app/**/*.tsx', { cwd: process.cwd() })
-
-let fixedCount = 0
-let errorCount = 0
-
-console.log(`Found ${files.length} TypeScript files to check...`)
-
-files.forEach(file => {
-  try {
-    let content = fs.readFileSync(file, 'utf8')
-    let originalContent = content
-    
-    // Apply fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement)
-    })
-    
-    // Additional specific fixes
-    // Fix common malformed patterns
-    content = content.replace(/}\s*\);\s*}\s*}\s*''\s*$/gm, '}')
-    content = content.replace(/}\s*\);\s*}\s*}\s*$/gm, '}')
-    content = content.replace(/}\s*}\s*''\s*$/gm, '}')
-    content = content.replace(/}\s*}\s*$/gm, '}')
-    
-    // Fix malformed JSX
-    content = content.replace(/<\/button><\/div><\/div><\/div><\/div>\s*\);\s*}\s*}\s*''\s*$/gm, '')
-    
-    // Fix duplicate closing braces
-    content = content.replace(/}\s*}\s*}\s*$/gm, '}')
-    
-    // Fix malformed function declarations
-    content = content.replace(/const ([^=]+) = \(\) => {\s*}\s*$/gm, 'const $1 = () => {\n  return (\n    <div>Page under development</div>\n  );\n};')
-    
-    // Fix malformed export statements
-    content = content.replace(/export default function ([^{]+)\s*{\s*}\s*$/gm, 'export default function $1 {\n  return (\n    <div>Page under development</div>\n  );\n}')
-    
-    // Clean up extra whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
-    content = content.trim() + '\n
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(file, content, 'utf8')
-      console.log(`Fixed: ${file}`)
-      fixedCount++
-    }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message)
-    errorCount++
-=======
 // Function to process a single file
 function processFile(filePath) {}
   try {}
@@ -192,15 +95,9 @@ function processFile(filePath) {}
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
 
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
   }
 })
 
-<<<<<<< HEAD
-console.log(`\nFixed ${fixedCount} files`)
-console.log(`Errors: ${errorCount} files`)
-console.log('Done!')
-=======
 // Main function
 async function main() {}
   const patterns = [
@@ -229,4 +126,3 @@ if (import.meta.url === `file://${process.argv[1]}`) {}
 
 export { fixSyntaxErrors, processFile };
 
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

@@ -48,11 +48,9 @@ export default function FuturisticBackgroundEnhanced() {
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
 export default FuturisticBackgroundEnhanced;
 
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
+

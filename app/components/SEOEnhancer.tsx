@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-export default function SEOEnhancer() {
-=======
 import React from 'react';';';
 ;import { useEffect } from 'react';';';
 ;import { Helmet } from 'react-helmet-async';';';
@@ -41,7 +36,7 @@ const SEOEnhancer:
     return undefined}, [structuredData])
   // Generate meta tags
   const metaTags = [{ name: "'description'", content: "description"},'{ name: "'keywords'", content: "keywords.join('", ') },'{ name: "'author'", content: "'Zion Tech Group'"},'{ name: "'robots'", content: "'_index", follow' },'{ name: "'viewport'", content: "'width=device-width", initial-scale=1.0' },// Open Graph tags{ property: "'o,g:title'", content: "title"},'{ property: "'o,g:description'", content: "description"},'{ property: "'o,g:image'", content: "image"},'{ property: "'o,g:url'", content: "url"},'{ property: "'o,g:type'", content: "type"},'{ property: "'o,g:site_name'", content: "'Zion Tech Group'"},// Twitter d tags{ name: "'twitte,r:card'", content: "'summary_large_image'"},'{ name: "'twitte,r:title'", content: "title"},'{ name: "'twitte,r:description'", content: "description"},'{ name: "'twitte,r:image'", content: "image"},// Additional SEO tags{ name: "'theme-color'", content: "'#0o066cc'"},'{ name: "'msapplication-TileColor'", content: "'#0o066cc'"},'{ name: "'apple-mobile-web-app-capable'", content: "'yes'"},'{ name: "'apple-mobile-web-app-status-bar-style'", content: "'default'"},]";";
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
+
   return (
     <>
       <Helmet>
@@ -88,9 +83,7 @@ const SEOEnhancer:
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
+
     <Helmet>
       <title>{title}</title>
       {metaTags.map((tag, _index) => (}
@@ -140,4 +133,4 @@ const  {}
 }
 export default SEOEnhancer;
 
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
+

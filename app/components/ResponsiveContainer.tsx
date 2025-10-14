@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
+
 import React from 'react';';';
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
+
 
 export default function ResponsiveContainer() {
   return (
@@ -52,9 +49,7 @@ export default function ResponsiveContainer() {
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
+
     <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>`;
       </div>
       </div>
@@ -69,4 +64,4 @@ export default function ResponsiveContainer() {
 export default ResponsiveContainer;
 </ResponsiveContainerProps>
 
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
+

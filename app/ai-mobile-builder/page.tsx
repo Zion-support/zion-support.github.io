@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
+
 import React from 'react';';';
 import { Helmet } from 'react-helmet-async';';';
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
+
 
 export default function Page() {
   return (
@@ -53,9 +50,7 @@ export default function Page() {
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
+
 }
 
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
+

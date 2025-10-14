@@ -64,8 +64,6 @@ function fixStringLiterals(filePath) {
     content = content.replace(/^['"]+/gm, '');
 
     // Remove any remaining merge conflict markers
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
 
     if (modified) {
       fs.writeFileSync(filePath, content);

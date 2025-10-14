@@ -1,63 +1,3 @@
-<<<<<<< HEAD
-import fs from 'fs
-import { glob } from 'glob
-
-// Function to resolve merge conflicts by accepting incoming changes
-function resolveMergeConflicts(content) {
-  // Remove conflict markers and keep only the incoming changes (our fixes)
-  let resolved = content
-  
-  // Pattern to match conflict blocks and keep only the incoming changes
-  resolved = resolved.replace(conflictPattern, '$1')
-  
-  // Clean up any remaining conflict markers
-  
-  return resolved
-}
-
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8')
-    
-    // Check if file has merge conflicts
-      const resolved = resolveMergeConflicts(content)
-      fs.writeFileSync(filePath, resolved, 'utf8')
-      console.log(`Resolved conflicts in: ${filePath}`)
-      return true
-    }
-    return false
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message)
-    return false
-  }
-}
-
-// Main function
-async function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'api/**/*.js
-  ]
-  
-  let totalResolved = 0
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**'] })
-    
-    for (const file of files) {
-      if (processFile(file)) {
-        totalResolved++
-      }
-    }
-  }
-  
-  console.log(`\nTotal files with conflicts resolved: ${totalResolved}`)
-}
-
-main()
-=======
 'use client';
 import React from 'react'; import { Helmet } from 'react-helmet-async'; export default function ResolveMergeConflicts.js() {} return ( <>Helme t><//titl e>Resolve Merge Conflicts.js - Zion Tech Group</titl e><//meta nam e="description" conten t="Professional resolve merge conflicts.js services by Zion Tech Group." />"" </Helme t><//div classNam e="min-h-screen bg-white">"" {/* Hero Section */} <section classNam e="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"" <div classNam e="max-w-6xl mx-auto text-center">
       </div>
@@ -91,4 +31,3 @@ import React from 'react'; import { Helmet } from 'react-helmet-async'; export d
       </div>
       </div>"" <h2 classNam e="text-4xl font-bold text-white mb-6">"; Ready to Get Started? </h 2><//p classNam e="text-xl text-gray-300 mb-8">"; Contact us today to learn more about our services and how they can benefit your organization. </p><//button classNam e="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">"; Get Started </butto n><///di v><///sectio n><///di v><///> ); }'""'"'
 
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b

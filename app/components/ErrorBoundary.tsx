@@ -48,11 +48,9 @@ export default function ErrorBoundary() {
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
+
 };
 
 export default ErrorBoundary;
 
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
+

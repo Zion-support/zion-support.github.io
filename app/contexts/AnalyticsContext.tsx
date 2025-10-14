@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-export default function AnalyticsContext() {
-=======
 import { createContext, useContext, useState, useEffect } from 'react';';';
 interface AnalyticsContextType {}
   trackEvent: "(eventNam,e: string", properties?: Record<string, any>) => void";";
@@ -45,7 +40,7 @@ const  ({ children }) => {}
     setUser,
     isEnabled
   }
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
+
   return (
     <>
       <Helmet>
@@ -92,9 +87,7 @@ const  ({ children }) => {}
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
+
     <AnalyticsContext.Provider value="{value}">";";
       {children}
     </AnalyticsContext.Provider>
@@ -106,4 +99,4 @@ export { AnalyticsContext };
 </string>
 </AnalyticsContextType>
 
->>>>>>> 5bbf6eb309caf703a91374ea05e64114adb2cc9b
+
