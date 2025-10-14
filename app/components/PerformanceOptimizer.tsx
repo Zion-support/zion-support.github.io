@@ -7,4 +7,5 @@ interface PerformanceOptimizerProps {
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   return <>{children}</>;
 };
+
 export default PerformanceOptimizer;

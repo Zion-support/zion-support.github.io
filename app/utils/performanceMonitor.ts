@@ -4,19 +4,20 @@ export const performanceMonitor = {
     fn()
     const end = performance.now()
     const duration = end - start
-    console.log(`${name} took ${duration.toFixed(2)}ms`)
     
-    // Performance measurement logged
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(`${name} took ${duration.toFixed(2)}ms`)
+    }
     
     // Send to analytics
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'performance_measurement', {
-
+        event_category: 'performance',
+        event_label: name,
+        value: Math.round(duration)
       })
     }
-    if (process.env.NODE_ENV === 'development') {
-      console.warn(`${name} took ${duration.toFixed(2)}ms`)
-    }
+    
     return duration
   },
   
@@ -25,15 +26,19 @@ export const performanceMonitor = {
     await fn()
     const end = performance.now()
     const duration = end - start
-    console.log(`${name} took ${duration.toFixed(2)}ms`)
     
-    if (typeof window !== 'undefined') {
-      window.gtag('event', 'performance_measure', {
-
-      })
     if (process.env.NODE_ENV === 'development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)
     }
+    
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'performance_measure', {
+        event_category: 'performance',
+        event_label: name,
+        value: Math.round(duration)
+      })
+    }
+    
     return duration
   },
   
@@ -43,23 +48,13 @@ export const performanceMonitor = {
     }
   },
   
-  measureBetween: (startMark: string, endMark: string, name: string) => {
-    try {
-      performance.measure(name, startMark, endMark);
-      const measure = performance.getEntriesByName(name)[0];
-      const Duration = measure.duration;
-      // Performance measurement logged
-    } catch {
-      // Error handled silently
-  measure: (name: string, startMark: string, endMark: string) => {
+  measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
-      performance.measure(name, startMark, endMark)
-      const measure = performance.getEntriesByName(name)[0]
-      console.warn(`${name} took ${measure.duration.toFixed(2)}ms`)
-      if (process.env.NODE_ENV === 'development') {
-        console.warn(`${name} took ${measure.duration.toFixed(2)}ms`)
+      if (endMark) {
+        performance.measure(name, startMark, endMark)
+      } else {
+        performance.measure(name, startMark)
       }
     }
   }
 }
-}}}}

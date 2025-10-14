@@ -1,4 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode, Suspense } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
 interface Props {
   children: ReactNode;
 }
@@ -13,29 +14,35 @@ class ErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = { hasError: false };
   }
+
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
-  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
-    // Error logged
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
   }
+
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center text-white">
+            <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>
+            <p className="text-xl mb-8">We&apos;re sorry for the inconvenience. Please try refreshing the page.</p>
             <button 
               onClick={() => window.location.reload()}
-              className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-              Reload Page
+              Refresh Page
             </button>
           </div>
         </div>
       );
     }
+
     return this.props.children;
   }
 }
+
 export default ErrorBoundary;
