@@ -2,11 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 const SecurityEnhancerPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>SecurityEnhancer - Zion Tech Group</title>
-        <meta name="description" content="Professional SecurityEnhancer services by Zion Tech Group." />
-        <meta name="keywords" content="SecurityEnhancer, AI solutions, IT services" />
+        <title>Enhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional securityenhancer services by Zion Tech Group." />
       </Helmet>
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">

@@ -2,11 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 const MicroSaasServicesPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>MicroSaasServices - Zion Tech Group</title>
-        <meta name="description" content="Professional microSaasServices services by Zion Tech Group." />
-        <meta name="keywords" content="microSaasServices, AI solutions, IT services" />
+        <title>Micro Saas Services - Zion Tech Group</title>
+        <meta name="description" content="Professional micro saas services services by Zion Tech Group." />
       </Helmet>
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -37,8 +36,26 @@ const MicroSaasServicesPage = () => {
             </p>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>2686
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our micro saas services'
+            services can help you achieve your goals.
+          </p>2799
+          <a
+            href="$1"
+            className=""
+          >
+            Get Started Today
+          </a>2978
+        </div>
+      </section>
+    </div>)
   );
 };
 export default MicroSaasServicesPage;

@@ -2,11 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 const SEOOptimizerPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-white">
       <Helmet>
         <title>SEOOptimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional SEOOptimizer services by Zion Tech Group." />
-        <meta name="keywords" content="SEOOptimizer, AI solutions, IT services" />
+        <meta name="description" content="Professional seooptimizer services by Zion Tech Group." />
       </Helmet>
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">

@@ -1,12 +1,21 @@
 import React from "react";
 const Page = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for Page.
-      </p>
-    </div>
+    <>
+      <Helmet>
+        <title>AI Document Processor - Zion Tech Group</title>
+        <meta name="description" content="AI Document Processor - Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">AI Document Processor</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our AI document processor services.
+          </p>
+        </div>
+      </div>
+    </>
   );
 };
 export default Page;

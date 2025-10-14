@@ -15,12 +15,17 @@ interface AnalyticsContextProviderProps {
 }
 export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> = ({ children }) => {
   const value = {
-    // Add your context values here
+    trackEvent: (event: string, properties?: Record<string, unknown>) => {
+      console.log('Analytics Event:', event, properties);
+    },
+    trackPageView: (page: string) => {
+      console.log('Page View:', page);
+    }
   };
   return (
-    <AnalyticsContextContext.Provider value={value}>
+<AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContextContext.Provider>
+    </AnalyticsContext.Provider>
   );
 };
 

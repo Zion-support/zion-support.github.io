@@ -2,11 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 const PagePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
-        <meta name="keywords" content="page, AI solutions, IT services" />
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize technology through AI and innovation." />
       </Helmet>
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -38,7 +37,7 @@ const PagePage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default PagePage;

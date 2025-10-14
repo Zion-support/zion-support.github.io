@@ -1,11 +1,9 @@
 import React from "react";
 const LoadingSpinner = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">LoadingSpinner</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for LoadingSpinner.
-      </p>
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-purple-600`}></div>
+      {text && (
     </div>
   );
 };

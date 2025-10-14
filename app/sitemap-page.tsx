@@ -2,11 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 const SitemapPagePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Sitemap Page - Zion Tech Group</title>
+        <title>Sitemap page - Zion Tech Group</title>
         <meta name="description" content="Professional sitemap page services by Zion Tech Group." />
-        <meta name="keywords" content="sitemap, page, AI solutions, IT services" />
       </Helmet>
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -38,7 +37,6 @@ const SitemapPagePage = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 export default SitemapPagePage;

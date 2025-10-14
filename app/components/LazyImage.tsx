@@ -37,7 +37,25 @@ const LazyImagePage = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>2624
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our lazy image'
+            services can help you achieve your goals.
+          </p>2737
+          <a
+            href="$1"
+            className=""
+          >
+            Get Started Today
+          </a>2907
+        </div>
+      </section>
     </div>
   );
 };

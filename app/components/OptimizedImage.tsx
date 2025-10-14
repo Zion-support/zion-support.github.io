@@ -38,7 +38,7 @@ const OptimizedImagePage = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </>
+);
 };
 export default OptimizedImagePage;

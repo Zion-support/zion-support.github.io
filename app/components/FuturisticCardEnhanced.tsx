@@ -2,11 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 const FuturisticCardEnhancedPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>FuturisticCardEnhanced - Zion Tech Group</title>
-        <meta name="description" content="Professional FuturisticCardEnhanced services by Zion Tech Group." />
-        <meta name="keywords" content="FuturisticCardEnhanced, AI solutions, IT services" />
+        <title>Futuristic d Enhanced - Zion Tech Group</title>
+        <meta name="description" content="Professional futuristic card enhanced services by Zion Tech Group." />
       </Helmet>
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -37,8 +36,26 @@ const FuturisticCardEnhancedPage = () => {
             </p>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>2715
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our futuristic card enhanced'
+            services can help you achieve your goals.
+          </p>2828
+          <a
+            href="$1"
+            className=""
+          >
+            Get Started Today
+          </a>3012
+        </div>
+      </section>
+    </div>)
   );
 };
 export default FuturisticCardEnhancedPage;

@@ -38,7 +38,7 @@ const AiAutomationPlatformPage = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </>
+);
 };
 export default AiAutomationPlatformPage;

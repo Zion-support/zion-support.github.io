@@ -4,9 +4,25 @@ const AboutPagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AboutPage - Zion Tech Group</title>
-        <meta name="description" content="Professional AboutPage services by Zion Tech Group." />
-        <meta name="keywords" content="AboutPage, AI solutions, IT services" />
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission and team" />
+      </Helmet>
+
+    }
+  ];
+
+  const stats = [
+    { number: '50+', label: 'Projects Completed' },
+    { number: '25+', label: 'Happy Clients' },
+    { number: '99%', label: 'Success Rate' },
+    { number: '4+', label: 'Years Experience' }
+  ]
+
+  return (
+    <>
+      <Helmet></Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." />"
       </Helmet>
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -38,7 +54,7 @@ const AboutPagePage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default AboutPagePage;

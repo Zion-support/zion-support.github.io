@@ -6,7 +6,6 @@ const NavigationPage = () => {
       <Helmet>
         <title>Navigation - Zion Tech Group</title>
         <meta name="description" content="Professional navigation services by Zion Tech Group." />
-        <meta name="keywords" content="navigation, AI solutions, IT services" />
       </Helmet>
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
