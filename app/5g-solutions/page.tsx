@@ -3,6 +3,64 @@ import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Globe, Smartphone } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Wifi,
+      title: 'Ultra-Fast Connectivity',
+      description: 'Lightning-fast 5G speeds for seamless operations'
+    },
+    {
+      icon: Zap,
+      title: 'Low Latency',
+      description: 'Minimal delay for real-time applications'
+    },
+    {
+      icon: Globe,
+      title: 'Global Coverage',
+      description: 'Worldwide 5G network implementation'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile Integration',
+      description: 'Seamless mobile device connectivity'
+    }
+  ];
+
+  const solutions = [
+    {
+      title: 'Enterprise 5G',
+      description: 'Complete 5G infrastructure for large enterprises',
+      price: 'Starting at $50,000',
+      features: [
+        'Custom 5G network design',
+        'Hardware installation',
+        '24/7 monitoring',
+        'Dedicated support team'
+      ]
+    },
+    {
+      title: 'SMB 5G Solutions',
+      description: 'Scalable 5G solutions for small to medium businesses',
+      price: 'Starting at $15,000',
+      features: [
+        'Pre-configured 5G setup',
+        'Basic monitoring',
+        'Standard support',
+        'Scalable architecture'
+      ]
+    },
+    {
+      title: '5G Consulting',
+      description: 'Expert guidance for 5G implementation strategy',
+      price: 'Starting at $5,000',
+      features: [
+        'Strategic planning',
+        'Technology assessment',
+        'Implementation roadmap',
+        'Ongoing consultation'
+      ]
+    }
+  ];
 
   return (
     <React.Fragment>
