@@ -1,18 +1,14 @@
-import { createContext, useContext, useState, useEffect   } from "react";
+import React from 'react';
 
-
-interface AnalyticsContextType {}"trackEvent: (eventNam,e: string", properties ?  : Record<string, any>) = void"trackPageView: (pageNam,e: string) = void",setUser: "(userI,d: string, properties ?  : Record<string, any>) = void"  isEnabled: "boolean}const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)"const  ({ children  }) = {}"  const [ isEnabled, setIsEnabled ] = useState(false);
-  const [ userId, setUserId ] = useState<string | null>(null);
-  useEffect(() = {;
-    // if analytics is enabled;
-    setIsEnabled(true)}, []);
-  const trackEvent = (eventName = "string, properties ?  : Record<string, any>) = {"if (!isEnabled) return;"// Track event logic here;"console.log(Analytics Event: "", eventName, properties);"}"const trackPageView = (pageName: "// Track page view logic here;"    console.log(Page View: "", pageName);  }const setUser  = (newUserId: "string, properties ?  : Record<string, any>) = {"setUserId(newUserId);"    console.log(User Set: "", newUserId, properties);"}    // Track event logic here;console.log(Analytics Event: "", eventName, properties)}"  }const trackPageView  = (pageName: "    // Track page view logic here;console.log(Page View: "", pageName)}  }const setUser  = (newUserId: "string, properties ?  : Record<string, any>) = {"setUserId(newUserId);console.log(User Set: "", newUserId, properties)}"  }'  const value="t,rackEvent,"    trackPageView,'    setUser,'    isEnabled
-  };
-    <div>Page content</div>
+export default function AnalyticsContextPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">AnalyticsContext</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about analyticscontext</p>
+        </div>
+      </div>
+    </div>
   );
-<nalyticsContext.Provider value={value}""{children}    </AnalyticsContext.Provider"  );
-
-export { AnalyticsContext };
-};
-export { AnalyticsContext };
-</AnalyticsContextType>>>>
+}

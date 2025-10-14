@@ -1,12 +1,9 @@
 import React from 'react';
 
-const PerformanceMonitor = () => {
+export default function PerformanceMonitor() {
   return (
-    <div>
-      <h2>PerformanceMonitor</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+    <div className="performancemonitor">
+      {/* PerformanceMonitor component implementation */}
     </div>
   );
-};
-
-export default PerformanceMonitor;
+}

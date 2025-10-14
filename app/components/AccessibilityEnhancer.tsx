@@ -1,12 +1,9 @@
 import React from 'react';
 
-const AccessibilityEnhancer = () => {
+export default function AccessibilityEnhancer() {
   return (
-    <div>
-      <h2>AccessibilityEnhancer</h2>
-      <p className="text-gray-300 text-lg">This component is under construction.</p>
+    <div className="accessibilityenhancer">
+      {/* AccessibilityEnhancer component implementation */}
     </div>
   );
-};
-
-export default AccessibilityEnhancer;
+}

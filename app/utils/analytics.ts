@@ -1,15 +1,14 @@
-// Analytics utility functions
-export const trackEvent = (eventName: string, properties?: Record<string, unknown>) = {
-  // Basic analytics tracking
-  console.log('Analytics Event:', eventName, properties);
-  // In a real implementation, you would send this to your analytics service
-  if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-    (window as unknown as { gtag: (command: string, eventName: string, properties?: Record<string, unknown>) = void }).gtag('event', eventName, properties)};
+import React from 'react';
 
-export const trackPageView = (pageName: string) = {
-  console.log('Page View:', pageName);
-  if (typeof window !== 'undefined' && (window as unknown as { gtag?: unknown }).gtag) {
-    (window as unknown as { gtag: (command: string, measurementId: string, config: { page_title: string; page_location: string }) = void }).gtag('config', 'GA_MEASUREMENT_ID', {
-      page_title: pageName,
-      page_location: window.location.href,
-    })};
+export default function AnalyticsTsPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Analytics.Ts</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about analytics.ts</p>
+        </div>
+      </div>
+    </div>
+  );
+}

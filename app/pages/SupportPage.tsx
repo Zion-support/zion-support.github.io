@@ -1,16 +1,14 @@
-"use client;";
-import React from "react";
+import React from 'react';
 
-
- import { Helmet   } from "react-helmet-async";
-
-
- const SupportPage: React.FC = () = {} return (
-    
-      React.Fragment>Helme t<//titl e>SupportPage - Zion Tech Group<//meta nam e=description"conten t="SupportPage - Zion Tech Group /"<//div classNam e=min-h-screen bg-slate-900 text-white flex items-center justify-center" <div>>>>>SupportPage</h 1" <p classNam e=text-gray-300"This page is under construction.</di v<///di v") </React.Fragment
+export default function SupportPagePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">SupportPage</h1>
+          <p className="text-gray-300 text-xl mb-8">Learn more about supportpage</p>
+        </div>
+      </div>
+    </div>
   );
-    </
-  ) ); }"export default SupportPag;e";</h1>>>>>'
-
-
-
+}
