@@ -13,8 +13,12 @@ import {
   ChevronDownIcon
 } from '@heroicons/react/24/outline';
 
-const Sidebar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<{ [key: string]: boolean }>({});
 
   const toggleSection = (section: string) => {
@@ -71,7 +75,7 @@ const Sidebar: React.FC = () => {
     <>
       {/* Mobile menu button */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={onClose}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-slate-800 text-white hover:bg-slate-700 transition-colors"
       >
         {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
@@ -88,7 +92,7 @@ const Sidebar: React.FC = () => {
               Zion Tech Group
             </Link>
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={onClose}
               className="lg:hidden text-gray-400 hover:text-white"
             >
               <XMarkIcon className="h-6 w-6" />
@@ -104,7 +108,7 @@ const Sidebar: React.FC = () => {
                   key={link.name}
                   to={link.href}
                   className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 rounded-md hover:bg-slate-800 hover:text-white transition-colors"
-                  onClick={() => setIsOpen(false)}
+                  onClick={onClose}
                 >
                   <link.icon className="mr-3 h-5 w-5" />
                   {link.name}
@@ -135,7 +139,7 @@ const Sidebar: React.FC = () => {
                       key={service.name}
                       to={service.href}
                       className="block px-3 py-2 text-sm text-gray-400 rounded-md hover:bg-slate-800 hover:text-white transition-colors"
-                      onClick={() => setIsOpen(false)}
+                      onClick={onClose}
                     >
                       {service.name}
                     </Link>
@@ -167,7 +171,7 @@ const Sidebar: React.FC = () => {
                       key={service.name}
                       to={service.href}
                       className="block px-3 py-2 text-sm text-gray-400 rounded-md hover:bg-slate-800 hover:text-white transition-colors"
-                      onClick={() => setIsOpen(false)}
+                      onClick={onClose}
                     >
                       {service.name}
                     </Link>
@@ -199,7 +203,7 @@ const Sidebar: React.FC = () => {
                       key={solution.name}
                       to={solution.href}
                       className="block px-3 py-2 text-sm text-gray-400 rounded-md hover:bg-slate-800 hover:text-white transition-colors"
-                      onClick={() => setIsOpen(false)}
+                      onClick={onClose}
                     >
                       {solution.name}
                     </Link>
@@ -217,7 +221,7 @@ const Sidebar: React.FC = () => {
                   key={link.name}
                   to={link.href}
                   className="block px-3 py-2 text-sm text-gray-400 rounded-md hover:bg-slate-800 hover:text-white transition-colors"
-                  onClick={() => setIsOpen(false)}
+                  onClick={onClose}
                 >
                   {link.name}
                 </Link>
@@ -231,7 +235,7 @@ const Sidebar: React.FC = () => {
       {isOpen && (
         <div 
           className="fixed inset-0 z-30 bg-black bg-opacity-50 lg:hidden"
-          onClick={() => setIsOpen(false)}
+          onClick={onClose}
         />
       )}
     </>

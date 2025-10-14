@@ -3,19 +3,19 @@ import { Helmet } from 'react-helmet-async';
 const PagePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet></Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
-        <meta name="keywords" content="page, AI solutions, IT services" />
+      <Helmet>
+        <title>Business Intelligence - Zion Tech Group</title>
+        <meta name="description" content="Advanced business intelligence solutions by Zion Tech Group." />
+        <meta name="keywords" content="business intelligence, data analytics, AI solutions, IT services" />
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Page
+            Business Intelligence
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional page services designed to help your business grow and succeed.
+            Advanced business intelligence solutions designed to help your business make data-driven decisions.
           </p>
         </div>
         
