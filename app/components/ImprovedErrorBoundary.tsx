@@ -1,5 +1,5 @@
             Improved Error Boundary
-          </h1>"
+          </h1>""
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional improved error boundary services
             designed to help your business grow and succeed.
@@ -7,30 +7,33 @@
         </div>
       </section>
       { /* Content Section */ }
-            Improved Error Boundary</h1>
+            Improved Error Boundary</h1>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional improved error boundary services
-import React, { Component, ErrorInfo, ReactNode } from "react;
+            Professional improved error boundary services"
+import React, { Component, ErrorInfo, ReactNode } from "react;"
 import { AlertTriangle, RefreshCw, Home     } from "lucide-react;
 
 interface Props {
   children: ReactNode
   fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  onError?: (erro,
+    r: Error, errorInfo: ErrorInfo) => void
 }
 
 interface State {
   hasError: boolean
   error?: Error
   errorInfo?: ErrorInfo
-  errorId: string
+  errorI,
+    d: string
 }
 
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
     this.state = {
-      hasError: false,
+      hasErro,
+    r: false,
       error: undefined,
       errorInfo: undefined,
       errorId: 
@@ -39,7 +42,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
-      hasError: true,
+      hasErro,
+    r: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
     }
@@ -56,5 +60,5 @@ class ImprovedErrorBoundary extends Component<Props, State> {
 
   )
 export default ImprovedErrorBoundary
-}
-export default ImprovedErrorBoundaryPage
+</p></p></Props></State></p></p></Props></State>}
+export default ImprovedErrorBoundaryPage"

@@ -17,7 +17,7 @@ export default FuturisticCard
   return (
   <>{children}````
     </div>
-    </>
+    </FuturisticCardProps></FuturisticCardProps></>
 )
   )
 export default FuturisticCard

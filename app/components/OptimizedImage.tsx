@@ -3,7 +3,8 @@ import { Helmet } from 'react-helmet-async';
 
 interface OptimizedImageProps {
   src: string;
-  alt: string;
+  al,
+    t: string;
   width?: number;
   height?: number;
   className?: string;
@@ -48,8 +49,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, [priority]);
 
   // Generate WebP src if supported
-  const getOptimizedSrc = (originalSrc: string) => {
-    if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
+  const getOptimizedSrc = (originalSrc: "string) => {
+    if (originalSrc.startsWith('dat",
+    a:') || originalSrc.startsWith('blo,
+    b:')) {
       return originalSrc;
     }
     // For local images, you could implement WebP conversion here
@@ -76,15 +79,15 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       )}
       <div ref={imgRef} className={`relative ${className}`}>
         {/* Placeholder */}
-        {!isLoaded && !isError && (
-          <div className="flex items-center justify-center bg-gray-100 rounded-lg" style={{ width, height }}>
+        {!isLoaded && !isError && ("
+          <div className="flex items-center justify-center bg-gray-100 rounded-lg" style={{ width, height }}>"
             <div className="text-gray-400 text-sm">Loading...</div>
           </div>
         )}
 
         {/* Error state */}
-        {isError && (
-          <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg text-gray-500" style={{ width, height }}>
+        {isError && ("
+          <div className="flex flex-col items-center justify-center bg-gray-100 rounded-lg text-gray-500" style={{ width, height }}>"
             <div className="text-2xl mb-2">📷</div>
             <div>Image not available</div>
           </div>
@@ -107,6 +110,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       </div>
     </>
   );
-};
+</li></OptimizedImageProps></HTMLImageElement></Helmet></link></div></div></div></div></div></div></img></OptimizedImageProps></HTMLImageElement></Helmet></link></div></div></div></div></div></div></img>};
 
 export default OptimizedImage;
+"

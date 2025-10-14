@@ -6,6 +6,6 @@
 export default BlogPag;e
     </React.Fragment>
   )
-}
-export default BlogPage
-"
+</title></meta></title></meta>}
+export default BlogPage"
+""

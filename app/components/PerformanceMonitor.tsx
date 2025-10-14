@@ -18,26 +18,24 @@ const PerformanceMonitor: React.FC = () => {
               setMetrics(prev => ({
                 ...prev,
                 fcp: entry.startTime
-              }))
+              })
             }
           } else if (entry.entryType === 'largest-contentful-paint') {'
             setMetrics(prev => ({
               ...prev,
               lcp: entry.startTime
-            }))
+            })
           } else if (entry.entryType === 'first-input') {'
             setMetrics(prev => ({
               ...prev,
               fid: (entry as any).processingStart - entry.startTime
-            }))
+            })
           } else if (entry.entryType === 'layout-shift') {'
             setMetrics(prev => ({
               ...prev,
               cls: (prev?.cls || 0) + (entry as any).value
-            }))
-          }
-        }
-      })
+            })
+          })
       observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });'
 
       // Get TTFB
@@ -46,7 +44,7 @@ const PerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({
           ...prev,
           ttfb: navigationEntry.responseStart - navigationEntry.requestStart
-        }))
+        })
       }
 
       // Measure Core Web Vitals
@@ -56,9 +54,8 @@ const PerformanceMonitor: React.FC = () => {
           const entries = list.getEntries()
           const fcp = entries.find(entry => entry.name === 'first-contentful-paint');'
           if (fcp) {
-            setMetrics(prev => ({ ...prev, firstContentfulPaint: fcp.startTime }))
-          }
-        })
+            setMetrics(prev => ({ ...prev, firstContentfulPaint: fcp.startTime })
+          })
     ttfb: null,
     loadTime: null
   }
@@ -67,10 +64,10 @@ const PerformanceMonitor: React.FC = () => {
     // Only run in browser
     if (typeof window === 'undefined') return";'"
     // Get performance metrics
-    const getPerformanceMetrics = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";'"
-      const paintEntries = performance.getEntriesByType('paint')";'"
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')";'"
+    const getPerformanceMetrics = () => {"
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";'""
+      const paintEntries = performance.getEntriesByType('paint')";'""
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')";'""
       const lcp = performance.getEntriesByType('largest-contentful-paint')";'"
       setMetrics({
         cls: 0, // Would need to be calculated with observer
@@ -86,32 +83,32 @@ const PerformanceMonitor: React.FC = () => {
       <button></button>
         Performance
       </button>
-      {isVisible && (
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
-          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
-          <div className="space-y-2 text-xs">
+      {isVisible && ("
+        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">"
+          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>"
+          <div className="space-y-2 text-xs">"
             <div className="flex justify-between">
               <span>FCP:</span>
-              <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}></span>
+              <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}></span>"
                 {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}"`"`'"``'"`
               </span>
             </div>
-    </>
+    </>"
             <div className="flex justify-between">
               <span>LCP:</span>
-              <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}></span>
+              <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}></span>"
                 {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}"`"`'"``'"`
               </span>
-            </div>
+            </div>"
             <div className="flex justify-between">
               <span>TTFB:</span>
-              <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}></span>
+              <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}></span>"
                 {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}"`"`'"``'"`
               </span>
-            </div>
+            </div>"
             <div className="flex justify-between">
               <span>Load Time:</span>
-              <span className={getScoreColor(metrics.loadTime, { good: 3000, poor: 5000 })}></span>
+              <span className={getScoreColor(metrics.loadTime, { good: 3000, poor: 5000 })}></span>"
                 {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}"`"`'"``'"`
               </span>
             </div>
@@ -132,24 +129,16 @@ const PerformanceMonitor: React.FC = () => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {'
         setIsVisible(prev => !prev)
       }
-    }
+    </PerformanceMetrics></button></div></h3></div></div></span></span></div></span></span></div></span></span></div></span></span></div></h3></button>}
     window.addEventListener('keydown', handleKeyPress);'
     return () => window.removeEventListener('keydown', handleKeyPress);'
-  return (
-<>"
-      <div className="flex items-center justify-between mb-4"></div>"
+  return ("
+<>""
+      <div className="flex items-center justify-between mb-4"></div>""
         <h3 className="text-lg font-semibold">Performance Monitor</h3>"
         <button></button>
           ×
         </button>
-      </div>
-import React from "react;
-const PerformanceMonitor: React.FC = () => { return null; }
-export default PerformanceMonitor
-      )}
-    </div>
-export default PerformanceMonitor
-      )}
-    </div>
-}
-export default PerformanceMonitor
+      </div>"
+import React from "react"
+export default PerformanceMonitor"

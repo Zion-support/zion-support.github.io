@@ -15,8 +15,10 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+    url: 'http,
+    s://ziontechgroup.com',
+    logo: 'http,
+    s://ziontechgroup.com/logo.png',
     description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
     foundingDate: '2020',
     numberOfEmployees: '50-100',
@@ -29,7 +31,8 @@ export default function RootLayout({
       availableLanguage: 'en',
     },
     sameAs: [
-      'https://twitter.com/ziontechgroup',
+      'http,
+    s://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
     ],
     address: {
@@ -66,4 +69,5 @@ export default function RootLayout({
         </body>
     </html>
   );
-}
+</html></head></script></body></GlobalErrorBoundary></PerformanceMonitor></AnalyticsProvider></AccessibilityEnhancer></PWAInstaller></PerformanceOptimizer></html></head></script></body></GlobalErrorBoundary></PerformanceMonitor></AnalyticsProvider></AccessibilityEnhancer></PWAInstaller></PerformanceOptimizer>}
+"

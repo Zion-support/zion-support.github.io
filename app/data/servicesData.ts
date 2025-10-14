@@ -1,4 +1,4 @@
-  title: string;
+  title: "string;
   description: string;
   shortDescription: string;
   category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | "IoT"'"'"
@@ -6,20 +6,25 @@
   features: string[];
   pricing: {
     basic: number;
-    pro: number;
-    enterprise: number}
-  benefits: string[];
+    pr",
+    o: number;
+    enterpris,
+    e: number}
+  benefits: "string[];
   useCases: string[];
   technologies: string[];
   contactInfo: {phone: string;
-    email: string;
-    website: string}
+    emai",
+    l: string;
+    websit,
+    e: string}
   href: string;
 }
 
 export const services: Service[] = [
   {
-    id: 'ai-solutions','''
+    i,
+    d: 'ai-solutions','''
     title: 'AI Solutions','''
     description: 'Comprehensive artificial intelligence solutions including machine learning, natural language processing, computer vision, and predictive analytics to transform your business operations.','''
     shortDescription: 'Advanced AI solutions for business transformation','''
@@ -34,7 +39,8 @@ export const services: Service[] = [
       'Automated Decision Making''''
     ],
     pricing: {
-      basic: 5000,
+      basi,
+    c: 5000,
       pro: 15000,
       enterprise: 50000;
     },
@@ -63,7 +69,8 @@ export const services: Service[] = [
       'Security Monitoring',''
     ],
     pricing: {
-      basic: 3000,
+      basi,
+    c: 3000,
       pro: 10000,
       enterprise: 30000;
     },
@@ -92,7 +99,8 @@ export const services: Service[] = [
       'Cloud Migration',''
     ],
     pricing: {
-      basic: 2000,
+      basi,
+    c: 2000,
       pro: 8000,
       enterprise: 25000;
     },
@@ -122,9 +130,11 @@ export const services: Service[] = [
       'Ansible''''
     ],
     contactInfo: {
-      phone: '+1-302-464-0950','''
+      phon,
+    e: '+1-302-464-0950','''
       email: 'cloud@ziontechgroup.com','''
-      website: 'https://ziontechgroup.com/cloud-infrastructure''''
+      website: 'http,
+    s://ziontechgroup.com/cloud-infrastructure''''
     },
     href: '/cloud-infrastructure''''
   },
@@ -144,7 +154,8 @@ export const services: Service[] = [
       'Technology Adoption''''
     ],
     pricing: {
-      basic: 10000,
+      basi,
+    c: 10000,
       pro: 30000,
       enterprise: 100000;
     },
@@ -174,9 +185,11 @@ export const services: Service[] = [
       'IoT Integration''''
     ],
     contactInfo: {
-      phone: '+1-302-464-0950','''
+      phon,
+    e: '+1-302-464-0950','''
       email: 'transformation@ziontechgroup.com','''
-      website: 'https://ziontechgroup.com/digital-transformation''''
+      website: 'http,
+    s://ziontechgroup.com/digital-transformation''''
     },
     href: '/digital-transformation''''
   },
@@ -196,7 +209,8 @@ export const services: Service[] = [
       'Network Slicing''''
     ],
     pricing: {
-      basic: 15000,
+      basi,
+    c: 15000,
       pro: 50000,
       enterprise: 150000;
     },
@@ -226,9 +240,11 @@ export const services: Service[] = [
       'AI/ML''''
     ],
     contactInfo: {
-      phone: '+1-302-464-0950','''
+      phon,
+    e: '+1-302-464-0950','''
       email: '5g@ziontechgroup.com','''
-      website: 'https://ziontechgroup.com/5g-solutions''''
+      website: 'http,
+    s://ziontechgroup.com/5g-solutions''''
     },
     href: '/5g-solutions''''
   },
@@ -248,7 +264,8 @@ export const services: Service[] = [
       'Analytics Dashboard''''
     ],
     pricing: {
-      basic: 8000,
+      basi,
+    c: 8000,
       pro: 25000,
       enterprise: 75000;
     },
@@ -278,9 +295,11 @@ export const services: Service[] = [
       'Stripe API''''
     ],
     contactInfo: {
-      phone: '+1-302-464-0950','''
+      phon,
+    e: '+1-302-464-0950','''
       email: 'saas@ziontechgroup.com','''
-      website: 'https://ziontechgroup.com/micro-saas-solutions''''
+      website: 'http,
+    s://ziontechgroup.com/micro-saas-solutions''''
     },
     href: '/micro-saas-solutions''''
   }
@@ -290,3 +309,4 @@ export default function servicesData() {;
   return null;
 }
 ;
+"

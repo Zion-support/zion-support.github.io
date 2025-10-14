@@ -30,8 +30,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         // Add fetchpriority for above-the-fold images
         if (img.getBoundingClientRect().top < window.innerHeight) {
           img.setAttribute('fetchpriority', 'high');'
-        }
-      })
+        })
     }
       link.rel = 'preload
       link.href = '/fonts/inter.woff2
@@ -45,8 +44,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           link.rel = 'prefetch';'
           link.href = href
           document.head.appendChild(link)
-        }
-      })
+        })
     }
     // Run optimizations
     optimizeImages()
@@ -73,5 +71,5 @@ export default PerformanceOptimizer
       // Cleanup if needed;}
   }, [])
   return <>{children}</>
-}
-export default PerformanceOptimizer
+</PerformanceOptimizerProps></PerformanceOptimizerProps></PerformanceOptimizerProps></PerformanceOptimizerProps>}
+export default PerformanceOptimizer"

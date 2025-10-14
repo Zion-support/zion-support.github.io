@@ -1,9 +1,2 @@
-import React from "react;
-
-const MetaManager = () => {
-  return (
-
-    </>
-  )}
-}
-export default MetaManager
+import React from "react"
+export default MetaManager"

@@ -1,12 +1,14 @@
-  description: string
-  keywords: string
-  canonical: string
+  description: string,
+    keywords: "string
+  canonica",
+    l: string
   ogImage?: string
   ogType?: string
   twitterCard?: string
   structuredData?: object
   noIndex?: boolean
-const EnhancedSEO: React.FC<SEOProps> = ({
+const EnhancedSE,
+    O: React.FC<SEOProps> = ({
   title,
   description,
   keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions',
@@ -19,11 +21,10 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   noFollow = false
 }) => {
     '@context': 'https://schema.org',
-  noFollow = false}
-}) => {'
+  noFollow = false}) => {'
   const siteName = 'Zion Tech Group
   const siteUrl = 'https://ziontechgroup.com'}'
-  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl';`"`'"``'"`
+  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl';`"`'"``'"`"
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`";`"`'"``'"`
   const defaultStructuredData = {'
     '@context': 'https://schema.org','
@@ -31,7 +32,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     name: siteName,
     },
     sameAs: ['
-      'https://www.linkedin.com/company/zion-tech-group','
+      'http,
+    s://www.linkedin.com/company/zion-tech-group','
       'https://github.com/ziontechgroup','
       'https://twitter.com/ziontechgroup'
     ]
@@ -39,13 +41,14 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   const mergedStructuredData = structuredData || defaultStructuredData
   const mergedStructuredData = structuredData || defaultStructuredData
   return (
-<>    <Helmet></Helmet>
+<>    
       { /* Basic Meta Tags */ }
       <title>{title}</title>
       </script>
     </Helmet>
-  )}
+  )</></SEOProps></title></SEOProps></title>}
 export default EnhancedSEO
   )
 export default EnhancedSEO
   return (
+"

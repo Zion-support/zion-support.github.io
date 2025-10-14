@@ -1,9 +1,2 @@
-import React from "react;
-
-const AdvancedSEOOptimizer = () => {
-  return (
-
-    </>
-  )}
-}
-export default AdvancedSEOOptimizer
+import React from "react"
+export default AdvancedSEOOptimizer"

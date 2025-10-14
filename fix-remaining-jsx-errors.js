@@ -3,26 +3,18 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix unterminated string literals and other syntax issues
-function fixStringLiterals(content, filePath) {
+// Function to fix remaining JSX syntax errors
+function fixRemainingJsxErrors(content, filePath) {
   let fixed = content;
   let changes = 0;
 
-  // Fix unterminated string literals in import statements
-  fixed = fixed.replace(/import\s+React\s+from\s+"([^"]*)$/gm, 'import React from "react"');
-  changes += (content.match(/import\s+React\s+from\s+"([^"]*)$/gm) || []).length;
-
-  // Fix unterminated string literals in Helmet imports
-  fixed = fixed.replace(/import\s+\{\s*Helmet\s*\}\s+from\s+"([^"]*)$/gm, 'import { Helmet } from "react-helmet-async"');
-  changes += (content.match(/import\s+\{\s*Helmet\s*\}\s+from\s+"([^"]*)$/gm) || []).length;
-
-  // Fix malformed JSX fragments that are missing closing tags
+  // Fix incomplete JSX fragments - add missing closing tags
   const fragmentOpenCount = (fixed.match(/<>/g) || []).length;
   const fragmentCloseCount = (fixed.match(/<\/>/g) || []).length;
   
   if (fragmentOpenCount > fragmentCloseCount) {
     const missingFragments = fragmentOpenCount - fragmentCloseCount;
-    // Add missing closing fragments at the end before the last closing brace
+    // Find the last closing brace and add missing fragments before it
     const lastBraceIndex = fixed.lastIndexOf('}');
     if (lastBraceIndex !== -1) {
       const beforeLastBrace = fixed.substring(0, lastBraceIndex);
@@ -32,63 +24,17 @@ function fixStringLiterals(content, filePath) {
     }
   }
 
-  // Fix incomplete JSX structures that are missing proper closing
-  // Look for patterns like: <Helmet>\n\n        </div>\n      </div>\n    </>\n  );\n}
-  fixed = fixed.replace(/<Helmet>\s*\n\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/>\s*\n\s*\);\s*\n\s*\}/g, '');
-  changes += (content.match(/<Helmet>\s*\n\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/>\s*\n\s*\);\s*\n\s*\}/g) || []).length;
-
-  // Fix malformed JSX with missing closing tags
-  fixed = fixed.replace(/<Helmet>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/>/g, '');
-  changes += (content.match(/<Helmet>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/>/g) || []).length;
-
-  // Fix incomplete function definitions
-  fixed = fixed.replace(/export default function Page\(\) \{\s*return\s*\(\s*<>\s*<Helmet>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/>\s*\);\s*\}/g, 
-    `export default function Page() {
-  return (
-    <>
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Page description" />
-      </Helmet>
-      <div className="min-h-screen bg-white">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Page</h1>
-          <p className="text-xl text-gray-600">
-            This page is under development. Please check back soon for more information.
-          </p>
-        </div>
-      </div>
-    </>
-  );
-}`);
-  changes += (content.match(/export default function Page\(\) \{\s*return\s*\(\s*<>\s*<Helmet>\s*\n\s*<\/div>\s*\n\s*<\/div>\s*\n\s*<\/>\s*\);\s*\}/g) || []).length;
-
   // Fix malformed JSX expressions with unexpected tokens
-  fixed = fixed.replace(/\}\s*\)\s*\)/g, '})');
-  changes += (content.match(/\}\s*\)\s*\)/g) || []).length;
+  fixed = fixed.replace(/\}\s*\}\s*\)/g, '})');
+  changes += (content.match(/\}\s*\}\s*\)/g) || []).length;
 
-  // Fix missing closing parentheses
-  fixed = fixed.replace(/\}\s*\)\s*\)/g, '})');
-  changes += (content.match(/\}\s*\)\s*\)/g) || []).length;
-
-  // Fix unterminated string literals in JSX attributes
-  fixed = fixed.replace(/className="([^"]*)$/gm, 'className="min-h-screen bg-white"');
-  changes += (content.match(/className="([^"]*)$/gm) || []).length;
-
-  // Fix malformed object literals with missing quotes
-  fixed = fixed.replace(/(\w+):\s*([^,}]+)\s*(\w+):/g, '$1: "$2",\n    $3:');
-  changes += (content.match(/(\w+):\s*([^,}]+)\s*(\w+):/g) || []).length;
-
-  // Fix missing commas in object literals
-  fixed = fixed.replace(/(\w+):\s*(\w+)\s*(\w+):/g, '$1: $2,\n    $3:');
-  changes += (content.match(/(\w+):\s*(\w+)\s*(\w+):/g) || []).length;
-
-  // Fix malformed JSX with missing closing tags
+  // Fix missing closing tags for div elements
   const divOpenCount = (fixed.match(/<div[^>]*>/g) || []).length;
   const divCloseCount = (fixed.match(/<\/div>/g) || []).length;
   
   if (divOpenCount > divCloseCount) {
     const missingDivs = divOpenCount - divCloseCount;
+    // Add missing closing divs before the last closing fragment or brace
     const lastFragmentIndex = fixed.lastIndexOf('</>');
     const lastBraceIndex = fixed.lastIndexOf('}');
     const insertIndex = Math.max(lastFragmentIndex, lastBraceIndex);
@@ -119,13 +65,105 @@ function fixStringLiterals(content, filePath) {
     }
   }
 
-  // Fix malformed JSX expressions
+  // Fix missing closing tags for li elements
+  const liOpenCount = (fixed.match(/<li[^>]*>/g) || []).length;
+  const liCloseCount = (fixed.match(/<\/li>/g) || []).length;
+  
+  if (liOpenCount > liCloseCount) {
+    const missingLis = liOpenCount - liCloseCount;
+    const lastFragmentIndex = fixed.lastIndexOf('</>');
+    const lastBraceIndex = fixed.lastIndexOf('}');
+    const insertIndex = Math.max(lastFragmentIndex, lastBraceIndex);
+    
+    if (insertIndex !== -1) {
+      const beforeInsert = fixed.substring(0, insertIndex);
+      const afterInsert = fixed.substring(insertIndex);
+      fixed = beforeInsert + '</li>'.repeat(missingLis) + afterInsert;
+      changes += missingLis;
+    }
+  }
+
+  // Fix missing closing tags for button elements
+  const buttonOpenCount = (fixed.match(/<button[^>]*>/g) || []).length;
+  const buttonCloseCount = (fixed.match(/<\/button>/g) || []).length;
+  
+  if (buttonOpenCount > buttonCloseCount) {
+    const missingButtons = buttonOpenCount - buttonCloseCount;
+    const lastFragmentIndex = fixed.lastIndexOf('</>');
+    const lastBraceIndex = fixed.lastIndexOf('}');
+    const insertIndex = Math.max(lastFragmentIndex, lastBraceIndex);
+    
+    if (insertIndex !== -1) {
+      const beforeInsert = fixed.substring(0, insertIndex);
+      const afterInsert = fixed.substring(insertIndex);
+      fixed = beforeInsert + '</button>'.repeat(missingButtons) + afterInsert;
+      changes += missingButtons;
+    }
+  }
+
+  // Fix missing closing tags for Link elements
+  const linkOpenCount = (fixed.match(/<Link[^>]*>/g) || []).length;
+  const linkCloseCount = (fixed.match(/<\/Link>/g) || []).length;
+  
+  if (linkOpenCount > linkCloseCount) {
+    const missingLinks = linkOpenCount - linkCloseCount;
+    const lastFragmentIndex = fixed.lastIndexOf('</>');
+    const lastBraceIndex = fixed.lastIndexOf('}');
+    const insertIndex = Math.max(lastFragmentIndex, lastBraceIndex);
+    
+    if (insertIndex !== -1) {
+      const beforeInsert = fixed.substring(0, insertIndex);
+      const afterInsert = fixed.substring(insertIndex);
+      fixed = beforeInsert + '</Link>'.repeat(missingLinks) + afterInsert;
+      changes += missingLinks;
+    }
+  }
+
+  // Fix missing closing tags for span elements
+  const spanOpenCount = (fixed.match(/<span[^>]*>/g) || []).length;
+  const spanCloseCount = (fixed.match(/<\/span>/g) || []).length;
+  
+  if (spanOpenCount > spanCloseCount) {
+    const missingSpans = spanOpenCount - spanCloseCount;
+    const lastFragmentIndex = fixed.lastIndexOf('</>');
+    const lastBraceIndex = fixed.lastIndexOf('}');
+    const insertIndex = Math.max(lastFragmentIndex, lastBraceIndex);
+    
+    if (insertIndex !== -1) {
+      const beforeInsert = fixed.substring(0, insertIndex);
+      const afterInsert = fixed.substring(insertIndex);
+      fixed = beforeInsert + '</span>'.repeat(missingSpans) + afterInsert;
+      changes += missingSpans;
+    }
+  }
+
+  // Fix syntax errors with unexpected tokens
   fixed = fixed.replace(/\}\s*\)\s*\)/g, '})');
   changes += (content.match(/\}\s*\)\s*\)/g) || []).length;
 
   // Fix missing semicolons in JSX expressions
   fixed = fixed.replace(/(\w+)\s*\)\s*\)/g, '$1);');
   changes += (content.match(/(\w+)\s*\)\s*\)/g) || []).length;
+
+  // Fix malformed JSX expressions
+  fixed = fixed.replace(/\}\s*\)\s*\)/g, '})');
+  changes += (content.match(/\}\s*\)\s*\)/g) || []).length;
+
+  // Fix missing closing parentheses
+  fixed = fixed.replace(/\}\s*\)\s*\)/g, '})');
+  changes += (content.match(/\}\s*\)\s*\)/g) || []).length;
+
+  // Fix unterminated string literals
+  fixed = fixed.replace(/"([^"]*)$/gm, '"$1"');
+  changes += (content.match(/"([^"]*)$/gm) || []).length;
+
+  // Fix missing commas in object literals
+  fixed = fixed.replace(/(\w+):\s*(\w+)\s*(\w+):/g, '$1: $2,\n    $3:');
+  changes += (content.match(/(\w+):\s*(\w+)\s*(\w+):/g) || []).length;
+
+  // Fix missing semicolons after property assignments
+  fixed = fixed.replace(/(\w+):\s*([^,}]+)\s*(\w+):/g, '$1: $2,\n    $3:');
+  changes += (content.match(/(\w+):\s*([^,}]+)\s*(\w+):/g) || []).length;
 
   // Fix malformed JSX with unexpected tokens
   fixed = fixed.replace(/\}\s*\)\s*\)/g, '})');
@@ -162,7 +200,7 @@ function fixStringLiterals(content, filePath) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const { content: fixed, changes } = fixStringLiterals(content, filePath);
+    const { content: fixed, changes } = fixRemainingJsxErrors(content, filePath);
     
     if (changes > 0) {
       fs.writeFileSync(filePath, fixed, 'utf8');
@@ -178,7 +216,7 @@ function processFile(filePath) {
 
 // Main function
 async function main() {
-  console.log('Starting string literal fixes...');
+  console.log('Starting remaining JSX syntax error fixes...');
   
   // Find all TypeScript/JavaScript files in the app directory
   const pattern = 'app/**/*.{ts,tsx,js,jsx}';

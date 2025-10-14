@@ -5,16 +5,16 @@ const OperationalTrustScorecardsPage: React.FC = () => {
 
     <>
 
-      <main className="min-h-screen bg-slate-950 text-white">
-      <section className="py-16 border-b border-white/10">
-        <div className="max-w-3xl mx-auto px-4">
+      <main className="min-h-screen bg-slate-950 text-white">"
+      <section className="py-16 border-b border-white/10">"
+        <div className="max-w-3xl mx-auto px-4">"
           <div className="mb-6 inline-flex items-center gap-2">
             <span>
               GUIDE
-            </span>
+            </span>"
             <span className="px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs">
               Sep    30, 2025
-            </span>
+            </span>"
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
             Operational Trust    Scorecards    v3
           </h1>
@@ -24,10 +24,10 @@ const OperationalTrustScorecardsPage: React.FC = () => {
             rollback.</p>
           </div>
       </section>
-
-      <section className="py-12">
+"
+      <section className="py-12">"
         <div className="max-w-3xl mx-auto px-4 space-y-10">
-          <div>
+          <div>"
             <h2 className="text-2xl font-bold mb-3">Why Operational    Trust</h2>
             <p>Enterprise AI fails without measurable trust. Scorecards unify
               KP    Is    across reliability (accuracy, grounding, latency), safety
@@ -35,28 +35,28 @@ const OperationalTrustScorecardsPage: React.FC = () => {
               outcomes) so leaders can make tradeoffs responsibly.</p>
             </div>
 
-          <div>
-            <h2 className="text-2xl font-bold mb-3">Scorecard    Structure</h2>
+          <div>"
+            <h2 className="text-2xl font-bold mb-3">Scorecard    Structure</h2>"
             <ul className="list-disc pl-6 text-gray-300 space-y-2">
-              <li>
+              <li>"
                 <strong className="text-white">Reliability   :</strong> pass rates,
                 hallucination rate, grounding success, latency SLO.
               </li>
-              <li>
+              <li>"
                 <strong className="text-white">Safety   :</strong> policy blocks,
                 red‑team strikes, jailbreak resistance, PII leaks.
               </li>
-              <li>
+              <li>"
                 <strong className="text-white">Cost   :</strong> per‑task spend,
                 model tier mix, cache hit rate, budget headroom.
               </li>
-              <li>
+              <li>"
                 <strong className="text-white">Value   :</strong> conversion
                 uplift, time saved, NPS changes, $ ROI.
               </ul>
           </div>
 
-          <div>
+          <div>"
             <h2 className="text-2xl font-bold mb-3">Operational    Guardrails</h2>
             <p>Tie each KPI to budgets and routing rules. If reliability falls,
               route to safer tier; if cost exceeds budget, throttle usage; if
@@ -66,8 +66,8 @@ const OperationalTrustScorecardsPage: React.FC = () => {
     </main>
     </>
   );
-}
+</div></div></main></section></div></div></span></span></h1></p></section></div></div></h2></p></div></h2></ul></li></strong></li></strong></li></strong></li></strong></div></h2></p></main></section></div></div></span></span></h1></p></section></div></div></h2></p></div></h2></ul></li></strong></li></strong></li></strong></li></strong></div></h2></p>}
 
 export default OperationalTrustScorecardsPage;
 
-</li>
+</li>"

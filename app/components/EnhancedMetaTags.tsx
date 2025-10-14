@@ -2,7 +2,7 @@
   keywords?: string
   canonical?: string
   ogImage?: string
-  ogType?: 'website' | 'article' | "product"'"'"
+  ogType?: 'website' | 'article' | "product"'"'""
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | "player"'"'"
   noIndex?: boolean
   structuredData?: Record<string, any></string>
@@ -27,7 +27,8 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
   tags = [],
 }) => {},
     sameAs: [
-      'https://twitter.com/ziontechgroup',
+      'http,
+    s://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
       'https://github.com/ziontechgroup',
     ],
@@ -56,13 +57,14 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
   return (
 <div>    <Helmet>
       { /* Basic Meta Tags */ }
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+      <title>{title}</title>"
+      <meta name="description" content={description} />"
+      <meta name="keywords" content={keywords} />"
+      <meta name="author" content={author} />"
+      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />"
       <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
       
-        tags.map((tag, index) => (
+        tags.map((tag, index) => ("
           <meta key={index} property="article:tag" content={tag} />
-        )})
+        )</div></string></EnhancedMetaTagsProps></div></Helmet></title></meta></meta></meta></meta></meta></meta></string></EnhancedMetaTagsProps></div></Helmet></title></meta></meta></meta></meta></meta></meta>})
+"

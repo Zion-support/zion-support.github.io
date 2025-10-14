@@ -4,78 +4,81 @@ const InnovationLabsPage: React.FC = () => {
 
   return (
 
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-8">
+    <div className="min-h-screen bg-gray-50">"
+      <div className="max-w-4xl mx-auto px-4 py-8">"
+        <div className="bg-white rounded-lg shadow-lg p-8">"
           <div className="text-center mb-8">
             <span>
               🚀 Innovation Lab
-            </span>
+            </span>"
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              AI Innovation Labs: Product Development Revolution 2025
+              AI Innovation Lab,
+    s: Product Development Revolution 2025
             </h1>
             <p>January 28, 2025 · 45 min read · AI Innovation</p>
             </div>
-
-          <div className="prose max-w-none">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Innovation Results</h2>
+"
+          <div className="prose max-w-none">"
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">🎯 Innovation Results</h2>"
             <p className="text-gray-700 mb-6">
               Discover how AI Innovation Labs are revolutionizing product development with <strong>10x faster time-to-market</strong>, 
               <strong>85% cost reduction</strong>, and breakthrough innovation acceleration. Learn the proven methodologies 
               that are transforming how companies build and launch products.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-blue-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-2">10x</div>
-                <div className="text-gray-700">Faster Time-to-Market</div>
-              <div className="bg-green-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-green-600 mb-2">85%</div>
-                <div className="text-gray-700">Cost Reduction</div>
-              <div className="bg-purple-50 p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold text-purple-600 mb-2">300%</div>
+            </p>"
+            <div className="grid grid-cols-1 md: "grid-cols-3 gap-6 mb-8">"
+              <div className="bg-blue-50 p-6 rounded-lg text-center">"
+                <div className="text-3xl font-bold text-blue-600 mb-2">10x</div>"
+                <div className="text-gray-700">Faster Time-to-Market</div>"
+              <div className="bg-green-50 p-6 rounded-lg text-center">"
+                <div className="text-3xl font-bold text-green-600 mb-2">85%</div>"
+                <div className="text-gray-700">Cost Reduction</div>"
+              <div className="bg-purple-50 p-6 rounded-lg text-center">"
+                <div className="text-3xl font-bold text-purple-600 mb-2">300%</div>"
                 <div className="text-gray-700">Innovation Speed</div>
-
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">🏭 Lab Overview</h2>
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">AI-Powered Product Development</h3>
+"
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">🏭 Lab Overview</h2>"
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">AI-Powered Product Development</h3>"
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
               <li><strong>Focus:</strong> AI-driven product innovation and development</li>
               <li><strong>Team:</strong> 200+ AI researchers and product engineers</li>
               <li><strong>Projects:</strong> 50+ active AI-powered product initiatives</li>
               <li><strong>Impact:</strong> $2B+ in new product revenue generated</ul>
-
+"
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Innovation Methodology</h2>
             <p>Our AI Innovation Labs follow a systematic approach to product development that leverages 
               cutting-edge AI technologies to accelerate every stage of the product lifecycle.</p>
             </p>
-
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: AI-Powered Ideation</h3>
+"
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: AI-Powered Ideation</h3>"
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
               <li>• Market analysis using AI-driven trend prediction</li>
               <li>• Customer need identification through AI sentiment analysis</li>
               <li>• Competitive landscape mapping with AI-powered research</li>
               <li>• Concept generation using generative AI models</ul>
-
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 2: Rapid Prototyping</h3>
+"
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 2: Rapid Prototyping</h3>"
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2">
               <li>• AI-assisted design and architecture planning</li>
               <li>• Automated code generation and testing</li>
               <li>• Virtual prototyping and simulation</li>
               <li>• Real-time performance optimization</ul>
-
+"
             <h2 className="text-2xl font-bold text-gray-900 mb-6">💰 ROI & Impact Metrics</h2>
-            <p>The AI Innovation Labs have delivered measurable value across multiple dimensions:</p>
+            <p>The AI Innovation Labs have delivered measurable value across multiple dimension",
+    s:</p>
             </p>
-
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Development Efficiency</h3>
+"
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">Development Efficiency</h3>"
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
               <li>• <strong>90% reduction</strong> in development time</li>
               <li>• <strong>85% cost savings</strong> in R&D expenses</li>
               <li>• <strong>95% accuracy</strong> in market demand prediction</li>
               <li>• <strong>80% faster</strong> time from concept to market</ul>
-
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>
+"
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">🛠️ Technology Stack</h2>"
             <div className="bg-gray-100 p-6 rounded-lg mb-6">
-              <p>{`AI Innovation Lab Stack:
+              <p>{`AI Innovation Lab Stac,
+    k:
 ├── AI/ML Platform
 │   ├── TensorFlow & PyTorch
 │   ├── Hugging Face Transformers
@@ -93,32 +96,32 @@ const InnovationLabsPage: React.FC = () => {
     ├── Kubernetes & Docker
     └── CI/CD Automation`}</p>
               </div>
-
+"
             <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Getting Started with AI Innovation</h2>
             <p>Ready to revolutionize your product development? Our AI Innovation Labs can help you 
               achieve breakthrough results in product development speed, cost, and innovation.</p>
             </p>
-
-            <div className="bg-blue-50 p-6 rounded-lg text-center">
+"
+            <div className="bg-blue-50 p-6 rounded-lg text-center">"
               <h3 className="text-xl font-semibold text-gray-800 mb-4">Start Your AI Innovation Journey</h3>
               <p>Join leading companies transforming product development with AI-powered innovation</p>
-              </p>
-              <div className="space-x-4">
+              </p>"
+              <div className="space-x-4">"
                 <Link to="
-                  Schedule Innovation Assessment
+                  Schedule Innovation Assessment"
                 ">
                   Schedule Innovation Assessment
-                </Link>
-                <Link href="/services"
+                </Link>"
+                <Link href="/services""
                   className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors">
                   Explore AI Services
                 </div>
   );
-}
+</div></div></div></div></div></div></div></div></div></Link></div></div></div></div></span></h1></div></h2></p></strong></strong></div></div></div></div></div></div></div></div></div></div></h2></h3></ul></li></strong></li></strong></li></strong></li></strong></h2></p></h3></ul></li></li></li></li></h3></ul></li></li></li></li></h2></h3></ul></li></strong></li></strong></li></strong></li></strong></h2></div></p></h2></p></div></h3></div></Link></Link></div></div></div></div></span></h1></div></h2></p></strong></strong></div></div></div></div></div></div></div></div></div></div></h2></h3></ul></li></strong></li></strong></li></strong></li></strong></h2></p></h3></ul></li></li></li></li></h3></ul></li></li></li></li></h2></p></h3></ul></li></strong></li></strong></li></strong></li></strong></h2></div></p></h2></p></div></h3></div></Link></Link>}
 
 export default InnovationLabsPage;
 
 </li>
 </li>
 </li>
-</li>
+</li>"

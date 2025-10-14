@@ -5,7 +5,8 @@ import { CheckCircle, Clock, TrendingUp, Phone, Mail, MapPin } from 'lucide-reac
 const MarketingToolsPage: React.FC = () => {
   const marketingTools = [
     {
-      title: 'AI Content Generator',
+      titl,
+    e: 'AI Content Generator',
       price: '$199/month',
       description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
       features: ['Blog post generation', 'Social media content', 'Email campaigns', 'Ad copy creation', 'SEO optimization', 'Multi-language support'],
@@ -80,81 +81,84 @@ const MarketingToolsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Marketing Tools - Zion Tech Group</title>
+        <title>Marketing Tools - Zion Tech Group</title>"
         <meta name="description" content="AI-powered marketing tools for content creation, SEO optimization, social media management, and analytics. Starting at $179/month." />
-      </Helmet>
+      </Helmet>"
         <meta name="keywords" content="marketing tools, ai marketing, content generation, seo optimization, social media management, email marketing" />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+      {/* Hero Section */}"
+      <section className="pt-24 pb-16 px-4">"
+        <div className="max-w-7xl mx-auto text-center">"
+          <h1 className="min-h-screen bg-white"
+    d:text-6xl font-bold text-white mb-6">
             AI Marketing Tools
           </h1>
           <p>Transform your marketing with AI-powered tools for content creation, SEO optimization, social media management, and analytics.</p>
           </p>
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
-              <div className="text-gray-300">Marketing Tools</div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$179</div>
-              <div className="text-gray-300">Starting Price</div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">250%</div>
-              <div className="text-gray-300">Average ROI</div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">80%</div>
+          {/* Stats */}"
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>"
+              <div className="text-gray-300">Marketing Tools</div>"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-green-400 mb-2">$179</div>"
+              <div className="text-gray-300">Starting Price</div>"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-purple-400 mb-2">250%</div>"
+              <div className="text-gray-300">Average ROI</div>"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+              <div className="text-3xl font-bold text-orange-400 mb-2">80%</div>"
               <div className="text-gray-300">Time Saved</div>
 
-          {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span className="text-white font-medium">+1 302 464 0950</span>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
-                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
+          {/* Contact Info */}"
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">"
+            <div className="min-h-screen bg-white"
+    d:space-x-8">"
+              <div className="flex items-center space-x-2">"
+                <Phone className="w-5 h-5" />"
+                <span className="text-white font-medium">+1 302 464 0950</span>"
+              <div className="flex items-center space-x-2">"
+                <Mail className="w-5 h-5" />"
+                <span className="text-white font-medium">kleber@ziontechgroup.com</span>"
+              <div className="flex items-center space-x-2">"
+                <MapPin className="w-5 h-5" />"
                 <span className="text-white font-medium">Middletown, DE</span>
         </section>
 
-      {/* Marketing Tools Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      {/* Marketing Tools Grid */}"
+      <section className="py-16 px-4">"
+        <div className="max-w-7xl mx-auto">"
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
             Our Marketing Tools
           </h2>
           
-          <div>{marketingTools.map((tool, index) => (</div>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{tool.icon}</div>
+          <div>{marketingTools.map((tool, index) => (</div>"
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">"
+                <div className="text-center mb-6">"
+                  <div className="text-5xl mb-4">{tool.icon}</div>"
                   <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
                   <p>{tool.description}</p>
                   <div>{tool.category}</div>
                   </div>
-
-                <div className="mb-6">
-                  <h4 className="font-semibold text-white mb-3">Features:</h4>
+"
+                <div className="mb-6">"
+                  <h4 className="font-semibold text-white mb-3">Features:</h4>"
                   <ul className="space-y-2">
-                    {tool.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                    {tool.features.map((feature, featureIndex) => ("
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">"
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </div>
-
-                <div className="text-center">
+"
+                <div className="text-center">"
                   <div className="text-2xl font-bold text-cyan-400 mb-4">{tool.price}</div>
                   <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all inline-block"
+                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}"
+                    className="min-h-screen bg-white"
+    r:to-blue-700 transition-all inline-block"
                   >
                     Get Started
                   </a>
@@ -162,42 +166,45 @@ const MarketingToolsPage: React.FC = () => {
           </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      {/* Benefits Section */}"
+      <section className="py-16 px-4">"
+        <div className="max-w-7xl mx-auto">"
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
             Why Choose Our Marketing Tools?
           </h2>
-          <div>{benefits.map((benefit, index) => (</div>
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">
-                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+          <div>{benefits.map((benefit, index) => (</div>"
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300">"
+                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>"
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
             ))}
           </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+      {/* CTA Section */}"
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">"
+        <div className="max-w-4xl mx-auto text-center">"
+          <h2 className="text-3xl md: "text-4xl font-bold text-white mb-6">
             Ready to Transform Your Marketing?
           </h2>
           <p>Get started with our AI marketing tools today and see the difference intelligent automation can make.</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </p>"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a href="#">
               Call (302) 464-0950
             </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+            <a"
+              href="mailto:kleber@ziontechgroup.com""
+              className="min-h-screen bg-white"
+    ",
+    r:text-purple-600 transition-colors"
             >
               Email Us
             </a>
         </section>
     </div>
   );
-};
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Helmet></title></meta></meta></section></div></h1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Phone></span></div></Mail></span></div></MapPin></span></section></div></h2></div></div></div></div></h3></div></div></h4></ul></li></CheckCircle></div></div></a></section></div></h2></div></div></benefit></h3></section></div></h2></div></a></a></div></Helmet></title></meta></meta></section></div></h1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></Phone></span></div></Mail></span></div></MapPin></span></section></div></h2></div></div></div></div></h3></div></div></h4></ul></li></CheckCircle></div></div></a></section></div></h2></div></div></benefit></h3></section></div></h2></div></a></a>};
 
 export default MarketingToolsPage;
+"

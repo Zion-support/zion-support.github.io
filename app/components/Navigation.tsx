@@ -33,8 +33,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const location = useLocation()
-  const navigation = [
-    { name: "Home", href: "/", icon: HomeIcon },"
+  const navigation = ["
+    { name: "Home", href: "/", icon: HomeIcon },""
     { name: "About", href: "/about", icon: InformationCircleIcon },"
     { 
       ]
@@ -44,22 +44,24 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       href: '/solutions','
       icon: CogIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
+        { nam,
+    e: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
       ]
-    },
-    { name: "Blog", href: "/blog", icon: DocumentTextIcon },"
-    { name: "Tutorials", href: "/tutorials", icon: AcademicCapIcon },"
-    { name: "Demo", href: "/demo", icon: PlayIcon },"
-    { name: "Support", href: "/support", icon: QuestionMarkCircleIcon },"
-    { name: "Pricing", href: "/pricing", icon: CurrencyDollarIcon },"
+    },"
+    { name: "Blog", href: "/blog", icon: DocumentTextIcon },""
+    { name: "Tutorials", href: "/tutorials", icon: AcademicCapIcon },""
+    { name: "Demo", href: "/demo", icon: PlayIcon },""
+    { name: "Support", href: "/support", icon: QuestionMarkCircleIcon },""
+    { name: "Pricing", href: "/pricing", icon: CurrencyDollarIcon },""
     { name: "Contact", href: "/contact", icon: PhoneIcon }"
   ]
 const Navigation: React.FC = () => {
-  return (
-<>    <nav className="bg-gray-800 text-white p-4"></nav>"
-      <div className="container mx-auto flex justify-between items-center"></div>"
-        <h1 className="text-xl font-bold">Zion Tech Group</h1>"
+  return ("
+<>    <nav className="bg-gray-800 text-white p-4"></nav>""
+      <div className="container mx-auto flex justify-between items-center"></div>""
+        <h1 className="text-xl font-bold">Zion Tech Group</h1>""
         <div className="space-x-4"></div>"
-    </>
+    </NavigationProps></nav></div></h1></div></NavigationProps></nav></div></h1></div></>
 
+"

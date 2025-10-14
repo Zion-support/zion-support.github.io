@@ -1,4 +1,4 @@
-import React from "react;
+import React from "react;"
 import { cn    } from "../utils/cn;
 
 interface FuturisticTextProps {
@@ -11,7 +11,8 @@ interface FuturisticTextProps {
 }
 
 const FuturisticText: React.FC<FuturisticTextProps> = ({
-  as: Component = 'p','
+  a,
+    s: Component = 'p','
   className = ,'
   children,
   variant = 'primary','
@@ -69,5 +70,5 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
     className: combinedClasses,
     ...props
   }, children)
-}
-export default FuturisticText
+</FuturisticTextProps></FuturisticTextProps>}
+export default FuturisticText"

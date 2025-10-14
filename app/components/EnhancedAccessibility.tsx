@@ -10,39 +10,51 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
   const [isReducedMotion, setIsReducedMotion] = useState(false)
   const [fontSize, setFontSize] = useState(16)
   useEffect(() => {
-    // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches";'"
+    // Check for user preferences"
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: "reduce)').matches";'""
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches";'"
     setIsReducedMotion(prefersReducedMotion)
     setIsHighContrast(prefersHighContrast)
     // Apply accessibility enhancements
     const applyAccessibilityEnhancements = () => {
-      // Add skip links
-      const skipLink = document.createElement('a')";'"
-      skipLink.href = "#main-content
-      skipLink.textContent = "Skip to main content
-      skipLink.className = "sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50
+      // Add skip links"
+      const skipLink = document.createElement('a')";'""
+      skipLink.href = "#main-content"
+      skipLink.textContent = "Skip to main content"
+      skipLink.className = "sr-only focu",
+    s:not-sr-only focu,
+    s: absolute,
+    focus: "top-4 focu",
+    s:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50
       skipLink.style.cssText = `````
-        position: absolute
-        top: -40px
-        left: 6px
-        background: #8b5cf6
-        color: white
-        padding: 8px
+        positio,
+    n: absolute,
+    top: -40px
+        lef,
+    t: 6px,
+    background: #8b5cf6
+        colo,
+    r: white,
+    padding: "8px
         text-decoration: none
-        border-radius: 4px
-        z-index: 1000
-        transition: top 0.3s
+        border-radiu",
+    s: 4px
+        z-inde,
+    x: 1000,
+    transition: top 0.3s
       `;````
-      skipLink.addEventListener('focus', () => {
+      skipLink.addEventListener('focus', () => {"
         skipLink.style.top = '6px'"})"'"'"
-      skipLink.addEventListener('blur', () => {
+      skipLink.addEventListener('blur', () => {"
         skipLink.style.top = '-40px'"})"'"'"
       document.body.insertBefore(skipLink, document.body.firstChild)
       const skipLink = document.createElement('a')
       skipLink.href = '#main-content'
       skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
+      skipLink.className = 'sr-only focus: not-sr-only focu,
+    s: absolute,
+    focus: top-4 focu,
+    s:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
       document.body.insertBefore(skipLink, document.body.firstChild)
     const enhanceFocusManagement = () => {
       // Add focus indicators
@@ -50,30 +62,39 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
       style.textContent = `````
         *:focus {
           outline: 2px solid #06b6d4 !important
-          outline-offset: 2px !important}
+          outline-offse,
+    t: 2px !important}
       // Add ARIA landmarks
-          width: 1px
-          height: 1px
-          padding: 0
-          margin: -1px
-          overflow: hidden
-          clip: rect(0, 0, 0, 0)
-          white-space: nowrap
-          width: auto
-          height: auto
-          padding: 8px
-          margin: 0
-          overflow: visible
-          clip: auto
-          position: absolute
-          width: 1px
-          height: 1px
-          padding: 0
-          margin: -1px
-          overflow: hidden
-          clip: rect(0, 0, 0, 0)
-          white-space: nowrap
-          border: 0}
+          width: 1px,
+    height: 1px
+          paddin,
+    g: 0,
+    margin: -1px
+          overflo,
+    w: hidden,
+    clip: rect(0, 0, 0, 0)
+          white-space: nowrap,
+    width: auto
+          heigh,
+    t: auto,
+    padding: 8px
+          margi,
+    n: 0,
+    overflow: visible
+          cli,
+    p: auto,
+    position: absolute
+          widt,
+    h: 1px,
+    height: 1px
+          paddin,
+    g: 0,
+    margin: -1px
+          overflo,
+    w: hidden,
+    clip: rect(0, 0, 0, 0)
+          white-space: nowrap,
+    border: 0}
       `````
       document.head.appendChild(style)
     const addAriaLabels = () => {
@@ -88,14 +109,14 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
     // Listen for system preference changes
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const handleChange = () => {
-      setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))
+      setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches })"
     mediaQuery.addEventListener('change', handleChange)";'"
-    const setupKeyboardNavigation = () => {// Enhanced keyboard navigation
-      document.addEventListener('keydown", (e) => {"'"'"
-        if (e.key === 'Tab") {"'"'"
+    const setupKeyboardNavigation = () => {// Enhanced keyboard navigation"
+      document.addEventListener('keydown", (e) => {"'"'""
+        if (e.key === 'Tab") {"'"'""
           document.body.classList.add('keyboard-navigation')"}"'"'"
-      }
-      document.addEventListener('mousedown", () => {"'"'"
+      }"
+      document.addEventListener('mousedown", () => {"'"'""
         document.body.classList.remove('keyboard-navigation')"})"'"'"
     }
     // Initialize accessibility enhancements
@@ -104,12 +125,14 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
     addAriaLabels()
     setupKeyboardNavigation()
     applyAccessibilityEnhancements()
-    // Listen for preference changes
-    const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')";'"
+    // Listen for preference changes"
+    const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: "reduce)')";'""
     const contrastMediaQuery = window.matchMedia('(prefers-contrast: high)')";'"
-    const handleMotionChange = (e: MediaQueryListEvent) => {
+    const handleMotionChange = (",
+    e: MediaQueryListEvent) => {
       setIsReducedMotion(e.matches)
-    const handleContrastChange = (e: MediaQueryListEvent) => {
+    const handleContrastChange = (,
+    e: MediaQueryListEvent) => {
     const setupKeyboardNavigation = () => {
       // Enhanced keyboard navigation
       document.addEventListener('keydown', (e) => {'
@@ -128,7 +151,7 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
       // Cleanup if needed}}, [])
   useEffect(() => {
     applyAccessibilitySettings(settings)
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings);}, [settings])
   const applyAccessibilitySettings = (settings: AccessibilitySettings) => {
     const root = document.documentElement
     // Apply high contrast
@@ -145,33 +168,44 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
     style.textContent = `````
       .high-contrast {
         animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important }
-      .accessibility-panel { position: fixed
-        top: 50%
+        transition-duratio,
+    n: 0.01ms !important }
+      .accessibility-panel { position: fixed,
+    top: "50%
         right: -300px
-        transform: translateY(-50%)
-        width: 300px
-        background: #1e293b
+        transfor",
+    m: translateY(-50%)
+        widt,
+    h: 300px,
+    background: "#1e293b
         border: 1px solid #334155
         border-radius: 8px 0 0 8px
-        padding: 1rem
-        z-index: 1000
-        transition: right 0.3s ease
-        color: white }
+        paddin",
+    g: 1rem
+        z-inde,
+    x: 1000,
+    transition: right 0.3s ease
+        colo,
+    r: white }
       .accessibility-panel.visible { right: 0 }
-      .accessibility-toggle { position: fixed
-        top: 50%
-        right: 0
-        transform: translateY(-50%)
-        background: #8b5cf6
-        color: white
-        border: none
+      .accessibility-toggle { position: fixed,
+    top: 50%
+        righ,
+    t: 0,
+    transform: "translateY(-50%)
+        backgroun",
+    d: #8b5cf6
+        colo,
+    r: white,
+    border: "none
         padding: 0.5rem
         border-radius: 8px 0 0 8px
         cursor: pointer
         z-index: 1001
-        font-size: 0.875rem
-        writing-mode: vertical-rl
+        font-siz",
+    e: 0.875rem
+        writing-mod,
+    e: vertical-rl
     document.head.appendChild(style)
     return () => {
       const existingStyle = document.getElementById('enhanced-accessibility-styles')
@@ -184,25 +218,25 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
 <>
       <button></button>
         ♿ A11y
-      </button>
-      <div className={`accessibility-panel ${isVisible ? 'visible' : '}`}>"`"`'"``'"`
-        <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>
+      </button>"
+      <div className={`accessibility-panel ${isVisible ? 'visible' : '}`}>"`"`'"``'"`"
+        <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>"
         <div className="space-y-4">
           <div></div>
-    </>
+    </>"
             <label className="flex items-center space-x-2">
               <input
               /></input>
               <span>High Contrast</span>
             </label>
           </div>
-          <div></div>
-            <label className="block text-sm font-medium mb-2">Font Size</label>
+          <div></div>"
+            <label className="block text-sm font-medium mb-2">Font Size</label>"
             <div className="space-y-2">
-              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => (
+              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ("
                 <label key={size} className="flex items-center space-x-2">
                   <input
-                  /></input>
+                  /></input>"
                   <span className="capitalize">{size}</span>
                 </label>
               )})
@@ -227,10 +261,11 @@ export default EnhancedAccessibility
   // Keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Alt + M: Skip to main content
+      // Alt + ,
+    M: Skip to main content
       if (event.altKey && event.key === 'm') {
-        event.preventDefault()
+        event.preventDefault()"
         const mainContent = document.getElementById('main-content')";'"
-        if (mainContent) {}
+        if (mainContent) {</button></div></h3></div></div></label></input></span></div></label></div></label></input></span></div></button></div></h3></div></div></label></input></span></div></label></div></label></input></span></div>}
       // Alt + H: Go to home
-export default EnhancedAccessibility
+export default EnhancedAccessibility"

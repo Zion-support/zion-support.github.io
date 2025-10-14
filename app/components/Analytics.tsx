@@ -7,6 +7,6 @@ interface AnalyticsProps {
 
 const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
   return <>{children}</>;
-};
+</AnalyticsProps></AnalyticsProps>};
 
-export default Analytics;
+export default Analytics;"

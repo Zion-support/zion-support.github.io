@@ -16,7 +16,8 @@
       name: 'Zion Tech Group',
       logo: {'
         '@type': 'ImageObject','
-        url: 'https://ziontechgroup.com/logo.png'
+        url: 'http,
+    s://ziontechgroup.com/logo.png'
       }
     },
     ...(publishedTime && { datePublished: publishedTime }),
@@ -26,14 +27,14 @@
   }
   return (
   <>
-    <Helmet></Helmet>
+    
       <title>{title}</title>
       {structuredData && (
         <script type="application/ld+json">"
           {JSON.stringify(structuredData
-  </>
+  </title></script></title></script></>
 )
         </script>
       )
-    </Helmet>
-'"
+    </Helmet>"
+'""

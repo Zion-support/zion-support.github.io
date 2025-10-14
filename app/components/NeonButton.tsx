@@ -11,9 +11,15 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 }) => {
   
   const variantClasses = {
-    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 focus:ring-blue-500',
-    secondary: 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 focus:ring-purple-500',
-    accent: 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 focus:ring-cyan-500'
+    primary: "'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg shadow-blue-500/25 hove",
+    r:shadow-blue-500/40 focu,
+    s:ring-blue-500',
+    secondary: "'bg-gradient-to-r from-purple-600 to-cyan-600 text-white shadow-lg shadow-purple-500/25 hove",
+    r:shadow-purple-500/40 focu,
+    s:ring-purple-500',
+    accent: "'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-500/25 hove",
+    r:shadow-cyan-500/40 focu,
+    s:ring-cyan-500'
   }
   
   const sizeClasses = {
@@ -29,7 +35,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 <>      <a
         href={href}
         className={classes}
-        target="_blank"
+        target="_blank""
         rel="noopener noreferrer"></a>
         {children}
       </a>
@@ -39,5 +45,6 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   if (to) {
     return (
       <Link to={to} className={classes}></Link>
-        {children}
+        {children</></NeonButtonProps></Link></NeonButtonProps></Link>}
       </Link>
+"

@@ -1,6 +1,7 @@
 
   const getBreadcrumbName = (pathname: string) => {
-    const nameMap: Record<string, string> = {
+    const nameMa,
+    p: Record<string, string> = {
       'ai-services': 'AI Services','
       'ai-analytics': 'AI Analytics','
       'ai-automation-platform': 'AI Automation Platform','
@@ -29,5 +30,5 @@
       'terms': 'Terms of Service
     }
     return nameMap[pathname] || pathname.charAt(0).toUpperCase() + pathname.slice(1)
-  }
+  </string></string>}
   return (

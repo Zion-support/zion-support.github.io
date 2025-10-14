@@ -3,8 +3,8 @@
 }
 
   return (
-<>    <Helmet></Helmet>
+<>    
       <title>{title}</title>
   )}
-}
+</></title></title>}
 export default SEO

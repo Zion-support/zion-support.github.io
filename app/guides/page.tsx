@@ -58,71 +58,73 @@ const GuidesPage: React.FC = () => {
       <Helmet>
         <title>Implementation Guides - Zion Tech Group</title>
         <meta name="description" content="Comprehensive guides for implementing AI, automation, and digital transformation solutions in your enterprise." />
-      </Helmet>
+      </Helmet>"
         <meta name="keywords" content="AI implementation, automation guides, digital transformation, enterprise solutions, technical guides" />
       </Helmet>
       
       <div>{/* Navigation */}</div>
-    </>
-        <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-between h-16">
+    </>"
+        <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">"
+          <div className="container mx-auto px-4">"
+            <div className="flex items-center justify-between h-16">"
               <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-cyan-400">
                 <span>⚡</span>
-                <span>Zion Tech Group</Link>
-              <div className="hidden lg:flex items-center space-x-8">
-                <Link to="Home">Home</Link>
-                <Link to="About">About</Link>
-                <Link to="Services">Services</Link>
-                <Link to="Guides">Guides</Link>
-                <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">Contact</div>
+                <span>Zion Tech Group</Link>"
+              <div className="hidden lg: "flex items-center space-x-8">"
+                <Link to="Home">Home</Link>"
+                <Link to="About">About</Link>"
+                <Link to="Services">Services</Link>"
+                <Link to="Guides">Guides</Link>"
+                <Link to="/contact" className="min-h-screen bg-white"
+    ",
+    r:text-cyan-400 transition-colors">Contact</div>
         </nav>
-
+"
         <main className="container mx-auto px-4 py-16">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center space-x-4 mb-6">
-              <BookOpen className="w-16 h-16 text-cyan-400" />
-              <h1 className="text-4xl md:text-6xl font-bold text-white">
+          {/* Header */}"
+          <div className="text-center mb-16">"
+            <div className="flex items-center justify-center space-x-4 mb-6">"
+              <BookOpen className="w-16 h-16 text-cyan-400" />"
+              <h1 className="text-4xl md:text-6xl font-bold text-white">"
                 Implementation <span className="text-cyan-400">Guides</h1>
             </div>
             <p>Step-by-step guides to help you implement AI, automation, and digital transformation 
               solutions in your enterprise with confidence.</p>
             </div>
 
-          {/* Categories */}
-          <section className="mb-16">
+          {/* Categories */}"
+          <section className="mb-16">"
             <h2 className="text-3xl font-bold text-white mb-8">Guide Categories</h2>
-            <div>{categories.map((category, index) => (</div>
+            <div>{categories.map((category, index) => (</div>"
                 <div key={index} className="bg-slate-800 rounded-lg p-4 text-center hover:bg-slate-700 transition-colors">
-                  <category.icon className={`w-8 h-8 mx-auto mb-2 ${category.color}`} />
+                  <category.icon className={`w-8 h-8 mx-auto mb-2 ${category.color}`} />"
                   <h3 className="text-white font-semibold text-sm">{category.name}</div>
               ))}
             </section>
 
-          {/* Guides Grid */}
-          <section className="mb-16">
+          {/* Guides Grid */}"
+          <section className="mb-16">"
             <h2 className="text-3xl font-bold text-white mb-8">Available Guides</h2>
-            <div>{guides.map((guide, index) => (</div>
-                <div key={index} className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-200">
-                  <div className="flex items-start space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div>{guides.map((guide, index) => (</div>"
+                <div key={index} className="bg-slate-800 rounded-lg p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-200">"
+                  <div className="flex items-start space-x-4 mb-4">"
+                    <div className="w-12 h-12 bg-slate-700 rounded-lg flex items-center justify-center flex-shrink-0">"
                       <guide.icon className="w-6 h-6 text-cyan-400" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{guide.title}</h3>
+                    </div>"
+                    <div className="flex-1">"
+                      <h3 className="text-xl font-semibold text-white mb-2">{guide.title}</h3>"
                       <p className="text-gray-300 text-sm mb-3">{guide.description}</p>
-                  
+                  "
                   <div className="flex items-center justify-between mb-4">
                     <span>{guide.category}</span>
                     <span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(guide.difficulty)}`}>
                       {guide.difficulty}
                     </span>
-                  
+                  "
                   <div className="flex items-center justify-between">
                     <span>{guide.duration}</span>
                     <Link
-                      to={guide.url}
+                      to={guide.url}"
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
                     >
                       Read Guide →
@@ -130,27 +132,27 @@ const GuidesPage: React.FC = () => {
               ))}
             </section>
 
-          {/* Getting Started */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
-            <div className="bg-slate-800 rounded-lg p-8">
+          {/* Getting Started */}"
+          <section className="mb-16">"
+            <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>"
+            <div className="bg-slate-800 rounded-lg p-8">"
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
+                <div>"
                   <h3 className="text-xl font-semibold text-white mb-4">New to AI Implementation?</h3>
                   <p>Start with our comprehensive AI 2026 Implementation Roadmap to understand 
                     the fundamentals and plan your AI transformation journey.</p>
-                  </p>
+                  </p>"
                   <ul className="space-y-2 text-gray-300">
                     <li>• Assess your current AI readiness</li>
                     <li>• Plan your implementation strategy</li>
                     <li>• Choose the right technologies</li>
                     <li>• Measure success and ROI</ul>
                 </div>
-                <div>
+                <div>"
                   <h3 className="text-xl font-semibold text-white mb-4">Ready for Advanced Topics?</h3>
                   <p>Explore our advanced guides for autonomous systems, process automation, 
                     and cutting-edge AI implementations.</p>
-                  </p>
+                  </p>"
                   <ul className="space-y-2 text-gray-300">
                     <li>• Autonomous business processes</li>
                     <li>• Advanced AI architectures</li>
@@ -159,23 +161,25 @@ const GuidesPage: React.FC = () => {
                 </div>
             </section>
 
-          {/* Call to Action */}
-          <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
+          {/* Call to Action */}"
+          <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">"
             <h2 className="text-3xl font-bold text-white mb-4">
               Need Personalized Guidance?
             </h2>
             <p>Our experts are available to provide personalized implementation guidance 
               tailored to your specific business needs and requirements.</p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </p>"
+            <div className="flex flex-col sm: "flex-row gap-4 justify-center">"
               <Link to="
-                Get Expert Consultation
+                Get Expert Consultation"
               ">
                 Get Expert Consultation
               </Link>
-              <Link
-                to="/services"
-                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
+              <Link"
+                to="/services""
+                className="min-h-screen bg-white"
+    ",
+    r:text-slate-900 transition-all duration-200"
               >
                 View Our Services
               </div>
@@ -183,9 +187,9 @@ const GuidesPage: React.FC = () => {
       </div>
     </>
   );
-};
+</div></div></div></div></div></div></div></section></Link></Link></Link></span></Helmet></title></meta></meta></div></nav></div></div></Link></span></span></div></Link></Link></Link></Link></Link></main></div></div></BookOpen></h1></span></p></section></h2></div></div></category></h3></section></h2></div></div></div></div></guide></div></h3></div></span></span></div></span></Link></section></h2></div></div></div></h3></p></ul></li></li></li></li></div></h3></p></ul></li></li></li></li></section></h2></p></div></Link></Link></Helmet></title></meta></meta></div></nav></div></div></Link></span></span></div></Link></Link></Link></Link></Link></main></div></div></BookOpen></h1></span></p></section></h2></div></div></category></h3></section></h2></div></div></div></div></guide></div></h3></div></span></span></div></span></Link></section></h2></div></div></div></h3></p></ul></li></li></li></li></div></h3></p></ul></li></li></li></li></section></h2></p></div></Link></Link>};
 
 export default GuidesPage;
 </span>
 </li>
-</li>
+</li>"
