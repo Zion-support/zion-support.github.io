@@ -26,14 +26,16 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
     // Add your user identification logic here
   }, []);
+  
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
+    setUser,
     identifyUser: setUser,
   };
+  
   return (
-    <>
-      <AnalyticsContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );

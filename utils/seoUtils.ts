@@ -31,7 +31,6 @@ interface SEOConfig {
     href: string
     hreflang: string
   }>
-  structuredData?: unknown
   structuredData?: Record<string, unknown>
 }
 
@@ -51,7 +50,6 @@ export const defaultSEOConfig: SEOConfig = {
     'business intelligence'
   ],
   canonicalUrl: 'https://zion.app',
-  ogImage: '/images/og-image.jpg',
   ogImage: 'https://zion.app/og-image.jpg',
   ogType: 'website',
   twitterCard: 'summary_large_image',
@@ -118,11 +116,9 @@ export const generateImageAlt = (imagePath: string, alt?: string) => {
 
 export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {
   return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`
-  viewport: 'width=device-width, initial-scale=1',
-  charset: 'UTF-8'
 }
 
-export const generateSEOTags = (config: Partial<SEOConfig> = {}) => {
+export const generateMetaTags = (config: Partial<SEOConfig> = {}) => {
   const seoConfig = { ...defaultSEOConfig, ...config }
   
   return {

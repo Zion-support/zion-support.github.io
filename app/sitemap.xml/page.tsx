@@ -1,7 +1,7 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Sitemap.xmlPage: React.FC = () => {
+const SitemapXmlPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,4 +49,4 @@ const Sitemap.xmlPage: React.FC = () => {
   );
 };
 
-export default Sitemap.xmlPage;
+export default SitemapXmlPage;

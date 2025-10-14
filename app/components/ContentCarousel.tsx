@@ -73,38 +73,37 @@ const ContentCarousel: React.FC = () => {
   };
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5-00-0);
+    const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
   }, [nextSlide]);
 
   const currentSlideData = slides[currentSlide];
 
   return (
-    <>
-      <div className="bg-gradient-to-br from-slate-900via-purple-900to-slate-900py-20px-4"></div>
-      <div className="max-w-7xl mx-auto"></div>
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16"></div>
-          <h2 className="text-3xl md:text-4xlfont-boldtext-whitemb-6">
-            Discover Our <span className="text-transparent bg-clip-textbg-gradient-to-rfrom-blue-400to-purple-400">Solutions</span>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h2>
-          <p className="text-xl text-gray-300max-w-3xlmx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore our comprehensive suite of AI and IT solutions designed to transform your business.
           </p>
         </div>
 
         {/* Carousel Container */}
-        <div className="relative"></div>
-          <div className="bg-white/10 backdrop-blur-lgrounded-2xlp-8md:p-12borderborder-white/20overflow-hidden"></div>
-            <div className="grid grid-cols-1lg:grid-cols-2gap-12items-center"></div>
+        <div className="relative">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/20 overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
-              <div className="space-y-8"></div>
-                <div className="flex items-centergap-4"></div>
-                  <div className="w-16 h-16bg-gradient-to-rfrom-purple-500to-blue-500rounded-fullflexitems-centerjustify-center"></div>
-                    <currentSlideData.icon className="w-8 h-8text-white" />
+              <div className="space-y-8">
+                <div className="flex items-center gap-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                    <currentSlideData.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div></div>
-                    <h3 className="text-2xl md:text-3xlfont-boldtext-whitemb-2">
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
                       {currentSlideData.title}
                     </h3>
                     <p className="text-gray-300 text-lg">
@@ -114,36 +113,37 @@ const ContentCarousel: React.FC = () => {
                 </div>
 
                 {/* Features */}
-                <div className="space-y-4"></div>
-                  <h4 className="text-lg font-semiboldtext-whitemb-4">Key Features:</h4>
-                  <div className="grid grid-cols-1sm:grid-cols-2gap-3"></div>
+                <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-white mb-4">Key Features:</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {currentSlideData.features.map((feature, index) => (
-                      <div key={index} className="flex items-centerspace-x-3"></div>
-                        <CheckCircle className="w-5 h-5text-green-400flex-shrink-0" />
+                      <div key={index} className="flex items-center space-x-3">
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Stats */},
-    {currentSlideData.stats && (
-                  <div className="grid grid-cols-3gap-6"></div>
+                {/* Stats */}
+                {currentSlideData.stats && (
+                  <div className="grid grid-cols-3 gap-6">
                     {currentSlideData.stats.map((stat, index) => (
-                      <div key={index} className="text-center"></div>
-                        <div className="text-2xl font-boldtext-whitemb-1">{stat.value}</div>
+                      <div key={index} className="text-center">
+                        <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                         <div className="text-gray-400 text-sm">{stat.label}</div>
                       </div>
                     ))}
                   </div>
-                )},
-    {/* CTA */}
-                <div className="flex flex-colsm:flex-rowgap-4"></div>
-                  <button className="inline-flex items-centergap-2bg-gradient-to-rfrom-purple-500to-blue-500text-whitepx-6py-3rounded-lgfont-semiboldhover:from-purple-600hover:to-blue-600transition-allduration-300transformhover:scale-105">
+                )}
+
+                {/* CTA */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                     <Zap className="w-5 h-5" />
                     Get Started
                   </button>
-                  <button className="inline-flex items-centergap-2bg-white/10text-whitepx-6py-3rounded-lgfont-semiboldborderborder-white/20hover:bg-white/20transition-allduration-300">
+                  <button className="inline-flex items-center gap-2 bg-white/10 text-white px-6 py-3 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                     <ArrowRight className="w-5 h-5" />
                     Learn More
                   </button>
@@ -151,13 +151,13 @@ const ContentCarousel: React.FC = () => {
               </div>
 
               {/* Visual Element */}
-              <div className="relative"></div>
-                <div className="aspect-square bg-gradient-to-brfrom-purple-500/20to-blue-500/20rounded-2xlflexitems-centerjustify-center"></div>
-                  <div className="text-center"></div>
-                    <div className="w-32 h-32bg-gradient-to-rfrom-purple-500to-blue-500rounded-fullmx-automb-6flexitems-centerjustify-center"></div>
-                      <currentSlideData.icon className="w-16 h-16text-white" />
+              <div className="relative">
+                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="w-32 h-32 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                      <currentSlideData.icon className="w-16 h-16 text-white" />
                     </div>
-                    <div className="text-4xl font-boldtext-whitemb-2">
+                    <div className="text-4xl font-bold text-white mb-2">
                       {currentSlideData.title}
                     </div>
                     <div className="text-gray-300">
@@ -172,19 +172,19 @@ const ContentCarousel: React.FC = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-4top-1/2transform-translate-y-1/2bg-white/10hover:bg-white/20text-whitep-3rounded-fulltransition-colorsduration-200backdrop-blur-lgborderborder-white/20"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4top-1/2transform-translate-y-1/2bg-white/10hover:bg-white/20text-whitep-3rounded-fulltransition-colorsduration-200backdrop-blur-lgborderborder-white/20"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
 
           {/* Dots Indicator */}
-          <div className="flex justify-centermt-8space-x-2"></div>
+          <div className="flex justify-center mt-8 space-x-2">
             {slides.map((_, index) => (
               <button
                 key={index}
@@ -198,25 +198,25 @@ const ContentCarousel: React.FC = () => {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 text-center"></div>
-          <div className="grid grid-cols-1md:grid-cols-3gap-8max-w-4xlmx-auto"></div>
-            <div className="flex items-centerjustify-centergap-3text-white"></div>
-              <Star className="w-6 h-6text-yellow-400" />
-              <div className="text-left"></div>
+        <div className="mt-16 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="flex items-center justify-center gap-3 text-white">
+              <Star className="w-6 h-6 text-yellow-400" />
+              <div className="text-left">
                 <div className="text-2xl font-bold">4.9/5</div>
                 <div className="text-gray-400 text-sm">Customer Rating</div>
               </div>
             </div>
-            <div className="flex items-centerjustify-centergap-3text-white"></div>
-              <Users className="w-6 h-6text-blue-400" />
-              <div className="text-left"></div>
+            <div className="flex items-center justify-center gap-3 text-white">
+              <Users className="w-6 h-6 text-blue-400" />
+              <div className="text-left">
                 <div className="text-2xl font-bold">10,000+</div>
                 <div className="text-gray-400 text-sm">Happy Customers</div>
               </div>
             </div>
-            <div className="flex items-centerjustify-centergap-3text-white"></div>
-              <TrendingUp className="w-6 h-6text-green-400" />
-              <div className="text-left"></div>
+            <div className="flex items-center justify-center gap-3 text-white">
+              <TrendingUp className="w-6 h-6 text-green-400" />
+              <div className="text-left">
                 <div className="text-2xl font-bold">99.9%</div>
                 <div className="text-gray-400 text-sm">Uptime</div>
               </div>
