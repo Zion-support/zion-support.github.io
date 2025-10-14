@@ -1,4 +1,4 @@
-import { ArrowRight, BarChart3, CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Database, Eye, Download, Upload, Search, Filter, Bell, MessageSquare, Calendar, PieChart, LineChart, BarChart, Activity, AlertTriangle, CheckCircle2, XCircle, Info, ExternalLink, Mail, Phone, MapPin, Play, Download as DownloadIcon, Upload as UploadIcon, Settings, Lock, RefreshCw, Globe, Smartphone, Target, FileText, Code, Brain, Database as DatabaseIcon } from "lucide-react";import { Helmet } from "react-helmet-async";
+import { ArrowRight, BarChart3, CheckCircle, Star, Users, TrendingUp, Clock, Shield, Database, Bell, PieChart, FileText, Mail, Phone, MapPin, Play } from "lucide-react";import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function ZionAnalyticsPro() {

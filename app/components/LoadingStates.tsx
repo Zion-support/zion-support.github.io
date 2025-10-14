@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
 interface LoadingStatesProps {
   type?: 'spinner' | 'skeleton' | 'dots' | 'pulse';
@@ -41,13 +40,12 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
           </div>
         );
       
-      case 'card':
+      case 'dots':
         return (
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
-            <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
-            <p className="text-gray-300">
-              Round-the-clock support to ensure your systems run smoothly at all times.
-            </p>
+          <div className="flex space-x-1">
+            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div>
+            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+            <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
           </div>
         );
       
@@ -74,4 +72,4 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
   );
 };
 
-export default LoadingStatesPage;
+export default LoadingStates;

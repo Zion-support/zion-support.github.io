@@ -177,10 +177,10 @@ const AIServicesPage: React.FC = () => {
                     <ArrowRight className="w-4 h-4 text-white" />
                   </div>                </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
-                  {step.title}
+                  Step {index + 1}
                 </h3>
                 <p className="text-gray-300">
-                  {step.description}
+                  Complete this step to proceed
                 </p>
               </div>
             ))}

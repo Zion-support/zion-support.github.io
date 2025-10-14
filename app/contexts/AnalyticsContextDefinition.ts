@@ -5,6 +5,6 @@ export interface AnalyticsContextType {
 }
 
 export const defaultAnalyticsContext: AnalyticsContextType = {
-  trackEvent: (event: string, properties?: Record<string, unknown>) => {},
-  trackPageView: (page: string) => {},
+  trackEvent: () => {},
+  trackPageView: () => {},
 };
