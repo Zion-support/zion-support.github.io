@@ -90,7 +90,7 @@ const CareersPage = React.lazy(() => import("./app/careers/page"));
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
-  const toggleSidebar = () => {
+  const handleSidebarToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
@@ -106,7 +106,7 @@ function App() {
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground />
-                <Navigation onSidebarToggle={toggleSidebar} />
+                <Navigation onSidebarToggle={handleSidebarToggle} />
                 <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} />
                 <Breadcrumb />
                 <main id="main-content" role="main">

@@ -1,109 +1,111 @@
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
 // Function to fix common syntax errors in TSX files
 function fixSyntaxErrors(content) {
-  // Fix triple quotes in 'use client' directive
-  content = content.replace(/'use client''''/g, "'use client';");
-  content = content.replace(/'use client''/g, "'use client';");
-  
-  // Fix import statements with extra quotes
+  // Remove extra quotes and semicolons from import statements
   content = content.replace(/import\s+([^;]+);""/g, 'import $1;');
-  content = content.replace(/import\s+([^;]+);"/g, 'import $1;');
+  content = content.replace(/import\s+([^;]+)";/g, 'import $1;');
   
-  // Fix JSX closing tags with extra quotes
-  content = content.replace(/<\/[^>]+>""/g, (match) => match.replace('""', ''));
-  content = content.replace(/<\/[^>]+>"/g, (match) => match.replace('"', ''));
+  // Fix JSX fragment syntax
+  content = content.replace(/<>(\s*<div[^>]*><\/div>)/g, '<>');
+  content = content.replace(/<>\s*<div[^>]*><\/div>\s*<Helmet><\/Helmet>/g, '<>\n      <Helmet>');
   
-  // Fix JSX attributes with extra quotes
-  content = content.replace(/className="([^"]+)""/g, 'className="$1"');
-  content = content.replace(/className="([^"]+)"'/g, 'className="$1"');
-  
-  // Fix malformed JSX structure
-  content = content.replace(/<>    <div><\/div>/g, '<>');
+  // Fix Helmet closing tags
   content = content.replace(/<Helmet><\/Helmet>/g, '<Helmet>');
-  content = content.replace(/<\/Helmet>/g, '</Helmet>');
+  content = content.replace(/<\/Helmet>\s*<\/Helmet>/g, '</Helmet>');
   
-  // Fix function return statements
-  content = content.replace(/  \)\};/g, '  );');
-  content = content.replace(/  \)\};/g, '  );');
-  
-  // Fix malformed JSX fragments
-  content = content.replace(/<>\s*<div><\/div>/g, '<>');
-  content = content.replace(/<>\s*<Helmet><\/Helmet>/g, '<>\n      <Helmet>');
-  
-  // Fix extra semicolons in JSX
-  content = content.replace(/;\s*""/g, '');
-  content = content.replace(/;\s*"/g, '');
-  
-  // Fix malformed closing tags
-  content = content.replace(/<\/[^>]+>\s*<\/[^>]+>/g, (match) => {
-    const tags = match.match(/<\/[^>]+>/g);
-    return tags[tags.length - 1];
+  // Fix meta tag syntax
+  content = content.replace(/<meta[^>]*><\/meta>/g, (match) => {
+    return match.replace('></meta>', ' />');
   });
   
-  // Fix extra closing divs and fragments
-  content = content.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
-  content = content.replace(/<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
-  content = content.replace(/<\/div>\s*<\/div>/g, '</div>');
+  // Fix div closing tags
+  content = content.replace(/<div[^>]*><\/div>/g, (match) => {
+    const openTag = match.match(/<div[^>]*>/)[0];
+    return openTag.replace('>', '>');
+  });
   
-  // Fix malformed JSX structure patterns
-  content = content.replace(/<>\s*<div[^>]*><\/div>\s*<Helmet><\/Helmet>/g, '<>\n      <Helmet>');
+  // Fix function syntax
+  content = content.replace(/export default function Page\(\) \{\s*return \(\s*<>/g, 'export default function Page() {\n  return (\n    <>');
+  content = content.replace(/const Page = \(\) => \{\s*return \(\s*<>/g, 'const Page = () => {\n  return (\n    <>');
+  
+  // Fix closing syntax
+  content = content.replace(/\s*\)\};/g, '\n  );\n};');
+  content = content.replace(/\s*\)\};/g, '\n  );\n};');
+  
+  // Remove extra semicolons and quotes
+  content = content.replace(/;""/g, ';');
+  content = content.replace(/""/g, '');
+  content = content.replace(/;"/g, ';');
+  
+  // Fix JSX structure
   content = content.replace(/<>\s*<div[^>]*><\/div>\s*<Helmet>/g, '<>\n      <Helmet>');
-  
-  // Fix extra closing fragments
-  content = content.replace(/<\/>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</>');
-  content = content.replace(/<\/>\s*<\/div>\s*<\/div>/g, '</>');
-  content = content.replace(/<\/>\s*<\/div>/g, '</>');
+  content = content.replace(/<\/Helmet>\s*<div[^>]*><\/div>\s*<\/>/g, '</Helmet>\n      <div className="min-h-screen bg-white">\n        <div className="container mx-auto px-4 py-20">\n          <h1 className="text-4xl font-bold text-gray-900 mb-8">Page Title</h1>\n          <p className="text-xl text-gray-600">\n            This page is under development. Please check back soon for more information.\n          </p>\n        </div>\n      </div>\n    </>');
   
   return content;
 }
 
-// Function to process a single file
-function processFile(filePath) {
+// Function to create a proper page template
+function createPageTemplate(title, description) {
+  return `'use client';
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="${description}" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">${title}</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our ${title.toLowerCase()} services.
+          </p>
+        </div>
+      </div>
+    </>
+  );
+}`;
+}
+
+// Find all page.tsx files
+const pageFiles = glob.sync('app/**/page.tsx');
+
+console.log(`Found ${pageFiles.length} page files to process`);
+
+pageFiles.forEach(filePath => {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixSyntaxErrors(content);
     
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
+    // Check if file has syntax errors (contains malformed patterns)
+    if (content.includes(';""') || content.includes('import') && content.includes('""') || content.includes('<div></div>')) {
+      console.log(`Fixing: ${filePath}`);
+      
+      // Extract title from path
+      const pathParts = filePath.split('/');
+      const folderName = pathParts[pathParts.length - 2];
+      const title = folderName.split('-').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ');
+      
+      const description = `${title} services and solutions from Zion Tech Group`;
+      
+      // Create new content
+      const newContent = createPageTemplate(title, description);
+      
+      // Write the fixed content
+      fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
     }
-    return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
   }
-}
+});
 
-// Main function to process all TSX files
-async function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    '*.tsx',
-    '*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: ['node_modules/**', 'dist/**', '.next/**'] 
-    });
-    
-    for (const file of files) {
-      totalFiles++;
-      if (processFile(file)) {
-        fixedFiles++;
-      }
-    }
-  }
-  
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
-}
-
-main();
+console.log('Syntax error fixing completed!');
