@@ -116,6 +116,3 @@ const Page = (): React.JSX.Element => {
   );
 };
 
-
-const page = React.lazy(() => import('./page'));
-export default page;
