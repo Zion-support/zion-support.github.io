@@ -1,93 +1,62 @@
-#!/usr/bin/env node
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
 
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
-
-// Find all TypeScript and JavaScript files
-const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { 
-  ignore: ['node_modules/**', 'dist/**', 'app-broken/**', 'app-disabled/**'] 
-});
-
-console.log(`Found ${files.length} files to process...`);
+// Find all TypeScript/JavaScript files in the app directory
+const files = glob.sync('app/**/*.{ts,tsx}', { cwd: process.cwd() });
 
 let fixedFiles = 0;
 
-files.forEach(file => {
+files.forEach(filePath => {
   try {
-    let content = fs.readFileSync(file, 'utf8');
-    let originalContent = content;
-    
-    // Fix duplicate React imports
-    const reactImportRegex = /import\s+React[^;]*;?\s*/g;
-    const reactImports = content.match(reactImportRegex) || [];
-    
-    if (reactImports.length > 1) {
-      // Keep only the first React import and merge all unique imports
-      const firstImport = reactImports[0];
-      const allImports = reactImports.join(' ');
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Remove duplicate React imports
+    const lines = content.split('\n');
+    const newLines = [];
+    const seenImports = new Set();
+    let inImportBlock = false;
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
       
-      // Extract unique imports from all React imports
-      const uniqueImports = new Set();
-      reactImports.forEach(importStr => {
-        const match = importStr.match(/import\s+React(?:,\s*\{([^}]+)\})?/);
-        if (match && match[1]) {
-          const imports = match[1].split(',').map(imp => imp.trim());
-          imports.forEach(imp => uniqueImports.add(imp));
-        }
-      });
-      
-      // Create a single, clean React import
-      const uniqueImportsArray = Array.from(uniqueImports);
-      const cleanImport = uniqueImportsArray.length > 0 
-        ? `import React, { ${uniqueImportsArray.join(', ')} } from 'react';`
-        : `import React from 'react';`;
-      
-      // Replace all React imports with the clean one
-      content = content.replace(reactImportRegex, '');
-      content = cleanImport + '\n' + content;
-      
-      // Remove duplicate Suspense imports
-      const suspenseImportRegex = /import\s*{\s*Suspense\s*}\s*from\s*['"]react['"];?\s*/g;
-      const suspenseImports = content.match(suspenseImportRegex) || [];
-      if (suspenseImports.length > 1) {
-        content = content.replace(suspenseImportRegex, '');
-        if (!content.includes('Suspense')) {
-          content = `import React, { Suspense } from 'react';\n` + content;
-        }
-      }
-      
-      // Clean up multiple empty lines
-      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-      
-      // Remove duplicate import statements
-      const lines = content.split('\n');
-      const seenImports = new Set();
-      const cleanedLines = [];
-      
-      lines.forEach(line => {
-        const trimmedLine = line.trim();
-        if (trimmedLine.startsWith('import ')) {
-          if (!seenImports.has(trimmedLine)) {
-            seenImports.add(trimmedLine);
-            cleanedLines.push(line);
+      // Check if this is an import line
+      if (line.trim().startsWith('import')) {
+        if (inImportBlock) {
+          // Check if this is a duplicate React import
+          if (line.includes('import React') && seenImports.has('React')) {
+            modified = true;
+            continue; // Skip this duplicate line
           }
         } else {
-          cleanedLines.push(line);
+          inImportBlock = true;
         }
-      });
-      
-      content = cleanedLines.join('\n');
-      
-      if (content !== originalContent) {
-        fs.writeFileSync(file, content, 'utf8');
-        console.log(`Fixed: ${file}`);
-        fixedFiles++;
+        
+        // Track React imports
+        if (line.includes('import React')) {
+          seenImports.add('React');
+        }
+        
+        newLines.push(line);
+      } else if (line.trim() === '') {
+        // Empty line might end import block
+        newLines.push(line);
+      } else {
+        // Non-import line ends import block
+        inImportBlock = false;
+        newLines.push(line);
       }
     }
+
+    if (modified) {
+      fs.writeFileSync(filePath, newLines.join('\n'));
+      console.log(`Fixed duplicate imports in: ${filePath}`);
+      fixedFiles++;
+    }
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 });
 
-console.log(`Fixed ${fixedFiles} files with duplicate imports.`);
+console.log(`Fixed ${fixedFiles} files with duplicate imports`);

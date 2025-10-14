@@ -18,8 +18,13 @@ export const analytics = {
   identify: (userId: string, traits: Record<string, unknown> = {}) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
+<<<<<<< HEAD
         user_id: _userId;,
         custom_map: _traits
+=======
+        user_id: _userId,
+        custom_map: _traits;
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
       });
     }
   }

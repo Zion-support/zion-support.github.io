@@ -18,7 +18,10 @@ const SupportPage: React.FC = () => {
             </p>
             <div className="text-gray-400">
               <p>Support information coming soon...</p>
+              </div>
+        </div>
             </div>
+        </div>
           </div>
         </div>
       </div>

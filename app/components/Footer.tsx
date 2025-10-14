@@ -64,7 +64,8 @@ const services = [
             <Link to="/" className="flex items-center space-x-3 mb-6 group">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform cyber-glow">
                 <span className="text-white font-bold text-xl">Z</span>
-              </div>
+                </div>
+        </div>
               <span className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">Zion Tech Group</span>
             </Link>
             <p className="text-gray-400 mb-6 max-w-sm">
@@ -77,16 +78,20 @@ const services = [
               <div className="flex items-center space-x-3 text-gray-300">
                 <PhoneIcon className="w-5 h-5 text-purple-400" />
                 <span>+1-302-464-0950</span>
-              </div>
+                </div>
+        </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <EnvelopeIcon className="w-5 h-5 text-purple-400" />
                 <span>kleber@ziontechgroup.com</span>
-              </div>
+                </div>
+        </div>
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPinIcon className="w-5 h-5 text-purple-400" />
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+                </div>
+        </div>
               </div>
-            </div>
+        </div>
 
             {/* Social Links */}
             <div className="flex space-x-4">
@@ -105,8 +110,10 @@ const services = [
                   {social.icon === 'github' && '🐙'}
                 </a>
               ))}
+              </div>
+        </div>
             </div>
-          </div>
+        </div>
 
           {/* Services */}
           <div>
@@ -124,7 +131,8 @@ const services = [
                 </li>
               ))}
             </ul>
-          </div>
+            </div>
+        </div>
 
           {/* Company */}
           <div>
@@ -142,7 +150,8 @@ const services = [
                 </li>
               ))}
             </ul>
-          </div>
+            </div>
+        </div>
 
           {/* Support & Legal */}
           <div>
@@ -171,6 +180,8 @@ const services = [
                 </li>
               ))}
             </ul>
+            </div>
+        </div>
           </div>
         </div>
 
@@ -191,7 +202,10 @@ const services = [
                 Subscribe
                 <ArrowRightIcon className="w-4 h-4 ml-2" />
               </button>
+              </div>
+        </div>
             </div>
+        </div>
           </div>
         </div>
 
@@ -201,10 +215,13 @@ const services = [
             <span>Made with</span>
             <HeartIcon className="w-4 h-4 text-red-400" />
             <span>by Zion Tech Group</span>
-          </div>
+            </div>
+        </div>
           <div className="flex space-x-6">
             <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</Link>
             <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</Link>
+            </div>
+        </div>
           </div>
         </div>
       </div>

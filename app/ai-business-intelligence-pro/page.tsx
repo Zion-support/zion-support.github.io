@@ -1,8 +1,7 @@
 import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
+import { Brain, BarChart3, TrendingUp } from 'lucide-react';
+
 const AIBusinessIntelligenceProPage: React.FC = () => {
   return (
     <>

@@ -49,6 +49,7 @@ export default tseslint.config(
         document: 'readonly',
         process: 'readonly',
         global: 'readonly',
+        ...globals.browser,
       },
     },
     plugins: {
@@ -65,16 +66,13 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
-      '@typescript-eslint/no-unused-vars': ['error', { 
-        "argsIgnorePattern": "^_", 
-        "varsIgnorePattern": "^[A-Z]" 
-      }],
+      '@typescript-eslint/no-unused-vars': ['error', { "argsIgnorePattern": "^_", "varsIgnorePattern": "^[A-Z]" }],
       '@typescript-eslint/no-require-imports': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
       'no-undef': 'off', // TypeScript handles this
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
-      'no-console': ['warn', { 'allow': ['warn', 'error'] }],
+      'no-console': ['warn', { "allow": ["warn", "error"] }]
     },
     settings: {
       react: {

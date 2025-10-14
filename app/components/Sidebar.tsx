@@ -45,6 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           >
             <X className="w-6 h-6" />
           </button>
+          </div>
         </div>
         
         <nav className="mt-6">
@@ -72,15 +73,20 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <div className="flex items-center text-sm text-gray-300 mb-2">
               <MapPin className="w-4 h-4 mr-2" />
               <span>Contact Info</span>
-            </div>
+              </div>
+        </div>
             <div className="flex items-center text-sm text-gray-300 mb-1">
               <Phone className="w-4 h-4 mr-2" />
               <span>+1 (555) 123-4567</span>
-            </div>
+              </div>
+        </div>
             <div className="flex items-center text-sm text-gray-300">
               <Mail className="w-4 h-4 mr-2" />
               <span>info@ziontechgroup.com</span>
+              </div>
+        </div>
             </div>
+        </div>
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -920,6 +921,13 @@ const MicroSaaSSolutionsPage: React.FC = () => {
     }
   });
 
+=======
+import React, { Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Target, Rocket } from 'lucide-react';
+
+const MicroSaasSolutionsPage: React.FC = () => {
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
   return (
     <>
       <Helmet>
@@ -943,6 +951,7 @@ const MicroSaaSSolutionsPage: React.FC = () => {
             <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
           </div>
           
+<<<<<<< HEAD
           {/* Floating Elements */}
           <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
           <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
@@ -955,6 +964,14 @@ const MicroSaaSSolutionsPage: React.FC = () => {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
                 25+ AI-Powered Business Tools to Transform Your Operations
+=======
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <Rocket className="w-12 h-12 text-blue-400 mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Rapid Development</h3>
+              <p className="text-gray-300">
+                Fast-track your SaaS product development with our expert team.
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
               </p>
               <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
                 Discover our comprehensive suite of intelligent micro SaaS solutions designed to automate, 
@@ -1241,4 +1258,8 @@ const MicroSaaSSolutionsPage: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default MicroSaaSSolutionsPage;
+=======
+export default MicroSaasSolutionsPage;
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05

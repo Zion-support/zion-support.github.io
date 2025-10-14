@@ -1,14 +1,14 @@
 export const enhancedErrorTracking = {
   trackError: (_error: Error, context?: Record<string, unknown>) => {
     const ErrorInfo = {
-      message: _error.message;,
-      stack: _error.stack;,
+      message: _error.message,
+      stack: _error.stack,
   trackError: (error: Error, context?: Record<string, unknown>) => {
     // Error tracking logic
   trackError: (error: Error, context?: Record<string, any>) => {
     const errorInfo = {
-      message: error.message;,
-      stack: error.stack;,
+      message: error.message,
+      stack: error.stack,
       timestamp: new Date().toISOString(),
       context: context || {}
     }
@@ -21,9 +21,15 @@ export const enhancedErrorTracking = {
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
+<<<<<<< HEAD
         description: _error.message;,
         fatal: false;,
         error_type: 'performance'
+=======
+        description: _error.message,
+        fatal: false,
+        error_type: 'performance';
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
       })
     }
   },
@@ -32,8 +38,13 @@ export const enhancedErrorTracking = {
     enhancedErrorTracking.trackError(_error, {
   trackPerformanceError: (error: Error, performanceData: unknown) => {
     enhancedErrorTracking.trackError(error, {
+<<<<<<< HEAD
       performance: performanceData;,
       _error_type: 'performance'
+=======
+      performance: performanceData,
+      _error_type: 'performance';
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
     });
   trackPerformanceError: (metric: string, value: number, threshold: number) => {
     if (value > threshold) {

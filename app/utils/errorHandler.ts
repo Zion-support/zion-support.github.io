@@ -3,14 +3,20 @@ export const errorHandler = {
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
+<<<<<<< HEAD
         description: _error.message;,
         fatal: false;,
         context: context
+=======
+        description: _error.message,
+        fatal: false,
+        context: context;
+>>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
       });
     }
     
     return {
-      message: 'Something went wrong. Please try again.';,
+      message: 'Something went wrong. Please try again.',
       code: 'GENERIC_ERROR';
     };
   },

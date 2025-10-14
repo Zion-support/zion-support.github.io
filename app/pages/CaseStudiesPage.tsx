@@ -63,9 +63,10 @@ const CaseStudiesPage: React.FC = () => {
             Success Stories
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Discover how we've helped businesses across industries achieve remarkable results 
+            Discover how we&apos;ve helped businesses across industries achieve remarkable results 
             with our AI and IT solutions.
           </p>
+          </div>
         </div>
       </section>
 
@@ -79,7 +80,8 @@ const CaseStudiesPage: React.FC = () => {
                   <div className="text-sm text-purple-400 font-semibold mb-2">{study.industry}</div>
                   <h3 className="text-2xl font-bold text-white mb-2">{study.title}</h3>
                   <div className="text-gray-400 text-sm mb-4">Client: {study.client}</div>
-                </div>
+                  </div>
+        </div>
 
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-2">Challenge</h4>
@@ -87,7 +89,8 @@ const CaseStudiesPage: React.FC = () => {
                   
                   <h4 className="text-white font-semibold mb-2">Solution</h4>
                   <p className="text-gray-300 text-sm mb-4">{study.solution}</p>
-                </div>
+                  </div>
+        </div>
 
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Results</h4>
@@ -97,12 +100,16 @@ const CaseStudiesPage: React.FC = () => {
                         <div className="flex items-center justify-between mb-1">
                           <span className="text-gray-300 text-xs">{result.metric}</span>
                           <result.icon className="w-4 h-4 text-purple-400" />
-                        </div>
+                          </div>
+        </div>
                         <div className="text-white font-bold text-lg">{result.value}</div>
-                      </div>
+                        </div>
+        </div>
                     ))}
+                    </div>
+        </div>
                   </div>
-                </div>
+        </div>
 
                 <p className="text-gray-300 text-sm mb-6">{study.description}</p>
 
@@ -110,8 +117,11 @@ const CaseStudiesPage: React.FC = () => {
                   Read Full Case Study
                   <ArrowRight className="w-4 h-4" />
                 </button>
-              </div>
+                </div>
+        </div>
             ))}
+            </div>
+        </div>
           </div>
         </div>
       </section>
@@ -123,7 +133,7 @@ const CaseStudiesPage: React.FC = () => {
             Ready to Create Your Success Story?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI and IT solutions can transform your business 
+            Let&apos;s discuss how our AI and IT solutions can transform your business 
             and deliver measurable results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -133,6 +143,8 @@ const CaseStudiesPage: React.FC = () => {
             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300">
               Schedule Consultation
             </button>
+            </div>
+        </div>
           </div>
         </div>
       </section>
