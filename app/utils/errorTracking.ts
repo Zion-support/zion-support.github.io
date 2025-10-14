@@ -1,10 +1,15 @@
-export const reportError = (error: Error, context?: Record<string, unknown>) => {
+// Error tracking utility
+export const reportError = (error: Error, context?: Record<string, any>) => {
   console.error('Error reported:', error, context);
-  // In a real implementation, you would send this to your error tracking service
-  // like Sentry, LogRocket, or similar
+  // In a real application, this would send the error to an error tracking service
 };
 
 export const initErrorReporting = () => {
-  // Initialize error reporting service
   console.log('Error reporting initialized');
+  // In a real application, this would initialize error tracking services
+};
+
+export default {
+  reportError,
+  initErrorReporting
 };

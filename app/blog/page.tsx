@@ -1,5 +1,38 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { User, Calendar } from 'lucide-react';
+
+const BlogPage = () => {
+  const posts = [
+    {
+      id: 1,
+      title: 'The Future of AI in Business',
+      excerpt: 'Exploring how artificial intelligence is transforming modern business operations.',
+      author: 'Zion Tech Team',
+      date: '2024-01-15',
+      readTime: '5 min read',
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 2,
+      title: 'Cloud Migration Best Practices',
+      excerpt: 'Essential strategies for successful cloud migration and optimization.',
+      author: 'Zion Tech Team',
+      date: '2024-01-10',
+      readTime: '7 min read',
+      image: '/api/placeholder/400/250'
+    },
+    {
+      id: 3,
+      title: 'Cybersecurity Trends 2024',
+      excerpt: 'Latest cybersecurity trends and how to protect your business.',
+      author: 'Zion Tech Team',
+      date: '2024-01-05',
+      readTime: '6 min read',
+      image: '/api/placeholder/400/250'
+    }
+  ];
 
 export default function Page() {
   return (

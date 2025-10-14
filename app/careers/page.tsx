@@ -1,5 +1,32 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+'use client';
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+// Link import removed as it's not being used
+
+const CareersPage: React.FC = () => {
+  const openPositions = [
+    {
+      title: 'Senior AI Engineer',
+      department: 'AI Solutions',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '5+ years',
+    },
+    {
+      title: 'Cloud Architect',
+      department: 'Cloud Services',
+      location: 'New York, NY',
+      type: 'Full-time',
+      experience: '7+ years',
+      description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
+      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
+    },
+    {
+    }
+  ];
+
+  // Benefits and values data removed as they were not being used in the component
 
 export default function Page() {
   return (

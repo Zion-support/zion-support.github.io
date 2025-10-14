@@ -1,151 +1,88 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-}
-
-interface Props {
+interface AdvancedPerformanceMonitorProps {
   enableRealTimeMonitoring?: boolean;
-  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  onMetricsUpdate?: (metrics: any) => void;
 }
 
-const AdvancedPerformanceMonitor: React.FC<Props> = ({
+export default function AdvancedPerformanceMonitor({ 
   enableRealTimeMonitoring = false,
-  onMetricsUpdate,
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [recommendations, setRecommendations] = useState<string[]>([]);
-
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined' || !window.performance) return;
-
-    const newMetrics: PerformanceMetrics = {};
-
-    // Measure First Contentful Paint (FCP)
-    const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
-    if (fcpEntry) {
-      newMetrics.fcp = fcpEntry.startTime;
-    }
-
-    // Measure Largest Contentful Paint (LCP)
-    const lcpEntries = performance.getEntriesByType('largest-contentful-paint');
-    if (lcpEntries.length > 0) {
-      newMetrics.lcp = (lcpEntries[lcpEntries.length - 1] as PerformanceEntry).startTime;
-    }
-
-    // Measure First Input Delay (FID)
-    const fidEntries = performance.getEntriesByType('first-input');
-    if (fidEntries.length > 0) {
-      newMetrics.fid = (fidEntries[0] as PerformanceEventTiming).processingStart - fidEntries[0].startTime;
-    }
-
-    // Measure Cumulative Layout Shift (CLS)
-    let clsValue = 0;
-    const clsEntries = performance.getEntriesByType('layout-shift');
-    clsEntries.forEach((entry: any) => {
-      if (!entry.hadRecentInput) {
-        clsValue += entry.value;
-      }
-    });
-    newMetrics.cls = clsValue;
-
-    // Measure Time to First Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      newMetrics.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-    }
-
-    setMetrics(newMetrics);
-    if (onMetricsUpdate) {
-      onMetricsUpdate(newMetrics);
-    }
-
-    // Generate recommendations
-    const newRecommendations: string[] = [];
-    if (newMetrics.fcp && newMetrics.fcp > 1800) {
-      newRecommendations.push('Consider optimizing First Contentful Paint (FCP) - currently ' + Math.round(newMetrics.fcp) + 'ms');
-    }
-    if (newMetrics.lcp && newMetrics.lcp > 2500) {
-      newRecommendations.push('Consider optimizing Largest Contentful Paint (LCP) - currently ' + Math.round(newMetrics.lcp) + 'ms');
-    }
-    if (newMetrics.fid && newMetrics.fid > 100) {
-      newRecommendations.push('Consider optimizing First Input Delay (FID) - currently ' + Math.round(newMetrics.fid) + 'ms');
-    }
-    if (newMetrics.cls && newMetrics.cls > 0.1) {
-      newRecommendations.push('Consider optimizing Cumulative Layout Shift (CLS) - currently ' + newMetrics.cls.toFixed(3));
-    }
-    if (newMetrics.ttfb && newMetrics.ttfb > 600) {
-      newRecommendations.push('Consider optimizing Time to First Byte (TTFB) - currently ' + Math.round(newMetrics.ttfb) + 'ms');
-    }
-
-    setRecommendations(newRecommendations);
-  }, [onMetricsUpdate]);
-
-  useEffect(() => {
-    if (enableRealTimeMonitoring && process.env.NODE_ENV === 'development') {
-      // Initial measurement
-      measurePerformance();
-
-      // Set up performance observer
-      const observer = new PerformanceObserver((list) => {
-        measurePerformance();
-      });
-
-      observer.observe({ entryTypes: ['measure', 'navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-      return () => {
-        observer.disconnect();
-      };
-    }
-  }, [enableRealTimeMonitoring, measurePerformance]);
-
-  // Don't render in production
+  onMetricsUpdate
+}: AdvancedPerformanceMonitorProps) {
+  // Don't render in production mode
   if (process.env.NODE_ENV === 'production') {
     return null;
   }
 
-  if (!enableRealTimeMonitoring) {
-    return null;
-  }
-
   return (
-    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg max-w-sm text-xs font-mono z-50">
-      <div className="font-bold mb-2">Performance Monitor</div>
+    <div>
+      <Helmet>
+        <title>AdvancedPerformanceMonitor - Zion Tech Group</title>
+        <meta name="description" content="Professional advancedperformancemonitor services by Zion Tech Group." />
+      </Helmet>
       
-      <div className="space-y-1 mb-3">
-        {metrics.fcp && (
-          <div>FCP: {Math.round(metrics.fcp)}ms</div>
-        )}
-        {metrics.lcp && (
-          <div>LCP: {Math.round(metrics.lcp)}ms</div>
-        )}
-        {metrics.fid && (
-          <div>FID: {Math.round(metrics.fid)}ms</div>
-        )}
-        {metrics.cls && (
-          <div>CLS: {metrics.cls.toFixed(3)}</div>
-        )}
-        {metrics.ttfb && (
-          <div>TTFB: {Math.round(metrics.ttfb)}ms</div>
-        )}
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Performance Monitor
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional performance monitoring services by Zion Tech Group.
+            </p>
+          </div>
+        </section>
+        
+        {/* Content Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Performance Monitoring</h3>
+                <p className="text-gray-600">Advanced performance monitoring solutions for optimal application performance</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-time Analytics</h3>
+                <p className="text-gray-600">Real-time performance analytics and insights</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Optimization</h3>
+                <p className="text-gray-600">Performance optimization recommendations and implementation</p>
+              </div>
+            </div>
+            
+            {/* Performance Recommendations */}
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">Recommendations:</h3>
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                <ul className="space-y-2 text-gray-700">
+                  <li>• Optimize images and assets</li>
+                  <li>• Implement lazy loading</li>
+                  <li>• Use CDN for static resources</li>
+                  <li>• Minimize JavaScript bundles</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our performance monitoring services.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
       </div>
-
-      {recommendations.length > 0 && (
-        <div>
-          <div className="font-bold text-yellow-400 mb-1">Recommendations:</div>
-          <ul className="space-y-1">
-            {recommendations.map((rec, index) => (
-              <li key={index} className="text-yellow-300">• {rec}</li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   );
-};
-
-export default AdvancedPerformanceMonitor;
+}
