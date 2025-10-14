@@ -4,15 +4,23 @@ import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
 
 // Components
-import Footer from './src/components/Footer';
+import Footer from './app/components/Footer';
+import Navigation from './app/components/Navigation';
+import LoadingStates from './app/components/LoadingStates';
 
 // Pages
-import HomePage from './src/page';
-import AboutPage from './src/about/page';
-import ContactPage from './src/pages/ContactPage';
-import ServicesPage from './src/services/page';
-import BlogPage from './src/pages/BlogPage';
-import SolutionsPage from './src/pages/SolutionsPage';
+import HomePage from './app/page';
+import AboutPage from './app/about/page';
+import ContactPage from './app/pages/ContactPage';
+import ServicesPage from './app/services/page';
+import BlogPage from './app/pages/BlogPage';
+import SolutionsPage from './app/pages/SolutionsPage';
+import TutorialsPage from './app/pages/TutorialsPage';
+import DemoPage from './app/pages/DemoPage';
+import SupportPage from './app/pages/SupportPage';
+import PrivacyPage from './app/pages/PrivacyPage';
+import TermsPage from './app/pages/TermsPage';
+import PricingPage from './app/pages/PricingPage';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -42,62 +50,44 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
 const App: React.FC = () => {
   return (
     <HelmetProvider>
-<<<<<<< HEAD
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-          <Router>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-              <main className="relative z-10" id="main-content" role="main">
-                <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-white">Loading...</div></div>}>
-=======
-      <AnalyticsProvider>
-        <ErrorBoundary FallbackComponent={ErrorFallback}>
-          <Router>
-            <div className="min-h-screen flex flex-col">
-              <Navigation />
-              <main className="flex-grow">
-                <Suspense fallback={<LoadingStates />}>
->>>>>>> cursor/fix-errors-and-merge-to-main-c3d6
-                  <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/blog" element={<BlogPage />} />
-<<<<<<< HEAD
-                    <Route path="/solutions" element={<SolutionsPage />} />
-                    
-                    {/* Catch all route */}
-                    <Route path="*" element={
-                      <div className="min-h-screen flex items-center justify-center">
-                        <div className="text-center">
-                          <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                          <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
-                          <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                            Go Home
-                          </a>
-                        </div>
+        <Router>
+          <div className="min-h-screen flex flex-col">
+            <Navigation />
+            <main className="flex-grow">
+              <Suspense fallback={<LoadingStates />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/solutions" element={<SolutionsPage />} />
+                  <Route path="/tutorials" element={<TutorialsPage />} />
+                  <Route path="/demo" element={<DemoPage />} />
+                  <Route path="/support" element={<SupportPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  {/* Catch all route */}
+                  <Route path="*" element={
+                    <div className="min-h-screen flex items-center justify-center">
+                      <div className="text-center">
+                        <h1 className="text-4xl font-bold text-gray-900 mb-4">404 - Page Not Found</h1>
+                        <p className="text-gray-600 mb-8">The page you're looking for doesn't exist.</p>
+                        <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                          Go Home
+                        </a>
                       </div>
-                    } />
-=======
-                    <Route path="/tutorials" element={<TutorialsPage />} />
-                    <Route path="/demo" element={<DemoPage />} />
-                    <Route path="/support" element={<SupportPage />} />
-                    <Route path="/privacy" element={<PrivacyPage />} />
-                    <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
->>>>>>> cursor/fix-errors-and-merge-to-main-c3d6
-                  </Routes>
-                </Suspense>
-              </main>
-              <Footer />
-            </div>
-          </Router>
-<<<<<<< HEAD
+                    </div>
+                  } />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </Router>
       </ErrorBoundary>
-=======
-        </ErrorBoundary>
-      </AnalyticsProvider>
->>>>>>> cursor/fix-errors-and-merge-to-main-c3d6
     </HelmetProvider>
   );
 };
