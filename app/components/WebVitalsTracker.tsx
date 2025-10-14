@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 'use client'
 export default function ComponentsPage() {
   return (
@@ -6,14 +6,35 @@ export default function ComponentsPage() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8">Components</h1>
         <p className="text-gray-300 text-lg">
-<<<<<<< HEAD
-          This page is under development.;
-        </p>
+          This page is under development.</p>
       </div>
     </div>
-  );
+  )
 }
-=======
-          This page is under development.</p></div></div>
-  )}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+
+const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
+  useEffect(() => {
+    // Track Core Web Vitals
+    const trackWebVitals = () => {
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS((metric) => {
+            console.log('CLS:', metric);
+          });
+          getFID((metric) => {
+            console.log('FID:', metric);
+          });
+          getFCP((metric) => {
+            console.log('FCP:', metric);
+          });
+          getLCP((metric) => {
+            console.log('LCP:', metric);
+          });
+          getTTFB((metric) => {
+            console.log('TTFB:', metric);
+          });
+        });
+      }
+    };
+
+    trackWebVitals();

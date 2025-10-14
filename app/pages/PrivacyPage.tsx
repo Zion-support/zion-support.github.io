@@ -1,6 +1,17 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-const PrivacyPage: React.FC = () => {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  ShieldCheckIcon,
+  EyeIcon,
+  LockClosedIcon,
+  DocumentTextIcon,
+  UserIcon,
+  CogIcon
+} from '@heroicons/react/24/outline'
+
+export default function PrivacyPage() {
+  const lastUpdated = "January 15, 2024";
+
   return (
     <>
       <Helmet>
@@ -15,12 +26,9 @@ const PrivacyPage: React.FC = () => {
           </p>
         </div>
       </div>
-    </>
-<<<<<<< HEAD
-  );
+)
+    </>)
+  )
 }
-export default PrivacyPage;
-=======
-  )}
-export default PrivacyPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+export default PrivacyPag;e;
+';

@@ -1,4 +1,7 @@
-import React, { useEffect } from 'react';
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+}
 
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -83,4 +86,5 @@ const AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 
+export default AccessibilityEnhancer;cursor/analyze-improve-and-deploy-application-c573
 export default AccessibilityEnhancer;

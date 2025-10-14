@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Bars3Icon, 
@@ -392,17 +392,28 @@ import {
   DocumentCloudFedrampIl100Icon
 } from '@heroicons/react/24/outline';
 
-interface NavigationProps {
-  onSidebarToggle?: () => void;
+interface NavigationItem {
+  name: string;
+  path: string;
+  icon: React.ReactNode;
+  dropdown?: NavigationItem[];
 }
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+interface NavigationProps {
+  onSidebarToggle: () => void;
+}
+
+const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
   const location = useLocation();
+  
+  const toggleMenu = useCallback(() => {
+    setIsOpen(!isOpen);
+  }, [isOpen]);
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -460,9 +471,25 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
   ];
 
-  const isActive = (href: string) => {
-    return location.pathname === href;
-  };
+  const mainNavItems = [
+    { name: 'Home', path: '/', icon: <Globe className="w-4 h-4" /> },
+    { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
+    { name: 'Contact', path: '/contact', icon: <Mail className="w-4 h-4" /> },
+    { name: 'Blog', path: '/blog', icon: <Code className="w-4 h-4" /> }
+  ];
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = () => {
+      setIsServicesOpen(false);
+      setIsMicroSaasOpen(false);
+      setIsItServicesOpen(false);
+      setIs5GServicesOpen(false);
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 sticky top-0 z-50">
@@ -480,6 +507,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 </span>
               </Link>
             </div>
+            <span className="text-xl font-bold">Zion Tech Group</span>
+          </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:ml-8 lg:flex lg:space-x-1">
@@ -557,7 +586,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     </Link>
                   )}
                 </div>
-              ))}
+              )}
             </div>
           </div>
 
@@ -577,11 +606,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white focus:outline-none focus:text-white transition-colors"
             >
-              {isOpen ? (
-                <XMarkIcon className="h-6 w-6" />
-              ) : (
-                <Bars3Icon className="h-6 w-6" />
-              )}
+              <Menu className="w-6 h-6" />
             </button>
           </div>
         </div>
@@ -657,6 +682,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       </div>
     </nav>
   );
-};
+});
 
 export default Navigation;

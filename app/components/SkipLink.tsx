@@ -1,21 +1,15 @@
-<<<<<<< HEAD
 import React from 'react';
-'use client';
+'use client'
       {/* Content Section */}
-=======
-import React from 'react'
 'use client'{/* Content Section */}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md: grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
               <p className="text-lg text-gray-600 mb-6">
-<<<<<<< HEAD
                 We provide comprehensive skip link;
-                solutions tailored to your specific needs and requirements.;
-              </p>
+                solutions tailored to your specific needs and requirements.</p>
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
@@ -34,19 +28,17 @@ import React from 'react'
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p className="mb-6">
-                Ready to transform your business with our skip link services?;
-              </p>
+                Ready to transform your business with our skip link services?</p>
               <a;
                 href="$1"
                 className="$1"
               >
-                Contact Us;
+                Contact Us,
               </a>
             </div>
           </div>
         </div>
       </section>
-=======
                 We provide comprehensive skip link
                 solutions tailored to your specific needs and requirements.</p>
               <ul className="space-y-3">
@@ -67,4 +59,8 @@ import React from 'react'
                 href="/contact"
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
                 Contact Us</a></div></div></div></section>
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>;

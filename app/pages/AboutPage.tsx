@@ -69,6 +69,7 @@ const AboutPage: React.FC = () => {
     }
   ];
 
+export default function AboutPage() {
   const stats = [
     { number: '50+', label: 'Projects Completed' },
     { number: '25+', label: 'Happy Clients' },

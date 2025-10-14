@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useMemo } from "react";
+import { Link } from "react-router-dom";
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
@@ -9,7 +9,7 @@ import {
 } from '@heroicons/react/24/outline';
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 
-const Footer: React.FC = () => {
+const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
 
   const services = [
@@ -22,22 +22,25 @@ const Footer: React.FC = () => {
     { name: '5G Solutions', href: '/5g-solutions' }
   ];
 
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' }
-  ];
+  const services = useMemo(() => [
+    { name: "AI Services", path: "/ai-services", icon: <Brain className="w-4 h-4" /> },
+    { name: "IT Services", path: "/services", icon: <Shield className="w-4 h-4" /> },
+    { name: "Micro SAAS", path: "/micro-saas", icon: <Zap className="w-4 h-4" /> },
+    { name: "5G Solutions", path: "/5g-solutions", icon: <Globe className="w-4 h-4" /> },
+    { name: "Cloud Services", path: "/cloud-infrastructure", icon: <Cloud className="w-4 h-4" /> },
+    { name: "Cybersecurity", path: "/cybersecurity-solutions", icon: <Shield className="w-4 h-4" /> },
+    { name: "Web Development", path: "/web-development", icon: <Code className="w-4 h-4" /> },
+    { name: "Data Analytics", path: "/ai-data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
+  ], []);
 
-  const support = [
-    { name: 'Contact', href: '/contact' },
-    { name: 'Support', href: '/support' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Demo', href: '/demo' },
-    { name: 'Documentation', href: '/docs' }
-  ];
+  const companyLinks = useMemo(() => [
+    { name: "About Us", path: "/about" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "Careers", path: "/careers" },
+    { name: "Blog", path: "/blog" },
+    { name: "Press", path: "/press" },
+    { name: "Partners", path: "/partners" }
+  ], []);
 
   const legal = [
     { name: 'Privacy Policy', href: '/privacy' },
