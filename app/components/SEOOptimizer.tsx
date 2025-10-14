@@ -1,6 +1,28 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const SEOOptimizer: React.FC = () => {
+  return null; // This component doesn't render anything visible
+import React,{ useEffect } from 'react';
+
+interface SEOOptimizerProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+}
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title,
+  description,
+  keywords,
+  canonical,
+  ogImage: _ogImage,
+  ogType: _ogType ='website',
+  twitterCard: _twitterCard ='summary_large_image'
+}) => {
   useEffect(() => {
     // SEO optimization code
     const optimizeSEO = () => {

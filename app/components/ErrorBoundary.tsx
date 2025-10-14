@@ -27,17 +27,9 @@ class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-4">
-              Something went wrong
-            </h1>
-            <p className="text-gray-300 mb-8">
-              We&apos;re sorry, but something unexpected happened.
-            </p>
-            <button
-              onClick={() =>
-                this.setState({ hasError: false, error: undefined })
-              }
-              className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
+            <button onClick ={() => window.location.reload()}
+              className ="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
             >
               Try again
             </button>

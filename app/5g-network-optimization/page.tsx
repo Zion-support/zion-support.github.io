@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const FiveGNetworkOptimizationPage: React.FC = () => {
+const FiveGNetworkOptimization: React.FC = () => {
   return (
     <>
       <Helmet>
