@@ -1,3 +1,8 @@
-'use client';';';
-export const utilityFunction = () => {}; // Utility implementation; return true;}
+'use client';
+
+export const accessibilityEnhancer = () => {
+  // Utility implementation
+  return true;
 };
+
+export default accessibilityEnhancer;

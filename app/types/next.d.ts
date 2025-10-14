@@ -1,4 +1,8 @@
-// next.d - Basic implementation
-export default function next.d() {
-  return null;
+// next.d.ts - TypeScript declarations
+declare module 'next' {
+  interface NextConfig {
+    experimental?: {
+      appDir?: boolean;
+    };
+  }
 }
