@@ -37,8 +37,12 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
         return (
           <div className="animate-pulse">
             <div className="bg-gray-300 rounded h-4 w-3/4 mb-2"></div>
-            <div className="bg-gray-300 rounded h-4 w-1/2"></div>          </div>
-          
+            <div className="bg-gray-300 rounded h-4 w-1/2"></div>
+          </div>
+        );
+      
+      case 'card':
+        return (
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
             <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
             <p className="text-gray-300">

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Zap, BarChart3, Users, Globe } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Zap, BarChart3, Users, Target, CheckCircle } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import Footer from '../components/Footer';
 import FuturisticBackground from '../components/FuturisticBackground';
 
-const AIServicesPage: React.FC = () => {  const stats = [
+const AIServicesPage: React.FC = () => {
+  const stats = [
     { icon: <Brain className="w-8 h-8 text-cyan-400" />, value: "500+", label: "AI Models Deployed" },
     { icon: <Shield className="w-8 h-8 text-cyan-400" />, value: "99.9%", label: "Security Uptime" },
     { icon: <Zap className="w-8 h-8 text-cyan-400" />, value: "50%", label: "Efficiency Gain" },

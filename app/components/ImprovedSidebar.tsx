@@ -163,7 +163,7 @@ const ImprovedSidebar: React.FC<ImprovedSidebarProps> = ({ isOpen, onClose }) =>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

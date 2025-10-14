@@ -1,7 +1,7 @@
 import React, { lazy, ComponentType, ComponentProps, Suspense } from 'react';
 
 // Higher-order component for lazy loading
-export function withLazyLoading<T extends ComponentType<any>>(
+export function withLazyLoading<T extends ComponentType<unknown>>(
   Component: T,
   fallback?: React.ReactNode,
 ) {
@@ -9,7 +9,7 @@ export function withLazyLoading<T extends ComponentType<any>>(
   
   const WrappedComponent = (props: ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
-      <LazyComponent {...(props as any)} />
+      <LazyComponent {...(props as ComponentProps<T>)} />
     </Suspense>
   );
   WrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name})`;
@@ -17,7 +17,7 @@ export function withLazyLoading<T extends ComponentType<any>>(
 }
 
 // Utility function to create lazy-loaded components
-export function createLazyComponent<T extends ComponentType<any>>(
+export function createLazyComponent<T extends ComponentType<unknown>>(
   importFunction: () => Promise<{ default: T }>,
   fallback?: React.ReactNode,
 ) {
@@ -25,9 +25,9 @@ export function createLazyComponent<T extends ComponentType<any>>(
   
   const WrappedComponent = (props: ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
-      <LazyComponent {...(props as any)} />
+      <LazyComponent {...(props as ComponentProps<T>)} />
     </Suspense>
   );
-  WrappedComponent.displayName = `createLazyComponent(${Component.displayName || Component.name})`;
+  WrappedComponent.displayName = `createLazyComponent(${LazyComponent.displayName || LazyComponent.name})`;
   return WrappedComponent;
 }

@@ -1,12 +1,13 @@
 // Learn more: https://github.com/testing-library/jest-dom
-require('@testing-library/jest-dom');
+require("@testing-library/jest-dom");
 
 // Polyfills for Node.js environment
-const { TextEncoder, TextDecoder } = require('util');
+const { TextEncoder, TextDecoder } = require("util");
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-// Mock window.matchMediaObject.defineProperty(window, "matchMedia", {
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {
   writable: true,
   value: jest.fn().mockImplementation((query) => ({
     matches: false,

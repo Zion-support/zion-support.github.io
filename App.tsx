@@ -1,4 +1,6 @@
 import React from 'react';
+
+const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       <div className="container mx-auto px-4 py-16">
@@ -19,7 +21,8 @@ import React from 'react';
           </div>
         </div>
       </div>
-    </div>  );
-}
+    </div>
+  );
+};
 
 export default App;
