@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { ArrowLeft, Home, Search, BookOpen, Users, Phone } from 'lucide-react';
+import { Phone, Home } from 'lucide-react';
 
 export default function NotFound() {
   const popularPages = [
