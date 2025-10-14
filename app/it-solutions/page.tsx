@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Server, Shield, Cloud, Database } from 'lucide-react';
+import { Shield, Cloud, Database } from 'lucide-react';
 
 const Page: React.FC = () => {
 
@@ -44,5 +44,5 @@ const Page: React.FC = () => {
   );
 };
 
-const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
-export default LazyPage;
+// const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
+export default Page;

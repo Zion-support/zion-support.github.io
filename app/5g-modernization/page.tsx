@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { CheckCircle, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 
@@ -66,6 +66,6 @@ function FiveGModernizationPage() {
   );
 }
 
-const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
-export default LazyPage;
+// const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
+export default FiveGModernizationPage;
 

@@ -1,12 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
+import { Shield, Lock, Brain } from 'lucide-react';
 
 const AICybersecuritySuiteProPage: React.FC = () => {
   return (
@@ -56,5 +50,5 @@ const AICybersecuritySuiteProPage: React.FC = () => {
   );
 };
 
-const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
-export default LazyPage;
+// const LazyPage: React.LazyExoticComponent<React.ComponentType<any>> = React.lazy(() => import('./page'));
+export default AICybersecuritySuiteProPage;
