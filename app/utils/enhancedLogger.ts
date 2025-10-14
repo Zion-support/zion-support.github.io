@@ -18,7 +18,7 @@ export const enhancedLogger = {
     }
   },
   
-  info: (message: string, data?: any) => this.log('info', message, data),
-  warn: (message: string, data?: any) => this.log('warn', message, data),
-  error: (message: string, data?: any) => this.log('error', message, data)
+  info: (message: string, data?: any) => logger.log('info', message, data),
+  warn: (message: string, data?: any) => logger.log('warn', message, data),
+  error: (message: string, data?: any) => logger.log('error', message, data)
 };

@@ -10,13 +10,13 @@ export const configManager = {
   },
   
   get: (key: string) => {
-    return key.split('.').reduce((obj, k) => obj?.[k], this.config);
+    return key.split('.').reduce((obj: any, k) => obj?.[k], configManager.config);
   },
   
   set: (key: string, value: any) => {
     const keys = key.split('.');
     const lastKey = keys.pop();
-    const target = keys.reduce((obj, k) => obj[k] = obj[k] || {}, this.config);
+    const target = keys.reduce((obj, k) => obj[k] = obj[k] || {}, configManager.config);
     if (lastKey) {
       target[lastKey] = value;
     }
