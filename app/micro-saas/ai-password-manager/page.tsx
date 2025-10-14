@@ -1,160 +1,159 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Box, Brain, Eye, Zap, CheckCircle, Star, Users, Clock, Target, BarChart3, Globe, Shield, Sparkles, PenTool, Image, Video, Mic, Code, Mail, MessageSquare, Calendar, DollarSign, Cube, Layers, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, FileText, Package } from 'lucide-react'
+import { ArrowRight, Lock, Brain, Shield, CheckCircle, Star, Users, Clock, Target, BarChart3, Globe, Zap, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle, FileText, Mail, MessageSquare, Calendar, DollarSign } from 'lucide-react'
 
-const AI3DGenerationPage: React.FC = () => {
+const AIPasswordManagerPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Modeling',
-      description: 'Generate complex 3D models from text descriptions, sketches, or reference images using advanced AI algorithms.'
+      title: 'AI Password Generation',
+      description: 'Generate ultra-secure passwords using AI algorithms that adapt to each site\'s requirements and your preferences.'
     },
     {
-      icon: <Eye className="w-6 h-6 text-emerald-400" />,
-      title: 'Real-time Rendering',
-      description: 'High-quality real-time rendering with photorealistic lighting, shadows, and materials for stunning visuals.'
+      icon: <Shield className="w-6 h-6 text-emerald-400" />,
+      title: 'Advanced Security',
+      description: 'Military-grade encryption with zero-knowledge architecture ensures your passwords are never accessible to anyone but you.'
     },
     {
-      icon: <Zap className="w-6 h-6 text-purple-400" />,
-      title: 'Instant Generation',
-      description: 'Create detailed 3D models in seconds with our optimized AI processing and cloud-based infrastructure.'
+      icon: <Eye className="w-6 h-6 text-purple-400" />,
+      title: 'Breach Monitoring',
+      description: 'AI-powered monitoring scans the dark web and alerts you immediately if any of your accounts are compromised.'
     },
     {
-      icon: <Target className="w-6 h-6 text-orange-400" />,
-      title: 'Precision Control',
-      description: 'Fine-tune every aspect of your 3D models with precise controls for dimensions, materials, and textures.'
+      icon: <Key className="w-6 h-6 text-orange-400" />,
+      title: 'Auto-Fill & Sync',
+      description: 'Seamlessly fill passwords across all your devices with intelligent auto-fill that learns your patterns.'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
-      title: 'Animation Ready',
-      description: 'Generate 3D models that are ready for animation with proper rigging and bone structure.'
+      icon: <Fingerprint className="w-6 h-6 text-pink-400" />,
+      title: 'Biometric Access',
+      description: 'Secure access using fingerprint, face ID, or other biometric authentication methods.'
     },
     {
-      icon: <Globe className="w-6 h-6 text-blue-400" />,
-      title: 'Multi-Format Export',
-      description: 'Export your 3D models in all major formats including OBJ, FBX, STL, and GLTF for any platform.'
+      icon: <BarChart3 className="w-6 h-6 text-blue-400" />,
+      title: 'Security Analytics',
+      description: 'Detailed security reports and insights to help you understand and improve your password hygiene.'
     }
   ]
 
-  const generationTypes = [
+  const securityFeatures = [
     {
-      icon: <Box className="w-8 h-8 text-cyan-400" />,
-      title: 'Product Design',
-      description: 'Create detailed 3D models for product visualization, prototyping, and manufacturing.',
-      price: '$0.50/model',
-      features: ['High detail', 'Manufacturing ready', 'Material options', 'Scale accuracy']
+      icon: <Lock className="w-8 h-8 text-cyan-400" />,
+      title: 'Password Vault',
+      description: 'Store unlimited passwords with end-to-end encryption and secure cloud backup.',
+      price: 'Included',
+      features: ['Unlimited storage', 'End-to-end encryption', 'Cloud backup', 'Offline access']
     },
     {
-      icon: <Users className="w-8 h-8 text-emerald-400" />,
-      title: 'Character Creation',
-      description: 'Generate realistic 3D characters for games, films, and virtual experiences.',
-      price: '$2.00/character',
-      features: ['Facial details', 'Body proportions', 'Clothing options', 'Animation ready']
+      icon: <Brain className="w-8 h-8 text-emerald-400" />,
+      title: 'AI Security Scan',
+      description: 'AI-powered analysis of your passwords to identify weak, reused, or compromised credentials.',
+      price: 'Included',
+      features: ['Weak password detection', 'Reuse analysis', 'Breach monitoring', 'Security scoring']
     },
     {
-      icon: <Layers className="w-8 h-8 text-purple-400" />,
-      title: 'Architecture',
-      description: 'Create detailed architectural models and building visualizations.',
-      price: '$5.00/building',
-      features: ['Floor plans', 'Interior design', 'Landscaping', 'Lighting setup']
+      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      title: 'Two-Factor Auth',
+      description: 'Built-in 2FA support with TOTP generation and secure backup codes.',
+      price: 'Included',
+      features: ['TOTP support', 'Backup codes', 'QR code scanning', 'Multiple devices']
     },
     {
-      icon: <Car className="w-8 h-8 text-orange-400" />,
-      title: 'Vehicle Design',
-      description: 'Generate detailed 3D vehicles for automotive design and visualization.',
-      price: '$3.00/vehicle',
-      features: ['Exterior design', 'Interior details', 'Wheel options', 'Color variations']
+      icon: <Users className="w-8 h-8 text-orange-400" />,
+      title: 'Family Sharing',
+      description: 'Secure password sharing with family members and trusted contacts.',
+      price: '$2.99/month',
+      features: ['Family vault', 'Secure sharing', 'Permission controls', 'Activity monitoring']
     },
     {
-      icon: <Package className="w-8 h-8 text-pink-400" />,
-      title: 'Packaging Design',
-      description: 'Create 3D packaging mockups for product presentation and marketing.',
-      price: '$1.00/package',
-      features: ['Brand integration', 'Material textures', 'Print ready', 'Multiple angles']
+      icon: <Globe className="w-8 h-8 text-pink-400" />,
+      title: 'Dark Web Monitoring',
+      description: 'Continuous monitoring of the dark web for your personal information and credentials.',
+      price: '$4.99/month',
+      features: ['Dark web scanning', 'Identity monitoring', 'Credit monitoring', 'Alert system']
     },
     {
-      icon: <Heart2 className="w-8 h-8 text-blue-400" />,
-      title: 'Art & Sculpture',
-      description: 'Generate artistic 3D sculptures and decorative objects.',
-      price: '$1.50/artwork',
-      features: ['Artistic styles', 'Detail levels', 'Material options', 'Export formats']
+      icon: <Database className="w-8 h-8 text-blue-400" />,
+      title: 'Business Features',
+      description: 'Advanced features for businesses including team management and admin controls.',
+      price: '$9.99/month',
+      features: ['Team management', 'Admin dashboard', 'SSO integration', 'Compliance reporting']
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Creator',
-      price: '$49',
+      name: 'Personal',
+      price: '$2.99',
       period: '/month',
-      description: 'Perfect for individual creators and designers',
+      description: 'Perfect for individuals',
       features: [
-        '100 3D models/month',
-        'Basic AI models',
-        'Standard resolution',
-        'Email support',
-        'Basic export formats'
+        'Unlimited passwords',
+        'AI password generation',
+        'Auto-fill & sync',
+        'Biometric access',
+        'Breach monitoring',
+        'Email support'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$149',
+      name: 'Family',
+      price: '$4.99',
       period: '/month',
-      description: 'Ideal for design agencies and studios',
+      description: 'Ideal for families',
       features: [
-        '500 3D models/month',
-        'Advanced AI models',
-        'High resolution',
+        'Everything in Personal',
+        'Up to 6 family members',
+        'Secure sharing',
+        'Family vault',
         'Priority support',
-        'All export formats',
-        'Animation tools',
-        'Team collaboration'
+        'Dark web monitoring'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$399',
+      name: 'Business',
+      price: '$9.99',
       period: '/month',
-      description: 'For large organizations and enterprises',
+      description: 'For small businesses',
       features: [
-        'Unlimited models',
-        'Custom AI training',
-        '4K resolution',
-        'Dedicated support',
-        'API access',
-        'White-label options',
-        'Custom integrations'
+        'Everything in Family',
+        'Team management',
+        'Admin dashboard',
+        'SSO integration',
+        'Compliance reporting',
+        'Dedicated support'
       ],
       popular: false
     }
   ]
 
   const stats = [
-    { number: '10M+', label: '3D Models Generated', icon: <Box className="w-6 h-6 text-cyan-400" /> },
-    { number: '99.9%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6 text-emerald-400" /> },
-    { number: '< 30s', label: 'Generation Time', icon: <Zap className="w-6 h-6 text-purple-400" /> },
-    { number: '50+', label: 'Export Formats', icon: <Globe className="w-6 h-6 text-orange-400" /> }
+    { number: '99.9%', label: 'Security Uptime', icon: <Shield className="w-6 h-6 text-cyan-400" /> },
+    { number: '256-bit', label: 'Encryption', icon: <Lock className="w-6 h-6 text-emerald-400" /> },
+    { number: '24/7', label: 'Monitoring', icon: <Eye className="w-6 h-6 text-purple-400" /> },
+    { number: '1M+', label: 'Users Protected', icon: <Users className="w-6 h-6 text-orange-400" /> }
   ]
 
   const testimonials = [
     {
-      name: 'Alex Chen',
-      company: '3D Design Studio',
-      content: 'Zion Tech Group\'s AI 3D Generation has revolutionized our workflow. We can now create detailed 3D models in minutes instead of hours, dramatically increasing our productivity.',
+      name: 'Sarah Johnson',
+      company: 'Tech Professional',
+      content: 'Zion Tech Group\'s AI Password Manager has completely transformed how I handle passwords. The AI generation is incredibly smart and the breach monitoring gives me peace of mind.',
       rating: 5
     },
     {
-      name: 'Maria Rodriguez',
-      company: 'Game Development Co.',
-      content: 'The character generation is incredible. We\'ve created hundreds of unique characters for our game in just a few days. The quality is outstanding and the models are animation-ready.',
+      name: 'Michael Chen',
+      company: 'Small Business Owner',
+      content: 'The family sharing features are perfect for our household. We can securely share important accounts while maintaining individual privacy. The AI security scan caught several weak passwords we didn\'t even know about.',
       rating: 5
     },
     {
-      name: 'David Kim',
-      company: 'Architecture Firm',
-      content: 'The architectural visualization capabilities are amazing. We can now present our designs to clients with photorealistic 3D models that help them visualize the final result.',
+      name: 'Emily Rodriguez',
+      company: 'IT Manager',
+      content: 'The business features are exactly what we needed. The team management and admin controls make it easy to ensure our employees are following security best practices.',
       rating: 5
     }
   ]
@@ -162,10 +161,10 @@ const AI3DGenerationPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI 3D Generation - Advanced 3D Model Creation | Zion Tech Group</title>
-        <meta name="description" content="Create stunning 3D models with AI-powered generation. From product design to character creation, generate high-quality 3D content in seconds with 99.9% accuracy." />
-        <meta name="keywords" content="AI 3D generation, 3D modeling, 3D design, product visualization, character creation, architectural modeling, 3D animation" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-3d-generation" />
+        <title>AI Password Manager - Advanced Password Security | Zion Tech Group</title>
+        <meta name="description" content="Secure your digital life with our AI-powered password manager. Advanced encryption, breach monitoring, and intelligent password generation with 99.9% security uptime." />
+        <meta name="keywords" content="AI password manager, password security, password generator, breach monitoring, two-factor authentication, password vault" />
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-password-manager" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-900 text-white">
@@ -174,17 +173,17 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10" />
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
-              <Box className="w-4 h-4" />
-              <span>AI-Powered 3D Generation</span>
+              <Lock className="w-4 h-4" />
+              <span>AI-Powered Password Security</span>
             </div>
             
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Advanced <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI 3D Generation</span>
+              Advanced <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Password Manager</span>
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Create stunning 3D models with AI-powered generation. From product design to character creation, 
-              generate high-quality 3D content in seconds with our advanced artificial intelligence.
+              Secure your digital life with our AI-powered password manager. Advanced encryption, 
+              breach monitoring, and intelligent password generation to keep your accounts safe.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -212,10 +211,10 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI 3D Generation?</span>
+                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Password Security?</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the power of AI-driven 3D creation with our proven results.
+                Experience the power of AI-driven password security with our proven track record.
               </p>
             </div>
             
@@ -243,10 +242,10 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">3D Features</span>
+                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Security Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Everything you need to create stunning 3D models with artificial intelligence.
+                Everything you need to secure your digital life with advanced AI-powered password management.
               </p>
             </div>
             
@@ -268,43 +267,43 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Generation Types Section */}
+        {/* Security Features Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-purple-900/50 relative">
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Generation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Types</span>
+                Security <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Create any type of 3D content you need with our versatile AI generation platform.
+                Comprehensive security features to protect your passwords and personal information.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {generationTypes.map((type, index) => (
+              {securityFeatures.map((feature, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="p-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
-                        {type.icon}
+                        {feature.icon}
                       </div>
                       <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
-                        {type.title}
+                        {feature.title}
                       </h3>
                     </div>
                   </div>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {type.description}
+                    {feature.description}
                   </p>
                   <div className="space-y-3">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
-                      {type.price}
+                      {feature.price}
                     </div>
                     <div className="space-y-1">
-                      {type.features.map((feature, featureIndex) => (
+                      {feature.features.map((feat, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-2 text-gray-400 text-xs">
                           <CheckCircle className="w-3 h-3 text-green-400" />
-                          <span>{feature}</span>
+                          <span>{feat}</span>
                         </div>
                       ))}
                     </div>
@@ -312,7 +311,7 @@ const AI3DGenerationPage: React.FC = () => {
                       to="/contact"
                       className="block w-full mt-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                     >
-                      Get Started
+                      Learn More
                     </Link>
                   </div>
                 </div>
@@ -330,7 +329,7 @@ const AI3DGenerationPage: React.FC = () => {
                 Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your 3D creation needs. All plans include a 14-day free trial.
+                Choose the plan that fits your security needs. All plans include a 30-day free trial.
               </p>
             </div>
             
@@ -388,10 +387,10 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                What Our <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Creators Say</span>
+                What Our <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Users Say</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Join thousands of creators using our AI platform to bring their ideas to life in 3D.
+                Join thousands of users who trust our AI-powered password manager for their security.
               </p>
             </div>
             
@@ -429,12 +428,12 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-8 sm:p-12 lg:p-16">
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Ready to Create Stunning <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">3D Content?</span>
+                Ready to Secure Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Digital Life?</span>
               </h2>
               
               <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-                Join thousands of creators using our AI platform to generate high-quality 3D models 
-                in seconds. Start your free trial today and bring your ideas to life.
+                Don't wait for a security breach. Protect your accounts with our AI-powered password manager. 
+                Start your free trial today and experience the peace of mind that comes with advanced security.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -461,4 +460,4 @@ const AI3DGenerationPage: React.FC = () => {
   )
 }
 
-export default AI3DGenerationPage
+export default AIPasswordManagerPage

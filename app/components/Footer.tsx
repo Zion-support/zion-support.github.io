@@ -58,7 +58,9 @@ const Footer = () => {
     { name: 'Inventory Manager', path: '/micro-saas/inventory-management' },
     { name: 'Lead Generation Suite', path: '/micro-saas/lead-generation' },
     { name: 'Social Media Scheduler', path: '/micro-saas/social-scheduler' },
-    { name: 'Password Manager Pro', path: '/micro-saas/password-manager' }
+    { name: 'AI Password Manager Pro', path: '/micro-saas/ai-password-manager' },
+    { name: 'AI Task Manager', path: '/micro-saas/ai-task-manager' },
+    { name: 'AI Email Marketing', path: '/micro-saas/ai-email-marketing' }
   ];
 
   const fiveGServices = [

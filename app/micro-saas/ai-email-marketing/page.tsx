@@ -1,160 +1,161 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Box, Brain, Eye, Zap, CheckCircle, Star, Users, Clock, Target, BarChart3, Globe, Shield, Sparkles, PenTool, Image, Video, Mic, Code, Mail, MessageSquare, Calendar, DollarSign, Cube, Layers, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, FileText, Package } from 'lucide-react'
+import { ArrowRight, Mail, Brain, Target, BarChart3, CheckCircle, Star, Users, Clock, Zap, Globe, Shield, Sparkles, PenTool, Calendar, DollarSign, FileText, MessageSquare, Mic, Code, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle } from 'lucide-react'
 
-const AI3DGenerationPage: React.FC = () => {
+const AIEmailMarketingPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Modeling',
-      description: 'Generate complex 3D models from text descriptions, sketches, or reference images using advanced AI algorithms.'
+      title: 'AI Content Generation',
+      description: 'Generate compelling email content, subject lines, and CTAs using advanced AI that understands your brand voice.'
     },
     {
-      icon: <Eye className="w-6 h-6 text-emerald-400" />,
-      title: 'Real-time Rendering',
-      description: 'High-quality real-time rendering with photorealistic lighting, shadows, and materials for stunning visuals.'
+      icon: <Target className="w-6 h-6 text-emerald-400" />,
+      title: 'Smart Segmentation',
+      description: 'AI-powered audience segmentation that automatically groups subscribers based on behavior, preferences, and engagement patterns.'
     },
     {
-      icon: <Zap className="w-6 h-6 text-purple-400" />,
-      title: 'Instant Generation',
-      description: 'Create detailed 3D models in seconds with our optimized AI processing and cloud-based infrastructure.'
+      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
+      title: 'Predictive Analytics',
+      description: 'Advanced analytics that predict email performance, optimal send times, and subscriber behavior to maximize ROI.'
     },
     {
-      icon: <Target className="w-6 h-6 text-orange-400" />,
-      title: 'Precision Control',
-      description: 'Fine-tune every aspect of your 3D models with precise controls for dimensions, materials, and textures.'
+      icon: <Zap className="w-6 h-6 text-orange-400" />,
+      title: 'Automation Workflows',
+      description: 'Intelligent email automation that triggers based on subscriber actions, preferences, and engagement levels.'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
-      title: 'Animation Ready',
-      description: 'Generate 3D models that are ready for animation with proper rigging and bone structure.'
+      icon: <Users className="w-6 h-6 text-pink-400" />,
+      title: 'Personalization Engine',
+      description: 'Dynamic content personalization that adapts emails to each subscriber\'s interests, behavior, and demographics.'
     },
     {
       icon: <Globe className="w-6 h-6 text-blue-400" />,
-      title: 'Multi-Format Export',
-      description: 'Export your 3D models in all major formats including OBJ, FBX, STL, and GLTF for any platform.'
+      title: 'Multi-Channel Integration',
+      description: 'Seamlessly integrate with social media, SMS, and other marketing channels for unified campaign management.'
     }
   ]
 
-  const generationTypes = [
+  const emailFeatures = [
     {
-      icon: <Box className="w-8 h-8 text-cyan-400" />,
-      title: 'Product Design',
-      description: 'Create detailed 3D models for product visualization, prototyping, and manufacturing.',
-      price: '$0.50/model',
-      features: ['High detail', 'Manufacturing ready', 'Material options', 'Scale accuracy']
+      icon: <Mail className="w-8 h-8 text-cyan-400" />,
+      title: 'Email Builder',
+      description: 'Drag-and-drop email builder with AI-powered templates and content suggestions.',
+      price: 'Included',
+      features: ['Drag-and-drop editor', 'AI templates', 'Mobile optimization', 'A/B testing']
     },
     {
-      icon: <Users className="w-8 h-8 text-emerald-400" />,
-      title: 'Character Creation',
-      description: 'Generate realistic 3D characters for games, films, and virtual experiences.',
-      price: '$2.00/character',
-      features: ['Facial details', 'Body proportions', 'Clothing options', 'Animation ready']
+      icon: <Brain className="w-8 h-8 text-emerald-400" />,
+      title: 'AI Content Assistant',
+      description: 'Generate subject lines, email content, and CTAs using AI that learns from your best-performing campaigns.',
+      price: 'Included',
+      features: ['Subject line generation', 'Content creation', 'CTA optimization', 'Brand voice training']
     },
     {
-      icon: <Layers className="w-8 h-8 text-purple-400" />,
-      title: 'Architecture',
-      description: 'Create detailed architectural models and building visualizations.',
-      price: '$5.00/building',
-      features: ['Floor plans', 'Interior design', 'Landscaping', 'Lighting setup']
+      icon: <Target className="w-8 h-8 text-purple-400" />,
+      title: 'Smart Segmentation',
+      description: 'Automatically segment your audience based on behavior, preferences, and engagement patterns.',
+      price: 'Included',
+      features: ['Behavioral segmentation', 'Demographic targeting', 'Engagement scoring', 'Dynamic lists']
     },
     {
-      icon: <Car className="w-8 h-8 text-orange-400" />,
-      title: 'Vehicle Design',
-      description: 'Generate detailed 3D vehicles for automotive design and visualization.',
-      price: '$3.00/vehicle',
-      features: ['Exterior design', 'Interior details', 'Wheel options', 'Color variations']
+      icon: <BarChart3 className="w-8 h-8 text-orange-400" />,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with predictive insights and performance optimization.',
+      price: '$9.99/month',
+      features: ['Predictive analytics', 'ROI tracking', 'Engagement insights', 'Custom reports']
     },
     {
-      icon: <Package className="w-8 h-8 text-pink-400" />,
-      title: 'Packaging Design',
-      description: 'Create 3D packaging mockups for product presentation and marketing.',
-      price: '$1.00/package',
-      features: ['Brand integration', 'Material textures', 'Print ready', 'Multiple angles']
+      icon: <Zap className="w-8 h-8 text-pink-400" />,
+      title: 'Automation Studio',
+      description: 'Create complex email automation workflows with AI-powered triggers and conditions.',
+      price: '$19.99/month',
+      features: ['Visual workflow builder', 'AI triggers', 'Conditional logic', 'Multi-step campaigns']
     },
     {
-      icon: <Heart2 className="w-8 h-8 text-blue-400" />,
-      title: 'Art & Sculpture',
-      description: 'Generate artistic 3D sculptures and decorative objects.',
-      price: '$1.50/artwork',
-      features: ['Artistic styles', 'Detail levels', 'Material options', 'Export formats']
+      icon: <Shield className="w-8 h-8 text-blue-400" />,
+      title: 'Deliverability Suite',
+      description: 'Advanced deliverability tools to ensure your emails reach the inbox and avoid spam filters.',
+      price: '$14.99/month',
+      features: ['Spam score analysis', 'IP warming', 'Reputation monitoring', 'Bounce management']
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Creator',
-      price: '$49',
+      name: 'Starter',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for individual creators and designers',
+      description: 'Perfect for small businesses',
       features: [
-        '100 3D models/month',
-        'Basic AI models',
-        'Standard resolution',
+        'Up to 5,000 subscribers',
+        'Unlimited emails',
+        'AI content generation',
+        'Basic automation',
         'Email support',
-        'Basic export formats'
+        'Standard templates'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$149',
+      price: '$79',
       period: '/month',
-      description: 'Ideal for design agencies and studios',
+      description: 'Ideal for growing businesses',
       features: [
-        '500 3D models/month',
-        'Advanced AI models',
-        'High resolution',
+        'Up to 25,000 subscribers',
+        'Everything in Starter',
+        'Advanced automation',
+        'Predictive analytics',
         'Priority support',
-        'All export formats',
-        'Animation tools',
-        'Team collaboration'
+        'Custom integrations',
+        'A/B testing'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$399',
+      price: '$199',
       period: '/month',
-      description: 'For large organizations and enterprises',
+      description: 'For large organizations',
       features: [
-        'Unlimited models',
+        'Unlimited subscribers',
+        'Everything in Professional',
+        'Advanced analytics',
         'Custom AI training',
-        '4K resolution',
         'Dedicated support',
-        'API access',
         'White-label options',
-        'Custom integrations'
+        'API access'
       ],
       popular: false
     }
   ]
 
   const stats = [
-    { number: '10M+', label: '3D Models Generated', icon: <Box className="w-6 h-6 text-cyan-400" /> },
-    { number: '99.9%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6 text-emerald-400" /> },
-    { number: '< 30s', label: 'Generation Time', icon: <Zap className="w-6 h-6 text-purple-400" /> },
-    { number: '50+', label: 'Export Formats', icon: <Globe className="w-6 h-6 text-orange-400" /> }
+    { number: '40%', label: 'Higher Open Rates', icon: <Mail className="w-6 h-6 text-cyan-400" /> },
+    { number: '60%', label: 'Better Click Rates', icon: <Target className="w-6 h-6 text-emerald-400" /> },
+    { number: '300%', label: 'ROI Increase', icon: <BarChart3 className="w-6 h-6 text-purple-400" /> },
+    { number: '50K+', label: 'Active Users', icon: <Users className="w-6 h-6 text-orange-400" /> }
   ]
 
   const testimonials = [
     {
-      name: 'Alex Chen',
-      company: '3D Design Studio',
-      content: 'Zion Tech Group\'s AI 3D Generation has revolutionized our workflow. We can now create detailed 3D models in minutes instead of hours, dramatically increasing our productivity.',
+      name: 'Jennifer Smith',
+      company: 'E-commerce Store',
+      content: 'Zion Tech Group\'s AI Email Marketing has transformed our email campaigns. Our open rates increased by 40% and our revenue from email marketing has tripled in just 3 months.',
       rating: 5
     },
     {
-      name: 'Maria Rodriguez',
-      company: 'Game Development Co.',
-      content: 'The character generation is incredible. We\'ve created hundreds of unique characters for our game in just a few days. The quality is outstanding and the models are animation-ready.',
+      name: 'Michael Chen',
+      company: 'SaaS Startup',
+      content: 'The AI content generation is incredible. We can now create personalized email campaigns for different customer segments in minutes instead of hours. The automation features are a game-changer.',
       rating: 5
     },
     {
-      name: 'David Kim',
-      company: 'Architecture Firm',
-      content: 'The architectural visualization capabilities are amazing. We can now present our designs to clients with photorealistic 3D models that help them visualize the final result.',
+      name: 'Sarah Johnson',
+      company: 'Marketing Agency',
+      content: 'The predictive analytics help us optimize our campaigns before we even send them. We\'ve been able to increase our clients\' email ROI by 300% using this platform.',
       rating: 5
     }
   ]
@@ -162,10 +163,10 @@ const AI3DGenerationPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI 3D Generation - Advanced 3D Model Creation | Zion Tech Group</title>
-        <meta name="description" content="Create stunning 3D models with AI-powered generation. From product design to character creation, generate high-quality 3D content in seconds with 99.9% accuracy." />
-        <meta name="keywords" content="AI 3D generation, 3D modeling, 3D design, product visualization, character creation, architectural modeling, 3D animation" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-3d-generation" />
+        <title>AI Email Marketing - Intelligent Email Campaigns | Zion Tech Group</title>
+        <meta name="description" content="Transform your email marketing with AI-powered campaigns. Smart segmentation, content generation, and automation with 40% higher open rates and 300% ROI increase." />
+        <meta name="keywords" content="AI email marketing, email automation, email campaigns, email segmentation, email analytics, email personalization" />
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-email-marketing" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-900 text-white">
@@ -174,17 +175,17 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10" />
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
-              <Box className="w-4 h-4" />
-              <span>AI-Powered 3D Generation</span>
+              <Mail className="w-4 h-4" />
+              <span>AI-Powered Email Marketing</span>
             </div>
             
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Advanced <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI 3D Generation</span>
+              Intelligent <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Email Marketing</span>
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Create stunning 3D models with AI-powered generation. From product design to character creation, 
-              generate high-quality 3D content in seconds with our advanced artificial intelligence.
+              Transform your email marketing with AI-powered campaigns. Smart segmentation, 
+              content generation, and automation to maximize your email ROI and engagement.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
@@ -212,10 +213,10 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI 3D Generation?</span>
+                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Email Marketing?</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the power of AI-driven 3D creation with our proven results.
+                Experience the power of AI-driven email marketing with our proven results.
               </p>
             </div>
             
@@ -243,10 +244,10 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">3D Features</span>
+                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Email Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Everything you need to create stunning 3D models with artificial intelligence.
+                Everything you need to create, send, and optimize email campaigns with artificial intelligence.
               </p>
             </div>
             
@@ -268,43 +269,43 @@ const AI3DGenerationPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Generation Types Section */}
+        {/* Email Features Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-purple-900/50 relative">
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Generation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Types</span>
+                Email <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Create any type of 3D content you need with our versatile AI generation platform.
+                Comprehensive email marketing features powered by artificial intelligence.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {generationTypes.map((type, index) => (
+              {emailFeatures.map((feature, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="p-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
-                        {type.icon}
+                        {feature.icon}
                       </div>
                       <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
-                        {type.title}
+                        {feature.title}
                       </h3>
                     </div>
                   </div>
                   <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {type.description}
+                    {feature.description}
                   </p>
                   <div className="space-y-3">
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
-                      {type.price}
+                      {feature.price}
                     </div>
                     <div className="space-y-1">
-                      {type.features.map((feature, featureIndex) => (
+                      {feature.features.map((feat, featureIndex) => (
                         <div key={featureIndex} className="flex items-center space-x-2 text-gray-400 text-xs">
                           <CheckCircle className="w-3 h-3 text-green-400" />
-                          <span>{feature}</span>
+                          <span>{feat}</span>
                         </div>
                       ))}
                     </div>
@@ -312,7 +313,7 @@ const AI3DGenerationPage: React.FC = () => {
                       to="/contact"
                       className="block w-full mt-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                     >
-                      Get Started
+                      Learn More
                     </Link>
                   </div>
                 </div>
@@ -330,7 +331,7 @@ const AI3DGenerationPage: React.FC = () => {
                 Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your 3D creation needs. All plans include a 14-day free trial.
+                Choose the plan that fits your email marketing needs. All plans include a 14-day free trial.
               </p>
             </div>
             
@@ -388,10 +389,10 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                What Our <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Creators Say</span>
+                What Our <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Marketers Say</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Join thousands of creators using our AI platform to bring their ideas to life in 3D.
+                Join thousands of marketers who have transformed their email campaigns with our AI platform.
               </p>
             </div>
             
@@ -429,12 +430,12 @@ const AI3DGenerationPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-8 sm:p-12 lg:p-16">
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Ready to Create Stunning <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">3D Content?</span>
+                Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Email Marketing?</span>
               </h2>
               
               <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-                Join thousands of creators using our AI platform to generate high-quality 3D models 
-                in seconds. Start your free trial today and bring your ideas to life.
+                Join thousands of marketers using our AI platform to create high-performing email campaigns. 
+                Start your free trial today and see the difference AI can make.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -461,4 +462,4 @@ const AI3DGenerationPage: React.FC = () => {
   )
 }
 
-export default AI3DGenerationPage
+export default AIEmailMarketingPage

@@ -41,6 +41,7 @@ import AIWorkflowAutomationPage from './app/ai-workflow-automation/page'
 import AIBlockchainAnalyticsPage from './app/ai-blockchain-analytics/page'
 
 // Additional IT Services
+import ITServicesPage from './app/it-services/page'
 import CloudMigrationPage from './app/cloud-migration/page'
 import MobileDevelopmentPage from './app/mobile-development/page'
 import APIDevelopmentPage from './app/api-development/page'
@@ -55,6 +56,9 @@ import AISocialMediaManagerPage from './app/ai-social-media-manager/page'
 import AIProjectManagementPage from './app/ai-project-management/page'
 import AICustomerSupportPage from './app/ai-customer-support/page'
 import AIInvoiceGeneratorPage from './app/ai-invoice-generator/page'
+import AIPasswordManagerPage from './app/micro-saas/ai-password-manager/page'
+import AITaskManagerPage from './app/micro-saas/ai-task-manager/page'
+import AIEmailMarketingPage from './app/micro-saas/ai-email-marketing/page'
 
 // Company Pages
 import TeamPage from './app/team/page'
@@ -129,6 +133,7 @@ const App: React.FC = () => {
                 <Route path="/ai-blockchain-analytics" element={<AIBlockchainAnalyticsPage />} />
                 
                 {/* IT Services */}
+                <Route path="/it-services" element={<ITServicesPage />} />
                 <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                 <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                 <Route path="/api-development" element={<APIDevelopmentPage />} />
@@ -143,6 +148,9 @@ const App: React.FC = () => {
                 <Route path="/ai-project-management" element={<AIProjectManagementPage />} />
                 <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
                 <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                <Route path="/micro-saas/ai-password-manager" element={<AIPasswordManagerPage />} />
+                <Route path="/micro-saas/ai-task-manager" element={<AITaskManagerPage />} />
+                <Route path="/micro-saas/ai-email-marketing" element={<AIEmailMarketingPage />} />
                 
                 {/* Company Pages */}
                 <Route path="/team" element={<TeamPage />} />
