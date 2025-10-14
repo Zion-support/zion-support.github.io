@@ -1,10 +1,5 @@
-
-
-
 import React from 'react';
-
-
-
+import { Helmet } from 'react-helmet-async';
 
 const MicroSaaSSolutionsPage: React.FC = () => {
   return (
@@ -20,5 +15,9 @@ const MicroSaaSSolutionsPage: React.FC = () => {
             Discover our micro SaaS solutions and services.
           </p>
         </div>
+      </div>
+    </>
+  );
+};
 
-
+export default MicroSaaSSolutionsPage;

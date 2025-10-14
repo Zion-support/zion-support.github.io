@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   CheckCircleIcon,
   UserGroupIcon,
@@ -14,30 +15,67 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-
-
-    <>
-      <Helmet>
-
-
+const AboutPage: React.FC = () => {
+  const values = [
+    {
+      icon: LightBulbIcon,
+      title: 'Innovation',
+      description: 'We constantly push the boundaries of what\'s possible with technology, always seeking new ways to solve complex problems.'
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Quality',
+      description: 'We maintain the highest standards in everything we do, ensuring our solutions are reliable, secure, and performant.'
+    },
+    {
+      icon: UserGroupIcon,
+      title: 'Collaboration',
+      description: 'We work closely with our clients as partners, understanding their needs and delivering solutions that exceed expectations.'
+    },
+    {
+      icon: RocketLaunchIcon,
+      title: 'Excellence',
+      description: 'We strive for excellence in every project, delivering results that drive real business value and transformation.'
     }
   ];
 
-  const stats = ['
-    { number: '50+', label: 'Projects Completed' },'
-    { number: '25+', label: 'Happy Clients' },'
-    { number: '99%', label: 'Success Rate' },'
+  const stats = [
+    { number: '50+', label: 'Projects Completed' },
+    { number: '25+', label: 'Happy Clients' },
+    { number: '99%', label: 'Success Rate' },
     { number: '4+', label: 'Years Experience' }
+  ];
+
+  const team = [
+    {
+      name: 'John Smith',
+      role: 'CEO & Founder',
+      description: 'Visionary leader with 15+ years in AI and technology innovation.'
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      description: 'Technical expert specializing in machine learning and cloud architecture.'
+    },
+    {
+      name: 'Mike Chen',
+      role: 'Lead Developer',
+      description: 'Full-stack developer passionate about creating scalable solutions.'
+    },
+    {
+      name: 'Emily Davis',
+      role: 'UX Designer',
+      description: 'Creative designer focused on user experience and interface design.'
+    }
   ];
 
   return (
     <>
-<SEO 
-        title="About Us - Zion Tech Group"'
-        description="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions."
-        keywords="about us, team, mission, values, AI company, IT solutions"
-        url="/about"
-      />
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions." />
+        <meta name="keywords" content="about us, team, mission, values, AI company, IT solutions" />
+      </Helmet>
 
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
@@ -51,13 +89,12 @@ import {
               About Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-Empowering businesses through innovative technology solutions
+              Empowering businesses through innovative technology solutions
             </p>
-
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
               Founded in 2020, we've been at the forefront of digital transformation, 
               helping companies leverage the power of artificial intelligence, cybersecurity, 
               and cloud technologies to achieve unprecedented growth.
-
             </p>
           </div>
         </div>
@@ -67,7 +104,7 @@ Empowering businesses through innovative technology solutions
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-<div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -85,7 +122,7 @@ Empowering businesses through innovative technology solutions
                   <HeartIcon className="w-16 h-16 text-purple-400 mx-auto mb-6" />
                   <h3 className="text-2xl font-bold text-white mb-4">Why We Do What We Do</h3>
                   <p className="text-gray-300">
-                    We believe technology should be accessible, powerful, and transformative. '
+                    We believe technology should be accessible, powerful, and transformative. 
                     Every solution we create is designed to make a real difference in our clients' success.
                   </p>
                 </div>
@@ -107,10 +144,10 @@ Empowering businesses through innovative technology solutions
             </p>
           </div>
           
-<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {values.map((value, index) => {
               const Icon = value.icon;
-              return (}
+              return (
                 <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <Icon className="w-8 h-8 text-white" />
@@ -122,7 +159,7 @@ Empowering businesses through innovative technology solutions
                 </div>
               );
             })}
-</div>
+          </div>
         </div>
       </section>
 
@@ -140,7 +177,7 @@ Empowering businesses through innovative technology solutions
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (}
+              {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
                     {stat.number}
@@ -151,6 +188,11 @@ Empowering businesses through innovative technology solutions
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -162,15 +204,15 @@ Empowering businesses through innovative technology solutions
             </p>
           </div>
           
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {team.map((member, index) => (}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {team.map((member, index) => (
               <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white font-bold text-2xl">'
+                  <span className="text-white font-bold text-2xl">
                     {member.name.split(' ').map(n => n[0]).join('')}
                   </span>
                 </div>
-<h3 className="text-xl font-bold text-white mb-2 text-center">
+                <h3 className="text-xl font-bold text-white mb-2 text-center">
                   {member.name}
                 </h3>
                 <p className="text-purple-400 text-center mb-4">
@@ -192,8 +234,8 @@ Empowering businesses through innovative technology solutions
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
               Ready to Work With Us?
             </h2>
-            <p className="text-xl text-gray-300 mb-12">'
-Let's discuss how we can help transform your business with our innovative solutions
+            <p className="text-xl text-gray-300 mb-12">
+              Let's discuss how we can help transform your business with our innovative solutions
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -215,8 +257,8 @@ Let's discuss how we can help transform your business with our innovative soluti
           </div>
         </div>
       </section>
-
     </>
   );
+};
 
-
+export default AboutPage;

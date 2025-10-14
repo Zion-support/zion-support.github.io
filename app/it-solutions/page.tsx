@@ -1,9 +1,5 @@
-
-
 import React from 'react';
-
-
-
+import { Helmet } from 'react-helmet-async';
 
 const ITSolutionsPage: React.FC = () => {
   return (
@@ -19,5 +15,9 @@ const ITSolutionsPage: React.FC = () => {
             Discover our IT solutions and services.
           </p>
         </div>
+      </div>
+    </>
+  );
+};
 
-
+export default ITSolutionsPage;
