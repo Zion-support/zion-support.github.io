@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const SEO = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">SEO</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for SEO.
-      </p>
-    </div>
-  );
-};
-
-export default SEO;
-=======
 'use client';
 
 /**
@@ -121,8 +105,47 @@ export const SEO: React.FC<SEOProps> = ({
   };
 
   return (
-    );
+    <>
+      {/* Basic Meta Tags */}
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="keywords" content={seo.keywords.join(', ')} />
+      <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
+      <link rel="canonical" href={canonical || seo.url} />
+      
+      {/* Open Graph */}
+      <meta property="og:type" content={seo.type} />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={seo.image} />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:locale" content={seo.locale} />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content={seo.twitterCard} />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
+      
+      {/* Article specific */}
+      {author && <meta name="author" content={author} />}
+      {publishDate && <meta property="article:published_time" content={publishDate} />}
+      {modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
+      
+      {/* Alternate locales */}
+      {alternateLocales.map((alt) => (
+        <link key={alt.locale} rel="alternate" hrefLang={alt.locale} href={alt.url} />
+      ))}
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(generateStructuredData()),
+        }}
+      />
+    </>
+  );
 };
 
 export default SEO;
->>>>>>> origin/cursor/resolve-all-prs-and-merge

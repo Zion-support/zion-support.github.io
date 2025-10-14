@@ -130,7 +130,7 @@ const AIAnalyticsPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Unlock Your Data&apos;s Potential?
+            Ready to Unlock Your Data's Potential?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Let our AI analytics platform transform your data into actionable insights. 

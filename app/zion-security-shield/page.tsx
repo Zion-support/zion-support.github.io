@@ -373,7 +373,7 @@ export default function ZionSecurityShield() {
                 Ready to Secure Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Don&apos;t wait for a security breach. Protect your business with Zion Security Shield today. 
+                Don't wait for a security breach. Protect your business with Zion Security Shield today. 
                 Start your free trial or contact us for a security assessment.
               </p>
               

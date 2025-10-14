@@ -55,7 +55,7 @@ class AdvancedErrorBoundary extends Component<
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo,
@@ -198,7 +198,7 @@ class AdvancedErrorBoundary extends Component<
                   Oops! Something went wrong
                 </h2>
                 <p className='mt-2 text-sm text-gray-600'>
-                  We&apos;re sorry, but something unexpected happened. Our team
+                  We're sorry, but something unexpected happened. Our team
                   has been notified.
                 </p>
               </div>
