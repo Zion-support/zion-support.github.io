@@ -82,7 +82,7 @@ export default FuturisticBackgroundEnhanced;
               <a;
             Ready to Get Started?</h2></a>
           <p className="text-xl text-blue-100 mb-8">""";
-            Let's discuss how our futuristic background enhanced'''';
+            Let's discuss how our futuristic background enhanced'''
             services can help you achieve your goals.</p>
           <a""";
             href="/contact"

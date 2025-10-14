@@ -7,9 +7,9 @@ const Footer = () => {
 ;
   const serviceCategories = [
     {
-      title: 'AI Services','';
+      title: 'AI Services','
       icon: <Brain className="w-5 h-5" />,"";
-      color: 'from-blue-500 to-cyan-500','';
+      color: 'from-blue-500 to-cyan-500','
       links: [
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },''
         {label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro',},''
@@ -22,9 +22,9 @@ const Footer = () => {
       ]
     },
     {
-      title: 'IT Services','';
+      title: 'IT Services','
       icon: <Cloud className="w-5 h-5" />,"";
-      color: 'from-green-500 to-emerald-500','';
+      color: 'from-green-500 to-emerald-500','
       links: [{ label: 'Cloud Infrastructure', href: '/cloud-infrastructure' }, ''
         {label: 'Database Management', href: '/database-management', }, ''
         {label: 'Cybersecurity Solutions', href: '/cybersecurity-solutions', }, ''
@@ -33,9 +33,9 @@ const Footer = () => {
         {label: 'Network Security', href: '/network-security', }'']
     },
     {
-      title: 'Solutions','';
+      title: 'Solutions','
       icon: <Zap className="w-5 h-5" />,"";
-      color: 'from-purple-500 to-pink-500','';
+      color: 'from-purple-500 to-pink-500','
       links: [{ label: 'Digital Transformation', href: '/digital-transformation' }, ''
         {label: 'Business Intelligence', href: '/business-intelligence', }, ''
         {label: 'Process Automation', href: '/process-automation', }, ''

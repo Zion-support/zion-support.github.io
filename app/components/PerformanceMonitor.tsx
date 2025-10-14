@@ -15,24 +15,24 @@ const PerformanceMonitor: React.FC = () => {
       // Get Core Web Vitals;
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {'';
-            if (entry.name === 'first-contentful-paint') {'';
+          if (entry.entryType === 'paint') {'
+            if (entry.name === 'first-contentful-paint') {'
               setMetrics(prev => ({
                 ...prev,
                 fcp: entry.startTime;
               }));
             }
-          } else if (entry.entryType === 'largest-contentful-paint') {'';
+          } else if (entry.entryType === 'largest-contentful-paint') {'
             setMetrics(prev => ({
               ...prev,
               lcp: entry.startTime;
             }));
-          } else if (entry.entryType === 'first-input') {'';
+          } else if (entry.entryType === 'first-input') {'
             setMetrics(prev => ({
               ...prev,
               fid: (entry as any).processingStart - entry.startTime;
             }));
-          } else if (entry.entryType === 'layout-shift') {'';
+          } else if (entry.entryType === 'layout-shift') {'
             setMetrics(prev => ({
               ...prev,
               cls: (prev?.cls || 0) + (entry as any).value;
@@ -44,7 +44,7 @@ const PerformanceMonitor: React.FC = () => {
       observer.observe({entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'],});'
 
       // Get TTFB;
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;';
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
         setMetrics(prev => ({
           ...prev,
@@ -57,7 +57,7 @@ const PerformanceMonitor: React.FC = () => {
         // First Contentful Paint;
         const fcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
-          const fcp = entries.find(entry => entry.name === 'first-contentful-paint');';
+          const fcp = entries.find(entry => entry.name === 'first-contentful-paint');
           if (fcp) {
             setMetrics(prev => ({ ...prev, firstContentfulPaint: fcp.startTime }));
           }
@@ -134,13 +134,13 @@ const PerformanceMonitor: React.FC = () => {
 
     // Set up keyboard shortcut to toggle visibility;
     const handleKeyPress = () => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {'';
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {'
         setIsVisible(prev => !prev);
       }
     };
 
-    window.addEventListener('keydown', handleKeyPress);';
-    return () => window.removeEventListener('keydown', handleKeyPress);';
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
   return (
 <>    <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"></div>""
       <div className="flex items-center justify-between mb-4"></div>""

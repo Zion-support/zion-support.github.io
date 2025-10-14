@@ -7,9 +7,9 @@ import { EnvelopeIcon, ;
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '','';
-    email: '','';
-    company: '','';
+    name: '','
+    email: '','
+    company: '','
     message: ''''
   });
 
@@ -29,26 +29,26 @@ const Contact: React.FC = () => {
   const contactInfo = [
     {
       icon: EnvelopeIcon,
-      title: 'Email','';
-      details: 'contact@ziontech.com','';
+      title: 'Email','
+      details: 'contact@ziontech.com','
       description: 'Send us an email anytime'''
     },
     {
       icon: PhoneIcon,
-      title: 'Phone','';
-      details: '+1 (555) 123-4567','';
+      title: 'Phone','
+      details: '+1 (555) 123-4567','
       description: 'Mon-Fri from 9am to 6pm'''
     },
     {
       icon: MapPinIcon,
-      title: 'Office','';
-      details: 'San Francisco, CA','';
+      title: 'Office','
+      details: 'San Francisco, CA','
       description: 'Visit our headquarters'''
     },
     {
       icon: ClockIcon,
-      title: 'Response Time','';
-      details: '< 24 hours','';
+      title: 'Response Time','
+      details: '< 24 hours','
       description: 'We respond quickly'''
     }
   ];
@@ -61,7 +61,7 @@ const Contact: React.FC = () => {
             Get In Touch;
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"";
-            Ready to transform your business? Let's discuss how our solutions '';
+            Ready to transform your business? Let's discuss how our solutions '
             can help you achieve your goals.
           </p>
         </div>
@@ -150,7 +150,7 @@ const Contact: React.FC = () => {
                 Contact Information;
               </h3>
               <p className="text-gray-600 mb-8">"";
-                We're here to help! Reach out to us through any of the channels below, '';
+                We're here to help! Reach out to us through any of the channels below, '
                 and we'll get back to you as soon as possible.''
               </p>
             </div>

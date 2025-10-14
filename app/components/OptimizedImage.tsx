@@ -5,18 +5,18 @@
   priority?: boolean;
   placeholder?: string;
   sizes?: string;
-  quality?: number';';
+  quality?: number
   loading?: 'lazy' | "eager"'"'";
   onLoad?: () => void;
   alt,
   width,
-  height,'''';
+  height,'''
   className=""
-  priority = false,'''';
+  priority = false,'''
   placeholder="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+"
   sizes="100vw"
-  quality = 85,'''';
-  loading = 'lazy',''';
+  quality = 85,'''
+  loading = 'lazy',''
   onLoad,
   const [isError, setIsError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -32,8 +32,8 @@ const observer = new IntersectionObserver()
           observer.disconnect()}
       },
   // Generate WebP src if supported;
-  const getOptimizedSrc = () => {'''';
-    if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {''';
+  const getOptimizedSrc = () => {'''
+    if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {''
       return originalSrc};
       return originalSrc;}
       return originalSrc;}

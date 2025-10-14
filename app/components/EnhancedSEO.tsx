@@ -8,7 +8,7 @@
   noIndex?: boolean;
 const EnhancedSEO: React.FC<SEOProps> = ({
   title,
-  description,'''';
+  description,'''
   keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
   ogImage="/api/placeholder/1200/630"
   ogType="website"
@@ -16,14 +16,14 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   noIndex = false,
   noFollow = false;
 }) => {
-    '@context': 'https://schema.org',''';
+    '@context': 'https://schema.org',''
   noFollow = false}
-}) => {'''';
+}) => {'''
   const siteName="Zion Tech Group" siteUrl="https://ziontechgroup.com" fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl';`"`'"``'"`;
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`";`"`'"``'"`;
   const defaultStructuredData = {''''
     '@context': 'https://schema.org',''''
-    '@type': 'Organization',''';
+    '@type': 'Organization',''
     name: siteName,
     },
     sameAs: [''''

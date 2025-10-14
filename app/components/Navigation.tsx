@@ -17,7 +17,7 @@ import { ;
   SignalIcon,
   UserGroupIcon;
   const isActive = () => {
-    if (href === '/') {''';
+    if (href === '/') {''
       return location.pathname === '/'"}"'"'";
     return location.pathname.startsWith(href);
   const toggleExpanded = () => {
@@ -39,8 +39,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     {]
     },
     { ;
-      name: 'Solutions','';
-      href: '/solutions','';
+      name: 'Solutions','
+      href: '/solutions','
       icon: CogIcon,
       submenu: [{ name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon }, ''
         {name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon, }'']

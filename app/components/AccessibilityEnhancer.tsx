@@ -14,10 +14,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   useEffect(() => {
     // Skip to main content functionality;
     const addSkipLink = () => {;
-      const skipLink = document.createElement('a');';
-      skipLink.href = '#main-content';';
-      skipLink.textContent = 'Skip to main content';';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50';';
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content
+      skipLink.textContent = 'Skip to main content
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50
       skipLink.style.cssText = ````;
         position: absolute;
         width: 1px;
@@ -38,7 +38,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 ;
       const handleKeyDown = () => {
         // Escape key to close modals/dropdowns;
-        if (e.key === 'Escape') {'';
+        if (e.key === 'Escape') {'
           const activeElement = document.activeElement as HTMLElement;
           if (activeElement && activeElement.blur) {
             activeElement.blur();
@@ -46,7 +46,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
 
         // Tab navigation improvements;
-        if (e.key === 'Tab') {'';
+        if (e.key === 'Tab') {'
           document.body.classList.add('keyboard-navigation');'
         }
       };
@@ -56,11 +56,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.body.classList.remove('keyboard-navigation');'
       };
 
-      document.addEventListener('keydown', handleKeyDown);';
-      document.addEventListener('mousedown', handleMouseDown);';
+      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('mousedown', handleMouseDown);
 
       return () => {;
-        document.removeEventListener('keydown', handleKeyDown);';
+        document.removeEventListener('keydown', handleKeyDown);
         document.removeEventListener('mousedown', handleMouseDown);'
       };
     };
@@ -75,7 +75,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const lastFocusableElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 ;
         const handleTabKey = () => {
-          if (e.key === 'Tab') {'';
+          if (e.key === 'Tab') {'
             if (e.shiftKey) {
               if (document.activeElement === firstFocusableElement) {
                 lastFocusableElement.focus();
@@ -90,7 +90,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           }
         };
 
-        element.addEventListener('keydown', handleTabKey);';
+        element.addEventListener('keydown', handleTabKey);
         firstFocusableElement?.focus();
 
         return () => {;
@@ -106,8 +106,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (!enableHighContrast) return () => {};
 ;
       const addHighContrastStyles = () => {;
-        const style = document.createElement('style');';
-        style.id = 'accessibility-high-contrast';';
+        const style = document.createElement('style');
+        style.id = 'accessibility-high-contrast
         style.textContent = ````
           .high-contrast {
             filter: contrast(150%) brightness(110%);
@@ -121,7 +121,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
 
       return () => {;
-        const existingStyle = document.getElementById('accessibility-high-contrast');';
+        const existingStyle = document.getElementById('accessibility-high-contrast');
         if (existingStyle) {
           existingStyle.remove();
         }
@@ -133,36 +133,36 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 ;
       // Add ARIA landmarks;
       const addLandmarks = () => {;
-        const main = document.querySelector('main');';
-        if (main && !main.getAttribute('role')) {'';
+        const main = document.querySelector('main');
+        if (main && !main.getAttribute('role')) {'
           main.setAttribute('role', 'main');'
         }
 
-        const nav = document.querySelector('nav');';
-        if (nav && !nav.getAttribute('role')) {'';
+        const nav = document.querySelector('nav');
+        if (nav && !nav.getAttribute('role')) {'
           nav.setAttribute('role', 'navigation');'
         }
 
-        const header = document.querySelector('header');';
-        if (header && !header.getAttribute('role')) {'';
+        const header = document.querySelector('header');
+        if (header && !header.getAttribute('role')) {'
           header.setAttribute('role', 'banner');'
         }
 
-        const footer = document.querySelector('footer');';
-        if (footer && !footer.getAttribute('role')) {'';
+        const footer = document.querySelector('footer');
+        if (footer && !footer.getAttribute('role')) {'
           footer.setAttribute('role', 'contentinfo');'
         }
       };
 
       // Add live regions for dynamic content;
       const addLiveRegions = () => {;
-        let liveRegion = document.getElementById('live-region');';
+        let liveRegion = document.getElementById('live-region');
         if (!liveRegion) {
-          liveRegion = document.createElement('div');';
-          liveRegion.id = 'live-region';';
-          liveRegion.setAttribute('aria-live', 'polite');';
-          liveRegion.setAttribute('aria-atomic', 'true');';
-          liveRegion.className = 'sr-only';';
+          liveRegion = document.createElement('div');
+          liveRegion.id = 'live-region
+          liveRegion.setAttribute('aria-live', 'polite');
+          liveRegion.setAttribute('aria-atomic', 'true');
+          liveRegion.className = 'sr-only
           document.body.appendChild(liveRegion);
         }
       };
@@ -171,7 +171,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       addLiveRegions();
 
       return () => {;
-        const liveRegion = document.getElementById('live-region');';
+        const liveRegion = document.getElementById('live-region');
         if (liveRegion) {
           liveRegion.remove();
         }

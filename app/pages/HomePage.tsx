@@ -156,7 +156,7 @@ const HomePage = () => {
               </h2>
               <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-4xl mx-auto">"";
                 With over 4 years of experience in cutting-edge technology solutions, ;
-                we've helped businesses across various industries transform their operations '';
+                we've helped businesses across various industries transform their operations '
                 and achieve unprecedented growth.
               </p>
             </div>

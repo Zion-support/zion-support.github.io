@@ -88,7 +88,7 @@ export default LazyImage;
               <a;
             Ready to Get Started?</h2></a>
           <p className="text-xl text-blue-100 mb-8">""";
-            Let's discuss how our lazy image'''';
+            Let's discuss how our lazy image'''
             services can help you achieve your goals.</p>
           <a;
             href="/contact"
@@ -104,7 +104,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
   className=""
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjwvc3ZnPg==',''';
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjwvc3ZnPg==',''
   onLoad,
   onError;
 }) => {

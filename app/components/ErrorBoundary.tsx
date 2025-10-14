@@ -49,7 +49,7 @@ this.setState({ hasError: false, error: undefined, errorInfo: undefined,});
   };
 
   handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = '/
   };
 
   render() {

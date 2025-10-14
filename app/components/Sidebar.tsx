@@ -109,7 +109,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
         </nav>;
 const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-  const [searchQuery, setSearchQuery] = useState('');';
+  const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
 ;
   // Close sidebar when route changes;
@@ -127,11 +127,11 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const navigationSections = [
     {
-      id: 'ai-services','';
-      title: 'AI Services','';
+      id: 'ai-services','
+      title: 'AI Services','
       icon: <Brain className="w-5 h-5" />,"";
-      color: 'from-blue-500 to-cyan-500','';
-      href: '/ai-services','';
+      color: 'from-blue-500 to-cyan-500','
+      href: '/ai-services','
       items: [
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },'"'"
         {label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" />,},'"'"
@@ -160,11 +160,11 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     },
     {
-      id: 'it-services','';
-      title: 'IT Services','';
+      id: 'it-services','
+      title: 'IT Services','
       icon: <Shield className="w-5 h-5" />,"";
-      color: 'from-green-500 to-emerald-500','';
-      href: '/services','';
+      color: 'from-green-500 to-emerald-500','
+      href: '/services','
       items: [{ label: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> }, '"'"
         {label: 'Blockchain Development', href: '/blockchain-development', icon: <Settings className="w-4 h-4" />, }, '"'"
         {label: 'IoT Solutions', href: '/iot-solutions', icon: <Globe className="w-4 h-4" />, }, '"'"
@@ -180,11 +180,11 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         {label: 'Asset Management', href: '/asset-management', icon: <BarChart3 className="w-4 h-4" />, }'"'"]
     },
     {
-      id: 'micro-saas','';
-      title: 'Micro SAAS','';
+      id: 'micro-saas','
+      title: 'Micro SAAS','
       icon: <Zap className="w-5 h-5" />,"";
-      color: 'from-purple-500 to-pink-500','';
-      href: '/micro-saas','';
+      color: 'from-purple-500 to-pink-500','
+      href: '/micro-saas','
       items: [{ label: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> }, '"'"
         {label: 'Zion Security Shield', href: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, }, '"'"
         {label: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, }, '"'"
@@ -210,11 +210,11 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         {label: 'Zion AI Testing Automation', href: '/zion-ai-testing-automation', icon: <CheckCircle className="w-4 h-4" />, }'"'"]
     },
     {
-      id: '5g-solutions','';
-      title: '5G Solutions','';
+      id: '5g-solutions','
+      title: '5G Solutions','
       icon: <Globe className="w-5 h-5" />,"";
-      color: 'from-orange-500 to-red-500','';
-      href: '/5g-solutions','';
+      color: 'from-orange-500 to-red-500','
+      href: '/5g-solutions','
       items: [{ label: '5G Data Analytics', href: '/5g-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }, '"'"
         {label: '5G Edge Computing', href: '/5g-edge-computing', icon: <Settings className="w-4 h-4" />, }, '"'"
         {label: '5G Implementation', href: '/5g-implementation', icon: <Settings className="w-4 h-4" />, }, '"'"
@@ -246,7 +246,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     items: section.items.filter(item => ;
       item.label.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(section => section.items.length > 0 || searchQuery === '');';
+  })).filter(section => section.items.length > 0 || searchQuery === '');
 
   if (!isOpen) return null;
 import React from "react";";

@@ -82,7 +82,7 @@ export default ImprovedFooter;
               <a;
             Ready to Get Started?</h2></a>
           <p className="text-xl text-blue-100 mb-8">""";
-            Let's discuss how our improved footer'''';
+            Let's discuss how our improved footer'''
             services can help you achieve your goals.</p>
           <a""";
             href="/contact"

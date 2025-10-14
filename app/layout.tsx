@@ -1,10 +1,10 @@
-import './globals.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AnalyticsProvider from './components/AnalyticsProvider';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PWAInstaller from './components/PWAInstaller';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import GlobalErrorBoundary from './components/GlobalErrorBoundary';
+import './globals.css
+import PerformanceMonitor from './components/PerformanceMonitor
+import AnalyticsProvider from './components/AnalyticsProvider
+import AccessibilityEnhancer from './components/AccessibilityEnhancer
+import PWAInstaller from './components/PWAInstaller
+import PerformanceOptimizer from './components/PerformanceOptimizer
+import GlobalErrorBoundary from './components/GlobalErrorBoundary
 ;
 export default function RootLayout({
   children,

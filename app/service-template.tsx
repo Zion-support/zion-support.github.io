@@ -82,7 +82,7 @@ export default ServiceTemplate;
               <a;
             Ready to Get Started?</h2></a>
           <p className="text-xl text-blue-100 mb-8">""";
-            Let's discuss how our service template'''';
+            Let's discuss how our service template'''
             services can help you achieve your goals.</p>
           <a""";
             href="/contact"

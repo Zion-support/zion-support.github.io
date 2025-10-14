@@ -34,15 +34,15 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
         z-index: 1000;
         transition: top 0.3s;
       `;````;
-      skipLink.addEventListener('focus', () => {''';
+      skipLink.addEventListener('focus', () => {''
         skipLink.style.top = '6px'"})"'"'";
-      skipLink.addEventListener('blur', () => {''';
-        skipLink.style.top="-40px" skipLink = document.createElement('a')''';
-      skipLink.href = '#main-content'''';
-      skipLink.textContent = 'Skip to main content'''';
+      skipLink.addEventListener('blur', () => {''
+        skipLink.style.top="-40px" skipLink = document.createElement('a')''
+      skipLink.href = '#main-content'''
+      skipLink.textContent = 'Skip to main content'''
       skipLink.className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50" enhanceFocusManagement = () => {
       // Add focus indicators;
-      const style = document.createElement('style')''';
+      const style = document.createElement('style')''
       style.textContent = `````
         *:focus {
           outline: 2px solid #06b6d4 !important;
@@ -74,7 +74,7 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
       document.head.appendChild(style);
     const addAriaLabels = () => {
       // Add ARIA labels to interactive elements;
-      const buttons = document.querySelectorAll('button:not([aria-label])')''';
+      const buttons = document.querySelectorAll('button:not([aria-label])')''
       buttons.forEach((button) => {
         if (!button.textContent?.trim()) {
           button.setAttribute('aria-label', 'Button')}'''
@@ -82,7 +82,7 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
     // Apply accessibility settings;
     applyAccessibilitySettings(settings)
     // Listen for system preference changes;
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')''';
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')''
     const handleChange = () => {
 setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches,}));
     mediaQuery.addEventListener('change', handleChange)";"'";
@@ -108,11 +108,11 @@ setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches,}));
     const handleContrastChange = () => {
     const setupKeyboardNavigation = () => {
       // Enhanced keyboard navigation;
-      document.addEventListener('keydown', (e) => {'''';
-        if (e.key === 'Tab') {'''';
+      document.addEventListener('keydown', (e) => {'''
+        if (e.key === 'Tab') {'''
           document.body.classList.add('keyboard-navigation')}'''
       }
-      document.addEventListener('mousedown', () => {'''';
+      document.addEventListener('mousedown', () => {'''
         document.body.classList.remove('keyboard-navigation')})}'''
     // Initialize accessibility enhancements;
     addSkipLinks();
@@ -124,20 +124,20 @@ setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches,}));
       // Cleanup if needed}}, []);
   useEffect(() => {
     applyAccessibilitySettings(settings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])''';
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings))}, [settings])''
   const applyAccessibilitySettings = () => {
     const root = document.documentElement;
     // Apply high contrast;
     if (settings.highContrast) {
     // Apply font size;
-    root.classList.remove('font-size-small', 'font-size-large', 'font-size-extra-large')''';
-    if (settings.fontSize !== 'normal') {''';
+    root.classList.remove('font-size-small', 'font-size-large', 'font-size-extra-large')''
+    if (settings.fontSize !== 'normal') {''
       root.classList.add(`font-size-${settings.fontSize}`)}````
     // Apply reduced motion;
   // Add CSS for accessibility features;
   useEffect(() => {
-    const style = document.createElement('style')''';
-    style.id = 'enhanced-accessibility-styles'''';
+    const style = document.createElement('style')''
+    style.id = 'enhanced-accessibility-styles'''
     style.textContent = `````
       .high-contrast {
         animation-iteration-count: 1 !important;
@@ -170,7 +170,7 @@ setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches,}));
         writing-mode: vertical-rl;
     document.head.appendChild(style);
     return () => {
-      const existingStyle = document.getElementById('enhanced-accessibility-styles')''';
+      const existingStyle = document.getElementById('enhanced-accessibility-styles')''
       if (existingStyle) {
         existingStyle.remove()
   }, []);
@@ -224,7 +224,7 @@ export default EnhancedAccessibility;
   useEffect(() => {
     const handleKeyDown = () => {
       // Alt + M: Skip to main content;
-      if (event.altKey && event.key === 'm') {''';
+      if (event.altKey && event.key === 'm') {''
         event.preventDefault();
         const mainContent = document.getElementById('main-content')";"'";
         if (mainContent) {}

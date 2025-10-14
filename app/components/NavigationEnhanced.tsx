@@ -23,7 +23,7 @@ import { Menu,
   Search,
   Bell,
   User } from 'lucide-react';'
-import FuturisticButton from './FuturisticButton'
+import FuturisticButton from './FuturisticButton
 
 interface NavigationEnhancedProps {
   onSidebarToggle?: () => void;

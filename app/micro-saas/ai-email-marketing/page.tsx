@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';'
 import { Link } from 'react-router-dom';'
 import { ArrowRight, Mail, Brain, Target, BarChart3, CheckCircle, Star, Users, Clock, Zap, Globe, Shield, Sparkles, PenTool, Calendar, DollarSign, FileText, MessageSquare, Mic, Code, Eye, EyeOff, Key, Fingerprint, Smartphone, Laptop, Monitor, Database, Cpu, Network, AlertTriangle } from 'lucide-react';'

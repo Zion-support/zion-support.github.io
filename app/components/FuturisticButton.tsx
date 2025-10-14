@@ -3,7 +3,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({ ;
   className=""
   variant="primary"
   size="md"
-  type = 'button''}) => {''';
+  type = 'button''}) => {''
   const baseClasses="inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2" variantClasses = {
     </button>
   );
@@ -16,8 +16,8 @@ import React from "react";";
 interface FuturisticButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'outline';';
-  size?: 'sm' | 'md' | 'lg';';
+  variant?: 'primary' | 'secondary' | 'outline
+  size?: 'sm' | 'md' | 'lg
   disabled?: boolean;
   className?: string;
 }

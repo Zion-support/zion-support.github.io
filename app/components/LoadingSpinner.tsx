@@ -15,7 +15,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <div;
           className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}````;
           style={{
-            animation: 'spin 1s linear infinite',''';
+            animation: 'spin 1s linear infinite',''
             willChange: 'transform''''
           }></div>
           <Loader2 className="w-full h-full" />"""

@@ -21,30 +21,35 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix import statements without semicolons
-    const importRegex = /^import\s+.*from\s+['"][^'"]+['"]$/gm;
-    const matches = content.match(importRegex);
-    
-    if (matches) {
-      matches.forEach(match => {
-        if (!match.endsWith(';')) {
-          content = content.replace(match, match + ';');
-          modified = true;
+    // Fix import statements without quotes and semicolons
+    const lines = content.split('\n');
+    const fixedLines = lines.map(line => {
+      // Fix import statements that are missing quotes and semicolons
+      if (line.trim().startsWith('import') && !line.includes(';') && !line.includes("'") && !line.includes('"')) {
+        // This is a malformed import, skip it for now
+        return line;
+      }
+      
+      // Fix import statements missing closing quotes and semicolons
+      if (line.trim().startsWith('import') && line.includes('from') && !line.endsWith(';')) {
+        if (line.includes("'") && !line.includes("';")) {
+          return line + "';";
+        } else if (line.includes('"') && !line.includes('";')) {
+          return line + '";';
         }
-      });
-    }
+      }
+      
+      return line;
+    });
     
-    // Fix other common syntax issues
-    content = content.replace(/from\s+['"]([^'"]+)['"]$/gm, "from '$1';");
-    content = content.replace(/from\s+['"]([^'"]+)['"]$/gm, 'from "$1";');
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+    const newContent = fixedLines.join('\n');
+    if (newContent !== content) {
+      fs.writeFileSync(filePath, newContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      return true;
+      modified = true;
     }
     
-    return false;
+    return modified;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;

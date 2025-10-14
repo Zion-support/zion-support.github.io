@@ -1,5 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { Logger } from '../utils/logger';
+import { Logger } from '../utils/logger
 ;
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -161,7 +161,7 @@ const errorReport: ErrorReport = {,
   };
 
   private handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = '/
   };
 
   render() {

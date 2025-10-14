@@ -28,12 +28,12 @@ ogImage="https://ziontechgroup.com/images/og-image.jpg",
     headline: title,
     description,
     author: {
-      '@type': 'Organization',''';
+      '@type': 'Organization',''
       name: author,
     },
     publisher: {
       logo: {
-        '@type': 'ImageObject',''';
+        '@type': 'ImageObject',''
         url: `${siteUrl}/images/logo.png`,````
       },
     },

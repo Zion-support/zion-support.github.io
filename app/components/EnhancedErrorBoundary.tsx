@@ -56,7 +56,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
 
     // Log error to console in development;
-    if (process.env.NODE_ENV === 'development') {'';
+    if (process.env.NODE_ENV === 'development') {'
       console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);'
     }
 
@@ -105,7 +105,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </h1>
               { /* Error Message */ }"""
               <p className="text-gray-300 mb-6 leading-relaxed">''"'";
-                We're sorry, but something unexpected happened. Our team has been notified;';
+                We're sorry, but something unexpected happened. Our team has been notified;
                 and is working to fix this issue.
               </p>
               { /* Error ID for support */ }

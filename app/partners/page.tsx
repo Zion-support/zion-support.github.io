@@ -1,33 +1,33 @@
 {
-      name: 'Amazon Web Services','''';
-      logo: '☁️','''';
-      description: 'infrastructure and AI services collaboration','''';
+      name: 'Amazon Web Services','''
+      logo: '☁️','''
+      description: 'infrastructure and AI services collaboration','''
       category: '''},'''
     {
-      name: 'Google ','''';
-      logo: '🔍','''';
-      description: 'AI and machine learning platform integration','''';
+      name: 'Google ','''
+      logo: '🔍','''
+      description: 'AI and machine learning platform integration','''
 
       category: 'AI/ML'},'''
 
     {
-      name: 'IBM','''';
-      logo: '💼','''';
-      description: 'Enterprise AI solutions and consulting','''';
+      name: 'IBM','''
+      logo: '💼','''
+      description: 'Enterprise AI solutions and consulting','''
 
       category: 'Enterprise'},'''
 
     {
-      name: 'Salesforce','''';
-      logo: '📊','''';
-      description: 'CRM and business intelligence integration','''';
+      name: 'Salesforce','''
+      logo: '📊','''
+      description: 'CRM and business intelligence integration','''
 
       category: 'CRM'},'''
 
     {
-      name: 'Oracle','''';
-      logo: '🗄️','''';
-      description: 'and enterprise application solutions','''';
+      name: 'Oracle','''
+      logo: '🗄️','''
+      description: 'and enterprise application solutions','''
       category: '''}'''
 
   ];
