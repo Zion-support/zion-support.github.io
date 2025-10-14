@@ -1,12 +1,12 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
-const PerformanceMonitor = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">PerformanceMonitor</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
+interface PerformanceMonitorProps {
+  children?: ReactNode;
+  onMetricsUpdate?: () => void;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+  return <>{children}</>;
 };
 
 export default PerformanceMonitor;
