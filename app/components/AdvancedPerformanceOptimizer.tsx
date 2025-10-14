@@ -24,7 +24,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
   enableCriticalCSS = true,
   enableBundleAnalysis = true
 }) => {
-  const { trackMetric } = usePerformanceMonitor();
+  usePerformanceMonitor();
 
   // Image optimization
   useEffect(() => {
@@ -170,17 +170,17 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
           // eslint-disable-next-line no-console
           console.log('Service Worker registered successfully:', registration);
           
-          // Track service worker registration
-          trackMetric('service_worker_registered', { scope: registration.scope });
+          // Service worker registered successfully
+          console.log('Service Worker scope:', registration.scope);
         } catch (error) {
           console.warn('Service Worker registration failed:', error);
-          trackMetric('service_worker_error', { error: error.message });
+          console.warn('Service Worker error details:', error instanceof Error ? error.message : 'Unknown error');
         }
       }
     };
 
     registerServiceWorker();
-  }, [enableServiceWorker, trackMetric]);
+  }, [enableServiceWorker]);
 
   // Resource hints
   useEffect(() => {
@@ -255,7 +255,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         return total + (script.src ? 0 : script.textContent?.length || 0);
       }, 0);
 
-      trackMetric('bundle_size', { 
+      console.log('Bundle analysis:', { 
         scriptCount: scripts.length,
         totalSize: totalScriptSize,
         averageSize: totalScriptSize / scripts.length
@@ -272,13 +272,13 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
         return acc;
       }, {} as Record<string, { count: number; totalSize: number; totalTime: number }>);
 
-      trackMetric('resource_metrics', resourceMetrics);
+      console.log('Resource metrics:', resourceMetrics);
     };
 
     // Run analysis after page load
     window.addEventListener('load', analyzeBundle);
     return () => window.removeEventListener('load', analyzeBundle);
-  }, [enableBundleAnalysis, trackMetric]);
+  }, [enableBundleAnalysis]);
 
   // Memoized performance optimizations
   const performanceOptimizations = useMemo(() => ({

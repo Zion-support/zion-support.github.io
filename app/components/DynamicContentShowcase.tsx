@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Play, ArrowRight, Star, Users, ChevronLeft, Pause, ChevronRight, CheckCircle, Zap } from 'lucide-react';
 
 interface Feature {
   icon: React.ComponentType<any>;

@@ -15,6 +15,27 @@ const SupportPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
+  const resources = [
+    {
+      title: 'Documentation',
+      description: 'Comprehensive guides and API references',
+      icon: BookOpen,
+      link: '/docs'
+    },
+    {
+      title: 'Community Forum',
+      description: 'Connect with other users and experts',
+      icon: Users,
+      link: '/community'
+    },
+    {
+      title: 'Video Tutorials',
+      description: 'Step-by-step video guides',
+      icon: Zap,
+      link: '/tutorials'
+    }
+  ];
+
   const faqs: FAQ[] = [
     {
       question: 'How do I get started with your AI solutions?',

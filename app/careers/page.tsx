@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Star, ArrowRight, CheckCircle, Zap, Heart, Brain, Rocket } from 'lucide-react';
+import { Zap, Heart, Brain, Rocket, Star, MapPin, Clock, Users, CheckCircle } from 'lucide-react';
 
 interface JobPosition {
   id: string;
