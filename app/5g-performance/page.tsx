@@ -54,6 +54,6 @@ const FiveGPerformance: React.FC = () => {
   );
 };
 
-export default 5gPerformancePage;
+export default FiveGperformancePage;
 
 

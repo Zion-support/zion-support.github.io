@@ -55,8 +55,4 @@ const AiDocumentProcessorPage: React.FC = () => {
 };
 
 export default AiDocumentProcessorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

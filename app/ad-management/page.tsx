@@ -55,8 +55,4 @@ const AdManagementPage: React.FC = () => {
 };
 
 export default AdManagementPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

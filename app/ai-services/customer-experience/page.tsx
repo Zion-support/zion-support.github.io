@@ -55,8 +55,4 @@ const CustomerExperiencePage: React.FC = () => {
 };
 
 export default CustomerExperiencePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

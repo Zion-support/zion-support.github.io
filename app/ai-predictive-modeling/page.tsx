@@ -55,8 +55,4 @@ const AiPredictiveModelingPage: React.FC = () => {
 };
 
 export default AiPredictiveModelingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

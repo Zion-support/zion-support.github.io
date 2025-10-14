@@ -55,8 +55,4 @@ const ExpenseTrackerPage: React.FC = () => {
 };
 
 export default ExpenseTrackerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

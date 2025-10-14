@@ -55,8 +55,4 @@ const AiEnterpriseSolutionsPage: React.FC = () => {
 };
 
 export default AiEnterpriseSolutionsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

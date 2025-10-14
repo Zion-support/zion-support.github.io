@@ -55,8 +55,4 @@ const AiVoiceAssistantPage: React.FC = () => {
 };
 
 export default AiVoiceAssistantPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

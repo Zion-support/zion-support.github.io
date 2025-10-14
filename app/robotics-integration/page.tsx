@@ -55,8 +55,4 @@ const RoboticsIntegrationPage: React.FC = () => {
 };
 
 export default RoboticsIntegrationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

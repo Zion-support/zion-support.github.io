@@ -55,8 +55,4 @@ const ZionAiMobileAppBuilderPage: React.FC = () => {
 };
 
 export default ZionAiMobileAppBuilderPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -53,8 +53,4 @@ const StatusPage: React.FC = () => {
 };
 
 export default StatusPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

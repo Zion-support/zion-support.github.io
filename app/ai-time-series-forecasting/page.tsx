@@ -55,8 +55,4 @@ const AiTimeSeriesForecastingPage: React.FC = () => {
 };
 
 export default AiTimeSeriesForecastingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

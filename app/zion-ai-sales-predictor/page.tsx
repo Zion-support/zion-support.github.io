@@ -55,8 +55,4 @@ const ZionAiSalesPredictorPage: React.FC = () => {
 };
 
 export default ZionAiSalesPredictorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

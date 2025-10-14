@@ -55,8 +55,4 @@ const ArVrPlatformPage: React.FC = () => {
 };
 
 export default ArVrPlatformPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

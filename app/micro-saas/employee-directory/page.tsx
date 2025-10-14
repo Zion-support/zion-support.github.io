@@ -55,8 +55,4 @@ const EmployeeDirectoryPage: React.FC = () => {
 };
 
 export default EmployeeDirectoryPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

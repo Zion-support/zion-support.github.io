@@ -55,8 +55,4 @@ const AiIotAnalyticsPage: React.FC = () => {
 };
 
 export default AiIotAnalyticsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

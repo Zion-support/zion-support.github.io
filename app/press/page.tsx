@@ -53,8 +53,4 @@ const PressPage: React.FC = () => {
 };
 
 export default PressPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

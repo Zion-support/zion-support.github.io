@@ -55,8 +55,4 @@ const DataAnalyticsPage: React.FC = () => {
 };
 
 export default DataAnalyticsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

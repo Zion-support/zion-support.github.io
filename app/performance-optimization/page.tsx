@@ -55,8 +55,4 @@ const PerformanceOptimizationPage: React.FC = () => {
 };
 
 export default PerformanceOptimizationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

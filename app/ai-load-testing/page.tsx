@@ -55,8 +55,4 @@ const AiLoadTestingPage: React.FC = () => {
 };
 
 export default AiLoadTestingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

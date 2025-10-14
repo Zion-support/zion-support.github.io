@@ -53,8 +53,4 @@ const HelpPage: React.FC = () => {
 };
 
 export default HelpPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -56,8 +56,4 @@ const IntelligentEmailInfrastructurePage: React.FC = () => {
 };
 
 export default IntelligentEmailInfrastructurePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

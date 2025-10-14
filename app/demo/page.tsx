@@ -53,8 +53,4 @@ const DemoPage: React.FC = () => {
 };
 
 export default DemoPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

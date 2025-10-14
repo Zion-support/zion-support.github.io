@@ -53,8 +53,4 @@ const AiFintechPage: React.FC = () => {
 };
 
 export default AiFintechPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

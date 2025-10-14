@@ -55,8 +55,4 @@ const ZionAiSupplyChainOptimizerPage: React.FC = () => {
 };
 
 export default ZionAiSupplyChainOptimizerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

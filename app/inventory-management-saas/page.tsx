@@ -55,8 +55,4 @@ const InventoryManagementSaasPage: React.FC = () => {
 };
 
 export default InventoryManagementSaasPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

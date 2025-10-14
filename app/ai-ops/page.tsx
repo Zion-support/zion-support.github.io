@@ -53,8 +53,4 @@ const AiOpsPage: React.FC = () => {
 };
 
 export default AiOpsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,8 +55,4 @@ const EdgeComputingPage: React.FC = () => {
 };
 
 export default EdgeComputingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

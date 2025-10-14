@@ -55,8 +55,4 @@ const AiEmailMarketingPage: React.FC = () => {
 };
 
 export default AiEmailMarketingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

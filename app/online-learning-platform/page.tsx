@@ -55,8 +55,4 @@ const OnlineLearningPlatformPage: React.FC = () => {
 };
 
 export default OnlineLearningPlatformPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,8 +55,4 @@ const AiHrAssistantPage: React.FC = () => {
 };
 
 export default AiHrAssistantPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

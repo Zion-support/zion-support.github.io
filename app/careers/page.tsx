@@ -398,8 +398,4 @@ const CareersPage: React.FC = () => {
 };
 
 export default CareersPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

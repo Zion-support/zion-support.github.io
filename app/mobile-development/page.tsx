@@ -55,8 +55,4 @@ const MobileDevelopmentPage: React.FC = () => {
 };
 
 export default MobileDevelopmentPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

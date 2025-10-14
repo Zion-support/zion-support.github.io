@@ -55,8 +55,4 @@ const ZionSecurityShieldProPage: React.FC = () => {
 };
 
 export default ZionSecurityShieldProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

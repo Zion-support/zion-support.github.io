@@ -55,8 +55,4 @@ const AiQualityAssurancePage: React.FC = () => {
 };
 
 export default AiQualityAssurancePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

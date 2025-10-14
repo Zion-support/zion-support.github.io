@@ -55,8 +55,4 @@ const ZionAiContractAnalyzerPage: React.FC = () => {
 };
 
 export default ZionAiContractAnalyzerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

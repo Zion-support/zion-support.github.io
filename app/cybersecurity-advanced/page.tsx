@@ -55,8 +55,4 @@ const CybersecurityAdvancedPage: React.FC = () => {
 };
 
 export default CybersecurityAdvancedPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

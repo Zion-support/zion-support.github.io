@@ -55,8 +55,4 @@ const AiSpaceMissionOptimizerPage: React.FC = () => {
 };
 
 export default AiSpaceMissionOptimizerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

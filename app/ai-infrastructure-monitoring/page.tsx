@@ -55,8 +55,4 @@ const AiInfrastructureMonitoringPage: React.FC = () => {
 };
 
 export default AiInfrastructureMonitoringPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

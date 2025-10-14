@@ -55,8 +55,4 @@ const AiHrRecruitmentProPage: React.FC = () => {
 };
 
 export default AiHrRecruitmentProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

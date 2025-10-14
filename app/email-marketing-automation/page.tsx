@@ -55,8 +55,4 @@ const EmailMarketingAutomationPage: React.FC = () => {
 };
 
 export default EmailMarketingAutomationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

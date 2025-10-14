@@ -55,8 +55,4 @@ const AiAutomationPlatformPage: React.FC = () => {
 };
 
 export default AiAutomationPlatformPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

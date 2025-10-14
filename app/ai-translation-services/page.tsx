@@ -55,8 +55,4 @@ const AiTranslationServicesPage: React.FC = () => {
 };
 
 export default AiTranslationServicesPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

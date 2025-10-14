@@ -55,8 +55,4 @@ const BlockchainWeb3Page: React.FC = () => {
 };
 
 export default BlockchainWeb3Page;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,8 +55,4 @@ const SmartHomeSaasPage: React.FC = () => {
 };
 
 export default SmartHomeSaasPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

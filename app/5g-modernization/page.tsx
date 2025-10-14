@@ -54,6 +54,6 @@ const FiveGModernization: React.FC = () => {
   );
 };
 
-export default 5gModernizationPage;
+export default FiveGmodernizationPage;
 
 

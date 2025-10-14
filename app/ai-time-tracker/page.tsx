@@ -55,8 +55,4 @@ const AiTimeTrackerPage: React.FC = () => {
 };
 
 export default AiTimeTrackerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

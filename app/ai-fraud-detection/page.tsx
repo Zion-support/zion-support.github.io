@@ -55,8 +55,4 @@ const AiFraudDetectionPage: React.FC = () => {
 };
 
 export default AiFraudDetectionPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

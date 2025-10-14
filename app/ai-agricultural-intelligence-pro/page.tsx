@@ -56,8 +56,4 @@ const AiAgriculturalIntelligenceProPage: React.FC = () => {
 };
 
 export default AiAgriculturalIntelligenceProPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

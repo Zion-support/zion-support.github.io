@@ -55,8 +55,4 @@ const AiHolographicWorkspacePage: React.FC = () => {
 };
 
 export default AiHolographicWorkspacePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

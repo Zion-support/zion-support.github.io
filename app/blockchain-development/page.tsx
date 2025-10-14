@@ -55,8 +55,4 @@ const BlockchainDevelopmentPage: React.FC = () => {
 };
 
 export default BlockchainDevelopmentPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

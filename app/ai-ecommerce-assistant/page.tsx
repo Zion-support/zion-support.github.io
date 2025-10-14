@@ -55,8 +55,4 @@ const AiEcommerceAssistantPage: React.FC = () => {
 };
 
 export default AiEcommerceAssistantPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,8 +55,4 @@ const DataAnalyticsBiPage: React.FC = () => {
 };
 
 export default DataAnalyticsBiPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

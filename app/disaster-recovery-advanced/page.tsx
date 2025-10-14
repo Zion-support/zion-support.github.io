@@ -55,8 +55,4 @@ const DisasterRecoveryAdvancedPage: React.FC = () => {
 };
 
 export default DisasterRecoveryAdvancedPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

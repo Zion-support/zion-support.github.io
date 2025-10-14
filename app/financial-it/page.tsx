@@ -53,8 +53,4 @@ const FinancialItPage: React.FC = () => {
 };
 
 export default FinancialItPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

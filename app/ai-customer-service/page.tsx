@@ -55,8 +55,4 @@ const AiCustomerServicePage: React.FC = () => {
 };
 
 export default AiCustomerServicePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

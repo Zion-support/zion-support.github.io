@@ -55,8 +55,4 @@ const AiSmartHomeControllerPage: React.FC = () => {
 };
 
 export default AiSmartHomeControllerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

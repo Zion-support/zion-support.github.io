@@ -55,8 +55,4 @@ const SupplyChainOptimizerPage: React.FC = () => {
 };
 
 export default SupplyChainOptimizerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

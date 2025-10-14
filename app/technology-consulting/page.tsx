@@ -55,8 +55,4 @@ const TechnologyConsultingPage: React.FC = () => {
 };
 
 export default TechnologyConsultingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

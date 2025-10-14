@@ -55,8 +55,4 @@ const ComplianceAutomationPage: React.FC = () => {
 };
 
 export default ComplianceAutomationPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

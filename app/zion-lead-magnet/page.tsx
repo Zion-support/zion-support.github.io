@@ -55,8 +55,4 @@ const ZionLeadMagnetPage: React.FC = () => {
 };
 
 export default ZionLeadMagnetPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

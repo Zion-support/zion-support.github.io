@@ -55,8 +55,4 @@ const EmailMarketingSaasPage: React.FC = () => {
 };
 
 export default EmailMarketingSaasPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

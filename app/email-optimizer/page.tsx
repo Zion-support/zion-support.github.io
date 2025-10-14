@@ -55,8 +55,4 @@ const EmailOptimizerPage: React.FC = () => {
 };
 
 export default EmailOptimizerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

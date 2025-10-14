@@ -55,8 +55,4 @@ const ContentGeneratorPage: React.FC = () => {
 };
 
 export default ContentGeneratorPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

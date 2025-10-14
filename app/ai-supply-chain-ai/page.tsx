@@ -55,8 +55,4 @@ const AiSupplyChainAiPage: React.FC = () => {
 };
 
 export default AiSupplyChainAiPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

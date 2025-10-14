@@ -53,8 +53,4 @@ const AiAnalyticsPage: React.FC = () => {
 };
 
 export default AiAnalyticsPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

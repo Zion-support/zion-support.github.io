@@ -55,8 +55,4 @@ const DatabaseServicesPage: React.FC = () => {
 };
 
 export default DatabaseServicesPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,8 +55,4 @@ const SeoOptimizerPage: React.FC = () => {
 };
 
 export default SeoOptimizerPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

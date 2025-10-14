@@ -55,8 +55,4 @@ const AdvancedSecuritySuitePage: React.FC = () => {
 };
 
 export default AdvancedSecuritySuitePage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,8 +55,4 @@ const AssetManagementPage: React.FC = () => {
 };
 
 export default AssetManagementPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,8 +55,4 @@ const CloudConsultingPage: React.FC = () => {
 };
 
 export default CloudConsultingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

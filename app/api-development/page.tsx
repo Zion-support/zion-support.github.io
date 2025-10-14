@@ -55,8 +55,4 @@ const ApiDevelopmentPage: React.FC = () => {
 };
 
 export default ApiDevelopmentPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

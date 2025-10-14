@@ -55,8 +55,4 @@ const AiCrmAssistantPage: React.FC = () => {
 };
 
 export default AiCrmAssistantPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

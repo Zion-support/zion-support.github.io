@@ -55,8 +55,4 @@ const PenetrationTestingPage: React.FC = () => {
 };
 
 export default PenetrationTestingPage;
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf
