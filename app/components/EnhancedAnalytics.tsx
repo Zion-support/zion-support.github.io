@@ -1,4 +1,5 @@
-import React, { useEffect, useCallback } from 'react';
+'use client';
+import React, { useCallback, useEffect } from 'react';
 
 
 
