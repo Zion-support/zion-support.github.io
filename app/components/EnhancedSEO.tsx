@@ -1,13 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function Page() {
+interface EnhancedSEOProps {
+  title: string;
+  description: string;
+  keywords: string;
+}
+
+export default function EnhancedSEO({ title, description, keywords }: EnhancedSEOProps) {
   return (
     <>
       <Helmet>
-        <title>EnhancedSEO - Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedSEO solutions and services" />
-        <meta name="keywords" content="enhancedseo" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">

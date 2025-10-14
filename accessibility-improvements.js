@@ -1,11 +1,4 @@
-// accessibility-improvements - Basic implementation;
-<<<<<<< HEAD
+// accessibility-improvements - Basic implementation
 export default function accessibilityImprovements() {
-  
-  return null
+  return null;
 }
-=======
-export default function accessibilityImprovements() {}
-  return null;}
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-d2b1
