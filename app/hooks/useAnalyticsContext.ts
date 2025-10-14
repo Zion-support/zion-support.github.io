@@ -1,5 +1,5 @@
-import { useContext } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
+import { useContext } from 'react'
+import { AnalyticsContext } from '../contexts/AnalyticsContext'
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
@@ -10,9 +10,10 @@ interface AnalyticsContextType {
 export const useAnalyticsContext = (): AnalyticsContextType => {
   const context = useContext(AnalyticsContext);
   
+export const useAnalyticsContext = () => {
+  const context = useContext(AnalyticsContext)
   if (!context) {
-    throw new Error('useAnalyticsContext must be used within an AnalyticsProvider');
+    throw new Error('useAnalyticsContext must be used within an AnalyticsProvider')
   }
-  
-  return context;
-};
+  return context
+}

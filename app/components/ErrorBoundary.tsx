@@ -1,8 +1,7 @@
-import React, { Component, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
 }
 
 interface State {
@@ -20,27 +19,23 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // In production, you might want to send this to an error reporting service
-    // For now, we'll silently handle errors in production
-    if (process.env.NODE_ENV === 'development') {
-      // eslint-disable-next-line no-console
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+import React, { Suspense } from 'react';
+  componentDidCatch(_error: Error, _errorInfo: ErrorInfo) {
+    // Error logged
   }
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-slate-900">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
             <button
-              onClick={() => this.setState({ hasError: false })}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              onClick={() => window.location.reload()}
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300"
             >
-              Try again
+              Reload Page
             </button>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import React, { Suspense } from 'react';
 import App from './App';
 import './index.css';
 
@@ -31,10 +32,15 @@ if ("serviceWorker" in navigator) {
     navigator.serviceWorker
       .register("/sw.js")
       .then((_registration) => {
-        console.log('Service Worker registered successfully');
+        if (process.env.NODE_ENV === 'development') {
+          console.warn('Service Worker registered successfully');
+        }
       })
       .catch((_error) => {
-        console.log('Service Worker registration failed');
+        if (process.env.NODE_ENV === 'development') {
+import React, { Suspense } from 'react';
+          console.warn('Service Worker registration failed');
+        }
       });
   });
 }

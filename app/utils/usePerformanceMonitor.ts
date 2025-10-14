@@ -11,6 +11,7 @@ export const usePerformanceMonitor = (name: string) => {
         const endTime = performance.now();
         const duration = endTime - startTime.current;
         
+        // eslint-disable-next-line no-console
         console.log(`${name} took ${duration.toFixed(2)}ms`);
         
         // Send to analytics

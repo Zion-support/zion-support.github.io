@@ -17,6 +17,6 @@ export const structuredData = {
   },
   
   generate: (type: 'organization' | 'website') => {
-    return structuredData[type];
+    return structuredData[type]
   }
-};
+}
