@@ -1,7 +1,4 @@
-
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-
+import React, { Component, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   onError?: (_error: Error, _errorInfo: ErrorInfo) => void;
@@ -10,7 +7,6 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -23,31 +19,9 @@ class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-    
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-    
-    // Call custom error handler if provided
-    this.props.onError?.(error, errorInfo);
-    
-    // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to your error reporting service
-      // Example: Sentry.captureException(error, { extra: errorInfo });
-    }
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', _error, _errorInfo);
   }
-
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  handleGoHome = () => {
-    window.location.href = '/';
-  };
 
   render() {
     if (this.state.hasError) {
@@ -81,49 +55,32 @@ class ErrorBoundary extends Component<Props, State> {
                     <pre className="mt-1 whitespace-pre-wrap">
                       {this.state.error.stack}
                     </pre>
-                  </div>
-                  {this.state.errorInfo && (
-                    <div className="mt-2">
-                      <strong>Component Stack:</strong>
-                      <pre className="mt-1 whitespace-pre-wrap">
+                    {this.state.errorInfo && (
                         {this.state.errorInfo.componentStack}
                       </pre>
-                    </div>
-                  )}
+                    )
+                  </div>
+                )
+                <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center"></div>"
+                  <button;
+                    onClick={() => window.location.reload()"
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
+                  >"
+                    <RefreshCw className="w-4 h-4 mr-2" />"
+                    Refresh Page;
+                  </button>
+                  <Link"
+                    to="/"
+                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500>"
+                    <Home className="w-4 h-4 mr-2" />"
+                    Go Home;
+                  </Link>
                 </div>
-              </details>
-            )}
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors duration-200"
-              >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again
-              </button>
-              
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors duration-200"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
-              </button>
-            </div>
-            
-            <div className="mt-6 text-sm text-gray-400">
-              <p>If this problem persists, please contact our support team.</p>
-              <p className="mt-2">
-                <a 
-                  href="mailto:support@ziontechgroup.com" 
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  support@ziontechgroup.com
-                </a>
-              </p>
             </div>
           </div>
+        <div className="p-4"></div>
+          <h2 className="text-xl font-semibold mb-2">Something went wrong.</h2>
+          <p>Please refresh the page and try again.</p>
         </div>
       );
     }

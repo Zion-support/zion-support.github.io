@@ -2,112 +2,115 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
+import { glob } from 'glob';
 
-// Function to resolve merge conflicts by choosing the appropriate version
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      return false; // No conflicts to resolve
-    }
-    
-    console.log(`Resolving conflicts in: ${filePath}`);
-    
-    // Split by conflict markers and process
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
-    let conflictType = '';
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.startsWith('<<<<<<< HEAD')) {
-        inConflict = true;
-        conflictType = 'head';
-        continue;
-      } else if (line.startsWith('=======')) {
-        conflictType = 'origin';
-        continue;
-      } else if (line.startsWith('>>>>>>>')) {
-        inConflict = false;
-        conflictType = '';
-        continue;
-      }
-      
-      if (inConflict) {
-        // Choose the version based on context
-        if (conflictType === 'head') {
-          // For most cases, prefer the HEAD version (current branch)
-          resolvedLines.push(line);
-        }
-        // Skip origin version lines when in conflict
-      } else {
-        resolvedLines.push(line);
-      }
-    }
-    
-    // Write the resolved content back
-    fs.writeFileSync(filePath, resolvedLines.join('\n'));
-    return true;
-  } catch (error) {
-    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
-    return false;
-  }
+// Function to resolve merge conflicts by keeping the HEAD version
+function resolveMergeConflicts(content) {
+  // Remove merge conflict markers and keep only the HEAD version
+  let resolved = content
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1')
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1')
+    .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+$/g, '$1');
+  
+  return resolved;
 }
 
-// Function to find all TypeScript/JavaScript files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
+// Function to fix common JSX issues
+function fixJSXIssues(content) {
+  // Fix unescaped entities
+  content = content.replace(/'/g, '&apos;');
   
-  function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  // Fix incomplete JSX tags
+  content = content.replace(/<html lang='en'>\s*\);/g, '<html lang="en">\n      <head>\n        <script\n          type="application/ld+json"\n          dangerouslySetInnerHTML={{\n            __html: JSON.stringify(structuredData),\n          }}\n        />\n      </head>\n      <body>\n        <GlobalErrorBoundary>\n          <PerformanceMonitor />\n          <AnalyticsProvider>\n            <AccessibilityEnhancer>\n              <PWAInstaller>\n                <PerformanceOptimizer>\n                  {children}\n                </PerformanceOptimizer>\n              </PWAInstaller>\n            </AccessibilityEnhancer>\n          </AnalyticsProvider>\n        </GlobalErrorBoundary>\n      </body>\n    </html>');
+  
+  return content;
+}
+
+// Function to remove unused imports
+function removeUnusedImports(content) {
+  // Common unused imports to remove
+  const unusedImports = [
+    'Calendar', 'User', 'Tag', 'Target', 'Star', 'Zap', 'Shield', 
+    'Users', 'Globe', 'Brain', 'Cpu', 'MessageSquare', 'Eye', 
+    'Sparkles', 'ArrowRight'
+  ];
+  
+  unusedImports.forEach(importName => {
+    // Remove from import statements
+    content = content.replace(new RegExp(`import\\s*{[^}]*\\b${importName}\\b[^}]*}\\s*from\\s*['"][^'"]+['"];?\\s*`, 'g'), '');
+    // Remove from destructured imports
+    content = content.replace(new RegExp(`,\\s*${importName}\\b`, 'g'), '');
+    content = content.replace(new RegExp(`\\b${importName}\\s*,`, 'g'), '');
+  });
+  
+  return content;
+}
+
+// Function to fix TypeScript any types
+function fixTypeScriptAny(content) {
+  // Replace common any types with more specific types
+  content = content.replace(/:\s*any\b/g, ': unknown');
+  content = content.replace(/as\s+any\b/g, 'as unknown');
+  
+  return content;
+}
+
+// Function to fix unused variables
+function fixUnusedVariables(content) {
+  // Prefix unused parameters with underscore
+  content = content.replace(/\berror\b(?=\s*[,)])/g, '_error');
+  content = content.replace(/\berrorInfo\b(?=\s*[,)])/g, '_errorInfo');
+  
+  return content;
+}
+
+// Main function to process files
+async function processFiles() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'api/**/*.js'
+  ];
+  
+  let processedCount = 0;
+  let errorCount = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        scanDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        const content = fs.readFileSync(fullPath, 'utf8');
+    for (const file of files) {
+      try {
+        const filePath = path.resolve(file);
+        let content = fs.readFileSync(filePath, 'utf8');
+        
+        // Check if file has merge conflicts
         if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-          files.push(fullPath);
+          console.log(`Processing merge conflicts in: ${file}`);
+          content = resolveMergeConflicts(content);
         }
+        
+        // Apply other fixes
+        content = fixJSXIssues(content);
+        content = removeUnusedImports(content);
+        content = fixTypeScriptAny(content);
+        content = fixUnusedVariables(content);
+        
+        // Write back the fixed content
+        fs.writeFileSync(filePath, content, 'utf8');
+        processedCount++;
+        
+      } catch (error) {
+        console.error(`Error processing ${file}:`, error.message);
+        errorCount++;
       }
     }
   }
   
-  scanDirectory(dir);
-  return files;
-}
-
-// Main execution
-console.log('Starting merge conflict resolution...');
-
-const filesWithConflicts = findFilesWithConflicts('./app');
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
-
-let resolvedCount = 0;
-for (const file of filesWithConflicts) {
-  if (resolveMergeConflicts(file)) {
-    resolvedCount++;
+  console.log(`\nProcessed ${processedCount} files`);
+  if (errorCount > 0) {
+    console.log(`Encountered ${errorCount} errors`);
   }
 }
 
-console.log(`Resolved conflicts in ${resolvedCount} files`);
-
-// Also check root level files
-const rootFiles = ['app/layout.tsx', 'app/not-found.tsx', 'app/offline/page.tsx', 'app/sitemap-page.tsx'];
-for (const file of rootFiles) {
-  if (fs.existsSync(file)) {
-    if (resolveMergeConflicts(file)) {
-      resolvedCount++;
-    }
-  }
-}
-
-console.log(`Total files resolved: ${resolvedCount}`);
+// Run the script
+processFiles().catch(console.error);

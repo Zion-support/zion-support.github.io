@@ -1,3 +1,102 @@
+            Improved Sidebar;
+          </h1>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+            Professional improved sidebar services;
+            designed to help your business grow and succeed.;
+          </p>
+        </div>
+      </section>
+      { /* Content Section */ }
+            Improved Sidebar</h1>"
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+            Professional improved sidebar services;
+            <div></div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>"
+              <p className="text-lg text-gray-600 mb-6">"
+                We provide comprehensive improved sidebar;
+                solutions tailored to your specific needs and requirements.;
+              </p>"
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Custom solutions;
+                </li>"
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Expert consultation;
+                </li>"
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Ongoing support;
+                </li>
+              </ul>
+            </div>"
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">"
+                Ready to transform your business with our improved sidebar services?;
+              </p>
+              <a;
+                href="$1"
+                className="$1></a>
+                Contact Us;
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+            Ready to Get Started?;
+          </h2>"
+          <p className="text-xl text-blue-100 mb-8">"
+          </h2>"
+          <p className="text-xl text-blue-100 mb-8">"
+            Let"s discuss how our improved sidebar"
+            services can help you achieve your goals.;
+          </p>
+          <a;
+            href="$1"
+            className="$1></a>
+            Get Started Today;
+          </a>
+        </div>
+      </section>
+    </div>)
+  );
+export default ImprovedSidebar;
+                We provide comprehensive improved sidebar;
+                solutions tailored to your specific needs and requirements.</p>"
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Custom solutions</li>"
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Expert consultation</li>"
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"
+                  Ongoing support</div>"
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">"
+                Ready to transform your business with our improved sidebar services?</p>
+              <a;
+            Ready to Get Started?</a>
+          <p className="text-xl text-blue-100 mb-8">"
+            Let's discuss how our improved sidebar''''
+            services can help you achieve your goals.</p>
+          <a"
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"
+            Get Started Today</div>
+  )
+export default ImprovedSidebar;
+const ImprovedSidebar = () => {
+  return (
+<>    <div className="p-4"></div>
+      <h2 className="text-xl font-semibold mb-2">ImprovedSidebar</h2>
+      <p>This component is under construction.</p>
+    </>
+import { Shield, ArrowRight, Globe, Database, Phone, Cpu } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -116,6 +215,7 @@ const ImprovedSidebar: React.FC<ImprovedSidebarProps> = ({ isOpen, onClose }) =>
 
   const isActive = (href: string) => location.pathname === href;
 
+const ImprovedSidebar: React.FC = () => {
   return (
     <>
       {/* Overlay */}
@@ -128,10 +228,9 @@ const ImprovedSidebar: React.FC<ImprovedSidebarProps> = ({ isOpen, onClose }) =>
 
       {/* Sidebar */}
       <div className={`
-        fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 to-slate-800 
-        transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0
+        fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 to-slate-800 transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0
         ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-        shadow-2xl border-r border-slate-700
+        shadow-2 xl border-r border-slate-700
       `}>
         <div className="flex flex-col h-full">
           {/* Header */}

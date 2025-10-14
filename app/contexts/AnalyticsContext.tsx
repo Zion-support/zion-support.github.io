@@ -1,37 +1,27 @@
-import React, { createContext, useContext, ReactNode } from 'react';
-
-interface AnalyticsContextContextType {
-  trackEvent: (_event: string, _properties?: Record<string, unknown>) => void;
-  trackPageView: (_page: string) => void;
+  trackPageView: "(pageName: string) => void;
+  setUse",
+    r: (userI,
+    d: string, properties?: Record<string, any>) => void;
+  isEnabled: boolean }
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 }
 
-const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
-
-export const useAnalyticsContext = () => {
-  const context = useContext(AnalyticsContextContext);
-  if (!context) {
-    throw new Error(`useAnalyticsContext must be used within a AnalyticsContextProvider`);
-  }
-  return context;
-};
-
-interface AnalyticsContextProviderProps {
-  children: ReactNode;
-}
-
-export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> = ({ children }) => {
-  const value = {
-    trackEvent: (_event: string, _properties?: Record<string, unknown>) => {
-      // Analytics event tracking - implement actual analytics service here
-    },
-    trackPageView: (_page: string) => {
-      // Page view tracking - implement actual analytics service here
-    }
-  };
-
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const  ({ children }) => {
+  const [isEnabled, setIsEnabled] = useState(false);
+  const [userId, setUserId] = useState<string | null>(null);
+  useEffect(() => {
+    // if analytics is enabled;
+    setIsEnabled(true)}, []);
+    // if analytics is enabled;
+    setIsEnabled(true);}
+    trackPageView,;
+    setUser,;
+    isEnabled, }
+    isEnabled,}
   return (
-    <AnalyticsContextContext.Provider value={value}>
-      {children}
-    </AnalyticsContextContext.Provider>
+    <div><AnalyticsContext.Provider value={value}></AnalyticsContext></div>)
+      { children }
+    </AnalyticsContext.Provider>;
   );
-};
+export { AnalyticsContext }
