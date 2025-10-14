@@ -9,6 +9,7 @@ export function withLazyLoading<T extends ComponentType<Record<string, unknown>>
   
   const WrappedComponent = (props: React.ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
+      {/* @ts-expect-error - Complex type inference issue with lazy components */}
       <LazyComponent {...props} />
     </Suspense>
   );
@@ -25,9 +26,10 @@ export function createLazyComponent<T extends ComponentType<Record<string, unkno
   
   const WrappedComponent = (props: React.ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
+      {/* @ts-expect-error - Complex type inference issue with lazy components */}
       <LazyComponent {...props} />
     </Suspense>
   );
-  WrappedComponent.displayName = 'createLazyComponent';
+  WrappedComponent.displayName = `createLazyComponent(${LazyComponent.name || 'Component'})`;
   return WrappedComponent;
 }
