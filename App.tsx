@@ -45,6 +45,8 @@ const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/
 const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
 
 const App = () => {
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
   return (
     <HelmetProvider>
       <Router>
@@ -52,7 +54,7 @@ const App = () => {
           <FuturisticBackground>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
               <Navigation />
-              <Sidebar />
+              <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
               <Breadcrumb />
               
               <Suspense fallback={<LoadingPage />}>

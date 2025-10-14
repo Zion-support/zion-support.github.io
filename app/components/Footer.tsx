@@ -1,15 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle } from 'lucide-react';
+import { ArrowRight, Mail, Phone, MapPin, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Brain, Cloud, Zap } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const serviceCategories = ["
-    {"
-      title: 'AI Services'"
-      icon: <Brain className="w-5 h-5"
-      color: 'from-blue-500 to-cyan-500'
+  const serviceCategories = [
+    {
+      title: 'AI Services',
+      icon: <Brain className="w-5 h-5" />,
+      color: 'from-blue-500 to-cyan-500',
       links: [
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' },
@@ -105,11 +105,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-gray-400">
                 <Phone className="w-4 h-4 mr-3" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <MapPin className="w-4 h-4 mr-3" />
-                <span>San Francisco, CA</span>
+                <span>Middletown, DE 19709</span>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ const Footer = () => {
                 <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center mr-3`}>
                   {category.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white"
+                <h3 className="text-lg font-semibold text-white">{category.title}</h3>
               </div>
               <ul className="space-y-3">
                 {category.links.map((link, linkIndex) => (
@@ -139,64 +139,6 @@ const Footer = () => {
           ))}
         </div>
 
-              ))}
-            </div>
-          </div>
-
-                  </Link>
-                </li>
-
-  ))};
-
-        {/* Contact Info */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="flex items-center">
-              <PhoneIcon className="w-5 h-5 mr-2 text-blue-400" />
-              <span className="text-gray-300">+1 (555) 123-4567</span>
-            </div>
-            <div className="flex items-center">
-              <EnvelopeIcon className="w-5 h-5 mr-2 text-blue-400" />
-              <span className="text-gray-300">info@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center space-x-3 text-gray-400">
-              <MapPinIcon className="w-5 h-5 text-purple-400" />
-              <span>Middletown, DE 19709</span>
-        {/* Contact Info */}
-        <div className="mt-8 pt-8 border-t border-slate-700">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
-            <div className="flex items-center space-x-2">
-              <PhoneIcon className="w-4 h-4 text-purple-400" />
-              <div>
-                <p className="text-sm text-gray-400"
-                <p className="text-white"
-              </div>
-            </div>
-            <div className="flex items-center space-x-3"
-              <Phone className="w-5 h-5 text-cyan-400"
-              <div>
-                <p className="text-sm text-gray-400"
-                <p className="text-white"
-              </div>
-            </div>
-            <div className="flex items-center space-x-3"
-              <MapPin className="w-5 h-5 text-cyan-400"
-              <div>
-                <p className="text-sm text-gray-400"
-                <p className="text-white"
-              </div>
-              <span>+1-302-464-0950</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <EnvelopeIcon className="w-4 h-4 text-purple-400" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPinIcon className="w-4 h-4 text-purple-400" />
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-            <div className="flex items-center">
-              <MapPinIcon className="w-5 h-5 mr-2 text-blue-400" />
-              <span className="text-gray-300">San Francisco, CA</span>
         {/* Additional Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-slate-700">
           <div>
