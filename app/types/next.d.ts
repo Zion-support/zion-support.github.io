@@ -1,12 +1,16 @@
-// Type definitions for Next.js
+import { NextPage } from 'next';
+import { AppProps } from 'next/app';
 
-declare global {
-  namespace NodeJS {
-    interface ProcessEnv {
-      NODE_ENV: 'development' | 'production' | 'test';
-      // Add your environment variables here
-    }
+declare module 'next' {
+  interface NextPageProps {
+    title?: string;
+    description?: string;
+    keywords?: string;
   }
 }
 
-export {};
+declare module 'next/app' {
+  interface AppProps {
+    Component: NextPage;
+  }
+}

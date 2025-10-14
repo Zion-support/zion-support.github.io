@@ -1,162 +1,51 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, BarChart3, TrendingUp, Users, Target, Brain, Zap } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import Footer from '../components/Footer';
-import FuturisticBackground from '../components/FuturisticBackground';
+import { Helmet } from 'react-helmet-async';
 
-const AIAnalyticsPage: React.FC = () => {
-  const features = [
-    {
-      title: "Predictive Analytics",
-      description: "Leverage machine learning algorithms to predict future trends and customer behavior with high accuracy.",
-      icon: <Brain className="w-12 h-12 text-cyan-400" />
-    },
-    {
-      title: "Real-time Dashboards",
-      description: "Monitor your business performance in real-time with interactive dashboards that update automatically.",
-      icon: <BarChart3 className="w-12 h-12 text-purple-400" />
-    },
-    {
-      title: "Customer Insights",
-      description: "Understand your customers better with AI-powered segmentation and behavioral analysis.",
-      icon: <Users className="w-12 h-12 text-yellow-400" />
-    },
-    {
-      title: "Performance Optimization",
-      description: "Identify bottlenecks and optimization opportunities across all your business processes.",
-      icon: <Zap className="w-12 h-12 text-green-400" />
-    }
-  ];
-
-  const metrics = [
-    { label: "Data Points Analyzed", value: "10M+", icon: <BarChart3 className="w-8 h-8 text-cyan-400" /> },
-    { label: "Predictive Accuracy", value: "95%", icon: <Target className="w-8 h-8 text-purple-400" /> },
-    { label: "Time Saved", value: "80%", icon: <TrendingUp className="w-8 h-8 text-yellow-400" /> },
-    { label: "Client Satisfaction", value: "98%", icon: <Users className="w-8 h-8 text-green-400" /> }
-  ];
-
+function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO 
-        title="AI Analytics - Zion Tech Group | Advanced Data Analytics Solutions"
-        description="Transform your data into actionable insights with our AI-powered analytics platform. Get predictive analytics, real-time dashboards, and intelligent business intelligence solutions."
-        keywords="AI analytics, data analytics, business intelligence, predictive analytics, data visualization, machine learning analytics"
-        canonical="https://ziontechgroup.com/ai-analytics"
-      />
-      
-      <FuturisticBackground />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Analytics
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your data into actionable insights with our advanced AI-powered analytics platform. 
-            Make smarter decisions with predictive analytics and real-time intelligence.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-            >
-              <span>Get Started</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              View Demo
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Metrics Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {metrics.map((metric, index) => (
-              <div key={index} className="text-center">
-                <div className="flex items-center justify-center mb-4">
-                  {metric.icon}
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {metric.value}
-                </div>
-                <div className="text-gray-300">
-                  {metric.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Analytics Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Powerful AI-driven analytics tools that help you understand your data and make informed decisions.
+    <>
+      <Helmet>
+        <title>Ai analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional Ai analytics solutions and services" />
+        <meta name="keywords" content="ai, analytics" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">Ai analytics</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional Ai analytics solutions and services
             </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  {feature.icon}
-                  <h3 className="text-xl font-semibold text-white ml-4">
-                    {feature.title}
-                  </h3>
-                </div>
-                <p className="text-gray-300">
-                  {feature.description}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
                 </p>
               </div>
-            ))}
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Unlock Your Data&apos;s Potential?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let our AI analytics platform transform your data into actionable insights. 
-            Get started with a free consultation and see the power of intelligent analytics.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-            >
-              <span>Start Analytics Journey</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
-              to="/pricing"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              View Pricing
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+      </div>
+    </>
   );
-};
+}
 
-export default AIAnalyticsPage;

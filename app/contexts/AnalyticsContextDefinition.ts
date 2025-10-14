@@ -1,10 +1,15 @@
-// Analytics Context Definition
 export interface AnalyticsContextType {
-  trackEvent: (_event: string, _properties?: Record<string, unknown>) => void;
-  trackPageView: (_page: string) => void;
+  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackPageView: (page: string) => void;
+  setUser: (userId: string, properties?: Record<string, any>) => void;
 }
 
-export const defaultAnalyticsContext: AnalyticsContextType = {
-  trackEvent: () => {},
-  trackPageView: () => {},
-};
+export interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export interface AnalyticsEvent {
+  name: string;
+  properties?: Record<string, any>;
+  timestamp: number;
+}

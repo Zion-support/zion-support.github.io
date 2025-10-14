@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import { Menu } from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle: () => void;
@@ -6,15 +7,58 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">Navigation</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for Navigation.
-      </p>
-      <button onClick={onSidebarToggle} className="bg-blue-500 text-white px-4 py-2 rounded">
-        Toggle Sidebar
-      </button>
-    </div>
+    <nav className="bg-slate-800 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <a href="/" className="text-2xl font-bold text-white">
+              Zion Tech Group
+            </a>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <a
+                href="/"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="/about"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                About
+              </a>
+              <a
+                href="/services"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Services
+              </a>
+              <a
+                href="/contact"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={onSidebarToggle}
+              className="text-gray-400 hover:text-white p-2 rounded-md transition-colors"
+            >
+              <Menu size={24} />
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

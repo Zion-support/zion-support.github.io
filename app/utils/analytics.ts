@@ -1,19 +1,24 @@
-// Analytics utility functions
-declare global {
-  interface Window {
-    gtag?: (_command: string, _eventName: string, _properties?: Record<string, unknown>) => void;
-  }
-}
-export const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, properties);
-  }
-};
-export const trackPageView = (pageTitle: string, pageLocation: string) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('config', 'GA_MEASUREMENT_ID', {
-      page_title: pageTitle,
-      page_location: pageLocation,
-    });
+export const analytics = {
+  track: (event: string, properties: Record<string, any> = {}) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', event, properties);
+    }
+  },
+  
+  page: (page: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_path: page
+      });
+    }
+  },
+  
+  identify: (userId: string, traits: Record<string, any> = {}) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        user_id: userId,
+        custom_map: traits
+      });
+    }
   }
 };

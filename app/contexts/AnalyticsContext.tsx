@@ -1,37 +1,45 @@
 import React, { createContext, useContext, ReactNode } from 'react';
 
-interface AnalyticsContextContextType {
-  trackEvent: (_event: string, _properties?: Record<string, unknown>) => void;
-  trackPageView: (_page: string) => void;
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackPageView: (pageName: string, properties?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
 }
 
-const AnalyticsContextContext = createContext<AnalyticsContextContextType | undefined>(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const useAnalyticsContext = () => {
-  const context = useContext(AnalyticsContextContext);
-  if (!context) {
-    throw new Error(`useAnalyticsContext must be used within a AnalyticsContextProvider`);
-  }
-  return context;
-};
-
-interface AnalyticsContextProviderProps {
+interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
-export const AnalyticsContextProvider: React.FC<AnalyticsContextProviderProps> = ({ children }) => {
-  const value = {
-    trackEvent: (_event: string, _properties?: Record<string, unknown>) => {
-      // Analytics event tracking - implement actual analytics service here
-    },
-    trackPageView: (_page: string) => {
-      // Page view tracking - implement actual analytics service here
-    }
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+    // Analytics tracking implementation
+    console.log('Event tracked:', eventName, properties);
+  };
+
+  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
+    // Page view tracking implementation
+    console.log('Page view tracked:', pageName, properties);
+  };
+
+  const identify = (userId: string, traits?: Record<string, any>) => {
+    // User identification implementation
+    console.log('User identified:', userId, traits);
+  };
+
+  const value: AnalyticsContextType = {
+    trackEvent,
+    trackPageView,
+    identify,
   };
 
   return (
-    <AnalyticsContextContext.Provider value={value}>
+    <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContextContext.Provider>
+    </AnalyticsContext.Provider>
   );
 };
+
+export { AnalyticsContext };
+export default AnalyticsProvider;

@@ -1,56 +1,50 @@
-import React from "react";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface FuturisticBackgroundProps {
-  children?: React.ReactNode;
-}
-
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
+export default function Page() {
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none">
-      {/* Animated Grid */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
-          {Array.from({ length: 144 }).map((_, index) => (
-            <div
-              key={index}
-              className="border border-cyan-500/20 animate-pulse"
-              style={{
-                animationDelay: `${index * 0.1}s`,
-                animationDuration: '3s'
-              }}
-            ></div>
-          ))}
+    <>
+      <Helmet>
+        <title>FuturisticBackground - Zion Tech Group</title>
+        <meta name="description" content="Professional FuturisticBackground solutions and services" />
+        <meta name="keywords" content="futuristicbackground" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">FuturisticBackground</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional FuturisticBackground solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* Floating Neon Orbs */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-purple-500/30 to-cyan-500/30 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full blur-xl animate-pulse delay-1000"></div>
-      <div className="absolute bottom-20 left-1/4 w-20 h-20 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-full blur-xl animate-pulse delay-2000"></div>
-      <div className="absolute bottom-40 right-1/3 w-28 h-28 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-xl animate-pulse delay-3000"></div>
-
-      {/* Animated Particles */}
-      <div className="absolute inset-0">
-        {Array.from({ length: 20 }).map((_, index) => (
-          <div
-            key={index}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${2 + Math.random() * 2}s`
-            }}
-          ></div>
-        ))}
-      </div>
-
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div>
-      
-      {children}
-    </div>
+    </>
   );
-};
-
-export default FuturisticBackground;
+}

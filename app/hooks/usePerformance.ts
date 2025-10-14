@@ -1,18 +1,37 @@
 import { useState, useEffect } from 'react';
 
-export const useUsePerformance = () => {
-  const [data] = useState(null);
-  const [loading] = useState(false);
-  const [error] = useState(null);
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+}
+
+export const usePerformance = (): PerformanceMetrics => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0
+  });
 
   useEffect(() => {
-    // Add your hook logic here
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'paint') {
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+          }
+        }
+      });
+
+      observer.observe({ entryTypes: ['paint'] });
+
+      return () => observer.disconnect();
+    }
   }, []);
 
-  return {
-    data,
-    loading,
-    error,
-    // Add your hook methods here
-  };
+  return metrics;
 };
