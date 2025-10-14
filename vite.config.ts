@@ -1,16 +1,18 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
+
 const resolve = path.resolve;
-export default defineConfig({;
-  plugins: [;
+
+export default defineConfig({
+  plugins: [
     react({
-      // Enable React Fast Refresh;
+      // Enable React Fast Refresh
       fastRefresh: true,
     }),
   ],
   resolve: {
-alias: {,
+    alias: {
       '@': resolve(__dirname, './src'),
       '@app': resolve(__dirname, './app'),
     },
@@ -23,7 +25,7 @@ alias: {,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks;
+          // Vendor chunks
           if (id.includes('node_modules')) {
             return 'vendor';
           }
