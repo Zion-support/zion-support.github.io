@@ -1,5 +1,4 @@
-import { ArrowRight } from "lucide-react";
-
+import lucide-react from 'lucide-react';
 export default function FuturisticGlow() {
   return (
     <></>

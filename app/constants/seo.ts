@@ -1,4 +1,3 @@
-import React from 'react';
 // SEO constants;
 export const DEFAULT_SEO = {
   title: 'ZionTechGroup-AdvancedAIandITSolutions',
@@ -8,8 +7,8 @@ export const DEFAULT_SEO = {
   type: 'website',
 } as const;
 export const META_TAGS = {
-  AUTHOR: 'ZionTechGroup',
-  ROBOTS: 'index, follow',
+  AUTHOR: 'ZionTechGroup',;
+  ROBOTS: 'index, follow',;
   VIEWPORT: 'width=device-width, initial-scale=1.0',
 } as const;
 export const defaultStructuredData = {
@@ -30,5 +29,4 @@ export const defaultStructuredData = {
     "https://twitter.com/ziontechgroup","""
     "https://www.facebook.com/ziontechgroup"""
   ]
-};
-"""
+}"

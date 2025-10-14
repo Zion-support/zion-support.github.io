@@ -1,8 +1,7 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRightIcon,
+import { ArrowRightIcon,
   CheckIcon,
   ChartBarIcon,
   TrendingUpIcon,
@@ -70,7 +69,7 @@ const CaseStudiesPage: React.FC = () => {
       image: '/.jpg'
     }
   ];
-
+const CaseStudiesPage: React.FC = () => {
   return (
     <></>
       <Helmet></Helmet>
@@ -172,8 +171,77 @@ const CaseStudiesPage: React.FC = () => {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          )})
+        </div>;
+              Let us help you achieve similar results with our proven AI and IT solutions.;
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              <button className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center">"
+                Start Your Project;
+                <ArrowRight className="w-5 h-5 ml-2" />"
+              </button>
+              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">"
+                View More Cases;
+const CaseStudiesPage: React.FC = () => {
+  return (
+<>    <div></div>
+      <Helmet></Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Explore our successful projects and case studies at Zion Tech Group." />"
+      </Helmet>
+      <div className="min-h-screen bg-white">"
+        <div className="container mx-auto px-4 py-16">"
+          <div className="text-center">"
+            <h1>"
+              Case Studies;
+            </h1>
+            <p>"
+              Discover how we've helped businesses transform with our AI and IT solutions.'
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">"
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">"
+                  AI Implementation;
+                </h3>
+                <p>"
+                  How we helped a Fortune 500 company implement AI solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
+                <h3 className="text-lg font-semibold text-green-900 mb-2">"
+                  Cloud Migration;
+                </h3>
+                <p>"
+                  Successful cloud infrastructure migration for a growing startup.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">"
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">"
+                  Cybersecurity;
+                </h3>
+                <p>"
+                  Comprehensive security overhaul for a financial services company.
+                </p>
+              </div>
+            </div>
+            <div className="mt-12">"
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
+                View All Case Studies;
+              </button>
+            </div>
+          </div>;
+const CaseStudiesPage: React.FC = () => {
+  return (
+    <>
+      <Helmet></Helmet>
+        <title>CaseStudiesPage - Zion Tech Group</title>
+        <meta name="description" content="CaseStudiesPage - Zion Tech Group" />"
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">"
+        <div className="text-center">"
+          <h1>CaseStudiesPage</h1>"
+          <p>This page is under construction.</p>"
         </div>
       </section>
 

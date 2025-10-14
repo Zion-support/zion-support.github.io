@@ -3,14 +3,17 @@ import React from 'react';'
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void}
-
+  page: (name: string, properties?: Record<string, any>) => void;
+=======
+}
+;
+>>>>>>> origin/main
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 export default AnalyticsProvider; 
 interface AnalyticsProviderProps {
-  children: ReactNode}
-
+  children: ReactNode;
+<<<<<<< HEAD
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const track = (event: string, properties?: Record<string, any>) => {
     // Analytics tracking implementation;'
@@ -34,8 +37,8 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {';'
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {';
         page_title: name,
-        page_location: window.location.href,
-        ...properties})}
+        page_location: window.location.href)
+...properties})}
   };
 
   useEffect(() => {
@@ -52,7 +55,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
 
   return (
     <AnalyticsContext.Provider value={value}>;
-      {children}
+      {children;
     </AnalyticsContext.Provider>)};
 
 const  (): AnalyticsContextType => {

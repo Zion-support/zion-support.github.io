@@ -1,6 +1,5 @@
 import React from 'react';'
 import { Link } from 'react-router-dom';
-
 interface NeonButtonProps {
   children: React.ReactNode;
   to?: string;
@@ -33,7 +32,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
     md: 'px-6 py-3 text-base','
     lg: 'px-8 py-4 text-lg;
   }
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
   const content = (
@@ -52,8 +51,8 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   if (href) {
     return (
       <a
-        href={href}
-        className={classes}
+        href={href;
+        className={classes;
         target="_blank"
         rel="noopener noreferrer"
       ></a>

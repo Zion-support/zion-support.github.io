@@ -36,7 +36,6 @@ const AIEmailMarketingPage: React.FC = () => {
       description: 'Seamlessly integrate with social media, SMS, and other marketing channels for unified campaign management.'
     }
   ]
-
   const emailFeatures = [
     {
       icon: <Mail className="w-8 h-8 text-cyan-400" />,'
@@ -81,7 +80,6 @@ const AIEmailMarketingPage: React.FC = () => {
       features: ['Spam score analysis', 'IP warming', 'Reputation monitoring', 'Bounce management']
     }
   ]
-
   const pricingPlans = [
     {'
       name: 'Starter','
@@ -96,7 +94,7 @@ const AIEmailMarketingPage: React.FC = () => {
         'Email support','
         'Standard templates'
       ],
-      popular: false
+      popular: false;
     },
     {'
       name: 'Professional','
@@ -112,7 +110,7 @@ const AIEmailMarketingPage: React.FC = () => {
         'Custom integrations','
         'A/B testing'
       ],
-      popular: true
+      popular: true;
     },
     {'
       name: 'Enterprise','
@@ -128,8 +126,10 @@ const AIEmailMarketingPage: React.FC = () => {
         'White-label options','
         'API access'
       ],
-      popular: false
+      popular: false;
+=======
     }
+>>>>>>> origin/main
   ]
 
   const stats = ['
@@ -138,7 +138,6 @@ const AIEmailMarketingPage: React.FC = () => {
     { number: '300%', label: 'ROI Increase', icon: <BarChart3 className="w-6 h-6 text-purple-400" /> },'
     { number: '50K+', label: 'Active Users', icon: <Users className="w-6 h-6 text-orange-400" /> }
   ]
-
   const testimonials = [
     {'
       name: 'Jennifer Smith','
@@ -156,10 +155,8 @@ const AIEmailMarketingPage: React.FC = () => {
       name: 'Sarah Johnson','
       company: 'Marketing Agency','
       content: 'The predictive analytics help us optimize our campaigns before we even send them. We\'ve been able to increase our clients\' email ROI by 300% using this platform.',
-      rating: 5
-    }
+      rating: 5;
   ]
-
   return (
     <></>
       <Helmet></Helmet>
@@ -206,7 +203,6 @@ const AIEmailMarketingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-20 px-4 relative"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" /></div>
@@ -237,7 +233,6 @@ const AIEmailMarketingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 relative"></section>
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-cyan-500/5 to-pink-500/5" /></div>
@@ -268,7 +263,6 @@ const AIEmailMarketingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Email Features Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-purple-900/50 relative"></section>
           <div className="relative max-w-7xl mx-auto"></div>
@@ -309,7 +303,7 @@ const AIEmailMarketingPage: React.FC = () => {
                         </div>
                       ))}
                     </div>
-                    <Link 
+                    <Link ;
                       to="/contact"
                       className="block w-full mt-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                     ></Link>
@@ -321,7 +315,6 @@ const AIEmailMarketingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 relative"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" /></div>
@@ -383,7 +376,6 @@ const AIEmailMarketingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-purple-900/50 to-pink-900/50 relative"></section>
           <div className="relative max-w-7xl mx-auto"></div>
@@ -423,7 +415,6 @@ const AIEmailMarketingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 relative"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" /></div>

@@ -1,7 +1,6 @@
 import { Star } from 'lucide-react';'
 import React from 'react';'
 import Link from 'next/link';
-
 const InnovationLabsPage: React.FC = () => {
     return (
     <div className="min-h-screen bg-gray-50"></div>
@@ -14,7 +13,9 @@ const InnovationLabsPage: React.FC = () => {
             <h1 className="text-4 xl font-bold text-gray-900 mb-4"></h1>
               AI Innovation Labs: Product Development Revolution 2025
             </h1>
-            <p>January 28, 2025 · 45 min read · AI Innovation</p>
+            <p>;
+              January 28, 2025 · 45 min read · AI Innovation
+            </p>
           </div>
 
           <div className="prose max-w-none"></div>
@@ -38,14 +39,13 @@ const InnovationLabsPage: React.FC = () => {
                 <div className="text-gray-700">Innovation Speed</div>
               </div>
             </div>
-
-            <h2 className="text-2 xl font-bold text-gray-900 mb-6">🏭 Lab Overview</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">🏭 Lab Overview</h2>
             <h3 className="text-xl font-semibold text-gray-800 mb-4">AI-Powered Product Development</h3>
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2"></ul>
               <li><strong>Focus:</strong> AI-driven product innovation and development</li>
               <li><strong>Team:</strong> 200+ AI researchers and product engineers</li>
               <li><strong>Projects:</strong> 50+ active AI-powered product initiatives</li>
-              <li><strong>Impact:</strong> $2 B+ in new product revenue generated</li>
+              <li><strong>Impact:</strong> $2B+ in new product revenue generated</li>
             </ul>
 
             <h2 className="text-2 xl font-bold text-gray-900 mb-6">🚀 Innovation Methodology</h2>
@@ -53,7 +53,6 @@ const InnovationLabsPage: React.FC = () => {
               Our AI Innovation Labs follow a systematic approach to product development that leverages 
               cutting-edge AI technologies to accelerate every stage of the product lifecycle.
             </p>
-
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 1: AI-Powered Ideation</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"></ul>
               <li>• Market analysis using AI-driven trend prediction</li>
@@ -61,7 +60,6 @@ const InnovationLabsPage: React.FC = () => {
               <li>• Competitive landscape mapping with AI-powered research</li>
               <li>• Concept generation using generative AI models</li>
             </ul>
-
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Phase 2: Rapid Prototyping</h3>
             <ul className="list-disc list-inside text-gray-700 mb-4 space-y-2"></ul>
               <li>• AI-assisted design and architecture planning</li>
@@ -74,7 +72,6 @@ const InnovationLabsPage: React.FC = () => {
             <p className="text-gray-700 mb-6"></p>
               The AI Innovation Labs have delivered measurable value across multiple dimensions:
             </p>
-
             <h3 className="text-xl font-semibold text-gray-800 mb-4">Development Efficiency</h3>
             <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2"></ul>
               <li>• <strong>90% reduction</strong> in development time</li>
@@ -90,17 +87,17 @@ const InnovationLabsPage: React.FC = () => {
 │   ├── TensorFlow & PyTorch
 │   ├── Hugging Face Transformers
 │   └── Custom AI Models
-├── Development Tools
-│   ├── GitHub Copilot
-│   ├── AI Code Generation
-│   └── Automated Testing
-├── Data & Analytics
-│   ├── Real-time Data Processing
-│   ├── Predictive Analytics
-│   └── Market Intelligence
-└── Infrastructure
-    ├── Cloud-native Architecture
-    ├── Kubernetes & Docker
+├── Development Tools`
+│   ├── GitHub Copilot``
+│   ├── AI Code Generation```
+│   └── Automated Testing````
+├── Data & Analytics`````
+│   ├── Real-time Data Processing``````
+│   ├── Predictive Analytics```````
+│   └── Market Intelligence````````
+└── Infrastructure`````````
+    ├── Cloud-native Architecture``````````
+    ├── Kubernetes & Docker```````````
     └── CI/CD Automation`}
               </pre>
             </div>

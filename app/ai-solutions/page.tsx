@@ -1,8 +1,7 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Link } from 'react-router-dom';
-import { 
-  CpuChipIcon,
+import { CpuChipIcon,
   EyeIcon,
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
@@ -204,7 +203,7 @@ const AISolutionsPage: React.FC = () => {
                 </div>
                 
                 <Link
-                  to={service.href}
+                  to={service.href;
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
                 ></Link>
                   Learn More
@@ -264,8 +263,8 @@ const AISolutionsPage: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 };
 

@@ -8,7 +8,6 @@ import { MousePointer } from 'lucide-react';'
 import { Keyboard } from 'lucide-react';'
 import { Contrast } from 'lucide-react';'
 import { ZoomIn } from 'lucide-react';
-
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;

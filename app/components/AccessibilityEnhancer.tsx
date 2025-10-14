@@ -1,6 +1,14 @@
-import React, { useEffect } from 'react';
-
-const AccessibilityEnhancer: React.FC = () => {
+import React from 'react';
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReader = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+}) => {
   useEffect(() => {
     // Skip to main content functionality
     const addSkipLink = () => {'
@@ -20,7 +28,6 @@ const AccessibilityEnhancer: React.FC = () => {
       toggle.onclick = () => {'
         document.body.classList.toggle('high-contrast');
       };
-      document.body.appendChild(toggle);
     };
 
     // Focus management
@@ -33,7 +40,7 @@ const AccessibilityEnhancer: React.FC = () => {
           outline-offset: 2px !important;
         }
         .high-contrast {
-          filter: contrast(150%) brightness(1.2);
+          filter: contrast(150%) brightness(110%);
         }
       `;
       document.head.appendChild(style);

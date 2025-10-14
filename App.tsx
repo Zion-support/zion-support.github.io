@@ -150,21 +150,19 @@ function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
-                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
-                  <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
                   <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/ai-services" element={<AIServicesPage />} />
                   <Route path="/tutorials" element={<TutorialsPage />} />
                   <Route path="/demo" element={<DemoPage />} />
                   <Route path="/support" element={<SupportPage />} />
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/solutions" element={<SolutionsPage />} />
-                  
-                  {/* Service Pages */}
-                  <Route path="/ai-services" element={<AIServicesPage />} />
-                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/cookies" element={<CookiesPage />} />
+                  <Route path="/sitemap" element={<SitemapPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
+                  <Route path="/it-services" element={<ItServicesPage />} />
+                  <Route path="/cloud-services" element={<CloudServicesPage />} />
                   <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                   <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                   <Route path="/case-studies" element={<CaseStudiesPage />} />
@@ -185,20 +183,15 @@ function App() {
                     </div>
                   } />
                 </Routes>
-              </ErrorBoundary>
+              </Suspense>
             </main>
             <Footer></Footer>
             <PerformanceMonitor></PerformanceMonitor>
             <AccessibilityEnhancer></AccessibilityEnhancer>
           </div>
-        </div>
-      </Router>
+        </Router>
+      </GlobalErrorBoundary>
     </HelmetProvider>
-  </ErrorBoundary>
-
-
-
-
   );
 }
 

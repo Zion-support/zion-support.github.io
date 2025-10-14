@@ -137,8 +137,7 @@ const CareersPage = () => {'
       ],
       benefits: ["Health Insurance", "401k Matching", "Design Tools", "Creative Freedom"],
       posted: "4 days ago",
-      featured: false
-    }
+      featured: false;
   ];
 
   const benefits = [
@@ -258,7 +257,7 @@ const CareersPage = () => {'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {benefits.map((benefit, index) => (
               <div
-                key={index}
+                key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden text-center"
               ></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -297,7 +296,7 @@ const CareersPage = () => {'
           <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
             {jobCategories.map((category) => (
               <button
-                key={category.id}
+                key={category.id;
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                   selectedCategory === category.id'
@@ -305,7 +304,7 @@ const CareersPage = () => {'
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                {category.icon}
+                {category.icon;
                 <span>{category.label}</span>
               </button>
             ))}
@@ -369,7 +368,7 @@ const CareersPage = () => {'
                     <div className="flex flex-wrap gap-2 mb-4"></div>
                       {job.requirements.slice(0, 3).map((req, idx) => (
                         <span
-                          key={idx}
+                          key={idx;
                           className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs"
                         ></span>
                           {req}
@@ -434,7 +433,7 @@ const CareersPage = () => {'
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );}'
 }'

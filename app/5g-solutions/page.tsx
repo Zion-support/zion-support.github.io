@@ -46,8 +46,6 @@ const Page = () => {
       description: 'IoT device connectivity and management platform'''
       price: 'Starting at $35,000'''
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-
-
     }
   ];
 
@@ -209,6 +207,20 @@ const Page = () => {
             Contact our experts to discuss your 5G implementation strategy
 
           </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 1</h3>
+              <p>Description of feature 1</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 2</h3>
+              <p>Description of feature 2</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 3</h3>
+              <p>Description of feature 3</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

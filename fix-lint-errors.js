@@ -1,5 +1,5 @@
-import fs from 'fs;
-import _path from '_path;
+import fs from 'fs;';
+import _path from '_path;';
 #!/usr/bin/env node;
 function fixFile(filePath) {
   try {
@@ -54,13 +54,13 @@ function fixFile(filePath) {
     }
 
     // Fix duplicate keys in objects;
-    content = content.replace(/(\s+)(icon:\s*[^,}]+),\s*\n\s*icon:\s*([^,}]+)/g, '$1icon: $2');
+    content = content.replace(/(\s+)(icon:\s*[^,}]+),\s*\n\s*icon:\s*([^,}]+)/g, '$1icon: '$2');',
     // Fix duplicate variable declarations;
     content = content.replace(/(\w+)\s+is\s+already\s+defined/g, (match, varName) => {
       return `_${varName}`;
     });
 
-    // Fix parsing errors in JSX
+    // Fix parsing errors in JSX;
     content = content.replace(/<div\s+([^>]*?)\s*$/gm, '<div $1>')
     content = content.replace(/<p\s+([^>]*?)\s*$/gm, '<p $1>');
     // Fix unterminated strings;

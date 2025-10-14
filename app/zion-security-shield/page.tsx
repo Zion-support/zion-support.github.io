@@ -45,7 +45,7 @@ const Page = () => {
       description: '24/7 support from our team of specialists'
     }
   ];
-
+  const complianceStandards = [{name: "GDPR", description: "General Data Protection Regulation", }, {name: "HIPAA", description: "Health Insurance Portability and Accountability Act", }, {name: "SOC 2", description: "Service Organization Control 2", }, {name: "PCI DSS", description: "Payment Card Industry Data Security Standard", }, {name: "ISO 27001", description: "Information Security Management", }, {name: "NIST", description: "National Institute of Standards and Technology", }];
   return (
     <></>
       <EnhancedSEO 
@@ -74,16 +74,30 @@ const Page = () => {
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></ArrowRight>
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               ></Link>
                 View Demo
               </Link>
             </div>
+            {/* Key Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Threat Detection Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-orange-400 mb-2">&lt;1min</div>
+                <div className="text-gray-300">Response Time</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
+                <div className="text-gray-300">Monitoring</div>
+              </div>
+            </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -102,8 +116,6 @@ const Page = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
             </div>

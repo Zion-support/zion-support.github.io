@@ -17,7 +17,7 @@ const MetaManagerPage = () => {
         </div>
       </div>
     </div>
-  );
+    </>
+  )};
 };
 export default MetaManager;
-"""

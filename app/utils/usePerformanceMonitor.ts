@@ -2,18 +2,13 @@ import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
   loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
+  renderTime: number;
+  memoryUsage?: number;
 }
-
 export const usePerformanceMonitor = (): PerformanceMetrics => {
-    const [
-    metrics, setMetrics,
-  ] = useState<PerformanceMetrics>({
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
-    renderTime: 0,
+renderTime: 0,
   });
   useEffect(() => {
     const startTime = performance.now();
@@ -21,9 +16,9 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
       const loadTime = performance.now() - startTime;
       const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;
       setMetrics({
-        loadTime,
+        loadTime)
         renderTime: performance.now() - startTime,
-        memoryUsage,
+        memoryUsage
       });
     };
     // Measure after component mount;
@@ -32,5 +27,4 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
   }, []);
   return metrics;
 };
-
-export default usePerformanceMonitor
+export default usePerformanceMonitor;

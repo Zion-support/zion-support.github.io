@@ -45,7 +45,6 @@ const Page = () => {
       description: '24/7 support from our team of specialists'
     }
   ];
-
   return (
     <></>
       <EnhancedSEO 
@@ -82,7 +81,7 @@ const Page = () => {
               </Link>
             </div>
           </div>
-        </section>
+</section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>

@@ -1,10 +1,10 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 
 console.log('🔧 Fixing config files...');
 
-// Fix vite.config.ts
+// Fix vite.config.ts;
 const viteConfig = `import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
@@ -12,9 +12,9 @@ import path from "path";
 const resolve = path.resolve;
 
 export default defineConfig({
-  plugins: [
+  plugins: '[',
     react({
-      // Enable JSX runtime
+      // Enable JSX runtime;
       jsxRuntime: "automatic",
     }),
   ],
@@ -32,7 +32,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks
+          // Vendor chunks;
           if (id.includes('node_modules')) {
             return 'vendor';
           }
@@ -60,7 +60,7 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: [
+    include: '[',
       'react',
       'react-dom',
       'react-router-dom',
@@ -69,7 +69,7 @@ export default defineConfig({
 });
 `;
 
-// Fix About.tsx
+// Fix About.tsx;
 const aboutComponent = `import React from "react";
 import { CheckIcon, UsersIcon, TrophyIcon, LightBulbIcon } from "@heroicons/react/24/outline";
 
@@ -100,22 +100,22 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-            About Zion Tech Group
+    <div className="bg-white py-24"></div>
+      <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">',
+        <div className="text-center"></div>
+          <h2 className="text-3xl font-extrabold text-gray-900 sm: 'text-4xl">',
+            About Zion Tech Group;
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-gray-600"></p>
             We are a leading technology company specializing in AI and IT solutions.
           </p>
         </div>
 
-        <div className="mt-20">
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-20"></div>
+          <div className="grid grid-cols-1 gap-8 sm: 'grid-cols-2 lg:grid-cols-4">',
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto">
+              <div key={index} className="text-center"></div>
+                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto"></div>
                   <stat.icon className="h-6 w-6" />
                 </div>
                 <p className="mt-2 text-3xl font-bold text-gray-900">{stat.value}</p>
@@ -125,13 +125,13 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-20">
-          <div className="text-center">
+        <div className="mt-20"></div>
+          <div className="text-center"></div>
             <h3 className="text-2xl font-bold text-gray-900">Our Values</h3>
           </div>
-          <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-1 gap-8 sm: 'grid-cols-2 lg:grid-cols-4">',
             {values.map((value, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center"></div>
                 <h4 className="text-lg font-semibold text-gray-900">{value.title}</h4>
                 <p className="mt-2 text-gray-600">{value.description}</p>
               </div>
@@ -155,5 +155,5 @@ try {
   
   console.log('🎉 Config files fixed!');
 } catch (error) {
-  console.error('❌ Error fixing config files:', error.message);
+  console.error('❌ Error fixing config files: ', error.message);'
 }

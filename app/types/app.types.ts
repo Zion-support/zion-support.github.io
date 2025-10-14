@@ -1,100 +1,82 @@
-/**;
- * Application Types;
- * Core type definitions for the Zion Tech Group website;
+/**
+ * Application Types
+ * Core type definitions for the Zion Tech Group website
+ */
+/**
+ * Performance Metrics Interface
+ * Web Vitals and performance measurement types
  */;
-/**;
- * Performance Metrics Interface;
- * Web Vitals and performance measurement types;
- */;
-export interface PerformanceMetrics {
+export interface PerformanceMetrics {;
   fcp?: number; // First Contentful Paint;
   lcp?: number; // Largest Contentful Paint;
   fid?: number; // First Input Delay;
   cls?: number; // Cumulative Layout Shift;
-  ttfb?: number; // Time to First Byte;
+  ttfb?: number; // Time to First Byte
 }
-
-/**;
- * Performance Report Interface;
+/**
+ * Performance Report Interface
  */;
 export interface PerformanceReport {
-  webVitals: "Partial<PerformanceMetrics>;
+  webVitals: Partial<PerformanceMetrics>;
   resources: ResourceStats;
-  memor",
-    y: MemoryStats | null;
-  timestam,
-    p: number;
+  memory: MemoryStats | null;
+  timestamp: number;
 }
-
-/**;
- * Resource Statistics Interface;
+/**
+ * Resource Statistics Interface
  */;
 export interface ResourceStats {
-  total: "number;
+  total: number;
   scripts: number;
   styles: number;
-  image",
-    s: number;
-  font,
-    s: number;
+  images: number;
+  fonts: number;
 }
-
-/**;
- * Memory Statistics Interface;
+/**
+ * Memory Statistics Interface
  */;
 export interface MemoryStats {
-  usedJSHeapSize: "number;
-  totalJSHeapSiz",
-    e: number;
-  jsHeapSizeLimi,
-    t: number;
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
 }
-
-/**;
- * Layout Shift Interface;
+/**
+ * Layout Shift Interface
  */;
 export interface LayoutShift extends PerformanceEntry {
   value: number;
-  hadRecentInpu,
-    t: boolean;
+  hadRecentInput: boolean;
 }
-
-/**;
- * Performance with Memory Interface;
+/**
+ * Performance with Memory Interface
  */;
 export interface PerformanceWithMemory extends Performance {
-  memory: "{
+  memory: {
     usedJSHeapSize: number;
-    totalJSHeapSiz",
-    e: number;
-    jsHeapSizeLimi,
-    t: number;
+    totalJSHeapSize: number;
+    jsHeapSizeLimit: number;
   };
 }
-
-/**;
- * Service Configuration Interface;
+/**
+ * Service Configuration Interface
  */;
 export interface ServiceConfig {
-  id: "string;
+  id: string;
   name: string;
   description: string;
   icon: string;
   category: string;
   features: string[];
   pricing?: {
-    startin",
-    g: number;
-    currenc,
-    y: string;
+    starting: number;
+    currency: string;
   };
 }
-
-/**;
- * Blog Post Interface;
+/**
+ * Blog Post Interface
  */;
 export interface BlogPost {
-  id: "string;
+  id: string;
   title: string;
   slug: string;
   excerpt: string;
@@ -108,93 +90,75 @@ export interface BlogPost {
   readingTime: number;
   seo: {
     title: string;
-    descriptio",
-    n: string;
-    keyword,
-    s: string[];
+    description: string;
+    keywords: string[];
   };
 }
-
-/**;
- * Contact Form Interface;
+/**
+ * Contact Form Interface
  */;
 export interface ContactForm {
-  name: "string;
+  name: string;
   email: string;
   company?: string;
   phone?: string;
   service: string;
-  messag",
-    e: string;
+  message: string;
   budget?: string;
   timeline?: string;
-  consen,
-    t: boolean;
+  consent: boolean;
 }
-
 /**
  * API Response Interface
- */
-export interface ApiResponse<T = unknown> {
-    success: boolean;
+ */;
+export interface ApiResponse<T = any> {
+  success: boolean;
   data?: T;
   error?: string;
   message?: string;
-  timestam,
-    p: number;
+  timestamp: number;
 }
-
-/**;
- * SEO Metadata Interface;
+/**
+ * SEO Metadata Interface
  */;
 export interface SEOMetadata {
-  title: "string;
-  descriptio",
-    n: string;
-  keyword,
-    s: string[];
+  title: string;
+  description: string;
+  keywords: string[];
   canonical?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
   nofollow?: boolean;
-,
-  }
-
-/**;
- * Navigation Item Interface;
+}
+/**
+ * Navigation Item Interface
  */;
 export interface NavigationItem {
   label: string;
-  hre,
-    f: string;
+  href: string;
   external?: boolean;
   children?: NavigationItem[];
-,
-  }
-
-/**;
- * Testimonial Interface;
+}
+/**
+ * Testimonial Interface
  */;
 export interface Testimonial {
-  id: "string;
+  id: string;
   name: string;
   company: string;
   position: string;
   content: string;
-  ratin",
-    g: number;
+  rating: number;
   avatar?: string;
-  feature,
-    d: boolean;
+  featured: boolean;
 }
-
-/**;
- * Case Study Interface;
+/**
+ * Case Study Interface
  */;
 export interface CaseStudy {
-  id: "string;
+  id: string;
   title: string;
   slug: string;
   client: string;
@@ -203,187 +167,138 @@ export interface CaseStudy {
   solution: string;
   results: {
     metric: string;
-    valu",
-    e: string;
-    improvemen,
-    t: string;
+    value: string;
+    improvement: string;
   }[];
-  technologies: "string[];
+  technologies: string[];
   duration: string;
   teamSize: number;
   featured: boolean;
-  image",
-    s: string[];
-  publishedA,
-    t: string;
+  images: string[];
+  publishedAt: string;
 }
-
-/**;
- * Team Member Interface;
+/**
+ * Team Member Interface
  */;
 export interface TeamMember {
-  id: "string;
+  id: string;
   name: string;
   position: string;
   bio: string;
-  avata",
-    r: string;
-  socia,
-    l: {
+  avatar: string;
+  social: {
     linkedin?: string;
     twitter?: string;
     github?: string;
-  ,
   };
   expertise: string[];
-  feature,
-    d: boolean;
+  featured: boolean;
 }
-
-/**;
- * FAQ Item Interface;
+/**
+ * FAQ Item Interface
  */;
 export interface FAQItem {
-  id: "string;
+  id: string;
   question: string;
   answer: string;
-  categor",
-    y: string;
-  orde,
-    r: number;
+  category: string;
+  order: number;
 }
-
-/**;
- * Newsletter Subscription Interface;
+/**
+ * Newsletter Subscription Interface
  */;
 export interface NewsletterSubscription {
-  email: "string;
+  email: string;
   name?: string;
   interests: string[];
-  subscribedA",
-    t: string;
-  activ,
-    e: boolean;
+  subscribedAt: string;
+  active: boolean;
 }
-
-/**;
- * Error Boundary Props Interface;
+/**
+ * Error Boundary Props Interface
  */;
 export interface ErrorBoundaryProps {
-    children: React.ReactNode;
-  fallback?: React.ComponentType<{ error: Error; resetError: () => void ,
-  }>;
-  onError?: (_error: Error, _errorInfo: React.ErrorInfo) => void;
+  children: React.ReactNode;
+  fallback?: React.ComponentType<{ error: Error; resetError: () => void }>;
+  onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
 }
-
-/**;
- * Error Boundary State Interface;
+/**
+ * Error Boundary State Interface
  */;
 export interface ErrorBoundaryState {
-    hasError: boolean;
+  hasError: boolean;
   error?: Error;
-,
-  }
-
-/**;
- * Theme Configuration Interface;
+}
+/**
+ * Theme Configuration Interface
  */;
 export interface ThemeConfig {
-  mode: "'light' | 'dark' | 'system';
+  mode: 'light' | 'dark' | 'system';
   primaryColor: string;
   secondaryColor: string;
   accentColor: string;
-  fontFamil",
-    y: string;
-  borderRadiu,
-    s: number;
+  fontFamily: string;
+  borderRadius: number;
 }
-
-/**;
- * Analytics Event Interface;
+/**
+ * Analytics Event Interface
  */;
 export interface AnalyticsEvent {
   action: string;
-  categor,
-    y: string;
+  category: string;
   label?: string;
   value?: number;
-  custom_parameters?: Record<string, unknown>;
+  custom_parameters?: Record<string, any>;
 }
-
-/**;
- * User Preferences Interface;
+/**
+ * User Preferences Interface
  */;
 export interface UserPreferences {
-  theme: "ThemeConfig;
+  theme: ThemeConfig;
   language: string;
   notifications: {
     email: boolean;
-    pus",
-    h: boolean;
-    sm,
-    s: boolean;
+    push: boolean;
+    sms: boolean;
   };
-  privacy: "{
+  privacy: {
     analytics: boolean;
-    marketin",
-    g: boolean;
-    functiona,
-    l: boolean;
+    marketing: boolean;
+    functional: boolean;
   };
 }
-
-/**;
- * Utility Types;
+/**
+ * Utility Types
  */;
-export type Optional<T, K extends keyof T> = Omit<////T, K> & Partial<Pick<T, K>>;
+export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
-    [
-    P in keyof T,
-  ]?: T[
-    P,
-  ] extends object ? DeepPartial<T[
-    P,
-  ]> : T[
-    P,
-  ];
-,
-  };
-
-/**;
- * API Endpoint Types;
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
+};
+/**
+ * API Endpoint Types
  */;
-export type ApiEndpoint =;
-  | '/api/contact';
-  | '/api/newsletter';
-  | '/api/analytics';
-  | '/api/performance';
+export type ApiEndpoint =
+  | '/api/contact'
+  | '/api/newsletter'
+  | '/api/analytics'
+  | '/api/performance'
   | '/api/health';
-
-/**;
- * HTTP Method Types;
+/**
+ * HTTP Method Types
  */;
-export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-
-/**;
- * Environment Types;
- */;
-export type Environment = 'development' | 'staging' | 'production';
-
-/**;
- * Build Configuration Interface;
+export type HttpMethod="GET" Environment = 'development' | 'staging' | 'production';
+/**
+ * Build Configuration Interface
  */;
 export interface BuildConfig {
-  environment: "Environment;
+  environment: Environment;
   version: string;
   buildTime: string;
   features: {
     analytics: boolean;
     performanceMonitoring: boolean;
-    errorReportin",
-    g: boolean;
-    pw,
-    a: boolean;
+    errorReporting: boolean;
+    pwa: boolean;
   };
-</PerformanceMetrics></T></string></T></T></Pick></T></Pick></T></T></PerformanceMetrics></T></string></T></T></Pick></T></Pick></T></T>}
+}

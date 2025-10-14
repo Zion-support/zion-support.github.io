@@ -1,8 +1,7 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Link } from 'react-router-dom';
-import { 
-  ArrowPathIcon,
+import { ArrowPathIcon,
   UserGroupIcon,
   CloudIcon,
   CpuChipIcon,
@@ -226,8 +225,24 @@ const DigitalTransformationPage: React.FC = () => {
                 <h3 className="text-xl font-bold text-white mb-2">{phase.title}</h3>
                 <p className="text-gray-300">{phase.description}</p>
               </div>
-            ))}
-          </div>
+            </div>
+            <div className="mt-12">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Get Started Today;
+              </button>
+            </div>
+          </div>;
+const DigitalTransformationPage: React.FC = () => {
+  return (
+    <>
+      <Helmet></Helmet>
+        <title>DigitalTransformationPage - Zion Tech Group</title>
+        <meta name="description" content="DigitalTransformationPage - Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1>DigitalTransformationPage</h1>
+          <p>This page is under construction.</p>
         </div>
       </section>
 
@@ -258,7 +273,5 @@ const DigitalTransformationPage: React.FC = () => {
       </section>
     </>
   );
-};
-
 export default DigitalTransformationPage;
 '

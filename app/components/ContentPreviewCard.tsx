@@ -1,25 +1,26 @@
-import React from "react";
-
+import React from 'react';
+import Link from 'next/link';
 interface ContentPreviewCardProps {
+  id: string;
   title: string;
   excerpt: string;
   author: string;
-  date: string;
+  publishedAt: string;
   readTime: string;
   category: string;
-  slug: string;
   imageUrl?: string;
+  slug: string;
 }
-
 const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
+  id: _id,
   title,
   excerpt,
   author,
-  date,
+  publishedAt,
   readTime,
   category,
-  slug,
-  imageUrl
+  imageUrl,
+  slug
 }) => {
   return (
     <div className="p-4"></div>

@@ -2,8 +2,7 @@ import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { Helmet } from 'react-helmet-async';'
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRightIcon, 
+import { ArrowRightIcon, 
   ShieldCheckIcon, 
   CloudIcon,
   ArrowRightIcon,
@@ -263,7 +262,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
     </>
-  );
+  )};
 };
 
 export default HomePage;

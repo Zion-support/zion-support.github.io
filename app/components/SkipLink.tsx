@@ -23,12 +23,12 @@ import React from 'react''
                 <li className="flex items-center"></li>
                   <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
                   Ongoing support;
-                </li>;
-              </ul>;
+                </li>
+              </ul>
             </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
-              <p className="mb-6">;
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p>
                 Ready to transform your business with our skip link services?;
               </p>;
               <a></a>
@@ -36,7 +36,7 @@ import React from 'react''
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
               >;
                 Contact Us;
-              </a>;
+              </a>
             </div>
           </div>
         </div>'

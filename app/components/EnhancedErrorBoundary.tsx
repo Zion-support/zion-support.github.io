@@ -1,17 +1,17 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';'
 import { Helmet } from 'react-helmet-async';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void}
-
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string}
-
+  errorId: string;
+}
+>>>>>>> origin/main;
+>>>>>>> origin/main
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -44,15 +44,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    }}
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-    });
-
-    // Call custom error handler if provided
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
+    };
+>>>>>>> origin/main;
+  }
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+    // Call the onError callback if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
@@ -102,7 +101,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
+      // Custom fallback UI;
       if (this.props.fallback) {
         return this.props.fallback}
 
@@ -164,7 +163,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </button>
               
               <button
-                onClick={this.handleGoHome}
+                onClick={this.handleGoHome;
                 className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 group"
               ></button>
                 <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /></Home>
@@ -202,13 +201,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <p>Error ID: {this.state.errorId}</p>
               <p>If this problem persists, please contact our support team with this error ID.</p>
             </div>
+>>>>>>> origin/main;
           </div>
         </>
-      )}
+)}
 
-    return this.props.children}
+    return this.props.children;
 }
-
 export default EnhancedErrorBoundary;
 
             <div className="mt-6 text-sm text-gray-400"></div>

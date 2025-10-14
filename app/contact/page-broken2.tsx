@@ -1,11 +1,10 @@
-import { ArrowRight } from "lucide-react";
-
+import lucide-react from 'lucide-react';
 const Pagebroken2Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Page Broken2 | Zion Tech Group</title>
-        <meta
+        <meta;
           name="description"
           content="Professional page broken2 services by Zion Tech Group"
         /></meta>
@@ -29,7 +28,7 @@ const Pagebroken2Page = () => {
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
             </Link>
-            <Link
+            <Link;
               to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             ></Link>
@@ -41,5 +40,4 @@ const Pagebroken2Page = () => {
     </div>
   );
 };
-
 export default Pagebroken2Page;

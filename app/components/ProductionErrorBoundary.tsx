@@ -1,38 +1,33 @@
 import React from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-
 interface Props {
-  children: ReactNode;
+  children: 'ReactNode;','
   fallback?: ReactNode;
 }
-
 interface State {
-  hasError: boolean;
+  hasError: 'boolean;','
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;
 }
-
 class ProductionErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
-
   static getDerivedStateFromError(error: Error): State {
-    // Update state so the next render will show the fallback UI
-    return { 
-      hasError: true, 
+    // Update state so the next render will show the fallback UI;
+    return {
+      hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error details
-    this.setState({
-      error,
-      errorInfo,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`````
+    };`````
+  }``````
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {```````
+    // Log error details;````````
+    this.setState({`````````
+      error,``````````
+      errorInfo,```````````
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     });
 
@@ -44,7 +39,6 @@ class ProductionErrorBoundary extends Component<Props, State> {
       this.logErrorToService(error, errorInfo);
     }
   }
-
   private logErrorToService = async (error: Error, errorInfo: ErrorInfo) => {
     try {
       const errorData = {
@@ -69,8 +63,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
         body: JSON.stringify(errorData),
       });
     } catch (reportingError) {
-      // Fallback: log to console if reporting fails
-      }
+      // Fallback: log to console if reporting fails;
   };
 
   private getSessionId = (): string => {
@@ -82,11 +75,9 @@ class ProductionErrorBoundary extends Component<Props, State> {
     }
     return sessionId;
   };
-
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
-
   private handleReload = () => {
     window.location.reload();
   };
@@ -108,17 +99,14 @@ class ProductionErrorBoundary extends Component<Props, State> {
     const subject = `Error Report - ${this.state.errorId}`;
     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
     window.open(mailtoLink);
   };
-
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
+      // Custom fallback UI;
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center"></div>
@@ -155,7 +143,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
 
             <div className="space-y-3"></div>
               <button
-                onClick={this.handleRetry}
+                onClick={this.handleRetry;
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
               ></button>
                 <RefreshCw className="w-5 h-5" /></RefreshCw>
@@ -163,7 +151,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
               </button>
 
               <button
-                onClick={this.handleReload}
+                onClick={this.handleReload;
                 className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               ></button>
                 <RefreshCw className="w-5 h-5" /></RefreshCw>
@@ -171,7 +159,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
               </button>
 
               <button
-                onClick={this.handleGoHome}
+                onClick={this.handleGoHome;
                 className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               ></button>
                 <Home className="w-5 h-5" /></Home>
@@ -179,14 +167,13 @@ class ProductionErrorBoundary extends Component<Props, State> {
               </button>
 
               <button
-                onClick={this.handleReportError}
+                onClick={this.handleReportError;
                 className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2"
               ></button>
                 <Mail className="w-5 h-5" /></Mail>
                 <span>Report Error</span>
               </button>
             </div>
-
             {this.state.errorId && (
               <p className="text-xs text-gray-400 mt-4"></p>
                 Error ID: {this.state.errorId}

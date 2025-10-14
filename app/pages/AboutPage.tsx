@@ -6,9 +6,10 @@ import {
   UserGroupIcon,
   CpuChipIcon,
   ShieldCheckIcon,
-  CloudIcon,
+  RocketLaunchIcon,
+  HeartIcon,
   ArrowRightIcon,
-  CheckIcon,
+  StarIcon,
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon'
@@ -29,8 +30,7 @@ const AboutPage: React.FC = () => {
     {'
       title: 'Reliability','
       description: 'We deliver consistent, high-quality solutions that you can depend on.',
-      icon: CloudIcon
-    }
+      icon: CloudIcon;
   ];
 
   const stats = ['
@@ -60,7 +60,6 @@ const AboutPage: React.FC = () => {
       image: '/team/michael.jpg'
     }
   ];
-
   return (
     <></>
       <Helmet></Helmet>

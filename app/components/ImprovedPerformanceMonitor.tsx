@@ -1,6 +1,5 @@
 import React from 'react';
 import { Activity, TrendingUp } from 'lucide-react';
-
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -10,21 +9,18 @@ interface PerformanceMetrics {
   memory?: number;
   connection?: string;
 }
-
 interface PerformanceMonitorProps {
   showDetails?: boolean;
   logMetrics?: boolean;
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
 }
-
 const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showDetails = false,
   logMetrics = false,
-  onMetricsUpdate
+  onMetricsUpdate;
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
-
   const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
     setMetrics(prev => {
       const updated = { ...prev, ...newMetrics };
@@ -32,7 +28,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       return updated;
     });
   }, [onMetricsUpdate]);
-
   useEffect(() => {
     // Only run in browser'
     if (typeof window === 'undefined') return;
@@ -47,22 +42,18 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           updateMetrics({ cls: metric.value });'
           if (logMetrics) console.log('CLS:', metric);
         });
-
         getFID((metric) => {
           updateMetrics({ fid: metric.value });'
           if (logMetrics) console.log('FID:', metric);
         });
-
         getFCP((metric) => {
           updateMetrics({ fcp: metric.value });'
           if (logMetrics) console.log('FCP:', metric);
         });
-
         getLCP((metric) => {
           updateMetrics({ lcp: metric.value });'
           if (logMetrics) console.log('LCP:', metric);
         });
-
         getTTFB((metric) => {
           updateMetrics({ ttfb: metric.value });'
           if (logMetrics) console.log('TTFB:', metric);
@@ -77,8 +68,8 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const monitorMemory = () => {'
       if ('memory' in performance) {
         const memory = (performance as any).memory;
-        updateMetrics({ 
-          memory: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+        updateMetrics({
+          memory: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB;
         });
       }
     };
@@ -87,13 +78,12 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const monitorConnection = () => {'
       if ('connection' in navigator) {
         const connection = (navigator as any).connection;
-        updateMetrics({ 
+        updateMetrics({
           connection: `${connection.effectiveType} (${connection.downlink}Mbps)`
         });
       }
     };
-
-    // Monitor performance entries
+    // Monitor performance entries;
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {'
         if (entry.entryType === 'largest-contentful-paint') {
@@ -102,8 +92,8 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           updateMetrics({ fid: entry.processingStart - entry.startTime });'
         } else if (entry.entryType === 'layout-shift') {
           if (!(entry as any).hadRecentInput) {
-            updateMetrics({ 
-              cls: (metrics.cls || 0) + (entry as any).value 
+            updateMetrics({
+              cls: (metrics.cls || 0) + (entry as any).value ;
             });
           }'
         } else if (entry.entryType === 'paint') {'
@@ -113,8 +103,7 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         }
       }
     });
-
-    // Initialize monitoring
+    // Initialize monitoring;
     loadWebVitals();
     monitorMemory();
     monitorConnection();
@@ -125,8 +114,7 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     } catch (e) {'
       console.warn('Performance Observer not supported:', e);
     }
-
-    // Monitor memory every 5 seconds
+    // Monitor memory every 5 seconds;
     const memoryInterval = setInterval(monitorMemory, 5000);
 
     // Monitor connection changes'
@@ -134,7 +122,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       const connection = (navigator as any).connection;'
       connection.addEventListener('change', monitorConnection);
     }
-
     return () => {
       observer.disconnect();
       clearInterval(memoryInterval);'
@@ -144,17 +131,14 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }
     };
   }, [updateMetrics, logMetrics, metrics.cls]);
-
-  // Performance score calculation
+  // Performance score calculation;
   const getPerformanceScore = () => {
     let score = 100;
-    
     if (metrics.lcp && metrics.lcp > 2500) score -= 20;
     if (metrics.fid && metrics.fid > 100) score -= 20;
     if (metrics.cls && metrics.cls > 0.1) score -= 20;
     if (metrics.fcp && metrics.fcp > 1800) score -= 20;
     if (metrics.ttfb && metrics.ttfb > 600) score -= 20;
-    
     return Math.max(0, score);
   };
 
@@ -170,23 +154,19 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (score >= 50) return 'Needs Improvement';'
     return 'Poor';
   };
-
   const performanceScore = getPerformanceScore();
-
   if (!showDetails) {
     return null;
   }
-
   return (
     <div className="fixed bottom-4 right-4 z-50"></div>
       <button
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover:bg-slate-700/90 transition-colors"
+        className="bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover: 'bg-slate-700/90 transition-colors"','
         title="Performance Monitor"
       >
         <Activity className="w-5 h-5" /></Activity>
       </button>
-
       {isVisible && (
         <div className="absolute bottom-16 right-0 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white"></div>
           <div className="flex items-center justify-between mb-4"></div>
@@ -223,7 +203,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               {getScoreLabel(performanceScore)}
             </p>
           </div>
-
           {/* Metrics */}
           <div className="space-y-2 text-sm"></div>
             {metrics.lcp && (

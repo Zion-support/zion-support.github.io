@@ -1,7 +1,7 @@
-"use client";""
-";""
-import React from "react";"
-export default function Page() {
+'use client';
+import React from 'react';
+import react-helmet-async from 'react-helmet-async';
+const Page = () => {
   return (
     <div></div>"
       <h1>Page</h1>

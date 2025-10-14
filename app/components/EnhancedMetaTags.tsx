@@ -1,6 +1,5 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';
-
 interface EnhancedMetaTagsProps {
   title: string;
   description: string;
@@ -97,9 +96,6 @@ const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
   }),'
     ...(tags.length > 0 && { keywords: tags.join(', ') }),
   } : null;
-
-  const finalStructuredData = structuredData || (articleStructuredData || defaultStructuredData)
-
   return (
     <Helmet></Helmet>
       {/* Basic Meta Tags */}

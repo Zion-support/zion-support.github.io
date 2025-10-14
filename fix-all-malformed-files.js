@@ -1,21 +1,21 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix malformed files
+// Function to fix malformed files;
 function fixMalformedFiles(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Check if file has malformed structure
+    // Check if file has malformed structure;
     if (content.includes("const ComponentName = () => {") && content.includes("const data = [")) {
-      // This is a malformed file that needs to be rewritten
+      // This is a malformed file that needs to be rewritten;
       const fileName = path.basename(filePath, '.tsx');
       const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase()) + 'Page';
       
-      // Extract the title from the file name or content
+      // Extract the title from the file name or content;
       let title = componentName.replace('Page', '');
       if (title.includes('AI')) {
         title = 'AI Services';
@@ -61,27 +61,27 @@ import { Helmet } from 'react-helmet-async';
 const ${componentName}: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>${title} | Zion Tech Group</title>
         <meta name="description" content="${title} - Professional services from Zion Tech Group" />
         <meta name="keywords" content="${title.toLowerCase()}, services, solutions, technology" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
+        <section className="py-20 px-4"></section>
+          <div className="max-w-6xl mx-auto text-center"></div>
+            <h1 className="text-5xl font-bold text-white mb-6"></h1>
               ${title}
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Professional ${title.toLowerCase()} services to help your business succeed.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-                Get Started
+            <div className="flex flex-col sm: 'flex-row gap-4 justify-center">',
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg hover: 'from-blue-700 hover:to-purple-700 transition-all duration-300">',
+                Get Started;
               </button>
-              <button className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
-                Learn More
+              <button className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg hover: 'bg-blue-400 hover:text-white transition-all duration-300">',
+                Learn More;
               </button>
             </div>
           </div>
@@ -104,7 +104,7 @@ export default ${componentName};`;
   }
 }
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function findSourceFiles(dir) {
   const files = [];
   
@@ -127,7 +127,7 @@ function findSourceFiles(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('🔍 Searching for malformed files...');
 const sourceFiles = findSourceFiles('./app');
 
@@ -148,7 +148,7 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`\n📊 Summary:`);
+console.log(`\n📊 Summary: '`);',
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 

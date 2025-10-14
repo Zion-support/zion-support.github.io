@@ -46,6 +46,7 @@ const Page = () => {
     }
   ];
 
+const FiveGMobileApplications = () => {
   return (
     <></>
       <EnhancedSEO 

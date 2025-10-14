@@ -1,9 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface AdvancedSEOProps {
-  title: string;
-  description: string;
+  title: 'string;','
+  description: 'string;','
   keywords?: string;
   canonical?: string;
   ogTitle?: string;
@@ -26,7 +25,6 @@ interface AdvancedSEOProps {
   tags?: string[];
   readingTime?: number;
 }
-
 const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   title,
   description,
@@ -61,83 +59,81 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   const fullTwitterImage = twitterImage || fullOgImage;'
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
   const currentDate = new Date().toISOString();
-
-  // Default structured data for organization
+  // Default structured data for organization;
   const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.svg",
-    "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-    "foundingDate": "2020",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
+    "@context": "https://schema.org","
+    "@type": "Organization","
+    "name": "Zion Tech Group","
+    "url": "https://ziontechgroup.com","
+    "logo": "https://ziontechgroup.com/logo.svg","
+    "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.","
+    "foundingDate": "2020","
+    "address": {"
+      "@type": "PostalAddress","
+      "streetAddress": "364 E Main St STE 1008","
+      "addressLocality": "Middletown","
+      "addressRegion": "DE","
+      "postalCode": "19709","
       "addressCountry": "US"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com",
-      "availableLanguage": ["English"]
+    "contactPoint": {"
+      "@type": "ContactPoint","
+      "telephone": "+1-302-464-0950","
+      "contactType": "customer service","
+      "email": "kleber@ziontechgroup.com","
+      "availableLanguage": ["English"]"
     },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-      "https://github.com/ziontechgroup"
+    "sameAs": ["
+      "https://twitter.com/ziontechgroup","
+      "https://linkedin.com/company/ziontechgroup","
+      "https: '//github.com/ziontechgroup"','
     ],
-    "offers": [
+    "offers": ["
       {
-        "@type": "Offer",
-        "name": "AI Solutions",
-        "description": "Artificial intelligence and machine learning services",
+        "@type": "Offer","
+        "name": "AI Solutions","
+        "description": "Artificial intelligence and machine learning services","
         "category": "Technology Services"
       },
       {
-        "@type": "Offer",
-        "name": "IT Services",
-        "description": "Information technology consulting and implementation",
+        "@type": "Offer","
+        "name": "IT Services","
+        "description": "Information technology consulting and implementation","
         "category": "Technology Services"
       },
       {
-        "@type": "Offer",
-        "name": "Micro SAAS",
-        "description": "Ready-to-use software solutions",
+        "@type": "Offer","
+        "name": "Micro SAAS","
+        "description": "Ready-to-use software solutions","
         "category": "Software"
       }
     ]
   };
-
-  // Article structured data if publishedTime is provided
+  // Article structured data if publishedTime is provided;
   const articleStructuredData = publishedTime ? {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": fullTitle,
-    "description": description,
-    "image": fullOgImage,
-    "author": {
-      "@type": "Organization",
-      "name": author,
+    "@context": "https://schema.org","
+    "@type": "Article","
+    "headline": fullTitle,"
+    "description": description,"
+    "image": fullOgImage,"
+    "author": {"
+      "@type": "Organization","
+      "name": author,"
       "url": "https://ziontechgroup.com"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "logo": {
-        "@type": "ImageObject",
+    "publisher": {"
+      "@type": "Organization","
+      "name": "Zion Tech Group","
+      "logo": {"
+        "@type": "ImageObject","
         "url": "https://ziontechgroup.com/logo.svg"
       }
     },
-    "datePublished": publishedTime,
-    "dateModified": modifiedTime || publishedTime,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": fullCanonical
+    "datePublished": publishedTime,"
+    "dateModified": modifiedTime || publishedTime,"
+    "mainEntityOfPage": {"
+      "@type": "WebPage","
+      "@id": fullCanonical"
     },
     "articleSection": section,'
     "keywords": tags.join(', '),
@@ -176,7 +172,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       {tags.length > 0 && tags.map(tag => (
         <meta key={tag} property="article:tag" content={tag} /></meta>
       ))}
-
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} /></meta>
       <meta name="twitter:title" content={fullTwitterTitle} /></meta>
@@ -215,32 +210,29 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       <script type="application/ld+json"></script>
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
-
       {/* Article structured data if applicable */}
       {articleStructuredData && (
         <script type="application/ld+json"></script>
           {JSON.stringify(articleStructuredData)}
         </script>
       )}
-
       {/* Breadcrumb structured data */}
       <script type="application/ld+json"></script>
         {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
+          "@context": "https://schema.org","
+          "@type": "BreadcrumbList","
+          "itemListElement": ["
             {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
+              "@type": "ListItem","
+              "position": 1,"
+              "name": "Home","
               "item": "https://ziontechgroup.com"
             },
             {
-              "@type": "ListItem",
+"@type": "ListItem",
               "position": 2,
               "name": title,
-              "item": fullCanonical
-            }
+              "item": fullCanonical;
           ]
         })}
       </script>

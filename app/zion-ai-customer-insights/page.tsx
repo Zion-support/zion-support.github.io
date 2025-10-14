@@ -26,7 +26,6 @@ import { Briefcase } from 'lucide-react';'
 import { Lightbulb } from 'lucide-react';'
 import { Link } from 'react-router-dom';'
 import EnhancedSEO from '../components/EnhancedSEO';
-
 const Page = () => {
   const features = [
     {
@@ -45,7 +44,6 @@ const Page = () => {
       description: '24/7 support from our team of specialists'
     }
   ];
-
   return (
     <></>
       <EnhancedSEO 
@@ -74,7 +72,7 @@ const Page = () => {
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></ArrowRight>
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               ></Link>
@@ -99,20 +97,19 @@ const Page = () => {
               href="#pricing"
               variant="primary"
               size="lg"
-              icon={<Brain className="w-5 h-5" />}
+              icon={<Brain className="w-5 h-5" />}"
             >
-              Start Free Trial
+              Start Free Trial;
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton;
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<BarChart3 className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}"
             >
-              View Demo
+              View Demo;
             </FuturisticButton>
           </div>
-
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"></div>
             {metrics.map((metric, index) => (
@@ -120,14 +117,13 @@ const Page = () => {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                   {metric.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{metric.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{metric.label}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{metric.number}</div>"
+                <div className="text-gray-300 text-xs md:text-sm">{metric.label}</div>"
               </div>
             ))} 
           </div>
         </ResponsiveContainer>
       </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -146,14 +142,13 @@ const Page = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
+                  <p>{feature.description}</p>"
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -171,7 +166,7 @@ const Page = () => {
                 Contact Us
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></ArrowRight>
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               ></Link>

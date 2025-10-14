@@ -1,6 +1,5 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';
-
 export default function 5GSolutionsPage() {
   return (
     <></>
@@ -21,7 +20,6 @@ export default function 5GSolutionsPage() {
             </p>
           </div>
         </section>
-
         {/* Content Section */}
         <section className="py-20 px-4"></section>
           <div className="max-w-6xl mx-auto"></div>
@@ -41,7 +39,6 @@ export default function 5GSolutionsPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gray-900"></section>
           <div className="max-w-4xl mx-auto text-center"></div>

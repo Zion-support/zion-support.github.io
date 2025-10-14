@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { execSync } from 'child_process';
 
-// List of files that still have unused imports
+// List of files that still have unused imports;
 const filesToFix = [
   'app/ai-customer-sentiment-tracker/page.tsx',
   'app/ai-data-analytics-pro/page.tsx',
@@ -24,18 +24,18 @@ function fixFile(filePath) {
   try {
     console.log(`Fixing ${filePath}...`);
     
-    // Read the file
+    // Read the file;
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove unused imports by running eslint with --fix
+    // Remove unused imports by running eslint with --fix;
     try {
       execSync(`npx eslint "${filePath}" --fix --quiet`, { stdio: 'pipe' });
       console.log(`✓ Fixed ${filePath}`);
     } catch (error) {
-      // If eslint can't fix it, try manual removal of common unused imports
+      // If eslint can't fix it, try manual removal of common unused imports;
       console.log(`⚠ ESLint couldn't fix ${filePath}, trying manual fix...`);
       
-      // Common patterns to remove
+      // Common patterns to remove;
       const patterns = [
         /import\s*{\s*[^}]*Link[^}]*}\s*from\s*['"]react-router-dom['"];\s*\n/g,
         /import\s*{\s*[^}]*Shield[^}]*}\s*from\s*['"]lucide-react['"];\s*\n/g,
@@ -55,7 +55,7 @@ function fixFile(filePath) {
         content = content.replace(pattern, '');
       });
       
-      // Write back the cleaned content
+      // Write back the cleaned content;
       fs.writeFileSync(filePath, content);
       console.log(`✓ Manually fixed ${filePath}`);
     }
@@ -64,7 +64,7 @@ function fixFile(filePath) {
   }
 }
 
-// Fix all files
+// Fix all files;
 filesToFix.forEach(fixFile);
 
 console.log('Done fixing remaining unused imports!');

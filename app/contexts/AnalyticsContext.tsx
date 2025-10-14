@@ -5,7 +5,7 @@ interface AnalyticsContextType {
   trackPageView: (pageName: string) => void,
 
   setUser: (userId: string, properties?: Record<string, any>) => void;
-  isEnabled: boolean}
+  isEnabled: boolean;
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 const  ({ children }) => {
   const [
@@ -15,7 +15,7 @@ const  ({ children }) => {
     userId, setUserId,
   ] = useState<string | null>(null)
   useEffect(() => {
-    // if analytics is enabled
+    // if analytics is enabled;
 setIsEnabled(true)}, [])
     // if analytics is enabled;
     setIsEnabled(true)}, []);

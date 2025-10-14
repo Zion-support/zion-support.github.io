@@ -81,18 +81,17 @@ const Services: React.FC = () => {
                 {service.features.map((feature, featureIndex) => ("
                   <li key={featureIndex} className="flex items-center text-sm text-gray-500">"
                     <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                    {feature},
+                    {feature}
                   </li>
-                ))},
+                )})}
               </ul>
-              "
-              <div className="mt-6">"
-                <button className="text-blue-600 font-semibold hover: text-blue-700 transition-colors group-hover:underline"></button>
+              <div className="mt-6">
+                <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:underline">
                   Learn More →
                 </button>
               </div>
-            </div>,
-          ))},
+            </div>
+          ))}
         </div>
 
         {/* CTA Section */}"
@@ -103,9 +102,9 @@ const Services: React.FC = () => {
             </h3>"'
             <p className="text-xl mb-6 opacity-90">''
               Let's discuss how our solutions can help you achieve your goals.
-            </p>"
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors"></button>
-              Get Free Consultation
+            </p>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Get Free Consultation;
             </button>
           </div>
         </div>

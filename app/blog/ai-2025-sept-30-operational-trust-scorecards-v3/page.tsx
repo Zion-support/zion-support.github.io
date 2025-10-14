@@ -1,5 +1,4 @@
 import React from 'react';
-
 const OperationalTrustScorecardsPage: React.FC = () => {
   return (
     <></>
@@ -63,12 +62,13 @@ const OperationalTrustScorecardsPage: React.FC = () => {
             <h2 className="text-2 xl font-bold mb-3">Operational    Guardrails</h2>
             <p className="text-gray-300"></p>
               Tie each KPI to budgets and routing rules. If reliability falls,
-              route to safer tier; if cost exceeds budget, throttle usage; if
-              safety violations spike, auto-rollback to last known good state.</p>
-            </div>
+              route to safer tier; if cost exceeds budget, throttle usage; if;
+              safety violations spike, auto-rollback to last known good state.
+            </p>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+    </main>
     </>
   );
 };

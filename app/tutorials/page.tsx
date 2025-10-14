@@ -141,7 +141,7 @@ const Page = () => {
                   <div className="text-4xl mb-4">{tutorial.thumbnail}</div>
                   <div className="flex items-center justify-between mb-3">;
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">;
-                      {tutorial.level}
+                      {tutorial.level;
                     </span>;
                     <div className="flex items-center text-yellow-400">;
                       <Star className="w-4 h-4 fill-current" />;
@@ -149,13 +149,13 @@ const Page = () => {
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">;
-                    {tutorial.title}
+                    {tutorial.title;
                   </h3>;
                   <p className="text-gray-300 mb-4 text-sm">{tutorial.description}</p>;
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">;
                     <span className="flex items-center">;
                       <Clock className="w-4 h-4 mr-1" />;
-                      {tutorial.duration}
+                      {tutorial.duration;
                     </span>;
                     <span className="flex items-center">;
                       <User className="w-4 h-4 mr-1" />;
@@ -196,6 +196,14 @@ const Page = () => {
         </section>;
       </div>
     </>
+        <div className="text-center"></div>
+          <h1>Page</h1>
+          <p className="text-gray-300 text-lg"></p>
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
   )};
 '
 const page = React.lazy(() => import('./page'));

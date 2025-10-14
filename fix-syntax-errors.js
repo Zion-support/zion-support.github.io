@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
@@ -74,6 +72,9 @@ function fixFile(filePath) {
 }
 
 async function main() {
+  console.log('Starting syntax error fixes...');
+  
+  // Find all TypeScript and JSX files
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',
@@ -81,7 +82,8 @@ async function main() {
     'components/**/*.ts'
   ];
   
-  let totalFixed = 0;
+  let totalFiles = 0;
+  let fixedFiles = 0;
   
   for (const pattern of patterns) {
     const files = await glob(pattern, { cwd: process.cwd() });

@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';'
 import { Helmet } from 'react-helmet-async';
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -27,18 +26,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 85,'
   loading = 'lazy'
   onLoad,
-
-  onError })
-}) => {;
-const [isLoaded, setIsLoaded] = useState(false);
-const [isError, setIsError] = useState(false);
-const [isInView, setIsInView] = useState(priority);
-const imgRef = useRef<HTMLImageElement>(null)
+  const [isError, setIsError] = useState(false);
+  const [isInView, setIsInView] = useState(priority);
+  const imgRef = useRef<HTMLImageElement>(null);
   useEffect(() => {
     if (priority) return;
 const observer = new IntersectionObserver()
       ([entry]) => {
         if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
           setIsInView(true);
           observer.disconnect()}
       },
@@ -66,14 +63,13 @@ const observer = new IntersectionObserver()
     
     // For external images, return as-is'
     if (originalSrc.startsWith('http')) {
-      return originalSrc}
-    
+      return originalSrc;
     // For local images, you could implement WebP conversion here
     return originalSrc};
 
   const optimizedSrc = getOptimizedSrc(src);
 
-    return originalSrc}
+    return originalSrc;
   const optimizedSrc = getOptimizedSrc(src)
   return (
     <></>
@@ -84,7 +80,7 @@ const observer = new IntersectionObserver()
 )}
       <div
 
-        ref={ imgRef }
+        ref={ imgRef;
         className={`relative overflow-hidden ${className}`}
         style={{ width, height }
       ></div>
@@ -108,6 +104,7 @@ const observer = new IntersectionObserver()
               <div>Image not available</div>
             </div>
           </div>
+<<<<<<< HEAD
 )}
         {/* Actual image */}
         {isInView && !isError && (

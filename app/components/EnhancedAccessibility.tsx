@@ -2,9 +2,9 @@ import React from 'react';'
     highContrast: false''
     fontSize: 'normal',
     reducedMotion: false,
-    screenReader: false
-  });
-  const [isVisible, setIsVisible] = useState(false)
+    screenReader: false;
+  }
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     // Enhanced accessibility features;'
     const addSkipLinks = () => {''
@@ -20,20 +20,19 @@ import React from 'react';'
       style.textContent = `
         *:focus {
           outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important}
+outline-offset: 2px !important;
         .sr-only {
           position: absolute;
           width: 1px;
           height: 1px;
           padding: 0;
           margin: -1px;
-          overflow: hidden,
-          clip: rect(0, 0, 0, 0)
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
           white-space: nowrap;
-          border: 0}
+border: 0;
       `;
       document.head.appendChild(style)};
-
     const addAriaLabels = () => {
       // Add ARIA labels to interactive elements'
       const buttons = document.querySelectorAll('button:not([aria-label])')'
@@ -67,7 +66,26 @@ import React from 'react';'
     enhanceFocusManagement();
     addAriaLabels();
     setupKeyboardNavigation();
-
+    applyAccessibilityEnhancements()
+    // Listen for preference changes;
+    const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');'";
+    const contrastMediaQuery = window.matchMedia('(prefers-contrast: high)');'";
+    const handleMotionChange = () => {
+      setIsReducedMotion(e.matches);
+    const handleContrastChange = () => {
+    const setupKeyboardNavigation = () => {
+      // Enhanced keyboard navigation;
+      document.addEventListener('keydown', (e) => {;
+        if (e.key === 'Tab') {;
+          document.body.classList.add('keyboard-navigation')}'
+      }
+      document.addEventListener('mousedown', () => {;
+        document.body.classList.remove('keyboard-navigation')})}'
+    // Initialize accessibility enhancements;
+    addSkipLinks();
+    enhanceFocusManagement();
+    addAriaLabels();
+    setupKeyboardNavigation()
     // Cleanup;
     return () => {
       // Cleanup if needed}}, []);
@@ -139,22 +157,18 @@ import React from 'react';'
     style.id = 'enhanced-accessibility-styles'
     style.textContent = `
       .high-contrast {
-        filter: contrast(150%) brightness(110%)}
+filter: contrast(150%) brightness(110%)}
 
       .font-size-small {
-        font-size: 0.875rem}
-
+        font-size: 0.875rem;
       .font-size-large {
-        font-size: 1.125rem}
-
+        font-size: 1.125rem;
       .font-size-extra-large {
-        font-size: 1.25rem}
-
+        font-size: 1.25rem;
       .reduced-motion * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important}
-
+        transition-duration: 0.01ms !important;
       .accessibility-panel {
         position: fixed;
         top: 50%;
@@ -167,11 +181,9 @@ import React from 'react';'
         padding: 1rem;
         z-index: 1000;
         transition: right 0.3s ease;
-        color: white}
-
+color: white;
       .accessibility-panel.visible {
-        right: 0}
-
+        right: 0;
       .accessibility-toggle {
         position: fixed;
         top: 50%;
@@ -186,10 +198,9 @@ import React from 'react';'
         z-index: 1001;
         font-size: 0.875rem;
         writing-mode: vertical-rl;
-        text-orientation: mixed}
-
+text-orientation: mixed;
       .accessibility-toggle:hover {
-        background: #7c3aed}
+        background: #7c3aed;
     `;
     document.head.appendChild(style);
 
@@ -230,17 +241,17 @@ import React from 'react';'
             <div className="space-y-2">"'
               {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('
                 <label key={size} className="flex items-center space-x-2">"
-                  <input
+<input
                     type="radio""
                     name="fontSize""
-                    value={size}
-                    checked={settings.fontSize === size}
+                    value={size;
+                    checked={settings.fontSize === size;
 onChange={() => setFontSize(size)}
                     className="rounded"
                   />
                   <span className="capitalize">{size}</span>"
                 </label>
-))}
+              )})
             </div>
           </div>
           <div></div>

@@ -2,15 +2,14 @@ import React from 'react';
 import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react";
 
 interface GenericServicePageProps {
-  title: string;
-  description: string;
-  icon: React.ComponentType<any>;
-  features: string[];
-  benefits: string[];
+  title: 'string;','
+  description: 'string;','
+  icon: 'React.ComponentType<any>;','
+  features: 'string[];','
+  benefits: 'string[];','
   pricing?: string;
-  category: "AI" | "IT" | "MicroSAAS" | "Emerging";
+  category: "AI" | "IT" | "MicroSAAS" | "Emerging;
 }
-
 const GenericServicePage: React.FC<GenericServicePageProps> = ({
   title,
   description,
@@ -21,15 +20,13 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
   category,
 }) => {
   const categoryColors = {
-    AI: "from-purple-500 to-pink-600",
-    IT: "from-blue-500 to-cyan-600",
-    MicroSAAS: "from-green-500 to-emerald-600",
-    Emerging: "from-orange-500 to-red-600",
+    AI: "from-purple-500 to-pink-600","
+    IT: "from-blue-500 to-cyan-600","
+    MicroSAAS: "from-green-500 to-emerald-600","
+    Emerging: "from-orange-500 to-red-600","
   };
-
   const categoryColor =
-    categoryColors[category] || "from-cyan-500 to-purple-600";
-
+    categoryColors[category] || "from-cyan-500 to-purple-600;
   return (
     <></>
       <Helmet></Helmet>
@@ -77,7 +74,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </a>
             </div>
           </section>
-
           {/* Features Section */}
           <section className="py-16"></section>
             <div className="text-center mb-12"></div>
@@ -91,8 +87,8 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {features.map((feature, index) => (
-                <div
-                  key={index}
+<div
+                  key={index;
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
                 ></div>
                   <div className="flex items-center mb-4"></div>
@@ -105,7 +101,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               ))}
             </div>
           </section>
-
           {/* Benefits Section */}
           <section className="py-16"></section>
             <div className="text-center mb-12"></div>
@@ -136,7 +131,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               ))}
             </div>
           </section>
-
           {/* Stats Section */}
           <section className="py-16"></section>
             <div className="text-center mb-12"></div>
@@ -145,30 +139,29 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                   <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
                     500+
                   </div>
-                  <div className="text-gray-300">Happy Clients</div>
+                  <div className="text-gray-300">Happy Clients</div>"
                 </div>
                 <div className="text-center"></div>
                   <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
                     99%
                   </div>
-                  <div className="text-gray-300">Success Rate</div>
+                  <div className="text-gray-300">Success Rate</div>"
                 </div>
                 <div className="text-center"></div>
                   <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
                     24/7
                   </div>
-                  <div className="text-gray-300">Support</div>
+                  <div className="text-gray-300">Support</div>"
                 </div>
                 <div className="text-center"></div>
                   <div className="text-4xl font-bold text-cyan-400 mb-2"></div>
                     10+
                   </div>
-                  <div className="text-gray-300">Years Experience</div>
+                  <div className="text-gray-300">Years Experience</div>"
                 </div>
               </div>
             </div>
           </section>
-
           {/* CTA Section */}
           <section className="py-16 text-center"></section>
             <h2 className="text-3xl font-bold text-white mb-4"></h2>

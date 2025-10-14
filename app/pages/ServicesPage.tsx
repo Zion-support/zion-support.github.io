@@ -1,8 +1,7 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Link } from 'react-router-dom';
-import { 
-  CpuChipIcon,
+import { CpuChipIcon,
   CloudIcon,
   GlobeAltIcon,
   SignalIcon,
@@ -104,7 +103,6 @@ const ServicesPage: React.FC = () => {
       color: 'from-gray-500 to-slate-500'
     }
   ];
-
   const processSteps = [
     {'
       step: '01','
@@ -127,7 +125,6 @@ const ServicesPage: React.FC = () => {
       description: 'We provide ongoing support and optimization to ensure your solution continues to deliver value.'
     }
   ];
-
   return (
     <></>
       <Helmet></Helmet>
@@ -135,7 +132,6 @@ const ServicesPage: React.FC = () => {
         <meta name="description" content="Comprehensive technology services including AI solutions, cybersecurity, cloud infrastructure, micro SaaS, 5G technology, and IT services." /></meta>
         <meta name="keywords" content="technology services, AI solutions, cybersecurity, cloud infrastructure, micro SaaS, 5G technology, IT services" /></meta>
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
         <div className="absolute inset-0 opacity-20"></div>
@@ -154,7 +150,7 @@ const ServicesPage: React.FC = () => {
               From AI and cybersecurity to cloud infrastructure and 5G technology, 
               we provide end-to-end solutions that drive digital transformation and business growth.
             </p>
-            <Link
+            <Link;
               to="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center gap-2"
             ></Link>
@@ -163,7 +159,6 @@ const ServicesPage: React.FC = () => {
             </Link>
           </div>
         </section>
-
       {/* Services Grid */}
       <section className="py-20 bg-slate-900"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -183,7 +178,7 @@ const ServicesPage: React.FC = () => {
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform`}></div>
                     <service.icon className="w-8 h-8 text-white" /></service>
                   </div>
-                  <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                  <h3 className="text-2xl font-bold text-white">{service.title}</h3>"
                 </div>
                 
                 <p className="text-gray-300 mb-6 leading-relaxed"></p>
@@ -200,7 +195,7 @@ const ServicesPage: React.FC = () => {
                 </ul>
                 
                 <Link
-                  to={service.href}
+                  to={service.href;
                   className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
                 ></Link>
                   Learn More
@@ -210,7 +205,6 @@ const ServicesPage: React.FC = () => {
             ))}
           </div>
         </section>
-
       {/* Process Section */}
       <section className="py-20 bg-slate-800/50"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -229,13 +223,12 @@ const ServicesPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <span className="text-2xl font-bold text-white">{step.step}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-gray-300">{step.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>"
+                <p>{step.description}</p>"
               </div>
             ))}
           </div>
         </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900"></section>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
@@ -252,7 +245,7 @@ const ServicesPage: React.FC = () => {
             ></Link>
               Get Started Today
             </Link>
-            <Link
+            <Link;
               to="/demo"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
             ></Link>

@@ -68,7 +68,6 @@ export default function ContactPage()    {
     '5G Implementation''
     'Other'
   ];
-
   return (
     <></>
       <EnhancedSEO 
@@ -90,7 +89,7 @@ export default function ContactPage()    {
             Get in touch with our experts today.
           </p>
         </div>
-      </section>
+</section>
 
       {/* Contact Info */}
       <section className="py-20 px-4"></section>
@@ -188,8 +187,8 @@ export default function ContactPage()    {
                 <select
                   id="subject"
                   name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
+                  value={formData.subject;
+                  onChange={handleChange;
                   required
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 ></select>
@@ -209,10 +208,10 @@ export default function ContactPage()    {
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
+                  value={formData.message;
+                  onChange={handleChange;
                   required
-                  rows={6}
+                  rows={6;
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                   placeholder="Tell us about your project or how we can help you..."
                 /></textarea>
@@ -221,7 +220,7 @@ export default function ContactPage()    {
               <div className="text-center"></div>
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting;
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 ></button>
                   {isSubmitting ? (

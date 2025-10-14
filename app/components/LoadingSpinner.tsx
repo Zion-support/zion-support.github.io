@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';'
@@ -7,6 +8,8 @@ interface LoadingSpinnerProps {'
   size?: 'sm' | 'md' | 'lg' | 'xl';
 
 
+=======
+>>>>>>> origin/main
   text?: string;
   fullScreen?: boolean;
   className?: string;

@@ -26,7 +26,6 @@ import { Briefcase } from 'lucide-react';'
 import { Lightbulb } from 'lucide-react';'
 import { Link } from 'react-router-dom';'
 import EnhancedSEO from '../components/EnhancedSEO';
-
 const Page = () => {
   const features = [
     {
@@ -45,14 +44,12 @@ const Page = () => {
       description: '24/7 support from our team of specialists'
     }
   ];
-
   const stats = [
-    { number: "10,000+", label: "Videos Generated", icon: <Video className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
-    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
+    { number: "10,000+", label: "Videos Generated", icon: <Video className="w-6 h-6" /> },"
+    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },"
+    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },"
+    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }"
   ];
-
   return (
     <></>
       <EnhancedSEO 
@@ -81,7 +78,7 @@ const Page = () => {
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></ArrowRight>
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               ></Link>
@@ -104,20 +101,19 @@ const Page = () => {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<Play className="w-5 h-5" />}
+                icon={<Play className="w-5 h-5" />}"
               >
-                Start Free Trial
+                Start Free Trial;
               </FuturisticButton>
-              <FuturisticButton
+              <FuturisticButton;
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<Video className="w-5 h-5" />}
+                icon={<Video className="w-5 h-5" />}"
               >
-                Watch Demo
+                Watch Demo;
               </FuturisticButton>
             </div>
-            
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto"></div>
               {stats.map((stat, index) => (
@@ -125,8 +121,8 @@ const Page = () => {
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                     {stat.icon}
                   </div>
-                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
+                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>"
+                  <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>"
                 </div>
               ))}      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -142,8 +138,8 @@ const Page = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
-              <FuturisticCard
-                key={index}
+<FuturisticCard
+                key={index;
                 className="group hover:scale-105 transition-all duration-300"
               ></FuturisticCard>
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"></div>
@@ -165,7 +161,6 @@ const Page = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -184,14 +179,13 @@ const Page = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
+                  <p>{feature.description}</p>"
                 </div>
               ))}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -209,7 +203,7 @@ const Page = () => {
                 Contact Us
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></ArrowRight>
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
               ></Link>

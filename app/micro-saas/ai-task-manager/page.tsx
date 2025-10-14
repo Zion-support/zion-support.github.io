@@ -36,7 +36,6 @@ const AITaskManagerPage: React.FC = () => {
       description: 'Sync your tasks across all devices and platforms with real-time updates and offline access.'
     }
   ]
-
   const taskFeatures = [
     {
       icon: <CheckCircle className="w-8 h-8 text-cyan-400" />,'
@@ -81,7 +80,6 @@ const AITaskManagerPage: React.FC = () => {
       features: ['SSO integration', 'Audit logs', 'Compliance tools', 'Advanced permissions']
     }
   ]
-
   const pricingPlans = [
     {'
       name: 'Personal','
@@ -96,7 +94,7 @@ const AITaskManagerPage: React.FC = () => {
         'Cross-platform sync','
         'Email support'
       ],
-      popular: false
+      popular: false;
     },
     {'
       name: 'Professional','
@@ -111,7 +109,7 @@ const AITaskManagerPage: React.FC = () => {
         'Priority support','
         'Custom integrations'
       ],
-      popular: true
+      popular: true;
     },
     {'
       name: 'Enterprise','
@@ -126,8 +124,10 @@ const AITaskManagerPage: React.FC = () => {
         'Dedicated support','
         'White-label options'
       ],
-      popular: false
+      popular: false;
+=======
     }
+>>>>>>> origin/main
   ]
 
   const stats = ['
@@ -136,7 +136,6 @@ const AITaskManagerPage: React.FC = () => {
     { number: '2hrs', label: 'Time Saved Daily', icon: <Clock className="w-6 h-6 text-purple-400" /> },'
     { number: '50K+', label: 'Active Users', icon: <Users className="w-6 h-6 text-orange-400" /> }
   ]
-
   const testimonials = [
     {'
       name: 'Jessica Martinez','
@@ -154,10 +153,8 @@ const AITaskManagerPage: React.FC = () => {
       name: 'Sarah Johnson','
       company: 'Team Lead','
       content: 'The team collaboration features are outstanding. We can now track everyone\'s progress in real-time and the AI helps us identify bottlenecks before they become problems.',
-      rating: 5
-    }
+      rating: 5;
   ]
-
   return (
     <></>
       <Helmet></Helmet>
@@ -204,7 +201,6 @@ const AITaskManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-20 px-4 relative"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" /></div>
@@ -235,7 +231,6 @@ const AITaskManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 relative"></section>
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-cyan-500/5 to-pink-500/5" /></div>
@@ -266,7 +261,6 @@ const AITaskManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Task Features Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-purple-900/50 relative"></section>
           <div className="relative max-w-7xl mx-auto"></div>
@@ -307,7 +301,7 @@ const AITaskManagerPage: React.FC = () => {
                         </div>
                       ))}
                     </div>
-                    <Link 
+                    <Link ;
                       to="/contact"
                       className="block w-full mt-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                     ></Link>
@@ -319,7 +313,6 @@ const AITaskManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 relative"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" /></div>
@@ -381,7 +374,6 @@ const AITaskManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-purple-900/50 to-pink-900/50 relative"></section>
           <div className="relative max-w-7xl mx-auto"></div>
@@ -421,7 +413,6 @@ const AITaskManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 relative"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" /></div>

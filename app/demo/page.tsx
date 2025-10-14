@@ -38,7 +38,7 @@ const DemoPage: React.FC = () => {
       name: "Emily Rodriguez",
       company: "InnovateLabs",
       content: "The demo team was knowledgeable and answered all our questions thoroughly.",
-      rating: 5}
+      rating: 5;
   ];
 
   return (
@@ -90,7 +90,7 @@ const DemoPage: React.FC = () => {
                     <h3 className="text-xl font-semibold text-white mb-2 text-center">{feature.title}</h3>;
                     <p className="text-gray-300 mb-4 text-center">{feature.description}</p>;
                     <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">;
-                      {feature.demo}
+                      {feature.demo;
                     </button>;
                   </div>
   );
@@ -165,6 +165,14 @@ const DemoPage: React.FC = () => {
         </section>;
       </div>
     </>
+        <div className="text-center"></div>
+          <h1>Page</h1>
+          <p className="text-gray-300 text-lg"></p>
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
   )};
 '
 const page = React.lazy(() => import('./page'));

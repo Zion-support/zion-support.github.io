@@ -15,14 +15,12 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ '
     md: 'w-8 h-8','
     lg: 'w-12 h-12'
   };
-
   return (
     <div className={`flex items-center justify-center ${className}`}></div>
       <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} /></Loader2>
     </div>
   );
 };
-
 interface LoadingPageProps {
   message?: string;
   showIcon?: boolean;
@@ -48,7 +46,6 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({ '
     </div>
   );
 };
-
 interface LoadingCardProps {
   title?: string;
   description?: string;
@@ -71,7 +68,7 @@ export const LoadingCard: React.FC<LoadingCardProps> = ({ '
       <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
       <p className="text-gray-300">{description}</p>
     </div>
-  );
+);
 };
 
 interface SkeletonLoaderProps {
@@ -96,18 +93,15 @@ export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
     </div>
   );
 };
-
 interface ServiceLoadingProps {
   serviceName: string;
 }
-
 export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) => {
   const getServiceIcon = (service: string) => {'
     if (service.toLowerCase().includes('ai')) return <Brain className="w-8 h-8 text-cyan-400" />;'
     if (service.toLowerCase().includes('security')) return <Shield className="w-8 h-8 text-purple-400" />;
     return <Zap className="w-8 h-8 text-blue-400" />;
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
       <div className="text-center max-w-md mx-auto px-6"></div>

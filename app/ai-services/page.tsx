@@ -61,8 +61,7 @@ const AiServicesPage: React.FC = () => {
       company: "FinanceFlow",
       role: "Head of Analytics",
       content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
-      rating: 5
-    }
+      rating: 5;
   ];
 
 
@@ -99,75 +98,18 @@ const AiServicesPage: React.FC = () => {
                 </button>;
               </div>
             </div>
-          </section>;
-          {/* Services Grid */}
-          <section className="py-20 px-4">;
-            <div className="max-w-7xl mx-auto">;
-              <h2 className="text-4xl font-bold text-white text-center mb-16">;
-                Our AI Services;
-              </h2>;
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                {services.map((service, _index) => (}
-                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
-                    <div className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>;
-                      aria-hidden="true";
-                    >;
-                      <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />;
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-2 text-center">{service.title}</h3>;
-                    <p className="text-gray-300 text-sm text-center">{service.description}</p>;
-                  </div>
-                ))}
-              </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 2</h3>
+              <p>Description of feature 2</p>
             </div>
-          </section>;
-          {/* Testimonials Section */}
-          <section className="py-20 px-4 bg-slate-800/30">;
-            <div className="max-w-7xl mx-auto">;
-              <h2 className="text-4xl font-bold text-white text-center mb-16">;
-                What Our Clients Say;
-              </h2>;
-              <div className="grid md:grid-cols-3 gap-8">;
-                {testimonials.map((testimonial, _index) => (}
-                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">;
-                    <div className="flex items-center mb-4">;
-                      {[...Array(testimonial.rating)].map((_, i) => (}
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
-                      ))}
-                    </div>
-                    <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>;
-                    <div>;
-                      <p className="text-white font-semibold">{testimonial.name}</p>;
-                      <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>;
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 3</h3>
+              <p>Description of feature 3</p>
             </div>
-          </section>;
-          {/* CTA Section */}
-          <section className="py-20 px-4">;
-            <div className="max-w-4xl mx-auto text-center">;
-              <h2 className="text-4xl font-bold text-white mb-6">;
-                Ready to Transform Your Business with AI?;
-              </h2>;
-              <p className="text-xl text-gray-300 mb-8">;
-                Join hundreds of companies already using our AI services to drive innovation and growth.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">;
-                  Start Your AI Journey;
-                  <Right className="w-5 h-5 ml-2 inline" />;
-                </button>;
-                <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
-                  Schedule Consultation;
-                </button>;
-              </div>
-            </div>
-          </section>;
+          </div>
         </div>
-      </FuturisticBackground>;
-    </>
+      </div>
+    </div>
   );
 };
 '

@@ -2,161 +2,210 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Specific fixes for remaining syntax errors
+const fixes = [
+  // Fix malformed import statements
+  { pattern: /import\s+\.\.\/components\/([^;]+)\s+from\s+['"]([^'"]+)['"];?/g, replacement: "import $1 from '$2';" },
+  { pattern: /import\s+([^;]+)\s+from\s+['"]([^'"]+)['"];?/g, replacement: "import $1 from '$2';" },
+  
+  // Fix missing default values in function parameters
+  { pattern: /className\s*=\s*\{\s*\}\s*\)/g, replacement: "className = '' })" },
+  { pattern: /className\s*=\s*\{\s*\}\s*\)/g, replacement: "className = '' })" },
+  
+  // Fix malformed JSX fragments
+  { pattern: /<>[\s]*<div[^>]*>[\s]*<\/div>[\s]*<\/>/g, replacement: "<><div></div></>" },
+  { pattern: /<>[\s]*<div[^>]*>[\s]*<\/div>[\s]*<\/>/g, replacement: "<><div></div></>" },
+  
+  // Fix malformed JSX closing tags
+  { pattern: /<Helmet><\/Helmet>/g, replacement: "<Helmet></Helmet>" },
+  { pattern: /<title>([^<]+)<\/title>/g, replacement: "<title>$1</title>" },
+  { pattern: /<meta\s+name="([^"]+)"\s+content="([^"]+)"\s*\/>/g, replacement: '<meta name="$1" content="$2" />' },
+  
+  // Fix extra quotes in JSX
+  { pattern: /className="([^"]+)"/g, replacement: 'className="$1"' },
+  { pattern: /className=\{`([^`]+)`\}/g, replacement: "className={`$1`}" },
+  
+  // Fix malformed function declarations
+  { pattern: /const\s+([^=]+)=\s*\([^)]*\)\s*=>\s*{[\s]*};[\s]*};/g, replacement: "const $1 = () => {\n  return null;\n};" },
+  
+  // Fix extra quotes in strings
+  { pattern: /""/g, replacement: "" },
+  { pattern: /''/g, replacement: "" },
+  { pattern: /";"/g, replacement: ";" },
+  { pattern: /';'/g, replacement: ";" },
+  
+  // Fix malformed interface names
+  { pattern: /interface\s+404\s*{/g, replacement: "interface NotFoundProps {" },
+  { pattern: /const\s+404:/g, replacement: "const NotFound:" },
+  
+  // Fix unterminated string literals
+  { pattern: /import\s+([^;]+);['"]/g, replacement: "import $1;" },
+  { pattern: /import\s+([^;]+);['"]/g, replacement: "import $1;" },
+  
+  // Fix malformed JSX expressions
+  { pattern: /{`([^`]+)`}/g, replacement: "{`$1`}" },
+  
+  // Fix extra quotes in JSX text
+  { pattern: /<h1[^>]*>([^<]+)<\/h1>/g, replacement: "<h1>$1</h1>" },
+  { pattern: /<p[^>]*>([^<]+)<\/p>/g, replacement: "<p>$1</p>" },
+  
+  // Fix malformed closing tags
+  { pattern: /<\/div>[\s]*""[\s]*<\/div>/g, replacement: "</div></div>" },
+  { pattern: /<\/section>[\s]*""[\s]*<\/section>/g, replacement: "</section></section>" },
+  
+  // Fix extra quotes in attribute values
+  { pattern: /="([^"]+)""/g, replacement: '="$1"' },
+  { pattern: /='([^']+)''/g, replacement: "='$1'" },
+  
+  // Fix malformed object literals
+  { pattern: /{[\s]*}/g, replacement: "{}" },
+  
+  // Fix extra whitespace and newlines
+  { pattern: /\n\s*\n\s*\n/g, replacement: "\n\n" },
+  { pattern: /[\s]+$/gm, replacement: "" },
+  
+  // Fix specific patterns found in the files
+  { pattern: /import\s+react\s+from\s+['"]react['"];?/g, replacement: "import React from 'react';" },
+  { pattern: /import\s+React\s+from\s+['"]react['"];?/g, replacement: "import React from 'react';" },
+  { pattern: /import\s+Helmet\s+from\s+['"]react-helmet-async['"];?/g, replacement: "import { Helmet } from 'react-helmet-async';" },
+  
+  // Fix malformed JSX fragments with missing closing tags
+  { pattern: /<>[\s]*<div[^>]*>[\s]*<\/div>[\s]*<\/>/g, replacement: "<><div></div></>" },
+  { pattern: /<>[\s]*<div[^>]*>[\s]*<\/div>[\s]*<\/>/g, replacement: "<><div></div></>" },
+  
+  // Fix malformed function returns
+  { pattern: /return\s*\([\s]*<>[\s]*<div[^>]*>[\s]*<\/div>[\s]*<\/>[\s]*\);[\s]*};/g, replacement: "return (\n    <>\n      <div></div>\n    </>\n  );\n};" },
+  
+  // Fix missing semicolons
+  { pattern: /export\s+default\s+([^;]+)$/gm, replacement: "export default $1;" },
+  
+  // Fix malformed JSX attributes
+  { pattern: /className=\{`([^`]+)`\}/g, replacement: "className={`$1`}" },
+  
+  // Fix unterminated template literals
+  { pattern: /`([^`]*)$/gm, replacement: "`$1`" },
+  
+  // Fix extra quotes in JSX
+  { pattern: /""/g, replacement: "" },
+  { pattern: /''/g, replacement: "" },
+  
+  // Fix malformed JSX closing tags
+  { pattern: /<Helmet><\/Helmet>/g, replacement: "<Helmet></Helmet>" },
+  
+  // Fix extra semicolons
+  { pattern: /;;/g, replacement: ";" },
+  
+  // Fix malformed template literals
+  { pattern: /`([^`]*)$/gm, replacement: "`$1`" },
+  
+  // Fix extra quotes in JSX attributes
+  { pattern: /="([^"]+)""/g, replacement: '="$1"' },
+  { pattern: /='([^']+)''/g, replacement: "='$1'" },
+  
+  // Clean up extra whitespace
+  { pattern: /\n\s*\n\s*\n/g, replacement: "\n\n" },
+  { pattern: /[\s]+$/gm, replacement: "" },
+];
 
-console.log('🔧 Starting comprehensive remaining error fix...');
-
-// Function to create a clean, working page component
-function createCleanPageComponent(pageName, title, description) {
-  return `import React from "react";
-import { Helmet } from "react-helmet-async";
-
-const ${pageName} = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description} - Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">${title}</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ${pageName};`;
-}
-
-// Function to fix a file by replacing it with a clean version
-function fixFileWithCleanVersion(filePath) {
+function fixFile(filePath) {
   try {
-    const fileName = path.basename(filePath, '.tsx');
-    const pageName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase()) + 'Page';
-    const title = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
-    const cleanContent = createCleanPageComponent(pageName, title, title);
-    fs.writeFileSync(filePath, cleanContent);
-    console.log(`✅ Replaced with clean version: ${filePath}`);
-    return true;
-  } catch (error) {
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to check if a file has serious syntax errors
-function hasSeriousErrors(content) {
-  const errorPatterns = [
-    /|    /const.*=.*\(\)\s*=>\s*\(\s*"/,
-    /return\s*\(\s*"/,
-    /<div[^>]*><\/div>\s*<Helmet><\/Helmet>/,
-    /<title>[^<]*<\/title>"\s*<meta/,
-    /<meta[^>]*\/>\s*<\/Helmet>"/,
-    /<\/Helmet>"\s*<div/,
-    /<div[^>]*><\/div>\s*<div[^>]*><\/div>/,
-    /<h1[^>]*>[^<]*<\/h1>"\s*<p/,
-    /<p[^>]*>[^<]*<\/p>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\)\(\s*\);\s*};/,
-    /export default \w+Page;"\s*$/,
-    /;\s*$/,
-    /^\s*;\s*$/m,
-    /const\s+const\s+/,
-    /error TS1389/,
-    /error TS1002/,
-    /error TS1005/,
-    /error TS2657/,
-    /error TS1003/,
-    /error TS1382/,
-    /error TS17002/,
-    /error TS1109/,
-    /error TS1128/,
-    /error TS1185/
-  ];
-  
-  return errorPatterns.some(pattern => pattern.test(content));
-}
-
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    // Apply all fixes
+    fixes.forEach(fix => {
+      content = content.replace(fix.pattern, fix.replacement);
+    });
     
-    if (hasSeriousErrors(content)) {
-      return fixFileWithCleanVersion(filePath);
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  const files = [];
-  
-  function traverse(currentDir) {
-async function main() {
-  const patterns = [;
-    'app/**/*.tsx',;
-    'app/**/*.ts';
-  ];
-  
-  function searchDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
+    // Additional specific fixes for common patterns
+    content = content
+      // Fix malformed import statements
+      .replace(/import\s+\.\.\/components\/([^;]+)\s+from\s+['"]([^'"]+)['"];?/g, "import $1 from '$2';")
+      .replace(/import\s+([^;]+)\s+from\s+['"]([^'"]+)['"];?/g, "import $1 from '$2';")
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
+      // Fix missing default values in function parameters
+      .replace(/className\s*=\s*\{\s*\}\s*\)/g, "className = '' })")
+      
+      // Fix malformed JSX fragments
+      .replace(/<>[\s]*<div[^>]*>[\s]*<\/div>[\s]*<\/>/g, "<><div></div></>")
+      
+      // Fix malformed JSX closing tags
+      .replace(/<Helmet><\/Helmet>/g, "<Helmet></Helmet>")
+      
+      // Fix extra quotes in JSX
+      .replace(/""/g, "")
+      .replace(/''/g, "")
+      
+      // Fix malformed function declarations
+      .replace(/const\s+([^=]+)=\s*\([^)]*\)\s*=>\s*{[\s]*};[\s]*};/g, "const $1 = () => {\n  return null;\n};")
+      
+      // Fix interface names that start with numbers
+      .replace(/interface\s+404\s*{/g, "interface NotFoundProps {")
+      .replace(/const\s+404:/g, "const NotFound:")
+      
+      // Fix malformed JSX closing tags
+      .replace(/<Helmet><\/Helmet>/g, "<Helmet></Helmet>")
+      
+      // Fix extra semicolons
+      .replace(/;;/g, ";")
+      
+      // Fix malformed template literals
+      .replace(/`([^`]*)$/gm, "`$1`")
+      
+      // Fix extra quotes in JSX attributes
+      .replace(/="([^"]+)""/g, '="$1"')
+      .replace(/='([^']+)''/g, "='$1'")
+      
+      // Clean up extra whitespace
+      .replace(/\n\s*\n\s*\n/g, "\n\n")
+      .replace(/[\s]+$/gm, "");
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+async function main() {
+  console.log('Starting remaining syntax error fixes...');
+  
+  // Find all TypeScript and JSX files
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    '*.tsx',
+    '*.ts',
+    '__tests__/**/*.tsx',
+    '__tests__/**/*.ts'
+  ];
+  
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    for (const file of files) {
+      totalFiles++;
+      if (fixFile(file)) {
+        fixedFiles++;
       }
     }
   }
   
-  traverse(dir);
-  return files;
+  console.log(`\nFixed ${fixedFiles} out of ${totalFiles} files`);
+  console.log('Remaining syntax error fixes completed!');
 }
 
-// Main execution
-try {
-  const appDir = path.join(__dirname, 'app');
-  const files = findFiles(appDir);
-  
-  console.log(`📁 Found ${files.length} files to process...`);
-  
-  let fixedCount = 0;
-  for (const file of files) {
-    if (processFile(file)) {
-      fixedCount++;
-    }
-  }
-  
-  console.log(`🎉 Fixed ${fixedCount} files!`);
-  
-  // Run type check to see remaining errors
-  console.log('🔍 Running type check...');
-  try {
-    execSync('npm run type-check', { stdio: 'pipe' });
-    console.log('✅ Type check passed!');
-  } catch (error) {
-    console.log('⚠️  Type check found remaining issues, but files have been cleaned up.');
-  }
-  
-} catch (error) {
-  console.error('❌ Error:', error.message);
-  process.exit(1);
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
 }
+
+export { fixFile, fixes };

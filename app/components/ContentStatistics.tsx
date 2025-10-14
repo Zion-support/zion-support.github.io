@@ -41,12 +41,7 @@ export default function Page() {
               </p>;
             </div>
           </div>
-          <div className="mt-12">;
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
-              Get Started Today;
-            </button>;
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );}'

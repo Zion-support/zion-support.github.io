@@ -11,13 +11,14 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    fcp: null,
-    lcp: null,
-    ttfb: null,
-    loadTime: null
+    loadTime: null,
+    firstContentfulPaint: null,
+    largestContentfulPaint: null,
+    firstInputDelay: null,
+    cumulativeLayoutShift: null;
   });
-
+>>>>>>> origin/main;
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     // Only run in development'
     if (process.env.NODE_ENV !== 'development') {
@@ -45,7 +46,25 @@ const PerformanceMonitor: React.FC = () => {
   if (process.env.NODE_ENV === 'production') {
     return null;
   }
-
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    // Only run in browser;
+    if (typeof window === 'undefined') return;'"
+    // Get performance metrics;
+    const getPerformanceMetrics = () => {;
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'";
+      const paintEntries = performance.getEntriesByType('paint');'";
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');'";
+      const lcp = performance.getEntriesByType('largest-contentful-paint');'";
+      setMetrics({
+        cls: 0, // Would need to be calculated with observer;
+        inp: 0, // Would need to be calculated with observer;
+        fcp: fcp ? fcp.startTime : null,
+        lcp: lcp.length > 0 ? lcp[lcp.length - 1].startTime : null,
+        ttfb: navigation ? navigation.responseStart - navigation.requestStart : null,
+        loadTime: navigation ? navigation.loadEventEnd - navigation.navigationStart : null;
+      }
+    // Wait for page load;
   return (
     <div className="fixed bottom-4 left-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs"></div>
       <h3 className="font-bold mb-2">Performance Metrics</h3>

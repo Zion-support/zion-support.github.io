@@ -45,7 +45,11 @@ const Page = () => {
       description: '24/7 support from our team of specialists'
     }
   ];
-
+  const testimonials = [{
+      name: "Sarah Johnson", company: "TechStart Inc.", role: "CEO", content: "Zion Analytics Pro transformed our data analysis. We now make decisions 40% faster with real-time insights.", rating: 5, avatar: "SJ", }, {
+      name: "Michael Chen", company: "E-commerce Solutions", role: "CTO", content: "The predictive analytics feature helped us identify trends before our competitors. Game changer!", rating: 5, avatar: "MC", }, {
+      name: "Emily Rodriguez", company: "Digital Marketing Agency", role: "Operations Director", content: "Easy to use, powerful features, and excellent support. Our team productivity increased by 60%.", rating: 5, avatar: "ER", }];
+  const stats = [{number: "10, 000+", label: "Active Users", icon: <Users className="w-6 h-6" />, }, {number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" />, }, {number: "100+", label: "Integrations", icon: <Database className="w-6 h-6" />, }, {number: "24/7", label: "Support", icon: <Clock className="w-6 h-6" />, }];
   return (
     <></>
       <EnhancedSEO 
@@ -83,7 +87,6 @@ const Page = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -102,8 +105,6 @@ const Page = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
             </div>

@@ -2,8 +2,7 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Link } from 'react-router-dom';
-import { 
-  AcademicCapIcon,
+import { AcademicCapIcon,
   PlayIcon,
   DocumentTextIcon,
   ClockIcon,
@@ -50,7 +49,6 @@ const TutorialsPage: React.FC = () => {
       href: '/'
     }
   ];
-
   return (
     <></>
       <Helmet></Helmet>
@@ -73,7 +71,6 @@ const TutorialsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Tutorials Grid */}
         <section className="py-20"></section>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -84,7 +81,7 @@ const TutorialsPage: React.FC = () => {
                     <span className="px-3 py-1 bg-purple-600 text-white text-sm rounded-full"></span>
                       {tutorial.category}
                     </span>
-                    <span className="text-sm text-gray-400">{tutorial.level}</span>
+                    <span className="text-sm text-gray-400">{tutorial.level}</span>"
                   </div>
                   
                   <h3 className="text-xl font-semibold mb-3 group-hover:text-purple-400 transition-colors"></h3>
@@ -102,7 +99,7 @@ const TutorialsPage: React.FC = () => {
                     </div>
                     
                     <Link
-                      to={tutorial.href}
+                      to={tutorial.href;
                       className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium group-hover:gap-2 transition-all"
                     ></Link>
                       Start Tutorial
@@ -114,7 +111,6 @@ const TutorialsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-slate-800"></section>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
@@ -129,7 +125,7 @@ const TutorialsPage: React.FC = () => {
               ></Link>
                 Get Started Today
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="border-2 border-purple-400 text-purple-300 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
               ></Link>

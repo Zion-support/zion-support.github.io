@@ -73,15 +73,14 @@ const SupportPage = () => {'
       question: "What happens if I need to scale my solution?",
       answer: "Our solutions are built to scale with your business. We can easily adjust capacity, add new features, or expand functionality as your needs grow. We also provide ongoing optimization and performance monitoring.",
       category: "cloud",
-      featured: false
-    }
+      featured: false;
   ];
 
   const supportChannels = [
     {
       title: "Live Chat",
       description: "Get instant help from our support team",
-      icon: <MessageCircle className="w-8 h-8" />,
+      icon: <MessageCircle className="w-6 h-6" />,
       availability: "24/7",
       responseTime: "Immediate",
       link: "#chat"
@@ -89,7 +88,7 @@ const SupportPage = () => {'
     {
       title: "Phone Support",
       description: "Speak directly with our technical experts",
-      icon: <Phone className="w-8 h-8" />,
+      icon: <Phone className="w-6 h-6" />,
       availability: "24/7",
       responseTime: "Immediate",
       link: "tel:+13024640950"
@@ -97,7 +96,7 @@ const SupportPage = () => {'
     {
       title: "Email Support",
       description: "Send us detailed questions and get comprehensive answers",
-      icon: <Mail className="w-8 h-8" />,
+      icon: <Mail className="w-6 h-6" />,
       availability: "24/7",
       responseTime: "Within 2 hours",
       link: "mailto:support@ziontechgroup.com"
@@ -105,7 +104,7 @@ const SupportPage = () => {'
     {
       title: "Documentation",
       description: "Browse our comprehensive knowledge base",
-      icon: <BookOpen className="w-8 h-8" />,
+      icon: <BookOpen className="w-6 h-6" />,
       availability: "24/7",
       responseTime: "Immediate",
       link: "/docs"
@@ -160,7 +159,6 @@ const SupportPage = () => {'
         item.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredFAQs;
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <EnhancedSEO
@@ -190,7 +188,7 @@ const SupportPage = () => {'
               <input
                 type="text"
                 placeholder="Search for help, documentation, or answers..."
-                value={searchQuery}
+                value={searchQuery;
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 text-lg"
               />
@@ -233,7 +231,7 @@ const SupportPage = () => {'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {supportChannels.map((channel, index) => (
               <div
-                key={index}
+                key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden text-center"
               ></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -258,7 +256,7 @@ const SupportPage = () => {'
                     </div>
                   </div>
                   <a
-                    href={channel.link}
+                    href={channel.link;
                     className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                   ></a>
                     Get Help
@@ -289,7 +287,7 @@ const SupportPage = () => {'
           <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
             {supportCategories.map((category) => (
               <button
-                key={category.id}
+                key={category.id;
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                   selectedCategory === category.id'
@@ -297,7 +295,7 @@ const SupportPage = () => {'
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
-                {category.icon}
+                {category.icon;
                 <span>{category.label}</span>
               </button>
             ))}
@@ -359,7 +357,7 @@ const SupportPage = () => {'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {resources.map((resource, index) => (
               <div
-                key={index}
+                key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               ></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -379,7 +377,7 @@ const SupportPage = () => {'
                     {resource.description}
                   </p>
                   <a
-                    href={resource.link}
+                    href={resource.link;
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group"
                   ></a>
                     Learn More
@@ -422,7 +420,7 @@ const SupportPage = () => {'
       </section>
 
     </div>
-  );
+  )};
 };
 
 export default SupportPage;

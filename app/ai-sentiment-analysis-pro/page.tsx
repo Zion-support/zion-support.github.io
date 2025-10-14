@@ -4,37 +4,33 @@ import EnhancedSEO from '../components/EnhancedSEO';'
 import ResponsiveContainer from '../components/ResponsiveContainer';'
 import FuturisticCard from '../components/FuturisticCard';'
 import FuturisticButton from '../components/FuturisticButton';
-
 const AISentimentAnalysisPro = () => {
   const features = [
     {
-      title: "Real-time Sentiment Tracking",
-      description: "Monitor customer sentiment across all channels in real-time",
-      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Real-time Sentiment Tracking","
+      description: "Monitor customer sentiment across all channels in real-time","
+      icon: <TrendingUp className="w-6 h-6" />,"
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-language Support",
-      description: "Analyze sentiment in 50+ languages with high accuracy",
-      icon: <Globe className="w-6 h-6" />,
+      title: "Multi-language Support","
+      description: "Analyze sentiment in 50+ languages with high accuracy","
+      icon: <Globe className="w-6 h-6" />,"
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Emotion Detection",
-      description: "Detect emotions like joy, anger, fear, and sadness in text",
-      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Emotion Detection","
+      description: "Detect emotions like joy, anger, fear, and sadness in text","
+      icon: <MessageSquare className="w-6 h-6" />,"
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Trend Analysis",
-      description: "Identify sentiment trends and patterns over time",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Trend Analysis","
+      description: "Identify sentiment trends and patterns over time","
+      icon: <BarChart3 className="w-6 h-6" />,"
       color: "from-orange-500 to-red-500"
     }
   ];
-
-  
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
       <EnhancedSEO
@@ -72,22 +68,21 @@ const AISentimentAnalysisPro = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
+              icon={<ArrowRight className="w-5 h-5" />}"
             >
-              Get Started Today
+              Get Started Today;
             </FuturisticButton>
-            <FuturisticButton
+            <FuturisticButton;
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<TrendingUp className="w-5 h-5" />}
+              icon={<TrendingUp className="w-5 h-5" />}"
             >
-              View Demo
+              View Demo;
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer></ResponsiveContainer>
@@ -101,8 +96,8 @@ const AISentimentAnalysisPro = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
             {features.map((feature, index) => (
-              <FuturisticCard
-                key={index}
+<FuturisticCard
+                key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               ></FuturisticCard>
                 <div
@@ -121,7 +116,6 @@ const AISentimentAnalysisPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
         <ResponsiveContainer></ResponsiveContainer>
@@ -143,7 +137,6 @@ const AISentimentAnalysisPro = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <ResponsiveContainer></ResponsiveContainer>
@@ -159,15 +152,15 @@ const AISentimentAnalysisPro = () => {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
+                icon={<ArrowRight className="w-5 h-5" />}"
               >
-                Start Your Free Trial
+                Start Your Free Trial;
               </FuturisticButton>
-              <FuturisticButton
+              <FuturisticButton;
                 href="/pricing"
                 variant="outline"
                 size="lg"
-                icon={<Target className="w-5 h-5" />}
+                icon={<Target className="w-5 h-5" />}"
               >
                 View Pricing
               </FuturisticButton>

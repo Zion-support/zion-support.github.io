@@ -1,6 +1,5 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';
-
 interface EnhancedSEOProps {
   title?: string;
   description?: string;
@@ -11,8 +10,7 @@ interface EnhancedSEOProps {
   twitterImage?: string;
   structuredData?: object;
   noIndex?: boolean;
-  noFollow?: boolean}
-
+  noFollow?: boolean;
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 
   title,
@@ -65,9 +63,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       'https://twitter.com/ziontechgroup'
     ]
   };
-
   const mergedStructuredData = structuredData || defaultStructuredData;
-
   return (
     <Helmet></Helmet>
       {/* Basic Meta Tags */}

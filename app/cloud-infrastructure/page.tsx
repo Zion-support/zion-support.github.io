@@ -66,9 +66,9 @@ export default function Infrastructure() {
         </div>
       </div>
     </div>
-  );}
+)}
+  )"
 }
-
 const Page = () => {
   const features = [
     {

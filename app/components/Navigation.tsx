@@ -12,12 +12,13 @@ import {
 } from 'lucide-react';
 
 interface NavigationProps {
-  onSidebarToggle: () => void;
+  onSidebarToggle?: () => void;
 }
-
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
-  const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
+const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
   const [isITServicesOpen, setIsITServicesOpen] = useState(false);
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
   const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);
@@ -105,7 +106,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               return (
                 <div key={item.name} className="relative group"></div>
                   <Link
-                    to={item.href}
+                    to={item.href;
                     className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActive(item.href)'
                         ? 'bg-purple-600 text-white''
@@ -123,8 +124,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50"></div>
                       {item.submenu.map((subItem) => (
-                        <Link key={subItem.name}
-                          to={subItem.href}
+                        <Link key={subItem.name;
+                          to={subItem.href;
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
                         ></Link>
                           {subItem.name}

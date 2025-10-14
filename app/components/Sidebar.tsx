@@ -8,22 +8,20 @@ import {
   BriefcaseIcon,
   PhoneIcon,
   DocumentTextIcon,
-  AcademicCapIcon,
-  PlayIcon,
+  ChatBubbleLeftRightIcon,
+  CogIcon,
   QuestionMarkCircleIcon,
-  CpuChipIcon,
-  CloudIcon,
   ShieldCheckIcon,
-  GlobeAltIcon,
+  MapIcon,
+  CloudIcon,
+  CpuChipIcon,
   SignalIcon,
   UserGroupIcon'
 } from '@heroicons/react/24/outline';
 
 interface SidebarProps {
   isOpen: boolean
-  onClose: () => void
-}
-
+  onClose: () => void;
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
@@ -60,7 +58,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   };
 
   if (!isOpen) return null;
-
   return (
     <></>
       {/* Backdrop */}
@@ -90,7 +87,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             {navigation.map((item) => (
               <li key={item.name}></li>
                 <Link
-                  to={item.href}
+                  to={item.href;
                   className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive(item.href)'
                       ? 'bg-purple-600 text-white''
@@ -108,7 +105,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     {item.submenu.map((subItem) => (
                       <li key={subItem.name}></li>
                         <Link
-                          to={subItem.href}
+                          to={subItem.href;
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                             isActive(subItem.href)'
                               ? 'text-purple-400 bg-slate-800''

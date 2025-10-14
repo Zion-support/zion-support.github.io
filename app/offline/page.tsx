@@ -45,7 +45,6 @@ const Page = () => {
       description: '24/7 support from our team of specialists'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20"></div>
       <div className="container mx-auto px-4">;

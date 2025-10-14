@@ -46,7 +46,6 @@ const Page = () => {
 
     }
   ];
-
   return (
     <></>
       <EnhancedSEO 
@@ -106,8 +105,10 @@ const Page = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
-            </div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </section>
 

@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from 'react';
 
 interface FuturisticBackgroundProps {
   children: React.ReactNode;
@@ -102,7 +101,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
   return (
     <div className="relative min-h-screen"></div>
       <canvas
-        ref={canvasRef}
+        ref={canvasRef;
         className="fixed inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: -1 }}
       /></canvas>
@@ -116,7 +115,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         <div className="absolute inset-0"></div>
           {Array.from({ length: 20 }).map((_, i) => (
             <div
-              key={i}
+              key={i;
               className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
               style={{
                 left: `${Math.random() * 100}%`,
@@ -127,11 +126,16 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
             ></div>
 ))}
         </div>
-
-        {/* Gradient Overlay */}"""
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div></div>"""
+        <div className="absolute inset-0"></div>"
+          {Array.from({ length: 20,}).map((_, i) => (
+            <div;
+              key={i}
+              }}></div>
+          ))
+        </div>
+        {/* Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 via-transparent to-slate-900/50"></div>
       </div>
-      
       {/* Content */}
       <div className="relative z-10"></div>
         {children}

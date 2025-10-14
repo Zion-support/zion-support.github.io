@@ -3,8 +3,7 @@
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 import { Link } from 'react-router-dom';
-import { 
-  CurrencyDollarIcon,
+import { CurrencyDollarIcon,
   CheckIcon,
   ArrowRightIcon,
   PhoneIcon,
@@ -29,7 +28,7 @@ const PricingPage: React.FC = () => {
         'Monthly Reports','
         'Basic Analytics'
       ],
-      popular: false
+      popular: false;
     },
     {'
       name: 'Professional','
@@ -46,7 +45,7 @@ const PricingPage: React.FC = () => {
         'Custom Integrations','
         '24/7 Monitoring'
       ],
-      popular: true
+      popular: true;
     },
     {'
       name: 'Enterprise','
@@ -65,10 +64,11 @@ const PricingPage: React.FC = () => {
         'On-site Consulting','
         'SLA Guarantees'
       ],
-      popular: false
+      popular: false;
+=======
     }
+>>>>>>> origin/main
   ];
-
   const addOns = [
     {'
       name: 'AI Development','
@@ -95,7 +95,6 @@ const PricingPage: React.FC = () => {
       description: 'Custom training sessions for your team'
     }
   ];
-
   return (
     <></>
       <Helmet></Helmet>
@@ -103,7 +102,6 @@ const PricingPage: React.FC = () => {
         <meta name="description" content="Transparent pricing for our AI, cybersecurity, cloud infrastructure, and IT solutions. Choose the plan that fits your business needs." /></meta>
         <meta name="keywords" content="pricing, AI solutions pricing, cybersecurity pricing, cloud infrastructure pricing, IT services pricing" /></meta>
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
         <div className="absolute inset-0 opacity-20"></div>
@@ -124,7 +122,6 @@ const PricingPage: React.FC = () => {
             </p>
           </div>
         </section>
-
       {/* Pricing Plans */}
       <section className="py-20 bg-slate-900"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -154,6 +151,7 @@ const PricingPage: React.FC = () => {
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
+<<<<<<< HEAD
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
                 
@@ -180,7 +178,6 @@ const PricingPage: React.FC = () => {
             ))}
           </div>
         </section>
-
       {/* Add-ons Section */}
       <section className="py-20 bg-slate-800/50"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -201,12 +198,11 @@ const PricingPage: React.FC = () => {
                   <span className="text-2xl font-bold text-purple-400">{addOn.price}</span>
                   <span className="text-gray-400 ml-1">{addOn.period}</span>
                 </div>
-                <p className="text-gray-300 text-sm">{addOn.description}</p>
+                <p>{addOn.description}</p>"
               </div>
             ))}
           </div>
         </section>
-
       {/* FAQ Section */}
       <section className="py-20 bg-slate-900"></section>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -242,7 +238,6 @@ const PricingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900"></section>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
@@ -260,7 +255,7 @@ const PricingPage: React.FC = () => {
             ></Link>
               Contact Sales
             </Link>
-            <Link
+            <Link;
               to="/demo"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
             ></Link>
@@ -268,7 +263,6 @@ const PricingPage: React.FC = () => {
             </Link>
           </div>
         </section>
-
         {/* Contact Info */}
         <section className="py-16 px-4 bg-gray-50"></section>
           <div className="max-w-4xl mx-auto text-center"></div>

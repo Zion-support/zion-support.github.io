@@ -1,19 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 interface Props {
-  children: ReactNode;
+  children: 'ReactNode;','
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
-
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  hasError: 'boolean;','
+  error: 'Error | null;','
+  errorInfo: 'ErrorInfo | null;','
   errorId: string;
 }
-
 class ComprehensiveErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -24,7 +21,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       errorId: ''
     };
   }
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
@@ -32,11 +28,10 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
-
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo;
     });
 
     // Log error to console in development'
@@ -46,16 +41,14 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo);
     }
-
-    // Call custom error handler if provided
+    // Call custom error handler if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
   }
-
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to an error reporting service
-    // like Sentry, LogRocket, or Bugsnag
+    // In a real application, you would send this to an error reporting service;
+    // like Sentry, LogRocket, or Bugsnag;
     const errorData = {
       message: error.message,
       stack: error.stack,
@@ -63,12 +56,10 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       errorId: this.state.errorId,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href;
     };
-
-    // For now, just log to console
+    // For now, just log to console;
     };
-
   handleRetry = () => {
     this.setState({
       hasError: false,
@@ -77,19 +68,16 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       errorId: ''
     });
   };
-
   handleReload = () => {
     window.location.reload();
   };
-
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
+      // Custom fallback UI;
       if (this.props.fallback) {
         return this.props.fallback;
       }
-
-      // Default error UI
+      // Default error UI;
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4"></div>
           <div className="max-w-2xl mx-auto text-center"></div>
@@ -129,7 +117,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6"></div>
                 <button
-                  onClick={this.handleRetry}
+                  onClick={this.handleRetry;
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
                 ></button>
                   <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" /></RefreshCw>
@@ -137,7 +125,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                 </button>
                 
                 <button
-                  onClick={this.handleReload}
+                  onClick={this.handleReload;
                   className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 ></button>
                   <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" /></RefreshCw>
@@ -153,8 +141,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                   <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /></Home>
                   Go Home
                 </Link>
-                
-                <Link
+                <Link;
                   to="/contact"
                   className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
                 ></Link>
@@ -162,7 +149,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
                   Contact Support
                 </Link>
               </div>
-
               {this.state.errorId && (
                 <p className="text-gray-400 text-sm mt-6"></p>
                   Error ID: {this.state.errorId}

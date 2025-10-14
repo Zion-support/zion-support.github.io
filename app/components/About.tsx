@@ -41,29 +41,29 @@ const About: React.FC = () => {'
               Our mission is to empower businesses with innovative technology that drives ,
               growth, efficiency, and success.
             </p>
-            "
-            <div className="space-y-4 mb-8">"
-              <div className="flex items-start">"
-                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />"
-                <p className="text-gray-600">"
-                  <strong className="text-gray-900">Expert Team: </strong> Our team consists of ,
-                  highly skilled professionals with deep expertise in AI, cloud computing, 
+            <div className="space-y-4 mb-8">
+              <div className="flex items-start">
+                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                <p className="text-gray-600">
+                  <strong className="text-gray-900">Expert Team:</strong> Our team consists of
+                  highly skilled professionals with deep expertise in AI, cloud computing, ;
                   and enterprise software development.
                 </p>
-              </div>"
-              <div className="flex items-start">"
-                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />"
-                <p className="text-gray-600">"
-                  <strong className="text-gray-900">Proven Track Record: </strong> We have 
-                  successfully delivered hundreds of projects for clients across various 
+              </div>
+    </>
+              <div className="flex items-start">
+                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                <p className="text-gray-600">
+                  <strong className="text-gray-900">Proven Track Record:</strong> We have
+                  successfully delivered hundreds of projects for clients across various ;
                   industries and company sizes.
                 </p>
-              </div>"
-              <div className="flex items-start">"
-                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />"
-                <p className="text-gray-600">"
-                  <strong className="text-gray-900">Cutting-Edge Technology:</strong> We 
-                  leverage the latest technologies and best practices to deliver 
+              </div>
+              <div className="flex items-start">
+                <CheckIcon className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                <p className="text-gray-600">
+                  <strong className="text-gray-900">Cutting-Edge Technology:</strong> We
+                  leverage the latest technologies and best practices to deliver ;
                   innovative solutions that give our clients a competitive advantage.
                 </p>
               </div>
@@ -79,7 +79,7 @@ const About: React.FC = () => {'
                   <div className="text-2xl font-bold text-gray-900">{stat.value}</div>"
                   <div className="text-sm text-gray-600">{stat.label}</div>
                 </div>
-              ))},
+              )})}
             </div>
           </div>
 
@@ -92,17 +92,16 @@ const About: React.FC = () => {'
                 enabling businesses of all sizes to compete and thrive in the
                 digital economy.
               </p>
-              "
-              <div className="space-y-4">"
-                <div className="flex items-center">"
+              <div className="space-y-4">
+                <div className="flex items-center">
                   <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
                   <span>Innovation-driven approach</span>
-                </div>"
-                <div className="flex items-center">"
+                </div>
+                <div className="flex items-center">
                   <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
                   <span>Client-focused solutions</span>
-                </div>"
-                <div className="flex items-center">"
+                </div>
+                <div className="flex items-center">
                   <div className="w-3 h-3 bg-white rounded-full mr-3"></div>
                   <span>Sustainable growth strategies</span>
                 </div>
@@ -129,7 +128,7 @@ const About: React.FC = () => {'
                   {value.description},
                 </p>
               </div>
-            ))},
+            ))}
           </div>
         </div>
       </div>

@@ -42,7 +42,6 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
           </div>
         </div>
       </header>
-
       {/* Article Content */}
       <article className="max-w-6 xl mx-auto px-4 py-12"></article>
         {/* Executive Summary */}
@@ -305,37 +304,37 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
             <div className="bg-white p-6 rounded-lg shadow-lg border"></div>
               <Cpu className="w-8 h-8 text-blue-600 mb-4" /></Cpu>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Process Mining</h3>
-              <p className="text-gray-600">Discover and analyze existing business processes using advanced algorithms</p>
+              <p>Discover and analyze existing business processes using advanced algorithms</p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg border"></div>
               <Settings className="w-8 h-8 text-green-600 mb-4" /></Settings>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Workflow Automation</h3>
-              <p className="text-gray-600">Automate complex business workflows with intelligent decision-making</p>
+              <p>Automate complex business workflows with intelligent decision-making</p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg border"></div>
               <Brain className="w-8 h-8 text-purple-600 mb-4" /></Brain>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">AI/ML Integration</h3>
-              <p className="text-gray-600">Integrate machine learning models for intelligent process optimization</p>
+              <p>Integrate machine learning models for intelligent process optimization</p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg border"></div>
               <Target className="w-8 h-8 text-orange-600 mb-4" /></Target>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">RPA Solutions</h3>
-              <p className="text-gray-600">Implement robotic process automation for repetitive tasks</p>
+              <p>Implement robotic process automation for repetitive tasks</p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg border"></div>
               <BarChart className="w-8 h-8 text-red-600 mb-4" /></BarChart>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Analytics & Monitoring</h3>
-              <p className="text-gray-600">Real-time monitoring and analytics for process performance</p>
+              <p>Real-time monitoring and analytics for process performance</p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-lg border"></div>
               <Zap className="w-8 h-8 text-indigo-600 mb-4" /></Zap>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Integration Platforms</h3>
-              <p className="text-gray-600">Seamless integration with existing enterprise systems</p>
+              <p>Seamless integration with existing enterprise systems</p>
             </div>
           </div>
         </div>
@@ -357,7 +356,7 @@ export default function AutonomousBusinessProcessesImplementationGuide2026() {
               Get Your Implementation Plan
               <ArrowLeft className="w-5 h-5 ml-2" /></ArrowLeft>
             </Link>
-            <Link 
+            <Link ;
               to="/case-studies"
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-900 transition-colors font-semibold"
             ></Link>

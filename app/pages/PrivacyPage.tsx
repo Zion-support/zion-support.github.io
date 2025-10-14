@@ -91,7 +91,6 @@ const PrivacyPage: React.FC = () => {'
     address: '364 E Main St STE 1008, Middletown, DE 19709','
     dpo: 'Data Protection Officer'
   }
-
   return (
     <></>
       <Helmet></Helmet>

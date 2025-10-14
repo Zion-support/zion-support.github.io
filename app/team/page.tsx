@@ -144,7 +144,7 @@ export default function TeamPage() {
             Our diverse team of AI researchers, engineers, and technology leaders is dedicated to pushing the boundaries of innovation and delivering exceptional solutions.
           </p>
         </div>
-      </section>
+</section>
 
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10"></section>
@@ -180,7 +180,7 @@ export default function TeamPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {teamMembers.map((member, index) => (
               <div
-                key={index}
+                key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               ></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -224,7 +224,7 @@ export default function TeamPage() {
                   <div className="flex justify-center space-x-4"></div>
                     {member.social.linkedin && (
                       <a
-                        href={member.social.linkedin}
+                        href={member.social.linkedin;
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-gray-300 hover:text-cyan-400 hover:bg-white/20 transition-all duration-300"
@@ -234,7 +234,7 @@ export default function TeamPage() {
                     )}
                     {member.social.github && (
                       <a
-                        href={member.social.github}
+                        href={member.social.github;
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-gray-300 hover:text-cyan-400 hover:bg-white/20 transition-all duration-300"
@@ -244,7 +244,7 @@ export default function TeamPage() {
                     )}
                     {member.social.twitter && (
                       <a
-                        href={member.social.twitter}
+                        href={member.social.twitter;
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-gray-300 hover:text-cyan-400 hover:bg-white/20 transition-all duration-300"
@@ -285,7 +285,7 @@ export default function TeamPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {values.map((value, index) => (
               <div
-                key={index}
+                key={index;
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden text-center"
               ></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

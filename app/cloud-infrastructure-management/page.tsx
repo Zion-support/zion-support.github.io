@@ -28,7 +28,7 @@ import { Link } from 'react-router-dom';'
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const Page = () => {
-  const features = [
+const features = [
     {
       icon: <CheckCircle className="w-8 h-8" />,'
       title: 'Advanced Features','
@@ -138,7 +138,15 @@ const Page = () => {
         </section>
 
       </div>
-    </div>
+    </>
+        <div className="text-center"></div>
+          <h1>Page</h1>
+          <p className="text-gray-300 text-lg"></p>
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>)}
   );
 };
 '

@@ -15,7 +15,7 @@ const Contact: React.FC = () => {,'
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({,
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value;
     });
   };
 
@@ -70,14 +70,14 @@ const Contact: React.FC = () => {,'
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2"></label>
                     Full Name *
                   </label>
-                  <input"
-                    type="text""
-                    id="name""
-                    name="name",
-                    value: {formData.name},
-                    onChange: {handleChange},
-                    required"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
+                  <input;
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required;
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Your full name"
                   /></input>
                 </div>
@@ -85,14 +85,14 @@ const Contact: React.FC = () => {,'
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2"></label>
                     Email Address *
                   </label>
-                  <input"
-                    type="email""
-                    id="email""
-                    name="email",
-                    value: {formData.email},
-                    onChange: {handleChange},
-                    required"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
+                  <input;
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required;
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="your@email.com"
                   /></input>
                 </div>
@@ -102,13 +102,13 @@ const Contact: React.FC = () => {,'
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2"></label>
                   Company
                 </label>
-                <input"
-                  type="text""
-                  id="company""
-                  name="company",
-                  value: {formData.company},
-                  onChange={handleChange}"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
+                <input;
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Your company name"
                 /></input>
               </div>
@@ -117,14 +117,14 @@ const Contact: React.FC = () => {,'
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2"></label>
                   Message *
                 </label>
-                <textarea"
-                  id="message""
-                  name="message",
-                  value: {formData.message},
-                  onChange: {handleChange},
-                  required
-                  rows={6}"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
+                <textarea;
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required;
+                  rows={6}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Tell us about your project or requirements..."
                 /></textarea>
               </div>
@@ -171,30 +171,30 @@ const Contact: React.FC = () => {,'
                     </p>
                   </div>
                 </div>
-              ))},
+              )})}
             </div>
 
             {/* Additional Info */}"
             <div className="bg-gray-50 rounded-lg p-6">"
               <h4 className="text-lg font-semibold text-gray-900 mb-3"></h4>
                 Why Choose Us?
-              </h4>"
-              <ul className="space-y-2 text-gray-600">"
-                <li className="flex items-center">"
+              </h4>
+              <ul className="space-y-2 text-gray-600">
+                <li className="flex items-center">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Free initial consultation
-                </li>"
-                <li className="flex items-center">"
+                  Free initial consultation;
+                </li>
+                <li className="flex items-center">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Customized solutions
-                </li>"
-                <li className="flex items-center">"
+                  Customized solutions;
+                </li>
+                <li className="flex items-center">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  24/7 support available
-                </li>"
-                <li className="flex items-center">"
+                  24/7 support available;
+                </li>
+                <li className="flex items-center">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Proven track record
+                  Proven track record;
                 </li>
               </ul>
 
@@ -202,7 +202,7 @@ const Contact: React.FC = () => {,'
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };'
 "'

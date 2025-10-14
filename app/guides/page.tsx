@@ -2,7 +2,6 @@ import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { Helmet } from 'react-helmet-async';'
 import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react';
-
 const GuidesPage: React.FC = () => {
   const guides = [
     {'
@@ -67,8 +66,7 @@ const GuidesPage: React.FC = () => {
       case 'Advanced': return 'text-orange-400 bg-orange-400/20';'
       case 'Expert': return 'text-red-400 bg-red-400/20';'
       default: return 'text-gray-400 bg-gray-400/20';
-    ,
-  }
+    }
   };
 
 const Page = () => {
@@ -140,8 +138,8 @@ const Page = () => {
                   
                   <div className="flex items-center justify-between"></div>
                     <span className="text-gray-400 text-sm">{guide.duration}</span>
-                    <Link
-                      to={guide.url}
+<Link
+                      to={guide.url;
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
                     ></Link>
                       Read Guide →
@@ -203,7 +201,7 @@ const Page = () => {
               ></Link>
                 Get Expert Consultation
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
               ></Link>

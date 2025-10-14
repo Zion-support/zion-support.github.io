@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';'
 import { Helmet } from 'react-helmet-async';
-import { 
-  PhoneIcon,
+import { PhoneIcon,
   EnvelopeIcon,
   MapPinIcon,
   ClockIcon,
@@ -20,29 +19,23 @@ const ContactPage: React.FC = () => {
     service: '','
     message: ''
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+    // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
-
   const contactInfo = [
     {
       icon: PhoneIcon,'
@@ -80,7 +73,6 @@ const ContactPage: React.FC = () => {
     'Digital Transformation','
     'Consulting'
   ];
-
   return (
     <></>
       <Helmet></Helmet>
@@ -88,7 +80,6 @@ const ContactPage: React.FC = () => {
         <meta name="description" content="Get in touch with Zion Tech Group. Contact us for AI solutions, cybersecurity, cloud infrastructure, and IT services. We're here to help transform your business." /></meta>
         <meta name="keywords" content="contact, AI solutions contact, cybersecurity contact, cloud infrastructure contact, IT services contact" /></meta>
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden"></section>
         <div className="absolute inset-0 opacity-20"></div>
@@ -110,7 +101,6 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Contact Form & Info */}
       <section className="py-20 bg-slate-900"></section>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -138,9 +128,9 @@ const ContactPage: React.FC = () => {
                         message: ''
                       });
                     }}
-                    className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+                    className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover: 'from-purple-700 hover:to-cyan-700 transition-all duration-300"','
                   >
-                    Send Another Message
+                    Send Another Message;
                   </button>
                 </div>
               ) : (
@@ -150,12 +140,12 @@ const ContactPage: React.FC = () => {
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"></label>
                         Full Name *
                       </label>
-                      <input
+                      <input;
                         type="text"
                         id="name"
                         name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
+value={formData.name;
+                        onChange={handleInputChange;
                         required
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="Your full name"
@@ -166,12 +156,12 @@ const ContactPage: React.FC = () => {
                       <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2"></label>
                         Email Address *
                       </label>
-                      <input
+                      <input;
                         type="email"
                         id="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
+value={formData.email;
+                        onChange={handleInputChange;
                         required
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="your@email.com"
@@ -184,12 +174,12 @@ const ContactPage: React.FC = () => {
                       <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2"></label>
                         Company
                       </label>
-                      <input
+                      <input;
                         type="text"
                         id="company"
                         name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
+value={formData.company;
+                        onChange={handleInputChange;
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="Your company name"
                       /></input>
@@ -199,12 +189,12 @@ const ContactPage: React.FC = () => {
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2"></label>
                         Phone Number
                       </label>
-                      <input
+                      <input;
                         type="tel"
                         id="phone"
                         name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
+value={formData.phone;
+                        onChange={handleInputChange;
                         className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="+1 (555) 123-4567"
                       /></input>
@@ -215,11 +205,11 @@ const ContactPage: React.FC = () => {
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Service Interest
                     </label>
-                    <select
+                    <select;
                       id="service"
                       name="service"
-                      value={formData.service}
-                      onChange={handleInputChange}
+value={formData.service;
+                      onChange={handleInputChange;
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     ></select>
                       <option value="">Select a service</option>
@@ -233,21 +223,20 @@ const ContactPage: React.FC = () => {
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Message *
                     </label>
-                    <textarea
+                    <textarea;
                       id="message"
                       name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
+value={formData.message;
+                      onChange={handleInputChange;
                       required
-                      rows={6}
+                      rows={6;
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                       placeholder="Tell us about your project or how we can help..."
                     /></textarea>
                   </div>
-                  
-                  <button
+                  <button;
                     type="submit"
-                    disabled={isSubmitting}
+disabled={isSubmitting;
                     className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   ></button>'
                     {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -256,7 +245,6 @@ const ContactPage: React.FC = () => {
                 </form>
               )}
             </div>
-
             {/* Contact Information */}
             <div className="space-y-8"></div>
               <div></div>

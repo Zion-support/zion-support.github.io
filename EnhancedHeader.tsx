@@ -2,10 +2,10 @@ import { Menu, X } from 'lucide-react''
 import React, { useState } from 'react''
 import { Link } from 'react-router-dom'
 const EnhancedHeader: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <header className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 fixed w-full top-0 z-50"></header>
       <div className="container mx-auto px-4"></div>
@@ -25,12 +25,15 @@ const EnhancedHeader: React.FC = () => {
               Services
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
               Contact
+            </Link>
+          </nav>
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
             className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"></button>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
+        </div>
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-cyan-500/20"></div>
@@ -43,6 +46,9 @@ const EnhancedHeader: React.FC = () => {
                 Services
               <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
                 Contact
+              </Link>
+            </nav>
+          </div>
         )}
   )
 }

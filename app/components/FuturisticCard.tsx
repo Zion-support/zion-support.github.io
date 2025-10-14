@@ -1,5 +1,8 @@
-import React from 'react;
-interface FuturisticCardProps {
+const FuturisticCard: React.FC<FuturisticCardProps> = ({ ;
+  children, ;
+  className=
+  variant = 'default}) => {';
+  const baseClasses="rounded-xl p-6 border border-white/20 backdrop-blur-sm" variantClasses = {
   children: React.ReactNode;
   className?: string;'
   variant?: 'default' | 'glow' | 'gradient'}
@@ -22,7 +25,5 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({ '
       {children}
     </div>
   );
-};
-
 export default FuturisticCard;
 '

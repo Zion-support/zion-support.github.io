@@ -6,15 +6,14 @@ export function withLazyLoading<T extends ComponentType<any>>(
   Component: T,
   fallback?: React.ReactNode;
 ) {
-  const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
+const LazyComponent = lazy(() => Promise.resolve({ default: Component,}));
   return (props: ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
       {/* eslint-disable-next-line @ */}
       <LazyComponent {...(props as any)} /></LazyComponent>
     </Suspense>
-  );
+  )};
 }
-
 // Utility function to create lazy-loaded components;
 // eslint-disable-next-line @;
 export function createLazyComponent<T extends ComponentType<any>>(

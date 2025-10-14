@@ -13,11 +13,11 @@ const ImprovedErrorBoundary: React.FC = () => {
         <div className="max-w-6xl mx-auto text-center">;
           <h1 className="text-5xl font-bold text-gray-900 mb-6">;
             Improved Error Boundary;
-          </h1>;
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+          </h1>"
+          <p>"
             Professional improved error boundary services;
             designed to help your business grow and succeed.;
-          </p>;
+          </p>
         </div>
       </section>;
       {/* Content Section */}
@@ -87,17 +87,21 @@ interface Props {
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
-
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
+  errorId: string;
 }
-
 class ImprovedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: undefined,
+      errorInfo: undefined,
+      errorId:
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -195,8 +199,8 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       </section>
     </div>
   );
-}
-                We provide comprehensive improved error boundary
+export default ImprovedErrorBoundary;
+                We provide comprehensive improved error boundary;
                 solutions tailored to your specific needs and requirements.</p>
               <ul className="space-y-3"></ul>
                 <li className="flex items-center"></li>

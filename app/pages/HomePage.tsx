@@ -20,8 +20,6 @@ import FuturisticBackground from '../components/FuturisticBackground';'
 import NeonButton from '../components/NeonButton';'
 import AnimatedCard from '../components/AnimatedCard';'
 import { services } from '../data/servicesData';
-
-
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",
@@ -58,7 +56,6 @@ import { services } from '../data/servicesData';
       href: '/digital-transformation;
     }
   ];
-
   return (
     <></>
       <SEOHead ;
@@ -82,30 +79,30 @@ import { services } from '../data/servicesData';
                 <BoltIcon className="w-8 h-8 text-cyan-400 animate-bounce delay-100" /></BoltIcon>
                 <RocketLaunchIcon className="w-8 h-8 text-pink-400 animate-bounce delay-200 />"
               </div>
+    </>
             </div>
             
             <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed font-light"></p>
               Advanced AI and IT Solutions for Modern Businesses;
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed>"
-              Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
+            <p>
+              Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, ;
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center"></div>
               <NeonButton to="/contact" variant="primary" size="lg"></NeonButton>
                 Get Started Today;
-                <ArrowRightIcon className="w-5 h-5 ml-2 />"
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
               </NeonButton>
               <NeonButton to="/services" variant="secondary" size="lg"></NeonButton>
                 Explore Services;
-                <ArrowRightIcon className="w-5 h-5 ml-2 />"
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
               </NeonButton>
             </div>
           </div>
         </div>
       </section>
-
       {/* Featured Services Section */}
       <section className="py-20 relative"></section>
         <div className="container mx-auto px-4>"
@@ -117,23 +114,21 @@ import { services } from '../data/servicesData';
               Comprehensive technology solutions designed to accelerate your business growth with real, proven results;
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto>"
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {featuredServices.map((service, index) => (
               <AnimatedCard key={service.id} glowColor={service.glowColor} className="group"></AnimatedCard>
                 <div className="text-center mb-6>"
                   <div className="text-6xl mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-bold text-white mb-3>{service.title}</h3>"
-                  <p className="text-gray-300 mb-4 leading-relaxed">{service.shortDescription}</p>
+                  <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
+                  <p>{service.shortDescription}</p>
                 </div>
-                
-                <div className="space-y-3 mb-6>"
+                <div className="space-y-3 mb-6">
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center text-gray-300"></div>
                       <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full mr-3></div>"
                       <span className="text-sm">{feature}</span>
                     </div>
-                  ))}
+                  )})}
                 </div>
                 
                 <div className="mb-6>"
@@ -141,13 +136,13 @@ import { services } from '../data/servicesData';
                     <span className="text-3xl font-bold text-white>${service.pricing.basic}</span>"
                     <span className="text-gray-400 text-sm ml-2">/month</span>
                   </div>
-                  <p className="text-gray-400 text-sm text-center mt-1>Starting from</p>"
+                  <p>Starting from</p>
                 </div>
                 
                 <div className="flex flex-col gap-3"></div>
                   <NeonButton to={service.href} variant="primary" size="sm"></NeonButton>
                     Learn More;
-                    <ArrowRightIcon className="w-4 h-4 ml-2 />"
+                    <ArrowRightIcon className="w-4 h-4 ml-2" />
                   </NeonButton>
                   <NeonButton to="/contact" variant="secondary" size="sm"></NeonButton>
                     Get Quote;
@@ -160,12 +155,11 @@ import { services } from '../data/servicesData';
           <div className="text-center mt-12>"
             <NeonButton to="/services" variant="primary" size="lg"></NeonButton>
               View All Services;
-              <ArrowRightIcon className="w-5 h-5 ml-2 />"
+              <ArrowRightIcon className="w-5 h-5 ml-2" />
             </NeonButton>
           </div>
         </div>
       </section>
-
       {/* About Section */}
       <section className="py-20 relative"></section>
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900/50 to-slate-900></div>"
@@ -190,7 +184,7 @@ import { services } from '../data/servicesData';
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <Link
-                    to={feature.href}
+                    to={feature.href;
                     className="text-blue-400 hover:text-blue-300 font-semibold flex items-center"
                   ></Link>
                     Learn More
@@ -202,7 +196,6 @@ import { services } from '../data/servicesData';
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 relative"></section>
         <div className="absolute inset-0 bg-slate-900></div>"
@@ -225,7 +218,7 @@ import { services } from '../data/servicesData';
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   <Link
-                    to={service.href}
+                    to={service.href;
                     className="text-blue-400 hover:text-blue-300 font-semibold flex items-center"
                   ></Link>
                     Learn More
@@ -238,7 +231,7 @@ import { services } from '../data/servicesData';
             <div className="flex flex-col sm:flex-row gap-6 justify-center"></div>
               <NeonButton to="/contact" variant="primary" size="lg"></NeonButton>
                 Get In Touch;
-                <ArrowRightIcon className="w-5 h-5 ml-2 />"
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
               </NeonButton>
               <NeonButton to="/demo" variant="secondary" size="lg"></NeonButton>
                 Schedule Demo;

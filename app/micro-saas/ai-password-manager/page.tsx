@@ -36,7 +36,6 @@ const AIPasswordManagerPage: React.FC = () => {
       description: 'Detailed security reports and insights to help you understand and improve your password hygiene.'
     }
   ]
-
   const securityFeatures = [
     {
       icon: <Lock className="w-8 h-8 text-cyan-400" />,'
@@ -81,7 +80,6 @@ const AIPasswordManagerPage: React.FC = () => {
       features: ['Team management', 'Admin dashboard', 'SSO integration', 'Compliance reporting']
     }
   ]
-
   const pricingPlans = [
     {'
       name: 'Personal','
@@ -96,7 +94,7 @@ const AIPasswordManagerPage: React.FC = () => {
         'Breach monitoring','
         'Email support'
       ],
-      popular: false
+      popular: false;
     },
     {'
       name: 'Family','
@@ -111,7 +109,7 @@ const AIPasswordManagerPage: React.FC = () => {
         'Priority support','
         'Dark web monitoring'
       ],
-      popular: true
+      popular: true;
     },
     {'
       name: 'Business','
@@ -126,8 +124,10 @@ const AIPasswordManagerPage: React.FC = () => {
         'Compliance reporting','
         'Dedicated support'
       ],
-      popular: false
+      popular: false;
+=======
     }
+>>>>>>> origin/main
   ]
 
   const stats = ['
@@ -136,7 +136,6 @@ const AIPasswordManagerPage: React.FC = () => {
     { number: '24/7', label: 'Monitoring', icon: <Eye className="w-6 h-6 text-purple-400" /> },'
     { number: '1M+', label: 'Users Protected', icon: <Users className="w-6 h-6 text-orange-400" /> }
   ]
-
   const testimonials = [
     {'
       name: 'Sarah Johnson','
@@ -154,10 +153,8 @@ const AIPasswordManagerPage: React.FC = () => {
       name: 'Emily Rodriguez','
       company: 'IT Manager','
       content: 'The business features are exactly what we needed. The team management and admin controls make it easy to ensure our employees are following security best practices.',
-      rating: 5
-    }
+      rating: 5;
   ]
-
   return (
     <></>
       <Helmet></Helmet>
@@ -204,7 +201,6 @@ const AIPasswordManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-20 px-4 relative"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" /></div>
@@ -235,7 +231,6 @@ const AIPasswordManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 relative"></section>
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-cyan-500/5 to-pink-500/5" /></div>
@@ -266,7 +261,6 @@ const AIPasswordManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Security Features Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-purple-900/50 relative"></section>
           <div className="relative max-w-7xl mx-auto"></div>
@@ -307,7 +301,7 @@ const AIPasswordManagerPage: React.FC = () => {
                         </div>
                       ))}
                     </div>
-                    <Link 
+                    <Link ;
                       to="/contact"
                       className="block w-full mt-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                     ></Link>
@@ -319,7 +313,6 @@ const AIPasswordManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 relative"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" /></div>
@@ -381,7 +374,6 @@ const AIPasswordManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Testimonials Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-purple-900/50 to-pink-900/50 relative"></section>
           <div className="relative max-w-7xl mx-auto"></div>
@@ -421,7 +413,6 @@ const AIPasswordManagerPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 relative"></section>
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" /></div>

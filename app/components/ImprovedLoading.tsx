@@ -14,7 +14,7 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({'
   size = 'md','
   variant = 'futuristic',
   showProgress = false,
-  progress = 0
+  progress = 0;
 }) => {
   const sizeClasses = {'
     sm: 'w-4 h-4','
@@ -77,7 +77,6 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({'
               </div>
             </div>
           )}
-
           {/* Service Icons Animation */}
           <div className="flex justify-center space-x-4 mt-8"></div>'
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center animate-bounce" style={{ animationDelay: '0s' }}></div>

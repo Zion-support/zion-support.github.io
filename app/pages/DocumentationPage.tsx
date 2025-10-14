@@ -1,8 +1,7 @@
 import React from 'react';;'
 import { Link } from 'react-router-dom';;'
 import SEO from '../components/SEO;
-import {
-  DocumentTextIcon,
+import { DocumentTextIcon,
   CodeBracketIcon,
   CogIcon,
   QuestionMarkCircleIcon,
@@ -117,7 +116,6 @@ const DocumentationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Quick Start Section */}
       <section id="quick-start" className="py-20 bg-slate-900"></section>
         <div className="container mx-auto px-4"></div>
@@ -136,14 +134,13 @@ const DocumentationPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <span className="text-white font-bold text-xl">{step.step}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                <p className="text-gray-300">{step.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>"
+                <p>{step.description}</p>"
               </div>
 ))}
           </div>
         </div>
       </section>
-
       {/* Documentation Sections */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-green-900"></section>
         <div className="container mx-auto px-4"></div>
@@ -172,7 +169,7 @@ const DocumentationPage: React.FC = () => {
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}></li>
                       <Link 
-                        to={link.href} 
+                        to={link.href;
                         className="text-green-400 hover:text-green-300 flex items-center group"
                       ></Link>
                         <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
@@ -186,7 +183,6 @@ const DocumentationPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Code Examples Section */}
       <section className="py-20 bg-slate-900"></section>
         <div className="container mx-auto px-4"></div>
@@ -241,7 +237,6 @@ console.log(response.data)`}</code>
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-green-900"></section>
         <div className="container mx-auto px-4"></div>

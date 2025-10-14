@@ -70,7 +70,7 @@ const PrivacyPage: React.FC = () => {
         </section>;
 
       </div>
-    </div>
+    </>
   );
 };
 
@@ -128,6 +128,14 @@ const PrivacyPage: React.FC = () => {
         </section>
       </div>
     </>
+        <div className="container mx-auto px-4 py-20"></div>
+          <h1>Privacy</h1>
+          <p className="text-xl text-gray-600"></p>
+            This page is under development. Please check back soon for more information about our privacy services.
+          </p>;
+        </div>;
+      </div>;
+    </div>;
   )};
 '
 const page = React.lazy(() => import('./page'));

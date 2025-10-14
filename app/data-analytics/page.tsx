@@ -45,7 +45,6 @@ const Page = () => {
       description: '24/7 support from our team of specialists'
     }
   ];
-
   return (
     <></>
       <EnhancedSEO 
@@ -82,7 +81,7 @@ const Page = () => {
               </Link>
             </div>
           </div>
-        </section>
+</section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -135,9 +134,15 @@ const Page = () => {
               </Link>
             </div>
           </div>
-        </section>
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
+            <p>;
+              Track record of delivering successful projects and exceeding client expectations.
+            </p>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 '

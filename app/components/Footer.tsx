@@ -1,7 +1,6 @@
 import React from 'react';'
 import { Link } from 'react-router-dom';
-import { 
-  PhoneIcon, 
+import { PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
   ArrowRightIcon,
@@ -59,7 +58,6 @@ const Footer: React.FC = () => {
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: FacebookIcon },'
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: InstagramIcon }
   ];
-
   return (
     <footer className="bg-slate-900 text-white"></footer>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"></div>
@@ -97,8 +95,8 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4"></div>
               {socialLinks.map((social) => (
                 <a
-                  key={social.name}
-                  href={social.href}
+                  key={social.name;
+                  href={social.href;
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
@@ -117,7 +115,7 @@ const Footer: React.FC = () => {
               {services.map((service) => (
                 <li key={service.name}></li>
                   <Link 
-                    to={service.href} 
+                    to={service.href;
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   ></Link>
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
@@ -141,7 +139,7 @@ const Footer: React.FC = () => {
               {company.map((item) => (
                 <li key={item.name}></li>
                   <Link 
-                    to={item.href} 
+                    to={item.href;
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   ></Link>
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
@@ -159,7 +157,7 @@ const Footer: React.FC = () => {
               {resources.map((resource) => (
                 <li key={resource.name}></li>
                   <Link 
-                    to={resource.href} 
+                    to={resource.href;
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   ></Link>
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
@@ -175,7 +173,7 @@ const Footer: React.FC = () => {
               {legal.map((item) => (
                 <li key={item.name}></li>
                   <Link 
-                    to={item.href} 
+                    to={item.href;
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
                   ></Link>
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" /></ArrowRightIcon>
@@ -186,8 +184,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-      </div>
-
         {/* Newsletter Signup */}
         <div className="mt-12 pt-8 border-t border-slate-700"></div>
           <div className="max-w-md mx-auto text-center"></div>
