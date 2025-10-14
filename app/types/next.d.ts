@@ -1,5 +1,4 @@
 import { NextPage } from 'next';
-import { AppProps } from 'next/app';
 
 declare module 'next' {
   interface NextPageProps {
