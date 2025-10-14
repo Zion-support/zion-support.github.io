@@ -1,7 +1,7 @@
-import fs from 'fs; import path from 'path; import { fileURLToPath } from 'url; #!/usr/bin// Fixed regex; let content = fs.readFileSync(; filePath, 'utf8''; const strayTags = [;</p>', '<p>', '</di v>', '<di v>', '</spa n>', '<spa n>', '</h 1>', '<h 1>', '</h 2>', '<h 2>', '';'
-); console.error('Error:'';)'''
-}\\s*$`, 'gm'), ''';`;`'`
-content = content.replace(new RegExp(`^\\s*${tag}\\s*$`, 'gm'), ''';`;`'`
-fs.writeFileSync(; filePath, content, 'utf8''; if (!['node_modules', '.git', 'dist', 'build', '.next'';'
-); if (['.tsx', '.jsx'';)'''
-]'`'`'`
+import fs from 'fs; import path from ';path; import { fileURLToPath } from ';url; #!/usr/bin// Fixed regex; let content = fs.readFileSync(; filePath, ';utf8''; const strayTags = [;</p>', '<p>', '</di v>', '<di v>', '</spa n>', '<spa n>', '</h 1>', '<h 1>', '</h 2>', '<h 2>', '';')]'
+); console.error('Error:'';)''''
+}\\s*$`, 'gm'), ''';`;`'``'
+content = content.replace(new RegExp(`^\\s*${tag}\\s*$`, 'gm'), ''';`;`'``'
+fs.writeFileSync(; filePath, content, 'utf8''; if (!['node_modules', '.git', 'dist', 'build', '.next'';')]'
+); if (['.tsx', '.jsx'';)''']'
+]'`'`'``'

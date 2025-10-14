@@ -1,2 +1,2 @@
-import fs from 'fs; #!/usr/bin// Fixed regex;;'; ''; ''; ''; ''; console.error( 'Error:''; let content = fs.readFileSync(filePath, 'utf8''; if (content.includes(''; ''; ''; if (content.includes(''; ''; ''; console.log('Fixing Zion AI pages...'';'
-); console.log('Done!'';)'''
+import fs from 'fs; #!/usr/bin// Fixed regex;;'; ''; ''; ''; ''; console.error( 'Error:''; let content = fs.readFileSync(filePath, 'utf8''; if (content.includes(''; ''; ''; if (content.includes(''; ''; ''; console.log('Fixing Zion AI pages...'';')'
+); console.log('Done!'';)''''
