@@ -53,6 +53,9 @@ const Footer = () => {
                 <MapPin className="h-4 w-4 mr-2"/>
                 <span className="text-gray-400">New York, NY</span>
               </div>
+              <p className="text-gray-400 text-sm">
+                © {currentYear} Zion Tech Group. All rights reserved.
+              </p>
             </div>
           </div>
           
