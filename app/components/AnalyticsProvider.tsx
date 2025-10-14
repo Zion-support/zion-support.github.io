@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-=======
 import React, { createContext, useContext } from 'react';
 
 interface AnalyticsContextType {
@@ -9,19 +6,11 @@ interface AnalyticsContextType {
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
 
 interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  return <>{children}</>;
-};
-
-export default AnalyticsProvider;
-=======
 export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   const trackEvent = (event: string, properties?: Record<string, unknown>) => {
     // Analytics tracking implementation
@@ -52,4 +41,3 @@ export function useAnalytics() {
   }
   return context;
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

@@ -1,13 +1,5 @@
 import React from "react";
 
-<<<<<<< HEAD
-const SidebarNavigation = () => {
-  return (
-    <div>
-      <h1>Sidebar Navigation</h1>
-      <p>This is a sidebar navigation component.</p>
-    </div>
-=======
 interface SidebarNavigationProps {
   isOpen: boolean;
   onClose: () => void;
@@ -65,7 +57,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         </nav>
       </div>
     </>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
   );
 };
 

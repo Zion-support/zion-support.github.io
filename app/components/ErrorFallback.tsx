@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const ErrorFallback: React.FC = () => {
-  return (
-    <div>
-      <h2>ErrorFallback</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default ErrorFallback;
-=======
 import React from 'react';
 
 export default function ErrorFallbackPage() {
@@ -26,4 +12,3 @@ export default function ErrorFallbackPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

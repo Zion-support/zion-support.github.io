@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const ResponsiveText: React.FC = () => {
-  return (
-    <div>
-      <h2>ResponsiveText</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default ResponsiveText;
-=======
 import React from 'react';
 
 export default function ResponsiveTextPage() {
@@ -26,4 +12,3 @@ export default function ResponsiveTextPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

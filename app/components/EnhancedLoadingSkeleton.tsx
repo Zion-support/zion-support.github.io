@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const EnhancedLoadingSkeleton: React.FC = () => {
-  return (
-    <div>
-      <h2>EnhancedLoadingSkeleton</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default EnhancedLoadingSkeleton;
-=======
 import React from 'react';
 
 export default function EnhancedLoadingSkeletonPage() {
@@ -26,4 +12,3 @@ export default function EnhancedLoadingSkeletonPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

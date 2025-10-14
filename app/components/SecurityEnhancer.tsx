@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const SecurityEnhancer: React.FC = () => {
-  return (
-    <div>
-      <h2>SecurityEnhancer</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default SecurityEnhancer;
-=======
 import React from 'react';
 
 export default function SecurityEnhancerPage() {
@@ -26,4 +12,3 @@ export default function SecurityEnhancerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const ResponsiveGrid: React.FC = () => {
-  return (
-    <div>
-      <h2>ResponsiveGrid</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default ResponsiveGrid;
-=======
 import React from 'react';
 
 export default function ResponsiveGridPage() {
@@ -26,4 +12,3 @@ export default function ResponsiveGridPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

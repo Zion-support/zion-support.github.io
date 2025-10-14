@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import { createContext } from "react";
-
-const AnalyticsContext = createContext({});
-
-export default AnalyticsContext;
-=======
 import React, { createContext, useContext, ReactNode } from 'react';
 import { AnalyticsContextType } from './AnalyticsContextDefinition';
 
@@ -44,4 +37,3 @@ export function useAnalytics() {
 }
 
 export { AnalyticsContext };
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

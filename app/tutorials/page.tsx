@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-const TutorialsPage = () => {
-  return (
-    <div>
-      <Helmet>
-        <title>Tutorials Page - Zion Tech Group</title>
-        <meta name="description" content="Tutorials Page - Zion Tech Group" />
-      </Helmet>
-      <div>
-        <div>
-          <h1 className="text-4xl font-bold text-white mb-8">Tutorials Page</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-=======
 import React from 'react';
 
 export default function TutorialsPage() {
@@ -25,15 +7,8 @@ export default function TutorialsPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Tutorials</h1>
           <p className="text-gray-300 text-xl mb-8">Learn more about tutorials</p>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default TutorialsPage;
-=======
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

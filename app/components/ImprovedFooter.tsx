@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const ImprovedFooter: React.FC = () => {
-  return (
-    <div>
-      <h2>ImprovedFooter</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default ImprovedFooter;
-=======
 import React from 'react';
 
 export default function ImprovedFooterPage() {
@@ -26,4 +12,3 @@ export default function ImprovedFooterPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

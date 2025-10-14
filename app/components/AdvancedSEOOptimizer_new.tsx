@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const AdvancedSEOOptimizer_new: React.FC = () => {
-  return (
-    <div>
-      <h2>AdvancedSEOOptimizer_new</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default AdvancedSEOOptimizer_new;
-=======
 import React from 'react';
 
 export default function AdvancedSEOOptimizernewPage() {
@@ -26,4 +12,3 @@ export default function AdvancedSEOOptimizernewPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const AdScheduler: React.FC = () => {
-  return (
-    <div>
-      <h2>AdScheduler</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default AdScheduler;
-=======
 import React from 'react';
 
 export default function AdSchedulerPage() {
@@ -26,4 +12,3 @@ export default function AdSchedulerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

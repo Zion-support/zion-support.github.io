@@ -15,4 +15,3 @@ export default function; Component; PagePage() {return (
   )}
 }
 }
-export default AboutPa;g;e;

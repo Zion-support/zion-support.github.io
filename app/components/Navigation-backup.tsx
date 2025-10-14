@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const NavigationBackup = () => {
-  return (
-    <div>
-      <h1>Navigation Backup</h1>
-      <p>This is a navigation backup component.</p>
-    </div>
-  );
-};
-
-export default NavigationBackup;
-=======
 import React from 'react';
 
 export default function NavigationBackupPage() {
@@ -26,4 +12,3 @@ export default function NavigationBackupPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

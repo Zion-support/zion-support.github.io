@@ -1,21 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-
-const HomePage = () => {
-  return (
-    <div>
-      <Helmet>
-        <title>HomePage - Zion Tech Group</title>
-        <meta name="description" content="HomePage - Zion Tech Group" />
-      </Helmet>
-      <div>
-        <div>
-          <h1 className="text-4xl font-bold text-white mb-8">HomePage</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-=======
 import { Link } from "react-router-dom";
 
 export default function HomePage() {
@@ -44,15 +27,8 @@ export default function HomePage() {
               Get Started
             </Link>
           </div>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default HomePage;
-=======
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

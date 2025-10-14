@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const ContentPromotionBanner: React.FC = () => {
-  return (
-    <div>
-      <h2>ContentPromotionBanner</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default ContentPromotionBanner;
-=======
 import React from 'react';
 
 export default function ContentPromotionBannerPage() {
@@ -26,4 +12,3 @@ export default function ContentPromotionBannerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const MobileNavigation: React.FC = () => {
-  return (
-    <div>
-      <h2>MobileNavigation</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default MobileNavigation;
-=======
 import React from 'react';
 
 export default function MobileNavigationPage() {
@@ -26,4 +12,3 @@ export default function MobileNavigationPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

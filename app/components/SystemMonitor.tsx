@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const SystemMonitor: React.FC = () => {
-  return (
-    <div>
-      <h2>SystemMonitor</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default SystemMonitor;
-=======
 import React from 'react';
 
 export default function SystemMonitorPage() {
@@ -26,4 +12,3 @@ export default function SystemMonitorPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

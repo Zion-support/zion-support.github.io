@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const LazyImage: React.FC = () => {
-  return (
-    <div>
-      <h2>LazyImage</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default LazyImage;
-=======
 import React from 'react';
 
 export default function LazyImagePage() {
@@ -26,4 +12,3 @@ export default function LazyImagePage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

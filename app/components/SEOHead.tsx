@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const SEOHead: React.FC = () => {
-  return (
-    <div>
-      <h2>SEOHead</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default SEOHead;
-=======
 import React from 'react';
 
 export default function SEOHeadPage() {
@@ -26,4 +12,3 @@ export default function SEOHeadPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

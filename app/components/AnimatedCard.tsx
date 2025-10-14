@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const AnimatedCard: React.FC = () => {
-  return (
-    <div>
-      <h2>AnimatedCard</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default AnimatedCard;
-=======
 import React from 'react';
 
 export default function AnimatedCardPage() {
@@ -26,4 +12,3 @@ export default function AnimatedCardPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

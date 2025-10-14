@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const ImprovedNavigation: React.FC = () => {
-  return (
-    <div>
-      <h2>ImprovedNavigation</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default ImprovedNavigation;
-=======
 import React from 'react';
 
 export default function ImprovedNavigationPage() {
@@ -26,4 +12,3 @@ export default function ImprovedNavigationPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

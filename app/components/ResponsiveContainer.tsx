@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const ResponsiveContainer: React.FC = () => {
-  return (
-    <div>
-      <h2>ResponsiveContainer</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default ResponsiveContainer;
-=======
 import React from 'react';
 
 export default function ResponsiveContainerPage() {
@@ -26,4 +12,3 @@ export default function ResponsiveContainerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

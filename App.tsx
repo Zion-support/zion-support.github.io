@@ -4,9 +4,6 @@ import { HelmetProvider } from 'react-helmet-async';
 
 // Components
 import Footer from './app/components/Footer';
-<<<<<<< HEAD
-import AnalyticsProvider from './app/components/AnalyticsProvider';
-=======
 import Navigation from './app/components/Navigation';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
@@ -14,7 +11,6 @@ import SEOEnhancer from './app/components/SEOEnhancer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 // import LoadingStates from './app/components/LoadingStates';
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
 
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import MetaManager from './app/components/MetaManager';
@@ -29,11 +25,7 @@ import ContactPage from './app/pages/ContactPage';
 
 const App: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <ErrorBoundary fallbackRender={() => <div>Something went wrong.</div>}>
-=======
     <ErrorBoundary>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
       <HelmetProvider>
         <AnalyticsProvider>
           <PerformanceOptimizer>

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const DynamicComponent = () => {
-  return (
-    <div>
-      <h1>Dynamic Component</h1>
-      <p>This is a dynamic component.</p>
-    </div>
-  );
-};
-
-export default DynamicComponent;
-=======
 import React from 'react';
 
 export default function DynamicPage() {
@@ -26,4 +12,3 @@ export default function DynamicPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

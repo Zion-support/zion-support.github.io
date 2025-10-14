@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const AdAnalytics: React.FC = () => {
-  return (
-    <div>
-      <h2>AdAnalytics</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default AdAnalytics;
-=======
 import React from 'react';
 
 export default function AdAnalyticsPage() {
@@ -26,4 +12,3 @@ export default function AdAnalyticsPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
