@@ -34,6 +34,8 @@ import DemoPage from './app/pages/DemoPage';
 import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
+import CookiesPage from './app/pages/CookiesPage';
+import SitemapPage from './app/pages/SitemapPage';
 import PricingPage from './app/pages/PricingPage';
 import SolutionsPage from './app/pages/SolutionsPage';
 import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
@@ -51,6 +53,8 @@ import CareersPage from './app/pages/CareersPage';
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
+import CookiesPage from './app/pages/CookiesPage';
+import SitemapPage from './app/pages/SitemapPage';
 
 // New Innovative Micro SAAS Services
 const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
@@ -175,8 +179,9 @@ if (typeof window !== 'undefined') {
                     <Route path="/support" element={<SupportPage />} />
                     <Route path="/privacy" element={<PrivacyPage />} />
                     <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/cookies" element={<PrivacyPage />} />
-                    <Route path="/sitemap" element={<HomePage />} />
+<<<<<<< HEAD
+                    <Route path="/cookies" element={<CookiesPage />} />
+                    <Route path="/sitemap" element={<SitemapPage />} />
                     <Route path="/micro-saas" element={<MicroSaaSPage />} />
                     <Route path="/it-services" element={<ITServicesPage />} />
                     <Route path="/cloud-services" element={<ServicesPage />} />

@@ -2,109 +2,108 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const glob = require('glob');
 
-// Function to fix common syntax errors in TSX files
-function fixTsxFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Fix malformed Helmet tags
-    if (content.includes('<Helmet></Helmet>')) {
-      content = content.replace(/<Helmet><\/Helmet>\s*<title>/g, '<Helmet>\n        <title>');
-      content = content.replace(/<Helmet><\/Helmet>\s*<meta/g, '<Helmet>\n        <meta');
-      modified = true;
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  
+  // Fix double quotes in import statements
+  fixed = fixed.replace(/from\s+['"]([^'"]+)['"]\s*['"]/g, "from '$1'");
+  
+  // Fix missing closing quotes in import statements
+  fixed = fixed.replace(/from\s+['"]([^'"]+)\s*$/gm, "from '$1';");
+  
+  // Fix unterminated string literals in import statements
+  fixed = fixed.replace(/import\s+([^'"]+)\s+from\s+['"]([^'"]+)\s*$/gm, "import $1 from '$2';");
+  
+  // Fix missing semicolons after import statements
+  fixed = fixed.replace(/import\s+[^;]+$/gm, (match) => {
+    if (!match.endsWith(';')) {
+      return match + ';';
     }
+    return match;
+  });
+  
+  // Fix 'use client' directive
+  fixed = fixed.replace(/'use client;\s*$/gm, "'use client';");
+  
+  // Fix malformed JSX - add missing closing tags
+  fixed = fixed.replace(/<([A-Z][a-zA-Z0-9]*)\s*([^>]*?)\s*>\s*$/gm, '<$1 $2></$1>');
+  
+  // Fix self-closing tags that should be closed
+  fixed = fixed.replace(/<([A-Z][a-zA-Z0-9]*)\s*([^>]*?)\s*>\s*$/gm, '<$1 $2></$1>');
+  
+  // Fix missing closing quotes in JSX attributes
+  fixed = fixed.replace(/=([^"'>\s]+)(?=\s|>)/g, '="$1"');
+  
+  // Fix unterminated JSX comments
+  fixed = fixed.replace(/{\/\*([^*]|\*[^/])*$/gm, '{/* */}');
+  
+  // Fix missing closing braces in JSX
+  fixed = fixed.replace(/\{([^}]*)$/gm, '{$1}');
+  
+  // Fix malformed export statements
+  fixed = fixed.replace(/export\s+default\s+function\s+([^(]+)\s*\(/g, 'export default function $1(');
+  
+  // Fix missing closing parentheses in function calls
+  fixed = fixed.replace(/\(([^)]*)$/gm, '($1)');
+  
+  // Fix missing closing brackets in object literals
+  fixed = fixed.replace(/\{([^}]*)$/gm, '{$1}');
+  
+  // Fix missing closing brackets in array literals
+  fixed = fixed.replace(/\[([^\]]*)$/gm, '[$1]');
+  
+  return fixed;
+}
 
-    // Fix unterminated string literals
-    content = content.replace(/"([^"]*)\n/g, '"$1"\n');
-    content = content.replace(/'([^']*)\n/g, "'$1'\n");
-
-    // Fix missing closing tags
-    content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
-    content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
-    content = content.replace(/<button([^>]*)>\s*$/gm, '<button$1></button>');
-
-    // Fix JSX expressions without parent elements
-    content = content.replace(/return\s*\(\s*<div([^>]*)>\s*<Helmet/g, 'return (\n    <div$1>\n      <Helmet');
-
-    // Fix missing semicolons and commas
-    content = content.replace(/(\w+)\s*=\s*\{([^}]*)\}\s*$/gm, '$1: {$2},');
-    content = content.replace(/(\w+)\s*:\s*([^,}]+)\s*$/gm, '$1: $2,');
-
-    // Fix malformed function parameters
-    content = content.replace(/React\.ChangeEvent<HTMLInputElement \| HTMLTextAreaElement><\/HTMLInputElement>/g, 'React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>');
-
-    // Fix array syntax issues
-    content = content.replace(/\[\s*"([^"]*)"\s*$/gm, '["$1"]');
-    content = content.replace(/\[\s*{/gm, '[{');
-    content = content.replace(/}\s*\]/gm, '}]');
-
-    // Fix object syntax issues
-    content = content.replace(/{\s*"([^"]*)"\s*$/gm, '{"$1"');
-    content = content.replace(/}\s*$/gm, '},');
-
-    // Fix missing closing parentheses
-    content = content.replace(/\(\s*$/gm, '()');
-
-    // Fix malformed JSX attributes
-    content = content.replace(/className="([^"]*)\s*$/gm, 'className="$1"');
-    content = content.replace(/href="([^"]*)\s*$/gm, 'href="$1"');
-
-    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
-      fs.writeFileSync(filePath, content);
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all TSX files
-function findTsxFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
+// Main function
+function main() {
+  const patterns = [
+    '**/*.tsx',
+    '**/*.ts',
+    '**/*.jsx',
+    '**/*.js'
+  ];
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+  let totalFixed = 0;
+  
+  patterns.forEach(pattern => {
+    const files = glob.sync(pattern, {
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']
+    });
     
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files.push(...findTsxFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath);
-    }
-  }
+    files.forEach(file => {
+      if (processFile(file)) {
+        totalFixed++;
+      }
+    });
+  });
   
-  return files;
+  console.log(`\nTotal files fixed: ${totalFixed}`);
 }
 
-// Main execution
-console.log('Starting comprehensive syntax fix...');
-
-const appDir = path.join(process.cwd(), 'app');
-const tsxFiles = findTsxFiles(appDir);
-
-let fixedCount = 0;
-for (const file of tsxFiles) {
-  if (fixTsxFile(file)) {
-    fixedCount++;
-  }
+if (require.main === module) {
+  main();
 }
 
-console.log(`Fixed ${fixedCount} files`);
-
-// Run type check to see remaining errors
-console.log('\nRunning type check...');
-try {
-  execSync('npm run type-check', { stdio: 'pipe' });
-  console.log('Type check passed!');
-} catch (error) {
-  const errorOutput = error.stdout?.toString() || error.stderr?.toString() || '';
-  const errorCount = (errorOutput.match(/error TS/g) || []).length;
-  console.log(`Type check found ${errorCount} errors`);
-}
+module.exports = { fixSyntaxErrors, processFile };
