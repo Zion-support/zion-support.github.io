@@ -47,3 +47,6 @@ const AiClimatePredictionEnginePage: React.FC = () => {
   );
 }
 export default AiClimatePredictionEnginePage;
+
+              </p>
+              </p>

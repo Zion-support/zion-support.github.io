@@ -47,3 +47,6 @@ const ZionSmartExpenseCategorizerProPage: React.FC = () => {
   );
 }
 export default ZionSmartExpenseCategorizerProPage;
+
+              </p>
+              </p>

@@ -47,3 +47,6 @@ const AnalyticsToolsPage: React.FC = () => {
   );
 }
 export default AnalyticsToolsPage;
+
+              </p>
+              </p>

@@ -47,3 +47,6 @@ const TutorialsPage: React.FC = () => {
   );
 }
 export default TutorialsPage;
+
+              </p>
+              </p>

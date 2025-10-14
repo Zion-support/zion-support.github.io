@@ -47,3 +47,6 @@ const DocsPage: React.FC = () => {
   );
 }
 export default DocsPage;
+
+              </p>
+              </p>

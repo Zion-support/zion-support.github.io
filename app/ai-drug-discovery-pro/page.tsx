@@ -47,3 +47,6 @@ const AiDrugDiscoveryProPage: React.FC = () => {
   );
 }
 export default AiDrugDiscoveryProPage;
+
+              </p>
+              </p>

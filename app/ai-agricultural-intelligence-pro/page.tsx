@@ -47,3 +47,6 @@ const AiAgriculturalIntelligenceProPage: React.FC = () => {
   );
 }
 export default AiAgriculturalIntelligenceProPage;
+
+              </p>
+              </p>

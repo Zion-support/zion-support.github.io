@@ -47,3 +47,6 @@ const BlockchainWeb3Page: React.FC = () => {
   );
 }
 export default BlockchainWeb3Page;
+
+              </p>
+              </p>

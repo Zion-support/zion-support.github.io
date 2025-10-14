@@ -47,3 +47,6 @@ const SupplyChainOptimizerPage: React.FC = () => {
   );
 }
 export default SupplyChainOptimizerPage;
+
+              </p>
+              </p>

@@ -47,3 +47,6 @@ const AiNlpTextAnalysisPage: React.FC = () => {
   );
 }
 export default AiNlpTextAnalysisPage;
+
+              </p>
+              </p>

@@ -39,8 +39,8 @@ title="5G Migration Services - Zion Tech Group"
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg p-8">
-              <div className="flex items-center mb-4">
-                <CheckCircle className="h-8 w-8 text-blue-600 mr-3" />
+              <div className="flexitems-center mb-4">
+                <CheckCircle className="h-8w-8 text-blue-600 mr-3" />
                 <h3 className="text-xl font-semibold text-gray-900">
                   {service.title}
                 </h3>
@@ -50,10 +50,10 @@ title="5G Migration Services - Zion Tech Group"
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center text-blue-600 hover: text-blue-800 font-medium"
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
                 Learn More
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2h-4 w-4" />
               </Link>
             </div>
           ))}
@@ -62,10 +62,10 @@ title="5G Migration Services - Zion Tech Group"
         <div className="text-center">
           <Link 
             to="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700";
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
           >
             Get Started Today
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="ml-2h-5 w-5" />
           </Link>
         </div>
       </div>

@@ -47,3 +47,6 @@ const AiCodeAssistantPage: React.FC = () => {
   );
 }
 export default AiCodeAssistantPage;
+
+              </p>
+              </p>

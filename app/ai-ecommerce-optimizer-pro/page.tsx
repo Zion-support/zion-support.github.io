@@ -47,3 +47,6 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
   );
 }
 export default AiEcommerceOptimizerProPage;
+
+              </p>
+              </p>

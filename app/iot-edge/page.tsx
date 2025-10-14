@@ -47,3 +47,6 @@ const IotEdgePage: React.FC = () => {
   );
 }
 export default IotEdgePage;
+
+              </p>
+              </p>

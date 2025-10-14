@@ -47,3 +47,6 @@ const AiContentGenerationProPage: React.FC = () => {
   );
 }
 export default AiContentGenerationProPage;
+
+              </p>
+              </p>

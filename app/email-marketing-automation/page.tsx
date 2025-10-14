@@ -47,3 +47,6 @@ const EmailMarketingAutomationPage: React.FC = () => {
   );
 }
 export default EmailMarketingAutomationPage;
+
+              </p>
+              </p>

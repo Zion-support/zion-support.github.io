@@ -47,3 +47,6 @@ const StatusPage: React.FC = () => {
   );
 }
 export default StatusPage;
+
+              </p>
+              </p>

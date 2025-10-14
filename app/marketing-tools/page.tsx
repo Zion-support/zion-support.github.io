@@ -47,3 +47,6 @@ const MarketingToolsPage: React.FC = () => {
   );
 }
 export default MarketingToolsPage;
+
+              </p>
+              </p>

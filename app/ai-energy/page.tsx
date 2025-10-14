@@ -47,3 +47,6 @@ const AiEnergyPage: React.FC = () => {
   );
 }
 export default AiEnergyPage;
+
+              </p>
+              </p>

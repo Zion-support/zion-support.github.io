@@ -47,3 +47,6 @@ const ItAssetManagementPage: React.FC = () => {
   );
 }
 export default ItAssetManagementPage;
+
+              </p>
+              </p>

@@ -47,3 +47,6 @@ const DataVisualizationPage: React.FC = () => {
   );
 }
 export default DataVisualizationPage;
+
+              </p>
+              </p>

@@ -47,3 +47,6 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
   );
 }
 export default AiPoweredEmailAnalyzerPage;
+
+              </p>
+              </p>

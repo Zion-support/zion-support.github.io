@@ -21,3 +21,4 @@ Sitemap: ${sitemapUrl}`
     return sitemap
   }
 }
+              </p>

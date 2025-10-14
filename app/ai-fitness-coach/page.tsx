@@ -47,3 +47,6 @@ const AiFitnessCoachPage: React.FC = () => {
   );
 }
 export default AiFitnessCoachPage;
+
+              </p>
+              </p>

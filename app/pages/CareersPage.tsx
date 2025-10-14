@@ -13,8 +13,8 @@ const CareersPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">Team</span>
+          <h1 className="text-5xlfont-bold text-white mb-6">
+            Join Our <span className="text-transparentbg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">Team</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Be part of a team that's shaping the future of AI and IT solutions.';
@@ -24,18 +24,18 @@ const CareersPage: React.FC = () => {
         </div>
         {/* Why Work With Us */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
+          <h2 className="text-3xlfont-bold text-white text-center mb-12">Why Work With Us?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, _index) => {
               const Icon = benefit.icon;
               return (
-                <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="p-3 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg w-fit mx-auto mb-4">
-                    <Icon className="w-6 h-6 text-white" />
+                <div key={_index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
+                  <div className="p-3bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg w-fit mx-auto mb-4">
+                    <Icon className="w-6h-6 text-white" />
                     </div>
         </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
+                  <p className="text-gray-300text-sm">{benefit.description}</p>
                   </div>
         </div>
               );
@@ -46,26 +46,26 @@ const CareersPage: React.FC = () => {
         </div>
         {/* Open Positions */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>
+          <h2 className="text-3xlfont-bold text-white text-center mb-12">Open Positions</h2>
           <div className="grid md:grid-cols-2 gap-6">
             {openPositions.map((position, _index) => (
-              <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
-                <div className="flex justify-between items-start mb-4">
+              <div key={_index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
+                <div className="flexjustify-between items-start mb-4">
                   <h3 className="text-xl font-semibold text-white">{position.title}</h3>
-                  <span className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
+                  <span className="bg-gradient-to-rfrom-rose-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
                     {position.type}
                   </span>
                   </div>
         </div>
-                <div className="flex items-center text-gray-400 mb-3">
-                  <MapPin className="w-4 h-4 mr-2" />
+                <div className="flexitems-center text-gray-400 mb-3">
+                  <MapPin className="w-4h-4 mr-2" />
                   <span className="text-sm">{position.location}</span>
                   <span className="mx-2">•</span>
                   <span className="text-sm">{position.department}</span>
                   </div>
         </div>
-                <p className="text-gray-300 mb-4">{position.description}</p>
-                <button className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
+                <p className="text-gray-300mb-4">{position.description}</p>
+                <button className="w-fullbg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
                   Apply Now
                 </button>
                 </div>
@@ -76,12 +76,12 @@ const CareersPage: React.FC = () => {
           </div>
         </div>
         {/* Company Culture */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Our Culture</h2>
+        <div className="bg-white/10backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16">
+          <h2 className="text-3xlfont-bold text-white text-center mb-8">Our Culture</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+              <div className="p-4bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
+                <Users className="w-8h-8 text-white" />
                 </div>
         </div>
               <h3 className="text-xl font-semibold text-white mb-3">Collaborative</h3>
@@ -89,8 +89,8 @@ const CareersPage: React.FC = () => {
               </div>
         </div>
             <div className="text-center">
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
+              <div className="p-4bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
+                <Zap className="w-8h-8 text-white" />
                 </div>
         </div>
               <h3 className="text-xl font-semibold text-white mb-3">Innovative</h3>
@@ -98,8 +98,8 @@ const CareersPage: React.FC = () => {
               </div>
         </div>
             <div className="text-center">
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
-                <Target className="w-8 h-8 text-white" />
+              <div className="p-4bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
+                <Target className="w-8h-8 text-white" />
                 </div>
         </div>
               <h3 className="text-xl font-semibold text-white mb-3">Impact-Driven</h3>
@@ -112,12 +112,12 @@ const CareersPage: React.FC = () => {
         </div>
         {/* CTA Section */}
         <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>';
-            <p className="text-gray-300 mb-6">
+          <div className="bg-white/10backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
+            <h2 className="text-2xlfont-bold text-white mb-4">Don't See Your Perfect Role?</h2>';
+            <p className="text-gray-300mb-6">
               We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.';
             </p>
-            <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
+            <button className="bg-gradient-to-rfrom-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
               Send Resume;
             </button>
             </div>

@@ -47,3 +47,6 @@ const PropertyManagementAiPage: React.FC = () => {
   );
 }
 export default PropertyManagementAiPage;
+
+              </p>
+              </p>

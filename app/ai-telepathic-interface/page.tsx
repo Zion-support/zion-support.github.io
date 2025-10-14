@@ -47,3 +47,6 @@ const AiTelepathicInterfacePage: React.FC = () => {
   );
 }
 export default AiTelepathicInterfacePage;
+
+              </p>
+              </p>

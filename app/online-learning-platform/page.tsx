@@ -47,3 +47,6 @@ const OnlineLearningPlatformPage: React.FC = () => {
   );
 }
 export default OnlineLearningPlatformPage;
+
+              </p>
+              </p>

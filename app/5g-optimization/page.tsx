@@ -13,18 +13,18 @@ const FiveGOptimizationPage: React.FC = () => {
       />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-emerald-900 to-teal-900 text-white py-20">
+      <section className="bg-gradient-to-rfrom-emerald-900 to-teal-900 text-white py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md: text-6xl font-bold mb-6">;
+          <div className="max-w-4xlmx-auto text-center">
+            <h1 className="text-4xlmd: text-6xl font-bold mb-6">;
               5G Optimization Services
             </h1>
-            <p className="text-xl md: text-2xl mb-8 text-emerald-100">;
+            <p className="text-xlmd: text-2xl mb-8 text-emerald-100">;
               Maximize your 5G network performance with our expert optimization services
             </p>
             <Link 
               to="/contact" 
-              className="inline-flex items-center bg-emerald-600 hover: bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors";
+              className="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
             >
               Optimize Now
               <ArrowRight className="ml-2 w-5 h-5" />
@@ -37,7 +37,7 @@ const FiveGOptimizationPage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-6">;
+            <h2 className="text-3xlmd: text-4xl font-bold text-gray-900 mb-6">;
               Our Optimization Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -47,8 +47,8 @@ const FiveGOptimizationPage: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                <CheckCircle className="w-6 h-6 text-emerald-600" />
+              <div className="w-12h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                <CheckCircle className="w-6h-6 text-emerald-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Performance Tuning
@@ -59,8 +59,8 @@ const FiveGOptimizationPage: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                <CheckCircle className="w-6 h-6 text-emerald-600" />
+              <div className="w-12h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                <CheckCircle className="w-6h-6 text-emerald-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Capacity Planning
@@ -71,8 +71,8 @@ const FiveGOptimizationPage: React.FC = () => {
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-6">
-              <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
-                <CheckCircle className="w-6 h-6 text-emerald-600" />
+              <div className="w-12h-12 bg-emerald-100 rounded-lg flex items-center justify-center mb-4">
+                <CheckCircle className="w-6h-6 text-emerald-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Cost Optimization
@@ -86,17 +86,17 @@ const FiveGOptimizationPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gray-900 text-white py-20">
+      <section className="bg-gray-900text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md: text-4xl font-bold mb-6">;
+          <h2 className="text-3xlmd: text-4xl font-bold mb-6">;
             Ready to Optimize Your 5G Network?
           </h2>
-          <p className="text-xl mb-8 text-gray-300">
+          <p className="text-xlmb-8 text-gray-300">
             Contact our experts today for a comprehensive network assessment
           </p>
           <Link 
             to="/contact" 
-            className="inline-flex items-center bg-emerald-600 hover: bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
+            className="inline-flex items-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
           >
             Get Started
             <ArrowRight className="ml-2 w-5 h-5" />

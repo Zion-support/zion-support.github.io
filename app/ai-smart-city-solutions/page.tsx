@@ -47,3 +47,6 @@ const AiSmartCitySolutionsPage: React.FC = () => {
   );
 }
 export default AiSmartCitySolutionsPage;
+
+              </p>
+              </p>

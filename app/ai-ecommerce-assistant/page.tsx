@@ -47,3 +47,6 @@ const AiEcommerceAssistantPage: React.FC = () => {
   );
 }
 export default AiEcommerceAssistantPage;
+
+              </p>
+              </p>

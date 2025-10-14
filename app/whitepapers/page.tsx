@@ -47,3 +47,6 @@ const WhitepapersPage: React.FC = () => {
   );
 }
 export default WhitepapersPage;
+
+              </p>
+              </p>

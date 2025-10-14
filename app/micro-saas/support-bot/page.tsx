@@ -47,3 +47,6 @@ const SupportBotPage: React.FC = () => {
   );
 }
 export default SupportBotPage;
+
+              </p>
+              </p>

@@ -47,3 +47,6 @@ const CreateAdPage: React.FC = () => {
   );
 }
 export default CreateAdPage;
+
+              </p>
+              </p>

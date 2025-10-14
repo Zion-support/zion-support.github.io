@@ -47,3 +47,6 @@ const CookiePolicyPage: React.FC = () => {
   );
 }
 export default CookiePolicyPage;
+
+              </p>
+              </p>

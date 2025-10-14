@@ -47,3 +47,6 @@ const SeoOptimizerPage: React.FC = () => {
   );
 }
 export default SeoOptimizerPage;
+
+              </p>
+              </p>

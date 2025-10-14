@@ -47,3 +47,6 @@ const AiLanguageTranslationPage: React.FC = () => {
   );
 }
 export default AiLanguageTranslationPage;
+
+              </p>
+              </p>

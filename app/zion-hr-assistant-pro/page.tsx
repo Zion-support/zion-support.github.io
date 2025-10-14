@@ -47,3 +47,6 @@ const ZionHrAssistantProPage: React.FC = () => {
   );
 }
 export default ZionHrAssistantProPage;
+
+              </p>
+              </p>

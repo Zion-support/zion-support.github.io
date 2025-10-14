@@ -47,3 +47,6 @@ const ZionAiEmailAnalyzerProPage: React.FC = () => {
   );
 }
 export default ZionAiEmailAnalyzerProPage;
+
+              </p>
+              </p>

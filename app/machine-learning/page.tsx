@@ -47,3 +47,6 @@ const MachineLearningPage: React.FC = () => {
   );
 }
 export default MachineLearningPage;
+
+              </p>
+              </p>

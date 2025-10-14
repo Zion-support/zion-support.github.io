@@ -47,3 +47,6 @@ const OfflinePage: React.FC = () => {
   );
 }
 export default OfflinePage;
+
+              </p>
+              </p>

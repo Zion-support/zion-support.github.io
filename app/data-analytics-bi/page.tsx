@@ -47,3 +47,6 @@ const DataAnalyticsBiPage: React.FC = () => {
   );
 }
 export default DataAnalyticsBiPage;
+
+              </p>
+              </p>

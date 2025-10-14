@@ -47,3 +47,6 @@ const AccessibilityPage: React.FC = () => {
   );
 }
 export default AccessibilityPage;
+
+              </p>
+              </p>

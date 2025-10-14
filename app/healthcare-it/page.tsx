@@ -47,3 +47,6 @@ const HealthcareItPage: React.FC = () => {
   );
 }
 export default HealthcareItPage;
+
+              </p>
+              </p>

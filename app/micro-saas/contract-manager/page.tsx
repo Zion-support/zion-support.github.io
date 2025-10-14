@@ -47,3 +47,6 @@ const ContractManagerPage: React.FC = () => {
   );
 }
 export default ContractManagerPage;
+
+              </p>
+              </p>

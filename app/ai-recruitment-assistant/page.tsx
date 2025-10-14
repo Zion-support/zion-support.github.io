@@ -47,3 +47,6 @@ const AiRecruitmentAssistantPage: React.FC = () => {
   );
 }
 export default AiRecruitmentAssistantPage;
+
+              </p>
+              </p>

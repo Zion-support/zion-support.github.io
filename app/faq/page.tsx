@@ -47,3 +47,6 @@ const FaqPage: React.FC = () => {
   );
 }
 export default FaqPage;
+
+              </p>
+              </p>

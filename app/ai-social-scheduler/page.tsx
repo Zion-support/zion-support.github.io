@@ -47,3 +47,6 @@ const AiSocialSchedulerPage: React.FC = () => {
   );
 }
 export default AiSocialSchedulerPage;
+
+              </p>
+              </p>

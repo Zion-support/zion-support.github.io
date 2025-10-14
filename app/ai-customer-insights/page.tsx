@@ -47,3 +47,6 @@ const AiCustomerInsightsPage: React.FC = () => {
   );
 }
 export default AiCustomerInsightsPage;
+
+              </p>
+              </p>

@@ -47,3 +47,6 @@ const PerformanceOptimizationPage: React.FC = () => {
   );
 }
 export default PerformanceOptimizationPage;
+
+              </p>
+              </p>

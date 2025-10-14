@@ -47,3 +47,6 @@ const EmailMarketingPage: React.FC = () => {
   );
 }
 export default EmailMarketingPage;
+
+              </p>
+              </p>

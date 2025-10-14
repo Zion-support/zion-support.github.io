@@ -47,3 +47,6 @@ const GuidesPage: React.FC = () => {
   );
 }
 export default GuidesPage;
+
+              </p>
+              </p>

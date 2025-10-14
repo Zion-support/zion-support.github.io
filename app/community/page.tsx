@@ -47,3 +47,6 @@ const CommunityPage: React.FC = () => {
   );
 }
 export default CommunityPage;
+
+              </p>
+              </p>

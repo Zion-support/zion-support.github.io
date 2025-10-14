@@ -47,3 +47,6 @@ const AiEducationPlatformPage: React.FC = () => {
   );
 }
 export default AiEducationPlatformPage;
+
+              </p>
+              </p>

@@ -47,3 +47,6 @@ const AiManufacturingPage: React.FC = () => {
   );
 }
 export default AiManufacturingPage;
+
+              </p>
+              </p>

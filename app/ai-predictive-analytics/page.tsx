@@ -47,3 +47,6 @@ const AiPredictiveAnalyticsPage: React.FC = () => {
   );
 }
 export default AiPredictiveAnalyticsPage;
+
+              </p>
+              </p>

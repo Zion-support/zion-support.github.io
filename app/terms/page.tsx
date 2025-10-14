@@ -47,3 +47,6 @@ const TermsPage: React.FC = () => {
   );
 }
 export default TermsPage;
+
+              </p>
+              </p>

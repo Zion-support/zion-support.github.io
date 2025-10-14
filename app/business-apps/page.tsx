@@ -47,3 +47,6 @@ const BusinessAppsPage: React.FC = () => {
   );
 }
 export default BusinessAppsPage;
+
+              </p>
+              </p>

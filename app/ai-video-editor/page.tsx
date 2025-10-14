@@ -47,3 +47,6 @@ const AiVideoEditorPage: React.FC = () => {
   );
 }
 export default AiVideoEditorPage;
+
+              </p>
+              </p>

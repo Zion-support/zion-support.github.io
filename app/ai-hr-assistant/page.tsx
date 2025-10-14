@@ -47,3 +47,6 @@ const AiHrAssistantPage: React.FC = () => {
   );
 }
 export default AiHrAssistantPage;
+
+              </p>
+              </p>

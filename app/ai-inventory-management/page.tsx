@@ -47,3 +47,6 @@ const AiInventoryManagementPage: React.FC = () => {
   );
 }
 export default AiInventoryManagementPage;
+
+              </p>
+              </p>

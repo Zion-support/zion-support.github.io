@@ -47,3 +47,6 @@ const AdManagementPage: React.FC = () => {
   );
 }
 export default AdManagementPage;
+
+              </p>
+              </p>

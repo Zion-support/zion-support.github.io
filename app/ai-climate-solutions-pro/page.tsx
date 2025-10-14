@@ -47,3 +47,6 @@ const AiClimateSolutionsProPage: React.FC = () => {
   );
 }
 export default AiClimateSolutionsProPage;
+
+              </p>
+              </p>

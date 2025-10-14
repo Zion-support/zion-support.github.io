@@ -47,3 +47,6 @@ const DeveloperToolsPage: React.FC = () => {
   );
 }
 export default DeveloperToolsPage;
+
+              </p>
+              </p>

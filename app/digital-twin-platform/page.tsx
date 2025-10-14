@@ -47,3 +47,6 @@ const DigitalTwinPlatformPage: React.FC = () => {
   );
 }
 export default DigitalTwinPlatformPage;
+
+              </p>
+              </p>

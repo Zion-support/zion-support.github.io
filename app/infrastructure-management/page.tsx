@@ -47,3 +47,6 @@ const InfrastructureManagementPage: React.FC = () => {
   );
 }
 export default InfrastructureManagementPage;
+
+              </p>
+              </p>

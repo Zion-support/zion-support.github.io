@@ -47,3 +47,6 @@ const ZionAiEmailOptimizerPage: React.FC = () => {
   );
 }
 export default ZionAiEmailOptimizerPage;
+
+              </p>
+              </p>

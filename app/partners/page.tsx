@@ -47,3 +47,6 @@ const PartnersPage: React.FC = () => {
   );
 }
 export default PartnersPage;
+
+              </p>
+              </p>

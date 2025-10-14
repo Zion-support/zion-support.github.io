@@ -47,3 +47,6 @@ const AiEmailAssistantPage: React.FC = () => {
   );
 }
 export default AiEmailAssistantPage;
+
+              </p>
+              </p>

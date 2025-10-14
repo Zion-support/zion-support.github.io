@@ -47,3 +47,6 @@ const AiCustomerChurnPage: React.FC = () => {
   );
 }
 export default AiCustomerChurnPage;
+
+              </p>
+              </p>

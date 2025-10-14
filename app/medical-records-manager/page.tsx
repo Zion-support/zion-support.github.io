@@ -47,3 +47,6 @@ const MedicalRecordsManagerPage: React.FC = () => {
   );
 }
 export default MedicalRecordsManagerPage;
+
+              </p>
+              </p>

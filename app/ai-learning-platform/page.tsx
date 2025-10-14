@@ -47,3 +47,6 @@ const AiLearningPlatformPage: React.FC = () => {
   );
 }
 export default AiLearningPlatformPage;
+
+              </p>
+              </p>

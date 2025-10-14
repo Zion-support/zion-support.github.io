@@ -47,3 +47,6 @@ const AiTimeSeriesForecastingPage: React.FC = () => {
   );
 }
 export default AiTimeSeriesForecastingPage;
+
+              </p>
+              </p>

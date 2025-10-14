@@ -47,3 +47,6 @@ const Ai3dGenerationPage: React.FC = () => {
   );
 }
 export default Ai3dGenerationPage;
+
+              </p>
+              </p>

@@ -47,3 +47,6 @@ const BackupRecoveryPage: React.FC = () => {
   );
 }
 export default BackupRecoveryPage;
+
+              </p>
+              </p>

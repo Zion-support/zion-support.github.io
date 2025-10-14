@@ -47,3 +47,6 @@ const AiLegalAssistantPage: React.FC = () => {
   );
 }
 export default AiLegalAssistantPage;
+
+              </p>
+              </p>

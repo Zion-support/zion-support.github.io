@@ -47,3 +47,6 @@ const FraudDetectionPage: React.FC = () => {
   );
 }
 export default FraudDetectionPage;
+
+              </p>
+              </p>

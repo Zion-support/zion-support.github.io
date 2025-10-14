@@ -47,3 +47,6 @@ const TrainingPage: React.FC = () => {
   );
 }
 export default TrainingPage;
+
+              </p>
+              </p>

@@ -47,3 +47,6 @@ const HelpPage: React.FC = () => {
   );
 }
 export default HelpPage;
+
+              </p>
+              </p>

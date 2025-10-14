@@ -47,3 +47,6 @@ const TeamPage: React.FC = () => {
   );
 }
 export default TeamPage;
+
+              </p>
+              </p>

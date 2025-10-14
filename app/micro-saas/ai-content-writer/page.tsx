@@ -47,3 +47,6 @@ const AiContentWriterPage: React.FC = () => {
   );
 }
 export default AiContentWriterPage;
+
+              </p>
+              </p>
