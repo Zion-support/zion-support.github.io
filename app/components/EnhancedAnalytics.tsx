@@ -12,7 +12,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   useEffect(() => {
     // Enhanced analytics tracking
     const trackEvent = (event: string, properties?: Record<string, unknown>) => {
-      if (typeof window !== 'undefined' && (window as any).gtag) => {
+      if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', event, {
           event_category: 'Enhanced Analytics',
           ...properties
@@ -22,7 +22,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
     // Track page view
     const trackPageView = () => {
-      if (typeof window !== 'undefined' && (window as any).gtag) => {
+      if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
           page_location: window.location.href
@@ -45,7 +45,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 
       const trackVisibility = () => {
         isActive = !document.hidden;
-        if (isActive) => {
+        if (isActive) {
           startTime = Date.now();
         } else {
           const timeSpent = Date.now() - startTime;
@@ -79,7 +79,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     const cleanup = trackEngagement();
 
     // Track custom event if provided
-    if (eventName) => {
+    if (eventName) {
       trackEvent(eventName, eventProperties);
     }
 

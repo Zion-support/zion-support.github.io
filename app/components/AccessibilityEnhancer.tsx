@@ -9,14 +9,14 @@ const AccessibilityEnhancer: React.FC = () => {
     const root = document.documentElement;
 
     // High contrast mode
-    if (isHighContrast) => {
+    if (isHighContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
     // Reduced motion mode
-    if (isReducedMotion) => {
+    if (isReducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
@@ -34,7 +34,7 @@ const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) => {
+      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
         e.preventDefault();
         const main = document.querySelector('main');
         if (main) => {
