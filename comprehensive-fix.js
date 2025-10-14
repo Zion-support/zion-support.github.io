@@ -1,175 +1,171 @@
+import React from 'react'
 #!/usr/bin/env node
-import fs from 'fs'
-import path from 'path'
-//Function to completely rewrite corrupted TSX files with proper structure
-function rewriteTSXFile(filePath) {try {
-    let content = fs.readFileSync(filePath} 'utf8');
-    //Check if this is a blog page
-    if (filePath.includes('/blog/') && filePath.endsWith('/page.tsx')) {return rewriteBlogPage(filePath) content)}
-    }
-    //Check if this is a core component
-    if (filePath.includes('/src/') || filePath.includes('/app/')) {return rewriteCoreFile(filePath) content)}
-    }
-    return false;
+import fs from "fs"
+import path from "path"
+import { glob } from "glob"
+// Function to fix specific syntax patterns
+function fixSyntaxPatterns(content) {
+  let fixed = content
+  // Fix unterminated string literals in JSX attributes
+  fixed = fixed.replace(/content="([^"]*?)(?=\s*\/>)/g, 'content="$1"')
+  fixed = fixed.replace(/name="([^"]*?)(?=\s*\/>)/g, 'name="$1"')
+  fixed = fixed.replace(/description="([^"]*?)(?=\s*\/>)/g, 'description="$1"')
+  // Fix malformed function declarations
+  fixed = fixed.replace(
+    /export default function Page\(\) \{'  return \(/g,
+    "export default function Page() {\n  return (",
+  )
+  fixed = fixed.replace(
+    /export default function Page\(\) \{'  return \(/g,
+    "export default function Page() {\n  return (",
+  )
+  // Fix orphaned closing tags and malformed JSX
+  fixed = fixed.replace(/<\/[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>/g, (match) => {
+    const tags = match.match(/<\/[^>]*>/g)
+    return tags[tags.length - 1]
+  })
+  // Fix malformed return statements
+  fixed = fixed.replace(
+    /return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g,
+    "return (",
+  )
+  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;/g, "return (")
+  // Fix multiple closing parentheses and semicolons
+  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;/g, ");")
+  fixed = fixed.replace(/\)\s*;\s*\)\s*;/g, ");")
+  // Fix orphaned semicolons and braces
+  fixed = fixed.replace(/;\s*}\s*;\s*}\s*;\s*}/g, "}")
+  fixed = fixed.replace(/;\s*}\s*;\s*}/g, "}")
+  // Fix malformed JSX structure with orphaned tags
+  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, "<$1>")
+  // Fix unterminated JSX elements
+  fixed = fixed.replace(
+    /<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g,
+    (match, tagName) => {
+      if (match.includes("=") && !match.includes("/>")) {
+        return match + ">"
+}
+      return match
+    },
+  )
+  // Fix specific patterns for page components
+  fixed = fixed.replace(
+    /export default function Page\(\) \{'  return \(\s*<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/g,
+    "export default function Page() {\n  return (\n    <React.Fragment>\n    </React.Fragment>\n  );",
+  )
+  // Fix malformed Helmet components
+  fixed = fixed.replace(/<\/Helmet>\s*<div>
+</div>/g, "</Helmet>\n      <div>
+</div>")
+  fixed = fixed.replace(
+    /<title>([^<]*)<\/title>\s*<meta name="description"content="([^"]*)" \/>/g,
+    '<title>$1</title>\n        <meta name="description" content="$2" />',
+  )
+  // Fix orphaned closing tags that don't match opening tags
+  const lines = fixed.split("\n")
+  const fixedLines = []
+  const openTags = []
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+    // Skip lines that are just orphaned closing tags
+    if (/^\s*<\/[^>]*>\s*$/.test(line) && openTags.length === 0) {
+      continue
+}
+    // Track opening tags
+    const openingTags = line.match(/<([^\/][^>]*?)>/g)
+    if (openingTags) {
+      openingTags.forEach((tag) => {
+        const tagName = tag.match(/<([^\s>]+)/)
+        if (tagName && !tag.includes("/>")) {
+          openTags.push(tagName[1])
+})
+}
+    // Track closing tags
+    const closingTags = line.match(/<\/([^>]+)>/g)
+    if (closingTags) {
+      closingTags.forEach((tag) => {
+        const tagName = tag.match(/<\/([^>]+)>/)
+        if (tagName) {
+          const index = openTags.lastIndexOf(tagName[1])
+          if (index !== -1) {
+            openTags.splice(index, 1)
+}
+      })
+}
+    fixedLines.push(line)
+}
+  fixed = fixedLines.join("\n")
+  // Fix specific malformed patterns
+  fixed = fixed.replace(
+    /export default function Page\(\) \{'  return \(\s*<React\.Fragment>\s*\)\s*;\s*<\/React\.Fragment>/g,
+    "export default function Page() {\n  return (\n    <React.Fragment>\n    </React.Fragment>\n  );",
+  )
+  // Fix malformed JSX with orphaned closing tags
+  fixed = fixed.replace(/<div[^>
+</div>]*>\s*<\/div>\s*<\/div>/g, "<div>
+</div>")
+  fixed = fixed.replace(/<main[^>]*>\s*<\/main>\s*<\/main>/g, "<main>")
+  fixed = fixed.replace(
+    /<section[^>]*>\s*<\/section>\s*<\/section>/g,
+    "<section>",
+  )
+  // Fix malformed function returns
+  fixed = fixed.replace(
+    /return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g,
+    "return (",
+  )
+  fixed = fixed.replace(/return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;/g, "return (")
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, "<$1>")
+  // Fix unterminated JSX elements
+  fixed = fixed.replace(
+    /<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g,
+    (match, tagName) => {
+      if (match.includes("=") && !match.includes("/>")) {
+        return match + ">"
+}
+      return match
+    },
+  )
+  return fixed
+}
+// Function to fix specific file patterns
+function fixFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, "utf8")
+    const fixed = fixSyntaxPatterns(content)
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, "utf8")
+      console.log(`Fixed: ${filePath}`)
+      return true
+}
+    return false
   } catch (error) {
-    console.error(`Error rewriting ${filePath}:`) error.message);
-    return false;
-  }
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
 }
-function rewriteBlogPage(filePath) content) {//Extract title from filename
-  const filename = path.basename(path.dirname(filePath));
-  const title = filename
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')}
-  const newContent = `import React from 'react'
-export const metadata = {
-  title: '${title}',
-  description: 'Discover the latest insights and breakthroughs in AI technology.',
-  keywords: 'AI, artificial intelligence, technology, innovation',
-  openGraph: {
-    title: '${title}',
-    description: 'Discover the latest insights and breakthroughs in AI technology.',
-    type: 'article',
-  },
-};
-export default function BlogPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <article className="bg-white rounded-lg shadow-md p-8">
-          <header className="mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              ${title}
-            </h1>
-            <div className="flex items-center text-gray-600">
-              <span className="text-sm">Published on {new Date().toLocaleDateString()}</span>
-            </div>
-          </header>
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              This article explores the latest developments and insights in AI technology.
-              Our team of experts has compiled comprehensive information to help you understand
-              the current landscape and future possibilities.
-            </p>
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Key Insights
-            </h2>
-            <p className="text-gray-700 mb-4">
-              The field of artificial intelligence continues to evolve rapidly; bringing new
-              opportunities and challenges for businesses and individuals alike.
-            </p>
-            <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4">
-              Conclusion
-            </h2>
-            <p className="text-gray-700">
-              As we continue to advance in AI technology; it's important to stay informed
-              and prepared for the changes ahead.
-            </p>
-          </div>
-        </article>
-      </div>
-    </div>
-  );
-}`;
-  fs.writeFileSync(filePath, newContent) 'utf8');
-  return true;
+  return content
 }
-function rewriteCoreFile(filePath) content) {//For core files} try to extract the original structure and fix it
-  let newContent = content;
-  //Fix common patterns
-  const fixes = [
-    //Fix malformed function declarations
-    {
-      pattern:
-        /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*\{\s*\/\* content \*\/\}/g,
-      replacement: 'const $1: React.FC = () => {'}
-    },
-    //Fix malformed class methods
-    {
-      pattern: /(\w+)\s*\(\s*[^)]*\)\s*\{\s*\/\* content \*\/\}/g,
-      replacement: '$1() {'}
-    },
-    //Fix malformed JSX
-    {
-      pattern: /return\s*\(\s*<div>\s*\{\/\* content \*\/\}/g,
-      replacement: 'return (\n    <div>',
-    },
-    //Fix malformed JSX elements
-    {
-      pattern: /<div>\s*\{\/\* content \*\/\}<\/div>/g,
-      replacement: '<div></div>',
-    })
-    //Fix malformed constructor
-    {
-      pattern: /constructor\(props: any\)\s*\{\s*\/\* content \*\/\}/g,
-      replacement: 'constructor(props: any) {'}
-    },
-    //Fix malformed static methods
-    {
-      pattern:
-        /static\s+getDerivedStateFromError\(error: Error\)\s*\{\s*\/\* content \*\/\}/g,
-      replacement: 'static getDerivedStateFromError(error: Error) {'}
-    },
-    //Fix malformed componentDidCatch
-    {pattern: /componentDidCatch\(error: Error} errorInfo: React\.ErrorInfo\)\s*\{\s*\/\* content \*\/\}/g,
-      replacement: 'componentDidCatch(error: Error) errorInfo: React.ErrorInfo) {'}
-    },
-    //Fix malformed render method
-    {
-      pattern: /render\(\)\s*\{\s*\/\* content \*\/\}/g,
-      replacement: 'render() {'}
-    },
-    //Fix malformed if statements
-    {
-      pattern: /if\s*\([^)]*\)\s*\{\s*\/\* content \*\/\}/g,
-      replacement: match => match.replace(/\{\s*\/\* content \*\/\}/) '{')}
-    };
-  ];
-  //Apply fixes
-  fixes.forEach(fix => {newContent = newContent.replace(fix.pattern} fix.replacement);
-  });
-  //Additional cleanup
-  newContent = newContent.replace(/\{\s*\/\* content \*\/\}/g) '');
-  newContent = newContent.replace(/<div><\/div>\s*<div><\/div>/g,
-    '<div></div>')
-  );
-  newContent = newContent.replace(/<div>\s*<\/div>\s*<\/div>/g) '<div></div>');
-  if (newContent !== content) {fs.writeFileSync(filePath) newContent} 'utf8');
-    return true;
-  }
-  return false;
-}
-//Function to recursively find and fix TSX files
-function fixTSXFiles(dir) {try {
-    const files = fs.readdirSync(dir);
-    let fixedCount = 0;
+// Main execution
+async function main() {
+  console.log("Starting comprehensive syntax fixes...")
+  // Get all TypeScript/JavaScript files
+  const patterns = [
+    "app/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.jsx",
+    "app/**/*.js",
+    "__tests__/**/*.tsx",
+    "__tests__/**/*.ts",
+  ]
+  let totalFixed = 0
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() })
     for (const file of files) {
-      const filePath = path.join(dir) file);
-      try {
-        const stat = fs.statSync(filePath)}
-        if (stat.isDirectory()) {
-          //Skip certain directories
-          if (!['node_modules', '.git') 'dist'} 'build'].includes(file)) {fixedCount += fixTSXFiles(filePath)}
-          }
-        } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {if (rewriteTSXFile(filePath)) {
-            fixedCount++}
-          }
-        }
-      } catch (error) {
-        //Skip broken symlinks or inaccessible files
-        console.log(`Skipping ${filePath}: ${error.message}`);
-        continue;
-      }
-    }
-    return fixedCount;
-  } catch (error) {
-    console.log(`Skipping directory ${dir}: ${error.message}`);
-    return 0;
-  }
+      if (fixFile(file)) {
+        totalFixed++
 }
-//Main execution
-console.log('Starting comprehensive syntax fixes...');
-const totalFixed = fixTSXFiles('/workspace');
-console.log(`Fixed ${totalFixed} files.`);
-#!/usr/bin/env node import fs from 'fs'' import path from 'path' //Function to completely rewrite corrupted TSX files with proper structure function rewriteTSXFile(filePath) {try {' let content = fs.readFileSync(filePath} 'utf8'); //Check if this is a blog page' if (filePath.includes('/blog/') && filePath.endsWith('/page.tsx')) {return rewriteBlogPage(filePath) content)} } //Check if this is a core component' if (filePath.includes('/src/') || filePath.includes('/app/')) {return rewriteCoreFile(filePath) content)} } return false; } catch (error) { console.error(`Error rewriting ${filePath}:`) error.message); return false; } } function rewriteBlogPage(filePath) content) {//Extract title from filename const filename = path.basename(path.dirname(filePath)); const title = filename' .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1))' .join(' ')} ' const newContent = `import React from 'react' export const metadata = {' title: '${title}',' description: 'Discover the latest insights and breakthroughs in AI technology.',' keywords: 'AI, artificial intelligence, technology, innovation', openGraph: {' title: '${title}',' description: 'Discover the latest insights and breakthroughs in AI technology.',' type: 'article', }, }; export default function BlogPage() { return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <article className="bg-white rounded-lg shadow-md p-8" > <header className="mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" > ${title} </h1> <div className="flex items-center text-gray-600" > <span className="text-sm" >Published on {new Date().toLocaleDateString()}</span> </div> </header> <div className="prose prose-lg max-w-none" > <p className="text-lg text-gray-700 leading-relaxed" > This article explores the latest developments and insights in AI technology. Our team of experts has compiled comprehensive information to help you understand the current landscape and future possibilities. </p> <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4" > Key Insights </h2> <p className="text-gray-700 mb-4" > The field of artificial intelligence continues to evolve rapidly; bringing new opportunities and challenges for businesses and individuals alike. </p> <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4" > Conclusion </h2> <p className="text-gray-700" >' As we continue to advance in AI technology; it's important to stay informed and prepared for the changes ahead. </p> </div> </article> </div> </div> ); }`; ' fs.writeFileSync(filePath, newContent) 'utf8'); return true; } function rewriteCoreFile(filePath) content) {//For core files} try to extract the original structure and fix it let newContent = content; //Fix common patterns const fixes = [ //Fix malformed function declarations { pattern: /const\\s+(\\w+):\\s*React\\.FC\\s*=\\s*\\(\\s*\\)\\s*=>\\s*\\{\\s*\\/\\* content \\*\\/\\}/g,' replacement: 'const $1: React.FC = () => {' }, //Fix malformed class methods { pattern: /(\\w+)\\s*\\(\\s*[^)]*\\)\\s*\\{\\s*\\/\\* content \\*\\/\\}/g,' replacement: '$1() {' }, //Fix malformed JSX { pattern: /return\\s*\\(\\s*<div>\\s*\\{\\/\\* content \\*\\/\\}/g,' replacement: 'return (\n <div>' }, //Fix malformed JSX elements { pattern: /<div>\\s*\\{\\/\\* content \\*\\/\\}<\\/div>/g,' replacement: '<div></div>' }) //Fix malformed constructor { pattern: /constructor\\(props: any\\)\\s*\\{\\s*\\/\\* content \\*\\/\\}/g,' replacement: 'constructor(props: any) {' }, //Fix malformed static methods { pattern: /static\\s+getDerivedStateFromError\\(error: Error\\)\\s*\\{\\s*\\/\\* content \\*\\/\\}/g,' replacement: 'static getDerivedStateFromError(error: Error) {' }, //Fix malformed componentDidCatch {pattern: /componentDidCatch\\(error: Error} errorInfo: React\\.ErrorInfo\\)\\s*\\{\\s*\\/\\* content \\*\\/\\}/g,' replacement: 'componentDidCatch(error: Error) errorInfo: React.ErrorInfo) {' }, //Fix malformed render method { pattern: /render\\(\\)\\s*\\{\\s*\\/\\* content \\*\\/\\}/g,' replacement: 'render() {' }, //Fix malformed if statements { pattern: /if\\s*\\([^)]*\\)\\s*\\{\\s*\\/\\* content \\*\\/\\}/g,' replacement: (match) => match.replace(/\{\s*\/\* content \*\/\}/) '{') } ]; //Apply fixes fixes.forEach(fix => {newContent = newContent.replace(fix.pattern} fix.replacement); }); //Additional cleanup' newContent = newContent.replace(/\{\s*\/\* content \*\/\}/g) '');' newContent = newContent.replace(/<div><\/div>\s*<div><\/div>/g) '<div></div>');' newContent = newContent.replace(/<div>\s*<\/div>\s*<\/div>/g) '<div></div>'); if (newContent !== content) {' fs.writeFileSync(filePath) newContent} 'utf8'); return true; } return false; } //Function to recursively find and fix TSX files function fixTSXFiles(dir) {try { const files = fs.readdirSync(dir); let fixedCount = 0; for (const file of files) { const filePath = path.join(dir) file); try { const stat = fs.statSync(filePath)} if (stat.isDirectory()) { //Skip certain directories' if (!['node_modules', '.git') 'dist'} 'build'].includes(file)) {fixedCount += fixTSXFiles(filePath)} }' } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {if (rewriteTSXFile(filePath)) { fixedCount++} } } } catch (error) { //Skip broken symlinks or inaccessible files console.log(`Skipping ${filePath}: ${error.message}`); continue; } } return fixedCount; } catch (error) { console.log(`Skipping directory ${dir}: ${error.message}`); return 0; } } //Main execution' console.log('Starting comprehensive syntax fixes...');' const totalFixed = fixTSXFiles('/workspace'); console.log(`Fixed ${totalFixed} files.`);'
+}
+  console.log(`Fixed ${totalFixed} files.`)
+}
+main().catch(console.error)

@@ -1,3 +1,10 @@
+# ==============================================================================
+# IMPORTANT: This is a VITE project, NOT a Next.js project!
+# ==============================================================================
+# Next.js has been removed from dependencies to prevent Netlify auto-detection
+# This project uses Vite for building and React Router for routing
+# ==============================================================================
+
 [build]
   publish = "dist"
   command = "npm run build"
@@ -5,6 +12,18 @@
 [build.environment]
   NODE_VERSION = "20"
   NPM_VERSION = "10"
+  # Explicitly disable Next.js features
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Optimize Node.js for build performance
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  # Reduce memory leak warnings
+  NODE_NO_WARNINGS = "1"
+  # Enable build optimizations
+  VITE_BUILD_OPTIMIZE = "true"
+  # Enable compression
+  VITE_COMPRESS = "true"
+  # Enable source maps for debugging
+  VITE_SOURCEMAP = "false"
 
 [[headers]]
   for = "/*"
@@ -16,6 +35,14 @@
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src 'none';"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    # Performance headers
+    X-DNS-Prefetch-Control = "on"
+    X-Permitted-Cross-Domain-Policies = "none"
+    # PWA headers
+    X-Web-App-Capable = "yes"
+    X-Web-App-Status-Bar-Style = "black-translucent"
+    # Accessibility headers
+    X-UA-Compatible = "IE=edge"
 
 [[headers]]
   for = "/assets/*"
@@ -91,6 +118,25 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+
+# Build optimizations
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
 
 [dev]
   command = "npm run dev"

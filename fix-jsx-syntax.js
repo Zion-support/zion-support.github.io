@@ -1,110 +1,103 @@
+import React from 'react'
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-
-//Function to fix JSX syntax errors
+import fs from "fs"
+import path from "path"
+// Function to fix JSX syntax errors
 function fixJSXSyntax(content) {
-  let fixed = content;
-
-  //Fix function declarations with malformed comments
+  let fixed = content
+  // Fix malformed JSX attributes with colons instead of equals
+  fixed = fixed.replace(/name:\s*"([^"]+)"/g, 'name="$1"')
+  fixed = fixed.replace(/content:\s*"([^"]+)"/g, 'content="$1"')
+  fixed = fixed.replace(/className:\s*"([^"]+)"/g, 'className="$1"')
+  fixed = fixed.replace(/id:\s*"([^"]+)"/g, 'id="$1"')
+  fixed = fixed.replace(/type:\s*"([^"]+)"/g, 'type="$1"')
+  fixed = fixed.replace(/href:\s*"([^"]+)"/g, 'href="$1"')
+  fixed = fixed.replace(/src:\s*"([^"]+)"/g, 'src="$1"')
+  fixed = fixed.replace(/alt:\s*"([^"]+)"/g, 'alt="$1"')
+  fixed = fixed.replace(/title:\s*"([^"]+)"/g, 'title="$1"')
+  fixed = fixed.replace(/value:\s*"([^"]+)"/g, 'value="$1"')
+  fixed = fixed.replace(/placeholder:\s*"([^"]+)"/g, 'placeholder="$1"')
+  // Fix stray quotes in JSX
+  fixed = fixed.replace(/>"(\s*<)/g, ">$1")
+  fixed = fixed.replace(/>"(\s*$)/gm, ">")
+  fixed = fixed.replace(/"(\s*<)/g, "$1")
+  fixed = fixed.replace(/"(\s*$)/gm, "")
+  // Fix malformed closing tags
+  fixed = fixed.replace(/<\/\s*>/g, "")
+  fixed = fixed.replace(/<\s*\/>/g, "")
+  // Fix malformed self-closing tags
+  fixed = fixed.replace(/<(\w+)\s*\/\s*>/g, "<$1 />")
+  // Fix malformed JSX expressions
+  fixed = fixed.replace(/\{\s*:\s*"([^"]+)"\s*\}/g, '"$1"')
+  // Fix malformed import statements with extra spaces
   fixed = fixed.replace(
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {'
-  );
-
-  //Fix malformed JSX elements that are self-closing but shouldn't be
-  //Pattern: <div></div> followed by content that should be inside
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
-
-  //Fix malformed JSX elements with attributes
+    /import\s+{\s*(\w+)\s*}\s+from\s+"([^"]+)";/g,
+    'import { $1 } from "$2";',
+  )
+  // Fix malformed function declarations
   fixed = fixed.replace(
-    /<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g,
-    '<$1$2><$3$4></$3></$1>'
-  );
-
-  //Fix array syntax issues
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
-
-  //Fix object syntax issues
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{');
-
-  //Fix missing closing braces for objects
+    /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*$/gm,
+    "const $1 = () => {\n",
+  )
+  // Fix malformed return statements
+  fixed = fixed.replace(/return\s*\(\s*$/gm, "return (\n")
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/<\/(\w+)>\s*"(\s*<)/g, "</$1>$2")
+  // Fix malformed meta tags
   fixed = fixed.replace(
-    /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
-    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
-  );
-
-  return fixed;
+    /<meta\s+name:\s*"([^"]+)"\s+content:\s*"([^"]+)"\s*\/>/g,
+    '<meta name="$1" content="$2" />',
+  )
+  // Fix malformed Helmet tags
+  fixed = fixed.replace(/<Helmet>\s*$/gm, "<Helmet>\n")
+  fixed = fixed.replace(/<\/Helmet>\s*$/gm, "\n</Helmet>")
+  return fixed
 }
-
-//Function to process a single file
+// Function to process a single file
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixJSXSyntax(content);
-
+    const content = fs.readFileSync(filePath, "utf8")
+    const fixed = fixJSXSyntax(content)
     if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
+      fs.writeFileSync(filePath, fixed, "utf8")
+      console.log(`Fixed: ${filePath}`)
+      return true
+}
+    return false
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+    console.error(`Error processing ${filePath}:`, error.message)
+    return false
 }
-
-//Main function
-async function main() {
-  const patterns = [
-    'src/**/*.tsx',
-    'src/**/*.ts',
-    'app/**/*.tsx',
-    'app/**/*.ts',
-  ];
-
-  let totalFixed = 0;
-
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: [
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/__tests__/**',
-        '**/_app_disabled/**',
-        '**/_conflicted_disabled/**',
-        '**/_pages_api_disabled/**',
-        '**/_pages_disabled/**',
-        '**/admin-api-disabled/**',
-        '**/api-disabled/**',
-        '**/api.disabled/**',
-        '**/api.disabled.temp/**',
-        '**/api-backup/**',
-        '**/apps.backup/**',
-        '**/automation_backup/**',
-        '**/ai-optimization-backups/**',
-        '**/automation_logs/**',
-        '**/all-automations-reports/**',
-        '**/accessibility-reports/**',
-      ],
-    });
-
-    for (const file of files) {
-      if (processFile(file)) {
-        totalFixed++;
-      }
-    }
-  }
-
-  console.log(`\nTotal files fixed: ${totalFixed}`);
+// Function to recursively find and process files
+function processDirectory(dirPath) {
+  let filesProcessed = 0
+  let filesFixed = 0
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath)
+    for (const item of items) {
+      const fullPath = path.join(currentPath, item)
+      const stat = fs.statSync(fullPath)
+      if (
+        stat.isDirectory() &&
+        !item.startsWith(".") &&
+        item !== "node_modules"
+      ) {
+        walkDir(fullPath)
+      } else if (
+        stat.isFile() &&
+        (item.endsWith(".tsx") || item.endsWith(".jsx"))
+      ) {
+        filesProcessed++
+        if (processFile(fullPath)) {
+          filesFixed++
 }
-
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main().catch(console.error);
 }
-
-export { fixJSXSyntax, processFile };
+  walkDir(dirPath)
+  return { filesProcessed, filesFixed }
+}
+// Main execution
+console.log("Starting JSX syntax fixes...")
+const { filesProcessed, filesFixed } = processDirectory("./app")
+console.log(
+  `\nCompleted! Processed ${filesProcessed} files, fixed ${filesFixed} files.`,
+)

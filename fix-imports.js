@@ -1,80 +1,79 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-
-//Mapping of broken imports to correct imports
-const iconMappings = {
-  rrowleft: 'ArrowLeft',
-  alendar: 'Calendar',
-  ser: 'User',
-  lock: 'Clock',
-  ag: 'Tag',
-  rendingup: 'TrendingUp',
-  ollarsign: 'DollarSign',
-  sers: 'Users',
-  arget: 'Target',
-  rain: 'Brain',
-  ap: 'Zap',
-  hield: 'Shield',
-  rrowright: 'ArrowRight',
-  og: 'Log',
-  pu: 'Cpu',
-  lobe: 'Globe',
-  ocket: 'Rocket',
-  heckcircle: 'CheckCircle',
-  hare2: 'Share2',
-  ookmark: 'Bookmark',
-  ot: 'Bot',
-  ookopen: 'BookOpen',
-};
-
-//Function to fix imports in a file
-function fixImportsInFile(filePath) {
+import fs from "fs"
+import path from "path"
+import { fileURLToPath } from "url"
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Function to fix import statements and other syntax issues
+function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    //Fix lucide-react imports
-    for (const [broken, correct] of Object.entries(iconMappings)) {
-      const oldImport = `lucide-react/dist/esm/icons/${broken}`;
-      const newImport = `lucide-react`;
-
-      if (content.includes(oldImport)) {
-        content = content.replace(
-          new RegExp(`import ${correct} from '${oldImport}';`, 'g'),
-          `import { ${correct} } from '${newImport}';`
-        );
-        modified = true;
-      }
-    }
-
-    //Fix Link imports if missing
-    if (
-      content.includes('Link') &&
-      !content.includes("import Link from 'next/link'")
-    ) {
-      content = "import Link from 'next/link';\n" + content;
-      modified = true;
-    }
-
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed imports in: ${filePath}`);
-    }
+    let content = fs.readFileSync(filePath, "utf8")
+    // Fix import statements missing semicolons
+    content = content
+      .replace(/import React from 'react'\n/g, "import React from 'react';\n")
+      .replace(
+        /import { Helmet } from 'react-helmet-async'\n/g,
+        "import { Helmet } from 'react-helmet-async';\n",
+      )
+      .replace(
+        /import { useEffect } from 'react'\n/g,
+        "import { useEffect } from 'react';\n",
+      )
+      .replace(
+        /import { useState } from 'react'\n/g,
+        "import { useState } from 'react';\n",
+      )
+      .replace(
+        /import { useCallback } from 'react'\n/g,
+        "import { useCallback } from 'react';\n",
+      )
+      .replace(
+        /import { useMemo } from 'react'\n/g,
+        "import { useMemo } from 'react';\n",
+      )
+      // Fix other common import patterns
+      .replace(/from '([^']+)'\n/g, "from '$1';\n")
+      .replace(/from "([^"]+)"\n/g, 'from "$1";\n')
+      // Fix any remaining unterminated strings
+      .replace(/import React from 'react$/g, "import React from 'react';")
+      .replace(
+        /import { Helmet } from 'react-helmet-async$/g,
+        "import { Helmet } from 'react-helmet-async';",
+      )
+      // Clean up extra whitespace
+      .replace(/\n\s*\n\s*\n/g, "\n\n")
+      .replace(/\s+$/gm, "")
+      .trim()
+    fs.writeFileSync(filePath, content)
+    console.log(`Fixed: ${filePath}`)
+    return true
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
 }
-
-//Get all blog files
-const blogDir = '/workspace/app/blog';
-const files = fs
-  .readdirSync(blogDir, { recursive: true })
-  .filter(file => file.endsWith('.tsx'))
-  .map(file => path.join(blogDir, file));
-
-// Process each file
-files.forEach(fixImportsInFile);
-
-console.log('Import fixing completed!');
+// Function to find all tsx files
+function findTsxFiles(dir) {
+  const files = []
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir)
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item)
+      const stat = fs.statSync(fullPath)
+      if (stat.isDirectory()) {
+        traverse(fullPath)
+      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
+        files.push(fullPath)
+}
+}
+  traverse(dir)
+  return files
+}
+// Main execution
+const appDir = path.join(__dirname, "app")
+const tsxFiles = findTsxFiles(appDir)
+console.log(`Found ${tsxFiles.length} tsx/ts files`)
+let fixedCount = 0
+for (const file of tsxFiles) {
+  if (fixFile(file)) {
+    fixedCount++
+}
+console.log(`Fixed ${fixedCount} out of ${tsxFiles.length} files`)

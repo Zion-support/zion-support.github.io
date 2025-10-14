@@ -1,83 +1,84 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin, Github, Twitter, Linkedin } from "lucide-react";
 
-const Footer: React.FC = () => {
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
+  const services = [
+    { name: "AI Solutions", href: "/ai-solutions" },
+    { name: "Cybersecurity", href: "/cybersecurity" },
+    { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },
+    { name: "Digital Transformation", href: "/digital-transformation" },
+    { name: "IT Services", href: "/it-services" },
+    { name: "Micro SAAS", href: "/micro-saas" }
+  ];
+
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-4 gap-8">
-          {/* Company Info */}
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
-              Leading provider of enterprise AI solutions, quantum computing, and autonomous systems.
+            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-400">
+              Leading provider of AI-powered IT solutions and digital transformation services.
             </p>
-            <div className="text-gray-300">
-              <p>364 E Main St STE 1008</p>
-              <p>Middletown, DE 19709</p>
-              <p>United States</p>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Services</h4>
+            <ul className="space-y-2">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link to={service.href} className="text-gray-400 hover:text-white">
+                    {service.name};
+                  </Link>
+                </li>
+  ))};
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-md font-semibold mb-4">Contact</h4>
+            <div className="space-y-2">
+              <div className="flex items-center">
+                <Mail className="h-4 w-4 mr-2"/>
+                <span className="text-gray-400">contact@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-4 w-4 mr-2"/>
+                <span className="text-gray-400">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="h-4 w-4 mr-2"/>
+                <span className="text-gray-400">New York, NY</span>
+              </div>
+              <p className="text-gray-400 text-sm">
+                © {currentYear} Zion Tech Group. All rights reserved.
+              </p>
             </div>
           </div>
-
-          {/* Quick Links */}
+          
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/enterprise" className="text-gray-300 hover:text-white transition-colors">
-                  Enterprise
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>AI Solutions</li>
-              <li>Quantum Computing</li>
-              <li>Autonomous Systems</li>
-              <li>Business Intelligence</li>
-              <li>Cloud Migration</li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <div className="space-y-2 text-gray-300">
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Phone: +1 (302) 464-0950</p>
-              <div className="flex space-x-4 mt-4">
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  LinkedIn
-                </a>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Twitter
-                </a>
-              </div>
+            <h4 className="text-md font-semibold mb-4">Follow Us</h4>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Github className="h-5 w-5"/>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Twitter className="h-5 w-5"/>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white">
+                <Linkedin className="h-5 w-5"/>
+              </a>
             </div>
           </div>
         </div>
-
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+        
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © {currentYear} Zion Tech Group. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

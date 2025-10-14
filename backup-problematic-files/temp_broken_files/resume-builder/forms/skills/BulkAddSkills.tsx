@@ -1,1 +1,0 @@
-; export const BulkAddSkills = ({resumeId} onSuccess } BulkAddSkillsProps) => {; const [bulkSkills, setBulkSkills] = useState(),} const [error, setError] = useState<string | null>(null)}; disabled={isEnhancing || !bulkSkills.trim()}" className="text-left""

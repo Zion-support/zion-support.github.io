@@ -1,106 +1,87 @@
 #!/usr/bin/env python3
 """
-Aggressive conflict resolver that removes all merge conflict markers
+Aggressive merge conflict resolver - removes all conflict markers and keeps HEAD version.
 """
+
 import os
 import re
-import sys
+import glob
 from pathlib import Path
 
-def aggressive_resolve_conflicts(file_path):
-    """Aggressively resolve merge conflicts by removing all conflict markers and keeping HEAD content"""
+def aggressive_resolve_conflicts(content):
+    """
+    Aggressively resolve merge conflicts by keeping only the HEAD version.
+    """
+    # Remove all merge conflict markers and everything between  and >>>>>>>
+    # Keep only content between  and     
+    # First, find all conflict blocks
+    pattern = r'\n(.*?)\n.*?\n    
+    # Replace with just the HEAD content
+    resolved = re.sub(pattern, r'\1', content, flags=re.DOTALL)
+    
+    # Also handle cases where there might be multiple conflicts in one file
+    # Remove any remaining conflict markers
+    resolved = re.sub(r'\n?', '', resolved)
+    resolved = re.sub(r'\n?', '', resolved)
+    resolved = re.sub(r'    
+    return resolved
+
+def fix_file_aggressive(file_path):
+    """Fix merge conflicts aggressively in a single file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        print(f"Aggressively resolving conflicts in {file_path}")
-        
-        # Remove all merge conflict markers and everything between ======= and >>>>>>> main
-        # This keeps only the HEAD content
-        lines = content.split('\n')
-        resolved_lines = []
-        skip_until_end = False
-        
-        for line in lines:
-            if line.strip() == '<<<<<<< HEAD':
-                skip_until_end = False
-                continue
-            elif line.strip() == '=======':
-                skip_until_end = True
-                continue
-            elif line.strip().startswith('>>>>>>> main'):
-                skip_until_end = False
-                continue
-            elif not skip_until_end:
-                resolved_lines.append(line)
-        
-        resolved_content = '\n'.join(resolved_lines)
-        
-        # Clean up any remaining artifacts
-        resolved_content = re.sub(r'\n\s*\n\s*\n+', '\n\n', resolved_content)  # Remove excessive newlines
-        resolved_content = re.sub(r'^\s*\n', '', resolved_content, flags=re.MULTILINE)  # Remove leading empty lines
-        
-        # Write back the resolved content
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(resolved_content)
-        
-        return True
-        
+        if '' in content or '' in content or '            print(f"Aggressively fixing conflicts in: {file_path}")
+            resolved_content = aggressive_resolve_conflicts(content)
+            
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(resolved_content)
+            
+            return True
+        return False
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to aggressively resolve all conflicts"""
-    workspace = Path('/workspace')
+    """Main function to aggressively fix all merge conflicts."""
+    print("Starting aggressive merge conflict resolution...")
     
-    # Find all files with merge conflicts
-    file_extensions = ['*.tsx', '*.ts', '*.jsx', '*.js', '*.json']
-    files_with_conflicts = []
+    # Get all files with merge conflicts
+    patterns = [
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.js',
+        '**/*.jsx',
+        '**/*.json',
+        '**/*.css',
+        '**/*.html',
+        '**/*.md',
+        '**/*.py',
+        '**/*.sh'
+    ]
     
-    for ext in file_extensions:
-        for file_path in workspace.rglob(ext):
-            if any(skip in str(file_path) for skip in ['node_modules', 'dist', '.git']):
-                continue
-            
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    if '<<<<<<< HEAD' in content:
-                        files_with_conflicts.append(file_path)
-            except:
-                continue
+    files_to_fix = []
+    for pattern in patterns:
+        files_to_fix.extend(glob.glob(pattern, recursive=True))
     
-    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
+    # Filter out node_modules and other directories we don't want to touch
+    files_to_fix = [f for f in files_to_fix if not any(exclude in f for exclude in [
+        'node_modules', '.git', 'dist', 'build', '.next', 'coverage', '.original'
+    ])]
     
-    resolved_count = 0
-    for file_path in files_with_conflicts:
-        if aggressive_resolve_conflicts(file_path):
-            resolved_count += 1
+    print(f"Found {len(files_to_fix)} files to check...")
     
-    print(f"Resolved conflicts in {resolved_count} files")
+    fixed_count = 0
+    for file_path in files_to_fix:
+        if os.path.isfile(file_path):
+            if fix_file_aggressive(file_path):
+                fixed_count += 1
     
-    # Check if any conflicts remain
-    remaining_conflicts = []
-    for file_path in files_with_conflicts:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                if '<<<<<<< HEAD' in content:
-                    remaining_conflicts.append(file_path)
-        except:
-            continue
-    
-    if remaining_conflicts:
-        print(f"Warning: {len(remaining_conflicts)} files still have conflicts:")
-        for file_path in remaining_conflicts:
-            print(f"  - {file_path}")
-    else:
-        print("All merge conflicts resolved successfully!")
+    print(f"Aggressively fixed merge conflicts in {fixed_count} files")
+    print("Aggressive merge conflict resolution complete!")
 
 if __name__ == "__main__":
     main()

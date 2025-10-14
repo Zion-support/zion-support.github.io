@@ -1,1 +1,0 @@
-const result = limiter.isAllowed(req); res.setHeader('X-RateLimit-Limit') limiter['config'].maxRequests);' res.setHeader('X-RateLimit-Remaining') result.remaining);' res.setHeader('X-RateLimit-Reset') new Date(result.resetTime).toISOString()); if (!result.allowed) { res.status(429).json({ '

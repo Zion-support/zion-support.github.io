@@ -2,13 +2,10 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -19,28 +16,17 @@
     "strictNullChecks": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": false,
+    "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "moduleResolution": "bundler",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/pages/*": [
-        "src/pages/*"
-      ],
-      "@/utils/*": [
-        "src/utils/*"
-      ],
-      "@/types/*": [
-        "src/types/*"
-      ]
+      "@/*": ["./app/*"],
+      "@/components/*": ["./app/components/*"],
+      "@/utils/*": ["./app/utils/*"],
+      "@/hooks/*": ["./hooks/*"]
     },
+    "incremental": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true,
@@ -55,78 +41,22 @@
     "verbatimModuleSyntax": false
   },
   "include": [
-    "app/**/*",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     "App.tsx",
-    "components/**/*"
+    "main.tsx",
+    "utils/**/*.ts",
+    "hooks/**/*.ts",
+    "vite.config.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "build",
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
     "**/*.spec.tsx",
-    "_app_disabled/**",
-    "_conflicted_disabled/**",
-    "_pages_api_disabled/**",
-    "_pages_disabled/**",
-    "admin-api-disabled/**",
-    "api-disabled/**",
-    "api.disabled/**",
-    "api.disabled.temp/**",
-    "api-backup/**",
-    "apps.backup/**",
-    "automation_backup/**",
-    "ai-optimization-backups/**",
-    "automation_logs/**",
-    "all-automations-reports/**",
-    "accessibility-reports/**",
-    "corrupted-files-backup/**",
-    "corrupted_backup/**",
-    "corrupted_files_backup_2/**",
-    "content/**",
-    "contracts/**",
-    "components_backup/**",
-    "data/**",
-    "data_backup/**",
-    "dao/**",
-    "deployments/**",
-    "disabled-api/**",
-    "e2e/**",
-    "factories/**",
-    "hooks/**",
-    "lib_backup/**",
-    "services/**",
-    "middleware/**",
-    "app/blog/**",
-    "app/page-optimized.tsx",
-    "app/services/**/*",
-    "app/case-studies/**/*",
-    "app/guides/**/*",
-    "app/components/**/*",
-    "src/components/disabled-corrupted/**",
-    "EnhancedFooter.tsx",
-    "EnhancedHeader.tsx",
-    "EnhancedNavigation.tsx",
-    "ModernNavigation.tsx",
-    "SidebarNavigation.tsx",
-    "api-documentation.tsx",
-    "app/components/NewContentPromotionalBanner2026.tsx",
-    "app/components/NewestContent2025Banner.tsx",
-    "api/**",
-    "lib/**",
-    "utils/**",
-    "src/utils/**",
-    "blog/**",
-    "backup-problematic-files/**",
-    "automation/**",
-    "**/*.disabled/**",
-    "**/*.backup/**"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
+    "app/components-broken/**",
+    "app/pages-broken/**"
   ]
 }

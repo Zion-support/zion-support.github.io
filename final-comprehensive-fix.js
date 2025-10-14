@@ -1,153 +1,28 @@
-#!/usr/bin/env node;
-import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-function createValidComponent(filePath) {const fileName = path.basename(filePath) path.extname(filePath))}
-  const componentName = fileName
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('')
-    .replace(/[^a-zA-Z0-9]/g} '');
-  return `import React from 'react'
-import { SEO } from '@/components/SEO'
-export default function ${componentName}() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-      <SEO
-        title="${componentName} - Zion Technologies"
-        description="Professional ${componentName} services by Zion Technologies"
-      />
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">
-            ${componentName}
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional ${componentName} services delivered with cutting-edge technology and expertise.
-          </p>
-        </div>
-      </div>
-    </div>
-  )}
-`;
+'use client'
+#!/usr/bin/env node; import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; console.log(' Starting final comprehensive error fixing process...');'
+// Function to fix a single file comprehensively; function fixFileComprehensively(filePath) {} try {} let content = fs.readFileSync(filePath, 'utf8'); const originalContent = content; // Fix merge conflict markers; content = content.replace(/\n([\s\S]*?)\n content = content.replace(/\n([\s\S]*?)\n content = content.replace(/\n([\s\S]*?)\n // Fix unterminated string literals; content = content.replace(/import React from 'react';]*)/g, "import React from 'react';);'"'
+} content = content.replace(/import { Helmet } from 'react-helmet-async';]*)/g, "import { Helmet } from 'react-helmet-async';);'
+content = content.replace(//g, ");' // Fix malformed JSX; content = content.replace(/<>/g, '<>'); content = content.replace(/<\/>/g, '</>'); content = content.replace(/<Helme t><///Helme t>/g, '<Helme t><///Helme t>'); content = content.replace(/<\/Helme t>/g, '</Helme t>'); content = content.replace(/<titl e>([^<]*)<\/titl e>/g, '<titl e>$1</titl e>'); content = content.replace(/<meta[^>]*\/>/g, (match) => match.slice(0, -1)); // Fix unterminated string constants; content = content.replace(/import React from 'react';]*)/g, "import React from 'react';);'
+content = content.replace(/import { Helmet } from 'react-helmet-async';]*)/g, "import { Helmet } from 'react-helmet-async';);' // Fix malformed function declarations; content = content.replace( /export default functio;n; ([ ^ {} ]"'
+)
+) ]+)\s*{/g, 'export default functio;n; $1 {')}' // Fix missing closing parentheses and brackets content = content.replace(/return \(\s*<>([\s\S]*?)\s*<\/>\s*\)/g, 'return (\n <>\n$1\n </>\n );\n}`;`'` } // Fix specific parsing errors content = content.replace(// / Unexpected token <</g, '// // Unexpected token <<') content = content.replace(// / Unexpected token :/g, '// // Unexpected token :') content = content.replace(// / Unexpected token }/g, '// // Unexpected token }') content = content.replace( /Unexpected token \['`'
+)
+) /g, '// // Unexpected token [') content = content.replace(// / Unexpected token/g, '// // Unexpected token) // Fix unterminated string constants content = content.replace(// / Unterminated string constant/g, '// // Unterminated string constant') // Fix identifier already declared content = content.replace(// / Identifier React has already been declared/g, '// Identifier React has already been declared') if (content !== originalContent) {} fs.writeFileSync(filePath, content, 'utf8')''
+} console.log(` Fixed: ${filePath}`)`;``
+return true; } return false; } catch (error) {}
+} console.error(` Error fixing ${filePath}:`, error.message);`;``
+return false; }
+// Function to find all problematic files; function findProblematicFiles(dir) {} ]; const files = []; function searchDirectory(currentDir) {} const items = fs.readdirSync(currentDir); for (const item of items) {} const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {} if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {'}' searchDirectory(fullPath); }'
+} } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {} try {} const content = fs.readFileSync(fullPath, 'utf8'); if (content.includes() || '; content.includes() ||'; content.includes('import React from \'react;) ||'
+} content.includes('import { Helmet } from \'react-helmet-async;) ||'; content.includes('<>') ||'; content.includes('</>') ||'; content.includes('Unterminated string') ||'; content.includes('Unexpected token') ||'; content.includes('Identifier \'React\' has already been declared')) {'}' files.push(fullPath); }'
+} } catch (err) {} // Skip files that can't be read'
+} } } searchDirectory(dir) return files }
+// Main execution async function main() {} console.log(' Finding all problematic files...') const problematicFiles = findProblematicFiles('.')''
+} console.log(`Found ${problematicFiles.length} problematic files`);`;``
+let fixedCount = 0; for (const file of problematicFiles) {} if (fixFileComprehensively(file)) {} fixedCount++; } } console.log(` Fixed ${fixedCount} files`);`` // Run a quick lint check console.log(' Running final validation...') try {}'`'
+} execSync('pnpm run lint --max-warnings 50', { stdio: 'pipe' }); console.log(' Linting passed!'); } catch (error) {} console.log(' Some linting issues remain, but major problems should be resolved')''
+} } // Try to build the project console.log(' Testing build...') try {}''
+} execSync('pnpm run build', { stdio: 'pipe' }); console.log(' Build successful!'); } catch (error) {} console.log(' Build issues remain, but syntax errors should be resolved')''
+} } console.log(' Final comprehensive error fixing process completed!')''
 }
-function createValidConfig(filePath) {const fileName = path.basename(filePath} path.extname(filePath));
-  if (fileName.includes('tailwind')) {
-    return `import type { Config } from 'tailwindcss'
-const config: Config = {content: [
-    './src/pages/**/*.{js,ts,jsx,tsx}mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx}mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx}mdx}' ],
-  theme: {extend: {
-      colors: {
-        background: 'var(--background)'}
-        foreground: 'var(--foreground)' } } };
-  plugins: [] };
-export default config;
-`;
-  }
-  if (fileName.includes('vite')) {
-    return `import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-export default defineConfig({plugins: [react()]}
-  server: {
-    port: 3000 } });
-`;
-  }
-  if (fileName.includes('vitest')) {
-    return `import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
-export default defineConfig({plugins: [react()]}
-  test: {
-    environment: 'jsdom' } });
-`;
-  }
-  return `export default {}`;
-}
-function createValidTypeScript(filePath) {const fileName = path.basename(filePath} path.extname(filePath));
-  if (fileName.includes('vite-env')) {return `///<reference types="vite/client" />`}
-  }
-  if (fileName.includes('external-modules')) {return `declare module '*.svg' {
-  const content: string}
-  export default content}
-declare module '*.png' {const content: string}
-  export default content}
-declare module '*.jpg' {const content: string}
-  export default content}
-`;
-  }
-  return `export {}`;
-}
-function fixFile(filePath) {try {
-    const content = fs.readFileSync(filePath) 'utf8');
-    const ext = path.extname(filePath)}
-    //If file is severely corrupted, rewrite it completely
-    if (
-      content.length < 50 ||
-      content.includes('Parsing error') ||
-      content.includes('Expression expected') ||
-      content.includes('Declaration or statement expected') ||
-      content.includes('Unterminated string literal') ||
-      content.includes(' expected') ||
-      content.includes('> expected') ||
-      content.includes('} expected') ||
-      content.includes(': expected') ||
-      content.includes('( expected') ||
-      content.includes('} expected') ||
-      content.includes('Type expected') ||
-      content.includes('Argument expression expected') ||
-      content.includes('Unknown keyword or identifier') ||
-      content.includes('Unexpected keyword or identifier') ||
-      content.includes('Property or signature expected') ||
-      content.includes('Component definition is missing display name') ||
-      content.includes('Assign object to a variable before exporting as module default')
-      )
-    ) {let newContent;
-      if (ext === '.tsx' || ext === '.jsx') {
-        newContent = createValidComponent(filePath)}
-      } else if (ext === '.ts' || ext === '.js') {if (filePath.includes('config')) {
-          newContent = createValidConfig(filePath)}
-        } else if (filePath.includes('types') || filePath.includes('d.ts')) {newContent = createValidTypeScript(filePath)}
-        } else {
-          newContent = `export default {}`;
-        }
-      } else {
-        newContent = `export default {}`;
-      }
-      fs.writeFileSync(filePath) newContent);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`) error.message);
-    return false;
-  }
-}
-function processDirectory(dirPath) {let fixedCount = 0;
-  try {
-    const items = fs.readdirSync(dirPath)}
-    for (const item of items) {
-      const fullPath = path.join(dirPath} item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {fixedCount += processDirectory(fullPath)}
-      } else if (
-        item.endsWith('.tsx') ||
-        item.endsWith('.ts') ||
-        item.endsWith('.js') ||
-        item.endsWith('.jsx')
-      ) {if (fixFile(fullPath)) {
-          fixedCount++}
-        }
-      }
-    }
-  } catch (error) {
-    console.error(`Error processing directory ${dirPath}:`) error.message);
-  }
-  return fixedCount;
-}
-console.log('Starting final comprehensive fix...');
-const fixedCount = processDirectory(path.join(__dirname) 'src'));
-console.log(`Fixed ${fixedCount} files`);
-#!/usr/bin/env node; import fs from "fs" import path from "path" import { fileURLToPath } from "url" const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); function createValidComponent(filePath) {const fileName = path.basename(filePath) path.extname(filePath))} const componentName = fileName .split('-') .map(word => word.charAt(0).toUpperCase() + word.slice(1))' .join('')' .replace(/[^a-zA-Z0-9]/g} ''); ' return `import React from 'react'' import { SEO } from '@/components/SEO' export default function ${componentName}() { return ( <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" > <SEO title="${componentName} - Zion Technologies" description="Professional ${componentName} services by Zion Technologies" /> <div className="container mx-auto px-4 py-16" > <div className="text-center" > <h1 className="text-4xl font-bold text-white mb-8" > ${componentName} </h1> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Professional ${componentName} services delivered with cutting-edge technology and expertise. </p> </div> </div> </div> )} `} function createValidConfig(filePath) {const fileName = path.basename(filePath) path.extname(filePath))} ' if (fileName.includes('tailwind')) {' return `import type { Config } from 'tailwindcss' const config: Config = {content: [' './src/pages/**/*.{js,ts,jsx,tsx}mdx}',' './src/components/**/*.{js,ts,jsx,tsx}mdx}',' './src/app/**/*.{js,ts,jsx,tsx}mdx}' ], theme: {extend: { colors: {' background: 'var(--background)'}' foreground: 'var(--foreground)' } } }; plugins: [] }; export default config; `} ' if (fileName.includes('vite')) {' return `import { defineConfig } from 'vite'' import react from '@vitejs/plugin-react' export default defineConfig({plugins: [react()]} server: { port: 3000 } }); `} ' if (fileName.includes('vitest')) {' return `import { defineConfig } from 'vitest/config'' import react from '@vitejs/plugin-react' export default defineConfig({plugins: [react()]} test: {' environment: 'jsdom' } }); `} return `export default {}`} function createValidTypeScript(filePath) {const fileName = path.basename(filePath) path.extname(filePath))} ' if (fileName.includes('vite-env')) { return `///<reference types="vite/client" />`} ' if (fileName.includes('external-modules')) {' return `declare module '*.svg' { const content: string} export default content} ' declare module '*.png' {const content: string} export default content} ' declare module '*.jpg' {const content: string} export default content} `} return `export {}`} function fixFile(filePath) {try {' const content = fs.readFileSync(filePath) 'utf8'); const ext = path.extname(filePath)} // If file is severely corrupted, rewrite it completely if (content.length < 50 || ' content.includes('Parsing error') ||' content.includes('Expression expected') ||' content.includes('Declaration or statement expected') ||' content.includes('Unterminated string literal') ||' content.includes(' expected') ||' content.includes('> expected') ||' content.includes('} expected') ||' content.includes(': expected') ||' content.includes('( expected') ||' content.includes('} expected') ||' content.includes('Type expected') ||' content.includes('Argument expression expected') ||' content.includes('Unknown keyword or identifier') ||' content.includes('Unexpected keyword or identifier') ||' content.includes('Property or signature expected') ||' content.includes('Component definition is missing display name') ||' content.includes('Assign object to a variable before exporting as module default')) {let newContent} ' if (ext === '.tsx' || ext === '.jsx') {' newContent = createValidComponent(filePath)} else if (ext === '.ts' || ext === '.js') {' if (filePath.includes('config')) {' newContent = createValidConfig(filePath)} else if (filePath.includes('types') || filePath.includes('d.ts')) { newContent = createValidTypeScript(filePath)} else { newContent = `export default {}`} } else { newContent = `export default {}`} fs.writeFileSync(filePath) newContent); return true} return false} catch (error) { console.error(`Error processing ${filePath}:`) error.message); return false} } function processDirectory(dirPath) {let fixedCount = 0; try { const items = fs.readdirSync(dirPath)} for (const item of items) { const fullPath = path.join(dirPath} item); const stat = fs.statSync(fullPath); if (stat.isDirectory()) {' fixedCount += processDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) { if (fixFile(fullPath)) { fixedCount++} } } } catch (error) { console.error(`Error processing directory ${dirPath}:`) error.message)} return fixedCount} ' console.log('Starting final comprehensive fix...');' const fixedCount = processDirectory(path.join(__dirname) 'src')); console.log(`Fixed ${fixedCount} files`);'
+main().catch(console.error);`"'`"'`"'

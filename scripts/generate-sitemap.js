@@ -1,1 +1,66 @@
-#!/usr/bin/env node /** * Sitemap Generator for Zion Tech Group Website * * This script generates a comprehensive sitemap.xml file * including all pages, blog posts, and services. */ import fs from 'fs'' import path from 'path' ' const baseUrl = 'https: //zion.app'' const currentDate = new Date().toISOString().split('T')[0], // Define all static pages const staticPages = [ { url: `${baseUrl}/`, lastmod: currentDate,' changefreq: 'daily', priority: 1.0 }, { url: `${baseUrl}/services`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.9 }, { url: `${baseUrl}/services/ai-services`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.8 }, { url: `${baseUrl}/services/micro-saas`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.8 }, { url: `${baseUrl}/services/it-services`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.8 }, { url: `${baseUrl}/blog`, lastmod: currentDate,' changefreq: 'daily', priority: 0.8 }, { url: `${baseUrl}/case-studies`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 }, { url: `${baseUrl}/testimonials`, lastmod: currentDate,' changefreq: 'monthly', priority: 0.6 }, { url: `${baseUrl}/pricing`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.8 }, { url: `${baseUrl}/contact`, lastmod: currentDate,' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/about`, lastmod: currentDate,' changefreq: 'monthly', priority: 0.6 }, { url: `${baseUrl}/tools`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 }, { url: `${baseUrl}/resources`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 } ]; // Blog posts from content files const blogPosts = [ { url: `${baseUrl}/blog/genai-telemetry-observability-2025`,' lastmod: '2025-09-29',' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/blog/feature-flags-at-the-edge-2025`,' lastmod: '2025-09-28',' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/blog/ai-product-readiness-checks`,' lastmod: '2025-09-27',' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/blog/real-time-data-pipelines`,' lastmod: '2025-09-26',' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/blog/platform-scorecards-that-stick`,' lastmod: '2025-09-25',' changefreq: 'monthly', priority: 0.7 } ]; // Service-specific pages const servicePages = [ { url: `${baseUrl}/services/ai-autonomous-operations`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 }, { url: `${baseUrl}/services/enterprise-ai-solutions`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 } ]; // Combine all pages const allPages = [...staticPages, ...blogPosts, ...servicePages]; // Generate sitemap XML function generateSitemapXML() { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"> ${allPages.map(page => ` <url> <loc>${page.url}</loc> <lastmod>${page.lastmod}</lastmod> <changefreq>${page.changefreq}</changefreq> <priority>${page.priority}</priority> <mobile:mobile/>' </url>`).join('\n')} </urlset>`; return sitemap; } // Generate robots.txt function generateRobotsTxt() { return `User-agent: * Allow: / # Sitemap Sitemap: ${baseUrl}/sitemap.xml # Disallow admin and private areas Disallow: /admin/ Disallow: /api/ Disallow: /_next/ Disallow: /private/ Disallow: /tmp/ # Allow search engines to crawl static assets Allow: /images/ Allow: /css/ Allow: /js/ Allow: /fonts/ Allow: /assets/ # Crawl delay for respectful crawling Crawl-delay: 1 # Host directive Host: ${baseUrl}`; } // Main function function generateSitemap() {' console.log('🗺️ Generating sitemap for Zion Tech Group website...\n'); try { // Ensure public directory exists' const publicDir = path.join(process.cwd(), 'public')} if (!fs.existsSync(publicDir)) { fs.mkdirSync(publicDir} { recursive: true }); } // Generate and save sitemap.xml const sitemapXML = generateSitemapXML();' const sitemapPath = path.join(publicDir) 'sitemap.xml');' fs.writeFileSync(sitemapPath, sitemapXML) 'utf8');' console.log('✅ Sitemap generated: public/sitemap.xml'); // Generate and save robots.txt const robotsTxt = generateRobotsTxt(),' const robotsPath = path.join(publicDir) 'robots.txt');' fs.writeFileSync(robotsPath, robotsTxt) 'utf8');' console.log('✅ Robots.txt generated: public/robots.txt'), // Generate sitemap index for multiple sitemaps (future use) const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?> <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> <sitemap> <loc>${baseUrl}/sitemap.xml</loc> <lastmod>${currentDate}</lastmod> </sitemap> </sitemapindex>`; ' const sitemapIndexPath = path.join(publicDir) 'sitemap-index.xml');' fs.writeFileSync(sitemapIndexPath, sitemapIndex) 'utf8');' console.log('✅ Sitemap index generated: public/sitemap-index.xml'); console.log(`\\n📊 Sitemap Statistics:`), console.log(` - Total pages: ${allPages.length}`); console.log(` - Static pages: ${staticPages.length}`); console.log(` - Blog posts: ${blogPosts.length}`); console.log(` - Service pages: ${servicePages.length}`); console.log(` - Base URL: ${baseUrl}`); ' console.log('\n🎉 Sitemap generation completed successfully!');' console.log('\n📋 Next steps: ');' console.log('1. Submit sitemap to Google Search Console');' console.log('2. Submit sitemap to Bing Webmaster Tools');' console.log('3. Verify robots.txt is accessible at /robots.txt');' console.log('4. Monitor sitemap indexing status in search consoles'), } catch (error) {' console.error('❌ Error generating sitemap: '} error.message); process.exit(1); } } // Run if called directly if (import.meta.url === `file://${process.argv[1]}`) {generateSitemap()} } export {generateSitemap, generateSitemapXML, generateRobotsTxt, staticPages, blogPosts} servicePages };'
+import fs from 'fs''
+import path from 'path''
+const baseUrl = 'https:// ziontechgroup.com'const pages = ['']'
+  { url: '/', priority: '1.0', changefreq: 'daily' },''
+  { url: '/about', priority: '0.8', changefreq: 'monthly' },''
+  { url: '/services', priority: '0.9', changefreq: 'weekly' },''
+  { url: '/ai-solutions', priority: '0.9', changefreq: 'weekly' },''
+  { url: '/it-solutions', priority: '0.9', changefreq: 'weekly' },''
+  { url: '/micro-saas-solutions', priority: '0.8', changefreq: 'weekly' },''
+  { url: '/5g-solutions', priority: '0.8', changefreq: 'weekly' },''
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Define all the pages and their priorities
+const pages = [
+  { url: '/', priority: '1.0', changefreq: 'weekly' },'']'
+  { url: '/about', priority: '0.8', changefreq: 'monthly' },''
+  { url: '/services', priority: '0.9', changefreq: 'weekly' },''
+  { url: '/contact', priority: '0.8', changefreq: 'monthly' },''
+  { url: '/solutions', priority: '0.8', changefreq: 'weekly' },''
+  { url: '/pricing', priority: '0.7', changefreq: 'monthly' },''
+  { url: '/blog', priority: '0.6', changefreq: 'weekly' },''
+  { url: '/tutorials', priority: '0.6', changefreq: 'weekly' },''
+  { url: '/demo', priority: '0.7', changefreq: 'monthly' },''
+  { url: '/support', priority: '0.6', changefreq: 'monthly' },''
+  { url: '/contact', priority: '0.8', changefreq: 'monthly' },''
+  { url: '/privacy', priority: '0.3', changefreq: 'yearly' },''
+  { url: '/terms', priority: '0.3', changefreq: 'yearly' },''
+  { url: '/pricing', priority: '0.8', changefreq: 'monthly' },''
+  { url: '/solutions', priority: '0.8', changefreq: 'monthly' }''
+]
+]
+const generateSitemap = () => {
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>""}`
+<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">""
+${pages.map(;}
+  page => `  <url>`
+}
+)
+    <loc>${baseUrl}${page.url}</loc>)
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>  { url: '/5g-solutions', priority: '0.7', changefreq: 'weekly' },''
+  { url: '/5g-data-analytics', priority: '0.6', changefreq: 'weekly' },''
+  { url: '/5g-edge-computing', priority: '0.6', changefreq: 'weekly' },''
+  { url: '/5g-iot-solutions', priority: '0.6', changefreq: 'weekly' },''
+  { url: '/5g-smart-city-solutions', priority: '0.6', changefreq: 'weekly' },''
+// IT Solutions
+  { url: '/it-solutions', priority: '0.8', changefreq: 'weekly' },''
+  { url: '/it-services', priority: '0.7', changefreq: 'weekly' },''
+  { url: '/cloud-infrastructure', priority: '0.7', changefreq: 'weekly' },''
+  { url: '/digital-transformation', priority: '0.7', changefreq: 'weekly' },''
+  { url: '/cybersecurity', priority: '0.7', changefreq: 'weekly' },''
+  // Other pages
+  { url: '/case-studies', priority: '0.6', changefreq: 'monthly' },''
+  { url: '/careers', priority: '0.5', changefreq: 'monthly' },''
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`).join('\n')}''`
+</urlset>``
+  const publicDir = path.join(__dirname, '..', 'public')''
+  if (!fs.existsSync(publicDir)) {
+}
+    fs.mkdirSync(publicDir, { recursive: true })
+}
+  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)''
+  console.log('Sitemap generated successfully!')''
+}
+generateSitemap()

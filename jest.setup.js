@@ -1,57 +1,52 @@
-require('@testing-library/jest-dom');
+// Learn more: https://github.com/testing-library/jest-dom
+require("@testing-library/jest-dom");
 
-//Mock window.matchMedia used by some components
-Object.defineProperty(window, 'matchMedia', {
+// Polyfills for Node.js environment
+const { TextEncoder, TextDecoder } = require("util");
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation((query) => ({
     matches: false,
-  media: query,
+    media: query,
     onchange: null,
-    addListener: jest.fn(), //deprecated
-    removeListener: jest.fn(), //deprecated
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
-  }))
+    dispatchEvent: jest.fn(),
+  })),
 });
 
-//Mock IntersectionObserver and ResizeObserver
-class MockIntersectionObserver {
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
-  observe() {}
-  unobserve() {}
   disconnect() {}
-}
-
-class MockResizeObserver {
-  constructor() {}
   observe() {}
+  takeRecords() {
+    return [];
+  }
   unobserve() {}
-  disconnect() {}
-}
+};
 
-//@ts-ignore
-global.IntersectionObserver = MockIntersectionObserver;
-//@ts-ignore
-global.ResizeObserver = MockResizeObserver;
-
-beforeEach(() => {
-  jest.clearAllMocks();
+// Suppress console errors in tests
+const originalError = console.error;
+beforeAll(() => {
+  console.error = jest.fn((...args) => {
+    if (
+      typeof args[0] === "string" &&
+      (args[0].includes("Warning: ReactDOM.render") ||
+        args[0].includes("Not implemented: HTMLFormElement.prototype.submit"))
+    ) {
+      return;
+    }
+    originalError.call(console, ...args);
+  });
 });
 
-//Polyfill TextEncoder/TextDecoder for react-router in Jest (Node environment)
-try {
-  const { TextEncoder, TextDecoder } = require('util');
-  //@ts-ignore
-  if (typeof global.TextEncoder === 'undefined') {
-    //@ts-ignore
-    global.TextEncoder = TextEncoder;
-  }
-  //@ts-ignore
-  if (typeof global.TextDecoder === 'undefined') {
-    //@ts-ignore
-    global.TextDecoder = TextDecoder;
-  }
-} catch (_) {
-  // ignore if util not available
-}
+afterAll(() => {
+  console.error = originalError;
+});

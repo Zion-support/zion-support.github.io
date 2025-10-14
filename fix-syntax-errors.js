@@ -1,102 +1,115 @@
+import React from 'react'
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-
-console.log('🔧 Starting comprehensive syntax error fixes...');
-
-//Files with known issues
-const filesToFix = [
-  'src/components/October2025CuttingEdgeContentBanner.tsx',
-  'src/components/October2025CuttingEdgeAIBanner.tsx',
-  'src/components/October2025AdvancedAIInnovationsBanner.tsx',
-];
-
-function fixDuplicateKeys(filePath) {
-  if (!fs.existsSync(filePath)) return;
-
-  let content = fs.readFileSync(filePath, 'utf8');
-
-  //Fix duplicate icon keys
-  content = content.replace(/icon: '🚀',\s*icon: <[^>]+>/g, match => {
-    const iconMatch = match.match(/icon: <([^>]+)>/);
-    return iconMatch ? `icon: ${iconMatch[1]}` : match;
-  });
-
-  fs.writeFileSync(filePath, content);
-  console.log(`✅ Fixed duplicate keys in ${filePath}`);
+import fs from "fs"
+import path from "path"
+import { glob } from "glob"
+// Function to fix common syntax errors
+function fixSyntaxErrors(content, filePath) {
+  let fixed = content
+  // Fix unterminated string literals in JSX attributes
+  fixed = fixed.replace(/content="([^"]*?)(?=\s*\/>)/g, 'content="$1"')
+  // Fix malformed JSX closing tags
+  fixed = fixed.replace(/<\/[^>]*>\s*<\/[^>]*>/g, (match) => {
+    const tags = match.match(/<\/[^>]*>/g)
+    return tags[tags.length - 1]; // Keep only the last closing tag
+  })
+  // Fix orphaned closing tags
+  fixed = fixed.replace(/<\/[^>]*>\s*<\/[^>]*>\s*<\/[^>]*>/g, (match) => {
+    const tags = match.match(/<\/[^>]*>/g)
+    return tags[tags.length - 1]
+  })
+  // Fix malformed function returns
+  fixed = fixed.replace(
+    /return\s*\(\s*<[^>]*>\s*\)\s*;\s*\)\s*;\s*\)\s*;/g,
+    "return (",
+  )
+  // Fix multiple closing parentheses
+  fixed = fixed.replace(/\)\s*;\s*\)\s*;\s*\)\s*;/g, ");")
+  // Fix orphaned semicolons and braces
+  fixed = fixed.replace(/;\s*}\s*;\s*}\s*;\s*}/g, "}")
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<([^>]+)>\s*<\/\1>\s*<([^>]+)>/g, "<$1>")
+  // Fix unterminated JSX elements
+  fixed = fixed.replace(
+    /<([^>]+)(?![^<]*\/>)(?![^<]*<\/\1>)/g,
+    (match, tagName) => {
+      if (match.includes("=") && !match.includes("/>")) {
+        return match + ">"
 }
-
-function fixJSXStructure(filePath) {
-  if (!fs.existsSync(filePath)) return;
-
-  let content = fs.readFileSync(filePath, 'utf8');
-
-  //Fix common JSX structure issues
-  content = content.replace(
-    /<div className="flex items-center gap-3 mb-4">\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<\/div>\s*<div className="flex-1">/g,
-    '<div className="flex items-center gap-3 mb-4">\n              <div className="p-3 bg-emerald-500/20 rounded-xl group-hover:bg-emerald-500/30 transition-colors">\n                <Shield className="w-8 h-8 text-emerald-300" />\n              </div>\n              <div className="flex-1">'
-  );
-
-  //Fix missing closing tags
-  content = content.replace(
-    /<Link[^>]*>\s*<div className="flex items-center gap-3 mb-4">\s*<div className="[^"]*">\s*<[^>]+>\s*<\/div>\s*<div className="flex-1">\s*<span[^>]*>[^<]*<\/span>\s*<\/div>\s*<\/div>\s*<h3[^>]*>[^<]*<\/h3>\s*<p[^>]*>[^<]*<\/p>\s*<div className="flex items-center justify-between">\s*<div[^>]*>[^<]*<\/div>\s*<[^>]+>\s*<\/div>\s*<\/div>\s*<\/Link>/g,
-    match => {
-      return match.replace(/<\/div>\s*<\/Link>/, '</div>\n            </Link>');
-    }
-  );
-
-  fs.writeFileSync(filePath, content);
-  console.log(`✅ Fixed JSX structure in ${filePath}`);
+      return match
+    },
+  )
+  // Fix orphaned closing tags that don't match opening tags
+  const lines = fixed.split("\n")
+  const fixedLines = []
+  const openTags = []
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+    // Skip lines that are just orphaned closing tags
+    if (/^\s*<\/[^>]*>\s*$/.test(line) && openTags.length === 0) {
+      continue
 }
-
-function addMissingImports(filePath) {
-  if (!fs.existsSync(filePath)) return;
-
-  let content = fs.readFileSync(filePath, 'utf8');
-
-  //Add common missing imports
-  if (content.includes('Shield') && !content.includes('import { Shield')) {
-    content = content.replace(
-      /import React[^;]+;/,
-      `import React from 'react';\nimport { Shield, Zap, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';`
-    );
-  }
-
-  if (content.includes('Link') && !content.includes('import { Link')) {
-    content = content.replace(
-      /import React[^;]+;/,
-      `import React from 'react';\nimport { Link } from 'react-router-dom';\nimport { Shield, Zap, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';`
-    );
-  }
-
-  fs.writeFileSync(filePath, content);
-  console.log(`✅ Added missing imports to ${filePath}`);
+    // Track opening tags
+    const openingTags = line.match(/<([^\/][^>]*?)>/g)
+    if (openingTags) {
+      openingTags.forEach((tag) => {
+        const tagName = tag.match(/<([^\s>]+)/)
+        if (tagName && !tag.includes("/>")) {
+          openTags.push(tagName[1])
+})
 }
-
-// Fix each file
-filesToFix.forEach(filePath => {
-  const fullPath = path.join(process.cwd(), filePath);
-
-  if (fs.existsSync(fullPath)) {
-    console.log(`\n🔧 Fixing ${filePath}...`);
-
-    fixDuplicateKeys(fullPath);
-    fixJSXStructure(fullPath);
-    addMissingImports(fullPath);
-  } else {
-    console.log(`⚠️  File not found: ${filePath}`);
-  }
-});
-
-console.log('\n✅ Syntax error fixes completed!');
-console.log('🚀 Running build test...');
-
-try {
-  execSync('pnpm run build:no-check', { stdio: 'inherit' });
-  console.log('🎉 Build successful!');
-} catch (error) {
-  console.log('❌ Build still has errors. Manual fixes needed.');
-  process.exit(1);
+    // Track closing tags
+    const closingTags = line.match(/<\/([^>]+)>/g)
+    if (closingTags) {
+      closingTags.forEach((tag) => {
+        const tagName = tag.match(/<\/([^>]+)>/)
+        if (tagName) {
+          const index = openTags.lastIndexOf(tagName[1])
+          if (index !== -1) {
+            openTags.splice(index, 1)
 }
+      })
+}
+    fixedLines.push(line)
+}
+  fixed = fixedLines.join("\n")
+  return fixed
+}
+// Function to fix specific file patterns
+function fixFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, "utf8")
+    const fixed = fixSyntaxErrors(content, filePath)
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, "utf8")
+      console.log(`Fixed: ${filePath}`)
+      return true
+}
+    return false
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message)
+    return false
+}
+// Main execution
+async function main() {
+  console.log("Starting syntax error fixes...")
+  // Get all TypeScript/JavaScript files
+  const patterns = [
+    "app/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.jsx",
+    "app/**/*.js",
+    "__tests__/**/*.tsx",
+    "__tests__/**/*.ts",
+  ]
+  let totalFixed = 0
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() })
+    for (const file of files) {
+      if (fixFile(file)) {
+        totalFixed++
+}
+}
+  console.log(`Fixed ${totalFixed} files.`)
+}
+main().catch(console.error)

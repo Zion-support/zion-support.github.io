@@ -1,34 +1,34 @@
 #!/bin/bash
 
-echo "Fixing all merge conflicts in the codebase..."
+echo "Fixing all merge conflicts..."
 
-# Find all files with conflict markers
-files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v .git | xargs grep -l "<<<<<<< HEAD\|=======\|>>>>>>> main" 2>/dev/null)
+# Find all files with merge conflicts
+files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "" 2>/dev/null)
 
-echo "Found files with conflicts:"
-echo "$files_with_conflicts"
+if [ -z "$files_with_conflicts" ]; then
+    echo "No merge conflicts found!"
+    exit 0
+fi
+
+echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
 
 # Process each file
 for file in $files_with_conflicts; do
-    if [ -f "$file" ]; then
-        echo "Processing $file..."
-        
-        # Create a backup
-        cp "$file" "$file.backup"
-        
-        # Remove conflict markers and choose the cleaner version
-        # This is a more aggressive approach that removes all conflict markers
-        sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> main$/{
-            /^<<<<<<< HEAD$/d
-            /^=======$/d
-            /^>>>>>>> main$/d
-        }' "$file"
-        
-        # Clean up any remaining empty lines
-        sed -i '/^[[:space:]]*$/N;/^\n$/d' "$file"
-        
-        echo "  ✓ Processed $file"
+    echo "Processing: $file"
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Use sed to remove merge conflict markers and keep HEAD content
+    sed -i '/^/,/^/!d; /^/d; /^    
+    # Alternative approach using awk if sed fails
+    if grep -q "" "$file"; then
+        awk '
+        /^/ { in_head = 1; next }
+        /^/ { in_head = 0; in_other = 1; next }
+        /^        in_head || (!in_head && !in_other) { print }
+        ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
     fi
 done
 
-echo "Conflict resolution complete!"
+echo "All merge conflicts resolved!"

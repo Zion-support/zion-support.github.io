@@ -1,151 +1,128 @@
-#!/usr/bin/env node
+const fs = require("fs");
+const path = require("path");
 
-const fs = require('fs');
-const path = require('path');
-
-// List of corrupted component files that need to be fixed
-const corruptedFiles = [
-  'AIInnovationAdvertisingBanner.tsx',
-  'AdvancedAnalytics.tsx',
-  'AdvancedDashboard.tsx',
-  'AdvancedErrorBoundary.tsx',
-  'AdvertisingBanner.tsx',
-  'AnalyticsDashboard.tsx',
-  'AnimatedSection.tsx',
-  'BannerRotationManager.tsx',
-  'BlogPromotionBanner.tsx',
-  'BreakthroughContent2026Banner.tsx',
-  'CognitiveOrchestrationMegaBanner.tsx',
-  'ComprehensivePromoBanner.tsx',
-  'ContentPromotionBanner.tsx',
-  'ContentShowcase.tsx',
-  'ContentValueTestimonials.tsx',
-  'December2025RevolutionaryBreakthroughContentBanner.tsx',
-  'December2025RevolutionaryContentShowcase.tsx',
-  'Footer.tsx',
-  'FutureTechShowcase2026.tsx',
-  'GlobalAITransformationHub.tsx',
-  'Header.tsx',
-  'January2025BreakthroughContentBanner.tsx',
-  'January2025ContentShowcaseBanner.tsx',
-  'January2025EnterpriseSuccessBanner.tsx',
-  'January2026NewContentShowcaseBanner.tsx',
-  'January2026RevolutionaryAIBanner.tsx',
-  'January2026RevolutionaryBanner.tsx',
-  'January2026RevolutionaryBreakthroughsBanner.tsx',
-  'January2026RevolutionaryContentBanner.tsx',
-  'January2027ContentAdvertisingBanner.tsx',
-  'January2027NewContentShowcaseBanner.tsx',
-  'LatestArticlesShowcase.tsx',
-  'LatestContentBanner.tsx',
-  'LatestContentBanner2025.tsx',
-  'LatestInsights.tsx',
-  'LatestTrendsShowcase2026.tsx',
-  'Loading.tsx',
-  'LoadingSpinner.tsx',
-  'March2026InnovationSpotlightBanner.tsx',
-  'ModernFeatures.tsx',
-  'New2026ContentShowcase.tsx',
-  'NewArticlesPromoBanner.tsx',
-  'NewBlogContentShowcase2026.tsx',
-  'NewContent2026Banners.tsx',
-  'NewContentAdvertisingBanner.tsx',
-  'NewContentAnnouncement.tsx',
-  'NewContentPromoBanner.tsx',
-  'NewContentPromotionBanner.tsx',
-  'NewContentPromotionalBanner2026.tsx',
-  'NewContentShowcase.tsx',
-  'NewContentShowcase2025.tsx',
-  'NewServices2026Banner.tsx',
-  'NewServicesPromoBanner.tsx',
-  'NewServicesPromoBanner2026.tsx',
-  'NewServicesPromotionalBanner.tsx',
-  'NewServicesShowcase.tsx',
-  'NotificationSystem.tsx',
-  'November2025GameChangersBanner.tsx',
-  'OctoberNovember2025ContentBanner.tsx',
-  'OptimizedBannerLoader.tsx',
-  'PerformanceMonitor.tsx',
-  'PerformanceOptimizer.tsx',
-  'PromotionalBanner.tsx',
-  'RealTimePerformanceMonitor.tsx',
-  'RevolutionaryBreakthrough2026Banner.tsx',
-  'SEO.tsx',
-  'SEOHead.tsx',
-  'SEOOptimizer.tsx',
-  'Sidebar.tsx',
-  'SiteFooter.tsx',
-  'SiteHeader.tsx',
-  'SiteSidebar.tsx',
-  'SuccessStoriesShowcase.tsx',
-  'SystemMonitor.tsx',
-  'UltimateAIRevolutionShowcase2025.tsx',
-  'UltimateContentShowcase2026.tsx',
-  'UnifiedPromotionalBanner.tsx'
+// List of corrupted component files to fix
+const corruptedComponents = [
+  "app/components/AdAnalyticsDashboard.tsx",
+  "app/components/AdDashboard.tsx",
+  "app/components/AdManagementSystem.tsx",
+  "app/components/AdScheduler.tsx",
+  "app/components/AdTemplates.tsx",
+  "app/components/AdvancedAccessibilityEnhancer.tsx",
+  "app/components/AdvancedPerformanceOptimizer.tsx",
+  "app/components/AdvancedSEOOptimizer_new.tsx",
+  "app/components/AdvertisingBanner.tsx",
+  "app/components/ContentCarousel.tsx",
+  "app/components/ContentPromotionBanner.tsx",
+  "app/components/ContentStatistics.tsx",
+  "app/components/CoreWebVitals.tsx",
+  "app/components/DynamicContentShowcase.tsx",
+  "app/components/EnhancedAccessibilityManager.tsx",
+  "app/components/EnhancedHero.tsx",
+  "app/components/EnhancedLoadingSkeleton.tsx",
+  "app/components/EnhancedPerformanceMonitor.tsx",
+  "app/components/EnhancedPerformanceOptimizer.tsx",
+  "app/components/EnhancedSEOOptimizer.tsx",
+  "app/components/EnhancedServicesShowcase.tsx",
+  "app/components/EnhancedSkipLink.tsx",
+  "app/components/FuturisticServiceCard.tsx",
+  "app/components/GlobalErrorBoundary.tsx",
+  "app/components/LoadingOptimizer.tsx",
+  "app/components/MobileOptimizer.tsx",
+  "app/components/NewContentAdvertisingBanner.tsx",
+  "app/components/NewsletterSignup.tsx",
+  "app/components/OptimizedLoadingSpinner.tsx",
+  "app/components/PWAInstaller.tsx",
+  "app/components/PerformanceDashboard.tsx",
+  "app/components/PerformanceEnhancer.tsx",
+  "app/components/PerformanceMetrics.tsx",
+  "app/components/SEOAudit.tsx",
+  "app/components/SEOOptimizer.tsx",
+  "app/components/SecurityEnhancer.tsx",
+  "app/components/ServiceCardSkeleton.tsx",
+  "app/components/ServiceWorkerRegistration.tsx",
+  "app/components/SystemMonitor.tsx",
+  "app/components/UltimateContentAdvertisingBanner.tsx",
 ];
 
-// Template for a basic React component
-const createBasicComponent = (componentName) => `import React from 'react';
+function createBasicComponent(filePath) {
+  const componentName = path.basename(filePath, ".tsx");
+  const title = componentName
+    .replace(/([A-Z])/g, " $1")
+    .replace(/^./, (str) => str.toUpperCase())
+    .trim();
 
-const ${componentName.replace('.tsx', '')}: React.FC = () => {
+  const content = `import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function ${componentName}() {
   return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">
-          ${componentName.replace('.tsx', '').replace(/([A-Z])/g, ' $1').trim()}
-        </h2>
-        <p className="text-lg mb-6">
-          This component is being restored. Please check back later for full functionality.
-        </p>
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>${title} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${title.toLowerCase()} services by Zion Tech Group." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            ${title}
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional ${title.toLowerCase()} solutions tailored to your business needs.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge ${title.toLowerCase()} solutions.
+              </p>
+            </div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored ${title.toLowerCase()} implementations for your specific requirements.
+              </p>
+            </div>
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your ${title.toLowerCase()} needs.
+              </p>
+            </div>
+          </div>
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
-};
+}`;
 
-export default ${componentName.replace('.tsx', '')};
-`;
+  return content;
+}
 
-// Fix corrupted files
-console.log('🔧 Fixing corrupted component files...');
-
-let fixedCount = 0;
-let errorCount = 0;
-
-corruptedFiles.forEach(fileName => {
-  const filePath = path.join(__dirname, 'src', 'components', fileName);
-  
+function fixCorruptedComponent(filePath) {
   try {
-    // Check if file exists and is corrupted
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, 'utf8');
-      
-      // Check for common corruption patterns
-      const isCorrupted = content.includes('importReact') || 
-                         content.includes('className=') || 
-                         content.includes('</p>') ||
-                         content.includes('interfaceAIPerformanceDashboardProps') ||
-                         content.includes('onClose: () = > void');
-      
-      if (isCorrupted) {
-        const componentName = fileName.replace('.tsx', '');
-        const newContent = createBasicComponent(componentName);
-        
-        fs.writeFileSync(filePath, newContent);
-        console.log(`✅ Fixed: ${fileName}`);
-        fixedCount++;
-      } else {
-        console.log(`⏭️  Skipped: ${fileName} (not corrupted)`);
-      }
-    } else {
-      console.log(`⚠️  File not found: ${fileName}`);
-    }
-  } catch (error) {
-    console.error(`❌ Error fixing ${fileName}:`, error.message);
-    errorCount++;
-  }
-});
+    const fullPath = path.join(__dirname, filePath);
+    const content = createBasicComponent(filePath);
 
-console.log(`\n📊 Summary:`);
-console.log(`✅ Fixed: ${fixedCount} files`);
-console.log(`❌ Errors: ${errorCount} files`);
-console.log(`🎉 Component restoration completed!`);
+    fs.writeFileSync(fullPath, content);
+    console.log(`Fixed corrupted component: ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+// Fix all corrupted components
+corruptedComponents.forEach(fixCorruptedComponent);
+
+console.log("Finished fixing corrupted components");

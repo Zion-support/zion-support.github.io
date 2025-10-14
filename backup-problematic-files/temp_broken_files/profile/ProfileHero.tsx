@@ -1,1 +1,0 @@
-import { cn } from "@/lib/utils"; interface ProfileHeroProps {; name: string,,; title: string,,} aiScore?:number};" profileType:'service' | 'talent' } profileType;) } ProfileHeroProps) {; return (; <img} src={coverImageUrl} alt={`${name} cover`}" className="text-left" ;"" loading="lazy"" />; coverImageUrl ? (<img src= {) coverImageUrl } '

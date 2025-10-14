@@ -1,23 +1,35 @@
 #!/bin/bash
 
-# Script to fix merge conflict markers in all files
-echo "Fixing merge conflict markers..."
+# Script to fix merge conflicts by keeping the HEAD version
+echo "Fixing merge conflicts..."
 
-# Find all files with merge conflict markers and fix them
-find /workspace -type f \( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" -o -name "*.css" -o -name "*.md" \) -exec grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " {} \; | while read file; do
+# Find all files with merge conflicts
+find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | while read file; do
+  if grep -q "" ]]; then
+        in_head=false
+        in_other=true
+        continue
+      elif [[ "$line" == ">>>>>>>"* ]]; then
+        in_head=false
+        in_other=false
+        continue
+      fi
+      
+      if [[ "$in_head" == true ]]; then
+        echo "$line" >> "$temp_file"
+      elif [[ "$in_other" == false ]]; then
+        echo "$line" >> "$temp_file"
+      fi
+    done < "$file"
+    
+    # Replace the original file
+    mv "$temp_file" "$file"
     echo "Fixing merge conflicts in: $file"
     
-    # Create a backup
-    cp "$file" "$file.backup"
-    
     # Remove merge conflict markers and keep the HEAD version (first part)
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
-    
-    # Clean up any remaining conflict markers
-    sed -i '/^<<<<<<< /d' "$file"
-    sed -i '/^=======$/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
+    sed -i '//,//!d' "$file"
+    sed -i '//,/    
+  fi
 done
 
-echo "Merge conflict markers fixed!"
+echo "Merge conflicts fixed!"

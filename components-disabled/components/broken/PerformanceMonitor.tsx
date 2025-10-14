@@ -1,1 +1,0 @@
-} const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {} } } } }

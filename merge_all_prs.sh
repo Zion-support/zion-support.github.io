@@ -1,86 +1,100 @@
 #!/bin/bash
 
-# Script to merge all cursor/fix-errors-and-merge-to-main branches
+# Script to merge all open PRs into main branch
 set -e
 
-echo "Starting systematic merge of all PR branches..."
+echo "Starting PR merge process..."
 
-# Get all cursor/fix-errors-and-merge-to-main branches
-branches=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | sed 's/origin\///' | head -20)
+# Get list of open PRs
+PR_LIST=$(gh pr list --state open --json number,headRefName --jq '.[] | "\(.number) \(.headRefName)"')
 
-successful_merges=0
-failed_merges=0
-conflict_resolutions=0
-
-for branch in $branches; do
-    echo "Processing branch: $branch"
+# Process each PR
+while IFS= read -r line; do
+    if [ -z "$line" ]; then
+        continue
+    fi
     
-    # Checkout the branch
-    if git checkout "$branch" 2>/dev/null; then
-        echo "  ✓ Checked out $branch"
+    PR_NUMBER=$(echo $line | cut -d' ' -f1)
+    BRANCH_NAME=$(echo $line | cut -d' ' -f2)
+    
+    echo "Processing PR #$PR_NUMBER (branch: $BRANCH_NAME)"
+    
+    # Checkout the PR branch
+    if git checkout "$BRANCH_NAME" 2>/dev/null; then
+        echo "Checked out branch $BRANCH_NAME"
+        
+        # Fetch latest main
+        git fetch origin main
         
         # Try to merge with main
-        if git merge origin/main --no-edit 2>/dev/null; then
-            echo "  ✓ Successfully merged $branch with main"
-            ((successful_merges++))
+        if git merge origin/main --no-edit; then
+            echo "Successfully merged $BRANCH_NAME with main"
             
-            # Push the merged changes back to the branch
-            if git push origin "$branch" 2>/dev/null; then
-                echo "  ✓ Pushed merged changes for $branch"
+            # Switch to main and merge
+            git checkout main
+            if git merge "$BRANCH_NAME" --no-edit; then
+                echo "Successfully merged $BRANCH_NAME into main"
+                
+                # Push to main
+                if git push origin main; then
+                    echo "Successfully pushed main"
+                    
+                    # Delete the branch
+                    git branch -D "$BRANCH_NAME" 2>/dev/null || true
+                    echo "Deleted local branch $BRANCH_NAME"
+                else
+                    echo "Failed to push main"
+                fi
             else
-                echo "  ⚠ Could not push changes for $branch (sandbox restriction)"
+                echo "Failed to merge $BRANCH_NAME into main"
+                git merge --abort 2>/dev/null || true
             fi
         else
-            echo "  ⚠ Merge conflict in $branch - attempting resolution"
+            echo "Failed to merge $BRANCH_NAME with main - resolving conflicts"
+            git merge --abort 2>/dev/null || true
             
-            # Check if there are actual conflicts
-            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-                echo "  🔧 Resolving conflicts in $branch"
-                
-                # Try to resolve common conflicts automatically
-                # Fix TypeScript process.env issues
-                if grep -q "process.env.NODE_ENV" components/PerformanceDashboard.tsx 2>/dev/null; then
-                    sed -i "s/process\.env\.NODE_ENV/process.env['NODE_ENV']/g" components/PerformanceDashboard.tsx
-                    echo "    Fixed process.env access in PerformanceDashboard.tsx"
-                fi
-                
-                # Add and commit the resolution
+            # Try to resolve conflicts by removing problematic files
+            if [ -f "tsconfig.tsbuildinfo" ]; then
+                rm tsconfig.tsbuildinfo
                 git add .
-                if git commit -m "Resolve merge conflicts automatically" 2>/dev/null; then
-                    echo "  ✓ Resolved conflicts in $branch"
-                    ((conflict_resolutions++))
-                    ((successful_merges++))
+                git commit -m "Remove tsconfig.tsbuildinfo - build cache file should not be committed" || true
+            fi
+            
+            # Try merge again
+            if git merge origin/main --no-edit; then
+                echo "Successfully merged $BRANCH_NAME with main after conflict resolution"
+                
+                # Switch to main and merge
+                git checkout main
+                if git merge "$BRANCH_NAME" --no-edit; then
+                    echo "Successfully merged $BRANCH_NAME into main"
                     
-                    # Push the resolved changes
-                    if git push origin "$branch" 2>/dev/null; then
-                        echo "  ✓ Pushed resolved changes for $branch"
+                    # Push to main
+                    if git push origin main; then
+                        echo "Successfully pushed main"
+                        
+                        # Delete the branch
+                        git branch -D "$BRANCH_NAME" 2>/dev/null || true
+                        echo "Deleted local branch $BRANCH_NAME"
                     else
-                        echo "  ⚠ Could not push resolved changes for $branch (sandbox restriction)"
+                        echo "Failed to push main"
                     fi
                 else
-                    echo "  ❌ Failed to resolve conflicts in $branch"
-                    ((failed_merges++))
+                    echo "Failed to merge $BRANCH_NAME into main after conflict resolution"
+                    git merge --abort 2>/dev/null || true
                 fi
             else
-                echo "  ✓ No actual conflicts in $branch"
-                ((successful_merges++))
+                echo "Failed to merge $BRANCH_NAME with main even after conflict resolution"
+                git merge --abort 2>/dev/null || true
             fi
         fi
     else
-        echo "  ❌ Could not checkout $branch"
-        ((failed_merges++))
+        echo "Failed to checkout branch $BRANCH_NAME"
     fi
     
-    echo "  ---"
-done
+    echo "Completed processing PR #$PR_NUMBER"
+    echo "---"
+    
+done <<< "$PR_LIST"
 
-echo ""
-echo "=== MERGE SUMMARY ==="
-echo "Successful merges: $successful_merges"
-echo "Failed merges: $failed_merges"
-echo "Conflict resolutions: $conflict_resolutions"
-echo ""
-
-# Return to main branch
-git checkout main
-echo "Returned to main branch"
+echo "PR merge process completed!"

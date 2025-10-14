@@ -1,128 +1,151 @@
-import React, { Suspense, useEffect, useCallback } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import './index.css';
+import React, { Suspense, lazy, useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import Footer from "./components/Footer";
+import LoadingSpinner from "./components/LoadingSpinner";
+import ErrorBoundary from "./components/ErrorBoundary";
 
-// Import components
-import ErrorBoundary from './components/ErrorBoundary';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import LoadingSpinner from '../app/components/LoadingSpinner';
+// Lazy load pages for better performance
+const Page = lazy(() => import("./page"));
+const AboutPage = lazy(() => import("./about/page"));
+const ContactPage = lazy(() => import("./contact/page"));
+const CaseStudiesPage = lazy(() => import("./case-studies/page"));
+const BlogPage = lazy(() => import("./blog/page"));
 
-// Blog component (used in Routes)
-const Blog = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Blog</h1>
-      <p className="text-xl text-gray-600">Latest AI and Technology Insights</p>
-    </div>
-  </div>
-);
+// AI Services
+const AiServicesPage = lazy(() => import("./ai-services/page"));
+const AiMarketingPage = lazy(() => import("./ai-marketing/page"));
+const AiAutomationPage = lazy(() => import("./ai-automation/page"));
+const AiHealthcarePage = lazy(() => import("./ai-healthcare/page"));
+const AiFintechPage = lazy(() => import("./ai-fintech/page"));
 
-const Contact = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-      <p className="text-xl text-gray-600">Get in touch with our experts</p>
-    </div>
-  </div>
-);
+// IT Services
+const ItServicesPage = lazy(() => import("./it-services/page"));
+const ServicesPage = lazy(() => import("./cloud-services/page"));
+const CybersecurityPage = lazy(() => import("./cybersecurity/page"));
+const DataAnalyticsPage = lazy(() => import("./data-analytics/page"));
+const DevOpsPage = lazy(() => import("./devops/page"));
 
-const Team = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Team</h1>
-      <p className="text-xl text-gray-600">Meet our expert professionals</p>
-    </div>
-  </div>
-);
+// Specialized Solutions
+const QuantumComputingPage = lazy(() => import("./quantum-computing/page"));
+const AutonomousSystemsPage = lazy(() => import("./autonomous-systems/page"));
+const BlockchainWeb3Page = lazy(() => import("./blockchain-web3/page"));
+const IoTEdgeComputingPage = lazy(() => import("./iot-edge-computing/page"));
+const BusinessIntelligencePage = lazy(() => import("./business-intelligence/page"));
+const RoboticsPage = lazy(() => import("./robotics/page"));
 
-const Privacy = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Privacy Policy</h1>
-      <p className="text-xl text-gray-600">Your privacy is important to us</p>
-    </div>
-  </div>
-);
+// Company Pages
+const TeamPage = lazy(() => import("./team/page"));
+const CareersPage = lazy(() => import("./careers/page"));
+const NewsPage = lazy(() => import("./news/page"));
 
-const Terms = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gray-50">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold text-gray-900 mb-4">Terms of Service</h1>
-      <p className="text-xl text-gray-600">Terms and conditions</p>
-    </div>
-  </div>
-);
+// Support Pages
+const SupportPage = lazy(() => import("./support/page"));
+const DocumentationPage = lazy(() => import("./documentation/page"));
+const FAQPage = lazy(() => import("./faq/page"));
 
-function App(): React.JSX.Element {
-  const initializeOptimizations = useCallback(() => {
-    try {
-      console.log('App initialized successfully');
-      
-      // Preload critical resources
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(() => {
-          // Preload critical pages
-          import('./pages/Home');
-          import('./pages/About');
-        });
-      }
-    } catch (error) {
-      console.error('Failed to initialize app:', error);
-    }
-  }, []);
+// Additional Pages
+const PricingPage = lazy(() => import("./pricing/page"));
+const DemoPage = lazy(() => import("./demo/page"));
+const ConsultationPage = lazy(() => import("./consultation/page"));
+
+// Legal Pages
+const PrivacyPage = lazy(() => import("./privacy/page"));
+const TermsPage = lazy(() => import("./terms/page"));
+const CookiesPage = lazy(() => import("./cookies/page"));
+
+const NotFoundPage = () => <div>Page Not Found</div>;
+
+const App: React.FC = () => {
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
-    initializeOptimizations();
-  }, [initializeOptimizations]);
+    // Initialize app
+    const initApp = async () => {
+      try {
+        // Add any initialization logic here
+        setIsInitialized(true);
+      } catch (error) {
+        console.error("Failed to initialize app:", error);
+        setIsInitialized(true); // Still show the app even if initialization fails
+      }
+    };
+    initApp();
+  }, []);
+
+  if (!isInitialized) {
+    return <LoadingSpinner />;
+  }
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
-        <SEOOptimizer>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className="App">
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/blog" element={<Blog />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/team" element={<Team />} />
-                    <Route path="/privacy" element={<Privacy />} />
-                    <Route path="/terms" element={<Terms />} />
-                  </Routes>
-                </Suspense>
-                <PerformanceMonitor>
-                  <div></div>
-                </PerformanceMonitor>
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
-        </SEOOptimizer>
-        <Router>
-          <div className="App">
+      <Router>
+        <ErrorBoundary>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/team" element={<Team />} />
-                <Route path="/privacy" element={<Privacy />} />
-                <Route path="/terms" element={<Terms />} />
+                {/* Main Pages */}
+                <Route path="/" element={<Page />} />
+                
+                {/* Company Pages */}
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/team" element={<TeamPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/news" element={<NewsPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                
+                {/* Main Services */}
+                <Route path="/services" element={<ItServicesPage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/demo" element={<DemoPage />} />
+                <Route path="/consultation" element={<ConsultationPage />} />
+                
+                {/* AI Services */}
+                <Route path="/ai-services" element={<AiServicesPage />} />
+                <Route path="/ai-marketing" element={<AiMarketingPage />} />
+                <Route path="/ai-automation" element={<AiAutomationPage />} />
+                <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+                <Route path="/ai-fintech" element={<AiFintechPage />} />
+                
+                {/* IT Services */}
+                <Route path="/it-services" element={<ItServicesPage />} />
+                <Route path="/cloud-services" element={<ServicesPage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                <Route path="/devops" element={<DevOpsPage />} />
+                
+                {/* Specialized Solutions */}
+                <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+                <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
+                <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                <Route path="/robotics" element={<RoboticsPage />} />
+                
+                {/* Support Pages */}
+                <Route path="/support" element={<SupportPage />} />
+                <Route path="/documentation" element={<DocumentationPage />} />
+                <Route path="/faq" element={<FAQPage />} />
+                
+                {/* Content Pages */}
+                <Route path="/case-studies" element={<CaseStudiesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
+                
+                {/* Legal Pages */}
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
+                <Route path="/cookies" element={<CookiesPage />} />
+                
+                {/* Catch all route */}
+                <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </Suspense>
+            <Footer />
           </div>
-        </Router>
-      </ErrorBoundary>
+        </ErrorBoundary>
+      </Router>
     </HelmetProvider>
   );
-  }
+};
 
 export default App;

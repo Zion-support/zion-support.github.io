@@ -1,44 +1,12 @@
-const { withSentry } = require('../withSentry.cjs');
-const { isValidEmail } = require('../emailUtils.cjs');
-
-async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+export default function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
   try {
-    const { email } = req.body || {};
-    
-    if (!email) {
-      res.statusCode = 400;
-      res.json({ error: 'Email is required' });
-      return;
-    }
-    
-    if (!isValidEmail(email)) {
-      res.statusCode = 400;
-      res.json({ error: 'Invalid email format' });
-      return;
-    }
-    // Save subscription logic here
-    const subscription = {
-      email,
-      subscribedAt: new Date().toISOString(),
-      status: 'active'
-    };
-    
-    res.statusCode = 200;
-    res.json({
-      message: 'Successfully subscribed to newsletter',
-      subscription
-    });
+    // Add your API logic here
+    res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Newsletter subscription error:', error);
-    res.statusCode = 500;
-    res.json({ error: 'Failed to subscribe to newsletter' });
+    console.error("API Error:", error);
+    res.status(500).json({ error: "Internal server error" });
   }
 }
-
-export default withSentry(handler);

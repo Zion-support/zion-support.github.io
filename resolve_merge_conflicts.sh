@@ -1,40 +1,45 @@
 #!/bin/bash
 
-echo "Starting merge conflict resolution..."
+# Script to resolve merge conflicts by choosing HEAD version
+echo "Resolving merge conflicts in critical files..."
 
-# Function to resolve conflicts by keeping the newer version
+# Function to resolve merge conflicts
 resolve_conflicts() {
     local file="$1"
+    echo "Processing: $file"
     
-    if [[ -f "$file" ]] && grep -q "<<<<<<< HEAD" "$file"; then
-        echo "Resolving conflicts in: $file"
-        
-        # Use the incoming changes (theirs) for most conflicts
-        # This keeps the newer version from the PR
-        git checkout --theirs "$file"
-        
-        # Remove conflict markers if any remain
-        sed -i '/^<<<<<<< HEAD$/d' "$file"
-        sed -i '/^=======$/d' "$file"
-        sed -i '/^>>>>>>> .*$/d' "$file"
-        
-        echo "Resolved: $file"
-    fi
+    # Create backup
+    cp "$file" "${file}.backup"
+    
+    # Use git checkout to resolve conflicts by choosing HEAD version
+    git checkout --ours "$file" 2>/dev/null || true
+    
+    # If that doesn't work, use sed to remove conflict markers and keep HEAD content
+    if grep -q "/d' "$file"
+        sed -i '/
+        sed -i '/    fi
 }
 
-# Find all files with merge conflicts
-conflicted_files=$(git diff --name-only --diff-filter=U)
+# List of critical files to fix
+files=(
+    "app/page.tsx"
+    "app/components/Footer.tsx"
+    "app/components/Navigation.tsx"
+    "app/components/EnhancedErrorBoundary.tsx"
+    "app/components/LoadingSpinner.tsx"
+    "app/ai-services/page.tsx"
+    "app/it-services/page.tsx"
+    "app/ai-workflow-automation/page.tsx"
+    "app/ai-3d-generation/page.tsx"
+    "app/api-docs/page.tsx"
+    "app/gdpr/page.tsx"
+)
 
-echo "Found $(echo "$conflicted_files" | wc -l) conflicted files"
-
-# Resolve each conflicted file
-for file in $conflicted_files; do
-    resolve_conflicts "$file"
+# Process each file
+for file in "${files[@]}"; do
+    if [ -f "$file" ]; then
+        resolve_conflicts "$file"
+    fi
 done
 
-echo "Merge conflict resolution complete!"
-
-# Add all resolved files
-git add .
-
-echo "All resolved files have been staged."
+echo "Merge conflicts resolved!"

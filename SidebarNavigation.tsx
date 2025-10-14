@@ -1,30 +1,64 @@
-import { Home, Menu, Settings, User, X } from 'lucide-react';
-import React, { useState } from 'react';
+import React from 'react';
 
-import { Link } from 'react-router-dom';
 
-const SidebarNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface SidebarNavigationProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const navigationItems = [
+  { name: 'Home', href: '/', icon: User },
+  { name: 'Profile', href: '/profile', icon: User },
+  { name: 'Settings', href: '/settings', icon: User },
+  { name: 'Help', href: '/help', icon: User },
+  { name: 'About', href: '/about', icon: User }
+];
+
+const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
+  return (
+    <>
+      {/* Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={onClose}
+        />
+      )}
+
+      {/* Sidebar */}
       <div
-        className={`${isOpen ? 'w-64' : 'w-16'} transition-all duration-300 bg-white shadow-lg`}
-      ></div>
-        <div className='p-4'></div>
+        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+          isOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+      >
+        <div className="flex items-center justify-between p-4 border-b">
+          <h2 className="text-lg font-semibold">Navigation</h2>
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className='w-full flex items-center justify-center p-2 rounded-lg hover:bg-gray-100 transition-colors'
+            onClick={onClose}
+            className="p-2 rounded-md hover:bg-gray-100"
           >
-            {isOpen ? </button><X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
-              className={`flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors mb-2 ${
-                isOpen ? 'justify-start' : 'justify-center'
-              }`}
-      {/* Main Content */}
-      <div className='flex-1 p-8'></div>
-        <h1 className='text-2xl font-bold text-gray-800'>Dashboard</h1>
-        <p className='text-gray-600 mt-2'>Welcome to your dashboard</p>
-              className={`flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors mb-2 ${
-                isOpen ? 'justify-start' : 'justify-center'
-              }`}
-      {/* Main Content */}
-      <div className='flex-1 p-8'></div>
-        <h1 className='text-2xl font-bold text-gray-800'>Dashboard</h1>
-        <p className='text-gray-600 mt-2'>Welcome to your dashboard</p>
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        <nav className="mt-4">
+          {navigationItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors"
+              >
+                <Icon className="h-5 w-5 mr-3" />
+                {item.name}
+              </a>
+            );
+          })}
+        </nav>
+      </div>
+    </>
+  );
+};
+
+export default SidebarNavigation;

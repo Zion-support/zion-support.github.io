@@ -1,1 +1,0 @@
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton'; interface ProjectActionsProps {; projectId: string,,; isUnderDispute: boolean,,; disputeId?:string,; isTalent: boolean,,} onAddMilestone: () => void} } onAddMilestone;) } ProjectActionsProps) {; return (; />} <Button onClick={onAddMilestone}>) '
