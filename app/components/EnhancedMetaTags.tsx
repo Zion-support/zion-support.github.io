@@ -1,14 +1,16 @@
 import React from "react";
 
-const EnhancedMetaTags = () => {
+const EnhancedMetaTags: React.FC = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">EnhancedMetaTags</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for EnhancedMetaTags.
-      </p>
-    </div>
-  );
-};
-
-export default EnhancedMetaTags;
+<>    <Helmet></Helmet>
+      { /* Basic Meta Tags */ }
+      <title>{title}</title>
+      <meta name="description" content={description} />"
+      <meta name="keywords" content={keywords} />"
+      <meta name="author" content={author} />"
+      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />"
+      <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />"
+      
+        tags.map((tag, index) => (
+          <meta key={index} property="article:tag" content={tag} />"
+        )})
