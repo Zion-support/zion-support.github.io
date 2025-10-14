@@ -121,7 +121,7 @@ export interface ContactForm {
 /**
  * API Response Interface
  */
-export interface ApiResponse<T = unknown> {
+export interface ApiResponse<T = any> {
   success: boolean;
   data?: T;
   error?: string;
@@ -238,7 +238,7 @@ export interface NewsletterSubscription {
 export interface ErrorBoundaryProps {
   children: React.ReactNode;
   fallback?: React.ComponentType<{ error: Error; resetError: () => void }>;
-  onError?: (_error: Error, _errorInfo: React.ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
 }
 
 /**
@@ -269,7 +269,7 @@ export interface AnalyticsEvent {
   category: string;
   label?: string;
   value?: number;
-  custom_parameters?: Record<string, unknown>;
+  custom_parameters?: Record<string, any>;
 }
 
 /**

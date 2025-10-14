@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react';
+import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain, Target } from 'lucide-react';
 
 const GuidesPage: React.FC = () => {
   const guides = [
