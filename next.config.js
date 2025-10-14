@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-import withBundleAnalyzer from '; import crypto from 'crypto;,';,''
-enabled: process.env.ANALYZE === 'true'';'
-/** @type {} import( 'next'';,';,''
-domains: [ 'images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'';,';,''
-formats: ['image/webp', '';,'''
+import withBundleAnalyzer from '; import crypto from ';crypto;,';,enabled: process.env.ANALYZE === 'true'
+/** @type {} import( 'next,';,domains: [ 'images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com,';,formats: ['image/webp', ,'
+
 );,
-contentSecurityPolicy: "default-src 'self'; script-src 'none'';)'""'"'
+contentSecurityPolicy: "default-src 'self'; script-src 'none)'""'"'
 }
 ]'""'"'
 =======
@@ -30,4 +27,5 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
->>>>>>> cursor/fix-errors-and-merge-to-main-fabf
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d09f

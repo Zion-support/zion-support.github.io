@@ -1,12 +1,10 @@
 import React from 'react';
-
-const LazyImage: React.FC = () => {
+const LazyImage = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Lazy Image</h2>
-      <p className="text-gray-600">Lazy Image component is under development.</p>
+    <div className="lazyimage-component">
+      <h2>LazyImage</h2>
+      <p>This component is under construction.</p>
     </div>
   );
 };
-
 export default LazyImage;

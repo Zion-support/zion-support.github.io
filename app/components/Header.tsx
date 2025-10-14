@@ -1,12 +1,10 @@
 import React from 'react';
-
-const Header: React.FC = () => {
+const Header = () => {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Header</h2>
-      <p className="text-gray-600">Header component is under development.</p>
+    <div className="header-component">
+      <h2>Header</h2>
+      <p>This component is under construction.</p>
     </div>
   );
 };
-
 export default Header;

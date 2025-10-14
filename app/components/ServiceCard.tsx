@@ -1,12 +1,30 @@
+'use client';
 import React from 'react';
-
-const ServiceCard: React.FC = () => {
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+  className?: string;
+}
+export default function ServiceCard({
+  title,
+  description,
+  icon,
+  className = ''
+}: ServiceCardProps) {
   return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Service Card</h2>
-      <p className="text-gray-600">Service Card component is under development.</p>
+    <div className={`bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 ${className}`}>
+      {icon && (
+        <div className="text-blue-600 mb-4">
+          {icon}
+        </div>
+      )}
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+        {title}
+      </h3>
+      <p className="text-gray-600">
+        {description}
+      </p>
     </div>
   );
-};
-
-export default ServiceCard;
+}

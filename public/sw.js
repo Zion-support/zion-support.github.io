@@ -1,4 +1,4 @@
-const CACHE_NAME = 'zion-tech-v1';
+const CACHE_NAME = 'zion-tech-v1''
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',
@@ -38,7 +38,7 @@ self.addEventListener('activate', (event) => {
             return caches.delete(cacheName);
           }
         })
-      );
+      )
     })
   );
 });

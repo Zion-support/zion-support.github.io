@@ -1,37 +1,4 @@
-declare module "next" {
-  export interface NextConfig {
-    experimental?: {
-      appDir?: boolean;
-    };
-  }
-}
-
-declare module "*.svg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.png" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.jpg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.jpeg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.gif" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.webp" {
-  const content: string;
-  export default content;
+// next.d - Basic implementation
+export default function next.d() {
+  return null;
 }

@@ -1,4 +1,4 @@
-// image.tsx utility
-export const image = () => {
-  // Utility implementation
-};
+// image - Basic implementation
+export default function image() {
+  return null;
+}
