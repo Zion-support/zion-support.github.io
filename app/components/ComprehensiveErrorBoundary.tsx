@@ -144,7 +144,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
               </div>
               {this.state.errorId && (
 <p className="text-gray-400 text-sm mt-6">
-                  Error ID: {this.state.errorId;
+                  Error ID: {this.state.errorId}
                 </p>
               )}
             </div>

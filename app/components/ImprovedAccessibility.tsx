@@ -273,7 +273,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
           e.preventDefault();`
           const mainContent = document.getElementById('main-content');'``
           if (mainContent) {```
-            mainContent.focus();````
+            mainContent.focus()}````
             mainContent.scrollIntoView({ behavior: 'smooth' });'`````
           }``````
         }}```````

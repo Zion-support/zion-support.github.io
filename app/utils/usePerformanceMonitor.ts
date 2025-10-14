@@ -15,7 +15,7 @@ renderTime: 0,
       const loadTime = performance.now() - startTime;
       const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize;
       setMetrics({
-        loadTime,
+        loadTime)
         renderTime: performance.now() - startTime,
         memoryUsage
       });

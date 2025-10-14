@@ -51,7 +51,7 @@ errorId: `error_${Date.now(),}_${Math.random().toString(36).substr(2, 9)}`,
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
+      errorInfo)
     });
     // Log error to console in development;
     if (process.env.NODE_ENV === 'development') {
@@ -117,7 +117,7 @@ const errorReport: ErrorReport = {,
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-        },
+        })
         body: JSON.stringify(errorReport),
       });
     } catch (reportError) {
@@ -134,7 +134,7 @@ const errorReport: ErrorReport = {,
         hasError: false,
         error: null,
         errorInfo: null,
-        errorId: null,
+        errorId: null)
       });
     }
   };

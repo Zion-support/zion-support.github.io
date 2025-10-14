@@ -29,7 +29,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {'
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {';
         page_title: name,
-        page_location: window.location.href,
+        page_location: window.location.href)
 ...properties})}
   };
 

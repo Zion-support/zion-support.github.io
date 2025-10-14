@@ -8,7 +8,7 @@ const root = createRoot(;
 root.render(
   <React.StrictMode></React>
     <App /></App>
-  </React.StrictMode>,
+  </React.StrictMode>)
 );
 // Register service worker for PWA functionality;
 if ("serviceWorker" in navigator) {"

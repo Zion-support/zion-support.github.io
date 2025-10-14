@@ -58,7 +58,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-        onClick={onClose;
+        onClick={onClose}
       />
       
       {/* Sidebar */}
@@ -71,7 +71,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </div>
           <button
-            onClick={onClose;
+            onClick={onClose}
             className="text-gray-400 hover:text-white lg:hidden"
           >
             <XMarkIcon className="w-6 h-6" />
@@ -89,7 +89,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                       ? 'bg-purple-600 text-white'
                       : 'text-gray-300 hover:text-white hover:bg-slate-800'
                   }`}
-                  onClick={onClose;
+                  onClick={onClose}
                 >
                   <item.icon className="w-5 h-5" />
                   <span>{item.name}</span>
@@ -107,7 +107,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
                               ? 'text-purple-400 bg-slate-800'
                               : 'text-gray-400 hover:text-white hover:bg-slate-800'
                           }`}
-                          onClick={onClose;
+                          onClick={onClose}
                         >
                           <subItem.icon className="w-4 h-4" />
                           <span>{subItem.name}</span>
@@ -137,7 +137,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const location
               {link.submenu ? (
                 <div></div>
                   <button;
-                    onClick={() => toggleExpanded(link.name);
+                    onClick={() => toggleExpanded(link.name)}
                     className="flex items-center justify-between w-full px-3 py-2 text-gray-300 hover:text-white hover:bg-slate-800 rounded"
                   >
                     <div className="flex items-center">"
@@ -194,7 +194,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {
       id: 'ai-services',;
       title: 'AI Services',;
-      icon: <Brain className="w-5 h-5" />,
+      icon: <Brain className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-500',;
       href: '/ai-services',;
       items: [
@@ -227,7 +227,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {
       id: 'it-services',;
       title: 'IT Services',;
-      icon: <Shield className="w-5 h-5" />,
+      icon: <Shield className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-500',;
       href: '/services',;
       items: [{ label: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> }, '"'"
@@ -247,7 +247,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {
       id: 'micro-saas',;
       title: 'Micro SAAS',;
-      icon: <Zap className="w-5 h-5" />,
+      icon: <Zap className="w-6 h-6" />,
       color: 'from-purple-500 to-pink-500',;
       href: '/micro-saas',;
       items: [{ label: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> }, '"'"
@@ -277,7 +277,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     {
       id: '5g-solutions',;
       title: '5G Solutions',;
-      icon: <Globe className="w-5 h-5" />,
+      icon: <Globe className="w-6 h-6" />,
       color: 'from-orange-500 to-red-500',;
       href: '/5g-solutions',;
       items: [{ label: '5G Data Analytics', href: '/5g-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }, '"'"

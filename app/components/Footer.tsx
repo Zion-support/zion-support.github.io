@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
   const serviceCategories = [
     {
       title: 'AI Services',;
-      icon: <Brain className="w-5 h-5" />,
+      icon: <Brain className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-500',;
       links: [
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
     },
     {
       title: 'IT Services',;
-      icon: <Cloud className="w-5 h-5" />,
+      icon: <Cloud className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-500',;
       links: [{ label: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
         {label: 'Database Management', href: '/database-management', },
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
     },
     {
       title: 'Solutions',;
-      icon: <Zap className="w-5 h-5" />,
+      icon: <Zap className="w-6 h-6" />,
       color: 'from-purple-500 to-pink-500',;
       links: [{ label: 'Digital Transformation', href: '/digital-transformation' },
         {label: 'Business Intelligence', href: '/business-intelligence', },

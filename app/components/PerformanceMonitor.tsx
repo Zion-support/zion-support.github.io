@@ -27,12 +27,12 @@ const PerformanceMonitor: React.FC = () => {
             }));
           } else if (entry.entryType === 'first-input') {;
             setMetrics(prev => ({
-              ...prev,
+              ...prev)
               fid: (entry as any).processingStart - entry.startTime;
             }));
           } else if (entry.entryType === 'layout-shift') {;
             setMetrics(prev => ({
-              ...prev,
+              ...prev)
               cls: (prev?.cls || 0) + (entry as any).value;
             }));
           }
@@ -89,7 +89,7 @@ const PerformanceMonitor: React.FC = () => {
           <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>"
           <div className="space-y-2 text-xs">"
             <div className="flex justify-between">"
-<span>FCP:</span>,
+<span>FCP:</span>)
 <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000,})}></span>
                 {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}"`"`'"``'"``````
               </span>``````
