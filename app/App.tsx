@@ -14,7 +14,7 @@ function App() {
         </div>
       </Router>
     </HelmetProvider>
-  );
-}
+  )
+  }
 
 export default App;

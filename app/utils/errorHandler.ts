@@ -1,11 +1,11 @@
 export const errorHandler = {
-  handle: (error: Error, context?: string) => {
+  handle: (_error: Error, context?: string) => {
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-        description: error.message,
+        description: _error.message,
         fatal: false,
-        custom_map: context ? { context } : {}
+        custom_map: { context: context || 'unknown' }
       });
     }
     
@@ -36,13 +36,13 @@ export const errorHandler = {
     }
   },
   
-  log: (error: Error, context?: Record<string, unknown>) => {
+  log: (_error: Error, _context?: Record<string, unknown>) => {
     // Error logging logic
-    console.error('Error logged:', error, context);
+    console.error('Error logged:', _error, _context);
   },
   
-  report: (error: Error, context?: Record<string, unknown>) => {
+  report: (_error: Error, _context?: Record<string, unknown>) => {
     // Error reporting logic
-    console.error('Error reported:', error, context);
+    console.error('Error reported:', _error, _context);
   }
 };

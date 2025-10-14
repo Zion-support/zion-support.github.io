@@ -6,8 +6,8 @@ interface EnhancedSEOProps {
   description: string;
   keywords?: string;
   canonicalUrl?: string;
-  ogImage?: string;
-}
+  ogImage?: string
+  }
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
@@ -33,6 +33,6 @@ canonicalUrl,
       <meta name="twitter:description" content={description} />
       {ogImage && <meta name="twitter:image" content={ogImage} />}
     </Helmet>
-  );
-};
+  )
+  };
 export default EnhancedSEO;
