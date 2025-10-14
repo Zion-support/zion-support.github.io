@@ -1,6 +1,5 @@
-export const PerformanceMonitoringTest = () => {
-  // PerformanceMonitoringTest utility function
-  return true;
-};
-
-export default PerformanceMonitoringTest;
+describe('PerformanceMonitoring', () => {
+  it('should be a placeholder test', () => {
+    expect(true).toBe(true);
+  });
+});
