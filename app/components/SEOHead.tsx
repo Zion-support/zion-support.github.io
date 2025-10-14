@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-import React from "react";
-
-const SEOHead = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">SEOHead</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for SEOHead.
-      </p>
-    </div>
-  );
-=======
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -27,11 +16,6 @@ interface SEOHeadProps {
   noindex?: boolean;
   nofollow?: boolean;
   canonical?: string;
-  alternateHreflang?: Array<{ hreflang: string; href: string }>;
-=======
-  canonicalUrl?: string;
-  ogImage?: string;
->>>>>>> origin/main
   structuredData?: object;
 }
 
@@ -50,8 +34,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   noindex = false,
   nofollow = false,
   canonical,
-  alternateHreflang = [],
-  structuredData,
+  structuredData
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const canonicalUrl = canonical || url;
@@ -103,53 +86,48 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     }
   };
 
-  return (
-  canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
-}) => {
+  const finalStructuredData = structuredData || defaultStructuredData;
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
+      <meta name="author" content={author} />
+      <meta name="robots" content={robotsContent} />
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={type} />
       <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:title" content={title} />
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={canonicalUrl} />
-      <meta name="twitter:title" content={title} />
+      <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:image" content={image} />
+      
+      {/* Additional Meta Tags */}
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
       
       {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
->>>>>>> origin/main
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(finalStructuredData) }}
+      />
     </Helmet>
   );
-=======
-    );
->>>>>>> origin/cursor/resolve-all-prs-and-merge
 };
 
 export default SEOHead;
