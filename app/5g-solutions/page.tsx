@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function FiveGSolutionsPage() {
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>5G Solutions - Zion Tech Group</title>
         <meta name="description" content="5G Solutions - Zion Tech Group" />
