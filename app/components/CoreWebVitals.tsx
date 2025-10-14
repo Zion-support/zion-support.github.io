@@ -1,6 +1,5 @@
-import React, { useEffect, useCallback, ReactNode } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
+import React, { useEffect, useCallback, ReactNode } from 'react'
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from "web-vitals";
 interface WebVitalsData {
   name: string;
   value: number;
@@ -16,8 +15,8 @@ interface CoreWebVitalsProps {
 const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
   const reportWebVitals = useCallback((data: WebVitalsData) => {
     // Send to Google Analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'web_vitals', {
+    if (typeof window !== 'undefined'
+      (window as any).gtag('event', 'web_vitals'
         metric_name: data.name,
         metric_value: Math.round(data.value),
         metric_delta: Math.round(data.delta),
@@ -27,14 +26,14 @@ const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vital:', data);
+    if (process.env.NODE_ENV === 'development'
+      console.log('Web Vital:'
     }
   }, []);
 
   useEffect(() => {
     // Track Core Web Vitals using web-vitals library
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined'
       onCLS(reportWebVitals);
       onINP(reportWebVitals);
       onFCP(reportWebVitals);

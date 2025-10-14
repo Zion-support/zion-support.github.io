@@ -3,25 +3,25 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 <<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Mic, DollarSign, Headphones, Video, FileText, Monitor, TrendingUp, Star as StarIcon } from "lucide-react";
-import SEOOptimizer from "../components/SEOOptimizer";
+import SEOOptimizer from "../components/SEOOptimizer"
 
-export default function ZionAIVoiceAssistantPro() {
+export default function ZionAIVoiceAssistantPro() {;
   const features = [
-    "Natural language processing (NLP)",
-    "Multi-language support (50+ languages)",
-    "Voice recognition & synthesis",
-    "Context-aware conversations",
-    "Integration with 500+ apps",
-    "Custom voice training",
-    "Real-time transcription",
-    "Smart scheduling & reminders",
-    "Email & calendar management",
-    "Document creation & editing",
-    "Web search & research",
-    "Code generation & debugging",
-    "Customer service automation",
-    "Meeting transcription & summaries",
-    "Voice-controlled presentations",
+    "Natural language processing (NLP)"
+    "Multi-language support (50+ languages)"
+    "Voice recognition & synthesis"
+    "Context-aware conversations"
+    "Integration with 500+ apps"
+    "Custom voice training"
+    "Real-time transcription"
+    "Smart scheduling & reminders"
+    "Email & calendar management"
+    "Document creation & editing"
+    "Web search & research"
+    "Code generation & debugging"
+    "Customer service automation"
+    "Meeting transcription & summaries"
+    "Voice-controlled presentations"
     "Multi-device synchronization"
   ];
 ;
@@ -41,7 +41,7 @@ const pricingPlans = [
       name: "Starter","
       price: "$29","
       period: "/month","
-      description: "Perfect for small teams and individuals",
+      description: "Perfect for small teams and individuals"
       features: ["
         "Up to 5 users","
         "Basic voice commands","
@@ -56,7 +56,7 @@ const pricingPlans = [
       name: "Professional","
       price: "$79","
       period: "/month","
-      description: "Ideal for growing businesses",
+      description: "Ideal for growing businesses"
       features: ["
         "Up to 25 users","
         "Advanced AI capabilities","
@@ -73,7 +73,7 @@ const pricingPlans = [
       name: "Enterprise","
       price: "$199","
       period: "/month","
-      description: "For large organizations",
+      description: "For large organizations"
       features: ["
         "Unlimited users","
         "Full AI suite","
@@ -94,7 +94,7 @@ const testimonials = [
       name: "Sarah Johnson","
       company: "TechStart Inc.","
       role: "CEO","
-      content: "Zion AI Voice Assistant Pro has revolutionized how our team works. We've increased productivity by 65% and our customer satisfaction scores are through the roof.",
+      content: "
       rating: 5,"
       avatar: "SJ"
     },
@@ -102,7 +102,7 @@ const testimonials = [
       name: "Michael Chen","
       company: "E-commerce Solutions","
       role: "CTO","
-      content: "The voice recognition is incredibly accurate, even with our technical jargon. It's like having a personal AI assistant that actually understands our business.",
+      content: "
       rating: 5,"
       avatar: "MC"
     },
@@ -110,7 +110,7 @@ const testimonials = [
       name: "Emily Rodriguez","
       company: "Digital Marketing Agency","
       role: "Operations Director","
-      content: "Our team can now handle 3x more customer inquiries thanks to the voice automation. The ROI was immediate and continues to grow.",
+      content: "Our team can now handle 3x more customer inquiries thanks to the voice automation. The ROI was immediate and continues to grow."
       rating: 5,"
       avatar: "ER"
     }
@@ -147,7 +147,7 @@ const useCases = [
       <div className="container mx-auto px-4 py-16"></div>"
         <div className="text-center"></div>"
           <h1 className="text-4xl font-bold text-white mb-8">Home</h1>"
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-300 text-lg"
             This page is under construction. Please check back later.
           </p>
         </div>

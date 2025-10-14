@@ -1,15 +1,5 @@
 
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-import { Users, Globe, Shield, Zap } from "lucide-react";
-
-export default function Partners() {
-  const partners = [
-    {
-=======
-{
->>>>>>> origin/main
+import { Helmet } from "react-helmet-async";
       name: 'Amazon Web Services',''
       logo: '☁️',''
       description: 'infrastructure and AI services collaboration',''
@@ -58,11 +48,11 @@ const benefits = ['Access to cutting-edge technology',''
         <meta name="keywords" content="partners, partnerships, strategic alliances, technology partners, business partners, partner program" />"
       </Helmet>
 "
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
         { /* Hero Section */ }"
         <section className="relative py-20 px-4">"
           <div className="max-w-7xl mx-auto text-center"></div>"
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"
 
               Our;"
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">"
@@ -88,11 +78,11 @@ const benefits = ['Access to cutting-edge technology',''
         { /* Partners Grid */ }"
         <section className="py-20 px-4">"
           <div className="max-w-7xl mx-auto"></div>"
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
+            <h2 className="text-4xl font-bold text-white text-center mb-16"
 
               Strategic Partners;
             </h2>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>")
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>"
               {partners.map((partner, _index) => (
 "
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>"
@@ -100,13 +90,13 @@ const benefits = ['Access to cutting-edge technology',''
                     <div className="text-4xl mb-4"></div>{partner.logo}</div>"
                     <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>"
                     <p className="text-cyan-400 text-sm mb-3">{partner.category}</p>"
-                    <p className="text-gray-300 text-sm">{partner.description}</p>
+                    <p className="text-gray-300 text-sm"
                   </div>
                 </div>
 
               Partner Benefits;
             </h2>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>")
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>"
               {benefits.map((benefit, _index) => ("
                 <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30"></div>""
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0"></div>""
@@ -115,13 +105,13 @@ const benefits = ['Access to cutting-edge technology',''
                   <span className="text-gray-300 font-medium">{benefit}</span>"
                 </div>
             </h2>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
               {benefits.map((benefit, _index) => (}"
                 <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30"></div>"
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0"></div>"
-                    <Circle className="w-4 h-4 text-white" />
+                    <Circle className="w-4 h-4 text-white"
                   </div>"
-                  <span className="text-gray-300 font-medium">{benefit}</span>
+                  <span className="text-gray-300 font-medium"
                 </div>
 
               Ready to Partner with Us?;

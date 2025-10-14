@@ -1,27 +1,27 @@
 // Learn more: https://github.com/testing-library/jest-dom
-require("@testing-library/jest-dom");
+require("@testing-library/jest-dom"
 
-// Polyfills for Node.js environment";
-const { TextEncoder, TextDecoder } = require("util");
+// Polyfills for Node.js environment"
+const { TextEncoder, TextDecoder } = require("util"
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
 <<<<<<< HEAD
 // Mock CSS imports
-jest.mock('react-lazy-load-image-component/src/effects/blur.css', () => ({}));
+jest.mock('react-lazy-load-image-component/src/effects/blur.css'
 
 // Mock react-lazy-load-image-component
-jest.mock('react-lazy-load-image-component', () => {
-  const React = require('react');
+jest.mock('react-lazy-load-image-component'
+  const React = require('react'
   return {
     LazyLoadImage: ({ children, placeholderSrc, ...props }) => {
       // Filter out non-DOM props
       const { effect, ...domProps } = props;
-      return React.createElement('img', domProps, children);
+      return React.createElement('img'
     },
   };
 });
-Object.defineProperty(window, "matchMedia", {
+Object.defineProperty(window, "matchMedia"
   writable: true,)
   value: jest.fn().mockImplementation((query) => ({
     matches: false,
@@ -51,9 +51,9 @@ const originalError = console.error;
 beforeAll(() => {
   console.error = jest.fn((...args) => {
     if ("
-      typeof args[0] === "string" &&")
+      typeof args[0] === "string" &&"
       (args[0].includes("Warning: ReactDOM.render") ||"
-        args[0].includes("Not implemented: HTMLFormElement.prototype.submit"))
+        args[0].includes("Not implemented: HTMLFormElement.prototype.submit"
     ) {
       return;
     }

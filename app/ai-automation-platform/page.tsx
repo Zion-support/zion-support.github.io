@@ -1,25 +1,14 @@
-<<<<<<< HEAD
-import React from 'react';
-
-import { ArrowRight, Zap, Brain, CheckCircle, TrendingUp, Settings, Target, Workflow } from "lucide-react";
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-
-=======
->>>>>>> origin/main
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react'
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO'
 import ResponsiveContainer from '../components/ResponsiveContainer'
 import FuturisticCard from '../components/FuturisticCard'
 import FuturisticButton from '../components/FuturisticButton'
 <<<<<<< HEAD
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton";
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from "lucide-react";
+import EnhancedSEO from '../components/EnhancedSEO'
+import ResponsiveContainer from '../components/ResponsiveContainer'
+import FuturisticCard from '../components/FuturisticCard'
+import FuturisticButton from '
 const AIAutomationPlatform = () => {
   const features = [
     {
@@ -71,7 +60,7 @@ const benefits = ["
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>"
         { /* Hero Section */ }""
         <section className="relative overflow-hidden">""
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"
 "
           <ResponsiveContainer>""
             <div className="relative z-10 text-center py-20"></div>"""
@@ -80,26 +69,26 @@ const benefits = ["
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>"
               </div>"
 ""
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"
                 AI Automation Platform
               </h1>"
               ""
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8"
                 Transform your business with AI-powered automation. 
                 Automate workflows, optimize processes, and make intelligent decisions at scale.
               </p>"
               ""
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
-                <FuturisticButton""
-                  icon={ <Right className="w-5 h-5" />>> }
+                <FuturisticButton ""
+                  icon={ <Right className="w-5 h-5"
 
                 >
                   Get Started Today
                 </FuturisticButton>
-                <FuturisticButton"
+                <FuturisticButton "
 ""
                   variant="outline"""
-                  icon={ <Play className="w-5 h-5" />>> }
+                  icon={ <Play className="w-5 h-5"
 
                 >
                   View Demo
@@ -121,7 +110,7 @@ const benefits = ["
               </p>
             </div>"
 ""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
 
                   </p>)
                 </FuturisticCard>)
@@ -142,7 +131,7 @@ const benefits = ["
               </p>
             </div>"
 ""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
 
                 </div>
               ))
@@ -160,10 +149,10 @@ const benefits = ["
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">"
                 Join thousands of businesses already using AI automation to streamline their operations.
               </p>
-              <FuturisticButton"
+              <FuturisticButton "
 ""
                 size="lg"""
-                icon={ <Zap className="w-6 h-6" />>> }
+                icon={ <Zap className="w-6 h-6"
 
               >
                 Start Your Automation Journey

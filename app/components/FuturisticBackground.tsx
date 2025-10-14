@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react'
 
 const FuturisticBackground = () => {
   return (
@@ -42,8 +42,7 @@ const FuturisticBackground = () => {
       </div>
     </div>
   )
-export default FuturisticBackground
-
+export default FuturisticBackground;
 interface FuturisticBackgroundProps {
   children: React.ReactNode;
 }
@@ -55,7 +54,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d'
     if (!ctx) return;
 
     let animationId: number;
@@ -82,9 +81,9 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       
       // Gradient background
       const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-      gradient.addColorStop(0, 'rgba(15, 23, 42, 0.8)');
-      gradient.addColorStop(0.5, 'rgba(88, 28, 135, 0.6)');
-      gradient.addColorStop(1, 'rgba(15, 23, 42, 0.8)');
+      gradient.addColorStop(0, 'rgba(15, 23, 42, 0.8)'
+      gradient.addColorStop(0.5, 'rgba(88, 28, 135, 0.6)'
+      gradient.addColorStop(1, 'rgba(15, 23, 42, 0.8)'
       
       ctx.fillStyle = gradient;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -97,7 +96,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         
         ctx.beginPath();
         ctx.arc(x, y, size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(6, 182, 212, ${0.3 + Math.sin(time + i) * 0.2})`;
+        ctx.fillStyle = `rgba(6, 182, 212, ${0.3 + Math.sin(time + i) * 0.2})`
         ctx.fill();
       }
     };
@@ -119,7 +118,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(6, 182, 212, ${particle.opacity})`;
+        ctx.fillStyle = `rgba(6, 182, 212, ${particle.opacity})`
         ctx.fill();
       });
 
@@ -134,7 +133,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(6, 182, 212, ${0.1 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(6, 182, 212, ${0.1 * (1 - distance / 100)})`
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -148,10 +147,10 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     createParticles();
     animate();
 
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('resize'
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize'
       if (animationId) {
         cancelAnimationFrame(animationId);
       }
@@ -159,7 +158,7 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
   }, []);
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen"
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -168,10 +167,10 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
       />
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/60 to-slate-900/80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/60 to-slate-900/80"
       
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10"
         {children}
       </div>
 >>>>>>> origin/main

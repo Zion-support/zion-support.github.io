@@ -1,17 +1,17 @@
-'use client';
-import React from 'react';';
+'use client'
+import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
-'use client';
+'use client'
 const ImprovedNavigation: React.FC = () => { return (
-    <div className="min-h-screen bg-white"></div>
+    <div className="min-h-screen bg-white"
       <Helmet></Helmet>
         <title>Improved - Zion Tech Group</title>"
-        <meta name="description" content="Professional improved navigation services by Zion Tech Group." />
+        <meta name="description" content="Professional improved navigation services by Zion Tech Group."
       </Helmet> }
       { /* Hero Section */ }"
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
         <div className="max-w-6xl mx-auto text-center"></div>"
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6"
 
             Improved </h1>"
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
@@ -26,7 +26,7 @@ const ImprovedNavigation: React.FC = () => { return (
             designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }"
       <section className="py-16 px-4">"
         <div className="max-w-6xl mx-auto"></div>"
-          <div className="grid md:grid-cols-2 gap-12 items-center"></div>
+          <div className="grid md:grid-cols-2 gap-12 items-center"
 
             <div></div>"
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>""
@@ -68,7 +68,7 @@ const ImprovedNavigation: React.FC = () => { return (
       { /* CTA Section */ }"
       <section className="py-16 px-4 bg-blue-600">"
         <div className="max-w-4xl mx-auto text-center"></div>"
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-white mb-6"
 
             Ready to Get Started?;
           </h2>"
@@ -108,11 +108,11 @@ export default ImprovedNavigation;
               <a
 "
                 href="/contact""
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
                 Contact Us</a></div></div></div></section>{ /* CTA Section */ }"
       <section className="py-16 px-4 bg-blue-600">"
         <div className="max-w-4xl mx-auto text-center"></div>"
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-white mb-6"
 
             Ready to Get Started?</h2>"
           <p className="text-xl text-blue-100 mb-8">"
@@ -123,20 +123,7 @@ export default ImprovedNavigation;
             className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"
             Get Started Today</a></div></section></div>
   )
-export default ImprovedNavigation
-<<<<<<< HEAD
-}
-export default ImprovedNavigation';
->>>>>>> origin/main
-
-const ImprovedNavigation = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">ImprovedNavigation</h2>
-      <p>This component is under construction.</p>
-    </div>
-=======
->>>>>>> origin/main
+export default ImprovedNavigation;
   );
-export default ImprovedNavigation
+export default ImprovedNavigation;
 "

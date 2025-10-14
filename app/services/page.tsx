@@ -1,19 +1,18 @@
 import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-
-export default function Services() {
+export default function Services() {;
   const services = [
     {
-      title: "AI-Powered Business Intelligence Pro",
-      description: "Transform raw data into actionable insights with our advanced AI analytics platform. Real-time dashboards, predictive analytics, and automated reporting with 99.9% accuracy.",
-      icon: <Brain className="w-8 h-8" />,
-      path: "/ai-business-intelligence",
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $299/month",
-      originalPrice: "$599/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Mobile App", "White-label Options"],
-      category: "AI Analytics",
+      title: "AI-Powered Business Intelligence Pro"
+      description: "Transform raw data into actionable insights with our advanced AI analytics platform. Real-time dashboards, predictive analytics, and automated reporting with 99.9% accuracy."
+      icon: <Brain className="w-8 h-8"
+      path: "/ai-business-intelligence"
+      color: "from-blue-500 to-cyan-500"
+      price: "Starting at $299/month"
+      originalPrice: "$599/month"
+      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Mobile App", "White-label Options"
+      category: "AI Analytics"
       popular: true
   ShieldCheckIcon,
   CloudIcon,
@@ -22,7 +21,7 @@ export default function Services() {
   ArrowRightIcon,
   CheckIcon,
   StarIcon'}'
-} from '@heroicons/react/24/outline";
+} from '
 import React from 'react'
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
@@ -104,8 +103,7 @@ const ServicesPage: React.FC = () => {
   ]
   return (
     <>
-      <EnhancedSEO
-        title="Our Services - Zion Tech Group | AI and IT Solutions""
+      <EnhancedSEO title="Our Services - Zion Tech Group | AI and IT Solutions""
         description="Comprehensive AI and IT services including machine learning, cybersecurity, cloud infrastructure, digital transformation, and 5G solutions.""
         keywords="AI services, IT services, cybersecurity, cloud computing, digital transformation, 5G solutions, micro SaaS""
         canonicalUrl="/services""
@@ -143,35 +141,35 @@ const Icon = category.icon
             return (
 "
               <div key={categoryIndex} className="mb-20"></div>"
-                <div className="flex items-center mb-12"></div>
-                  <div className={`w-16 h-16 ${category.bgColor} rounded-lg flex items-center justify-center mr-6`}></div>
-                    <Icon className={`w-8 h-8 ${category.color}`} />
+                <div className="flex items-center mb-12"
+                  <div className={`w-16 h-16 ${category.bgColor} rounded-lg flex items-center justify-center mr-6`
+                    <Icon className={`w-8 h-8 ${category.color}`
 
                   </div>"
                   <h3 className="text-3xl font-bold text-white">{category.title}</h3>"
                 </div>
 "
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
                   { category.services.map((service, serviceIndex) => ( }"
                     <div key={serviceIndex} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105"></div>"
                       <div className="flex justify-between items-start mb-4"></div>"
-                        <h4 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                        <h4 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors"
                           { service.name }
                         </h4>"
-                        <span className="text-purple-400 font-semibold text-lg">
+                        <span className="text-purple-400 font-semibold text-lg"
                           { service.price }
                         </span>
                       </div>
                       "
-                      <p className="text-gray-300 mb-6 leading-relaxed">
+                      <p className="text-gray-300 mb-6 leading-relaxed"
                         { service.description }
                       </p>
 "
-                      <ul className="space-y-2 mb-6">)
+                      <ul className="space-y-2 mb-6"
                         { service.features.map((feature, featureIndex) => ( }"
                           <li key={featureIndex} className="flex items-center text-gray-300">"
                             <CheckIcon className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />"
-                            <span className="text-sm">{feature}</span>
+                            <span className="text-sm"
 
                           </li>)
                         ))
@@ -199,8 +197,7 @@ const Icon = category.icon
                 Get Free Consultation"
                 <ArrowRightIcon className="w-5 h-5" />"
               </Link>
-              <Link 
-"
+              <Link "
                 to="/demo""
                 className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
 

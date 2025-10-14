@@ -50,9 +50,9 @@ function fixMergeConflicts(filePath) {
     });
     
     // Fix unterminated string literals
-    content = content.replace(/import React from 'react';']*)/g, "
-    content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "
-    content = content.replace(/'use client';/g, "
+    content = content.replace(/import React from 'react';'
+    content = content.replace(/import { Helmet } from 'react-helmet-async';'
+    content = content.replace(/'use client'
     
     // Fix malformed JSX
     content = content.replace(/<>/g, '<>'
@@ -63,7 +63,7 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
     
     // Fix common syntax errors
-    content = content.replace(/export default function ([^   {]+)\s*{/g, 'export default function $1    {'
+    content = content.replace(/export default function ([^   {]+)\s*{/g, 'export default function $1    {';
     content = content.replace(/return \(\s*<>/g, 'return (\n    <>'
     content = content.replace(/;\s*<\/>;/g, '\n    </>'
     content = content.replace(/;\s*\);/g, '\n  );'
@@ -113,12 +113,12 @@ function fixUnterminatedStrings(filePath) {
       let line = lines[i];
       
       // Fix unterminated string literals
-      if (line.includes("import React from 'react';'react;/, "
-      }
-      if (line.includes("import { Helmet } from 'react-helmet-async';'react-helmet-async;/, "
+      if (line.includes("
       }
       if (line.includes("
-        line = line.replace(/'use client';/, "
+      }
+      if (line.includes("
+        line = line.replace(/'use client'
       }
       
       // Fix malformed JSX syntax
