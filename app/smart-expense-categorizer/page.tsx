@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SmartexpensecategorizerPage: React.FC = () => {
+const SmartExpenseCategorizerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const SmartexpensecategorizerPage: React.FC = () => {
   );
 }
 
-export default SmartexpensecategorizerPage;
+export default SmartExpenseCategorizerPage;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AipasswordmanagerPage: React.FC = () => {
+const AiPasswordManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AipasswordmanagerPage: React.FC = () => {
   );
 }
 
-export default AipasswordmanagerPage;
+export default AiPasswordManagerPage;
 

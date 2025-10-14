@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const DataanalyticsbiPage: React.FC = () => {
+const DataAnalyticsBiPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const DataanalyticsbiPage: React.FC = () => {
   );
 }
 
-export default DataanalyticsbiPage;
+export default DataAnalyticsBiPage;
 

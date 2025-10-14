@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AisocialmediaschedulerPage: React.FC = () => {
+const AiSocialMediaSchedulerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AisocialmediaschedulerPage: React.FC = () => {
   );
 }
 
-export default AisocialmediaschedulerPage;
+export default AiSocialMediaSchedulerPage;
 

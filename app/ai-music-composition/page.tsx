@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AimusiccompositionPage: React.FC = () => {
+const AiMusicCompositionPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AimusiccompositionPage: React.FC = () => {
   );
 }
 
-export default AimusiccompositionPage;
+export default AiMusicCompositionPage;
 

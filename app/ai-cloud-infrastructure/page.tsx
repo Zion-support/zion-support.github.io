@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AicloudinfrastructurePage: React.FC = () => {
+const AiCloudInfrastructurePage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AicloudinfrastructurePage: React.FC = () => {
   );
 }
 
-export default AicloudinfrastructurePage;
+export default AiCloudInfrastructurePage;
 

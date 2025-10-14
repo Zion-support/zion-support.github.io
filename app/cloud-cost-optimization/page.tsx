@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CloudcostoptimizationPage: React.FC = () => {
+const CloudCostOptimizationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const CloudcostoptimizationPage: React.FC = () => {
   );
 }
 
-export default CloudcostoptimizationPage;
+export default CloudCostOptimizationPage;
 

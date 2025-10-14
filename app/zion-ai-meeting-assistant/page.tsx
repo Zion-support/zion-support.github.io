@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionaimeetingassistantPage: React.FC = () => {
+const ZionAiMeetingAssistantPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionaimeetingassistantPage: React.FC = () => {
   );
 }
 
-export default ZionaimeetingassistantPage;
+export default ZionAiMeetingAssistantPage;
 

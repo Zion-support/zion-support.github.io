@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AnalyticstoolsPage: React.FC = () => {
+const AnalyticsToolsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AnalyticstoolsPage: React.FC = () => {
   );
 }
 
-export default AnalyticstoolsPage;
+export default AnalyticsToolsPage;
 

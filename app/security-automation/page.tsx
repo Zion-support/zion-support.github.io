@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SecurityautomationPage: React.FC = () => {
+const SecurityAutomationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const SecurityautomationPage: React.FC = () => {
   );
 }
 
-export default SecurityautomationPage;
+export default SecurityAutomationPage;
 

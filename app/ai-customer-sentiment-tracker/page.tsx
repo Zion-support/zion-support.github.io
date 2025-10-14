@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AicustomersentimenttrackerPage: React.FC = () => {
+const AiCustomerSentimentTrackerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AicustomersentimenttrackerPage: React.FC = () => {
   );
 }
 
-export default AicustomersentimenttrackerPage;
+export default AiCustomerSentimentTrackerPage;
 

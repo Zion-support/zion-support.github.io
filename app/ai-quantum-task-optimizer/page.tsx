@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiquantumtaskoptimizerPage: React.FC = () => {
+const AiQuantumTaskOptimizerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AiquantumtaskoptimizerPage: React.FC = () => {
   );
 }
 
-export default AiquantumtaskoptimizerPage;
+export default AiQuantumTaskOptimizerPage;
 

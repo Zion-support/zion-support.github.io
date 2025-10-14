@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Page5gmobileapplicationsPage: React.FC = () => {
+const FiveGMobileApplicationsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const Page5gmobileapplicationsPage: React.FC = () => {
   );
 }
 
-export default Page5gmobileapplicationsPage;
+export default FiveGMobileApplicationsPage;
 

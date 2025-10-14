@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const IotedgePage: React.FC = () => {
+const IotEdgePage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const IotedgePage: React.FC = () => {
   );
 }
 
-export default IotedgePage;
+export default IotEdgePage;
 

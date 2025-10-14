@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const QuantumdataencryptionvaultPage: React.FC = () => {
+const QuantumDataEncryptionVaultPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const QuantumdataencryptionvaultPage: React.FC = () => {
   );
 }
 
-export default QuantumdataencryptionvaultPage;
+export default QuantumDataEncryptionVaultPage;
 

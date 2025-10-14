@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const TaskmanagementsaasPage: React.FC = () => {
+const TaskManagementSaasPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const TaskmanagementsaasPage: React.FC = () => {
   );
 }
 
-export default TaskmanagementsaasPage;
+export default TaskManagementSaasPage;
 

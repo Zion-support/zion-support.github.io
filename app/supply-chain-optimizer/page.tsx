@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SupplychainoptimizerPage: React.FC = () => {
+const SupplyChainOptimizerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const SupplychainoptimizerPage: React.FC = () => {
   );
 }
 
-export default SupplychainoptimizerPage;
+export default SupplyChainOptimizerPage;
 

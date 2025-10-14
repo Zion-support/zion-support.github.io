@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionaienergymanagerPage: React.FC = () => {
+const ZionAiEnergyManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionaienergymanagerPage: React.FC = () => {
   );
 }
 
-export default ZionaienergymanagerPage;
+export default ZionAiEnergyManagerPage;
 

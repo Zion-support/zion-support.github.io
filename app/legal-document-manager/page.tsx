@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const LegaldocumentmanagerPage: React.FC = () => {
+const LegalDocumentManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const LegaldocumentmanagerPage: React.FC = () => {
   );
 }
 
-export default LegaldocumentmanagerPage;
+export default LegalDocumentManagerPage;
 

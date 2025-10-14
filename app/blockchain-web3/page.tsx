@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Blockchainweb3Page: React.FC = () => {
+const BlockchainWeb3Page: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const Blockchainweb3Page: React.FC = () => {
   );
 }
 
-export default Blockchainweb3Page;
+export default BlockchainWeb3Page;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const WebsitebuildersaasPage: React.FC = () => {
+const WebsiteBuilderSaasPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const WebsitebuildersaasPage: React.FC = () => {
   );
 }
 
-export default WebsitebuildersaasPage;
+export default WebsiteBuilderSaasPage;
 

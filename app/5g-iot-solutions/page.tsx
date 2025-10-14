@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const Page5giotsolutionsPage: React.FC = () => {
+const FiveGIotSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const Page5giotsolutionsPage: React.FC = () => {
   );
 }
 
-export default Page5giotsolutionsPage;
+export default FiveGIotSolutionsPage;
 

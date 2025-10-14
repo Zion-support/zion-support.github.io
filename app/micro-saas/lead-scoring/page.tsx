@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const LeadscoringPage: React.FC = () => {
+const LeadScoringPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const LeadscoringPage: React.FC = () => {
   );
 }
 
-export default LeadscoringPage;
+export default LeadScoringPage;
 

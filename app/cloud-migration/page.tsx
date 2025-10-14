@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CloudmigrationPage: React.FC = () => {
+const CloudMigrationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const CloudmigrationPage: React.FC = () => {
   );
 }
 
-export default CloudmigrationPage;
+export default CloudMigrationPage;
 

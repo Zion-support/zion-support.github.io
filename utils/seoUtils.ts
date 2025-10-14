@@ -31,7 +31,7 @@ interface SEOConfig {
     href: string
     hreflang: string
   }>
-  structuredData?: any
+  structuredData?: Record<string, unknown>
 }
 
 export const defaultSEOConfig: SEOConfig = {

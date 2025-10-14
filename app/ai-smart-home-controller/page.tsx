@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AismarthomecontrollerPage: React.FC = () => {
+const AiSmartHomeControllerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AismarthomecontrollerPage: React.FC = () => {
   );
 }
 
-export default AismarthomecontrollerPage;
+export default AiSmartHomeControllerPage;
 

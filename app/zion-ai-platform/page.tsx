@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionaiplatformPage: React.FC = () => {
+const ZionAiPlatformPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionaiplatformPage: React.FC = () => {
   );
 }
 
-export default ZionaiplatformPage;
+export default ZionAiPlatformPage;
 

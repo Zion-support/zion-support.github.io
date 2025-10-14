@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SupportbotPage: React.FC = () => {
+const SupportBotPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const SupportbotPage: React.FC = () => {
   );
 }
 
-export default SupportbotPage;
+export default SupportBotPage;
 

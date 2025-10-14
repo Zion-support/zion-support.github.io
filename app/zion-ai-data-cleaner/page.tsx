@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionaidatacleanerPage: React.FC = () => {
+const ZionAiDataCleanerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionaidatacleanerPage: React.FC = () => {
   );
 }
 
-export default ZionaidatacleanerPage;
+export default ZionAiDataCleanerPage;
 

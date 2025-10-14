@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AistockportfoliomanagerPage: React.FC = () => {
+const AiStockPortfolioManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AistockportfoliomanagerPage: React.FC = () => {
   );
 }
 
-export default AistockportfoliomanagerPage;
+export default AiStockPortfolioManagerPage;
 

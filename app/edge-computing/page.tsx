@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const EdgecomputingPage: React.FC = () => {
+const EdgeComputingPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const EdgecomputingPage: React.FC = () => {
   );
 }
 
-export default EdgecomputingPage;
+export default EdgeComputingPage;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionaisocialschedulerproPage: React.FC = () => {
+const ZionAiSocialSchedulerProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionaisocialschedulerproPage: React.FC = () => {
   );
 }
 
-export default ZionaisocialschedulerproPage;
+export default ZionAiSocialSchedulerProPage;
 

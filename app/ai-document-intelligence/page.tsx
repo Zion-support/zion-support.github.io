@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AidocumentintelligencePage: React.FC = () => {
+const AiDocumentIntelligencePage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AidocumentintelligencePage: React.FC = () => {
   );
 }
 
-export default AidocumentintelligencePage;
+export default AiDocumentIntelligencePage;
 

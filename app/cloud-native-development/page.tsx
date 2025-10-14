@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CloudnativedevelopmentPage: React.FC = () => {
+const CloudNativeDevelopmentPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const CloudnativedevelopmentPage: React.FC = () => {
   );
 }
 
-export default CloudnativedevelopmentPage;
+export default CloudNativeDevelopmentPage;
 

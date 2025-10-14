@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AimobileappdevelopmentPage: React.FC = () => {
+const AiMobileAppDevelopmentPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AimobileappdevelopmentPage: React.FC = () => {
   );
 }
 
-export default AimobileappdevelopmentPage;
+export default AiMobileAppDevelopmentPage;
 

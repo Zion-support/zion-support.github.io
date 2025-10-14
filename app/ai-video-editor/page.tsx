@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AivideoeditorPage: React.FC = () => {
+const AiVideoEditorPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AivideoeditorPage: React.FC = () => {
   );
 }
 
-export default AivideoeditorPage;
+export default AiVideoEditorPage;
 

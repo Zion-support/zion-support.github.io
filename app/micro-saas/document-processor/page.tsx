@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const DocumentprocessorPage: React.FC = () => {
+const DocumentProcessorPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const DocumentprocessorPage: React.FC = () => {
   );
 }
 
-export default DocumentprocessorPage;
+export default DocumentProcessorPage;
 

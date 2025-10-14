@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Server, Cloud } from 'lucide-react';
 
-const ITSolutionsPage: React.FC = () => {
+const ItSolutionsPage: React.FC = () => {
 
   return (
     <>
@@ -44,4 +44,5 @@ const ITSolutionsPage: React.FC = () => {
   );
 };
 
-export default ITSolutionsPage;
+import React, { Suspense } from 'react';
+export default ItSolutionsPage;

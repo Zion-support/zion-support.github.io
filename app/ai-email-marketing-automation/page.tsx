@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiemailmarketingautomationPage: React.FC = () => {
+const AiEmailMarketingAutomationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AiemailmarketingautomationPage: React.FC = () => {
   );
 }
 
-export default AiemailmarketingautomationPage;
+export default AiEmailMarketingAutomationPage;
 

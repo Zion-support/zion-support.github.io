@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const EmployeedirectoryPage: React.FC = () => {
+const EmployeeDirectoryPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const EmployeedirectoryPage: React.FC = () => {
   );
 }
 
-export default EmployeedirectoryPage;
+export default EmployeeDirectoryPage;
 

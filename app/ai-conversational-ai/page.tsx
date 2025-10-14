@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiconversationalaiPage: React.FC = () => {
+const AiConversationalAiPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AiconversationalaiPage: React.FC = () => {
   );
 }
 
-export default AiconversationalaiPage;
+export default AiConversationalAiPage;
 

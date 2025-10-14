@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CybersecurityauditPage: React.FC = () => {
+const CybersecurityAuditPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const CybersecurityauditPage: React.FC = () => {
   );
 }
 
-export default CybersecurityauditPage;
+export default CybersecurityAuditPage;
 

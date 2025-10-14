@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const DigitaltwinplatformPage: React.FC = () => {
+const DigitalTwinPlatformPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const DigitaltwinplatformPage: React.FC = () => {
   );
 }
 
-export default DigitaltwinplatformPage;
+export default DigitalTwinPlatformPage;
 

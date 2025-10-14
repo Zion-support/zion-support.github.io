@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const IntelligentdatabasemigrationPage: React.FC = () => {
+const IntelligentDatabaseMigrationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const IntelligentdatabasemigrationPage: React.FC = () => {
   );
 }
 
-export default IntelligentdatabasemigrationPage;
+export default IntelligentDatabaseMigrationPage;
 

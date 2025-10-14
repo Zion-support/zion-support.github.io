@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionaiinvoicegeneratorPage: React.FC = () => {
+const ZionAiInvoiceGeneratorPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionaiinvoicegeneratorPage: React.FC = () => {
   );
 }
 
-export default ZionaiinvoicegeneratorPage;
+export default ZionAiInvoiceGeneratorPage;
 

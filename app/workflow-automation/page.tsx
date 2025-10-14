@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const WorkflowautomationPage: React.FC = () => {
+const WorkflowAutomationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const WorkflowautomationPage: React.FC = () => {
   );
 }
 
-export default WorkflowautomationPage;
+export default WorkflowAutomationPage;
 

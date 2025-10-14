@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionaiworkflowautomatorproPage: React.FC = () => {
+const ZionAiWorkflowAutomatorProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionaiworkflowautomatorproPage: React.FC = () => {
   );
 }
 
-export default ZionaiworkflowautomatorproPage;
+export default ZionAiWorkflowAutomatorProPage;
 

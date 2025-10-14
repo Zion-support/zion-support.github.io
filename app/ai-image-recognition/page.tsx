@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiimagerecognitionPage: React.FC = () => {
+const AiImageRecognitionPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AiimagerecognitionPage: React.FC = () => {
   );
 }
 
-export default AiimagerecognitionPage;
+export default AiImageRecognitionPage;
 

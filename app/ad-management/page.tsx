@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AdmanagementPage: React.FC = () => {
+const AdManagementPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AdmanagementPage: React.FC = () => {
   );
 }
 
-export default AdmanagementPage;
+export default AdManagementPage;
 

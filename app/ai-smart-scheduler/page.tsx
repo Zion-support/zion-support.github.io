@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AismartschedulerPage: React.FC = () => {
+const AiSmartSchedulerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AismartschedulerPage: React.FC = () => {
   );
 }
 
-export default AismartschedulerPage;
+export default AiSmartSchedulerPage;
 

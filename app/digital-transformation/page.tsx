@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const DigitaltransformationPage: React.FC = () => {
+const DigitalTransformationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const DigitaltransformationPage: React.FC = () => {
   );
 }
 
-export default DigitaltransformationPage;
+export default DigitalTransformationPage;
 

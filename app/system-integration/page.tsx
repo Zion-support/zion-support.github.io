@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SystemintegrationPage: React.FC = () => {
+const SystemIntegrationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const SystemintegrationPage: React.FC = () => {
   );
 }
 
-export default SystemintegrationPage;
+export default SystemIntegrationPage;
 

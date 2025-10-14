@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AidocumentscannerPage: React.FC = () => {
+const AiDocumentScannerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AidocumentscannerPage: React.FC = () => {
   );
 }
 
-export default AidocumentscannerPage;
+export default AiDocumentScannerPage;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AirecommendationenginePage: React.FC = () => {
+const AiRecommendationEnginePage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AirecommendationenginePage: React.FC = () => {
   );
 }
 
-export default AirecommendationenginePage;
+export default AiRecommendationEnginePage;
 

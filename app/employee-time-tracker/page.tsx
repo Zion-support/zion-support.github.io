@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const EmployeetimetrackerPage: React.FC = () => {
+const EmployeeTimeTrackerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const EmployeetimetrackerPage: React.FC = () => {
   );
 }
 
-export default EmployeetimetrackerPage;
+export default EmployeeTimeTrackerPage;
 

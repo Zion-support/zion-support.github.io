@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AineuralmemoryassistantPage: React.FC = () => {
+const AiNeuralMemoryAssistantPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AineuralmemoryassistantPage: React.FC = () => {
   );
 }
 
-export default AineuralmemoryassistantPage;
+export default AiNeuralMemoryAssistantPage;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ArvrplatformPage: React.FC = () => {
+const ArVrPlatformPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ArvrplatformPage: React.FC = () => {
   );
 }
 
-export default ArvrplatformPage;
+export default ArVrPlatformPage;
 

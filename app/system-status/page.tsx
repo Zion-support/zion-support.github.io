@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SystemstatusPage: React.FC = () => {
+const SystemStatusPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const SystemstatusPage: React.FC = () => {
   );
 }
 
-export default SystemstatusPage;
+export default SystemStatusPage;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionaiseooptimizerPage: React.FC = () => {
+const ZionAiSeoOptimizerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionaiseooptimizerPage: React.FC = () => {
   );
 }
 
-export default ZionaiseooptimizerPage;
+export default ZionAiSeoOptimizerPage;
 

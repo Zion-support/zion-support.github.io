@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ProjectmanagementtoolPage: React.FC = () => {
+const ProjectManagementToolPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ProjectmanagementtoolPage: React.FC = () => {
   );
 }
 
-export default ProjectmanagementtoolPage;
+export default ProjectManagementToolPage;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const PrivacypolicyPage: React.FC = () => {
+const PrivacyPolicyPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const PrivacypolicyPage: React.FC = () => {
   );
 }
 
-export default PrivacypolicyPage;
+export default PrivacyPolicyPage;
 

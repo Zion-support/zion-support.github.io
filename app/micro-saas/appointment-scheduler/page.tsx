@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AppointmentschedulerPage: React.FC = () => {
+const AppointmentSchedulerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AppointmentschedulerPage: React.FC = () => {
   );
 }
 
-export default AppointmentschedulerPage;
+export default AppointmentSchedulerPage;
 

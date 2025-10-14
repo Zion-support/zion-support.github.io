@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZioncloudvaultPage: React.FC = () => {
+const ZionCloudVaultPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZioncloudvaultPage: React.FC = () => {
   );
 }
 
-export default ZioncloudvaultPage;
+export default ZionCloudVaultPage;
 

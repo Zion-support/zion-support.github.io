@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ApidocsPage: React.FC = () => {
+const ApiDocsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ApidocsPage: React.FC = () => {
   );
 }
 
-export default ApidocsPage;
+export default ApiDocsPage;
 

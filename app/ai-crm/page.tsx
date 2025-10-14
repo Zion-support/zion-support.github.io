@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AicrmPage: React.FC = () => {
+const AiCrmPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AicrmPage: React.FC = () => {
   );
 }
 
-export default AicrmPage;
+export default AiCrmPage;
 

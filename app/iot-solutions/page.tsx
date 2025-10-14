@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const IotsolutionsPage: React.FC = () => {
+const IotSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const IotsolutionsPage: React.FC = () => {
   );
 }
 
-export default IotsolutionsPage;
+export default IotSolutionsPage;
 

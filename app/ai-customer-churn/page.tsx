@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AicustomerchurnPage: React.FC = () => {
+const AiCustomerChurnPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AicustomerchurnPage: React.FC = () => {
   );
 }
 
-export default AicustomerchurnPage;
+export default AiCustomerChurnPage;
 

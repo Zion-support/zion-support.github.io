@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SeooptimizerPage: React.FC = () => {
+const SeoOptimizerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const SeooptimizerPage: React.FC = () => {
   );
 }
 
-export default SeooptimizerPage;
+export default SeoOptimizerPage;
 

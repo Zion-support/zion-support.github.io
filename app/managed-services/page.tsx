@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ManagedservicesPage: React.FC = () => {
+const ManagedServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ManagedservicesPage: React.FC = () => {
   );
 }
 
-export default ManagedservicesPage;
+export default ManagedServicesPage;
 

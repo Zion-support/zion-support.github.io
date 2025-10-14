@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiedgecomputingPage: React.FC = () => {
+const AiEdgeComputingPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AiedgecomputingPage: React.FC = () => {
   );
 }
 
-export default AiedgecomputingPage;
+export default AiEdgeComputingPage;
 

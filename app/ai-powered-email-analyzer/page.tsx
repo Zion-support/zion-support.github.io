@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AipoweredemailanalyzerPage: React.FC = () => {
+const AiPoweredEmailAnalyzerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AipoweredemailanalyzerPage: React.FC = () => {
   );
 }
 
-export default AipoweredemailanalyzerPage;
+export default AiPoweredEmailAnalyzerPage;
 

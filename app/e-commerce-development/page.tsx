@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const EcommercedevelopmentPage: React.FC = () => {
+const ECommerceDevelopmentPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const EcommercedevelopmentPage: React.FC = () => {
   );
 }
 
-export default EcommercedevelopmentPage;
+export default ECommerceDevelopmentPage;
 

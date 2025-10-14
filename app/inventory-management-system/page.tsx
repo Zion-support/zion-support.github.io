@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const InventorymanagementsystemPage: React.FC = () => {
+const InventoryManagementSystemPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const InventorymanagementsystemPage: React.FC = () => {
   );
 }
 
-export default InventorymanagementsystemPage;
+export default InventoryManagementSystemPage;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const EmailsignaturePage: React.FC = () => {
+const EmailSignaturePage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const EmailsignaturePage: React.FC = () => {
   );
 }
 
-export default EmailsignaturePage;
+export default EmailSignaturePage;
 

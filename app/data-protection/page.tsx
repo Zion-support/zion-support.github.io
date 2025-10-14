@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const DataprotectionPage: React.FC = () => {
+const DataProtectionPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const DataprotectionPage: React.FC = () => {
   );
 }
 
-export default DataprotectionPage;
+export default DataProtectionPage;
 

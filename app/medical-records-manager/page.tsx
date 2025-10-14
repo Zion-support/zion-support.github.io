@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const MedicalrecordsmanagerPage: React.FC = () => {
+const MedicalRecordsManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const MedicalrecordsmanagerPage: React.FC = () => {
   );
 }
 
-export default MedicalrecordsmanagerPage;
+export default MedicalRecordsManagerPage;
 

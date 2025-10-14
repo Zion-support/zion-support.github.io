@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AismartcalendarPage: React.FC = () => {
+const AiSmartCalendarPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AismartcalendarPage: React.FC = () => {
   );
 }
 
-export default AismartcalendarPage;
+export default AiSmartCalendarPage;
 

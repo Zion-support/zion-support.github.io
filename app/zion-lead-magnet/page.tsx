@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionleadmagnetPage: React.FC = () => {
+const ZionLeadMagnetPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionleadmagnetPage: React.FC = () => {
   );
 }
 
-export default ZionleadmagnetPage;
+export default ZionLeadMagnetPage;
 

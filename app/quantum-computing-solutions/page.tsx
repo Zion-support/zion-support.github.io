@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const QuantumcomputingsolutionsPage: React.FC = () => {
+const QuantumComputingSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const QuantumcomputingsolutionsPage: React.FC = () => {
   );
 }
 
-export default QuantumcomputingsolutionsPage;
+export default QuantumComputingSolutionsPage;
 

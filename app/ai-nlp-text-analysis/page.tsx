@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AinlptextanalysisPage: React.FC = () => {
+const AiNlpTextAnalysisPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AinlptextanalysisPage: React.FC = () => {
   );
 }
 
-export default AinlptextanalysisPage;
+export default AiNlpTextAnalysisPage;
 

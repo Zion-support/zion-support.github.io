@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Zap } from 'lucide-react';
 
-const AISolutionsPage: React.FC = () => {
+const AiSolutionsPage: React.FC = () => {
 
   return (
     <>
@@ -44,4 +44,5 @@ const AISolutionsPage: React.FC = () => {
   );
 };
 
-export default AISolutionsPage;
+import React, { Suspense } from 'react';
+export default AiSolutionsPage;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AinlpPage: React.FC = () => {
+const AiNlpPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AinlpPage: React.FC = () => {
   );
 }
 
-export default AinlpPage;
+export default AiNlpPage;
 

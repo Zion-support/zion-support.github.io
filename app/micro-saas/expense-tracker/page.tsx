@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ExpensetrackerPage: React.FC = () => {
+const ExpenseTrackerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ExpensetrackerPage: React.FC = () => {
   );
 }
 
-export default ExpensetrackerPage;
+export default ExpenseTrackerPage;
 

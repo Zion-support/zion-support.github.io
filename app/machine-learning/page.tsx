@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const MachinelearningPage: React.FC = () => {
+const MachineLearningPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const MachinelearningPage: React.FC = () => {
   );
 }
 
-export default MachinelearningPage;
+export default MachineLearningPage;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionaivideoeditorPage: React.FC = () => {
+const ZionAiVideoEditorPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionaivideoeditorPage: React.FC = () => {
   );
 }
 
-export default ZionaivideoeditorPage;
+export default ZionAiVideoEditorPage;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiclimatepredictionenginePage: React.FC = () => {
+const AiClimatePredictionEnginePage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AiclimatepredictionenginePage: React.FC = () => {
   );
 }
 
-export default AiclimatepredictionenginePage;
+export default AiClimatePredictionEnginePage;
 

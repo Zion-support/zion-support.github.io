@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AianalyticsdashboardproPage: React.FC = () => {
+const AiAnalyticsDashboardProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AianalyticsdashboardproPage: React.FC = () => {
   );
 }
 
-export default AianalyticsdashboardproPage;
+export default AiAnalyticsDashboardProPage;
 

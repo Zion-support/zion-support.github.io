@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AilogodesignerPage: React.FC = () => {
+const AiLogoDesignerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AilogodesignerPage: React.FC = () => {
   );
 }
 
-export default AilogodesignerPage;
+export default AiLogoDesignerPage;
 

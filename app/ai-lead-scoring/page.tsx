@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AileadscoringPage: React.FC = () => {
+const AiLeadScoringPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AileadscoringPage: React.FC = () => {
   );
 }
 
-export default AileadscoringPage;
+export default AiLeadScoringPage;
 

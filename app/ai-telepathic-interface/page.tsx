@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AitelepathicinterfacePage: React.FC = () => {
+const AiTelepathicInterfacePage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AitelepathicinterfacePage: React.FC = () => {
   );
 }
 
-export default AitelepathicinterfacePage;
+export default AiTelepathicInterfacePage;
 

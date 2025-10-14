@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ApidevelopmentPage: React.FC = () => {
+const ApiDevelopmentPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ApidevelopmentPage: React.FC = () => {
   );
 }
 
-export default ApidevelopmentPage;
+export default ApiDevelopmentPage;
 

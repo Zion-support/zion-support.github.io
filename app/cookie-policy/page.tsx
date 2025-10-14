@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CookiepolicyPage: React.FC = () => {
+const CookiePolicyPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const CookiepolicyPage: React.FC = () => {
   );
 }
 
-export default CookiepolicyPage;
+export default CookiePolicyPage;
 

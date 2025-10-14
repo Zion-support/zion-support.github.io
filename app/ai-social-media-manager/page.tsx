@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AisocialmediamanagerPage: React.FC = () => {
+const AiSocialMediaManagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AisocialmediamanagerPage: React.FC = () => {
   );
 }
 
-export default AisocialmediamanagerPage;
+export default AiSocialMediaManagerPage;
 

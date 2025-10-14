@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ComplianceautomationPage: React.FC = () => {
+const ComplianceAutomationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ComplianceautomationPage: React.FC = () => {
   );
 }
 
-export default ComplianceautomationPage;
+export default ComplianceAutomationPage;
 

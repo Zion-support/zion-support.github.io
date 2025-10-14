@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AicyberdefensematrixPage: React.FC = () => {
+const AiCyberDefenseMatrixPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AicyberdefensematrixPage: React.FC = () => {
   );
 }
 
-export default AicyberdefensematrixPage;
+export default AiCyberDefenseMatrixPage;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AivoicecloningstudioPage: React.FC = () => {
+const AiVoiceCloningStudioPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AivoicecloningstudioPage: React.FC = () => {
   );
 }
 
-export default AivoicecloningstudioPage;
+export default AiVoiceCloningStudioPage;
 

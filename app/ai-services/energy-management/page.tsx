@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const EnergymanagementPage: React.FC = () => {
+const EnergyManagementPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const EnergymanagementPage: React.FC = () => {
   );
 }
 
-export default EnergymanagementPage;
+export default EnergyManagementPage;
 

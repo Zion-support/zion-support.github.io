@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AidataminingproPage: React.FC = () => {
+const AiDataMiningProPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AidataminingproPage: React.FC = () => {
   );
 }
 
-export default AidataminingproPage;
+export default AiDataMiningProPage;
 

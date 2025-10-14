@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionperformancemonitorPage: React.FC = () => {
+const ZionPerformanceMonitorPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionperformancemonitorPage: React.FC = () => {
   );
 }
 
-export default ZionperformancemonitorPage;
+export default ZionPerformanceMonitorPage;
 

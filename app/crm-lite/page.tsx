@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CrmlitePage: React.FC = () => {
+const CrmLitePage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const CrmlitePage: React.FC = () => {
   );
 }
 
-export default CrmlitePage;
+export default CrmLitePage;
 

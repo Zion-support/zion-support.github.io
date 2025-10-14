@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const MicrosaasPage: React.FC = () => {
+const MicroSaasPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const MicrosaasPage: React.FC = () => {
   );
 }
 
-export default MicrosaasPage;
+export default MicroSaasPage;
 

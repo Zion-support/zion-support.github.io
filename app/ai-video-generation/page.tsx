@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AivideogenerationPage: React.FC = () => {
+const AiVideoGenerationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AivideogenerationPage: React.FC = () => {
   );
 }
 
-export default AivideogenerationPage;
+export default AiVideoGenerationPage;
 

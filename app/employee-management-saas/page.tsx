@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const EmployeemanagementsaasPage: React.FC = () => {
+const EmployeeManagementSaasPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const EmployeemanagementsaasPage: React.FC = () => {
   );
 }
 
-export default EmployeemanagementsaasPage;
+export default EmployeeManagementSaasPage;
 

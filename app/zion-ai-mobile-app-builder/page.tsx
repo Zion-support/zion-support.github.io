@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionaimobileappbuilderPage: React.FC = () => {
+const ZionAiMobileAppBuilderPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionaimobileappbuilderPage: React.FC = () => {
   );
 }
 
-export default ZionaimobileappbuilderPage;
+export default ZionAiMobileAppBuilderPage;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const DatavisualizationPage: React.FC = () => {
+const DataVisualizationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const DatavisualizationPage: React.FC = () => {
   );
 }
 
-export default DatavisualizationPage;
+export default DataVisualizationPage;
 

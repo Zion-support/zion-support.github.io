@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SmartinventoryoptimizerPage: React.FC = () => {
+const SmartInventoryOptimizerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const SmartinventoryoptimizerPage: React.FC = () => {
   );
 }
 
-export default SmartinventoryoptimizerPage;
+export default SmartInventoryOptimizerPage;
 

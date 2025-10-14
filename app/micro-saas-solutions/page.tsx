@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Target, Rocket } from 'lucide-react';
 
-const MicroSaaSSolutionsPage: React.FC = () => {
+const MicroSaasSolutionsPage: React.FC = () => {
 
   return (
     <>
@@ -44,4 +44,5 @@ const MicroSaaSSolutionsPage: React.FC = () => {
   );
 };
 
-export default MicroSaaSSolutionsPage;
+import React, { Suspense } from 'react';
+export default MicroSaasSolutionsPage;

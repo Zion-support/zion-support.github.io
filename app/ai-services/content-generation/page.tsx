@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ContentgenerationPage: React.FC = () => {
+const ContentGenerationPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ContentgenerationPage: React.FC = () => {
   );
 }
 
-export default ContentgenerationPage;
+export default ContentGenerationPage;
 

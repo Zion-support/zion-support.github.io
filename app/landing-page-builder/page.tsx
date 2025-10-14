@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const LandingpagebuilderPage: React.FC = () => {
+const LandingPageBuilderPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const LandingpagebuilderPage: React.FC = () => {
   );
 }
 
-export default LandingpagebuilderPage;
+export default LandingPageBuilderPage;
 

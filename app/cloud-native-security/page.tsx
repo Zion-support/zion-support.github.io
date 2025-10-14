@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CloudnativesecurityPage: React.FC = () => {
+const CloudNativeSecurityPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const CloudnativesecurityPage: React.FC = () => {
   );
 }
 
-export default CloudnativesecurityPage;
+export default CloudNativeSecurityPage;
 

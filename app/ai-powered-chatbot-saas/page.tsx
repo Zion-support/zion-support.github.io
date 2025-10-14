@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AipoweredchatbotsaasPage: React.FC = () => {
+const AiPoweredChatbotSaasPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AipoweredchatbotsaasPage: React.FC = () => {
   );
 }
 
-export default AipoweredchatbotsaasPage;
+export default AiPoweredChatbotSaasPage;
 

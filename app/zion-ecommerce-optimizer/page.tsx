@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionecommerceoptimizerPage: React.FC = () => {
+const ZionEcommerceOptimizerPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionecommerceoptimizerPage: React.FC = () => {
   );
 }
 
-export default ZionecommerceoptimizerPage;
+export default ZionEcommerceOptimizerPage;
 

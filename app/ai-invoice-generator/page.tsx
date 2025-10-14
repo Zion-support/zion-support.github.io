@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiinvoicegeneratorPage: React.FC = () => {
+const AiInvoiceGeneratorPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AiinvoicegeneratorPage: React.FC = () => {
   );
 }
 
-export default AiinvoicegeneratorPage;
+export default AiInvoiceGeneratorPage;
 

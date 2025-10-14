@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AienergyPage: React.FC = () => {
+const AiEnergyPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AienergyPage: React.FC = () => {
   );
 }
 
-export default AienergyPage;
+export default AiEnergyPage;
 

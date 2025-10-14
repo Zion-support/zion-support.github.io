@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const PropertymanagementaiPage: React.FC = () => {
+const PropertyManagementAiPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const PropertymanagementaiPage: React.FC = () => {
   );
 }
 
-export default PropertymanagementaiPage;
+export default PropertyManagementAiPage;
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AicontentwriterPage: React.FC = () => {
+const AiContentWriterPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AicontentwriterPage: React.FC = () => {
   );
 }
 
-export default AicontentwriterPage;
+export default AiContentWriterPage;
 

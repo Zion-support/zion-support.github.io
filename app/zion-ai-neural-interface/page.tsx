@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ZionaineuralinterfacePage: React.FC = () => {
+const ZionAiNeuralInterfacePage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ZionaineuralinterfacePage: React.FC = () => {
   );
 }
 
-export default ZionaineuralinterfacePage;
+export default ZionAiNeuralInterfacePage;
 

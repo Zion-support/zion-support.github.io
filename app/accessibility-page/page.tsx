@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AccessibilitypagePage: React.FC = () => {
+const AccessibilityPagePage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AccessibilitypagePage: React.FC = () => {
   );
 }
 
-export default AccessibilitypagePage;
+export default AccessibilityPagePage;
 

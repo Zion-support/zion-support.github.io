@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiblockchainanalyticsPage: React.FC = () => {
+const AiBlockchainAnalyticsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const AiblockchainanalyticsPage: React.FC = () => {
   );
 }
 
-export default AiblockchainanalyticsPage;
+export default AiBlockchainAnalyticsPage;
 

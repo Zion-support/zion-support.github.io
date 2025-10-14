@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const DisasterrecoveryadvancedPage: React.FC = () => {
+const DisasterRecoveryAdvancedPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const DisasterrecoveryadvancedPage: React.FC = () => {
   );
 }
 
-export default DisasterrecoveryadvancedPage;
+export default DisasterRecoveryAdvancedPage;
 

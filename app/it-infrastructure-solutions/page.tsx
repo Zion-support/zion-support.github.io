@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ItinfrastructuresolutionsPage: React.FC = () => {
+const ItInfrastructureSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -49,5 +49,5 @@ const ItinfrastructuresolutionsPage: React.FC = () => {
   );
 }
 
-export default ItinfrastructuresolutionsPage;
+export default ItInfrastructureSolutionsPage;
 
