@@ -1,10 +1,12 @@
 // Analytics Context Definition;
 export interface AnalyticsContextType {
-  trackEvent: (event: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (page: string) => void;
+  trackEvent: (even,
+    t: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (pag,
+    e: string) => void;
 }
 
 export const defaultAnalyticsContext: AnalyticsContextType = {
-  trackEvent: () => {},
-  trackPageView: () => {},
+  trackEvent: () => {},;
+  trackPageView: () => {},;
 };

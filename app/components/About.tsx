@@ -1,32 +1,6 @@
 import React from "react";
-import { CheckIcon, UsersIcon, TrophyIcon, LightBulbIcon } from "@heroicons/react/24/outline";
 
 const About: React.FC = () => {
-  const stats = [
-    { icon: UsersIcon, value: '500+', label: 'Happy Clients' },
-    { icon: TrophyIcon, value: '50+', label: 'Awards Won' },
-    { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }
-  ];
-
-  const values = [
-    {
-      title: 'Innovation',
-      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'
-    },
-    {
-      title: 'Excellence',
-      description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.'
-    },
-    {
-      title: 'Partnership',
-      description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.'
-    },
-    {
-      title: 'Integrity',
-      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
-    }
-  ];
-
   return (
     <>
       <section className="py-20 bg-gray-50">
@@ -104,6 +78,6 @@ const About: React.FC = () => {
       </section>
     </>
   );
-};
+</section></div></div></div></h2></p></div></CheckIcon></div></h3></div></CheckIcon></div></h3></div></div></div></stat></div></div></div></div></h3></p></div></div></h4></section></div></div></div></h2></p></div></CheckIcon></div></h3></div></CheckIcon></div></h3></div></div></div></stat></div></div></div></div></h3></p></div></div></h4>};
 
 export default About;

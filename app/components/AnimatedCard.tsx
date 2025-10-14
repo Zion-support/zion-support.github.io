@@ -25,6 +25,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
   const hoverClasses = hoverEffect ? 'hover:scale-105 hover:shadow-xl' : '';
   const glowClass = glowClasses[glowColor];
 
+const AnimatedCard: React.FC = () => {
   return (
     <div className={`${baseClasses} ${hoverClasses} ${glowClass} ${className}`}>
       {children}

@@ -1,18 +1,12 @@
 import React from "react";
 
-const AccessibilityAudit = () => {
+const AccessibilityAudit: React.FC = () => {
   return (
-    <>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Accessibility Audit</h1>
-          <p className="text-gray-300 text-lg">
-            This component is under construction. Please check back later.
-          </p>
-        </div>
-      </div>
-    </>
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">AccessibilityAudit</h2>
+      <p>This component is under development.</p>
+    </div>
   );
-};
+</div></div></h1></p></div></div></h1></p>};
 
 export default AccessibilityAudit;

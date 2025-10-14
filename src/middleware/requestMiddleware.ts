@@ -1,12 +1,11 @@
-'use client';'
-
-import { logger    } from "../utils/logger";"
+'use client';';
+import { logger    } from "../utils/logger";";
 export type NextFunction = () => Promise<unknown> | unknown;
 export interface MiddlewareContext {
   request: {
     url: string;
     method: string;
-    headers: Record<string, string>;
+    headers: Record<////string, string>;
     body?: unknown;
   };
   response?: {
@@ -14,10 +13,10 @@ export interface MiddlewareContext {
     data?: unknown;
     headers?: Record<string, string>;
   };
-  metadata: Record<string, unknown>;
+  metadata: Record<////string, unknown>;
 }
-export type Middleware = (
-  context: MiddlewareContext,
+export type Middleware = (;
+  context: MiddlewareContext,;
   next: NextFunction;
 ) => Promise<unknown> | unknown;
 
@@ -29,7 +28,7 @@ export class MiddlewareExecutor {
     return this;
   }
   
-  async execute(context: MiddlewareContext): Promise<unknown> {
+  async execute(context: MiddlewareContext): Promise<////unknown> {
     let index = 0;
     const next = async (): Promise<unknown> => {
       if (index >= this.middlewares.length) {
@@ -44,28 +43,28 @@ export class MiddlewareExecutor {
 
 export const loggingMiddleware: Middleware = async (context, next) => {
   const _startTime = Date.now();
-  logger.info('Request started', {''
-    component: 'RequestMiddleware',''
-    method: context.request.method,
+  logger.info('Request started', {'';
+    component: 'RequestMiddleware','';
+    method: context.request.method,;
     url: context.request.url;
   });
   try {
     const _result = await next();
     const duration = Date.now() - _startTime;
-    logger.info('Request completed', {''
-      component: 'RequestMiddleware',''
-      method: context.request.method,
-      url: context.request.url,
-      status: context.response?.status,
+    logger.info('Request completed', {'';
+      component: 'RequestMiddleware','';
+      method: context.request.method,;
+      url: context.request.url,;
+      status: context.response?.status,;
       duration;
     });
     return _result;
   } catch (error) {
     const duration = Date.now() - _startTime;
-    logger.error('Request failed', error as Error, {''
-      component: 'RequestMiddleware',''
-      method: context.request.method,
-      url: context.request.url,
+    logger.error('Request failed', error as Error, {'';
+      component: 'RequestMiddleware','';
+      method: context.request.method,;
+      url: context.request.url,;
       duration;
     });
     throw error;
@@ -75,14 +74,14 @@ export const loggingMiddleware: Middleware = async (context, next) => {
 export const authMiddleware: Middleware = async (context, next) => {
   const _token = getAuthToken();
   if (_token) {
-    context.request.headers['Authorization'] = `Bearer ${_token}`;``'`
+    context.request.headers['Authorization'] = `Bearer ${_token}`;``'`;
   }
   return await next();
 };
 
 function getAuthToken(): string | null {
-  if (typeof window === 'undefined') return null;'
-  return localStorage.getItem('authToken');'
+  if (typeof window === 'undefined') return null;';
+  return localStorage.getItem('authToken');';
 }
 
 export const errorHandlingMiddleware: Middleware = async (context, next) => {
@@ -91,13 +90,13 @@ export const errorHandlingMiddleware: Middleware = async (context, next) => {
   } catch (error) {
     // Transform error into a standardized format;
     const standardError = {
-      message: error instanceof Error ? error.message : 'Unknown error',''
-      status: context.response?.status || 500,
-      url: context.request.url,
+      message: error instanceof Error ? error.message : 'Unknown error','';
+      status: context.response?.status || 500,;
+      url: context.request.url,;
       method: context.request.method;
     };
-    logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {''
-      component: 'ErrorHandlingMiddleware',''
+    logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {'';
+      component: 'ErrorHandlingMiddleware','';
       ...standardError;
     });
     throw standardError;
@@ -113,7 +112,7 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
     // Remove expired timestamps;
     const validTimestamps = timestamps.filter(t => _now - t < windowMs);
     if (validTimestamps.length >= maxRequests) {
-      throw new Error('Rate limit exceeded');'
+      throw new Error('Rate limit exceeded');';
     }
     validTimestamps.push(_now);
     _requests.set(_key, validTimestamps);
@@ -124,19 +123,19 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
 export const cachingMiddleware = (ttl: number): Middleware => {
   const _cache = new Map<string, { data: unknown; timestamp: number }>();
   return async (context, next) => {
-    if (context.request.method !== 'GET') {''
+    if (context.request.method !== 'GET') {'';
       return await next();
     }
     const _key = context.request.url;
     const cached = _cache.get(_key);
     if (cached && Date.now() - cached.timestamp < ttl) {
-      logger.debug('Cache hit', { component: 'CachingMiddleware', url: _key });'
+      logger.debug('Cache hit', { component: 'CachingMiddleware', url: _key });';
       return cached.data;
     }
     const result = await next();
     _cache.set(_key, {
-      data: result,
-      timestamp: Date.now()
+      data: result,;
+      timestamp: Date.now();
     });
     return result;
   };
@@ -151,10 +150,10 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
       } catch (error) {
         lastError = error as Error;
         if (attempt < maxRetries) {
-          logger.warn(
-            `Request failed, retrying (${attempt + 1}/${maxRetries})`,```
+          logger.warn(;
+            `Request failed, retrying (${attempt + 1}/${maxRetries})`,```;
             {
-              component: 'RetryMiddleware',''
+              component: 'RetryMiddleware','';
               url: context.request.url;
             }
           );
@@ -168,15 +167,15 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
 
 export const timeoutMiddleware = (timeoutMs: number): Middleware => {
   return async (context, next) => {
-    return await Promise.race([
-      next(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),''
+    return await Promise.race([;
+      next(),;
+      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),'';
     ]);
   };
 };
 
-export const transformRequestMiddleware = (
-  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext></MiddlewareContext>
+export const transformRequestMiddleware = (;
+  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise<MiddlewareContext></MiddlewareContext>;
 ): Middleware => {
   return async (context, next) => {
     const _transformedContext = await transformer(context);
@@ -185,8 +184,8 @@ export const transformRequestMiddleware = (
   };
 };
 
-export const transformResponseMiddleware = (
-  transformer: (data: unknown) => unknown | Promise<unknown></unknown>
+export const transformResponseMiddleware = (;
+  transformer: (data: unknown) => unknown | Promise<unknown></unknown>;
 ): Middleware => {
   return async (context, next) => {
     const _result = await next();
@@ -197,22 +196,22 @@ export const transformResponseMiddleware = (
 export function createDefaultMiddlewareChain(): MiddlewareExecutor {
   const _executor = new MiddlewareExecutor();
   return _executor;
-    .use(loggingMiddleware)
-    .use(errorHandlingMiddleware)
-    .use(authMiddleware)
-    .use(timeoutMiddleware(30000))
+    .use(loggingMiddleware);
+    .use(errorHandlingMiddleware);
+    .use(authMiddleware);
+    .use(timeoutMiddleware(30000));
     .use(retryMiddleware(2, 1000));
 }
 export default {
-  MiddlewareExecutor,
-  loggingMiddleware,
-  authMiddleware,
-  errorHandlingMiddleware,
-  rateLimitMiddleware,
-  cachingMiddleware,
-  retryMiddleware,
-  timeoutMiddleware,
-  transformRequestMiddleware,
-  transformResponseMiddleware,
+  MiddlewareExecutor,;
+  loggingMiddleware,;
+  authMiddleware,;
+  errorHandlingMiddleware,;
+  rateLimitMiddleware,;
+  cachingMiddleware,;
+  retryMiddleware,;
+  timeoutMiddleware,;
+  transformRequestMiddleware,;
+  transformResponseMiddleware,;
   createDefaultMiddlewareChain;
 };

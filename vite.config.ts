@@ -33,7 +33,7 @@ export default defineConfig({
         assetFileNames: (assetInfo) => {
           if (
             assetInfo.name &&
-            /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
+            /.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
           ) {
             return `assets/images/[name]-[hash][extname]`;
           }

@@ -1,15 +1,13 @@
 'use client';
-import React from "react";
+import React from "react";"
 import { Helmet } from "react-helmet-async";
-
-export default function Page() {
+const PagePage = () => {
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Business Intelligence - Zion Tech Group</title>
+        <title>Business Intelligence - Zion Tech Group</title>"
         <meta name="description" content="Business Intelligence services and solutions from Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Business Intelligence</h1>
@@ -18,6 +16,6 @@ export default function Page() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

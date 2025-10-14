@@ -1,5 +1,5 @@
 'use client';
-import React from "react";
+import React from "react";"
 import { Helmet } from "react-helmet-async";
 
 export default function Page() {
@@ -9,7 +9,6 @@ export default function Page() {
         <title>Ai Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Ai Chatbot Builder services and solutions from Zion Tech Group" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <div className="container mx-auto px-4 py-20">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Ai Chatbot Builder</h1>
