@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function FiveGSolutionsPage() {
+export default function Page() {
   return (
     <>
       <Helmet>

@@ -2,194 +2,333 @@
 
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// List of corrupted files that need fixing
+// List of corrupted files that need to be fixed or deleted
 const corruptedFiles = [
-  'app/hooks/usePerformance.ts',
-  'app/pages/BlogPage.tsx',
-  'app/pages/5GSolutionsPage.tsx',
-  'app/pages/CloudSolutionsPage.tsx',
-  'app/pages/CybersecurityPage.tsx',
-  'app/pages/DemoPage.tsx',
-  'app/pages/MicroSaaSPage.tsx',
-  'app/pages/PricingPage.tsx',
-  'app/pages/PrivacyPage.tsx',
-  'app/pages/SolutionsPage.tsx',
-  'app/pages/SupportPage.tsx',
-  'app/pages/TermsPage.tsx',
-  'app/pages/TutorialsPage.tsx',
-  'app/page-backup.tsx',
-  'app/page-optimized.tsx',
-  'app/service-template.tsx',
-  'app/sitemap-page.tsx',
-  'app/types/next.d.ts',
-  'app/utils/__tests__/performanceMonitoring.test.ts',
-  'app/utils/accessibilityEnhancer.ts',
-  'app/utils/dynamic.tsx',
-  'app/utils/errorHandler.ts',
-  'app/utils/imageOptimizer.ts',
-  'app/utils/messageHandler.ts',
-  'app/it-infrastructure/page.tsx',
-  'app/legal-document-manager/page.tsx',
-  'app/medical-records-manager/page.tsx',
-  'app/offline/page.tsx',
-  'app/online-learning-platform/page.tsx',
-  'app/property-management-ai/page.tsx',
-  'app/supply-chain-optimizer/page.tsx',
-  'app/webinars/page.tsx',
-  'app/whitepapers/page.tsx',
-  'app/zion-ai-accounting-suite/page.tsx',
-  'app/zion-ai-api-manager/page.tsx',
-  'app/zion-ai-chatbot-builder/page.tsx',
-  'app/zion-ai-data-warehouse/page.tsx',
-  'app/zion-ai-document-processor/page.tsx',
-  'app/zion-ai-email-optimizer/page.tsx',
-  'app/zion-ai-expense-tracker/page.tsx',
-  'app/zion-ai-lead-scoring/page.tsx',
-  'app/zion-ai-mobile-app-builder/page.tsx',
-  'app/zion-ai-social-listener/page.tsx',
-  'app/zion-ai-testing-automation/page.tsx',
-  'app/zion-ai-workflow-automation/page.tsx',
-  'app/zion-ecommerce-optimizer/page.tsx',
-  'app/zion-hr-assistant-pro/page.tsx'
+  'app/404.tsx',
+  'app/components/AccessibilityAudit.tsx',
+  'app/components/AccessibilityEnhancer.tsx',
+  'app/components/AdAnalytics.tsx',
+  'app/components/AdAnalyticsDashboard.tsx',
+  'app/components/AdDashboard.tsx',
+  'app/components/AdManagementSystem.tsx',
+  'app/components/AdScheduler.tsx',
+  'app/components/AdTemplates.tsx',
+  'app/components/AdvancedAccessibilityEnhancer.tsx',
+  'app/components/AdvancedPerformanceMonitor.tsx',
+  'app/components/AdvancedPerformanceOptimizer.tsx',
+  'app/components/AdvancedSEOOptimizer.tsx',
+  'app/components/AdvancedSEOOptimizer_new.tsx',
+  'app/components/AdvertisingBanner.tsx',
+  'app/components/AnalyticsProvider.tsx',
+  'app/components/AnimatedCard.tsx',
+  'app/components/Breadcrumb.tsx',
+  'app/components/ContentCarousel.tsx',
+  'app/components/ContentPromotionBanner.tsx',
+  'app/components/ContentStatistics.tsx',
+  'app/components/CoreWebVitals.tsx',
+  'app/components/CriticalResourcePreloader.tsx',
+  'app/components/DynamicContentShowcase.tsx',
+  'app/components/EnhancedAccessibility.tsx',
+  'app/components/EnhancedAccessibilityManager.tsx',
+  'app/components/EnhancedErrorBoundary.tsx',
+  'app/components/EnhancedHero.tsx',
+  'app/components/EnhancedLoading.tsx',
+  'app/components/EnhancedLoadingSkeleton.tsx',
+  'app/components/EnhancedLoadingSpinner.tsx',
+  'app/components/EnhancedLoadingStates.tsx',
+  'app/components/EnhancedMetaTags.tsx',
+  'app/components/EnhancedPerformanceMonitor.tsx',
+  'app/components/EnhancedPerformanceOptimizer.tsx',
+  'app/components/EnhancedSEO.tsx',
+  'app/components/EnhancedSEOOptimizer.tsx',
+  'app/components/EnhancedServicesShowcase.tsx',
+  'app/components/EnhancedSkipLink.tsx',
+  'app/components/ErrorBoundary.tsx',
+  'app/components/ErrorFallback.tsx',
+  'app/components/Footer.tsx',
+  'app/components/FuturisticBackground.tsx',
+  'app/components/FuturisticBackgroundEnhanced.tsx',
+  'app/components/FuturisticButton.tsx',
+  'app/components/FuturisticButtonEnhanced.tsx',
+  'app/components/FuturisticCard.tsx',
+  'app/components/FuturisticCardEnhanced.tsx',
+  'app/components/FuturisticServiceCard.tsx',
+  'app/components/FuturisticTextEnhanced.tsx',
+  'app/components/GlobalErrorBoundary.tsx',
+  'app/components/Header.tsx',
+  'app/components/ImprovedErrorBoundary.tsx',
+  'app/components/ImprovedFooter.tsx',
+  'app/components/ImprovedImage.tsx',
+  'app/components/ImprovedNavigation.tsx',
+  'app/components/ImprovedSidebar.tsx',
+  'app/components/LazyImage.tsx',
+  'app/components/LazyWrapper.tsx',
+  'app/components/Loading.tsx',
+  'app/components/LoadingOptimizer.tsx',
+  'app/components/LoadingSpinner.tsx',
+  'app/components/LoadingStates.tsx',
+  'app/components/MobileNavigation.tsx',
+  'app/components/MobileOptimizer.tsx',
+  'app/components/Navigation-backup.tsx',
+  'app/components/Navigation.tsx'
 ];
 
-// Function to create a basic page component
-function createBasicPageComponent(pageName) {
-  const componentName = pageName
-    .split('/')
-    .pop()
-    .replace('.tsx', '')
-    .replace('.ts', '')
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('');
+// Function to check if a file is corrupted
+function isCorrupted(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check for common corruption patterns
+    const corruptionPatterns = [
+      /unterminated string literal/i,
+      /unexpected token/i,
+      /identifier expected/i,
+      /property assignment expected/i,
+      /declaration or statement expected/i,
+      /expression expected/i,
+      /unterminated template literal/i,
+      /unterminated string constant/i
+    ];
+    
+    return corruptionPatterns.some(pattern => pattern.test(content));
+  } catch (error) {
+    return true; // If we can't read the file, consider it corrupted
+  }
+}
 
-  return `'use client';
-import React from 'react';
+// Function to create a basic 404 page
+function create404Page() {
+  const content = `import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-export default function ${componentName}() {
+const NotFoundPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="container mx-auto px-4">
+    <>
+      <Helmet>
+        <title>404 - Page Not Found | Zion Tech Group</title>
+        <meta name="description" content="The page you are looking for could not be found." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">${componentName}</h1>
-          <p className="text-gray-300 text-lg">This page is under development.</p>
+          <h1 className="text-6xl font-bold text-white mb-4">404</h1>
+          <h2 className="text-2xl text-gray-300 mb-8">Page Not Found</h2>
+          <p className="text-gray-400 mb-8">The page you are looking for could not be found.</p>
+          <Link 
+            to="/" 
+            className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+          >
+            Go Home
+          </Link>
         </div>
       </div>
-    </div>
+    </>
   );
-}`;
-}
-
-// Function to create a basic utility file
-function createBasicUtility(fileName) {
-  const utilityName = fileName
-    .split('/')
-    .pop()
-    .replace('.ts', '')
-    .replace('.tsx', '')
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('');
-
-  return `'use client';
-
-export const ${utilityName} = () => {
-  // Implementation
-  return true;
 };
 
-export default ${utilityName};`;
-}
-
-// Function to create a basic test file
-function createBasicTest(fileName) {
-  const testName = fileName
-    .split('/')
-    .pop()
-    .replace('.test.ts', '')
-    .replace('.test.tsx', '')
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('');
-
-  return `import { describe, it, expect } from '@jest/globals';
-
-describe('${testName}', () => {
-  it('should work', () => {
-    expect(true).toBe(true);
-  });
-});`;
-}
-
-// Function to create a basic type definition
-function createBasicTypeDef() {
-  return `declare module '*.svg' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.png' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.jpg' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.jpeg' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.gif' {
-  const content: string;
-  export default content;
-}
-
-declare module '*.webp' {
-  const content: string;
-  export default content;
-}`;
-}
-
-// Fix each corrupted file
-corruptedFiles.forEach(filePath => {
-  const fullPath = path.join(__dirname, filePath);
+export default NotFoundPage;`;
   
-  try {
-    // Ensure directory exists
-    const dir = path.dirname(fullPath);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
+  fs.writeFileSync('app/404.tsx', content);
+}
 
-    let content = '';
+// Function to create a basic Navigation component
+function createNavigationComponent() {
+  const content = `import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+
+const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <nav className="bg-slate-900/90 backdrop-blur-sm border-b border-purple-500/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0">
+              <span className="text-2xl font-bold text-white">Zion Tech Group</span>
+            </Link>
+          </div>
+          
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              About
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              Services
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+              Contact
+            </Link>
+          </div>
+
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-white p-2"
+            >
+              {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {isOpen && (
+        <div className="md:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800">
+            <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              About
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              Services
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              Contact
+            </Link>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navigation;`;
+  
+  fs.writeFileSync('app/components/Navigation.tsx', content);
+}
+
+// Function to create a basic Footer component
+function createFooterComponent() {
+  const content = `import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Footer = () => {
+  return (
+    <footer className="bg-slate-900 border-t border-purple-500/20">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
+            <p className="text-gray-400 mb-4">
+              Advanced AI and IT Solutions for the modern enterprise.
+            </p>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+            <ul className="space-y-2">
+              <li><Link to="/ai-solutions" className="text-gray-400 hover:text-white">AI Solutions</Link></li>
+              <li><Link to="/cloud-solutions" className="text-gray-400 hover:text-white">Cloud Solutions</Link></li>
+              <li><Link to="/cybersecurity" className="text-gray-400 hover:text-white">Cybersecurity</Link></li>
+              <li><Link to="/it-services" className="text-gray-400 hover:text-white">IT Services</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-400 hover:text-white">About</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+              <li><Link to="/privacy" className="text-gray-400 hover:text-white">Privacy</Link></li>
+              <li><Link to="/terms" className="text-gray-400 hover:text-white">Terms</Link></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="mt-8 pt-8 border-t border-gray-700">
+          <p className="text-center text-gray-400">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;`;
+  
+  fs.writeFileSync('app/components/Footer.tsx', content);
+}
+
+// Function to create a basic AnalyticsProvider component
+function createAnalyticsProvider() {
+  const content = `import React, { createContext, useContext, useEffect } from 'react';
+
+interface AnalyticsContextType {
+  track: (event: string, properties?: Record<string, any>) => void;
+}
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const track = (event: string, properties?: Record<string, any>) => {
+    // Basic analytics tracking
+    console.log('Analytics Event:', event, properties);
     
-    if (filePath.includes('page.tsx') || filePath.includes('Page.tsx')) {
-      content = createBasicPageComponent(filePath);
-    } else if (filePath.includes('test')) {
-      content = createBasicTest(filePath);
-    } else if (filePath.includes('types/next.d.ts')) {
-      content = createBasicTypeDef();
-    } else if (filePath.includes('utils/') || filePath.includes('hooks/')) {
-      content = createBasicUtility(filePath);
-    } else {
-      content = createBasicPageComponent(filePath);
+    // Add your analytics implementation here
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', event, properties);
     }
+  };
 
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+  useEffect(() => {
+    // Initialize analytics
+    console.log('Analytics Provider initialized');
+  }, []);
+
+  return (
+    <AnalyticsContext.Provider value={{ track }}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+};
+
+export default AnalyticsProvider;`;
+  
+  fs.writeFileSync('app/components/AnalyticsProvider.tsx', content);
+}
+
+// Main execution
+console.log('Starting corrupted files cleanup...');
+
+// Create essential components
+create404Page();
+createNavigationComponent();
+createFooterComponent();
+createAnalyticsProvider();
+
+// Delete corrupted files
+let deletedCount = 0;
+corruptedFiles.forEach(file => {
+  if (fs.existsSync(file) && isCorrupted(file)) {
+    try {
+      fs.unlinkSync(file);
+      console.log(`Deleted corrupted file: ${file}`);
+      deletedCount++;
+    } catch (error) {
+      console.error(`Failed to delete ${file}:`, error.message);
+    }
   }
 });
 
-console.log('All corrupted files have been fixed!');
+console.log(`Cleanup complete. Deleted ${deletedCount} corrupted files.`);
+console.log('Created essential components: 404.tsx, Navigation.tsx, Footer.tsx, AnalyticsProvider.tsx');

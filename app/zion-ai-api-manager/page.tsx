@@ -1,15 +1,19 @@
-'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="container mx-auto px-4">
+    <>
+      <Helmet>
+        <title>Zion Ai Api Manager - Zion Tech Group</title>
+        <meta name="description" content="Professional zion ai api manager services by Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-gray-300 text-lg">This page is under development.</p>
+          <h1 className="text-4xl font-bold text-white mb-4">Zion Ai Api Manager</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
