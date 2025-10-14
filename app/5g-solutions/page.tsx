@@ -16,7 +16,6 @@ export default function PagePage() {
           </p>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
-};
-export default PagePage;
+}
