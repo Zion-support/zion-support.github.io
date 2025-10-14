@@ -22,7 +22,6 @@ function findFilesToFix(dir)  const _files = []; function traverse(currentDir)  
 // Main execution; const workspaceDir = process.cwd(); console.log('Searching for _files to fix...'); const filesToFix = findFilesToFix(workspaceDir); console.log(`Found ${filesToFix.length} _files to process`);`'``
 let fixedCount = 0; for (const file of filesToFix)  if (fixFile(file))  fixedCount++; } console.log(`Fixed: ${file}`);`` }``
 }
-<<<<<<< HEAD
       }
     }
     // Fix unused variables by prefixing with underscore;
@@ -150,6 +149,3 @@ for (const file of filesToFix) {
   }
 }
 console.log(`Fixed ${fixedCount} _files`);
-=======
-console.log(`Fixed ${fixedCount} _files`);`"'`"'``)`
->>>>>>> origin/main

@@ -1,49 +1,16 @@
-<<<<<<< HEAD
-import React from 'react'
-'use client''
 import React from 'react';
-"use client"
-export default function ComponentsPage() {return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">"
-      <div className="container mx-auto px-4">"
-        <h1 className="text-4xl font-bold mb-8">Components</h1>"
-        <p className="text-gray-300 text-lg">"
-          This page is under development.;
-        </p>
-      </div>
-    </div>
-  )
-=======
-import React from "react";
 
-const EnhancedLoadingStates = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">EnhancedLoadingStates</h2>
-      <p>This component is under construction.</p>
-    </div>
-<<<<<<< HEAD
-  ); }
->>>>>>> origin/main
-          This page is under development.</p></div></div>
-  )
-        </p>
-      </div>
-    </div>
-  )}
-<<<<<<< HEAD
-''
-=======
-        </p>;
-      </div>
-    </div>
-  );}
+interface EnhancedLoadingStatesProps {
+  className?: string;
+  children?: React.ReactNode;
 }
-'
-=======
+
+const EnhancedLoadingStates: React.FC<EnhancedLoadingStatesProps> = ({ className = '', children }) => {
+  return (
+    <div className={`enhancedloadingstates ${className}`}>
+      {children}
+    </div>
   );
 };
 
 export default EnhancedLoadingStates;
->>>>>>> origin/main
->>>>>>> origin/main

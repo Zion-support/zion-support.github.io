@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import fs from "fs"
+import fs from "fs
 // Function to fix zion-ai pages syntax errors
 function fixZionAiPages() {
   const pages = [

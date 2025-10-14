@@ -1,30 +1,12 @@
 import React from 'react';
-<<<<<<< HEAD
 
-const App: React.FC = () => {return (
-    <div className="App">
-      <h1>Test App</h1>
-    </div>
-  )};
-
-export default App;
-=======
-<<<<<<< HEAD
-const App: React.FC = () => { return (
-    <div className="App">
-      <h1>Test App</h1>
-    </div>
-  ); }
-=======
-
-const AppTest: React.FC = () => {
+const App_test: React.FC = () => {
   return (
-    <div className="App">
-      <h1>Test App</h1>
+    <div>
+      <h1>App_test</h1>
+      <p>This component is under development.</p>
     </div>
   );
->>>>>>> origin/main
 };
 
-export default AppTest;
->>>>>>> origin/main
+export default App_test;

@@ -1,57 +1,23 @@
-<<<<<<< HEAD
+'use client'
 import React from 'react'
-<<<<<<< HEAD
-export default function OfflinePage() {return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">"
-      <div className="container mx-auto px-4">"
-        <h1 className="text-4xl font-bold mb-8">Offline</h1>"
-        <p className="text-gray-300 text-lg">"
-=======
-export default function OfflinePage() { return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Offline</h1>
-        <p className="text-gray-300 text-lg">
->>>>>>> origin/main
-          This page is under development.;
-        </p>
-      </div>
-    </div>
-<<<<<<< HEAD
-  )
-=======
-  ); }
->>>>>>> origin/main
-          This page is under development.</p></div></div>
-  )
-        </p>
-      </div>
-    </div>
-  )}
-<<<<<<< HEAD
-''
-=======
-        </p>;
-      </div>
-    </div>
-  );}
-=======
-"use client";
+import { Helmet } from 'react-helmet-async'
 
-import React from "react";
-
-export default function OfflinePage() {
+export default function Page() {
   return (
-    <div>
-      <h1 className="text-4xl font-bold mb-8">Offline</h1>
-      <p className="text-gray-300 text-lg">This page is under development.</p>
-    </div>
+    <>
+      <Helmet>
+        <title>Offline - Zion Tech Group</title>
+        <meta name="description" content="Offline services and solutions from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Offline</h1>
+          <p className="text-xl text-gray-600">
+            This page is under development. Please check back soon for more information about our offline services.
+          </p>
+        </div>
+      </div>
+    </>
   );
-<<<<<<< HEAD
 }
-  );
-=======
->>>>>>> origin/main
-}
->>>>>>> origin/main
->>>>>>> origin/main

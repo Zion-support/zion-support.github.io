@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-v1';
 const urlsToCache = [
   '/',
@@ -57,6 +56,3 @@ self.addEventListener('sync', (event) => {
 async function doBackgroundSync() { // Handle offline form submissions or other background tasks
   console.log('Background sync triggered'); }
 }
-=======
-
->>>>>>> origin/main

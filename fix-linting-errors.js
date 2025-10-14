@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import fs from "fs"
-import path from "path"
+import fs from "fs
+import path from "path
 // Function to recursively find all TypeScript/JavaScript files
 function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
   let results = []

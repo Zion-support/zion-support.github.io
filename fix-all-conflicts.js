@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -64,9 +63,3 @@ for (const file of conflictedFiles) {
 }
 console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
 console.log('🎉 All merge conflicts resolved!');
-=======
-// fix-all-conflicts - Basic implementation
-export default function fix-all-conflicts() {
-  return null;
-}
->>>>>>> origin/main

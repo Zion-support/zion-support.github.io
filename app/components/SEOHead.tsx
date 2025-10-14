@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -19,8 +18,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   image = "https://ziontechgroup.com/og-image.jpg",
   url = "https://ziontechgroup.com",
   type = "website",
-=======
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
@@ -35,45 +32,29 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-<<<<<<< HEAD
   title = 'Zion Tech Group - Advanced AI and IT Solutions','
   description = 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services.','
   keywords = 'AI solutions, cybersecurity, cloud infrastructure, digital transformation, IT services','
   image = '/og-image.jpg','
   url = 'https://ziontechgroup.com','
   type = 'website','
-=======
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
-  keywords = 'AI solutions, cybersecurity, cloud infrastructure, digital transformation, IT services',
-  image = '/og-image.jpg',
-  url = 'https://ziontechgroup.com',
-  type = 'website',
->>>>>>> origin/main
->>>>>>> origin/main
   structuredData
 }) => {
   return (
     <Helmet>
       <title>{title}</title>
-<<<<<<< HEAD
-      <meta name="description" content={description} />"
-      <meta name="keywords" content={keywords} />"
-      <meta property="og:title" content={title} />"
-      <meta property="og:description" content={description} />"
-      <meta property="og:image" content={image} />"
-      <meta property="og:url" content={url} />"
-      <meta property="og:type" content={type} />"
-      <meta name="twitter:card" content="summary_large_image" />"
-      <meta name="twitter:title" content={title} />"
-      <meta name="twitter:description" content={description} />"
-      <meta name="twitter:image" content={image} />"
-      <link rel="canonical" href={url} />"
-=======
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-<<<<<<< HEAD
-      
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={url} />
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
@@ -94,51 +75,14 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       
       {/* Structured Data */}
-=======
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={url} />
->>>>>>> origin/main
->>>>>>> origin/main
       {structuredData && (
-        <script type="application/ld+json">"
+        <script type="application/ld+json">
           {JSON.stringify(structuredData)
         </script>
       )
     </Helmet>
-<<<<<<< HEAD
   );
 };
 
 export default SEOHead;
-=======
-  )
-<<<<<<< HEAD
 export default SEOHead
-=======
-}
-
-export default SEOHead
-=======
-import React from "react";
-
-const SEOHead = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-xl font-semibold mb-2">SEOHead</h2>
-      <p>This component is under construction.</p>
-    </div>
-  );
-};
-
-export default SEOHead;
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main

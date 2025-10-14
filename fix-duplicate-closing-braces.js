@@ -1,5 +1,5 @@
-import fs from "fs"
-import path from "path"
+import fs from "fs
+import path from "path
 // Function to fix duplicate closing braces
 function fixDuplicateClosingBraces(content) {
   // Fix duplicate closing braces

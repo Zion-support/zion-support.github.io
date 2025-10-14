@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -73,9 +72,3 @@ files.forEach(
   }
 });
 console.log(`Fixed HTML entities in ${fixedCount} files.`);
-=======
-// fix-html-entities - Basic implementation
-export default function fix-html-entities() {
-  return null;
-}
->>>>>>> origin/main

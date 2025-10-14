@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from 'fs;
 import path from 'path;
@@ -84,9 +83,3 @@ for (const file of filesToClean) {
   }
 }
 console.log(`Cleaned ${cleanedCount} files`);
-=======
-// clean-syntax-errors - Basic implementation
-export default function clean-syntax-errors() {
-  return null;
-}
->>>>>>> origin/main
