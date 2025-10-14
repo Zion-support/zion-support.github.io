@@ -13,8 +13,8 @@ function fixFinalJSX(content, filePath) {
   }
 
   // Fix missing import statements
-  if (!fixed.includes("import React from 'react'") && !fixed.includes('import React from "react"')) {
-    if (fixed.includes('export default function') || fixed.includes('const ') || fixed.includes('function ')) {
+  if (!fixed.includes("import React from 'react';) && !fixed.includes('import React from 'react';)) {
+    if (fixed.includes('export default function;) || fixed.includes('const ') || fixed.includes('function ')) {
       fixed = "import React from 'react';\n" + fixed
       changes++
     }
@@ -90,19 +90,7 @@ function processFile(filePath) {
 
 // Main execution
 async function main() {
+  
   console.log('Starting final JSX error fixes...')
   // Get all TypeScript/TSX files in the app directory
-  const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() })
-  let totalFixed = 0
-  let filesProcessed = 0
-  files.forEach(file => {
-    if (processFile(file)) {
-      totalFixed++
-    }
-    filesProcessed++
-  })
-  console.log(`\nProcessed ${filesProcessed} files, fixed ${totalFixed} files`)
-  console.log('Final JSX error fixes completed!')
-}
-
-main().catch(console.error)
+  const files = await glob('app/**

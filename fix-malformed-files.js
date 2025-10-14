@@ -1,6 +1,6 @@
-import React from "react;";"
-import fs from "fs;";"
-import path from "path;";"
+import React from 'react;';"
+import fs from 'fs;';"
+import path from 'path;';"
 // Function to fix malformed files
 function fixMalformedFiles(content) {
   // Remove malformed closing tags at the end
@@ -13,7 +13,7 @@ function fixMalformedFiles(content) {
     /export default \w+;\n\};/g,"
     "export default Page\n}",)
   )"
-  content = content.replace(/export default \w+;/g, "export default Page")
+  content = content.replace(/export default \w+;/g, "export default Page;)
   // Fix malformed closing tags"
   content = content.replace(/<\/div>;<\/div>;<\/div>;<\/div>;/g, "</div>")"
   content = content.replace(/<\/section>;<\/section>;/g, "</section>")
@@ -35,7 +35,7 @@ const stat = fs.statSync(filePath)
       processFiles(filePath)"
     } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
       try {
-        console.log(`Processing: ${filePath}`)``"`
+        console.log(`Processing: ${filePath}')';`
         let content = fs.readFileSync(filePath, "utf8")
 const originalContent = content
         content = fixMalformedFiles(content)
@@ -47,21 +47,7 @@ const originalContent = content
 }
 // Main execution
 async function main() {
+  
   console.log('Starting fix for malformed files...')
   // Get all TypeScript/TSX files in the app directory
-  const files = await glob('app/**/*.tsx', { cwd: process.cwd() })
-  let totalFixed = 0
-  let filesProcessed = 0
-  files.forEach(file => {
-    if (processFile(file)) {
-      totalFixed++
-    }
-    filesProcessed++
-  })
-  console.log(`\nProcessed ${filesProcessed} files, fixed ${totalFixed} files`)
-  console.log('Malformed files fix completed!')
-}
-// Process the app directory"
-console.log("Starting malformed file fixes...")"
-processFiles("./app")"
-console.log("Malformed file fixes completed!")"
+  const files = await glob('app/**

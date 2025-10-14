@@ -58,7 +58,7 @@ function fixFile(filePath) {
     let modified = false;
 
     // Remove merge conflict markers;
-    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
+    if (content.includes('<<<<<<<') || content.includes(';) || content.includes('>>>>>>>')) {
       // Keep the HEAD version (first part before )
       content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)\n>>>>>>>.*?\n/g, '$1');
       modified = true;
@@ -66,7 +66,7 @@ function fixFile(filePath) {
 
     // Fix common syntax errors;
     // Remove extra quotes and semicolons;
-    content = content.replace(/import\s+.*?from\s+["'][^"']*["'];";/g, (match) => {
+    content = content.replace(/import\s+.*?from\s+["'][^';]*["'];";/g, (match) => {
       return match.replace(/";$/, ';');
     });
 
@@ -80,17 +80,17 @@ function fixFile(filePath) {
     content = content.replace(/<([^>]+)>\s*"([^"]*)"\s*<\/\1>/g, '<$1>$2</$1>');
 
     // Fix unterminated strings;
-    content = content.replace(/([^\\])"([^"]*?)\n([^"]*?)"/g, '$1"$2$3"');
+    content = content.replace(/([^\\])"([^"]*?)\n([^"]*?)"/g, '$1'$2$3';);
 
     // Remove extra semicolons;
-    content = content.replace(/;;+/g, ';');
+    content = content.replace(/;+/g, ';');
     content = content.replace(/;\s*$/gm, ';');
 
     // Fix JSX structure;
     content = content.replace(/<div[^>]*>\s*"([^"]*)"\s*<\/div>/g, '<div$1></div>');
 
     // Remove empty lines with just quotes;
-    content = content.replace(/^\s*"\s*$/gm, '');
+    content = content.replace(/^\s*'\s*$/gm, ';);
 
     // Fix function declarations;
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{\s*return\s*\(\s*"([\s\S]*?)"\s*\)\s*};/g, (match, funcName, jsxContent) => {

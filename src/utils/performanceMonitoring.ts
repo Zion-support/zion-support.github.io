@@ -1,4 +1,4 @@
-'use client';';
+';';
 
 import { logger    } from "./logger";";
 export interface PerformanceMetric {
@@ -38,14 +38,14 @@ class PerformanceMonitoringService {
   }
   ;
   private initializeObservers(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {'';
+    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {';
       return;
     }
     try {
       // Observe paint metrics (FCP);
       const paintObserver = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {'';
+          if (entry.name === 'first-contentful-paint') {';
             this.recordWebVital('FCP', entry.startTime);'
           }
         });
@@ -110,7 +110,7 @@ clsValue += (entry as PerformanceEntry & { value: number,}).value;
     this.sendToAnalytics(metric);
   }
   ;
-  private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {'';
+  private getRating(name: keyof WebVitals, value: number): 'good' | 'needs-improvement' | 'poor' {';
     const thresholds: Record<keyof WebVitals, { good: number; poor: number }> = {
 FCP: { good: 1800, poor: 3000,},
       LCP: {good: 2500, poor: 4000,},
@@ -126,7 +126,7 @@ FCP: { good: 1800, poor: 3000,},
     return 'poor';'
   }
   ;
-  recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {'';
+  recordCustomMetric(name: string, value: number, unit: CustomMetric['unit']): void {';
     const metric: CustomMetric = {
       name,
       value,
@@ -143,10 +143,10 @@ FCP: { good: 1800, poor: 3000,},
   ;
   private async sendToAnalytics(metric: PerformanceMetric): Promise<void> {
     try {
-      if (typeof window !== 'undefined' && 'fetch' in window) {'';
-        await fetch('/api/analytics/performance', {'';
-          method: 'POST','';
-          headers: { 'Content-Type': 'application/json' },'';
+      if (typeof window !== 'undefined' && 'fetch' in window) {';
+        await fetch('/api/analytics/performance', {';
+          method: 'POST',';
+          headers: { 'Content-Type': 'application/json' },';
           body: JSON.stringify(metric)
         });
       }
@@ -186,19 +186,19 @@ FCP: { good: 1800, poor: 3000,},
     const score = this.getPerformanceScore();
     const recommendations: string[] = [];
     // Generate recommendations based on metrics;
-    if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {'';
+    if (this.webVitals.FCP && this.webVitals.FCP.rating !== 'good') {';
       recommendations.push('Improve First Contentful Paint by optimizing critical rendering path');'
     }
-    if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {'';
+    if (this.webVitals.LCP && this.webVitals.LCP.rating !== 'good') {';
       recommendations.push('Improve Largest Contentful Paint by optimizing images and server response');'
     }
-    if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {'';
+    if (this.webVitals.CLS && this.webVitals.CLS.rating !== 'good') {';
       recommendations.push('Reduce Cumulative Layout Shift by reserving space for dynamic content');'
     }
-    if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {'';
+    if (this.webVitals.FID && this.webVitals.FID.rating !== 'good') {';
       recommendations.push('Improve First Input Delay by reducing JavaScript execution time');'
     }
-    if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {'';
+    if (this.webVitals.TTFB && this.webVitals.TTFB.rating !== 'good') {';
       recommendations.push('Improve Time to First Byte by optimizing server response time');'
     }
     return {
@@ -213,7 +213,7 @@ FCP: { good: 1800, poor: 3000,},
     const start = performance.now();
     const result = fn();
     const duration = performance.now() - start;
-    this.recordCustomMetric(`fn_${name}`, duration, 'ms');``'`;
+    this.recordCustomMetric(`fn_${name}`, duration, 'ms');'';`;
     return result;
   }
   ;
@@ -221,18 +221,18 @@ FCP: { good: 1800, poor: 3000,},
     const start = performance.now();
     const result = await fn();
     const duration = performance.now() - start;
-    this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');``'`;
+    this.recordCustomMetric(`async_fn_${name}`, duration, 'ms');'';`;
     return result;
   }
   ;
   mark(name: string): void {
-    if (typeof performance !== 'undefined' && 'mark' in performance) {'';
+    if (typeof performance !== 'undefined' && 'mark' in performance) {';
       performance.mark(name);
     }
   }
   ;
   measure(name: string, startMark: string, endMark: string): number | null {
-    if (typeof performance !== 'undefined' && 'measure' in performance) {'';
+    if (typeof performance !== 'undefined' && 'measure' in performance) {';
       try {
         performance.measure(name, startMark, endMark);
         const measure = performance.getEntriesByName(name, 'measure')[0];';
@@ -288,14 +288,14 @@ rating: getRating(name, value),
   // Also record in the main performance monitoring service;
   performanceMonitoring.recordCustomMetric(name, value, unit);
 };
-function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {'';
+function getRating(name: string, value: number): 'good' | 'needs-improvement' | 'poor' {';
   const thresholds: Record<string, { good: number; poor: number }> = {
-'FCP': { good: 1800, poor: 3000,},''
-    'LCP': {good: 2500, poor: 4000,},''
-    'FID': {good: 100, poor: 300,},''
-    'CLS': {good: 0.1, poor: 0.25,},''
-    'TTFB': {good: 800, poor: 1800,},''
-    'INP': {good: 200, poor: 500,}''
+'FCP': { good: 1800, poor: 3000,},';
+    'LCP': {good: 2500, poor: 4000,},';
+    'FID': {good: 100, poor: 300,},';
+    'CLS': {good: 0.1, poor: 0.25,},';
+    'TTFB': {good: 800, poor: 1800,},';
+    'INP': {good: 200, poor: 500,}';
   };
   const threshold = thresholds[name];
   if (!threshold) return 'good';';
@@ -349,19 +349,19 @@ export const getPerformanceScore = (): number => {
 export const getRecommendations = (): string[] => {
   const metrics = getMetrics();
   const recommendations: string[] = [];
-  if (metrics.FCP && metrics.FCP.rating !== 'good') {'';
+  if (metrics.FCP && metrics.FCP.rating !== 'good') {';
     recommendations.push('Improve FCP by optimizing critical CSS and reducing render-blocking resources');'
   }
-  if (metrics.LCP && metrics.LCP.rating !== 'good') {'';
+  if (metrics.LCP && metrics.LCP.rating !== 'good') {';
     recommendations.push('Improve LCP by optimizing largest images and server response time');'
   }
-  if (metrics.FID && metrics.FID.rating !== 'good') {'';
+  if (metrics.FID && metrics.FID.rating !== 'good') {';
     recommendations.push('Improve FID by reducing JavaScript execution time');'
   }
-  if (metrics.CLS && metrics.CLS.rating !== 'good') {'';
+  if (metrics.CLS && metrics.CLS.rating !== 'good') {';
     recommendations.push('Improve CLS by reserving space for dynamic content and avoiding layout shifts');'
   }
-  if (metrics.TTFB && metrics.TTFB.rating !== 'good') {'';
+  if (metrics.TTFB && metrics.TTFB.rating !== 'good') {';
     recommendations.push('Improve TTFB by optimizing server response time and using CDN');'
   }
   return recommendations;

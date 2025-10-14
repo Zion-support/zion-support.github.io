@@ -68,7 +68,7 @@ function fixJSXSyntax(content) {
   });
   
   // Fix missing semicolons after imports;
-  content = content.replace(/import\s+.*?from\s+['"][^'"]*['"]\s*$/gm, (match) => {
+  content = content.replace(/import\s+.*?from\s+[''][^';]*[';]\s*$/gm, (match) => {
     if (!match.endsWith(';')) {
       return match + ';';
     }
@@ -132,6 +132,7 @@ function fixFileSpecificIssues(filePath, content) {
 
 // Main function;
 function main() {
+  
   try {
     const files = getAllFiles('/workspace');
     let fixedCount = 0;

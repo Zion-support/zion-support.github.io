@@ -1,5 +1,5 @@
-'use client';';
-import React from "react";";
+';';
+import React from 'react';";
 
 interface ErrorContext {
   userId?: string;
@@ -54,28 +54,28 @@ class EnhancedErrorMonitoring {
   }
   ;
   private initializeMonitoring(): void {
-    if (typeof window === 'undefined') return''
+    if (typeof window === 'undefined') return';
     // JavaScript errors;
-    window.addEventListener('error', (event) => {'';
+    window.addEventListener('error', (event) => {';
       this.handleError(event.error || new Error(event.message), {
         filename: event.filename,
         lineno: event.lineno,
         colno: event.colno,
-        category: 'javascript'''
+        category: 'javascript';
       });
     })
     // Unhandled promise rejections;
-    window.addEventListener('unhandledrejection', (event) => {'';
+    window.addEventListener('unhandledrejection', (event) => {';
       this.handleError(new Error(`Unhandled Promise Rejection: ${event.reason}`), {```;
         reason: event.reason,
-        category: 'promise'''
+        category: 'promise';
       });
     })
     // Resource loading errors;
-    window.addEventListener('error', (event) => {'';
+    window.addEventListener('error', (event) => {';
       if (event.target !== window) {
         this.handleError(new Error(`Resource loading error: ${event.type}`), {```;
-          category: 'resource'''
+          category: 'resource';
         })
       }
     }, true)
@@ -95,14 +95,14 @@ class EnhancedErrorMonitoring {
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText,
-            category: 'network'''
+            category: 'network';
           });
         }
         return response;
       } catch (error) {
         this.handleError(error as Error, {
           url: args[0] as string,
-category: 'network''',
+category: 'network';,
         });
         throw error;
       }
@@ -111,42 +111,42 @@ category: 'network''',
   ;
   private setupPerformanceErrorMonitoring(): void {
     // Monitor long tasks;
-    if ('PerformanceObserver' in window) {'';
+    if ('PerformanceObserver' in window) {';
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) { // Tasks longer than 50ms;
             this.handleError(new Error(`Long task detected: ${entry.duration}ms`), {```;
               duration: entry.duration,
               startTime: entry.startTime,
-              category: 'performance'''
+              category: 'performance';
             })
           }
         }
-      }).observe({entryTypes: ['longtask'],})''
+      }).observe({entryTypes: ['longtask'],})';
       // Monitor memory leaks;
       new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'memory') {'';
+          if (entry.entryType === 'memory') {';
             const memoryInfo = (entry as any).memory;
             if (memoryInfo && memoryInfo.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB;
               this.handleError(new Error(`High memory usage detected: ${memoryInfo.usedJSHeapSize / 1024 / 1024}MB`), {```;
                 memoryUsage: memoryInfo.usedJSHeapSize,
-                category: 'performance'''
+                category: 'performance';
               })
             }
           }
         }
-      }).observe({entryTypes: ['memory'],})''
+      }).observe({entryTypes: ['memory'],})';
     }
   }
   ;
   private setupNetworkMonitoring(): void {
-    if (typeof window === 'undefined') return'';
-    window.addEventListener('online', () => {'';
+    if (typeof window === 'undefined') return';
+    window.addEventListener('online', () => {';
       this.isOnline = true;
       this.flushErrorQueue()
     });
-    window.addEventListener('offline', () => {'';
+    window.addEventListener('offline', () => {';
       this.isOnline = false;
     })
   }
@@ -165,7 +165,7 @@ category: 'network''',
         ...context;
       },
       severity: this.calculateSeverity(error, context),
-      category: (context.category as 'javascript' | 'network' | 'promise' | 'resource' | 'custom') || 'javascript','';
+      category: (context.category as 'javascript' | 'network' | 'promise' | 'resource' | 'custom') || 'javascript',';
       resolved: false,
       occurrences: 1,
       firstSeen: new Date().toISOString(),
@@ -188,8 +188,8 @@ category: 'network''',
       this.sendErrorReport(errorReport)
     }
     // Log to console in development;
-    if (process.env['NODE_ENV'] === 'development') {''
-// console.error('Error captured:', errorReport)'',
+    if (process.env['NODE_ENV'] === 'development') {';
+// console.error('Error captured:', errorReport)';,
     }
   }
   ;
@@ -201,29 +201,29 @@ category: 'network''',
     )
   }
   ;
-  private calculateSeverity(error: Error, context: Partial<ErrorContext>): 'low' | 'medium' | 'high' | 'critical' {''
+  private calculateSeverity(error: Error, context: Partial<ErrorContext>): 'low' | 'medium' | 'high' | 'critical' {';
     // Critical: Network errors, unhandled promise rejections;
-    if (context.category === 'network' || context.category === 'promise') {'';
-      return 'critical'''
+    if (context.category === 'network' || context.category === 'promise') {';
+      return 'critical';
     }
     // High: JavaScript errors in critical components;
-    if (context.component && ['App', 'Router', 'Auth'].includes(context.component)) {'';
-      return 'high'''
+    if (context.component && ['App', 'Router', 'Auth'].includes(context.component)) {';
+      return 'high';
     }
     // Medium: Resource loading errors;
-    if (context.category === 'resource') {'';
-      return 'medium'''
+    if (context.category === 'resource') {';
+      return 'medium';
     }
     // Low: Other errors;
-    return 'low'''
+    return 'low';
   }
   ;
   private async sendErrorReport(errorReport: ErrorReport): Promise<void> {
     try {
-      await fetch('/api/errors', {'';
-        method: 'POST','';
+      await fetch('/api/errors', {';
+        method: 'POST',';
         headers: {
-          'Content-Type': 'application/json'''
+          'Content-Type': 'application/json';
         },
         body: JSON.stringify(errorReport)
       })
@@ -297,9 +297,9 @@ recent: recent.slice(0, 10),
 - Total Errors: ${stats.total}
 - Recent Errors (24h): ${stats.recent.length}
 ## By Severity;
-${Object.entries(stats.bySeverity).map(([severity, count]) => `- ${severity}: ${count}`).join('\n')}'``'`
+${Object.entries(stats.bySeverity).map(([severity, count]) => `- ${severity}: ${count}`).join('\n')}''';`
 ## By Category;
-${Object.entries(stats.byCategory).map(([category, count]) => `- ${category}: ${count}`).join('\n')}'``'`
+${Object.entries(stats.byCategory).map(([category, count]) => `- ${category}: ${count}`).join('\n')}''';`
 ## Recent Errors;
 ${stats.recent.map(error => }````
 ### ${error.message}
@@ -308,7 +308,7 @@ ${stats.recent.map(error => }````
 - Occurrences: ${error.occurrences}
 - Last Seen: ${error.lastSeen}
 - URL: ${error.context.url}
-`).join('\n')}'``'`
+`).join('\n')}''';`
     `.trim()```
   }
 }

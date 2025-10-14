@@ -1,5 +1,5 @@
-import fs from "fs;";"
-import path from "path;";"
+import fs from 'fs;';"
+import path from 'path;';"
 // Function to fix duplicate closing braces
 function fixDuplicateClosingBraces(content) {
   // Fix duplicate closing braces
@@ -28,7 +28,7 @@ const stat = fs.statSync(filePath)
       processFiles(filePath)"
     } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
       try {
-        console.log(`Processing: ${filePath}`)``"`
+        console.log(`Processing: ${filePath}')';`
         let content = fs.readFileSync(filePath, "utf8")
 const originalContent = content
         content = fixDuplicateClosingBraces(content)

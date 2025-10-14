@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { Helmet } from 'react-helmet-async'
 const Page: React.FC = () => {
   return (
+    
     <>
       <Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
@@ -22,14 +23,12 @@ const Page: React.FC = () => {
             <div className="flex justify-center space-x-4">
               <a
                 href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
+                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
                 Get Started
               </a>
               <a
                 href="/solutions"
-                className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-colors"
-              >
+                className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-colors">
                 Our Solutions
               </a>
             </div>
@@ -64,8 +63,7 @@ const Page: React.FC = () => {
             </p>
             <a
               href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors"
-            >
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
               Contact Us
             </a>
           </section>

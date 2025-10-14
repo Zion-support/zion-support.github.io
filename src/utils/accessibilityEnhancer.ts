@@ -1,4 +1,4 @@
-'use client';';
+';';
 
 interface AccessibilityConfig {
   enableKeyboardNavigation: boolean;
@@ -68,19 +68,19 @@ class AccessibilityEnhancer {
   ;
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
-    document.addEventListener('keydown', (event) => {''
+    document.addEventListener('keydown', (event) => {';
       // Skip links for better navigation;
-      if (event.key === 'Tab' && event.shiftKey) {'';
+      if (event.key === 'Tab' && event.shiftKey) {';
         this.handleTabNavigation(event, true);
-      } else if (event.key === 'Tab') {'';
+      } else if (event.key === 'Tab') {';
         this.handleTabNavigation(event, false);
       }
       // Escape key handling;
-      if (event.key === 'Escape') {'';
+      if (event.key === 'Escape') {';
         this.handleEscapeKey(event);
       }
       // Arrow key navigation for custom components;
-      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {'';
+      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {';
         this.handleArrowNavigation(event);
       }
     });
@@ -102,22 +102,22 @@ const focusableElements = this.getFocusableElements();
   ;
   private handleEscapeKey(event: KeyboardEvent): void {
     // Close any open modals or dropdowns;
-const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');"'";
+const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');';;
     modals.forEach(modal => {");";
-const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;"'";
+const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;';;
       closeButton?.click();
     });
     // Close any open menus";";
-const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');"'";
+const menus = document.querySelectorAll('[role="menu"][aria-expanded="true"]');';;
     menus.forEach(menu => {");";
 const trigger = document.querySelector(`[aria-controls="${menu.id}" currentElement = document.activeElement as HTMLElement;
     if (!currentElement) return;
     // Handle radio button groups;
-    if (currentElement instanceof HTMLInputElement && currentElement.type === 'radio') {'';
+    if (currentElement instanceof HTMLInputElement && currentElement.type === 'radio') {';
       this.handleRadioGroupNavigation(event, currentElement);
     }
     // Handle menu navigation;
-    if (currentElement.getAttribute('role') === 'menuitem') {'';
+    if (currentElement.getAttribute('role') === 'menuitem') {';
       this.handleMenuNavigation(event, currentElement);
     }
   }
@@ -127,7 +127,7 @@ const name = currentElement.name;
     if (!name) return;
 const radioButtons = Array.from(document.querySelectorAll(`input[type="radio"][name="${name}" currentIndex = radioButtons.indexOf(currentElement);
     let nextIndex: number;
-    if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {'';
+    if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {';
       nextIndex = currentIndex > 0 ? currentIndex - 1 : radioButtons.length - 1;
     } else {
       nextIndex = currentIndex < radioButtons.length - 1 ? currentIndex + 1 : 0;
@@ -140,9 +140,9 @@ const radioButtons = Array.from(document.querySelectorAll(`input[type="radio"][n
   private handleMenuNavigation(event: KeyboardEvent, currentElement: HTMLElement): void {";";
 const menu = currentElement.closest('[role="menu" menuItems = Array.from(menu.querySelectorAll('[role="menuitem" currentIndex = menuItems.indexOf(currentElement);
     let nextIndex: number;
-    if (event.key === 'ArrowUp') {'';
+    if (event.key === 'ArrowUp') {';
       nextIndex = currentIndex > 0 ? currentIndex - 1 : menuItems.length - 1;
-    } else if (event.key === 'ArrowDown') {'';
+    } else if (event.key === 'ArrowDown') {';
       nextIndex = currentIndex < menuItems.length - 1 ? currentIndex + 1 : 0;
     } else {
       return;
@@ -166,10 +166,10 @@ const menu = currentElement.closest('[role="menu" menuItems = Array.from(menu.qu
   private addSkipLinks(): void {;
 const skipLinks = document.createElement('div');';
     skipLinks.className = 'skip-links';';
-    skipLinks.innerHTML = `""``"`
-      <a href="#main-content" class="skip-link">>Skip to main content</a>"""
-      <a href="#navigation" class="skip-link">Skip to navigation</a>"""
-      <a href="#footer" class="skip-link">Skip to footer</a>""
+    skipLinks.innerHTML = '';';`
+      <a href="#main-content" class="skip-link'>>Skip to main content</a>';"
+      <a href="#navigation" class="skip-link'>Skip to navigation</a>';"
+      <a href="#footer" class="skip-link'>Skip to footer</a>';
     `;```
     // Add styles;
 const style = document.createElement('style');';
@@ -212,11 +212,11 @@ const placeholder = element.getAttribute('placeholder');';
         }
       }
       // Add required attribute announcement;
-      if (element.hasAttribute('required')) {'';
+      if (element.hasAttribute('required')) {';
         element.setAttribute('aria-required', 'true');'
       }
       // Add error states;
-      if (element.classList.contains('error') || element.getAttribute('aria-invalid') === 'true') {'';
+      if (element.classList.contains('error') || element.getAttribute('aria-invalid') === 'true') {';
         element.setAttribute('aria-invalid', 'true');';
         this.announceToScreenReader('Error in form field');'
       }
@@ -240,10 +240,10 @@ const main = document.querySelector('main') || document.querySelector('[role="ma
   private setupFocusManagement(): void {
     if (!this.config.enableFocusManagement) return;
     // Track focus changes;
-    document.addEventListener('focusin', (event) => {'';
+    document.addEventListener('focusin', (event) => {';
       this.handleFocusIn(event);
     });
-    document.addEventListener('focusout', (event) => {'';
+    document.addEventListener('focusout', (event) => {';
       this.handleFocusOut(event);
     });
   }
@@ -253,8 +253,8 @@ const element = event.target as HTMLElement;
     // Add focus indicator;
     element.classList.add('focus-visible');'
     // Announce focus changes for important elements;
-    if (element.getAttribute('role') === 'button' || element.tagName === 'BUTTON') {'';
-      this.announceToScreenReader(`Focused on button: ${element.textContent?.trim() || element.getAttribute('aria-label') || 'button'}`);``'`
+    if (element.getAttribute('role') === 'button' || element.tagName === 'BUTTON') {';
+      this.announceToScreenReader(`Focused on button: ${element.textContent?.trim() || element.getAttribute('aria-label') || 'button'}`);'';`
     }
   }
   ;
@@ -266,11 +266,11 @@ const element = event.target as HTMLElement;
   private setupHighContrastMode(): void {
     if (!this.config.enableHighContrast) return;
     // Check for high contrast preference;
-    if (window.matchMedia('(prefers-contrast: high)').matches) {'';
+    if (window.matchMedia('(prefers-contrast: high)').matches) {';
       document.body.classList.add('high-contrast');'
     }
     // Listen for changes;
-    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {'';
+    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {';
       if (e.matches) {
         document.body.classList.add('high-contrast');'
       } else {
@@ -282,11 +282,11 @@ const element = event.target as HTMLElement;
   private setupReducedMotion(): void {
     if (!this.config.enableReducedMotion) return;
     // Check for reduced motion preference;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {'';
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {';
       document.body.classList.add('reduced-motion');'
     }
     // Listen for changes;
-    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {'';
+    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {';
       if (e.matches) {
         document.body.classList.add('reduced-motion');'
       } else {
@@ -316,7 +316,7 @@ const element = link as HTMLElement;
   ;
   private setupColorContrast(): void {
     // This would typically use a color contrast library;
-    // For now, we'll just count potential issues'';
+    // For now, we'll just count potential issues';
     this.metrics.colorContrastIssues = 0;
   }
   ;
@@ -349,15 +349,15 @@ const inputs = form.querySelectorAll('input, textarea, select');';
 const element = input as HTMLElement;
         const id = element.id || `input-${Math.random().toString(36).substr(2, 9)}`;```;
         element.id = id;
-        if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {";"'";
+        if (!element.getAttribute('aria-label') && !element.getAttribute('aria-labelledby')) {';';;
 const label = form.querySelector(`label[for="${id}" navs = document.querySelectorAll('nav');';
     navs.forEach((nav) => {
       // Add navigation role if not present;
-      if (!nav.getAttribute('role')) {'';
+      if (!nav.getAttribute('role')) {';
         nav.setAttribute('role', 'navigation');'
       }
       // Add aria-label if not present;
-      if (!nav.getAttribute('aria-label')) {'';
+      if (!nav.getAttribute('aria-label')) {';
         nav.setAttribute('aria-label', 'Main navigation');'
       }
     });
@@ -368,12 +368,12 @@ const label = form.querySelector(`label[for="${id}" navs = document.querySelecto
     // Observe DOM changes for dynamic content;
 const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
-        if (mutation.type === 'childList') {'';
+        if (mutation.type === 'childList') {';
           mutation.addedNodes.forEach((node) => {
             if (node.nodeType === Node.ELEMENT_NODE) {;
 const element = node as HTMLElement;
               // Announce new content;
-              if (element.getAttribute('aria-live') === 'polite') {'';
+              if (element.getAttribute('aria-live') === 'polite') {';
                 this.announceToScreenReader(element.textContent || '');'
               }
             }
@@ -399,7 +399,7 @@ subtree: true),
     this.metrics.focusableElements = this.getFocusableElements().length;
     this.metrics.imagesWithoutAlt = document.querySelectorAll('img:not([alt])').length;';
     this.metrics.linksWithoutText = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby]):empty').length;';
-    this.metrics.headingsWithoutContent = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length - '';
+    this.metrics.headingsWithoutContent = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length - ';
       Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6')).filter(h => h.textContent?.trim()).length;';
     this.calculateScores();
   }
@@ -435,20 +435,20 @@ const focusableElements = this.getFocusableElements();
   }
   ;
   private getFocusableElements(): HTMLElement[] {;
-const focusableSelectors = ['a[href]',''
-      'button:not([disabled])',''
-      'input:not([disabled])',''
-      'select:not([disabled])',''
-      'textarea:not([disabled])',"'"'"
-      '[tabindex]:not([tabindex="-1"])',"'"'"
-      '[contenteditable="true"]''"'"
+const focusableSelectors = ['a[href]',';
+      'button:not([disabled])',';
+      'input:not([disabled])',';
+      'select:not([disabled])',';
+      'textarea:not([disabled])',';';
+      '[tabindex]:not([tabindex="-1"])',';';
+      '[contenteditable="true']';';
     ];
     return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];'
   }
   ;
   private announceToScreenReader(message: string, priority: 'polite' | 'assertive' = 'polite'): void {;';
 const liveRegion = document.getElementById(;
-      priority === 'assertive' ? 'assertive-live-region' : 'live-region')''
+      priority === 'assertive' ? 'assertive-live-region' : 'live-region')';
     );
     if (liveRegion) {
       liveRegion.textContent = message;
@@ -464,4 +464,4 @@ Keyboard Navigation Score: ${metrics.keyboardNavigationScore}/100;
 Screen Reader Score: ${metrics.screenReaderScore}/100;
 `;```
   }
-}"""
+}'';

@@ -1,7 +1,9 @@
 export default function AdvancedSEOOptimizer() {
+  
   return (
-    <div></div>
-      <Helmet></Helmet>
+    
+    <div />
+      <Helmet />
         <title>Advanced SEO Optimizer - Zion Tech Group</title>
         <meta
           name="description"

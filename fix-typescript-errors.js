@@ -76,6 +76,7 @@ function findTypeScriptFiles(dir) {
 
 // Main execution;
 function main() {
+  
   console.log('Starting TypeScript error fixes...');
   
   const sourceFiles = findTypeScriptFiles(process.cwd());

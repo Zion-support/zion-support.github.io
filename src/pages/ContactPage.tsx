@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { Helmet } from 'react-helmet-async'
 const ContactPage: React.FC = () => {
   return (
+    
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
@@ -28,8 +29,8 @@ const ContactPage: React.FC = () => {
                     </a>
                   </div>
                 </div>
-              </div>
-              <div>
+  </div>
+  <div>
                 <h2 className="text-2xl font-semibold mb-6">Send us a Message</h2>
                 <form className="space-y-4">
                   <div>
@@ -40,9 +41,7 @@ const ContactPage: React.FC = () => {
                       type="text"
                       id="name"
                       name="name"
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      required
-                    />
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
@@ -52,9 +51,7 @@ const ContactPage: React.FC = () => {
                       type="email"
                       id="email"
                       name="email"
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      required
-                    />
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium mb-2">
@@ -64,14 +61,11 @@ const ContactPage: React.FC = () => {
                       id="message"
                       name="message"
                       rows={4}
-                      className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      required
-                    ></textarea>
+                      className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors"
-                  >
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition-colors">
                     Send Message
                   </button>
                 </form>

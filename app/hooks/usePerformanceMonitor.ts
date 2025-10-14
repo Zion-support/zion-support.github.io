@@ -1,15 +1,19 @@
 import { useState, useEffect } from 'react';
 
-export const usePerformanceMonitor = () => {
+interface PerformanceMetrics {
+  [key: string]: number;
+}
+
+export const usePerformanceMonitor = (): { isMonitoring: boolean; metrics: PerformanceMetrics } => {
   const [isMonitoring, setIsMonitoring] = useState(false);
-  const [metrics, setMetrics] = useState({});
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
 
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       setIsMonitoring(true);
       
       const observer = new PerformanceObserver((list) => {
-        const newMetrics = {};
+        const newMetrics: PerformanceMetrics = {};
         for (const entry of list.getEntries()) {
           newMetrics[entry.name] = entry.startTime;
         }

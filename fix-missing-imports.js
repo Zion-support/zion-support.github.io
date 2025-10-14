@@ -25,7 +25,7 @@ function fixImports(filePath, imports) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
     // Find the existing lucide-react import
-    const importMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];/)
+    const importMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['']lucide-react[';];/)
     if (importMatch) {
       // Get existing imports
       const existingImports = importMatch[1].split(',').map(imp => imp.trim())
@@ -33,7 +33,7 @@ function fixImports(filePath, imports) {
       const allImports = [...new Set([...existingImports, ...imports])]
       // Replace the import
       content = content.replace(
-        /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];/,
+        /import\s*{\s*[^}]+\s*}\s*from\s*['']lucide-react[';];/,
         `import { ${allImports.join(', ')} } from 'lucide-react';`
       )
     } else {

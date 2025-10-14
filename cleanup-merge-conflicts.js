@@ -25,43 +25,6 @@ function cleanMergeConflicts(filePath) {
 }
 
 async function main() {
+  
   const patterns = [
-    '**/*.tsx',
-    '**/*.ts',
-    '**/*.js'
-  ]
-  for (const item of items) {
-    const fullPath = path.join(dirPath, item)
-    const stat = fs.statSync(fullPath)
-    if (stat.isDirectory()) {
-      // Skip node_modules and other common directories
-      if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {''
-        cleanedCount += cleanDirectory(fullPath)
-      }
-    } else if (stat.isFile()) {
-      // Only process TypeScript, JavaScript, and JSX files
-      if (/\.(ts|tsx|js|jsx)$/.test(item)) {
-        const content = fs.readFileSync(fullPath, 'utf8');'
-        if (content.includes('''
-          if (cleanMergeConflicts(fullPath)) {
-            cleanedCount++
-          }
-        }
-      }
-    }
-  }
-
-  console.log(`\nTotal files cleaned: ${totalCleaned}`)
-}
-
-console.log('Starting merge conflict cleanup...');'
-const cleanedCount = cleanDirectory('.');'
-console.log(`Cleaned ${cleanedCount} files with merge conflicts.`);```
-// Run linting to check if issues are resolved
-console.log('Running linting check...');'
-try {
-  execSync('pnpm run lint', { stdio: 'inherit' });'
-  console.log('✅ Linting passed!');'
-} catch (error) {
-  console.log('❌ Linting still has issues, but merge conflicts should be cleaned.');'
-}
+    '**

@@ -8,7 +8,7 @@ const jsxFixes = [
   // Fix JSX fragments without closing tags
   {
     pattern: /<>\s*$/gm,
-    replacement: "<></>"
+    replacement: "<div></div>"
   },
   // Fix JSX expressions without parent element
   {
@@ -18,7 +18,7 @@ const jsxFixes = [
   // Fix unterminated string literals in JSX
   {
     pattern: /'([^']*)\s*$/gm,
-    replacement: "'$1'"
+    replacement: "'$1';
   },
   // Fix missing closing tags
   {
@@ -88,24 +88,6 @@ function fixJSXFile(filePath) {
 }
 
 async function main() {
+  
   const patterns = [
-    'app/**/*.tsx',
-    'components/**/*.tsx',
-    '*.tsx'
-  ];
-  
-  let totalFixed = 0;
-  
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { cwd: process.cwd() });
-    for (const file of files) {
-      if (fixJSXFile(file)) {
-        totalFixed++;
-      }
-    }
-  }
-  
-  console.log(`\nFixed ${totalFixed} JSX files`);
-}
-
-main().catch(console.error);
+    'app/**

@@ -1,6 +1,6 @@
-import React from "react;";"
-import fs from "fs;";"
-import path from "path;";"
+import React from 'react;';"
+import fs from 'fs;';"
+import path from 'path;';"
 import { glob    } from "glob;";"
 // Common syntax fixes for merged files
 function fixSyntaxErrors(content) {
@@ -53,19 +53,4 @@ const jsxElements = body.match(/<[A-Z][^>]*>/g)
   return content
 }
 // Find all TypeScript/TSX files in the app directory"
-const files = glob.sync("app/**/*.{ts,tsx}", { cwd: process.cwd() })
-console.log(`Found ${files.length} files to process...`)```
-let fixedCount = 0
-files.forEach((file) => {
-  try {"
-const content = fs.readFileSync(file, "utf8")
-const fixedContent = fixSyntaxErrors(content)
-    if (content !== fixedContent) {
-      fs.writeFileSync(file, fixedContent)
-      console.log(`Fixed: ${file}`)```
-      fixedCount++
-} catch (error) {
-    console.error(`Error processing ${file}:`, error.message)```
-})
-console.log(`Fixed ${fixedCount} files.`)``"`
-}}
+const files = glob.sync("app/**
