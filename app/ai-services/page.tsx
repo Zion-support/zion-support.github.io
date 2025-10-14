@@ -1,43 +1,43 @@
-import React from 'react';'react-helmet-async;
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;
-import FuturisticBackground from '../components/FuturisticBackground;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
+import FuturisticBackground from '../components/FuturisticBackground';
 const AiServicesPage: React.FC = () => {
   const services = [{
-      icon: icon: Brain,
-      title: 'AI Consulting','
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.','
-      color: 'from-purple-500 to-pink-500''
+      icon: Brain,
+      title: 'AI Consulting',
+      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: icon: BarChart3,
-      title: 'AI Analytics','
-      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.','
-      color: 'from-blue-500 to-cyan-500''
+      icon: BarChart3,
+      title: 'AI Analytics',
+      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: icon: Zap,
-      title: 'AI Automation','
-      description: 'Intelligent automation solutions to streamline your business processes.','
-      color: 'from-green-500 to-emerald-500''
+      icon: Zap,
+      title: 'AI Automation',
+      description: 'Intelligent automation solutions to streamline your business processes.',
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: icon: FileText,
-      title: 'AI Content Generation','
-      description: 'AI-powered content creation for marketing, documentation, and communication.','
-      color: 'from-orange-500 to-red-500''
+      icon: FileText,
+      title: 'AI Content Generation',
+      description: 'AI-powered content creation for marketing, documentation, and communication.',
+      color: 'from-orange-500 to-red-500'
     },
     {
-      icon: icon: MessageSquare,
-      title: 'AI Customer Service','
-      description: 'Intelligent chatbots and customer service solutions powered by AI.','
-      color: 'from-indigo-500 to-purple-500''
+      icon: MessageSquare,
+      title: 'AI Customer Service',
+      description: 'Intelligent chatbots and customer service solutions powered by AI.',
+      color: 'from-indigo-500 to-purple-500'
     },
     {
-      icon: icon: Shield,
-      title: 'AI Security','
-      description: 'AI-powered security solutions to protect your business and data.','
-      color: 'from-cyan-500 to-blue-500''
+      icon: Shield,
+      title: 'AI Security',
+      description: 'AI-powered security solutions to protect your business and data.',
+      color: 'from-cyan-500 to-blue-500'
     }
   ];
 
@@ -45,8 +45,8 @@ const AiServicesPage: React.FC = () => {
       name: "Dr. Sarah Johnson",
       company: "MedTech Solutions",
       role: "CTO",
-      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",'
-      rating: 5;
+      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",
+      rating: 5
     },
     {
       name: "Michael Chen",
