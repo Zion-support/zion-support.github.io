@@ -26,7 +26,7 @@ const filesToFix = [
   'app/service-template.tsx'
 ];
 
-// Common replacements for unescaped entities
+// Common replacements for unescaped entities;
 const replacements = [
   { from: "Let's", to: "Let&apos;s" },
   { from: "Don't", to: "Don&apos;t" },
@@ -51,7 +51,7 @@ const replacements = [
   { from: "hadn't", to: "hadn&apos;t" },
   { from: "doesn't", to: "doesn&apos;t" },
   { from: "didn't", to: "didn&apos;t" },
-  { from: "will", to: "will" }, // This one doesn't need escaping
+  { from: "will", to: "will" }, // This one doesn't need escaping;
 ];
 
 function fixFile(filePath) {
@@ -82,7 +82,7 @@ function fixFile(filePath) {
   }
 }
 
-// Fix all files
+// Fix all files;
 filesToFix.forEach(fixFile);
 
 console.log('Done fixing unescaped entities!');

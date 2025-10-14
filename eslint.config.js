@@ -61,6 +61,7 @@ export default tseslint.config(
         MediaQueryListEvent: "readonly",
         PerformanceObserver: "readonly",
         PerformanceNavigationTiming: "readonly",
+        PerformanceEventTiming: "readonly",
         HTMLInputElement: "readonly",
         HTMLTextAreaElement: "readonly",
         HTMLSelectElement: "readonly",
@@ -76,7 +77,7 @@ export default tseslint.config(
         exports: "readonly",
         fs: "readonly",
         __dirname: "readonly",
-        // Jest globals
+        // Jest globals;
         describe: "readonly",
         it: "readonly",
         test: "readonly",
@@ -93,21 +94,6 @@ export default tseslint.config(
         ecmaFeatures: {
           jsx: true
         }
-      },
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        HTMLInputElement: 'readonly',
-        HTMLTextAreaElement: 'readonly',
-        HTMLSelectElement: 'readonly',
-        PerformanceObserver: 'readonly',
-        PerformanceNavigationTiming: 'readonly',
-        PerformanceEventTiming: 'readonly'
       }
     },
     plugins: {

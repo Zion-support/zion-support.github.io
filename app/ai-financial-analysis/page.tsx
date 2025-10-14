@@ -1,74 +1,20 @@
 import React from 'react';
-import { ArrowRight, BarChart3, CheckCircle } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-
-const AIFinancialAnalysis = () => {
-  const features = [
-    {
-      title: "Predictive Financial Modeling",
-      description: "Build accurate financial models and forecasts using AI",
-      icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Advanced risk analysis and portfolio optimization",
-      icon: <Shield className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Real-time Market Analysis",
-      description: "Monitor market trends and make informed decisions",
-      icon: <Activity className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate comprehensive financial reports automatically",
-      icon: <FileText className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  
-
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'page - Zion Tech Group',
+  description: 'Advanced AI and IT solutions by Zion Tech Group',
+  keywords: 'AI, IT solutions, technology, innovation',
+};
+const pagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
-        title="AI Financial Analysis - Intelligent Financial Intelligence | Zion Tech Group"
-        description="Transform your financial decision-making with AI-powered analysis. Predictive modeling, risk assessment, and automated reporting for modern finance teams."
-        keywords="AI financial analysis, financial modeling, risk assessment, market analysis, portfolio optimization, financial intelligence"
-        canonical="https://ziontechgroup.com/ai-financial-analysis"
-      />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <DollarSign className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI Financial Intelligence</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Financial Analysis
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Transform your financial decision-making with AI-powered analysis. 
-            Get predictive modeling, risk assessment, and automated reporting that drives better financial outcomes.
+    <div className="page-container">
+      <div className="container mx-auto px-4 py-8">
+        <h1>page</h1>
+        <div className="prose max-w-none">
+          <p>
+            Discover our comprehensive page solutions designed to transform your business.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+<div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               href="/contact"
               variant="primary"
@@ -174,10 +120,9 @@ const AIFinancialAnalysis = () => {
               </FuturisticButton>
             </div>
           </div>
-        </ResponsiveContainer>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };
-
-export default AIFinancialAnalysis;
+export default pagePage;

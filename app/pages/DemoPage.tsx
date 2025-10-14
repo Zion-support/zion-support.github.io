@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -84,14 +82,8 @@ const DemoPage: React.FC = () => {
         <meta name="description" content="Experience our technology solutions with interactive demos. See AI, cybersecurity, cloud infrastructure, and more in action." />
         <meta name="keywords" content="demo, technology demo, AI demo, cybersecurity demo, cloud demo, micro SaaS demo" />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
         </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
+<div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Experience Our Solutions
@@ -200,5 +192,4 @@ const DemoPage: React.FC = () => {
     </>
   );
 };
-
 export default DemoPage;

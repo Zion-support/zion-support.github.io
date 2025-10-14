@@ -1,15 +1,15 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix remaining syntax errors
+// Function to fix remaining syntax errors;
 function fixRemainingSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix unterminated string literals in import statements
+    // Fix unterminated string literals in import statements;
     content = content.replace(/import\s+{[^}]*}\s+from\s+'[^']*;';'[^']*',/g, (match) => {
       const importMatch = match.match(/import\s+{([^}]*)}\s+from\s+'([^']*);';'([^']*)',/);
       if (importMatch) {
@@ -18,7 +18,7 @@ function fixRemainingSyntax(filePath) {
       return match;
     });
     
-    // Fix malformed import statements with stray characters
+    // Fix malformed import statements with stray characters;
     content = content.replace(/import\s+{[^}]*}\s+from\s+'[^']*;';'[^']*',/g, (match) => {
       const importMatch = match.match(/import\s+{([^}]*)}\s+from\s+'([^']*);';'([^']*)',/);
       if (importMatch) {
@@ -27,33 +27,33 @@ function fixRemainingSyntax(filePath) {
       return match;
     });
     
-    // Fix stray semicolons and quotes in the middle of code
+    // Fix stray semicolons and quotes in the middle of code;
     content = content.replace(/';'[^']*',/g, (match) => {
       const cleanMatch = match.replace(/';'([^']*)',/, '$1');
       return `'${cleanMatch}',`;
     });
     
-    // Fix malformed object properties
+    // Fix malformed object properties;
     content = content.replace(/(\w+):\s*'([^']*);'([^']*)',/g, '$1: \'$2\',');
     
-    // Fix stray semicolons in JSX
+    // Fix stray semicolons in JSX;
     content = content.replace(/;\s*\)\s*}/g, '\n  );\n}');
     
-    // Fix duplicate function declarations
+    // Fix duplicate function declarations;
     const functionRegex = /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{[^}]*\}\s*const\s+\1:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g;
     content = content.replace(functionRegex, (match, funcName) => {
       return match.replace(new RegExp(`const\\s+${funcName}:\\s*React\\.FC\\s*=\\s*\\(\\)\\s*=>\\s*\\{[^}]*\\}\\s*const\\s+${funcName}:\\s*React\\.FC\\s*=\\s*\\(\\)\\s*=>\\s*\\{`, 'g'), `const ${funcName}: React.FC = () => {`);
     });
     
-    // Fix malformed return statements
+    // Fix malformed return statements;
     content = content.replace(/return\s*\(\s*<[^>]*>\s*;\s*\)/g, (match) => {
       return match.replace(/;\s*\)/, '\n  )');
     });
     
-    // Clean up multiple consecutive empty lines
+    // Clean up multiple consecutive empty lines;
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    // Ensure file ends with single newline
+    // Ensure file ends with single newline;
     content = content.trim() + '\n';
     
     if (content !== fs.readFileSync(filePath, 'utf8')) {
@@ -68,7 +68,7 @@ function fixRemainingSyntax(filePath) {
   }
 }
 
-// Function to find all TypeScript/JavaScript files
+// Function to find all TypeScript/JavaScript files;
 function findSourceFiles(dir) {
   const files = [];
   
@@ -91,7 +91,7 @@ function findSourceFiles(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 console.log('🔍 Searching for files with remaining syntax errors...');
 const sourceFiles = findSourceFiles('./app');
 
@@ -112,7 +112,7 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`\n📊 Summary:`);
+console.log(`\n📊 Summary: '`);',
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 

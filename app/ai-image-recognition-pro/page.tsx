@@ -1,74 +1,20 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Image, Scan } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-
-const AIImageRecognitionPro = () => {
-  const features = [
-    {
-      title: "Object Detection",
-      description: "Identify and classify objects in images with high accuracy",
-      icon: <Eye className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Facial Recognition",
-      description: "Advanced facial recognition and analysis capabilities",
-      icon: <Users className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Text Extraction",
-      description: "Extract text from images using OCR technology",
-      icon: <Scan className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Scene Analysis",
-      description: "Understand and analyze complex scenes and contexts",
-      icon: <Image className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  
-
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'page - Zion Tech Group',
+  description: 'Advanced AI and IT solutions by Zion Tech Group',
+  keywords: 'AI, IT solutions, technology, innovation',
+};
+const pagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
-        title="AI Image Recognition Pro - Advanced Computer Vision | Zion Tech Group"
-        description="Transform images into actionable insights with AI-powered recognition. Object detection, facial recognition, and text extraction for modern applications."
-        keywords="AI image recognition, computer vision, object detection, facial recognition, OCR, image analysis"
-        canonical="https://ziontechgroup.com/ai-image-recognition-pro"
-      />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Camera className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Computer Vision AI</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Image Recognition Pro
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Transform images into actionable insights with AI-powered recognition. 
-            Object detection, facial recognition, and text extraction for modern applications.
+    <div className="page-container">
+      <div className="container mx-auto px-4 py-8">
+        <h1>page</h1>
+        <div className="prose max-w-none">
+          <p>
+            Discover our comprehensive page solutions designed to transform your business.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+<div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               href="/contact"
               variant="primary"
@@ -174,10 +120,9 @@ const AIImageRecognitionPro = () => {
               </FuturisticButton>
             </div>
           </div>
-        </ResponsiveContainer>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };
-
-export default AIImageRecognitionPro;
+export default pagePage;

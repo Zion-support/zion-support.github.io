@@ -110,49 +110,24 @@ export default function AITranslationServicePage() {
       description: 'Expand your business to new markets with accurate translations'
     }
   ];
-
   return (
-    <>
-      <Helmet>
-        <title>AI Translation Service - Zion Tech Group</title>
-        <meta name="description" content="Professional AI-powered translation services supporting 100+ languages with industry-specific models and real-time translation." />
-        <meta name="keywords" content="AI translation, machine translation, document translation, multilingual, language services" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <ResponsiveContainer>
-            <div className="relative z-10 text-center">
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
-                AI Translation Service
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Break language barriers with our advanced AI-powered translation service supporting 100+ languages.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton className="bg-blue-600 hover:bg-blue-700">
-                  Start Translating
-                </FuturisticButton>
-                <FuturisticButton variant="outline">
-                  View Demo
-                </FuturisticButton>
-              </div>
+    <div className="page-container">
+      <div className="container mx-auto px-4 py-8">
+        <h1>page</h1>
+        <div className="prose max-w-none">
+          <p>
+            Discover our comprehensive page solutions designed to transform your business.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 1</h3>
+              <p>Description of feature 1</p>
             </div>
-          </ResponsiveContainer>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20">
-          <ResponsiveContainer>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Powerful Translation Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI translation service provides comprehensive language solutions for all your needs.
-              </p>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 2</h3>
+              <p>Description of feature 2</p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <FuturisticCard key={index} className="text-center">
                   <div className="mb-4 flex justify-center">
@@ -280,6 +255,7 @@ export default function AITranslationServicePage() {
           </ResponsiveContainer>
         </section>
       </div>
-    </>
+    </div>
   );
-}
+};
+export default pagePage;

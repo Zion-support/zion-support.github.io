@@ -1,10 +1,10 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Essential components to keep
+// Essential components to keep;
 const keepComponents = [
   'app/components/Navigation.tsx',
   'app/components/Footer.tsx',
@@ -14,16 +14,16 @@ const keepComponents = [
   'app/components/Loading.tsx'
 ];
 
-// Function to check if a component should be kept
+// Function to check if a component should be kept;
 function shouldKeepComponent(filePath) {
   return keepComponents.includes(filePath);
 }
 
-// Function to delete corrupted components
+// Function to delete corrupted components;
 async function cleanupCorruptedComponents() {
   console.log('Cleaning up corrupted components...');
   
-  // Find all component files
+  // Find all component files;
   const files = await glob('app/components/**/*.tsx', { 
     ignore: ['node_modules/**', 'dist/**', '.next/**'] 
   });
@@ -45,7 +45,7 @@ async function cleanupCorruptedComponents() {
   console.log(`Deleted ${deletedCount} corrupted components`);
 }
 
-// Main execution
+// Main execution;
 async function main() {
   await cleanupCorruptedComponents();
   console.log('Component cleanup completed!');

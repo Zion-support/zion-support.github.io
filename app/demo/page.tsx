@@ -1,4 +1,3 @@
-
 const DemoPage: React.FC = () => {
   const features = [{'
       icon: 'Analytics',';
@@ -165,7 +164,14 @@ const DemoPage: React.FC = () => {
         </section>;
       </div>
     </>
+        <div className="text-center"></div>
+          <h1>Page</h1>
+          <p className="text-gray-300 text-lg"></p>
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
   )};
-
-const page = React.lazy(() => import('./page'));
-export default page;
+};
+export default PagePage;

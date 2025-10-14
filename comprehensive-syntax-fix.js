@@ -1,14 +1,14 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix comprehensive syntax errors
+// Function to fix comprehensive syntax errors;
 function fixComprehensiveSyntax(content) {
   let fixed = content;
   
-  // Fix unterminated string literals in import statements
+  // Fix unterminated string literals in import statements;
   fixed = fixed.replace(/import\s+([^"]*?)\s+from\s+"([^"]*?)(?:\n|$)/g, (match, imports, module) => {
     if (!match.includes('"') || match.split('"').length % 2 === 0) {
       return `import ${imports} from "${module}";\n`;
@@ -16,23 +16,23 @@ function fixComprehensiveSyntax(content) {
     return match;
   });
   
-  // Fix unterminated string literals in general - more aggressive approach
+  // Fix unterminated string literals in general - more aggressive approach;
   const lines = fixed.split('\n');
   const fixedLines = [];
   
   for (let i = 0; i < lines.length; i++) {
     let line = lines[i];
     
-    // Fix unterminated string literals
+    // Fix unterminated string literals;
     if (line.includes('"') && line.split('"').length % 2 === 0) {
-      // Count quotes to see if we need to close
+      // Count quotes to see if we need to close;
       const quoteCount = (line.match(/"/g) || []).length;
       if (quoteCount % 2 !== 0) {
         line = line + '"';
       }
     }
     
-    // Fix malformed JSX attributes
+    // Fix malformed JSX attributes;
     line = line.replace(/className="([^"]*?)(?:\n|$)/g, (match, className) => {
       if (match.endsWith('\n') && !match.endsWith('"\n')) {
         return `className="${className}"\n`;
@@ -40,7 +40,7 @@ function fixComprehensiveSyntax(content) {
       return match;
     });
     
-    // Fix malformed object properties
+    // Fix malformed object properties;
     line = line.replace(/(\w+):\s*([^,}]+)(?:\n|$)/g, (match, key, value) => {
       if (match.endsWith('\n') && !match.includes(',') && !match.includes('}')) {
         return `${key}: ${value},\n`;
@@ -48,7 +48,7 @@ function fixComprehensiveSyntax(content) {
       return match;
     });
     
-    // Fix broken JSX tags
+    // Fix broken JSX tags;
     line = line.replace(/<(\w+)([^>]*?)(?:\n|$)/g, (match, tag, attrs) => {
       if (match.endsWith('\n') && !match.includes('>')) {
         return `<${tag}${attrs}>\n`;
@@ -61,9 +61,9 @@ function fixComprehensiveSyntax(content) {
   
   fixed = fixedLines.join('\n');
   
-  // Fix merge conflict markers
+  // Fix merge conflict markers;
   fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/<<<<<<< [^\n]*[\s\S]*?[\s\S]*?  
-  // Fix malformed function declarations
+  // Fix malformed function declarations;
   fixed = fixed.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*{([^}]*?)(?:\n|$)/g, (match, name, body) => {
     if (!match.includes('}')) {
       return `const ${name}: React.FC = () => {\n${body}\n};\n`;
@@ -71,7 +71,7 @@ function fixComprehensiveSyntax(content) {
     return match;
   });
   
-  // Fix broken JSX structure
+  // Fix broken JSX structure;
   fixed = fixed.replace(/<(\w+)([^>]*?)(?:\n|$)/g, (match, tag, attrs) => {
     if (match.endsWith('\n') && !match.includes('>')) {
       return `<${tag}${attrs}>\n`;
@@ -79,7 +79,7 @@ function fixComprehensiveSyntax(content) {
     return match;
   });
   
-  // Fix missing semicolons in object properties
+  // Fix missing semicolons in object properties;
   fixed = fixed.replace(/(\w+):\s*([^,}]+)(?:\n|$)/g, (match, key, value) => {
     if (match.endsWith('\n') && !match.includes(',')) {
       return `${key}: ${value},\n`;
@@ -87,7 +87,7 @@ function fixComprehensiveSyntax(content) {
     return match;
   });
   
-  // Fix broken JSX expressions
+  // Fix broken JSX expressions;
   fixed = fixed.replace(/\{([^}]*?)(?:\n|$)/g, (match, expr) => {
     if (match.endsWith('\n') && !match.includes('}')) {
       return `{${expr}}\n`;
@@ -98,16 +98,16 @@ function fixComprehensiveSyntax(content) {
   return fixed;
 }
 
-// Function to fix specific file patterns
+// Function to fix specific file patterns;
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
     
-    // Apply fixes
+    // Apply fixes;
     content = fixComprehensiveSyntax(content);
     
-    // If content changed, write it back
+    // If content changed, write it back;
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
@@ -121,11 +121,11 @@ function fixFile(filePath) {
   }
 }
 
-// Main execution
+// Main execution;
 async function main() {
   console.log('Starting comprehensive syntax error fixes...');
   
-  // Find all TypeScript and TSX files
+  // Find all TypeScript and TSX files;
   const patterns = [
     'app/**/*.tsx',
     'app/**/*.ts',

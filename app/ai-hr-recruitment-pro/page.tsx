@@ -1,74 +1,20 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, UserCheck, FileText } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-
-const AIHRRecruitmentPro = () => {
-  const features = [
-    {
-      title: "AI Resume Screening",
-      description: "Automatically screen and rank resumes using advanced AI algorithms",
-      icon: <FileText className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Candidate Matching",
-      description: "Match candidates to job requirements with 95% accuracy",
-      icon: <Target className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Interview Scheduling",
-      description: "Automated interview scheduling and calendar management",
-      icon: <Clock className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Talent Analytics",
-      description: "Comprehensive analytics on recruitment performance and trends",
-      icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  
-
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'page - Zion Tech Group',
+  description: 'Advanced AI and IT solutions by Zion Tech Group',
+  keywords: 'AI, IT solutions, technology, innovation',
+};
+const pagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
-        title="AI HR & Recruitment Pro - Intelligent Talent Management | Zion Tech Group"
-        description="Revolutionize your hiring process with AI-powered recruitment tools. Automated screening, candidate matching, and talent analytics for modern HR teams."
-        keywords="AI recruitment, HR automation, talent management, candidate screening, hiring software, recruitment analytics"
-        canonical="https://ziontechgroup.com/ai-hr-recruitment-pro"
-      />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Users className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered HR</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI HR & Recruitment Pro
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Revolutionize your hiring process with AI-powered recruitment tools. 
-            Find the best talent faster with automated screening, intelligent matching, and comprehensive analytics.
+    <div className="page-container">
+      <div className="container mx-auto px-4 py-8">
+        <h1>page</h1>
+        <div className="prose max-w-none">
+          <p>
+            Discover our comprehensive page solutions designed to transform your business.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+<div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               href="/contact"
               variant="primary"
@@ -174,10 +120,9 @@ const AIHRRecruitmentPro = () => {
               </FuturisticButton>
             </div>
           </div>
-        </ResponsiveContainer>
-      </section>
+        </div>
+      </div>
     </div>
   );
 };
-
-export default AIHRRecruitmentPro;
+export default pagePage;

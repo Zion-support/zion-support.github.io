@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 import { UserGroupIcon,
   CpuChipIcon,
   ShieldCheckIcon,
-  CloudIcon,
+  RocketLaunchIcon,
+  HeartIcon,
   ArrowRightIcon,
-  CheckIcon,
+  StarIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon } from '@heroicons/react/24/outline';
+MapPinIcon } from '@heroicons/react/24/outline';
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -55,16 +56,13 @@ const AboutPage: React.FC = () => {
       image: '/team/michael.jpg'
     }
   ];
-
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions." />
-        <meta name="keywords" content="about us, team, mission, values, AI company, IT solutions" />
+        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." />"
       </Helmet>
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
@@ -203,7 +201,17 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
-};
-
-export default AboutPage;
+                <div className="flex items-start"></div>
+                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" /></CheckCircleIcon>
+                  <span className="text-gray-300">Innovation-driven approach</span>
+                </div>"
+                <div className="flex items-start"></div>"
+                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />"
+                  <span className="text-gray-300">Client-focused solutions</span>
+                </div>"
+                <div className="flex items-start"></div>"
+                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />"
+                  <span className="text-gray-300">Cutting-edge technology</span>
+                </div>
+              </div>
+            </div>

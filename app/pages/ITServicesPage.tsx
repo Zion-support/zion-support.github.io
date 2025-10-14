@@ -10,85 +10,22 @@ import { ServerIcon,
   PhoneIcon,
   EnvelopeIcon } from '@heroicons/react/24/outline';
 const ITServicesPage: React.FC = () => {
-  const services = [
-    {
-      icon: ServerIcon,
-      title: 'Infrastructure Management',
-      description: 'Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance.',
-      features: [
-        'Server Configuration',
-        'Network Setup',
-        'Hardware Maintenance',
-        'Performance Monitoring'
-      ]
-    },
-    {
-      icon: CloudIcon,
-      title: 'Cloud Solutions',
-      description: 'Complete cloud migration and management services for scalable, secure, and cost-effective solutions.',
-      features: [
-        'Cloud Migration',
-        'Multi-cloud Strategy',
-        'Cost Optimization',
-        'Security Compliance'
-      ]
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity Services',
-      description: 'Advanced security solutions to protect your IT infrastructure from threats and vulnerabilities.',
-      features: [
-        'Threat Detection',
-        'Vulnerability Assessment',
-        'Security Monitoring',
-        'Incident Response'
-      ]
-    },
-    {
-      icon: CpuChipIcon,
-      title: 'AI Integration',
-      description: 'Integrate artificial intelligence into your existing IT infrastructure for enhanced capabilities.',
-      features: [
-        'Machine Learning',
-        'Process Automation',
-        'Data Analytics',
-        'Predictive Maintenance'
-      ]
-    }
-  ];
-
-  const benefits = [
-    '24/7 Expert Support',
-    'Proactive Monitoring',
-    'Scalable Solutions',
-    'Cost Optimization',
-    'Security Compliance',
-    'Performance Optimization'
-  ];
-
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including infrastructure management, cloud solutions, cybersecurity, and AI integration for modern businesses." />
-        <meta name="keywords" content="IT services, infrastructure management, cloud solutions, cybersecurity, AI integration, IT support" />
+        <meta name="description" content="Professional IT services by Zion Tech Group." />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Services
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1>
+              IT Services;
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive IT Solutions for Modern Businesses
+            <p>
+              Professional IT services tailored to your business needs.
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+<p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
               From infrastructure management to AI integration, we provide end-to-end IT services 
               that keep your business running smoothly and securely.
             </p>
@@ -174,38 +111,56 @@ const ITServicesPage: React.FC = () => {
                   Professional IT services that ensure your systems are always running at peak performance.
                 </p>
               </div>
-            ))}
-          </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation;
+                </h3>
+                <p>
+                  Tailored IT implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support;
+                </h3>
+                <p>
+                  Round-the-clock support for all your IT needs.
+                </p>
+              </div>
+            </div>
+            <div className="mt-12">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Get Started Today;
+              </button>
+            </div>
+          </div>;
+const ITServicesPage: React.FC = () => {
+  return (
+    <>
+      <Helmet></Helmet>
+        <title>ITServicesPage - Zion Tech Group</title>
+        <meta name="description" content="ITServicesPage - Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1>ITServicesPage</h1>
+          <p>This page is under construction.</p>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Optimize Your IT Infrastructure?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let our experts help you build a robust, secure, and scalable IT environment
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              to="/demo"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
-            >
-              Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
+      </div>;
+    </div>;  );
+export default ITServicesPage;
     </>
   );
-};
-
 export default ITServicesPage;
+"use client;
+import React from 'react';
+const ITServicesPage = () => {
+  return (
+  <>
+    <div></div>
+      <h1>ITServicesPage</h1>"
+      <p>This page is under development.</p>"
+    </div>
+  </>
+);
+}

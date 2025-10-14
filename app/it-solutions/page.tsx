@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -37,16 +36,13 @@ const ITSolutionsPage: React.FC = () => {
       features: ['Machine Learning', 'Process Automation', 'Data Analytics', 'Predictive Maintenance']
     }
   ];
-
   return (
-    <>
-      <Helmet>
-        <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, cybersecurity, and AI integration services." />
-        <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, cybersecurity, AI integration" />
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" /></meta>
       </Helmet>
-      
-      <div className="min-h-screen bg-slate-900 text-white">
+<div className="min-h-screen bg-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,7 +130,14 @@ const ITSolutionsPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+        <div className="text-center"></div>
+          <h1>Page</h1>
+          <p className="text-gray-300 text-lg"></p>
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  )};
 };
-
-export default ITSolutionsPage;
+export default PagePage;

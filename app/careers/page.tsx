@@ -432,7 +432,7 @@ const CareersPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
-  );}
-}'
+"
+ cursor/fix-errors-and-merge-to-main-54ad;

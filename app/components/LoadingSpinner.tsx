@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 import React from 'react';
@@ -6,43 +7,36 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
 
 
+=======
+>>>>>>> origin/main
   text?: string;
   fullScreen?: boolean;
-  className?: string;
-}
-
+  className?: string}
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-
-
-
+  size="md"
+  color="primary"
+  fullScreen = false,
+  className = '
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16'
-  };
-
-
-      </div>
-    );
-  }
-
-  return spinner;
-
-
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-purple-600`}></div>
-      {text && (
-        <p className="mt-2 text-sm text-gray-400">{text}</p>
-      )}
-    </div>
-  );
-
-
-
-};
-
-export default LoadingSpinner;
+  const spinner = (
+    <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">"`"`"``"``````````
+      <div className="relative">"``````````
+        <div;```````````
+          className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}````;
+          style={{
+            animation: 'spin 1s linear infinite',';
+            willChange: 'transform
+          }></div>
+          <Loader2 className="w-full h-full" />"
+        </div>`
+      </div>``
+      {text && (```
+    </div>````
+  );`````
+  if (fullScreen) {``````
+    return (```````
+        {spinner}````````
+      </div>`````````
+    );``````````
+  return spinner;```````````

@@ -98,49 +98,24 @@ export default function AISupplyChainOptimizerPage() {
       description: 'Manage complex supply chains across multiple countries and time zones'
     }
   ];
-
   return (
-    <>
-      <Helmet>
-        <title>AI Supply Chain Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Optimize your supply chain with AI-powered route planning, inventory management, and predictive analytics." />
-        <meta name="keywords" content="supply chain optimization, AI logistics, inventory management, route optimization" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
-          <ResponsiveContainer>
-            <div className="relative z-10 text-center">
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-green-200 to-blue-200 bg-clip-text text-transparent mb-6">
-                AI Supply Chain Optimizer
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your supply chain with AI-powered optimization, predictive analytics, and intelligent automation.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton className="bg-green-600 hover:bg-green-700">
-                  Get Started
-                </FuturisticButton>
-                <FuturisticButton variant="outline">
-                  View Demo
-                </FuturisticButton>
-              </div>
+    <div className="page-container">
+      <div className="container mx-auto px-4 py-8">
+        <h1>page</h1>
+        <div className="prose max-w-none">
+          <p>
+            Discover our comprehensive page solutions designed to transform your business.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 1</h3>
+              <p>Description of feature 1</p>
             </div>
-          </ResponsiveContainer>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20">
-          <ResponsiveContainer>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Powerful Features</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI-powered supply chain optimizer provides comprehensive tools to streamline your logistics operations.
-              </p>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 2</h3>
+              <p>Description of feature 2</p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <FuturisticCard key={index} className="text-center">
                   <div className="mb-4 flex justify-center">
@@ -241,6 +216,7 @@ export default function AISupplyChainOptimizerPage() {
           </ResponsiveContainer>
         </section>
       </div>
-    </>
+    </div>
   );
-}
+};
+export default pagePage;

@@ -1,13 +1,13 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix remaining syntax issues
+// Function to fix remaining syntax issues;
 function fixRemainingIssues(content) {
   let fixed = content;
   
-  // Fix unterminated string literals in JSX attributes
+  // Fix unterminated string literals in JSX attributes;
   fixed = fixed.replace(/className="([^"]*?)(\n|$)/gm, (match, p1, p2) => {
     if (!p1.endsWith('"')) {
       return `className="${p1}"${p2}`;
@@ -15,7 +15,7 @@ function fixRemainingIssues(content) {
     return match;
   });
   
-  // Fix unterminated string literals in content attributes
+  // Fix unterminated string literals in content attributes;
   fixed = fixed.replace(/content="([^"]*?)(\n|$)/gm, (match, p1, p2) => {
     if (!p1.endsWith('"')) {
       return `content="${p1}"${p2}`;
@@ -23,13 +23,13 @@ function fixRemainingIssues(content) {
     return match;
   });
   
-  // Fix malformed JSX structure
+  // Fix malformed JSX structure;
   fixed = fixed.replace(/return \("([\s\S]*?)"\);/g, (match, p1) => {
     const cleaned = p1.replace(/"/g, '').trim();
     return `return (\n    <>\n      ${cleaned}\n    </>\n  );`;
   });
   
-  // Fix missing closing quotes in JSX
+  // Fix missing closing quotes in JSX;
   fixed = fixed.replace(/<([^>]*?)>([^<]*?)(\n|$)/gm, (match, tag, content, newline) => {
     if (content && !content.includes('<') && !content.includes('>') && !content.endsWith('"')) {
       return match;
@@ -37,21 +37,21 @@ function fixRemainingIssues(content) {
     return match;
   });
   
-  // Fix malformed function declarations
+  // Fix malformed function declarations;
   fixed = fixed.replace(/const (\w+) = \(\) => \{"/g, (match, funcName) => {
     return `const ${funcName} = () => {`;
   });
   
-  // Fix extra semicolons and quotes
+  // Fix extra semicolons and quotes;
   fixed = fixed.replace(/;";/g, ';');
   fixed = fixed.replace(/";"/g, ';');
   fixed = fixed.replace(/""/g, '"');
   fixed = fixed.replace(/;;/g, ';');
   
-  // Fix malformed imports
+  // Fix malformed imports;
   fixed = fixed.replace(/import React from "react";";/g, 'import React from "react";');
   
-  // Fix missing closing braces
+  // Fix missing closing braces;
   const openBraces = (fixed.match(/\{/g) || []).length;
   const closeBraces = (fixed.match(/\}/g) || []).length;
   if (openBraces > closeBraces) {
@@ -59,18 +59,18 @@ function fixRemainingIssues(content) {
     fixed += '\n' + '}'.repeat(missingBraces);
   }
   
-  // Fix malformed JSX fragments
+  // Fix malformed JSX fragments;
   fixed = fixed.replace(/<>([\s\S]*?)<\/>/g, (match, p1) => {
     if (!p1.trim()) return '<></>';
     return `<>${p1}</>`;
   });
   
-  // Fix merge conflict markers
+  // Fix merge conflict markers;
   fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  
   return fixed;
 }
 
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -88,7 +88,7 @@ function processFile(filePath) {
   }
 }
 
-// Main function
+// Main function;
 async function main() {
   const patterns = [
     'app/**/*.tsx',

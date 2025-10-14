@@ -17,75 +17,39 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   type = 'website'
   structuredData
 }) => {
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo192.png",
-    "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
-    "foundingDate": "2020",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': type === 'article' ? 'Article' : 'WebPage',
+    headline: title,
+    description,
+    image,
+    url,
+author: {,
+      '@type': 'Organization',
+name: author,
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
-      "contactType": "customer service",
-      "email": "info@ziontechgroup.com"
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+logo: {,
+        '@type': 'ImageObject',
+url: 'https://ziontechgroup.com/logo.png',
+      }
     },
-    "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://github.com/ziontechgroup"
-    ],
-    "offers": {
-      "@type": "AggregateOffer",
-      "offerCount": "50+",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "AI Solutions",
-          "description": "Advanced artificial intelligence solutions for businesses"
-        },
-        {
-          "@type": "Offer",
-          "name": "Cybersecurity Services",
-          "description": "Comprehensive cybersecurity solutions and consulting"
-        },
-        {
-          "@type": "Offer",
-          "name": "Cloud Infrastructure",
-          "description": "Scalable cloud infrastructure and migration services"
-        }
-      ]
-    }
-  }
-  const finalStructuredData = structuredData || defaultStructuredData;
-
-  const finalStructuredData = structuredData || defaultStructuredData
+    ...(publishedTime && {datePublished: publishedTime,}),
+    ...(modifiedTime && {dateModified: modifiedTime,}),
+    ...(section && {articleSection: section,}),
+    ...(tags.length > 0 && {keywords: tags.join(', '),})
+  };
   return (
-    <Helmet>
+  <>
+    <Helmet></Helmet>
       <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={url} />
       {structuredData && (
         <script type="application/ld+json">
-{JSON.stringify(structuredData)}
+          {JSON.stringify(structuredData
+  </>
+);
         </script>
-)}
+      )
     </Helmet>
-  )};
-
-export default SEOHead;

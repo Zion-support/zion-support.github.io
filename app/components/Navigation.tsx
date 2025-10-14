@@ -8,12 +8,13 @@ import { Menu,
   Globe,
   ChevronDown } from 'lucide-react';
 interface NavigationProps {
-  onSidebarToggle: () => void;
+  onSidebarToggle?: () => void;
 }
-
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
-  const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
+const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
   const [isITServicesOpen, setIsITServicesOpen] = useState(false);
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
   const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);
@@ -34,11 +35,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon;
       ]
     },
-    { 
-      name: 'Solutions', 
-      href: '/solutions', 
+    { ;
+      name: 'Solutions',;
+      href: '/solutions',;
       icon: CogIcon,
-      submenu: [
+submenu: [
         { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },
         { name: 'IT Services', href: '/it-services', icon: BriefcaseIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },
@@ -52,36 +53,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon;
   ];
-
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
-
-  const itServices = [
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
-    { name: 'Web Development', href: '/web-development', icon: <Globe className="w-4 h-4" /> },
-    { name: 'Mobile Development', href: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'Database Management', href: '/database-management', icon: <Database className="w-4 h-4" /> },
-    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: <Network className="w-4 h-4" /> }
-  ];
-
-  const microSaasServices = [
-    { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'Zion Security Shield', href: '/zion-security-shield', icon: <Shield className="w-4 h-4" /> },
-    { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Zion Content Studio', href: '/zion-content-studio', icon: <FileText className="w-4 h-4" /> }
-  ];
-
-  const fiveGServices = [
-    { name: '5G Implementation', href: '/5g-implementation', icon: <Cpu className="w-4 h-4" /> },
-    { name: '5G Edge Computing', href: '/5g-edge-computing', icon: <Zap className="w-4 h-4" /> },
-    { name: '5G IoT Solutions', href: '/5g-iot-solutions', icon: <Wifi className="w-4 h-4" /> },
-    { name: '5G Smart City', href: '/5g-smart-city-solutions', icon: <Building2 className="w-4 h-4" /> }
-  ];
-
+const Navigation: React.FC = () => {
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 sticky top-0 z-50">
+<nav className="bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -158,5 +132,4 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       </div>
     </nav>
   )};
-
-export default Navigation;
+};

@@ -191,16 +191,8 @@ export default function ConsultationPage() {
               <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-          
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center group"
-          >
-            Schedule Your Free Consultation
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Link>
         </div>
       </div>
     </div>
-  );
-}
+"
+ cursor/fix-errors-and-merge-to-main-54ad;

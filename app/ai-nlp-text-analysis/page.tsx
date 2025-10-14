@@ -1,15 +1,36 @@
 import React from 'react';
-'use client';
-export default function AiNlpTextAnalysisPage() {
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'page - Zion Tech Group',
+  description: 'Advanced AI and IT solutions by Zion Tech Group',
+  keywords: 'AI, IT solutions, technology, innovation',
+};
+const pagePage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">;
-        <h1 className="text-4xl font-bold mb-8">Ai Nlp Text Analysis</h1>;
-        <p className="text-gray-300 text-lg">;
-          This page is under development.;
-        </p>;
+    <div className="page-container">
+      <div className="container mx-auto px-4 py-8">
+        <h1>page</h1>
+        <div className="prose max-w-none">
+          <p>
+            Discover our comprehensive page solutions designed to transform your business.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 1</h3>
+              <p>Description of feature 1</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 2</h3>
+              <p>Description of feature 2</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 3</h3>
+              <p>Description of feature 3</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  );}
-}
-'
+  );
+};
+export default pagePage;

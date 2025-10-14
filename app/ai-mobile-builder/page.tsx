@@ -45,45 +45,29 @@ const Page = () => {
       description: '24/7 support from our team of specialists'
     }
   ];
-
   return (
-    <>
-      <EnhancedSEO 
-        title="Page - Zion Tech Group"
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
-        keywords="page, business solutions, technology services, professional services"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional page services designed to help your business succeed and grow.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                View Demo
-              </Link>
+    <div className="page-container">
+      <div className="container mx-auto px-4 py-8">
+        <h1>page</h1>
+        <div className="prose max-w-none">
+          <p>
+            Discover our comprehensive page solutions designed to transform your business.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 1</h3>
+              <p>Description of feature 1</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 2</h3>
+              <p>Description of feature 2</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-3">Feature 3</h3>
+              <p>Description of feature 3</p>
             </div>
           </div>
-        </section>
+</section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -138,9 +122,7 @@ const Page = () => {
           </div>
         </section>
       </div>
-    </>
+    </div>
   );
 };
-
-const page = React.lazy(() => import('./page'));
-export default page;
+export default pagePage;

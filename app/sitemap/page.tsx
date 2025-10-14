@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
@@ -139,8 +140,13 @@ const Page = () => {
         </section>
       </div>
     </>
-  );
-};
-
-const page = React.lazy(() => import('./page'));
-export default page;
+        <div className="container mx-auto px-4 py-20"></div>
+          <h1>Sitemap</h1>
+          <p className="text-xl text-gray-600"></p>
+            This page is under development. Please check back soon for more information about our sitemap services.
+          </p>;
+        </div>;
+      </div>;
+    </div>;
+  )};
+}

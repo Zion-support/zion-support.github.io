@@ -1,22 +1,22 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import { glob } from 'glob';
 
-// Function to fix JSX errors in a file
+// Function to fix JSX errors in a file;
 function fixJSXErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Remove extra closing divs
+    // Remove extra closing divs;
     const extraClosingDivsRegex = /<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/g;
     if (extraClosingDivsRegex.test(content)) {
       content = content.replace(extraClosingDivsRegex, '</div>\n        </div>\n      </div>\n    </>\n  );\n};');
       modified = true;
     }
 
-    // Fix missing closing div for container
+    // Fix missing closing div for container;
     const missingContainerClosingRegex = /<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (missingContainerClosingRegex.test(content)) {
       content = content.replace(missingContainerClosingRegex, (match) => {
@@ -28,7 +28,7 @@ function fixJSXErrors(filePath) {
       modified = true;
     }
 
-    // Fix missing closing div for min-h-screen wrapper
+    // Fix missing closing div for min-h-screen wrapper;
     const missingMinHeightClosingRegex = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (missingMinHeightClosingRegex.test(content)) {
       content = content.replace(missingMinHeightClosingRegex, (match) => {
@@ -40,7 +40,7 @@ function fixJSXErrors(filePath) {
       modified = true;
     }
 
-    // Fix missing closing div for container in specific pattern
+    // Fix missing closing div for container in specific pattern;
     const containerPatternRegex = /<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (containerPatternRegex.test(content)) {
       content = content.replace(containerPatternRegex, (match) => {
@@ -55,7 +55,7 @@ function fixJSXErrors(filePath) {
       modified = true;
     }
 
-    // Fix missing closing div for min-h-screen wrapper in specific pattern
+    // Fix missing closing div for min-h-screen wrapper in specific pattern;
     const minHeightPatternRegex = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (minHeightPatternRegex.test(content)) {
       content = content.replace(minHeightPatternRegex, (match) => {
@@ -67,7 +67,7 @@ function fixJSXErrors(filePath) {
       modified = true;
     }
 
-    // Fix missing closing div for container in specific pattern with Helmet
+    // Fix missing closing div for container in specific pattern with Helmet;
     const helmetContainerPatternRegex = /<Helmet>[\s\S]*?<\/Helmet>\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (helmetContainerPatternRegex.test(content)) {
       content = content.replace(helmetContainerPatternRegex, (match) => {
@@ -79,7 +79,7 @@ function fixJSXErrors(filePath) {
       modified = true;
     }
 
-    // Fix missing closing div for container in specific pattern without Helmet
+    // Fix missing closing div for container in specific pattern without Helmet;
     const noHelmetContainerPatternRegex = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (noHelmetContainerPatternRegex.test(content)) {
       content = content.replace(noHelmetContainerPatternRegex, (match) => {
@@ -91,7 +91,7 @@ function fixJSXErrors(filePath) {
       modified = true;
     }
 
-    // Fix missing closing div for container in specific pattern with Helmet
+    // Fix missing closing div for container in specific pattern with Helmet;
     const helmetContainerPatternRegex2 = /<Helmet>[\s\S]*?<\/Helmet>\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (helmetContainerPatternRegex2.test(content)) {
       content = content.replace(helmetContainerPatternRegex2, (match) => {
@@ -103,7 +103,7 @@ function fixJSXErrors(filePath) {
       modified = true;
     }
 
-    // Fix missing closing div for container in specific pattern without Helmet
+    // Fix missing closing div for container in specific pattern without Helmet;
     const noHelmetContainerPatternRegex2 = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (noHelmetContainerPatternRegex2.test(content)) {
       content = content.replace(noHelmetContainerPatternRegex2, (match) => {
@@ -115,7 +115,7 @@ function fixJSXErrors(filePath) {
       modified = true;
     }
 
-    // Fix missing closing div for container in specific pattern with Helmet
+    // Fix missing closing div for container in specific pattern with Helmet;
     const helmetContainerPatternRegex3 = /<Helmet>[\s\S]*?<\/Helmet>\s*<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (helmetContainerPatternRegex3.test(content)) {
       content = content.replace(helmetContainerPatternRegex3, (match) => {
@@ -127,7 +127,7 @@ function fixJSXErrors(filePath) {
       modified = true;
     }
 
-    // Fix missing closing div for container in specific pattern without Helmet
+    // Fix missing closing div for container in specific pattern without Helmet;
     const noHelmetContainerPatternRegex3 = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (noHelmetContainerPatternRegex3.test(content)) {
       content = content.replace(noHelmetContainerPatternRegex3, (match) => {
@@ -152,11 +152,11 @@ function fixJSXErrors(filePath) {
   }
 }
 
-// Main execution
+// Main execution;
 async function main() {
   console.log('Starting comprehensive JSX error fixes...');
   
-  // Find all page.tsx files
+  // Find all page.tsx files;
   const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
   
   let fixedCount = 0;
@@ -169,7 +169,7 @@ async function main() {
   
   console.log(`Fixed JSX errors in ${fixedCount} files`);
   
-  // Also fix the main App.tsx file
+  // Also fix the main App.tsx file;
   if (fixJSXErrors('app/App.tsx')) {
     fixedCount++;
     console.log('Fixed App.tsx');

@@ -114,7 +114,7 @@ function main() {
   let totalConflicts = 0;
   let totalFixes = 0;
 
-  // First pass: identify files with conflicts;
+  // First pass: 'identify files with conflicts;',
   allFiles.forEach(file => {
     try {
       const content = fs.readFileSync(file, 'utf8');';
@@ -126,7 +126,7 @@ function main() {
   });
 
   console.log(`📁 Found ${filesWithConflicts.length} files with merge conflicts`);```;
-  // Second pass: resolve conflicts;
+  // Second pass: 'resolve conflicts;',
   filesWithConflicts.forEach(file => {
     try {
       const originalContent = fs.readFileSync(file, 'utf8');';
@@ -144,7 +144,7 @@ function main() {
     }
   });
 
-  console.log(`\n🎉 Summary:`);```;
+  console.log(`\n🎉 Summary: '`);```;',
   console.log(`   Files processed: ${filesWithConflicts.length}`);```;
   console.log(`   Merge conflicts resolved: ${totalConflicts}`);```;
   console.log(`   Syntax fixes applied: ${totalFixes}`);```;

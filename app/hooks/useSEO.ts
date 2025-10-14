@@ -1,12 +1,10 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-export const useSEO = (structuredData?: unknown) => {
+import React from 'react';
+export const useSEO = () => {
   useEffect(() => {
-    // Add structured data to the page
+    // Add structured data to the page;
     if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
+      const script = document.createElement('script');';
+      script.type = 'application/ld+json;
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
       return () => {
@@ -17,4 +15,4 @@ export const useSEO = (structuredData?: unknown) => {
     }
     return undefined;
   }, [structuredData]);
-}
+};

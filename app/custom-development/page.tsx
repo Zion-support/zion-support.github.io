@@ -45,45 +45,30 @@ const Page = () => {
       description: '24/7 support from our team of specialists'
     }
   ];
-
   return (
-    <>
-      <EnhancedSEO 
-        title="Page - Zion Tech Group"
-        description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
-        keywords="page, business solutions, technology services, professional services"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Page
-              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional page services designed to help your business succeed and grow.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Custom Development - Zion Tech Group</title>
+        <meta name="description" content="Professional custom development services by Zion Tech Group." />
+        <meta name="keywords" content="custom development, software development, IT services" />;
+      </Helmet>;
+      <div className="container mx-auto px-4 py-20">;
+        <div className="text-center">;
+          <h1>;
+            Custom Development
+          </h1>
+          <p>;
+            Professional custom development services designed to help your business grow and succeed.
+          </p>
+        </div>
+        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Expert Solutions</h3>
+            <p>;
+              Our team of experts provides cutting-edge solutions tailored to your specific needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                View Demo
-              </Link>
-            </div>
           </div>
-        </section>
+</section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -120,27 +105,15 @@ const Page = () => {
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our page services can help your business succeed.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
-              >
-                Contact Us
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
-                View All Services
-              </Link>
-            </div>
           </div>
-        </section>
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+            <h3 className="text-xl font-semibold text-white mb-3">Proven Results</h3>
+            <p>;
+              Track record of delivering successful projects and exceeding client expectations.
+            </p>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   );
-};
-
-const page = React.lazy(() => import('./page'));
-export default page;
+}

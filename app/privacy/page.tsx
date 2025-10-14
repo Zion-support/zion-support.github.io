@@ -1,8 +1,9 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-const PrivacyPage: React.FC = () => {
+import react-helmet-async from 'react-helmet-async';
+export default function Page() {
   return (
-    <>
+<>
       <EnhancedSEO 
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
@@ -128,7 +129,13 @@ const PrivacyPage: React.FC = () => {
         </section>
       </div>
     </>
+        <div className="container mx-auto px-4 py-20"></div>
+          <h1>Privacy</h1>
+          <p className="text-xl text-gray-600"></p>
+            This page is under development. Please check back soon for more information about our privacy services.
+          </p>;
+        </div>;
+      </div>;
+    </div>;
   )};
-
-const page = React.lazy(() => import('./page'));
-export default page;
+}

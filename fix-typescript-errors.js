@@ -1,38 +1,38 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
+;
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix TypeScript any types
+// Function to fix TypeScript any types;
 function fixTypeScriptErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Fix any types in AnalyticsProvider
+    // Fix any types in AnalyticsProvider;
     if (filePath.includes('AnalyticsProvider.tsx')) {
-      content = content.replace(/function gtag\(\.\.\.args: any\[\]\)/g, 'function gtag(...args: unknown[])');
+      content = content.replace(/function gtag\(\.\.\.args: any\[\]\)/g, 'function gtag(...args: 'unknown[])');',
       content = content.replace(/\(window as any\)\.gtag/g, '(window as unknown as { gtag: (...args: unknown[]) => void }).gtag');
       content = content.replace(/\(window as any\)\.gtag/g, '(window as unknown as { gtag: (...args: unknown[]) => void }).gtag');
       modified = true;
     }
 
-    // Fix any types in sitemap.ts
+    // Fix any types in sitemap.ts;
     if (filePath.includes('sitemap.ts')) {
       content = content.replace(/any/g, 'unknown');
       modified = true;
     }
 
-    // Fix any types in app.types.ts
+    // Fix any types in app.types.ts;
     if (filePath.includes('app.types.ts')) {
       content = content.replace(/any/g, 'unknown');
       modified = true;
     }
 
-    // Fix unused variables by prefixing with underscore
+    // Fix unused variables by prefixing with underscore;
     content = content.replace(/\b(error|errorInfo|placeholder|Calendar|User|Tag|Target|Star|Zap|Shield|Users|Globe|Brain|Cpu|MessageSquare|Eye|Sparkles|ArrowRight|ArrowLeft|Search|BookOpen)\b(?=\s*[,)])/g, '_$1');
     
-    // Fix unescaped entities
+    // Fix unescaped entities;
     content = content.replace(/'/g, '&apos;');
     content = content.replace(/"/g, '&quot;');
 
@@ -49,7 +49,7 @@ function fixTypeScriptErrors(filePath) {
   }
 }
 
-// Function to find all TypeScript files
+// Function to find all TypeScript files;
 function findTypeScriptFiles(dir) {
   const files = [];
   
@@ -74,7 +74,7 @@ function findTypeScriptFiles(dir) {
   return files;
 }
 
-// Main execution
+// Main execution;
 function main() {
   console.log('Starting TypeScript error fixes...');
   

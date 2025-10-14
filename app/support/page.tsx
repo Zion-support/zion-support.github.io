@@ -158,30 +158,20 @@ const SupportPage = () => {
         item.answer.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredFAQs;
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="Support - Zion Tech Group | 24/7 Technical Support"
-        description="Get 24/7 technical support from Zion Tech Group. Live chat, phone support, documentation, and expert help for all your AI and technology needs."
-        keywords="technical support, customer service, help desk, AI support, cloud support, 24/7 support"
-        canonical="https://ziontechgroup.com/support"
-      />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            We're Here to
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              {" "}Help
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Get 24/7 support from our expert team. Whether you need technical assistance, have questions about our services, or want to explore new possibilities, we're here for you.
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" /></meta>
+      </Helmet>
+      <div className="container mx-auto px-4 py-16"></div>
+    </>
+        <div className="text-center"></div>
+          <h1>Page</h1>
+          <p className="text-gray-300 text-lg"></p>
+            This page is under construction. Please check back later.
           </p>
-          
-          {/* Search Bar */}
+{/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -419,7 +409,6 @@ const SupportPage = () => {
         </div>
       </section>
     </div>
-  );
+  )};
 };
-
-export default SupportPage;
+export default PagePage;

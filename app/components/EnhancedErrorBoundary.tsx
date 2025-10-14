@@ -9,100 +9,45 @@ interface State {
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
+}
+>>>>>>> origin/main;
+>>>>>>> origin/main
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-    }}
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  retryCount: number;
-}
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-  private retryTimeoutId: NodeJS.Timeout | null = null;
-
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    }}
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-    });
-
-    // Call custom error handler if provided
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}````
+    };
+>>>>>>> origin/main;
+  }
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+    // Call the onError callback if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo)}
-
-    // Log error to external service in production
+    // Log error to console in development;
+    if (process.env.NODE_ENV === 'development') {;
+      console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);'
+    }
+    // Log error to external service in production;
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo)}
-  }
-
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to an error reporting service
-    // like Sentry, LogRocket, or Bugsnag
-    const errorData = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      errorId: this.state.errorId,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-    };
-
-      // Example: Send to error tracking service
-      // errorTrackingService.captureException(error, { extra: errorData });
-      
-      console.error('Error logged to service:', errorData)} catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError)}
-  };
-
-  private handleRetry = () => {
-    this.setState(prevState => ({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-    })};
-
-  private handleReload = () => {
-    window.location.reload()};
-
-  private handleGoHome = () => {
-    window.location.href = '/'};
-
+      // Here you would typically send the error to a logging service;
+      console.error('Production error:', error);'
+>>>>>>> origin/main;
+    }
+>>>>>>> origin/main;
+ origin/main;
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
+      // Custom fallback UI;
       if (this.props.fallback) {
         return this.props.fallback;
-      return (
+return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -198,18 +143,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <p>Error ID: {this.state.errorId}</p>
               <p>If this problem persists, please contact our support team with this error ID.</p>
             </div>
+>>>>>>> origin/main;
           </div>
         </>
-      )}
+)}
 
     return this.props.children;
 }
-
 export default EnhancedErrorBoundary;
-
-            <div className="mt-6 text-sm text-gray-400">
-              <p>If this problem persists, please contact our support team.</p>
-              <p className="mt-2">
-                Error ID: {Date.now().toString(36)}-{Math.random().toString(36).substr(2, 9)}
-              </p>
-            </div>
+export default EnhancedErrorBoundary;
+              )}`
+        </div>``
+      );```
+    }````
+    return this.props.children;`````
+  }``````
+}```````
+;````````
+export default EnhancedErrorBoundary;`````````
+>>>>>>> origin/main;``````````
+ origin/main;```````````
