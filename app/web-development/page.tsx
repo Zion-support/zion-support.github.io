@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, CodeBracketIcon, GlobeAltIcon, DevicePhoneMobileIcon, ShoppingCartIcon, ChartBarIcon } from "@heroicons/react/24/outline";
+import { CodeBracketIcon, GlobeAltIcon, DevicePhoneMobileIcon, ShoppingCartIcon, ChartBarIcon } from "@heroicons/react/24/outline";
 import FuturisticBackground from "../components/FuturisticBackground";
 
 const WebDevelopmentPage = () => {
