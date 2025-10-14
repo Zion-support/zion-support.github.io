@@ -16,36 +16,21 @@ const AICybersecuritySuiteProPage: React.FC = () => {
             <h1 className="text-5xlfont-bold text-white mb-6">
               AI Cybersecurity Suite Pro
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Protect your business with AI-powered cybersecurity solutions
-            </p>
-          </div>
+            <p className="text-gray-600">Protect your business with AI-powered cybersecurity solutions</p>
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Shield className="w-12h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Threat Detection</h3>
-              <p className="text-gray-300">
-                AI-powered threat detection and prevention systems.
-              </p>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">Threat Detection</h3>
+              <p className="text-gray-600">AI-powered threat detection and prevention systems.</p>
             <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Lock className="w-12h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Data Protection</h3>
-              <p className="text-gray-300">
-                Advanced encryption and data protection mechanisms.
-              </p>
-            </div>
+              <h3 className="text-lg font-semibold mb-2">Data Protection</h3>
+              <p className="text-gray-600">Advanced encryption and data protection mechanisms.</p>
             <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
               <Brain className="w-12h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">AI Monitoring</h3>
-              <p className="text-gray-300">
-                Continuous AI monitoring and security analysis.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+              <h3 className="text-lg font-semibold mb-2">AI Monitoring</h3>
+              <p className="text-gray-600">Continuous AI monitoring and security analysis.</p>
     </>
   );
 };

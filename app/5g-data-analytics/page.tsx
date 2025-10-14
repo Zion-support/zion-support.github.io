@@ -42,9 +42,7 @@ const Page = () => {
                 Solutions
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional 5G data analytics services designed to help your business succeed and grow.
-            </p>
+            <p className="text-white text-lg mb-8">Professional 5G data analytics services designed to help your business succeed and grow.</p>
             <div className="flexflex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -59,8 +57,6 @@ const Page = () => {
               >
                 View Demo
               </Link>
-            </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -70,22 +66,15 @@ const Page = () => {
               <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4">
                 Why Choose Our 5G Data Analytics Services?
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                We deliver exceptional results with cutting-edge technology and expert knowledge.
-              </p>
-            </div>
+              <p className="text-gray-600">We deliver exceptional results with cutting-edge technology and expert knowledge.</p>
             <div className="gridgrid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
                   <div className="w-16h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
+                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
               ))}
-            </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -94,9 +83,7 @@ const Page = () => {
             <h2 className="text-3xlmd:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our 5G data analytics services can help your business succeed.
-            </p>
+            <p className="text-gray-600">Let's discuss how our 5G data analytics services can help your business succeed.</p>
             <div className="flexflex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -111,10 +98,7 @@ const Page = () => {
               >
                 View All Services
               </Link>
-            </div>
-          </div>
         </section>
-      </div>
     </>
   );
 };

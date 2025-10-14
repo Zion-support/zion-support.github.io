@@ -8,12 +8,7 @@ const FiveGPerformancePage: React.FC = () => {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             5gPerformance Services
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional services and solutions.
-          </p>
-        </div>
-      </div>
-    </div>
+          <p className="text-white text-lg mb-8">Professional services and solutions.</p>
   );
 }
 export default FiveGPerformancePage;

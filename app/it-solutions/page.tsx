@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -11,8 +10,6 @@ import {
   ChartBarIcon,
   CogIcon
 } from '@heroicons/react/24/outline';
-
-
 
 export default function ITSolutionsPage() {
   const itServices = [
@@ -128,21 +125,11 @@ export default function ITSolutionsPage() {
 
   return (
     <div className="min-h-screen bg-slate-900 text-white">
-=======
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Server, Cloud } from 'lucide-react';
-
-const ItSolutionsPage: React.FC = () => {
-  return (
-    <>
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT solutions including infrastructure management, cybersecurity, cloud solutions, and system integration services." />
         <meta name="keywords" content="IT solutions, infrastructure management, cybersecurity, cloud solutions, system integration, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relativepy-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -150,11 +137,7 @@ const ItSolutionsPage: React.FC = () => {
           <h1 className="text-5xlmd:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             IT Solutions
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive IT solutions to keep your business running smoothly and securely. 
-            From infrastructure to cloud, we&apos;ve got you covered.
-          </p>
-        </div>
+          <p className="text-gray-600">Comprehensive IT solutions to keep your business running smoothly and securely. From infrastructure to cloud, we&apos;ve got you covered.</p>
       </section>
 
       {/* Services Grid */}
@@ -165,10 +148,9 @@ const ItSolutionsPage: React.FC = () => {
               <div key={index} className="bg-slate-800rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>
                   <service.icon className="w-8h-8 text-white" />
-                </div>
                 
-                <h3 className="text-2xlfont-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300mb-6">{service.description}</p>
+                <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
                 
                 <div className="mb-6">
                   <h4 className="text-whitefont-semibold mb-3">Key Features</h4>
@@ -180,12 +162,10 @@ const ItSolutionsPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
 
                 <div className="mb-6">
                   <div className="text-2xlfont-bold text-blue-400 mb-2">{service.price}</div>
                   <div className="text-gray-400text-sm mb-4">Benefits: {service.benefits.join(', ')}</div>
-                </div>
 
                 <Link
                   to={service.href}
@@ -194,10 +174,7 @@ const ItSolutionsPage: React.FC = () => {
                   Learn More
                   <ArrowRightIcon className="w-4h-4" />
                 </Link>
-              </div>
             ))}
-          </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -206,9 +183,7 @@ const ItSolutionsPage: React.FC = () => {
           <h2 className="text-4xlmd:text-5xl font-bold text-white mb-6">
             Ready to Optimize Your IT Infrastructure?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let&apos;s discuss how our IT solutions can improve your business operations and security.
-          </p>
+          <p className="text-gray-600">Let&apos;s discuss how our IT solutions can improve your business operations and security.</p>
           <div className="flexflex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -222,46 +197,17 @@ const ItSolutionsPage: React.FC = () => {
             >
               Schedule Demo
             </Link>
-          </div>
-        </div>
       </section>
-    </div>
   );
 }
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xlfont-bold text-white mb-6">
-              IT Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Comprehensive IT services to power your digital transformation
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Server className="w-12h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Infrastructure</h3>
-              <p className="text-gray-300">
-                Robust IT infrastructure solutions for scalable growth.
-              </p>
-            </div>
-            <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Cloud className="w-12h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Cloud Services</h3>
-              <p className="text-gray-300">
-                Secure and scalable cloud computing solutions.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
 
-export default ItSolutionsPage;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>

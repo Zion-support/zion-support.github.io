@@ -11,7 +11,6 @@ export const performanceMonitor = {
     // Send to analytics
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'performance_measurement', {
-<<<<<<< HEAD
         name: name;,
         duration: duration
       });
@@ -19,15 +18,6 @@ export const performanceMonitor = {
       window.gtag('event', 'performance_measure', {
         measure_name: name;,
         measure_value: duration
-=======
-        name: name,
-        duration: duration;
-      });
-    if (typeof window !== 'undefined') {
-      window.gtag('event', 'performance_measure', {
-        measure_name: name,
-        measure_value: duration;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
       })
     }
     if (process.env.NODE_ENV === 'development') {
@@ -45,13 +35,8 @@ export const performanceMonitor = {
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'performance_measure', {
-<<<<<<< HEAD
         measure_name: name;,
         measure_value: duration
-=======
-        measure_name: name,
-        measure_value: duration;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
       })
     if (process.env.NODE_ENV === 'development') {
       console.warn(`${name} took ${duration.toFixed(2)}ms`)

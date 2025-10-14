@@ -7,15 +7,9 @@ export const enhancedErrorHandler = {
     
     if (typeof window !== 'undefined') {
       window.gtag('event', 'exception', {
-<<<<<<< HEAD
         description: _error.message;,
         fatal: false;,
         custom_parameter: context
-=======
-        description: _error.message,
-        fatal: false,
-        custom_parameter: context;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
       })
     }
     

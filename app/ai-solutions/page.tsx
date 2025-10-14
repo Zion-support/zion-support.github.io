@@ -173,11 +173,7 @@ export default function AISolutionsPage() {
           <h1 className="text-5xlmd:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
             AI Solutions
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with cutting-edge artificial intelligence solutions. 
-            From machine learning to automation, we deliver AI that drives real results.
-          </p>
-        </div>
+          <p className="text-gray-600">Transform your business with cutting-edge artificial intelligence solutions. From machine learning to automation, we deliver AI that drives real results.</p>
       </section>
 
       {/* Services Grid */}
@@ -188,10 +184,9 @@ export default function AISolutionsPage() {
               <div key={index} className="bg-slate-800rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>
                   <service.icon className="w-8h-8 text-white" />
-                </div>
                 
-                <h3 className="text-2xlfont-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300mb-6">{service.description}</p>
+                <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
                 
                 <div className="mb-6">
                   <h4 className="text-whitefont-semibold mb-3">Key Features</h4>
@@ -203,12 +198,10 @@ export default function AISolutionsPage() {
                       </li>
                     ))}
                   </ul>
-                </div>
 
                 <div className="mb-6">
                   <div className="text-2xlfont-bold text-purple-400 mb-2">{service.price}</div>
                   <div className="text-gray-400text-sm mb-4">Benefits: {service.benefits.join(', ')}</div>
-                </div>
 
                 <Link
                   to={service.href}
@@ -217,10 +210,7 @@ export default function AISolutionsPage() {
                   Learn More
                   <ArrowRightIcon className="w-4h-4" />
                 </Link>
-              </div>
             ))}
-          </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -229,9 +219,7 @@ export default function AISolutionsPage() {
           <h2 className="text-4xlmd:text-5xl font-bold text-white mb-6">
             Ready to Harness the Power of AI?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let&apos;s discuss how our AI solutions can transform your business and give you a competitive edge.
-          </p>
+          <p className="text-gray-600">Let&apos;s discuss how our AI solutions can transform your business and give you a competitive edge.</p>
           <div className="flexflex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -245,9 +233,17 @@ export default function AISolutionsPage() {
             >
               Schedule Demo
             </Link>
-          </div>
-        </div>
       </section>
-    </div>
   );
 }
+
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>

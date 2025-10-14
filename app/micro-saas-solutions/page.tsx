@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -33,8 +32,6 @@ import {
   SparklesIcon,
   BoltIcon
 } from '@heroicons/react/24/outline';
-
-
 
 const MicroSaaSSolutionsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -921,13 +918,6 @@ const MicroSaaSSolutionsPage: React.FC = () => {
     }
   });
 
-=======
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Target, Rocket } from 'lucide-react';
-
-const MicroSaasSolutionsPage: React.FC = () => {
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
   return (
     <>
       <Helmet>
@@ -949,9 +939,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
           {/* Animated Background */}
           <div className="absoluteinset-0 opacity-20">
             <div className="w-fullh-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
-          </div>
           
-<<<<<<< HEAD
           {/* Floating Elements */}
           <div className="absolutetop-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
           <div className="absolutebottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
@@ -964,19 +952,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
               </h1>
               <p className="text-xlmd:text-2xl text-gray-300 mb-8 leading-relaxed">
                 25+ AI-Powered Business Tools to Transform Your Operations
-=======
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/10backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <Rocket className="w-12h-12 text-blue-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-3">Rapid Development</h3>
-              <p className="text-gray-300">
-                Fast-track your SaaS product development with our expert team.
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
-              </p>
-              <p className="text-lgtext-gray-400 mb-12 max-w-3xl mx-auto">
-                Discover our comprehensive suite of intelligent micro SaaS solutions designed to automate, 
-                optimize, and accelerate your business growth with cutting-edge AI technology.
-              </p>
+              <p className="text-gray-600">Discover our comprehensive suite of intelligent micro SaaS solutions designed to automate, optimize, and accelerate your business growth with cutting-edge AI technology.</p>
               
               <div className="flexflex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <Link 
@@ -993,29 +969,21 @@ const MicroSaasSolutionsPage: React.FC = () => {
                   Schedule Demo
                   <ArrowRightIcon className="w-5h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-              </div>
 
               {/* Stats */}
               <div className="gridgrid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xlmd:text-4xl font-bold text-purple-400 mb-2">25+</div>
                   <div className="text-gray-300text-sm md:text-base">AI Solutions</div>
-                </div>
                 <div className="text-center">
                   <div className="text-3xlmd:text-4xl font-bold text-cyan-400 mb-2">500+</div>
                   <div className="text-gray-300text-sm md:text-base">Happy Clients</div>
-                </div>
                 <div className="text-center">
                   <div className="text-3xlmd:text-4xl font-bold text-green-400 mb-2">99.9%</div>
                   <div className="text-gray-300text-sm md:text-base">Uptime</div>
-                </div>
                 <div className="text-center">
                   <div className="text-3xlmd:text-4xl font-bold text-pink-400 mb-2">24/7</div>
                   <div className="text-gray-300text-sm md:text-base">Support</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Filters and Sorting */}
@@ -1037,7 +1005,6 @@ const MicroSaasSolutionsPage: React.FC = () => {
                     {category.name} ({category.count})
                   </button>
                 ))}
-              </div>
 
               {/* Sorting */}
               <div className="flexitems-center gap-4">
@@ -1052,9 +1019,6 @@ const MicroSaasSolutionsPage: React.FC = () => {
                   <option value="price-low">Price: Low to High</option>
                   <option value="price-high">Price: High to Low</option>
                 </select>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Products Grid */}
@@ -1083,20 +1047,14 @@ const MicroSaasSolutionsPage: React.FC = () => {
                         {product.discount}
                       </span>
                     )}
-                  </div>
 
                   {/* Icon */}
                   <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating`}>
                     <product.icon className="w-8h-8 text-white" />
-                  </div>
 
                   {/* Title and Description */}
-                  <h3 className="text-2xlfont-bold text-white mb-4 gradient-text group-hover:text-purple-400 transition-colors">
-                    {product.title}
-                  </h3>
-                  <p className="text-gray-300mb-6 leading-relaxed">
-                    {product.description}
-                  </p>
+                  <h3 className="text-lg font-semibold mb-2">{product.title}</h3>
+                  <p className="text-gray-600">{product.description}</p>
 
                   {/* Features */}
                   <div className="mb-6">
@@ -1117,7 +1075,6 @@ const MicroSaasSolutionsPage: React.FC = () => {
                         </li>
                       )}
                     </ul>
-                  </div>
 
                   {/* Benefits */}
                   <div className="mb-6">
@@ -1134,8 +1091,6 @@ const MicroSaasSolutionsPage: React.FC = () => {
                           {benefit}
                         </span>
                       ))}
-                    </div>
-                  </div>
 
                   {/* Pricing */}
                   <div className="mb-6p-4 bg-slate-900/50 rounded-lg border border-slate-600">
@@ -1144,11 +1099,8 @@ const MicroSaasSolutionsPage: React.FC = () => {
                       {product.originalPrice && (
                         <span className="text-gray-400line-through text-sm">{product.originalPrice}</span>
                       )}
-                    </div>
                     <div className="text-gray-300text-sm">
                       Setup fee: {product.setupFee}
-                    </div>
-                  </div>
 
                   {/* Rating and Reviews */}
                   <div className="flexitems-center justify-between mb-6">
@@ -1164,15 +1116,11 @@ const MicroSaasSolutionsPage: React.FC = () => {
                             }`}
                           />
                         ))}
-                      </div>
                       <span className="text-gray-300text-sm">
                         {product.rating} ({product.reviews} reviews)
                       </span>
-                    </div>
                     <div className="text-gray-400text-sm">
                       {product.popularity}% popular
-                    </div>
-                  </div>
 
                   {/* Action Buttons */}
                   <div className="flexflex-col gap-3">
@@ -1203,8 +1151,6 @@ const MicroSaasSolutionsPage: React.FC = () => {
                         <DocumentTextIcon className="w-4h-4" />
                         Docs
                       </a>
-                    </div>
-                  </div>
 
                   {/* Tags */}
                   <div className="mt-4flex flex-wrap gap-2">
@@ -1216,11 +1162,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
                         {tag}
                       </span>
                     ))}
-                  </div>
-                </div>
               ))}
-            </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -1230,10 +1172,7 @@ const MicroSaasSolutionsPage: React.FC = () => {
               <h2 className="text-4xlmd:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Choose from our comprehensive suite of AI-powered micro SaaS solutions 
-                and start your digital transformation journey today.
-              </p>
+              <p className="text-gray-600">Choose from our comprehensive suite of AI-powered micro SaaS solutions and start your digital transformation journey today.</p>
               <div className="flexflex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -1249,22 +1188,9 @@ const MicroSaasSolutionsPage: React.FC = () => {
                   View Pricing
                   <CurrencyDollarIcon className="w-5h-5" />
                 </Link>
-              </div>
-            </div>
-          </div>
         </section>
-      </div>
     </>
   );
 };
 
-<<<<<<< HEAD
 export default MicroSaaSSolutionsPage;
-=======
-export default MicroSaasSolutionsPage;
->>>>>>> f089994c77d248534ea2ed654eb7db9e6a079d05
-
-        </div>
-        </div>
-              </p>
-              </p>
