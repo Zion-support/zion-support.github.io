@@ -19,7 +19,8 @@ const requiredPages = [
 const missingPages = [];
 const existingPages = [];
 
-requiredPages.forEach(page => {
+requiredPages.forEach(page =>
+                {
   const pagePath = path.join(__dirname, 'app', page, 'page.tsx');
   if (fs.existsSync(pagePath)) {
     existingPages.push(page);
@@ -42,7 +43,8 @@ const allPages = [];
 
 function scanDirectory(dir) {
   const items = fs.readdirSync(dir);
-  items.forEach(item => {
+  items.forEach(item =>
+                {
     const itemPath = path.join(dir, item);
     const stat = fs.statSync(itemPath);
     

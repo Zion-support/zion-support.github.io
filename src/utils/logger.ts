@@ -1,16 +1,20 @@
 export const logger = {
-  debug: (message: string, ...args: any[]) => {
+  debug: (message: string, ...args: any[]) =>
+                {
     if (process.env.NODE_ENV === 'development') {
       console.debug(`[DEBUG] ${message}`, ...args)
     }
   },
-  info: (message: string, ...args: any[]) => {
+  info: (message: string, ...args: any[]) =>
+                {
     console.info(`[INFO] ${message}`, ...args)
   },
-  warn: (message: string, ...args: any[]) => {
+  warn: (message: string, ...args: any[]) =>
+                {
     console.warn(`[WARN] ${message}`, ...args)
   },
-  error: (message: string, error?: Error, ...args: any[]) => {
+  error: (message: string, error?: Error, ...args: any[]) =>
+                {
     console.error(`[ERROR] ${message}`, error, ...args)
   }}
 
@@ -136,7 +140,7 @@ class Logger {/* TODO: Fix JSX expression */}
           <string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
 
-    metadata?: Record<string, unknown>
+    metadata?: Record<string, unknown></string,>
   ): void {
     // TODO: Add content
   }
@@ -162,13 +166,13 @@ class Logger {/* TODO: Fix JSX expression */}
       context = {/* TODO: Fix JSX expression */}
   t: errorOrContextOrMetadata }
       meta = contextOrMetadata as Record
-          <string>
+          <string></string>
     } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       context = errorOrContextOrMetadata as LogContext
       meta = contextOrMetadata as Record
-          <string>
+          <string></string>
     }
     this.log(LogLevel.ERROR, message, context, { ...meta, error })
   )
@@ -194,7 +198,7 @@ class Logger {/* TODO: Fix JSX expression */}
   e: string,
     context?: LogContext,
     metadata?: Record
-          <string, unknown>
+          <string, unknown></string,>
   ): void {
     // TODO: Add content
   }
@@ -350,7 +354,8 @@ class Logger {/* TODO: Fix JSX expression */}
   s: {// 'Content-Type': 'application/json'},
     //   bod)
   y: JSON.stringify(entry)
-    // }).catch(err => {/* TODO: Fix JSX expression */})
+    // }).catch(err =></>
+                {/* TODO: Fix JSX expression */})
   service:', err);}
     // })
   }

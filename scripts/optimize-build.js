@@ -53,18 +53,19 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
   q: 'weekly' }
   ]
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?></?xml>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
 ${pages.map(page => `  <url>),
     <loc>https://ziontechgroup.com${page.url}
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
-  p://www.sitemaps.org/schemas/sitemap/0.9">
+  p://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
 ${/* TODO: Fix JSX expression */}
   s://ziontechgroup.com${page.url}
-    <lastmod>${new Date().toISOString().split('T')[0]}
-    <changefreq>${page.changefreq}
-    <priority>${page.priority}</priority>`
+                <lastmod>${new Date().toISOString().split('T')[0]}
+                <changefreq>${page.changefreq}
+                <priority>${page.priority}
+                </priority>`
   </url>`).join('\n')}`
 </urlset>`
   fs.writeFileSync('public/sitemap.xml', sitemap)
@@ -161,6 +162,6 @@ async function optimize() {/* TODO: Fix JSX expression */}
 }
 
 // Run optimization
-optimize()
+optimize();
 optimize();"`
 </p>

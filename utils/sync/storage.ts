@@ -160,7 +160,7 @@ export function filterEventsByScope(
         e.type === 'talent_mobility' |
         e.type === 'leaderboard_entry'
     )
-  }
+  };
   return events;export function resetState(): void {
   state = { ...defaultState }
 }
@@ -178,7 +178,6 @@ const default_state: SyncState = {
   },
   lastSyncedAt: new Date ().toISOString ()
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   // Check condition
 if ( {) {

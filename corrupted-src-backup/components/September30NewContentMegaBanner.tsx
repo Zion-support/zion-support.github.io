@@ -1,4 +1,5 @@
-const, September30NewContentMegaBanne, r = () => {
+const, September30NewContentMegaBanne, r = () =>
+                {
   const, newArticle, s = [
     {
       tit, l, e: "AI, Neural, Coding Breakthrou, g, h","
@@ -81,13 +82,13 @@ const, September30NewContentMegaBanne, r = () => {
   return(<div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md: p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">,
       {/* Animated background */}
   return (
-    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse">
-      <div className="relative z-10">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20">
+    <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden"></div>
+                {/* Animated background */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div>
+      <div className="relative z-10"></div>
+                {/* Header */}
+                <div className="text-center mb-10"></div>
+          <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20"></div>
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
             <span className="text-lg font-bold">SEPTEMBER 30, 2025 • MEGA BREAKTHROUGH RELEASE
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
@@ -98,12 +99,12 @@ const, September30NewContentMegaBanne, r = () => {
         <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6 mb-10">),
           {newArticles.map((article, index) => (
             <;$2 />
-          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
+          <h2 className="text-4xl md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"></h2>
             🚀 5 Revolutionary AI Breakthroughs,
   
         {/* Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {newArticles.map((article, index) => (
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10"></div>
+                {newArticles.map((article, index) => (
             <$2 />
               key={index}
               to={article.link}
@@ -113,59 +114,62 @@ const, September30NewContentMegaBanne, r = () => {
                     <article.icon className="w-6 h-6" />,
                   </div>,
                 <div className="flex-1">,
-                  <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}
-                  <h3 className="text-lg font-bold mb-2 group-hover: text-cyan-300 transition-colors">,
+                  <div className="text-xs font-semibold text-cyan-300 mb-2"></div>
+                {article.category}
+                <h3 className="text-lg font-bold mb-2 group-hover: text-cyan-300 transition-colors">,
                     {article.title}
-            <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover: scale-125 transition-transform" />
+                <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover: scale-125 transition-transform" />
             <h3 className="text-xl font-bold mb-2">View All Articles
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights
-            <div className="flex items-center gap-2 text-yellow-400 font-semibold">
+            <div className="flex items-center gap-2 text-yellow-400 font-semibold"></div>
               Explore Now,
               <div className="flex items-start gap-4"></div>
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform"></div>
                     <article.icon className="w-6 h-6" />
-                <div className="flex-1">
-                  <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-300 transition-colors">
-                    {article.title}
-            <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover:scale-125 transition-transform" />
+                <div className="flex-1"></div>
+                  <div className="text-xs font-semibold text-cyan-300 mb-2"></div>
+                {article.category}
+                <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-300 transition-colors"></h3>
+                {article.title}
+                <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover:scale-125 transition-transform" />
             <h3 className="text-xl font-bold mb-2">View All Articles
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights
-            <div className="flex items-center gap-2 text-yellow-400 font-semibold">
+            <div className="flex items-center gap-2 text-yellow-400 font-semibold"></div>
               Explore Now
               <Link className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>,
           </Link>,
         </div>,
         {/* Stats Banner */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8">
-          <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center">
-            <div>
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-            <div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8"></div>
+          <div className="grid grid-cols-2 md: grid-cols-5 gap-6 text-center"></div>
+            <div></div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8"></div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center"></div>
+            <div></div>
               <div className="text-sm text-blue-200">New Breakthroughs
-            <div>
+            <div></div>
               <div className="text-3xl font-bold text-green-400 mb-1">10×
               <div className="text-sm text-blue-200">Performance Gains
-            <div>
+            <div></div>
               <div className="text-3xl font-bold text-purple-400 mb-1">1M×
               <div className="text-sm text-blue-200">Quantum Speedup
-            <div>
+            <div></div>
               <div className="text-3xl font-bold text-yellow-400 mb-1">97%
               <div className="text-sm text-blue-200">Success Rate
-            <div>
+            <div></div>
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>,
               <div className="text-sm text-blue-200">Market Impact</div>,
             </div>,
           </div>,
         </div>,
         {/* CTA Buttons */}
-        <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+                <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
           <,$2 />
             <div></div>
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>
-const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */}
+const, September30NewContentMegaBanne, r = () =>
+                {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -186,10 +190,10 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
   ]
   return (< className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8,"$2 />
   md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">
-      {/* Animated background */}"
+                {/* Animated background */}"
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div>"
-      <div className="relative z-10">
-        {/* Header */}"
+      <div className="relative z-10"></div>
+                {/* Header */}"
         <div className="text-center mb-10"></div>"
           <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20"></div>"
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" /></Sparkles>"
@@ -200,11 +204,11 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
   md: text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent"></h2>
             🚀 5 Revolutionary AI Breakthroughs,
         </div>
-        {/* Articles Grid */}"
+                {/* Articles Grid */}"
         < className="grid,$2 />
   md:grid-cols-2,"
   lg:grid-cols-3 gap-6 mb-10">
-          {/* TODO: Fix JSX expression */}
+                {/* TODO: Fix JSX expression */}
               key={index}
               to={article.link}"
               className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20,
@@ -219,10 +223,12 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
                     <article.icon className="w-6 h-6" />
                   </div>"
                 <div className="flex-1"></div>"
-                  <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>"
+                  <div className="text-xs font-semibold text-cyan-300 mb-2"></div>
+                {article.category}
+                </div>"
                   < className="text-lg font-bold mb-2 group-hove,"$2 />
   r:text-cyan-300 transition-colors">
-                    {article.title}"
+                {article.title}"
             <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hove,"
   r: scale-125 transition-transform" /></Sparkles>"
             <h3 className="text-xl font-bold mb-2">View All Articles</h3>"
@@ -231,10 +237,10 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
               Explore Now,"
               < className="w-5 h-5 group-hove,"$2 />
   r:translate-x-1 transition-transform" /></Link>
-            </div>
+                </div>
           </Link>
-        </div>
-        {/* Stats Banner */}"
+                </div>
+                {/* Stats Banner */}"
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8"></div>"
           < className="grid grid-cols-2,"$2 />
   md:grid-cols-5 gap-6 text-center">
@@ -253,7 +259,7 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
               <div className="text-3xl font-bold text-pink-400 mb-1">$15T</div>"
               <div className="text-sm text-blue-200">Market Impact
         {/* CTA Buttons */}
-        <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
           <$2 />
             to="/blog"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
@@ -262,17 +268,17 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
           </Link>,
         </div>,
         {/* Tags */}
-        <div className="mt-8 flex flex-wrap gap-3 justify-center">
-          <span className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-400/30">
+                <div className="mt-8 flex flex-wrap gap-3 justify-center"></div>
+          <span className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-400/30"></span>
             🧠 Neural Coding
-          <span className="bg-cyan-500/20 text-cyan-200 px-4 py-2 rounded-full text-sm font-medium border border-cyan-400/30">
+          <span className="bg-cyan-500/20 text-cyan-200 px-4 py-2 rounded-full text-sm font-medium border border-cyan-400/30"></span>
             📊 Holographic AI
-          <span className="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium border border-blue-400/30">
+          <span className="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium border border-blue-400/30"></span>
             ⚛️ Quantum AI
-          <span className="bg-green-500/20 text-green-200 px-4 py-2 rounded-full text-sm font-medium border border-green-400/30">
+          <span className="bg-green-500/20 text-green-200 px-4 py-2 rounded-full text-sm font-medium border border-green-400/30"></span>
             🔬 Molecular Manufacturing
-          <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30">
-        {/* CTA Buttons */}"
+          <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30"></span>
+                {/* CTA Buttons */}"
         < className="flex flex-col,"$2 />
   sm:flex-row gap-4 justify-center items-center">
           <Link></Link>"
@@ -285,17 +291,47 @@ const, September30NewContentMegaBanne, r = () => {/* TODO: Fix JSX expression */
             <Sparkles className="w-5 h-5" /></Sparkles>
             Get Started Today,
           </Link>
-        </div>
-        {/* Tags */}"
+                </div>
+                {/* Tags */}"
         <div className="mt-8 flex flex-wrap gap-3 justify-center"></div>"
-          <span className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-400/30">
+          <span className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-400/30"></span>
             🧠 Neural Coding</$1>"
-          <span className="bg-cyan-500/20 text-cyan-200 px-4 py-2 rounded-full text-sm font-medium border border-cyan-400/30">
+          <span className="bg-cyan-500/20 text-cyan-200 px-4 py-2 rounded-full text-sm font-medium border border-cyan-400/30"></span>
             📊 Holographic AI</$1>"
-          <span className="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium border border-blue-400/30">
+          <span className="bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium border border-blue-400/30"></span>
             ⚛️ Quantum AI</$1>"
-          <span className="bg-green-500/20 text-green-200 px-4 py-2 rounded-full text-sm font-medium border border-green-400/30">
+          <span className="bg-green-500/20 text-green-200 px-4 py-2 rounded-full text-sm font-medium border border-green-400/30"></span>
             🔬 Molecular Manufacturing</$1>"
-          <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30">
+          <span className="bg-pink-500/20 text-pink-200 px-4 py-2 rounded-full text-sm font-medium border border-pink-400/30"></span>
             📚 AI Education
-}}")</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></a></a></a></p></p></h2></h2></h3></h3></h3></h3></article></article></article>
+}}")</div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></span>
+                </span></span>
+                </span></span>
+                </span></span>
+                </span></span>
+                </span></span>
+                </a></a>
+                </a></p>
+                </p></h2>
+                </h2></h3>
+                </h3></h3>
+                </h3></article>
+                </article></article>

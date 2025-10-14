@@ -3,11 +3,9 @@
  * Application Health Check Utility
  * Monitors application health and provides diagnostic information
  */
-import React from 'react'
-import { logger } from './logger'
-import { performanceMonitor } from './performanceMonitor'
-
-// Core Web Vitals thresholds
+import React from 'react';
+import { logger  } from './logger';
+import { performanceMonitor  } from './performanceMonitor';// Core Web Vitals thresholds
 const coreWebVitals = {
   lcp: { good: 2500, needsImprovement: 4000 },
   fid: { good: 100, needsImprovement: 300 },
@@ -25,7 +23,7 @@ export interface HealthCheck {
     name: string
   status: 'pass' | 'warn' | 'fail'
   message?: string,
-  details?: Record<string>
+  details?: Record<string></string>
   duration?: number
   }
 export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
@@ -70,7 +68,8 @@ class HealthCheckService {
   /**
    * Run all health checks
    */
-  async runChecks(): Promise<HealthStatus> {
+  async runChecks(): Promise<HealthStatus></HealthStatus>
+                {
     const now = Date.now()
     // Return cached status if still valid
     if (
@@ -154,7 +153,7 @@ export interface HealthCheck {
   s: 'pass' | 'warn' | 'fail'
   message?: string
   details?: Record
-          <string>
+          <string></string>
   duration?: number,
 }
 export type HealthCheckFunction = () => Promise<HealthCheck> | HealthCheck
@@ -228,7 +227,8 @@ constructor() {/* TODO: Fix JSX expression */}
    * Run all health checks
    */
   async runChecks(): Promise
-          <HealthStatus> {/* TODO: Fix JSX expression */}
+          <HealthStatus></HealthStatus>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const now = Date.now()
@@ -327,7 +327,8 @@ const hasFailures = checks.some((c) => c.status === 'fail')
   /**
    * Get current health status (may return cached)
    */
-  async getStatus(): Promise<HealthStatus> {
+  async getStatus(): Promise<HealthStatus></HealthStatus>
+                {
     return this.runChecks()
   }
   /**
@@ -389,7 +390,8 @@ $4}
       const good: string[] = []
       const vitals = Object.keys(coreWebVitals)
       
-      criticalMetrics.forEach(metric => {
+      criticalMetrics.forEach(metric =>
+                {
         const metrics = performanceMonitor.getMetrics()
         const value = metrics[metric as keyof typeof metrics]
         if (value === undefined) {
@@ -439,7 +441,8 @@ $4}
    */
   private checkBrowserAPIs(): HealthCheck {
   async getStatus(): Promise
-          <HealthStatus> {/* TODO: Fix JSX expression */}
+          <HealthStatus></HealthStatus>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     return this.runChecks()
@@ -602,7 +605,8 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
       'navigator'
     ]
     const missingAPIs: string[] = []
-    requiredAPIs.forEach((api) => {
+    requiredAPIs.forEach((api) =>
+                {
       if (typeof window !== 'undefined' && !(api in window)) {
         missingAPIs.push(api)
       }
@@ -612,7 +616,8 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
         name: 'browser-apis']
 
     const missingAPIs: string[] = []
-    requiredAPIs.forEach((api) => {// TODO: Add content
+    requiredAPIs.forEach((api) =>
+                {// TODO: Add content
   }
 
 }

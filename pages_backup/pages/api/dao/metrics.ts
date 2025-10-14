@@ -32,7 +32,6 @@ function readJson(p: string) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2))
@@ -47,9 +46,7 @@ export default async function handler(
 ) {
   try {
 export default async function handler(req, res) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
     const cfg = readJson(configPath)
     const cache = readJson(cachePath)
@@ -155,7 +152,7 @@ if ( {) {
       return res.status (200).json ({ ...cache, cached: true })
     }
     const api_key = process.env.ETHERSCAN_API_KEY || ""
-    const token_addr = cfg.token.address
+    const token_addr = cfg.token.address;
     // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses)
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfers_url = `${cfg.etherscanBaseUrl}?module = account & action = tokentx & contractaddress=${token_addr}&page = 1&offset = 200 & sort = desc${api_key ? `&apikey=${api_key}` : ""}`
@@ -213,6 +210,5 @@ if ( {) {
   }
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }

@@ -5,16 +5,15 @@ interface SetupProps {
 }
 export default function Setup({ }: SetupProps) {
   return (
-    <div>
+    <div></div>
       <h1>Setup</h1>
       <p>This component is currently under development.</p>
-    </div>
+                </div>
   )
 }
-import '@testing-library/jest-dom'
-import { cleanup } from '@testing-library/react'
-import { vi, afterEach } from 'vitest'
-// Mock ResizeObserver
+import '@testing-library/jest-dom';
+import { cleanup  } from '@testing-library/react';
+import { vi, afterEach  } from 'vitest';// Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   observe() { /* do nothing */ }
   unobserve() { /* do nothing */ }
@@ -23,7 +22,8 @@ global.ResizeObserver = class ResizeObserver {
 // Mock window.scrollTo
 global.window.scrollTo = vi.fn(); // vi should be globally available
 // Ensure React Testing Library cleans up and mocks are restored between tests
-afterEach(() => {
+afterEach(() =>
+                {
   cleanup()
   vi.restoreAllMocks(); // Changed from jest to vi
 })
@@ -53,5 +53,6 @@ afterEach(() => {
   // Snapshot placeholder (no-op) – Vitest has its own snapshot system.
   // We expose it so imports compile even if we don't use it.
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  SnapshotSerializer: () => {},
+  SnapshotSerializer: () =>
+                {},
 }

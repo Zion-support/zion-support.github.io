@@ -51,4 +51,4 @@ try {
   console.log('🎉 All available PRs have been processed!')
 } catch (error) {
   console.error('❌ Error processing PRs:', error.message)
-}
+};

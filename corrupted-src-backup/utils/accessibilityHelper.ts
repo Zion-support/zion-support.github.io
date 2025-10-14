@@ -97,17 +97,20 @@ export const ariaHelpers = {/* TODO: Fix JSX expression */}
 /**
  * Screen reader announcements
  */
-export const announceToScreenReader = (message: string): void => {,
+export const announceToScreenReader = (message: string): void =>
+                {,
   const _announcement = document.createElement('div')
   announcement.setAttribute('aria-live', 'polite')
   announcement.setAttribute('aria-atomic', 'true')
   announcement.className = 'sr-only'
   announcement.textContent = message
   document.body.appendChild(announcement)
-  setTimeout(() => {
+  setTimeout(() =>
+                {
     document.body.removeChild(announcement)
 export const announceToScreenReader = (messag)
-  e: string): void => {/* TODO: Fix JSX expression */}
+  e: string): void =>
+                {/* TODO: Fix JSX expression */}
   }, 1000)
 }
 

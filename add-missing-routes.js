@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import fs from 'fs';
-import { fileURLToPath } from 'url';
-
-// Read the current App.tsx;
-const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8');
-
-// Read the missing pages from the analysis;
-const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'));
-const missingPages = analysisData.missingPagesList;
-
-// Generate import statements for missing pages;
-=======
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -22,16 +9,17 @@ const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8')
 const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8'))
 const missingPages = analysisData.missingPagesList
 // Generate import statements for missing pages
->>>>>>> origin/main
-const generateImportStatement = (route) => {
-  const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page'
+const generateImportStatement = (route) =>
+                {
+  const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
   return `const ${componentName} = lazy(() => import('.${route}/page'));`
 }
 
 // Generate route statements
-const generateRouteStatement = (route) => {
+const generateRouteStatement = (route) =>
+                {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page'
-  return `            <Route path="${route}" element={<${componentName} />} />`
+  return `            <Route path="${route}" element={<${componentName} / / />} />`
 }
 
 // Generate all import statements
@@ -56,4 +44,4 @@ fs.writeFileSync('/workspace/src/App.tsx', newAppContent)
 if (process.env.NODE_ENV === 'development') {
   console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`)
   console.log('All navigation links should now work properly!')
-}
+};

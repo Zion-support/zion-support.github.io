@@ -11,13 +11,16 @@ export interface ModerationFlag {
   adminNotes?: string
 }
 
-export async function getFlagById (id: string): Promise < ModerationFlag | null> {
+export async function getFlagById (id: string): Promise < ModerationFlag | null></>
+                {
   return flags.find (flag => flag.id === id) || null
 }
-export async function readAllFlags (): Promise < ModerationFlag[]> {
+export async function readAllFlags (): Promise < ModerationFlag[]></>
+                {
   return [...flags]
 }
-export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
+export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag></>
+                {
   const flag: ModerationFlag = {
   flag && flag.status = status
   flag && flag.adminNotes = adminNotes || flag && flag.adminNotes
@@ -27,13 +30,16 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 }
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = []
-export async function getFlagById(id: string): Promise<ModerationFlag | null> {
+export async function getFlagById(id: string): Promise<ModerationFlag | null></ModerationFlag>
+                {
   return flags.find(flag => flag.id === id) || null
 }
-export async function readAllFlags(): Promise<ModerationFlag[]> {
+export async function readAllFlags(): Promise<ModerationFlag[]></ModerationFlag[]>
+                {
   return [...flags]
 }
-export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag> {
+export async function createFlag(data: Partial<ModerationFlag>): Promise<ModerationFlag></ModerationFlag>
+                {
   const flag: ModerationFlag = {
     id: `flag_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     contentId: data.contentId || '',
@@ -51,7 +57,8 @@ export async function updateFlagStatus(
   id: string, 
   status: ModerationFlag['status'], 
   adminNotes?: string
-): Promise<FlaggedContent | undefined> {
+): Promise<FlaggedContent | undefined></FlaggedContent>
+                {
   const flag = await getFlagById(id)
   if (!flag) return undefined
 import fs from 'fs'
@@ -72,13 +79,15 @@ async function ensureBaseFiles() {
     await writeFile(MODERATION_FILE, JSON.stringify({ flags: [] }, null, 2), 'utf8')
   }
 }
-export async function readAllFlags(): Promise<FlaggedContent[]> {
+export async function readAllFlags(): Promise<FlaggedContent[]></FlaggedContent[]>
+                {
   await ensureBaseFiles()
   const raw = await readFile(MODERATION_FILE, 'utf8')
   const data = JSON.parse(raw) as { flags: FlaggedContent[] }
   return data.flags || []
 }
-export async function writeAllFlags(flags: FlaggedContent[]): Promise<void> {
+export async function writeAllFlags(flags: FlaggedContent[]): Promise<void></void>
+                {
   await ensureBaseFiles()
   await writeFile(MODERATION_FILE, JSON.stringify({ flags }, null, 2), 'utf8')
 }
@@ -90,17 +99,20 @@ export function generateAiScores(seed?: string): AiScores {
   const v = (i: number) => Number((buf[i] / 255).toFixed(2))
   return { toxicity: v(0), nsfw: v(1), scam: v(2) }
 }
-export async function getFlagById(id: string): Promise<FlaggedContent | undefined> {
+export async function getFlagById(id: string): Promise<FlaggedContent | undefined></FlaggedContent>
+                {
   const all = await readAllFlags()
   return all.find(f => f.id === id)
 }
-export async function upsertFlag(flag: FlaggedContent): Promise<void> {
+export async function upsertFlag(flag: FlaggedContent): Promise<void></void>
+                {
   const all = await readAllFlags()
-  const idx = all.findIndex(f => f.id === flag.id)
+  const idx = all.findIndex(f => f.id === flag.id);
   if (idx >= 0) all[idx] = flag; else all.push(flag)
   await writeAllFlags(all)
 }
-export async function createFlag(init: Omit<FlaggedContent, 'id' | 'createdAt' | 'updatedAt' | 'aiScores' | 'status'> & { status?: ModerationStatus; aiScores?: AiScores }): Promise<FlaggedContent> {
+export async function createFlag(init: Omit<FlaggedContent, 'id' | 'createdAt' | 'updatedAt' | 'aiScores' | 'status'> & { status?: ModerationStatus; aiScores?: AiScores }): Promise<FlaggedContent></FlaggedContent>
+                {
   const now = new Date().toISOString()
   const flag: FlaggedContent = {
     id: generateFlagId(),
@@ -115,7 +127,8 @@ export async function createFlag(init: Omit<FlaggedContent, 'id' | 'createdAt' |
   await writeAllFlags(all)
   return flag
 }
-export async function updateFlagStatus(id: string, status: ModerationStatus, adminNotes?: string): Promise<FlaggedContent | undefined> {
+export async function updateFlagStatus(id: string, status: ModerationStatus, adminNotes?: string): Promise<FlaggedContent | undefined></FlaggedContent>
+                {
   const flag = await getFlagById(id)
   if (!flag) return undefined
   flag.status = status

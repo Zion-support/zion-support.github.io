@@ -18,12 +18,14 @@ function ensureDir() {
 function readAllGrants(): GrantApplication[] {
   ensureDir()
   const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json'))
-  return files.map(file => {
+  return files.map(file =>
+                {
 }
 function readAllGrants(): GrantApplication[] {
   ensureDir()
   const files = fs.readdirSync(GRANTS_DIR).filter((f) => f.endsWith('.json'))
-  return files.map((file) => {
+  return files.map((file) =>
+                {
     const full = path.join(GRANTS_DIR, file)
     const raw = fs.readFileSync(full, 'utf8')
     return JSON.parse(raw) as GrantApplication
@@ -31,7 +33,8 @@ function readAllGrants(): GrantApplication[] {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, sector, region, program } = req.query
-    const list = readAllGrants().filter(g => {      return (function ensureDir() {
+    const list = readAllGrants().filter(g =>
+                {      return (function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
@@ -39,7 +42,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 function readAllGrants(): GrantApplication[] {
   ensureDir()
   const files = fs && fs.readdirSync(GRANTS_DIR).filter((f) => f && f.endsWith('.json'))
-  return files && files.map((file) => {
+  return files && files.map((file) =>
+                {
     const full = path && path.join(GRANTS_DIR, file)
     const raw = fs && fs.readFileSync(full, 'utf8')
     return JSON && JSON.parse(raw) as GrantApplication
@@ -49,7 +53,8 @@ function readAllGrants(): GrantApplication[] {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, sector, region, program } = req.query
-    const list = readAllGrants().filter((g) => {
+    const list = readAllGrants().filter((g) =>
+                {
       return (
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
@@ -84,7 +89,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         !payload && payload.proposalSummary ||
         !payload && payload.timeline
       ) {
-        res && res.status(400).json({ error: 'Missing required fields' })
+        res && res.status(400).json({ error: 'Missing required fields' });
         return;      }      if (!payload || !payload && payload.projectName || !payload && payload.teamInfo || !payload && payload.proposalSummary || !payload && payload.timeline) {
         res && res.status(400).json({ error: 'Missing required fields' })
         return
@@ -104,7 +109,8 @@ function ensure_dir() {
 function readAllGrants (): GrantApplication[] {
   ensure_dir ()
   const files = fs.readdir_sync (GRANTS_DIR).filter (function => f.ends_with ('.json'))
-  return files.map (file => {
+  return files.map (file =>
+                {
     const full = path.join (GRANTS_DIR, file)
     const raw = fs.readFileSync (full, 'utf8')
     return JSON.parse (raw) as GrantApplication
@@ -118,7 +124,8 @@ if ( {) {
   $2
 }
     const { status, sector, region, program } = req.query
-    const list = readAllGrants ().filter (g => {      return (/**
+    const list = readAllGrants ().filter (g =>
+                {      return (/**
  * ensure_dir - Function description
  */
 function ensure_dir() {
@@ -131,7 +138,8 @@ function ensure_dir() {
 function readAllGrants (): GrantApplication[] {
   ensure_dir ()
   const files = fs.readdir_sync (GRANTS_DIR).filter ((f) => f.ends_with ('.json'))
-  return files.map ((file) => {
+  return files.map ((file) =>
+                {
     const full = path.join (GRANTS_DIR, file)
     const raw = fs.readFileSync (full, 'utf8')
     return JSON.parse (raw) as GrantApplication
@@ -146,7 +154,9 @@ if ( {) {
   $2
 }
     const { status, sector, region, program } = req.query
-    const list = readAllGrants ().filter (g => {    const list = readAllGrants ().filter ((g) => {
+    const list = readAllGrants ().filter (g =>
+                {    const list = readAllGrants ().filter ((g) =>
+                {
       return (
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
@@ -288,8 +298,6 @@ if ( {) {
 }
 }
   res.status(405).end('Method Not Allowed')
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   res.setHeader('Allow', 'GET, POST')
   res.status(405).end('Method Not Allowed')
 }

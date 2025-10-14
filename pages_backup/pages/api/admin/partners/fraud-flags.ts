@@ -11,7 +11,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .eq('partner_code', code)
     }
     const flags: any[] = []
-    counts.forEach((count, ip) => {
+    counts.forEach((count, ip) =>
+                {
       if (count > 30 && ip !== 'unknown') {
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
@@ -36,4 +37,4 @@ import type { NextApiRequest, NextApiResponse } from 'next'
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

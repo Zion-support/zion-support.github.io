@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 'use client'
 import React, { useState } from 'react'
-const SolutionsPage: React.FC = () => {
+const SolutionsPage: React.FC  = () => {
   const [activeTab, setActiveTab] = useState('ai')
   const _solutionCategories = [
     {
@@ -202,22 +202,22 @@ $4},
 $4}
   ]
   return (
-    <React.Fragment>
+    <React.Fragment></React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
+                {/* Header */}
+                <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text"></h1>
               Our Solutions,
   
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Comprehensive technology solutions designed to transform your business operations 
               and drive innovation across every aspect of your organization.
           {/* Solution Categories Tabs */}
-          <div className="mb-12">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {solutionCategories.map((category) => (
+                <div className="mb-12"></div>
+            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
+                {solutionCategories.map((category) => (
                 <$2 />
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
@@ -228,10 +228,11 @@ $4}
                   }`}
                 >
                   <category.icon className="w-5 h-5 mr-2" />
-                  <span className="font-medium">{category.name}
+                  <span className="font-medium"></span>
+                {category.name}
               ))}
-            <div className="text-center">
-              <p className="text-gray-300 max-w-2xl mx-auto">
+                <div className="text-center"></div>
+              <p className="text-gray-300 max-w-2xl mx-auto"></p>
     <div>Coming Soon</div>
   )
 }
@@ -632,11 +633,11 @@ $4}
   ]
   return (<div>Coming Soon</div>)
   )
-          <React.Fragment>
+          <React.Fragment></React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}"
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
+                {/* Header */}"
           <div className="text-center mb-16"></div>"
             < className="text-4xl,"$2 />
   md: text-5xl font-bold text-white mb-6 neon-text"></h1>
@@ -647,15 +648,15 @@ $4}
 //               and drive innovation across every aspect of your organization.
           {/* Solution Categories Tabs */}"
           <div className="mb-12"></div>"
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {solutionCategories.map((category) => ()}
-          <button>
+            <div className="flex flex-wrap justify-center gap-4 mb-8"></div>
+                {solutionCategories.map((category) => ()}
+                <button></button>
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
                   className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${}
   // TOD,
   O: Add content,
-}
+};
                     activeTab === category.id;`
                       ? `${category.bgColor} ${category.color} border-2 border-current`
                       : 'bg-slate-800/50 text-gray-300,
@@ -664,34 +665,37 @@ $4}
 //                 >
           "
           <category.icon className="w-5 h-5 mr-2" /></category>"
-                  <span className="font-medium">{category.name}
+                  <span className="font-medium"></span>
+                {category.name}
               ))}
-            </div>"
+                </div>"
             <div className="text-center"></div>"
-              <p className="text-gray-300 max-w-2xl mx-auto">
+              <p className="text-gray-300 max-w-2xl mx-auto"></p>
                 {solutionCategories.find(cat => cat.id === activeTab)?.description}
           {/* Solutions Grid */}
-          <div className="mb-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {solutions[activeTab as keyof typeof solutions].map((solution, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
-                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}>
+                <div className="mb-16"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                {solutions[activeTab as keyof typeof solutions].map((solution, index) => (
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300"></div>
+                  <div className="flex items-start mb-4"></div>
+                    <div className={`w-12 h-12 bg-slate-700/50 rounded-lg flex items-center justify-center mr-4`}></div>
                       <solution.icon className={`w-6 h-6 ${solution.color}`} />
-                    <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}
-                      <p className="text-gray-300 text-sm mb-4">{solution.description}
-                  <div className="mb-4">
+                    <div className="flex-1"></div>
+                      <h3 className="text-xl font-semibold text-white mb-2"></h3>
+                {solution.title}
+                <p className="text-gray-300 text-sm mb-4"></p>
+                {solution.description}
+                <div className="mb-4"></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:
-                    <ul className="space-y-1">
-                      {solution.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                    <ul className="space-y-1"></ul>
+                {solution.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-          {/* Solutions Grid */}"
+                {/* Solutions Grid */}"
           <div className="mb-16"></div>"
             < className="grid grid-cols-1,"$2 />
   md:grid-cols-2 gap-8">
-              {solutions[activeTab as keyof typeof solutions].map((solution, index) => ()}"
+                {solutions[activeTab as keyof typeof solutions].map((solution, index) => ()}"
           < key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"$2 />
   hover:border-cyan-400/50 transition-all duration-300"></div>"
                   <div className="flex items-start mb-4"></div>`
@@ -699,75 +703,82 @@ $4}
                       <solution.icon className={`w-6 h-6 ${solution.color}`} />
                     </div>"
                     <div className="flex-1"></div>"
-                      <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>"
-                      <p className="text-gray-300 text-sm mb-4">{solution.description}
-                  </div>"
+                      <h3 className="text-xl font-semibold text-white mb-2"></h3>
+                {solution.title}
+                </h3>"
+                      <p className="text-gray-300 text-sm mb-4"></p>
+                {solution.description}
+                </div>"
                   <div className="mb-4"></div>"
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key,
   Features:</h4>"
-                    <ul className="space-y-1">
-                      {solution.features.map((feature, featureIndex) => ()}"
+                    <ul className="space-y-1"></ul>
+                {solution.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>"
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
+                {feature}
                       ))}
-                  <div className="flex items-center justify-between">
-                    <div className={`text-lg font-bold ${solution.color}`}>
-                      {solution.pricing}
-                    <$2 />
+                <div className="flex items-center justify-between"></div>
+                    <div className={`text-lg font-bold ${solution.color}`}></div>
+                {solution.pricing}
+                <$2 />
                       href="/contact"
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                   </div>"
                   <div className="flex items-center justify-between"></div>`
-                    <div className={`text-lg font-bold ${solution.color}`}>
-                      {solution.pricing}
-                    </div>
+                    <div className={`text-lg font-bold ${solution.color}`}></div>
+                {solution.pricing}
+                </div>
                     <$2 />
                       href="/contact" className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium text-sm transition-colors"
 // >
 //                       Learn More,"
           <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
-                    </a>
+                </a>
                   </div>
                 </div>
               ))}
           {/* Benefits Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+                <div className="mb-16"></div>
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
               Why Choose Our Solutions?
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                {benefits.map((benefit, index) => (
+                <div key={index} className="text-center"></div>
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}
+                  <h3 className="text-lg font-semibold text-white mb-2"></h3>
+                {benefit.title}
           {/* Benefits Section */}"
           <div className="mb-16"></div>"
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
+            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
 // Why Choose Our Solutions?
           </h2>"
             < className="grid grid-cols-1,$2 />
   md:grid-cols-2,"
   lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => ()}"
+                {benefits.map((benefit, index) => ()}"
           <div key={index} className="text-center"></div>"
                   <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   </div>"
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>"
-                  <p className="text-gray-300 text-sm">{benefit.description}
+                  <h3 className="text-lg font-semibold text-white mb-2"></h3>
+                {benefit.title}
+                </h3>"
+                  <p className="text-gray-300 text-sm"></p>
+                {benefit.description}
               ))}
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
+                <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Ready to Transform Your Business?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Get a free consultation and discover how our solutions can revolutionize your operations 
               and drive unprecedented growth.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <$2 />
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
@@ -791,11 +802,11 @@ $4}
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
 // Ready to Transform Your Business?
           </h2>"
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
 // Get a free consultation and discover how our solutions can revolutionize your operations
 //               and drive unprecedented growth.
           </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <$2 />
                 href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
@@ -816,17 +827,30 @@ $4}
           <Mail className="w-4 h-4 mr-2" /></Mail>
 // Email Us
           </a>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
       <Footer />
     </React.Fragment>
-    </div>
+                </div>
   ),
 }
 export default SolutionsPage</a>
+                </a>
   </a>
-  </a>
-  </a>
-</div></div></div></div></div></div></div></div></div></div></div></span></span></button></p></p></p></p></p></p></h2></h3></h3></h4></ul></ul></li>
+                </a>
+</div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </span></span>
+                </button></p>
+                </p></p>
+                </p></p>
+                </p></h2>
+                </h3></h3>
+                </h4></ul>
+                </ul></li>

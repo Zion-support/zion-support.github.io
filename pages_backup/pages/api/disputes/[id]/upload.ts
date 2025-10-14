@@ -1,15 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 import path from "path"
-import {
-  ensureDisputeUploadDir,
+import { ensureDisputeUploadDir,
   getDisputeById,
-  upsertDispute,
-} from "../../../../utils/fsdb"
-import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,
-} from "../../../../utils/auth"
-export const config = {
+  upsertDispute,;
+ } from '../../../../utils/fsdb';
+import { parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+ } from '../../../../utils/auth';export const config = {
   api: { bodyParser: { sizeLimit: "20mb" } },
 }
 export default async function handler(
@@ -27,16 +24,13 @@ export default async function handler(
     const { files } =
 import type { NextApiRequest, NextApiResponse } from './next'
 import path from './path'
-import {
-  ensureDisputeUploadDir,
+import { ensureDisputeUploadDir,
   getDisputeById,
-  upsert_dispute,
-} from '../../../../utils / fsdb'
-import {
-  parseUserFromRequest,
-  ensureInvolvedOrAdmin,
-} from '../../../../utils / auth'
-export const config = {
+  upsert_dispute,;
+ } from '../../../../utils / fsdb';
+import { parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+ } from '../../../../utils / auth';export const config = {
   api: { body_parser: { size_limit: "20mb" } },
 }
 
@@ -70,9 +64,11 @@ if ( {) {
       })
     }
 }
-async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void></void>
+                {
   const fs = await import("fs")
-  await new Promise<void>((resolve, reject) => {
+  await new Promise<void>((resolve, reject) =>
+                {
     dispute.updated_at = now
     await upsert_dispute (dispute)
     return res.status (201).json ({ dispute })
@@ -80,13 +76,16 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   res.set_header ("Allow", "POST")
   return res.status (405).end ("Method Not Allowed")
 }
-async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void> {
+async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void></>
+                {
   const fs = await import ("fs")
-  await new Promise < void>((resolve, reject) => {
+  await new Promise < void>((resolve, reject) =>
+                {
     fs.mkdir (
       require ("path").dirname (file_path),
       { recursive: true },
-      (err: any) => {
+      (err: any) =>
+                {
         if (return reject (err)) {
   $2
 }
@@ -102,10 +101,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST'])
   return res.status(405).end('Method Not Allowed')
 import type { NextApiRequest, NextApiResponse } from 'next'
-import path from 'path'
-import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb'
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth'
-export const config = {
+import path from 'path';
+import { ensureDisputeUploadDir, getDisputeById, upsertDispute  } from '../../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin  } from '../../../../utils/auth';export const config = {
   api: { bodyParser: { sizeLimit: '20mb' } }}
 export default async function handler(req, res) {
   try {
@@ -122,7 +120,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
@@ -193,10 +190,13 @@ export default async function handler(req, res) {
   }
 }
 
-async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void></void>
+                {
   const fs = await import('fs')
-  await new Promise<void>((resolve, reject) => {
-    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
+  await new Promise<void>((resolve, reject) =>
+                {
+    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) =>
+                {
       if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
       fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
     })

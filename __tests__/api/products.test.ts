@@ -1,12 +1,13 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import { createMocks, createRequest, createResponse } from 'node-mocks-http'
-import productHandler from '@/pages/api/products/index'
+import { NextApiRequest, NextApiResponse  } from 'next';
+import { createMocks, createRequest, createResponse  } from 'node-mocks-http';import productHandler from '@/pages/api/products/index'
 import { PrismaClient } from '@prisma/client'
-jest.mock('@prisma/client', () => {
-  const mPrismaClient = {
+jest.mock('@prisma/client', () =>
+                {
+  const mPrismaClient = {;
 import { NextApiRequest, NextApiResponse } from 'next';import { createMocks, createRequest as _createRequest, createResponse as _createResponse } from node-mocks-http';import productHandler from @/pages/api/products/index';import { PrismaClient } from @prisma/client'
 // Mock Prisma Client
-jest.mock('@prisma/client', () => {'  const mPrismaClient = {
+jest.mock('@prisma/client', () =>
+                {'  const mPrismaClient = {
     product: {
       findMany: jest.fn(),
       aggregate: jest.fn()
@@ -29,17 +30,21 @@ interface ProductLike {
   currency?: string
   tags?: string[]
 }
-describe('/api/products API Endpoint', () => {
-  let req: ReturnType<typeof createRequest>
-  let res: ReturnType<typeof createResponse>
-  beforeEach(() => {
+describe('/api/products API Endpoint', () =>
+                {
+  let req: ReturnType<typeof createRequest></typeof>
+  let res: ReturnType<typeof createResponse></typeof>
+  beforeEach(() =>
+                {
     jest.clearAllMocks()
     prisma = new PrismaClient()
 let prisma: PrismaClient
-describe('/api/products API Endpoint', () => {'  let _req: ReturnType<typeof _createRequest>
-  let _res: ReturnType<typeof _createResponse>
-  beforeEach(() => {
-    jest.clearAllMocks()
+describe('/api/products API Endpoint', () =>
+                {'  let _req: ReturnType<typeof _createRequest></typeof>
+  let _res: ReturnType<typeof _createResponse></typeof>
+  beforeEach(() =>
+                {
+    jest.clearAllMocks();
     prisma = new PrismaClient(); // Get the mocked instance
     // Default mock for productReview.aggregate to avoid errors in stats calculation
     (prisma.productReview.aggregate as jest.Mock).mockResolvedValue({
@@ -47,8 +52,10 @@ describe('/api/products API Endpoint', () => {'  let _req: ReturnType<typeof _cr
       _count: { id: 0 }
     })
   })
-  describe('GET /api/products with fuzzy search', () => {
-    it('should return products matching "gpt" with similarity >= 0.8', async () => {
+  describe('GET /api/products with fuzzy search', () =>
+                {
+    it('should return products matching "gpt" with similarity >= 0.8', async () =>
+                {
       const mockRawResults = [
         { id: 'product-gpt-high-score', name_similarity: '0.9', description_similarity: '0.5' },
         { id: 'product-other', name_similarity: '0.2', description_similarity: '0.1' },
@@ -64,7 +71,8 @@ describe('/api/products API Endpoint', () => {'  let _req: ReturnType<typeof _cr
       (prisma.$queryRawUnsafe as jest.Mock).mockResolvedValue(filteredMockRawResults)
       const expectedProductIds = filteredMockRawResults.map(p => p.id)
       (prisma.product.findMany as jest.Mock).mockImplementation(
-        async ({ where }: { where: { id: { in: string[] } } }) => {
+        async ({ where }: { where: { id: { in: string[] } } }) =>
+                {
           return mockProductsData.filter(p => where.id.in.includes(p.id))
         }
       )
@@ -96,7 +104,9 @@ describe('/api/products API Endpoint', () => {'  let _req: ReturnType<typeof _cr
     })
   })
 })
-  describe('GET /api/products with fuzzy search', () => {'    it('should return products matching "gpt" with similarity >= 0.8', async () => {'      // 1. Mock database responses
+  describe('GET /api/products with fuzzy search', () =>
+                {'    it('should return products matching "gpt" with similarity >= 0.8', async () =>
+                {'      // 1. Mock database responses
       const mockRawResults = [
         { id: product-gpt-high-score', name_similarity: 0.9, description_similarity: 0.5 },        { id: product-other', name_similarity: 0.2, description_similarity: 0.1 },        { id: product-gpt-medium-score', name_similarity: 0.82, description_similarity: 0.85 },      ]
       // Note: The API sorts by GREATEST(name_similarity, description_similarity) DESC
@@ -115,7 +125,8 @@ describe('/api/products API Endpoint', () => {'  let _req: ReturnType<typeof _cr
       (prisma.$queryRawUnsafe as jest.Mock).mockResolvedValue(filteredMockRawResults)
       // findMany will be called with IDs from filteredMockRawResults
       const expectedProductIds = filteredMockRawResults.map(p => p.id)
-      (prisma.product.findMany as jest.Mock).mockImplementation(async ({ where }) => {
+      (prisma.product.findMany as jest.Mock).mockImplementation(async ({ where }) =>
+                {
         return mockProductsData.filter(p => where.id.in.includes(p.id))
       })
       // 2. Create mock request and response

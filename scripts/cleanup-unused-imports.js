@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
+import path from 'path';
+import { execSync  } from 'child_process';
+import { fileURLToPath  } from 'url';const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 console.log('🧹 Starting cleanup of unused imports and console statements...')
 // Function to remove unused imports and console statements
@@ -21,12 +20,14 @@ function cleanupFile(filePath) {
     // Remove unused imports (basic cleanup)
     const importRegex = /^import\s+{[^}]*}\s+from\s+['"][^'"]+['"];?\s*$/gm
     const imports = content.match(importRegex) || []
-    imports.forEach(importStatement => {)
+    imports.forEach(importStatement =>
+                {)
       // Extract imported items;)
       const match = importStatement.match(/import\s+{([^}]+)}\s+from/)
       if (match) {
         const importedItems = match[1].split(',').map(item => item.trim())
-        const unusedItems = importedItems.filter(item => {)
+        const unusedItems = importedItems.filter(item =>
+                {)
           const itemName = item.split(' as ')[0].trim()
           // Check if the imported item is actually used in the file
           const usageRegex = new RegExp(`\\b${itemName}\\b`, 'g')
@@ -86,7 +87,8 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 const files = findFiles('./app')
 let cleanedCount = 0
 console.log(`Found ${files.length} files to process...`)
-files.forEach(file => {
+files.forEach(file =>
+                {
     )
   if (cleanupFile(file)) {
     cleanedCount++
@@ -102,4 +104,4 @@ try {
     console.log('⚠️ ESLint fix had some issues, but continuing...')
   }
 
-console.log('\n✨ Cleanup process completed successfully!')
+console.log('\n✨ Cleanup process completed successfully!');

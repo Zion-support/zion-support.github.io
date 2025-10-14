@@ -6,7 +6,8 @@ async function reportWebVitals() {/* TODO: Fix JSX expression */}
     const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals')
     const log = (metri,
   c: {/* TODO: Fix JSX expression */})
-  e: number }) => {/* TODO: Fix JSX expression */}
+  e: number }) =>
+                {/* TODO: Fix JSX expression */}
         //         }
     }
     onCLS(log)
@@ -22,8 +23,8 @@ if (!container) {/* TODO: Fix JSX expression */}
 const _root = createRoot(container)
 root.render(<React.StrictMode>)
     <App />)
-root.render(<React.StrictMode>
+root.render(<React.StrictMode></React.StrictMode>
     <App />
   </React.StrictMode>)
 )
-reportWebVitals()
+reportWebVitals();

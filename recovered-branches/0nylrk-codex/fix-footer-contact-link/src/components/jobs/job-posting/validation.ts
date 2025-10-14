@@ -44,4 +44,4 @@ export const jobSchema = z.object({
     message: "Please enter a valid URL.",
   }).optional(),
 })
-export type JobSchemaType = z.infer<typeof jobSchema>
+export type JobSchemaType = z.infer<typeof jobSchema>;

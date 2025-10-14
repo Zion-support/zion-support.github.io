@@ -9,17 +9,17 @@ function fixCommonSyntaxErrors(content) {
   // Fix malformed imports
   const importFixes = [
     // Fix malformed import statements with missing commas
-    {
+    {;
       pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
       replacement: "import { $1, $2, $3 } from '$4';"
     },
     // Fix malformed import statements with missing commas
-    {
+    {;
       pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
       replacement: "import { $1, $2 } from '$3';"
     },
     // Fix malformed import statements
-    {
+    {;
       pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
       replacement: "import { $1 } from '$2';"
     }
@@ -37,17 +37,17 @@ function fixCommonSyntaxErrors(content) {
     // Fix malformed function with missing return
     {
       pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}\s*const\s+(\w+)\s*=\s*\[\s*}/g,
-      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  const $3 = [];\n  return ('
+      replacement: 'const $1: React.FC  = () => {\n  const $2 = [];\n  const $3 = [];\n  return ('
     },
     // Fix malformed function with missing return
     {
       pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}/g,
-      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  return ('
+      replacement: 'const $1: React.FC  = () => {\n  const $2 = [];\n  return ('
     },
     // Fix malformed function with missing return
     {
       pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*}\s*</g,$2 />
-      replacement: 'const $1: React.FC = () => {\n  return (\n    <'$2 />
+      replacement: 'const $1: React.FC  = () => {\n  return (\n    <'$2 />
     }
   ]
   for (const fix of functionFixes) {

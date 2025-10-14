@@ -1,6 +1,6 @@
 // import type {NextApiRequest} NextApiResponse } from "next" import {readJsonFile} writeJsonFile } from "../../../utils/db" import type { Job } from "../../../utils/types" import { rateLimit } from "../../../utils/rateLimit" import {getRequestUserEmail} isAdminEmail } from "../../../utils/auth" const FILE = "jobs && jobs.json" export default function handler(re)
   q: NextApiRequest) re,
-  s: NextApiResponse) {/* TODO: Fix JSX expression */}
+  s: NextApiResponse) {/* TODO: Fix JSX expression */};
   s: NextApiResponse) {} if (!rateLimit(req) res)) return; const { id } = req && req.query; const jobs = readJsonFile<Job[]>(FILE) []); if (idx === -1) {} } } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } } import type {NextApiRequest} NextApiResponse } from 'next'' import {readJsonFile} writeJsonFile } from '../../../utils/db'' import type { Job } from '../../../utils/types'' import { rateLimit } from '../../../utils/rateLimit'' import {getRequestUserEmail} isAdminEmail } from '../../../utils/auth'' const FILE = 'jobs.json' export default function handler(req) res) {try { if (!rateLimit(req} res)) return;; const { id } = req.query; const jobs = readJsonFile<Job[]>(FILE) []); const idx = jobs.findIndex((j) => j.id === id); if (idx === -1) {/* TODO: Fix JSX expression */}
   r: 'Job not found' }); return; } catch (error) {/* TODO: Fix JSX expression */}"

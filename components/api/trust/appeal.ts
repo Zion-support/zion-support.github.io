@@ -36,7 +36,7 @@ if ( {) {
 
   try {
     await supabase.from ('trust_appeals').insert (appeal)
-  } catch {}
+  } catch {};
   return res.status (200).json ({ ok: true, appeal });  // Check condition
 if ( {) {
   $2
@@ -79,3 +79,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch {}
   return res.status(200).json({ ok: true, appeal })
 }
+;

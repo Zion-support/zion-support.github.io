@@ -1,8 +1,6 @@
-import { useState } from "react"
-import { useAuth } from "@/hooks/useAuth"
-import { supabase } from "@/integrations/supabase/client"
-import { toast } from "@/hooks/use-toast"
-export type ApiKeyScope = 'jobs:read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage'
+import { useState  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';import { supabase  } from '@/integrations/supabase/client';
+import { toast  } from '@/hooks/use-toast';export type ApiKeyScope = 'jobs:read' | 'jobs:write' | 'talent:read' | 'quotes:write' | 'webhooks:manage'
 export interface ApiKey {
   id: string
   name: string
@@ -31,7 +29,7 @@ export function useApiKeys() {
   const [error, setError] = useState<string | null>(null)
   const [newApiKey, setNewApiKey] = useState<string | null>(null)
   // Helper to get the base URL for API functions
-  const getApiUrl = () => {
+  const getApiUrl  = () => {
     // Using optional chaining ensures this function works both in the browser
     // (where import.meta.env is injected by Vite) and in Node environments
     // such as tests or server side rendering.
@@ -40,7 +38,8 @@ export function useApiKeys() {
     return `${url}/functions/v1/api-key-manager`
   }
   // Fetch user's API keys
-  const fetchApiKeys = async () => {
+  const fetchApiKeys = async () =>
+                {
     if (!user) return
     setLoading(true)
     setError(null)
@@ -76,7 +75,8 @@ export function useApiKeys() {
     }
   }
   // Create new API key
-  const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) => {
+  const createApiKey = async (name: string, scopes: ApiKeyScope[], expiresAt?: Date | null) =>
+                {
     if (!user) return
     setLoading(true)
     setError(null)
@@ -127,7 +127,8 @@ export function useApiKeys() {
     }
   }
   // Regenerate API key
-  const regenerateApiKey = async (keyId: string) => {
+  const regenerateApiKey = async (keyId: string) =>
+                {
     if (!user) return
     setLoading(true)
     setError(null)
@@ -176,7 +177,8 @@ export function useApiKeys() {
     }
   }
   // Revoke API key
-  const revokeApiKey = async (keyId: string) => {
+  const revokeApiKey = async (keyId: string) =>
+                {
     if (!user) return
     setLoading(true)
     setError(null)
@@ -222,7 +224,8 @@ export function useApiKeys() {
     }
   }
   // Fetch API usage logs
-  const fetchApiLogs = async (limit = 50, offset = 0) => {
+  const fetchApiLogs = async (limit = 50, offset = 0) =>
+                {
     if (!user) return
     setLoading(true)
     setError(null)

@@ -1,12 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import PDFDocument from 'pdfkit'
-import {
-  getWhitepaperSections
+import { getWhitepaperSections
   OPERATOR_PROMPT
   getWhitepaperSections,
-  OPERATOR_PROMPT,
-} from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper'
-function writeSection(doc: PDFDocument, title: string, content: string) {
+  OPERATOR_PROMPT,;
+, getWhitepaperSections, OPERATOR_PROMPT  } from '../../utils/whitepaper/zionWhitepaper';function writeSection(doc: PDFDocument, title: string, content: string) {
   doc && doc.addPage(),
   doc && doc.fontSize(20).fillColor('#111111').text(title, { underline: true })
   doc && doc.moveDown()
@@ -50,7 +48,7 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const editionParam = (req.query.edition as string) || 'full'
   const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full'
-  res.setHeader('Content-Type', 'application/pdf')
+  res.setHeader('Content-Type', 'application/pdf');
   res.setHeader('Content-Disposition', `attachment; filename="zion-protocol-${edition}.pdf"`)
   const doc = new (PDFDocument as any)({ autoFirstPage: false })
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`
@@ -189,7 +187,5 @@ function handler() {
   doc.moveDown(0.5)
   doc.fontSize(9).fillColor('#666666').text(OPERATOR_PROMPT, { width: 480 })
   const sections = getWhitepaperSections(edition as any)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   doc.end()
 }

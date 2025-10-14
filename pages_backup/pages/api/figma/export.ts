@@ -56,7 +56,7 @@ function handler() {
     const buffer = await zip.generateAsync({ type: "nodebuffer" })
     res.setHeader("Content-Type", "application/zip")
     res.setHeader(
-      "Content-Disposition",
+      "Content-Disposition",;
       `attachment; filename=zion-design-${kind}.zip`,
     )
     res.status(200).send(buffer)
@@ -98,7 +98,7 @@ export default async function handler(req, res) {
     const buffer = await zip.generateAsync({ type: "nodebuffer" })
     res.setHeader("Content-Type", "application/zip")
     res.setHeader(
-      "Content-Disposition",
+      "Content-Disposition",;
       `attachment; filename=zion-design-${kind}.zip`,
     )
     res.status(200).send(buffer)
@@ -148,4 +148,3 @@ export default async function handler(req, res) {
 }
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

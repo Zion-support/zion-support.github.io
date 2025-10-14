@@ -10,37 +10,41 @@ import './index.css'
 // const Privacy = lazy(() => import('./pages/Privacy'))
 // const Terms = lazy(() => import('./pages/Terms'))
 function App() {
-  useEffect(() => {
+  useEffect(() =>
+                {
     // Initialize basic optimizations
     //     // Cleanup on unmount
-    return () => {
+    return () =>
+                {
       //       }
   }, [])
-  return(<ErrorBoundary>
-      <div>
+  return(<ErrorBoundary></ErrorBoundary>
+      <div></div>
   return (
-    <ErrorBoundary>
-      <div>
-        <Router>
+    <ErrorBoundary></ErrorBoundary>
+      <div></div>
+                <Router></Router>
 function App() {/* TODO: Fix JSX expression */}
 }
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() =>
+                {/* TODO: Fix JSX expression */}
       //       }
   }, [])
   return (<ErrorBoundary></ErrorBoundary>
       <div></div>
-        <Router></Router>
+                <Router></Router>
+                </Router>
           <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              <Route path="/" element={<Home />} />"
-              <Route path="/about" element={<About />} />"
-              <Route path="/services" element={<Services />} />"
-              <Route path="/blog" element={<Blog />} />"
-              <Route path="/contact" element={<Contact />} />"
-              <Route path="/team" element={<Team />} />"
-              <Route path="/privacy" element={<Privacy />} />"
-              <Route path="/terms" element={<Terms />} />
-            </Routes>)
+                <Routes></Routes>
+                <Route path="/" element={<Home / / />} />"
+              <Route path="/about" element={<About / / />} />"
+              <Route path="/services" element={<Services / / />} />"
+              <Route path="/blog" element={<Blog / / />} />"
+              <Route path="/contact" element={<Contact / / />} />"
+              <Route path="/team" element={<Team / / />} />"
+              <Route path="/privacy" element={<Privacy / / />} />"
+              <Route path="/terms" element={<Terms / / />} />
+                </Routes>)
           </Suspense>)
         </Router>)
       </div>)
@@ -53,7 +57,9 @@ class ErrorBoundary extends React.Component<
   n: React.ReactNode, fallback?: React.ReactNode },
   {/* TODO: Fix JSX expression */}
   r: boolean }
-> {/* TODO: Fix JSX expression */}
+></
+>
+                {/* TODO: Fix JSX expression */}
   n: React.ReactNode, fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
   r: false }
   }
@@ -67,12 +73,12 @@ class ErrorBoundary extends React.Component<
       return(this.props.fallback || ()
           <div className="min-h-screen flex items-center justify-center bg-gray-50">)
             <div className="text-center">)
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>)
+              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>);
               <;)$2 />
       return (
         this.props.fallback || (
-          <div className="min-h-screen flex items-center justify-center bg-gray-50">
-            <div className="text-center">
+          <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
+            <div className="text-center"></div>
               <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong
               <$2 />
                 onClick={() => this.setState({ hasError: false })}
@@ -88,11 +94,14 @@ class ErrorBoundary extends React.Component<
               >
                 Try again
               </button>
-            </div>
+                </div>
           </div>)),
     }
     return this.props.children
   }
 }
 export default App
-"</div></div></div></div></div></h1>
+"</div>
+                </div></div>
+                </div></div>
+                </h1>

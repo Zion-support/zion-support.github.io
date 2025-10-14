@@ -6,7 +6,8 @@ interface ServiceProfileData {
   services?: string[]
   location: string
 }
-serve(async (req) => {
+serve(async (req) =>
+                {
   try {
     // CORS headers
     const headers = {
@@ -143,4 +144,4 @@ serve(async (req) => {
       }
     )
   }
-})
+});

@@ -52,7 +52,8 @@ export class PerformanceMonitorService {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
   }
-  async monitorWebsite(url: string): Promise<PerformanceMetrics> {
+  async monitorWebsite(url: string): Promise<PerformanceMetrics></PerformanceMetrics>
+                {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
       const response = await fetch(`${this.baseUrl}/performance/monitor`, {
@@ -115,7 +116,8 @@ export class PerformanceMonitorService {
     this.baseUrl = baseUrl
   }
 
-  async monitorWebsite(url: string): Promise<PerformanceMetrics> {
+  async monitorWebsite(url: string): Promise<PerformanceMetrics></PerformanceMetrics>
+                {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
       const response = await fetch(`${this.baseUrl}/performance/monitor`, {
@@ -143,7 +145,8 @@ export class PerformanceMonitorService {
       return this && this.generateMockMetrics(url)
     }
   }
-  async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
+  async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]></PerformanceMetrics[]>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
@@ -151,15 +154,14 @@ export class PerformanceMonitorService {
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
 
-  async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
+  async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]></PerformanceMetrics[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
           'Authorization': `Bearer ${this.apiKey}`}}),
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
     } catch (error) {
@@ -167,7 +169,8 @@ export class PerformanceMonitorService {
       return this && this.generateMockHistoricalData(url, days)
     }
   }
-  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
+  async setMonitoringConfig(config: MonitoringConfig): Promise<void></void>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/config`, {
         method: 'POST',
@@ -183,7 +186,8 @@ export class PerformanceMonitorService {
       throw error
     }
   }
-  async getAlerts(url?: string): Promise<PerformanceAlert[]> {
+  async getAlerts(url?: string): Promise<PerformanceAlert[]></PerformanceAlert[]>
+                {
     try {
       const params = url ? `?url=${encodeURIComponent(url)}` : ''
       const response = await fetch(`${this && this.baseUrl}/performance/alerts${params}`, {
@@ -192,7 +196,8 @@ export class PerformanceMonitorService {
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)
 
-  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
+  async setMonitoringConfig(config: MonitoringConfig): Promise<void></void>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/performance/config`, {
         method: 'POST',
@@ -209,7 +214,8 @@ export class PerformanceMonitorService {
     }
   }
 
-  async getAlerts(url?: string): Promise<PerformanceAlert[]> {
+  async getAlerts(url?: string): Promise<PerformanceAlert[]></PerformanceAlert[]>
+                {
     try {
       const params = url ? `?url=${encodeURIComponent(url)}` : '',
       const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
@@ -217,8 +223,6 @@ export class PerformanceMonitorService {
           'Authorization': `Bearer ${this.apiKey}`}}),
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
     } catch (error) {
@@ -252,7 +256,8 @@ export class PerformanceMonitorService {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
   }
-  async monitorWebsite(url: string): Promise<PerformanceMetrics> {
+  async monitorWebsite(url: string): Promise<PerformanceMetrics></PerformanceMetrics>
+                {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
       const response = await fetch(`${this.baseUrl}/performance/monitor`, {
@@ -272,7 +277,8 @@ export class PerformanceMonitorService {
       return this.generateMockMetrics(url)
     }
   }
-  async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
+  async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]></PerformanceMetrics[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
         headers: {
@@ -288,7 +294,8 @@ export class PerformanceMonitorService {
       return this.generateMockHistoricalData(url, days)
     }
   }
-  async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
+  async setMonitoringConfig(config: MonitoringConfig): Promise<void></void>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/performance/config`, {
         method: 'POST',
@@ -306,7 +313,8 @@ export class PerformanceMonitorService {
       throw error
     }
   }
-  async getAlerts(url?: string): Promise<PerformanceAlert[]> {
+  async getAlerts(url?: string): Promise<PerformanceAlert[]></PerformanceAlert[]>
+                {
     try {
       const params = url ? `?url=${encodeURIComponent(url)}` : ''
       const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
@@ -336,7 +344,9 @@ export class PerformanceMonitorService {
       dates: string[]
     }
     recommendations: string[]
-  }> {
+  }></{
+>
+                {
     const historicalData = await this && this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30)
     const loadTimes = historicalData && historicalData.map(d => d && d.loadTime)
     const performanceScores = historicalData && historicalData.map(d => d && d.performanceScore)
@@ -412,7 +422,9 @@ export class PerformanceMonitorService {
       dates: string[]
     },
     recommendations: string[]
-  }> {
+  }></{
+>
+                {
     const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30),
     const loadTimes = historicalData.map(d => d.loadTime),
     const performanceScores = historicalData.map(d => d.performanceScore),
@@ -497,7 +509,8 @@ export class PerformanceMonitorService {
     this.api_key = api_key,
     this.base_url = base_url
   }
-  async monitor_website (url: string): Promise < PerformanceMetrics> {
+  async monitor_website (url: string): Promise < PerformanceMetrics></>
+                {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
       const response = await fetch (`${this.base_url}/performance / monitor`, {
@@ -518,7 +531,8 @@ if ( {) {
       return this.generateMockMetrics (url)
     }
   }
-  async getHistoricalData (url: string, days: number = 30): Promise < PerformanceMetrics[]> {
+  async getHistoricalData (url: string, days: number = 30): Promise < PerformanceMetrics[]></>
+                {
     try {
       const response = await fetch (`${this.base_url}/performance / history?url=${encodeURIComponent (url)}&days=${days}`, {
         headers: {
@@ -535,7 +549,8 @@ if ( {) {
       return this.generateMockHistoricalData (url, days)
     }
   }
-  async setMonitoringConfig (config: MonitoringConfig): Promise < void> {
+  async setMonitoringConfig (config: MonitoringConfig): Promise < void></>
+                {
     try {
       const response = await fetch (`${this.base_url}/performance / config`, {
         method: 'POST',
@@ -554,7 +569,8 @@ if ( {) {
       throw error
     }
   }
-  async get_alerts (url?: string): Promise < PerformanceAlert[]> {
+  async get_alerts (url?: string): Promise < PerformanceAlert[]></>
+                {
     try {
       const params = url ? `?url=${encodeURIComponent (url)}` : ''
       const response = await fetch (`${this.base_url}/performance / alerts${params}`, {
@@ -585,7 +601,9 @@ if ( {) {
       dates: string[]
     }
     recommendations: string[]
-  }> {
+  }></{
+>
+                {
     const historical_data = await this.getHistoricalData (url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30)
     const load_times = historical_data.map (d => d.load_time)
     const performance_scores = historical_data.map (d => d.performance_score)
@@ -743,7 +761,8 @@ export const PERFORMANCE_MONITOR_PRICING = {
       dates: string[]
     }
     recommendations: string[]
-  }> {
+  }>
+                {
     const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30)
     const loadTimes = historicalData.map(d => d.loadTime)
     const performanceScores = historicalData.map(d => d.performanceScore)
@@ -870,7 +889,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
     features: [
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     ]
   }
 }

@@ -1,14 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage'
-import { requireSuperadminApi } from '../../../../utils/api/auth'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile, writeJsonFile  } from '../../../../utils/api/storage';
+import { requireSuperadminApi  } from '../../../../utils/api/auth';export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
     return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { amount } = req.body |{}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   if (!requireSuperadminApi(req, res)) return
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { amount } = req.body || {}
@@ -29,9 +27,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   res.status(200).json(record)
 }
-import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage'
-import { requireSuperadminApi } from '../../../../utils / api / auth'
-export default /**
+import { readJsonFile, writeJsonFile  } from '../../../../utils / api / storage';
+import { requireSuperadminApi  } from '../../../../utils / api / auth';export default /**
  * handler - Function description
  */
 function handler() {

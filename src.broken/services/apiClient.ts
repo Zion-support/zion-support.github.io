@@ -1,19 +1,19 @@
-import axios from 'axios'
-import { toast } from '@/hooks/use-toast'
-import { supabase } from '@/integrations/supabase/client'
-import axiosRetry from 'axios-retry'
+import axios from 'axios';
+import { toast  } from '@/hooks/use-toast';
+import { supabase  } from '@/integrations/supabase/client';import axiosRetry from 'axios-retry'
 import { logErrorToProduction, logDebug } from '@/utils/productionLogger'
 import type { AxiosResponse } from 'axios'
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com/v1'
 // Global interceptor for all axios instances
 // Define the global error handler (exported for testing purposes)
-export const globalAxiosErrorHandler = (error: unknown) => {
+export const globalAxiosErrorHandler = (error: unknown) =>
+                {
   const contentType = typeof error === 'object' && error && 'response' in error && error.response && 'headers' in error.response ? (error.response as { headers?: Record<string, unknown> }).headers?.['content-type'] : undefined
   if (typeof contentType === 'string' && contentType.includes('text/html')) {
     toast.error('Server returned HTML instead of JSON')
     showError('html-error', 'Server returned HTML instead of JSON')
   }
-  const config = typeof error === 'object' && error && 'config' in error ? (error as { config?: unknown }).config || {} : {}
+  const config = typeof error === 'object' && error && 'config' in error ? (error as { config?: unknown }).config || {} : {};
   const axiosRetryState = config['axios-retry']; // Standard property used by axios-retry
   const isRetryingAndNotFinalConfiguredRetry = axiosRetryState && axiosRetryState.attemptNumber <= axiosRetryState.retryCount
   const status = typeof error === 'object' && error && 'response' in error && error.response && 'status' in error.response ? (error.response as { status?: number }).status : undefined
@@ -42,11 +42,13 @@ export const globalAxiosErrorHandler = (error: unknown) => {
     'github.com/api',
   ]
   // Check if URL should fail silently
-  const shouldFailSilently = (url: string): boolean => {
+  const shouldFailSilently = (url: string): boolean =></=>
+                {
     return SILENT_ERROR_PATTERNS.some(pattern => url.includes(pattern))
   }
   // Check if error should be shown to user
-  const shouldShowErrorToUser = (status: number, method: string, url: string): boolean => {
+  const shouldShowErrorToUser = (status: number, method: string, url: string): boolean =>
+                {
     // Never show errors for silent URLs
     if (shouldFailSilently(url)) {
       return false
@@ -99,7 +101,8 @@ export function setAuthToken(token: string) {
 }
 apiClient.interceptors.response.use(
   (response: AxiosResponse) => response,
-  async (error: unknown) => {
+  async (error: unknown) =>
+                {
     const status = typeof error === 'object' && error && 'response' in error && error.response && 'status' in error.response ? (error.response as { status?: number }).status : undefined
     if (status === 401) {
       try {

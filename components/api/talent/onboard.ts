@@ -91,7 +91,7 @@ async function summarizeAndTag(input: {
     try {
       const parsed = JSON.parse(content)
       if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
-        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
+        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) };
       const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
         { role: 'user', content: prompt }]
       temperature: 0.4})

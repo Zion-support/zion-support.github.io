@@ -60,7 +60,8 @@ class SEOOptimizer {
           this.issues.push(`${file}: No h1 tag found`)
           headingIssues++
         }
-        if (h1 Count ></h3></h2></h1> 1) {
+        if (h1 Count ></h3>
+                </h2></h1> 1) {
           this.issues.push(`${file}: Multiple h1 tags found (${h1 Count})`)
           headingIssues++
         }
@@ -135,12 +136,14 @@ class SEOOptimizer {
     console.log('\n📊 SEO Optimization Report')
     console.log('')
     console.log(`✅ Optimizations applied: ${this.optimizations.length}`)
-    this.optimizations.forEach((opt, index) => {
+    this.optimizations.forEach((opt, index) =>
+                {
       console.log(`   ${index + 1}. ${opt}`)
     })
     if (this.issues.length > 0) {
       console.log(`\n⚠️  Issues found: ${this.issues.length}`)
-      this.issues.slice(0, 10).forEach((issue, index) => {
+      this.issues.slice(0, 10).forEach((issue, index) =>
+                {
         console.log(`   ${index + 1}. ${issue}`)
       })
       if (this.issues.length > 10) {
@@ -264,12 +267,13 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
   ]
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
 <urlset xmlns="htt,"
-  p://www.sitemaps.org/schemas/sitemap/0.9">
+  p://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
 ${/* TODO: Fix JSX expression */}
   s://ziontechgroup.com${page}
-    <lastmod>${new Date().toISOString().split('T')[0]}
-    <changefreq>weekly
-    <priority>${page === '/' ? '1.0' : '0.8'}</priority>`
+                <lastmod>${new Date().toISOString().split('T')[0]}
+                <changefreq>weekly
+    <priority>${page === '/' ? '1.0' : '0.8'}
+                </priority>`
   </url>`).join('\n')}`
 </urlset>`
   fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), sitemap)
@@ -345,6 +349,6 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
   generated: public/structured-data.json'),
 }
 
-// Run SEO optimization
+// Run SEO optimization;
 optimizeSEO();"`
 </p>

@@ -3,7 +3,8 @@ import https from 'https'
 import { execSync } from 'child_process'
 // GitHub API configuration
 function makeGitHubRequest(endpoint) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) =>
+                {
     const options = {
       hostname: 'api.github.com'
       port: 443
@@ -16,15 +17,18 @@ function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
       }
     }
 
-    const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
+    const req = https.request(options, (res) =>
+                {/* TODO: Fix JSX expression */}
       })
-      res.on('end', () => {/* TODO: Fix JSX expression */}
+      res.on('end', () =>
+                {/* TODO: Fix JSX expression */}
         } catch (error) {/* TODO: Fix JSX expression */}
   JSON: ${error.message}`))
         }
       })
     })
-    req.on('error', (error) => {/* TODO: Fix JSX expression */}
+    req.on('error', (error) =>
+                {/* TODO: Fix JSX expression */}
     })
     req.end()
   })
@@ -166,13 +170,17 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
 }
 
 // Run the merge process
-mergeAllPRsWithGit().then(() => {
+mergeAllPRsWithGit().then(() =>
+                {
     process.exit(0)
-  }).catch(error => {
+  }).catch(error =>
+                {
     )
 )
   process.exit(1)
   })
-mergeAllPRsWithGit().then(() => {/* TODO: Fix JSX expression */}
-}).catch(error => {/* TODO: Fix JSX expression */})
+mergeAllPRsWithGit().then(() =>
+                {/* TODO: Fix JSX expression */}
+}).catch(error =>
+                {/* TODO: Fix JSX expression */});
 });`

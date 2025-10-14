@@ -1,7 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { readState, writeState } from "../../../lib/integrations/fileStore"
-import { getProviderById } from "../../../lib/integrations/registry"
-export default async function handler(
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState  } from '../../../lib/integrations/fileStore';
+import { getProviderById  } from '../../../lib/integrations/registry';export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -16,7 +15,8 @@ export default async function handler(
   const conn = state && state.connections.find((c) => c && c.providerId === providerId)
   if (!conn) return res && res.status(404).json({ error: "Connection not found" })
   const now = Date && Date.now()
-  writeState((s) => {
+  writeState((s) =>
+                {
     s.logs.push({
       id: `${now}-${providerId}-resync`
       timestamp: now
@@ -32,10 +32,9 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' })
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { readState, writeState } from '../../../lib/integrations/fileStore'
-import { getProviderById } from '../../../lib/integrations/registry'
-export default async function handler(req, res) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState, writeState  } from '../../../lib/integrations/fileStore';
+import { getProviderById  } from '../../../lib/integrations/registry';export default async function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
     } catch (error) {
@@ -56,7 +55,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const conn = state.connections.find(c => c.providerId === providerId)
   if (!conn) return res.status(400).json({ error: 'Provider not connected' })
   const now = Date.now()
-  writeState(s => {
+  writeState(s =>
+                {
     s.logs.push({ id: `${now}-${providerId}-resync`, timestamp: now, providerId: providerId as any, level: 'info', action: 'resync' })
     const target = s.connections.find(c => c.providerId === providerId)
     if (target) target.lastSyncAt = now
@@ -71,3 +71,4 @@ if (target.lastSyncAt = now) {
   })
   res.status (200).json ({ ok: true })
 }
+;

@@ -1,20 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from "next",
-import axios from "axios",
-import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage"
-import { verifySignature } from "../../../utils/sync/signature"
-import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle"
-import { SyncEvent } from "../../../utils/sync/types"
-function isAllowedByScope(stateType: string, scope: string): boolean {
+import axios from "axios",;
+import { readState, writeState, upsertEvent, getEntityId  } from '../../../utils/sync/storage';
+import { verifySignature  } from '../../../utils/sync/signature';import { computeMerkleRootFromVotes  } from '../../../utils/sync/merkle';
+import { SyncEvent  } from '../../../utils/sync/types';function isAllowedByScope(stateType: string, scope: string): boolean {
   if (scope === "full") return true
   if (scope === "dao") return stateType === "proposal" |stateType === "dao_endorsement"
   if (scope === "marketplace") return stateType === "token_transfer" |stateType === "talent_mobility" |stateType === "leaderboard_entry"
 import type { NextApiRequest, NextApiResponse } from "next"
-import axios from "axios"
-import {readState, writeState, upsertEvent, getEntityId} from "../../../utils/sync/storage"
-import {verifySignature} from "../../../utils/sync/signature"
-import {computeMerkleRootFromVotes} from "../../../utils/sync/merkle"
-import {SyncEvent} from "../../../utils/sync/types"
-import type { NextApiRequest, NextApiResponse } from 'next'
+import axios from "axios";
+import { readState, writeState, upsertEvent, getEntityId } from '../../../utils/sync/storage';
+import { verifySignature } from '../../../utils/sync/signature';import { computeMerkleRootFromVotes } from '../../../utils/sync/merkle';
+import { SyncEvent } from '../../../utils/sync/types';import type { NextApiRequest, NextApiResponse } from 'next'
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Event published' })
@@ -199,7 +195,8 @@ export default async function handler(req, res) {
     await Promise.all(
       currentState.config.peers
         .filter((p) => !p.paused)
-        .map(async (peer) => {
+        .map(async (peer) =>
+                {
           const url = new URL("/api/sync/publish", peer.baseUrl).toString()
           const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
           try {
@@ -249,7 +246,8 @@ if (headers["x - zion - signature"] = sig) {
     await Promise.all (
       current_state.config.peers
         .filter ((p) => !p.paused)
-        .map (async (peer) => {
+        .map (async (peer) =>
+                {
           const url = new URL ("/api / sync / publish", peer.base_url).to_string ()
           try {
             await axios.post (url, local_body, { headers, timeout: 5000 })
@@ -296,3 +294,4 @@ if (headers["x - zion - signature"] = sig) {
   }
 }
 }
+;

@@ -124,4 +124,4 @@ export const TALENT_PROFILES: TalentProfile[] = [
     createdAt: new Date().toISOString()}]
     createdAt: new Date().toISOString(),
   },
-]
+];

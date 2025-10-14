@@ -3,7 +3,8 @@ interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
 }
-export class AdvancedErrorBoundary extends Component<Props, State> {
+export class AdvancedErrorBoundary extends Component<Props, State></Props,>
+                {
   constructor(props: Props) {,
     super(props)
     this.state = { hasError: false }
@@ -12,7 +13,8 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
     return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
+export class AdvancedErrorBoundary extends Component<Props, State></Props,>
+                {/* TODO: Fix JSX expression */}
   r: false }
   }
   static getDerivedStateFromError(erro)
@@ -41,18 +43,19 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
             <details style={{ whiteSpace: 'pre-wrap' }}>)
       return (
         this.props.fallback || (
-          <div className="error-boundary">
+          <div className="error-boundary"></div>
             <h2>Something went wrong.
-            <details style={{ whiteSpace: 'pre-wrap' }}>
+            <details style={{ whiteSpace: 'pre-wrap' }}></details>
   render() {/* TODO: Fix JSX expression */}
   e: 'pre-wrap' }}>
-              {this.state.error && this.state.error.toString()}
-              <br />
-              {this.state.errorInfo?.componentStack}
+                {this.state.error && this.state.error.toString()}
+                <br />
+                {this.state.errorInfo?.componentStack}
         )
       )
     }
     return this.props.children
   }
 }
-export default AdvancedErrorBoundary</div></div></h2>
+export default AdvancedErrorBoundary</div>
+                </div></h2>;

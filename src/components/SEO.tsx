@@ -19,7 +19,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   canonical?: string
   noIndex?: boolean
   structuredData?: Record
-          <string>
+          <string></string>
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
   locale?: string
   alternateLocales?: {/* TODO: Fix JSX expression */}
@@ -72,7 +72,8 @@ export const,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
   alternateLocales = [])
-}) => {/* TODO: Fix JSX expression */}
+}) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const seo = {/* TODO: Fix JSX expression */}
@@ -92,7 +93,7 @@ export const,
 //     twitterCard,
 //     locale}
   // Generate structured data
-const generateStructuredData = () => {/* TODO: Fix JSX expression */}
+const generateStructuredData  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     if (structuredData) {/* TODO: Fix JSX expression */}
@@ -139,6 +140,6 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
     return baseStructuredData
   }
   return null
-}
+};
 export default SEO;`
   </SEOProps>

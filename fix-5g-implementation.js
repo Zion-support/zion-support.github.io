@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename)
 const filePath = path.join(__dirname, 'app/5 g-implementation/page.tsx')
 let content = fs.readFileSync(filePath, 'utf8')
 // Fix malformed JSX elements
-content = content.replace(/<\/undefined>/g, '')
+content = content.replace(/<\/undefined>/g, '');
 content = content.replace(/&quot;/g, '"')
 content = content.replace(/className="([^"]*)"([^>]*)><\/undefined>/g, 'className="$1"$2>')
 content = content.replace(/className="([^"]*)"([^>]*)><\/undefined><\/undefined>/g, 'className="$1"$2>')

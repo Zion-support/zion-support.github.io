@@ -52,18 +52,21 @@ function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): bo
 export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[], talent: SearchResult[], jobs: SearchResult[], projects: SearchResult[] } {
   const talent: SearchResult[] = TALENT_PROFILES
     .filter((p) => availabilityMatches(p.availability, filters.availability))
-    .filter((p) => {
+    .filter((p) =>
+                {
       if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase()),
       return true,
     })
-    .filter((p) => {
+    .filter((p) =>
+                {
       if (filters.minBudgetUsd || filters.maxBudgetUsd) {
         if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false,
         if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false,
       }
       return true,
     })
-    .map<SearchResult>((p) => {
+    .map<SearchResult>((p) =>
+                {
       const skillScore = computeSkillOverlap(p.skills, filters.skills),
       const textScore = computeRelevanceScore(`${p.name} ${p.title} ${p.bio}`, filters.keywords, 0.8),
       const priceScore = budgetScore(p.hourlyRateUsd, filters.minBudgetUsd, filters.maxBudgetUsd),
@@ -118,22 +121,25 @@ function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): bo
   const level = visibility || 'public'
   const order: AccessLevel[] = ['public', 'member', 'admin']
   return order.indexOf(access) >= order.indexOf(level)
-}
+};
 export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[]; talent: SearchResult[]; jobs: SearchResult[]; projects: SearchResult[] } {
   const talent: SearchResult[] = TALENT_PROFILES
     .filter((p) => availabilityMatches(p.availability, filters.availability))
-    .filter((p) => {
+    .filter((p) =>
+                {
       if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase())
       return true
     })
-    .filter((p) => {
+    .filter((p) =>
+                {
       if (filters.minBudgetUsd || filters.maxBudgetUsd) {
         if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false
         if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false
       }
       return true
     })
-    .map<SearchResult>((p) => {
+    .map<SearchResult>((p) =>
+                {
       const skillScore = computeSkillOverlap(p.skills, filters.skills)
       const textScore = computeRelevanceScore(`${p.name} ${p.title} ${p.bio}`, filters.keywords, 0.8)
       const priceScore = budgetScore(p.hourlyRateUsd, filters.minBudgetUsd, filters.maxBudgetUsd)

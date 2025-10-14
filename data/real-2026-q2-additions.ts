@@ -245,7 +245,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     taglin,
   e:
       'Monitor LLM quality, costs, latency, and hallucinations with guardrails.'
-    descriptio,
+    descriptio,;
   n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk; with playbooks for mitigation and auto-rollbacks.'
     feature,
   s: [,
@@ -1479,7 +1479,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     taglin,
   e:
       'Monitor LLM quality, costs, latency, and hallucinations with guardrails.'
-    descriptio,
+    descriptio,;
   n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk; with playbooks for mitigation and auto-rollbacks.'
     feature,
   s: [,
@@ -2035,7 +2035,7 @@ export const real2026Q2Additions = [
     ro,
   i: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
     lin,
-  k: 'http,
+  k: 'http,;
   s://ziontechgroup.com / services / msp - remote - device - ops'}];      'Windows / macOS / Linux agent and lightweight mode_patch automation and health policies_remote scripts and secure sessions_inventory, software metering, and alerts_ticketing and customer portals'
     perio,
   d: '/device/month',
@@ -2820,7 +2820,7 @@ export const real2026 Q2 Additions = [
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
     ]
-    useCases: [,
+    useCases: [,;
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],
     competitors: ['MonitaurCalypsoAICredo AI']}
@@ -3241,7 +3241,7 @@ export const real2026Q2Additions = [
     features: [,
       'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO) HIPAA add-ons)'
     ]
-    useCases: [,
+    useCases: [,;
       'Enterprise AI model governanceRegulatory readiness and auditsVendor model risk management'];,
     integrations: ['JiraServiceNowSlackGitHubAzure OpenAIVertex AIDatadog'],
     competitors: ['MonitaurCalypsoAICredo AI']}
@@ -3826,7 +3826,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   e: 'AI Synthetic Data Factory',' categor,
   y: 'AI & Data' taglin,
   e:,' 'Generate high - quality, private, and balanced datasets for ML training.', descriptio,
-  n:  ,' 'Produce privacy - preserving synthetic tabular and time - series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built - in quality metrics and drift checks.', feature,
+  n:  ,' 'Produce privacy - preserving synthetic tabular and time - series datasets with distribution control, class rebalancing, bias mitigation, and privacy guarantees. Built - in quality metrics and drift checks.', feature,;
   s: [,' 'Differential privacy and k - anonymity options',' 'Data schema import and auto - profiling',' 'Class balancing, minority class boosters',' 'Bias and fairness testing with reports',' 'Evaluation dashboard with KS / JS metrics',' 'SDKs for Python / JS and API access'; ]; use_case,
   s: [,' 'MSPs and IT providers',' 'Internal IT for SMBs',' 'BYOD governance'],' integration,
   s: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],' competitor,
@@ -4180,7 +4180,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   s: ['Atera', 'NinjaOne'],' pric,
   e: '$4', ' ro,
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',' lin,
-  k: 'http,
+  k: 'http,;
   s: //ziontechgroup.com/services/msp-remote-device-ops', } ' ]; 'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals' ' i,
   d: 'ai-governance-compliance-hub', nam,
   e: 'AI Governance & Compliance Hub',' categor,

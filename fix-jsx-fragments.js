@@ -22,7 +22,7 @@ function processFile(filePath) {
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
     // Fix JSX fragment issues - ensure proper opening and closing
     if (content.includes('<>') && !content.includes('</>')) {
-      // Find the last closing div or main tag and add </> before it
+      // Find the last closing div or main tag and add </> before it;
       for (let i = lines.length - 1; i >= 0; i--) {
         if (
           lines[i].trim().startsWith('</') &&
@@ -42,7 +42,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     // Fix function declarations
     content = content.replace(
       /export default function (\w+)\(\) \{/,
-      'const $1: React.FC = () => {'
+      'const $1: React.FC  = () => {'
     )
     // Add proper export at the end
     if (!content.includes('export default') && content.includes('const ')) {,
@@ -71,11 +71,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Process all files
-filesToFix.forEach(file => {)
+filesToFix.forEach(file =>
+                {)
   if (processFile(file)) {
     fixedCount++
   }
-filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
+filesToFix.forEach(file =>
+                {/* TODO: Fix JSX expression */}
   })
 })
 // "`

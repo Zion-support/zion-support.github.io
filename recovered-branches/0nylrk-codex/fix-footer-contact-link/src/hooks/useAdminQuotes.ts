@@ -1,10 +1,9 @@
-import { useState } from 'react'
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { quoteRequestService } from '@/services/quoteRequestService'
+import { useState  } from 'react';
+import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';import { quoteRequestService } from '@/services/quoteRequestService'
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes'
 import { useToast } from '@/components/ui/use-toast'
 import type { DateRange } from '@/types/dateRange'
-export const useAdminQuotes = () => {
+export const useAdminQuotes  = () => {
   const { toast } = useToast()
   const queryClient = useQueryClient()
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all')
@@ -19,7 +18,8 @@ export const useAdminQuotes = () => {
     enabled: true,
   })
   // Filter quotes based on selected filters
-  const filteredQuotes = allQuotes.filter((quote) => {
+  const filteredQuotes = allQuotes.filter((quote) =>
+                {
     // Status filter
     if (statusFilter !== 'all' && quote.status !== statusFilter) {
       return false
@@ -52,7 +52,7 @@ export const useAdminQuotes = () => {
     }
     if (dateRange?.to) {
       const createdAt = new Date(quote.created_at)
-      const endDate = new Date(dateRange.to)
+      const endDate = new Date(dateRange.to);
       endDate.setHours(23, 59, 59, 999); // End of day
       if (createdAt > endDate) {
         return false
@@ -64,14 +64,16 @@ export const useAdminQuotes = () => {
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string; status: QuoteStatus }) => 
       quoteRequestService.updateStatus(id, status),
-    onSuccess: () => {
+    onSuccess: () =>
+                {
       toast({
         title: "Status updated",
         description: "The quote request status has been updated"
       })
       queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] })
     },
-    onError: (error: Error) => {
+    onError: (error: Error) =>
+                {
       toast({
         title: "Error",
         description: "Failed to update status: " + error.message,
@@ -83,7 +85,8 @@ export const useAdminQuotes = () => {
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string; isArchived: boolean }) => 
       quoteRequestService.toggleArchive(id, isArchived),
-    onSuccess: (_, variables) => {
+    onSuccess: (_, variables) =>
+                {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived",
         description: variables.isArchived 
@@ -92,7 +95,8 @@ export const useAdminQuotes = () => {
       })
       queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] })
     },
-    onError: (error: Error) => {
+    onError: (error: Error) =>
+                {
       toast({
         title: "Error",
         description: "Failed to update quote: " + error.message,
@@ -103,14 +107,16 @@ export const useAdminQuotes = () => {
   // Delete mutation
   const deleteMutation = useMutation({
     mutationFn: (id: string) => quoteRequestService.delete(id),
-    onSuccess: () => {
+    onSuccess: () =>
+                {
       toast({
         title: "Quote deleted",
         description: "The quote request has been permanently deleted"
       })
       queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] })
     },
-    onError: (error: Error) => {
+    onError: (error: Error) =>
+                {
       toast({
         title: "Error",
         description: "Failed to delete quote: " + error.message,

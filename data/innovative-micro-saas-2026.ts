@@ -276,4 +276,4 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [
     rating: 4.8,
     reviews: 445
   }
-]
+];

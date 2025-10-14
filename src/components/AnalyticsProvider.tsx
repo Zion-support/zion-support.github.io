@@ -12,8 +12,10 @@ interface AnalyticsProviderProps {
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ 
   children, 
   trackingId = 'G-XXXXXXXXXX' 
-}) => {
-  useEffect(() => {
+}) =>
+                {
+  useEffect(() =>
+                {
     // Initialize Google Analytics
     if (typeof window !== 'undefined' && trackingId !== 'G-XXXXXXXXXX') {
       // Load Google Analytics script
@@ -33,7 +35,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_location: window.location.href})
     }
   }, [trackingId])
-  const track = (event: string, properties?: Record<string, any>) => {
+  const track = (event: string, properties?: Record<string, any>) =>
+                {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, properties)
   }
@@ -42,7 +45,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     console.log('Analytics Event:', event, properties)
   }
   }
-  const page = (name: string, properties?: Record<string, any>) => {
+  const page = (name: string, properties?: Record<string, any>) =>
+                {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         page_title: name,
@@ -54,7 +58,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     console.log('Analytics Page:', name, properties)
   }
   }
-  const identify = (userId: string, traits?: Record<string, any>) => {
+  const identify = (userId: string, traits?: Record<string, any>) =>
+                {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         user_id: userId,
@@ -70,12 +75,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     page,
     identify}
   return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
+    <AnalyticsContext.Provider value={value}></AnalyticsContext.Provider>
+                {children}
+                </AnalyticsContext.Provider>
   )
 }
-export const useAnalytics = (): AnalyticsContextType => {
+export const useAnalytics = (): AnalyticsContextType =>
+                {
     const context = useContext(AnalyticsContext)
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')
@@ -88,4 +94,4 @@ declare global {
     dataLayer: any[],
     gtag: (...args: any[]) => void
   }
-}
+};

@@ -264,7 +264,7 @@ export interface AIAutonomousEcosystem2030 {
 export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [,
   // AI Autonomous Business Management
   {
-reviews: 12
+reviews: 12;
 }];  reviews: number
       'Autonomous strategic planningSelf-optimizing operationsIntelligent financial managementAutomated marketing campaignsCustomer relationship automationPredictive business analyticsRisk assessment and mitigationPerformance optimization'
       'Market trend analysisCompetitive intelligence'
@@ -1380,4 +1380,4 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
     rating: 4.9
     reviews: 12,
   }
-]
+];

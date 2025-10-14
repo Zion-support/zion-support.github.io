@@ -57,3 +57,4 @@ try {
     console.error('❌ Error during merge process:', error.message)
   process.exit(1)
   }
+;

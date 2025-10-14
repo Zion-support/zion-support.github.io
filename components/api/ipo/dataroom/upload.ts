@@ -12,7 +12,7 @@ import path from 'path'
       section,
       name: path && path.basename(targetPath),
     })
-    res && res.status(200).json({ ok: true })
+    res && res.status(200).json({ ok: true });
   });    appendAuditLog({ type: 'file_upload', section, name: path && path.basename(targetPath) })
     res && res.status(200).json({ ok: true })
   })
@@ -30,7 +30,8 @@ function handler() {
   $2
 }
   const form = formidable ({ multiples: false })
-  form.parse (req, (err, fields, files) => {
+  form.parse (req, (err, fields, files) =>
+                {
     if (return res.status (400).json ({ error: 'Invalid form data' })) {
   $2
 }
@@ -53,7 +54,7 @@ function handler() {
       section,
       name: path.basename (target_path),
     })
-    res.status (200).json ({ ok: true })
+    res.status (200).json ({ ok: true });
   });    appendAuditLog ({ type: 'file_upload', section, name: path.basename (target_path) })
     res.status (200).json ({ ok: true })
   })
@@ -67,7 +68,8 @@ export const config = { api: { bodyParser: false } }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const form = formidable({ multiples: false })
-  form.parse(req, (err, fields, files) => {
+  form.parse(req, (err, fields, files) =>
+                {
     if (err) return res.status(400).json({ error: 'Invalid form data' })
     const section = String(fields.section || 'General')
     const file = files.file as formidable.File | undefined
@@ -80,3 +82,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ ok: true })
   })
 }
+;

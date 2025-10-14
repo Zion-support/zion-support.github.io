@@ -1,8 +1,6 @@
-import { UserProfile, UserDetails } from '@/types/auth'
-import { supabase } from '@/integrations/supabase/client'
-import { Conversation, ConversationContextData } from '@/types/messaging'
-import { toast } from '@/hooks/use-toast'
-// Allow either UserProfile or UserDetails
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { supabase  } from '@/integrations/supabase/client';import { Conversation, ConversationContextData  } from '@/types/messaging';
+import { toast  } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
 type UserWithProfile = UserProfile | UserDetails | null
 /**
  * Hook to handle conversation operations
@@ -16,7 +14,8 @@ export function useConversations(
   /**
    * Fetch conversations for the current user
    */
-  const fetchConversations = async () => {
+  const fetchConversations = async () =>
+                {
     if (!user) return
     setIsLoading(true)
     try {
@@ -27,7 +26,8 @@ export function useConversations(
         .or(`user_one_id.eq.${user.id},user_two_id.eq.${user.id}`)
       if (error) throw error
       // Format conversations
-      const formattedConversations: Conversation[] = data.map(conv => {
+      const formattedConversations: Conversation[] = data.map(conv =>
+                {
         const isUserOne = conv.user_one_id === user.id
         const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id
         return {
@@ -74,7 +74,8 @@ export function useConversations(
     contextType: 'job' | 'talent' | 'general' = 'general',
     contextId?: string,
     contextData?: ConversationContextData
-  ) => {
+  ) =>
+                {
     if (!user || !initialMessage.trim()) return
     try {
       // Check if conversation already exists

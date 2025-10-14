@@ -69,7 +69,8 @@ class EnvironmentConfig {
    * Get the entire configuration object
    */
   public getConfig(): Readonly
-          <EnvConfig> {/* TODO: Fix JSX expression */}
+          <EnvConfig></EnvConfig>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     return Object.freeze({ ...this.config })
@@ -156,7 +157,8 @@ class EnvironmentConfig {
    * Get API headers with authentication
    */
   public getApiHeaders(): Record
-          <string, string> {/* TODO: Fix JSX expression */}
+          <string, string></string,>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const,

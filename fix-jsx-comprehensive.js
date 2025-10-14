@@ -18,7 +18,8 @@ function fixJsxFile(filePath) {
     
     // Fix mismatched section/div tags
     const sectionDivPattern = /<section([^>]*)>[\s\S]*?<\/div>/g
-    const sectionDivReplacement = (match, sectionAttrs) => {
+    const sectionDivReplacement = (match, sectionAttrs) =>
+                {
       return match.replace(/<\/div>$/, '</section>')
     }
     const newContent2 = content.replace(sectionDivPattern, sectionDivReplacement)
@@ -59,10 +60,12 @@ function findTsxFiles(dir) {
 console.log('🔧 Starting comprehensive JSX fixes...')
 const tsxFiles = findTsxFiles('/workspace')
 let fixedCount = 0
-tsxFiles.forEach(file => {
+tsxFiles.forEach(file =>
+                {
   if (fixJsxFile(file)) {
     fixedCount++
   }
 })
 console.log(`✅ Fixed ${fixedCount} files`)
-console.log('🎉 Comprehensive JSX fixes completed!')</div></div>
+console.log('🎉 Comprehensive JSX fixes completed!')</div>
+                </div>;

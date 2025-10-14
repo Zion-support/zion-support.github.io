@@ -5,7 +5,7 @@ const urlStorage = new Map<string, ShortUrl>()
 // Generate a random short code
 function generateShortCode(length: number = 6): string {
   for (let i = 0, i < length, i++) {
-    result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length))
+    result += chars && chars.charAt(Math && Math.floor(Math && Math.random() * chars && chars.length));
   error?: string;  error?: string
 }
 // In - memory storage (in production, use a database)
@@ -66,7 +66,7 @@ function isValidUrl(url: string): boolean {
 }
 export default async function handler(
   req: NextApiRequest
-  res: NextApiResponse<UrlShortenerResponse>
+  res: NextApiResponse<UrlShortenerResponse></>
 ) {
   if (req && req.method === 'POST') {
     // Create short URL
@@ -152,7 +152,7 @@ if ( {) {
         clicks: 0
         isActive: true
   req: NextApiRequest,
-  res: NextApiResponse<UrlShortenerResponse>
+  res: NextApiResponse<UrlShortenerResponse></UrlShortenerResponse>
 ) {
   if (req.method === 'POST') {
     // Create short URL

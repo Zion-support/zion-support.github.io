@@ -116,9 +116,8 @@ export const SERVICES_METADATA = {
     pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
     apiEndpoint: '/api/text-analysis'
   }
-} as const
-// Service availability and status
-export const getServiceStatus = () => {
+} as const // Service availability and status
+export const getServiceStatus  = () => {
   return {
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
@@ -138,7 +137,7 @@ export const getServiceStatus = () => {
   }
 }
 // Service usage statistics
-export const getServiceStats = () => {
+export const getServiceStats  = () => {
   return {
     totalUsers: 15420
     totalRequests: 2847500
@@ -225,7 +224,7 @@ export const getServiceStatus = () =>: any {
 }
 
 // Service usage statistics
-export const getServiceStats = () => {
+export const getServiceStats  = () => {
   return {
     totalUsers: 15420,
     totalRequests: 2847500,
@@ -367,9 +366,8 @@ export const SERVICES_METADATA = {
     pricing: 'Free (Basic) / $19.99/month (Pro)',
     apiEndpoint: '/api/text-analysis'
   }
-} as const
-// Service availability and status
-export const getServiceStatus = () => {
+} as const // Service availability and status
+export const getServiceStatus  = () => {
   return {
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
@@ -379,7 +377,7 @@ export const getServiceStatus = () => {
   }
 }
 // Service usage statistics
-export const getServiceStats = () => {
+export const getServiceStats  = () => {
   return {
     totalUsers: 15420,
     totalRequests: 2847500,

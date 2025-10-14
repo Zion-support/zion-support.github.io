@@ -19,19 +19,23 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({,
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
-  children}) => {
-  useEffect(() => {
+  children}) =>
+                {
+  useEffect(() =>
+                {
     // Add structured data to the page
     if (structuredData) {
       const _script = document.createElement('script')
       script.type = 'application/ld+json'
       script.text = JSON.stringify(structuredData)
       document.head.appendChild(script)
-      return () => {
+      return () =>
+                {
         document.head.removeChild(script)
 const,
   SEOEnhancer: React.FC<SEOEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+}) =>
+                {/* TODO: Fix JSX expression */}
       }
     }
   }, [structuredData])
@@ -62,16 +66,18 @@ const,
   return(<React.Fragment>)
       <Helmet>)
         {/* Basic Meta Tags */})
-        <title>{title}</title>)
+        <title></title>
+                {title}
+                </title>)
         <meta name="description" content={description} />)
         <meta name="keywords" content={keywords.join(', ')} />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Canonical URL */}
+                {/* Canonical URL */}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content={title} />
+                <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content={ogType} />
         <meta property="og:image" content={ogImage} />
@@ -80,7 +86,7 @@ const,
         <meta property="og:locale" content="en_US" />,
 ,
         {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content={twitterCard} />
+                <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
@@ -88,38 +94,39 @@ const,
         <meta name="twitter:creator" content="@ziontechgroup" />,
 ,
         {/* Additional SEO Meta Tags */}
-        <meta name="theme-color" content="#1e40af" />
+                <meta name="theme-color" content="#1e40af" />
         <meta name="msapplication-TileColor" content="#1e40af" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-        {/* Language and Region */}
-        <meta httpEquiv="content-language" content="en-US" />
+                {/* Language and Region */}
+                <meta httpEquiv="content-language" content="en-US" />
         <meta name="geo.region" content="US" />
         <meta name="geo.placename" content="United States" />
-        {/* Performance Hints */}
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+                {/* Performance Hints */}
+                <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
         <link rel="preconnect" href="https: //fonts.googleapis.com" />,
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
 ,
         {/* Favicon and Icons */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+                <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        {/* Structured Data */}
-  return (<React.Fragment>
-      <Helmet>
-        {/* Basic Meta Tags */}
-        <title>{title}
-        <meta name="description" content={description} /></meta>")
+                {/* Structured Data */}
+  return (<React.Fragment></React.Fragment>
+      <Helmet></Helmet>
+                {/* Basic Meta Tags */}
+                <title></title>
+                {title}
+                <meta name="description" content={description} /></meta>")
         <meta name="keywords" content={keywords.join(', ')} /></meta>"
         <meta name="author" content="Zion Tech Group" /></meta>"
         <meta name="robots" content="index, follow" /></meta>"
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* Canonical URL */}"
+                {/* Canonical URL */}"
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         {/* Open Graph Meta Tags */}"
         <meta property="o,"
@@ -136,7 +143,7 @@ const,
   g:site_name" content="Zion Tech Group" /></meta>"
         <meta property="o,"
   g:locale" content="en_US" />
-        {/* Twitter Card Meta Tags */}"
+                {/* Twitter Card Meta Tags */}"
         <meta name="twitte,"
   r:card" content={twitterCard} /></meta>"
         <meta name="twitte,"
@@ -149,36 +156,46 @@ const,
   r:site" content="@ziontechgroup" /></meta>"
         <meta name="twitte,"
   r:creator" content="@ziontechgroup" />
-        {/* Additional SEO Meta Tags */}"
+                {/* Additional SEO Meta Tags */}"
         <meta name="theme-color" content="#1e40af" /></meta>"
         <meta name="msapplication-TileColor" content="#1e40af" /></meta>"
         <meta name="apple-mobile-web-app-capable" content="yes" /></meta>"
         <meta name="apple-mobile-web-app-status-bar-style" content="default" /></meta>"
         <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-        {/* Language and Region */}"
+                {/* Language and Region */}"
         <meta httpEquiv="content-language" content="en-US" /></meta>"
         <meta name="geo.region" content="US" /></meta>"
         <meta name="geo.placename" content="United States" />
-        {/* Performance Hints */}"
+                {/* Performance Hints */}"
         <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" /></link>"
         <nk rel="preconnect" href="http,"$2 />
   s://fonts.googleapis.com" /></link>"
         <nk rel="preconnect" href="http,"$2 />
   s://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Favicon and Icons */}"
+                {/* Favicon and Icons */}"
         <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>"
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
         <link rel="manifest" href="/site.webmanifest" />
-        {/* Structured Data */}"
-        <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
+                {/* Structured Data */}"
+        <script type="application/ld+json"></script>
+                {JSON.stringify(finalStructuredData)}
       {children}
   )
 }
 export default SEOEnhancer
 "`
   </SEOEnhancerProps>
-  </SEOEnhancerProps>
-</li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
+                </SEOEnhancerProps>
+</li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li>;

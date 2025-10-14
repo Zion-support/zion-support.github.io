@@ -29,4 +29,4 @@ export async function disputeOrder(orderId: string) {
   if (error) throw error
   return data as { message: string }
 }
-export type EscrowStatus = OrderStatus
+export type EscrowStatus = OrderStatus;

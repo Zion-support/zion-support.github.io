@@ -5,7 +5,7 @@ function processFile(filePath) {
     // Fix remaining import path issues
     const replacements = [
       // Fix root-level files
-      {
+      {;
         pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
         replacement: "import { Metadata } from './types/next';"},
       {
@@ -17,7 +17,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   t: "import { Metadata } from './types/next';"},
       {/* TODO: Fix JSX expression */}
       }]
-    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
+    replacements.forEach(({ pattern, replacement }) =>
+                {/* TODO: Fix JSX expression */}
       }
     })
     if (modified) {/* TODO: Fix JSX expression */}
@@ -29,7 +30,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 function processDirectory(dirPath) {
 
-  items.forEach(item => {)
+  items.forEach(item =>
+                {)
 )
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath)

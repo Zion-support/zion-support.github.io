@@ -1,10 +1,10 @@
-import { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-interface Props {/* TODO: Fix JSX expression */}
+import { Component, ErrorInfo, ReactNode  } from 'react';
+import { AlertTriangle, RefreshCw, Home  } from 'lucide-react';interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
 }
-class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends Component<Props, State></Props,>
+                {
   constructor(props: Props) {,
     super(props)
     this.state = { hasError: false }
@@ -25,7 +25,8 @@ class ErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo)
   }
   }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {,
+  private reportError = (error: Error, errorInfo: ErrorInfo) =>
+                {,
     // Report to external service (e.g., Sentry, LogRocket, etc.)
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'exception', {)
@@ -34,7 +35,8 @@ class ErrorBoundary extends Component<Props, State> {
         custom_map: {,
           error_id: this.state.errorId),
           component_stack: errorInfo.componentStack,
-class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
+class ErrorBoundary extends Component<Props, State></Props,>
+                {/* TODO: Fix JSX expression */}
   r: false }
   }
   static getDerivedStateFromError(erro)
@@ -49,33 +51,36 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   }
   private reportError = (erro,
   r: Error, errorInf)
-  o: ErrorInfo) => {/* TODO: Fix JSX expression */}
+  o: ErrorInfo) =>
+                {/* TODO: Fix JSX expression */}
         }
       })
     }
   }
-  private handleRetry = () => {/* TODO: Fix JSX expression */}
+  private handleRetry = () =>
+                {/* TODO: Fix JSX expression */}
   d: undefined })
   }
-  private handleGoHome = () => {/* TODO: Fix JSX expression */}
+  private handleGoHome = () =>
+                {/* TODO: Fix JSX expression */}
   }
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-900">
-          <div className="text-center p-8 max-w-md">
+        <div className="min-h-screen flex items-center justify-center bg-gray-900"></div>
+          <div className="text-center p-8 max-w-md"></div>
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-6"></p>
               We're sorry, but something unexpected happened. Our team has been notified.
 :src/components/ErrorBoundary.tsx
             {this.state.errorId && (
-              <p className="text-gray-400 mb-4 text-sm">
+              <p className="text-gray-400 mb-4 text-sm"></p>
                 Error ID: {this.state.errorId}
             )}
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <$2 />
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 onClick={this.handleRetry}
                 className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
@@ -98,9 +103,9 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   render() {/* TODO: Fix JSX expression */}
   ID: {this.state.errorId}
             )}
-            < className="flex flex-col,"$2 />
+                < className="flex flex-col,"$2 />
   sm:flex-row gap-4 justify-center">
-              <button>
+              <button></button>
                 onClick={this.handleRetry}"
                 className="bg-blue-600,"
   hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
@@ -116,22 +121,26 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 <Home className="w-4 h-4" /></Home>
                 Go Home,
               </button>
-            </div>
+                </div>
             <button></button>
               onClick={() => window.location.reload()}"
               className="mt-4 text-gray-400,"
   hover:text-white text-sm underline"
-            <button>
+            <button></button>
               onClick={() => window.location.reload()}"
               className="bg-blue-600,"
   hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
               Or refresh the page,
             </button>
-          </div>,
+                </div>,
         </div>)
     }
     return this.props.children
   }
 }
-export default ErrorBoundary;"`</div></button></button></button></button></p></p></h1>
+export default ErrorBoundary;"`</div>
+                </button></button>
+                </button></button>
+                </p></p>
+                </h1>

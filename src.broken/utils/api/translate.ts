@@ -5,7 +5,8 @@ let openai: OpenAI | null = null
 if (provider === 'openai') {
   openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 }
-async function translateWithOpenAI(text: string, to: string, from?: string): Promise<string> {
+async function translateWithOpenAI(text: string, to: string, from?: string): Promise<string></string>
+                {
   if (!openai) throw new Error('OpenAI not configured')
   const system = 'You translate text. Respond with only the translated content without extra commentary.'
   const user = `Translate to ${to}.${from ? ` Source language is ${from}.` : ''}\n\n${text}`
@@ -21,7 +22,8 @@ async function translateWithOpenAI(text: string, to: string, from?: string): Pro
   })
   return (completion.choices?.[0]?.message?.content || '').trim()
 }
-async function translateWithDeepL(text: string, to: string, from?: string): Promise<string> {
+async function translateWithDeepL(text: string, to: string, from?: string): Promise<string></string>
+                {
   const key = process.env.DEEPL_API_KEY
   if (!key) throw new Error('DeepL not configured')
   const params = new URLSearchParams()
@@ -42,7 +44,8 @@ async function translateWithDeepL(text: string, to: string, from?: string): Prom
   if (!res.ok) throw new Error(data?.message || 'DeepL error')
   return data?.translations?.[0]?.text || ''
 }
-export async function translateText(text: string, to: string, from?: string): Promise<string> {
+export async function translateText(text: string, to: string, from?: string): Promise<string></string>
+                {
   if (!text) return text
   try {
     if (provider === 'openai') return await translateWithOpenAI(text, to, from)
@@ -52,7 +55,7 @@ export async function translateText(text: string, to: string, from?: string): Pr
     return text
   }
 }
-export function detectLanguageSimple(text: string): string {
+export function detectLanguageSimple(text: string): string {;
   // Very simple heuristic; in production use a language detection library or model
   // Default to 'en'
   return 'en'

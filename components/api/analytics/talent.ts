@@ -51,7 +51,8 @@ export default async function handler(
     (tags.length
       ? tags
       : [{ tag: 'react' }, { tag: 'node' }, { tag: 'ai' }, { tag: 'react' }]
-    ).forEach(t => {
+    ).forEach(t =>
+                {
       tagCounts[t.tag] = (tagCounts[t.tag] |0) + 1
     })
     res.status(200).json({
@@ -81,7 +82,6 @@ export default async function handler(
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { createServerClient } from '../../../utils/supabase/server'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -107,7 +107,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { tag: 'node' },
       { tag: 'ai' },
       { tag: 'react' },
-    ]).forEach(t => { tagCounts[t.tag] = (tagCounts[t.tag] || 0) + 1; })
+    ]).forEach(t =>;
+                { tagCounts[t.tag] = (tagCounts[t.tag] || 0) + 1; })
     res.status(200).json({
       profileViews,
       quoteInvites,

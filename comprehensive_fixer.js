@@ -49,7 +49,8 @@ const fixes = [
   //Fix arrow function syntax
   {
     pattern: /(\w+)\s*=>\s*{([^}]+)}\s*(\w+)/g,
-    replacement: '$1 => { $2 }, $3'},
+    replacement: '$1 =>
+                { $2 }, $3'},
   //Fix conditional rendering
   {
     pattern: /{([^}]*)\s*&&\s*([^}]*)}/g,
@@ -63,7 +64,7 @@ const fixes = [
     pattern: /(\w+)\s*\([^)]*\)\s*{\s*([^}]+)}\s*(\w+)/g,
     replacement: '$1() { $2 }, $3'},
   //Fix class property syntax
-  {
+  {;
     pattern: /(\w+)\s*=\s*([^;]+);\s*(\w+)/g
     replacement: '$1 = $2, $3'},
   //Fix import statements
@@ -78,13 +79,13 @@ const fixes = [
     pattern: /interface\s+(\w+)\s*{\s*([^}]+)}\s*(\w+)/g,
     replacement: 'interface $1 { $2 } $3'},
   //Fix type definitions
-  {
+  {;
     pattern: /type\s+(\w+)\s*=\s*([^;]+);\s*(\w+)/g
     replacement: 'type $1 = $2, $3'},
   //Fix React component syntax
   {
     pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*(\w+)/g,
-    replacement: 'const $1 = () => { $2 } $3'},
+    replacement: 'const $1  = () => { $2 } $3'},
   //Fix JSX return statements
   {
     pattern: /return\s*\(\s*<([^>]+)>\s*([^<]+)\s*<\/\1>\s*\)\s*(\w+)/g
@@ -128,7 +129,8 @@ const fixes = [
   //Fix useEffect hooks
   {
     pattern: /useEffect\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
-    replacement: 'useEffect(() => { $1 }, [$2]); $3'},
+    replacement: 'useEffect(() =>
+                { $1 }, [$2]); $3'},
   //Fix useCallback hooks
   {
     pattern:
@@ -180,7 +182,8 @@ const fixes = [
   {/* TODO: Fix JSX expression */}
   n: /(\w+)\s*=>\s*{([^}]+)}\s*(\w+)/g,
     replacemen,
-  t: '$1 => { $2 }, $3'},
+  t: '$1 =>
+                { $2 }, $3'},
   //Fix conditional rendering
   {/* TODO: Fix JSX expression */}
   n: /{([^}]*)\s*&&\s*([^}]*)}/g,
@@ -217,7 +220,7 @@ const fixes = [
   {/* TODO: Fix JSX expression */}
   n: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*(\w+)/g,
     replacemen,
-  t: 'const $1 = () => { $2 } $3'},
+  t: 'const $1  = () => { $2 } $3'},
   //Fix JSX return statements
   {/* TODO: Fix JSX expression */}
   },
@@ -262,22 +265,26 @@ const fixes = [
   {/* TODO: Fix JSX expression */}
   n: /useEffect\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
     replacemen,
-  t: 'useEffect(() => { $1 }, [$2]); $3'},
+  t: 'useEffect(() =>;
+                { $1 }, [$2]); $3'},
   //Fix useCallback hooks
   {/* TODO: Fix JSX expression */}
       /const\s+(\w+)\s*=\s*useCallback\s*\(\s*\([^)]*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
     replacemen,
-  t: 'const $1 = useCallback(() => { $2 }, [$3]); $4'},
+  t: 'const $1 = useCallback(() =>
+                { $2 }, [$3]); $4'},
   //Fix useMemo hooks
   {
     pattern:
   {/* TODO: Fix JSX expression */}
       /const\s+(\w+)\s*=\s*useMemo\s*\(\s*\(\s*\)\s*=>\s*{\s*([^}]+)}\s*,\s*\[([^\]]+)\]\s*\)\s*(\w+)/g,
     replacemen,
-  t: 'const $1 = useMemo(() => { $2 }, [$3]); $4'}]
+  t: 'const $1 = useMemo(() =>
+                { $2 }, [$3]); $4'}]
 function fixFile(filePath) {
   try {
-    fixes.forEach(fix => {)
+    fixes.forEach(fix =>
+                {)
       //       const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
         content = newContent
@@ -296,7 +303,8 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 async function main() {
     //Find all TypeScript/TSX files
   //   let fixedCount = 0
-  files.forEach(file => {)
+  files.forEach(file =>
+                {)
     if (fixFile(file)) {
       fixedCount++
   }
@@ -304,7 +312,8 @@ async function main() {/* TODO: Fix JSX expression */}
 }
   //Find all TypeScript/TSX files
   //   let fixedCount = 0
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
     })
   })
   //   }

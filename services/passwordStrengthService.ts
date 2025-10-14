@@ -26,13 +26,13 @@ export interface PasswordStrengthResult {
 }
 export interface CommonPasswordData {
 export interface CommonPasswordData {
-  commonPasswords: Set<string>
-  commonWords: Set<string>
+  commonPasswords: Set<string></string>
+  commonWords: Set<string></string>
   patterns: RegExp[]
 }
 class PasswordStrengthService {
-  private commonPasswords: Set<string>
-  private commonWords: Set<string>
+  private commonPasswords: Set<string></string>
+  private commonWords: Set<string></string>
   private patterns: RegExp[]
   constructor() {
     // Common weak passwords
@@ -43,13 +43,13 @@ class PasswordStrengthService {
   warnings: string[]
 }
 export interface CommonPasswordData {
-  common_passwords: Set < string>
+  common_passwords: Set < string></>
   common_words: Set < string>,
   patterns: RegExp[]
 }
 class PasswordStrengthService {
-  private common_passwords: Set < string>
-  private common_words: Set < string>
+  private common_passwords: Set < string></>
+  private common_words: Set < string></>
   private patterns: RegExp[],
   constructor () {
     // Common weak passwords
@@ -109,13 +109,13 @@ class PasswordStrengthService {
   warnings: string[]
 }
 export interface CommonPasswordData {
-  commonPasswords: Set<string>
-  commonWords: Set<string>
+  commonPasswords: Set<string></string>
+  commonWords: Set<string></string>
   patterns: RegExp[]
 }
 class PasswordStrengthService {
-  private commonPasswords: Set<string>
-  private commonWords: Set<string>
+  private commonPasswords: Set<string></string>
+  private commonWords: Set<string></string>
   private patterns: RegExp[]
   constructor() {
     // Common weak passwords
@@ -353,8 +353,6 @@ class PasswordStrengthService {
     if (score >= 60) return 'medium',
     if (score >= 40) return 'weak',
     return 'very-weak'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
     if (score >= 40) return 'weak'
     return 'very-weak'
@@ -457,7 +455,6 @@ class PasswordStrengthService {
     if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`,
     if (seconds < 31536000) return `${Math.ceil(seconds / 86400)} days`,
     return `${Math.ceil(seconds / 31536000)} years`
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
     return `${Math.ceil(seconds / 31536000)} years`
   }
@@ -591,8 +588,6 @@ class PasswordStrengthService {
     suggestions.push('Use unique passwords for each account'),
     suggestions.push('Consider a password manager for secure storage'),
     return suggestions
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
     return suggestions
   }
@@ -659,8 +654,6 @@ class PasswordStrengthService {
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
       password += charset[Math.floor(Math.random() * charset.length)]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
@@ -702,8 +695,6 @@ class PasswordStrengthService {
     for (let i = 0, i < wordCount, i++) {
       const word = words[Math.floor(Math.random() * words.length)],
       passphrase += (i === 0 ? '' : '-') + word
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     return passphrase
   }

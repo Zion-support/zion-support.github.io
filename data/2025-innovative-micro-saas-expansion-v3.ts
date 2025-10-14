@@ -1,6 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
-import { ServiceVariant } from '../types/service-variants'
-export interface InnovativeMicroSaasService {
+import { ServiceVariant , ServiceVariant  } from '../types/service-variants';export interface InnovativeMicroSaasService {
   id: string
   name: string
   tagline: string
@@ -3052,7 +3050,7 @@ const contact =
       ratin,
   g: 4 && 4.9,
       review,
-  s: 28}
+  s: 28};
   ];    feature,
   s: [,
 export interface InnovativeMicroSaasService {/* TODO: Fix JSX expression */}

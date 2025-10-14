@@ -28,7 +28,7 @@ function mergePRBranch(branchName, prNumber) {
     try {
       execSync(`git merge origin/${branchName} --no-commit`, { stdio: 'pipe' })
 function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
-    console.log(`🔄 Attempting to merge PR #${prNumber} (${branchName})...`)
+    console.log(`🔄 Attempting to merge PR #${prNumber} (${branchName})...`);
     // Fetch the branch;`
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
   o: 'pipe' })
@@ -48,12 +48,14 @@ function mergePRBranch(branchName, prNumber) {/* TODO: Fix JSX expression */}
       if (conflictedFiles.length > 0) {/* TODO: Fix JSX expression */}`
         console.log(`📁 Resolving ${conflictedFiles.length} conflicted files...`)
         // Resolve conflicts by keeping the incoming version
-        conflictedFiles.forEach(file => {)
+        conflictedFiles.forEach(file =>
+                {)
           if (fs.existsSync(file)) {
             try {
               execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' })
               execSync(`git add "${file}"`, { stdio: 'pipe' })
-        conflictedFiles.forEach(file => {/* TODO: Fix JSX expression */}`
+        conflictedFiles.forEach(file =>
+                {/* TODO: Fix JSX expression */}`
               execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });"`
               execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
@@ -95,7 +97,8 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
     'app/layout.tsx',
     'app/main.tsx'
   ]
-  commonFiles.forEach(file => {)
+  commonFiles.forEach(file =>
+                {)
     if (fs.existsSync(file)) {
       try {
         let content = fs.readFileSync(file, 'utf8')
@@ -107,7 +110,8 @@ function cleanConsoleLogs() {/* TODO: Fix JSX expression */}
         content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
         if (content.length !== originalLength) {
           fs.writeFileSync(file, content)
-  commonFiles.forEach(file => {/* TODO: Fix JSX expression */})`
+  commonFiles.forEach(file =>
+                {/* TODO: Fix JSX expression */})`
           console.log(`  ✅ Cleaned ${file}`)
         }
       } catch (error) {/* TODO: Fix JSX expression */}`

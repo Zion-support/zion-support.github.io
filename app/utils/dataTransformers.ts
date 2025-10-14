@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-'use client';
-/**;
- * Data Transformation Utilities;
- * Provides utilities for transforming and formatting data;
- */;
-/**;
- * Deep clone an object;
- */;
-export function deepClone<T>(ob);
-  j: T): T {/* TODO: Fix JSX expression */,}}}
-  if (obj instanceof Date) {/* TODO: Fix JSX expression */,}}
-  if (obj instanceof Array) {/* TODO: Fix JSX expression */,}}
-  if (obj instanceof Object) {/* TODO: Fix JSX expression */,}const clonedObj = {}as T;
-    for (const key in obj) {/* TODO: Fix JSX expression */,}}
-=======
 'use client'
 /**
  * Data Transformation Utilities
@@ -33,7 +17,6 @@ export function deepClone<T>(ob)
     const clonedObj = {} as T
     for (const key in obj) {/* TODO: Fix JSX expression */}
       }
->>>>>>> origin/main
     }
     return clonedObj
   }
@@ -49,38 +32,23 @@ export function deepMerge</T><T extends Record<string, unknown>>(targe,
  * Deep merge two objects
  */
 export function deepMerge<T extends Record<string, unknown>>(targe,
-<<<<<<< HEAD
-  t: T, sourc);
-  e: Partial<T>): T {/* TODO: Fix JSX expression */,}}const output = {...target}for (const key in source) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
-=======
   t: T, sourc)
   e: Partial<T>): T {/* TODO: Fix JSX expression */}
   const output = { ...target }
   for (const key in source) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
->>>>>>> origin/main
     }
   }
   return output
 }
-<<<<<<< HEAD
-/**;
- * Flatten a nested object;
- */;
-<<<<<<< HEAD
-export function flattenObject(ob,;)
-  j: Record<string, unknown>,;
-  prefix = '',;
-=======
 export function flattenObject(ob,
   j: Record<string, unknown>,
   prefix = '',
->>>>>>> origin/main
   separator = '.');
-): Record<string, unknown> {/* TODO: Fix JSX expression */,}flattened: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}const newKey = prefix ? `${prefix}${separator}${key}` : key;
+): Record<string, unknown></string,>
+                {/* TODO: Fix JSX expression */,}flattened: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
-=======
 /**
  * Flatten a nested object
  */
@@ -88,7 +56,8 @@ export function flattenObject(ob,
   j: Record</T><string, unknown>,
   prefix = '',
   separator = '.')
-): Record</string><string, unknown> {/* TODO: Fix JSX expression */}
+): Record</string><string, unknown></string,>
+                {/* TODO: Fix JSX expression */}
   flattened: Record</string><string, unknown> = {}
     }
   }
@@ -101,57 +70,49 @@ export function flattenObject(ob,
   j: Record<string, unknown>,
   prefix = '',
   separator = '.')
-): Record<string, unknown> {/* TODO: Fix JSX expression */}
+): Record<string, unknown></string,>
+                {/* TODO: Fix JSX expression */}
   flattened: Record<string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
       const newKey = prefix ? `${prefix}${separator}${key}` : key
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
->>>>>>> origin/main
     }
   }
   return flattened
 }
-<<<<<<< HEAD
-/**;
- * Unflatten a flattened object;
- */;
-<<<<<<< HEAD
-export function unflattenObject(ob,;)
-  j: Record<string, unknown>,;
-=======
 export function unflattenObject(ob,
   j: Record<string, unknown>,
->>>>>>> origin/main
   separator = '.');
-): Record<string, unknown> {/* TODO: Fix JSX expression */,}result: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}current[k] = current[k] || {}current = current[k] as Record<string>
-=======
+): Record<string, unknown></string,>
+                {/* TODO: Fix JSX expression */,}result: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}current[k] = current[k] || {}current = current[k] as Record<string></string>
 /**
  * Unflatten a flattened object
  */
 export function unflattenObject(ob,
   j: Record</string><string, unknown>,
   separator = '.')
-): Record</string><string, unknown> {/* TODO: Fix JSX expression */}
+): Record</string><string, unknown></string,>
+                {/* TODO: Fix JSX expression */}
   result: Record</string><string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {}
-          current = current[k] as Record</string><string>
+          current = current[k] as Record</string><string></string>
 /**
  * Unflatten a flattened object
  */
 export function unflattenObject(ob,
   j: Record<string, unknown>,
   separator = '.')
-): Record<string, unknown> {/* TODO: Fix JSX expression */}
+): Record<string, unknown></string,>
+                {/* TODO: Fix JSX expression */}
   result: Record<string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}
           current[k] = current[k] || {}
-          current = current[k] as Record<string, unknown>
->>>>>>> origin/main
+          current = current[k] as Record<string, unknown></string,>
         }
       }
     }
@@ -165,15 +126,12 @@ export function pick</string><T extends Record<string, unknown>, K extends keyof
   j: T,
   key,
   s: K[]),
-<<<<<<< HEAD
-): Pick<T, K> {/* TODO: Fix JSX expression */,}const result = {}as Pick<T>
-  keys.forEach(key => {/* TODO: Fix JSX expression */,)}})
-=======
-): Pick</T><T, K> {/* TODO: Fix JSX expression */}
-  const result = {} as Pick</T><T>
-  keys.forEach(key => {/* TODO: Fix JSX expression */}
+): Pick</T><T, K></T,>
+                {/* TODO: Fix JSX expression */}
+  const result = {} as Pick</T><T></T>
+  keys.forEach(key =>
+                {/* TODO: Fix JSX expression */}
     })
->>>>>>> origin/main
   })
   return result
 }
@@ -184,45 +142,24 @@ export function omit</T><T extends Record<string, unknown>, K extends keyof T>(o
   j: T,
   key,
   s: K[]),
-<<<<<<< HEAD
-): Omit<T, K> {/* TODO: Fix JSX expression */,}const result = {...obj}keys.forEach(key => {/* TODO: Fix JSX expression */,)})
-=======
-): Omit</T><T, K> {/* TODO: Fix JSX expression */}
+): Omit</T><T, K></T,>
+                {/* TODO: Fix JSX expression */}
   const result = { ...obj }
-  keys.forEach(key => {/* TODO: Fix JSX expression */})
->>>>>>> origin/main
+  keys.forEach(key =>
+                {/* TODO: Fix JSX expression */})
   })
-  return result as Omit</T><T>
+  return result as Omit</T><T></T>
 }
 /**
  * Group array items by a key
  */
 export function groupBy</T><T>(arra,
   y: T[],
-<<<<<<< HEAD
-  ke,;
-  y: keyof T | ((ite),
-=======
   ke,
   y: keyof T | ((ite)
->>>>>>> origin/main
   m: T) => string | number),
-<<<<<<< HEAD
-): Record<string, T[]> {/* TODO: Fix JSX expression */,},
-    {}as Record<string, T[]></string>
-  );
-}
-/**;
- * Get unique items from an array;
- */;
-export function unique<T>(arra);
-  y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */,}}
-  const seen = new Set();
-  return array.filter(item => {/* TODO: Fix JSX expression */,)}})
-    seen.add(value);
-    return true;
-=======
-): Record</T><string, T[]> {/* TODO: Fix JSX expression */},
+): Record</T><string, T[]></string,>
+                {/* TODO: Fix JSX expression */},
     {} as Record</string><string, T[]></string>
   )
 /**
@@ -232,9 +169,11 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,
   j: T,
   key,
   s: K[])
-): Pick<T, K> {/* TODO: Fix JSX expression */}
-  const result = {} as Pick<T, K>
-  keys.forEach(key => {/* TODO: Fix JSX expression */}
+): Pick<T, K></T,>
+                {/* TODO: Fix JSX expression */}
+  const result = {} as Pick<T, K></T,>
+  keys.forEach(key =>
+                {/* TODO: Fix JSX expression */}
     })
   })
   return result
@@ -246,11 +185,13 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,
   j: T,
   key,
   s: K[])
-): Omit<T, K> {/* TODO: Fix JSX expression */}
+): Omit<T, K></T,>
+                {/* TODO: Fix JSX expression */}
   const result = { ...obj }
-  keys.forEach(key => {/* TODO: Fix JSX expression */})
+  keys.forEach(key =>
+                {/* TODO: Fix JSX expression */})
   })
-  return result as Omit<T, K>
+  return result as Omit<T, K></T,>
 }
 /**
  * Group array items by a key
@@ -260,7 +201,8 @@ export function groupBy<T>(arra,
   ke,
   y: keyof T | ((ite)
   m: T) => string | number)
-): Record<string, T[]> {/* TODO: Fix JSX expression */}
+): Record<string, T[]></string,>
+                {/* TODO: Fix JSX expression */}
     },
     {} as Record<string, T[]></string>
   )
@@ -276,7 +218,6 @@ export function unique<T>(arra)
     })
     seen.add(value)
     return true
->>>>>>> origin/main
   })
 }
 /**
@@ -289,70 +230,10 @@ export function sortBy</T><T>(arra,
   m: T) => unknown)>,
   order,
   s: Array<'asc' | 'desc'> = [],
-<<<<<<< HEAD
-): T[] {/* TODO: Fix JSX expression */,}}
-      // Convert to comparable values;
-      const aComp =;
-        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean';
-          ? aVal;
-          : String(aVal);
-      const bComp =;
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean';
-          ? bVal;
-          : String(bVal);
-      if (aComp < bComp) return order === 'asc' ? -1 : 1;
-      if (aComp > bComp) return order === 'asc' ? 1 : -1;
-    }
-    return 0;
-  })
-}
-/**;
- * Chunk array into smaller arrays;
- */;
-export function chunk<T>(arra,
-  y: T[], siz);
-  e: number): T[][] {/* TODO: Fix JSX expression */,}}
-  return chunks;
-}
-/**;
- * Zip multiple arrays together;
- */;
-export function zip<T>(...array);
-  s: T[][]): T[][] {/* TODO: Fix JSX expression */,}}
-  return result;
-}
-/**;
- * Format bytes to human readable string;
- */;
-export function formatBytes(byte);
-  s: number, decimals = 2): string {/* TODO: Fix JSX expression */,}}`;
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))}${sizes[i]}`;
-}
-/**;
- * Format number with separators;
- */;
-export function formatNumber(nu);
-  m: number, locale = 'en-US'): string {/* TODO: Fix JSX expression */,}}}
-/**;
- * Format currency;
- */;
-export function formatCurrency(amoun);
-  t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */,}}}).format(amount);
-}
-/**;
- * Format date;
- */;
-<<<<<<< HEAD
-export function formatDate(dat,;)
-  e: Date | string | number,
-  option,;
-  s: Intl.DateTimeFormatOptions = {,},;
-=======
 export function formatDate(dat,
   e: Date | string | number,
   option,
   s: Intl.DateTimeFormatOptions = {},
->>>>>>> origin/main
   locale = 'en-US');
 ): string {/* TODO: Fix JSX expression */,}}}
 /**;
@@ -370,11 +251,7 @@ export function formatRelativeTime(dat);
 /**;
  * Truncate string;
  */;
-<<<<<<< HEAD
-export function truncate(st,;)
-=======
 export function truncate(st,
->>>>>>> origin/main
   r: string, lengt);
   h: number, suffix = '...'): string {/* TODO: Fix JSX expression */,}}}
 /**;
@@ -401,14 +278,9 @@ export function camelCase(st);
  * Convert to snake case;
  */;
 export function snakeCase(st);
-<<<<<<< HEAD
-  r: string): string {/* TODO: Fix JSX expression */,}}}
-export default {/* TODO: Fix JSX expression */,}}}
-`;
-=======
-=======
   const seen = new Set()
-  return array.filter(item => {/* TODO: Fix JSX expression */}
+  return array.filter(item =>
+                {/* TODO: Fix JSX expression */}
     })
     seen.add(value)
     return true
@@ -534,14 +406,8 @@ export function camelCase(st)
  * Convert to snake case
  */
 export function snakeCase(st)
->>>>>>> origin/main
   r: string): string {/* TODO: Fix JSX expression */}
 }
 export default {/* TODO: Fix JSX expression */}
 }
-<<<<<<< HEAD
-`;
->>>>>>> origin/main
-=======
 `
->>>>>>> origin/main

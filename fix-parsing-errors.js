@@ -72,7 +72,7 @@ function fixJSXIssues(content) {
   
   // Fix common emoji issues in JSX
   fixed = fixEmojis(fixed)
-  // Fix common syntax issues
+  // Fix common syntax issues;
   fixed = fixed.replace(/\{\s*'([^']*)'\s*\}/g, '"$1"'); // Fix single quotes in JSX expressions
   fixed = fixed.replace(/\{\s*"([^"]*)"\s*\}/g, '"$1"'); // Normalize quotes
   

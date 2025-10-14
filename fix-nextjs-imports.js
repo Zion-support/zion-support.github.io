@@ -4,7 +4,7 @@ import path from 'path'
 import { glob } from 'glob'
 // Define the replacements
 const replacements = [
-  // Next.js imports to React Router
+  // Next.js imports to React Router;
   { from: "import Link from 'next/link';", to: "import { Link } from 'react-router-dom';" },
   {
     from: "import { useRouter } from 'next/router';",
@@ -115,12 +115,14 @@ const replacements = [
 function processFile(filePath) {
   try {
     // Apply replacements
-    replacements.forEach(({ from, to, context }) => {
+    replacements.forEach(({ from, to, context }) =></'>
+                {
       if (context) {
         // Context-specific replacement
         const regex = new RegExp(
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-    replacements.forEach(({ from, to, context }) => {/* TODO: Fix JSX expression */}
+    replacements.forEach(({ from, to, context }) =>
+                {/* TODO: Fix JSX expression */}
           `(${context}[^>]*?)${from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`,
           'g'
         )
@@ -142,11 +144,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     })
     // Additional cleanup
     content = content
-      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines
+      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports
-      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {)
+      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match =>
+                {)
         // Merge consecutive imports from same module;)
-        lines.forEach(line => {)
+        lines.forEach(line =>
+                {)
           if (match) {
             const [, importsStr, module] = match
             if (!imports[module]) imports[module] = []
@@ -154,7 +158,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
           }
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;"
       .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, '') // Remove empty imports
-      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {/* TODO: Fix JSX expression */}
+      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match =>
+                {/* TODO: Fix JSX expression */}
           })
         })
         return ()
@@ -186,7 +191,8 @@ async function main() {
         '**/*corrupted*/**',
         '**/*temp*/**',
         '**/*.broken/**']})
-    files.forEach(file => {)
+    files.forEach(file =>
+                {)
       totalFiles++;)
       if (processFile(file)) {
         fixedFiles++
@@ -196,7 +202,8 @@ async function main() {/* TODO: Fix JSX expression */}
   // Find all TypeScript/JavaScript files in app directory
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
     })
-    files.forEach(file => {/* TODO: Fix JSX expression */}
+    files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
       })
     })
   }

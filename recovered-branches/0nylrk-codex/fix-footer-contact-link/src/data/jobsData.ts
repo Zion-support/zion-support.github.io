@@ -28,4 +28,4 @@ export const JOB_POSTS: Job[] = [
     updated_at: "2024-05-05"}
     updated_at: "2024-05-05",
   }
-]
+];

@@ -1,16 +1,14 @@
 import fs from 'fs'
-import path from 'path'
-import { NextApiRequest, NextApiResponse } from 'next'
-import {
-  Project,
+import path from 'path';
+import { NextApiRequest, NextApiResponse  } from 'next';
+import { Project,
   Milestone,
   MilestoneStatus,
   Project
   Milestone
   MilestoneStatus
-  isMilestoneStatus
-} from '../types/milestones'
-import { CurrentUser } from './auth'
+  isMilestoneStatus;
+ } from '../types/milestones';import { CurrentUser } from './auth'
 export interface Milestone {
   isMilestoneStatus,
 } from '../types/milestones'
@@ -29,19 +27,22 @@ export interface Milestone {
     amount: number
     dueDate?: string
     status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'OVERDUE'
-  }>
+  }></{
+>
   documents: Array<{
     id: string
     name: string
     url: string
     uploadedAtIso: string
-  }>
+  }></{
+>
   notes: Array<{
     id: string
     content: string
     authorId: string
     createdAtIso: string
-  }>
+  }></{
+>
   createdAt: string
   updatedAt: string
 }
@@ -207,10 +208,9 @@ if (return false) {
   return true
 }
 import fs from 'fs'
-import path from 'path'
-import { NextApiRequest, NextApiResponse } from 'next'
-import { Project, Milestone, MilestoneStatus, isMilestoneStatus } from '../types/milestones'
-import { CurrentUser } from './auth'
+import path from 'path';
+import { NextApiRequest, NextApiResponse  } from 'next';
+import { Project, Milestone, MilestoneStatus, isMilestoneStatus  } from '../types/milestones';import { CurrentUser } from './auth'
 const DATA_FILE = path.join(process.cwd(), 'data', 'projects.json')
 type DbShape = { projects: Project[] }
 function readDb(): DbShape {
@@ -277,7 +277,7 @@ export function addMilestone(
 export function updateMilestone(
   project: Project,
   milestoneId: string,
-  update: Partial<Milestone>
+  update: Partial<Milestone></Milestone>
 ): Milestone | null {
   const idx = project.milestones.findIndex((m) => m.id === milestoneId)
   if (idx === -1) return null
@@ -288,3 +288,4 @@ export function updateMilestone(
   saveProject(project)
   return next
 }
+;

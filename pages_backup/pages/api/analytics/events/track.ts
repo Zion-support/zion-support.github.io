@@ -45,8 +45,6 @@ function handler() {
   $2
 }
   const now_iso = new Date ().toISOString (),
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
   } catch (e) {
     // ignore file errors in serverless
@@ -79,3 +77,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" })
   }
 }
+;

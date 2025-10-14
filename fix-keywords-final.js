@@ -10,7 +10,8 @@ function processFile(filePath) {
         replacement: "keywords: ['$1'],",
 function processFile(filePath) {/* TODO: Fix JSX expression */}
       }]
-    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
+    replacements.forEach(({ pattern, replacement }) =>
+                {/* TODO: Fix JSX expression */}
       }
     })
     if (modified) {/* TODO: Fix JSX expression */}
@@ -22,7 +23,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 function processDirectory(dirPath) {
 
-  items.forEach(item => {)
+  items.forEach(item =>
+                {)
 )
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath)
@@ -37,4 +39,4 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
   return totalFixed
 }
 
-// Process the app directory
+// Process the app directory;

@@ -95,9 +95,8 @@ export function set_config (
   // Update the configuration
   Object.assign (current, partial)
 }
-import { randomUUID } from "crypto"
-import { tokenStore } from "./storage"
-import { TokenTransaction, WalletSummary } from "./types"
+import { randomUUID  } from 'crypto';
+import { tokenStore  } from './storage';import { TokenTransaction, WalletSummary } from "./types"
 export function getWalletSummary(userId: string): WalletSummary {
   const wallet = tokenStore.getWallet(userId)
   const transactions = tokenStore.getTransactions(userId)
@@ -108,7 +107,7 @@ export function earnTokens(
   userId: string,
   amount: number,
   reason: string,
-  metadata?: Record<string, any>
+  metadata?: Record<string, any></string,>
 ): TokenTransaction {
   if (amount <= 0) throw new Error("Amount must be positive")
   const wallet = tokenStore.getWallet(userId)
@@ -130,7 +129,7 @@ export function burnTokens(
   userId: string,
   amount: number,
   reason: string,
-  metadata?: Record<string, any>
+  metadata?: Record<string, any></=>
 ): TokenTransaction {
   if (amount <= 0) throw new Error("Amount must be positive")
   const wallet = tokenStore.getWallet(userId)
@@ -178,7 +177,7 @@ export function burnForFeature(userId: string, feature: string, metadata?: Recor
   const amount = burnRules[feature]
   if (!amount) throw new Error("Unknown feature")
   return burnTokens(userId, amount, feature, metadata)
-}
+};
 export function redeemToCredits(userId: string, amount: number): { tx: TokenTransaction; usd: number } {
   const { usdPerToken } = tokenStore.getConfig()
   const tx = burnTokens(userId, amount, "redeem_credits")

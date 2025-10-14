@@ -58,3 +58,4 @@ Tone: professional, modern, trustworthy`
     try {
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]')
     } catch {
+;

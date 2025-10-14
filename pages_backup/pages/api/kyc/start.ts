@@ -3,7 +3,7 @@ import { getRequiredDocuments, getOptionalDocuments } from '[^']*'
 import {getRequiredDocuments, getOptionalDocuments} from '../../../utils/kyc'
 import type { KycProfile, KycRole } from '../../../utils/kyc'
 import fs from 'fs'
-import path from 'path'
+import path from 'path';
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'KYC started' })
@@ -14,7 +14,8 @@ import fs from 'fs'
 import path from 'path'
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),
 const FILE = path.join(DATA_DIR, 'profiles.json')
-function load(): Record<string, KycProfile> {
+function load(): Record<string, KycProfile></string,>
+                {
   try {
     const raw = fs.readFileSync(FILE, 'utf8')
     return JSON.parse(raw)
@@ -69,7 +70,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   profile && profile.role = role
   if (fullLegalName) profile && profile.fullLegalName = fullLegalName
   if (businessName) profile && profile.businessName = businessName
-  if (businessRegistrationNumber)
+  if (businessRegistrationNumber);
     profile && profile.businessRegistrationNumber = businessRegistrationNumber;  profile && profile.lastUpdatedAt = now
   db[userId] = profile
   save(db)

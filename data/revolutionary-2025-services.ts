@@ -52,7 +52,7 @@ export interface Revolutionary2025Service {,
   realImplementation: boolean
   contactInfo: unknown
     mobile: string
-    email: string
+    email: string;
 export interface Revolutionary2025Service {;,
     address: string}
   i,

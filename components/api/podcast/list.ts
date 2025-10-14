@@ -13,7 +13,7 @@ function ensureStorage() {
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  ensureStorage()
+  ensureStorage();
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json')
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH)

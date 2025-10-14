@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
-import path from 'path'
+import path from 'path';
 const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json');const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 

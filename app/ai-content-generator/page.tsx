@@ -4,7 +4,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { PenTool, Brain, Zap, Target, CheckCircle, Star, ArrowRight, Users, BarChart, Clock, FileText, Image, Video, Mic } from 'lucide-react'
 
-const AiContentGeneratorPage: React.FC = () => {
+const AiContentGeneratorPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -149,224 +149,239 @@ const AiContentGeneratorPage: React.FC = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                {/* Hero Section */}
+                <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               AI <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Content Generator</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Create high-quality content 10x faster with AI. Generate blogs, social media posts, 
               emails, and more with just a few clicks.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
                 Start Free Trial
               </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                 Try Demo
               </button>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  {stat.icon}
+                {/* Stats Section */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+                {stats.map((stat, index) => (
+              <div key={index} className="text-center"></div>
+                <div className="flex justify-center mb-4"></div>
+                {stat.icon}
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.value}
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2"></div>
+                {stat.value}
                 </div>
-                <div className="text-gray-300">
-                  {stat.label}
+                <div className="text-gray-300"></div>
+                {stat.label}
                 </div>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Features Section */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Powerful AI Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Everything you need to create professional content at scale.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300"></div>
+                <div className="flex items-center mb-4"></div>
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mr-4"></div>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-white"></h3>
+                {feature.title}
+                </h3>
                 </div>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center text-gray-300">
+                <p className="text-gray-300 mb-6"></p>
+                {feature.description}
+                </p>
+                <ul className="space-y-2"></ul>
+                {feature.details.map((detail, detailIndex) => (
+                    <li key={detailIndex} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {detail}
-                    </li>
+                {detail}
+                </li>
                   ))}
                 </ul>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Content Types Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Content Types Section */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Content Types
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-300"></p>
               Generate any type of content your business needs.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contentTypes.map((type, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                  {type.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{type.title}</h3>
-                <p className="text-gray-300">{type.description}</p>
-              </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {contentTypes.map((type, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center hover:bg-white/20 transition-all duration-300"></div>
+                <div className="flex justify-center mb-4"></div>
+                {type.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4"></h3>
+                {type.title}
+                </h3>
+                <p className="text-gray-300"></p>
+                {type.description}
+                </p>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Pricing Section */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Simple Pricing
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-300"></p>
               Choose the plan that fits your content needs.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 relative ${
                 plan.popular ? 'ring-2 ring-cyan-400 bg-white/15' : ''
-              }`}>
+              }`}></div>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium"></span>
                       Most Popular
                     </span>
-                  </div>
-                )}
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300 ml-1">{plan.period}</span>
-                  </div>
                 </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                )}
+                <div className="text-center mb-8"></div>
+                  <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                {plan.name}
+                </h3>
+                  <p className="text-gray-300 mb-4"></p>
+                {plan.description}
+                </p>
+                  <div className="flex items-baseline justify-center"></div>
+                    <span className="text-4xl font-bold text-white"></span>
+                {plan.price}
+                </span>
+                    <span className="text-gray-300 ml-1"></span>
+                {plan.period}
+                </span>
+                </div>
+                </div>
+                <ul className="space-y-4 mb-8"></ul>
+                {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
+                {feature}
+                </li>
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-300 ${
                   plan.popular 
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white transform hover:scale-105' 
                     : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                }`}>
+                }`}></button>
                   Start Free Trial
                 </button>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Testimonials Section */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               What Our Users Say
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-300"></p>
               Join thousands of content creators using our AI platform.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"></div>
+                <div className="flex items-center mb-4"></div>
+                {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-cyan-400 text-sm">{testimonial.role}</div>
-                  <div className="text-gray-400 text-sm">{testimonial.company}</div>
+                <div></div>
+                  <div className="font-semibold text-white"></div>
+                {testimonial.name}
+                </div>
+                  <div className="text-cyan-400 text-sm"></div>
+                {testimonial.role}
+                </div>
+                  <div className="text-gray-400 text-sm"></div>
+                {testimonial.company}
+                </div>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                {/* CTA Section */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
             Ready to Create Amazing Content?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p>
             Start your free trial today and experience the power of AI content generation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"></button>
               <ArrowRight className="w-5 h-5 mr-2" />
               Start Free Trial
             </button>
-            <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
               Contact Sales
             </button>
-          </div>
+                </div>
         </div>
-      </section>
+                </section>
 
       <Footer />
     </div>
   )
 }
 
-export default AiContentGeneratorPage
+export default AiContentGeneratorPage;

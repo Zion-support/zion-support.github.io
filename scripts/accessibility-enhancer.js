@@ -16,7 +16,7 @@ if (fs.existsSync(indexPath)) {
   let indexContent = fs.readFileSync(indexPath, 'utf8')
   // Add accessibility improvements
   const accessibilityScript = `
-    <script>
+    <script></script>
       // Accessibility enhancements
       (function() {
         'use strict'
@@ -91,19 +91,22 @@ if (fs.existsSync(indexPath)) {
           \`
           const increaseBtn = document.createElement('button')
           increaseBtn.textContent = 'A+'
-          increaseBtn.addEventListener('click', () => {
+          increaseBtn.addEventListener('click', () =>
+                {
             const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize)
             document.documentElement.style.fontSize = (currentSize + 2) + 'px'
           })
           const decreaseBtn = document.createElement('button')
           decreaseBtn.textContent = 'A-'
-          decreaseBtn.addEventListener('click', () => {
+          decreaseBtn.addEventListener('click', () =>
+                {
             const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize)
             document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px'
           })
           const resetBtn = document.createElement('button')
           resetBtn.textContent = 'Reset'
-          resetBtn.addEventListener('click', () => {
+          resetBtn.addEventListener('click', () =>
+                {
             document.documentElement.style.fontSize = '16 px'
           })
           controls.appendChild(increaseBtn)
@@ -153,7 +156,8 @@ if (fs.existsSync(indexPath)) {
         function addAriaLabels() {
           // Add aria-labels to buttons without text
           const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])')
-          iconButtons.forEach(button => {
+          iconButtons.forEach(button =>
+                {
             const icon = button.querySelector('svg, i')
             if (icon) {
               const iconName = icon.getAttribute('class') || icon.tagName.toLowerCase()
@@ -162,7 +166,8 @@ if (fs.existsSync(indexPath)) {
           })
           // Add role="button" to clickable divs
           const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]')
-          clickableDivs.forEach(div => {
+          clickableDivs.forEach(div =>
+                {
             if (!div.getAttribute('role')) {
               div.setAttribute('role', 'button')
               div.setAttribute('tabindex', '0')
@@ -170,7 +175,8 @@ if (fs.existsSync(indexPath)) {
           })
           // Add aria-expanded to collapsible elements
           const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse"]')
-          collapsibles.forEach(element => {
+          collapsibles.forEach(element =>
+                {
             if (!element.getAttribute('aria-expanded')) {
               element.setAttribute('aria-expanded', 'false')
             }
@@ -231,7 +237,8 @@ if (fs.existsSync(indexPath)) {
       })()
   `
   // Insert accessibility script before closing body tag
-  indexContent = indexContent.replace('</body>', `${accessibilityScript}</body>`)
+  indexContent = indexContent.replace('</body>', `${accessibilityScript}
+                </body>`)
   fs.writeFileSync(indexPath, indexContent)
   console.log('✅ Enhanced accessibility features')
 }
@@ -511,4 +518,4 @@ If you have any questions or concerns about our accessibility efforts, please co
 `
 fs.writeFileSync(path.join(__dirname, '../dist/accessibility-statement.md'), accessibilityStatement)
 console.log('✅ Created accessibility statement')
-console.log('♿ Accessibility enhancements completed!')
+console.log('♿ Accessibility enhancements completed!');

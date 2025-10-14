@@ -3,10 +3,11 @@ import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide
 import React, { useState } from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const FAQPage: React.FC = () => {
+const FAQPage: React.FC  = () => {
     const [searchTerm, setSearchTerm] = useState('')
   const [openItems, setOpenItems] = useState<number[]>([])
-  const toggleItem = (index: number) => {
+  const toggleItem = (index: number) =>
+                {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(i => i !== index)
@@ -82,18 +83,18 @@ $4]
     )
   })).filter(category => category.questions.length > 0)
   return (
-    <React.Fragment>
+    <React.Fragment></React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
+                {/* Header */}
+                <div className="text-center mb-12"></div>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"></h1>
               Frequently Asked Questions
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Find answers to common questions about our AI and IT services, pricing, and support.
             {/* Search Bar */}
-            <div className="max-w-md mx-auto relative">
+                <div className="max-w-md mx-auto relative"></div>
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -102,38 +103,41 @@ $4]
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
-          {/* FAQ Content */}
-          <div className="max-w-4xl mx-auto">
-            {filteredData.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="mb-12">
-                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
-                  {category.category}
-                <div className="space-y-4">
-                  {category.questions.map((item, itemIndex) => {
+                {/* FAQ Content */}
+                <div className="max-w-4xl mx-auto"></div>
+                {filteredData.map((category, categoryIndex) => (
+              <div key={categoryIndex} className="mb-12"></div>
+                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text"></h2>
+                {category.category}
+                <div className="space-y-4"></div>
+                {category.questions.map((item, itemIndex) =>
+                {
                     const globalIndex = categoryIndex * 100 + itemIndex
                     const isOpen = openItems.includes(globalIndex)
-                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
+                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"></div>
                         <$2 />
                           onClick={() => toggleItem(globalIndex)}
                           className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors">
-                          <span className="text-white font-medium pr-4">{item.question}
+                          <span className="text-white font-medium pr-4"></span>
+                {item.question}
                           {isOpen ? (
                             <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           ) : (
                             <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           )}
                         {isOpen && (
-                          <div className="px-6 pb-4">
-                            <p className="text-gray-300 leading-relaxed">{item.answer}
+                          <div className="px-6 pb-4"></div>
+                            <p className="text-gray-300 leading-relaxed"></p>
+                {item.answer}
                   })}
             ))}
           {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
+                <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Still Have Questions?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <$2 />
                 href="tel:+13024640950"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
@@ -153,7 +157,7 @@ export default FAQPage,
 import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const FAQPage: React.FC = () => {
+const FAQPage: React.FC  = () => {
     return (
     <div>Coming Soon</div>
   )
@@ -161,7 +165,8 @@ const FAQPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [openItems, setOpenItems] = useState<number[]>([])
 const toggleItem = (inde)
-  x: number) => {setOpenItems(prev =>})
+  x: number) =>
+                {setOpenItems(prev =>})
       prev.includes(index)
         ? prev.filter(i => i !== index)
         : [...prev, index]
@@ -300,19 +305,19 @@ const toggleItem = (inde)
   })).filter(category => category.questions.length > 0)
   return (<div>Coming Soon</div>)
   )
-          <React.Fragment>
+          <React.Fragment></React.Fragment>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}"
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
+                {/* Header */}"
           <div className="text-center mb-12"></div>"
             < className="text-4xl,"$2 />
   md:text-5xl font-bold text-white mb-6 neon-text">
 // Frequently Asked Questions</h1>"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Find answers to common questions about our AI and IT services, pricing, and support.
             {/* Search Bar */}
-            <div className="max-w-md mx-auto relative">
+                <div className="max-w-md mx-auto relative"></div>
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
 type="text" placeholder="Search FAQs..."
@@ -324,29 +329,31 @@ type="text" placeholder="Search FAQs..."
   focus:ring-2,"
   focus:ring-cyan-400/20"
 // />
-          {/* FAQ Content */}"
-          <div className="max-w-4xl mx-auto">
-            {filteredData.map((category, categoryIndex) => ()}"
+                {/* FAQ Content */}"
+          <div className="max-w-4xl mx-auto"></div>
+                {filteredData.map((category, categoryIndex) => ()}"
           <div key={categoryIndex} className="mb-12"></div>"
-                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">
-                  {category.category}
+                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text"></h2>
+                {category.category}
                 </h2>"
-                <div className="space-y-4">
-                  {category.questions.map((item, itemIndex) => {}
+                <div className="space-y-4"></div>
+                {category.questions.map((item, itemIndex) =>
+                {}
   // TOD,
   O: Add content,
 }
                     const globalIndex = categoryIndex * 100 + itemIndex
                     const isOpen = openItems.includes(globalIndex)
           "
-          <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">
-                        <button>
+          <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"></div>
+                        <button></button>
                           onClick={() => toggleItem(globalIndex)}"
                           className="w-full px-6 py-4 text-left flex items-center justify-between,"
   hover:bg-slate-700/50 transition-colors"
 // >
           "
-          <span className="text-white font-medium pr-4">{item.question}
+          <span className="text-white font-medium pr-4"></span>
+                {item.question}
                           {isOpen ? ()}"
           <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                           ) : ()
@@ -355,16 +362,17 @@ type="text" placeholder="Search FAQs..."
                           )}
                         {isOpen && ()}"
           <div className="px-6 pb-4"></div>"
-                            <p className="text-gray-300 leading-relaxed">{item.answer}
+                            <p className="text-gray-300 leading-relaxed"></p>
+                {item.answer}
                   })}
             ))}
 {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
+                <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>
+            <h2 className="text-2xl font-bold text-white mb-4"></h2>
               Still Have Questions?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto"></p>
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
               <$2 />
                 href="tel:+13024640950" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 <Phone className="w-5 h-5 mr-2" />
@@ -376,21 +384,28 @@ type="text" placeholder="Search FAQs..."
                 <MessageSquare className="w-4 h-4 mr-2" />
                 Contact Form
       <Footer /></Footer>
-    </React.Fragment>
+                </React.Fragment>
 export default FAQPage,
 export default FaqPage</div>
-  </p>
+                </p>
   </h2>
-  </div>
+                </div>
   </a>
+                </div>
   </div>
+                </div>
   </div>
+                </div>
   </div>
+                </div>
   </div>
+                </div>
   </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-</div></div></div></div></div></div></span></span></button></p></p></p></p></p></h2></h2>
+                </div></div>
+                </div></div>
+                </div></div>
+                </span></span>
+                </button></p>
+                </p></p>
+                </p></p>
+                </h2></h2>;

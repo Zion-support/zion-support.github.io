@@ -2253,7 +2253,7 @@ export type Database = {
     }
     Functions: {
       check_users_needing_reminders: {
-        Args: Record<PropertyKey, never>
+        Args: Record<PropertyKey, never></PropertyKey,>
         Returns: {
           user_id: string
           email: string
@@ -2280,7 +2280,7 @@ export type Database = {
         Returns: string
       }
       create_scheduled_reminders: {
-        Args: Record<PropertyKey, never>
+        Args: Record<PropertyKey, never></PropertyKey,>
         Returns: undefined
       }
       flag_suspicious_content: {
@@ -2313,7 +2313,7 @@ export type Database = {
         Returns: string
       }
       get_current_tenant_id: {
-        Args: Record<PropertyKey, never>
+        Args: Record<PropertyKey, never></PropertyKey,>
         Returns: string
       }
       get_event_distribution: {
@@ -2329,7 +2329,7 @@ export type Database = {
         Returns: string
       }
       schedule_email_reminders: {
-        Args: Record<PropertyKey, never>
+        Args: Record<PropertyKey, never></PropertyKey,>
         Returns: number
       }
       trigger_resume_scoring: {

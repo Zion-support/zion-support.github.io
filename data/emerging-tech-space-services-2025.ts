@@ -299,4 +299,4 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [
     rating: 4.6,
     reviews: 24
   }
-]
+];

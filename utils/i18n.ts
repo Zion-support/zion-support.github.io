@@ -45,4 +45,4 @@ if (!i18n.isInitialized) {
       defaultNS: 'common',
     } as any)
 }
-export default i18n
+export default i18n;

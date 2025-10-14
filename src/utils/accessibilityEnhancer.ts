@@ -30,7 +30,8 @@ class AccessibilityEnhancer {
 
   private setupKeyboardNavigation(): void {if (typeof document !== 'undefined' {}
       // Add keyboard navigation support;)
-      document.addEventListener('keydown', (event) => {if (event.key === 'Tab') {}
+      document.addEventListener('keydown', (event) =>
+                {if (event.key === 'Tab') {}
           // Handle tab navigation
           console.log('Tab navigation detected')
         }

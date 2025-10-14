@@ -119,7 +119,7 @@ export function getProviderById(
   id: string
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id)
-    description: 'HRIS & ATS'}]
+    description: 'HRIS & ATS'}];
 export function getProviderById(id: string;)): IntegrationProviderMeta | undefined {,
   return PROVIDERS.find(p => p.id === id)
 export function getProviderById(i)

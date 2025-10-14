@@ -1,6 +1,5 @@
-import { useState } from 'react'
-import { supabase } from '@/integrations/supabase/client'
-import { toast } from 'sonner'
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';import { toast } from 'sonner'
 export interface MilestoneInput {
   scope: string
   startDate: string
@@ -17,7 +16,8 @@ export interface GeneratedMilestone {
 export function useMilestoneGenerator() {
   const [isGenerating, setIsGenerating] = useState(false)
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([])
-  const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> => {
+  const generateMilestones = async (input: MilestoneInput): Promise<GeneratedMilestone[]> =>
+                {
     try {
       setIsGenerating(true)
       const { data, error } = await supabase.functions.invoke('generate-milestones', {
@@ -40,7 +40,7 @@ export function useMilestoneGenerator() {
       setIsGenerating(false)
     }
   }
-  const clearGeneratedMilestones = () => {
+  const clearGeneratedMilestones  = () => {
     setGeneratedMilestones([])
   }
   return {
@@ -51,3 +51,4 @@ export function useMilestoneGenerator() {
     clearGeneratedMilestones,
   }
 }
+;

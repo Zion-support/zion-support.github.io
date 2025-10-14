@@ -13,7 +13,8 @@ export function dynamic
   t: T }>,
   _option,
   s: DynamicOptions = {}
-): ComponentType<unknown> {/* TODO: Fix JSX expression */}
+): ComponentType<unknown></unknown>
+                {/* TODO: Fix JSX expression */}
   s: unknown) => (})
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}><LazyComponent {...props} />
   )

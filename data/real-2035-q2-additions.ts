@@ -25,7 +25,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 		icon: '🧠',
 		color: 'from-cyan-600 to-blue-700',
 		textColor: 'text-cyan-200',
-		link: '/services/ai-rfp-bid-writer',
+		link: '/services/ai-rfp-bid-writer',;
 		marketPosition: 'Faster than manual writing; complements Loopio and RFPIO with AI-first flows.',
 		targetAudience: 'Sales engineering, proposal managers, government contractors',
 		trialDays: 14,

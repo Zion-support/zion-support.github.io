@@ -35,7 +35,8 @@ export default defineConfig({
         moduleSideEffects: false,
       },
       output: {
-        manualChunks: (id) => {
+        manualChunks: (id) =>
+                {
           // React and React DOM
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
             return 'react'
@@ -112,4 +113,4 @@ export default defineConfig({
       '@components': '/app/components',
     },
   },
-})
+});

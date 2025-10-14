@@ -13,13 +13,13 @@ export type AnalyzeResponse = {
 import OpenAI from 'openai'
 export type AnalyzeRequestBody = {
   operatorPrompt: string
-  context?: Record<string, unknown>
+  context?: Record<string, unknown></string,>
 }
 export type AnalyzeResponse = {
   analysis: string
   role: 'system', content: system 
 }
-export type AnalyzeResponse = {
+export type AnalyzeResponse = {;
   analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next'
 import OpenAI from 'openai'
 export type AnalyzeRequestBody = {
@@ -28,16 +28,16 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import OpenAI from 'openai'
 export type AnalyzeRequestBody = {
   operatorPrompt: string
-  context?: Record<string, unknown>
+  context?: Record<string, unknown></string,>
 }
 export type AnalyzeResponse = {
   analysis: string
 }
 export default async function handler(
   req: NextApiRequest
-  res: NextApiResponse<AnalyzeResponse | { error: string }>
+  res: NextApiResponse<AnalyzeResponse | { error: string }></AnalyzeResponse>
 ) {
-  if (req && req.method !== 'POST') {
+  if (req && req.method !== 'POST') {;
     return res && res.status(405).json({ error: 'Method not allowed' });  }
   const { operatorPrompt, context } = (req && req.body || {}) as AnalyzeRequestBody
   if (!operatorPrompt || typeof operatorPrompt !== 'string') {
@@ -124,7 +124,7 @@ export default async function handler(
   }
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<AnalyzeResponse | { error: string }>
+  res: NextApiResponse<AnalyzeResponse | { error: string }></AnalyzeResponse>
 ) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })

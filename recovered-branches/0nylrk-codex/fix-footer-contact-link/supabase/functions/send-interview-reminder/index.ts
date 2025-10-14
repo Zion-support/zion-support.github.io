@@ -1,6 +1,5 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
-import { Resend } from "npm:resend@2.0.0"
+import { serve  } from 'https://deno.land/std@0.190.0/http/server.ts';
+import { createClient  } from 'https://esm.sh/@supabase/supabase-js@2';import { Resend } from "npm:resend@2.0.0"
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -9,7 +8,8 @@ const corsHeaders = {
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || ""
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") || ""
-serve(async (req) => {
+serve(async (req) =>
+                {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -49,9 +49,12 @@ serve(async (req) => {
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>
-                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
+                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}
+                </p>
                 <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
+                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}
+                </a>
+                </p>` : ''}
                 <p>Please be ready on time!</p>
               `})
               `,
@@ -73,9 +76,12 @@ serve(async (req) => {
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${clientName} is starting in 30 minutes.</p>
-                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}</p>
+                <p><strong>Time:</strong> ${interviewDate.toLocaleTimeString()}
+                </p>
                 <p><strong>Duration:</strong> ${interview.duration_minutes} minutes</p>
-                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
+                ${interview.meeting_link ? `<p><strong>Meeting Link:</strong> <a href="${interview.meeting_link}">${interview.meeting_link}
+                </a>
+                </p>` : ''}
                 <p>Please be ready on time!</p>
               `})
               `,
@@ -105,4 +111,4 @@ serve(async (req) => {
       status: 500,
     })
   }
-})
+});

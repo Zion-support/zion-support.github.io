@@ -74,7 +74,6 @@ export interface WalletSummary {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 }
 export type TokenSymbol = "ZION$"
@@ -90,7 +89,7 @@ export interface TokenTransaction {
   type: TokenTransactionType
   amount: number; // positive integer tokens
   reason: string
-  metadata?: Record<string, any>
+  metadata?: Record<string, any></string,>
   createdAt: string; // ISO timestamp
 }
 export interface Wallet {

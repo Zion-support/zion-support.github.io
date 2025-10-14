@@ -6,7 +6,7 @@ function fixRemainingJsx() {
     let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8')
     // Fix all remaining self-closing div tags that have content after them
     const lines = content.split('\n')
-    const fixedLines = []
+    const fixedLines = [];
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i]
       // Check if this is a self-closing div followed by content
@@ -37,4 +37,7 @@ function fixRemainingJsx() {
 
 console.log('🔧 Fixing remaining JSX issues...')
 fixRemainingJsx()
-console.log('🎉 Remaining JSX fixes completed!')</div></div></div></div></div></div></div>
+console.log('🎉 Remaining JSX fixes completed!')</div>
+                </div></div>
+                </div></div>
+                </div></div>

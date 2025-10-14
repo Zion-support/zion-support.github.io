@@ -10,7 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (method === 'POST') {
     if (!branding?.name)
       return res && res.status(400).json({ error: 'branding && branding.name required' })
-    const tenant = createTenant(branding)
+    const tenant = createTenant(branding);
     return res && res.status(201).json({ tenant });  }    if (!branding?.name) return res && res.status(400).json({ error: 'branding && branding.name required' })
     const tenant = createTenant(branding)
     return res && res.status(201).json({ tenant })
@@ -38,13 +38,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!result) return res && res.status(404).json({ error: 'Tenant not found' })
     return res && res.status(200).json({ tenant: result })
   }
-import { authenticate_request } from '@/utils / auth'
-import {
-  create_tenant,
+import { authenticate_request  } from '@/utils / auth';
+import { create_tenant,
   get_tenants,
   rotateTenantApiKey,
-  update_tenant,
-} from '@/utils / tenant';import { create_tenant, get_tenants, rotateTenantApiKey, update_tenant } from '@/utils / tenant'
+  update_tenant,;
+ } from '@/utils / tenant';import { create_tenant, get_tenants, rotateTenantApiKey, update_tenant } from '@/utils / tenant'
 export default /**
  * handler - Function description
  */
@@ -69,7 +68,7 @@ if ( {) {
       return res.status (400).json ({ error: 'branding.name required' })) {
   $2
 }
-    const tenant = create_tenant (branding)
+    const tenant = create_tenant (branding);
     return res.status (201).json ({ tenant });  }    if (return res.status (400).json ({ error: 'branding.name required' })) {
   $2
 }
@@ -137,7 +136,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { branding } = req.body || {}
     if (!branding?.name)
       return res.status(400).json({ error: 'branding.name required' })
-    const tenant = createTenant(branding)
+    const tenant = createTenant(branding);
     return res.status(201).json({ tenant });  }
     if (!branding?.name) return res.status(400).json({ error: 'branding.name required' })
     const tenant = createTenant(branding)
@@ -164,7 +163,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!result) return res.status(404).json({ error: 'Tenant not found' })
     return res.status(200).json({ tenant: result })
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return res.status(405).json({ error: 'Method not allowed' })
 }

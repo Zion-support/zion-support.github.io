@@ -4,7 +4,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const method = (req.method |'POST').toUpperCase()
-  if (method !== 'POST')
+  if (method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method |'POST').toUpperCase()
 ) {
@@ -12,9 +12,8 @@ export default async function handler(
   if (method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'POST').toUpperCase()
-import { authenticateRequest } from '@/utils/auth'
-import { generateText } from '@/utils/ai'
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import { authenticateRequest  } from '@/utils/auth';
+import { generateText  } from '@/utils/ai';export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'POST').toUpperCase()
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const auth = authenticateRequest(req, false)

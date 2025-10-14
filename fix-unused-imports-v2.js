@@ -46,42 +46,49 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       if (lintResults.length === 0) return
       const unusedVars = lintResults[0].messages
         .filter(msg => msg.ruleId === '@typescript-eslint/no-unused-vars' && msg.message.includes('is defined but never used'))
-        .map(msg => {)
+        .map(msg =>
+                {)
           const match = msg.message.match(/'([^']+)'/)
           return match ? match[1] : null
-        .map(msg => {/* TODO: Fix JSX expression */})
+        .map(msg =>
+                {/* TODO: Fix JSX expression */})
         })
         .filter(Boolean)
       if (unusedVars.length === 0) return
       `
       console.log(`Fixing ${unusedVars.length} unused imports in ${filePath}`)
-      // Remove unused imports from import statements
+      // Remove unused imports from import statements;
       const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g
-      content = content.replace(importRegex, (match, imports) => {
+      content = content.replace(importRegex, (match, imports) =>
+                {
         const importList = imports.split(',').map(imp => imp.trim())
-        const usedImports = importList.filter(imp => {)
+        const usedImports = importList.filter(imp =>
+                {)
           const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim()
           return !unusedVars.includes(cleanImp)
         })
         if (usedImports.length === 0) {
-          return ''; // Remove entire import if no imports are used
+          return ''; // Remove entire import if no imports are used;
       // Remove unused imports from import statements;"
       const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g
-      content = content.replace(importRegex, (match, imports) => {/* TODO: Fix JSX expression */}
+      content = content.replace(importRegex, (match, imports) =>
+                {/* TODO: Fix JSX expression */}
         })
         if (usedImports.length === 0) {/* TODO: Fix JSX expression */}
         }
         
         return match.replace(imports, usedImports.join(', '))
       })
-      // Remove entire import lines that are now empty
+      // Remove entire import lines that are now empty;
       content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*\n?/g, '')
       // Remove unused variable declarations
-      unusedVars.forEach(varName => {)
+      unusedVars.forEach(varName =>
+                {)
       // Remove entire import lines that are now empty;"
       content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*\n?/g, '')
       // Remove unused variable declarations
-      unusedVars.forEach(varName => {/* TODO: Fix JSX expression */})`
+      unusedVars.forEach(varName =>
+                {/* TODO: Fix JSX expression */})`
         const varRegex = new RegExp(`const\\s+${varName}\\s*=\\s*[^;]+;?\\s*\\n?`, 'g')
         content = content.replace(varRegex, '')
       })
@@ -108,7 +115,8 @@ console.log(`Found ${files.length} files to process`)
 const batchSize = 10
 for (let i = 0; i < files.length; i += batchSize) {
   const batch = files.slice(i, i + batchSize)
-  batch.forEach(file => {)
+  batch.forEach(file =></>
+                {)
     removeUnusedImports(file)
   })
 for (let i = 0; i < files.length; i += batchSize) {/* TODO: Fix JSX expression */}

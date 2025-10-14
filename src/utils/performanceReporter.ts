@@ -70,14 +70,16 @@ class PerformanceReporter {
     if (config?.reportInterval) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      this.reportingInterval = setInterval(() => {/* TODO: Fix JSX expression */}
+      this.reportingInterval = setInterval(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 //         this.report()
       }, config.reportInterval)
     }
     // Report on page unload
-    window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */}
+    window.addEventListener('beforeunload', () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 //       this.report()
@@ -102,7 +104,8 @@ class PerformanceReporter {
   O: Add content,}
 }
       // Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX expression */}
+      const lcpObserver = new PerformanceObserver((entryList) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         const entries = entryList.getEntries()
@@ -121,13 +124,15 @@ class PerformanceReporter {
   )
       // First Input Delay (FID)
 
-      const fidObserver = new PerformanceObserver((entryList) => {
+      const fidObserver = new PerformanceObserver((entryList) =>
+                {
     // TODO: Add content
   }
 
 }
         const entries = entryList.getEntries()
-        entries.forEach((entry) => {/* TODO: Fix JSX expression */}
+        entries.forEach((entry) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           if ('processingStart' in entry && 'startTime' in entry) {/* TODO: Fix JSX expression */}
@@ -145,10 +150,12 @@ class PerformanceReporter {
   )
       // Cumulative Layout Shift (CLS)
       let clsValue = 0
-const clsObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX expression */}
+const clsObserver = new PerformanceObserver((entryList) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        entryList.getEntries().forEach((entry) => {/* TODO: Fix JSX expression */}
+        entryList.getEntries().forEach((entry) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */}
@@ -166,13 +173,15 @@ const clsObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX exp
   )
       // First Contentful Paint (FCP)
 
-      const fcpObserver = new PerformanceObserver((entryList) => {
+      const fcpObserver = new PerformanceObserver((entryList) =>
+                {
     // TODO: Add content
   }
 
 }
         const entries = entryList.getEntries()
-        entries.forEach((entry) => {/* TODO: Fix JSX expression */}
+        entries.forEach((entry) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
@@ -204,10 +213,12 @@ const clsObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX exp
 }
 //       return
     }
-    window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
+    window.addEventListener('load', () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      setTimeout(() => {/* TODO: Fix JSX expression */}
+      setTimeout(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
@@ -242,10 +253,12 @@ const loadComplete = navigation.loadEventEnd - navigation.loadEventStart
 }
 //       return
     }
-    window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
+    window.addEventListener('load', () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      setTimeout(() => {/* TODO: Fix JSX expression */}
+      setTimeout(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
@@ -254,7 +267,8 @@ const slowResources = resources
           .filter((resource) => resource.duration > 1000)
           .sort((a, b) => b.duration - a.duration)
 //           .slice(0, 10)
-        slowResources.forEach((resource) => {/* TODO: Fix JSX expression */}
+        slowResources.forEach((resource) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
           logger.warn('Slow resource detected', {/* TODO: Fix JSX expression */}

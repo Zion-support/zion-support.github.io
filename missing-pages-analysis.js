@@ -140,7 +140,8 @@ const extraPages = existingPages.filter(page => !navigationLinks.includes(page))
 console.log('\nPages that exist but aren\'t in main navigation:')
 extraPages.forEach(page => console.log(`- ${page}`))
 // Check for broken links (pages that should exist based on navigation)
-const brokenLinks = missingPages.filter(page => {
+const brokenLinks = missingPages.filter(page =>
+                {
   // These are critical pages that should exist
   const criticalPages = ['/blockchain-web3']
   return criticalPages.includes(page)

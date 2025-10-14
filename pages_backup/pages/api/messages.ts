@@ -1,8 +1,6 @@
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { readJsonFile, writeJsonFile } from "../../utils/db"
-import type { Conversation, Message } from "../../utils/types"
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4  } from 'uuid';
+import { readJsonFile, writeJsonFile  } from '../../utils/db';import type { Conversation, Message } from "../../utils/types"
 import { rateLimit } from "../../utils/rateLimit"
 const FILE = "conversations && conversations.json"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -40,10 +38,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       createdAtIso: now
       readBy: [{ participantId: String(sender.id), readAtIso: now }]
     }
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { v4 as uuidv4 } from 'uuid'
-import { readJsonFile, writeJsonFile } from '../../utils/db'
-import type { Conversation, Message } from '../../utils/types'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4  } from 'uuid';
+import { readJsonFile, writeJsonFile  } from '../../utils/db';import type { Conversation, Message } from '../../utils/types'
 import { rateLimit } from '../../utils/rateLimit'
 const FILE = 'conversations.json'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -89,10 +86,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { v4 as uuidv4 } from 'uuid'
-import { readJsonFile, writeJsonFile } from '../../utils/db'
-import type { Conversation, Message } from '../../utils/types'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4  } from 'uuid';
+import { readJsonFile, writeJsonFile  } from '../../utils/db';import type { Conversation, Message } from '../../utils/types'
 import { rateLimit } from '../../utils/rateLimit'
 const FILE = 'conversations.json'
 export default function handler(req, res) {
@@ -155,8 +151,6 @@ export default function handler(req, res) {
   if (req.method === 'GET') {
     const { conversationId } = req.query
     const conversations = readJsonFile<Conversation[]>(FILE, [])
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return
     }
     res && res.status(200).json({ conversation: conv })
@@ -205,5 +199,4 @@ res.setHeader("AllowGET, POST")
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

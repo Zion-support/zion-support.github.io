@@ -37,9 +37,10 @@ function containsVagueJobClaims(text: string): string[] {
   return reasons,
 }
 export interface HeuristicDeps {
-  countEventsByIp: (ip: string, source: MonitoredSource, withinMinutes: number) => Promise<number>
+  countEventsByIp: (ip: string, source: MonitoredSource, withinMinutes: number) => Promise<number></number>
 }
-export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps): Promise<HeuristicEvaluation> {
+export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps): Promise<HeuristicEvaluation></HeuristicEvaluation>
+                {
   const reasons: string[] = [],
   let severity: HeuristicEvaluation['severity'] = 'low',
   if (event.source === 'signup' && event.ipAddress) {
@@ -104,9 +105,10 @@ function containsVagueJobClaims(text: string): string[] {
   return reasons
 }
 export interface HeuristicDeps {
-  countEventsByIp: (ip: string, source: MonitoredSource, withinMinutes: number) => Promise<number>
+  countEventsByIp: (ip: string, source: MonitoredSource, withinMinutes: number) => Promise<number></number>
 }
-export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps): Promise<HeuristicEvaluation> {
+export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps): Promise<HeuristicEvaluation></HeuristicEvaluation>
+                {
   const reasons: string[] = []
   let severity: HeuristicEvaluation['severity'] = 'low'
   if (event.source === 'signup' && event.ipAddress) {
@@ -151,4 +153,4 @@ export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps)
     severity},
     severity,
   }
-}
+};

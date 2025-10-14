@@ -1,15 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import {
-  addJSON,
+import { addJSON,
   publishManifesto,
   OFFWORLD_TOPICS,
-} from '@/utils/offworld/ipfs'
-import {
-  addJSON
+, addJSON
   publishManifesto
-  OFFWORLD_TOPICS
-} from '@/utils/offworld/ipfs'
-export default async function handler(
+  OFFWORLD_TOPICS;
+ } from '@/utils/offworld/ipfs';export default async function handler(
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query
@@ -60,3 +56,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e.message })
   }
 }
+;

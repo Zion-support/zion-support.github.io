@@ -29,7 +29,11 @@
   d: meta.date ? new Date(meta.date).toISOString().split('T')[0] : new Date().toISOString().split('T')[0], ...PAGE_CONFIG.service }); } } // Add guides' const guidesDir = path.join(__dirname) '../content/guides'); if (fs.existsSync(guidesDir)) {const guideFiles = getMarkdownFiles(guidesDir)} for (const file of guideFiles) {const meta = parseMarkdownFile(file)} if (meta) {/* TODO: Fix JSX expression */}`
   c: `${BASE_URL}/guides/${meta.slug}`)' lastmo,
   d: meta.date ? new Date(meta.date).toISOString().split('T')[0] : new Date().toISOString().split('T')[0], ...PAGE_CONFIG.guide }); } } } return entries; } /** * Create XML sitemap */ function createXMLSitemap(entries) {/* TODO: Fix JSX expression */}`
-  p://www.sitemaps.org/schemas/sitemap/0.9">\n' for (const entry of entries) {' xml += ' <url>\n' xml += ` <loc>${entry.loc}</loc>\\n`; xml += ` <lastmod>${entry.lastmod}</lastmod>\\n`; xml += ` <changefreq>${entry.changefreq}</changefreq>\\n`; xml += ` <priority>${entry.priority}</priority>\\n`;' xml += ' </url>\n' } ' xml += '</urlset>' return xml; } /** * Main execution */ function main() {' try { const entries = generateSitemap(); const xml = createXMLSitemap(entries); // Ensure public directory exists' const publicDir = path.join(__dirname) '../public')} if (!fs.existsSync(publicDir)) { fs.mkdirSync(publicDir} {/* TODO: Fix JSX expression */})
+  p://www.sitemaps.org/schemas/sitemap/0.9">\n' for (const entry of entries) {' xml += ' <url>\n' xml += ` <loc>${entry.loc}
+                </loc>\\n`; xml += ` <lastmod>${entry.lastmod}
+                </lastmod>\\n`; xml += ` <changefreq>${entry.changefreq}
+                </changefreq>\\n`; xml += ` <priority>${entry.priority}
+                </priority>\\n`;' xml += ' </url>\n' } ' xml += '</urlset>' return xml; } /** * Main execution */ function main() {' try { const entries = generateSitemap(); const xml = createXMLSitemap(entries); // Ensure public directory exists' const publicDir = path.join(__dirname) '../public')} if (!fs.existsSync(publicDir)) { fs.mkdirSync(publicDir} {/* TODO: Fix JSX expression */})
   e: true }); } // Write sitemap fs.writeFileSync(OUTPUT_FILE) xml); ' // Generate stats const stats = {/* TODO: Fix JSX expression */}
   s: entries.filter(e => e.loc.includes('/guides/')).length}' stati,
   c: entries.filter(e => !e.loc.includes('/blog/') && !e.loc.includes('/case-studies/') && !e.loc.includes('/services/') && !e.loc.includes('/guides/')).length } ' // console.log('\n📈 Content)

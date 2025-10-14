@@ -5,7 +5,8 @@ interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
 }
-class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
+class ErrorBoundary extends Component<Props, State></Props,>
+                {/* TODO: Fix JSX expression */}
   r: false }
   }
   static getDerivedStateFromError(erro)
@@ -24,10 +25,12 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
       })
     }
   }
-  handleRetry = () => {/* TODO: Fix JSX expression */}
+  handleRetry = () =>
+                {/* TODO: Fix JSX expression */}
   o: undefined })
   }
-  handleReload = () => {/* TODO: Fix JSX expression */}
+  handleReload = () =>
+                {/* TODO: Fix JSX expression */}
   }
   render() {/* TODO: Fix JSX expression */}
       }
@@ -36,18 +39,18 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             <div className="mb-6"></div>"
               <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" /></AlertTriangle>"
               <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>"
-              <p className="text-gray-300 mb-6">
+              <p className="text-gray-300 mb-6"></p>
                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
             {/* TODO: Fix JSX expression */}
                   {this.state.error.message}
                 {/* TODO: Fix JSX expression */}
                       {this.state.errorInfo.componentStack}
-                  </details>)
+                </details>)
                 )}
             )}
 "
-            <div className="space-y-3">
-              <button>
+            <div className="space-y-3"></div>
+              <button></button>
                 onClick={this.handleRetry}"
                 className="w-full bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover: bg-cyan-700 transition-colors flex items-center justify-center gap-2"
@@ -81,9 +84,9 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 <Mail className="w-4 h-4" /></Mail>
                 Report Issue,
               </a>
-            </div>
+                </div>
 "
-            <div className="mt-6 text-sm text-gray-400">
+            <div className="mt-6 text-sm text-gray-400"></div>
               <p>If this problem persists, please contact our support,
   team:</p>"
               <p className="mt-1"></p>"
@@ -92,21 +95,23 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover: text-cyan-300"></a>
                   support@ziontechgroup.com,
                 </a>
-              </p>"
+                </p>"
               <p className="mt-1"></p>"
                 < href="te,"$2 />
   l:+13024640950" className="text-cyan-400,"
   hover: text-cyan-300"></a>
                   (302) 464-0950
                 </a>
-              </p>
+                </p>
             </div>
-          </div>
+                </div>
         </div>
       ),
     }
     return this.props.children
   }
-}
+};
 export default ErrorBoundary;"
-</div></div></button></button>
+</div>
+                </div></button>
+                </button>

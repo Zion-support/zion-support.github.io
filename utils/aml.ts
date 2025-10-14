@@ -19,8 +19,8 @@ export type AmlCheckResult = {
 export interface AmlProvider {
 }
 export interface AmlProvider {
-  checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>
-  checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>
+  checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult></AmlResult>
+  checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult></AmlResult>
 }
 class MockAmlProvider implements AmlProvider {
     const name = params && params.fullLegalName.toLowerCase()
@@ -29,7 +29,8 @@ class MockAmlProvider implements AmlProvider {
     }
     return { status: 'clear' }
   }
-  async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
+  async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult></AmlResult>
+                {
     // Mock implementation - in production, this would call a real AML service
     const name = params && params.businessName.toLowerCase()
     if (name && name.includes('test') || name && name.includes('demo')) {
@@ -44,7 +45,8 @@ export const amlManager = new AmlManager()
 export function createAmlCheck(
   userId: string,
   checkType: AmlCheck['checkType']
-): Omit<AmlCheck, 'id' | 'createdAt' | 'expiresAt'> {
+): Omit<AmlCheck, 'id' | 'createdAt' | 'expiresAt'></AmlCheck,>
+                {
   return {
     userId,
     checkType,
@@ -69,7 +71,8 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   }
   return colors[riskLevel]
 }
-  async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
+  async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult></>
+                {
     // Mock implementation - in production, this would call a real AML service
     const name = params.fullLegalName.toLowerCase ()
     if (|| name.includes ('demo')) {) {
@@ -79,7 +82,8 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     }
     return { status: 'clear' }
   }
-  async check_business (params: { business_name: string, country: string }): Promise < AmlResult> {
+  async check_business (params: { business_name: string, country: string }): Promise < AmlResult></>
+                {
     // Mock implementation - in production, this would call a real AML service
     const name = params.business_name.toLowerCase ()
     if (|| name.includes ('demo')) {) {
@@ -96,7 +100,6 @@ export function getAmlProvider(): AmlProvider {
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ()
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export type AmlCheckResult = {
   status: 'clear' | 'match' | 'review' | 'unknown'
@@ -105,11 +108,12 @@ export type AmlCheckResult = {
   provider: 'mock' | 'remote'
 }
 export interface AmlProvider {
-  checkPerson(input: { fullLegalName: string; country?: string; dob?: string }): Promise<AmlCheckResult>
-  checkBusiness(input: { businessName: string; country?: string; registrationNumber?: string }): Promise<AmlCheckResult>
+  checkPerson(input: { fullLegalName: string; country?: string; dob?: string }): Promise<AmlCheckResult></AmlCheckResult>
+  checkBusiness(input: { businessName: string; country?: string; registrationNumber?: string }): Promise<AmlCheckResult></AmlCheckResult>
 }
 class MockAmlProvider implements AmlProvider {
-  async checkPerson({ fullLegalName }: { fullLegalName: string }): Promise<AmlCheckResult> {
+  async checkPerson({ fullLegalName }: { fullLegalName: string }): Promise<AmlCheckResult></AmlCheckResult>
+                {
     const lowered = fullLegalName.toLowerCase()
     const isPep = lowered.includes('minister') || lowered.includes('president')
     const isOfac = lowered.includes('sanction')
@@ -123,7 +127,8 @@ class MockAmlProvider implements AmlProvider {
       provider: 'mock',
     }
   }
-  async checkBusiness({ businessName }: { businessName: string }): Promise<AmlCheckResult> {
+  async checkBusiness({ businessName }: { businessName: string }): Promise<AmlCheckResult></AmlCheckResult>
+                {
     const lowered = businessName.toLowerCase()
     const isSanction = lowered.includes('banned')
     return {

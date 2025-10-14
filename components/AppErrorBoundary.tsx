@@ -8,9 +8,9 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
             onClick={() => window?.location.reload()}
             className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
             Reload page</span>
-        </div>
+                </div>
       </div>
-    </div>
+                </div>
   ),
 }
 interface AppErrorBoundaryProps {
@@ -20,7 +20,8 @@ interface AppErrorBoundaryState {
     hasError: boolean,
   error: Error | undefined
   }
-export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
+export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState></AppErrorBoundaryProps,>
+                {
   constructor(props: AppErrorBoundaryProps) {
     super(props),
     this.state = { hasError: false, error: undefined }
@@ -34,7 +35,8 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   }
     // Here you could send error to monitoring service
   }
-  resetError = () => {
+  resetError = () =>
+                {
     this.setState({ hasError: false, error: undefined })
   }
   render() {
@@ -43,4 +45,10 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
     }
     return this.props.children
   }
-}</div></div></div></div></div></div></div></p></p></h3>
+}
+                </div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </p></p>
+                </h3>;

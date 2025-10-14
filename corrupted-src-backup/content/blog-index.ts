@@ -151,7 +151,8 @@ export function getAllTags(): string[] {/* TODO: Fix JSX expression */}
 }
 
 export function getTotalValueProposition(): string {
-  const totalValue = allBlogPosts.reduce((sum, post) => {
+  const totalValue = allBlogPosts.reduce((sum, post) =>
+                {
     const _value = post.valueProposition.match(/\$(\d+)M/)
 :corrupted-src-backup/content/blog-index.ts
 export function getTotalValueProposition(): string {/* TODO: Fix JSX expression */}

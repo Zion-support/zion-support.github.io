@@ -20,13 +20,15 @@ const,
 //   message,
   type = 'success',
   duration = 3000,
-//   onClose,
+//   onClose,;
 //   show;)
-}) => {/* TODO: Fix JSX expression */}
+}) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const [isVisible, setIsVisible] = useState(show)
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     setIsVisible(show)
@@ -41,7 +43,7 @@ const,
     return undefined
   }, [show, duration, onClose])
   if (!isVisible) return null
-  const getToastStyles = () => {/* TODO: Fix JSX expression */}
+  const getToastStyles  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     switch (type) {/* TODO: Fix JSX expression */}
@@ -59,7 +61,7 @@ const,
   t: return 'bg-gray-800 text-white',
     }
   }
-  const getIcon = () => {/* TODO: Fix JSX expression */}
+  const getIcon  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     switch (type) {/* TODO: Fix JSX expression */}
@@ -79,16 +81,19 @@ const,
   }
   return (<div>Coming Soon</div>)
   )
-          <div>
+          <div></div>
 className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
       role="alert""
       aria-live="polite"
 // >
           "
-          <span className="text-xl font-bold">{getIcon()}
-      <span>{message}
-      <button>
-        onClick={() => {}
+          <span className="text-xl font-bold"></span>
+                {getIcon()}
+                <span></span>
+                {message}
+                <button></button>
+        onClick={() =>
+                {}
   // TOD,
   O: Add content,
 }
@@ -101,9 +106,9 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
 //       >
 //
           </button>
-    </div>
+                </div>
   ),
 }
 export default Toast;"`
   </ToastProps>
-</span></span>
+                </span></span>

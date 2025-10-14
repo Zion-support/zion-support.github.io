@@ -5,7 +5,8 @@ import fs from "fs"
 import path from "path"
 const DATA_DIR = path.join(process.cwd(), "data", "kyc")
 const FILE = path.join(DATA_DIR, "profiles.json")
-function load(): Record<string, KycProfile> {
+function load(): Record<string, KycProfile></string,>
+                {
   try {
     const raw = fs.readFileSync(FILE, "utf8")
     return JSON.parse(raw)
@@ -38,7 +39,8 @@ import fs from 'fs'
 import path from 'path'
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),
 const FILE = path.join(DATA_DIR, 'profiles.json')
-function load(): Record<string, KycProfile> {
+function load(): Record<string, KycProfile></string,>
+                {
   try {
     const raw = fs.readFileSync(FILE, 'utf8')
     return JSON.parse(raw)
@@ -105,3 +107,4 @@ export default function handler(req, res) {
 }
   })
 }
+;

@@ -4,7 +4,7 @@ import { glob } from 'glob'
 // Function to process a file
 function processFile(filePath) {
   try {
-    // Fix duplicate React imports
+    // Fix duplicate React imports;
     if (content.includes("import React from 'react';\nimport React from 'react';")) {
       content = content.replace(/import React from 'react';\nimport React from 'react';/g)
         "import React from 'react';"
@@ -63,14 +63,16 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 // Main execution
 async function main() {
   // Find all TypeScript/JavaScript files in app directory
-  files.forEach(file => {)
+  files.forEach(file =>
+                {)
     if (processFile(file)) {
       fixedCount++
     }
 async function main() {/* TODO: Fix JSX expression */}
 }
   // Find all TypeScript/JavaScript files in app directory
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
     })
   })
 }

@@ -258,12 +258,16 @@ async function runSEOEnhancements() {
 }
 
 runSEOEnhancements()
-// #!/usr/bin/env node /** * SEO Enhancement Script for Zion Tech Group Website * * This script enhances SEO,
+// #!/usr/bin/env node /** * SEO Enhancement Script for Zion Tech Group Website * * This script enhances SEO,;
   by: * - Generating comprehensive sitemaps * - Optimizing meta tags * - Adding structured data * - Improving page performance metrics */ import fs from 'fs'' import path from 'path'' import { fileURLToPath } from 'url' const __filename = fileURLToPath(import.meta.url); const __dirname = path.dirname(__filename); class SEOEnhancer {/* TODO: Fix JSX expression */}
   s: //ziontechgroup.com' this.pages = []; this.blogPosts = []; this.services = []} this.caseStudies = []} } async generateSitemap() {' // Read blog posts try {' const blogPostsPath = path.join(__dirname) '../src/content/blog-posts.ts');' const blogContent = fs.readFileSync(blogPostsPath) 'utf8')} // Extract blog post slugs (simplified extraction) const blogMatches = blogContent.match(/slu)
   g: \\s*"([^"]+)"/g), if (blogMatches) {/* TODO: Fix JSX expression */}"
   g:\s*"/) '').replace(/"/} '') ); } } catch (error) {' } // Define static pages const staticPages = [' '',' '/about',' '/services',' '/blog',' '/case-studies',' '/contact',' '/tools' ]; // Define service pages const servicePages = [' '/services/ai-data-analytics',' '/services/ai-workflow-automation',' '/services/ai-virtual-assistant',' '/services/cloud-migration',' '/services/devops-automation',' '/services/cybersecurity-consulting' ]; // Generate XML sitemap const sitemapXml = this.generateXMLSitemap([ ...staticPages, ...servicePages) ...this.blogPosts.map(slug => `/blog/${slug}`) ]); // Save sitemap' const sitemapPath = path.join(__dirname) '../public/sitemap.xml'); fs.writeFileSync(sitemapPath) sitemapXml); } generateXMLSitemap(pages) {const now = new Date().toISOString()} ' let xml = '<?xml version="1.0" encoding="UTF-8"?>\n'' xml += '<urlset xmlns="htt,"`
-  p://www.sitemaps.org/schemas/sitemap/0.9">\n' pages.forEach(page => {' const url = page === '' ? this.baseUrl : `${this.baseUrl}${page}`)' const priority = page === '' ? '1.0' : ' page.includes('/blog/') ? '0.8' : ' page.includes('/services/') ? '0.9' : '0.7' ' xml += ' <url>\n' xml += ` <loc>${url}</loc>\\n`; xml += ` <lastmod>${now}</lastmod>\\n`; xml += ` <changefreq>weekly</changefreq>\\n`; xml += ` <priority>${priority}</priority>\\n`;' xml += ' </url>\n' }); ' xml += '</urlset>' return xml; } generateRobotsTxt() {' // console.log('🤖 Generating robots.txt...')} const robotsContent = `User-agen,
+  p://www.sitemaps.org/schemas/sitemap/0.9">\n' pages.forEach(page =>
+                {' const url = page === '' ? this.baseUrl : `${this.baseUrl}${page}`)' const priority = page === '' ? '1.0' : ' page.includes('/blog/') ? '0.8' : ' page.includes('/services/') ? '0.9' : '0.7' ' xml += ' <url>\n' xml += ` <loc>${url}
+                </loc>\\n`; xml += ` <lastmod>${now}
+                </lastmod>\\n`; xml += ` <changefreq>weekly</changefreq>\\n`; xml += ` <priority>${priority}
+                </priority>\\n`;' xml += ' </url>\n' }); ' xml += '</urlset>' return xml; } generateRobotsTxt() {' // console.log('🤖 Generating robots.txt...')} const robotsContent = `User-agen,
   t: * Allo,
   w: / # Sitemap,
   Sitemap: ${this.baseUrl}/sitemap.xml # Disallow admin areas,

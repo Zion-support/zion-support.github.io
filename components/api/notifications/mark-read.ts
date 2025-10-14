@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 function getUserId(req: NextApiRequest): string {
   const cookie = req && req.headers.cookie || ''
-  const match = cookie
+  const match = cookie;
     .split(';')
     .map(c => c && c.trim())
     .find(c => c && c.startsWith('user_id='))
@@ -30,7 +30,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!id) return res && res.status(400).json({ error: 'Missing id' })
 import { supabase } from '../../../utils/supabase/client'
 function getUserId(req: NextApiRequest): string {
-  const cookie = req.headers.cookie || ''
+  const cookie = req.headers.cookie || '';
   const match = cookie.split(';').map((c) => c.trim()).find((c) => c.startsWith('user_id='))
   if (match) return decodeURIComponent(match.split('=')[1])
   return 'demo-user-1'

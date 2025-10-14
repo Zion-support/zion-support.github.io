@@ -20,14 +20,16 @@ function fixFile(filePath) {
         'CookiesPage'
       ]
       // Remove unused imports
-      unusedImports.forEach(importName => {)
-function fixFile(filePath) {/* TODO: Fix JSX expression */}
+      unusedImports.forEach(importName =>
+                {)
+function fixFile(filePath) {/* TODO: Fix JSX expression */};
         const regex = new RegExp(`import\\s+${importName}\\s+from[^;]+;\\s*`, 'g')
         if (content.match(regex)) {/* TODO: Fix JSX expression */}
         }
       })
       // Fix unused error parameter
-      content = content.replace(/\(error\) => \{/, '() => {')
+      content = content.replace(/\(error\) => \{/, '() =>
+                {')
       modified = true
     }
 

@@ -1,16 +1,17 @@
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import reviewsHandler from '@/pages/api/reviews'
-import productReviewsHandler from '@/pages/api/reviews/[productId]'
-import { PrismaClient, ProductReview, User as PrismaUser, Prisma } from '@prisma/client'
-import { supabase } from '@/integrations/supabase/client'
-import type { User as SupabaseUser, Session, AuthError } from '@supabase/supabase-js'
+import productReviewsHandler from '@/pages/api/reviews/[productId]';
+import { PrismaClient, ProductReview, User as PrismaUser, Prisma  } from '@prisma/client';
+import { supabase  } from '@/integrations/supabase/client';import type { User as SupabaseUser, Session, AuthError } from '@supabase/supabase-js'
 import { describe, it, expect, beforeEach, vi } from 'vitest'
-jest.mock('@prisma/client', () => {
-  const mockPrismaClient = {
+jest.mock('@prisma/client', () =>
+                {
+  const mockPrismaClient = {;
 import { createMocks, RequestMethod } from node-mocks-http';import type { NextApiRequest, NextApiResponse } from 'next';import reviewsHandler from @/pages/api/reviews'; // Handler for POST /api/reviews'import productReviewsHandler from @/pages/api/reviews/[productId]; // Handler for GET /api/reviews/[productId]import { PrismaClient } from @prisma/client';import { supabase } from @/integrations/supabase/client'
 // Mock Prisma Client
-jest.mock('@prisma/client', () => {'  const mockPrismaClient = {
+jest.mock('@prisma/client', () =>
+                {'  const mockPrismaClient = {
     productReview: {
       create: jest.fn(),
       findMany: jest.fn()
@@ -25,12 +26,12 @@ jest.mock('@prisma/client', () => {'  const mockPrismaClient = {
     Prisma: {
       PrismaClientKnownRequestError: class PrismaClientKnownRequestError extends Error {
         code: string
-        meta?: Record<string, unknown>
+        meta?: Record<string, unknown></string,>
         constructor(
           message: string,
           code: string,
           clientVersion: string,
-          meta?: Record<string, unknown>
+          meta?: Record<string, unknown></string,>
         ) {
           super(message)
           this.code = code
@@ -58,9 +59,11 @@ interface ErrorResponse {
 }
 type PostReviewSuccessResponse = ProductReview
 type GetReviewsSuccessResponse = ProductReview[]
-describe('/api/reviews API Endpoint', () => {
+describe('/api/reviews API Endpoint', () =>
+                {
   let prismaMock: PrismaClient
-  beforeEach(() => {
+  beforeEach(() =>
+                {
     prismaMock = new PrismaClient()
     (prismaMock.productReview.create as jest.Mock).mockReset()
     (prismaMock.productReview.findMany as jest.Mock).mockReset()
@@ -68,8 +71,10 @@ describe('/api/reviews API Endpoint', () => {
     (prismaMock.$disconnect as jest.Mock).mockReset()
     (supabase.auth.getSession as jest.Mock).mockReset()
   })
-  describe('POST /api/reviews', () => {
-    it('should successfully create a review (201)', async () => {
+  describe('POST /api/reviews', () =>
+                {
+    it('should successfully create a review (201)', async () =>
+                {
       const mockPrismaUser: PrismaUser = {
         id: 1,
         email: 'test@example.com',
@@ -119,7 +124,7 @@ describe('/api/reviews API Endpoint', () => {
       })
       await reviewsHandler(
         req as NextApiRequest,
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse></PostReviewSuccessResponse>
       )
       expect(res._getStatusCode()).toBe(201)
       expect(res._getJSONData()).toEqual(mockReviewResponse)
@@ -132,7 +137,8 @@ describe('/api/reviews API Endpoint', () => {
         }
       })
     })
-    it('should fail if user already reviewed the product (409)', async () => {
+    it('should fail if user already reviewed the product (409)', async () =>
+                {
       const mockSupabaseSession: Session = {
         user: { id: 'supaUserId', email: 'test@example.com' } as SupabaseUser,
         access_token: 'token',
@@ -160,36 +166,39 @@ describe('/api/reviews API Endpoint', () => {
       })
       await reviewsHandler(
         req as NextApiRequest,
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse></PostReviewSuccessResponse>
       )
       expect(res._getStatusCode()).toBe(409)
       expect(res._getJSONData()).toEqual({ error: 'You have already reviewed this product.' })
     })
-    it('should fail with invalid rating (400) - too high', async () => {
+    it('should fail with invalid rating (400) - too high', async () =>
+                {
       const { req, res } = createMocks({
         method: 'POST' as RequestMethod,
         body: { productId: 'prod1', rating: 6, comment: 'Too good!' }
       })
       await reviewsHandler(
         req as NextApiRequest,
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse></PostReviewSuccessResponse>
       )
       expect(res._getStatusCode()).toBe(400)
       expect(res._getJSONData()).toEqual({ error: 'Rating is required and must be a number between 1 and 5.' })
     })
-    it('should fail with invalid rating (400) - not a number', async () => {
+    it('should fail with invalid rating (400) - not a number', async () =>
+                {
       const { req, res } = createMocks({
         method: 'POST' as RequestMethod,
         body: { productId: 'prod1', rating: 'five-stars', comment: 'Text rating!' }
       })
       await reviewsHandler(
         req as NextApiRequest,
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse></PostReviewSuccessResponse>
       )
       expect(res._getStatusCode()).toBe(400)
       expect(res._getJSONData()).toEqual({ error: 'Rating is required and must be a number between 1 and 5.' })
     })
-    it('should fail if not authenticated (401)', async () => {
+    it('should fail if not authenticated (401)', async () =>
+                {
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({
         data: { session: null },
         error: null
@@ -200,12 +209,13 @@ describe('/api/reviews API Endpoint', () => {
       })
       await reviewsHandler(
         req as NextApiRequest,
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse></PostReviewSuccessResponse>
       )
       expect(res._getStatusCode()).toBe(401)
       expect(res._getJSONData()).toEqual({ error: 'Not authenticated or session error.' })
     })
-    it('should fail if Supabase user email is missing (401)', async () => {
+    it('should fail if Supabase user email is missing (401)', async () =>
+                {
       const mockSupabaseSessionNoEmail: Session = {
         user: { id: 'supaUserId', email: undefined } as SupabaseUser,
         access_token: 'token',
@@ -224,12 +234,13 @@ describe('/api/reviews API Endpoint', () => {
       })
       await reviewsHandler(
         req as NextApiRequest,
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse></PostReviewSuccessResponse>
       )
       expect(res._getStatusCode()).toBe(401)
       expect(res._getJSONData()).toEqual({ error: 'User email not found in session.' })
     })
-    it('should fail if user not found in Prisma database (404)', async () => {
+    it('should fail if user not found in Prisma database (404)', async () =>
+                {
       const mockSupabaseSession: Session = {
         user: { id: 'supaUserId', email: 'unknown@example.com' } as SupabaseUser,
         access_token: 'token',
@@ -249,14 +260,16 @@ describe('/api/reviews API Endpoint', () => {
       })
       await reviewsHandler(
         req as NextApiRequest,
-        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse>
+        res as NextApiResponse<PostReviewSuccessResponse | ErrorResponse></PostReviewSuccessResponse>
       )
       expect(res._getStatusCode()).toBe(404)
       expect(res._getJSONData()).toEqual({ error: 'User not found in our database.' })
     })
   })
-  describe('GET /api/reviews/[productId]', () => {
-    it('should successfully fetch reviews for a product (200)', async () => {
+  describe('GET /api/reviews/[productId]', () =>
+                {
+    it('should successfully fetch reviews for a product (200)', async () =>
+                {
       const mockReviewsList: ProductReview[] = [
         {
           id: 'rev1',
@@ -284,7 +297,7 @@ describe('/api/reviews API Endpoint', () => {
       })
       await productReviewsHandler(
         req as NextApiRequest,
-        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
+        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse></GetReviewsSuccessResponse>
       )
       expect(res._getStatusCode()).toBe(200)
       expect(res._getJSONData()).toEqual(mockReviewsList)
@@ -294,7 +307,8 @@ describe('/api/reviews API Endpoint', () => {
         })
       )
     })
-    it('should return an empty array if no reviews found (200)', async () => {
+    it('should return an empty array if no reviews found (200)', async () =>
+                {
       (prismaMock.productReview.findMany as jest.Mock).mockResolvedValue([])
       const { req, res } = createMocks({
         method: 'GET' as RequestMethod,
@@ -302,27 +316,30 @@ describe('/api/reviews API Endpoint', () => {
       })
       await productReviewsHandler(
         req as NextApiRequest,
-        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
+        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse></GetReviewsSuccessResponse>
       )
       expect(res._getStatusCode()).toBe(200)
       expect(res._getJSONData()).toEqual([])
     })
-    it('should fail if productId is missing (400)', async () => {
+    it('should fail if productId is missing (400)', async () =>
+                {
       const { req, res } = createMocks({
         method: 'GET' as RequestMethod,
         query: {}
       })
       await productReviewsHandler(
         req as NextApiRequest,
-        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse>
+        res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse></GetReviewsSuccessResponse>
       )
       expect(res._getStatusCode()).toBe(400)
       expect(res._getJSONData()).toEqual({ error: 'productId is required in the URL path and must be a string.' })
     })
   })
 })
-describe('/api/reviews API Endpoint', () => {'  let _prisma: PrismaClient
-  beforeEach(() => {
+describe('/api/reviews API Endpoint', () =>
+                {'  let _prisma: PrismaClient
+  beforeEach(() =>
+                {
     prisma = new PrismaClient()
     // Reset all mocks before each test
     (prisma.productReview.create as jest.Mock).mockReset()
@@ -331,7 +348,9 @@ describe('/api/reviews API Endpoint', () => {'  let _prisma: PrismaClient
     (prisma.$disconnect as jest.Mock).mockReset()
     (supabase.auth.getSession as jest.Mock).mockReset()
   })
-  describe('POST /api/reviews', () => {'    it('should successfully create a review (201), async () => {'      const mockUser = { id: 1, email: test@example.com', name: Test User' };      const mockReview = { id: review1', productId: prod1', userId: 1, rating: 5, comment: Great!' }
+  describe('POST /api/reviews', () =>
+                {'    it('should successfully create a review (201), async () =>;
+                {'      const mockUser = { id: 1, email: test@example.com', name: Test User' };      const mockReview = { id: review1', productId: prod1', userId: 1, rating: 5, comment: Great!' }
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({
         data: { session: { user: { id: supaUserId', email: test@example.com' } } },        error: null
       })
@@ -345,7 +364,8 @@ describe('/api/reviews API Endpoint', () => {'  let _prisma: PrismaClient
       expect(prisma.productReview.create).toHaveBeenCalledWith({
         data: { productId: prod1', rating: 5, comment: Great!', userId: mockUser.id },      })
     })
-    it('should fail if user already reviewed the product (409), async () => {'      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
+    it('should fail if user already reviewed the product (409), async () =>
+                {'      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
         data: { session: { user: { id: supaUserId', email: test@example.com' } } },        error: null
       })
       (prisma.user.findUnique as jest.Mock).mockResolvedValue({ id: 1, email: test@example.com' });      (prisma.productReview.create as jest.Mock).mockRejectedValue({
@@ -355,23 +375,27 @@ describe('/api/reviews API Endpoint', () => {'  let _prisma: PrismaClient
       await reviewsHandler(req as NextApiRequest, res as NextApiResponse)
       expect(res._getStatusCode()).toBe(409)
       expect(JSON.parse(res._getData())).toEqual({ error: You have already reviewed this product.' });    })
-    it('should fail with invalid rating (400) - too high', async () => {'      const { req, res } = createMocks({
+    it('should fail with invalid rating (400) - too high', async () =>
+                {'      const { req, res } = createMocks({
         method: POST' as RequestMethod,        body: { productId: prod1', rating: 6, comment: Too good!' },      })
       await reviewsHandler(req as NextApiRequest, res as NextApiResponse)
       expect(res._getStatusCode()).toBe(400)
       expect(JSON.parse(res._getData())).toEqual({ error: Rating is required and must be a number between 1 and 5.' });    })
-    it('should fail with invalid rating (400) - not a number', async () => {'        const { req, res } = createMocks({
+    it('should fail with invalid rating (400) - not a number', async () =>
+                {'        const { req, res } = createMocks({
           method: POST' as RequestMethod,          body: { productId: prod1', rating: "five-stars", comment: Text rating!' },        })
         await reviewsHandler(req as NextApiRequest, res as NextApiResponse)
         expect(res._getStatusCode()).toBe(400)
         expect(JSON.parse(res._getData())).toEqual({ error: Rating is required and must be a number between 1 and 5.' });      })
-    it('should fail if not authenticated (401), async () => {'      (supabase.auth.getSession as jest.Mock).mockResolvedValue({ data: { session: null }, error: null })
+    it('should fail if not authenticated (401), async () =>
+                {'      (supabase.auth.getSession as jest.Mock).mockResolvedValue({ data: { session: null }, error: null })
       const { req, res } = createMocks({
         method: POST' as RequestMethod,        body: { productId: prod1', rating: 5, comment: Trying to review without login' },      })
       await reviewsHandler(req as NextApiRequest, res as NextApiResponse)
       expect(res._getStatusCode()).toBe(401)
       expect(JSON.parse(res._getData())).toEqual({ error: Not authenticated or session error.' });    })
-    it('should fail if Supabase user email is missing (401), async () => {'      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
+    it('should fail if Supabase user email is missing (401), async () =>
+                {'      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
         data: { session: { user: { id: supaUserId', email: null } } }, // No email'        error: null
       })
        const { req, res } = createMocks({
@@ -379,7 +403,8 @@ describe('/api/reviews API Endpoint', () => {'  let _prisma: PrismaClient
       await reviewsHandler(req as NextApiRequest, res as NextApiResponse)
       expect(res._getStatusCode()).toBe(401)
       expect(JSON.parse(res._getData())).toEqual({ error: User email not found in session.' });    })
-    it('should fail if user not found in Prisma database (404), async () => {'      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
+    it('should fail if user not found in Prisma database (404), async () =>
+                {'      (supabase.auth.getSession as jest.Mock).mockResolvedValue({
         data: { session: { user: { id: supaUserId', email: unknown@example.com' } } },        error: null
       })
       (prisma.user.findUnique as jest.Mock).mockResolvedValue(null); // User not found in Prisma
@@ -389,7 +414,9 @@ describe('/api/reviews API Endpoint', () => {'  let _prisma: PrismaClient
       expect(res._getStatusCode()).toBe(404)
       expect(JSON.parse(res._getData())).toEqual({ error: User not found in our database.' });    })
   })
-  describe('GET /api/reviews/[productId], () => {'    it('should successfully fetch reviews for a product (200), async () => {'      const mockReviewsList = [
+  describe('GET /api/reviews/[productId], () =>
+                {'    it('should successfully fetch reviews for a product (200), async () =>
+                {'      const mockReviewsList = [
         { id: rev1', productId: prod123', userId: 1, rating: 5, comment: Excellent!', createdAt: new Date().toISOString() },        { id: rev2', productId: prod123', userId: 2, rating: 4, comment: Very good.', createdAt: new Date().toISOString() },      ]
       (prisma.productReview.findMany as jest.Mock).mockResolvedValue(mockReviewsList)
       const { req, res } = createMocks({
@@ -400,14 +427,16 @@ describe('/api/reviews API Endpoint', () => {'  let _prisma: PrismaClient
       expect(prisma.productReview.findMany).toHaveBeenCalledWith(expect.objectContaining({
         where: { productId: prod123' },      }))
     })
-    it('should return an empty array if no reviews found (200), async () => {'      (prisma.productReview.findMany as jest.Mock).mockResolvedValue([])
+    it('should return an empty array if no reviews found (200), async () =>
+                {'      (prisma.productReview.findMany as jest.Mock).mockResolvedValue([])
       const { req, res } = createMocks({
         method: GET' as RequestMethod,        query: { productId: prodNonExistent' },      })
       await productReviewsHandler(req as NextApiRequest, res as NextApiResponse)
       expect(res._getStatusCode()).toBe(200)
       expect(JSON.parse(res._getData())).toEqual([])
     })
-    it('should fail if productId is missing (400), async () => {'      // Simulate how Next.js might pass undefined if param is missing or route is mistyped by test
+    it('should fail if productId is missing (400), async () =>
+                {'      // Simulate how Next.js might pass undefined if param is missing or route is mistyped by test
       const { req, res } = createMocks({
         method: GET' as RequestMethod,        query: {}, // No productId
       })

@@ -4,7 +4,7 @@ import path from 'path'
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH)
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true })
-  if (!fs && fs.existsSync(EPISODES_PATH))
+  if (!fs && fs.existsSync(EPISODES_PATH));
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

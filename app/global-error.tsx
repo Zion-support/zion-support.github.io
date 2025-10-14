@@ -1,128 +1,28 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-=======
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const GlobalErrorPage: React.FC = () => {,
-=======
+const GlobalErrorPage: React.FC  = () => {,
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
->>>>>>> origin/main
-const GlobalErrorPage: React.FC = () => {
->>>>>>> origin/main
+const GlobalErrorPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Global Error | Zion Tech Group</title>
-        <meta name="description" content="Professional Global Error services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="global-error, AI solutions, IT services, Zion Tech Group, global error" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Global Error
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced global error solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-=======
       title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-=======
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',;
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-=======
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'],
->>>>>>> origin/main
     },
     {
       icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
-<<<<<<< HEAD
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
-    {icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-<<<<<<< HEAD
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
-  ]
-  return(<React.Fragment>)</React.Fragment>
-      <Helmet />
-=======
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics'],
     },
     {
@@ -136,224 +36,171 @@ const GlobalErrorPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization'],
->>>>>>> origin/main
     },
   ]
   return (
-<<<<<<< HEAD
->>>>>>> origin/main
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+                {/* Features Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Why Choose Our Global Error?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our global error solutions deliver unmatched performance, security, and scalability.
             </p>
-          </div>
+                </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+                <h3 className="text-xl font-semibold text-white mb-3"></h3>
+                {feature.title}
+                </h3>
+                <p className="text-gray-300"></p>
+                {feature.description}
+                </p>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+                {/* Benefits Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
         </section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Experience the power of our global error solutions for your business.
             </p>
-          </div>
+                </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
+                <p className="text-gray-300 text-lg"></p>
+                {benefit}
+                </p>
               ))
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+                {/* CTA Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         </section>
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="text-xl text-purple-100 mb-8"></p>
               Contact our experts to discuss your global error needs and get a customized solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"></button>
                 <Phone className="mr-2 h-5 w-5" />
                 Call Now
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"></button>
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
               </button>
-=======
-<<<<<<< HEAD
-    <>
-      <Helmet>
->>>>>>> origin/main
         <title>Global Error - Zion Tech Group</title>
-=======
-    <React.Fragment>
-      </React><Helmet>
+    <React.Fragment></React.Fragment>
+      </React><Helmet></Helmet>
         </Helmet><title>Global Error - Zion Tech Group</title>
->>>>>>> origin/main
         <meta name="description" content="Global error page." />
         <meta name="keywords" content="global error, AI solutions, IT services, business transformation" />
       <Navigation />
-<<<<<<< HEAD
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
-                Global Error;
-  </
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Global error page.</p>
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">,</button>
-                  Get Started;
-  </
-                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
-=======
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}
-        </main></main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></main>
+                {/* Hero Section */}
+                </main>
+                </main><section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
           </section>< className="$2 />
-            </div><div className="text-center">
-              </div><h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            </div><div className="text-center"></div>
+              </div><h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"></h1>
                 Global Error
   
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"></p>
                 Global error page.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                </div><button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                </div><button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"></button>
                   Get Started
   
-                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
->>>>>>> origin/main
+                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"></button>
                   Learn More,
   
               </div>
->>>>>>> origin/main
-            </div>
+                </div>
           </div>
-        </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
-=======
+                </section>
       </main>
     </>
   );
 }
-      </main>
+                </main>
     </>
   );
 }
-      </main>
+                </main>
     </>
   );
 }
         {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
->>>>>>> origin/main
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+                <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
+          <div className="max-w-7xl mx-auto"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
                 Our Services,
   </
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">Discover how our solutions can help transform your business.</p>
-=======
-        {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8">
+                {/* Features Section */}
+                <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
           </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            </div><div className="text-center mb-16"></div>
+              </div><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
                 Our Services,
   
               <p className="text-xl text-gray-600 max-w-3xl mx-auto" /></p>
                 Discover how our solutions can help transform your business.
->>>>>>> origin/main
               </p>
-            </div>
+                </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
-              {features.map((feature, index) => (
-<<<<<<< HEAD
-                <div key={index}className="bg-white p-6 rounded-xl shadow-lg hover: shadow-xl transition-shadow">,</div>
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-=======
-                </div><div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  </div><div className="flex items-center mb-4">
+                {features.map((feature, index) => (
+                </div><div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"></div>
+                  </div><div className="flex items-center mb-4"></div>
                     </div><feature.icon className="h-8 w-8 text-blue-600 mr-3" />
->>>>>>> origin/main
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{feature.description</p>}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-<<<<<<< HEAD
-                      <li key={benefitIndex}className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {benefit} </li>
-=======
-                      </ul><li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                    <h3 className="text-xl font-semibold text-gray-900"></h3>
+                {feature.title}
+                </h3>
+                </div>
+                  <p className="text-gray-600 mb-4"></p>
+                {feature.description</p>}
+                </p>
+                  <ul className="space-y-2"></ul>
+                {feature.benefits.map((benefit, benefitIndex) => (
+                      </ul><li key={benefitIndex} className="flex items-center text-sm text-gray-600"></li>
                         </li><CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
->>>>>>> origin/main
+                {benefit}
+                </li>
                     ))}
               ))}
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">Contact us today to learn more about our services.</p>
-            </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
-              Contact Us;
-  </
-=======
         {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">
+                <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600"></section>
           </section>< className="$2 />
-            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8" /></p>
@@ -362,26 +209,16 @@ const GlobalErrorPage: React.FC = () => {
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold" /></button>
               Contact Us
   
->>>>>>> origin/main
           </div>
-        </section>
+                </section>
       </main>
       <Footer /></Footer>
     </>
   ),
-<<<<<<< HEAD
-};
-
-export default GlobalErrorPage;
-<<<<<<< HEAD
-=======
-=======
 }
 export default GlobalErrorPage
->>>>>>> origin/main
   </button>
-  </h2>
+                </h2>
   </button>
-  </button>
+                </button>
   </h1>
->>>>>>> origin/main

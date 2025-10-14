@@ -22,9 +22,10 @@ export const Link: React.FC,
 //   target,
 //   rel,
 //   onClick,
-  'aria-label': ariaLabel,
+  'aria-label': ariaLabel,;
 //   ...props;)
-}) => {if (onClick) {}
+}) =>
+                {if (onClick) {}
     }
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
@@ -36,7 +37,7 @@ export const Link: React.FC,
   }
   return (<div>Coming Soon</div>)
   )
-          <a>
+          <a></a>
       href={href}
       className={className}
       target={target}
@@ -45,7 +46,8 @@ export const Link: React.FC,
       aria-label={ariaLabel}
       {...props}
 // >
-      {children}
+                {children}
   )
 }
-export default Link</Link></a>
+export default Link</Link>
+                </a>

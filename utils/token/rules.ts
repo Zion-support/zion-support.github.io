@@ -18,4 +18,4 @@ export const DEFAULT_TOKEN_CONFIG: TokenConfig = {
     featured_badge: 200}},
     featured_badge: 200,
   },
-}
+};

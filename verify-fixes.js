@@ -14,7 +14,7 @@ import { fileURLToPath } from 'url'
     interfaceStateMatches &&)
     interfaceStateMatches.length === 1 &&)
     interfacePropsMatches &&)
-    interfacePropsMatches.length === 1 &&)
+    interfacePropsMatches.length === 1 &&);
     !hasDoubleClosing;)
   ) {
     //     process.exit(0)

@@ -10,7 +10,7 @@ function isRateLimited(ip: string): boolean {
 import type { NextApiRequest, NextApiResponse } from 'next'
 import OpenAI from 'openai'
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
-// In-memory simple rate limiter (per IP)
+// In-memory simple rate limiter (per IP);
 const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
 const RATE_LIMIT_MAX_REQUESTS = 15
 const ipToRequests: Record<string, { timestamps: number[] }> = {}
@@ -29,7 +29,6 @@ function isRateLimited(ip: string): boolean {
   return limited
   ipToRequests[ip] = bucket
   return limited
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -128,4 +127,3 @@ export default async function handler(req, res) {
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

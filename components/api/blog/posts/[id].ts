@@ -32,11 +32,9 @@
       writePosts(posts)
       return res.status(200).json(updated)
     }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { readPosts, writePosts } from '@/utils/data/blogStore'
-import { requireAdmin } from '@/utils/api/auth'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readPosts, writePosts  } from '@/utils/data/blogStore';
+import { requireAdmin  } from '@/utils/api/auth';export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query
   if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' })
   if (req.method === 'PUT') {

@@ -6,18 +6,17 @@ import type { NextApiRequest, NextApiResponse } from 'next'
     order: (order as any) || 'desc', page: page ? Number(page) : 0,
     pageSize: pageSize ? Number(pageSize) : 20, filters,
     format: (format as any) || undefined}
-}
-import { ADMIN_TYPES, AdminType, ListParams } from '../../../utils/admin/types'
-import { v4 as uuidv4 } from 'uuid'
-import { supabase as client } from '../../../utils/supabase/client'
-import { MOCK_DATA } from '../../../utils/admin/mockData'
-function isSupabaseConfigured() {
+};
+import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types';
+import { v4 as uuidv4  } from 'uuid';import { supabase as client  } from '../../../utils/supabase/client';
+import { MOCK_DATA  } from '../../../utils/admin/mockData';function isSupabaseConfigured() {
   return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co'
 }
 function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
-  const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string>
+  const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string></string,>
   const filters: Record<string, any> = {}
-  Object.keys(rest).forEach((k) => {
+  Object.keys(rest).forEach((k) =>
+                {
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k]
   })
   return {
@@ -44,7 +43,8 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
 function toCsv(rows: any[]): string {
   if (!rows && rows.length) return ''
   const headers = Object && Object.keys(rows[0])
-  const escape = (v: any) => {
+  const escape = (v: any) =>
+                {
     if (v === null || v === undefined) return ''
     const s = typeof v === 'string' ? v : JSON && JSON.stringify(v)
     return '"' + s && s.replace(/"/g, '""') + '"'
@@ -77,7 +77,8 @@ export default async function handler(
 function toCsv(rows: any[]): string {
   if (!rows.length) return ''
   const headers = Object.keys(rows[0])
-  const escape = (v: any) => {
+  const escape = (v: any) =>
+                {
     if (v === null |v === undefined) return ''
     const s = typeof v === 'string' ? v : JSON.stringify(v)
     return '"' + s.replace(/"/g, '""') + '"'
@@ -129,7 +130,8 @@ export default async function handler(
 function toCsv(rows: any[]): string {
   if (!rows.length) return ''
   const headers = Object.keys(rows[0])
-  const escape = (v: any) => {
+  const escape = (v: any) =>
+                {
     if (v === null || v === undefined) return ''
     const s = typeof v === 'string' ? v : JSON.stringify(v)
     return '"' + s.replace(/"/g, '""') + '"'
@@ -203,7 +205,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
       }
       if (params.sort) {
-        filtered.sort((a: any, b: any) => {
+        filtered.sort((a: any, b: any) =>
+                {
           const av = (a as any)[params.sort!]
           const bv = (b as any)[params.sort!]
           return (
@@ -226,11 +229,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
       }
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string
-      updates: Record<string, any>
+      updates: Record<string, any></>
     }
     if (!id) return res.status(400).json({ error: 'Missing id' })
   if (req && req.method === 'PATCH') {
@@ -256,7 +258,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string
-      updates: Record<string, any>
+      updates: Record<string, any></>
     }
     if (!id) return res.status(400).json({ error: 'Missing id' })
     if (useSupabase) {
@@ -355,7 +357,7 @@ if ( {) {
 }
     const { id, updates } = req.body as {
       id: string
-      updates: Record < string, any>
+      updates: Record < string, any></>
     }
     if (return res.status (400).json ({ error: 'Missing id' })) {
   $2
@@ -427,7 +429,6 @@ return res.status (405).json ({ error: 'Method not allowed' })
   }
   if (req.method === 'PATCH') {
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return res.status(200).json({ ok: true })
     } else {
       const list = MOCK_DATA[type] || []

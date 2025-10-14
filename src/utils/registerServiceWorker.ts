@@ -11,7 +11,8 @@ export interface ServiceWorkerConfig {
  */
 export async function registerServiceWorker(
   _config: ServiceWorkerConfig = {}
-): Promise<ServiceWorkerRegistration | undefined> {
+): Promise<ServiceWorkerRegistration | undefined></ServiceWorkerRegistration>
+                {
     // Check if service workers are supported
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
     return
@@ -39,7 +40,8 @@ export async function registerServiceWorker()
   _config: ServiceWorkerConfig = {}
 
 ): Promise
-          <ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
+          <ServiceWorkerRegistration | undefined></ServiceWorkerRegistration>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   // Check if service workers are supported
@@ -57,7 +59,8 @@ export async function registerServiceWorker()
   if (isLocalhost) {}
   try {
     // Wait for page to load
-    await new Promise<void>((resolve) => {
+    await new Promise<void>((resolve) =>
+                {
       if (document.readyState === 'complete') {} else {
     window.addEventListener('load', () => resolve())
   }
@@ -66,10 +69,12 @@ export async function registerServiceWorker()
       scope:     ,
 $4})
     // Handle updates
-    registration.addEventListener('updatefound', () => {
+    registration.addEventListener('updatefound', () =>
+                {
     const installingWorker = registration.installing
       if (!installingWorker) return
-      installingWorker.addEventListener('statechange', () => {
+      installingWorker.addEventListener('statechange', () =>
+                {
         if (installingWorker.state === 'installed') {
           if (navigator.serviceWorker.controller) {
             // New update available
@@ -89,7 +94,8 @@ $4})
 }
     // Wait for page to load
     await new Promise
-          <void>((resolve) => {/* TODO: Fix JSX expression */}
+          <void>((resolve) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
@@ -106,12 +112,14 @@ $4})
   e: '/')
     })
     // Handle updates
-    registration.addEventListener('updatefound', () => {/* TODO: Fix JSX expression */}
+    registration.addEventListener('updatefound', () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const installingWorker = registration.installing
       if (!installingWorker) return
-      installingWorker.addEventListener('statechange', () => {/* TODO: Fix JSX expression */}
+      installingWorker.addEventListener('statechange', () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
         if (installingWorker.state === 'installed') {/* TODO: Fix JSX expression */}
@@ -154,7 +162,8 @@ $4})
 /**
  * Unregister service worker
  */
-export async function unregisterServiceWorker(): Promise<boolean> {
+export async function unregisterServiceWorker(): Promise<boolean></boolean>
+                {
     if (!('serviceWorker' in navigator)) {
     return false
   }
@@ -167,7 +176,8 @@ export async function unregisterServiceWorker(): Promise<boolean> {
  * Unregister service worker
  */
 export async function unregisterServiceWorker(): Promise
-          <boolean> {/* TODO: Fix JSX expression */}
+          <boolean></boolean>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   if (!('serviceWorker' in navigator)) {/* TODO: Fix JSX expression */}
@@ -189,7 +199,8 @@ export async function unregisterServiceWorker(): Promise
 /**
  * Check for service worker updates
  */
-export async function checkForUpdates(): Promise<void> {
+export async function checkForUpdates(): Promise<void></void>
+                {
     if (!('serviceWorker' in navigator)) {
     return
   }
@@ -225,7 +236,9 @@ export async function getServiceWorkerStatus(): Promise<{
     supported: boolean
   registered: boolean,
   active: boolean
-  }> {
+  }></{
+>
+                {
   if (!('serviceWorker' in navigator)) {
     return {
       supported: false,
@@ -251,7 +264,8 @@ export async function getServiceWorkerStatus(): Promise<{
  * Check for service worker updates
  */
 export async function checkForUpdates(): Promise
-          <void> {/* TODO: Fix JSX expression */}
+          <void></void>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   if (!('serviceWorker' in navigator)) {/* TODO: Fix JSX expression */}
@@ -327,7 +341,8 @@ export async function getServiceWorkerStatus(): Promise
   d: boolean,,
     activ,
   e: boolean,
-}> {/* TODO: Fix JSX expression */}
+}></{/*>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   if (!('serviceWorker' in navigator)) {/* TODO: Fix JSX expression */}

@@ -61,3 +61,4 @@ try {
     console.error('❌ Error during PR merge process:', error.message)
   process.exit(1)
   }
+;

@@ -1,10 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage"
-import { signPayload } from "../../../utils/sync/signature"
-import axios from "axios"
-import { v4 as uuidv4 } from "uuid"
-import { nextVersionFor } from "../../../utils/sync/versioning"
-  if (req && req.method !== "POST")
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent  } from '../../../utils/sync/storage';
+import { signPayload  } from '../../../utils/sync/signature';import axios from "axios";
+import { v4 as uuidv4  } from 'uuid';
+import { nextVersionFor  } from '../../../utils/sync/versioning';if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   if (!state.config.optIn |state.config.paused) {
@@ -58,7 +56,6 @@ export default async function handler(req, res) {
     originInstanceId: state.config.instanceId
     version
     timestamp: timestamp |Date.now()
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const version = nextVersionFor(state, milestoneId)
   const event = {
       id: milestoneId,
@@ -114,7 +111,8 @@ export default async function handler(req, res) {
   await Promise && Promise.all(
     state && state.config.peers
       .filter((p) => !p && p.paused)
-      .map(async (peer) => {
+      .map(async (peer) =>
+                {
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
@@ -145,7 +143,8 @@ if (headers["x - zion - signature"] = sig) {
   await Promise.all (
     state.config.peers
       .filter ((p) => !p.paused)
-      .map (async (peer) => {
+      .map (async (peer) =>
+                {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string ()
         try {
           await axios.post (url, body, { headers, timeout: 5000 })
@@ -161,4 +160,4 @@ if (headers["x - zion - signature"] = sig) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

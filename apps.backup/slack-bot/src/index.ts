@@ -1,4 +1,5 @@
-} ; app.command('/zion', async ({command) ack} respond }) => {; await ack();' const text = (command.text || '').trim();' const [sub, ...rest] = text.split(' '); const userId = command.user_id; try {;' if (!sub || sub.toLowerCase() === 'help') {}' await respond({/* TODO: Fix JSX expression */}
+} ; app.command('/zion', async ({command) ack} respond }) =>
+                {; await ack();' const text = (command.text || '').trim();' const [sub, ...rest] = text.split(' '); const userId = command.user_id; try {;' if (!sub || sub.toLowerCase() === 'help') {}' await respond({/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex)
   t: helpText() }); return; }' if (sub === 'post-job') {;' const role = rest.join(' ') || 'Cloud Engineer'}; const res = await fetch(`${apiBase}/jobs/generate`, {/* TODO: Fix JSX expression */})
   d: 'POST'})' header,
@@ -21,11 +22,13 @@
   r: unknown) {/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,`
   t: `Erro,`
-  r: ${err.message || 'unknown'}` }); } }) (async () => {const port = Number(process.env.SLACK_PORT || 3001), await app.start(port)} // eslint-disable-next-line no-console ' import { App } from '@slack/bolt';' import dotenv from 'dotenv';' import fetch from 'node-fetch'; dotenv.config();' const apiBase = process.env.API_ORIGIN || 'htt,
+  r: ${err.message || 'unknown'}` }); } }) (async () =>
+                {const port = Number(process.env.SLACK_PORT || 3001), await app.start(port)} // eslint-disable-next-line no-console ' import { App } from '@slack/bolt';' import dotenv from 'dotenv';' import fetch from 'node-fetch'; dotenv.config();' const apiBase = process.env.API_ORIGIN || 'htt,
   p: //localhos,
   t:4000'; const app = new App({/* TODO: Fix JSX expression */})
   n: process.env.SLACK_APP_LEVEL_TOKEN)} socketMod,`
-  e: true} }); function helpText(): string {; return [;' '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'' ].join('\n')} } ;' app.command('/zion', async ({command) ack} respond }) => {; await ack();' const text = (command.text || '').trim();' const [sub, ...rest] = text.split(' '); const userId = command.user_id; try {;' if (!sub || sub.toLowerCase() === 'help') {}' await respond({/* TODO: Fix JSX expression */}
+  e: true} }); function helpText(): string {; return [;' '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'' ].join('\n')} } ;' app.command('/zion', async ({command) ack} respond }) =>
+                {; await ack();' const text = (command.text || '').trim();' const [sub, ...rest] = text.split(' '); const userId = command.user_id; try {;' if (!sub || sub.toLowerCase() === 'help') {}' await respond({/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex)`
   t: helpText() }); return; }' if (sub === 'post-job') {;' const role = rest.join(' ') || 'Cloud Engineer'}; const res = await fetch(`${apiBase}/jobs/generate`, {/* TODO: Fix JSX expression */})
   d: 'POST'})' header,
@@ -48,4 +51,5 @@
   r: unknown) {/* TODO: Fix JSX expression */}
   e: 'ephemeral'} tex,`
   t: `Erro,`
-  r: ${err.message || 'unknown'}` }); } }) (async () => {' import { App } from '@slack / bolt'' import dotenv from 'dotenv' '`
+  r: ${err.message || 'unknown'}` }); } }) (async () =>
+                {' import { App } from '@slack / bolt'' import dotenv from 'dotenv' '`;

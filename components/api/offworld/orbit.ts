@@ -1,28 +1,24 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import {
-  connectOrbit,
+import { connectOrbit,
   appendChatMessage,
   recordVote,
   editConstitution,
-} from '@/utils/offworld/orbitdb'
-import {
-  connectOrbit
+, connectOrbit
   appendChatMessage
   recordVote
-  editConstitution
-} from '@/utils/offworld/orbitdb'
-export default async function handler(
+  editConstitution;
+ } from '@/utils/offworld/orbitdb';export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb'
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse;
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body
   const { stores } = await connectOrbit()
-  if (!stores) return res.status(503).json({ error: 'OrbitDB unavailable' })
+  if (!stores) return res.status(503).json({ error: 'OrbitDB unavailable' });
 ) {  const { action } = req && req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req && req.query
@@ -88,3 +84,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e.message })
   }
 }
+;

@@ -23,7 +23,8 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
   }
 }
 
-export const _errorHandler = (error: AppError | Error) => {
+export const _errorHandler = (error: AppError | Error) =>
+                {
     // TODO: Add content
   }
 }
@@ -51,11 +52,13 @@ export const asyncHandler = (f,
   t: unknown) => unknown) => (re,
   q: unknown, re,
   s: unknown, nex)
-  t: unknown) => {/* TODO: Fix JSX expression */}
+  t: unknown) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   Promise.resolve(fn(req, res, next)).catch((erro)
-  r: unknown) => {/* TODO: Fix JSX expression */}
+  r: unknown) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     if (next && typeof next === 'function') {/* TODO: Fix JSX expression */}

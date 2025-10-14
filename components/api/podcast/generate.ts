@@ -1,7 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { v4 as uuidv4  } from 'uuid'
-import { v4 as uuidv4 } from 'uuid'
-import fs from 'fs'
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4  , v4 as uuidv4  } from 'uuid';import fs from 'fs'
 import path from 'path'
 import OpenAI from 'openai'
 function readEpisodes(): any[] {
@@ -43,7 +41,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
   const user = `Guest: ${invitee?.name |''}\nBio: ${invitee?.bio |''}\nTopic: ${topic |''}\nOperator Prompt: ${operatorPrompt |''}\nStyle Sample: ${persona?.cloneStyleText |''}`
   let generated: any = null
   try {
-    const apiKey = process.env.OPENAI_API_KEY
+    const apiKey = process.env.OPENAI_API_KEY;
     let content: string;    if (apiKey) {      const openai = new OpenAI({ apiKey })
       const completion = await openai.chat.completions.create({
         model: process.env.ZION_GPT_MODEL |'gpt-4o-mini'

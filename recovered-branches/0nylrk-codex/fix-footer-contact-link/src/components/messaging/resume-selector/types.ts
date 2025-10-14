@@ -32,3 +32,4 @@ export interface ResumeSelectorProps {
 export interface ResumeSelectorProps {
   onResumeSelected: (resumeOption: ResumeOption) => void
 }
+;

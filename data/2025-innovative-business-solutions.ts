@@ -1031,7 +1031,7 @@ realImplementation: true,
     launchDate: '2025-05-01'
     customers: 38
     rating: 4.7
-    reviews: 26,
+    reviews: 26,;
   }];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2245,7 +2245,7 @@ i,
   g: 4.7, review,
   s: 26, ],' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
+  e: 'http,;
   s://ziontechgroup.com' } ]; } ]; realImplementatio,
   n: true,
   implementationDetails:' 'Comprehensive AI-powered marketing automation platform with intelligent optimization, customer engagement, and seamless marketing tool integration.'' launchDat,

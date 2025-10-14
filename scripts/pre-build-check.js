@@ -4,9 +4,8 @@
  * Checks for common issues before building the application
  */
 
-import { readFileSync, existsSync } from 'fs'
-import { resolve } from 'path'
-const _errors = []
+import { readFileSync, existsSync  } from 'fs';
+import { resolve  } from 'path';const _errors = []
 const _warnings = []
 // // Check Node version
 // const requiredNodeVersion = '18.0.0'
@@ -24,7 +23,8 @@ const requiredFiles = [
   'tsconfig.json',
   'tailwind.config.cjs',
   'postcss.config.cjs']
-requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
+requiredFiles.forEach((file) =></>
+                {/* TODO: Fix JSX expression */}`
   missing: ${file}`)
   } else {/* TODO: Fix JSX expression */}
 //     }
@@ -33,7 +33,8 @@ requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
 try {
   const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8'))
   const _requiredDeps = ['next', 'react', 'react-dom']
-  requiredDeps.forEach((dep) => {
+  requiredDeps.forEach((dep) =>
+                {
     if (!packageJson.dependencies[dep]) {
       errors.push(`Missing required dependency: ${dep}`)
 try {/* TODO: Fix JSX expression */}`

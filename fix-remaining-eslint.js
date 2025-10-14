@@ -22,8 +22,10 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO:
 // Fix unused variables by prefixing with underscore
 function fixUnusedVariables(content) {
   // Fix unused parameters in function declarations
-  content = content.replace(/function\s*\(([^)]*)\)/g, (_match, _params) => {
-    const newParams = params.split(',').map(param => {)
+  content = content.replace(/function\s*\(([^)]*)\)/g, (_match, _params) =>
+                {
+    const newParams = params.split(',').map(param =>
+                {)
       if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
         return `_${trimmed}`
@@ -33,22 +35,27 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
     return match.replace(params, newParams)
   })
   // Fix unused parameters in arrow functions
-  content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {
-    const newParams = params.split(',').map(param => {)
+  content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) =>
+                {
+    const newParams = params.split(',').map(param =>
+                {)
       if (trimmed && trimmed.startsWith('_') && trimmed !== 'props' && trimmed !== 'event' && trimmed !== 'index') {
-  content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) => {/* TODO: Fix JSX expression */}`
+  content = content.replace(/\(([^)]*)\)\s*=>/g, (_match, _params) =>
+                {/* TODO: Fix JSX expression */}`
         return `_${trimmed}`
       }
       return trimmed
     }).join(', ')
     return match.replace(params, newParams)
   })
-  // Fix unused variable declarations
-  content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {
+  // Fix unused variable declarations;
+  content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) =>
+                {
     if (varName.startsWith('_') || varName === 'props' || varName === 'event' || varName === 'index') {
       return match
     }
-  content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) => {/* TODO: Fix JSX expression */}
+  content = content.replace(/^\s*(const|let|var)\s+(\w+)\s*=.*?;\s*$/gm, (_match, _decl, _varName) =>
+                {/* TODO: Fix JSX expression */}
     }`
     return match.replace(varName, `_${varName}`)
   })
@@ -59,20 +66,23 @@ function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
 function fixUnusedImports(content) {
   
   // Find all used identifiers
-  lines.forEach(line => {)
+  lines.forEach(line =>
+                {)
     if (matches) {
       matches.forEach(match => usedIdentifiers.add(match))
 function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
     }
   })
   // Remove unused import lines
-  const filteredLines = lines.filter(line => {)
+  const filteredLines = lines.filter(line =>
+                {)
     if (importMatch) {
       if (importedItems) {
         return hasUsedItems
-  const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */}
+  const filteredLines = lines.filter(line =>
+                {/* TODO: Fix JSX expression */}
       }
-    }
+    };
     return true;)
   })
   return filteredLines.join('\n')
@@ -119,7 +129,8 @@ function fixAnyTypes(content) {
 function main() {
 
   
-  files.forEach(file => {)
+  files.forEach(file =>
+                {)
     try {)
       // Apply fixes;)
       content = fixConsoleStatements(content)
@@ -145,7 +156,8 @@ function fixAnyTypes(content) {/* TODO: Fix JSX expression */}
 // Main function
 function main() {/* TODO: Fix JSX expression */}
 }
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
       })
     } catch (error) {/* TODO: Fix JSX expression */}
     }

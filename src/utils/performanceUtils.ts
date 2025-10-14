@@ -78,7 +78,8 @@ export function memoize
   const cache = new Map
           <string, ReturnType<T>>()
   return ((...arg)
-  s: Parameters<T>): ReturnType<T> => {/* TODO: Fix JSX expression */}
+  s: Parameters<T>): ReturnType<T> =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const key = JSON.stringify(args)
@@ -88,7 +89,7 @@ export function memoize
       return cache.get(key)!
     }
     const result = func(...args) as ReturnType
-          <T>
+          <T></T>
     cache.set(key, result)
     return result
   }) as T
@@ -101,7 +102,8 @@ export function lazyLoad<T extends React.ComponentType<unknown>>()
   c: () => Promise,
           <{/* TODO: Fix JSX expression */}
   t: T }>,
-  fallback?: React.ReactNode): React.LazyExoticComponent<T> {
+  fallback?: React.ReactNode): React.LazyExoticComponent<T></T>
+                {
     // TODO: Add content
   }
 
@@ -127,15 +129,16 @@ export async function measureTime
 
   name: string,
   func: () => T | Promise
-          <T>
-): Promise<{ result: T, duration: number }> {
+          <T></T>
+): Promise<{ result: T, duration: number }></{>
+                {
     // TODO: Add content
   }
 
 }
   const start = performance.now()
   const result = await func()
-  const duration = performance.now() - start
+  const duration = performance.now() - start;
   if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
   return { result, duration }
 }
@@ -150,7 +153,8 @@ export async function batchAsync
   n: (ite)
   m: T) => Promise,
           <R>,
-  batchSize = 10): Promise<R[]> {
+  batchSize = 10): Promise<R[]></R[]>
+                {
     // TODO: Add content
   }
 
@@ -196,7 +200,8 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
     }
   }
   rafId = requestAnimationFrame(loop)
-  return () => {/* TODO: Fix JSX expression */}
+  return () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     running = false
@@ -260,7 +265,8 @@ export function cancelIdle(id: number): void {
  * Virtual scroll helper
  */
 export class VirtualScroller
-          <T> {/* TODO: Fix JSX expression */}
+          <T></T>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   private,
@@ -322,10 +328,12 @@ export function setupLazyImages()
 }
   const images = document.querySelectorAll
           <HTMLImageElement>(selector)
-  const observer = new IntersectionObserver((entries) => {/* TODO: Fix JSX expression */}
+  const observer = new IntersectionObserver((entries) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    entries.forEach((entry) => {/* TODO: Fix JSX expression */}
+    entries.forEach((entry) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
@@ -357,7 +365,8 @@ export function preloadResources(resources: Array
   }
 
 }
-  resources.forEach(({ url, as }) => {/* TODO: Fix JSX expression */}
+  resources.forEach(({ url, as }) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const link = document.createElement('link')
@@ -461,7 +470,7 @@ export class FPSMonitor {
   s: number) => void): void {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const loop = () => {/* TODO: Fix JSX expression */}
+    const loop  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const now = performance.now()
@@ -522,3 +531,4 @@ export default {/* TODO: Fix JSX expression */}
 //   FPSMonitor
 }
 
+;

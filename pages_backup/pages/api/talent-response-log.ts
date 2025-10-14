@@ -8,4 +8,3 @@
   const payload = { talentId, action, at: new Date().toISOString() }
   return res.status(200).json({ ok: true, data: payload })
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

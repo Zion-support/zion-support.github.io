@@ -1738,7 +1738,7 @@ export const getServicesByPriceRange = (minPric)
   })
 }
 export const getServicesByTechnology = (technolog)
-  y: string) =>
+  y: string) =></=>
   return zionEmergingTechServices2029.filter(service =>)
     service.technology.some(tech => tech.toLowerCase().includes(technology.toLowerCase()))
   ),

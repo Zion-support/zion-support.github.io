@@ -93,7 +93,7 @@ export interface ProviderConnection {
   accessToken: string
   refreshToken?: string
   expiresAt?: number
-  config?: Record<string, any>
+  config?: Record<string, any></string,>
 }
   category: 'crm' | 'ats' | 'hr'
   description: string
@@ -118,7 +118,7 @@ export interface SyncLogEntry {
   provider_id: IntegrationProviderId
   level: 'info' | 'warn' | 'error'
   action: string
-  details?: Record<string, any>
+  details?: Record<string, any></string,>
 export interface ManualOverride {
   job_id: string
   disableCrmSync?: boolean
@@ -132,7 +132,7 @@ export interface ZapierEvent {
   id: string
   type: 'zion && zion.job.posted' | 'zion && zion.talent.matched'
   timestamp: number
-  payload: Record < string, any>
+  payload: Record < string, any></>
 export interface IntegrationsState {
 export interface ManualOverride {
   jobId: string
@@ -158,7 +158,7 @@ export interface SyncLogEntry {
   updatedAt: number
   status: SyncStatus
   lastSync?: number
-  config?: Record<string, any>
+  config?: Record<string, any></string,>
   expiresAt?: number
   status: SyncStatus
   lastSync?: number
@@ -185,7 +185,7 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected'
   lastSyncAt?: number
   createdAt: number
   updatedAt: number
-  config?: Record<string, any>
+  config?: Record<string, any></string,>
   expiresAt?: number
   status: SyncStatus
   lastSync?: number
@@ -194,7 +194,7 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected'
   expiresAt?: number
   status: SyncStatus
   lastSync?: number
-  config?: Record<string, any>
+  config?: Record<string, any></string,>
 }
 
 export type SyncStatus = 'connected' | 'warning' | 'disconnected'
@@ -223,7 +223,7 @@ export interface SyncLogEntry {
     id: string
   connectionId: string
   action: string,
-  details?: Record<string, any>
+  details?: Record<string, any></string,>
   }
 
   details?: Record<string></string>
@@ -274,7 +274,7 @@ export interface ZapierEvent {
     id: string
   type: 'zion.job.posted' | 'zion.talent.matched'
   timestamp: number,
-  payload: Record<string, any>
+  payload: Record<string, any></string,>
   }
 
 export interface IntegrationsState {
@@ -302,11 +302,11 @@ export interface IntegrationsState {
 }
 }
 }
-  payload: Record<string, any>
+  payload: Record<string, any></string,>
   id: string
   type: 'zion.job.posted' | 'zion.talent.matched'
   timestamp: number
-  payload: Record<string, any>
+  payload: Record<string, any></string,>
 }
 export interface ManualOverride {
   jobId: string, disableCrmSync?: boolean,
@@ -315,7 +315,7 @@ export interface ManualOverride {
 export interface ZapierEvent {
   id: string, type: 'zion.job.posted' | 'zion.talent.matched',
   timestamp: number,
-  payload: Record<string, any>
+  payload: Record<string, any></string,>
 }
 export interface IntegrationsState {
   connections: ProviderConnection[], logs: SyncLogEntry[],
@@ -329,7 +329,7 @@ export interface IntegrationProviderMeta {
   name: string
   category: 'crm' | 'ats'
   description: string
-  payload: Record<string, any>
+  payload: Record<string, any></string,>
 }
 export interface IntegrationsState {
   connections: ProviderConnection[]
@@ -380,7 +380,7 @@ export interface IntegrationsState {
   websiteUrl?: string
   apiDocsUrl?: string
 }
-  payload: Record<string, any>
+  payload: Record<string, any></string,>
 }
 }
 

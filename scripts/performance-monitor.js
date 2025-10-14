@@ -17,12 +17,13 @@ const staticDir = path.join(buildDir, 'static')
 if (fs.existsSync(staticDir)) {
   const files = fs.readdirSync(staticDir, { recursive: true })
   const jsFiles = files.filter(file => file.endsWith('.js'))
-  jsFiles.forEach(file => {
+  jsFiles.forEach(file =>
+                {
     )
     const filePath = path.join(staticDir, file)
     const stats = fs.statSync(filePath)
     performanceReport.buildSize += stats.size
-  })
+  });
   performanceReport.buildSize = Math.round(performanceReport.buildSize / 1024); // Convert to KB
 }
 

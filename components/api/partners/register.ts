@@ -120,3 +120,4 @@ import { createPartner } from "../../../utils/api/partnerAuth"
     return res.status(500).json({ error: "Failed to create partner" })
   }
 }
+;

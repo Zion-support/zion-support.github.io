@@ -1,11 +1,12 @@
-const TestComponent = () => {
+const TestComponent  = () => {
   return(<div>)
       <h1>Test</h1>)
     </div>)
   return (
-    <div>
+    <div></div>
       <h1>Test
   )
-const TestComponent = () => {/* TODO: Fix JSX expression */}
+const TestComponent  = () => {/* TODO: Fix JSX expression */}
 }
-export default TestComponent</$1></h1>
+export default TestComponent</$1>
+                </h1>

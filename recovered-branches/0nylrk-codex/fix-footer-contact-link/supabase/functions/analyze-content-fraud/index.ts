@@ -1,6 +1,5 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.4"
-import { corsHeaders } from "../_shared/cors.ts"
+import { serve  } from 'https://deno.land/std@0.168.0/http/server.ts';
+import { createClient  } from 'https://esm.sh/@supabase/supabase-js@2.38.4';import { corsHeaders } from "../_shared/cors.ts"
 interface AnalyzeRequest {
   content: string
   contentType: string
@@ -12,7 +11,7 @@ interface AnalysisResult {
   success: boolean
 }
 // Initialize environment and clients
-const initializeServices = () => {
+const initializeServices  = () => {
   const supabaseUrl = Deno.env.get("SUPABASE_URL")
   const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")
   const openaiApiKey = Deno.env.get("OPENAI_API_KEY")
@@ -25,7 +24,8 @@ const initializeServices = () => {
   }
 }
 // Validate request content
-const validateRequest = (data: unknown): AnalyzeRequest => {
+const validateRequest = (data: unknown): AnalyzeRequest =>
+                {
   if (!data || typeof data !== 'object') {
     throw new Error("Invalid request body")
   }
@@ -39,7 +39,8 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
   return request
 }
 // Create prompt for OpenAI
-const createAnalysisPrompt = (contentType: string, content: string): string => {
+const createAnalysisPrompt = (contentType: string, content: string): string =>
+                {
   return `
     You are an AI fraud detection assistant for the Zion AI Marketplace.
     Analyze this ${contentType} for signs of fraud, spam, phishing, or abuse.
@@ -53,7 +54,8 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
   `
 }
 // Call OpenAI API for content analysis
-const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<{classification: string, explanation: string}> => {
+const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<{classification: string, explanation: string}> =>
+                {
   try {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
@@ -103,7 +105,8 @@ const updateFraudFlag = async (
   flagId: string,
   classification: string, 
   explanation: string
-): Promise<void> => {
+): Promise<void> =>
+                {
   if (!flagId) return
   const { error } = await supabase
     .from("fraud_flags")
@@ -120,7 +123,8 @@ const updateFraudFlag = async (
   console.log(`Updated fraud flag ${flagId} with classification: ${classification}`)
 }
 // Main request handler
-serve(async (req) => {
+serve(async (req) =>
+                {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -130,7 +134,8 @@ serve(async (req) => {
     // Initialize services
     const { supabase, openaiApiKey } = initializeServices()
     // Parse and validate request
-    const requestData = await req.json().catch(err => {
+    const requestData = await req.json().catch(err =>
+                {
       console.error("Error parsing request JSON:", err)
       throw new Error("Invalid JSON in request body")
     })
@@ -170,4 +175,4 @@ serve(async (req) => {
       }
     )
   }
-})
+});

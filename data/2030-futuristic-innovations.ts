@@ -344,7 +344,7 @@ export interface FuturisticInnovation2030 {
 export const futuristicInnovations2030: FuturisticInnovation2030[] = [,
   // AI Consciousness & Emotional Intelligence
   {
-reviews: 89
+reviews: 89;
 }];  reviews: number
       'Consciousness development algorithmsEmotional intelligence trainingPersonality customization engineContext awareness systemsSelf-reflection capabilitiesEthical decision-making frameworksConsciousness monitoring toolsMulti-modal consciousness fusion'
       'Real-time consciousness metricsConsciousness evolution tracking'
@@ -1814,4 +1814,4 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     rating: 4.9
     reviews: 89,
   }
-]
+];

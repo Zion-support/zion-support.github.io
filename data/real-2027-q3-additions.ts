@@ -1376,7 +1376,7 @@ export const real2027Q3Additions = [ export const real2027Q3Additions = [ i,
   e: true,' ro,
   i: 'Improve deliverability and block spoofing/phishing attempts.' } {/* TODO: Fix JSX expression */}
   k: '/api-security-scanner'} realServic,
-  e: true}' ro,
+  e: true}' ro,;
   i: 'Prevent high-severity API incidents and cut MTTR.' } ]; export const real2027Q3Additions = [ {/* TODO: Fix JSX expression */}
   k: '/it-asset-discovery-agent'} realServic,
   e: true}' ro,

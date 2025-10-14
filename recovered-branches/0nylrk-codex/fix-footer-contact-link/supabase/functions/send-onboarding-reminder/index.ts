@@ -1,6 +1,5 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1"
-import { Resend } from "npm:resend@1.0.0"
+import { serve  } from 'https://deno.land/std@0.168.0/http/server.ts';
+import { createClient  } from 'https://esm.sh/@supabase/supabase-js@2.7.1';import { Resend } from "npm:resend@1.0.0"
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
@@ -15,7 +14,8 @@ interface ReminderPayload {
   missing_milestone: string
   role: string
 }
-serve(async (req: Request) => {
+serve(async (req: Request) =>
+                {
   // Handle CORS
   if (req.method === "OPTIONS") {
     return new Response(null, {
@@ -84,19 +84,20 @@ serve(async (req: Request) => {
       from: "Zion AI Marketplace <notifications@zion.ai>",
       to: userData.email,
       subject: "Complete your next step on Zion AI Marketplace",
-      html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+      html: `;
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;"></div>
           <h2>Hi ${name},</h2>
           <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>
-          <p>Your next step is to <strong>${action}</strong>.</p>
+          <p>Your next step is to <strong>${action}
+                </strong>.</p>
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
-          <div style="margin: 30px 0;">
-            <a href="https://zion.ai/dashboard" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;">
+          <div style="margin: 30px 0;"></div>
+            <a href="https://zion.ai/dashboard" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;"></a>
               Continue my setup
             </a>
-          </div>
+                </div>
           <p>The Zion AI Marketplace Team</p>
-        </div>
+                </div>
       `})
       `,
     })

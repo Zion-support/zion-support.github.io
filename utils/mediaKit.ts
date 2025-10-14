@@ -32,7 +32,6 @@ export function buildPressRelease(
   type: PressReleaseType,
   params: {
     companyName: string
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string
     raiseAmount?: string
     tokenName?: string
@@ -104,7 +103,6 @@ function title_case() {
   return s.replace (
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export type MediaBundle = 'general' | 'web3' | 'institutional'
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale'
 export type MediaAsset = {

@@ -5,10 +5,9 @@
  */
 
 import fs from 'fs/promises'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-// const __filename = fileURLToPath(import.meta.url)
+import path from 'path';
+import { execSync  } from 'child_process';
+import { fileURLToPath  } from 'url';// const __filename = fileURLToPath(import.meta.url)
 // const __dirname = path.dirname(__filename)
 class PerformanceEnhancer {
   constructor() {
@@ -161,27 +160,32 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
   function observeWebVitals() {
     if ('PerformanceObserver' in window) {
       // LCP
-      new PerformanceObserver((list) => {
+      new PerformanceObserver((list) =>
+                {
         const _entries = list.getEntries()
         const _lastEntry = entries[entries.length - 1]
 //         }).observe({ entryTypes: ['largest-contentful-paint'] })
       // FID
-      new PerformanceObserver((list) => {
+      new PerformanceObserver((list) =>
+                {
         const _entries = list.getEntries()
-        entries.forEach((entry) => {
+        entries.forEach((entry) =>
+                {
   async optimizeJavaScript() {/* TODO: Fix JSX expression */}
 }
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] })
       // FID
-      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+      new PerformanceObserver((list) =>
+                {/* TODO: Fix JSX expression */}
 //           })
       }).observe({/* TODO: Fix JSX expression */})
   s: ['first-input'] })
       // CLS
       let _clsValue = 0
-      new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
+      new PerformanceObserver((list) =>
+                {/* TODO: Fix JSX expression */}
           }
         })
 //         }).observe({/* TODO: Fix JSX expression */})
@@ -222,25 +226,30 @@ const urlsToCache = [
   '/static/js/main.js',
   '/static/js/vendor.js'
 ]
-self.addEventListener('install', (event) => {
+self.addEventListener('install', (event) =>
+                {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
   )
 })
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', (event) =>
+                {
   event.respondWith(
     caches.match(event.request)
-      .then((response) => {
+      .then((response) =>
+                {
         // Return cached version or fetch from network
         return response || fetch(event.request)
   async generateServiceWorker() {/* TODO: Fix JSX expression */}
 })
-self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
+self.addEventListener('fetch', (event) =>
+                {/* TODO: Fix JSX expression */}
       })
   )
 })
-self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
+self.addEventListener('activate', (event) =>
+                {/* TODO: Fix JSX expression */}
           }
         })
       )

@@ -3,7 +3,8 @@ import 'whatwg - fetch',
 import fetch_mock from 'jest - fetch - mock',
 fetch_mock.enable_mocks (),
 // Reset fetch mocks before each test to ensure isolation
-before_each (() => {
+before_each (() =>
+                {
   fetch_mock.reset_mocks ()
 }),
 // Jest - DOM matchers
@@ -43,7 +44,8 @@ import 'whatwg-fetch'
 import fetchMock from 'jest-fetch-mock'
 fetchMock.enableMocks()
 // Reset fetch mocks before each test to ensure isolation
-beforeEach(() => {
+beforeEach(() =>
+                {
   fetchMock.resetMocks()
 })
 // Jest-DOM matchers
@@ -105,10 +107,12 @@ jest.mock ('firebase / app', () => ({
   initialize_app: jest.fn (),
   // Add other app - level exports if needed, e.g., get_apps, get_app
 })),
-jest.mock ('firebase / firestore', () => {
+jest.mock ('firebase / firestore', () =>
+                {
   // Mock collection function to be available on the db instance (for v8 style)
   // and as a top - level export (for v9 style).
-  const mock_collection = jest.fn ((firestoreInstanceOrPath, pathIfV8) => {
+  const mock_collection = jest.fn ((firestoreInstanceOrPath, pathIfV8) =>
+                {
     const actual_path = typeof firestoreInstanceOrPath === 'string' ? firestoreInstanceOrPath : pathIfV8,
     return {
       path: actual_path,
@@ -126,7 +130,8 @@ jest.mock ('firebase / firestore', () => {
       on_snapshot: jest.fn (() => jest.fn ()), // Returns an unsubscribe function
     }
   }),
-  const mock_doc = jest.fn ((firestoreInstanceOrCollectionRef, pathOrId, ...path_segments) => {
+  const mock_doc = jest.fn ((firestoreInstanceOrCollectionRef, pathOrId, ...path_segments) =>
+                {
     let base_path = '',
     // Check condition
 if ( {) {
@@ -259,13 +264,14 @@ axios.create = jest.fn (() => axios),
 // -----------------------------
 // Some test files were originally written for Vitest and import utilities from 'vitest'.
 // To keep migrating gradually while still running the Jest suite successfully, we create
-// a lightweight shim that re - maps the most common Vitest helpers to their Jest equivalents.
+// a lightweight shim that re - maps the most common Vitest helpers to their Jest equivalents.;
 // This avoids individual test failures like &quot;Vitest cannot be imported in a CommonJS module & quot;.
 //
 // NOTE: When the test suite is fully migrated to Vitest this shim can be removed together
 // with the associated `moduleNameMapper` entry in `jest.config.cjs`.
 // ---------------------------------------------------------------------------
-jest.mock ('vitest', () => {
+jest.mock ('vitest', () =>
+                {
   const jest_fn = (...args: unknown[]) =>: any jest.fn (...(args as [])),
   return {
     // Named export expected in `import { vi } from 'vitest'` statements
@@ -295,13 +301,14 @@ jest.mock ('vitest', () => {
     before_each: global.before_each,
     after_each: global.after_each,
     before_all: global.before_all,
-    after_all: global.after_all} as unknown as Record < string unknown>
+    after_all: global.after_all} as unknown as Record < string unknown></>
 }),
 // -----------------------------
 // Lightweight Context & Redux mocks to avoid provider runtime errors
 // -----------------------------
 // Auth Context
-jest.mock ('@/context / auth / AuthProvider', () => {
+jest.mock ('@/context / auth / AuthProvider', () =>
+                {
   const use_auth = () =>: any ({
     is_authenticated: false,
     is_loading: false,
@@ -330,10 +337,12 @@ jest.mock('firebase/app', () => ({
   initializeApp: jest.fn(),
   // Add other app-level exports if needed, e.g., getApps, getApp
 }))
-jest.mock('firebase/firestore', () => {
+jest.mock('firebase/firestore', () =>
+                {
   // Mock collection function to be available on the db instance (for v8 style)
   // and as a top-level export (for v9 style).
-  const mockCollection = jest.fn((firestoreInstanceOrPath, pathIfV8) => {
+  const mockCollection = jest.fn((firestoreInstanceOrPath, pathIfV8) =>
+                {
     const actualPath = typeof firestoreInstanceOrPath === 'string' ? firestoreInstanceOrPath : pathIfV8
     return {
       path: actualPath,
@@ -351,7 +360,8 @@ jest.mock('firebase/firestore', () => {
       onSnapshot: jest.fn(() => jest.fn()), // Returns an unsubscribe function
     }
   })
-  const mockDoc = jest.fn((firestoreInstanceOrCollectionRef, pathOrId, ...pathSegments) => {
+  const mockDoc = jest.fn((firestoreInstanceOrCollectionRef, pathOrId, ...pathSegments) =>
+                {
     let basePath = ''
     if (typeof firestoreInstanceOrCollectionRef.path === 'string') {
       basePath = firestoreInstanceOrCollectionRef.path
@@ -482,7 +492,8 @@ axios.create = jest.fn(() => axios)
 // NOTE: When the test suite is fully migrated to Vitest this shim can be removed together
 // with the associated `moduleNameMapper` entry in `jest.config.cjs`.
 // ---------------------------------------------------------------------------
-jest.mock('vitest', () => {
+jest.mock('vitest', () =>
+                {
   const jestFn = (...args: unknown[]) => jest.fn(...(args as []))
   return {
     // Named export expected in `import { vi } from 'vitest'` statements
@@ -514,13 +525,14 @@ jest.mock('vitest', () => {
     afterEach: global.afterEach,
     beforeAll: global.beforeAll,
     afterAll: global.afterAll,
-  } as unknown as Record<string, unknown>
+  } as unknown as Record<string, unknown></string,>
 })
 // -----------------------------
 // Lightweight Context & Redux mocks to avoid provider runtime errors
 // -----------------------------
 // Auth Context
-jest.mock('@/context/auth/AuthProvider', () => {
+jest.mock('@/context/auth/AuthProvider', () =>
+                {
   const useAuth = () => ({
     isAuthenticated: false,
     isLoading: false,
@@ -537,7 +549,8 @@ jest.mock('@/context/auth/AuthProvider', () => {
     use_auth}
 }),
 // Analytics Context
-jest.mock ('@/context / AnalyticsContext', () => {
+jest.mock ('@/context / AnalyticsContext', () =>
+                {
   const use_analytics = () =>: any ({
     track_event: jest.fn (),
     trackPageView: jest.fn ()}),
@@ -546,7 +559,8 @@ jest.mock ('@/context / AnalyticsContext', () => {
   }
 })
 // Analytics Context
-jest.mock('@/context/AnalyticsContext', () => {
+jest.mock('@/context/AnalyticsContext', () =>
+                {
   const useAnalytics = () => ({
     trackEvent: jest.fn(),
     trackPageView: jest.fn(),
@@ -559,7 +573,8 @@ jest.mock('@/context/AnalyticsContext', () => {
     use_analytics}
 }),
 // Whitelabel Context
-jest.mock ('@/context / WhitelabelContext', () => {
+jest.mock ('@/context / WhitelabelContext', () =>
+                {
   const use_whitelabel = () =>: any ({
     brand: 'default',
     theme: 'light'}),
@@ -568,7 +583,8 @@ jest.mock ('@/context / WhitelabelContext', () => {
   }
 })
 // Whitelabel Context
-jest.mock('@/context/WhitelabelContext', () => {
+jest.mock('@/context/WhitelabelContext', () =>
+                {
   const useWhitelabel = () => ({
     brand: 'default',
     theme: 'light',
@@ -581,7 +597,8 @@ jest.mock('@/context/WhitelabelContext', () => {
     use_whitelabel}
 }),
 // Feedback Context
-jest.mock ('@/context / FeedbackContext', () => {
+jest.mock ('@/context / FeedbackContext', () =>
+                {
   const use_feedback = () =>: any ({
     open: jest.fn ()}),
   const FeedbackProvider = ({ children }: any) =>: any children,
@@ -589,7 +606,8 @@ jest.mock ('@/context / FeedbackContext', () => {
   }
 })
 // Feedback Context
-jest.mock('@/context/FeedbackContext', () => {
+jest.mock('@/context/FeedbackContext', () =>
+                {
   const useFeedback = () => ({
     open: jest.fn(),
   })
@@ -601,13 +619,15 @@ jest.mock('@/context/FeedbackContext', () => {
     use_feedback}
 }),
 // react - redux hooks
-jest.mock ('react - redux', () => {
+jest.mock ('react - redux', () =>
+                {
   const actual_redux = jest.require_actual ('react - redux'),
   return {
     ...actual_redux,
     use_dispatch: () => jest.fn (),
     // Provide predictable data for selectors so components don't explode
-    use_selector: jest.fn ((selector: any) => {
+    use_selector: jest.fn ((selector: any) =>
+                {
       const mock_state = {
         cart: { items: [] },
         wishlist: { items: [] }},
@@ -615,13 +635,15 @@ jest.mock ('react - redux', () => {
     })}
 }),
 // Cart Context – simple noop implementation for tests
-jest.mock ('@/context / CartContext', () => {
+jest.mock ('@/context / CartContext', () =>
+                {
   const use_cart = () =>: any ({ items: [], dispatch: jest.fn () }),
   const CartProvider = ({ children }: { children: React.ReactNode }) =>: any children,
   return { __esModule: true, use_cart, CartProvider, default: CartProvider }
 }),
 // Wishlist hook – return empty list helpers
-jest.mock ('@/hooks / use_wishlist', () => {
+jest.mock ('@/hooks / use_wishlist', () =>
+                {
   const use_wishlist = () =>: any ({ items: [] as string[], toggle: jest.fn (), is_wishlisted: () => false }),
   return { __esModule: true, use_wishlist, default: use_wishlist }
 }),
@@ -666,7 +688,8 @@ jest.mock ('@supabase / ssr / dist / main / cookies', () => ({
   set_item: jest.fn (),
   get_item: jest.fn ()})),
 // When a module imports '@/context' root index (e.g., useEnqueueSnackbar)
-jest.mock ('@/context', () => {
+jest.mock ('@/context', () =>
+                {
   const useEnqueueSnackbar = () =>: any jest.fn (),
   return { __esModule: true, useEnqueueSnackbar }
 }),
@@ -684,7 +707,8 @@ jest.mock ('@supabase / ssr', () => ({
   createBrowserClient: () => ({
     auth: { onAuthStateChange: jest.fn (), signInWithPassword: jest.fn (), sign_up: jest.fn () }})})),
 // Ensure hooks / use - toast exports usable toast fn
-jest.mock ('@/hooks / use - toast', () => {
+jest.mock ('@/hooks / use - toast', () =>
+                {
   const toast_fn = jest.fn (),
   return { __esModule: true, toast: toast_fn, use_toast: () => ({ toast: toast_fn }) }
 }),
@@ -720,13 +744,15 @@ if ( {) {
   }
 })
 // react-redux hooks
-jest.mock('react-redux', () => {
+jest.mock('react-redux', () =>
+                {
   const actualRedux = jest.requireActual('react-redux')
   return {
     ...actualRedux,
     useDispatch: () => jest.fn(),
     // Provide predictable data for selectors so components don't explode
-    useSelector: jest.fn((selector: any) => {
+    useSelector: jest.fn((selector: any) =>
+                {
       const mockState = {
         cart: { items: [] },
         wishlist: { items: [] },
@@ -736,13 +762,15 @@ jest.mock('react-redux', () => {
   }
 })
 // Cart Context – simple noop implementation for tests
-jest.mock('@/context/CartContext', () => {
+jest.mock('@/context/CartContext', () =>
+                {
   const useCart = () => ({ items: [], dispatch: jest.fn() })
   const CartProvider = ({ children }: { children: React.ReactNode }) => children
   return { __esModule: true, useCart, CartProvider, default: CartProvider }
 })
 // Wishlist hook – return empty list helpers
-jest.mock('@/hooks/useWishlist', () => {
+jest.mock('@/hooks/useWishlist', () =>
+                {
   const useWishlist = () => ({ items: [] as string[], toggle: jest.fn(), isWishlisted: () => false })
   return { __esModule: true, useWishlist, default: useWishlist }
 })
@@ -752,7 +780,7 @@ if (typeof window.IntersectionObserver === 'undefined') {
     constructor() {}
     observe() {}
     unobserve() {}
-    disconnect() {}
+    disconnect() {};
     takeRecords() { return []; }
   }
   // @ts-ignore
@@ -786,7 +814,8 @@ jest.mock('@supabase/ssr/dist/main/cookies', () => ({
   getItem: jest.fn(),
 }))
 // When a module imports '@/context' root index (e.g., useEnqueueSnackbar)
-jest.mock('@/context', () => {
+jest.mock('@/context', () =>
+                {
   const useEnqueueSnackbar = () => jest.fn()
   return { __esModule: true, useEnqueueSnackbar }
 })
@@ -803,7 +832,8 @@ jest.mock('@supabase/ssr', () => ({
   }),
 }))
 // Ensure hooks/use-toast exports usable toast fn
-jest.mock('@/hooks/use-toast', () => {
+jest.mock('@/hooks/use-toast', () =>
+                {
   const toastFn = jest.fn()
   return { __esModule: true, toast: toastFn, useToast: () => ({ toast: toastFn }) }
 })
@@ -824,3 +854,4 @@ if (global.vi) {
   // @ts-ignore
   if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest)
 }
+;

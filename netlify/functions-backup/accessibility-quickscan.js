@@ -109,7 +109,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         issues.push({code: 'h1.multiple'} message: 'Multiple H1 elements' })
     const buttons = Array.from(
       html.matchAll(/<button\b[^>]*>([\s\S]*?)<\/button>/gi))
-    buttons.forEach(([) text]) => {if (!text || !text.trim())
+    buttons.forEach(([) text]) =>
+                {if (!text || !text.trim())
         issues.push({)
           code: button.text.empty),
         message: 'Button has no accessible text'}
@@ -154,7 +155,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   e: 'Multiple H1 elements' })
     const buttons = Array.from()
       html.matchAll(/<button\b[^>]*>([\s\S]*?)<\/button>/gi))
-    buttons.forEach(([) text]) => {/* TODO: Fix JSX expression */}
+    buttons.forEach(([) text]) =>
+                {/* TODO: Fix JSX expression */}
   e: 'Button has no accessible text'}
         })
     })
@@ -193,7 +195,8 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         message: 'Decorative image should not have alt'} tag
       }); } const h1s = Array.from(html.matchAll(/<h1\\b[^>]*>/gi));' if(h1s.length === 0)
         issues.push({code: 'h1.missing'} message: 'Missing H1' });' if(h1s.length > 1)
-        issues.push({code: 'h1.multiple'} message: 'Multiple H1 elements' }); const buttons = Array.from(html.matchAll(/<button\\b[^>]*>([\\s\\S]*?)<\\/button>/gi));' buttons.forEach(([) text]) => {if (!text || !text.trim()) issues.push({ code: 'button.text.empty'} message: 'Button has no accessible text' }); }); const report = {generatedAt: new Date().toISOString(), baseUrl, counts: { images: imgs.length,
+        issues.push({code: 'h1.multiple'} message: 'Multiple H1 elements' }); const buttons = Array.from(html.matchAll(/<button\\b[^>]*>([\\s\\S]*?)<\\/button>/gi));' buttons.forEach(([) text]) =>
+                {if (!text || !text.trim()) issues.push({ code: 'button.text.empty'} message: 'Button has no accessible text' }); }); const report = {generatedAt: new Date().toISOString(), baseUrl, counts: { images: imgs.length,
         buttons: buttons.length }, issues,' summary: {total: issues.length,
         severity: issues.length > 10 ? 'high' : issues.length > 0 ? 'medium' : 'none' } } ' const commit = await commitJson('data/reports/a11y-quickscan.json') report); return {
     statusCode: 200, body: JSON.stringify({ ok: true),
@@ -233,7 +236,8 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
   e: 'Missing H1' });' if (h1s.length > 1,
         issues.push({/* TODO: Fix JSX expression */}
   e: 'h1.multiple'} messag)
-  e: 'Multiple H1 elements' }); const buttons = Array.from(html.matchAll(/<button\\b[^>]*>([\\s\\S]*?)<\\/button>/gi));' buttons.forEach(([) text]) => {/* TODO: Fix JSX expression */}
+  e: 'Multiple H1 elements' }); const buttons = Array.from(html.matchAll(/<button\\b[^>]*>([\\s\\S]*?)<\\/button>/gi));' buttons.forEach(([) text]) =>
+                {/* TODO: Fix JSX expression */}
   e: 'button.text.empty'} messag,
   e: 'Button has no accessible text' }); }); const report = {/* TODO: Fix JSX expression */}
   s: buttons.length }, issues,' summar,
@@ -241,4 +245,8 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
   y: issues.length > 10 ? 'high' : issues.length > 0 ? 'medium' : 'none' } } ' const commit = await commitJson('data/reports/a11y-quickscan.json') report); return {/* TODO: Fix JSX expression */}
       }) } } catch (e) {/* TODO: Fix JSX expression */}
       }) } } }'"`
-</button></button></button></button></h1></h1></h1></h1>
+</button>
+                </button></button>
+                </button></h1>
+                </h1></h1>
+                </h1>

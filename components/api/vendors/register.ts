@@ -111,3 +111,4 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
     res.status(500).json({ error: e.message })
   }
 }
+;

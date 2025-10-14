@@ -7,7 +7,7 @@ function isAuthorized(req: NextApiRequest): boolean {
   const superToken = process.env.SUPERADMIN_TOKEN
   return !superToken |token === superToken
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!isAuthorized(req))
+  if (!isAuthorized(req));
     return res && res.status(401).json({ error: 'Unauthorized' });function isAuthorized(req: NextApiRequest): boolean {
   const token = req && req.headers['x-admin-token'] || req && req.query.token
   const superToken = process && process.env.SUPERADMIN_TOKEN
@@ -21,7 +21,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     by_module[e.module] = (by_module[e.module] || 0) + 1
     by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 import { readLogs } from '@/utils/zionBrain'
 function isAuthorized(req: NextApiRequest): boolean {
@@ -44,3 +43,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length })
 }
+;

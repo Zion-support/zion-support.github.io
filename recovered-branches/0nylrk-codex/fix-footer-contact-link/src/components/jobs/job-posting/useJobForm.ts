@@ -1,16 +1,13 @@
-import { useState, useEffect } from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from "@hookform/resolvers/zod"
-import { format } from 'date-fns'
-import { toast } from "sonner"
-import { useNavigate } from 'react-router-dom'
-import { jobSchema, JobSchemaType } from './validation'
-import { useAuth } from "@/hooks/useAuth"
-export interface JobPostingProps {
+import { useState, useEffect  } from 'react';
+import { useForm  } from 'react-hook-form';import { zodResolver  } from '@hookform/resolvers/zod';
+import { format  } from 'date-fns';import { toast  } from 'sonner';
+import { useNavigate  } from 'react-router-dom';import { jobSchema, JobSchemaType  } from './validation';
+import { useAuth  } from '@/hooks/useAuth';export interface JobPostingProps {
   jobId?: string
   onSuccess?: () => void
 }
-export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
+export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) =>
+                {
   const { user } = useAuth()
   const navigate = useNavigate()
   const [startDate, setStartDate] = useState<Date | undefined>(undefined)
@@ -44,7 +41,8 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
     mode: "onChange",
   })
   // Function to create/update jobs that will be implemented by parent component
-  const submitJob = async (values: JobSchemaType) => {
+  const submitJob = async (values: JobSchemaType) =>
+                {
     if (!user) {
       toast.error("You must be logged in to post a job")
       navigate("/login")

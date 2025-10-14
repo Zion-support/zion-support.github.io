@@ -95,11 +95,9 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
         inputs: { issue_number: String(issue.data.number) }} as any)
     } catch (error) {
     } catch (e) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (e) {
       // ignore if missing
     }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
 
@@ -119,3 +117,4 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
 }
   }
 }
+;

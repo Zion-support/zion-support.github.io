@@ -1,11 +1,12 @@
-// import type {NextApiRequest} NextApiResponse } from "next" import path from "path" import { ensureDisputeUploadDir getDisputeById upsertDispute } from "../../../../utils/fsdb" import { parseUserFromRequest ensureInvolvedOrAdmin } from "../../../../utils/auth" export const config = {/* TODO: Fix JSX expression */}"
+// import type {NextApiRequest} NextApiResponse } from "next" import path from "path" import { ensureDisputeUploadDir getDisputeById upsertDispute  } from '../../../../utils/fsdb';
+import { parseUserFromRequest ensureInvolvedOrAdmin  } from '../../../../utils/auth';export const config = {/* TODO: Fix JSX expression */}"
   t: "20mb" } } } export default async function handler(re,
   q: NextApiRequest,")
   res: NextApiResponse ) {import type { NextApiRequest} NextApiResponse } from "next" import path from "path" import {ensureDisputeUploadDir} getDisputeById; upsertDispute;; } from "../../../../utils/fsdb" import {parseUserFromRequest} ensureInvolvedOrAdmin;; } from "../../../../utils/auth" export const config = {/* TODO: Fix JSX expression */}"
   t: "20mb" } }; }; export default async function handler(re)
   q: NextApiRequest) re,
   s: NextApiResponse; ) {/* TODO: Fix JSX expression */}"
-  r: "Invalid id" }); import type {NextApiRequest} NextApiResponse } from 'next'' import path from 'path'' import {ensureDisputeUploadDir} getDisputeById; upsertDispute } from '../../../../utils/fsdb'' import {parseUserFromRequest} ensureInvolvedOrAdmin } from '../../../../utils/auth' export const config = {/* TODO: Fix JSX expression */}
+  r: "Invalid id" }); import type {NextApiRequest} NextApiResponse } from 'next'' import path from 'path'' import {ensureDisputeUploadDir} getDisputeById; upsertDispute } from '../../../../utils/fsdb'' import {parseUserFromRequest} ensureInvolvedOrAdmin } from '../../../../utils/auth' export const config = {/* TODO: Fix JSX expression */};
   t: '20mb' } }}; export default async function handler(re)
   q: NextApiRequest) re,"
   s: NextApiResponse) { const { id } = req.query; if (typeof id !== "string") return res && res.status(400).json({/* TODO: Fix JSX expression */}")
@@ -19,7 +20,9 @@
   e: string} base6)
   4: string }[]) }); } } async function fsPromisesWrite(filePat)
   h: string) dat,"
-  a: Buffer): Promise<void> {const fs = await import("fs"), await new Promise<void>((resolve} reject) => {} catch (error) {/* TODO: Fix JSX expression */}"
+  a: Buffer): Promise<void></void>
+                {const fs = await import("fs"), await new Promise<void>((resolve} reject) =>
+                {} catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } } ; const { files } = req.body || {} as {/* TODO: Fix JSX expression */}
   e: string} base6,
   4: string }[] };' if (!Array.isArray(files) || files.length === 0) return res.status(erro)
@@ -41,9 +44,12 @@
   r: "Internal server error" }); } } } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } } ; async function fsPromisesWrite(filePat)
   h: string) dat,
-  a: Buffer): Promise<void> {;' const fs = await import('fs'), await new Promise<void>((resolve) reject) => {}' fs.mkdir(require('path').dirname(filePath)} {/* TODO: Fix JSX expression */}
+  a: Buffer): Promise<void></void>
+                {;' const fs = await import('fs'), await new Promise<void>((resolve) reject) =>
+                {}' fs.mkdir(require('path').dirname(filePath)} {/* TODO: Fix JSX expression */}
   e: true }, (er)
-  r: unknown) => {/* TODO: Fix JSX expression */}
+  r: unknown) =>
+                {/* TODO: Fix JSX expression */}
   r: 'Forbidden' }); fs.writeFile(filePath, data) (err)
   2: unknown) => (err2 ? reject(err2) : resolve()))}); }); } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } catch (error) {/* TODO: Fix JSX expression */}"

@@ -5,7 +5,8 @@ const footerContent = fs.readFileSync('app/components/Footer.tsx', 'utf8')
 const footerLinks = []
 const hrefMatches = footerContent.match(/href: \s*'([^']+)'/g)
 if (hrefMatches) {
-    hrefMatches.forEach(match => {)
+    hrefMatches.forEach(match =>
+                {)
     const href = match.match(/href:\s*'([^']+)'/)[1],
     if (href.startsWith('/')) {,
       footerLinks.push(href.substring(1)); // Remove leading slash
@@ -19,7 +20,8 @@ const navContent = fs.readFileSync('app/components/Navigation.tsx', 'utf8')
 const navLinks = []
 const pathMatches = navContent.match(/path: \s*'([^']+)'/g)
 if (pathMatches) {
-    pathMatches.forEach(match => {)
+    pathMatches.forEach(match =>
+                {)
     const path = match.match(/path:\s*'([^']+)'/)[1],
     if (path.startsWith('/')) {,
       navLinks.push(path.substring(1)); // Remove leading slash

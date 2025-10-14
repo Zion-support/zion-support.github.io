@@ -300,4 +300,4 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     rating: 4.8,
     reviews: 85
   }
-]
+];

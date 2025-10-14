@@ -18,12 +18,13 @@ export function FuturisticBackground({
 }: FuturisticBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const animationRef = useRef<number>()
-  useEffect(() => {
+  useEffect(() =>
+                {
     const canvas = canvasRef.current
     if (!canvas) return
     const ctx = canvas.getContext('2d')
     if (!ctx) return
-    const resizeCanvas = () => {
+    const resizeCanvas  = () => {
       canvas.width = window.innerWidth
       canvas.height = window.innerHeight
     }
@@ -47,8 +48,8 @@ export function FuturisticBackground({
       '#7aeae4', // zion-cyan-light
     ]
     // Initialize particles
-    const initParticles = () => {
-      const particleCount = intensity === 'high' ? 150 : intensity === 'medium' ? 100 : 50
+    const initParticles  = () => {
+      const particleCount = intensity === 'high' ? 150 : intensity === 'medium' ? 100 : 50;
       for (let i = 0; i < particleCount; i++) {
         particles.push({
           x: Math.random() * canvas.width,
@@ -59,7 +60,7 @@ export function FuturisticBackground({
       life: number
       maxLife: number
     }> = []
-    const getColorScheme = () => {
+    const getColorScheme  = () => {
       switch (colorScheme) {
         case 'cyberpunk':
           return {
@@ -100,7 +101,7 @@ export function FuturisticBackground({
     }
     const colors = getColorScheme()
     // Create particles
-    const createParticle = () => {
+    const createParticle  = () => {
       const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200
       if (particles.length < particleCount) {
         particles.push({
@@ -119,10 +120,11 @@ export function FuturisticBackground({
     }
     initParticles()
     // Animation loop
-    const animate = () => {
+    const animate  = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       // Update and draw particles
-      particles.forEach((particle, index) => {
+      particles.forEach((particle, index) =>
+                {
         // Update position
         particle.x += particle.vx
         particle.y += particle.vy
@@ -144,7 +146,8 @@ export function FuturisticBackground({
         ctx.globalAlpha = particle.opacity * 0.3
         ctx.fill()
         // Draw connections between nearby particles
-        particles.forEach((otherParticle, otherIndex) => {
+        particles.forEach((otherParticle, otherIndex) =>
+                {
           if (index === otherIndex) return
           const dx = particle.x - otherParticle.x
           const dy = particle.y - otherParticle.y
@@ -178,13 +181,14 @@ export function FuturisticBackground({
         ctx.stroke()
       }
     // Update and draw particles
-    const animate = () => {
+    const animate  = () => {
       ctx.fillStyle = colors.background
       ctx.fillRect(0, 0, canvas.width, canvas.height)
       // Create new particles
       createParticle()
       // Update and draw particles
-      particles.forEach((particle, index) => {
+      particles.forEach((particle, index) =>
+                {
         particle.x += particle.vx
         particle.y += particle.vy
         // Bounce off edges
@@ -217,7 +221,7 @@ export function FuturisticBackground({
       })
     }
     // Draw connections between nearby particles
-    const drawConnections = () => {
+    const drawConnections  = () => {
       const connectionDistance = 150
       ctx.strokeStyle = 'rgba(34, 221, 210, 0.1)'
       ctx.lineWidth = 1
@@ -238,7 +242,7 @@ export function FuturisticBackground({
       }
     }
     // Main animation loop
-    const animate = () => {
+    const animate  = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       // Draw background pattern based on variant
       switch (variant) {
@@ -266,7 +270,8 @@ export function FuturisticBackground({
     initParticles()
     animate()
     // Cleanup
-    return () => {
+    return () =>
+                {
       window.removeEventListener('resize', resizeCanvas)
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
@@ -274,7 +279,7 @@ export function FuturisticBackground({
     }
   }, [variant, intensity])
   return (
-    <div className={`fixed inset-0 pointer-events-none z-0 ${className}`}>
+    <div className={`fixed inset-0 pointer-events-none z-0 ${className}`}></div>
       <canvas
         ref={canvasRef}
         className="w-full h-full"
@@ -282,21 +287,21 @@ export function FuturisticBackground({
           background: 'radial-gradient(ellipse at center, rgba(23, 45, 103, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%)'
         }}
       />
-      
-      {/* Additional overlay effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-zion-purple/5 to-transparent" />
+                {/* Additional overlay effects */}
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-zion-purple/5 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-zion-cyan/5 to-transparent" />
-      
-      {/* Animated corner accents */}
-      <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-zion-cyan/30 animate-pulse" />
+                {/* Animated corner accents */}
+                <div className="absolute top-0 left-0 w-32 h-32 border-l-2 border-t-2 border-zion-cyan/30 animate-pulse" />
       <div className="absolute top-0 right-0 w-32 h-32 border-r-2 border-t-2 border-zion-purple/30 animate-pulse" />
       <div className="absolute bottom-0 left-0 w-32 h-32 border-l-2 border-b-2 border-zion-purple/30 animate-pulse" />
       <div className="absolute bottom-0 right-0 w-32 h-32 border-r-2 border-b-2 border-zion-cyan/30 animate-pulse" />
     </div>
   )
       // Draw connecting lines between nearby particles
-      particles.forEach((particle1, i) => {
-        particles.slice(i + 1).forEach(particle2 => {
+      particles.forEach((particle1, i) =>
+                {
+        particles.slice(i + 1).forEach(particle2 =>
+                {
           const distance = Math.sqrt(
             Math.pow(particle1.x - particle2.x, 2) + 
             Math.pow(particle1.y - particle2.y, 2)
@@ -416,7 +421,8 @@ export function FuturisticBackground({
       animationRef.current = requestAnimationFrame(animate)
     }
     animate()
-    return () => {
+    return () =></>
+                {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)
       }
@@ -424,16 +430,16 @@ export function FuturisticBackground({
     }
   }, [intensity])
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative ${className}`}></div>
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 0 }}
       />
-      <div className="relative z-10">
-        {children}
-      </div>
-    </div>
+      <div className="relative z-10"></div>
+                {children}
+                </div>
+                </div>
   )
 }
 
@@ -446,25 +452,26 @@ export function SimpleFuturisticBackground({
   className?: string
 }) {
   return (
-    <div className={`relative ${className}`}>
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark animate-pulse"></div>
-      
-      {/* Floating geometric shapes */}
-      <div className="absolute inset-0 overflow-hidden">
+    <div className={`relative ${className}`}></div>
+                {/* Animated gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark animate-pulse"></div>
+                {/* Floating geometric shapes */}
+                <div className="absolute inset-0 overflow-hidden"></div>
         <div className="absolute top-20 left-20 w-32 h-32 border border-zion-purple/30 rounded-lg rotate-45 animate-spin-slow"></div>
         <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full animate-bounce-slow"></div>
         <div className="absolute bottom-32 left-1/3 w-20 h-20 border-2 border-zion-cyan/40 transform rotate-12 animate-pulse"></div>
         <div className="absolute top-1/2 right-20 w-16 h-16 bg-gradient-to-tr from-zion-purple/30 to-zion-cyan/30 rounded animate-spin-reverse"></div>
-      </div>
-
-      {/* Grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(140,21,233,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(140,21,233,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-
-      {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
-    </div>
+                </div>
+                {/* Grid overlay */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(140,21,233,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(140,21,233,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+                {/* Content */}
+                <div className="relative z-10"></div>
+                {children}
+                </div>
+                </div>
   )
-}</div></div></div></div></div></div>
+}
+                </div>
+                </div></div>
+                </div></div>
+                </div>

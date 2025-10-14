@@ -40,19 +40,23 @@ const recentBranches = execSync('git for-each-ref --sort=-committerdate refs/rem
   .filter(line => !line.includes('backup'))
   .filter(line => !line.includes('aggressive'))
   .filter(line => !line.includes('automation'))
-  .map(line => {)
+  .map(line =>
+                {)
     return {)
       date: parts[0]),
       branch: parts[1].replace('origin/', '')}
   })
-  .filter(item => {)
+  .filter(item =>
+                {)
 //     const branchDate = new Date(item.date)
     sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7)
     return branchDate >= sevenDaysAgo
-  .map(line => {/* TODO: Fix JSX expression */}
+  .map(line =>
+                {/* TODO: Fix JSX expression */}
     })
   })
-  .filter(item => {/* TODO: Fix JSX expression */})
+  .filter(item =>
+                {/* TODO: Fix JSX expression */})
   })
   .map(item => item.branch)
   .filter(branch =>)
@@ -160,7 +164,7 @@ const results = {/* TODO: Fix JSX expression */}
 
 // //Process in batches of 20 to avoid overwhelming the system
 // const batchSize = 20
-// const totalBatches = Math.ceil(recentBranches.length / batchSize)
+// const totalBatches = Math.ceil(recentBranches.length / batchSize);
 for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression */}`
     `\n📦 Processing batch ${batch + 1}/${totalBatches} (${batchBranches.length} branches)...`
   )

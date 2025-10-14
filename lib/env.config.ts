@@ -155,7 +155,8 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */}
     }
   }
 
-  public get(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
+  public get(): Readonly<EnvConfig></EnvConfig>
+                {/* TODO: Fix JSX expression */}
     return { ...this.config }
   }
 

@@ -25,7 +25,7 @@ export default async function handler(
   res: NextApiResponse
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST')
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405)
+    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405);
     return res && res.status(405).json({ error: 'Method Not Allowed' });  }
   const { email, programTrack } = req && req.body || {}
   if (!email) {
@@ -92,7 +92,7 @@ if ( {) {
   $2
 }
     res.set_header ('Allow', 'POST')
-    await record_request (req, res, auth.partner, auth.api_key, started, 405)
+    await record_request (req, res, auth.partner, auth.api_key, started, 405);
     return res.status (405).json ({ error: 'Method Not Allowed' });  }
   const { email, program_track } = req.body || {}
   // Check condition
@@ -208,8 +208,6 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429)
     return res.status(429).json({ error: "Rate limit exceeded" })
@@ -230,3 +228,4 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200)
   return res.status(200).json({ verified })
 }
+;

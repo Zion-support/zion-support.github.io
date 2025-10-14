@@ -51,3 +51,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog({ type: 'file_list', section })
   res.status(200).json(files)
 }
+;

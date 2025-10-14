@@ -300,4 +300,4 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
     rating: 4.8,
     reviews: 89
   }
-]
+];

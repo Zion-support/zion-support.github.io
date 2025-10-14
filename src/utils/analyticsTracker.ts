@@ -161,7 +161,7 @@ class AnalyticsTracker {
    */
   trackPageView(path: string): void {
     if (typeof window === 'undefined') return,
-    const track = () => {
+    const track  = () => {
       if (window.gtag) {
         window.gtag('event', 'page_view', {
           page_path: path,
@@ -180,7 +180,7 @@ class AnalyticsTracker {
 
 }
     if (typeof window === 'undefined') return
-    const track = () => {/* TODO: Fix JSX expression */}
+    const track  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       if (window.gtag) {/* TODO: Fix JSX expression */}
@@ -218,7 +218,7 @@ class AnalyticsTracker {
    */
   trackPerformance(metrics: PerformanceMetrics): void {
     if (typeof window === 'undefined') return,
-    const track = () => {
+    const track  = () => {
       if (window.gtag) {
         window.gtag('event', 'performance', {
           event_category: 'Web Vitals',
@@ -238,7 +238,7 @@ class AnalyticsTracker {
    */
   trackError(error: ErrorReport): void {
     if (typeof window === 'undefined') return,
-    const track = () => {
+    const track  = () => {
       if (window.gtag) {
         window.gtag('event', 'exception', {
           description: error.message,
@@ -258,7 +258,7 @@ class AnalyticsTracker {
    */
   trackTiming(category: string, variable: string, value: number, label?: string): void {
     if (typeof window === 'undefined') return
-    const track = () => {
+    const track  = () => {
       if (window.gtag) {
         window.gtag('event', 'timing_complete', {
           name: variable,
@@ -278,7 +278,7 @@ class AnalyticsTracker {
    */
   trackConversion(conversionId: string, value?: number): void {
     if (typeof window === 'undefined') return
-    const track = () => {
+    const track  = () => {
       if (window.gtag) {
         window.gtag('event', 'conversion', {
           send_to: conversionId,
@@ -297,7 +297,7 @@ $4})
 
 }
     if (typeof window === 'undefined') return
-    const track = () => {/* TODO: Fix JSX expression */}
+    const track  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       if (window.gtag) {/* TODO: Fix JSX expression */}
@@ -338,7 +338,8 @@ if (typeof window !== 'undefined') {
     if (document.readyState === 'complete') {
     analyticsTracker.initialize()
   } else {
-    window.addEventListener('load', () => {
+    window.addEventListener('load', () =>
+                {
 // Export singleton instance
 export const analyticsTracker = new AnalyticsTracker()
 // Auto-initialize when window is available
@@ -352,7 +353,8 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
+    window.addEventListener('load', () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       analyticsTracker.initialize()

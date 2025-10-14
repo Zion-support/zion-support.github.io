@@ -10,15 +10,17 @@ function fixLintWarnings(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
     // Fix unused variables by prefixing with underscore
-    content = content.replace(/const (\w+) = /g, (match, varName) => {
+    content = content.replace(/const (\w+) = /g, (match, varName) =>
+                {
       if (varName.startsWith('_')) return match
 function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
       return `const _${varName} = `
     })
-    content = content.replace(/let (\w+) = /g, (match, varName) => {/* TODO: Fix JSX expression */}`
+    content = content.replace(/let (\w+) = /g, (match, varName) =>
+                {/* TODO: Fix JSX expression */}`
       return `let _${varName} = `
     })
-    // Fix unused imports
+    // Fix unused imports;
     content = content.replace(/import React from 'react';/g, '')
     content = content.replace(/import { Link } from 'react-router-dom';/g, '')
     // Fix console statements in test files

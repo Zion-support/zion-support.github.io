@@ -13,9 +13,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ url })
   }
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
-  const html = `<!doctype html><html><head><meta charset="utf-8"><title>Pitch ${version |''}</title></head><body>` +
-    slides.map((s: any, i: number) => `<section style="page-break-after: always, font-family: Arial, sans-serif, padding: 24px,"><h1>${i + 1}. ${escapeHtml(s.title |'')}</h1><pre style="white-space: pre-wrap, font: inherit,">${escapeHtml(s.content |'')}</pre></section>`).join('') +
-`</body></html>`
+  const html = `<!doctype html><html><head><meta charset="utf-8"><title>Pitch ${version |''}
+                </title>
+                </head><body>` +
+    slides.map((s: any, i: number) => `<section style="page-break-after: always, font-family: Arial, sans-serif, padding: 24px,"><h1>${i + 1}. ${escapeHtml(s.title |'')}
+                </h1><pre style="white-space: pre-wrap, font: inherit,">${escapeHtml(s.content |'')}
+                </pre>
+                </section>`).join('') +
+`</body>
+                </html>`
   res.setHeader('Content-Typeapplication/octet-stream')
   res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version |'draft'}.html"`)
   res.status(200).send(html)
@@ -54,6 +60,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-</p>
+                </p>;

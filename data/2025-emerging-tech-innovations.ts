@@ -716,4 +716,4 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     ],
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
   }
-]
+];

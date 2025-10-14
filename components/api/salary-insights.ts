@@ -23,7 +23,7 @@ type InsightResponse = {
   recommendedMonthlyUsd: number
   medianHourlyUsd: number
   minHourlyUsd: number
-  maxHourlyUsd: number
+  maxHourlyUsd: number;
   confidence: number; // 0..1
   trendMonthly: { label: string; value: number }[]
   regionalComparison: { region: string; medianHourlyUsd: number }[]
@@ -47,7 +47,7 @@ type InsightResponse = {
   trendMonthly: { label: string, value: number }[]
   regionalComparison: { region: string, medianHourlyUsd: number }[]
   tags: string[],
-  gptRecommendation?: string
+  gptRecommendation?: string;
   confidence: number; // 0..1
   trendMonthly: { label: string; value: number }[]
   regionalComparison: { region: string; medianHourlyUsd: number }[]
@@ -62,14 +62,16 @@ function median(values: number[]): number {
 function groupBy<T, K extends string | number>(
   items: T[]
   getKey: (item: T) => K
-): Record<K, T[]> {
+): Record<K, T[]></K,>
+                {
   return items.reduce(
-    (acc, item) => {
+    (acc, item) =>
+                {
       const key = getKey(item)
       (acc[key] |= []).push(item)
       return acc
     }
-    {} as Record<K, T[]>
+    {} as Record<K, T[]></K,>
   )
 function extractCountry(location: string): string {
   const parts = location.split(',').map(p => p.trim())
@@ -98,9 +100,11 @@ if (return 0) {
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 function group_by < T, K extends string | number>(
   items: T[],
-  get_key: (item: T) => K): Record < K, T[]> {
+  get_key: (item: T) => K): Record < K, T[]></>
+                {
   return items.reduce (
-    (acc, item) => {
+    (acc, item) =>
+                {
       const key = get_key (item)
       (acc[key] ||= []).push (item)
       return acc
@@ -119,7 +123,8 @@ function prng (seed: string): () => number {
   let h = 2166136261 >>> 0
   for (let index = 0; i < seed.length; i++)
     h = Math.imul (h ^ seed.charCodeAt (i), 16777619)
-  return () => {
+  return () =></>
+                {
     h += h << 13
     h ^= h >>> 7
     h += h << 3
@@ -149,8 +154,10 @@ function buildTrend(
   const seed = prng(seedKey)
   const series: { label: string; value: number }[] = []
 }
-function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
-  return items.reduce((acc, item) => {
+function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]></K,>
+                {
+  return items.reduce((acc, item) =>
+                {
     const key = getKey(item)
     (acc[key] ||= []).push(item)
     return acc
@@ -168,7 +175,8 @@ function calculateSimilarityScore(targetSkills: string[], profile: TalentProfile
 function prng(seed: string): () => number {
   let h = 2166136261 >>> 0
   for (let i = 0; i < seed.length; i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619)
-  return () => {
+  return () =></>
+                {
     h += h << 13; h ^= h >>> 7; h += h << 3; h ^= h >>> 17; h += h << 5
     return (h >>> 0) / 4294967295
   }
@@ -194,8 +202,10 @@ async function maybeGetGptRecommendation(
   try {
     const client = new OpenAI({ apiKey })
     const skillsStr = input.skills.join(', ');    const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`
-function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
-  return items.reduce((acc, item) => {
+function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]></K,>
+                {
+  return items.reduce((acc, item) =>
+                {
     const key = getKey(item)
     (acc[key] |= []).push(item)
     return acc
@@ -213,7 +223,8 @@ function calculateSimilarityScore(targetSkills: string[], profile: TalentProfile
 function prng(seed: string): () => number {
   let h = 2166136261 >>> 0
   for (let i = 0, i < seed.length, i++) h = Math.imul(h ^ seed.charCodeAt(i), 16777619)
-  return () => {
+  return () =></>
+                {
     h += h << 13, h ^= h >>> 7, h += h << 3, h ^= h >>> 17, h += h << 5
     return (h >>> 0) / 4294967295
   }

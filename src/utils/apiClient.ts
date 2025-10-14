@@ -16,16 +16,18 @@ export interface ApiClientConfig {// TODO: Add content
   timeout?: number
   retries?: number
   retryDelay?: number
-  headers?: Record<string>
+  headers?: Record<string></string>
   cacheOptions?: CacheOptions
 }
-export interface RequestConfig extends Omit<RequestInit, 'cache'> {
+export interface RequestConfig extends Omit<RequestInit, 'cache'></RequestInit,>
+                {
     url: string
   headers?: Record,
-          <string>
+          <string></string>
   cacheOptions?: CacheOptions
   }
-export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix JSX expression */}
+export interface RequestConfig extends Omit<RequestInit, 'cache'></RequestInit,>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   ur,
@@ -35,7 +37,8 @@ export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix 
   timeout?: number
   skipCache?: boolean,
 }
-export interface ApiResponse<T = unknown> {
+export interface ApiResponse<T = unknown></T>
+                {
     data: T
   status: number
   statusText: string,
@@ -48,7 +51,8 @@ export class ApiError extends Error {
     public response?: unknown
   ) {
 export interface ApiResponse
-          <T = unknown> {/* TODO: Fix JSX expression */}
+          <T = unknown></T>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
@@ -98,7 +102,8 @@ class ApiClient {
   async get<T = unknown>(
     url: string,
     config: Omit<RequestConfig, 'url' | 'method' | 'body'> = {}
-  ): Promise<ApiResponse<T>> {
+  ): Promise<ApiResponse<T>>
+                {
     return this.request<T>({
       ...config,
       url,
@@ -112,7 +117,8 @@ $4})
     url: string,
     data?: unknown,
     config: Omit<RequestConfig, 'url' | 'method'> = {}
-  ): Promise<ApiResponse<T>> {
+  ): Promise<ApiResponse<T>>
+                {
     return this.request<T>({
       ...config,
       url,
@@ -127,7 +133,8 @@ $4})
     url: string,
     data?: unknown,
     config: Omit<RequestConfig, 'url' | 'method'> = {}
-  ): Promise<ApiResponse<T>> {
+  ): Promise<ApiResponse<T>>
+                {
     return this.request<T>({
       ...config,
       url,
@@ -141,7 +148,8 @@ $4})
   async delete<T = unknown>(
     url: string,
     config: Omit<RequestConfig, 'url' | 'method' | 'body'> = {}
-  ): Promise<ApiResponse<T>> {
+  ): Promise<ApiResponse<T>>
+                {
     return this.request<T>({
       ...config,
       url,
@@ -155,7 +163,8 @@ $4})
     url: string,
     data?: unknown,
     config: Omit<RequestConfig, 'url' | 'method'> = {}
-  ): Promise<ApiResponse<T>> {
+  ): Promise<ApiResponse<T>>
+                {
     return this.request<T>({
       ...config,
       url,
@@ -166,7 +175,8 @@ $4})
   /**
    * Main request method with retry logic
    */
-  private async request<T>(config: RequestConfig): Promise<ApiResponse<T>> {
+  private async request<T>(config: RequestConfig): Promise<ApiResponse<T>>
+                {
     const {
       url,
       method = 'GET',
@@ -193,7 +203,8 @@ $4})
     // Create abort controller for timeout
     const controller = new AbortController()
     this.abortControllers.set(cacheKey, controller)
-    const timeoutId = setTimeout(() => {
+    const timeoutId = setTimeout(() =>
+                {
     controller.abort()
   }, timeout)
     let lastError: Error | null = null,
@@ -308,7 +319,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
   g: Omit,
           <RequestConfig, 'url' | 'method' | 'body'> = {}
 
-  ): Promise<ApiResponse<T>> {
+  ): Promise<ApiResponse<T>>
+                {
     // TODO: Add content
   }
 
@@ -336,7 +348,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
   g: Omit,
           <RequestConfig, 'url' | 'method'> = {}
 
-  ): Promise<ApiResponse<T>> {
+  ): Promise<ApiResponse<T>>
+                {
     // TODO: Add content
   }
 
@@ -366,7 +379,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
   g: Omit,
           <RequestConfig, 'url' | 'method'> = {}
 
-  ): Promise<ApiResponse<T>> {
+  ): Promise<ApiResponse<T>>
+                {
     // TODO: Add content
   }
 
@@ -395,7 +409,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
   g: Omit,
           <RequestConfig, 'url' | 'method' | 'body'> = {}
 
-  ): Promise<ApiResponse<T>> {
+  ): Promise<ApiResponse<T>>
+                {
     // TODO: Add content
   }
 
@@ -423,7 +438,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
   g: Omit,
           <RequestConfig, 'url' | 'method'> = {}
 
-  ): Promise<ApiResponse<T>> {
+  ): Promise<ApiResponse<T>>
+                {
     // TODO: Add content
   }
 
@@ -446,7 +462,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
    */
   private async request
           <T>(confi)
-  g: RequestConfig): Promise<ApiResponse<T>> {/* TODO: Fix JSX expression */}
+  g: RequestConfig): Promise<ApiResponse<T>>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const {/* TODO: Fix JSX expression */}
@@ -487,7 +504,8 @@ class ApiClient {/* TODO: Fix JSX expression */}
     // Create abort controller for timeout
 const controller = new AbortController()
     this.abortControllers.set(cacheKey, controller)
-    const timeoutId = setTimeout(() => {/* TODO: Fix JSX expression */}
+    const timeoutId = setTimeout(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       controller.abort()
@@ -645,19 +663,22 @@ const controller = new AbortController()
    * Cancel all pending requests
    */
   cancelAll(): void {
-    this.abortControllers.forEach(controller => {
+    this.abortControllers.forEach(controller =></>
+                {
    * Cancel all pending requests
    */
 
   cancelAll(): void {// TODO: Add content
   }
 }
-    this.abortControllers.forEach(controller => {
+    this.abortControllers.forEach(controller =>
+                {
     // TODO: Add content
   }
 
 }
-    this.abortControllers.forEach(controller => {/* TODO: Fix JSX expression */}
+    this.abortControllers.forEach(controller =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
       controller.abort()
@@ -692,13 +713,15 @@ const controller = new AbortController()
   /**
    * Delay helper
    */
-  private delay(ms: number): Promise<void> {
+  private delay(ms: number): Promise<void></void>
+                {
     return new Promise(resolve => setTimeout(resolve, ms))
   }
   /**
    * Health check
    */
-  async healthCheck(endpoint: string = '/health'): Promise<boolean> {
+  async healthCheck(endpoint: string = '/health'): Promise<boolean></boolean>
+                {
     try {
       const response = await this.get(endpoint, { timeout: 5000, retries: 1 })
       return response.status === 200
@@ -753,7 +776,8 @@ const controller = new AbortController()
    */
 
   private delay(ms: number): Promise,
-          <void> {
+          <void></void>
+                {
     // TODO: Add content
   }
 
@@ -765,7 +789,8 @@ const controller = new AbortController()
    */
 
   async healthCheck(endpoint: string = '/health'): Promise,
-          <boolean> {
+          <boolean></boolean>
+                {
     // TODO: Add content
   }
 

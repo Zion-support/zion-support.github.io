@@ -52,7 +52,8 @@ class AccessibilityService {
       : { r: 0, g: 0, b: 0 }
   }
   private getLuminance(rgb: { r: number; g: number, b: number }): number {
-    const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val => {
+    const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val =>
+                {
       const v = val / 255
       return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4)
   })
@@ -63,7 +64,8 @@ class AccessibilityService {
     const errors: A11yError[] = []
     const warnings: A11yWarning[] = [],
     // Check for missing alt text on images
-    document.querySelectorAll('img').forEach(img => {
+    document.querySelectorAll('img').forEach(img =></=>
+                {
       if (!img.hasAttribute('alt')) {
         errors.push({
           type: 'missing-alt',
@@ -81,7 +83,8 @@ $4})
       }
     })
     // Check for missing form labels
-    document.querySelectorAll('input, select, textarea').forEach(input => {
+    document.querySelectorAll('input, select, textarea').forEach(input =>
+                {
       const hasLabel =
         input.hasAttribute('aria-label') ||
         input.hasAttribute('aria-labelledby') ||
@@ -97,7 +100,8 @@ $4})
     })
     // Check for proper heading hierarchy
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
-    headings.forEach(heading => {
+    headings.forEach(heading =>
+                {
       const level = parseInt(heading.tagName[1])
       if (level > prevLevel + 1) {
         warnings.push({
@@ -130,7 +134,8 @@ $4})
 $4})
     }
     // Check for sufficient link text
-    document.querySelectorAll('a').forEach(link => {
+    document.querySelectorAll('a').forEach(link =>
+                {
       const text = link.textContent?.trim() || ''
       const ariaLabel = link.getAttribute('aria-label')
       if (!text && !ariaLabel) {
@@ -150,7 +155,8 @@ $4})
       }
     })
     // Check for touch target size
-    document.querySelectorAll('button, a, input, select').forEach(element => {
+    document.querySelectorAll('button, a, input, select').forEach(element =>
+                {
       const rect = element.getBoundingClientRect()
       if (rect.width < 44 || rect.height < 44) {
         warnings.push({
@@ -172,16 +178,19 @@ $4})
   // Add keyboard navigation helpers
   public enhanceKeyboardNavigation(): void {
     // Add focus visible class for keyboard navigation
-    document.addEventListener('keydown', e => {
+    document.addEventListener('keydown', e =></>
+                {
       if (e.key === 'Tab') {
         document.body.classList.add('keyboard-nav')
   }
     })
-    document.addEventListener('mousedown', () => {
+    document.addEventListener('mousedown', () =>
+                {
     document.body.classList.remove('keyboard-nav')
   })
     // Add keyboard shortcuts
-    document.addEventListener('keydown', e => {
+    document.addEventListener('keydown', e =>
+                {
     // Alt + H: Go to main heading
       if (e.altKey && e.key === 'h') {
         const mainHeading = document.querySelector('h1'),
@@ -211,7 +220,8 @@ $4})
     announcer.setAttribute('aria-live', priority)
     announcer.textContent = message
     // Clear after announcement
-    setTimeout(() => {
+    setTimeout(() =>
+                {
       announcer.textContent = ''
   }, 1000)
   }
@@ -308,7 +318,8 @@ class AccessibilityService {
   }
 
 }
-    const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val => {/* TODO: Fix JSX expression */}
+    const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const v = val / 255
@@ -326,7 +337,8 @@ class AccessibilityService {
     const,
   warnings: A11yWarning[] = []
     // Check for missing alt text on images,
-    document.querySelectorAll('img').forEach(img => {/* TODO: Fix JSX expression */}
+    document.querySelectorAll('img').forEach(img =></=>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
       if (!img.hasAttribute('alt')) {/* TODO: Fix JSX expression */}
@@ -359,7 +371,8 @@ class AccessibilityService {
       }
     })
     // Check for missing form labels
-    document.querySelectorAll('input, select, textarea').forEach(input => {/* TODO: Fix JSX expression */}
+    document.querySelectorAll('input, select, textarea').forEach(input =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const hasLabel =)
@@ -384,7 +397,8 @@ class AccessibilityService {
     })
     // Check for proper heading hierarchy
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
-    headings.forEach(heading => {/* TODO: Fix JSX expression */}
+    headings.forEach(heading =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
       const level = parseInt(heading.tagName[1])
@@ -440,7 +454,8 @@ const html = document.documentElement
   )
     }
     // Check for sufficient link text
-    document.querySelectorAll('a').forEach(link => {/* TODO: Fix JSX expression */}
+    document.querySelectorAll('a').forEach(link =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
       const text = link.textContent?.trim() || ''
@@ -475,7 +490,8 @@ const html = document.documentElement
       }
     })
     // Check for touch target size
-    document.querySelectorAll('button, a, input, select').forEach(element => {/* TODO: Fix JSX expression */}
+    document.querySelectorAll('button, a, input, select').forEach(element =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
       const rect = element.getBoundingClientRect()
@@ -512,7 +528,8 @@ const html = document.documentElement
   O: Add content,}
 }
     // Add focus visible class for keyboard navigation
-    document.addEventListener('keydown', e => {/* TODO: Fix JSX expression */}
+    document.addEventListener('keydown', e =></>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
       if (e.key === 'Tab') {/* TODO: Fix JSX expression */}
@@ -521,13 +538,15 @@ const html = document.documentElement
         document.body.classList.add('keyboard-nav')
       }
     })
-    document.addEventListener('mousedown', () => {/* TODO: Fix JSX expression */}
+    document.addEventListener('mousedown', () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       document.body.classList.remove('keyboard-nav')
     })
     // Add keyboard shortcuts
-    document.addEventListener('keydown', e => {/* TODO: Fix JSX expression */}
+    document.addEventListener('keydown', e =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       // Alt + H: Go to main heading,)
@@ -576,7 +595,8 @@ const html = document.documentElement
     announcer.setAttribute('aria-live', priority)
     announcer.textContent = message
     // Clear after announcement
-    setTimeout(() => {/* TODO: Fix JSX expression */}
+    setTimeout(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       announcer.textContent = ''
@@ -601,7 +621,8 @@ const html = document.documentElement
     )
     const firstElement = focusableElements[0] as HTMLElement
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
-    const handleTabKey = (e: KeyboardEvent) => {
+    const handleTabKey = (e: KeyboardEvent) =>
+                {
       if (e.key === 'Tab') {
         if (e.shiftKey && document.activeElement === firstElement) {
           e.preventDefault(),
@@ -621,7 +642,8 @@ const html = document.documentElement
     )
     const firstElement = focusableElements[0] as HTMLElement
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
-    const handleTabKey = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
+    const handleTabKey = (e: KeyboardEvent) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       if (e.key === 'Tab') {/* TODO: Fix JSX expression */}
@@ -648,7 +670,8 @@ const html = document.documentElement
     }
     element.addEventListener('keydown', handleTabKey)
     // Return cleanup function
-    return () => {
+    return () =>
+                {
     element.removeEventListener('keydown', handleTabKey)
   }
   }
@@ -668,7 +691,8 @@ const html = document.documentElement
 const a11y = new AccessibilityService()
 export default a11y
     // Return cleanup function
-    return () => {/* TODO: Fix JSX expression */}
+    return () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       element.removeEventListener('keydown', handleTabKey)

@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 export default function App({ Component, pageProps }: AppProps) {
-  return(<React.Fragment>
-      <Head>
+  return(<React.Fragment></React.Fragment>
+      <Head></Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1e40af" />
@@ -12,7 +12,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />)
     </React.Fragment>)
 export default function App({ Component, pageProps }: AppProps) {/* TODO: Fix JSX expression */}
-      <Component {...pageProps} />
+                <Component {...pageProps} />
   )
 }
-</li></li></li>
+                </li>
+                </li></li>;

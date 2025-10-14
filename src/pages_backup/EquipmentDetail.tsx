@@ -2,7 +2,8 @@
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipment_listings.reduce (
-    (acc, item) => {
+    (acc, item) =>
+                {
 
       acc[item.id] = convertProductListingToEquipmentDetails (item)
       return acc
@@ -25,7 +26,8 @@ function EquipmentDetail() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [equipment, setEquipment] = useState<EquipmentDetails | undefined>()
-  useEffect((,) => {
+  useEffect((,) =>
+                {
     async function loadEquipment() {
       if (!id) {
         setLoading(false)
@@ -61,43 +63,29 @@ if ( {) {
               } else {
 
 
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
-import { NextSeo } from '@/components/NextSeo'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-import {
-  ShoppingCart,
+import { useState, useEffect  } from 'react';
+import { useRouter  } from 'next/router';import { NextSeo  } from '@/components/NextSeo';
+import { Badge  } from '@/components/ui/badge';import { Button  } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';import { AspectRatio  } from '@/components/ui/aspect-ratio';
+import { ShoppingCart,
   Star,
   Truck,
   Shield,
   RotateCcw,
   Clock,
   AlertTriangle,
-  ArrowLeft,
-} from 'lucide-react'
-import { toast } from '@/hooks/use-toast'
-import { useAuth } from '@/hooks/useAuth'
-import { getStripe } from '@/utils/getStripe';import { useRouter } from 'next/router'
-import { NextSeo } from '@/components/NextSeo'
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { AspectRatio } from "@/components/ui/aspect-ratio"
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast"
-import { useAuth } from "@/hooks/useAuth"
-import { getStripe } from "@/utils/getStripe"
-import { useCart } from '@/context/CartContext'
-import { ImageWithRetry } from '@/components/ui/ImageWithRetry'
-import { equipmentListings } from '@/data/equipmentData'
-import { ProductListing } from '@/types/listings'
-import { motion } from 'framer-motion'
-import { useCurrency } from '@/hooks/useCurrency'
-import { logErrorToProduction } from '@/utils/productionLogger'
-interface EquipmentSpecification {
+  ArrowLeft,;
+ } from 'lucide-react';import { toast  } from '@/hooks/use-toast';
+import { useAuth  } from '@/hooks/useAuth';import { getStripe  } from '@/utils/getStripe';
+import { useRouter  } from 'next/router';import { NextSeo  } from '@/components/NextSeo';
+import { Badge  } from '@/components/ui/badge';import { Button  } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';import { AspectRatio  } from '@/components/ui/aspect-ratio';
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft  } from 'lucide-react';import { toast  } from '@/hooks/use-toast';
+import { useAuth  } from '@/hooks/useAuth';import { getStripe  } from '@/utils/getStripe';
+import { useCart  } from '@/context/CartContext';import { ImageWithRetry  } from '@/components/ui/ImageWithRetry';
+import { equipmentListings  } from '@/data/equipmentData';import { ProductListing  } from '@/types/listings';
+import { motion  } from 'framer-motion';import { useCurrency  } from '@/hooks/useCurrency';
+import { logErrorToProduction  } from '@/utils/productionLogger';interface EquipmentSpecification {
   name: string
 value: string 
 }interface EquipmentDetails {
@@ -155,7 +143,8 @@ function convertProductListingToEquipmentDetails(): any (
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
   equipmentListings && equipmentListings.reduce(
-    (acc, item) => {
+    (acc, item) =>
+                {
       acc[item && item.id] = convertProductListingToEquipmentDetails(item)
       return acc
     },
@@ -173,7 +162,8 @@ export default function EquipmentDetail() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [equipment, setEquipment] = useState<EquipmentDetails | undefined>()
-  useEffect((,) => {
+  useEffect((,) =>
+                {
     async function loadEquipment() {
       if (!id) {
         setLoading(false)
@@ -249,9 +239,9 @@ import { NextSeo } from '@/components/NextSeo',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft  } from 'lucide-react';
+import { toast  } from '@/hooks/use-toast';,
 import { useAuth } from "@/hooks/useAuth",
 import { getStripe } from "@/utils/getStripe",
 import { useCart } from '@/context/CartContext',
@@ -270,9 +260,9 @@ import { NextSeo } from '@/components/NextSeo',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { AspectRatio } from "@/components/ui/aspect-ratio",
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft  } from 'lucide-react';
+import { toast  } from '@/hooks/use-toast';,
 import { useAuth } from "@/hooks/useAuth",
 import { getStripe } from "@/utils/getStripe",
 import { useCart } from '@/context/CartContext',
@@ -335,7 +325,8 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
 
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
-  equipmentListings.reduce((acc, item) => {
+  equipmentListings.reduce((acc, item) =>
+                {
     acc[item.id] = convertProductListingToEquipmentDetails(item),
     return acc
   }, {} as { [key: string]: EquipmentDetails }),
@@ -351,7 +342,8 @@ export default function EquipmentDetail() {
   const [loading, setLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
   const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),
-  useEffect(() => {
+  useEffect(() =>
+                {
     async function loadEquipment() {
       if (!id) {
         setLoading(false),
@@ -415,7 +407,8 @@ export default function EquipmentDetail() {
 
 
 
-  const handleAddToCart = async () => {
+  const handleAddToCart = async () =>
+                {
     if (!equipment |!isAuthenticated) {
       toast({
 
@@ -458,14 +451,11 @@ export default function EquipmentDetail() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
           quantity}}),
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -475,14 +465,14 @@ export default function EquipmentDetail() {
     return (
       <>
         <NextSeo title="Loading Equipment..." />
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <div className="text-center py-20">
+        <div className="min-h-screen bg-zion-blue py-12 px-4"></div>
+          <div className="container mx-auto"></div>
+            <div className="text-center py-20"></div>
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
               <p className="text-zion-slate-light">Loading equipment details...</p>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </>
     )
   }
@@ -496,12 +486,14 @@ if ( {) {
     return (
       <>
         <NextSeo title='Loading Equipment...' />
-        <div className='min - h-screen bg - zion - blue py - 12 px - 4'>
-          <div className='container mx - auto'>
-            <div className='text - center py - 20'>
+        <div className='min - h-screen bg - zion - blue py - 12 px - 4'></div>
+          <div className='container mx - auto'></div>
+            <div className='text - center py - 20'></div>
               <div className='animate - spin rounded - full h - 12 w - 12 border - b-2 border - zion - cyan mx - auto mb - 4'></div>
-              <p className='text - zion - slate - light'>
-                Loading equipment details...</$1></$1></$1></$1>
+              <p className='text - zion - slate - light'></p>
+                Loading equipment details...</$1>
+                </$1></$1>
+                </$1>
       </>)
   }
 
@@ -524,7 +516,8 @@ if ( {) {
 
     loadEquipment()
   }, [id])
-  const handleAddToCart = async () => {
+  const handleAddToCart = async () =>
+                {
     if (!equipment || !isAuthenticated) {
       toast({
         title: 'Authentication Required',
@@ -565,12 +558,14 @@ if ( {) {
     return (
       <>
         <NextSeo title='Loading Equipment...' />
-        <div className='min-h-screen bg-zion-blue py-12 px-4'>
-          <div className='container mx-auto'>
-            <div className='text-center py-20'>
+        <div className='min-h-screen bg-zion-blue py-12 px-4'></div>
+          <div className='container mx-auto'></div>
+            <div className='text-center py-20'></div>
               <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4'></div>
-              <p className='text-zion-slate-light'>
-                Loading equipment details...</$1></$1></$1></$1>
+              <p className='text-zion-slate-light'></p>
+                Loading equipment details...</$1>
+                </$1></$1>
+                </$1>
       </>
     )
   }
@@ -583,26 +578,25 @@ if ( {) {
           title="Equipment Not Found"
           description="The equipment you're looking for doesn't exist or has been removed."
         />
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
+        <div className="min-h-screen bg-zion-blue py-12 px-4"></div>
+          <div className="container mx-auto"></div>
             <motion.div 
               className="text-center py-20"
               initial={{ opacity: 0, y: 20 }}
-
-              </h1>
-              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
+                </h1>
+              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'></p>
                 {error === 'Equipment not found'
                   ? 'Equipment Not Found'
                   : 'Something went wrong'}
-              </h1>
-              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
+                </h1>
+              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'></p>
                 {error === 'Equipment not found'
                   ? "The equipment you're looking for doesn't exist or has been removed."
                   : error |
 
                     "We couldn't load the equipment details. Please try again."}
-              </p>
-              <div className='space-x-4'>
+                </p>
+              <div className='space-x-4'></div>
                 <Button
                   onClick={() => router && router.back()}
                   variant='outline'
@@ -612,19 +606,21 @@ if ( {) {
                 <Button
 
               animate={{ opacity: 1, y: 0 }}
-            >
-              <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
-              <h1 className="text-3xl font-bold text-white mb-4">
-                {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
-              </h1>
+            ></Button
 
-              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
+>
+              <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
+              <h1 className="text-3xl font-bold text-white mb-4"></h1>
+                {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
+                </h1>
+
+              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'></p>
                 {error === 'Equipment not found'
                   ? "The equipment you're looking for doesn't exist or has been removed."
                   : error |
                     "We couldn't load the equipment details. Please try again."}
-              </p>
-              <div className='space-x-4'>
+                </p>
+              <div className='space-x-4'></div>
                 <Button
                   onClick={() => router && router.back()}
                   variant='outline'
@@ -634,13 +630,13 @@ if ( {) {
                 <Button
                   onClick={() => router.push('/equipment')}
                   className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >
-              <p className="text-zion-slate-light mb-8 max-w-md mx-auto">
+              <p className="text-zion-slate-light mb-8 max-w-md mx-auto"></p>
                 {error === 'Equipment not found' 
                   ? "The equipment you're looking for doesn't exist or has been removed." 
                   : error || "We couldn't load the equipment details. Please try again."
                 }
-              </p>
-              <div className="space-x-4">
+                </p>
+              <div className="space-x-4"></div>
                 <Button 
                   onClick={() => router.back()} 
                   variant="outline"
@@ -656,9 +652,9 @@ if ( {) {
 
                   Browse Equipment
                 </Button>
-              </div>
+                </div>
             </motion.div>
-          </div>
+                </div>
         </div>
       </>
     )
@@ -672,7 +668,9 @@ if ( {) {
 
     loadEquipment()
   }, [id]),
-  const handleAddToCart = async () => {
+  const handleAddToCart = async () =></NextSeo
+>
+                {
     if (!equipment || !isAuthenticated) {
       toast({
         title: "Authentication Required",
@@ -708,11 +706,13 @@ if ( {) {
     return (
       <>
         <NextSeo title="Loading Equipment..." />
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
-            <div className="text-center py-20">
+        <div className="min-h-screen bg-zion-blue py-12 px-4"></div>
+          <div className="container mx-auto"></div>
+            <div className="text-center py-20"></div>
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
-              <p className="text-zion-slate-light">Loading equipment details...</p></$1></$1></$1>
+              <p className="text-zion-slate-light">Loading equipment details...</p>
+                </$1></$1>
+                </$1>
       </>
     )
   }
@@ -725,24 +725,25 @@ if ( {) {
           title="Equipment Not Found"
           description="The equipment you're looking for doesn't exist or has been removed."
         />
-        <div className="min-h-screen bg-zion-blue py-12 px-4">
-          <div className="container mx-auto">
+        <div className="min-h-screen bg-zion-blue py-12 px-4"></div>
+          <div className="container mx-auto"></div>
             <motion.div
               className="text-center py-20"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-            >
+            ></motion.div
+>
               <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
-              <h1 className="text-3xl font-bold text-white mb-4">
+              <h1 className="text-3xl font-bold text-white mb-4"></h1>
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
-              </h1>
-              <p className="text-zion-slate-light mb-8 max-w-md mx-auto">
+                </h1>
+              <p className="text-zion-slate-light mb-8 max-w-md mx-auto"></p>
                 {error === 'Equipment not found'
                   ? "The equipment you're looking for doesn't exist or has been removed."
                   : error || "We couldn't load the equipment details. Please try again."
                 }
-              </p>
-              <div className="space-x-4">
+                </p>
+              <div className="space-x-4"></div>
                 <Button
                   onClick={() => router.back()}
                   variant="outline"
@@ -754,7 +755,9 @@ if ( {) {
                   onClick={() => router.push('/equipment')}
                   className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
                 >
-                  Browse Equipment</$1></$1></$1></$1></$1>
+                  Browse Equipment</$1>
+                </$1></$1>
+                </$1></$1>
       </>
     )
   }
@@ -770,14 +773,14 @@ if ( {) {
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined
         }}
       />
-      <div className="min-h-screen bg-zion-blue py-8 px-4">
-        <div className="container mx-auto">
-          {/* Breadcrumb */}
-
-          <motion.nav
+      <div className="min-h-screen bg-zion-blue py-8 px-4"></div>
+        <div className="container mx-auto"></div>
+                {/* Breadcrumb */}
+                <motion.nav
             className='flex mb-8'
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}>
+            animate={{ opacity: 1, y: 0 }}></motion.nav
+>
             <$2 />
               onClick={() => router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >
@@ -785,7 +788,7 @@ if ( {) {
             className="flex mb-8"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-          >
+          >;
             <;$2 />
               onClick={() => router.push('/equipment')}
               className="text-zion-cyan hover:text-white transition-colors"
@@ -796,30 +799,34 @@ if ( {) {
               Equipment
             </button>
             <span className="mx-2 text-zion-slate-light">/</span>
-            <span className="text-zion-slate-light">{equipment.name}</span>
-          </motion.nav>
+            <span className="text-zion-slate-light"></span>
+                {equipment.name}
+                </span>
+                </motion.nav>
 
               onClick={() => router && router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >
               Equipment</$1>
             <span className='mx-2 text-zion-slate-light'>/</span>
-            <span className='text-zion-slate-light'>{equipment && equipment.name}</span></$1>
-          <div className='grid lg:grid-cols-2 gap-12'>
+            <span className='text-zion-slate-light'></span>
+                {equipment && equipment.name}
+                </span>
+                </$1>
+          <div className='grid lg:grid-cols-2 gap-12'></div>
           <div className="grid lg:grid-cols-2 gap-12">
 
 
 
 
-
+</div>
                       />
                     </button>
                   ))}
                 </div>
               )}
-
-            </motion && motion.div>
-            {/* Product Details */}
-            <motion.div
+                </motion && motion.div>
+                {/* Product Details */}
+                <motion.div
               className='space-y-6'
             <motion.div 
               className="space-y-6"
@@ -829,20 +836,22 @@ if ( {) {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
-            >
-              {/* Header */}
+            ></motion.div
+>
+                {/* Header */}
 
 
                     className='border-zion-slate-light text-zion-slate-light'>
-                    {equipment && equipment.brand}
-                  </Badge></$1>
-                <h1 className='text-3xl font-bold text-white'>
-                  {equipment && equipment.name}
+                {equipment && equipment.brand}
+                </Badge>
+                </$1>
+                <h1 className='text-3xl font-bold text-white'></h1>
+                {equipment && equipment.name}
                 </h1>
                 {equipment && equipment.rating && (
-                  <div className='flex items-center gap-2'>
-                    <div className='flex items-center'>
-                      {[...Array(5)].map((_, i) => (                        <Star
+                  <div className='flex items-center gap-2'></div>
+                    <div className='flex items-center'></div>
+                {[...Array(5)].map((_, i) => (                        <Star
                           key = {i,}
                           className={`h-4 w-4 ${
                             i < Math && Math.floor(equipment && equipment.rating!)
@@ -850,78 +859,100 @@ if ( {) {
                               : 'text-zion-slate-light'
 
 
-              <div className="space-y-2">
-                <div className="flex items-center gap-2 mb-2">
+              <div className="space-y-2"></Star
+>
+                <div className="flex items-center gap-2 mb-2"></div>
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
 
 
 
 
-
+</Badge>
                           }`}
                         />
                       ))}
-                    </div>
-                    <span className='text-sm text-zion-slate-light'>
-                      {equipment && equipment.rating?.toFixed(1)} ({equipment && equipment.reviewCount}{' '}
-                      reviews)</$1></$1>
+                </div>
+                    <span className='text-sm text-zion-slate-light'></span>
+                {equipment && equipment.rating?.toFixed(1)} ({equipment && equipment.reviewCount}{' '}
+                      reviews)</$1>
+                </$1>
                 )}
-
-              </div>
-              {/* Price */}
-
-
-                  <div className="flex gap-3 text-zion-slate-light">
+                </div>
+                {/* Price */}
+                <div className="flex gap-3 text-zion-slate-light"></div>
                     <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />
-                    <div>
+                    <div></div>
                       <p className="text-white text-sm font-medium">Warranty</p>
-                      <p className="text-xs">{equipment.warranty}</p>
-                    </div>
+                      <p className="text-xs"></p>
+                {equipment.warranty}
+                </p>
+                </div>
                   </div>
                 )}
 
                 {/* Warranty */}
                 {equipment && equipment.warranty && (
-                  <div className='flex gap-3 text-zion-slate-light'>
+                  <div className='flex gap-3 text-zion-slate-light'></div>
                     <Shield className='h-5 w-5 text-zion-cyan flex-shrink-0' />
-                    <div>
+                    <div></div>
                       <p className='text-white text-sm font-medium'>Warranty</p>
-                      <p className='text-xs'>{equipment && equipment.warranty}</p></$1></$1>
+                      <p className='text-xs'></p>
+                {equipment && equipment.warranty}
+                </p>
+                </$1></$1>
                 )}
                 {/* Return Policy */}
                 {equipment && equipment.returnPolicy && (
-                  <div className='flex gap-3 text-zion-slate-light'>
+                  <div className='flex gap-3 text-zion-slate-light'></div>
                     <RotateCcw className='h-5 w-5 text-zion-cyan flex-shrink-0' />
-                    <div>
+                    <div></div>
                       <p className='text-white text-sm font-medium'>Returns</p>
-                      <p className='text-xs'>{equipment && equipment.returnPolicy}</p></$1></$1>
+                      <p className='text-xs'></p>
+                {equipment && equipment.returnPolicy}
+                </p>
+                </$1></$1>
                 )}
 
 
 
 
   equipment.returnPolicy 
-}</p> </div> </div>) 
-}</div> </motion.div> </div> </div> </div> </>) 
+}
+                </p>
+                </div> </div>) 
+}
+                </div>
+                </motion.div> </div>
+                </div> </div> </>) 
 }'"}
-</$1></$1></$1></$1></$1>
+                </$1>
+                </$1></$1>
+                </$1></$1>
     </>
   )
                 {/* Warranty */}
                 {equipment.warranty && (
-                  <div className='flex gap - 3 text - zion - slate - light'>
+                  <div className='flex gap - 3 text - zion - slate - light'></div>
                     <Shield className='h - 5 w - 5 text - zion - cyan flex - shrink - 0' />
-                    <div>
+                    <div></div>
                       <p className='text - white text - sm font - medium'>Warranty</p>
-                      <p className='text - xs'>{equipment.warranty}</p></$1></$1>)}
+                      <p className='text - xs'></p>
+                {equipment.warranty}
+                </p>
+                </$1></$1>)}
                 {/* Return Policy */}
                 {equipment.return_policy && (
-                  <div className='flex gap - 3 text - zion - slate - light'>
+                  <div className='flex gap - 3 text - zion - slate - light'></div>
                     <RotateCcw className='h - 5 w - 5 text - zion - cyan flex - shrink - 0' />
-                    <div>
+                    <div></div>
                       <p className='text - white text - sm font - medium'>Returns</p>
-                      <p className='text - xs'>{equipment.return_policy}</p></$1></$1>)}
-              </div></$1></$1></$1></$1>
+                      <p className='text - xs'></p>
+                {equipment.return_policy}
+                </p>
+                </$1></$1>)}
+                </div>
+                </$1></$1>
+                </$1></$1>
     </>
   )
 }

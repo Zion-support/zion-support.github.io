@@ -3,8 +3,9 @@ import fs from 'fs'
 import { glob } from 'glob'
 async function main() {
   //Find all TSX files in src/components
-  //   files.forEach(file => {)
-    try {)
+  //   files.forEach(file =>
+                {)
+    try {);
       //Fix common JSX syntax issues;)
       //1. Fix key prop placement: <div>\nkey={...} -> <\nkey={...})$2 />
       if (keyPropFix !== content) {
@@ -13,7 +14,8 @@ async function main() {
 async function main() {/* TODO: Fix JSX expression */}
 }
   //Find all TSX files in src/components
-  //   files.forEach(file => {/* TODO: Fix JSX expression */}
+  //   files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
   placement: <div>\nkey={...} -> <\nkey={...})$2 />
       if (keyPropFix !== content) {/* TODO: Fix JSX expression */}
       }
@@ -66,7 +68,7 @@ async function main() {/* TODO: Fix JSX expression */}
       }
 
       //6. Fix unclosed input,
-  tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button>
+  tags: <input\n...\n\n<button -> <input\n...\n/>\n\n<button></button>
       const inputFix = content.replace()
         /<input([^>]*?)\n\s*\n\s*</g,$2 />
         '<input$1\n/>\n\n<'$2 />
@@ -87,4 +89,8 @@ async function main() {/* TODO: Fix JSX expression */}
   })
   //   }
 
-// main().catch(console.error)</div></div></div></div></button></button></button></button>
+// main().catch(console.error)</div>
+                </div></div>
+                </div></button>
+                </button></button>
+                </button>

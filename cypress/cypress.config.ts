@@ -9,21 +9,23 @@ export default define_config ({
     supportFile: 'cypress/support/e2e && e2e.ts',
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
-      on('before:browser:launch', (browser = {}, launchOptions) => {
+      on('before:browser:launch', (browser = {}, launchOptions) =>
+                {
         if (browser && browser.family === 'chromium') {
           launchOptions && launchOptions.args.push('--disable-ipv6')
     base_url: 'http://localhost:3000', // Standard Next.js port
     support_file: 'cypress / support / e2e.ts',
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium - based browsers to avoid socket errors
     setupNodeEvents (on, config) {
-      on ('before:browser:launch', (browser = {}, launch_options) => {
+      on ('before:browser:launch', (browser = {}, launch_options) =>
+                {
         // Check condition
 if ( {) {
   $2
 }
           launch_options.args.push ('--disable - ipv6')
         }
-        return launch_options
+        return launch_options;
       });export default define_config ({
   e2e: {
 import { defineConfig } from 'cypress',
@@ -34,7 +36,8 @@ export default defineConfig({
     experimentalModifyObstructiveThirdPartyCode: true,
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
-      on('before:browser:launch', (browser = {}, launchOptions) => {
+      on('before:browser:launch', (browser = {}, launchOptions) =>
+                {
         if (browser.family === 'chromium') {
           launchOptions.args.push('--disable-ipv6')
         }
@@ -43,8 +46,9 @@ export default defineConfig({
     experimentalModifyObstructiveThirdPartyCode: true
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
-      on('before:browser:launch', (browser = {}, launchOptions) => {
-        if (browser && browser.family === 'chromium') {
+      on('before:browser:launch', (browser = {}, launchOptions) =>
+                {
+        if (browser && browser.family === 'chromium') {;
           launchOptions && launchOptions.args.push('--disable-ipv6');        }
         return launchOptions
       })
@@ -85,7 +89,8 @@ export default defineConfig({
     experimentalModifyObstructiveThirdPartyCode: true,
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
-      on('before:browser:launch', (browser = {}, launchOptions) => {
+      on('before:browser:launch', (browser = {}, launchOptions) =>
+                {
         if (browser.family === 'chromium') {
           launchOptions.args.push('--disable-ipv6')
         }
@@ -114,7 +119,8 @@ export default defineConfig({
     experimentalModifyObstructiveThirdPartyCode: true,
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
-      on('before:browser:launch', (browser = {}, launchOptions) => {
+      on('before:browser:launch', (browser = {}, launchOptions) =>
+                {
         if (browser.family === 'chromium') {
           launchOptions.args.push('--disable-ipv6')
         }
@@ -156,13 +162,11 @@ export default defineConfig({
   reporter: 'junit',
   reporter_options: {
     mocha_file: 'cypress / results / junit-[hash].xml',
-    to_console: true,
+    to_console: true,;
   }, });    mocha_file: 'cypress / results / junit-[hash].xml'
     to_console: true
   }
 })
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           launchOptions.args.push('--disable-ipv6')
         }
         return launchOptions

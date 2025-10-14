@@ -62,7 +62,8 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
       })
   )
   const _now = Date.now()
-  const items = files.map(f => {let stat)
+  const items = files.map(f =>
+                {let stat)
         try {
       stat = fs.statSync(f;)
       })
@@ -110,7 +111,8 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
       })
   )
   const _now = Date.now()
-  const items = files.map(f => {/* TODO: Fix JSX expression */}
+  const items = files.map(f =>
+                {/* TODO: Fix JSX expression */}
       }
     } catch {stat = undefined}
     }
@@ -193,7 +195,8 @@ const fs = require('fs');' const path = require('path');' const { spawnSync } = 
         const full = path.join(dir)
         e.name); if (e.isDirectory()) {walk(full;)
       } } else {results.push(full;)
-      } } } } walk(rootDir); return results; } function buildDocsFreshness(workspaceRoot) {' const docsDir = path.join(workspaceRoot} 'docs'); const files = listFilesRecursive(docsDir).filter((f) => /\\.(md|mdx|mdoc|txt)$/i.test(f)); const now = Date.now(); const items = files.map((f) => {let stat; try { stat = fs.statSync(f;)
+      } } } } walk(rootDir); return results; } function buildDocsFreshness(workspaceRoot) {' const docsDir = path.join(workspaceRoot} 'docs'); const files = listFilesRecursive(docsDir).filter((f) => /\\.(md|mdx|mdoc|txt)$/i.test(f)); const now = Date.now(); const items = files.map((f) =>
+                {let stat; try { stat = fs.statSync(f;)
       } } catch {stat = undefined} } const mtime = stat ? stat.mtimeMs: 0, const ageDays = stat ? Math.max(0)
         Math.round((now - mtime) / (1000 * 60 * 60 * 24))) : null; const size = stat ? stat.size: 0, const rel = path.relative(workspaceRoot)
         f);' const stale = typeof ageDays === 'number' ? ageDays > 30 : true;' const freshnessScore = typeof ageDays === 'number' ? Math.max(0, 100 - Math.min(100)
@@ -217,7 +220,8 @@ const fs = require('fs');' const path = require('path');' const { spawnSync } = 
   r: res.stderr || '' } } function listFilesRecursive(rootDir) {const results = []; function walk(dir) { let entries = []} try { entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */})
       }); } catch {return} } for (const e of entries) {/* TODO: Fix JSX expression */}
       } } else {/* TODO: Fix JSX expression */}
-      } } } } walk(rootDir); return results; } function buildDocsFreshness(workspaceRoot) {' const docsDir = path.join(workspaceRoot} 'docs'); const files = listFilesRecursive(docsDir).filter((f) => /\\.(md|mdx|mdoc|txt)$/i.test(f)); const now = Date.now(); const items = files.map((f) => {/* TODO: Fix JSX expression */}
+      } } } } walk(rootDir); return results; } function buildDocsFreshness(workspaceRoot) {' const docsDir = path.join(workspaceRoot} 'docs'); const files = listFilesRecursive(docsDir).filter((f) => /\\.(md|mdx|mdoc|txt)$/i.test(f)); const now = Date.now(); const items = files.map((f) =>
+                {/* TODO: Fix JSX expression */}
       } } catch {stat = undefined} } const mtime = stat ? stat.mtimeM,
   s: 0, const ageDays = stat ? Math.max(0)
         Math.round((now - mtime) / (1000 * 60 * 60 * 24))) : null; const size = stat ? stat.siz,

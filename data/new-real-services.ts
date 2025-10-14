@@ -6065,7 +6065,7 @@ export const,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/llm-observability-suite'' marketPositio,
   n: 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.', marketPositio,
-  n: ' 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.', feature,
+  n: ' 'Complements PromptLayer and Langfuse with enterprise policy engine and cost attribution out-of-the-box.', feature,;
   s: [' 'Prompt and response tracingCost and token analyticsAutomatic PII redactionOffline and online evalsGuardrail policy engineDrift and performance alertsSDKs for JS, Python, GoGrafana and Datadog exporters' ]; popula,
   r: true,' ico,
   n: '📈'' colo,

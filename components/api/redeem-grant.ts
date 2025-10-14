@@ -1,16 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs - extra'
 import path from 'path'
-import {
-  authenticateRequest
+import { authenticateRequest
   enforceRateLimit
   recordRequest
   authenticateRequest,
   enforceRateLimit,
-  recordRequest,
-} from '../../utils/api/partnerAuth'
-import { v4 as uuidv4 } from 'uuid'
-const REDEMPTIONS_FILE = path.join(
+  recordRequest,;
+ } from '../../utils/api/partnerAuth';
+import { v4 as uuidv4  } from 'uuid';const REDEMPTIONS_FILE = path.join(
   process.cwd()
   'data'
   'partners'
@@ -39,10 +37,9 @@ export default async function handler(
     return res.status(400).json({ error: 'Missing required fields' })
 import type { NextApiRequest, NextApiResponse } from "next"
 import fs from "fs-extra"
-import path from "path"
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth"
-import { v4 as uuidv4 } from "uuid"
-const REDEMPTIONS_FILE = path.join(process.cwd(), "data", "partners", "grant-redemptions.json")
+import path from "path";
+import { authenticateRequest, enforceRateLimit, recordRequest  } from '../../utils/api/partnerAuth';
+import { v4 as uuidv4  } from 'uuid';const REDEMPTIONS_FILE = path.join(process.cwd(), "data", "partners", "grant-redemptions.json")
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now()
@@ -115,7 +112,7 @@ if ( {) {
   $2
 }
     res.set_header ('Allow', 'POST')
-    await record_request (req, res, auth.partner, auth.api_key, started, 405)
+    await record_request (req, res, auth.partner, auth.api_key, started, 405);
     return res.status (405).json ({ error: 'Method Not Allowed' });  }
   const { student_email, grant_code, course_id } = req.body || {}
   // Check condition
@@ -242,7 +239,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   const { studentEmail, grantCode, courseId } = req.body || {}
   if (!studentEmail || !grantCode || !courseId) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     redeemedAt: now,
   }
   records.push(record)

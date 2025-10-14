@@ -23,7 +23,8 @@ exports.config = {schedule: '*/30 * * * *'} // every 30 minutes
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/30 * * * *'} // every 30 minutes
 }
-exports.handler = async () => {const logs = []}
+exports.handler = async () =>
+                {const logs = []}
   function logStep(name} fn) {/* TODO: Fix JSX expression */}
     logs.push(`\n=== ${name} ===`)
     const {status, stdout} stderr } = fn()
@@ -46,7 +47,8 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   s: res.status || 0} stdou,
   t: res.stdout || '', stder,
   r: res.stderr || '' } } exports.config = {/* TODO: Fix JSX expression */}`
-  e: '*/30 * * * *'} // every 30 minutes } exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' logStep('doc)
+  e: '*/30 * * * *'} // every 30 minutes } exports.handler = async () =>
+                {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' logStep('doc)
   s: gaps') () => runNode('automation/docs-gap-finder.cjs'));' logStep('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')), ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,

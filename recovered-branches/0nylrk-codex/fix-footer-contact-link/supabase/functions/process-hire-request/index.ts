@@ -1,6 +1,5 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
-import { Configuration, OpenAIApi } from "https://esm.sh/openai@3.2.1"
+import { serve  } from 'https://deno.land/std@0.190.0/http/server.ts';
+import { createClient  } from 'https://esm.sh/@supabase/supabase-js@2';import { Configuration, OpenAIApi } from "https://esm.sh/openai@3.2.1"
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -29,7 +28,8 @@ interface EnhancedContent {
   summary: string
   projectType: string
 }
-serve(async (req) => {
+serve(async (req) =>
+                {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -156,13 +156,19 @@ serve(async (req) => {
             <p>Hello ${talent.full_name},</p>
             <p>You have received a new project request from ${requester.name} (${requester.email}).</p>
             <h2>Project Details</h2>
-            <p><strong>Budget:</strong> ${budgetDisplay}</p>
-            <p><strong>Timeline:</strong> ${project.timeline}</p>
-            <p><strong>Overview:</strong></p>
-            <p>${project.overview}</p>
-            ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}</p>` : ''}
-            ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
-            <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
+            <p><strong>Budget:</strong> ${budgetDisplay}
+                </p>
+            <p><strong>Timeline:</strong> ${project.timeline}
+                </p>
+            <p><strong>Overview:</strong>
+                </p>
+            <p>${project.overview}
+                </p>
+            ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}
+                </p>` : ''}
+            ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}
+                </p>` : ''}
+                <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
             <p>Best regards,<br>The Zion AI Marketplace Team</p>
           `}})
           `,
@@ -197,4 +203,4 @@ serve(async (req) => {
       }
     )
   }
-})
+});

@@ -1,25 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import React from 'react'
-import { motion } from 'framer-motion'
->>>>>>> origin/main
-import { 
-  Heart, 
+import { motion  } from 'framer-motion';
+import { Heart, 
   BarChart3, 
   Activity, 
   Shield, 
-<<<<<<< HEAD
-  CheckCircle, 
-  ArrowRight, 
-  Brain, 
-  TrendingUp 
-} from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-
-export default function AIHealthcareAnalytics() {
-=======
   Clock,
   ArrowRight,
   CheckCircle,
@@ -29,10 +13,8 @@ export default function AIHealthcareAnalytics() {
   Award,
   TrendingUp,
   Stethoscope,
-  Database
-import { Link } from 'react-router-dom'
-import { 
-  Heart, 
+  Database;
+import { Link  } from 'react-router-dom';import { Heart, 
   Brain, 
   Activity, 
   Zap, 
@@ -55,10 +37,9 @@ import {
   Pill,
   Microscope,
   FileText,
-  AlertTriangle,
-import { Link } from 'react-router-dom'
-import { 
-  Heart, 
+  AlertTriangle,;
+import { Link  } from 'react-router-dom';
+import { Heart, 
   Activity, 
   Brain, 
   Shield, 
@@ -69,15 +50,14 @@ import {
   Clock,
   DollarSign,
   Zap,
-  Target
-} from 'lucide-react'
-export default function AIHealthcareAnalytics() {
+  Target;
+ } from 'lucide-react';export default function AIHealthcareAnalytics() {
   const features = [
     {
   LineChart,
   Building
 } from 'lucide-react'
-const AIHealthcareAnalytics: React.FC = () => {
+const AIHealthcareAnalytics: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -428,7 +408,6 @@ const AIHealthcareAnalytics: React.FC = () => {
       ]
     }
   ]
->>>>>>> origin/main
   return (
     <>
       <SEOHead
@@ -437,31 +416,22 @@ const AIHealthcareAnalytics: React.FC = () => {
         keywords="AI healthcare, healthcare analytics, medical AI, health insights, healthcare optimization"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
-        {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="pt-32 pb-20 px-4 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-red-800/20 to-pink-800/20"></div>
-          <div className="max-w-7xl mx-auto relative z-10">
-            <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 bg-red-500/20 rounded-full px-6 py-3 mb-6">
-                <Heart className="w-5 h-5 text-red-400" />
-                <span className="text-red-300 font-medium">AI Healthcare Analytics</span>
-=======
-        <div className="text-center mb-16">
-          <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50"></div>
+                {/* Hero Section */}
+                <div className="text-center mb-16"></div>
+          <div className="flex justify-center mb-6"></div>
+            <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center"></div>
               <Heart className="w-10 h-10 text-white" />
             </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             AI Healthcare Analytics
           </h1>
-          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
+          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8"></p>
             Transform healthcare delivery with intelligent AI that predicts outcomes, 
             optimizes care pathways, and improves patient safety and satisfaction.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <$2 />
               to="/contact"
               className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
@@ -474,45 +444,45 @@ const AIHealthcareAnalytics: React.FC = () => {
             >
               Request Demo
             </Link>
-          </div>
+                </div>
         </div>
 
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 text-red-300 text-sm font-medium mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
+                {/* Hero Section */}
+                <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <div className="mb-8"></div>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 text-red-300 text-sm font-medium mb-6"></div>
               <Heart className="w-4 h-4 mr-2" />
               AI-Powered Healthcare Analytics
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"></h1>
               Transform Healthcare with
-              <span className="bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent"></span>
                 {" "}AI Intelligence
               </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Revolutionize patient care with AI-powered analytics that predict health outcomes, 
               optimize treatments, and enable proactive healthcare interventions.
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-medium mb-6">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"></div>
+                {/* Hero Section */}
+                <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
+          <div className="mb-8"></div>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-medium mb-6"></div>
               <Heart className="w-4 h-4 mr-2" />
               AI-Powered Healthcare Analytics
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               Transform Healthcare with
               <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent"> AI Intelligence</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Revolutionize patient care with AI-powered healthcare analytics that predict outcomes, optimize treatments, 
               and improve population health. Make data-driven decisions that save lives and reduce costs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold hover:from-red-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
@@ -526,341 +496,315 @@ const AIHealthcareAnalytics: React.FC = () => {
               >
                 Schedule Demo
               </Link>
-            </div>
+                </div>
           </div>
-          
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
-            <div className="text-center">
+                {/* Key Metrics */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16"></div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-red-400 mb-2">35%</div>
               <div className="text-gray-400">Better Outcomes</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-pink-400 mb-2">25%</div>
               <div className="text-gray-400">Fewer Readmissions</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-blue-400 mb-2">40%</div>
               <div className="text-gray-400">Cost Reduction</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-green-400 mb-2">50%</div>
               <div className="text-gray-400">Efficiency Boost</div>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+                {/* Features Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
       </section>
-
-      {/* Healthcare Processes Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                {/* Healthcare Processes Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4"></h2>
               The AI-Powered Healthcare Journey
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               From data collection to treatment optimization, our AI streamlines every aspect of healthcare delivery.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {healthcareProcesses.map((process, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {healthcareProcesses.map((process, index) => (
               <$2 />
                 key={index}
                 className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-red-500/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-white font-bold text-xl">{process.step}</span>
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-red-500 to-pink-500 flex items-center justify-center mb-4 mx-auto"></div>
+                  <span className="text-white font-bold text-xl"></span>
+                {process.step}
+                </span>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center">{process.title}</h3>
-                <p className="text-gray-300 text-center">{process.description}</p>
->>>>>>> origin/main
-              </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+                <h3 className="text-xl font-semibold text-white mb-3 text-center"></h3>
+                {process.title}
+                </h3>
+                <p className="text-gray-300 text-center"></p>
+                {process.description}
+                </p>
+                </div>
+              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6"></h1>
                 Intelligent
-                <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent block">
+                <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent block"></span>
                   Healthcare Insights
                 </span>
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"></p>
                 Revolutionary AI-powered healthcare analytics platform that provides insights, 
                 predictions, and optimization for healthcare organizations with unprecedented accuracy.
               </p>
-            </div>
+                </div>
           </div>
-        </section>
-
-<<<<<<< HEAD
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Analytics Features</h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Advanced AI capabilities that transform healthcare data into actionable insights
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              {[
-                {
-                  icon: BarChart3,
-                  title: 'Predictive Analytics',
-                  description: 'Predict patient outcomes and identify potential health risks before they occur'
-                },
-                {
-                  icon: Activity,
-                  title: 'Real-time Monitoring',
-                  description: 'Monitor patient health metrics and vital signs in real-time'
-                },
-                {
-                  icon: Brain,
-                  title: 'Intelligent Diagnosis',
-                  description: 'AI-assisted diagnosis with 99.2% accuracy in medical imaging'
-                },
-                {
-                  icon: Shield,
-                  title: 'Risk Assessment',
-                  description: 'Comprehensive risk assessment and early warning systems'
-                },
-                {
-                  icon: TrendingUp,
-                  title: 'Performance Optimization',
-                  description: 'Optimize healthcare operations and resource allocation'
-                },
-                {
-                  icon: CheckCircle,
-                  title: 'Quality Assurance',
-                  description: 'Ensure the highest standards of care and patient safety'
-                }
-              ].map((feature, index) => (
-                <div key={index} className="bg-white/80 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 hover:border-red-500/50 transition-colors">
-                  <feature.icon className="w-12 h-12 text-red-500 mb-6" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-=======
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                </section>
+                {/* Benefits Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4"></h2>
               Why Choose AI Healthcare Analytics?
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Experience unprecedented improvements in patient care and healthcare efficiency.
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               AI-Powered Features That Transform Healthcare
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Our AI healthcare analytics platform combines cutting-edge artificial intelligence with deep medical expertise 
               to deliver exceptional results for healthcare providers and patients.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-red-500/50 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <div className="p-3 rounded-lg bg-red-500/20 mr-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-red-500/50 transition-all duration-300"></div>
+                <div className="flex items-center mb-6"></div>
+                  <div className="p-3 rounded-lg bg-red-500/20 mr-4"></div>
                     <feature.icon className="w-8 h-8 text-red-400" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  <h3 className="text-xl font-semibold text-white"></h3>
+                {feature.title}
+                </h3>
                 </div>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-gray-400">
+                <p className="text-gray-300 mb-4"></p>
+                {feature.description}
+                </p>
+                <ul className="space-y-2"></ul>
+                {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-400"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
+                {benefit}
+                </li>
                   ))}
                 </ul>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Services Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Comprehensive Healthcare Analytics Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               From patient analytics to clinical research, our AI platform covers every aspect of modern healthcare analytics.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-300 text-center">
-                <div className="p-4 rounded-lg bg-red-500/20 inline-block mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                {services.map((service, index) => (
+              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-300 text-center"></div>
+                <div className="p-4 rounded-lg bg-red-500/20 inline-block mb-4"></div>
                   <service.icon className="w-8 h-8 text-red-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                <ul className="space-y-1 text-sm">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-400">
+                <h3 className="text-lg font-semibold text-white mb-3"></h3>
+                {service.title}
+                </h3>
+                <p className="text-gray-300 mb-4 text-sm"></p>
+                {service.description}
+                </p>
+                <ul className="space-y-1 text-sm"></ul>
+                {service.features.map((feature, idx) => (
+                    <li key={idx} className="text-gray-400"></li>
                       • {feature}
-                    </li>
+                </li>
                   ))}
                 </ul>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Use Cases Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Designed for Every Healthcare Organization
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Our AI healthcare analytics solutions are tailored to meet the unique needs of different types of healthcare organizations.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-300 text-center">
-                <div className="p-4 rounded-lg bg-red-500/20 inline-block mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                {useCases.map((useCase, index) => (
+              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-red-500/50 transition-all duration-300 text-center"></div>
+                <div className="p-4 rounded-lg bg-red-500/20 inline-block mb-4"></div>
                   <useCase.icon className="w-8 h-8 text-red-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{useCase.description}</p>
-                <ul className="space-y-1 text-sm">
-                  {useCase.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-400">
+                <h3 className="text-lg font-semibold text-white mb-3"></h3>
+                {useCase.title}
+                </h3>
+                <p className="text-gray-300 mb-4 text-sm"></p>
+                {useCase.description}
+                </p>
+                <ul className="space-y-1 text-sm"></ul>
+                {useCase.features.map((feature, idx) => (
+                    <li key={idx} className="text-gray-400"></li>
                       • {feature}
-                    </li>
+                </li>
                   ))}
                 </ul>
-        {/* Features Grid */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+                {/* Features Grid */}
+                <div className="mb-20"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
             Advanced Healthcare Analytics Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {features.map((feature, index) =>
+                {
               const Icon = feature.icon
               return (
-                <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
+                <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4"></div>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-zion-slate-light">{feature.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3"></h3>
+                {feature.title}
+                </h3>
+                  <p className="text-zion-slate-light"></p>
+                {feature.description}
+                </p>
                 </div>
               )
             })}
-          </div>
-        </div>
-
-        {/* Benefits Section */}
-        <div className="mb-20">
-          <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white text-center mb-8">
+                </div>
+                </div>
+                {/* Benefits Section */}
+                <div className="mb-20"></div>
+          <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8"></div>
+            <h2 className="text-3xl font-bold text-white text-center mb-8"></h2>
               Proven Healthcare Results
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light">{benefit}</span>
->>>>>>> origin/main
+                  <span className="text-zion-slate-light"></span>
+                {benefit}
+                </span>
                 </div>
               ))}
-            </div>
-          </div>
-<<<<<<< HEAD
-        </section>
-=======
+                </div>
+                </div>
         </div>
-
-        {/* Use Cases */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+                {/* Use Cases */}
+                <div className="mb-20"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
             Healthcare Setting Applications
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6">
-                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
-                <p className="text-zion-slate-light mb-4">{useCase.description}</p>
-                <div className="space-y-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                {useCases.map((useCase, index) => (
+              <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6"></div>
+                <h3 className="text-2xl font-bold text-white mb-4"></h3>
+                {useCase.industry}
+                </h3>
+                <p className="text-zion-slate-light mb-4"></p>
+                {useCase.description}
+                </p>
+                <div className="space-y-2"></div>
                   <h4 className="font-semibold text-zion-cyan">Key Metrics:</h4>
-                  {useCase.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex items-center space-x-2">
+                {useCase.metrics.map((metric, metricIndex) => (
+                    <div key={metricIndex} className="flex items-center space-x-2"></div>
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                      <span className="text-zion-slate-light text-sm">{metric}</span>
-                    </div>
+                      <span className="text-zion-slate-light text-sm"></span>
+                {metric}
+                </span>
+                </div>
                   ))}
                 </div>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                </div>
+                </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Choose Your Plan
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
               Flexible pricing options designed to scale with your healthcare organization's needs and growth.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                {pricing.map((plan, index) => (
               < key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${$2 />
                 plan.popular 
                   ? 'border-red-500/50 scale-105' 
                   : 'border-gray-700 hover:border-gray-600'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-
-        {/* Pricing */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium"></span>
+                {/* Pricing */}
+                <div className="mb-20"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12"></h2>
             Transparent Pricing
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                {pricing.map((plan, index) => (
               < key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${$2 />
                 plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
+                    <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-1 rounded-full text-sm font-semibold"></span>
                       Most Popular
                     </span>
-                  </div>
+                </div>
                 )}
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300 mt-2">{plan.description}</p>
+                <div className="flex items-baseline justify-center"></div>
+                    <span className="text-4xl font-bold text-white"></span>
+                {plan.price}
+                </span>
+                    <span className="text-gray-400 ml-1"></span>
+                {plan.period}
+                </span>
+                </div>
+                  <p className="text-gray-300 mt-2"></p>
+                {plan.description}
+                </p>
                 </div>
                 
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
+                <ul className="space-y-3 mb-8"></ul>
+                {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300"></li>
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
+                {feature}
+                </li>
                   ))}
                 </ul>
                 
@@ -886,24 +830,34 @@ const AIHealthcareAnalytics: React.FC = () => {
                   Get Started
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
-                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-zion-slate-light mt-2">{plan.description}</p>
                 </div>
-                <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
+            ))}
+                </div>
+                </div>
+                <div className="text-center mb-6"></div>
+                  <h3 className="text-2xl font-bold text-white mb-2"></h3>
+                {plan.name}
+                </h3>
+                  <div className="flex items-baseline justify-center"></div>
+                    <span className="text-4xl font-bold text-zion-cyan"></span>
+                {plan.price}
+                </span>
+                    <span className="text-zion-slate-light ml-1"></span>
+                {plan.period}
+                </span>
+                </div>
+                  <p className="text-zion-slate-light mt-2"></p>
+                {plan.description}
+                </p>
+                </div>
+                <ul className="space-y-3 mb-6"></ul>
+                {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3"></li>
                       <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
-                    </li>
+                      <span className="text-zion-slate-light"></span>
+                {feature}
+                </span>
+                </li>
                   ))}
                 </ul>
                 <$2 />
@@ -916,25 +870,20 @@ const AIHealthcareAnalytics: React.FC = () => {
                 >
                   Get Started
                 </Link>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
->>>>>>> origin/main
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gray-900">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                </div>
+                </div>
+                {/* CTA Section */}
+                <section className="py-20 px-4 bg-gray-900"></section>
+          <div className="max-w-4xl mx-auto text-center"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Ready to Transform Healthcare Analytics?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Get started with our AI Healthcare Analytics platform and improve patient outcomes.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <button className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center gap-2 justify-center">
-=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
@@ -947,9 +896,9 @@ const AIHealthcareAnalytics: React.FC = () => {
               >
                 Schedule Consultation
               </Link>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
     "Improve patient outcomes by 25-40%",
     "Reduce hospital readmissions by 30%",
@@ -987,125 +936,126 @@ const AIHealthcareAnalytics: React.FC = () => {
     "Mental Health"
   ]
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white"></div>
+                {/* Hero Section */}
+                <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto text-center"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
+          ></motion.div
+>
+            <div className="flex justify-center mb-6"></div>
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center"></div>
                 <Heart className="w-10 h-10 text-white" />
               </div>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"></h1>
               AI Healthcare Analytics
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
               Transform healthcare delivery with intelligent analytics powered by artificial intelligence. 
               Improve patient outcomes, optimize operations, and advance medical research.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
->>>>>>> origin/main
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"></button>
                 Start Free Trial
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-red-500 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-500/10 transition-all">
+              <button className="border border-red-500 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-500/10 transition-all"></button>
                 Schedule Demo
               </button>
-            </div>
+                </div>
           </div>
-<<<<<<< HEAD
-        </section>
-      </div>
-    </>
-  );
-}
-=======
-        </div>
+                </div>
       </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
+                {/* Benefits Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          ></motion.div
+>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6"></h2>
               Why Choose AI Healthcare Analytics?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Experience unprecedented insights and improvements in healthcare delivery with AI-powered analytics.
             </p>
-          </motion.div>
+                </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+            ></motion.div
+>
               <h3 className="text-2xl font-semibold mb-6">Key Benefits</h3>
-              <div className="space-y-4">
+              <div className="space-y-4"></div>
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
+                  <div key={index} className="flex items-center space-x-3"></div>
                     <CheckCircle className="w-5 h-5 text-cyan-500 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
-                  </div>
+                    <span className="text-gray-300"></span>
+                {benefit}
+                </span>
+                </div>
                 ))}
-              </div>
-            </motion.div>
+                </div>
+                </motion.div>
 
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >
+            ></motion.div
+>
               <h3 className="text-2xl font-semibold mb-6">Solutions</h3>
-              <div className="space-y-4">
+              <div className="space-y-4"></div>
                 {solutions.map((solution, index) => (
-                  <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4">
-                    <h4 className="font-semibold text-cyan-400 mb-2">{solution.title}</h4>
-                    <p className="text-gray-300 text-sm">{solution.description}</p>
-                  </div>
+                  <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-lg p-4"></div>
+                    <h4 className="font-semibold text-cyan-400 mb-2"></h4>
+                {solution.title}
+                </h4>
+                    <p className="text-gray-300 text-sm"></p>
+                {solution.description}
+                </p>
+                </div>
                 ))}
-              </div>
-            </motion.div>
+                </div>
+                </motion.div>
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* Specialties Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+                {/* Specialties Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          ></motion.div
+>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6"></h2>
               Medical Specialties
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our AI healthcare analytics solutions are designed to support various medical specialties 
               and clinical areas.
             </p>
-          </motion.div>
+                </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {specialties.map((specialty, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+                {specialties.map((specialty, index) => (
               <motion.div
                 key={specialty}
                 initial={{ opacity: 0, y: 20 }}
@@ -1113,63 +1063,64 @@ const AIHealthcareAnalytics: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300"
-              >
+              ></motion.div
+>
                 <Stethoscope className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
-                <h3 className="font-semibold">{specialty}</h3>
-              </motion.div>
+                <h3 className="font-semibold"></h3>
+                {specialty}
+                </h3>
+                </motion.div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+                {/* CTA Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          ></motion.div
+>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6"></h2>
               Ready to Transform Healthcare?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8"></p>
               Join the future of healthcare analytics and start improving patient outcomes today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2"></button>
                 <span>Get Started Today</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
+              <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200"></button>
                 Contact Sales
               </button>
-            </div>
+                </div>
           </motion.div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+                </section>
+                {/* CTA Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6"></h2>
             Ready to Transform Healthcare?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p>
             Join thousands of healthcare providers who have already revolutionized patient care with AI analytics.
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500/10 to-pink-500/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                {/* CTA Section */}
+                <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500/10 to-pink-500/10"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
             Ready to Transform Healthcare?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p>
             Join forward-thinking healthcare organizations that have already revolutionized patient care with AI. 
             Start improving outcomes today with intelligent healthcare analytics.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <$2 />
               to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold hover:from-red-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
@@ -1183,9 +1134,9 @@ const AIHealthcareAnalytics: React.FC = () => {
             >
               Schedule Demo
             </Link>
-          </div>
+                </div>
         </div>
-      </section>
+                </section>
     </div>
   )
 }
@@ -1193,5 +1144,10 @@ export default AIHealthcareAnalytics</$1>
   )
 }
 }
-</div></div></div></div></div></div></span></p></p></p></section></section>
->>>>>>> origin/main
+                </div>
+                </div></div>
+                </div></div>
+                </div></span>
+                </p></p>
+                </p></section>
+                </section>

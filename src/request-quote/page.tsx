@@ -5,7 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 'use client'
 import React, { useState } from 'react'
-const RequestQuotePage: React.FC = () => {
+const RequestQuotePage: React.FC  = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -53,14 +53,16 @@ $4})
     '$500,000+',
     'To be discussed'
   ]
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+                {
     const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
     }))
   }
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) =>
+                {
     e.preventDefault()
     setIsSubmitting(true),
     // Simulate form submission
@@ -114,34 +116,34 @@ $4}
   ]
   if (isSubmitted) {
     return (
-      <React.Fragment>
+      <React.Fragment></React.Fragment>
         <Navigation />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="container mx-auto px-4 py-16 pt-24">
-            <div className="max-w-2xl mx-auto text-center">
-              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+          <div className="container mx-auto px-4 py-16 pt-24"></div>
+            <div className="max-w-2xl mx-auto text-center"></div>
+              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <CheckCircle className="w-10 h-10 text-green-400" />
-              <h1 className="text-4xl font-bold text-white mb-6 neon-text">
+              <h1 className="text-4xl font-bold text-white mb-6 neon-text"></h1>
                 Quote Request Submitted!
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Thank you for your interest in our services. We've received your quote request 
                 and will get back to you within 24 hours with a detailed proposal.
-              <div className="bg-slate-800/50 rounded-lg p-6 mb-8">
+              <div className="bg-slate-800/50 rounded-lg p-6 mb-8"></div>
                 <h3 className="text-lg font-semibold text-white mb-4">What happens next?
-                <div className="space-y-3 text-left">
-                  <div className="flex items-center">
+                <div className="space-y-3 text-left"></div>
+                  <div className="flex items-center"></div>
                     <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1
                     <span className="text-gray-300">Our team will review your requirements
-                  <div className="flex items-center">
+                  <div className="flex items-center"></div>
                     <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2
                     <span className="text-gray-300">We'll prepare a detailed quote and proposal
-                  <div className="flex items-center">
+                  <div className="flex items-center"></div>
                     <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
-                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                </div>
+                </div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <$2 />
                   href="/contact"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
@@ -155,36 +157,36 @@ $4}
                   Back to Home,
   
               </div>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
         <Footer />
       </React.Fragment>
     )
   }
   return (
-    <React.Fragment>
+    <React.Fragment></React.Fragment>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
+                {/* Header */}
+                <div className="text-center mb-16"></div>
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text"></h1>
               Request a Quote,
   
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
               Get a detailed, no-obligation quote for your AI and IT project. 
               Our experts will provide you with a comprehensive proposal within 24 hours.
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Quote Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12"></div>
+                {/* Quote Form */}
+                <div className="lg:col-span-2"></div>
+              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50"></div>
                 <h2 className="text-2xl font-bold text-white mb-6">Project Details
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Personal Information */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                <form onSubmit={handleSubmit} className="space-y-6"></form>
+                {/* Personal Information */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                    <div></div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                         Full Name *
                       <input
                         type="text"
@@ -195,8 +197,8 @@ $4}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your full name"
                       />
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <div></div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                         Email Address *
                       <input
                         type="email"
@@ -207,9 +209,9 @@ $4}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                         placeholder="Enter your email"
                       />
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                    <div></div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                         Company Name,
   
                       <input
@@ -221,8 +223,8 @@ $4}
                         placeholder="Enter your company name"
                       />
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <div></div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                         Phone Number,
   
                       <input
@@ -234,53 +236,59 @@ $4}
                         placeholder="Enter your phone number"
                       />
                     </div>
-                  </div>
-                  {/* Project Information */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                </div>
+                {/* Project Information */}
+                <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Service Type *
                     <select
                       name="serviceType"
                       value={formData.serviceType}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"></select
+>
                       <option value="">Select a service type
                       {serviceTypes.map((type, index) => (
-                        <option key={index} value={type}>{type}
+                        <option key={index} value={type}></option>
+                {type}
                       ))}
-                    </select>
-                  </div>
-                  <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                </select>
+                </div>
+                  <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
+                    <div></div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                         Project Size,
   
                       <select
                         name="projectSize"
                         value={formData.projectSize}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
+                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"></select
+>
                         <option value="">Select project size</option>
-                        {projectSizes.map((size, index) => (
-                          <option key={index} value={size}>{size}
+                {projectSizes.map((size, index) => (
+                          <option key={index} value={size}></option>
+                {size}
                         ))}
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                <div></div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                         Timeline
                         <option value="">Select timeline
                         {timelines.map((timeline, index) => (
-                          <option key={index} value={timeline}>{timeline}
+                          <option key={index} value={timeline}></option>
+                {timeline}
                         ))}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Budget Range
                       <option value="">Select budget range
                       {budgetRanges.map((range, index) => (
-                        <option key={index} value={range}>{range}
+                        <option key={index} value={range}></option>
+                {range}
                       ))}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Project Description *
                     <textarea
                       name="description"
@@ -291,8 +299,8 @@ $4}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                       placeholder="Describe your project requirements and goals..."
                     />
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <div></div>
+                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
                       Specific Requirements,
   
                     <textarea
@@ -308,45 +316,49 @@ $4}
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
-                    {isSubmitting ? (
-                      <div className="flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">
+                {isSubmitting ? (
+                      <div className="flex items-center justify-center"></div>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                         Submitting...
                     ) : (
                       'Request Quote'
                     )}
             {/* Sidebar */}
-            <div className="space-y-8">
-              {/* Benefits */}
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
+                <div className="space-y-8"></div>
+                {/* Benefits */}
+                <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>
                 <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?
-                <div className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                <div className="space-y-4"></div>
+                {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-start"></div>
+                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"></div>
                         <benefit.icon className="w-4 h-4 text-cyan-400" />
-                      <div>
-                        <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}
-                        <p className="text-xs text-gray-300">{benefit.description}
+                      <div></div>
+                        <h4 className="text-sm font-semibold text-white mb-1"></h4>
+                {benefit.title}
+                <p className="text-xs text-gray-300"></p>
+                {benefit.description}
                   ))}
               {/* Why Choose Us */}
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
+                <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>
                 <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?
-                <div className="space-y-4">
-                  {whyChooseUs.map((item, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+                <div className="space-y-4"></div>
+                {whyChooseUs.map((item, index) => (
+                    <div key={index} className="flex items-start"></div>
+                      <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"></div>
                         <item.icon className="w-4 h-4 text-purple-400" />
-                      <div>
-                        <h4 className="text-sm font-semibold text-white mb-1">{item.title}
-                        <p className="text-xs text-gray-300">{item.description}
+                      <div></div>
+                        <h4 className="text-sm font-semibold text-white mb-1"></h4>
+                {item.title}
+                <p className="text-xs text-gray-300"></p>
+                {item.description}
                   ))}
               {/* Contact Info */}
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
+                <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>
                 <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?
-                <p className="text-gray-300 text-sm mb-4">
+                <p className="text-gray-300 text-sm mb-4"></p>
                   For urgent inquiries or immediate assistance, contact us directly.
-                <div className="space-y-3">
+                <div className="space-y-3"></div>
                   <$2 />
                     href="tel: +13024640950"
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -362,7 +374,7 @@ $4}
                     className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
                     <MessageSquare className="w-4 h-4 mr-2" />
                     <span className="text-sm">Contact Form</span>
-                  </a>
+                </a>
                 </div>
     <div>Coming Soon</div>
   ),
@@ -439,18 +451,20 @@ $4}
 //     'To be discussed'
   ]
   const handleInputChange = (e: React.ChangeEvent,)
-          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
+          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const { name, value } = e.target
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-//       ...prev,
+//       ...prev,;
       [name]: value;)
     }))
   }
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
+  const handleSubmit = async (e: React.FormEvent) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     e.preventDefault()
@@ -555,7 +569,7 @@ $4}
 }
     return (<div>Coming Soon</div>)
   )
-          <React.Fragment>
+          <React.Fragment></React.Fragment>
         <Navigation />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
           <div className="container mx-auto px-4 py-16 pt-24"></div>"
@@ -563,10 +577,10 @@ $4}
               <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>"
                 <CheckCircle className="w-10 h-10 text-green-400" />
               </div>"
-              <h1 className="text-4xl font-bold text-white mb-6 neon-text">
+              <h1 className="text-4xl font-bold text-white mb-6 neon-text"></h1>
 // Quote Request Submitted!
           </h1>"
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8"></p>
                 Thank you for your interest in our services. We've received your quote request
 // and will get back to you within 24 hours with a detailed proposal.
           </p>"
@@ -584,10 +598,10 @@ $4}
                   <div className="flex items-center"></div>"
                     <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>"
                     <span className="text-gray-300">Schedule a call to discuss your project</span>
-                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                </div>
+                </div>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <$2 />
                   href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
@@ -602,43 +616,43 @@ $4}
           <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
 // Back to Home
           </a>
-              </div>
+                </div>
             </div>
-          </div>
+                </div>
         </div>
-      </div>
+                </div>
       <Footer />
     </React.Fragment>
         <Footer /></Footer>
-      </React.Fragment>
+                </React.Fragment>
     ),
   }
   return (<div>Coming Soon</div>)
   )
-          <React.Fragment>
+          <React.Fragment></React.Fragment>
       <Navigation /></Navigation>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}"
+        <div className="container mx-auto px-4 py-16 pt-24"></div>
+                {/* Header */}"
           <div className="text-center mb-16"></div>"
             < className="text-4xl,"$2 />
   md: text-5xl font-bold text-white mb-6 neon-text"></h1>
 // Request a Quote
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+          <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
             Coming Soon,
   
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Quote Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12"></div>
+                {/* Quote Form */}
+                <div className="lg:col-span-2"></div>
+              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50"></div>
                 <h2 className="text-2xl font-bold text-white mb-6">Project Details
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Personal Information */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                <form onSubmit={handleSubmit} className="space-y-6"></form>
+                {/* Personal Information */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                    <div></div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Full Name *
                       <input
 type="text" name="name"
@@ -648,7 +662,7 @@ type="text" name="name"
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your full name"
 //                       />
                     <div></div>"
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Email Address *
                       <input
 type="email" name="email"
@@ -680,22 +694,24 @@ type="tel" name="phone"
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your phone number"
 // />
-                  {/* Project Information */}
-                  <div></div>"
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                {/* Project Information */}
+                <div></div>"
+                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Service Type *
                     <select
                       name="serviceType" value={formData.serviceType}
                       onChange={handleInputChange}
 // required
 className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-//                     >
+//                     ></select
+>
           "
           <option value="">Select a service type
                       {serviceTypes.map((type, index) => ()}
-          <option key={index} value={type}>{type}
+                <option key={index} value={type}></option>
+                {type}
                       ))}
-                  </div>"
+                </div>"
                   < className="grid grid-cols-1,"$2 />
   md: grid-cols-2 gap-6"></div>
                     <div></div>"
@@ -706,35 +722,40 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
                         name="projectSize" value={formData.projectSize}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-// >
+// ></select
+>
           "
           <option value="">Select project size
                         {projectSizes.map((size, index) => ()}
-          <option key={index} value={size}>{size}
+                <option key={index} value={size}></option>
+                {size}
                         ))}
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                <div></div>
+                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Timeline
           "
           <option value="">Select timeline
                         {timelines.map((timeline, index) => ()}
-          <option key={index} value={timeline}>{timeline}
+                <option key={index} value={timeline}></option>
+                {timeline}
                         ))}
-                  <div></div>"
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                <div></div>"
+                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Budget Range
                     <select
                       name="budget" value={formData.budget}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-// >
+// ></select
+>
           "
           <option value="">Select budget range
                       {budgetRanges.map((range, index) => ()}
-          <option key={index} value={range}>{range}
+                <option key={index} value={range}></option>
+                {range}
                       ))}
-                  <div></div>"
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                <div></div>"
+                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
 // Project Description *
                     <textarea
                       name="description" value={formData.description}
@@ -757,57 +778,88 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
 type="submit" disabled={isSubmitting}
                     className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
 // >
-                    {isSubmitting ? ()}"
+                {isSubmitting ? ()}"
           <div className="flex items-center justify-center"></div>"
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
 // Submitting...
                     ) : ()
 // 'Request Quote'
                     )}
             {/* Sidebar */}"
-            <div className="space-y-8">
-              {/* Benefits */}"
+            <div className="space-y-8"></div>
+                {/* Benefits */}"
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>"
                 <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?</h3>"
-                <div className="space-y-4">
-                  {benefits.map((benefit, index) => ()}"
+                <div className="space-y-4"></div>
+                {benefits.map((benefit, index) => ()}"
           <div key={index} className="flex items-start"></div>"
                       <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"></div>"
                         <benefit.icon className="w-4 h-4 text-cyan-400" />
                       <div></div>"
-                        <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}</h4>"
-                        <p className="text-xs text-gray-300">{benefit.description}
+                        <h4 className="text-sm font-semibold text-white mb-1"></h4>
+                {benefit.title}
+                </h4>"
+                        <p className="text-xs text-gray-300"></p>
+                {benefit.description}
                   ))}
               {/* Why Choose Us */}"
               <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>"
                 <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>"
-                <div className="space-y-4">
-                  {whyChooseUs.map((item, index) => ()}"
+                <div className="space-y-4"></div>
+                {whyChooseUs.map((item, index) => ()}"
           <div key={index} className="flex items-start"></div>"
                       <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"></div>"
                         <item.icon className="w-4 h-4 text-purple-400" />
                       <div></div>"
-                        <h4 className="text-sm font-semibold text-white mb-1">{item.title}</h4>"
-                        <p className="text-xs text-gray-300">{item.description}
+                        <h4 className="text-sm font-semibold text-white mb-1"></h4>
+                {item.title}
+                </h4>"
+                        <p className="text-xs text-gray-300"></p>
+                {item.description}
                   ))}
               {/* Contact Info */}"
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
                 <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>"
-                <p className="text-gray-300 text-sm mb-4">
+                <p className="text-gray-300 text-sm mb-4"></p>
 // For urgent inquiries or immediate assistance, contact us directly.
           </p>
-        </section>
+                </section>
       </main>
       <Footer /></Footer>
-    </div>
+                </div>
   )
 }
 export default RequestQuotePage</textarea>
-  </textarea>
+                </textarea>
   </HTMLInputElement>
+                </textarea>
   </textarea>
-  </textarea>
+                </a>
   </a>
-  </a>
-  </HTMLInputElement>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h4></h4>
+                </HTMLInputElement>
+</div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></span>
+                </span></span>
+                </span></span>
+                </span></p>
+                </p></p>
+                </p></p>
+                </p></p>
+                </p></h2>
+                </h2></h3>
+                </h3></h3>
+                </h3></h4>
+                </h4>

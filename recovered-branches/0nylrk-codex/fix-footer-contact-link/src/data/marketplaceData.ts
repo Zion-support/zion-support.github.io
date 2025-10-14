@@ -1,6 +1,5 @@
-import { ProductListing } from "@/types/listings"
-import { SearchSuggestion, FilterOptions } from "@/types/search"
-// Mock marketplace listings with more realistic data
+import { ProductListing  } from '@/types/listings';
+import { SearchSuggestion, FilterOptions  } from '@/types/search';// Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
     id: "ai-model-1",
@@ -312,7 +311,8 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
   }
 ]
 // Generate search suggestions based on existing listings
-export const generateSearchSuggestions = (): SearchSuggestion[] => {
+export const generateSearchSuggestions = (): SearchSuggestion[] =>
+                {
   const suggestions = [
     "AI models",
     "GPT integration",
@@ -340,7 +340,8 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   }))
 }
 // Generate filter options for sidebar
-export const generateFilterOptions = (): FilterOptions => {
+export const generateFilterOptions = (): FilterOptions =>
+                {
   // Extract unique categories, locations, and availability options from listings
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort()
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort()

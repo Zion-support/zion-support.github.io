@@ -72,7 +72,8 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
   /**
    * Initialize all optimization features
    */
-  public async initialize(): Promise<void> {
+  public async initialize(): Promise<void></void>
+                {
     if (this.isInitialized) return
     try {
       // Initialize accessibility features
@@ -86,7 +87,8 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
 
       // Initialize scroll optimization
       if (this.config.performance.enableScrollOptimization) {
-  public async initialize(): Promise<void> {/* TODO: Fix JSX expression */}
+  public async initialize(): Promise<void></void>
+                {/* TODO: Fix JSX expression */}
       }
 
       // Initialize performance monitoring
@@ -130,7 +132,8 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
 
     // Monitor memory usage
     if (this.config.performance.enableMemoryMonitoring) {
-      setInterval(() => {
+      setInterval(() =>
+                {
   public optimizePerformance(): void {/* TODO: Fix JSX expression */}
     }
 
@@ -183,7 +186,8 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
    * Run comprehensive audit
    */
   public async runAudit(): Promise<{/* TODO: Fix JSX expression */}
-  }> {/* TODO: Fix JSX expression */}
+  }></{/*>
+                {/* TODO: Fix JSX expression */}
   y: {},
       performanc,
   e: {},
@@ -219,7 +223,8 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
    */
   private addSkipLinks(): void {/* TODO: Fix JSX expression */}
     })
-    skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
+    skipLink.addEventListener('blur', () =>
+                {/* TODO: Fix JSX expression */}
     })
     document.body.insertBefore(skipLink, document.body.firstChild)
   }

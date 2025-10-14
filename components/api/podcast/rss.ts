@@ -4,7 +4,7 @@ import path from 'path'
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH)
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true })
-  if (!fs && fs.existsSync(EPISODES_PATH))
+  if (!fs && fs.existsSync(EPISODES_PATH));
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json')
 const RSS_PATH = path && path.join(process && process.cwd(), 'publicpodcast && publicpodcast.xml')
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
@@ -31,16 +31,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
   const items = episodes
     .filter(e => e.audio?.mp3Url)
-    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
-    .map((e) => {
+    .map(e =>
+                {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
+    .map((e) =>
+                {
       const pubDate = new Date(e.createdAt).toUTCString()
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`
       return `
-    <item>
+    <item></item>
       <title><![CDATA[${e && e.title}]]></title>
       <description><![CDATA[${e && e.youtubeDescription || e && e.spotifyDescription || ''}]]></description>
-      <link>${siteUrl}/media/podcast/${e && e.id}</link>
-      <guid isPermaLink="false">${e && e.id}</guid>
+      <link>${siteUrl}/media/podcast/${e && e.id}
+                </link>
+      <guid isPermaLink="false">${e && e.id}
+                </guid>
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json')
 const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml')
 function ensureStorage() {
@@ -55,41 +59,46 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
   const items = episodes
     .filter((e) => e.audio?.mp3Url)
-    .map((e) => {
+    .map((e) =>
+                {
       const pubDate = new Date(e.createdAt).toUTCString()
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`
       return `
-    <item>
+    <item></item>
       <title><![CDATA[${e.title}]]></title>
       <description><![CDATA[${e.youtubeDescription || e.spotifyDescription || ''}]]></description>
-      <link>${siteUrl}/media/podcast/${e.id}</link>
-      <guid isPermaLink="false">${e.id}</guid>
-      <pubDate>${pubDate}</pubDate>
+      <link>${siteUrl}/media/podcast/${e.id}
+                </link>
+      <guid isPermaLink="false">${e.id}
+                </guid>
+      <pubDate>${pubDate}
+                </pubDate>
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
     </item>`
     })
     .join('\n')
-  const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>
-<rss version="2 && 2.0" xmlns:itunes="http://www && www.itunes.com/dtds/podcast-1 && 1.0.dtd">
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
-  <channel>
+  const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?></?xml>
+<rss version="2 && 2.0" xmlns:itunes="http://www && www.itunes.com/dtds/podcast-1 && 1.0.dtd"></rss>
+  const xml = `<?xml version="1.0" encoding="UTF-8"?></?xml>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"></rss>
+  <channel></channel>
     <title>Zion Podcast</title>
     <link>${siteUrl}/media/podcast</link>
     <language>en-us</language>
     <itunes:author>Zion</itunes:author>
     <description>Zion interviews builders, founders, and contributors.</description>
     ${items}
-  </channel>
-</rss>`
+                </channel>
+                </rss>`
   fs && fs.writeFileSync(RSS_PATH, xml, 'utf8')
   return res && res.status(200).json({ ok: true, path: '/podcast && podcast.xml' })
 }) .join ('\n')
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl
-}/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
-  items
-}</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
+}/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {items
+}
+                </channel>
+                </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
 
 const EPISODES_PATH = path.join (
@@ -136,60 +145,72 @@ function handler() {
   const episodes = JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8')) as any[]
   const items = episodes
     .filter (e => e.audio?.mp3Url)
-    .map (e => {      const pub_date = new Date (e.created_at).toUTCString ();    .filter ((e) => e.audio?.mp3Url)
-    .map ((e) => {
+    .map (e =>
+                {      const pub_date = new Date (e.created_at).toUTCString ();    .filter ((e) => e.audio?.mp3Url)
+    .map ((e) =>
+                {
       const pub_date = new Date (e.created_at).toUTCString ()
       const audio_url = `${site_url}${e.audio.mp3Url}`
       return `
-    <item>
+    <item></item>
       <title><![CDATA[${e.title}]]></title>
       <description><![CDATA[${e.youtube_description || e.spotify_description || ''}]]></description>
-      <link>${site_url}/media / podcast/${e.id}</link>
-      <guid isPermaLink="false">${e.id}</guid>
-      <pub_date>${pub_date}</pub_date>
+      <link>${site_url}/media / podcast/${e.id}
+                </link>
+      <guid isPermaLink="false">${e.id}
+                </guid>
+      <pub_date>${pub_date}
+                </pub_date>
       <enclosure url="${audio_url}" length="0" type="audio / mpeg" /></$1>`
     })
     .join ('\n')
-  const xml = `<?xml version="1.0" encoding="UTF - 8"?>
-<rss version="2.0" xmlns:itunes="http://www.itunes.com / dtds / podcast - 1.0.dtd">
-  <channel>
+  const xml = `<?xml version="1.0" encoding="UTF - 8"?></?xml>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com / dtds / podcast - 1.0.dtd"></rss>
+  <channel></channel>
     <title > Zion Podcast</title>
     <link>${site_url}/media / podcast</link>
     <language > en - us</language>
     <itunes:author > Zion</itunes:author>
     <description > Zion interviews builders, founders, and contributors.</description>
     ${items}
-  </channel></$1>`
+                </channel>
+                </$1>`
 fs.writeFileSync (RSS_PATH, xml, 'utf8')
   return res.status (200).json ({ ok: true, path: '/podcast.xml' })
 }) .join ('\n')
 <channel> <title > Zion Podcast</title> <link>$ {
   site_url
-}/media / podcast</link> <language > en - us</language> <itunes:author > Zion</itunes:author> <description > Zion interviews builders, founders, and contributors.</description> $ {
-  items
-}</channel> </rss>`;  return res.status (200).json ({ ok: true, path: '/podcast.xml' })
+}/media / podcast</link> <language > en - us</language> <itunes:author > Zion</itunes:author> <description > Zion interviews builders, founders, and contributors.</description> $ {items
+}
+                </channel>
+                </rss>`;  return res.status (200).json ({ ok: true, path: '/podcast.xml' })
     })
     .join('\n'),
-  const xml = `<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
-<rss version=&quot;2.0&quot; xmlns:itunes=&quot;http://www.itunes.com/dtds/podcast-1.0.dtd&quot;>
-  <channel>
+  const xml = `<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?></?xml>
+<rss version=&quot;2.0&quot; xmlns:itunes=&quot;http://www.itunes.com/dtds/podcast-1.0.dtd&quot;></rss>
+  <channel></channel>
     <title>Zion Podcast</title>
     <link>${_siteUrl}/media/podcast</link>
     <language>en-us</language>
     <itunes:author>Zion</itunes:author>
     <description>Zion interviews builders, founders, and contributors.</description>
     ${_items}
-  </channel>
-</rss>`,
+                </channel>
+                </rss>`,
   fs.writeFileSync(RSS_PATH, xml, 'utf8'),
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
   items 
-}</channel> </rss>`
+}
+                </channel>
+                </rss>`
   items 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   fs.writeFileSync(RSS_PATH, xml, 'utf8')
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 }
-</p></p></li></li></li></li></li></li></li></li>
+                </p>
+                </p></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li>

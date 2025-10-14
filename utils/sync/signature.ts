@@ -57,3 +57,4 @@ export function verifySignature(payload: unknown, signature?: string | null): bo
     return false
   }
 }
+;

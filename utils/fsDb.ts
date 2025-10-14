@@ -26,7 +26,8 @@ const DATA_DIR = path.join(process.cwd(), 'data')
     return defaultValue
   }
 }
-export async function writeJsonAsync<T>(filePath: string, data: T): Promise<void> {
+export async function writeJsonAsync<T>(filePath: string, data: T): Promise<void></void>
+                {
   try {
     const fullPath = path.join(DATA_DIR, filePath)
     const dir = path.dirname(fullPath)
@@ -59,3 +60,4 @@ export function writeJson<T>(relativePath: string, value: T): void {
   ensureDir(path.dirname(full))
   fs.writeFileSync(full, JSON.stringify(value, null, 2), 'utf-8')
 }
+;

@@ -157,7 +157,7 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [
     realService: true,
     technology: ['Node.js', 'DuckDB', 'React'],
     integrations: ['Greenhouse', 'Lever', 'Workday', 'BambooHR'],
-    useCases: ['Retention', 'Hiring', 'Diversity'],
+    useCases: ['Retention', 'Hiring', 'Diversity'],;
     roi: '5-10% attrition reduction; 20% faster hiring',
     competitors: ['Visier', 'ChartHop', 'Eightfold'],
     marketSize: '$7B HR analytics',

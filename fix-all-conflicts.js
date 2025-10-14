@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
+import path from 'path';
+import { execSync  } from 'child_process';
+import { fileURLToPath  } from 'url';const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
@@ -13,7 +12,8 @@ function fixMergeConflicts(filePath) {
     // Remove merge conflict markers and keep the HEAD version (first part)
     const conflictRegex = /\n([\s\S]*?)\n
     const originalContent = content
-    content = content.replace(conflictRegex, (match, headContent, otherContent) => {
+    content = content.replace(conflictRegex, (match, headContent, otherContent) =>
+                {
       modified = true
       return headContent.trim()
 function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}

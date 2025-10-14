@@ -1,6 +1,4 @@
-import { ServiceVariant } from '../types/service-variants'
-import { ServiceVariant } from '../types/service-variants'
-export interface AdvancedLogisticsSupplyChainSolution2025 {
+import { ServiceVariant , ServiceVariant  } from '../types/service-variants';export interface AdvancedLogisticsSupplyChainSolution2025 {
   id: string
   name: string
   tagline: string
@@ -873,7 +871,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       launchDate: '2025-02-18',      customers: 178
       rating: 4 && 4.8
       reviews: 112,
-    }
+    };
   ];    features: [,
 export interface AdvancedLogisticsSupplyChainSolution2025 {id: string, name: string,
   tagline: string, price: string,

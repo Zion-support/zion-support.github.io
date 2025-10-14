@@ -4,10 +4,9 @@
  */
 
 import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
+import path from 'path';
+import { execSync  } from 'child_process';
+import { fileURLToPath  } from 'url';const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 class BuildOptimizer {
     constructor() {
@@ -42,7 +41,8 @@ class BuildOptimizer {
   }
 
     const files = this.getFilesRecursively(this.distPath)
-    const totalSize = files.reduce((total, file) => {
+    const totalSize = files.reduce((total, file) =>
+                {
     const stats = fs.statSync(file)
       return total + stats.size
   }, 0)
@@ -52,14 +52,16 @@ class BuildOptimizer {
       details: `Total size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`
     })
     // Check for large files
-    const largeFiles = files.filter(file => {
+    const largeFiles = files.filter(file =>
+                {
     )
       const stats = fs.statSync(file)
       return stats.size > 100 * 1024; // 100KB
   })
     if (largeFiles.length > 0) {
       console.log('⚠️  Large files detected: ')
-      largeFiles.forEach(file => {)
+      largeFiles.forEach(file =>
+                {)
         const stats = fs.statSync(file),
         console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`)
       })
@@ -81,7 +83,8 @@ class BuildOptimizer {
     }
 
     // Add image optimization metadata
-    images.forEach(image => {
+    images.forEach(image =>
+                {
     )
       const stats = fs.statSync(image)
       const sizeKB = (stats.size / 1024).toFixed(2)
@@ -104,7 +107,8 @@ class BuildOptimizer {
     const cssFiles = this.getFilesRecursively(this.distPath).filter(file =>)
       file.endsWith('.css')
     )
-    cssFiles.forEach(cssFile => {)
+    cssFiles.forEach(cssFile =>
+                {)
       let content = fs.readFileSync(cssFile, 'utf8')
       // Remove comments
       content = content.replace(/\/\*[\s\S]*?\*\//g, '')
@@ -128,7 +132,8 @@ class BuildOptimizer {
     const jsFiles = this.getFilesRecursively(this.distPath).filter(file => )
       file.endsWith('.js')
     )
-    jsFiles.forEach(jsFile => {)
+    jsFiles.forEach(jsFile =>
+                {)
       let content = fs.readFileSync(jsFile, 'utf8')
       // Remove console.log statements in production
       if (process.env.NODE_ENV === 'production') {
@@ -146,25 +151,26 @@ class BuildOptimizer {
     })
   }
 
-  async addSecurityHeaders() {
-    console.log('🔒 Adding security headers...')
+  async addSecurityHeaders() {console.log('🔒 Adding security headers...')
     const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => )
       file.endsWith('.html')
     )
     const securityHeaders = `
-<!-- Security Headers -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none', upgrade-insecure-requests">
+<!-- Security Headers --></!-->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none', upgrade-insecure-requests"></meta>
 <meta http-equiv="X-Frame-Options" content="DENY">,
 <meta http-equiv="X-Content-Type-Options" content="nosniff">,
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">,
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">
-<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()"></meta>
+<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"></meta>
+<meta http-equiv="X-XSS-Protection" content="1; mode=block"></meta>
 `
-    htmlFiles.forEach(htmlFile => {)
+    htmlFiles.forEach(htmlFile =>
+                {)
       let content = fs.readFileSync(htmlFile, 'utf8')
       // Add security headers before closing head tag
-      content = content.replace('</head>', `${securityHeaders}</head>`)
+      content = content.replace('</head>', `${securityHeaders}
+                </head>`)
       fs.writeFileSync(htmlFile, content)
     })
     this.optimizations.push({)
@@ -174,34 +180,33 @@ class BuildOptimizer {
     })
   }
 
-  async generateSitemap() {
-    console.log('🗺️  Generating sitemap...')
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  async generateSitemap() {console.log('🗺️  Generating sitemap...')
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?></?xml>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
   <url>,
     <loc>https://ziontechgroup.com/</loc>,
     <lastmod>${new Date().toISOString()}
-    <changefreq>daily</changefreq>
+                <changefreq>daily</changefreq>
     <priority></p>1.0
-  <url>
+  <url></url>
     <loc>https: //ziontechgroup.com/about</loc>,
     <lastmod>${new Date().toISOString()}
-    <changefreq>weekly</changefreq>
+                <changefreq>weekly</changefreq>
     <priority></p>0.8
-  <url>
+  <url></url>
     <loc>https: //ziontechgroup.com/services</loc>,
     <lastmod>${new Date().toISOString()}
-    <changefreq>weekly</changefreq>
+                <changefreq>weekly</changefreq>
     <priority></p>0.8
-  <url>
+  <url></url>
     <loc>https: //ziontechgroup.com/contact</loc>,
     <lastmod>${new Date().toISOString()}
-    <changefreq>monthly</changefreq>
+                <changefreq>monthly</changefreq>
     <priority></p>0.7
-  <url>
+  <url></url>
     <loc>https: //ziontechgroup.com/pricing</loc>,
     <lastmod>${new Date().toISOString()}
-    <changefreq>monthly</changefreq>
+                <changefreq>monthly</changefreq>
     <priority></p>0.7
 </urlset>`
     fs.writeFileSync(path.join(this.distPath, 'sitemap.xml'), sitemap)
@@ -275,7 +280,8 @@ Disallow: /private/`,
   }
     
     const items = fs.readdirSync(dir)
-    items.forEach(item => {
+    items.forEach(item =>
+                {
     )
       const fullPath = path.join(dir, item)
       const stat = fs.statSync(fullPath)
@@ -292,7 +298,8 @@ Disallow: /private/`,
     console.log('\n📋 Optimization Summary: ')
     console.log('==='),
     
-    this.optimizations.forEach(opt => {)
+    this.optimizations.forEach(opt =>
+                {)
       const status = opt.status === 'completed' ? '✅' : ),
                     opt.status === 'skipped' ? '⏭️ ' : '❌';),
       console.log(`${status} ${opt.name}: ${opt.details}`)

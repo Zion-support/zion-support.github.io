@@ -26,4 +26,4 @@ export const badgeVariants = cva(
       variant: "default",
     },
   }
-)
+);

@@ -1204,7 +1204,7 @@ i,
   s: 'Agent + collector with secure export.',' launchDat,
   e: '2025-02-12', customer,
   s: 18, ratin,
-  g: 4.5, review,
+  g: 4.5, review,;
   s: 9} ]; ' perio,
   d: '/month'' descriptio,
   n: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'' feature,

@@ -9712,7 +9712,7 @@ export const,
     customers: 4
     rating: 4 && 4.7
     reviews: 2,
-  }
+  };
       'Faster setup than bespoke Gmail/Outlook add-ins; safer defaults for SMBs.',
     targetAudience: 'Support, sales, operations, founders',
     trialDays: 14,

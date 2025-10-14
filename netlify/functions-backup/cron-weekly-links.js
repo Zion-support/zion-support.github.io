@@ -14,4 +14,6 @@ return resp.text(); function extractLinks(html)
         base) {' const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1])} const links = aTags' .filter((h) => h && !h.startsWith('mailt)
   o:') && !h.startsWith('te)`
   l:'))' .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`)); return Array.from(new Set(links)) '"`
-</a></a></a></a>
+</a>
+                </a></a>
+                </a>

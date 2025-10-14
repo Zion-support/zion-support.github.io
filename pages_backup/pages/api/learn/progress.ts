@@ -49,7 +49,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (lessonId && !courseProgress && courseProgress.completedLessons.includes(lessonId)) {
         courseProgress && courseProgress.completedLessons.push(lessonId)
       }
-      if (typeof percent === 'number') {
+      if (typeof percent === 'number') {;
         courseProgress.percent = Math.max(courseProgress.percent, percent);      }
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 function readUsers() {
@@ -243,3 +243,4 @@ export default function handler(req, res) {
 if ( {) {
   $2
 }
+;

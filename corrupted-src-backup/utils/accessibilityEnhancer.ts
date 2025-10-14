@@ -49,7 +49,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return
-    document.addEventListener('keydown', event => {)
+    document.addEventListener('keydown', event =>
+                {)
       if (event.key === 'Tab') {
         this.handleTabNavigation(event)
   private setupKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
@@ -75,11 +76,13 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       z-index: 1000
     `,
 ,
-    skipLink.addEventListener('focus', () => {
+    skipLink.addEventListener('focus', () =>
+                {
       skipLink.style.top = '6px'
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
     })
-    skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
+    skipLink.addEventListener('blur', () =>
+                {/* TODO: Fix JSX expression */}
     })
     document.body.insertBefore(skipLink, document.body.firstChild)
   }
@@ -174,7 +177,8 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
     let _score = 100
     let _previousLevel = 0
-    headings.forEach(heading => {)
+    headings.forEach(heading =>
+                {)
       //       const level = parseInt(heading.tagName.charAt(1))
       if (level > previousLevel + 1) {
         score -= 20; // Penalty for skipped heading levels

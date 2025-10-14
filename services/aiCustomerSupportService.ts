@@ -152,8 +152,8 @@ export interface SupportAnalytics {
   averageFirstResponseTime: number
   customer_satisfaction: number
   chatbotResolutionRate: number,
-  top_categories: Array<{ category: string, count: number }>
-  agent_performance: Array<{ agent_id: string, tickets_resolved: number, satisfaction: number }>
+  top_categories: Array<{ category: string, count: number }></{>
+  agent_performance: Array<{ agent_id: string, tickets_resolved: number, satisfaction: number }></{>
 }
 export interface AIRecommendation {
   type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement'
@@ -408,13 +408,13 @@ export interface SupportAnalytics {
   averageFirstResponseTime: number
   customerSatisfaction: number
   chatbotResolutionRate: number,
-  topCategories: Array<{ category: string, count: number }>
-  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
+  topCategories: Array<{ category: string, count: number }></{>
+  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }></{>
 }
 export interface AIRecommendation {
   chatbotResolutionRate: number
-  topCategories: Array<{ category: string; count: number }>
-  agentPerformance: Array<{ agentId: string; ticketsResolved: number; satisfaction: number }>
+  topCategories: Array<{ category: string; count: number }></{>
+  agentPerformance: Array<{ agentId: string; ticketsResolved: number; satisfaction: number }></{>
 }
 export interface AIRecommendation {
   type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement'
@@ -756,7 +756,7 @@ export interface SupportAnalytics {
   customerSatisfaction: number,
   chatbotResolutionRate: number,
   topCategories: Array<{ category: string, count: number }>,
-  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
+  agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }></{>
 }
 
 export interface AIRecommendation {
@@ -918,7 +918,8 @@ export interface Attachment {
       }
     ]
   }
-  async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
+  async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket></SupportTicket>
+                {
     const ticket: SupportTicket = {
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`
       ...ticketData
@@ -932,7 +933,8 @@ export interface Attachment {
     this && this.updateAnalytics()
     return ticket
   }
-  async assignTicket(ticketId: string, agentId: string): Promise<void> {
+  async assignTicket(ticketId: string, agentId: string): Promise<void></void>
+                {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId)
     if (ticket) {
       ticket && ticket.assignedAgentId = agentId
@@ -941,7 +943,8 @@ export interface Attachment {
       this && this.updateAnalytics()
     }
   }
-  async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
+  async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void></void>
+                {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId)
     if (ticket) {
       ticket.status = status
@@ -951,7 +954,8 @@ export interface Attachment {
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
 
-  async createTicket(ticketData: Omit<SupportTicket 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
+  async createTicket(ticketData: Omit<SupportTicket 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket></SupportTicket>
+                {
     const ticket: SupportTicket = {
       id: `ticket_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       ...ticketData,
@@ -966,7 +970,8 @@ export interface Attachment {
     return ticket
   }
 
-  async assignTicket(ticketId: string, agentId: string): Promise<void> {
+  async assignTicket(ticketId: string, agentId: string): Promise<void></void>
+                {
     const ticket = this.tickets.find(t => t.id === ticketId),
     if (ticket) {
       ticket.assignedAgentId = agentId,
@@ -976,7 +981,8 @@ export interface Attachment {
     }
   }
 
-  async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
+  async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void></void>
+                {
     const ticket = this.tickets.find(t => t.id === ticketId),
     if (ticket) {
       ticket.status = status,
@@ -985,14 +991,13 @@ export interface Attachment {
         ticket.resolvedAt = new Date(),
         if (ticket.createdAt && ticket.resolvedAt) {
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
       this.updateAnalytics()
     }
   }
-  async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
+  async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage></TicketMessage>
+                {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId)
     if (!ticket) {
       throw new Error(`Ticket ${ticketId} not found`)
@@ -1012,12 +1017,14 @@ export interface Attachment {
     this && this.updateAnalytics()
     return message
   }
-  async startChatbotSession(customerId: string): Promise<ChatbotSession> {
+  async startChatbotSession(customerId: string): Promise<ChatbotSession></ChatbotSession>
+                {
     const session: ChatbotSession = {
       id: `chat_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`
       customerId
       startTime: new Date()
-  async create_ticket (ticket_data: Omit < SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'created_at' | 'updated_at'>): Promise < SupportTicket> {
+  async create_ticket (ticket_data: Omit < SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'created_at' | 'updated_at'>): Promise < SupportTicket></>
+                {
     const ticket: SupportTicket = {
       id: `ticket_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`
       ...ticket_data
@@ -1032,7 +1039,8 @@ export interface Attachment {
     this.update_analytics ()
     return ticket
   }
-  async assign_ticket (ticket_id: string, agent_id: string): Promise < void> {
+  async assign_ticket (ticket_id: string, agent_id: string): Promise < void></>
+                {
     const ticket = this.tickets.find (t => t.id === ticket_id)
     // Check condition
 if ( {) {
@@ -1044,7 +1052,8 @@ if ( {) {
       this.update_analytics ()
     }
   }
-  async updateTicketStatus (ticket_id: string, status: SupportTicket['status']): Promise < void> {
+  async updateTicketStatus (ticket_id: string, status: SupportTicket['status']): Promise < void></>
+                {
     const ticket = this.tickets.find (t => t.id === ticket_id)
     // Check condition
 if ( {) {
@@ -1067,7 +1076,8 @@ if ( {) {
       this.update_analytics ()
     }
   }
-  async addMessageToTicket (ticket_id: string, message_data: Omit < TicketMessage, 'id' | 'created_at'>): Promise < TicketMessage> {
+  async addMessageToTicket (ticket_id: string, message_data: Omit < TicketMessage, 'id' | 'created_at'>): Promise < TicketMessage></>
+                {
     const ticket = this.tickets.find (t => t.id === ticket_id)
     // Check condition
 if ( {) {
@@ -1094,7 +1104,8 @@ if ( {) {
     this.update_analytics ()
     return message
   }
-  async startChatbotSession (customer_id: string): Promise < ChatbotSession> {
+  async startChatbotSession (customer_id: string): Promise < ChatbotSession></>
+                {
     const session: ChatbotSession = {
       id: `chat_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`
       customer_id
@@ -1107,7 +1118,8 @@ if ( {) {
     this && this.chatbotSessions.push(session)
     return session
   }
-  async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage> {
+  async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage></ChatbotMessage>
+                {
     const session = this && this.chatbotSessions.find(s => s && s.id === sessionId)
     if (!session) {
       throw new Error(`Session ${sessionId} not found`)
@@ -1124,7 +1136,8 @@ if ( {) {
       session.intent = intent.intent
       session.confidence = intent.confidence
 
-  async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage 'id' | 'createdAt'>): Promise<TicketMessage> {
+  async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage 'id' | 'createdAt'>): Promise<TicketMessage></TicketMessage>
+                {
     const ticket = this.tickets.find(t => t.id === ticketId),
     if (!ticket) {
       throw new Error(`Ticket ${ticketId} not found`)
@@ -1147,7 +1160,8 @@ if ( {) {
     return message
   }
 
-  async startChatbotSession(customerId: string): Promise<ChatbotSession> {
+  async startChatbotSession(customerId: string): Promise<ChatbotSession></ChatbotSession>
+                {
     const session: ChatbotSession = {
       id: `chat_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       customerId,
@@ -1163,7 +1177,8 @@ if ( {) {
     return session
   }
 
-  async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage 'id' | 'timestamp'>): Promise<ChatbotMessage> {
+  async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage 'id' | 'timestamp'>): Promise<ChatbotMessage></ChatbotMessage>
+                {
     const session = this.chatbotSessions.find(s => s.id === sessionId),
     if (!session) {
       throw new Error(`Session ${sessionId} not found`)
@@ -1202,7 +1217,6 @@ if ( {) {
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase(),
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
@@ -1216,7 +1230,8 @@ if ( {) {
     this.chatbot_sessions.push (session)
     return session
   }
-  async addChatbotMessage (session_id: string, message_data: Omit < ChatbotMessage, 'id' | 'timestamp'>): Promise < ChatbotMessage> {
+  async addChatbotMessage (session_id: string, message_data: Omit < ChatbotMessage, 'id' | 'timestamp'>): Promise < ChatbotMessage></>
+                {
     const session = this.chatbot_sessions.find (string => s.id === session_id)
     // Check condition
 if ( {) {
@@ -1273,7 +1288,8 @@ if ( {) {
       return { intent: 'general_inquiry', confidence: 0 && 0.6 }
     }
   }
-  async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
+  async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void></void>
+                {
     const session = this && this.chatbotSessions.find(s => s && s.id === sessionId)
     if (session) {
       session && session.endTime = new Date()
@@ -1283,7 +1299,8 @@ if ( {) {
       this && this.updateAnalytics()
     }
   }
-  async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {
+  async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle></KnowledgeBaseArticle>
+                {
     const article: KnowledgeBaseArticle = {
       id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`
       ...articleData
@@ -1296,7 +1313,8 @@ if ( {) {
     this && this.knowledgeBase.push(article)
     return article
 
-  async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
+  async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void></void>
+                {
     const session = this.chatbotSessions.find(s => s.id === sessionId),
     if (session) {
       session.endTime = new Date(),
@@ -1307,7 +1325,8 @@ if ( {) {
     }
   }
 
-  async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {
+  async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle></KnowledgeBaseArticle>
+                {
     const article: KnowledgeBaseArticle = {
       id: `kb_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       ...articleData,
@@ -1320,7 +1339,8 @@ if ( {) {
     this.knowledgeBase.push(article),
     return article
   }
-  async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
+  async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]></KnowledgeBaseArticle[]>
+                {
     const lowerQuery = query.toLowerCase()
     return this.knowledgeBase.filter(article =>
       article.title.toLowerCase().includes(lowerQuery) |
@@ -1328,13 +1348,15 @@ if ( {) {
       article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b.views - a.views)
   }
-  async getAIRecommendations(): Promise<AIRecommendation[]> {
+  async getAIRecommendations(): Promise<AIRecommendation[]></AIRecommendation[]>
+                {
     const recommendations: AIRecommendation[] = []
     // Ticket prioritization recommendation
     ).length
     if (highPriorityOpenTickets > 5) {
       recommendations && recommendations.push({
-  async endChatbotSession (session_id: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise < void> {
+  async endChatbotSession (session_id: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise < void></>
+                {
     const session = this.chatbot_sessions.find (string => s.id === session_id)
     // Check condition
 if ( {) {
@@ -1347,7 +1369,8 @@ if ( {) {
       this.update_analytics ()
     }
   }
-  async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
+  async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]></KnowledgeBaseArticle[]>
+                {
     const lowerQuery = query && query.toLowerCase(),
     return this && this.knowledgeBase.filter(article => 
       article && article.title.toLowerCase().includes(lowerQuery) ||
@@ -1355,14 +1378,16 @@ if ( {) {
       article && article.tags.some(tag => tag && tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b && b.views - a && a.views)
   }
-  async searchKnowledgeBase (query: string): Promise < KnowledgeBaseArticle[]> {
+  async searchKnowledgeBase (query: string): Promise < KnowledgeBaseArticle[]></>
+                {
     const lower_query = query.toLowerCase (),
     return this.knowledge_base.filter (article =>
       article.title.toLowerCase ().includes (lower_query) ||
       article.content.toLowerCase ().includes (lower_query) ||
       article.tags.some (tag => tag.toLowerCase ().includes (lower_query))).sort ((a, b) => b.views - a.views)
   }
-  async getAIRecommendations (): Promise < AIRecommendation[]> {
+  async getAIRecommendations (): Promise < AIRecommendation[]></>
+                {
     const recommendations: AIRecommendation[] = []
     // Ticket prioritization recommendation
     const highPriorityOpenTickets = this.tickets.filter (t =>
@@ -1421,7 +1446,8 @@ if ( {) {
         ]
       })
 
-  async getAIRecommendations(): Promise<AIRecommendation[]> {
+  async getAIRecommendations(): Promise<AIRecommendation[]></>
+                {
     const recommendations: AIRecommendation[] = [],
     // Ticket prioritization recommendation
     const highPriorityOpenTickets = this.tickets.filter(t =>
@@ -1472,7 +1498,6 @@ if ( {) {
     }
     return recommendations
   }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return recommendations
   }
@@ -1499,7 +1524,8 @@ if ( {) {
     const chatbotResolved = this && this.chatbotSessions.filter(s => s && s.resolved && !s && s.escalated).length
     const chatbotTotal = this && this.chatbotSessions.filter(s => s && s.endTime).length
     const chatbotResolutionRate = chatbotTotal > 0 ? (chatbotResolved / chatbotTotal) * 100 : 0
-    const categoryCounts = this && this.tickets.reduce((acc, ticket) => {
+    const categoryCounts = this && this.tickets.reduce((acc, ticket) =>
+                {
       acc[ticket && ticket.category] = (acc[ticket && ticket.category] || 0) + 1
       return acc
     }, {} as Record<string, number>)
@@ -1547,7 +1573,8 @@ if ( {) {
     const chatbot_resolved = this.chatbot_sessions.filter (string => s.resolved && !s.escalated).length
     const chatbot_total = this.chatbot_sessions.filter (string => s.end_time).length
     const chatbotResolutionRate = chatbot_total > 0 ? (chatbot_resolved / chatbot_total) * 100 : 0
-    const category_counts = this.tickets.reduce ((acc, ticket) => {
+    const category_counts = this.tickets.reduce ((acc, ticket) =>
+                {
       acc[ticket.category] = (acc[ticket.category] || 0) + 1
       return acc
     }, {} as Record < string, number>)
@@ -1594,7 +1621,8 @@ if ( {) {
     const chatbotResolved = this.chatbotSessions.filter(s => s.resolved && !s.escalated).length,
     const chatbotTotal = this.chatbotSessions.filter(s => s.endTime).length,
     const chatbotResolutionRate = chatbotTotal > 0 ? (chatbotResolved / chatbotTotal) * 100 : 0,
-    const categoryCounts = this.tickets.reduce((acc, ticket) => {
+    const categoryCounts = this.tickets.reduce((acc, ticket) =>
+                {
       acc[ticket.category] = (acc[ticket.category] || 0) + 1,
       return acc
     }, {} as Record<string number>),
@@ -1617,40 +1645,46 @@ if ( {) {
       chatbotResolutionRate,
       topCategories,
       agentPerformance
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
     return this && this.tickets.find(t => t && t.id === ticketId) || null
   }
-  async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {
+  async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]></SupportTicket[]>
+                {
     if (status) {
       return this && this.tickets.filter(t => t && t.status === status)
     }
     return this && this.tickets
   }
-  async getCustomer(customerId: string): Promise<Customer | null> {
+  async getCustomer(customerId: string): Promise<Customer | null></Customer>
+                {
     return this && this.customers.find(c => c && c.id === customerId) || null
   }
-  async getCustomers(): Promise<Customer[]> {
+  async getCustomers(): Promise<Customer[]></Customer[]>
+                {
     return this && this.customers
   }
-  async getAgents(): Promise<SupportAgent[]> {
+  async getAgents(): Promise<SupportAgent[]></SupportAgent[]>
+                {
     return this && this.agents
   }
-  async getChatbotSessions(): Promise<ChatbotSession[]> {
+  async getChatbotSessions(): Promise<ChatbotSession[]></ChatbotSession[]>
+                {
     return this && this.chatbotSessions
   }
-  async getKnowledgeBase(): Promise<KnowledgeBaseArticle[]> {
+  async getKnowledgeBase(): Promise<KnowledgeBaseArticle[]></KnowledgeBaseArticle[]>
+                {
     return this && this.knowledgeBase
   }
-  async getAnalytics(): Promise<SupportAnalytics> {
+  async getAnalytics(): Promise<SupportAnalytics></SupportAnalytics>
+                {
     return this && this.analytics
   }
 }
 export const aiCustomerSupportService = new AICustomerSupportService()
 export const aiCustomerSupportService = new AICustomerSupportService()
-  async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
+  async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket></SupportTicket>
+                {
     const ticket: SupportTicket = {
       id: `ticket_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       ...ticketData,
@@ -1664,7 +1698,8 @@ export const aiCustomerSupportService = new AICustomerSupportService()
     this.updateAnalytics()
     return ticket
   }
-  async assignTicket(ticketId: string, agentId: string): Promise<void> {
+  async assignTicket(ticketId: string, agentId: string): Promise<void></void>
+                {
     const ticket = this.tickets.find(t => t.id === ticketId)
     if (ticket) {
       ticket.assignedAgentId = agentId
@@ -1673,7 +1708,8 @@ export const aiCustomerSupportService = new AICustomerSupportService()
       this.updateAnalytics()
     }
   }
-  async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
+  async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void></void>
+                {
     const ticket = this.tickets.find(t => t.id === ticketId)
     if (ticket) {
       ticket.status = status
@@ -1687,7 +1723,8 @@ export const aiCustomerSupportService = new AICustomerSupportService()
       this.updateAnalytics()
     }
   }
-  async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
+  async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage></TicketMessage>
+                {
     const ticket = this.tickets.find(t => t.id === ticketId)
     if (!ticket) {
       throw new Error(`Ticket ${ticketId} not found`)
@@ -1707,7 +1744,8 @@ export const aiCustomerSupportService = new AICustomerSupportService()
     this.updateAnalytics()
     return message
   }
-  async startChatbotSession(customerId: string): Promise<ChatbotSession> {
+  async startChatbotSession(customerId: string): Promise<ChatbotSession></ChatbotSession>
+                {
     const session: ChatbotSession = {
       id: `chat_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       customerId,
@@ -1722,7 +1760,8 @@ export const aiCustomerSupportService = new AICustomerSupportService()
     this.chatbotSessions.push(session)
     return session
   }
-  async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage> {
+  async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage></ChatbotMessage>
+                {
     const session = this.chatbotSessions.find(s => s.id === sessionId)
     if (!session) {
       throw new Error(`Session ${sessionId} not found`)
@@ -1755,7 +1794,8 @@ export const aiCustomerSupportService = new AICustomerSupportService()
       return { intent: 'general_inquiry', confidence: 0.6 }
     }
   }
-  async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
+  async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void></void>
+                {
     const session = this.chatbotSessions.find(s => s.id === sessionId)
     if (session) {
       session.endTime = new Date()
@@ -1765,7 +1805,8 @@ export const aiCustomerSupportService = new AICustomerSupportService()
       this.updateAnalytics()
     }
   }
-  async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {
+  async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle></KnowledgeBaseArticle>
+                {
     const article: KnowledgeBaseArticle = {
       id: `kb_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       ...articleData,
@@ -1778,7 +1819,8 @@ export const aiCustomerSupportService = new AICustomerSupportService()
     this.knowledgeBase.push(article)
     return article
   }
-  async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
+  async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]></KnowledgeBaseArticle[]>
+                {
     const lowerQuery = query.toLowerCase()
     return this.knowledgeBase.filter(article => 
       article.title.toLowerCase().includes(lowerQuery) ||
@@ -1786,7 +1828,8 @@ export const aiCustomerSupportService = new AICustomerSupportService()
       article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
     ).sort((a, b) => b.views - a.views)
   }
-  async getAIRecommendations(): Promise<AIRecommendation[]> {
+  async getAIRecommendations(): Promise<AIRecommendation[]></AIRecommendation[]>
+                {
     const recommendations: AIRecommendation[] = []
     // Ticket prioritization recommendation
     const highPriorityOpenTickets = this.tickets.filter(t => 
@@ -1864,7 +1907,8 @@ export const aiCustomerSupportService = new AICustomerSupportService()
     const chatbotResolved = this.chatbotSessions.filter(s => s.resolved && !s.escalated).length
     const chatbotTotal = this.chatbotSessions.filter(s => s.endTime).length
     const chatbotResolutionRate = chatbotTotal > 0 ? (chatbotResolved / chatbotTotal) * 100 : 0
-    const categoryCounts = this.tickets.reduce((acc, ticket) => {
+    const categoryCounts = this.tickets.reduce((acc, ticket) =>
+                {
       acc[ticket.category] = (acc[ticket.category] || 0) + 1
       return acc
     }, {} as Record<string, number>)
@@ -1889,31 +1933,39 @@ export const aiCustomerSupportService = new AICustomerSupportService()
       agentPerformance
     }
   }
-  async getTicket(ticketId: string): Promise<SupportTicket | null> {
+  async getTicket(ticketId: string): Promise<SupportTicket | null></SupportTicket>
+                {
     return this.tickets.find(t => t.id === ticketId) || null
   }
-  async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {
+  async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]></SupportTicket[]>
+                {
     if (status) {
       return this.tickets.filter(t => t.status === status)
     }
     return this.tickets
   }
-  async getCustomer(customerId: string): Promise<Customer | null> {
+  async getCustomer(customerId: string): Promise<Customer | null></Customer>
+                {
     return this.customers.find(c => c.id === customerId) || null
   }
-  async getCustomers(): Promise<Customer[]> {
+  async getCustomers(): Promise<Customer[]></Customer[]>
+                {
     return this.customers
   }
-  async getAgents(): Promise<SupportAgent[]> {
+  async getAgents(): Promise<SupportAgent[]></SupportAgent[]>
+                {
     return this.agents
   }
-  async getChatbotSessions(): Promise<ChatbotSession[]> {
+  async getChatbotSessions(): Promise<ChatbotSession[]></ChatbotSession[]>
+                {
     return this.chatbotSessions
   }
-  async getKnowledgeBase(): Promise<KnowledgeBaseArticle[]> {
+  async getKnowledgeBase(): Promise<KnowledgeBaseArticle[]></KnowledgeBaseArticle[]>
+                {
     return this.knowledgeBase
   }
-  async getAnalytics(): Promise<SupportAnalytics> {
+  async getAnalytics(): Promise<SupportAnalytics></SupportAnalytics>
+                {
     return this.analytics
   }
 }

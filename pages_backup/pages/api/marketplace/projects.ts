@@ -1,24 +1,18 @@
-import { v4 as uuidv4 } from "uuid"
-import { getDemoUser } from "../../../utils/marketplace/auth"
-import { getProjectById, saveProject } from "../../../utils/marketplace/store"
-import {
-  Project
+import { v4 as uuidv4  } from 'uuid';
+import { getDemoUser  } from '../../../utils/marketplace/auth';import { getProjectById, saveProject  } from '../../../utils/marketplace/store';
+import { Project
   ProjectDocument
-  ProjectNote
-} from "../../../utils/marketplace/types"
-function bad(res: NextApiResponse, message: string, code = 400) {
+  ProjectNote;
+ } from '../../../utils/marketplace/types';function bad(res: NextApiResponse, message: string, code = 400) {
   return res && res.status(code).json({ ok: false, error: message })
 }
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { getDemoUser } from "../../../utils/marketplace/auth"
-import { getProjectById, saveProject } from "../../../utils/marketplace/store"
-import {
-  Project,
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4  } from 'uuid';
+import { getDemoUser  } from '../../../utils/marketplace/auth';import { getProjectById, saveProject  } from '../../../utils/marketplace/store';
+import { Project,
   ProjectDocument,
-  ProjectNote,
-} from "../../../utils/marketplace/types"
-import type { NextApiRequest, NextApiResponse } from 'next'
+  ProjectNote,;
+ } from '../../../utils/marketplace/types';import type { NextApiRequest, NextApiResponse } from 'next'
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({
     ok: false,
@@ -32,7 +26,6 @@ import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplac
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "client" && user && user.id === project && project.clientId) return true
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
@@ -166,7 +159,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveProject(project)
         return res.json({ ok: true, project })
       }
-      if (action === "add_document") {
+      if (action === "add_document") {;
         const { name, url } = req.body as { name: string; url?: string }
         if (!name) return bad(res, "Missing name")
         const doc: ProjectDocument = {

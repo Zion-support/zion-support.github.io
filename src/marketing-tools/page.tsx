@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const Pagetsx: React.FC = () => {
+const Pagetsx: React.FC  = () => {
   const _features = [],
   return (
     {icon: Users,
@@ -21,18 +21,18 @@ const Pagetsx: React.FC = () => {
       benefits: ['Data protection', 'Compliance', 'Secure operations']
     }
   ]
-  return (<div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
+  return (<div className="min-h-screen bg-gray-900 text-white"></div>
+      <Helmet></Helmet>
         <title>tsx - Zion Tech Group</title>"
         <meta name="description" content="Advanced tsx solutions powered by AI and cutting-edge technology" />
       <Navigation /></Navigation>"
-      <main className="pt-20">
-        {/* Hero Section */}"
+      <main className="pt-20"></main>
+                {/* Hero Section */}"
         <section className="py-20 px-4"></section>"
           <div className="max-w-6xl mx-auto text-center"></div>"
-            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></h1>
               tsx</$1>"
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Advanced tsx solutions powered by AI and cutting-edge technology</$1>"
             < className="flex flex-col,"$2 />
   sm:flex-row gap-4 justify-center"></div>"
@@ -45,25 +45,27 @@ const Pagetsx: React.FC = () => {
   hover: text-white transition-colors"></a>
                 View Demo,
               </a>
-            </div>
+                </div>
           </div>
-        </section>
-        {/* Features Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
+                </section>
+                {/* Features Section */}
+                <section className="py-16 px-4"></section>
+          <div className="max-w-6xl mx-auto"></div>
             <h2 className="text-3xl font-bold text-center mb-12">Key Features
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {_features.map((feature, index) => (}
-                <div key={index} className="bg-gray-800 rounded-xl p-6 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {_features.map((feature, index) => (}
+                <div key={index} className="bg-gray-800 rounded-xl p-6 text-center"></div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">{feature.title}
-                  <p className="text-gray-300 mb-4">{feature.description}
-                  <ul className="text-sm text-gray-400 space-y-1">
-                    {feature.benefits.map((benefit, idx) => (}
-                      <li key={idx} className="flex items-center">
+                  <h3 className="text-xl font-semibold mb-3"></h3>
+                {feature.title}
+                <p className="text-gray-300 mb-4"></p>
+                {feature.description}
+                <ul className="text-sm text-gray-400 space-y-1"></ul>
+                {feature.benefits.map((benefit, idx) => (}
+                <li key={idx} className="flex items-center"></li>
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {benefit}
-                      </li>)
+                {benefit}
+                </li>)
                     ))}
               ))}
         {/* CTA Section */}"
@@ -75,11 +77,16 @@ const Pagetsx: React.FC = () => {
   hover: bg-cyan-600 transition-colors"></a>
               Contact Us,
             </a>
-          </div>
+                </div>
         </section>
-      </main>
+                </main>
       <Footer /></div>
   )
-}
+};
 export default Pagetsx;"
-export default MarketingToolsPage</div></div></div></p></p></h1></h2></h3></ul></main></section>
+export default MarketingToolsPage</div>
+                </div></div>
+                </p></p>
+                </h1></h2>
+                </h3></ul>
+                </main></section>

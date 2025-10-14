@@ -8,3 +8,4 @@ if (_root) {
   )
 if (_root) {/* TODO: Fix JSX expression */}
 }
+;

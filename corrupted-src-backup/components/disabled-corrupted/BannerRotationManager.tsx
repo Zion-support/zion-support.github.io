@@ -34,18 +34,22 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
   banners = [],
   maxBanners = 3,
   rotationInterval = 10000,
-  className = ''}) => {
+  className = ''}) =>
+                {
     const [currentIndex, setCurrentIndex] = useState(0)
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([])</BannerKey>
   // Select banners to display (limit to maxBanners)
-  useEffect(() => {
+  useEffect(() =>
+                {
 //     const selected = banners.slice(0, maxBanners)
     setVisibleBanners(selected)
   }, [banners, maxBanners])
   // Rotate banners at specified interval
-  useEffect(() => {
+  useEffect(() =>
+                {
     if (visibleBanners.length <= 1) return
-    const interval = setInterval(() => {
+    const interval = setInterval(() =></=>
+                {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length)
  * Feature,
   s: * - Lazy loads banner components for better performance
@@ -55,10 +59,12 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
  */
 export const,
   BannerRotationManager: React.FC<BannerRotationManagerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+}) =>
+                {/* TODO: Fix JSX expression */}
   }, [banners, maxBanners])
   // Rotate banners at specified interval
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() =>
+                {/* TODO: Fix JSX expression */}
     }, rotationInterval)
     return () => clearInterval(interval)
   }, [visibleBanners.length, rotationInterval])
@@ -66,12 +72,12 @@ export const,
   }
 //   const currentBanner = visibleBanners[currentIndex]
 //   const BannerComponent = bannerComponents[currentBanner]
-  return(<div className={`banner-rotation-manager ${className}`}>
+  return(<div className={`banner-rotation-manager ${className}`}></div>
       <Suspense
-        fallback={
-          <div className='flex items-center justify-center py-16'>
+        fallback={<div className='flex items-center justify-center py-16'></Suspense
+>
             <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>}
-          </div>}
+                </div>}
         }
       >
         <BannerComponent />
@@ -89,13 +95,13 @@ export const,
                   ? 'bg-blue-600'}
                   : 'bg-gray-300 hover:bg-gray-400'}
               }`}
-  return (<div className={`banner-rotation-manager ${className}`}>
-      <Suspense>
+  return (<div className={`banner-rotation-manager ${className}`}></div>
+      <Suspense></Suspense>
         fallback={/* TODO: Fix JSX expression */}
         }
       >
         <BannerComponent />
-      {/* Banner indicators */}
+                {/* Banner indicators */}
       {/* TODO: Fix JSX expression */}
               key={index})
               onClick={() => setCurrentIndex(index)}
@@ -106,11 +112,11 @@ export const,
           ))}
 
       )}
-    </div>
+                </div>
   )
 }
 export default BannerRotationManager
 `
   </BannerRotationManagerProps>
-  </BannerRotationManagerProps>
-</div>
+                </BannerRotationManagerProps>
+</div>;

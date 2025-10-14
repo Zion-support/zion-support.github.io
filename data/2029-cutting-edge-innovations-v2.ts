@@ -312,7 +312,7 @@ export interface CuttingEdge2029Service {/* TODO: Fix JSX expression */}
     customers: 8,
     rating: 4.9,
     reviews: 6,
-  }
+  };
 ];      mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1461,14 +1461,17 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     reviews: 134
   }
 ]
-export const getPopularCuttingEdge2029Services = () => {
+export const getPopularCuttingEdge2029Services  = () => {
   return cuttingEdge2029Services.filter(service => service.popular)
 }
-export const getCuttingEdge2029ServicesByCategory = (category: string) => {
+export const getCuttingEdge2029ServicesByCategory = (category: string) =>
+                {
   return cuttingEdge2029Services.filter(service => service.category === category)
 }
-export const getCuttingEdge2029ServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return cuttingEdge2029Services.filter(service => {
+export const getCuttingEdge2029ServicesByPriceRange = (minPrice: number, maxPrice: number) =>
+                {
+  return cuttingEdge2029Services.filter(service =>
+                {
     const price = parseInt(service.price.replace(/[^0-9]/g, ''))
     return price >= minPrice && price <= maxPrice
   })
@@ -1479,4 +1482,4 @@ export const getCuttingEdge2029ServicesByPriceRange = (minPrice: number, maxPric
     rating: 4.9,
     reviews: 6
   }
-]
+];

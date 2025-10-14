@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react'
-import { supabase } from "@/integrations/supabase/client"
-interface PricingSuggestionAnalytics {
+import { useState, useEffect  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';interface PricingSuggestionAnalytics {
   totalSuggestions: number
   acceptanceRate: number
   averagePriceGap: number
@@ -28,10 +27,12 @@ export function usePricingSuggestionAnalytics(days = 30) {
     isLoading: true,
     error: null
   })
-  useEffect(() => {
+  useEffect(() =>
+                {
     // This would fetch actual data from the database in a real implementation
     // For now, let's simulate the data
-    const fetchAnalytics = async () => {
+    const fetchAnalytics = async () =>
+                {
       try {
         // Simulate API delay
         await new Promise(resolve => setTimeout(resolve, 1000))

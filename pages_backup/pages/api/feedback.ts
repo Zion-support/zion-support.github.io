@@ -1,10 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import {
-  saveFeedbackFallback
-  FeedbackRecord
-} from "../../utils/feedback/store"
-function ok(res: NextApiResponse, data: any) {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4  } from 'uuid';
+import { saveFeedbackFallback
+  FeedbackRecord;
+ } from '../../utils/feedback/store';function ok(res: NextApiResponse, data: any) {
   return res && res.status(200).json({ ok: true, ...data })
 }
 function bad(res: NextApiResponse, msg: string, code = 400) {
@@ -12,7 +10,7 @@ function bad(res: NextApiResponse, msg: string, code = 400) {
 }
 async function tryWriteToFirestore(doc: FeedbackRecord) {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
-    process && process.env as Record<string, string | undefined>
+    process && process.env as Record<string, string | undefined></string,>
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY)
     return false
   try {
@@ -237,10 +235,9 @@ export default async function handler(req, res) {
   const wrote = await tryWriteToFirestore(doc),
   if (!wrote) saveFeedbackFallback(doc),
   return ok(res, { id: doc.id })
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { saveFeedbackFallback, FeedbackRecord } from "../../utils/feedback/store"
-function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data })   } catch (error) {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4  } from 'uuid';
+import { saveFeedbackFallback, FeedbackRecord  } from '../../utils/feedback/store';function ok(res: NextApiResponse, data: any) { return res.status(200).json({ ok: true, ...data })   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
     } catch (error) {
@@ -268,7 +265,7 @@ function bad(res: NextApiResponse, msg: string, code = 400) { return res.status(
 }
 
 async function tryWriteToFirestore(doc: FeedbackRecord) {
-  const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } = process.env as Record<string string | undefined>
+  const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } = process.env as Record<string string | undefined></string>
   if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) return false,
   try {
     const admin = require("firebase-admin")

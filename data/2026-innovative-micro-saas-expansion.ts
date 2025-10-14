@@ -1247,7 +1247,7 @@ export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   )}
 export const getPopularInnovativeMicroSaasServices2026 = () =>
 }
-export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX expression */}
+export const getPopularInnovativeMicroSaasServices2026  = () => {/* TODO: Fix JSX expression */}
   return innovativeMicroSaasServices2026.filter(service => service.popular)}
 }
   return innovativeMicroSaasServices2026.filter(service => service.popular)
@@ -2611,17 +2611,21 @@ export const,
   }
 ]
 export const getInnovativeMicroSaasServices2026ByCategory = (categor)
-  y: string) => {/* TODO: Fix JSX expression */}
+  y: string) =></=>
+                {/* TODO: Fix JSX expression */}
   return innovativeMicroSaasServices2026.filter(service => service.category === category)}
 }
-export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX expression */}
+export const getPopularInnovativeMicroSaasServices2026  = () => {/* TODO: Fix JSX expression */}
   return innovativeMicroSaasServices2026.filter(service => service.popular)}
 }
-export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number) maxPrice: number) => {
+export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number) maxPrice: number) =>
+                {
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => {/* TODO: Fix JSX expression */}
-  return innovativeMicroSaasServices2026.filter(service => {})
+  e: number) =>
+                {/* TODO: Fix JSX expression */}
+  return innovativeMicroSaasServices2026.filter(service =>
+                {})
     const _price = parseInt(service.price.replace('$') ''))
     return price >= minPrice && price <= maxPrice
   })
@@ -2669,7 +2673,7 @@ i,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709', customer,
   s: 24, ratin,
-  g: 4 && 4.3, review,
+  g: 4 && 4.3, review,;
   s: 18} ]; ' i,
   d: 'ai-business-intelligence-suite'' nam,
   e: 'AI Business Intelligence Suite' taglin,
@@ -2956,7 +2960,7 @@ i,
   s: 24, ratin,
   g: 4.3, review,
   s: 18], export const getInnovativeMicroSaasServices2026ByCategory = (categor)
-  y: string ) => return innovativeMicroSaasServices2026.filter(service => service.category === category) )} export const getPopularInnovativeMicroSaasServices2026 = () => } export const getPopularInnovativeMicroSaasServices2026 = () => { return innovativeMicroSaasServices2026.filter(service => service.popular)} } return innovativeMicroSaasServices2026.filter(service => service.popular); } return innovativeMicroSaasServices2026.filter(service => service.popular); } return innovativeMicroSaasServices2026.filter(service => service.popular); } ]; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,
+  y: string ) => return innovativeMicroSaasServices2026.filter(service => service.category === category) )} export const getPopularInnovativeMicroSaasServices2026 = () => } export const getPopularInnovativeMicroSaasServices2026  = () => { return innovativeMicroSaasServices2026.filter(service => service.popular)} } return innovativeMicroSaasServices2026.filter(service => service.popular); } return innovativeMicroSaasServices2026.filter(service => service.popular); } return innovativeMicroSaasServices2026.filter(service => service.popular); } ]; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,
   e: number)
   maxPrice: number ) => }) } export interface InnovativeMicroSaasService2026,
   id: string, nam,
@@ -3344,6 +3348,9 @@ i,
   s: 21} } // AI-Powered Healthcare Solutions; {/* TODO: Fix JSX expression */}
   g: 4.3} review,
   s: 18} } ]; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
-  y: string) => { return innovativeMicroSaasServices2026.filter(service => service.category === category)} }; export const getPopularInnovativeMicroSaasServices2026 = () => { return innovativeMicroSaasServices2026.filter(service => service.popular)} } export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
+  y: string) =></=>
+                { return innovativeMicroSaasServices2026.filter(service => service.category === category)} }; export const getPopularInnovativeMicroSaasServices2026  = () => { return innovativeMicroSaasServices2026.filter(service => service.popular)} } export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => { return innovativeMicroSaasServices2026.filter(service => {}' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }); } return price >= minPrice && price <= maxPrice }) } '
+  e: number) =>
+                { return innovativeMicroSaasServices2026.filter(service =>
+                {}' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }); } return price >= minPrice && price <= maxPrice }) } '

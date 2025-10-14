@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 export default function EnhancedContactForm(): React.JSX.Element {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [message, setMessage] = useState('');
   return(<form;)
       aria-label="Contact form")
       onSubmit={e => e.preventDefault()}
@@ -37,10 +37,11 @@ export default function EnhancedContactForm(): React.JSX.Element {/* TODO: Fix J
         onChange={e => setMessage(e.target.value)}"
         className="border p-2 rounded"
       />
-      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
+      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded"></button>
       />"
-      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">
+      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded"></button>
         Send
   )
 }
-"</button></button>
+"</button>
+                </button>

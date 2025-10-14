@@ -3,10 +3,9 @@ import fs from 'fs'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
-import mime from 'mime-types'
-import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage'
-import { requireSuperadminApi } from '../../../../utils/api/auth'
-  const section = String(req && req.query.section || "General")
+import mime from 'mime-types';
+import { appendAuditLog, resolveDataPath  } from '../../../../utils/api/storage';
+import { requireSuperadminApi  } from '../../../../utils/api/auth';const section = String(req && req.query.section || "General")
   const file = String(req && req.query.file || "")
   if (!file) return res && res.status(400).json({ error: "Missing file" })
   const fullPath = path && path.join(
@@ -14,10 +13,9 @@ import { requireSuperadminApi } from '../../../../utils/api/auth'
 import type { NextApiRequest, NextApiResponse } from './next'
 import fs from './fs'
 import path from './path'
-import mime from './mime - types'
-import { appendAuditLog, resolveDataPath  } from '../../../../utils / api / storage'
-import { requireSuperadminApi  } from '../../../../utils / api / auth'
-export default /**
+import mime from './mime - types';
+import { appendAuditLog, resolveDataPath   } from '../../../../utils / api / storage';
+import { requireSuperadminApi   } from '../../../../utils / api / auth';export default /**
  * handler - Function description
  */
 function handler() {
@@ -67,10 +65,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from "next"
 import fs from "fs"
 import path from "path"
-import mime from "mime-types"
-import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage"
-import { requireSuperadminApi } from "../../../../utils/api/auth"
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import mime from "mime-types";
+import { appendAuditLog, resolveDataPath  } from '../../../../utils/api/storage';
+import { requireSuperadminApi  } from '../../../../utils/api/auth';export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
   const section = String(req.query.section || "General")
   const file = String(req.query.file || "")
@@ -101,10 +98,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
-import mime from 'mime-types'
-import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage'
-import { requireSuperadminApi } from '../../../../utils/api/auth'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import mime from 'mime-types';
+import { appendAuditLog, resolveDataPath  } from '../../../../utils/api/storage';
+import { requireSuperadminApi  } from '../../../../utils/api/auth';export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return
   const section = String(req.query.section |"General")
   const file = String(req.query.file |"")
@@ -155,7 +151,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const section = String(req.query.section || 'General')
   const file = String(req.query.file || '')
   if (!file) return res.status(400).json({ error: 'Missing file' })
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   res.setHeader('Content-Disposition', `attachment; filename="${path.basename(fullPath)}"`)
   appendAuditLog({ type: 'file_download', section, name: file })
   fs.createReadStream(fullPath).pipe(res)

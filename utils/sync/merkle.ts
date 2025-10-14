@@ -51,7 +51,7 @@ export function computeMerkleRootFromLeaves(leaves: string[]): string {
   if (leaves.length === 0) return sha256Hex("EMPTY")
   let layer = leaves.slice()
   while (layer.length > 1) {
-    const next: string[] = []
+    const next: string[] = [];
     for (let i = 0; i < layer.length; i += 2) {
       const left = layer[i]
       const right = i + 1 < layer.length ? layer[i + 1] : left

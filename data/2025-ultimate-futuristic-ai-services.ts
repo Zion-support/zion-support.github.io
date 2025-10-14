@@ -508,4 +508,4 @@ export const ultimateFuturisticAIServices2025: UltimateFuturisticAIService[] = [
     rating: 4.7,
     reviews: 67
   }
-]
+];

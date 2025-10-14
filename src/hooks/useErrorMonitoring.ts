@@ -15,25 +15,28 @@ declare global {/* TODO: Fix JSX expression */}
   o: unknown) => void,
   }
 }
-export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}
+export const _useErrorMonitoring  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   const { trackError } = useAnalytics()
   const reportError = useCallback()
     (erro)
-  r: Error, context?: string) => {/* TODO: Fix JSX expression */}
+  r: Error, context?: string) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       trackError(error, context)
     },
 //     [trackError]
   )
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     // Global error handler
 const handleError = (even)
-  t: unknown) => {/* TODO: Fix JSX expression */}
+  t: unknown) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const errorEvent = event as {/* TODO: Fix JSX expression */}
@@ -44,7 +47,8 @@ const handleError = (even)
     }
     // Unhandled promise rejection handler
 const handleUnhandledRejection = (even)
-  t: unknown) => {/* TODO: Fix JSX expression */}
+  t: unknown) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const rejectionEvent = event as {/* TODO: Fix JSX expression */}
@@ -58,7 +62,8 @@ const handleUnhandledRejection = (even)
     // React error boundary handler (if available)
     const handleReactError = (erro,
   r: Error, errorInf)
-  o: unknown) => {/* TODO: Fix JSX expression */}
+  o: unknown) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const componentStack =
@@ -76,7 +81,8 @@ const handleUnhandledRejection = (even)
       }
     ).__REACT_ERROR_HANDLER__ = handleReactError
     // Cleanup
-    return () => {/* TODO: Fix JSX expression */}
+    return () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       window.removeEventListener('error', handleError)
@@ -90,4 +96,4 @@ const handleUnhandledRejection = (even)
 //     reportError
   }
 }
-export default useErrorMonitoring
+export default useErrorMonitoring;

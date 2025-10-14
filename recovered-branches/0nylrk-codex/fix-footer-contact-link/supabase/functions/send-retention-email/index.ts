@@ -1,6 +1,5 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0"
-import { Resend } from "npm:resend@2.0.0"
+import { serve  } from 'https://deno.land/std@0.190.0/http/server.ts';
+import { createClient  } from 'https://esm.sh/@supabase/supabase-js@2.45.0';import { Resend } from "npm:resend@2.0.0"
 // Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
 // Initialize Supabase client
@@ -22,7 +21,8 @@ interface EmailData {
   job_id?: string
   job_title?: string
 }
-serve(async (req) => {
+serve(async (req) =>
+                {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
@@ -127,8 +127,9 @@ serve(async (req) => {
       }
     )
   }
-})
-async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string; html: string }> {
+});
+async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string; html: string }></{>
+                {
   const { email_type, display_name, user_type } = emailData
   const firstName = display_name?.split(" ")[0] || "there"
   // Get onboarding status for personalized content
@@ -141,23 +142,23 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       return {
         subject: `Welcome to Zion AI Marketplace, ${firstName}!`,
         html: `
-          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;"></div>
             <h2>Welcome to Zion AI Marketplace!</h2>
             <p>Hi ${firstName},</p>
             <p>We're excited to have you join our community of talented AI professionals.</p>
             <p>Here's what to do next to get started:</p>
-            <ol>
+            <ol></ol>
               <li>Complete your profile to help clients find you</li>
               <li>Add your skills and expertise</li>
               <li>Set your availability preferences</li>
               <li>Browse available jobs and start applying</li>
-            </ol>
-            <div style="margin: 25px 0;">
+                </ol>
+            <div style="margin: 25px 0;"></div>
               <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">Complete Your Profile</a>
-            </div>
+                </div>
             <p>If you have any questions, just reply to this email.</p>
             <p>The Zion AI Marketplace Team</p>
-          </div>
+                </div>
         `}
         `,
       }
@@ -166,23 +167,23 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       return {
         subject: `Welcome to Zion AI Marketplace, ${firstName}!`,
         html: `
-          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;"></div>
             <h2>Welcome to Zion AI Marketplace!</h2>
             <p>Hi ${firstName},</p>
             <p>We're excited to have you join our community of innovative businesses and entrepreneurs.</p>
             <p>Here's what to do next to get started:</p>
-            <ol>
+            <ol></ol>
               <li>Complete your company profile</li>
               <li>Post your first job or project</li>
               <li>Browse talent profiles in our directory</li>
               <li>Connect with AI professionals that match your needs</li>
-            </ol>
-            <div style="margin: 25px 0;">
+                </ol>
+            <div style="margin: 25px 0;"></div>
               <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">Post Your First Job</a>
-            </div>
+                </div>
             <p>If you have any questions, just reply to this email.</p>
             <p>The Zion AI Marketplace Team</p>
-          </div>
+                </div>
         `}
         `,
       }
@@ -221,19 +222,20 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
     return {
       subject: `${firstName}, one quick step to unlock more opportunities`,
       html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;"></div>
           <h2>One quick step to get more from Zion</h2>
           <p>Hi ${firstName},</p>
           <p>We noticed you haven't had a chance to ${nextAction || "complete your setup"} yet.</p>
           <p>This will help you ${user_type === "jobSeeker" || user_type === "creator" ? 
             "get discovered by clients looking for your skills" : 
             "find the perfect AI talent for your projects"}.</p>
-          <div style="margin: 25px 0;">
-            <a href="${supabaseUrl}${ctaLink}" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">${ctaText}</a>
-          </div>
+          <div style="margin: 25px 0;"></div>
+            <a href="${supabaseUrl}${ctaLink}" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">${ctaText}
+                </a>
+                </div>
           <p>Need help? Just reply to this email and we'll assist you.</p>
           <p>The Zion AI Marketplace Team</p>
-        </div>
+                </div>
       `}
       `,
     }
@@ -243,16 +245,16 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       return {
         subject: `New projects waiting for your expertise, ${firstName}`,
         html: `
-          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;"></div>
             <h2>New opportunities waiting for you!</h2>
             <p>Hi ${firstName},</p>
             <p>We've seen new AI projects posted in your area of expertise this week.</p>
             <p>Complete your profile this week and unlock premium visibility to stand out to clients looking for talent like you.</p>
-            <div style="margin: 25px 0;">
+            <div style="margin: 25px 0;"></div>
               <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">See New Projects</a>
-            </div>
+                </div>
             <p>The Zion AI Marketplace Team</p>
-          </div>
+                </div>
         `}
         `,
       }
@@ -261,16 +263,16 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       return {
         subject: `Zion's top AI talent this week — don't miss out, ${firstName}`,
         html: `
-          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;"></div>
             <h2>This week's top AI talent</h2>
             <p>Hi ${firstName},</p>
             <p>We've added new exceptional AI professionals to our talent pool this week who might be perfect for your projects.</p>
             <p>Post a job this week and get featured in our newsletter sent to all our talent.</p>
-            <div style="margin: 25px 0;">
+            <div style="margin: 25px 0;"></div>
               <a href="${supabaseUrl}/talent" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">Browse Top Talent</a>
-            </div>
+                </div>
             <p>The Zion AI Marketplace Team</p>
-          </div>
+                </div>
         `}
         `,
       }
@@ -281,16 +283,16 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       return {
         subject: `${firstName}, we miss you! Special offer inside`,
         html: `
-          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;"></div>
             <h2>We miss you! Special offer inside</h2>
             <p>Hi ${firstName},</p>
             <p>It's been a while since we've seen you on Zion AI Marketplace. We've noticed many new jobs that match your skills have been posted.</p>
             <p><strong>Special Offer:</strong> Return this week and complete your profile to unlock 2 weeks of premium visibility absolutely free.</p>
-            <div style="margin: 25px 0;">
+            <div style="margin: 25px 0;"></div>
               <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">Claim Your Offer</a>
-            </div>
+                </div>
             <p>The Zion AI Marketplace Team</p>
-          </div>
+                </div>
         `}
         `,
       }
@@ -299,16 +301,16 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       return {
         subject: `${firstName}, exclusive hiring discount inside`,
         html: `
-          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;"></div>
             <h2>Exclusive hiring discount inside</h2>
             <p>Hi ${firstName},</p>
             <p>We haven't seen you for a while on Zion AI Marketplace. Our talent pool has grown significantly since your last visit.</p>
             <p><strong>Special Offer:</strong> Post a job this week and receive 20% off our platform fees for your next hire.</p>
-            <div style="margin: 25px 0;">
+            <div style="margin: 25px 0;"></div>
               <a href="${supabaseUrl}/post-job" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">Post a Job</a>
-            </div>
+                </div>
             <p>The Zion AI Marketplace Team</p>
-          </div>
+                </div>
         `}
         `,
       }
@@ -318,21 +320,21 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
     return {
       subject: `Boost your profile visibility, ${firstName}`,
       html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;"></div>
           <h2>Boost your profile visibility</h2>
           <p>Hi ${firstName},</p>
           <p>We noticed you haven't received applications recently. Here are some tips to make your profile stand out:</p>
-          <ul>
+          <ul></ul>
             <li>Add more details to your skills and experience</li>
             <li>Upload samples of your work to your portfolio</li>
             <li>Make sure your availability is up to date</li>
             <li>Adjust your rate if needed to be more competitive</li>
-          </ul>
-          <div style="margin: 25px 0;">
+                </ul>
+          <div style="margin: 25px 0;"></div>
             <a href="${supabaseUrl}/profile" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">Update Your Profile</a>
-          </div>
+                </div>
           <p>The Zion AI Marketplace Team</p>
-        </div>
+                </div>
       `}
       `,
     }
@@ -341,21 +343,21 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
     return {
       subject: `Tips to find the perfect talent for "${emailData.job_title}"`,
       html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;"></div>
           <h2>Let's find talent for your job</h2>
           <p>Hi ${firstName},</p>
           <p>We noticed your job "${emailData.job_title}" has been open for a while. Here are some tips to attract more qualified candidates:</p>
-          <ul>
+          <ul></ul>
             <li>Review and update your job description with more details</li>
             <li>Consider adjusting your budget range if possible</li>
             <li>Proactively invite talent from our directory</li>
             <li>Add more specific skills requirements</li>
-          </ul>
-          <div style="margin: 25px 0;">
+                </ul>
+          <div style="margin: 25px 0;"></div>
             <a href="${supabaseUrl}/dashboard/jobs/${emailData.job_id}" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">Update Job Post</a>
-          </div>
+                </div>
           <p>The Zion AI Marketplace Team</p>
-        </div>
+                </div>
       `}
       `,
     }
@@ -364,7 +366,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
   return {
     subject: `${firstName}, we miss you at Zion AI Marketplace`,
     html: `
-      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;"></div>
         <h2>We've missed you!</h2>
         <p>Hi ${firstName},</p>
         <p>We noticed you haven't been active on Zion AI Marketplace recently.</p>
@@ -373,11 +375,11 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             ? "clients looking for your skills" 
             : "talented AI professionals"
         }.</p>
-        <div style="margin: 25px 0;">
+        <div style="margin: 25px 0;"></div>
           <a href="${supabaseUrl}/dashboard" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px;">Log In Now</a>
-        </div>
+                </div>
         <p>The Zion AI Marketplace Team</p>
-      </div>
+                </div>
     `}
     `,
   }

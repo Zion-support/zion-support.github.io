@@ -1,2 +1,2 @@
 import React from 'react'
-export default EnterpriseSolutionsShowcase2026
+export default EnterpriseSolutionsShowcase2026;

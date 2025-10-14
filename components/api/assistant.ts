@@ -24,7 +24,8 @@ Style: - Use bullets and short paragraphs
       messages?: Array<{
         role: 'user' | 'assistant' | 'system'
         content: string
-      }>
+      }></{
+>
     }
     const completion = await openai && openai.chat.completions && completions.create({
       model: 'gpt-4o',
@@ -42,11 +43,9 @@ Style: - Use bullets and short paragraphs
   }    return res && res.status(500).json({ error: 'Assistant request failed' })
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
 1) What is Zion?  → A marketplace to find and integrate AI models and services.
-2) How do I list my AI model or service?  → Create a vendor account, submit product details, pricing, and docs for review.
+2) How do I list my AI model or service?  → Create a vendor account, submit product details, pricing, and docs for review.;
 3) How does pricing work?  → Vendors set pricing; users may pay per-call, per-seat, or subscription. Zion may add marketplace fees.
 4) How do I integrate APIs?  → Each product page includes API docs and keys—follow Quickstart steps or SDKs when available.
 5) How do I get support?  → Use in-app support, contact the vendor, or reach Zion’s support channel.

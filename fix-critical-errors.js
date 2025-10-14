@@ -10,14 +10,13 @@ function fixCriticalErrors(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
     // Fix merge conflict markers
-    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`Fixing merge conflicts in: ${filePath}`)
 function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
   in: ${filePath}`)
       const lines = content.split('\n')
       const result = []
       let inConflict = false
-      let keepCurrent = true
+      let keepCurrent = true;
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i]
         if (line.startsWith('<<<<<<<')) {
@@ -27,7 +26,6 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
         } else if (line.startsWith('')) {
           keepCurrent = false
           continue
-        } else if (line.startsWith('>>>>>>>')) {
           inConflict = false
           keepCurrent = false
           continue
@@ -53,7 +51,7 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
         } else if (line.startsWith(']*>\s*$/gm, '<div>')
     content = content.replace(/<\/div>\s*$/gm, '</div>')
     // Fix function declarations
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*};/g, 'const $1 = () => {};')
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*};/g, 'const $1  = () => {};')
     // Fix missing semicolons
     content = content.replace(/(\w+)\s*$/gm, '$1;')
     // Fix specific patterns
@@ -108,4 +106,5 @@ for (const file of filesToFix) {/* TODO: Fix JSX expression */}
   }
 }
 `
-console.log(`Fixed ${fixedCount} files`);"`</div></div>
+console.log(`Fixed ${fixedCount} files`);"`</div>
+                </div>

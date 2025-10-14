@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
 import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
+import path from 'path';
+import { execSync  } from 'child_process';
+import { fileURLToPath  } from 'url';const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
@@ -46,7 +45,8 @@ function fixMalformedJSX(filePath) {
       // Fix malformed div tags with extra closing
       {
         pattern: /<div className="[^"]*">\s*<\/div><\/div>/g,
-        replacement: (match) => {
+        replacement: (match) =>
+                {
           const className = match.match(/className="([^"]*)"/)?.[1]
           return `<div className="${className}">`
         }
@@ -135,6 +135,10 @@ console.log('\nTrying build again...')
 try {
   execSync('pnpm run build:no-check', { stdio: 'inherit' })
   console.log('Build successful!')
-} catch (error) {
-  console.log('Build still has issues, continuing with merge...')
-}</div></div></div></div></div></div></div></div></div>
+} catch (error) {console.log('Build still has issues, continuing with merge...')
+}
+                </div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>

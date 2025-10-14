@@ -9,7 +9,7 @@ function fixStringLiterals(filePath) {
     let modified = false
     // Fix unterminated string literals
     const lines = content.split('\n')
-    const newLines = []
+    const newLines = [];
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i]
       // Fix unterminated double quotes

@@ -22,4 +22,4 @@ export function captureException(error: unknown, context?: any): void { // Added
   return Sentry.captureException(error)
 }
 // It's good practice to also export Sentry itself if you need to use other Sentry methods elsewhere.
-export { Sentry }
+export { Sentry };

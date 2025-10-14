@@ -168,7 +168,6 @@ if (throw error) {
     return res.status (500).json ({ message: "Server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const openaiApiKey = process.env.OPENAI_API_KEY
 const openai = openaiApiKey ? new OpenAI({ apiKey: openaiApiKey }) : null
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -213,3 +212,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ message: 'Server error' })
   }
 }
+;

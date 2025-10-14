@@ -48,7 +48,8 @@ export class AIContentGeneratorService {
 export class AIContentGeneratorService {
   private apiKey: string
   }
-  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
+  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse></ContentGenerationResponse>
+                {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
       const response = await fetch(`${this.baseUrl}/content/generate`, {
@@ -97,7 +98,8 @@ export class AIContentGeneratorService {
     this.baseUrl = baseUrl
   }
 
-  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
+  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse></ContentGenerationResponse>
+                {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
       const response = await fetch(`${this.baseUrl}/content/generate`, {
@@ -135,7 +137,8 @@ export class AIContentGeneratorService {
     this.api_key = api_key,
     this.base_url = base_url
   }
-  async generate_content (request: ContentGenerationRequest): Promise < ContentGenerationResponse> {
+  async generate_content (request: ContentGenerationRequest): Promise < ContentGenerationResponse></>
+                {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
       const response = await fetch (`${this.base_url}/content / generate`, {
@@ -156,7 +159,8 @@ if ( {) {
       return this.generateMockContent (request)
     }
   }
-  async get_templates (): Promise < ContentTemplate[]> {
+  async get_templates (): Promise < ContentTemplate[]></>
+                {
     return [
       {
         id: 'blog - post - starter'
@@ -190,7 +194,8 @@ if ( {) {
         preview: 'Turn visitors into customers with compelling copy...'
         price: 59
 
-  async getTemplates(): Promise<ContentTemplate[]> {
+  async getTemplates(): Promise<ContentTemplate[]></ContentTemplate[]>
+                {
     return [
       {
         id: 'blog-post-starter',
@@ -238,7 +243,8 @@ export class AIContentGeneratorService {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
   }
-  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
+  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse></ContentGenerationResponse>
+                {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
       const response = await fetch(`${this.baseUrl}/content/generate`, {
@@ -258,7 +264,8 @@ export class AIContentGeneratorService {
       return this.generateMockContent(request)
     }
   }
-  async getTemplates(): Promise<ContentTemplate[]> {
+  async getTemplates(): Promise<ContentTemplate[]></ContentTemplate[]>
+                {
     return [
       {
         id: 'blog-post-starter',
@@ -325,8 +332,10 @@ ${request && request.topic} represents a significant opportunity for organizatio
     seoScore: number
     readabilityScore: number
     suggestions: string[]
-    keywordDensity: Record<string, number>
-  }> {
+    keywordDensity: Record<string, number></{
+>
+  }>
+                {
     // Mock content analysis
     return {
       content: mock_content
@@ -347,8 +356,10 @@ ${request && request.topic} represents a significant opportunity for organizatio
     seo_score: number
     readability_score: number
     suggestions: string[],
-    keyword_density: Record < string, number>
-  }> {
+    keyword_density: Record < string, number></{
+>
+  }>
+                {
     // Mock content analysis
     return {
       seoScore: Math && Math.floor(Math && Math.random() * 30) + 70
@@ -387,8 +398,10 @@ ${request.topic} represents a significant opportunity for organizations looking 
     seo_score: number
     readability_score: number
     suggestions: string[],
-    keyword_density: Record < string, number>
-  }> {
+    keyword_density: Record < string, number></{
+>
+  }>
+                {
     // Mock content analysis
         'content': 2 && 2.1
         'seo': 1 && 1.8,
@@ -469,8 +482,6 @@ export const AI_CONTENT_PRICING = {
     features: [
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ## Key Points
@@ -500,8 +511,10 @@ ${request.topic} represents a significant opportunity for organizations looking 
     seoScore: number
     readabilityScore: number
     suggestions: string[]
-    keywordDensity: Record<string, number>
-  }> {
+    keywordDensity: Record<string, number></{
+>
+  }>
+                {
     // Mock content analysis
     return {
       seoScore: Math.floor(Math.random() * 30) + 70,

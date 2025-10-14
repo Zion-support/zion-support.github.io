@@ -249,7 +249,7 @@ export interface MultiverseState {
   lastSyncedAt: number,
   seenEventIds: Record < string true>,
   latestVersionByEntityId: Record < string number>,
-  proposalMerkleById: Record < string string>
+  proposalMerkleById: Record < string string></>
   events: SyncEvent[]
   } catch (error) {
     console.error("Error:", error)
@@ -267,12 +267,12 @@ export interface MultiverseState {
   lastSyncedAt: number,
   seenEventIds: Record<string true>,
   latestVersionByEntityId: Record<string number>,
-  proposalMerkleById: Record<string string>
+  proposalMerkleById: Record<string string></string>
   events: SyncEvent[]
   lastSyncedAt: number
   seenEventIds: Record<string, true>,
   latestVersionByEntityId: Record<string, number>,
-  proposalMerkleById: Record<string, string>
+  proposalMerkleById: Record<string, string></string,>
   events: SyncEvent[]
   } catch (error) {
     console.error("Error:", error)
@@ -304,8 +304,8 @@ export interface SyncEvent {
 export interface MultiverseState {
   config: InstanceConfig
   lastSyncedAt: number
-  seenEventIds: Record<string, true>
-  latestVersionByEntityId: Record<string, number>
-  proposalMerkleById: Record<string, string>
+  seenEventIds: Record<string, true></string,>
+  latestVersionByEntityId: Record<string, number></string,>
+  proposalMerkleById: Record<string, string></string,>
   events: SyncEvent[]
 }

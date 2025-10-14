@@ -12,7 +12,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       modified = true
     }
 
-    // Fix malformed closing tags with semicolons
+    // Fix malformed closing tags with semicolons;
     if (content.includes('</div>;')) {
       content = content.replace(/<\/div>;/g, ';')
       modified = true
@@ -73,14 +73,16 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 // Main execution
 async function main() {
   // Find all TypeScript/JavaScript files in app directory
-  files.forEach(file => {)
+  files.forEach(file =>
+                {)
     if (processFile(file)) {
       fixedCount++
     }
 async function main() {/* TODO: Fix JSX expression */}
 }
   // Find all TypeScript/JavaScript files in app directory
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
     })
   })
 }

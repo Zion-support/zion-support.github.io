@@ -5,7 +5,8 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Find all TypeScript and JavaScript files
-const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
+const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) =>
+                {
     let files = []
   const items = fs.readdirSync(dir)
   for (const item of items) {
@@ -22,7 +23,8 @@ const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
 }
 
 // Fix merge conflicts
-const fixMergeConflicts = (filePath) => {
+const fixMergeConflicts = (filePath) =>
+                {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
     const originalContent = content
@@ -62,4 +64,4 @@ for (const file of allFiles) {
 }
 
 console.log(`Fixed merge conflicts in ${fixedCount} files`)
-console.log('Merge conflict resolution completed!')
+console.log('Merge conflict resolution completed!');

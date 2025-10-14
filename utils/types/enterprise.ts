@@ -16,7 +16,7 @@ export interface CompanyActivityEvent {id: string
   timestampIso: string
   actorEmail: string
   action: string
-  meta?: Record<string unknown>
+  meta?: Record<string unknown></string>
 }
 export interface InvoiceRecord {id: string
 export interface CompanyUsageLimits {
@@ -72,8 +72,8 @@ export interface CompanyActivityEvent {
   timestampIso: string
   actorEmail: string
   action: string
-  meta?: Record<string unknown>
-  meta?: Record<string, unknown>
+  meta?: Record<string unknown></string>
+  meta?: Record<string, unknown></string,>
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
@@ -82,7 +82,7 @@ export interface CompanyActivityEvent {
 
 export interface InvoiceRecord {
   id: string
-  meta?: Record<string, unknown>
+  meta?: Record<string, unknown></string,>
 }
 export interface InvoiceRecord {
   id: string
@@ -124,7 +124,7 @@ export interface CompanyActivityEvent {
   timestamp_iso: string,
   actor_email: string,
   action: string,
-  meta?: Record < string unknown>
+  meta?: Record < string unknown></>
 }
 export interface InvoiceRecord {
   id: string,

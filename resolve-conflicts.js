@@ -7,7 +7,7 @@ try {
   // Split by conflict markers and keep our version (after )
   const lines = content.split('\n')
   const resolvedLines = []
-  let skipUntilNextMarker = false
+  let skipUntilNextMarker = false;
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i]
     if (line.includes('')) {

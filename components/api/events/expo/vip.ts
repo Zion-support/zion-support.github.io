@@ -44,3 +44,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!address) return res.status(400).json({ allowed: false })
   res.status(200).json({ allowed: allowlist.has(address) })
 }
+;

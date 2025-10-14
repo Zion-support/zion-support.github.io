@@ -9,7 +9,8 @@ export const support = {
   getArticles: () => [],
   getArticleById: (id: string) => null
 }
-export const logSupportEventToOperator = (event: any) => {
+export const logSupportEventToOperator = (event: any) =>
+                {
   // Add support event logging functionality here
   return null
 export interface IntentMatch {
@@ -38,7 +39,8 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   get_articles: () => [],
   getArticleById: (id: string) => null
 }
-export const logSupportEventToOperator = (event: any) => {
+export const logSupportEventToOperator = (event: any) =>
+                {
   // Add support event logging functionality here
   return null
 }

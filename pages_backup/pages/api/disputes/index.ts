@@ -1,9 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { createDispute, readAllDisputes } from "../../../utils/fsdb"
-import { parseUserFromRequest } from "../../../utils/auth"
-import { DisputeCase, DisputeReason } from "../../../types/disputes"
-import { generateCaseId } from "../../../utils/fsdb"
-export default async function handler(
+import type { NextApiRequest, NextApiResponse } from "next";
+import { createDispute, readAllDisputes  } from '../../../utils/fsdb';
+import { parseUserFromRequest  } from '../../../utils/auth';import { DisputeCase, DisputeReason  } from '../../../types/disputes';
+import { generateCaseId  } from '../../../utils/fsdb';export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
@@ -147,12 +145,10 @@ res.setHeader("Allow", "GET,POST")
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET', 'POST'])
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { createDispute, readAllDisputes } from '../../../utils/fsdb'
-import { parseUserFromRequest } from '../../../utils/auth'
-import { DisputeCase, DisputeReason } from '../../../types/disputes'
-import { generateCaseId } from '../../../utils/fsdb'
-export default async function handler(req, res) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { createDispute, readAllDisputes  } from '../../../utils/fsdb';
+import { parseUserFromRequest  } from '../../../utils/auth';import { DisputeCase, DisputeReason  } from '../../../types/disputes';
+import { generateCaseId  } from '../../../utils/fsdb';export default async function handler(req, res) {
   try {
   const user = parseUserFromRequest(req)
   if (req.method === 'GET') {
@@ -265,4 +261,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

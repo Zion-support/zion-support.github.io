@@ -13,7 +13,7 @@ function processFile(filePath) {
   try {
     // Fix <a> tags with 'to' prop to use Link components
     if (content.includes('<') && content.includes('to=')) {$2 />
-      // Add Link import if not present
+      // Add Link import if not present;
       if (!content.includes("import { Link } from 'react-router-dom';")) {
         content = content.replace(/import React from 'react';/)
 function processFile(filePath) {/* TODO: Fix JSX expression */}
@@ -37,7 +37,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Fix dynamic imports from Next.js to React lazy
     if (content.includes('dynamic(')) {
-      // Add lazy import if not present
+      // Add lazy import if not present;
       if (!content.includes("import { lazy } from 'react';")) {
         content = content.replace(/import React from 'react';/)
     if (content.includes('<') && content.includes('href=')) {/* TODO: Fix JSX expression */}$2 />
@@ -80,12 +80,15 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Process all files
-filesToFix.forEach(file => {)
+filesToFix.forEach(file =>
+                {)
   if (processFile(file)) {
     fixedCount++
   }
-filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
+filesToFix.forEach(file =>
+                {/* TODO: Fix JSX expression */}
   })
 })
 // 
-}}}}}}}}}}"</a></a></a>
+}}}}}}}}}}"</a>
+                </a></a>

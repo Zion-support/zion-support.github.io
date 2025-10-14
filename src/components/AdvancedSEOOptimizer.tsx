@@ -1,91 +1,3 @@
-<<<<<<< HEAD
-'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  noIndex?: boolean;
-  structuredData?: any;
-}
-
-interface AdvancedSEOOptimizerProps {
-  seoData: SEOData;
-  children?: React.ReactNode;
-}
-
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
-  seoData,
-  children
-}) => {
-  const {
-    title,
-    description,
-    keywords,
-    canonicalUrl,
-    ogImage,
-    noIndex = false,
-    structuredData
-  } = seoData;
-
-  const baseStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Leading AI and IT solutions provider",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service"
-    }
-  };
-
-  const finalStructuredData = structuredData || baseStructuredData;
-
-  return (
-    <>
-      <Helmet>
-        {/* Basic Meta Tags */}
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords.join(', ')} />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
-        
-        {/* Canonical URL */}
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        
-        {/* Open Graph Tags */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={canonicalUrl || "https://ziontechgroup.com"} />
-        {ogImage && <meta property="og:image" content={ogImage} />}
-        
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        {ogImage && <meta name="twitter:image" content={ogImage} />}
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(finalStructuredData)}
-        </script>
-      </Helmet>
-      {children}
-    </>
-  );
-};
-
-export default AdvancedSEOOptimizer;
-=======
 'use client'
 import React, { useEffect, useCallback, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -95,7 +7,8 @@ interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
 }
 const,
   AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+}) =>
+                {/* TODO: Fix JSX expression */}
     }
     const baseStructuredData = {/* TODO: Fix JSX expression */}
       },
@@ -116,13 +29,15 @@ const,
     }
     return baseStructuredData
   }, [seoData, enableStructuredData])
-  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+  const generateBreadcrumbStructuredData = useCallback(() =>
+                {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
       }))
     }
   }, [seoData, enableStructuredData])
-  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+  const generateFAQStructuredData = useCallback(() =>
+                {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
         }
@@ -130,19 +45,22 @@ const,
     }
   }, [seoData, enableStructuredData])
   // Generate Open Graph data
-  const generateOpenGraphData = useCallback(() => {/* TODO: Fix JSX expression */}
+  const generateOpenGraphData = useCallback(() =>
+                {/* TODO: Fix JSX expression */}
     if (!enableOpenGraph) return {}
     return {/* TODO: Fix JSX expression */}
     }
   }, [seoData, enableOpenGraph])
   // Generate Twitter Card data
-  const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
+  const generateTwitterCardData = useCallback(() =>
+                {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {}
     return {/* TODO: Fix JSX expression */}
     }
   }, [seoData, enableTwitterCards])
   // Generate meta tags
-  const generateMetaTags = useCallback(() => {/* TODO: Fix JSX expression */}
+  const generateMetaTags = useCallback(() =>
+                {/* TODO: Fix JSX expression */}
   t: seoData.description },
       {/* TODO: Fix JSX expression */}
   t: seoData.keywords.join(', ') },
@@ -160,13 +78,15 @@ const,
   t: '/browserconfig.xml' }]
     return metaTags
   }, [seoData])
-  const generateBreadcrumbStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+  const generateBreadcrumbStructuredData = useCallback(() =>
+                {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
       }))
     }
   }, [seoData.breadcrumbs])
-  const generateFAQStructuredData = useCallback(() => {/* TODO: Fix JSX expression */}
+  const generateFAQStructuredData = useCallback(() =>
+                {/* TODO: Fix JSX expression */}
     }
     return {/* TODO: Fix JSX expression */}
         }
@@ -177,7 +97,8 @@ const,
   const openGraphData = generateOpenGraphData()
   const twitterCardData = generateTwitterCardData()
   const metaTags = generateMetaTags()
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() =>
+                {/* TODO: Fix JSX expression */}
       }
       metaDescription.setAttribute('content', seoData.description)
       // Update canonical URL
@@ -188,7 +109,8 @@ const,
     }
   }, [seoData])
   const addStructuredData = (dat)
-  a: Record<string, unknown>) => {/* TODO: Fix JSX expression */}
+  a: Record<string, unknown>) =>
+                {/* TODO: Fix JSX expression */}
     }
     const script = document.createElement('script')
     script.type = 'application/ld+json'
@@ -196,20 +118,23 @@ const,
     document.head.appendChild(script)
     structuredDataRef.current = script
   }
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() =>
+                {/* TODO: Fix JSX expression */}
     }
   }, [structuredData])
-  useEffect(() => {/* TODO: Fix JSX expression */}
+  useEffect(() =>
+                {/* TODO: Fix JSX expression */}
           })
         }
       }
     }
   }, [])
-  return (<Helmet>
-      {/* Basic Meta Tags */}
-      <title>{seoData.title}
+  return (<Helmet></Helmet>
+                {/* Basic Meta Tags */}
+                <title></title>
+                {seoData.title}
       {/* TODO: Fix JSX expression */}
-        <meta key={index} name={tag.name} content={tag.content} /></meta>)
+                <meta key={index} name={tag.name} content={tag.content} /></meta>)
       ))}
       {/* Canonical URL */}
       {/* TODO: Fix JSX expression */}"
@@ -217,11 +142,11 @@ const,
       )}
       {/* Open Graph Tags */}
       {/* TODO: Fix JSX expression */}
-        <meta key={property} property={property} content={content} />
+                <meta key={property} property={property} content={content} />
       ))}
       {/* Twitter Card Tags */}
       {/* TODO: Fix JSX expression */}
-        <meta key={name} name={name} content={content} />
+                <meta key={name} name={name} content={content} />
       ))}
       {/* Additional SEO Tags */}"
       <meta name="format-detection" content="telephone=no" /></meta>"
@@ -229,13 +154,13 @@ const,
       <meta name="apple-mobile-web-app-capable" content="yes" /></meta>"
       <meta name="apple-mobile-web-app-status-bar-style" content="default" /></meta>"
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      {/* Favicon and Icons */}"
+                {/* Favicon and Icons */}"
       <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>"
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>"
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>"
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>"
       <link rel="manifest" href="/site.webmanifest" />
-      {/* Preconnect to external domains */}"
+                {/* Preconnect to external domains */}"
       <nk rel="preconnect" href="http,"$2 />
   s://fonts.googleapis.com" /></link>"
       <nk rel="preconnect" href="http,"$2 />
@@ -244,15 +169,19 @@ const,
   s://www.google-analytics.com" /></link>"
       <nk rel="preconnect" href="http,"$2 />
   s://www.googletagmanager.com" />
-      {/* DNS Prefetch */}"
+                {/* DNS Prefetch */}"
       <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>"
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>"
       <link rel="dns-prefetch" href="//www.googletagmanager.com" /></link>
-    </Helmet>
+                </Helmet>
   )
 }
 export default AdvancedSEOOptimizer
 }"
   </AdvancedSEOOptimizerProps>
-</li></li></li></li></li></li></li></li></li>
->>>>>>> origin/main
+                </li></li>
+                </li></li>
+                </li></li>
+                </li></li>
+                </li>
+;

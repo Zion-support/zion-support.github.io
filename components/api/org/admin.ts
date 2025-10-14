@@ -1,10 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next';
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
   | {
       type: 'promote'
       section: keyof OrgData
       id: string
-      updates: Partial < BasePerson>
+      updates: Partial < BasePerson></>
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
 type AdminAction =
@@ -58,7 +58,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import { readOrgData, writeOrgData } from '../../../utils/org-data'
 import type { OrgData, BasePerson } from '../../../types/org'
 const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key'
-type AdminAction =
+type AdminAction =;
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
   | { type: 'promote'; section: keyof OrgData; id: string; updates: Partial<BasePerson> }
   | { type: 'deactivate'; section: keyof OrgData; id: string }

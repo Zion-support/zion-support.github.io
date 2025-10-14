@@ -67,4 +67,4 @@ async function main() {
   console.log('\n🎉 Manual merge handling completed!')
 }
 
-main().catch(console.error)
+main().catch(console.error);

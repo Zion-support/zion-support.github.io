@@ -84,7 +84,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs'
 import path from 'path'
-async function fetchFromGitHub(): Promise<any | null> {
+async function fetchFromGitHub(): Promise<any | null></any>
+                {
   try {
     const pkg = require('../../../package.json')
     const repoUrl: string = pkg.repository?.url || ''
@@ -189,6 +190,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-</a>
+                </a>;

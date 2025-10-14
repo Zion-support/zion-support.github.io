@@ -1,10 +1,7 @@
-import { useState } from "react"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { z } from "zod"
-import { useHireRequest } from "@/hooks/useHireRequest"
-import { TalentProfile } from "@/types/talent"
-interface UseHireRequestFormProps {
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';import { useHireRequest  } from '@/hooks/useHireRequest';
+import { TalentProfile  } from '@/types/talent';interface UseHireRequestFormProps {
   talent: TalentProfile
   onClose: () => void
   initialJobTitle?: string
@@ -50,7 +47,8 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     }
   })
   // Handle form submission
-  const onSubmit = async (values: FormValues) => {
+  const onSubmit = async (values: FormValues) =>
+                {
     setIsSubmitting(true)
     try {
       const requestData = {

@@ -4,7 +4,8 @@ interface UseIntersectionObserverProps {
   rootMargin?: string
   }, [node, threshold, root, rootMargin, frozen])
   const prevNode = useRef<Element | null>(null)
-  useEffect(() => {
+  useEffect(() =>
+                {
     if (prevNode.current) {
   return [setNode, entry] as const
 }
@@ -25,22 +26,26 @@ export function useIntersectionObserver({
   const [node, setNode] = useState<Element | null>(null),
   const observer = useRef<IntersectionObserver | null>(null),
   const frozen = entry?.isIntersecting && freezeOnceVisible,
-  const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
+  const updateEntry = ([entry]: IntersectionObserverEntry[]): void =>
+                {
     setEntry(entry)
   },
-  useEffect(() => {
+  useEffect(() =>
+                {
     const hasIOSupport = !!window.IntersectionObserver,
     if (!hasIOSupport || frozen || !node) return,
     const observerParams = { threshold, root, rootMargin },
     const currentObserver = new IntersectionObserver(updateEntry, observerParams),
     observer.current = currentObserver,
     currentObserver.observe(node),
-    return () => {
+    return () =>
+                {
       currentObserver.disconnect()
     }
   }, [node, threshold, root, rootMargin, frozen]),
   const prevNode = useRef<Element | null>(null)
-  useEffect(() => {
+  useEffect(() =>
+                {
     if (prevNode.current) {
       observer.current?.unobserve(prevNode.current)
     }
@@ -60,3 +65,4 @@ export function useIntersectionObserver({
   }, [node])
   return [setNode, entry] as const
 }
+;

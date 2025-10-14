@@ -7,7 +7,7 @@ export default async function handler(
 ) {  if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
-  const { talentSlug, requesterName, requesterEmail, projectInfo } =
+  const { talentSlug, requesterName, requesterEmail, projectInfo } =;
     req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
@@ -83,7 +83,6 @@ if ( {) {
   } catch (err) {
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     console.error('Request-to-hire failed', err)
     return res.status(500).json({ error: 'Internal error' })
   }

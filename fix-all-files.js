@@ -13,13 +13,12 @@ function createProperComponent(filePath) {
   let content = ''
   if (isPage) {
     content = `import React from 'react'
-export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}() {
-  return(<div className="min-h-screen bg-gray-50">)
+export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}() {return(<div className="min-h-screen bg-gray-50">)
       <div className="container mx-auto px-4 py-8">)
         <h1 className="text-3xl font-bold text-gray-900 mb-6">)
           ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, ' ')}
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <p className="text-gray-600">
+                <div className="bg-white rounded-lg shadow-md p-6"></div>
+          <p className="text-gray-600"></p>
             This page is under development. Content will be added soon.
   )
 }`
@@ -35,12 +34,12 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
   children
 }: ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}Props) {
   return (
-    <div className={\`${fileName.toLowerCase()} \${className}\`}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold mb-2">
+    <div className={\`${fileName.toLowerCase()} \${className}\`}></div>
+                {children || (
+        <div className="p-4"></div>
+          <h3 className="text-lg font-semibold mb-2"></h3>
             ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/([A-Z])/g, ' $1').trim()}
-          <p className="text-gray-600">
+                <p className="text-gray-600"></p>
             Component content will be added here.
       )}
   )
@@ -50,10 +49,11 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
 // This file contains utility functions and configurations
 export const ${fileName} = {
   // Add utility functions here
-  init: () => {,
+  init: () =>
+                {,
     console.log('${fileName} initialized')
   }
-}
+};
 export default ${fileName};`
   } else if (isType) {
     content = `// Type definitions for ${fileName}
@@ -140,6 +140,10 @@ console.log(`❌ Errors: ${errorCount}`)
 console.log(`📁 Total files processed: ${files.length}`)
 if (fixedCount > 0) {
   console.log('\n🎉 All files fixed successfully!')
-} else {
-  console.log('\n✨ No files needed fixing.')
-}</div></div></div></div></div></p></p></h1></h3>
+} else {console.log('\n✨ No files needed fixing.')
+}
+                </div>
+                </div></div>
+                </div></div>
+                </p></p>
+                </h1></h3>

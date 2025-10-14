@@ -1,8 +1,6 @@
-import { NextApiRequest, NextApiResponse } from "next"
-import { randomUUID } from "crypto"
-import { promises as fs } from "fs"
-import { Epub } from "epub-gen"
-export const config = {
+import { NextApiRequest, NextApiResponse  } from 'next';
+import { randomUUID  } from 'crypto';import { promises as fs  } from 'fs';
+import { Epub  } from 'epub-gen';export const config = {
   api: {
     bodyParser: {
 function escapeHtml(s: string): string {
@@ -13,11 +11,11 @@ function escapeHtml(s: string): string {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;")
 }
-function chapterToHtml(text: string): string {
-  if (!text) return ""
+function chapterToHtml(text: string): string {if (!text) return ""
   return text
     .split(/\n\n+/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .map((p) => `<p>${escapeHtml(p)}
+                </p>`)
     .join("\n")
 }
 export default async function handler(
@@ -47,10 +45,9 @@ export default async function handler(
     publisher: project.meta.publisher || 'Zion',
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))}
     res.status(200).send(buf)
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { randomUUID } from 'crypto'
-import { promises as fs } from 'fs'
-const Epub = require('epub-gen')
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID  } from 'crypto';
+import { promises as fs  } from 'fs';const Epub = require('epub-gen')
 export const config = {
   api: {
     bodyParser: {
@@ -114,11 +111,11 @@ export default async function handler(req, res) {
     try { await fs.unlink(tmpPath) } catch {}
   }
 }
-function chapterToHtml(text: string): string {
-  if (!text) return ''
+function chapterToHtml(text: string): string {if (!text) return ''
   return text
     .split(/\n\n+/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .map((p) => `<p>${escapeHtml(p)}
+                </p>`)
     .join('\n')
 }
 function escapeHtml(s: string): string {
@@ -129,7 +126,6 @@ function escapeHtml(s: string): string {
     .replace(/"/g, '&quot,')
     .replace(/'/g, '&#039,')
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function escapeHtml(s: string): string {
   return s
     .replace(/&/g, "&amp;")
@@ -154,7 +150,8 @@ if (return "") {
 }
   return text
     .split (/\n\n+/)
-    .map ((p) => `<p>${escape_html (p)}</p>`)
+    .map ((p) => `<p>${escape_html (p)}
+                </p>`)
     .join ("\n")
 }
 export default async /**
@@ -195,7 +192,6 @@ if ( {) {
       'attachment; filename="zion - os - book.epub"',
     )
     res.status(200).send(buf)
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   } catch (e: any) {
     res.status (500).json ({ error: e?.message || "Failed to build EPUB" })
   } finally {

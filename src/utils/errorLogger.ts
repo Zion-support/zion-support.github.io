@@ -29,7 +29,7 @@ export interface ErrorLogEntry {
   e: string
   error?: Error
   context?: Record
-          <string>
+          <string></string>
   userAgent?: string
   url?: string
   stackTrace?: string,
@@ -50,7 +50,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
   y: ErrorSeverity = ErrorSeverity.MEDIUM,
     error?: Error,
     context?: Record
-          <string, unknown>
+          <string, unknown></string,>
   ): void {
     // TODO: Add content
   }
@@ -133,7 +133,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    */
 
   private async sendToExternalService(entry: ErrorLogEntry): Promise,
-          <void> {
+          <void></void>
+                {
     // TODO: Add content
   }
 

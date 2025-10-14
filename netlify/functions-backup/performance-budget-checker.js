@@ -295,4 +295,5 @@ exports.handler = async function(event, context) {/* TODO: Fix JSX expression */
   g: totalImg / KB <= budgets.imgTotalKb }, largestAssets } ' const commit = await commitJson('data/reports/performance-budget.json') report); return {/* TODO: Fix JSX expression */}
       }) } } catch (err) {/* TODO: Fix JSX expression */}
       }) } } }'"`
-</li></li>
+</li>
+                </li>

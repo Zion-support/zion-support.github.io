@@ -1,7 +1,7 @@
 // const completion = await client.chat.completions.create({/* TODO: Fix JSX expression */}
   e: ch.title} conten)
   t: text }) } res.status(200).json({/* TODO: Fix JSX expression */})
-  s: drafted }) } ' import type {NextApiRequest} NextApiResponse } from 'next',' import OpenAI from 'openai', export default async /** * handler - Function description */ function handler() { // Check condition if ( {) { $2 }' res.status (405).json ({/* TODO: Fix JSX expression */})
+  s: drafted }) } ' import type {NextApiRequest} NextApiResponse } from 'next',' import OpenAI from 'openai', export default async /** * handler - Function description */ function handler() { // Check condition if ( {) { $2 }' res.status (405).json ({/* TODO: Fix JSX expression */});
   r: 'Method not allowed' }); return; } const {meta} chapters } = req.body as {/* TODO: Fix JSX expression */}
   e: string} content?: string }[] }, const api_key = process.env.OPENAI_API_KEY, // Check condition if ( {) { $2 } } // Fallbac,
   k: return structured placeholders, const drafted = chapters.map ((c) => ({/* TODO: Fix JSX expression */}

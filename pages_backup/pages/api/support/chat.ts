@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import OpenAI from "openai"
-import { readJson } from "../../../utils/fsDb"
-import { HelpArticle, matchIntent } from "../../../utils/support"
-import { logSupportEventToOperator } from "../../../utils/operator"
+import OpenAI from "openai";
+import { readJson  } from '../../../utils/fsDb';
+import { HelpArticle, matchIntent  } from '../../../utils/support';import { logSupportEventToOperator } from "../../../utils/operator"
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`
 export default async function handler(
   req: NextApiRequest
@@ -11,8 +10,8 @@ export default async function handler(
   if (req.method !== "POST")
     return res.status(405).json({ error: "Method not allowed" })
   const { sessionId, messages } = req.body as {
-    sessionId?: string
-    messages: Array<{ role: "user" | "assistant" | "system"; content: string }>
+    sessionId?: string;
+    messages: Array<{ role: "user" | "assistant" | "system"; content: string }></{>
   }
   if (!messages |!Array.isArray(messages))
     return res.status(400).json({ error: "messages required" })
@@ -23,10 +22,9 @@ export default async function handler(
     : { intentMatched: false, matchedArticleIds: [] }
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 import type { NextApiRequest, NextApiResponse } from 'next'
-import OpenAI from 'openai'
-import { readJson } from '../../../utils/fsDb'
-import { HelpArticle, matchIntent } from '../../../utils/support'
-import { logSupportEventToOperator } from '../../../utils/operator'
+import OpenAI from 'openai';
+import { readJson  } from '../../../utils/fsDb';
+import { HelpArticle, matchIntent  } from '../../../utils/support';import { logSupportEventToOperator } from '../../../utils/operator'
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
   const { sessionId, messages } = req.body as { sessionId?: string, messages: Array<{ role: 'user' | 'assistant' | 'system', content: string }> }
@@ -37,7 +35,7 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
   // Build context with top matched articles as brief references
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' })
+  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { sessionId, messages } = req && req.body as { sessionId?: string; messages: Array<{ role: 'user' | 'assistant' | 'system'; content: string }> }
   if (!messages || !Array && Array.isArray(messages)) return res && res.status(400).json({ error: 'Missing messages' })
   const articles = readJson<HelpArticle[]>('help/articles && articles.json', [])
@@ -134,3 +132,4 @@ import type { NextApiRequest, NextApiResponse } from 'next'
       },
     })
   } catch (e: any) {
+;

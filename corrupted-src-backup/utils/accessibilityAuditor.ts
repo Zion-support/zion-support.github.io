@@ -32,7 +32,8 @@ export class AccessibilityAuditor {
 
   private checkImages(): void {
     const _images = document.querySelectorAll('img')
-    images.forEach((img, index) => {
+    images.forEach((img, index) =>
+                {
       if (!img.getAttribute('alt')) {
         this.addIssue('critical')
           `img[${index}]`)
@@ -52,7 +53,8 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   private checkHeadings(): void {
     const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
     let _previousLevel = 0
-    headings.forEach((heading, index) => {
+    headings.forEach((heading, index) =>
+                {
       //       const level = parseInt(heading.tagName.charAt(1))
       if (level > previousLevel + 1) {
         this.addIssue('serious')
@@ -71,7 +73,8 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
 
   private checkLinks(): void {
     const _links = document.querySelectorAll('a')
-    links.forEach((link, index) => {
+    links.forEach((link, index) =>
+                {
       if (!link.getAttribute('href') && !link.getAttribute('role')) {
         this.addIssue('serious')
           `a[${index}]`)
@@ -87,7 +90,8 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
 
   private checkForms(): void {
     const _inputs = document.querySelectorAll('input, textarea, select')
-    inputs.forEach((input, index) => {
+    inputs.forEach((input, index) =>
+                {
       if (!input.getAttribute('id') && !input.getAttribute('aria-label')) {
         this.addIssue('serious')
           `input[${index}]`)
@@ -103,7 +107,8 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
 
   private checkButtons(): void {
     const _buttons = document.querySelectorAll('button')
-    buttons.forEach((button, index) => {
+    buttons.forEach((button, index) =>
+                {
       if (!button.textContent?.trim() && !button.getAttribute('aria-label')) {
         this.addIssue('serious')
           `button[${index}]`)
@@ -129,7 +134,8 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
   private checkKeyboardNavigation(): void {
     const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
     )
-    focusableElements.forEach((element, index) => {
+    focusableElements.forEach((element, index) =>
+                {
       if (element.getAttribute('tabindex') === '-1' && !element.getAttribute('aria-hidden')) {
         this.addIssue('moderate')
           `element[${index}]`)
@@ -148,7 +154,8 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
 
   private checkARIALabels(): void {
     const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelledby]')
-    elementsWithAria.forEach((element, index) => {
+    elementsWithAria.forEach((element, index) =>
+                {
       //       const ariaLabel = element.getAttribute('aria-label')
       //       const ariaLabelledBy = element.getAttribute('aria-labelledby')
       if (ariaLabel && ariaLabelledBy) {
@@ -220,6 +227,7 @@ export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
 /**
  * Utility function to run accessibility audit
  */
-export const runAccessibilityAudit = (): AccessibilityIssue[] => {/* TODO: Fix JSX expression */}
+export const runAccessibilityAudit = (): AccessibilityIssue[] =>
+                {/* TODO: Fix JSX expression */}
 }
 "`

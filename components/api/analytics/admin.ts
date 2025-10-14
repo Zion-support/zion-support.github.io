@@ -69,7 +69,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const referralsData = mockIfEmpty(referrals, [
       { id: 41, converted: true, source: 'linkedin' },
       { id: 42, converted: false, source: 'twitter' },
-      { id: 43, converted: true, source: 'partner' },
+      { id: 43, converted: true, source: 'partner' },;
     ]);      { id: 41, converted: true, source: 'linkedin' }
       { id: 42, converted: false, source: 'twitter' }
     const mockIfEmpty = (arr: any[], mock: any[]) => (arr.length ? arr : mock)
@@ -112,12 +112,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length
     const activeProjects = projectsData.filter(p => p.status === 'active').length
     const categoryCounts: Record<string, number> = {}
-    jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 })
+    jobsData.forEach(j =>
+                { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 })
     const referralConversions = referralsData.filter(r => r.converted).length
-    jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 })
+    jobsData.forEach(j =>
+                { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 })
     const referralConversions = referralsData.filter(r => r.converted).length
     const geoCounts: Record<string, number> = {}
-    usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 })
+    usersData.forEach(u =>
+                { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 })
     res.status(200).json({
       totals: {
        totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects 
@@ -162,10 +165,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length
     const activeProjects = projectsData.filter(p => p.status === 'active').length
     const categoryCounts: Record<string, number> = {}
-    jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1; })
+    jobsData.forEach(j =>
+                { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1; })
     const referralConversions = referralsData.filter(r => r.converted).length
     const geoCounts: Record<string, number> = {}
-    usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1; })
+    usersData.forEach(u =>
+                { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1; })
     res.status(200).json({
       totals: { totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects },
       topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value })),

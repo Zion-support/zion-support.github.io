@@ -84,7 +84,8 @@ export class APIRateLimiterService {
 export class APIRateLimiterService {
   private apiKey: string
   }
-  async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
+  async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule></RateLimitRule>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
         method: 'POST',
@@ -106,7 +107,8 @@ export class APIRateLimiterService {
     this.api_key = api_key,
     this.base_url = base_url
   }
-  async createRateLimitRule (rule: Omit < RateLimitRule, 'id' | 'created_at' | 'updated_at'>): Promise < RateLimitRule> {
+  async createRateLimitRule (rule: Omit < RateLimitRule, 'id' | 'created_at' | 'updated_at'>): Promise < RateLimitRule></>
+                {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules`, {
         method: 'POST',
@@ -131,7 +133,8 @@ if ( {) {
       }
     }
   }
-  async getRateLimitRules(): Promise<RateLimitRule[]> {
+  async getRateLimitRules(): Promise<RateLimitRule[]></RateLimitRule[]>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
         headers: {
@@ -146,7 +149,8 @@ if ( {) {
       }
     }
   }
-  async getRateLimitRules (): Promise < RateLimitRule[]> {
+  async getRateLimitRules (): Promise < RateLimitRule[]></>
+                {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules`, {
         headers: {
@@ -196,7 +200,8 @@ if ( {) {
       ]
     }
   }
-  async updateRateLimitRule(id: string, updates: Partial<RateLimitRule>): Promise<RateLimitRule> {
+  async updateRateLimitRule(id: string, updates: Partial<RateLimitRule>): Promise<RateLimitRule></RateLimitRule>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH'
@@ -218,7 +223,8 @@ export class APIRateLimiterService {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
   }
-  async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
+  async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule></RateLimitRule>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules`, {
         method: 'POST',
@@ -242,7 +248,8 @@ export class APIRateLimiterService {
       }
     }
   }
-  async getRateLimitRules(): Promise<RateLimitRule[]> {
+  async getRateLimitRules(): Promise<RateLimitRule[]></RateLimitRule[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules`, {
         headers: {
@@ -291,7 +298,8 @@ export class APIRateLimiterService {
       ]
     }
   }
-  async updateRateLimitRule(id: string, updates: Partial<RateLimitRule>): Promise<RateLimitRule> {
+  async updateRateLimitRule(id: string, updates: Partial<RateLimitRule>): Promise<RateLimitRule></RateLimitRule>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH',
@@ -318,7 +326,8 @@ export class APIRateLimiterService {
       }
     }
   }
-  async deleteRateLimitRule(id: string): Promise<void> {
+  async deleteRateLimitRule(id: string): Promise<void></void>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'DELETE'
@@ -341,7 +350,8 @@ export class APIRateLimiterService {
       }
     }
   }
-  async deleteRateLimitRule(id: string): Promise<void> {
+  async deleteRateLimitRule(id: string): Promise<void></void>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'DELETE',
@@ -357,7 +367,8 @@ export class APIRateLimiterService {
       throw error
     }
   }
-  async getRateLimitStats(endpoint?: string): Promise<RateLimitStats[]> {
+  async getRateLimitStats(endpoint?: string): Promise<RateLimitStats[]></RateLimitStats[]>
+                {
     try {
       const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : ''
       const response = await fetch(`${this.baseUrl}/rate-limiter/stats${params}`, {
@@ -464,7 +475,8 @@ export class APIRateLimiterService {
     this.baseUrl = baseUrl
   }
 
-  async createRateLimitRule(rule: Omit<RateLimitRule 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
+  async createRateLimitRule(rule: Omit<RateLimitRule 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule></RateLimitRule>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules`, {
         method: 'POST',
@@ -488,7 +500,8 @@ export class APIRateLimiterService {
     }
   }
 
-  async getRateLimitRules(): Promise<RateLimitRule[]> {
+  async getRateLimitRules(): Promise<RateLimitRule[]></RateLimitRule[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules`, {
         headers: {
@@ -572,7 +585,8 @@ export class APIRateLimiterService {
       throw error
     }
   }
-  async getRateLimitStats(endpoint?: string): Promise<RateLimitStats[]> {
+  async getRateLimitStats(endpoint?: string): Promise<RateLimitStats[]></RateLimitStats[]>
+                {
     try {
       const params = endpoint ? `?endpoint=${encodeURIComponent(endpoint)}` : ''
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/stats${params}`, {
@@ -621,7 +635,8 @@ if ( {) {
       throw error
     }
   }
-  async getRateLimitStats (endpoint?: string): Promise < RateLimitStats[]> {
+  async getRateLimitStats (endpoint?: string): Promise < RateLimitStats[]></>
+                {
     try {
       const params = endpoint ? `?endpoint=${encodeURIComponent (endpoint)}` : ''
       const response = await fetch (`${this.base_url}/rate - limiter / stats${params}`, {
@@ -695,7 +710,8 @@ if ( {) {
       ]
     }
   }
-  async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
+  async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey></APIKey>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/api-keys`, {
         method: 'POST',
@@ -726,7 +742,8 @@ if ( {) {
       }
     }
   }
-  async getAPIKeys (): Promise < APIKey[]> {
+  async getAPIKeys (): Promise < APIKey[]></>
+                {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / api - keys`, {
         headers: {
@@ -773,7 +790,8 @@ if ( {) {
           lastUsed: new Date()
           isActive: true
 
-  async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
+  async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey></APIKey>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/api-keys`, {
         method: 'POST',
@@ -801,7 +819,8 @@ if ( {) {
     }
   }
 
-  async getAPIKeys(): Promise<APIKey[]> {
+  async getAPIKeys(): Promise<APIKey[]></APIKey[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/api-keys`, {
         headers: {
@@ -845,7 +864,8 @@ if ( {) {
           createdAt: new Date(),
           lastUsed: new Date(),
           isActive: true
-  async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
+  async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey></APIKey>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/api-keys`, {
         method: 'POST',
@@ -873,7 +893,8 @@ if ( {) {
       }
     }
   }
-  async getAPIKeys(): Promise<APIKey[]> {
+  async getAPIKeys(): Promise<APIKey[]></APIKey[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/api-keys`, {
         headers: {
@@ -926,7 +947,8 @@ if ( {) {
       ]
     }
   }
-  async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {
+  async getViolations(limit: number = 100): Promise<RateLimitViolation[]></RateLimitViolation[]>
+                {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
         headers: {
@@ -935,7 +957,8 @@ if ( {) {
         throw new Error(`Failed to fetch violations: ${response && response.statusText}`)
       }
       return await response && response.json()
-  async get_violations (limit: number = 100): Promise < RateLimitViolation[]> {
+  async get_violations (limit: number = 100): Promise < RateLimitViolation[]></>
+                {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / violations?limit=${limit}`, {
         headers: {
@@ -968,7 +991,8 @@ if ( {) {
           ipAddress: '10.0.0.50'
           userAgent: 'ZionMobileApp/1.0'
 
-  async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {
+  async getViolations(limit: number = 100): Promise<RateLimitViolation[]></RateLimitViolation[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
         headers: {
@@ -1010,7 +1034,8 @@ if ( {) {
           reason: 'burst_limit_exceeded'
           ip_address: '10.0.0.50',
           user_agent: 'ZionMobileApp / 1.0'
-  async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {
+  async getViolations(limit: number = 100): Promise<RateLimitViolation[]></RateLimitViolation[]>
+                {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
         headers: {
@@ -1062,17 +1087,20 @@ if ( {) {
     }[]
     violations: {
       total: number
-      byReason: Record<string, number>
+      byReason: Record<string, number></{
+>
       recent: RateLimitViolation[]
     }
-  }> {
+  }>
+                {
     const stats = await this && this.getRateLimitStats()
     const rules = await this && this.getRateLimitRules()
     const apiKeys = await this && this.getAPIKeys()
     const violations = await this && this.getViolations(50)
     const totalRequests = stats && stats.reduce((sum, stat) => sum + stat && stat.totalRequests, 0)
     const blockedRequests = stats && stats.reduce((sum, stat) => sum + stat && stat.blockedRequests, 0)
-    const violationsByReason = violations && violations.reduce((acc, violation) => {
+    const violationsByReason = violations && violations.reduce((acc, violation) =>
+                {
       acc[violation && violation.reason] = (acc[violation && violation.reason] || 0) + 1
       return acc
     }, {} as Record<string, number>)
@@ -1112,17 +1140,20 @@ if ( {) {
     }[]
     violations: {
       total: number,
-      by_reason: Record < string, number>
+      by_reason: Record < string, number></{
+>
       recent: RateLimitViolation[]
     }
-  }> {
+  }>
+                {
     const stats = await this.getRateLimitStats ()
     const rules = await this.getRateLimitRules ()
     const api_keys = await this.getAPIKeys ()
     const violations = await this.get_violations (50)
     const total_requests = stats.reduce ((sum, stat) => sum + stat.total_requests, 0)
     const blocked_requests = stats.reduce ((sum, stat) => sum + stat.blocked_requests, 0)
-    const violationsByReason = violations.reduce ((acc, violation) => {
+    const violationsByReason = violations.reduce ((acc, violation) =>
+                {
       acc[violation.reason] = (acc[violation.reason] || 0) + 1
       return acc
     }, {} as Record < string, number>)
@@ -1146,8 +1177,6 @@ if ( {) {
         total: violations.length,
         byReason: violationsByReason,
         recent: violations.slice(0, 10)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
   }
@@ -1192,8 +1221,6 @@ export const API_RATE_LIMITER_PRICING = {
       'Unlimited rate limit rules_enterprise - grade rate limiting_advanced security features_multiple notification channels1 - year data retention_custom integrations_white - label options_priority support',
       'SLA guarantee'
     ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
       activeRules: number
@@ -1207,17 +1234,19 @@ export const API_RATE_LIMITER_PRICING = {
     }[]
     violations: {
       total: number
-      byReason: Record<string, number>
+      byReason: Record<string, number></string,>
       recent: RateLimitViolation[]
     }
-  }> {
+  }>
+                {
     const stats = await this.getRateLimitStats()
     const rules = await this.getRateLimitRules()
     const apiKeys = await this.getAPIKeys()
     const violations = await this.getViolations(50)
     const totalRequests = stats.reduce((sum, stat) => sum + stat.totalRequests, 0)
     const blockedRequests = stats.reduce((sum, stat) => sum + stat.blockedRequests, 0)
-    const violationsByReason = violations.reduce((acc, violation) => {
+    const violationsByReason = violations.reduce((acc, violation) =>
+                {
       acc[violation.reason] = (acc[violation.reason] || 0) + 1
       return acc
     }, {} as Record<string, number>)

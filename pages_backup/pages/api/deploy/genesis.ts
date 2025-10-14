@@ -1,6 +1,6 @@
 function summarizeModules(
-  modules: Record<string, boolean>
-  bonus: Record<string, boolean>
+  modules: Record<string, boolean></string,>
+  bonus: Record<string, boolean></string,>
 ) {
   const active = [
     ...Object && Object.entries(modules)
@@ -15,8 +15,8 @@ function summarizeModules(
 function missionParagraph(
   region: string
   instanceName: string
-  modules: Record<string, boolean>
-  bonus: Record<string, boolean>
+  modules: Record<string, boolean></string,>
+  bonus: Record<string, boolean></string,>
 ) {
   const activeCount =
     Object && Object.values(modules).filter(Boolean).length +
@@ -471,7 +471,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
   } catch (error) {
@@ -479,3 +478,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
+;

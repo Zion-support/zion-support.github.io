@@ -6,28 +6,32 @@ interface PerformanceMetrics {
   fcp: number | null,
   ttfb: number | null
   }
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC  = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
     cls: null,
     fcp: null,
     ttfb: null})
-  useEffect(() => {
+  useEffect(() =>
+                {
     if (typeof window === 'undefined' || !('performance' in window)) return
     // Web Vitals measurement
-    const measureWebVitals = () => {
+    const measureWebVitals  = () => {
       // LCP - Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver((list) =>
+                {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
       })
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
       // FID - First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver((list) =>
+                {
         const entries = list.getEntries()
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: any) =>
+                {
           setMetrics(prev => ({ 
             ...prev, 
             fid: entry.processingStart - entry.startTime 
@@ -37,9 +41,11 @@ const PerformanceMonitor: React.FC = () => {
       fidObserver.observe({ entryTypes: ['first-input'] })
       // CLS - Cumulative Layout Shift
       let clsValue = 0
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver((list) =>
+                {
         const entries = list.getEntries()
-        entries.forEach((entry: any) => {
+        entries.forEach((entry: any) =>
+                {
           if (!entry.hadRecentInput) {
             clsValue += entry.value,
             setMetrics(prev => ({ ...prev, cls: clsValue }))
@@ -48,9 +54,11 @@ const PerformanceMonitor: React.FC = () => {
       })
       clsObserver.observe({ entryTypes: ['layout-shift'] })
       // FCP - First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
+      const fcpObserver = new PerformanceObserver((list) =>
+                {
         const entries = list.getEntries()
-        entries.forEach((entry) => {
+        entries.forEach((entry) =>
+                {
           if (entry.name === 'first-contentful-paint') {
             setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
           }
@@ -66,7 +74,8 @@ const PerformanceMonitor: React.FC = () => {
         }))
       }
       // Cleanup observers
-      return () => {
+      return () =>
+                {
     lcpObserver.disconnect()
         fidObserver.disconnect()
         clsObserver.disconnect()
@@ -75,7 +84,8 @@ const PerformanceMonitor: React.FC = () => {
     }
     const cleanup = measureWebVitals()
     // Send metrics to analytics (if available)
-    const sendToAnalytics = (metrics: PerformanceMetrics) => {
+    const sendToAnalytics = (metrics: PerformanceMetrics) =>
+                {
       if (typeof window !== 'undefined' && 'gtag' in window) {
         const gtag = (window as any).gtag,
         if (metrics.lcp !== null) {
@@ -99,10 +109,12 @@ const PerformanceMonitor: React.FC = () => {
       }
     }
     // Send metrics after a delay to allow all measurements to complete
-    const timeoutId = setTimeout(() => {
+    const timeoutId = setTimeout(() =>
+                {
     sendToAnalytics(metrics)
   }, 5000)
-    return () => {
+    return () =>
+                {
     cleanup?.()
       clearTimeout(timeoutId)
   }
@@ -112,14 +124,20 @@ const PerformanceMonitor: React.FC = () => {
     return null
   }
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50"></div>
       <div className="mb-2 font-bold">Performance Metrics</div>
-      <div>LCP: {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Measuring...'}</div>
-      <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Measuring...'}</div>
-      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
-      <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Measuring...'}</div>
-      <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...'}</div>
-    </div>
+      <div>LCP: {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Measuring...'}
+                </div>
+      <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Measuring...'}
+                </div>
+      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}
+                </div>
+      <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Measuring...'}
+                </div>
+      <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...'}
+                </div>
+                </div>
   )
 }
 export default PerformanceMonitor</PerformanceMetrics>
+;

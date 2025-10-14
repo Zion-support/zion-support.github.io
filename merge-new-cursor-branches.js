@@ -78,7 +78,7 @@ for (const branch of newCursorBranches) {/* TODO: Fix JSX expression */}
     results.push({)
       branch)
       status: 'conflict'),
-      error: mergeResult.error),
+      error: mergeResult.error),;
 //   //Try to merge the branch;`
   const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,`
     `Merge ${branch}`)

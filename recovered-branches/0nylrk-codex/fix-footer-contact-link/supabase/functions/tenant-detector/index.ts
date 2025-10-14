@@ -1,6 +1,5 @@
-import { serve } from 'https://deno.land/std@0.208.0/http/server.ts'
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7'
-interface TenantInfo {
+import { serve  } from 'https://deno.land/std@0.208.0/http/server.ts';
+import { createClient  } from 'https://esm.sh/@supabase/supabase-js@2.39.7';interface TenantInfo {
   id: string
   brand_name: string
   subdomain: string
@@ -23,7 +22,8 @@ if (!supabaseUrl || !supabaseServiceKey) {
   throw new Error('Required environment variables are not set')
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey)
-serve(async (req) => {
+serve(async (req) =>
+                {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, {

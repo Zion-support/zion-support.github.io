@@ -6,7 +6,7 @@ function fixBlogFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8')
     let modified = false
-    // Fix missing closing parenthesis and return statement
+    // Fix missing closing parenthesis and return statement;
     if (content.includes('};') && !content.includes('  );')) {
 function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('};') && !content.includes('  );')) {/* TODO: Fix JSX expression */}

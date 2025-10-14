@@ -16,7 +16,7 @@ export interface AdminAction {
   type: AdminActionType
   admin_id: string
   reason: string,
-  details: Record < string, any>
+  details: Record < string, any></>
   created_at: string
   executed_at?: string
   status: 'pending' | 'executed' | 'failed',
@@ -24,7 +24,6 @@ export interface AdminAction {
 export interface FraudDetectionResult {
   is_fraud: boolean
   isFraud: boolean
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   confidence: number
   reasons: string[]
 export interface FraudDetectionConfig {
@@ -52,11 +51,7 @@ export interface FraudDetectionConfig {
     actions: AdminActionType[]
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review'
 export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS'
 export interface FraudEvent {
@@ -113,7 +108,7 @@ export interface MonthlyReport {
     suspicious: number
     dangerous: number
   }
-  bySource: Record<MonitoredSource, number>
+  bySource: Record<MonitoredSource, number></MonitoredSource,>
   falsePositives: number; // count of IGNORED actions
-  topReasons: Array<{ reason: string; count: number }>
+  topReasons: Array<{ reason: string; count: number }></{>
 }

@@ -1,11 +1,12 @@
-import { useState, useCallback } from 'react'
-import { supabase } from '@/integrations/supabase/client'
-import { Notification, FilterType, NotificationContextType } from './types'
-export const useNotificationOperations = (userId?: string): NotificationContextType => {
+import { useState, useCallback  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';import { Notification, FilterType, NotificationContextType } from './types'
+export const useNotificationOperations = (userId?: string): NotificationContextType =>
+                {
   const [notifications, setNotifications] = useState<Notification[]>([])
   const [loading, setLoading] = useState(false)
   const [filter, setFilter] = useState<FilterType>('all')
-  const fetchNotifications = useCallback(async () => {
+  const fetchNotifications = useCallback(async () =>
+                {
     if (!userId) return
     setLoading(true)
     try {
@@ -22,7 +23,8 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       setLoading(false)
     }
   }, [userId])
-  const markAsRead = useCallback(async (id: string) => {
+  const markAsRead = useCallback(async (id: string) =>
+                {
     if (!userId) return
     try {
       const { error } = await supabase
@@ -36,7 +38,8 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       console.error('Error marking notification as read:', err)
     }
   }, [userId, fetchNotifications])
-  const markAllAsRead = useCallback(async () => {
+  const markAllAsRead = useCallback(async () =>
+                {
     if (!userId) return
     try {
       const { error } = await supabase
@@ -50,7 +53,8 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       console.error('Error marking all notifications as read:', err)
     }
   }, [userId, fetchNotifications])
-  const dismissNotification = useCallback(async (id: string) => {
+  const dismissNotification = useCallback(async (id: string) =>
+                {
     if (!userId) return
     try {
       const { error } = await supabase
@@ -64,7 +68,8 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
       console.error('Error dismissing notification:', err)
     }
   }, [userId, fetchNotifications])
-  const filteredNotifications = notifications.filter(notification => {
+  const filteredNotifications = notifications.filter(notification =>
+                {
     switch (filter) {
       case 'unread':
         return !notification.read
@@ -92,4 +97,4 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     fetchNotifications}
     fetchNotifications,
   }
-}
+};

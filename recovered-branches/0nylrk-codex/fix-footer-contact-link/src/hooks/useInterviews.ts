@@ -1,15 +1,14 @@
-import { useState } from 'react'
-import { useAuth } from "@/hooks/useAuth"
-import { supabase } from '@/integrations/supabase/client'
-import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview'
-import { toast } from '@/components/ui/use-toast'
+import { useState  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';import { supabase  } from '@/integrations/supabase/client';
+import { Interview, InterviewRequest, InterviewResponse  } from '@/types/interview';import { toast } from '@/components/ui/use-toast'
 export function useInterviews() {
   const [interviews, setInterviews] = useState<Interview[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const { user } = useAuth()
   // Request an interview as a client
-  const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
+  const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> =>
+                {
     if (!user) {
       toast({
         title: "Authentication required",
@@ -62,7 +61,8 @@ export function useInterviews() {
     }
   }
   // Fetch interviews for the current user (as client or talent)
-  const fetchInterviews = async (): Promise<Interview[]> => {
+  const fetchInterviews = async (): Promise<Interview[]> =>
+                {
     if (!user?.id) {
       setInterviews([])
       return []
@@ -121,7 +121,8 @@ export function useInterviews() {
   const respondToInterview = async (
     interviewId: string,
     response: InterviewResponse
-  ): Promise<boolean> => {
+  ): Promise<boolean> =>
+                {
     if (!user?.id) {
       toast({
         title: "Authentication required",
@@ -195,7 +196,8 @@ export function useInterviews() {
     title: string,
     message: string,
     relatedId: string
-  ) => {
+  ) =>
+                {
     try {
       await supabase.from('notifications').insert({
         user_id: userId,
@@ -210,7 +212,8 @@ export function useInterviews() {
     }
   }
   // Cancel an interview (either client or talent can cancel)
-  const cancelInterview = async (interviewId: string): Promise<boolean> => {
+  const cancelInterview = async (interviewId: string): Promise<boolean> =>
+                {
     if (!user?.id) return false
     setIsLoading(true)
     setError(null)
@@ -276,3 +279,4 @@ export function useInterviews() {
     cancelInterview,
   }
 }
+;

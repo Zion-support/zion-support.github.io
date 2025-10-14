@@ -34,11 +34,12 @@ function fixConsoleWarnings(filePath) {
 
 // Process all files
 console.log('🔧 Fixing console warnings...\n')
-filesToFix.forEach(filePath => {
+filesToFix.forEach(filePath =>
+                {
   if (fs.existsSync(filePath)) {
     fixConsoleWarnings(filePath)
   } else {
     console.log(`⚠️  File not found: ${filePath}`)
   }
 })
-console.log('\n✨ Console warning fixes complete!')
+console.log('\n✨ Console warning fixes complete!');

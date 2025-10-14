@@ -9,7 +9,7 @@ let inCategoriesArray = false
 let realEstateStartLine = -1
 let realEstateEndLine = -1
 let categoriesStartLine = -1
-let categoriesEndLine = -1
+let categoriesEndLine = -1;
 for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
   } else if (inRealEstateArray && line.includes('// ];')) {/* TODO: Fix JSX expression */}
   } else if (line.includes('// const _categories = [')) {/* TODO: Fix JSX expression */}

@@ -38,13 +38,15 @@ export function announceToScreenReader()
   announcement.style.overflow = 'hidden'
   document.body.appendChild(announcement)
   // Set message after a slight delay to ensure screen readers pick it up
-  setTimeout(() => {/* TODO: Fix JSX expression */}
+  setTimeout(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     announcement.textContent = message
   }, 100)
   // Remove announcement after it's been read
-  setTimeout(() => {/* TODO: Fix JSX expression */}
+  setTimeout(() =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     document.body.removeChild(announcement)
@@ -69,7 +71,8 @@ export function trapFocus(element: HTMLElement): () => void {
   )
   const firstFocusable = focusableElements[0]
   const lastFocusable = focusableElements[focusableElements.length - 1]
-  const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
+  const handleKeyDown = (e: KeyboardEvent) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     if (e.key !== 'Tab') return
@@ -99,7 +102,8 @@ export function trapFocus(element: HTMLElement): () => void {
   // Focus first element
   firstFocusable?.focus()
   // Return cleanup function
-  return () => {/* TODO: Fix JSX expression */}
+  return () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     element.removeEventListener('keydown', handleKeyDown)
@@ -147,7 +151,8 @@ export function makeKeyboardAccessible()
   const { role = 'button', tabindex = 0 } = options
   element.setAttribute('role', role)
   element.setAttribute('tabindex', tabindex.toString())
-  const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
+  const handleKeyDown = (e: KeyboardEvent) =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     if (e.key === 'Enter' || e.key === ' ') {/* TODO: Fix JSX expression */}
@@ -159,7 +164,8 @@ export function makeKeyboardAccessible()
   }
   element.addEventListener('click', onClick)
   element.addEventListener('keydown', handleKeyDown)
-  return () => {/* TODO: Fix JSX expression */}
+  return () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     element.removeEventListener('click', onClick)
@@ -176,12 +182,14 @@ export function getContrastRatio(color1: string, color2: string): number {
 
 }
   const getLuminance = (colo)
-  r: string): number => {/* TODO: Fix JSX expression */}
+  r: string): number =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     // Simple RGB to luminance conversion
 const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0]
-    const [r, g, b] = rgb.map(val => {/* TODO: Fix JSX expression */}
+    const [r, g, b] = rgb.map(val =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
       const normalized = val / 255
@@ -246,12 +254,14 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
   skipLink.style.padding = '8px'
   skipLink.style.textDecoration = 'none'
   skipLink.style.zIndex = '100'
-  skipLink.addEventListener('focus', () => {/* TODO: Fix JSX expression */}
+  skipLink.addEventListener('focus', () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     skipLink.style.top = '0'
   })
-  skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
+  skipLink.addEventListener('blur', () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     skipLink.style.top = '-40px'
@@ -332,7 +342,7 @@ export function createAccessibleTooltip()
   tooltip.style.display = 'none'
   document.body.appendChild(tooltip)
   trigger.setAttribute('aria-describedby', tooltipId)
-  const showTooltip = () => {/* TODO: Fix JSX expression */}
+  const showTooltip  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     tooltip.style.display = 'block'
@@ -360,7 +370,7 @@ export function createAccessibleTooltip()
         break
     }
   }
-  const hideTooltip = () => {/* TODO: Fix JSX expression */}
+  const hideTooltip  = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     tooltip.style.display = 'none'
@@ -369,7 +379,8 @@ export function createAccessibleTooltip()
   trigger.addEventListener('mouseleave', hideTooltip)
   trigger.addEventListener('focus', showTooltip)
   trigger.addEventListener('blur', hideTooltip)
-  return () => {/* TODO: Fix JSX expression */}
+  return () =>
+                {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     trigger.removeEventListener('mouseenter', showTooltip)

@@ -111,7 +111,7 @@ function fixCorruptedText(text) {/* TODO: Fix JSX expression */}
   fixed = fixed.replace(/testBanner,\s*s/g, 'testBanners')
   fixed = fixed.replace(/BannerConf,\s*i,\s*g/g, 'BannerConfig')
   //Remove duplicate content (looks like there might be merge conflict markers)
-  //Clean up extra semicolons and commas
+  //Clean up extra semicolons and commas;
   fixed = fixed.replace(/;+/g, ';')
   fixed = fixed.replace(/,\s*,/g, ',')
   fixed = fixed.replace(/;\s*;/g, ';')

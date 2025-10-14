@@ -1,13 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 import { PDFDocument, StandardFonts } from "pdf-lib"
 import crypto from "crypto"
-import {
-  updateArtifacts,
+import { updateArtifacts,
   getProposal,
-  savePdf,
-} from "../../../utils/data/proposals"
-import { create as createIpfsClient } from "ipfs-http-client"
-import { ethers } from "ethers"
+  savePdf,;
+ } from '../../../utils/data/proposals';
+import { create as createIpfsClient  } from 'ipfs-http-client';import { ethers } from "ethers"
 import fs from "fs"
 import path from "path"
 function buildIpfsClient() {
@@ -29,10 +27,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ export: 'PDF export' })
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { PDFDocument, StandardFonts } from 'pdf-lib'
-import crypto from 'crypto'
-import { updateArtifacts, getProposal, savePdf } from '../../../utils/data/proposals'
-import { create as createIpfsClient } from 'ipfs-http-client'
-import { ethers } from 'ethers'
+import crypto from 'crypto';
+import { updateArtifacts, getProposal, savePdf  } from '../../../utils/data/proposals';
+import { create as createIpfsClient  } from 'ipfs-http-client';import { ethers } from 'ethers'
 import fs from 'fs'
 import path from 'path'
 function buildIpfsClient() {
@@ -51,7 +48,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
 }
 
 async function generatePdfFromMarkdown(markdown: string, title: string) {
-  const pdfDoc = await PDFDocument.create()
+  const pdfDoc = await PDFDocument.create();
   const page = pdfDoc.addPage([595.28, 841.89]); // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica)
   const fontSize = 11
@@ -65,7 +62,8 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
       }
     .replace(/\r\n/g, '\n')
     .split('\n')
-    .flatMap((line) => {
+    .flatMap((line) =>
+                {
       const words = line.split(' ')
       const wrapped: string[] = []
       let current = ''

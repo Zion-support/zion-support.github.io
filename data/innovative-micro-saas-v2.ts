@@ -316,4 +316,4 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     rating: 4.8,
     reviews: 912
   }
-]
+];

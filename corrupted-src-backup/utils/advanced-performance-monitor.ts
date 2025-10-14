@@ -103,9 +103,11 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
    */
   private setupPerformanceObserver(): void {
     if (!('PerformanceObserver' in window)) return
-    this.observer = new PerformanceObserver(list => {)
+    this.observer = new PerformanceObserver(list =>
+                {)
       const _entries = list.getEntries()
-      entries.forEach(entry => {)
+      entries.forEach(entry =>
+                {)
         this.handlePerformanceEntry(entry)
   })
     })
@@ -128,41 +130,54 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
     if (typeof window === 'undefined') return
     // Dynamic import to avoid bundle size impact
     import('web-vitals')
-      .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-    getCLS(metric => {)
+      .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) =>
+                {
+    getCLS(metric =>
+                {)
           this.updateMetric('cumulativeLayoutShift', metric.value)
   })
-        getFID(metric => {
+        getFID(metric =>
+                {
     )
           this.updateMetric('firstInputDelay', metric.value)
   })
-        getFCP(metric => {
+        getFCP(metric =>
+                {
     )
           this.updateMetric('firstContentfulPaint', metric.value)
   })
-        getLCP(metric => {
+        getLCP(metric =>
+                {
     )
           this.updateMetric('largestContentfulPaint', metric.value)
   })
-        getTTFB(metric => {
+        getTTFB(metric =>
+                {
     )
           this.updateMetric('loadTime', metric.value)
   })
       })
-      .catch(error => {)
+      .catch(error =>
+                {)
   private setupWebVitals(): void {/* TODO: Fix JSX expression */}
-      .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
+      .then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) =>
+                {/* TODO: Fix JSX expression */}
         })
-        getFID(metric => {/* TODO: Fix JSX expression */})
+        getFID(metric =>
+                {/* TODO: Fix JSX expression */})
         })
-        getFCP(metric => {/* TODO: Fix JSX expression */})
+        getFCP(metric =>
+                {/* TODO: Fix JSX expression */})
         })
-        getLCP(metric => {/* TODO: Fix JSX expression */})
+        getLCP(metric =>
+                {/* TODO: Fix JSX expression */})
         })
-        getTTFB(metric => {/* TODO: Fix JSX expression */})
+        getTTFB(metric =>
+                {/* TODO: Fix JSX expression */})
         })
       })
-      .catch(error => {/* TODO: Fix JSX expression */})
+      .catch(error =>
+                {/* TODO: Fix JSX expression */})
         //         })
   }
 
@@ -174,7 +189,7 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
     }
 
     // Check memory every 30 seconds
-    setInterval(checkMemory, 30000)
+    setInterval(checkMemory, 30000);
     checkMemory(); // Initial check
   }
 

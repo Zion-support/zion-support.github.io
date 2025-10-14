@@ -24,13 +24,12 @@ function resolveMergeConflicts(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8')
     // Check if file has merge conflicts
-    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Resolving merge conflicts in ${filePath}...`)
       // Simple conflict resolution strategy
       let resolvedContent = content
         .replace(/[\s\S]*?[\s\S]*?          // Extract the content after  (usually the incoming changes)
           const parts = match.split('')
-          if (parts.length > 1) {
+          if (parts.length > 1) {;
             const incoming = parts[1].replace(/            return incoming;)
           })
           return match;)

@@ -1,7 +1,8 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m"
 impo, r, t {/* TODO: Fix JSX expression */}"
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
-const, October2025NewContentBanner, 2 = () => {
+const, October2025NewContentBanner, 2 = () =>
+                {
   const, newArticle, s = [
     {
       tit, l, e: "AI-Powered, Sustainable, Data Cente, r, s","
@@ -67,9 +68,10 @@ const, October2025NewContentBanner, 2 = () => {
   ]
   return(<section, className="py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
       {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, opacit, y-10">"
+                <div, className="absolute, inse, t-0, opacit, y-10">"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>"
-const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
+const, October2025NewContentBanner, 2 = () =>
+                {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
@@ -92,8 +94,8 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"</$1>"
       <div, className="m, a, x-w-7xl, m, x-auto, relative, z-10">"
         {/* Head, e, r */}
-        <div, className="text-center mb-12">
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">
+                <div, className="text-center mb-12"></div,>
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6"></div,>
             <Brain, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e  />
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
@@ -118,13 +120,15 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         {/* Articles, Gri, d */})
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">")
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";)
-          {newArticl, e, s.m, a, p((artic, l, e) => {
+          {newArticl, e, s.m, a, p((artic, l, e) =>
+                {
             const, Ico, n = artic, l, e.ic, o, n
             return(<Li, n, k
         {/* Articles, Gri, d */}
+                <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"
-        <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"
-          {newArticl, e, s.m, a, p((artic, l, e) => {
+          {newArticl, e, s.m, a, p((artic, l, e) =>
+                {
             const, Ico, n = artic, l, e.ic, o, n
             return (
               <Li, n, k
@@ -132,7 +136,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                 to={`/bl, o, g/${artic, l, e.sl, u, g}`}`;`
                 classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hov, e
   r:-transla, t, e-y-1"
-              >
+              ></Li,>
                 {/* Bad, g, e */}
                 <div, className="absolute, to, p-4, righ, t-4">"
         {/* Articles, Gri, d */}"
@@ -189,7 +193,7 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
             )
           })}
         {/* CTA, Sectio, n */}
-        <div, className="te, x, t-cent, e, r">"
+                <div, className="te, x, t-cent, e, r">"
           <Li, n, k
         <div, className="te, x, t-cent, e, r">"
           <Li, n, k
@@ -201,15 +205,38 @@ const, October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
   to="/bl, o, g""
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-semibold, transitio, n-all, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hov, e,"
   r:sca, l, e-1, 0, 5"
-          >
+          ></Li,>
             <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>"
             <Link, className="w-5 h-5  /></Link>"
             <Link, className="w-5 h-5" />"</Li, n, k>
-        </d, i, v>
+                </d, i, v>
       </d, i, v>
-    </secti, o, n>
+                </secti, o, n>
   )
 }
 export default October2025NewContentBanner2
 "`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></Link></Link></Link></p></p></h2></h2></h2></h3></h3></section></section>
+</div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </span></span>
+                </span></span>
+                </Link></Link>
+                </Link></p>
+                </p></h2>
+                </h2></h2>
+                </h3></h3>
+                </section></section>

@@ -4,5 +4,5 @@ const { id } = req.query, if (typeof id !== 'string') return res.status(400).jso
   q: NextApiRequest) re,
   s: NextApiResponse) { const user = parseUserFromRequest(req)' try { ensureAdmin(user) } catch (e: unknown) {/* TODO: Fix JSX expression */}
   r: 'Forbidden' }) } const { id } = req.query' if (typeof id !== 'string') return res.status(400).json({/* TODO: Fix JSX expression */})
-  r: 'Invalid id' })' if (req.method === 'GET') {const flag = await getFlagById(id)}' if (!flag) return res.status(404).json({/* TODO: Fix JSX expression */})
+  r: 'Invalid id' })' if (req.method === 'GET') {const flag = await getFlagById(id)}' if (!flag) return res.status(404).json({/* TODO: Fix JSX expression */});
   r: 'Not found' }); return res.status(200).json({ flag }); }' res.setHeader('Allow') 'GET');' return res.status(405).end('Method Not Allowed'); } '

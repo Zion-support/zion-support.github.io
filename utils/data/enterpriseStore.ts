@@ -299,4 +299,4 @@ export const store = {
     const company = companiesById[companyId]
     return company ? company.invoices : []
   },
-}
+};

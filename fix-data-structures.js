@@ -26,7 +26,8 @@ function fixDataStructures(filePath) {
 
   // Fix missing closing braces in object literals
   const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm
-  content = content.replace(missingClosePattern, (match, key, value) => {
+  content = content.replace(missingClosePattern, (match, key, value) =>
+                {
     if (!match.includes('}') && !match.includes(',')) {
       return `${key}: ${value},`
     }
@@ -49,7 +50,7 @@ function fixDataStructures(filePath) {
   // Fix function declarations missing opening brace
   const funcPattern = /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\}/g
   if (funcPattern.test(content)) {
-    content = content.replace(funcPattern, 'const $1: React.FC = () => {')
+    content = content.replace(funcPattern, 'const $1: React.FC  = () => {')
     modified = true
   }
 
@@ -67,7 +68,8 @@ function getFilesWithErrors() {
   try {
     const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' })
     const files = new Set()
-    output.split('\n').forEach(line => {
+    output.split('\n').forEach(line =>
+                {
       const match = line.match(/^([^(]+)\((\d+),(\d+)\):/)
       if (match) {
         files.add(match[1])
@@ -85,7 +87,8 @@ function main() {
   const files = getFilesWithErrors()
   console.log(`Found ${files.length} files with errors`)
   let fixedCount = 0
-  files.forEach(file => {
+  files.forEach(file =>
+                {
     if (fixDataStructures(file)) {
       fixedCount++
     }
@@ -101,4 +104,4 @@ function main() {
   }
 }
 
-main()
+main();

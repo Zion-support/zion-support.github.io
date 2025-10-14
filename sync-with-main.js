@@ -49,3 +49,4 @@ try {
     console.error('❌ Error syncing with main:', error.message)
   process.exit(1)
   }
+;

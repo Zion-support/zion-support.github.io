@@ -8,14 +8,16 @@ function fixDuplicateImports(filePath) {
     // Fix duplicate imports in lucide-react imports
     content = content.replace(
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
-      (match, imports) => {
+      (match, imports) =>
+                {
         // Split by comma and clean up
         const importList = imports.split(',').map(imp => imp.trim())
         // Remove duplicates while preserving order
         const uniqueImports = [...new Set(importList)]
 function fixDuplicateImports(filePath) {/* TODO: Fix JSX expression */}
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/g,
-      (match, imports) => {/* TODO: Fix JSX expression */}
+      (match, imports) =>
+                {/* TODO: Fix JSX expression */}
         return `import { ${uniqueImports.join(', ')} } from 'lucide-react'`
       }
     )
@@ -54,16 +56,18 @@ function main() {/* TODO: Fix JSX expression */}
   ]
   console.log('Fixing duplicate imports...')
   let fixedCount = 0
-  files.forEach(file => {)
+  files.forEach(file =>
+                {)
     if (fs.existsSync(file)) {
       if (fixDuplicateImports(file)) {
         fixedCount++
-  files.forEach(file => {/* TODO: Fix JSX expression */}
+  files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
       }
     })
   })
   `
   console.log(`Fixed ${fixedCount} files`)
 }
-
+;
 main();"`

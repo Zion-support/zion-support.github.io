@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-<<<<<<< HEAD
+import { Helmet  } from 'react-helmet-async';
+import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info  } from 'lucide-react';
 
-const CookiesPage: React.FC = () => {
-=======
-import { Helmet } from 'react-helmet-async';
-import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react';
-
-const CookiesPage: React.FC = () => {
+const CookiesPage: React.FC  = () => {
   const lastUpdated = 'January 1, 2024';
   
   const cookieTypes = [
@@ -84,135 +77,80 @@ const CookiesPage: React.FC = () => {
     }
   ]
 
->>>>>>> main
   return (
-    <div className="min-h-screen pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+    <div className="min-h-screen pt-20"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16"></div>
+        <div className="text-center"></div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             <span className="text-cyan-400">Cookie Policy</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
             Information about how we use cookies on our website.
           </p>
-        </div>
+                </div>
       </div>
-    </div>
+                </div>
   );
 };
-=======
 'use client'
 import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
-const CookiesPage: React.FC = () => {
-  return (
-<<<<<<< HEAD
-    <>
-  </>
-      <Helmet>
-        <title>Cookie Policy - Zion Tech Group</title>
-        <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about how we use cookies on our website." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation />
-        
-        <main className="pt-20">
-          <div className="container mx-auto px-4 py-16"></div>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Cookie Policy</h1>
-              </h1>
-              
-              <div className="prose prose-lg max-w-none"></div>
-                <p className="text-xl text-gray-600 mb-8">
-                  Last updated: {new Date().toLocaleDateString(</div>
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">What Are Cookies</h2>
-                <p className="text-gray-700 mb-6">
-                  Cookies are small text files that are placed on your computer or mobile device when you visit our website.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">How We Use Cookies</h2>
-                <p className="text-gray-700 mb-6">
-                  We use cookies to improve your experience on our website, analyze site traffic, and personalize content.
-                </p>
-                
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Managing Cookies</h2>
-                <p className="text-gray-700 mb-6">
-                  You can control and/or delete cookies as you wish through your browser settings.
-                </p>
-              </div>
-            </div>
-          </div>
-        </main>
-        
-        <Footer />
-      </div>
-
-  );
-};
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+const CookiesPage: React.FC  = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                {/* Hero Section */}
+                <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               Cookie <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Policy</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               Learn about how we use cookies to improve your experience on our website.
             </p>
-          </div>
+                </div>
         </div>
-      </section>
-
-      {/* Content Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-8">
-            <div>
+                </section>
+                {/* Content Section */}
+                <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto"></div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 space-y-8"></div>
+            <div></div>
               <h2 className="text-2xl font-bold text-white mb-4">What Are Cookies?</h2>
-              <p className="text-gray-300">
+              <p className="text-gray-300"></p>
                 Cookies are small text files that are placed on your computer or mobile device when you visit our website.
               </p>
-            </div>
+                </div>
 
-            <div>
+            <div></div>
               <h2 className="text-2xl font-bold text-white mb-4">How We Use Cookies</h2>
-              <p className="text-gray-300">
+              <p className="text-gray-300"></p>
                 We use cookies to enhance your browsing experience, analyze site traffic, and personalize content and advertisements.
               </p>
-            </div>
+                </div>
 
-            <div>
+            <div></div>
               <h2 className="text-2xl font-bold text-white mb-4">Managing Cookies</h2>
-              <p className="text-gray-300">
+              <p className="text-gray-300"></p>
                 You can control and manage cookies through your browser settings. However, disabling cookies may affect the functionality of our website.
               </p>
-            </div>
+                </div>
 
-            <div>
+            <div></div>
               <h2 className="text-2xl font-bold text-white mb-4">Contact Us</h2>
-              <p className="text-gray-300">
+              <p className="text-gray-300"></p>
                 If you have any questions about our use of cookies, please contact us at privacy@ziontechgroup.com
               </p>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </section>
->>>>>>> origin/main
->>>>>>> origin/main
 
       <Footer />
     </div>
   )
 }
 
-export default CookiesPage
+export default CookiesPage;

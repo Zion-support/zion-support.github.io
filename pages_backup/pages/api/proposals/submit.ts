@@ -38,7 +38,6 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
   const transporter = nodemailer.createTransport({ host, port, secure: port === 465, auth: { user, pass } })
   await transporter.sendMail({ from, to, subject, text, attachments })
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   await transporter.sendMail({ from, to, subject, text, attachments })
 }
 export default async function handler(
@@ -155,7 +154,6 @@ export default async function handler(req, res) {
     return res
       .status (500)
       .json ({ error: error?.message || "Submission failed" })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
   } catch (error) {
@@ -185,4 +183,4 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

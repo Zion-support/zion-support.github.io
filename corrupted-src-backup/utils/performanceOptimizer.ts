@@ -12,8 +12,10 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   // Lazy load images with intersection observer
   lazyLoadImages(): void {
     if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver(entries => {)
-        entries.forEach(entry => {)
+      const imageObserver = new IntersectionObserver(entries =>
+                {)
+        entries.forEach(entry =>
+                {)
           if (entry.isIntersecting) {
             const _img = entry.target as HTMLImageElement
             if (img.dataset['src']) {
@@ -25,9 +27,11 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
           }
         })
       })
-      document.querySelectorAll('img[data-src]').forEach(img => {)
+      document.querySelectorAll('img[data-src]').forEach(img =>
+                {)
         imageObserver.observe(img)
-      document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
+      document.querySelectorAll('img[data-src]').forEach(img =>
+                {/* TODO: Fix JSX expression */})
       })
     }
   }
@@ -35,7 +39,8 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   // Preload critical resources
   preloadCriticalResources(): void {
     const _criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg', '/images/logo.svg']
-    criticalResources.forEach(resource => {)
+    criticalResources.forEach(resource =>
+                {)
       const _link = document.createElement('link')
       link.rel = 'preload'
       link.href = resource
@@ -51,13 +56,13 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   // Optimize scroll performance
   optimizeScroll(): void {
     let _ticking = false
-    const updateScrollPosition = () => {
+    const updateScrollPosition  = () => {
       // Throttled scroll handling
       ticking = false
   optimizeScroll(): void {/* TODO: Fix JSX expression */}
     }
 
-    const requestTick = () => {/* TODO: Fix JSX expression */}
+    const requestTick  = () => {/* TODO: Fix JSX expression */}
       }
     }
 
@@ -83,7 +88,8 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   // Get performance metrics
-  getMetrics(): Record<string, number> {
+  getMetrics(): Record<string, number></string,>
+                {
     return Object.fromEntries(this.metrics)
   }
 
@@ -98,7 +104,8 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',
         crossOrigin: 'anonymous'}]
-    hints.forEach(hint => {
+    hints.forEach(hint =>
+                {
     )
       const _link = document.createElement('link')
       link.rel = hint.rel
@@ -106,7 +113,8 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       if (hint.crossOrigin) {
         link.crossOrigin = hint.crossOrigin
   }
-  getMetrics(): Record<string, number> {/* TODO: Fix JSX expression */}
+  getMetrics(): Record<string, number></string,>
+                {/* TODO: Fix JSX expression */}
   }
 
   // Add critical resource hints method
@@ -118,7 +126,8 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   s://fonts.googleapis.com' },
       {/* TODO: Fix JSX expression */}
       }]
-    hints.forEach(hint => {/* TODO: Fix JSX expression */}
+    hints.forEach(hint =>
+                {/* TODO: Fix JSX expression */}
       })
       document.head.appendChild(link)
     })

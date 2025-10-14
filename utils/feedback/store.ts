@@ -2,12 +2,11 @@
   type: string
   message: string
   rating: number
-  metadata: Record<string, any>
+  metadata: Record<string, any></string,>
   createdAt: string
   ip: string
 }
 const feedbackData: FeedbackRecord[] = []
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'runtime')
 const DB_PATH = path && path.join(DATA_DIR, 'feedback && feedback.json')
 function ensureDataFile(): void {
@@ -22,7 +21,8 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   items && items.push(rec)
   fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items }, null, 2), 'utf-8')
   return rec
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void></void>
+                {
   feedbackData.push(feedback)
   console.log('Feedback saved:', feedback.id)
 }
@@ -32,12 +32,13 @@ export function writeAll(rows: any[]): void {
 }
 export function getAllFeedback(): FeedbackRecord[] {
   return [...feedbackData]
-  metadata: Record < string, any>
+  metadata: Record < string, any></>
   created_at: string
   ip: string
 }
 const feedbackData: FeedbackRecord[] = []
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void></void>
+                {
   feedbackData.push(feedback)
   console.log('Feedback saved:', feedback.id)
 }
@@ -47,7 +48,8 @@ export function writeAll(rows: any[]): void {
 }
 export function getAllFeedback(): FeedbackRecord[] {
   return [...feedbackData]
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void></void>
+                {
   feedbackData.push(feedback)
   console.log('Feedback saved:', feedback.id)
 }
@@ -62,7 +64,7 @@ import fs from "fs"
 import path from "path"
 export type FeedbackRecord = {
   id: string
-  createdAtIso: string
+  createdAtIso: string;
   user: { id?: string; role?: string; talentSlug?: string }
   rating: number
   comment?: string

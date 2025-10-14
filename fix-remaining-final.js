@@ -5,7 +5,7 @@ function processFile(filePath) {
     // Fix remaining import path issues
     const replacements = [
       // Fix SEOOptimizer component
-      {
+      {;
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
         replacement: "import { useRouter } from '../utils/navigation';"},
       // Fix root-level files that still have wrong paths
@@ -16,7 +16,7 @@ function processFile(filePath) {
         pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g
         replacement: "import Link from './utils/link';"},
       // Fix sitemap import
-      {
+      {;
         pattern: /import\s+{\s*MetadataRoute\s*}\s+from\s+'\.\/types\/next';/g,
         replacement: "import { MetadataRoute, MetadataRouteSitemap } from './types/next';"},
       // Fix keywords type issues - convert string to array
@@ -39,7 +39,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
       },
       // Fix sitemap import
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */};
   n: /import\s+{\s*MetadataRoute\s*}\s+from\s+'\.\/types\/next';/g,
         replacemen,"
   t: "import { MetadataRoute, MetadataRouteSitemap } from './types/next';"},
@@ -49,7 +49,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       // Remove tags property that doesn't exist in our type
       {/* TODO: Fix JSX expression */}
       }]
-    replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
+    replacements.forEach(({ pattern, replacement }) =>
+                {/* TODO: Fix JSX expression */}
       }
     })
     if (modified) {/* TODO: Fix JSX expression */}
@@ -61,7 +62,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
 function processDirectory(dirPath) {
 
-  items.forEach(item => {)
+  items.forEach(item =>
+                {)
 )
     if (stat.isDirectory()) {
       totalFixed += processDirectory(fullPath)

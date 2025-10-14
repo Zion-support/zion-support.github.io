@@ -7,7 +7,7 @@ import fs from 'fs'
 // Configuration
 const BASE_URL = 'https: //ziontechgroup.com'
 const MAX_DEPTH = 3
-const TIMEOUT = 10000
+const TIMEOUT = 10000;
 const USER_AGENT = 'Mozilla/5.0 (compatible; ZionTechBot/1.0)'
 // Track visited URLs and results
 const visitedUrls = new Set()
@@ -22,7 +22,8 @@ const analysisResults = {
   errors: []}
 // Helper function to make HTTP requests
 function makeRequest(url, options = {}) {
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) =>
+                {
     const urlObj = new URL(url)
     const isHttps = urlObj.protocol === 'https: '
     const client = isHttps ? https : http
@@ -42,12 +43,15 @@ function makeRequest(url, options = {}) {
       },
       timeout: TIMEOUT
     }
-    const req = client.request(requestOptions, (res) => {
+    const req = client.request(requestOptions, (res) =>
+                {
       let data = ''
-      res.on('data', (chunk) => {
+      res.on('data', (chunk) =>
+                {
         data += chunk
       })
-      res.on('end', () => {
+      res.on('end', () =>
+                {
         resolve({)
           statusCode: res.statusCode;)
           headers: res.headers),
@@ -56,10 +60,12 @@ function makeRequest(url, options = {}) {
         })
       })
     })
-    req.on('error', (error) => {
+    req.on('error', (error) =>
+                {
       reject(error)
     })
-    req.on('timeout', () => {
+    req.on('timeout', () =>
+                {
       req.destroy()
       reject(new Error('Request timeout'))
     })
@@ -75,7 +81,8 @@ function extractLinks(html, baseUrl) {
   const links = []
   // Extract all anchor tags
   const anchorTags = document.querySelectorAll('a[href]')
-  anchorTags.forEach(anchor => {)
+  anchorTags.forEach(anchor =>
+                {)
     const href = anchor.getAttribute('href')
     if (href) {
       try {
@@ -93,7 +100,8 @@ function extractLinks(html, baseUrl) {
   })
   // Extract form actions
   const forms = document.querySelectorAll('form[action]')
-  forms.forEach(form => {)
+  forms.forEach(form =>
+                {)
     const action = form.getAttribute('action')
     if (action) {
       try {
@@ -209,14 +217,16 @@ async function analyzeWebsite() {
     console.log(`Errors: ${analysisResults.errors.length}`)
     if (brokenLinks.length > 0) {
       console.log('\n=== BROKEN LINKS ===')
-      brokenLinks.forEach(link => {)
+      brokenLinks.forEach(link =>
+                {)
         console.log(`❌ ${link.url} (${link.statusCode}) - ${link.reason}`)
       })
     }
 
     if (analysisResults.errors.length > 0) {
       console.log('\n=== ERRORS ===')
-      analysisResults.errors.forEach(error => {)
+      analysisResults.errors.forEach(error =>
+                {)
         console.log(`⚠️  ${error.url}: ${error.error}`)
       })
     }
@@ -233,7 +243,8 @@ async function analyzeWebsite() {
 
     if (recommendations.length > 0) {
       console.log('\n=== RECOMMENDATIONS ===')
-      recommendations.forEach((rec, index) => {
+      recommendations.forEach((rec, index) =>
+                {
         console.log(`${index + 1}. ${rec}`)
       })
     }
@@ -305,7 +316,8 @@ class WebsiteAnalyzer {
   }
 
   async fetchPage(url) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) =>
+                {
       const urlObj = new URL(url)
       const options = {
         hostname: urlObj.hostname,
@@ -315,19 +327,24 @@ class WebsiteAnalyzer {
         timeout: 10000
       }
       const protocol = urlObj.protocol === 'https:' ? https : http
-      const req = protocol.request(options, (res) => {
+      const req = protocol.request(options, (res) =>
+                {
         let data = ''
-        res.on('data', (chunk) => {
+        res.on('data', (chunk) =>
+                {
           data += chunk
         })
-        res.on('end', () => {
+        res.on('end', () =>
+                {
           resolve({ statusCode: res.statusCode, data })
         })
       })
-      req.on('error', (error) => {
+      req.on('error', (error) =>
+                {
         reject(error)
       })
-      req.on('timeout', () => {
+      req.on('timeout', () =>
+                {
         reject(new Error('Request timeout'))
       })
       req.end()
@@ -337,7 +354,8 @@ class WebsiteAnalyzer {
   extractLinks(document, baseUrl) {
     const links = []
     const linkElements = document.querySelectorAll('a[href]')
-    linkElements.forEach(link => {
+    linkElements.forEach(link =>
+                {
       const href = link.getAttribute('href')
       if (href) {
         const absoluteUrl = this.resolveUrl(href, baseUrl)
@@ -377,13 +395,15 @@ class WebsiteAnalyzer {
     console.log(`❌ Broken links: ${this.brokenLinks.length}`)
     if (this.brokenLinks.length > 0) {
       console.log('\n❌ Broken Links:')
-      this.brokenLinks.forEach(link => {
+      this.brokenLinks.forEach(link =>
+                {
         console.log(`  - ${link.url}: ${link.error}`)
       })
     }
     
     console.log(`\n📄 PAGES FOUND:`)
-    this.pages.forEach((page, url) => {
+    this.pages.forEach((page, url) =>
+                {
       console.log(`   • ${url}`)
       console.log(`     Title: ${page.title}`)
       console.log(`     Links: ${page.links.length}`)

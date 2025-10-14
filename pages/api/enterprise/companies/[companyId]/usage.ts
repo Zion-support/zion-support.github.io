@@ -44,4 +44,4 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" })
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

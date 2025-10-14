@@ -300,4 +300,4 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     rating: 4.9,
     reviews: 89
   }
-]
+];

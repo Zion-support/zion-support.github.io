@@ -36,4 +36,4 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
 
 const _optimizer = new ImageOptimizer()
 optimizer.optimizeImages()
-`
+`;

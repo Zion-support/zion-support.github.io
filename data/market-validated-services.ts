@@ -1078,7 +1078,7 @@ export const,
     trialDays: 14,
     setupTime: '2 hours',
     contactInfo
-  }
+  };
 ];import { ServiceVariant  } from "../types/service-variants"
 export interface MarketValidatedService {id: 'vector - search - starter'
     name: 'Vector Search Starter',
@@ -1117,7 +1117,7 @@ export interface MarketValidatedService {id: 'vector - search - starter'
     setupTim,
   e: '2 hours'
     contactInfo,
-  }
+  };
 ];import { ServiceVariant } from '../types/service-variants'
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
     contact_info}
@@ -1148,7 +1148,7 @@ export interface MarketValidatedService {}
     trialDays: 14,
     setupTime: '2 hours',
     contactInfo}
-  }
+  };
 ];import { ServiceVariant  } from "../types/service-variants"
 export interface MarketValidatedService {
 	id: string
@@ -1212,7 +1212,7 @@ export interface MarketValidatedService {}
     setupTim,
   e: '2 hours',
     contactInfo}
-  }
+  };
 ];import { ServiceVariant } from '../types/service-variants'
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   s: string}
@@ -1648,7 +1648,7 @@ export const,
 		variant: "quantum-neural",
 		rating: 4 && 4.5
 		customers: 420,
-		trialDays: 14}
+		trialDays: 14};
 ];import { ServiceVariant   } from '../types / service - variants'
 export interface MarketValidatedService {id: string
 name: string
@@ -1733,7 +1733,7 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 		contactInfo}}
 },
 	{/* TODO: Fix JSX expression */}
-  s: 14}
+  s: 14};
 ];import { ServiceVariant } from '../types / service - variants'
 export interface MarketValidatedService {/* TODO: Fix JSX expression */}
   l: string}
@@ -1805,7 +1805,7 @@ export const,
   trial_day,
   s: 14,
   setup_tim,"
-  e: "30 minutes",
+  e: "30 minutes",;
   contact_info;},
   i,"
   d: "ai - evals - observability",
@@ -2988,9 +2988,9 @@ i,
   s: 410, trial_day,
   s: 14,' setup_tim,
   e: '2 hours', contact_info}, export interface MarketValidatedService export interface MarketValidatedService { export interface MarketValidatedService export interface MarketValidatedService {} trialDay,
-  s: 14,' setupTim,"
+  s: 14,' setupTim,";
   e: '2 hours', contactInfo} } ];import { ServiceVariant } from "../types/service-variants" export interface MarketValidatedService {/* TODO: Fix JSX expression */}
-  s: string} website?: string} } } export const,
+  s: string} website?: string} } } export const,;
   marketValidatedServices: MarketValidatedService[] = [; // AI and Assistants, {/* TODO: Fix JSX expression */}"
   e: "30 minutes", contactInfo}} }, {/* TODO: Fix JSX expression */}"
   e: "1 hour", contactInfo}} }, {/* TODO: Fix JSX expression */}"
@@ -3018,7 +3018,7 @@ i,
   d: string, descriptio,
   n: string, feature,
   s: string[], categor,
-  y: string, lin,
+  y: string, lin,;
   k: string; variant?: ServiceVariant; rating?: number; customers?: number; trial_days?: number; setup_time?: string, contact_inf,
   o: mobil,
   e: string, emai,

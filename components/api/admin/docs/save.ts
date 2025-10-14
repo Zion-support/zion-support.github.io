@@ -1,5 +1,3 @@
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const ts = new Date () .toISOString ()
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
@@ -57,7 +55,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const body = req.body
     const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2)
     const body = req && req.body
-    const jsonString =
+    const jsonString =;
       typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2);    const jsonString = typeof body === 'string' ? body : JSON && JSON.stringify(body, null, 2)
     const ts = new Date()
       .toISOString()
@@ -114,7 +112,7 @@ if ( {) {
     ensure_dir (DOCS_DIR)
     ensure_dir (VERSIONS_DIR)
     const body = req.body
-    const json_string =
+    const json_string =;
       typeof body === 'string' ? body : JSON.stringify (body, null, 2);    const json_string = typeof body === 'string' ? body : JSON.stringify (body, null, 2)
     const ts = new Date ()
       .toISOString ()

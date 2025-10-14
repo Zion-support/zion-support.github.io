@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
+import path from 'path';
+import { execSync  } from 'child_process';
+import { fileURLToPath  } from 'url';const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix merge conflicts and syntax errors
 function fixFile(filePath) {
@@ -13,7 +12,8 @@ function fixFile(filePath) {
     // Remove merge conflict markers and keep the HEAD version
     const conflictRegex = /\n([\s\S]*?)\n
     const originalContent = content
-    content = content.replace(conflictRegex, (match, headContent, otherContent) => {
+    content = content.replace(conflictRegex, (match, headContent, otherContent) =>
+                {
       modified = true
       return headContent.trim()
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
@@ -51,10 +51,12 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       // Fix duplicate 'use client' directives
       .replace(/'use client';\s*'use client';/g, "'use client';")
       // Fix duplicate React imports
-      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {
+      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) =>
+                {
         const lines = match.split('\n')
         return lines[0] + ';'
-      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {/* TODO: Fix JSX expression */}
+      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) =>
+                {/* TODO: Fix JSX expression */}
       })
       // Remove empty lines with just spaces
       .replace(/^\s*\n/gm, '\n')

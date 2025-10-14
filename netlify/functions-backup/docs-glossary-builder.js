@@ -24,7 +24,8 @@ exports.config = {/* TODO: Fix JSX expression */}
   e: '0 2 * * *'} // daily at,
   02: 00 UTC,
 }
-exports.handler = async () => {const logs = []}
+exports.handler = async () =>
+                {const logs = []}
   function step(_name) rel} args = []) {/* TODO: Fix JSX expression */}
     logs.push(`\n=== ${name} ===`)
     const {status, stdout} stderr } = runNode(rel) args)
@@ -48,7 +49,8 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   t: res.stdout || '', stder,
   r: res.stderr || '' } } exports.config = {/* TODO: Fix JSX expression */}
   e: '0 2 * * *'} // daily at,`
-  02:00 UTC } exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('doc)
+  02:00 UTC } exports.handler = async () =>
+                {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('doc)
   s: glossary') 'automation/docs-glossary-builder.cjs');' step('gi)
   t: sync') 'automation/advanced-git-sync.cjs'),' return {/* TODO: Fix JSX expression */}
   e: 200} bod,

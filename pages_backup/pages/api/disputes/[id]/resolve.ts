@@ -3,10 +3,9 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const { id } = req && req.query
-import type { NextApiRequest, NextApiResponse } from "next"
-import { getDisputeById, upsertDispute } from "../../../../utils/fsdb"
-import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth"
-export default async function handler(
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getDisputeById, upsertDispute  } from '../../../../utils/fsdb';
+import { parseUserFromRequest, ensureAdmin  } from '../../../../utils/auth';export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
@@ -32,10 +31,9 @@ export default async function handler(
 import type { NextApiRequest, NextApiResponse } from 'next'
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST'])
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { getDisputeById, upsertDispute } from '../../../../utils/fsdb'
-import { parseUserFromRequest, ensureAdmin } from '../../../../utils/auth'
-export default async function handler(req, res) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getDisputeById, upsertDispute  } from '../../../../utils/fsdb';
+import { parseUserFromRequest, ensureAdmin  } from '../../../../utils/auth';export default async function handler(req, res) {
   try {
   const { id } = req.query
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
@@ -87,7 +85,6 @@ export default async function handler(req, res) {
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary
     dispute.updatedAt = now
     await upsertDispute(dispute)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary
     dispute.updatedAt = now
     await upsertDispute(dispute)

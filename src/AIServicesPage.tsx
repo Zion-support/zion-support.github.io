@@ -1,33 +1,17 @@
-<<<<<<< HEAD
+import React, { useState } from 'react'
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { 
-  Search, 
-  Filter, 
-=======
-import React, { useState } from 'react'
-import React, { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
-import { 
-  Brain, 
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';import { Badge  } from '@/components/ui/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';import { Accordion, AccordionContent, AccordionItem, AccordionTrigger  } from '@/components/ui/accordion';
+import { Brain, 
   Zap, 
   TrendingUp, 
   Shield, 
   Users, 
   BarChart3, 
-  Network, 
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, ExternalLink, Sparkles, Rocket, TrendingUp, BarChart3, Target, Users as UsersIcon, Brain as BrainIcon, MessageSquare } from 'lucide-react'
-import { enhancedAIServices2025 } from '@/data/comprehensiveServices2025'
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, TrendingUp, BarChart3, Target, Rocket, Lock, Sparkles, Layers, Code, Database as DatabaseIcon2, Globe2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon, Cpu as CpuIcon, Cloud as CloudIcon, Database as DatabaseIcon3, Shield as ShieldIcon3, Zap as ZapIcon3, MessageSquare, Atom } from 'lucide-react'
-import { motion } from 'framer-motion'
+  Network, ;
+import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, ExternalLink, Sparkles, Rocket, TrendingUp, BarChart3, Target, Users as UsersIcon, Brain as BrainIcon, MessageSquare  } from 'lucide-react';import { enhancedAIServices2025  } from '@/data/comprehensiveServices2025';
+import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, TrendingUp, BarChart3, Target, Rocket, Lock, Sparkles, Layers, Code, Database as DatabaseIcon2, Globe2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon, Cpu as CpuIcon, Cloud as CloudIcon, Database as DatabaseIcon3, Shield as ShieldIcon3, Zap as ZapIcon3, MessageSquare, Atom  } from 'lucide-react';import { motion } from 'framer-motion'
 const AI_SERVICES = COMPREHENSIVE_SERVICES.filter(service => 
   service.category.includes('AI') || 
   service.category.includes('Machine Learning') || 
@@ -55,42 +39,39 @@ const AI_SERVICES = ENHANCED_SERVICES.filter(service =>
   service.category.includes('Machine Learning') ||
   service.category.includes('Automation')
 )
-export default function AIServicesPage() {
-  const [selectedTab, setSelectedTab] = useState('overview')
+export default function AIServicesPage() {const [selectedTab, setSelectedTab] = useState('overview')
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark"></div>
+                {/* Hero Section */}
+                <div className="relative overflow-hidden"></div>
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
-          <div className="flex items-center justify-center mb-6">
+        <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white"></div>
+          <div className="flex items-center justify-center mb-6"></div>
             <Brain className="h-16 w-16 text-zion-cyan mr-4" />
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"></h1>
               AI Services
             </h1>
-          </div>
-          <p className="text-xl md:text-2xl mb-8 text-zion-cyan-light max-w-4xl mx-auto">
+                </div>
+          <p className="text-xl md:text-2xl mb-8 text-zion-cyan-light max-w-4xl mx-auto"></p>
             Transform Your Business with Cutting-Edge Artificial Intelligence Solutions
           </p>
-          <p className="text-lg text-zion-cyan-light mb-12 max-w-3xl mx-auto">
+          <p className="text-lg text-zion-cyan-light mb-12 max-w-3xl mx-auto"></p>
             From process automation to predictive analytics, our AI services deliver measurable results and competitive advantages.
           </p>
-          
-          {/* Contact CTA */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white px-8 py-3">
+                {/* Contact CTA */}
+                <div className="flex flex-wrap justify-center gap-4 mb-12"></div>
+            <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white px-8 py-3"></Button>
               <Phone className="mr-2 h-5 w-5" />
               +1 302 464 0950
             </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3"></Button>
               <Mail className="mr-2 h-5 w-5" />
               kleber@ziontechgroup.com
             </Button>
-          </div>
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Brain, Cpu, Shield, Zap, Cloud, Rocket, Target, Users, Award, Globe } from 'lucide-react'
-const AIServicesPage = () => {
+                </div>
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Brain, Cpu, Shield, Zap, Cloud, Rocket, Target, Users, Award, Globe  } from 'lucide-react';const AIServicesPage  = () => {
   const aiServices = [
     {
       category: 'AI Business Intelligence',
@@ -165,7 +146,7 @@ const AIServicesPage = () => {
       pricingModel: "monthly",
       aiScore: 95,
 import { Search, Filter, Brain, Zap, Shield, Database, Users, TrendingUp, BarChart3, MessageSquare, Camera, Video, FileText, Target, Globe, Bot, Cpu, Network, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign } from 'lucide-react'
-const AIServicesPage: React.FC = () => {
+const AIServicesPage: React.FC  = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedPricing, setSelectedPricing] = useState<string>('all')
@@ -318,10 +299,9 @@ const AIServicesPage: React.FC = () => {
   const aiServices = enhancedAIServices2025
   const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))]
       id: 4,
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { 
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';import { 
   Brain, 
   Zap, 
   Shield, 
@@ -335,7 +315,7 @@ import {
   Rocket,
   Globe
 } from 'lucide-react'
-const AIServicesPage = () => {
+const AIServicesPage  = () => {
   const aiServices = [
     {
       icon: Brain,
@@ -630,7 +610,8 @@ const AIServicesPage = () => {
   const categories = ['all', 'Content Generation', 'Customer Service', 'Sales Intelligence', 'Computer Vision', 'Data Analytics', 'Process Automation', 'Cybersecurity', 'Marketing']
   const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time']
   const categories = ['all', 'Business Intelligence', 'Language AI', 'Visual AI', 'Predictive AI', 'Process Automation', 'Conversational AI', 'Customer Service', 'Marketing AI', 'Security AI', 'Supply Chain AI']
-  const filteredServices = aiServices.filter(service => {
+  const filteredServices = aiServices.filter(service =>
+                {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -638,7 +619,8 @@ const AIServicesPage = () => {
     const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing
     return matchesSearch && matchesCategory && matchesPricing
   })
-  const formatPrice = (price: number, model: string) => {
+  const formatPrice = (price: number, model: string) =>
+                {
     switch (model) {
       case 'monthly':
         return `$${price}/month`
@@ -686,13 +668,15 @@ const AIServicesPage = () => {
     'Energy & Utilities',
     'Media & Entertainment'
   ]
-  const getAIScoreColor = (score: number) => {
+  const getAIScoreColor = (score: number) =>
+                {
     if (score >= 95) return 'text-emerald-400'
     if (score >= 90) return 'text-green-400'
     if (score >= 85) return 'text-yellow-400'
     return 'text-red-400'
   }
-  const getInnovationLevelColor = (level: string) => {
+  const getInnovationLevelColor = (level: string) =>
+                {
     switch (level) {
       case 'Revolutionary': return 'text-purple-400 bg-purple-400/20'
       case 'Cutting-edge': return 'text-blue-400 bg-blue-400/20'
@@ -701,7 +685,8 @@ const AIServicesPage = () => {
         return `$${price}`
     }
   }
-  const getCategoryIcon = (category: string) => {
+  const getCategoryIcon = (category: string) =>
+                {
     switch (category) {
       case 'Content Generation': return <FileText className="w-6 h-6" />
       case 'Customer Service': return <MessageSquare className="w-6 h-6" />
@@ -714,7 +699,8 @@ const AIServicesPage = () => {
       default: return <Brain className="w-6 h-6" />
     }
   }
-  const getPricingColor = (pricing: string) => {
+  const getPricingColor = (pricing: string) =>
+                {
     switch (pricing) {
       case 'Freemium': return 'text-green-400'
       case 'Subscription': return 'text-blue-400'
@@ -722,12 +708,10 @@ const AIServicesPage = () => {
       default: return 'text-gray-400'
     }
   }
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { Brain, Zap, Cpu, Shield, Users, TrendingUp, ArrowRight, CheckCircle, Star, Globe, Lock, Rocket } from 'lucide-react'
-import { SEO } from '@/components/SEO'
-const aiServices = [
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Link  } from 'react-router-dom';import { Brain, Zap, Cpu, Shield, Users, TrendingUp, ArrowRight, CheckCircle, Star, Globe, Lock, Rocket  } from 'lucide-react';
+import { SEO  } from '@/components/SEO';const aiServices = [
   {
     title: "AI-Powered Business Intelligence",
     description: "Transform raw data into actionable insights with our advanced AI analytics platform.",
@@ -759,120 +743,114 @@ const aiServices = [
     features: ["Failure Prediction", "Maintenance Optimization", "Performance Monitoring", "Cost Reduction"],
     price: "From $2,800/month",
     color: "from-orange-500 to-red-500"
-import React from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { Link } from "react-router-dom"
-import { SEO } from "@/components/SEO"
-import { 
-  Brain, 
+import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';import { Badge  } from '@/components/ui/badge';
+import { Link  } from 'react-router-dom';import { SEO } from "@/components/SEO"
+import {Brain, 
 
           {/* AI Stats */}
-          <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            <div className="text-center">
+                <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto"></div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-zion-cyan mb-2">95%</div>
               <div className="text-zion-cyan-light">Accuracy Rate</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-zion-cyan mb-2">24/7</div>
               <div className="text-zion-cyan-light">Operation</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-zion-cyan mb-2">80%</div>
               <div className="text-zion-cyan-light">Cost Reduction</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl font-bold text-zion-cyan mb-2">300%</div>
               <div className="text-zion-cyan-light">ROI Average</div>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
-
-      {/* Main Content */}
-      <div className="container mx-auto px-4 py-16">
-        <Tabs value={selectedTab} onValueChange={setSelectedTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-12 bg-white/10 backdrop-blur-sm">
-            <TabsTrigger value="overview" className="text-zion-cyan-light data-[state=active]:text-white data-[state=active]:bg-zion-purple">
+                {/* Main Content */}
+                <div className="container mx-auto px-4 py-16"></div>
+        <Tabs value={selectedTab} onValueChange={setSelectedTab} className="w-full"></Tabs>
+          <TabsList className="grid w-full grid-cols-4 mb-12 bg-white/10 backdrop-blur-sm"></TabsList>
+            <TabsTrigger value="overview" className="text-zion-cyan-light data-[state=active]:text-white data-[state=active]:bg-zion-purple"></TabsTrigger>
               Overview
             </TabsTrigger>
-            <TabsTrigger value="services" className="text-zion-cyan-light data-[state=active]:text-white data-[state=active]:bg-zion-purple">
+            <TabsTrigger value="services" className="text-zion-cyan-light data-[state=active]:text-white data-[state=active]:bg-zion-purple"></TabsTrigger>
               Services
             </TabsTrigger>
-            <TabsTrigger value="use-cases" className="text-zion-cyan-light data-[state=active]:text-white data-[state=active]:bg-zion-purple">
+            <TabsTrigger value="use-cases" className="text-zion-cyan-light data-[state=active]:text-white data-[state=active]:bg-zion-purple"></TabsTrigger>
               Use Cases
             </TabsTrigger>
-            <TabsTrigger value="pricing" className="text-zion-cyan-light data-[state=active]:text-white data-[state=active]:bg-zion-purple">
+            <TabsTrigger value="pricing" className="text-zion-cyan-light data-[state=active]:text-white data-[state=active]:bg-zion-purple"></TabsTrigger>
               Pricing
             </TabsTrigger>
-          </TabsList>
-
-          {/* Overview Tab */}
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      {/* Futuristic Background Elements */}
-      <div className="absolute inset-0 opacity-10">
+                </TabsList>
+                {/* Overview Tab */}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
+                {/* Futuristic Background Elements */}
+                <div className="absolute inset-0 opacity-10"></div>
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full filter blur-3xl animate-pulse delay-2000"></div>
-      </div>
-
-      {/* Enhanced Hero Section */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-24 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+                </div>
+                {/* Enhanced Hero Section */}
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-24 relative overflow-hidden"></div>
+        <div className="absolute inset-0 opacity-20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-blue-400"></div>
-        </div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex items-center gap-3 mb-6">
-            <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center animate-pulse">
+                </div>
+        <div className="container mx-auto px-4 text-center relative z-10"></div>
+          <div className="inline-flex items-center gap-3 mb-6"></div>
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center animate-pulse"></div>
               <Brain className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>
               AI Services & Solutions
             </h1>
-          </div>
-          <p className="text-xl md:text-2xl text-purple-100 max-w-4xl mx-auto leading-relaxed">
+                </div>
+          <p className="text-xl md:text-2xl text-purple-100 max-w-4xl mx-auto leading-relaxed"></p>
             Harness the power of artificial intelligence to transform your business operations, 
             enhance customer experiences, and drive innovation across all aspects of your organization.
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-purple-600 bg-clip-text text-transparent mb-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="container mx-auto px-4 py-8"></div>
+                {/* Header */}
+                <div className="text-center mb-12"></div>
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-blue-400 to-purple-600 bg-clip-text text-transparent mb-4"></h1>
             AI Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
             Cutting-edge artificial intelligence solutions that transform businesses through automation, insights, and intelligent decision-making
           </p>
-          
-          {/* AI Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">{aiServices.length}+</div>
+                {/* AI Stats */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto"></div>
+            <div className="text-center"></div>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2"></div>
+                {aiServices.length}+</div>
               <div className="text-purple-100 text-sm">AI Services</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">95%+</div>
               <div className="text-purple-100 text-sm">Accuracy</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">24/7</div>
               <div className="text-purple-100 text-sm">AI Monitoring</div>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">99%</div>
               <div className="text-purple-100 text-sm">Uptime</div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6"></h1>
               AI &{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"></span>
                 Machine Learning
               </span>
-            </h1>
-            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
+                </h1>
+            <p className="text-xl text-zion-slate-light leading-relaxed mb-8"></p>
               Transform your business with cutting-edge artificial intelligence solutions that drive innovation, 
               efficiency, and competitive advantage in the digital age.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div>
               <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
@@ -885,32 +863,29 @@ import {
               >
                 Request Quote
               </Link>
-            </div>
+                </div>
           </motion.div>
-        </div>
+                </div>
       </section>
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-10">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden"></div>
+                {/* Animated Background */}
+                <div className="absolute inset-0 opacity-10"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-purple-600/20 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-      </div>
-
-      {/* Hero Section */}
-      <div className="relative z-10 bg-gradient-to-r from-purple-600/90 to-blue-600/90 py-20 backdrop-blur-sm">
-        <div className="container mx-auto px-4 text-center">
-    <div className="min-h-screen bg-background relative overflow-hidden">
+                </div>
+                {/* Hero Section */}
+                <div className="relative z-10 bg-gradient-to-r from-purple-600/90 to-blue-600/90 py-20 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 text-center"></div>
+    <div className="min-h-screen bg-background relative overflow-hidden"></div>
       <SEO 
         title="AI & Machine Learning Services - Zion Tech Group" 
         description="Transform your business with cutting-edge AI solutions including predictive analytics, natural language processing, and computer vision."
         keywords="AI, machine learning, predictive analytics, NLP, computer vision, business intelligence"
-import React from 'react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Link } from 'react-router-dom'
-import { 
+import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';import { Badge  } from '@/components/ui/badge';
+import { Link  } from 'react-router-dom';import { 
   Brain, 
   Bot, 
   BarChart3, 
@@ -1138,66 +1113,63 @@ const BENEFITS = [
     icon: <Users className="h-6 w-6 text-cyan-500" />
   }
 ]
-export default function AIServicesPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue">
+export default function AIServicesPage() {return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue"></div>
       <SEO 
         title="AI Services - Zion Tech Group" 
         description="Discover cutting-edge AI services and micro SAAS solutions for your business needs."
         keywords="AI services, micro SAAS, artificial intelligence, automation, content generation"
         canonical="https://ziontechgroup.com/ai-services"
       />
-
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 relative overflow-hidden">
+                {/* Hero Section */}
+                <section className="pt-24 pb-16 relative overflow-hidden"></section>
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 animate-pulse"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="flex items-center justify-center mb-6">
+        <div className="container mx-auto px-4 relative z-10"></div>
+          <div className="text-center max-w-4xl mx-auto"></div>
+            <div className="flex items-center justify-center mb-6"></div>
               <Brain className="h-16 w-16 text-zion-cyan mr-4" />
-              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-purple-light bg-clip-text text-transparent">
+              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-purple-light bg-clip-text text-transparent"></h1>
                 AI Services Hub
               </h1>
-            </div>
+                </div>
           </motion.div>
-        </div>
+                </div>
 
                 className="w-full pl-10 pr-4 py-3 bg-slate-700/80 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
               />
-              <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+              <div className="absolute right-4 top-1/2 transform -translate-y-1/2"></div>
                 <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
               </div>
-            </div>
-
-            {/* Enhanced Category Filter */}
-            <div className="relative">
+                </div>
+                {/* Enhanced Category Filter */}
+                <div className="relative"></div>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="w-full px-4 py-3 bg-slate-700/80 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300"
               >
                 {categories.map(category => (
-                  <option key={category} value={category} className="bg-slate-800 text-white">
-                    {category === 'all' ? '🚀 All AI Categories' : `✨ ${category}`}
-                  </option>
+                  <option key={category} value={category} className="bg-slate-800 text-white"></option>
+                {category === 'all' ? '🚀 All AI Categories' : `✨ ${category}`}
+                </option>
                 ))}
-              </select>
-              <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
+                </select>
+              <div className="absolute right-4 top-1/2 transform -translate-y-1/2"></div>
                 <Brain className="w-5 h-5 text-purple-400" />
               </div>
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white"></h1>
               AI & Machine Learning
-              <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"></span>
                 Services
               </span>
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+                </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8"></p>
               Transform your business operations with cutting-edge artificial intelligence solutions. 
               From predictive analytics to computer vision, we deliver AI that drives real business value.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
@@ -1212,62 +1184,64 @@ export default function AIServicesPage() {
                 Request Quote
                 <CheckCircle className="w-5 h-5" />
               </Link>
-            </div>
+                </div>
           </motion.div>
-        </div>
+                </div>
       </section>
-
-      {/* Services Grid */}
-      <div className="relative z-10 container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service, index) => (
+                {/* Services Grid */}
+                <div className="relative z-10 container mx-auto px-4 py-12"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group bg-slate-800/80 backdrop-blur-sm rounded-xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
-            >
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-purple-500/20 rounded-lg text-purple-400">
-                      {getCategoryIcon(service.category)}
+            ></motion.div
+>
+              <div className="p-6"></div>
+                <div className="flex items-center justify-between mb-4"></div>
+                  <div className="flex items-center gap-3"></div>
+                    <div className="p-2 bg-purple-500/20 rounded-lg text-purple-400"></div>
+                {getCategoryIcon(service.category)}
+                </div>
+                    <div></div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors"></h3>
+                {service.name}
+                </h3>
+                      <div className="flex items-center gap-2 mt-1"></div>
+                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${getInnovationLevelColor(service.innovationLevel)}`}></span>
+                {service.innovationLevel}
+                </span>
+                </div>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
-                        {service.name}
-                      </h3>
-                      <div className="flex items-center gap-2 mt-1">
-                        <span className={`px-2 py-1 text-xs font-medium rounded-full ${getInnovationLevelColor(service.innovationLevel)}`}>
-                          {service.innovationLevel}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <span className="text-3xl font-bold text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
-                      {formatPrice(service.price, service.pricingModel)}
-                    </span>
-                    <div className={`text-sm font-semibold ${getAIScoreColor(service.aiScore)} flex items-center gap-1 mt-1`}>
+                </div>
+                  <div className="text-right"></div>
+                    <span className="text-3xl font-bold text-purple-400 group-hover:text-purple-300 transition-colors duration-300"></span>
+                {formatPrice(service.price, service.pricingModel)}
+                </span>
+                    <div className={`text-sm font-semibold ${getAIScoreColor(service.aiScore)} flex items-center gap-1 mt-1`}></div>
                       <Brain className="w-4 h-4" />
                       AI Score: {service.aiScore}%
                     </div>
-                  </div>
+                </div>
                 </div>
                 
-                <p className="text-slate-300 mb-4 leading-relaxed">{service.description}</p>
+                <p className="text-slate-300 mb-4 leading-relaxed"></p>
+                {service.description}
+                </p>
                 
-                <div className="mb-4">
-                  <span className="inline-block bg-purple-600/20 text-purple-300 text-xs px-3 py-1 rounded-full mb-2 border border-purple-500/30">
-                    {service.category}
-                  </span>
-                  <span className="inline-block bg-slate-600/20 text-slate-300 text-xs px-3 py-1 rounded-full ml-2 border border-slate-500/30">
-                    {service.pricingModel}
-                  </span>
-        {/* Search and Filters */}
-        <div className="mb-8 space-y-4">
-          <div className="relative">
+                <div className="mb-4"></div>
+                  <span className="inline-block bg-purple-600/20 text-purple-300 text-xs px-3 py-1 rounded-full mb-2 border border-purple-500/30"></span>
+                {service.category}
+                </span>
+                  <span className="inline-block bg-slate-600/20 text-slate-300 text-xs px-3 py-1 rounded-full ml-2 border border-slate-500/30"></span>
+                {service.pricingModel}
+                </span>
+                {/* Search and Filters */}
+                <div className="mb-8 space-y-4"></div>
+          <div className="relative"></div>
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
               type="text"
@@ -1278,84 +1252,92 @@ export default function AIServicesPage() {
             />
           </div>
           
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4"></div>
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
               className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
-              {categories.map(category => (
-                <option key={category} value={category} className="bg-gray-800 text-white">
-                  {category === 'all' ? 'All Categories' : category}
+                {categories.map(category => (
+                <option key={category} value={category} className="bg-gray-800 text-white"></option>
+                {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
-            </select>
+                </select>
             
             <select
               value={selectedPricing}
               onChange={(e) => setSelectedPricing(e.target.value)}
               className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
-              {pricingModels.map(pricing => (
-                <option key={pricing} value={pricing} className="bg-gray-800 text-white">
-                  {pricing === 'all' ? 'All Pricing Models' : pricing}
+                {pricingModels.map(pricing => (
+                <option key={pricing} value={pricing} className="bg-gray-800 text-white"></option>
+                {pricing === 'all' ? 'All Pricing Models' : pricing}
                 </option>
               ))}
-            </select>
-          </div>
+                </select>
+                </div>
         </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredServices.map((service) => (
-            <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="text-purple-400">
-                    {getCategoryIcon(service.category)}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
-                    <div className="flex items-center gap-2">
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 bg-current`}>
-                        {service.pricing}
-                      </span>
-                      <span className="px-2 py-1 text-xs font-medium rounded-full text-purple-400 bg-purple-400 bg-opacity-20">
-                        {service.category}
-                      </span>
-                    </div>
+                {/* Services Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+                {filteredServices.map((service) => (
+            <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"></div>
+              <div className="flex items-start justify-between mb-4"></div>
+                <div className="flex items-center gap-3 mb-2"></div>
+                  <div className="text-purple-400"></div>
+                {getCategoryIcon(service.category)}
+                </div>
+                  <div></div>
+                    <h3 className="text-xl font-semibold text-white"></h3>
+                {service.name}
+                </h3>
+                    <div className="flex items-center gap-2"></div>
+                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 bg-current`}></span>
+                {service.pricing}
+                </span>
+                      <span className="px-2 py-1 text-xs font-medium rounded-full text-purple-400 bg-purple-400 bg-opacity-20"></span>
+                {service.category}
+                </span>
+                </div>
                   </div>
                 </div>
               </div>
               
-              <p className="text-gray-300 mb-4">{service.description}</p>
+              <p className="text-gray-300 mb-4"></p>
+                {service.description}
+                </p>
               
-              <div className="mb-4">
-                <div className="text-2xl font-bold text-white mb-2">
-                  {formatPrice(service.price, service.pricingModel)}
+              <div className="mb-4"></div>
+                <div className="text-2xl font-bold text-white mb-2"></div>
+                {formatPrice(service.price, service.pricingModel)}
                 </div>
-                <div className="text-sm text-gray-400">{service.userLimit}</div>
-                <div className="text-sm text-green-400 font-medium">{service.marketPrice}</div>
-              </div>
-
-      {/* Services Grid */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div className="text-sm text-gray-400"></div>
+                {service.userLimit}
+                </div>
+                <div className="text-sm text-green-400 font-medium"></div>
+                {service.marketPrice}
+                </div>
+                </div>
+                {/* Services Grid */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"></section>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+        ></motion.div
+>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white"></h2>
             Our AI Services
           </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto"></p>
             Comprehensive AI solutions designed to address your specific business challenges and drive innovation.
           </p>
-        </motion.div>
+                </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {aiServices.map((service, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                {aiServices.map((service, index) =>
+                {
             const IconComponent = service.icon
             return (
               <motion.div
@@ -1364,40 +1346,49 @@ export default function AIServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 flex items-center justify-center text-white`}>
+              ></motion.div
+>
+                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 flex items-center justify-center text-white`}></div>
                   <IconComponent className="w-8 h-8" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
-                <p className="text-zion-slate-light mb-6 leading-relaxed">{service.description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-4"></h3>
+                {service.title}
+                </h3>
+                <p className="text-zion-slate-light mb-6 leading-relaxed"></p>
+                {service.description}
+                </p>
                 
-                <div className="mb-6">
+                <div className="mb-6"></div>
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2 text-zion-slate-light">
+                  <ul className="space-y-2"></ul>
+                {service.features.map((feature) => (
+                      <li key={feature} className="flex items-center gap-2 text-zion-slate-light"></li>
                         <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                        {feature}
-                      </li>
+                {feature}
+                </li>
                     ))}
-                  </ul>
+                </ul>
                 </div>
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
+                <div className="mb-4"></div>
+                  <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2"></h4>
                     <Target className="w-4 h-4 text-green-400" />
                     Use Cases:
                   </h4>
-                  <ul className="text-sm text-slate-300 space-y-1">
-                    {service.useCases.slice(0, 2).map((useCase, index) => (
-                      <li key={index} className="flex items-center">
+                  <ul className="text-sm text-slate-300 space-y-1"></ul>
+                {service.useCases.slice(0, 2).map((useCase, index) => (
+                      <li key={index} className="flex items-center"></li>
                         <Zap className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        <span className="line-clamp-1">{useCase}</span>
-                      </li>
+                        <span className="line-clamp-1"></span>
+                {useCase}
+                </span>
+                </li>
                     ))}
-                  </ul>
+                </ul>
                 
-                <div className="flex items-center justify-between">
-                  <span className="text-zion-cyan font-semibold">{service.price}</span>
+                <div className="flex items-center justify-between"></div>
+                  <span className="text-zion-cyan font-semibold"></span>
+                {service.price}
+                </span>
                   <$2 />
                     to="/contact"
                     className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors duration-300"
@@ -1408,37 +1399,39 @@ export default function AIServicesPage() {
               </motion.div>
             )
           })}
-        </div>
-      </section>
+                </div>
+                </section>
 
-                    <span key={index} className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded border border-slate-600/50">
-                      {tag}
-              <div className="mb-4">
+                    <span key={index} className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded border border-slate-600/50"></span>
+                {tag}
+                <div className="mb-4"></div>
                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.features.slice(0, 3).map((feature, index) => (
-                    <span key={index} className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded">
-                      {feature}
-                    </span>
+                <div className="flex flex-wrap gap-2"></div>
+                {service.features.slice(0, 3).map((feature, index) => (
+                    <span key={index} className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded"></span>
+                {feature}
+                </span>
                   ))}
       {/* Benefits Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"></section>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+        ></motion.div
+>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white"></h2>
             Why Choose Our AI Services?
           </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto"></p>
             We combine cutting-edge AI technology with proven expertise to deliver solutions that drive real business value.
           </p>
-        </motion.div>
+                </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {benefits.map((benefit, index) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+                {benefits.map((benefit, index) =>
+                {
             const IconComponent = benefit.icon
             return (
               <motion.div
@@ -1447,55 +1440,62 @@ export default function AIServicesPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
-              >
-                <div className="flex items-start gap-4">
-                  <div className={`p-3 bg-zion-purple/20 rounded-lg ${benefit.color}`}>
+              ></motion.div
+>
+                <div className="flex items-start gap-4"></div>
+                  <div className={`p-3 bg-zion-purple/20 rounded-lg ${benefit.color}`}></div>
                     <IconComponent className="w-8 h-8" />
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                    <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
-                  </div>
+                  <div></div>
+                    <h3 className="text-xl font-semibold text-white mb-3"></h3>
+                {benefit.title}
+                </h3>
+                    <p className="text-zion-slate-light leading-relaxed"></p>
+                {benefit.description}
+                </p>
                 </div>
-              </motion.div>
+                </div>
+                </motion.div>
             )
           })}
-        </div>
-      </section>
+                </div>
+                </section>
 
-                <div className="flex items-center justify-between mb-4 text-sm text-slate-400">
-                  <span>Delivery: {service.deliveryTime}</span>
-                  <span>Market: {service.marketPrice}</span>
+                <div className="flex items-center justify-between mb-4 text-sm text-slate-400"></div>
+                  <span>Delivery: {service.deliveryTime}
+                </span>
+                  <span>Market: {service.marketPrice}
+                </span>
                 </div>
 
-                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-purple-500/25">
+                <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-purple-500/25"></button>
                   Get Started
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
-              <div className="mb-4">
+              <div className="mb-4"></div>
                 <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.benefits.slice(0, 2).map((benefit, index) => (
-                    <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
-                      {benefit}
-                    </span>
+                <div className="flex flex-wrap gap-2"></div>
+                {service.benefits.slice(0, 2).map((benefit, index) => (
+                    <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded"></span>
+                {benefit}
+                </span>
                   ))}
                 </div>
-              </div>
+                </div>
 
-              <div className="mb-4">
+              <div className="mb-4"></div>
                 <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.targetAudience.slice(0, 2).map((audience, index) => (
-                    <span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">
-                      {audience}
-                    </span>
+                <div className="flex flex-wrap gap-2"></div>
+                {service.targetAudience.slice(0, 2).map((audience, index) => (
+                    <span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded"></span>
+                {audience}
+                </span>
                   ))}
                 </div>
-              </div>
+                </div>
 
-              <div className="border-t border-gray-600 pt-4">
-                <div className="flex items-center justify-between text-sm text-gray-400">
+              <div className="border-t border-gray-600 pt-4"></div>
+                <div className="flex items-center justify-between text-sm text-gray-400"></div>
                   <span>Start your free trial today</span>
                   <$2 />
                     href={service.contactInfo.website}
@@ -1507,100 +1507,97 @@ export default function AIServicesPage() {
                   </a>
                 </div>
               </div>
-          <TabsContent value="overview" className="space-y-12">
-            <div className="text-center">
+          <TabsContent value="overview" className="space-y-12"></TabsContent>
+            <div className="text-center"></div>
               <h2 className="text-4xl font-bold text-white mb-6">Why AI Matters for Your Business</h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto"></p>
                 Artificial Intelligence is no longer a luxury—it's a necessity for businesses that want to stay competitive in today's digital economy.
               </p>
-            </div>
+                </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
-                <CardContent className="p-8">
+            <div className="grid md:grid-cols-3 gap-8"></div>
+              <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center"></Card>
+                <CardContent className="p-8"></CardContent>
                   <Zap className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
                   <h3 className="text-2xl font-bold text-white mb-4">Automation & Efficiency</h3>
-                  <p className="text-zion-cyan-light">
+                  <p className="text-zion-cyan-light"></p>
                     Automate repetitive tasks, reduce manual errors, and increase operational efficiency by up to 80%.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
-                <CardContent className="p-8">
+              <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center"></Card>
+                <CardContent className="p-8"></CardContent>
                   <TrendingUp className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
                   <h3 className="text-2xl font-bold text-white mb-4">Data-Driven Insights</h3>
-                  <p className="text-zion-cyan-light">
+                  <p className="text-zion-cyan-light"></p>
                     Transform raw data into actionable insights that drive better decision-making and strategic planning.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
-                <CardContent className="p-8">
+              <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center"></Card>
+                <CardContent className="p-8"></CardContent>
                   <Users className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
                   <h3 className="text-2xl font-bold text-white mb-4">Customer Experience</h3>
-                  <p className="text-zion-cyan-light">
+                  <p className="text-zion-cyan-light"></p>
                     Deliver personalized experiences, predict customer needs, and increase satisfaction and retention rates.
                   </p>
                 </CardContent>
               </Card>
-            </div>
-
-            {/* AI Capabilities */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+                </div>
+                {/* AI Capabilities */}
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8"></div>
               <h3 className="text-3xl font-bold text-white mb-8 text-center">Our AI Capabilities</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="text-center">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+                <div className="text-center"></div>
                   <Brain className="h-12 w-12 mx-auto mb-3 text-zion-cyan" />
                   <h4 className="font-semibold text-white mb-2">Machine Learning</h4>
                   <p className="text-sm text-zion-cyan-light">Custom ML models for your specific needs</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center"></div>
                   <Network className="h-12 w-12 mx-auto mb-3 text-zion-cyan" />
                   <h4 className="font-semibold text-white mb-2">Neural Networks</h4>
                   <p className="text-sm text-zion-cyan-light">Deep learning for complex pattern recognition</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center"></div>
                   <BarChart3 className="h-12 w-12 mx-auto mb-3 text-zion-cyan" />
                   <h4 className="font-semibold text-white mb-2">Predictive Analytics</h4>
                   <p className="text-sm text-zion-cyan-light">Forecast trends and behaviors</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center"></div>
                   <Smartphone className="h-12 w-12 mx-auto mb-3 text-zion-cyan" />
                   <h4 className="font-semibold text-white mb-2">Natural Language Processing</h4>
                   <p className="text-sm text-zion-cyan-light">Understand and process human language</p>
                 </div>
               </div>
-            </div>
+                </div>
           </TabsContent>
-
-          {/* Services Tab */}
-          <TabsContent value="services" className="space-y-12">
-            <div className="text-center">
+                {/* Services Tab */}
+                <TabsContent value="services" className="space-y-12"></TabsContent>
+            <div className="text-center"></div>
               <h2 className="text-4xl font-bold text-white mb-6">AI Service Portfolio</h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto"></p>
                 Comprehensive AI solutions designed to address your specific business challenges and opportunities.
               </p>
-            </div>
+                </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {AI_SERVICES.map((service) => (
+            <div className="grid md:grid-cols-2 gap-8"></div>
+                {AI_SERVICES.map((service) => (
                 <AIServiceCard key={service.id} service={service} />
               ))}
-            </div>
-          </TabsContent>
-
-          {/* Use Cases Tab */}
-          <TabsContent value="use-cases" className="space-y-12">
-            <div className="text-center">
+                </div>
+                </TabsContent>
+                {/* Use Cases Tab */}
+                <TabsContent value="use-cases" className="space-y-12"></TabsContent>
+            <div className="text-center"></div>
               <h2 className="text-4xl font-bold text-white mb-6">Real-World AI Applications</h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto"></p>
                 Discover how AI is transforming industries and creating new opportunities for businesses like yours.
               </p>
-            </div>
+                </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               <UseCaseCard
                 icon={<BarChart3 className="h-8 w-8" />}
                 title="Financial Services"
@@ -1638,18 +1635,17 @@ export default function AIServicesPage() {
                 examples={["Literature review", "Data mining", "Simulation modeling"]}
               />
             </div>
-          </TabsContent>
-
-          {/* Pricing Tab */}
-          <TabsContent value="pricing" className="space-y-12">
-            <div className="text-center">
+                </TabsContent>
+                {/* Pricing Tab */}
+                <TabsContent value="pricing" className="space-y-12"></TabsContent>
+            <div className="text-center"></div>
               <h2 className="text-4xl font-bold text-white mb-6">AI Service Pricing</h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto"></p>
                 Transparent pricing for our AI services with flexible options to fit your budget and requirements.
               </p>
-            </div>
+                </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8"></div>
               <PricingCard
                 title="Starter AI Package"
                 price="$2,999"
@@ -1693,132 +1689,137 @@ export default function AIServicesPage() {
                 popular={false}
               />
             </div>
-
-            {/* ROI Calculator */}
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8">
+                {/* ROI Calculator */}
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8"></div>
               <h3 className="text-3xl font-bold text-white mb-8 text-center">ROI Calculator</h3>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
+              <div className="grid md:grid-cols-2 gap-8"></div>
+                <div></div>
                   <h4 className="text-xl font-semibold text-white mb-4">Investment Benefits</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
+                  <div className="space-y-3"></div>
+                    <div className="flex justify-between"></div>
                       <span className="text-zion-cyan-light">Cost Reduction:</span>
                       <span className="text-white font-semibold">20-40%</span>
-                    </div>
-                    <div className="flex justify-between">
+                </div>
+                    <div className="flex justify-between"></div>
                       <span className="text-zion-cyan-light">Efficiency Gain:</span>
                       <span className="text-white font-semibold">60-80%</span>
-                    </div>
-                    <div className="flex justify-between">
+                </div>
+                    <div className="flex justify-between"></div>
                       <span className="text-zion-cyan-light">Revenue Increase:</span>
                       <span className="text-white font-semibold">15-30%</span>
-                    </div>
-                    <div className="flex justify-between">
+                </div>
+                    <div className="flex justify-between"></div>
                       <span className="text-zion-cyan-light">Time Savings:</span>
                       <span className="text-white font-semibold">40-60%</span>
-                    </div>
+                </div>
                   </div>
                 </div>
-                <div>
+                <div></div>
                   <h4 className="text-xl font-semibold text-white mb-4">Expected Returns</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
+                  <div className="space-y-3"></div>
+                    <div className="flex justify-between"></div>
                       <span className="text-zion-cyan-light">Payback Period:</span>
                       <span className="text-white font-semibold">6-12 months</span>
-                    </div>
-                    <div className="flex justify-between">
+                </div>
+                    <div className="flex justify-between"></div>
                       <span className="text-zion-cyan-light">3-Year ROI:</span>
                       <span className="text-white font-semibold">300-500%</span>
-                    </div>
-                    <div className="flex justify-between">
+                </div>
+                    <div className="flex justify-between"></div>
                       <span className="text-zion-cyan-light">Risk Reduction:</span>
                       <span className="text-white font-semibold">50-70%</span>
-                    </div>
-                    <div className="flex justify-between">
+                </div>
+                    <div className="flex justify-between"></div>
                       <span className="text-zion-cyan-light">Competitive Advantage:</span>
                       <span className="text-white font-semibold">Significant</span>
-                    </div>
+                </div>
                   </div>
                 </div>
               </div>
-            </div>
+                </div>
           </TabsContent>
-        </Tabs>
+                </Tabs>
       </div>
-
-      {/* Call to Action */}
-      <div className="bg-slate-800 py-16 border-t border-slate-700">
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                {/* Call to Action */}
+                <div className="bg-slate-800 py-16 border-t border-slate-700"></div>
+                {/* CTA Section */}
+                <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16"></div>
+        <div className="container mx-auto px-4 text-center"></div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"></h2>
             Ready to Harness the Power of AI?
           </h2>
-          <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
-      {/* Testimonials */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto"></p>
+                {/* Testimonials */}
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"></section>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+        ></motion.div
+>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white"></h2>
             What Our Clients Say
           </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto"></p>
             Don't just take our word for it. Here's what industry leaders have to say about our AI services.
           </p>
-        </motion.div>
+                </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+                {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
-            >
-              <div className="flex gap-1 mb-4">
+            ></motion.div
+>
+              <div className="flex gap-1 mb-4"></div>
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 text-zion-cyan fill-current" />
                 ))}
-              </div>
-              <p className="text-zion-slate-light mb-6 leading-relaxed italic">
+                </div>
+              <p className="text-zion-slate-light mb-6 leading-relaxed italic"></p>
                 "{testimonial.content}"
               </p>
-              <div>
-                <div className="font-semibold text-white">{testimonial.name}</div>
-                <div className="text-zion-cyan text-sm">{testimonial.role}</div>
-              </div>
+              <div></div>
+                <div className="font-semibold text-white"></div>
+                {testimonial.name}
+                </div>
+                <div className="text-zion-cyan text-sm"></div>
+                {testimonial.role}
+                </div>
+                </div>
             </motion.div>
           ))}
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                </div>
+                </section>
+                {/* Benefits Section */}
+                <section className="py-20"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">
+          ></motion.div
+>
+            <h2 className="text-4xl font-bold mb-6"></h2>
               Why Choose Our{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"></span>
                 AI Services
               </span>
-            </h2>
-            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+                </h2>
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto"></p>
               Experience the power of artificial intelligence with our comprehensive suite of services.
             </p>
-          </motion.div>
+                </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {benefits.map((benefit, index) =>
+                {
               const IconComponent = benefit.icon
               return (
                 <motion.div
@@ -1827,57 +1828,66 @@ export default function AIServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                ></motion.div
+>
+                  <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}></div>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                  <p className="text-zion-slate-light">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold mb-3"></h3>
+                {benefit.title}
+                </h3>
+                  <p className="text-zion-slate-light"></p>
+                {benefit.description}
+                </p>
                 </motion.div>
               )
             })}
       {/* Enhanced Contact Section */}
-      <div className="bg-slate-800 py-20 border-t border-slate-700 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
+                <div className="bg-slate-800 py-20 border-t border-slate-700 relative overflow-hidden"></div>
+        <div className="absolute inset-0 opacity-5"></div>
           <div className="absolute inset-0 bg-gradient-to-br from-purple-400 via-blue-400 to-pink-400"></div>
-        </div>
+                </div>
         
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 flex items-center justify-center gap-3">
+        <div className="container mx-auto px-4 text-center relative z-10"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 flex items-center justify-center gap-3"></h2>
             <Brain className="w-8 h-8 text-purple-400" />
             Ready to Harness AI Power?
           </h2>
-          <div className="mb-8">
+          <div className="mb-8"></div>
             <$2 />
               href="/comprehensive-services"
               className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 mb-4"
             >
               Explore Our Complete Service Portfolio →
             </a>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
+                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
+            <div className="text-center"></div>
               <Phone className="w-8 h-8 text-purple-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-slate-300">{aiServices[0].contactInfo.phone}</p>
-            </div>
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <p className="text-slate-300"></p>
+                {aiServices[0].contactInfo.phone}
+                </p>
+                </div>
+            <div className="text-center group"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                 <Mail className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-slate-300">{aiServices[0].contactInfo.email}</p>
-            </div>
-            <div className="text-center group">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+              <p className="text-slate-300"></p>
+                {aiServices[0].contactInfo.email}
+                </p>
+                </div>
+            <div className="text-center group"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                 <MapPin className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
+                </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <$2 />
               href="https://ziontechgroup.com" 
               target="_blank"
@@ -1894,28 +1904,30 @@ export default function AIServicesPage() {
               <Mail className="w-5 h-5" />
               Contact Us
             </a>
-      {/* AI Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                {/* AI Services Grid */}
+                <section className="py-20"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">
+          ></motion.div
+>
+            <h2 className="text-4xl font-bold mb-6"></h2>
               Our{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"></span>
                 AI Services
               </span>
-            </h2>
-            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+                </h2>
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto"></p>
               Comprehensive AI solutions designed to address your specific business challenges and drive measurable results.
             </p>
-          </motion.div>
+                </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => {
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {aiServices.map((service, index) =>
+                {
               const IconComponent = service.icon
               return (
                 <motion.div
@@ -1924,24 +1936,29 @@ export default function AIServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="group p-6 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                ></motion.div
+>
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{service.description}</p>
+                  <h3 className="text-xl font-semibold mb-3"></h3>
+                {service.title}
+                </h3>
+                  <p className="text-zion-slate-light mb-4"></p>
+                {service.description}
+                </p>
                   
-                  <div className="mb-4">
+                  <div className="mb-4"></div>
                     <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="text-sm text-zion-slate-light flex items-center">
+                    <ul className="space-y-1"></ul>
+                {service.features.map((feature, idx) => (
+                        <li key={idx} className="text-sm text-zion-slate-light flex items-center"></li>
                           <CheckCircle className="w-3 h-3 text-zion-cyan mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
+                {feature}
+                </li>
                       ))}
-                    </ul>
-                  </div>
+                </ul>
+                </div>
                   
                   <$2 />
                     to={service.link}
@@ -1953,47 +1970,48 @@ export default function AIServicesPage() {
                 </motion.div>
               )
             })}
-          </div>
-      <div className="relative z-10 bg-slate-800/80 backdrop-blur-sm py-16 border-t border-slate-700/50">
-        <div className="container mx-auto px-4 text-center">
+                </div>
+      <div className="relative z-10 bg-slate-800/80 backdrop-blur-sm py-16 border-t border-slate-700/50"></div>
+        <div className="container mx-auto px-4 text-center"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+          ></motion.div
+>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8"></h2>
               Ready to Harness AI Power?
             </h2>
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto"></p>
               Contact our expert team to discuss your AI needs and get a customized solution that transforms your business
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-purple-500/20 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"></div>
+              <div className="text-center group"></div>
+                <div className="w-16 h-16 bg-purple-500/20 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-purple-500/30 transition-colors"></div>
                   <Phone className="w-8 h-8 text-purple-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
                 <p className="text-slate-300">+1 302 464 0950</p>
-              </div>
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-blue-500/20 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
+                </div>
+              <div className="text-center group"></div>
+                <div className="w-16 h-16 bg-blue-500/20 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-blue-500/30 transition-colors"></div>
                   <Mail className="w-8 h-8 text-blue-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
                 <p className="text-slate-300">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="text-center group">
-                <div className="w-16 h-16 bg-green-500/20 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
+                </div>
+              <div className="text-center group"></div>
+                <div className="w-16 h-16 bg-green-500/20 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:bg-green-500/30 transition-colors"></div>
                   <MapPin className="w-8 h-8 text-green-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
                 <p className="text-slate-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
+                </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <motion.a
                 href="https://ziontechgroup.com"
                 target="_blank"
@@ -2001,7 +2019,8 @@ export default function AIServicesPage() {
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >
+              ></motion.a
+>
                 Visit Our Website
                 <Globe className="w-5 h-5 group-hover:rotate-12 transition-transform" />
               </motion.a>
@@ -2010,37 +2029,39 @@ export default function AIServicesPage() {
                 className="inline-flex items-center gap-2 px-8 py-4 border border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-              >
+              ></motion.a
+>
                 Get Free Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.a>
-            </div>
+                </div>
           </motion.div>
-        </div>
+                </div>
       </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Benefits Section */}
+                <section className="py-20 bg-zion-blue-light/5"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">
+          ></motion.div
+>
+            <h2 className="text-4xl font-bold mb-6"></h2>
               Why Choose{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"></span>
                 AI Solutions?
               </span>
-            </h2>
-            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+                </h2>
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto"></p>
               Discover the transformative benefits that AI can bring to your business operations and growth.
             </p>
-          </motion.div>
+                </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {benefits.map((benefit, index) =>
+                {
               const IconComponent = benefit.icon
               return (
                 <motion.div
@@ -2049,107 +2070,112 @@ export default function AIServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="text-center p-6 rounded-2xl hover:bg-zion-blue-light/10 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                ></motion.div
+>
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4"></div>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                  <p className="text-zion-slate-light">{benefit.description}</p>
+                  <h3 className="text-xl font-semibold mb-3"></h3>
+                {benefit.title}
+                </h3>
+                  <p className="text-zion-slate-light"></p>
+                {benefit.description}
+                </p>
                 </motion.div>
               )
             })}
           ))}
-        </div>
-
-        {/* Contact Information */}
-        <div className="mt-16 text-center">
-          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
+                </div>
+                {/* Contact Information */}
+                <div className="mt-16 text-center"></div>
+          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8"></div>
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-6"></p>
               Our AI solutions are designed to scale with your business and provide measurable ROI
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center"></div>
+              <div></div>
                 <Phone className="w-8 h-8 text-purple-400 mx-auto mb-2" />
                 <p className="text-white font-semibold">Phone</p>
                 <p className="text-gray-300">+1 302 464 0950</p>
-              </div>
-              <div>
+                </div>
+              <div></div>
                 <Mail className="w-8 h-8 text-purple-400 mx-auto mb-2" />
                 <p className="text-white font-semibold">Email</p>
                 <p className="text-gray-300">kleber@ziontechgroup.com</p>
-              </div>
-              <div>
+                </div>
+              <div></div>
                 <MapPin className="w-8 h-8 text-purple-400 mx-auto mb-2" />
                 <p className="text-white font-semibold">Address</p>
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
+                </div>
             </div>
-          </div>
+                </div>
         </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                </section>
+                {/* Industries Section */}
+                <section className="py-20"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">
+          ></motion.div
+>
+            <h2 className="text-4xl font-bold mb-6"></h2>
               Industries We{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"></span>
                 Serve
               </span>
-            </h2>
-            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+                </h2>
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto"></p>
               Our AI solutions are tailored to meet the unique challenges and opportunities across diverse industries.
             </p>
-          </motion.div>
+                </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {industries.map((industry, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
+                {industries.map((industry, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
                 className="p-4 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300 text-center"
-              >
-                <span className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
-                  {industry}
+              ></motion.div
+>
+                <span className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"></span>
+                {industry}
                 </span>
-              </motion.div>
+                </motion.div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* AI Implementation Process */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                {/* AI Implementation Process */}
+                <section className="py-20 bg-zion-blue-light/5"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">
+          ></motion.div
+>
+            <h2 className="text-4xl font-bold mb-6"></h2>
               Our{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"></span>
                 AI Implementation
               </span>
-              {' '}Process
+                {' '}Process
             </h2>
-            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto"></p>
               A proven methodology for successfully implementing AI solutions that drive real business value.
             </p>
-          </motion.div>
+                </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {[
               {
                 step: '01',
                 title: 'Discovery & Assessment',
@@ -2177,16 +2203,21 @@ export default function AIServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
-              >
-                <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
-                  {phase.step}
+              ></motion.div
+>
+                <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"></div>
+                {phase.step}
                 </div>
-                <h3 className="text-xl font-semibold mb-3">{phase.title}</h3>
-                <p className="text-zion-slate-light">{phase.description}</p>
-              </motion.div>
+                <h3 className="text-xl font-semibold mb-3"></h3>
+                {phase.title}
+                </h3>
+                <p className="text-zion-slate-light"></p>
+                {phase.description}
+                </p>
+                </motion.div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
 
     title: "Cost Efficiency",
@@ -2209,232 +2240,230 @@ export default function AIServicesPage() {
     icon: <Brain className="h-6 w-6" />
   }
 ]
-export default function AIServicesPage() {
-  return (
-    <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+export default function AIServicesPage() {return (
+    <div className="min-h-screen bg-background"></div>
+                {/* Hero Section */}
+                <section className="bg-gradient-to-br from-zion-blue via-zion-purple to-zion-blue-dark py-20"></section>
+        <div className="container mx-auto px-4 text-center"></div>
+          <div className="max-w-4xl mx-auto"></div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
               AI-Powered Solutions for the
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple-light">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple-light"></span>
                 Modern Business
               </span>
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+                </h1>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"></p>
               Transform your business with cutting-edge artificial intelligence solutions. From content creation to predictive analytics, 
               our AI services deliver measurable results and competitive advantages.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3"></Button>
                 Get Started Today
               </Button>
-              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+              <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3"></Button>
                 View Demo
               </Button>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* Services Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-zion-blue mb-4">
-              {filteredServices.length} AI Services Found
+                {/* Services Grid */}
+                <section className="py-16"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-12"></div>
+            <h2 className="text-3xl font-bold text-zion-blue mb-4"></h2>
+                {filteredServices.length} AI Services Found
             </h2>
-            <p className="text-zion-slate-light">
+            <p className="text-zion-slate-light"></p>
               Discover AI solutions that can transform your business operations and customer experience
             </p>
-          </div>
+                </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <Card key={service.id} className="h-full border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:shadow-xl">
-                <CardHeader className="pb-4">
-                  <div className="flex items-start justify-between mb-3">
-                    <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-                      {service.subcategory}
-                    </Badge>
-                    <div className="flex items-center gap-1 text-zion-slate-light">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"></div>
+                {filteredServices.map((service) => (
+              <Card key={service.id} className="h-full border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:shadow-xl"></Card>
+                <CardHeader className="pb-4"></CardHeader>
+                  <div className="flex items-start justify-between mb-3"></div>
+                    <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30"></Badge>
+                {service.subcategory}
+                </Badge>
+                    <div className="flex items-center gap-1 text-zion-slate-light"></div>
                       <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-medium">{service.rating}</span>
+                      <span className="text-sm font-medium"></span>
+                {service.rating}
+                </span>
                       <span className="text-xs">({service.reviewCount})</span>
-                    </div>
+                </div>
                   </div>
                   
-                  <CardTitle className="text-xl text-zion-blue mb-2">{service.title}</CardTitle>
-                  <CardDescription className="text-zion-slate-light line-clamp-2">
-                    {service.description}
-                  </CardDescription>
+                  <CardTitle className="text-xl text-zion-blue mb-2"></CardTitle>
+                {service.title}
+                </CardTitle>
+                  <CardDescription className="text-zion-slate-light line-clamp-2"></CardDescription>
+                {service.description}
+                </CardDescription>
                 </CardHeader>
 
-                <CardContent className="space-y-4">
-                  {/* Pricing */}
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      {getPricingModelIcon(service.pricingModel)}
-                      <span className="text-sm text-zion-slate-light">
-                        {getPricingModelText(service.pricingModel)}
-                      </span>
-                    </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-zion-purple">
-                        {service.currency}{service.price.toLocaleString()}
-                      </div>
-                      {service.pricingModel === 'monthly' && (
+                <CardContent className="space-y-4"></CardContent>
+                {/* Pricing */}
+                <div className="flex items-center justify-between"></div>
+                    <div className="flex items-center gap-2"></div>
+                {getPricingModelIcon(service.pricingModel)}
+                <span className="text-sm text-zion-slate-light"></span>
+                {getPricingModelText(service.pricingModel)}
+                </span>
+                </div>
+                    <div className="text-right"></div>
+                      <div className="text-2xl font-bold text-zion-purple"></div>
+                {service.currency}{service.price.toLocaleString()}
+                </div>
+                {service.pricingModel === 'monthly' && (
                         <div className="text-xs text-zion-slate-light">per month</div>
                       )}
-                    </div>
-                  </div>
-
-                  {/* AI Score */}
-                  <div className="flex items-center justify-between">
+                </div>
+                </div>
+                {/* AI Score */}
+                <div className="flex items-center justify-between"></div>
                     <span className="text-sm text-zion-slate-light">AI Intelligence Score</span>
-                    <Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+                    <Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"></Badge>
                       <Brain className="w-3 h-3 mr-1" />
-                      {service.aiScore}/100
+                {service.aiScore}/100
                     </Badge>
-                  </div>
-
-                  {/* Features Preview */}
-                  <div>
+                </div>
+                {/* Features Preview */}
+                <div></div>
                     <h4 className="text-sm font-semibold text-zion-blue mb-2">Key Features</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {service.features.slice(0, 3).map((feature, index) => (
-                        <Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
-                          {feature}
-                        </Badge>
+                    <div className="flex flex-wrap gap-1"></div>
+                {service.features.slice(0, 3).map((feature, index) => (
+                        <Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light"></Badge>
+                {feature}
+                </Badge>
                       ))}
                       {service.features.length > 3 && (
-                        <Badge variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
+                        <Badge variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light"></Badge>
                           +{service.features.length - 3} more
                         </Badge>
                       )}
-                    </div>
-                  </div>
-
-                  {/* Benefits */}
-                  <div>
+                </div>
+                </div>
+                {/* Benefits */}
+                <div></div>
                     <h4 className="text-sm font-semibold text-zion-blue mb-2">Key Benefits</h4>
-                    <div className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, index) => (
-                        <div key={index} className="flex items-start gap-2 text-sm text-zion-slate-light">
+                    <div className="space-y-1"></div>
+                {service.benefits.slice(0, 2).map((benefit, index) => (
+                        <div key={index} className="flex items-start gap-2 text-sm text-zion-slate-light"></div>
                           <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
-                          <span>{benefit}</span>
-                        </div>
+                          <span></span>
+                {benefit}
+                </span>
+                </div>
                       ))}
-                    </div>
-                  </div>
-
-                  {/* Use Cases */}
-                  <div>
+                </div>
+                </div>
+                {/* Use Cases */}
+                <div></div>
                     <h4 className="text-sm font-semibold text-zion-blue mb-2">Use Cases</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {service.useCases.slice(0, 3).map((useCase, index) => (
-                        <Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
-                          {useCase}
-                        </Badge>
+                    <div className="flex flex-wrap gap-1"></div>
+                {service.useCases.slice(0, 3).map((useCase, index) => (
+                        <Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light"></Badge>
+                {useCase}
+                </Badge>
                       ))}
-                    </div>
-                  </div>
-
-                  {/* Target Audience */}
-                  <div>
+                </div>
+                </div>
+                {/* Target Audience */}
+                <div></div>
                     <h4 className="text-sm font-semibold text-zion-blue mb-2">Perfect For</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {service.targetAudience.slice(0, 3).map((audience, index) => (
-                        <Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
-                          {audience}
-                        </Badge>
+                    <div className="flex flex-wrap gap-1"></div>
+                {service.targetAudience.slice(0, 3).map((audience, index) => (
+                        <Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light"></Badge>
+                {audience}
+                </Badge>
                       ))}
-                    </div>
-                  </div>
-
-                  {/* Action Buttons */}
-                  <div className="flex flex-col gap-2 pt-4">
-                    <Link to={`/services/${service.id}`}>
-                      <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
+                </div>
+                </div>
+                {/* Action Buttons */}
+                <div className="flex flex-col gap-2 pt-4"></div>
+                    <Link to={`/services/${service.id}`}></Link>
+                      <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white"></Button>
                         <Lightbulb className="w-4 h-4 mr-2" />
                         Learn More
                       </Button>
-                    </Link>
+                </Link>
                     
-                    <div className="flex gap-2">
-                      {service.website && (
+                    <div className="flex gap-2"></div>
+                {service.website && (
                         <$2 />
                           href={service.website} 
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="flex-1"
                         >
-                          <Button variant="outline" className="w-full border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10">
+                          <Button variant="outline" className="w-full border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10"></Button>
                             <ExternalLink className="w-4 h-4 mr-2" />
                             Demo
                           </Button>
-                        </a>
+                </a>
                       )}
-                      
-                      <Link to="/contact" className="flex-1">
-                        <Button variant="outline" className="w-full border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10">
+                <Link to="/contact" className="flex-1"></Link>
+                        <Button variant="outline" className="w-full border-zion-blue-light text-zion-cyan hover:bg-zion-blue-light/10"></Button>
                           <Mail className="w-4 h-4 mr-2" />
                           Contact
                         </Button>
-                      </Link>
+                </Link>
                     </div>
-                  </div>
-
-                  {/* Additional Info */}
-                  <div className="pt-4 border-t border-zion-blue-light">
-                    <div className="grid grid-cols-2 gap-4 text-xs text-zion-slate-light">
-                      {service.documentation && (
-                        <div className="flex items-center gap-1">
+                </div>
+                {/* Additional Info */}
+                <div className="pt-4 border-t border-zion-blue-light"></div>
+                    <div className="grid grid-cols-2 gap-4 text-xs text-zion-slate-light"></div>
+                {service.documentation && (
+                        <div className="flex items-center gap-1"></div>
                           <BookOpen className="w-3 h-3" />
                           <span>Docs</span>
-                        </div>
+                </div>
                       )}
                       {service.support && (
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-1"></div>
                           <Phone className="w-3 h-3" />
                           <span>Support</span>
-                        </div>
+                </div>
                       )}
                       {service.compliance && service.compliance.length > 0 && (
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-1"></div>
                           <Shield className="w-3 h-3" />
-                          <span>{service.compliance.length} Compliance</span>
-                        </div>
+                          <span></span>
+                {service.compliance.length} Compliance</span>
+                </div>
                       )}
                       {service.sla && (
-                        <div className="flex items-center gap-1">
+                        <div className="flex items-center gap-1"></div>
                           <TrendingUp className="w-3 h-3" />
                           <span>SLA</span>
-                        </div>
+                </div>
                       )}
-                    </div>
-                  </div>
+                </div>
+                </div>
                 </CardContent>
-              </Card>
+                </Card>
             ))}
-          </div>
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                </div>
+                {/* CTA Section */}
+                <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></section>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold mb-6">
+          ></motion.div
+>
+            <h2 className="text-4xl font-bold mb-6"></h2>
               Ready to Harness the Power of AI?
             </h2>
-            <p className="text-lg text-zion-slate-light mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-zion-slate-light mb-8 max-w-2xl mx-auto"></p>
               Let's discuss how our AI solutions can transform your business operations, 
               improve efficiency, and create new opportunities for growth.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4"></div>
               <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
@@ -2447,121 +2476,124 @@ export default function AIServicesPage() {
               >
                 Get a Custom Quote
               </Link>
-            </div>
+                </div>
           </motion.div>
-        </div>
+                </div>
       </section>
             Let's discuss how AI can transform your business operations and drive unprecedented growth.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan px-8 py-3">
+          <div className="flex flex-wrap justify-center gap-4"></div>
+            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan px-8 py-3"></Button>
               <Brain className="mr-2 h-5 w-5" />
               Start AI Assessment
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3">
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3"></Button>
               <Phone className="mr-2 h-5 w-5" />
               Schedule Demo
             </Button>
-          </div>
+                </div>
         </div>
-      </div>
-
-      {/* Contact Section */}
-      <div className="bg-zion-blue-dark py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+                </div>
+                {/* Contact Section */}
+                <div className="bg-zion-blue-dark py-16"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-4xl font-bold text-white mb-6">Get in Touch</h2>
-            <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+            <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto"></p>
               Ready to explore AI solutions for your business? Contact our experts today.
             </p>
-          </div>
+                </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto"></div>
+            <div className="text-center"></div>
               <Phone className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
               <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
               <p className="text-zion-cyan-light">+1 302 464 0950</p>
               <p className="text-sm text-zion-cyan-light">Mon-Fri 9AM-6PM EST</p>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <Mail className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
               <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
               <p className="text-zion-cyan-light">kleber@ziontechgroup.com</p>
               <p className="text-sm text-zion-cyan-light">24/7 Response</p>
-            </div>
-            <div className="text-center">
+                </div>
+            <div className="text-center"></div>
               <MapPin className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
               <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-zion-cyan-light">364 E Main St STE 1008</p>
               <p className="text-sm text-zion-cyan-light">Middletown DE 19709</p>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
-    </div>
+                </div>
   )
 }
 
 // AI Service Card Component
-function AIServiceCard({ service }: { service: any }) {
-  return (
-    <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
-      <CardHeader>
-        <div className="flex items-start justify-between mb-2">
-          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-            {service.category}
-          </Badge>
-          {service.featured && (
-            <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
+function AIServiceCard({ service }: { service: any }) {return (
+    <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300"></Card>
+      <CardHeader></CardHeader>
+        <div className="flex items-start justify-between mb-2"></div>
+          <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30"></Badge>
+                {service.category}
+                </Badge>
+                {service.featured && (
+            <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30"></Badge>
               Featured
             </Badge>
           )}
-        </div>
-        <CardTitle className="text-xl text-white mb-2">{service.title}</CardTitle>
-        <CardDescription className="text-zion-cyan-light">
-          {service.description}
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-zion-cyan">
-              {service.currency}{service.price?.toLocaleString()}
-            </div>
-            <div className="flex items-center gap-1">
+                </div>
+        <CardTitle className="text-xl text-white mb-2"></CardTitle>
+                {service.title}
+                </CardTitle>
+        <CardDescription className="text-zion-cyan-light"></CardDescription>
+                {service.description}
+                </CardDescription>
+                </CardHeader>
+      <CardContent></CardContent>
+        <div className="space-y-4"></div>
+          <div className="flex items-center justify-between"></div>
+            <div className="text-2xl font-bold text-zion-cyan"></div>
+                {service.currency}{service.price?.toLocaleString()}
+                </div>
+            <div className="flex items-center gap-1"></div>
               <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-              <span className="text-white">{service.rating}</span>
+              <span className="text-white"></span>
+                {service.rating}
+                </span>
               <span className="text-zion-cyan-light">({service.reviewCount})</span>
-            </div>
+                </div>
           </div>
           
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between"></div>
             <span className="text-zion-cyan-light">AI Score:</span>
-            <div className="flex items-center gap-2">
-              <div className="w-16 bg-zion-blue-light rounded-full h-2">
+            <div className="flex items-center gap-2"></div>
+              <div className="w-16 bg-zion-blue-light rounded-full h-2"></div>
                 <$2 />
                   className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" 
                   style={{ width: `${service.aiScore}%` }}
                 ></div>
-              </div>
-              <span className="text-zion-cyan font-semibold">{service.aiScore}%</span>
-            </div>
+                </div>
+              <span className="text-zion-cyan font-semibold"></span>
+                {service.aiScore}%</span>
+                </div>
           </div>
 
-          <div className="flex flex-wrap gap-2">
-            {service.tags.slice(0, 3).map((tag: string) => (
-              <Badge key={tag} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan-light">
+          <div className="flex flex-wrap gap-2"></div>
+                {service.tags.slice(0, 3).map((tag: string) => (
+              <Badge key={tag} variant="outline" className="text-xs border-zion-cyan/30 text-zion-cyan-light"></Badge>
                 {tag}
-              </Badge>
+                </Badge>
             ))}
-          </div>
+                </div>
 
-          <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
+          <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white"></Button>
             Learn More
           </Button>
-        </div>
+                </div>
       </CardContent>
-    </Card>
+                </Card>
   )
 }
 
@@ -2571,29 +2603,32 @@ function UseCaseCard({ icon, title, description, examples }: {
   title: string, 
   description: string, 
   examples: string[] 
-}) {
-  return (
-    <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
-      <CardHeader className="text-center">
-        <div className="mx-auto mb-4 text-zion-cyan">
-          {icon}
-        </div>
-        <CardTitle className="text-xl text-white">{title}</CardTitle>
-        <CardDescription className="text-zion-cyan-light">
-          {description}
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-2">
+}) {return (
+    <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300"></Card>
+      <CardHeader className="text-center"></CardHeader>
+        <div className="mx-auto mb-4 text-zion-cyan"></div>
+                {icon}
+                </div>
+        <CardTitle className="text-xl text-white"></CardTitle>
+                {title}
+                </CardTitle>
+        <CardDescription className="text-zion-cyan-light"></CardDescription>
+                {description}
+                </CardDescription>
+                </CardHeader>
+      <CardContent></CardContent>
+        <div className="space-y-2"></div>
           <h4 className="font-semibold text-white mb-3">Examples:</h4>
-          {examples.map((example, index) => (
-            <div key={index} className="flex items-center gap-2">
+                {examples.map((example, index) => (
+            <div key={index} className="flex items-center gap-2"></div>
               <CheckCircle className="h-4 w-4 text-green-400" />
-              <span className="text-sm text-zion-cyan-light">{example}</span>
-            </div>
+              <span className="text-sm text-zion-cyan-light"></span>
+                {example}
+                </span>
+                </div>
           ))}
-        </div>
-      </CardContent>
+                </div>
+                </CardContent>
     </Card>
   )
 }
@@ -2607,48 +2642,57 @@ function PricingCard({ title, price, description, features, popular }: {
   popular: boolean
 }) {
   return (
-    <Card className={`relative ${popular ? 'border-zion-cyan border-2' : 'border-zion-cyan/30'} bg-white/10 backdrop-blur-sm hover:border-zion-cyan/60 transition-all duration-300`}>
-      {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+    <Card className={`relative ${popular ? 'border-zion-cyan border-2' : 'border-zion-cyan/30'} bg-white/10 backdrop-blur-sm hover:border-zion-cyan/60 transition-all duration-300`}></Card>
+                {popular && (
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
           <Badge className="bg-zion-cyan text-white px-4 py-1">Most Popular</Badge>
-        </div>
+                </div>
       )}
-      <CardHeader className="text-center pt-8">
-        <CardTitle className="text-2xl text-white">{title}</CardTitle>
-        <CardDescription className="text-zion-cyan-light">{description}</CardDescription>
-        <div className="text-4xl font-bold text-zion-cyan mt-4">{price}</div>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-3">
-          {features.map((feature, index) => (
-            <div key={index} className="flex items-center gap-2">
+                <CardHeader className="text-center pt-8"></CardHeader>
+        <CardTitle className="text-2xl text-white"></CardTitle>
+                {title}
+                </CardTitle>
+        <CardDescription className="text-zion-cyan-light"></CardDescription>
+                {description}
+                </CardDescription>
+        <div className="text-4xl font-bold text-zion-cyan mt-4"></div>
+                {price}
+                </div>
+                </CardHeader>
+      <CardContent></CardContent>
+        <div className="space-y-3"></div>
+                {features.map((feature, index) => (
+            <div key={index} className="flex items-center gap-2"></div>
               <CheckCircle className="h-4 w-4 text-green-400" />
-              <span className="text-zion-cyan-light">{feature}</span>
-            </div>
+              <span className="text-zion-cyan-light"></span>
+                {feature}
+                </span>
+                </div>
           ))}
-        </div>
-        <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white">
+                </div>
+        <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white"></Button>
           Get Started
         </Button>
-      </CardContent>
+                </CardContent>
     </Card>
   )
       {/* CTA Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"></section>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center"
-        >
-          <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+        ></motion.div
+>
+          <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md"></div>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white"></h2>
               Ready to Transform Your Business with AI?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"></p>
               Join hundreds of companies that have already revolutionized their operations with our cutting-edge AI solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
@@ -2663,230 +2707,225 @@ function PricingCard({ title, price, description, features, popular }: {
                 <CheckCircle className="w-5 h-5" />
                 Get Free Consultation
               </Link>
-            </div>
+                </div>
           </div>
-        </motion.div>
+                </motion.div>
       </section>
-    </div>
+                </div>
   )
-      <section className="py-16 bg-zion-blue">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-4">
+      <section className="py-16 bg-zion-blue"></section>
+        <div className="container mx-auto px-4 text-center"></div>
+          <div className="max-w-3xl mx-auto"></div>
+            <h2 className="text-3xl font-bold text-white mb-4"></h2>
               Ready to Transform Your Business with AI?
             </h2>
-            <p className="text-zion-slate-light text-lg mb-8">
+            <p className="text-zion-slate-light text-lg mb-8"></p>
               Join thousands of businesses already leveraging our AI solutions to drive growth and innovation
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/request-quote">
-                <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3">
+            <div className="flex flex-wrap justify-center gap-4"></div>
+              <Link to="/request-quote"></Link>
+                <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white px-8 py-3"></Button>
                   Request Custom Quote
                 </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+                </Link>
+              <Link to="/contact"></Link>
+                <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3"></Button>
                   Contact Our AI Experts
                 </Button>
-              </Link>
+                </Link>
             </div>
-            <div className="mt-8 text-zion-slate-light">
+            <div className="mt-8 text-zion-slate-light"></div>
               <p>📞 <strong>Mobile:</strong> +1 302 464 0950</p>
               <p>📧 <strong>Email:</strong> kleber@ziontechgroup.com</p>
               <p>📍 <strong>Address:</strong> 364 E Main St STE 1008 Middletown DE 19709</p>
-            </div>
-
-          {filteredServices.length === 0 && (
-            <div className="text-center py-16">
+                </div>
+                {filteredServices.length === 0 && (
+            <div className="text-center py-16"></div>
               <h3 className="text-xl font-semibold text-zion-slate-light mb-2">No AI services found</h3>
               <p className="text-zion-slate-light mb-4">Try adjusting your search criteria or browse all AI categories</p>
-              <Button onClick={() => {
+              <Button onClick={() =></Button>
+                {
                 setSearchQuery('')
                 setSelectedSubcategory('all')
                 setPriceRange('all')
               }}>
                 Clear Filters
               </Button>
-            </div>
+                </div>
           )}
-        </div>
-      </section>
-
-      {/* AI Success Stories */}
-      <section className="py-16 bg-zion-blue">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+                </div>
+                </section>
+                {/* AI Success Stories */}
+                <section className="py-16 bg-zion-blue"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl font-bold text-white mb-4">AI Success Stories</h2>
-            <p className="text-zion-slate-light text-lg">
+            <p className="text-zion-slate-light text-lg"></p>
               See how our AI solutions have transformed businesses across industries
             </p>
-          </div>
+                </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-zion-blue-dark border-zion-blue-light">
-              <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <Card className="bg-zion-blue-dark border-zion-blue-light"></Card>
+              <CardHeader></CardHeader>
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mb-4"></div>
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <CardTitle className="text-white">E-commerce Growth</CardTitle>
-                <CardDescription className="text-zion-slate-light">
+                <CardDescription className="text-zion-slate-light"></CardDescription>
                   AI-powered recommendations increased sales by 35%
                 </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-slate-light text-sm">
+                </CardHeader>
+              <CardContent></CardContent>
+                <p className="text-zion-slate-light text-sm"></p>
                   Our AI chatbot and recommendation engine helped a major retailer increase 
                   conversion rates and average order value significantly.
                 </p>
-              </CardContent>
+                </CardContent>
             </Card>
 
-            <Card className="bg-zion-blue-dark border-zion-blue-light">
-              <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mb-4">
+            <Card className="bg-zion-blue-dark border-zion-blue-light"></Card>
+              <CardHeader></CardHeader>
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mb-4"></div>
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <CardTitle className="text-white">Customer Service</CardTitle>
-                <CardDescription className="text-zion-slate-light">
+                <CardDescription className="text-zion-slate-light"></CardDescription>
                   Reduced response time from hours to seconds
                 </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-slate-light text-sm">
+                </CardHeader>
+              <CardContent></CardContent>
+                <p className="text-zion-slate-light text-sm"></p>
                   AI chatbot implementation reduced customer service costs by 60% while 
                   improving customer satisfaction scores.
                 </p>
-              </CardContent>
+                </CardContent>
             </Card>
 
-            <Card className="bg-zion-blue-dark border-zion-blue-light">
-              <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mb-4">
+            <Card className="bg-zion-blue-dark border-zion-blue-light"></Card>
+              <CardHeader></CardHeader>
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mb-4"></div>
                   <BarChart3 className="w-6 h-6 text-white" />
                 </div>
                 <CardTitle className="text-white">Predictive Analytics</CardTitle>
-                <CardDescription className="text-zion-slate-light">
+                <CardDescription className="text-zion-slate-light"></CardDescription>
                   Prevented $2M in potential losses
                 </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-slate-light text-sm">
+                </CardHeader>
+              <CardContent></CardContent>
+                <p className="text-zion-slate-light text-sm"></p>
                   AI-powered risk assessment and predictive analytics helped a financial 
                   institution identify and prevent fraudulent activities.
                 </p>
-              </CardContent>
+                </CardContent>
             </Card>
-          </div>
+                </div>
         </div>
-      </section>
-
-      {/* Why AI with Zion */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+                </section>
+                {/* Why AI with Zion */}
+                <section className="py-16"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-12"></div>
             <h2 className="text-3xl font-bold text-zion-blue mb-4">Why Choose Zion for AI Solutions?</h2>
-            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto"></p>
               We combine deep AI expertise with industry knowledge to deliver solutions that drive measurable business outcomes
             </p>
-          </div>
+                </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Brain className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">AI Expertise</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 Deep expertise in machine learning, NLP, computer vision, and emerging AI technologies
               </p>
-            </div>
+                </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Business Focus</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 AI solutions designed to solve real business problems, not just showcase technology
               </p>
-            </div>
+                </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Enterprise Security</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 Bank-level security and compliance standards for all AI implementations
               </p>
-            </div>
+                </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Rapid Deployment</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 Pre-built AI models and rapid deployment frameworks for faster time to value
               </p>
-            </div>
+                </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">24/7 Support</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 Round-the-clock support and monitoring for all AI systems and implementations
               </p>
-            </div>
+                </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-zion-blue mb-2">Continuous Innovation</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 Always up-to-date with the latest AI research and technology breakthroughs
               </p>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-br from-zion-blue via-zion-purple to-zion-purple-dark">
-        <div className="container mx-auto px-4 text-center">
+                {/* Call to Action */}
+                <section className="py-16 bg-gradient-to-br from-zion-blue via-zion-purple to-zion-purple-dark"></section>
+        <div className="container mx-auto px-4 text-center"></div>
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Harness the Power of AI?</h2>
-          <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto"></p>
             Let's discuss how artificial intelligence can transform your business operations, 
             improve customer experience, and drive growth
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact">
-              <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-slate-light">
+          <div className="flex flex-wrap justify-center gap-4"></div>
+            <Link to="/contact"></Link>
+              <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-slate-light"></Button>
                 <Mail className="w-5 h-5 mr-2" />
                 Schedule AI Consultation
               </Button>
-            </Link>
-            <Link to="/request-quote">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                </Link>
+            <Link to="/request-quote"></Link>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10"></Button>
                 <DollarSign className="w-5 h-5 mr-2" />
                 Get AI Quote
               </Button>
-            </Link>
-            <a href="tel:+13024640950">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                </Link>
+            <a href="tel:+13024640950"></a>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10"></Button>
                 <Phone className="w-5 h-5 mr-2" />
                 Call AI Experts
               </Button>
-            </a>
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from '@/components/ui/button'
-import { TrustedBySection } from '@/components/TrustedBySection'
-import { QuoteFormSection } from '@/components/QuoteFormSection'
-import { 
+                </a>
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { Button  } from '@/components/ui/button';import { TrustedBySection  } from '@/components/TrustedBySection';
+import { QuoteFormSection  } from '@/components/QuoteFormSection';import { 
   Brain, 
   Bot, 
   Zap, 
@@ -3061,360 +3100,363 @@ const industries = [
   "Media & Entertainment",
   "Government & Public Sector"
 ]
-export default function AIServicesPage() {
-  return (
+export default function AIServicesPage() {return (
     <>
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                {/* Hero Section */}
+                <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple"></section>
+        <div className="container mx-auto px-4 text-center"></div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
             AI-Powered Solutions for
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple-light">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple-light"></span>
               Modern Businesses
             </span>
-          </h1>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+                </h1>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"></p>
             Transform your business with cutting-edge AI solutions designed to drive innovation, 
             efficiency, and competitive advantage. From automation to predictive analytics, 
             we deliver intelligent solutions that scale with your business.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/request-quote">
-              <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
+          <div className="flex flex-wrap justify-center gap-4"></div>
+            <Link to="/request-quote"></Link>
+              <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3"></Button>
                 Get AI Solution Quote
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-            </Link>
-            <Link to="/contact">
-              <Button variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+                </Link>
+            <Link to="/contact"></Link>
+              <Button variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3"></Button>
                 Schedule AI Consultation
               </Button>
-            </Link>
+                </Link>
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* AI Services Grid */}
-      <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* AI Services Grid */}
+                <section className="py-20 bg-zion-blue-dark"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               AI-Powered Solutions
             </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto"></p>
               Choose from our range of AI services designed to address specific business challenges 
               and drive measurable results.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service) => (
-              <div key={service.id} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
-                <div className="flex items-center mb-4">
-                  <div className="p-3 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-lg mr-4">
-                    <div className="text-white">
-                      {service.icon}
-                    </div>
-                  </div>
-                  <div>
-                    <span className="text-zion-cyan text-sm font-medium">{service.category}</span>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {aiServices.map((service) => (
+              <div key={service.id} className="bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]"></div>
+                <div className="flex items-center mb-4"></div>
+                  <div className="p-3 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-lg mr-4"></div>
+                    <div className="text-white"></div>
+                {service.icon}
+                </div>
+                </div>
+                  <div></div>
+                    <span className="text-zion-cyan text-sm font-medium"></span>
+                {service.category}
+                </span>
+                </div>
                 </div>
                 
-                <h3 className="text-white text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-zion-slate-light mb-4">{service.description}</p>
+                <h3 className="text-white text-xl font-bold mb-3"></h3>
+                {service.title}
+                </h3>
+                <p className="text-zion-slate-light mb-4"></p>
+                {service.description}
+                </p>
                 
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, index) => (
-                      <li key={index} className="text-zion-slate-light text-sm flex items-center">
+                  <ul className="space-y-1"></ul>
+                {service.features.slice(0, 3).map((feature, index) => (
+                      <li key={index} className="text-zion-slate-light text-sm flex items-center"></li>
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
+                {feature}
+                </li>
                     ))}
-                  </ul>
+                </ul>
                 </div>
                 
-                <div className="border-t border-zion-blue-light pt-4 mb-4">
-                  <div className="flex items-center justify-between text-sm">
-                    <div className="flex items-center text-zion-cyan">
+                <div className="border-t border-zion-blue-light pt-4 mb-4"></div>
+                  <div className="flex items-center justify-between text-sm"></div>
+                    <div className="flex items-center text-zion-cyan"></div>
                       <DollarSign className="w-4 h-4 mr-1" />
-                      <span className="font-semibold">{service.currency}{service.price.toLocaleString()}</span>
-                    </div>
-                    <div className="flex items-center text-zion-slate-light">
+                      <span className="font-semibold"></span>
+                {service.currency}{service.price.toLocaleString()}
+                </span>
+                </div>
+                    <div className="flex items-center text-zion-slate-light"></div>
                       <Clock className="w-4 h-4 mr-1" />
-                      <span>{service.duration}</span>
-                    </div>
+                      <span></span>
+                {service.duration}
+                </span>
+                </div>
                   </div>
                 </div>
                 
-                <Link to="/request-quote">
-                  <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                <Link to="/request-quote"></Link>
+                  <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"></Button>
                     Get Quote
                   </Button>
                 </Link>
               </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* AI Technologies */}
-      <section className="py-20 bg-zion-blue">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* AI Technologies */}
+                <section className="py-20 bg-zion-blue"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Advanced AI Technologies
             </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto"></p>
               We leverage cutting-edge AI technologies to deliver innovative solutions 
               that address complex business challenges.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {aiTechnologies.map((tech, index) => (
-              <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+                {aiTechnologies.map((tech, index) => (
+              <div key={index} className="text-center p-6 bg-zion-blue-dark border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Brain className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-white font-semibold text-sm">{tech}</h3>
-              </div>
+                <h3 className="text-white font-semibold text-sm"></h3>
+                {tech}
+                </h3>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Industries We Serve */}
-      <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Industries We Serve */}
+                <section className="py-20 bg-zion-blue-dark"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Industries We Serve
             </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto"></p>
               Our AI solutions are tailored to meet the unique challenges and opportunities 
               across diverse industry sectors.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
-              <div key={index} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+                {industries.map((industry, index) => (
+              <div key={index} className="text-center p-6 bg-zion-blue border border-zion-blue-light rounded-lg hover:border-zion-purple/50 transition-all duration-300"></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-white font-semibold text-sm">{industry}</h3>
-              </div>
+                <h3 className="text-white font-semibold text-sm"></h3>
+                {industry}
+                </h3>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-      {/* Why Choose ZionTech for AI */}
-      <section className="py-20 bg-zion-blue">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Why Choose ZionTech for AI */}
+                <section className="py-20 bg-zion-blue"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Why Choose ZionTech Group for AI Solutions?
             </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto"></p>
               We combine deep AI expertise with industry knowledge to deliver 
               solutions that drive real business value.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="text-center p-6"></div>
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <Star className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-white text-xl font-bold mb-3">Proven Expertise</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 Over 5 years of experience in AI implementation across multiple industries 
                 with a track record of successful projects.
               </p>
-            </div>
+                </div>
             
-            <div className="text-center p-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-6"></div>
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <Lock className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-white text-xl font-bold mb-3">Enterprise Security</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 Bank-level security standards with SOC 2 compliance and enterprise-grade 
                 data protection for all AI solutions.
               </p>
-            </div>
+                </div>
             
-            <div className="text-center p-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center p-6"></div>
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-6"></div>
                 <Zap className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-white text-xl font-bold mb-3">Rapid Deployment</h3>
-              <p className="text-zion-slate-light">
+              <p className="text-zion-slate-light"></p>
                 Agile development methodology with rapid prototyping and deployment 
                 to get your AI solution running quickly.
               </p>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </section>
-
-      {/* Pricing Information */}
-      <section className="py-20 bg-zion-blue-dark">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Pricing Information */}
+                <section className="py-20 bg-zion-blue-dark"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Transparent AI Solution Pricing
             </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto"></p>
               Competitive pricing for enterprise-grade AI solutions with flexible 
               payment options and ROI guarantees.
             </p>
-          </div>
+                </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"></div>
+            <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-8 text-center"></div>
               <h3 className="text-white text-2xl font-bold mb-4">Starter AI</h3>
-              <div className="text-4xl font-bold text-zion-cyan mb-6">
+              <div className="text-4xl font-bold text-zion-cyan mb-6"></div>
                 $2,200<span className="text-lg text-zion-slate-light">/project</span>
-              </div>
-              <ul className="text-zion-slate-light space-y-2 mb-8">
+                </div>
+              <ul className="text-zion-slate-light space-y-2 mb-8"></ul>
                 <li>Basic AI implementation</li>
                 <li>Standard features</li>
                 <li>Email support</li>
                 <li>2-week delivery</li>
-              </ul>
-              <Link to="/request-quote">
-                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                </ul>
+              <Link to="/request-quote"></Link>
+                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"></Button>
                   Get Started
                 </Button>
-              </Link>
+                </Link>
             </div>
             
-            <div className="bg-gradient-to-br from-zion-purple to-zion-purple-dark border border-zion-purple rounded-lg p-8 text-center relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-zion-cyan text-zion-blue px-4 py-2 rounded-full text-sm font-bold">
+            <div className="bg-gradient-to-br from-zion-purple to-zion-purple-dark border border-zion-purple rounded-lg p-8 text-center relative"></div>
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                <span className="bg-zion-cyan text-zion-blue px-4 py-2 rounded-full text-sm font-bold"></span>
                   Most Popular
                 </span>
-              </div>
+                </div>
               <h3 className="text-white text-2xl font-bold mb-4">Professional AI</h3>
-              <div className="text-4xl font-bold text-white mb-6">
+              <div className="text-4xl font-bold text-white mb-6"></div>
                 $4,800<span className="text-lg text-zion-slate-light">/project</span>
-              </div>
-              <ul className="text-white space-y-2 mb-8">
+                </div>
+              <ul className="text-white space-y-2 mb-8"></ul>
                 <li>Advanced AI features</li>
                 <li>Custom integrations</li>
                 <li>Priority support</li>
                 <li>6-8 week delivery</li>
-              </ul>
-              <Link to="/request-quote">
-                <Button className="w-full bg-white text-zion-purple hover:bg-zion-slate-light">
+                </ul>
+              <Link to="/request-quote"></Link>
+                <Button className="w-full bg-white text-zion-purple hover:bg-zion-slate-light"></Button>
                   Get Started
                 </Button>
-              </Link>
+                </Link>
             </div>
             
-            <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-8 text-center">
+            <div className="bg-zion-blue border border-zion-blue-light rounded-lg p-8 text-center"></div>
               <h3 className="text-white text-2xl font-bold mb-4">Enterprise AI</h3>
-              <div className="text-4xl font-bold text-zion-cyan mb-6">
+              <div className="text-4xl font-bold text-zion-cyan mb-6"></div>
                 $12,000<span className="text-lg text-zion-slate-light">/project</span>
-              </div>
-              <ul className="text-zion-slate-light space-y-2 mb-8">
+                </div>
+              <ul className="text-zion-slate-light space-y-2 mb-8"></ul>
                 <li>Full AI transformation</li>
                 <li>Custom development</li>
                 <li>24/7 dedicated support</li>
                 <li>12-16 week delivery</li>
-              </ul>
-              <Link to="/request-quote">
-                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
+                </ul>
+              <Link to="/request-quote"></Link>
+                <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"></Button>
                   Contact Sales
                 </Button>
-              </Link>
+                </Link>
             </div>
-          </div>
+                </div>
         </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-20 bg-zion-blue">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                </section>
+                {/* Contact Information */}
+                <section className="py-20 bg-zion-blue"></section>
+        <div className="container mx-auto px-4 text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
             Ready to Transform Your Business with AI?
           </h2>
-          <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto"></p>
             Contact our AI experts today to discuss how we can help you leverage 
             artificial intelligence for business growth and innovation.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12"></div>
+            <div className="text-center p-6"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Globe className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-white font-bold mb-2">Visit Us</h3>
-              <p className="text-zion-slate-light text-sm">
+              <p className="text-zion-slate-light text-sm"></p>
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </p>
-            </div>
+                </div>
             
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-white font-bold mb-2">Call Us</h3>
-              <p className="text-zion-cyan font-semibold">
+              <p className="text-zion-cyan font-semibold"></p>
                 +1 302 464 0950
               </p>
-            </div>
+                </div>
             
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6"></div>
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4"></div>
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-white font-bold mb-2">Email Us</h3>
-              <p className="text-zion-cyan font-semibold">
+              <p className="text-zion-cyan font-semibold"></p>
                 kleber@ziontechgroup.com
               </p>
-            </div>
+                </div>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/request-quote">
-              <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
+          <div className="flex flex-wrap justify-center gap-4"></div>
+            <Link to="/request-quote"></Link>
+              <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3"></Button>
                 Request AI Solution Quote
               </Button>
-            </Link>
-            <Link to="/contact">
-              <Button variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+                </Link>
+            <Link to="/contact"></Link>
+              <Button variant="outline" size="lg" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3"></Button>
                 Schedule AI Consultation
               </Button>
-            </Link>
+                </Link>
           </div>
-        </div>
+                </div>
       </section>
 
       <TrustedBySection />
 import React from 'react'
-import React from 'react'
-import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
-import { SEO } from '@/components/SEO'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Link } from 'react-router-dom'
-import { 
-  Brain, 
+import React from 'react';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';import { SEO  } from '@/components/SEO';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';import { Link  } from 'react-router-dom';
+import { Brain, 
   Database, 
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark py-20">
+      <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark py-20"></div>
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+        <div className="relative container mx-auto px-4 text-center"></div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6"></h1>
             AI Services & Solutions
           </h1>
   Zap, 
@@ -3437,9 +3479,8 @@ import {
   Settings,
   BarChart,
   Smartphone,
-
-} from "lucide-react"
-export default function AIServicesPage() {
+;
+ } from 'lucide-react';export default function AIServicesPage() {
   const aiServices = [
     {
       id: "ai-chatbot",
@@ -3699,7 +3740,8 @@ export default function AIServicesPage() {
   ]
   const [selectedCategory, setSelectedCategory] = React.useState("All Services")
   const [filteredServices, setFilteredServices] = React.useState(aiServices)
-  React.useEffect(() => {
+  React.useEffect(() =>
+                {
     if (selectedCategory === "All Services") {
       setFilteredServices(aiServices)
     } else {
@@ -3707,53 +3749,49 @@ export default function AIServicesPage() {
     }
   }, [selectedCategory])
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark"></div>
+                {/* Hero Section */}
+                <div className="relative overflow-hidden"></div>
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-zion-cyan/20 rounded-full">
+        <div className="relative z-10 container mx-auto px-4 py-20 text-center text-white"></div>
+          <div className="flex justify-center mb-6"></div>
+            <div className="p-4 bg-zion-cyan/20 rounded-full"></div>
               <Brain className="h-16 w-16 text-zion-cyan" />
             </div>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                </div>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"></h1>
             AI Services & Solutions
           </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"></p>
             Transform your business with cutting-edge AI solutions. From chatbots to predictive analytics, 
             we provide enterprise-grade AI services that drive innovation and growth.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
+          <div className="flex flex-wrap justify-center gap-4"></div>
+            <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3"></Button>
               <Brain className="h-5 w-5 mr-2" />
               Explore AI Solutions
             </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
+            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3"></Button>
               <Lightbulb className="h-5 w-5 mr-2" />
               Get AI Consultation
-          <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8"></p>
             Transform your business with cutting-edge artificial intelligence services. 
             From development to deployment, we provide comprehensive AI solutions.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+          <div className="flex flex-wrap justify-center gap-4"></div>
+            <Button asChild size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"></Button>
               <Link to="/request-quote">Get AI Quote</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                </Button>
+            <Button asChild size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"></Button>
               <Link to="/contact">Consult with Experts</Link>
-            </Button>
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { 
-  Brain, 
+                </Button>
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { Button  } from '@/components/ui/button';import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';import { Brain, 
   Zap, 
     Circle,
   BarChart3, 
->>>>>>> origin/main
   Star, 
   Clock, 
   DollarSign, 
@@ -3778,73 +3816,6 @@ import {
   Cpu, 
   Network, 
   ArrowRight, 
-<<<<<<< HEAD
-  CheckCircle, 
-  ExternalLink, 
-  Sparkles, 
-  Rocket, 
-  TrendingUp, 
-  BarChart3, 
-  Target, 
-  MessageSquare 
-} from 'lucide-react';
-import { motion } from 'framer-motion';
-
-// Mock data for AI services
-const AI_SERVICES = [
-  {
-    id: 'ai-chatbot',
-    name: 'AI Chatbot Solutions',
-    description: 'Intelligent conversational AI that understands context and provides human-like responses.',
-    price: '$299',
-    period: '/month',
-    features: ['Natural Language Processing', 'Multi-language Support', '24/7 Availability', 'Custom Training'],
-    category: 'AI & Machine Learning',
-    popular: true,
-    icon: Bot,
-    color: 'from-blue-600 to-purple-700'
-  },
-  {
-    id: 'ai-analytics',
-    name: 'AI-Powered Analytics',
-    description: 'Advanced analytics platform that uses machine learning to uncover insights from your data.',
-    price: '$499',
-    period: '/month',
-    features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Data Visualization'],
-    category: 'AI & Machine Learning',
-    popular: true,
-    icon: BarChart3,
-    color: 'from-green-600 to-teal-700'
-  },
-  {
-    id: 'ai-automation',
-    name: 'AI Process Automation',
-    description: 'Automate repetitive tasks and workflows with intelligent AI agents.',
-    price: '$399',
-    period: '/month',
-    features: ['Workflow Automation', 'Task Scheduling', 'Error Handling', 'Performance Monitoring'],
-    category: 'AI & Machine Learning',
-    popular: false,
-    icon: Zap,
-    color: 'from-orange-600 to-red-700'
-  }
-];
-
-export default function AIServicesPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-
-  const filteredServices = AI_SERVICES.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const categories = ['all', ...Array.from(new Set(AI_SERVICES.map(service => service.category)))];
-
-=======
   CheckCircle,
   Phone,
   Mail,
@@ -3860,91 +3831,82 @@ export default function AIServicesPage() {
   Eye,
   MessageSquare,
   Bot,
-  Network
-} from "lucide-react"
-import { AI_SERVICES } from "@/data/expandedServices"
-const AIServicesPage = () => {
->>>>>>> origin/main
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+  Network;
+ } from 'lucide-react';
+import { AI_SERVICES  } from '@/data/expandedServices';const AIServicesPage  = () => {return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+                {/* Hero Section */}
+                <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          ></motion.div
+>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6"></h1>
               AI-Powered Services
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"></p>
               Transform your business with cutting-edge artificial intelligence solutions. 
               From chatbots to analytics, we provide the AI tools you need to succeed.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700"></Button>
                 Get Started
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-<<<<<<< HEAD
-              <Button size="lg" variant="outline">
-                View Pricing
-              </Button>
-            </div>
-          </motion.div>
-=======
-      {/* Categories Overview */}
-      <div className="py-16 bg-zion-slate/50">
-        <div className="container mx-auto px-4">
+                {/* Categories Overview */}
+                <div className="py-16 bg-zion-slate/50"></div>
+        <div className="container mx-auto px-4"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">AI Service Categories</h2>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {AI_SERVICE_CATEGORIES.map((category) => (
-              <div key={category.name} className="text-center">
-                <div className={`w-16 h-16 ${category.color} rounded-full mx-auto mb-3 flex items-center justify-center`}>
-                  <span className="text-white font-bold text-lg">{category.count}</span>
-      {/* AI Statistics */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-4 gap-8">
-          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
-            <CardContent className="p-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4"></div>
+                {AI_SERVICE_CATEGORIES.map((category) => (
+              <div key={category.name} className="text-center"></div>
+                <div className={`w-16 h-16 ${category.color} rounded-full mx-auto mb-3 flex items-center justify-center`}></div>
+                  <span className="text-white font-bold text-lg"></span>
+                {category.count}
+                </span>
+                {/* AI Statistics */}
+                <div className="container mx-auto px-4 py-16"></div>
+        <div className="grid md:grid-cols-4 gap-8"></div>
+          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center"></Card>
+            <CardContent className="p-6"></CardContent>
               <TrendingUp className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
               <h3 className="text-3xl font-bold text-white mb-2">95%</h3>
               <p className="text-zion-cyan-light">Increase in Efficiency</p>
-            </CardContent>
+                </CardContent>
           </Card>
-          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
-            <CardContent className="p-6">
+          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center"></Card>
+            <CardContent className="p-6"></CardContent>
               <DollarSign className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
               <h3 className="text-3xl font-bold text-white mb-2">$2.9T</h3>
               <p className="text-zion-cyan-light">AI Market Value by 2025</p>
-            </CardContent>
+                </CardContent>
           </Card>
-          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
-            <CardContent className="p-6">
+          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center"></Card>
+            <CardContent className="p-6"></CardContent>
               <Users className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
               <h3 className="text-3xl font-bold text-white mb-2">87%</h3>
               <p className="text-zion-cyan-light">Customer Satisfaction</p>
-            </CardContent>
+                </CardContent>
           </Card>
-          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
-            <CardContent className="p-6">
+          <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center"></Card>
+            <CardContent className="p-6"></CardContent>
               <Clock className="h-12 w-12 mx-auto mb-4 text-zion-cyan" />
               <h3 className="text-3xl font-bold text-white mb-2">24/7</h3>
               <p className="text-zion-cyan-light">AI-Powered Operations</p>
-            </CardContent>
+                </CardContent>
           </Card>
->>>>>>> origin/main
-        </div>
+                </div>
       </section>
-
-      {/* Search and Filters */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row gap-4 mb-8">
-            <div className="flex-1">
-              <div className="relative">
+                {/* Search and Filters */}
+                <section className="py-8 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="flex flex-col md:flex-row gap-4 mb-8"></div>
+            <div className="flex-1"></div>
+              <div className="relative"></div>
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
                 <input
                   type="text"
@@ -3954,19 +3916,19 @@ const AIServicesPage = () => {
                   className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
-            </div>
-            <div className="flex gap-2">
+                </div>
+            <div className="flex gap-2"></div>
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
               >
                 {categories.map(category => (
-                  <option key={category} value={category}>
-                    {category === 'all' ? 'All Categories' : category}
-                  </option>
+                  <option key={category} value={category}></option>
+                {category === 'all' ? 'All Categories' : category}
+                </option>
                 ))}
-              </select>
+                </select>
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
@@ -3975,83 +3937,84 @@ const AIServicesPage = () => {
                 <option value="popularity">Sort by Popularity</option>
                 <option value="price">Sort by Price</option>
                 <option value="name">Sort by Name</option>
-              </select>
+                </select>
             </div>
-          </div>
+                </div>
         </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index) => (
+                </section>
+                {/* Services Grid */}
+                <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color}`}>
+              ></motion.div
+>
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300"></Card>
+                  <CardHeader></CardHeader>
+                    <div className="flex items-center justify-between mb-4"></div>
+                      <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color}`}></div>
                         <service.icon className="h-6 w-6 text-white" />
                       </div>
-                      {service.popular && (
-                        <Badge variant="secondary" className="bg-green-100 text-green-800">
+                {service.popular && (
+                        <Badge variant="secondary" className="bg-green-100 text-green-800"></Badge>
                           Popular
                         </Badge>
                       )}
-                    </div>
-                    <CardTitle className="text-xl">{service.name}</CardTitle>
-                    <CardDescription className="text-gray-600">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="mb-4">
-                      <span className="text-3xl font-bold text-gray-900">{service.price}</span>
-                      <span className="text-gray-500">{service.period}</span>
-                    </div>
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                </div>
+                    <CardTitle className="text-xl"></CardTitle>
+                {service.name}
+                </CardTitle>
+                    <CardDescription className="text-gray-600"></CardDescription>
+                {service.description}
+                </CardDescription>
+                </CardHeader>
+                  <CardContent></CardContent>
+                    <div className="mb-4"></div>
+                      <span className="text-3xl font-bold text-gray-900"></span>
+                {service.price}
+                </span>
+                      <span className="text-gray-500"></span>
+                {service.period}
+                </span>
+                </div>
+                    <ul className="space-y-2 mb-6"></ul>
+                {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>
                           <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                          {feature}
-                        </li>
+                {feature}
+                </li>
                       ))}
-                    </ul>
-                    <Button className="w-full" variant="outline">
+                </ul>
+                    <Button className="w-full" variant="outline"></Button>
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
-<<<<<<< HEAD
-                  </CardContent>
-                </Card>
-              </motion.div>
-=======
-                  </div>
+                </div>
                 </CardContent>
-      {/* Contact Information Banner */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-6 text-sm text-gray-600">
-              <div className="flex items-center gap-2">
+                {/* Contact Information Banner */}
+                <div className="bg-white border-b border-gray-200"></div>
+        <div className="container mx-auto px-4 py-6"></div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4"></div>
+            <div className="flex items-center gap-6 text-sm text-gray-600"></div>
+              <div className="flex items-center gap-2"></div>
                 <Phone className="h-4 w-4 text-blue-600" />
                 <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center gap-2">
+                </div>
+              <div className="flex items-center gap-2"></div>
                 <Mail className="h-4 w-4 text-blue-600" />
                 <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center gap-2">
+                </div>
+              <div className="flex items-center gap-2"></div>
                 <MapPin className="h-4 w-4 text-blue-600" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
+                </div>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2"></div>
               <Globe className="h-4 w-4 text-blue-600" />
               <$2 />
                 href="https://ziontechgroup.com" 
@@ -4061,498 +4024,485 @@ const AIServicesPage = () => {
               >
                 ziontechgroup.com
               </a>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
-
-      {/* AI Capabilities Overview */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                {/* AI Capabilities Overview */}
+                <div className="py-16 bg-white"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
               AI Capabilities & Expertise
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
               Our AI solutions leverage the latest technologies to deliver measurable business outcomes
             </p>
-          </div>
+                </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div className="text-center"></div>
+              <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                 <Brain className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Machine Learning</h3>
               <p className="text-gray-600">Custom ML models, predictive analytics, and automated decision-making systems</p>
-            </div>
+                </div>
             
-            <div className="text-center">
-              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="text-center"></div>
+              <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                 <MessageSquare className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Natural Language Processing</h3>
               <p className="text-gray-600">Text analysis, sentiment detection, language translation, and chatbot development</p>
-            </div>
+                </div>
             
-            <div className="text-center">
-              <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="text-center"></div>
+              <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                 <Eye className="h-8 w-8 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Computer Vision</h3>
               <p className="text-gray-600">Image recognition, object detection, quality control, and automated inspection</p>
-            </div>
+                </div>
             
-            <div className="text-center">
-              <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="text-center"></div>
+              <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                 <Zap className="h-8 w-8 text-orange-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Process Automation</h3>
               <p className="text-gray-600">AI-powered workflow automation, RPA integration, and intelligent process optimization</p>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
-
-      {/* AI Services Grid */}
-      <div className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                {/* AI Services Grid */}
+                <div className="py-16 bg-gray-50"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
               AI & Machine Learning Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
               Comprehensive AI solutions designed to drive innovation and competitive advantage
             </p>
-          </div>
+                </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {AI_SERVICES.map((service) => (
-              <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-blue-500/20">
-                <div className="relative">
+          <div className="grid md:grid-cols-2 gap-8"></div>
+                {AI_SERVICES.map((service) => (
+              <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-blue-500/20"></Card>
+                <div className="relative"></div>
                   <img 
                     src={service.images[0]} 
                     alt={service.title}
                     className="w-full h-64 object-cover rounded-t-lg"
                   />
-                  {service.featured && (
-                    <Badge className="absolute top-4 right-4 bg-blue-600 text-white">
+                {service.featured && (
+                    <Badge className="absolute top-4 right-4 bg-blue-600 text-white"></Badge>
                       Featured
                     </Badge>
                   )}
                 </div>
-                <CardHeader>
-                  <div className="flex items-start justify-between mb-2">
-                    <Badge className="bg-blue-100 text-blue-800 border-blue-200">
-                      {service.category}
-                    </Badge>
-                    <div className="flex items-center gap-1 text-sm text-gray-600">
+                <CardHeader></CardHeader>
+                  <div className="flex items-start justify-between mb-2"></div>
+                    <Badge className="bg-blue-100 text-blue-800 border-blue-200"></Badge>
+                {service.category}
+                </Badge>
+                    <div className="flex items-center gap-1 text-sm text-gray-600"></div>
                       <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      <span>{service.rating}</span>
+                      <span></span>
+                {service.rating}
+                </span>
                       <span className="text-gray-400">({service.reviewCount})</span>
-                    </div>
+                </div>
                   </div>
-                  <CardTitle className="text-xl leading-tight">{service.title}</CardTitle>
-                  <CardDescription className="text-base leading-relaxed">
-                    {service.description}
-                  </CardDescription>
+                  <CardTitle className="text-xl leading-tight"></CardTitle>
+                {service.title}
+                </CardTitle>
+                  <CardDescription className="text-base leading-relaxed"></CardDescription>
+                {service.description}
+                </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="text-3xl font-bold text-blue-600">
-                      {service.currency}{service.price?.toLocaleString()}
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                <CardContent></CardContent>
+                  <div className="flex items-center justify-between mb-4"></div>
+                    <div className="text-3xl font-bold text-blue-600"></div>
+                {service.currency}{service.price?.toLocaleString()}
+                </div>
+                    <div className="flex items-center gap-2 text-sm text-gray-600"></div>
                       <Clock className="h-4 w-4" />
-                      <span>{service.availability}</span>
-                    </div>
+                      <span></span>
+                {service.availability}
+                </span>
+                </div>
                   </div>
                   
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="text-xs">
-                        {tag}
-                      </Badge>
+                  <div className="flex flex-wrap gap-2 mb-4"></div>
+                {service.tags.map((tag) => (
+                      <Badge key={tag} variant="secondary" className="text-xs"></Badge>
+                {tag}
+                </Badge>
                     ))}
-                  </div>
+                </div>
 
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <div className="flex items-center justify-between"></div>
+                    <div className="flex items-center gap-2 text-sm text-gray-600"></div>
                       <BarChart3 className="h-4 w-4" />
                       <span>AI Score: {service.aiScore}%</span>
-                    </div>
-                    <Link to={`/services/${service.id}`}>
-                      <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                </div>
+                    <Link to={`/services/${service.id}`}></Link>
+                      <Button size="sm" className="bg-blue-600 hover:bg-blue-700"></Button>
                         Learn More
                       </Button>
-                    </Link>
+                </Link>
                   </div>
                 </CardContent>
               </Card>
->>>>>>> origin/main
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
-
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business with AI?
-=======
-      {/* Benefits Section */}
-      <section className="py-16 bg-zion-blue-dark/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                {/* Benefits Section */}
+                <section className="py-16 bg-zion-blue-dark/30"></section>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Why Choose Zion AI Services?
             </h2>
-            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto"></p>
               Experience the power of AI with our proven, reliable, and scalable solutions
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {BENEFITS.map((benefit, index) => (
-              <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                  {benefit.title}
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                {BENEFITS.map((benefit, index) => (
+              <div key={index} className="text-center group"></div>
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 mb-6 group-hover:scale-110 transition-transform duration-300"></div>
+                {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors"></h3>
+                {benefit.title}
                 </h3>
-                <p className="text-zion-slate-light leading-relaxed">
-                  {benefit.description}
+                <p className="text-zion-slate-light leading-relaxed"></p>
+                {benefit.description}
                 </p>
-              </div>
+                </div>
             ))}
-          </div>
-        </div>
+                </div>
+                </div>
       </section>
 
-      <div className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-blue-dark">
-        <div className="container mx-auto px-4 text-center">
+      <div className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-blue-dark"></div>
+        <div className="container mx-auto px-4 text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business with AI?</h2>
-          <p className="text-xl text-zion-cyan mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-zion-cyan mb-8 max-w-2xl mx-auto"></p>
             Our AI experts are ready to help you implement cutting-edge solutions that drive growth and innovation.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-zion-slate">
+          <div className="flex flex-wrap justify-center gap-4"></div>
+            <Button asChild size="lg" className="bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-zion-slate"></Button>
               <Link to="/request-quote">Request Free Consultation</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                </Button>
+            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10"></Button>
               <Link to="/contact">Contact Our Team</Link>
-            </Button>
+                </Button>
           </div>
-          <div className="mt-8 text-zion-cyan">
+          <div className="mt-8 text-zion-cyan"></div>
             <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
-          </div>
-      {/* AI Benefits Section */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                </div>
+                {/* AI Benefits Section */}
+                <div className="py-16 bg-white"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
               Benefits of AI Integration
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
               Discover how artificial intelligence can transform your business operations and drive growth
             </p>
-          </div>
+                </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-purple-50">
-              <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-blue-50 to-purple-50"></div>
+              <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                 <TrendingUp className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">Increased Efficiency</h3>
               <p className="text-gray-600">Automate repetitive tasks and optimize workflows to boost productivity by up to 300%</p>
-            </div>
+                </div>
 
-            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-purple-50 to-pink-50">
-              <div className="bg-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-purple-50 to-pink-50"></div>
+              <div className="bg-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                 <Circle className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">Better Decision Making</h3>
               <p className="text-gray-600">Leverage data-driven insights and predictive analytics for informed strategic decisions</p>
-            </div>
+                </div>
 
-            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-green-50 to-blue-50">
-              <div className="bg-green-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-green-50 to-blue-50"></div>
+              <div className="bg-green-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                 <Users className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">Enhanced Customer Experience</h3>
               <p className="text-gray-600">Personalize interactions and provide 24/7 support through AI-powered chatbots</p>
-            </div>
+                </div>
 
-            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-orange-50 to-red-50">
-              <div className="bg-orange-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-orange-50 to-red-50"></div>
+              <div className="bg-orange-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                 <Shield className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">Improved Security</h3>
               <p className="text-gray-600">Advanced threat detection and fraud prevention using machine learning algorithms</p>
-            </div>
+                </div>
 
-            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-cyan-50 to-blue-50">
-              <div className="bg-cyan-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-cyan-50 to-blue-50"></div>
+              <div className="bg-cyan-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                 <Database className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">Data Insights</h3>
               <p className="text-gray-600">Extract valuable patterns and trends from large datasets for strategic advantage</p>
-            </div>
+                </div>
 
-            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-yellow-50 to-orange-50">
-              <div className="bg-yellow-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="text-center p-6 rounded-lg bg-gradient-to-br from-yellow-50 to-orange-50"></div>
+              <div className="bg-yellow-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                 <TrendingUp className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-3 text-gray-900">Innovation Leadership</h3>
               <p className="text-gray-600">Stay ahead of competitors with cutting-edge AI technologies and solutions</p>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
-
-      {/* AI Implementation Process */}
-      <div className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                {/* AI Implementation Process */}
+                <div className="py-16 bg-gray-50"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
               AI Implementation Process
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
               Our proven methodology ensures successful AI integration and maximum ROI
             </p>
-          </div>
+                </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div className="text-center"></div>
+              <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"></div>
                 1
               </div>
               <h3 className="text-xl font-semibold mb-2">Assessment & Strategy</h3>
               <p className="text-gray-600">Evaluate current state, define AI objectives, and create implementation roadmap</p>
-            </div>
+                </div>
 
-            <div className="text-center">
-              <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+            <div className="text-center"></div>
+              <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"></div>
                 2
               </div>
               <h3 className="text-xl font-semibold mb-2">Data Preparation</h3>
               <p className="text-gray-600">Clean, structure, and prepare data for AI model training and validation</p>
-            </div>
+                </div>
 
-            <div className="text-center">
-              <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+            <div className="text-center"></div>
+              <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"></div>
                 3
               </div>
               <h3 className="text-xl font-semibold mb-2">Development & Testing</h3>
               <p className="text-gray-600">Build, train, and validate AI models with comprehensive testing protocols</p>
-            </div>
+                </div>
 
-            <div className="text-center">
-              <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl">
+            <div className="text-center"></div>
+              <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-white font-bold text-xl"></div>
                 4
               </div>
               <h3 className="text-xl font-semibold mb-2">Deployment & Optimization</h3>
               <p className="text-gray-600">Deploy to production, monitor performance, and continuously optimize</p>
-            </div>
+                </div>
           </div>
-        </div>
+                </div>
       </div>
-
-      {/* AI Use Cases */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                {/* AI Use Cases */}
+                <div className="py-16 bg-white"></div>
+        <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"></h2>
               AI Use Cases & Applications
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
               Real-world applications of AI technology across various industries
             </p>
-          </div>
+                </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="bg-blue-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            <Card className="hover:shadow-lg transition-shadow"></Card>
+              <CardHeader></CardHeader>
+                <div className="bg-blue-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4"></div>
                   <Monitor className="h-6 w-6 text-blue-600" />
                 </div>
                 <CardTitle>Manufacturing</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
+                </CardHeader>
+              <CardContent></CardContent>
+                <ul className="space-y-2 text-sm text-gray-600"></ul>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Predictive maintenance</span>
-                  </li>
-                  <li className="flex items-center gap-2">
+                </li>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Quality control automation</span>
-                  </li>
-                  <li className="flex items-center gap-2">
+                </li>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Supply chain optimization</span>
-                  </li>
+                </li>
                 </ul>
-              </CardContent>
+                </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="bg-green-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+            <Card className="hover:shadow-lg transition-shadow"></Card>
+              <CardHeader></CardHeader>
+                <div className="bg-green-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4"></div>
                   <Database className="h-6 w-6 text-green-600" />
                 </div>
                 <CardTitle>Finance & Banking</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
+                </CardHeader>
+              <CardContent></CardContent>
+                <ul className="space-y-2 text-sm text-gray-600"></ul>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Fraud detection</span>
-                  </li>
-                  <li className="flex items-center gap-2">
+                </li>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Risk assessment</span>
-                  </li>
-                  <li className="flex items-center gap-2">
+                </li>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Algorithmic trading</span>
-                  </li>
+                </li>
                 </ul>
-              </CardContent>
+                </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="bg-purple-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+            <Card className="hover:shadow-lg transition-shadow"></Card>
+              <CardHeader></CardHeader>
+                <div className="bg-purple-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4"></div>
                   <MessageSquare className="h-6 w-6 text-purple-600" />
                 </div>
                 <CardTitle>Customer Service</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
+                </CardHeader>
+              <CardContent></CardContent>
+                <ul className="space-y-2 text-sm text-gray-600"></ul>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Intelligent chatbots</span>
-                  </li>
-                  <li className="flex items-center gap-2">
+                </li>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Sentiment analysis</span>
-                  </li>
-                  <li className="flex items-center gap-2">
+                </li>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Personalized recommendations</span>
-                  </li>
+                </li>
                 </ul>
-              </CardContent>
+                </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="bg-orange-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+            <Card className="hover:shadow-lg transition-shadow"></Card>
+              <CardHeader></CardHeader>
+                <div className="bg-orange-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4"></div>
                   <BarChart3 className="h-6 w-6 text-orange-600" />
                 </div>
                 <CardTitle>Healthcare</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
+                </CardHeader>
+              <CardContent></CardContent>
+                <ul className="space-y-2 text-sm text-gray-600"></ul>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Medical image analysis</span>
-                  </li>
-                  <li className="flex items-center gap-2">
+                </li>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Drug discovery</span>
-                  </li>
-                  <li className="flex items-center gap-2">
+                </li>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Patient outcome prediction</span>
-                  </li>
+                </li>
                 </ul>
-              </CardContent>
+                </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="bg-cyan-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+            <Card className="hover:shadow-lg transition-shadow"></Card>
+              <CardHeader></CardHeader>
+                <div className="bg-cyan-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4"></div>
                   <Network className="h-6 w-6 text-cyan-600" />
                 </div>
                 <CardTitle>Retail & E-commerce</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
+                </CardHeader>
+              <CardContent></CardContent>
+                <ul className="space-y-2 text-sm text-gray-600"></ul>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Demand forecasting</span>
-                  </li>
-                  <li className="flex items-center gap-2">
+                </li>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Inventory optimization</span>
-                  </li>
-                  <li className="flex items-center gap-2">
+                </li>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Dynamic pricing</span>
-                  </li>
+                </li>
                 </ul>
-              </CardContent>
+                </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="bg-yellow-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
+            <Card className="hover:shadow-lg transition-shadow"></Card>
+              <CardHeader></CardHeader>
+                <div className="bg-yellow-100 rounded-lg w-12 h-12 flex items-center justify-center mb-4"></div>
                   <Lightbulb className="h-6 w-6 text-yellow-600" />
                 </div>
                 <CardTitle>Marketing & Sales</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-center gap-2">
+                </CardHeader>
+              <CardContent></CardContent>
+                <ul className="space-y-2 text-sm text-gray-600"></ul>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Lead scoring</span>
-                  </li>
-                  <li className="flex items-center gap-2">
+                </li>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Content optimization</span>
-                  </li>
-                  <li className="flex items-center gap-2">
+                </li>
+                  <li className="flex items-center gap-2"></li>
                     <CheckCircle className="h-4 w-4 text-green-500" />
                     <span>Campaign automation</span>
-                  </li>
+                </li>
                 </ul>
-              </CardContent>
+                </CardContent>
             </Card>
-          </div>
+                </div>
         </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                </div>
+                {/* Call to Action */}
+                <div className="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white"></div>
+        <div className="container mx-auto px-4 text-center"></div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6"></h2>
             Ready to Harness the Power of AI?
->>>>>>> origin/main
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 mb-8"></p>
             Get started with our AI services today and see the difference artificial intelligence can make.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700"></Button>
               Start Your Free Trial
             </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900">
+            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900"></Button>
               Contact Sales
             </Button>
-          </div>
+                </div>
         </div>
-      </section>
+                </section>
     </div>
-<<<<<<< HEAD
-  );
-}
-=======
   )
   Code, 
   BarChart3, 
@@ -4741,146 +4691,148 @@ export default function AIServicesPage() {
       />
       <Header />
       
-      <main className="min-h-screen bg-background">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 overflow-hidden">
+      <main className="min-h-screen bg-background"></main>
+                {/* Hero Section */}
+                <section className="relative bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20 overflow-hidden"></section>
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
-          
-          {/* Animated Background Elements */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse"></div>
+                {/* Animated Background Elements */}
+                <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-zion-blue/30 rounded-full blur-2xl animate-pulse delay-500"></div>
           
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight">
+          <div className="container mx-auto px-4 relative z-10"></div>
+            <div className="text-center max-w-4xl mx-auto"></div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight"></h1>
                 AI Services & Solutions
               </h1>
-              <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"></p>
                 Transform your business with cutting-edge artificial intelligence solutions. From custom AI development 
                 to machine learning implementation, we deliver intelligent solutions that drive growth and innovation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-light text-white">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-light text-white"></Button>
                   <Link to="/request-quote">Get Free Consultation</Link>
                 </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10"></Button>
                   <Link to="/contact">Contact Our Team</Link>
                 </Button>
               </div>
-            </div>
+                </div>
           </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                </section>
+                {/* Services Grid */}
+                <section className="py-20 bg-background"></section>
+          <div className="container mx-auto px-4"></div>
+            <div className="text-center mb-16"></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
                 Comprehensive AI Solutions
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto"></p>
                 Choose from our extensive portfolio of AI services, each designed to address specific business challenges 
                 and drive measurable results.
               </p>
-            </div>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-3 mb-12">
-              {categories.map((category, index) => (
+                </div>
+                {/* Category Filter */}
+                <div className="flex flex-wrap justify-center gap-3 mb-12"></div>
+                {categories.map((category, index) => (
                 <Button
                   key={index}
                   variant={category.active ? "default" : "outline"}
                   className={category.active ? "bg-zion-purple text-white" : "border-zion-purple/30 text-zion-purple hover:bg-zion-purple/10"}
-                >
-                  {category.name} ({category.count})
+                ></Button
+>
+                {category.name} ({category.count})
                 </Button>
               ))}
-            </div>
-
-            {/* Services Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service) => (
-                <Card key={service.id} className="group hover:shadow-2xl transition-all duration-300 border-zion-purple/20 hover:border-zion-purple/50 bg-card/50 backdrop-blur-sm">
-                  <CardHeader className="pb-4">
-                    <div className="flex justify-between items-start mb-3">
-                      {service.icon}
+                </div>
+                {/* Services Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+                {aiServices.map((service) => (
+                <Card key={service.id} className="group hover:shadow-2xl transition-all duration-300 border-zion-purple/20 hover:border-zion-purple/50 bg-card/50 backdrop-blur-sm"></Card>
+                  <CardHeader className="pb-4"></CardHeader>
+                    <div className="flex justify-between items-start mb-3"></div>
+                {service.icon}
                       {service.badge && (
-                        <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-                          {service.badge}
-                        </Badge>
+                        <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30"></Badge>
+                {service.badge}
+                </Badge>
                       )}
-                    </div>
-                    <CardTitle className="text-xl group-hover:text-zion-cyan transition-colors">
-                      {service.title}
-                    </CardTitle>
-                    <CardDescription className="text-muted-foreground">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
+                </div>
+                    <CardTitle className="text-xl group-hover:text-zion-cyan transition-colors"></CardTitle>
+                {service.title}
+                </CardTitle>
+                    <CardDescription className="text-muted-foreground"></CardDescription>
+                {service.description}
+                </CardDescription>
+                </CardHeader>
                   
-                  <CardContent className="pb-4">
-                    <div className="mb-4">
-                      <span className="text-2xl font-bold text-zion-cyan">{service.price}</span>
-                    </div>
+                  <CardContent className="pb-4"></CardContent>
+                    <div className="mb-4"></div>
+                      <span className="text-2xl font-bold text-zion-cyan"></span>
+                {service.price}
+                </span>
+                </div>
                     
-                    <div className="space-y-2 mb-4">
-                      {service.features.slice(0, 3).map((feature, index) => (
-                        <div key={index} className="flex items-center text-sm">
+                    <div className="space-y-2 mb-4"></div>
+                {service.features.slice(0, 3).map((feature, index) => (
+                        <div key={index} className="flex items-center text-sm"></div>
                           <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                          <span className="text-muted-foreground">{feature}</span>
-                        </div>
+                          <span className="text-muted-foreground"></span>
+                {feature}
+                </span>
+                </div>
                       ))}
-                    </div>
+                </div>
                     
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1">
+                    <div className="flex items-center justify-between"></div>
+                      <div className="flex items-center gap-1"></div>
                         <Star className="h-4 w-4 text-yellow-500 fill-current" />
-                        <span className="text-sm text-muted-foreground">{service.rating}</span>
+                        <span className="text-sm text-muted-foreground"></span>
+                {service.rating}
+                </span>
                         <span className="text-sm text-muted-foreground">({service.reviewCount})</span>
-                      </div>
-                      <Badge variant="outline" className="text-xs">
-                        {service.category}
-                      </Badge>
-                    </div>
+                </div>
+                      <Badge variant="outline" className="text-xs"></Badge>
+                {service.category}
+                </Badge>
+                </div>
                   </CardContent>
                   
-                  <CardContent className="pt-0">
-                    <Button asChild className="w-full group-hover:bg-zion-purple group-hover:text-white transition-all duration-300">
-                      <Link to={service.link}>
+                  <CardContent className="pt-0"></CardContent>
+                    <Button asChild className="w-full group-hover:bg-zion-purple group-hover:text-white transition-all duration-300"></Button>
+                      <Link to={service.link}></Link>
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                       </Link>
-                    </Button>
+                </Button>
                   </CardContent>
                 </Card>
               ))}
-            </div>
-          </div>
+                </div>
+                </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                {/* CTA Section */}
+                <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark"></section>
+          <div className="container mx-auto px-4 text-center"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
               Ready to Harness the Power of AI?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"></p>
               Let our AI experts help you identify the right solutions for your business. 
               Get a free consultation and discover how AI can transform your operations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-slate-dark"></Button>
                 <Link to="/request-quote">Start Your AI Journey</Link>
-              </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+                </Button>
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10"></Button>
                 <Link to="/contact">Schedule a Call</Link>
-              </Button>
+                </Button>
             </div>
-          </div>
+                </div>
         </section>
-      </main>
+                </main>
       
       <Footer />
     </>
@@ -4892,5 +4844,33 @@ export default function AIServicesPage() {
 }
 export default AIServicesPage
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p>
->>>>>>> origin/main
+                </div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></div>
+                </div></span>
+                </p>

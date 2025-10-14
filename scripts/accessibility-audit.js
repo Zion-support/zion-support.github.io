@@ -77,7 +77,8 @@ function auditHTMLFiles() {
   console.log('📄 Auditing HTML files...')
   const distDir = path.join(__dirname, '../dist')
   const htmlFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.html'))
-  htmlFiles.forEach(file => {)
+  htmlFiles.forEach(file =>
+                {)
     const filePath = path.join(distDir, file)
     const content = fs.readFileSync(filePath, 'utf8')
     console.log(`  - Auditing ${file}`)
@@ -92,7 +93,8 @@ function auditHTMLFiles() {
     
     // Check for alt attributes
     const imgTags = content.match(/<img[^>]*>/g) || []
-    imgTags.forEach(img => {
+    imgTags.forEach(img =>
+                {
     )
       if (!img.includes('alt=')) {
         console.log('    ⚠️  Image missing alt attribute')
@@ -116,7 +118,8 @@ function auditCSSFiles() {
   console.log('🎨 Auditing CSS files...')
   const distDir = path.join(__dirname, '../dist')
   const cssFiles = fs.readdirSync(distDir).filter(file => file.endsWith('.css'))
-  cssFiles.forEach(file => {)
+  cssFiles.forEach(file =>
+                {)
     const filePath = path.join(distDir, file)
     const content = fs.readFileSync(filePath, 'utf8')
     console.log(`  - Auditing ${file}`)
@@ -182,13 +185,15 @@ function generateAccessibilityImprovements() {
 <input aria-describedby="email-help" type="email" />
 <div id="email-help">Enter your email address
 // 2. Implement focus management
-const trapFocus = (element) => {
+const trapFocus = (element) =>
+                {
   const focusableElements = element.querySelectorAll(
     'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
   )
   const firstElement = focusableElements[0]
   const lastElement = focusableElements[focusableElements.length - 1]
-  element.addEventListener('keydown', (e) => {
+  element.addEventListener('keydown', (e) =>
+                {
     if (e.key === 'Tab') {
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
@@ -206,27 +211,27 @@ const trapFocus = (element) => {
 }
 
 // 3. Add live regions for dynamic content
-<div aria-live="polite" aria-atomic="true" className="sr-only">
-  {announcement}
+<div aria-live="polite" aria-atomic="true" className="sr-only"></div>
+                {announcement}
 // 4. Ensure proper heading hierarchy
 <h1>Main Page Title
   <h2>Section Title
     <h3>Subsection Title
 // 5. Add skip links
-<a href="#main-content" className="skip-link">
+<a href="#main-content" className="skip-link"></a>
   Skip to main content
 // 6. Use semantic HTML
-<main>
-  <nav aria-label="Main navigation">
-    <ul>
+<main></main>
+  <nav aria-label="Main navigation"></nav>
+    <ul></ul>
       <li><a href="/">Home</a>
-  <section>
+  <section></section>
     <h2>Section</h2> Title
-    <article>
+    <article></article>
       <h3>Article</h3> Title
 // 7. Form accessibility
-<form>
-  <fieldset>
+<form></form>
+  <fieldset></fieldset>
     <legend>Contact Information
     <label htmlFor="email">Email Address
     <input
@@ -235,8 +240,8 @@ const trapFocus = (element) => {
       required
       aria-describedby="email-error"
     />
-    <div id="email-error" role="alert" aria-live="polite">
-      {emailError}
+    <div id="email-error" role="alert" aria-live="polite"></div>
+                {emailError}
 // 8. Image accessibility
 <img
   src="chart.png" 
@@ -279,4 +284,11 @@ function audit() {
 }
 
 // Run audit
-audit()</div></div></div></button></a></a></h1></h2></h3></ul></li></main></section></article></nav>
+audit()</div>
+                </div></div>
+                </button></a>
+                </a></h1>
+                </h2></h3>
+                </ul></li>
+                </main></section>
+                </article></nav>;

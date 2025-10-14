@@ -560,4 +560,4 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     rating: 4.9,
     reviews: 8
   }
-]
+];

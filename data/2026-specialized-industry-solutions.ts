@@ -1,50 +1,4 @@
 export interface SpecializedIndustrySolution2026 {
-<<<<<<< HEAD
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-  benefits: string[];
-  capabilities: string[];
-  marketAdvantage: string;
-  averageMarketPrice: string;
-  featuresCapabilities: string[];
-}
-
-=======
   id: string
   name: string
   tagline: string
@@ -88,16 +42,11 @@ export interface SpecializedIndustrySolution2026 {
   averageMarketPrice: string
   featuresCapabilities: string[]
 }
->>>>>>> origin/main
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-<<<<<<< HEAD
-};
-
-=======
 }
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {
@@ -298,7 +247,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
       'Performance monitoring',
       'Multi-carrier integration',
       'Mobile app for drivers'
->>>>>>> origin/main
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[] = [
   {
     id: 'ai-healthcare-diagnostics',
@@ -330,14 +278,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     setupTime: '1 week',
     category: 'Healthcare AI',
     realService: true,
-<<<<<<< HEAD
-    technology: ['AI/ML', 'Computer Vision', 'Medical Imaging', 'Python', 'TensorFlow', 'DICOM'],
-    integrations: ['Epic', 'Cerner', 'Allscripts', 'NextGen', 'Telemedicine platforms', 'PACS systems'],
-    useCases: ['Medical diagnostics', 'Treatment planning', 'Patient monitoring', 'Telemedicine', 'Medical research'],
-    roi: 'Reduce diagnostic time by 80% and improve accuracy by 15%',
-    competitors: ['IBM Watson Health ($10,000/month)', 'Google Health AI ($5,000/month)', 'None with 99.2% accuracy'],
-    marketSize: '$45B healthcare AI market',
-=======
     technology: ['Machine Learning', 'Python', 'TensorFlow', 'PyTorch', 'PostgreSQL', 'Redis', 'Apache Kafka'],
     integrations: ['Bloomberg API', 'Reuters API', 'Trading platforms', 'Risk management systems', 'Regulatory reporting systems'],
     useCases: ['Risk assessment', 'Portfolio optimization', 'Market analysis', 'Compliance reporting', 'Fraud detection'],
@@ -699,7 +639,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     roi: 'Law firms see 400% ROI through improved research efficiency and reduced billable hours.',
     competitors: ['Westlaw', 'LexisNexis', 'Bloomberg Law', 'Fastcase'],
     marketSize: '$15B legal technology market',
->>>>>>> origin/main
     growthRate: '300% annual growth',
     contactInfo: contact,
     realImplementation: true,
@@ -716,10 +655,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Cost savings of 40%'
     ],
     capabilities: [
-<<<<<<< HEAD
-      'Medical image analysis',
-      'Symptom analysis',
-=======
       'Legal research',
       'Document analysis',
       'Contract review',
@@ -821,7 +756,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Predictive diagnostics',
       'Personalized medicine',
       'Patient monitoring',
->>>>>>> origin/main
       'Treatment recommendations',
       'Patient monitoring',
       'Drug interaction checking'
@@ -836,11 +770,6 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
       'Electronic health record integration'
     ]
   }
-<<<<<<< HEAD
-];
-
-export default specializedIndustrySolutions2026;
-=======
 ]
 export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Healthcare Technology',
@@ -850,4 +779,3 @@ export const INDUSTRY_SOLUTION_CATEGORIES = [
   'Logistics Technology'
   }
 ]
->>>>>>> origin/main

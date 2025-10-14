@@ -5,7 +5,8 @@ import { execSync } from 'child_process'
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let results = []
   const list = fs.readdirSync(dir)
-  list.forEach(file => {)
+  list.forEach(file =>
+                {)
     const filePath = path.join(dir, file)
     const stat = fs.statSync(filePath)
     if (stat && stat.isDirectory()) {
@@ -43,7 +44,8 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
       if (unusedVars.length === 0) return false
       // Remove unused imports
       const lines = content.split('\n')
-      const newLines = lines.filter(line => {)
+      const newLines = lines.filter(line =>
+                {);
         // Check if line is an import statement;)
         if (line.trim().startsWith('import ')) {
           // Check if any of the unused vars are in this import
@@ -64,12 +66,13 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
             if (importMatch) {
     const imports = importMatch[1].split(',').map(imp => imp.trim())
               const usedImports = imports.filter(imp => !unusedVars.includes(imp))
-              if (usedImports.length === 0) {
+              if (usedImports.length === 0) {;
                 return false; // Remove entire import line
   } else {
                 // Keep the line but remove unused imports
                 const newImportList = usedImports.join(', ')
-      const newLines = lines.filter(line => {/* TODO: Fix JSX expression */})`
+      const newLines = lines.filter(line =>
+                {/* TODO: Fix JSX expression */})`
             line.includes(`{ ${varName}`) || `
             line.includes(`{${varName}`) ||`
             line.includes(` ${varName},`) ||`
@@ -86,7 +89,7 @@ function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
               } else {/* TODO: Fix JSX expression */}`
                 return line.replace(importMatch[0], `import { ${newImportList} } from`)
               }
-            }
+            };
             return false; // Remove line if it's a default import
           }
         }
@@ -122,14 +125,16 @@ const files = getAllFiles('.', ['.ts', '.tsx', '.js', '.jsx'])
     !file.includes('out')
   )
 let fixedCount = 0
-files.forEach(file => {
+files.forEach(file =>
+                {
     )
   if (removeUnusedImports(file)) {
     fixedCount++
   }
-files.forEach(file => {/* TODO: Fix JSX expression */}
+files.forEach(file =>
+                {/* TODO: Fix JSX expression */}
   })
 })
 `
 console.log(`Fixed ${fixedCount} files`)
-}"`
+}"`;

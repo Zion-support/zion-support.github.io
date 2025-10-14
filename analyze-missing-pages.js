@@ -8,14 +8,16 @@ const __dirname = path.dirname(__filename)
 const footerContent = fs.readFileSync('/workspace/app/components/Footer.tsx', 'utf8')
 // Extract all href values from the footer
 const hrefMatches = footerContent.match(/href:\s*'([^']+)'/g)
-const footerLinks = hrefMatches ? hrefMatches.map(match => {
+const footerLinks = hrefMatches ? hrefMatches.map(match =>
+                {
   const result = match.match(/href:\s*'([^']+)'/)
   return result ? result[1] : null
 }).filter(Boolean) : []
 // Read the navigation component to extract all links
 const navContent = fs.readFileSync('/workspace/app/components/Navigation.tsx', 'utf8')
 const navMatches = navContent.match(/to="([^"]+)"/g)
-const navLinks = navMatches ? navMatches.map(match => {
+const navLinks = navMatches ? navMatches.map(match =>
+                {
   const result = match.match(/to="([^"]+)"/)
   return result ? result[1] : null
 }).filter(Boolean) : []
@@ -67,4 +69,4 @@ fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
   existingPagesList: existingPages
 }, null, 2))
 console.log('\n=== ANALYSIS COMPLETE ===')
-console.log('Results saved to missing-pages.json')
+console.log('Results saved to missing-pages.json');

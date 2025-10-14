@@ -1,10 +1,9 @@
 #!/usr/bin/env node
 
 import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
+import path from 'path';
+import { execSync  } from 'child_process';
+import { fileURLToPath  } from 'url';const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
@@ -42,7 +41,8 @@ function fixMergeConflicts(filePath) {
       // Fix missing closing tags in JSX
       {
         pattern: /<meta\s+[^>]*name="[^"]*"[^>]*>/g,
-        replacement: (match) => {
+        replacement: (match) =>
+                {
           if (!match.includes('/>') && !match.includes('</meta>')) {
             return match.replace(/>$/, ' />')
           }
@@ -52,7 +52,8 @@ function fixMergeConflicts(filePath) {
       // Fix unclosed JSX elements
       {
         pattern: /<(\w+)([^>]*?)(?<!\/)>/g,
-        replacement: (match, tagName, attributes) => {
+        replacement: (match, tagName, attributes) =>
+                {
           // Skip self-closing tags
           if (match.endsWith('/>') || ['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
             return match

@@ -23,7 +23,8 @@ export class PerformanceMonitor {
   private initializeObservers(): void {
     // Monitor navigation timing
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {
-      const navObserver = new PerformanceObserver((list) => {
+      const navObserver = new PerformanceObserver((list) =>
+                {
         for (const entry of list.getEntries()) {
           this.recordMetric('navigation', entry.duration)
   }
@@ -34,7 +35,8 @@ export class PerformanceMonitor {
     
     // Monitor resource timing
     if (PerformanceObserver.supportedEntryTypes.includes('resource')) {
-    const resourceObserver = new PerformanceObserver((list) => {
+    const resourceObserver = new PerformanceObserver((list) =>
+                {
         for (const entry of list.getEntries()) {
           this.recordMetric('resource', entry.duration)
   }
@@ -45,7 +47,8 @@ export class PerformanceMonitor {
     
     // Monitor paint timing
     if (PerformanceObserver.supportedEntryTypes.includes('paint')) {
-    const paintObserver = new PerformanceObserver((list) => {
+    const paintObserver = new PerformanceObserver((list) =>
+                {
         for (const entry of list.getEntries()) {
           this.recordMetric(entry.name, entry.startTime)
   }
@@ -56,7 +59,8 @@ export class PerformanceMonitor {
     
     // Monitor largest contentful paint
     if (PerformanceObserver.supportedEntryTypes.includes('largest-contentful-paint')) {
-    const lcpObserver = new PerformanceObserver((list) => {
+    const lcpObserver = new PerformanceObserver((list) =>
+                {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
         if (lastEntry) {
@@ -69,7 +73,8 @@ export class PerformanceMonitor {
     
     // Monitor first input delay
     if (PerformanceObserver.supportedEntryTypes.includes('first-input')) {
-    const fidObserver = new PerformanceObserver((list) => {
+    const fidObserver = new PerformanceObserver((list) =>
+                {
         for (const entry of list.getEntries()) {
           const fidEntry = entry as PerformanceEventTiming
           const fid = fidEntry.processingStart - fidEntry.startTime
@@ -83,7 +88,8 @@ export class PerformanceMonitor {
     // Monitor layout shift
     if (PerformanceObserver.supportedEntryTypes.includes('layout-shift')) {
     let clsValue = 0
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver((list) =>
+                {
         for (const entry of list.getEntries()) {
           const layoutShiftEntry = entry as LayoutShift
           if (!layoutShiftEntry.hadRecentInput) {
@@ -109,7 +115,8 @@ export class PerformanceMonitor {
   /**
    * Get Web Vitals metrics
    */
-  getWebVitals(): Partial<PerformanceMetrics> {
+  getWebVitals(): Partial<PerformanceMetrics></PerformanceMetrics>
+                {
     return {
       fcp: this.getMetric('first-contentful-paint'),
       lcp: this.getMetric('lcp'),
@@ -257,7 +264,8 @@ export function measureExecutionTime<T extends (...args: unknown[]) => any>(
   fn: T,
   label?: string
 ): T {
-  return ((...args: Parameters<T>): ReturnType<T> => {
+  return ((...args: Parameters<T>): ReturnType<T> =>
+                {
     const start = performance.now()
     const result = fn(...args)
     const end = performance.now(),
@@ -276,12 +284,14 @@ export function debounce<T extends (...args: unknown[]) => any>(
 ): (...args: Parameters<T>) => void {
     let timeoutId: NodeJS.Timeout | null = null,
   
-  return (...args: Parameters<T>) => {
+  return (...args: Parameters<T>) =>
+                {
     if (timeoutId) {
       clearTimeout(timeoutId)
   }
     
-    timeoutId = setTimeout(() => {
+    timeoutId = setTimeout(() =>
+                {
     fn(...args)
   }, delay)
   }
@@ -295,7 +305,8 @@ export function throttle<T extends (...args: unknown[]) => any>(
   delay: number
 ): (...args: Parameters<T>) => void {
     let lastCall = 0
-  return (...args: Parameters<T>) => {
+  return (...args: Parameters<T>) =>
+                {
     const now = Date.now()
     if (now - lastCall >= delay) {
       lastCall = now,
@@ -406,4 +417,4 @@ export function runWhenIdle(callbac)
 }
     setTimeout(callback, 0)
 * Default performance monitor instance
-export const performanceMonitor = new PerformanceMonitor()
+export const performanceMonitor = new PerformanceMonitor();

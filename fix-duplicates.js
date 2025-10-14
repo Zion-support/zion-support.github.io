@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
+import path from 'path';
+import { execSync  } from 'child_process';
+import { fileURLToPath  } from 'url';const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix duplicate function declarations
 function fixDuplicateDeclarations(filePath) {
@@ -11,15 +10,18 @@ function fixDuplicateDeclarations(filePath) {
     let content = fs.readFileSync(filePath, 'utf8')
     let originalContent = content
     // Fix duplicate function declarations
-    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
-      return `const ${name}: React.FC = () => {`
+    content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) =>
+                {
+      return `const ${name}: React.FC  = () => {`
     })
     // Fix duplicate const declarations
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
-      return `const ${name} = () => {`
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/g, (match, name) =>
+                {
+      return `const ${name}  = () => {`
     })
     // Fix missing closing braces in simple cases
-    content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {
+    content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) =>
+                {
       const lines = body.split('\n')
       let openBraces = 0
       let closeBraces = 0
@@ -27,11 +29,11 @@ function fixDuplicateDeclarations(filePath) {
         openBraces += (line.match(/{/g) || []).length
 function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
-      return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
+      return `const ${name}: React.FC  = () => {/* TODO: Fix JSX expression */}
     })
     // Fix duplicate const declarations
     content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}`
-      return `const ${name} = () => {/* TODO: Fix JSX expression */}
+      return `const ${name}  = () => {/* TODO: Fix JSX expression */}
     })
     // Fix missing closing braces in simple cases
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
@@ -39,15 +41,18 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
       }
       
       if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}`
-        return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`
+        return `${name} = () =>
+                {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`
       }
       return match
     })
     // Fix missing semicolons
-    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
+    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) =>
+                {
       if (!match.endsWith(';')) {
         return match + ';'
-    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
+    content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) =>
+                {/* TODO: Fix JSX expression */}
       }
       return match
     })

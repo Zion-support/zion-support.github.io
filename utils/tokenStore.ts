@@ -7,14 +7,14 @@ export interface TokenTransaction {
   amount: number
   description: string
   timestamp: string
-  metadata?: Record < string, any>
+  metadata?: Record < string, any></>
 }
 export interface TokenConfig {
 export interface TokenConfig {
   name: string
   symbol: string
   total_supply: number
-  circulating_supply: number
+  circulating_supply: number;
   exchange_rate: number; // USD per token
   staking_enabled: boolean
   stakingRewardRate: number; // APY percentage

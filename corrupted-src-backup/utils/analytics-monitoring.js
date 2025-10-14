@@ -1,7 +1,8 @@
 // Advanced analytics and monitoring
 export const analyticsUtils = {
   // Performance monitoring
-  measurePerformance: () => {
+  measurePerformance: () =>
+                {
     if (typeof window !== 'undefined' && 'performance' in window) {
       const _navigation = performance.getEntriesByType('navigation')[0]
       const _paint = performance.getEntriesByType('paint')
@@ -20,7 +21,8 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
   },
 
   // Error tracking
-  trackError: (error, context = {}) => {
+  trackError: (error, context = {}) =>
+                {
     const errorData = {
       message: error.message
       stack: error.stack
@@ -29,7 +31,8 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
       userAgent: navigator.userAgent,
       context,
   // Error tracking,
-  trackError: (error, context = {}) => {/* TODO: Fix JSX expression */}
+  trackError: (error, context = {}) =>
+                {/* TODO: Fix JSX expression */}
     }
 
     // Send to analytics service
@@ -38,7 +41,8 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
   },
 
   // User behavior tracking
-  trackUserInteraction: (action, element, metadata = {}) => {
+  trackUserInteraction: (action, element, metadata = {}) =>
+                {
     const interactionData = {
       action,
       element: element.tagName?.toLowerCase() || 'unknown'
@@ -48,24 +52,29 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
       url: window.location.href,
       metadata,
   // User behavior tracking,
-  trackUserInteraction: (action, element, metadata = {}) => {/* TODO: Fix JSX expression */}
+  trackUserInteraction: (action, element, metadata = {}) =>
+                {/* TODO: Fix JSX expression */}
     }
 
     //     return interactionData
   },
 
   // Core Web Vitals
-  measureCoreWebVitals: () => {,
+  measureCoreWebVitals: () =>
+                {,
     if (typeof window !== 'undefined' && 'web-vitals' in window) {,
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) =>
+                {
         //           getCLS(console.log)
         //           getFID(console.log)
         //           getFCP(console.log)
         //           getLCP(console.log)
         //           getTTFB(console.log)
   // Core Web Vitals,
-  measureCoreWebVitals: () => {/* TODO: Fix JSX expression */}
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
+  measureCoreWebVitals: () =>
+                {/* TODO: Fix JSX expression */}
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) =>
+                {/* TODO: Fix JSX expression */}
       })
     }
   }}

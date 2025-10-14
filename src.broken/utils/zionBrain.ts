@@ -24,7 +24,7 @@ export interface LogEntry {
   type: ZionChain | 'metrics' | 'optimize' | 'deploy' | 'suspend' | 'audit' | 'stuck'
   status: 'ok' | 'laggy' | 'error' | 'stuck'
   latencyMs?: number
-  payload?: Record<string, unknown>
+  payload?: Record<string, unknown></string,>
 }
 import fs from 'fs'
 import path from 'path'
@@ -37,7 +37,7 @@ function ensureDataFiles(): void {
     if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true })
     if (!fs.existsSync(logsPath)) fs.writeFileSync(logsPath, JSON.stringify({ entries: [] }, null, 2))
     if (!fs.existsSync(statePath)) fs.writeFileSync(statePath, JSON.stringify({ metrics: {} }, null, 2))
-  } catch {
+  } catch {;
     // In serverless environments, filesystem may be read-only; ignore errors gracefully
   }
 }
@@ -59,7 +59,8 @@ export function detectIntent(text: string): RouterResult {
   // Fallback simple heuristic
   return { intent: 'nationAssistant', confidence: 0.5, notes: 'Default fallback' }
 }
-export async function routeToChain(intent: ZionChain, payload: Record<string, unknown>): Promise<{ routed: boolean; message: string }> {
+export async function routeToChain(intent: ZionChain, payload: Record<string, unknown>): Promise<{ routed: boolean; message: string }></{>
+                {
   // Placeholder for real chain invocations
   return { routed: true, message: `Routed to ${intent}` }
 }
@@ -79,7 +80,8 @@ export function evaluateReflexes(metrics: ReflexMetrics): ReflexTrigger[] {
   }
   return triggers
 }
-export async function optimizePrompt(original: string, userIntent?: string): Promise<{ optimized: string; suggestions: string[] }> {
+export async function optimizePrompt(original: string, userIntent?: string): Promise<{ optimized: string; suggestions: string[] }></>
+                {
   const apiKey = process.env.OPENAI_API_KEY
   const targetInstruction = 'Review this prompt and rewrite it to be 30% faster and more specific to user intent.'
   // Heuristic fast path if no API key
