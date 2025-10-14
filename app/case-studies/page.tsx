@@ -131,7 +131,7 @@ const CaseStudiesPage: React.FC = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
-                <div key ={index} classNam e ="text-center">
+                <div key={index} className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-4">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
@@ -148,7 +148,7 @@ const CaseStudiesPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {caseStudies.map((study) => (
-                <div key ={study.id} classNam e ="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+                <div key={study.id} className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                   <div className="aspect-video bg-gradient-to-br from-purple-500 to-blue-500 relative">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute bottom-4 left-4 right-4">
@@ -183,7 +183,7 @@ const CaseStudiesPage: React.FC = () => {
                       <h4 className="text-lg font-semibold text-white mb-3">Results</h4>
                       <ul className="space-y-2">
                         {study.results.map((result, index) => (
-                          <li key ={index} classNam e ="flex items-center text-gray-300 text-sm">
+                          <li key={index} className="flex items-center text-gray-300 text-sm">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                             {result}
                           </li>
