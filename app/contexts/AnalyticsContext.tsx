@@ -12,3 +12,4 @@ interface AnalyticsContextType { trackEvent: (eventName: string, properties?: Re
   trackPageView: (pageName: string) => void;
   setUser: (userId: string, properties?: Record<string, any>) => void;
   isEnabled: boolean; }
+</AnalyticsContextType>

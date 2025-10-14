@@ -6,7 +6,7 @@ export function withLazyLoading<T extends ComponentType<any>>(
   Component: T,
   fallback?: React.ReactNode
 ) {
-  const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
+  const LazyComponent = lazy(() => Promise.resolve({ default: Component });;
   
   return (props: ComponentProps<T>) => (
     <Suspense fallback={fallback || <div>Loading...</div>}>
@@ -31,3 +31,4 @@ export function createLazyComponent<T extends ComponentType<any>>(
     </Suspense>
   );
 }
+</T></T></T></T></LazyComponent></LazyComponent>

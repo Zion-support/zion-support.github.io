@@ -40,10 +40,13 @@ const benefits = ['Access to cutting-edge technology',''
     'Dedicated partner success manager'''
   ]
 
-  return (
-    <>
-      <Helmet></Helmet>
-        <title>Partners - Strategic Partnerships | Zion Tech Group</title>
+  return (";
+    <>";
+      <Helmet>";
+        <title>Page - Zion Tech Group</title>";
+        <meta name="description" content="Professional services by Zion Tech Group" />
+      </Helmet>
+        <title>Partners - Strategic Partnerships | Zion Tech Group</title>";
         <meta name="description" content="Join our partner ecosystem and grow your business with Zion Tech Group. Strategic partnerships, technical support, and joint go-to-market opportunities."  />
         <meta name="keywords" content="partners, partnerships, strategic alliances, technology partners, business partners, partner program" /></Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
@@ -123,4 +126,4 @@ const benefits = ['Access to cutting-edge technology',''
 )
   );
 }
-}
+}</meta></meta></meta></p></Right></Right></Circle></Circle>

@@ -1,5 +1,8 @@
 return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Helmet></Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group" />
+      </Helmet>
       title: "Live Chat"
       description: "Get instant help from our support team"
       action: "Start Chat"
@@ -195,7 +198,7 @@ const Icon = option.icon
                 <p className="text-cyan-400 font-medium">123 Tech Street</p>
                 <p className="text-gray-400 text-sm">San Francisco, CA 94105</p>
               </div>
-            </div>
-          </div>
-        </div></div></div>);
+      </div>
+    </div></div>);
 }
+</meta></meta></meta></section></section></p></Icon></Icon></Icon></Icon></button></button></Right></Right></Circle></Circle></Circle>

@@ -20,4 +20,4 @@ const FiveGImplementationPage = () => {
   );
 };
 
-export default FiveGImplementationPage;
+export default AppPage;

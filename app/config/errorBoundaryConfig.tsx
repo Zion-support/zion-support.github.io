@@ -112,3 +112,4 @@ export default ErrorBoundaryConfig;
 export default ErrorBoundaryConfig;
 };
 export default ErrorBoundaryConfig;'
+</meta>

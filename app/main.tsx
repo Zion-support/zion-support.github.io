@@ -78,4 +78,4 @@ const Main: React.FC = () => {
     </div>);
 };
 
-export default Main;
+export default AppPage;

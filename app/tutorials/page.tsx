@@ -88,3 +88,4 @@ const categories = [{ name: "All", count: 24 }
 
     </div>)
   )
+</meta>

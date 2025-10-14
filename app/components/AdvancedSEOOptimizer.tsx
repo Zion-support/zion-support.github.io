@@ -1,9 +1,9 @@
 import React    from "react
-interface AdvancedSEOOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-;
+interface AdvancedSEOOptimizerProps {";
+  className?: string;";
+  children?: React.ReactNode;";
+}";
+;";
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({ className, children }) => {"
   return (
     <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 ${className || ''}`}></div>

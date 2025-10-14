@@ -14,10 +14,7 @@ export default function Page() {
                   Contact Us
                 </a>
               </div>
-            </div>
-
-          </div>
-        </div>
-      </div>;
+      </div>
+    </div>;
     </div>;
 };

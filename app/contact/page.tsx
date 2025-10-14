@@ -1,4 +1,4 @@
-import React from "react
+import React from "react";
 import { Helmet }    from "react-helmet-async
     'AI Services','
     'IT Services','
@@ -12,11 +12,11 @@ import { Helmet }    from "react-helmet-async
 const subjects = [''
     'AI Services',''
     'IT Services',''
-    'Services',''
-    'Micro SAAS',''
-    'Digital Transformation',''
-    '5G Implementation',''
-    'Other''
+    'Services',''";
+    'Micro SAAS',''";
+    'Digital Transformation',''";
+    '5G Implementation',''";
+    'Other''";
   ]""
   return (
     <div className="min-h-screen bg-white"><Helmet><title>Contact - Zion Tech Group</title><meta name="description" content="Contact Zion Tech Group for AI and IT solutions" /></Helmet>
@@ -176,8 +176,7 @@ const Icon = info.icon
                     <>
                       Send Message
                       <Send className="w-5 h-5 ml-2 inline" />
-                    </> })
-                  )}
+                    </> });}
 
                 </button>
               </div>
@@ -189,4 +188,4 @@ const Icon = info.icon
     </div>);
 };
 export default ContactPage;
-};
+};</meta></Icon></Circle></input></input></input></input></textarea></Send>

@@ -44,4 +44,4 @@ interface SEOProps {
       <meta name="twitter:description" content={description}  />
       <meta name="twitter:image" content={image}  />
       { /* Canonical URL */ }
-      <link rel="canonical" href={url} /></Helmet>)
+      <link rel="canonical" href={url} /></Helmet>)</meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></meta></link>

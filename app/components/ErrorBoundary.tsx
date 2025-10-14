@@ -18,12 +18,11 @@
                     Go Home
                   </Link>
                 </div>
-
-              </div>
-
-            </div></div></div>);
+      </div>
+    </div>);
     }
 
     return this.props.children;
   }
 }
+</RefreshCw></Home>

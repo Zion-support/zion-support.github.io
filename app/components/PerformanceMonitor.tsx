@@ -33,7 +33,7 @@ const PerformanceMonitor: React.FC = () => {
     const measureLoadTime = () => {
       if (performance.timing) {
         const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-        setMetrics(prev => ({ ...prev, loadTime }));
+        setMetrics(prev => ({ ...prev, loadTime });;
       }
     };
 
@@ -44,7 +44,7 @@ const PerformanceMonitor: React.FC = () => {
         const observer = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime });;
             }
           }
         });
@@ -54,14 +54,14 @@ const PerformanceMonitor: React.FC = () => {
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime });;
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
         // First Input Delay (FID)
         const fidObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime });;
           }
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
@@ -72,7 +72,7 @@ const PerformanceMonitor: React.FC = () => {
           for (const entry of list.getEntries()) {
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value;
-              setMetrics(prev => ({ ...prev, cls: clsValue }));
+              setMetrics(prev => ({ ...prev, cls: clsValue });;
             }
           }
         });
@@ -80,7 +80,7 @@ const PerformanceMonitor: React.FC = () => {
 
         // Time to First Byte (TTFB)
         const ttfb = performance.timing.responseStart - performance.timing.navigationStart;
-        setMetrics(prev => ({ ...prev, ttfb }));
+        setMetrics(prev => ({ ...prev, ttfb });;
 
         return () => {
           observer.disconnect();
@@ -152,4 +152,4 @@ const PerformanceMonitor: React.FC = () => {
               <span className="text-gray-600">TTFB:</span>);
 };
 
-export default PerformanceMonitor;
+export default PerformanceMonitor;</PerformanceMetrics></div></div></div>

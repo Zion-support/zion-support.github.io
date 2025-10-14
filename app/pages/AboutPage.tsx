@@ -28,11 +28,8 @@ import {
                 <div className="flex items-start"><CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />
                   <span className="text-gray-300">Cutting-edge technology</span>
                 </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
+      </div>
+    </div>
 
         {/* Mission Section */}
         <div className="py-20 bg-slate-800/30"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold mb-4">Our Mission</h2>
@@ -135,3 +132,4 @@ import {
         </div>
       </div>
     </>)
+</meta></CheckCircleIcon></CheckCircleIcon></CheckCircleIcon></CheckCircleIcon></LightBulbIcon></ShieldCheckIcon></RocketLaunchIcon></UserGroupIcon></HeartIcon></StarIcon>

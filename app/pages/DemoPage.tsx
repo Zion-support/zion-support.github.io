@@ -1,10 +1,13 @@
 "use client"
-import React from "react
-import { Helmet }    from "react-helmet-async
-const DemoPage: React.FC = () => {
-  return (
-    <React.Fragment>
-      <Helmet></Helmet>"
+import React from "react";
+import { Helmet }    from "react-helmet-async";
+const Page = () => {;";
+  return (";
+    <React.Fragment>";
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group" />
+      </Helmet>"
         <title>DemoPage - Zion Tech Group</title>
         <meta name="description" content="DemoPage - Zion Tech Group" /></Helmet>
       <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"><div></div>
@@ -17,3 +20,4 @@ const DemoPage: React.FC = () => {
 }
 ;
 export default DemoPag;e
+</meta></meta>

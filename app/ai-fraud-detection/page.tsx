@@ -8,7 +8,7 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 import SecurityEnhancer from '../components/SecurityEnhancer';
 import Analytics from '../components/Analytics';
-const AIFraudDetectionPage: React.FC = () => {;
+const AIFraudDetectionPage: React.FC = () => {
 const fraudServices = [
     {
       title: 'Real-time Fraud Detection',
@@ -262,4 +262,4 @@ const benefits = [
     </>
   );
 };
-export default AIFraudDetectionPage;
+export default AIFraudDetectionPage;</SEOOptimizer></PerformanceOptimizer></SecurityEnhancer></Analytics></Navigation></Phone></Footer>

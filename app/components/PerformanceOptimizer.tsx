@@ -15,3 +15,4 @@ import React from 'react';'
 interface PerformanceOptimizerProps { children: Node; }
 
 }}}}}
+</PerformanceOptimizerProps>

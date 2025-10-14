@@ -112,4 +112,4 @@ export default ImprovedNavigation;
   )
 export default ImprovedNavigation;
   );
-export default ImprovedNavigation;
+export default AppPage;

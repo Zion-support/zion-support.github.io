@@ -1,187 +1,80 @@
-import React from 'react'
-import { Loader2, Brain, Shield, Zap, Globe, BarChart3 }    from "lucide-react
-interface LoadingPageProps {
-  type?: 'loading' | 'ai' | 'security' | 'performance' | 'global'
-  message?: string;
-  variant?: 'default' | 'futuristic' | 'minimal'
-}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md'
-  className = ''
-}) => {"
-  if (variant === 'minimal'"
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-900"
-        <div className="flex items-center space-x-3"
-          <Loader2 className="w-6 h-6 animate-spin text-cyan-400"
-          <span className="text-white"
-        </div></div>);
-  }
-
-  if (variant === 'default'
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-        <div className="text-center"
-          <Loader2 className="w-12 h-12 text-blue-400 animate-spin mx-auto mb-4"
-          <h2 className="text-xl font-semibold text-white mb-2"
-          <p className="text-gray-400"
-        </div></div>);
-  }
-
-  // Futuristic variant (default)
+export default function LoadingStatesPage() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"
-      {/* Animated background elements */}
-      <div className="absolute inset-0"
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-500"
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>LoadingStates - Zion Tech Group</title>
+        <meta name="description" content="Professional loadingstates services by Zion Tech Group." />
+      </Helmet>
 
-      <div className="relative z-10 text-center"
-        <div className="w-20 h-20 mx-auto mb-6 relative"
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full animate-spin"
-          <div className="absolute inset-2 bg-slate-900 rounded-full flex items-center justify-center"
-            <Brain className="w-8 h-8 text-cyan-400"
-          </div>
-        </div>
-        
-        <h2 className="text-3xl font-bold text-white mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"
-          {message}
-        </h2>
-        
-        <p className="text-gray-300 mb-8 max-w-md mx-auto"
-          Initializing advanced AI systems and preparing your experience...
-        </p>
-
-        {/* Loading dots */}
-        <div className="flex justify-center space-x-2"
-          <div className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce"
-          <div className="w-3 h-3 bg-purple-400 rounded-full animate-bounce delay-100"
-          <div className="w-3 h-3 bg-blue-400 rounded-full animate-bounce delay-200"
-        </div>
-
-        {/* Feature icons */}
-        <div className="flex justify-center space-x-6 mt-8"
-          <div className="flex flex-col items-center space-y-2"
-            <Shield className="w-6 h-6 text-cyan-400 animate-pulse"
-            <span className="text-xs text-gray-400"
-          </div>
-          <div className="flex flex-col items-center space-y-2"
-            <Zap className="w-6 h-6 text-purple-400 animate-pulse delay-200"
-            <span className="text-xs text-gray-400"
-          </div>
-          <div className="flex flex-col items-center space-y-2"
-            <Globe className="w-6 h-6 text-blue-400 animate-pulse delay-400"
-            <span className="text-xs text-gray-400"
-          </div>
-          <div className="flex flex-col items-center space-y-2"
-            <BarChart3 className="w-6 h-6 text-green-400 animate-pulse delay-600"
-            <span className="text-xs text-gray-400"
-          </div>
-        </div></div></div>);
-};
-
-export const AILoadingPage: React.FC<{ message?: string }> = ({ message = "AI is thinking..."
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-    <div className="text-center"
-      <div className="w-16 h-16 mx-auto mb-6 relative"
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full animate-pulse"
-        <div className="absolute inset-2 bg-slate-900 rounded-full flex items-center justify-center"
-          <Brain className="w-8 h-8 text-cyan-400 animate-pulse"
-        </div>
-      </div>
-      <h2 className="text-2xl font-bold text-white mb-4"
-      <p className="text-gray-300"
-    </div></div>);
-export const SecurityLoadingPage: React.FC<{ message?: string }> = ({ message = "Securing connection..."
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"
-    <div className="text-center"
-      <div className="w-16 h-16 mx-auto mb-6 relative"
-        <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-600 rounded-full animate-pulse"
-        <div className="absolute inset-2 bg-slate-900 rounded-full flex items-center justify-center"
-          <Shield className="w-8 h-8 text-red-400 animate-pulse"
-        </div>
-      </div>
-      <h2 className="text-2xl font-bold text-white mb-4"
-      <p className="text-gray-300"
-    </div></div>);
-export const PerformanceLoadingPage: React.FC<{ message?: string }> = ({ message = "Optimizing performance..."
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"
-    <div className="text-center"
-      <div className="w-16 h-16 mx-auto mb-6 relative"
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-teal-600 rounded-full animate-pulse"
-        <div className="absolute inset-2 bg-slate-900 rounded-full flex items-center justify-center"
-          <Zap className="w-8 h-8 text-green-400 animate-pulse"
-        </div>
-      </div>
-      <h2 className="text-2xl font-bold text-white mb-4"
-      <p className="text-gray-300"
-    </div></div>);
-export const GlobalLoadingPage: React.FC<{ message?: string }> = ({ message = "Connecting globally..."
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"
-    <div className="text-center"
-      <div className="w-16 h-16 mx-auto mb-6 relative"
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full animate-pulse"
-        <div className="absolute inset-2 bg-slate-900 rounded-full flex items-center justify-center"
-          <Globe className="w-8 h-8 text-blue-400 animate-pulse"
-        </div>
-      </div>
-      <h2 className="text-2xl font-bold text-white mb-4"
-      <p className="text-gray-300"
-    </div></div>);
-            </div>
-            <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"
-            </div>
-            <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"
->>>>>>> origin/main
-          </div>
-          <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>
-          <p className="text-gray-300 mb-6">{message || getDefaultMessage()}</p>
-          <div className="flex justify-center space-x-2"><div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div>
-            <div className="w-2 h-2 bg-purple-500 rounded-full animate-bounce"
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
-          </div></div></div>);
-  }
-
-  return (
-    <div className="flex items-center justify-center p-4"><div className="text-center"
-        <Loader2 className={`${sizeClasses[size]} text-cyan-500 animate-spin mx-auto mb-2`
-        <p className="text-gray-600 text-sm"
-      </div>
-    </div>
-  )
-            LoadingStates</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Professional loadingstates solutions tailored to your business needs.</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                Expert Solutions</h3>
-              <p className="text-blue-700">
-                Our team of experts delivers cutting-edge loadingstates solutions.</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-green-900 mb-2">
-                Custom Implementation</h3>
-              <p className="text-green-700">
-                Tailored loadingstates implementations for your specific requirements.</p></div>
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                24/7 Support</h3>
-              <p className="text-purple-700">
-                Round-the-clock support for all your loadingstates needs.</p></div></div>
-          <div className="mt-12">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started Today</button></div></div></div></div>
-  )
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">LoadingStates</h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional loadingstates services designed to help your business grow and succeed.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </button>
+            <button className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Learn More
             </button>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive loadingstates solutions tailored to your needs
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-4">Professional Service</h3>
+              <p className="text-gray-300">High-quality loadingstates solutions delivered by our expert team.</p>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300">24/7 support and maintenance for all our loadingstates services.</p>
+            </div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300">
+              <h3 className="text-xl font-semibold text-white mb-4">Custom Solutions</h3>
+              <p className="text-gray-300">Tailored loadingstates solutions designed specifically for your business.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contact us today to learn more about our loadingstates services and how we can help your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+              <button className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  )}
-}''
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
+  );
+}

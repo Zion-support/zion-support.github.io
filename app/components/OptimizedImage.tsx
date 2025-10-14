@@ -91,7 +91,10 @@ const getOptimizedSrc = (originalSrc: string) => {''
     <>
 
       { priority && (
-        <Helmet></Helmet> }
+        <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group" />
+      </Helmet> }
           <link rel="preload" as="image" href={optimizedSrc} /></Helmet>)")
       <div
 
@@ -148,3 +151,4 @@ const getOptimizedSrc = (originalSrc: string) => {''
         )
       </div>
     </>
+</OptimizedImageProps></HTMLImageElement></meta></link></img>

@@ -115,4 +115,4 @@ export default ImprovedFooter;
   )
 export default ImprovedFooter;
   );
-export default ImprovedFooter;
+export default AppPage;
