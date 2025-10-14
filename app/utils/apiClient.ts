@@ -20,16 +20,16 @@ export const apiClient = {
     return response.json();
   },
   
-  get: <T>(endpoint: string) => this.request<T>(endpoint),
-  post: <T>(endpoint: string, data: any) => this.request<T>(endpoint, {
+  get: function<T>(endpoint: string) { return this.request<T>(endpoint); },
+  post: function<T>(endpoint: string, data: any) { return this.request<T>(endpoint, {
     method: 'POST',
     body: JSON.stringify(data),
-  }),
-  put: <T>(endpoint: string, data: any) => this.request<T>(endpoint, {
+  }); },
+  put: function<T>(endpoint: string, data: any) { return this.request<T>(endpoint, {
     method: 'PUT',
     body: JSON.stringify(data),
-  }),
-  delete: <T>(endpoint: string) => this.request<T>(endpoint, {
+  }); },
+  delete: function<T>(endpoint: string) { return this.request<T>(endpoint, {
     method: 'DELETE',
-  }),
+  }); },
 };
