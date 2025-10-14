@@ -1,35 +1,27 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { resolve } from "path";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react({
-      // Enable React Fast Refresh
       fastRefresh: true,
-      // Enable JSX runtime
-      jsxRuntime: "automatic",
-    }),
+      jsxRuntime: 'automatic',
+    })
   ],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./app"),
-      "@/components": resolve(__dirname, "./app/components"),
-      "@/pages": resolve(__dirname, "./app"),
-      "@/utils": resolve(__dirname, "./utils"),
-      "@/types": resolve(__dirname, "./types"),
-      "@/hooks": resolve(__dirname, "./hooks"),
-      "@/config": resolve(__dirname, "./config"),
-      "@/data": resolve(__dirname, "./data"),
-      "@/content": resolve(__dirname, "./content"),
+      '@': path.resolve(__dirname, './'),
+      '@app': path.resolve(__dirname, './app'),
+      '@components': path.resolve(__dirname, './app/components'),
+      '@utils': path.resolve(__dirname, './utils'),
     },
   },
   build: {
-    outDir: "dist",
-    sourcemap: false,
-    minify: "esbuild",
-    target: "es2020",
+    outDir: 'dist',
+    target: 'esnext',
+    minify: 'esbuild',
+    sourcemap: process.env.NODE_ENV === 'development',
     cssCodeSplit: true,
     modulePreload: {
       polyfill: false,
@@ -39,13 +31,13 @@ export default defineConfig({
     assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
-    // Optimize for production
+    // Optimize for production;
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3, // More passes for better optimization
+        passes: 3, // More passes for better optimization;
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
@@ -63,7 +55,7 @@ export default defineConfig({
         unused: true,
       },
       mangle: {
-        safari10: true, // Better Safari compatibility
+        safari10: true, // Better Safari compatibility;
         toplevel: true,
         properties: {
           regex: /^_/
@@ -74,13 +66,8 @@ export default defineConfig({
         ascii_only: true
       }
     },
-    // Enhanced build optimizations
+    // Enhanced build optimizations;
     rollupOptions: {
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
-      },
       output: {
         manualChunks: (id) => {
           // Core React libraries - split into smaller chunks
@@ -127,77 +114,81 @@ export default defineConfig({
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
               return 'ai-analytics'
             }
-            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
-              return 'ai-content'
+            if (id.includes('react-router')) {
+              return 'vendor-router';
             }
-            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
-              return 'ai-security'
+            if (id.includes('@heroicons') || id.includes('lucide-react')) {
+              return 'vendor-icons';
             }
-            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
-              return 'ai-customer'
+            if (id.includes('framer-motion')) {
+              return 'vendor-motion';
             }
-            return 'ai-other'
+            if (id.includes('react-helmet')) {
+              return 'vendor-helmet';
+            }
+            return 'vendor-other';
           }
-          // Zion service pages - group by category
-          if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/zion-')[1]?.split('/')[0];
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'zion-analytics'
-            }
-            if (serviceName?.includes('ai-')) {
-              return 'zion-ai'
-            }
-            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
-              return 'zion-security'
-            }
-            return 'zion-other'
+          
+          if (id.includes('/app/pages/')) {
+            return 'pages';
           }
-          // 5G service pages - group together
-          if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            return '5g-services'
+          if (id.includes('/app/components/')) {
+            return 'components';
           }
-          // Main pages
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
-            return 'main-pages'
-          }
-          // Default chunk for other modules
-          return 'vendor'
         },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name.split('.');
+          const ext = info[info.length - 1];
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
+            return 'assets/images/[name]-[hash][extname]';
+          }
+          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
+            return 'assets/fonts/[name]-[hash][extname]';
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js',
       },
     },
-    // Enable tree shaking
+    // Optimize bundle size
+    chunkSizeWarningLimit: 500,
+    reportCompressedSize: true,
     treeshake: true,
   },
   server: {
     port: 3000,
-    open: true,
-    host: true,
-    // Enable HMR
+    open: false,
+    cors: true,
     hmr: {
       overlay: true,
     },
   },
   preview: {
     port: 4173,
-    open: true,
-    host: true,
+    open: false,
   },
-  // Optimize dependencies
+  // Optimize dependencies;
   optimizeDeps: {
     include: [
-      "react",
-      "react-dom",
-      "react-router-dom",
-      "react-helmet-async",
-      "framer-motion",
-      "lucide-react",
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'react-helmet-async',
+      '@heroicons/react/24/outline',
+      'lucide-react',
+      'framer-motion'
     ],
+    exclude: ['@vite/client', '@vite/env'],
   },
-  // CSS optimization
+  esbuild: {
+    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+    target: 'esnext',
+  },
+  define: {
+    __VUE_OPTIONS_API__: false,
+    __VUE_PROD_DEVTOOLS__: false,
+  },
   css: {
     devSourcemap: true,
   },

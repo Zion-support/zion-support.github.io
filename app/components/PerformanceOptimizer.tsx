@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-}
+  children: Node}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   const [isOptimized, setIsOptimized] = useState(false);
@@ -37,47 +36,57 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
-      images.forEach(img => {
-        // Add loading="lazy" for non-critical images
-        if (!img.hasAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
-        }
-        
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.setAttribute('decoding', 'async');
+      images.forEach((img) => {'
+        if (!img.hasAttribute('loading')) {';
+          img.setAttribute('loading', 'lazy');}
         }
       });
     };
 
-    // Preconnect to external domains
-    const preconnectExternalDomains = () => {
-      const domains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://www.google-analytics.com',
-        'https://www.googletagmanager.com'
+        if (!img.hasAttribute('loading')) {';
+          img.setAttribute('loading', 'lazy')
+{ useEffect, Node } from 'react';
+interface PerformanceOptimizerProps {
+  children: Node,}
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  useEffect(() => {
+    // Performance optimization code;
+    const optimizeImages = () => {;
+      const images = document.querySelectorAll('img')
+      images.forEach((img) => {;
+        if (!img.hasAttribute('loading')) {;
+img.setAttribute('loading', 'lazy')}
+      });
+    const optimizeFonts = () => {
+      // Preload critical fonts;'
+      const link = document.createElement('link');'
+      link.rel = 'preload';
+      link.href = '/fonts/inter.woff2';
+      link.as = 'font';
+      link.type = 'font/woff2';
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link)};
+
+    const optimizeResources = () => {
+      // Preload critical resources;'
+      const criticalResources = ['/css/critical.css',';
+        '/js/critical.js'';
       ];
 
-      domains.forEach(domain => {
+      criticalResources.forEach((resource) => {
         const link = document.createElement('link');
-        link.rel = 'preconnect';
-        link.href = domain;
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      });
-    };
+        link.rel = 'preload'
+        link.href = resource;
+        link.as = resource.endsWith('.css') ? 'style' : 'script';
+        document.head.appendChild(link)})};
 
-    // Optimize third-party scripts
-    const optimizeThirdPartyScripts = () => {
-      // Defer non-critical scripts
-      const scripts = document.querySelectorAll('script[src]');
-      scripts.forEach(script => {
-        if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
-          script.setAttribute('defer', 'true');
-        }
-      });
-    };
+    // Run optimizations;
+    optimizeImages()
+    optimizeFonts()
+    optimizeResources()
+    // Cleanup function;
+    return () => {
+      // Cleanup if needed}}, []);
 
     // Initialize optimizations
     const initializeOptimizations = () => {

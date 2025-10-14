@@ -11,13 +11,10 @@
     "imageSize": 0
   },
   "recommendations": [
-    {
-      "type": "warning",
-      "message": "JavaScript bundle size is large. Consider code splitting or tree shaking."
-    },
-    {
-      "type": "success",
-      "message": "Build size is optimized! Great job!"
-    }
+    "Consider implementing image optimization pipeline",
+    "Add more granular code splitting for large pages",
+    "Implement preloading for critical resources",
+    "Add more comprehensive caching strategies",
+    "Consider implementing CDN for static assets"
   ]
 }

@@ -1,4 +1,3 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
 interface Props {
@@ -38,8 +37,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by ProductionErrorBoundary:', error, errorInfo);
-    }
+      }
 
     // In production, you would typically send this to an error reporting service
     if (process.env.NODE_ENV === 'production') {
@@ -72,8 +70,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
       });
     } catch (reportingError) {
       // Fallback: log to console if reporting fails
-      console.error('Failed to report error:', reportingError);
-    }
+      }
   };
 
   private getSessionId = (): string => {

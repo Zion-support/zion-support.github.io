@@ -435,7 +435,5 @@ const CareersPage = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default CareersPage;
+  );}
+}'

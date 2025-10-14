@@ -1,6 +1,6 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import React, { Component, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowPathIcon, HomeIcon } from '@heroicons/react/24/outline';
 
 interface Props {
   children: ReactNode;
@@ -9,93 +9,123 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | null;
+  errorInfo: any;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return {
+      hasError: true,
+      error,
+      errorInfo: null
+    };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this.setState({ error, errorInfo });
+  componentDidCatch(error: Error, errorInfo: any) {
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send the error to a service like Sentry
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null
+    });
   };
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full text-center">
-            {/* Error Icon */}
-            <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-10 h-10 text-red-400" />
+        <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
+          <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
+            <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
+              <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
             </div>
-
-            {/* Error Message */}
+            
             <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
+              Something went wrong
             </h1>
+            
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.
             </p>
-
-            {/* Error Details (Development) */}
+            
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left bg-slate-800/50 rounded-lg p-4">
-                <summary className="text-cyan-400 cursor-pointer mb-2">Error Details</summary>
-                <pre className="text-xs text-gray-300 overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
+              <details className="mb-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
+                  Show Error Details
+                </summary>
+                <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  {this.state.errorInfo && (
+                    <div>
+                      <strong>Stack Trace:</strong>
+                      <pre className="mt-1 whitespace-pre-wrap">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
+                    </div>
+                  )}
+                </div>
               </details>
             )}
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="space-y-3">
               <button
-                onClick={this.handleRetry}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+                onClick={() => window.location.reload()}
+                className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors"
               >
-                <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
+                <ArrowPathIcon className="w-5 h-5" />
                 Try Again
               </button>
+              
               <Link
                 to="/"
-                className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group"
+                className="w-full border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
               >
-                <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                <HomeIcon className="w-5 h-5" />
                 Go Home
               </Link>
             </div>
 
-            {/* Contact Support */}
-            <div className="mt-8 p-4 bg-slate-800/50 rounded-lg">
-              <p className="text-sm text-gray-400 mb-2">Still having issues?</p>
-              <a
-                href="mailto:support@ziontechgroup.com"
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
-                Contact Support
-              </a>
+            <div className="mt-6 pt-6 border-t border-slate-700">
+              <p className="text-sm text-gray-400">
+                If this problem persists, please{' '}
+                <Link to="/contact" className="text-purple-400 hover:text-purple-300">
+                  contact our support team
+                </Link>
+              </p>
             </div>
           </div>
         </div>
-      );
+      )
     }
 
     return this.props.children;

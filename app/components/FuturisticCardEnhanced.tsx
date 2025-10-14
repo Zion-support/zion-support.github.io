@@ -1,213 +1,141 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
-
-interface FuturisticCardEnhancedProps {
-  children: React.ReactNode;
-  className?: string;
-  variant?: 'default' | 'holographic' | 'glass' | 'neon' | 'cyber';
-  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'orange' | 'red';
-  hoverEffect?: 'lift' | 'glow' | 'scale' | 'rotate' | 'slide';
-  animation?: 'pulse' | 'float' | 'scan' | 'matrix' | 'quantum';
-  interactive?: boolean;
-}
-
-const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
-  children,
-  className = '',
-  variant = 'default',
-  glowColor = 'purple',
-  hoverEffect = 'lift',
-  animation = 'pulse',
-  interactive = true
-}) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  const glowColors = {
-    purple: 'rgba(139, 92, 246, 0.3)',
-    cyan: 'rgba(6, 182, 212, 0.3)',
-    pink: 'rgba(236, 72, 153, 0.3)',
-    green: 'rgba(16, 185, 129, 0.3)',
-    blue: 'rgba(59, 130, 246, 0.3)',
-    orange: 'rgba(245, 158, 11, 0.3)',
-    red: 'rgba(239, 68, 68, 0.3)'
-  };
-
-  const getVariantClass = () => {
-    const variants = {
-      default: 'bg-slate-800/50 backdrop-blur-sm border border-white/20',
-      holographic: 'holographic-card bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-cyan-500/10',
-      glass: 'glass-enhanced bg-white/5 backdrop-blur-xl border border-white/10',
-      neon: 'bg-slate-900/80 border-2 border-cyan-400/50 shadow-lg',
-      cyber: 'bg-slate-900 border border-green-400/30 shadow-lg'
-    };
-    return variants[variant];
-  };
-
-  const getAnimationClass = () => {
-    const animations = {
-      pulse: 'pulse-glow-enhanced',
-      float: 'float-enhanced',
-      scan: 'scan-lines-enhanced',
-      matrix: 'data-stream',
-      quantum: 'quantum-particles'
-    };
-    return animations[animation];
-  };
-
-  const getHoverEffect = () => {
-    const effects = {
-      lift: 'hover:translate-y-[-8px] hover:scale-105',
-      glow: 'hover:shadow-2xl hover:shadow-purple-500/25',
-      scale: 'hover:scale-110',
-      rotate: 'hover:rotate-1',
-      slide: 'hover:translate-x-2 hover:translate-y-[-4px]'
-    };
-    return effects[hoverEffect];
-  };
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
-    
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    setMousePosition({ x, y });
-  };
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  // Mouse tracking effect
-  useEffect(() => {
-    if (!cardRef.current || !interactive) return;
-
-    const card = cardRef.current;
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      setMousePosition({ x, y });
-    };
-
-    card.addEventListener('mousemove', handleMouseMove);
-    return () => card.removeEventListener('mousemove', handleMouseMove);
-  }, [interactive]);
-
-  const cardVariants = {
-    initial: { 
-      scale: 1,
-      rotateX: 0,
-      rotateY: 0,
-      boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
-    },
-    hover: {
-      scale: 1.05,
-      rotateX: interactive ? (mousePosition.y - 150) / 30 : 0,
-      rotateY: interactive ? (mousePosition.x - 150) / 30 : 0,
-      boxShadow: `0 20px 40px ${glowColors[glowColor]}`,
-      transition: {
-        duration: 0.3,
-        ease: 'easeOut'
-      }
-    }
-  };
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
+const FuturisticCardEnhanced: React.FC = () => {
   return (
-    <motion.div
-      ref={cardRef}
-      className={`
-        relative rounded-xl p-6 transition-all duration-300 group
-        ${getVariantClass()}
-        ${getAnimationClass()}
-        ${getHoverEffect()}
-        ${className}
-      `}
-      variants={cardVariants}
-      initial="initial"
-      whileHover="hover"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onMouseMove={handleMouseMove}
-      style={{
-        transformStyle: 'preserve-3d',
-        perspective: '1000px'
-      }}
-    >
-      {/* Holographic scan line effect */}
-      {variant === 'holographic' && (
-        <div className="absolute inset-0 rounded-xl overflow-hidden">
-          <div 
-            className="absolute w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-60"
-            style={{
-              top: isHovered ? '50%' : '0%',
-              transition: 'top 0.6s ease-in-out'
-            }}
-          />
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Futuristic d Enhanced - Zion Tech Group</title>
+        <meta name="description" content="Professional futuristic card enhanced services by Zion Tech Group." />
+      </Helmet>
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Futuristic d Enhanced;
+          </h1>;
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+            Professional futuristic card enhanced services;
+            designed to help your business grow and succeed.;
+          </p>;
         </div>
-      )}
-
-      {/* Neon glow effect */}
-      {variant === 'neon' && (
-        <div 
-          className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-          style={{
-            background: `linear-gradient(45deg, ${glowColors[glowColor]}, transparent)`,
-            filter: 'blur(20px)'
-          }}
-        />
-      )}
-
-      {/* Cyber grid overlay */}
-      {variant === 'cyber' && (
-        <div className="absolute inset-0 rounded-xl opacity-20 group-hover:opacity-40 transition-opacity duration-300">
-          <div 
-            className="w-full h-full"
-            style={{
-              backgroundImage: `
-                linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px)
-              `,
-              backgroundSize: '20px 20px'
-            }}
-          />
+      </section>;
+      {/* Content Section */}
+            Futuristic d Enhanced</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional futuristic card enhanced services
+            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive futuristic card enhanced;
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Expert consultation;
+                </li>"""
+                <li className="flex items-center">""""
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
+                  Ongoing support;
+                </li>;
+              </ul>;
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
+              <p className="mb-6">;
+                Ready to transform your business with our futuristic card enhanced services?;
+              </p>;
+              <a>
+                href="/contact";
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
+              >;
+                Contact Us;
+              </a>;
+            </div>
+          </div>
         </div>
-      )}
-
-      {/* Interactive mouse tracking effect */}
-      {interactive && (
-        <div
-          className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-          style={{
-            background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, ${glowColors[glowColor]}, transparent 50%)`
-          }}
-        />
-      )}
-
-      {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
-
-      {/* Border glow effect */}
-      <div 
-        className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        style={{
-          background: `linear-gradient(45deg, ${glowColors[glowColor]}, transparent, ${glowColors[glowColor]})`,
-          padding: '1px',
-          WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-          WebkitMaskComposite: 'xor',
-          maskComposite: 'exclude'
-        }}
-      />
-    </motion.div>
+      </section>;
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <h2 className="text-3xl font-bold text-white mb-6">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text-xl text-blue-100 mb-8">;
+            Let's discuss how our futuristic card enhanced';
+            services can help you achieve your goals.;
+          </p>;
+          <a>
+            href="/contact";
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
+          >;
+            Get Started Today;
+          </a>;
+        </div>
+      </section>;
+    </div>
   );
 };
 
-export default FuturisticCardEnhanced;
+      { /* CTA Section */ }"""
+      <section className="py-16 px-4 bg-blue-600">"""
+        <div className=max-w-4xl mx-auto text-center></div>
+          <h2 className="text-3xl font-bold text-white mb-6">""
+
+            Ready to Get Started?;
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let&apos;s discuss how our futuristic card enhanced 
+            services can help you achieve your goals.
+          </p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            Get Started Today;
+          </a>
+        </div>
+      </section>
+    </div>
+  )
+}
+                We provide comprehensive futuristic card enhanced
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support</li></ul></div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our futuristic card enhanced services?</p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                Contact Us</a></div></div></div></section>{/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our futuristic card enhanced'
+            services can help you achieve your goals.</p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+            Get Started Today</a></div></section></div>
+export default FuturisticCardEnhanced

@@ -1,5 +1,90 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { ImageIcon } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+'use client';
+const LazyImage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Lazy Image - Zion Tech Group</title>
+        <meta name="description" content="Professional lazy image services by Zion Tech Group." />
+      </Helmet>
+      {/* Hero Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Lazy Image;
+          </h1>;
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+            Professional lazy image services;
+            designed to help your business grow and succeed.;
+          </p>;
+        </div>
+      </section>;
+      {/* Content Section */}
+            Lazy Image</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional lazy image services
+            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We provide comprehensive lazy image;
+                solutions tailored to your specific needs and requirements.;
+              </p>;
+              <ul className="space-y-3">;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Custom solutions;
+                </li>;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Expert consultation;
+                </li>;
+                <li className="flex items-center">;
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>;
+                  Ongoing support;
+                </li>;
+              </ul>;
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">;
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>;
+              <p className="mb-6">;
+                Ready to transform your business with our lazy image services?;
+              </p>;
+              <a>
+                href="/contact";
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors";
+              >;
+                Contact Us;
+              </a>;
+            </div>
+          </div>
+        </div>
+      </section>;
+      {/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <h2 className="text-3xl font-bold text-white mb-6">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text-xl text-blue-100 mb-8">;
+            Let's discuss how our lazy image';
+            services can help you achieve your goals.;
+          </p>;
+          <a>
+            href="/contact";
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors";
+          >;
+            Get Started Today;
+          </a>;
+        </div>
+      </section>;
+    </div>
+  );
+};
 
 interface LazyImageProps {
   src: string;
@@ -7,106 +92,96 @@ interface LazyImageProps {
   className?: string;
   placeholder?: string;
   onLoad?: () => void;
-  onError?: () => void;
-  priority?: boolean;
-  sizes?: string;
-  quality?: number;
+  onError?: () => void,
 }
-
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
-  className = '',
-  placeholder,
+  className =;,
+  placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjwvc3ZnPg==',
   onLoad,
-  onError,
-  priority = false,
-  sizes = '100vw',
-  quality = 75
+  onError
 }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isInView, setIsInView] = useState(false)
+  const imgRef = useRef<HTMLImageElement>(null)
   useEffect(() => {
-    if (priority) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
+          setIsInView(true)
+          observer.disconnect()
         }
       },
-      {
-        rootMargin: '50px 0px',
-        threshold: 0.1
-      }
-    );
-
+      { threshold: 0.1 });
     if (imgRef.current) {
-      observer.observe(imgRef.current);
+      observer.observe(imgRef.current)
     }
-
-    return () => observer.disconnect();
-  }, [priority]);
-
+    return () => observer.disconnect()
+  }, [])
   const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
+    setIsLoaded(true)
+    onLoad?.()
+  }
   const handleError = () => {
-    setHasError(true);
-    onError?.();
-  };
-
-  const optimizedSrc = `${src}?w=800&q=${quality}&f=webp`;
-
+    onError?.()
+  }
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
-      {/* Placeholder */}
-      {!isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
-          {placeholder ? (
-            <img
-              src={placeholder}
-              alt=""
-              className="w-full h-full object-cover opacity-50"
-            />
-          ) : (
-            <ImageIcon className="w-8 h-8 text-gray-400" />
-          )}
-        </div>
-      )}
-
-      {/* Error State */}
-      {hasError && (
-        <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-          <div className="text-center">
-            <ImageIcon className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-            <p className="text-xs text-gray-500">Failed to load image</p>
-          </div>
-        </div>
-      )}
-
-      {/* Actual Image */}
-      {isInView && !hasError && (
+      {isInView && (
         <img
-          src={optimizedSrc}
+          src={src}
           alt={alt}
-          className={`w-full h-full object-cover transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
           onLoad={handleLoad}
           onError={handleError}
-          loading={priority ? 'eager' : 'lazy'}
-          sizes={sizes}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0;
+          }`}
+          loading="lazy"
         />
-      )}
+)}
+      {!isLoaded && (
+        <div
+          className="absolute inset-0 bg-gray-200 animate-pulse"
+          style={{
+            backgroundImage: `url(${placeholder})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center;
+          }
+        />
+)}
     </div>
-  );
-};
-
-export default LazyImage;
+  )
+}
+                We provide comprehensive lazy image
+                solutions tailored to your specific needs and requirements.</p>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Custom solutions</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Expert consultation</li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                  Ongoing support</li></ul></div>
+            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
+              <p className="mb-6">
+                Ready to transform your business with our lazy image services?</p>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                Contact Us</a></div></div></div></section>{/* CTA Section */}
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?</h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Let's discuss how our lazy image'
+            services can help you achieve your goals.</p>
+          <a
+            href="/contact"
+            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">
+            Get Started Today</a></div></section></div>
+export default LazyImage
