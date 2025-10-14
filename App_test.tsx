@@ -1,5 +1,4 @@
 import React from 'react';
-
 const App: React.FC = () => {
   return (
     <div className="App">
@@ -14,4 +13,6 @@ const AppTest = () => {
       <h1 className="text-white text-center py-20">Test App</h1>
     </div>
   );
-}export default App;
+};
+
+export default App;

@@ -1,12 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-""94a""7
 
 export const useSEO = (structuredData?: unknown) => {
   useEffect(() => {
     // Add structured data to the page
     if (structuredData) {
-      const script = document.createElement('script');
+      const script = document.createElement('script');''
       script.type = 'application/ld+json';
       script.text = JSON.stringify(structuredData);
       document.head.appendChild(script);
@@ -17,5 +17,5 @@ export const useSEO = (structuredData?: unknown) => {
       };
     }
     return undefined;
-  }, [structuredData]);
-}
+  }, [structuredData]);'
+}''

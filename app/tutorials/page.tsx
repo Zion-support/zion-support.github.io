@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react';''
 import { Helmet , Right,  Play,  User,  Star,  Circle,  Clock   } from 'lucide-react';
 const TutorialsPage: React.FC = () => {
-  const tutorials = [{
+  const tutorials = [
+    {
       id: 1,
       title: "Getting Started with AI Development",
       description: "Learn the fundamentals of AI development and machine learning concepts.",
@@ -65,20 +66,20 @@ const TutorialsPage: React.FC = () => {
 
 const Page = () => {
   const features = [
-    {
-      icon: <CheckCircle className="w-8 h-8" />,
-      title: 'Advanced Features',
-      description: 'Cutting-edge technology for maximum efficiency'
+    {'
+      icon: <CheckCircle className="w-8 h-8" />,''
+      title: 'Advanced Features',''
+      description: 'Cutting-edge technology for maximum efficiency',
     },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'Secure & Reliable',
-      description: 'Enterprise-grade security and 99.9% uptime'
+    {'
+      icon: <Shield className="w-8 h-8" />,''
+      title: 'Secure & Reliable',''
+      description: 'Enterprise-grade security and 99.9% uptime',
     },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Expert Support',
-      description: '24/7 support from our team of specialists'
+    {'
+      icon: <Users className="w-8 h-8" />,''
+      title: 'Expert Support',''
+      description: '24/7 support from our team of specialists',
     }
   ];
 
@@ -88,19 +89,18 @@ const Page = () => {
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      /></EnhancedSEO>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
-          <div className="max-w-7xl mx-auto text-center">;
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
+          <div className="max-w-""7xl"" mx-auto text-center">;
+            <h1 className="text-""5xl"" md:text-""7xl"" font-bold text-white mb-6">;
               Learn;
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
                 Tutorials;
               </span>;
             </h1>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+            <p className="text-xl text-gray-300 mb-8 max-w-""3xl"" mx-auto">;
               Master AI and IT skills with our comprehensive tutorials.;
               Learn from experts with hands-on projects and real-world examples.;
             </p>;
@@ -117,10 +117,10 @@ const Page = () => {
         </section>;
         {/* Categories */}
         <section className="py-10 px-4">;
-          <div className="max-w-7xl mx-auto">;
+          <div className="max-w-""7xl"" mx-auto">;
             <div className="flex flex-wrap justify-center gap-4">;
               {categories.map((category, _index) => (
-                <button>
+                <button></button>
                   key={_index}
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300";
                 >;
@@ -132,14 +132,14 @@ const Page = () => {
         </section>;
         {/* Tutorials Grid */}
         <section className="py-20 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <h2 className="text-4xl font-bold text-white text-center mb-16">;
+          <div className="max-w-""7xl"" mx-auto">;
+            <h2 className="text-""4xl"" font-bold text-white text-center mb-16">;
               Featured Tutorials;
             </h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {tutorials.map((tutorial) => (
-                <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
-                  <div className="text-4xl mb-4">{tutorial.thumbnail}</div>
+                <div key={tutorial.id} className="bg-slate-800/50 backdrop-blur-sm rounded-""2xl"" p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
+                  <div className="text-""4xl"" mb-4">{tutorial.thumbnail}</div>
                   <div className="flex items-center justify-between mb-3">;
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">;
                       {tutorial.level}
@@ -177,8 +177,8 @@ const Page = () => {
         </section>;
         {/* CTA Section */}
         <section className="py-20 px-4 bg-slate-800/30">;
-          <div className="max-w-4xl mx-auto text-center">;
-            <h2 className="text-4xl font-bold text-white mb-6">;
+          <div className="max-w-""4xl"" mx-auto text-center">;
+            <h2 className="text-""4xl"" font-bold text-white mb-6">;
               Ready to Start Learning?;
             </h2>;
             <p className="text-xl text-gray-300 mb-8">;
@@ -196,9 +196,9 @@ const Page = () => {
           </div>
         </section>;
       </div>
-    </>
-  )};
-
+</>
+  )};'
+''
 const page = React.lazy(() => import('./page'));
-export default page;
-ursor/fix-errors-and-merge-to-main-94a7
+export default page;'
+ursor/fix-errors-and-merge-to-main-""94a""7''

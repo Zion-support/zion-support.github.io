@@ -18,22 +18,7 @@ import EnhancedSEO from "./app/components/EnhancedSEO";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-
-// Components
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-
-
-
-
-
 // Page Components
-import HomePage from './app/page';
 import AboutPage from './app/pages/AboutPage';
 import ContactPage from './app/pages/ContactPage';
 import ServicesPage from './app/pages/ServicesPage';
@@ -49,14 +34,13 @@ import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
 
-// Service Pages'
+// Service Pages
 import AIServicesPage from './app/pages/AIServicesPage';
 import ITServicesPage from './app/pages/ITServicesPage';
 import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
 import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
 import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
-
 // Additional Pages
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
@@ -118,7 +102,7 @@ const TechnologyConsultingPage = React.lazy(() => import("./app/technology-consu
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+  
   const toggleSidebar = useCallback(() => {
     setIsSidebarOpen(prev => !prev);
   }, []);
@@ -180,7 +164,6 @@ function App() {
                         <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
                           Go Home
                         </a>
-
                       </div>
                     </div>
                   } />
@@ -195,11 +178,7 @@ function App() {
       </Router>
     </HelmetProvider>
   </ErrorBoundary>
-
-
-
-
   );
-}
+};
 
 export default App;

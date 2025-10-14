@@ -159,7 +159,7 @@ export interface SEOMetadata {
   twitterCard?: string;
   noindex?: boolean;
   nofollow?: boolean;
-,
+}
   }
 
 /**;
@@ -171,7 +171,7 @@ export interface NavigationItem {
     f: string;
   external?: boolean;
   children?: NavigationItem[];
-,
+}
   }
 
 /**;
@@ -233,7 +233,7 @@ export interface TeamMember {
     linkedin?: string;
     twitter?: string;
     github?: string;
-  ,
+}
   };
   expertise: string[];
   feature,
@@ -271,7 +271,7 @@ export interface NewsletterSubscription {
  */;
 export interface ErrorBoundaryProps {
     children: React.ReactNode;
-  fallback?: React.ComponentType<{ error: Error; resetError: () => void ,
+  fallback?: React.ComponentType<{ error: Error; resetError: () => void 
   }>;
   onError?: (_error: Error, _errorInfo: React.ErrorInfo) => void;
 }
@@ -280,9 +280,9 @@ export interface ErrorBoundaryProps {
  * Error Boundary State Interface;
  */;
 export interface ErrorBoundaryState {
-    hasError: boolean;
+  hasError: boolean;
   error?: Error;
-,
+}
   }
 
 /**;
@@ -339,7 +339,7 @@ export interface UserPreferences {
 export type Optional<T, K extends keyof T> = Omit<////T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
-    [
+  [
     P in keyof T,
   ]?: T[
     P,
@@ -348,27 +348,27 @@ export type DeepPartial<T> = {
   ]> : T[
     P,
   ];
-,
+}
   };
 
 /**;
  * API Endpoint Types;
- */;
-export type ApiEndpoint =;
-  | '/api/contact';
-  | '/api/newsletter';
-  | '/api/analytics';
-  | '/api/performance';
+ */;'
+export type ApiEndpoint =;''
+  | '/api/contact';''
+  | '/api/newsletter';''
+  | '/api/analytics';''
+  | '/api/performance';''
   | '/api/health';
 
 /**;
- * HTTP Method Types;
- */;
+ * HTTP Method Types;'
+ */;''
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
 
 /**;
- * Environment Types;
- */;
+ * Environment Types;'
+ */;''
 export type Environment = 'development' | 'staging' | 'production';
 
 /**;
@@ -384,6 +384,6 @@ export interface BuildConfig {
     errorReportin",
     g: boolean;
     pw,
-    a: boolean;
-  };
+    a: boolean;'
+  };''
 </PerformanceMetrics></T></string></T></T></Pick></T></Pick></T></T></PerformanceMetrics></T></string></T></T></Pick></T></Pick></T></T>}

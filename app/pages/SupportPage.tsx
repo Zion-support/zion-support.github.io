@@ -2,6 +2,4 @@
 
   return (
     <>
-      <Helmet>
-
-
+      <Helmet></Helmet>

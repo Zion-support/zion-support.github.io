@@ -1,29 +1,30 @@
 
 const DemoPage: React.FC = () => {
-  const features = [{'
-      icon: 'Analytics',';
-      title: 'AI-Powered Analytics',';
-      description: 'See how our AI analyzes your data in real-time',';
-      demo: 'Live Demo'';}
-    },
-    {'
-      icon: 'Security',';
-      title: 'Advanced Security',';
-      description: 'Experience our enterprise-grade security features',';
-      demo: 'Demo'';}
-    },
-    {'
-      icon: 'Intelligence',';
-      title: 'Business Intelligence',';
-      description: 'Explore our comprehensive BI dashboard',';
+  const features = [{'''
+      icon: 'Analytics',''
+      title: 'AI-Powered Analytics',''
+      description: 'See how our AI analyzes your data in real-time',''
+      demo: 'Live Demo'';}'
+    },''
+    {'''
+      icon: 'Security',''
+      title: 'Advanced Security',''
+      description: 'Experience our enterprise-grade security features',''
+      demo: 'Demo'';}'
+    },''
+    {'''
+      icon: 'Intelligence',''
+      title: 'Business Intelligence',''
+      description: 'Explore our comprehensive BI dashboard',''
       demo: 'BI Demo'';}
-    },
+    }
 
 
     }
   ];
 
-  const testimonials = [{
+  const testimonials = [
+    {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
       content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
@@ -46,19 +47,18 @@ const DemoPage: React.FC = () => {
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      /></EnhancedSEO>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
-          <div className="max-w-7xl mx-auto text-center">;
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
+          <div className="max-w-""7xl"" mx-auto text-center">;
+            <h1 className="text-""5xl"" md:text-""7xl"" font-bold text-white mb-6">;
               See It In;
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
                 Action;
               </span>;
             </h1>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+            <p className="text-xl text-gray-300 mb-8 max-w-""3xl"" mx-auto">;
               Experience our AI and IT solutions through interactive demos.;
               See how our technology can transform your business.;
             </p>;
@@ -75,15 +75,15 @@ const DemoPage: React.FC = () => {
         </section>;
         {/* Demo Features */}
         <section className="py-20 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <h2 className="text-4xl font-bold text-white text-center mb-16">;
+          <div className="max-w-""7xl"" mx-auto">;
+            <h2 className="text-""4xl"" font-bold text-white text-center mb-16">;
               Interactive Demos;
             </h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {features.map((feature, _index) => {
                 const Icon = feature.icon;
                 return (}
-                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
+                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-""2xl"" p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
                     <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">;
                       <Icon className="w-8 h-8 text-white" />;
                     </div>
@@ -100,17 +100,17 @@ const DemoPage: React.FC = () => {
         </section>;
         {/* Demo Section */}
         <section className="py-20 px-4 bg-slate-800/30">;
-          <div className="max-w-6xl mx-auto">;
-            <h2 className="text-4xl font-bold text-white text-center mb-16">;
+          <div className="max-w-""6xl"" mx-auto">;
+            <h2 className="text-""4xl"" font-bold text-white text-center mb-16">;
               Watch Our Solutions in Action;
             </h2>;
-            <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">;
+            <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-""2xl"" p-8 border border-slate-700/50">;
               <div className="aspect-video bg-slate-700/50 rounded-xl flex items-center justify-center">;
                 <div className="text-center">;
                   <div className="w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">;
                     <Play className="w-10 h-10 text-white ml-1" />;
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Product Demo </h3>;
+                  <h3 className="text-""2xl"" font-bold text-white mb-2">Product Demo </h3>;
                   <p className="text-gray-300 mb-4">See our AI solutions in action</p>;
                   <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">;
                     Play </button>;
@@ -121,13 +121,13 @@ const DemoPage: React.FC = () => {
         </section>;
         {/* Testimonials */}
         <section className="py-20 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <h2 className="text-4xl font-bold text-white text-center mb-16">;
+          <div className="max-w-""7xl"" mx-auto">;
+            <h2 className="text-""4xl"" font-bold text-white text-center mb-16">;
               What Say About Our Demos;
             </h2>;
             <div className="grid md:grid-cols-3 gap-8">;
               {testimonials.map((testimonial, _index) => (
-                <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">;
+                <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-""2xl"" p-6 border border-slate-700/50">;
                   <div className="flex items-center mb-4">;
                     {[...Array(testimonial.rating)].map((_, i) => (}
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
@@ -145,8 +145,8 @@ const DemoPage: React.FC = () => {
         </section>;
         {/* CTA Section */}
         <section className="py-20 px-4">;
-          <div className="max-w-4xl mx-auto text-center">;
-            <h2 className="text-4xl font-bold text-white mb-6">;
+          <div className="max-w-""4xl"" mx-auto text-center">;
+            <h2 className="text-""4xl"" font-bold text-white mb-6">;
               Ready to See More?;
             </h2>;
             <p className="text-xl text-gray-300 mb-8">;
@@ -164,9 +164,9 @@ const DemoPage: React.FC = () => {
           </div>
         </section>;
       </div>
-    </>
-  )};
-
+</>
+  )};'
+''
 const page = React.lazy(() => import('./page'));
-export default page;
-ursor/fix-errors-and-merge-to-main-94a7
+export default page;'
+ursor/fix-errors-and-merge-to-main-""94a""7''

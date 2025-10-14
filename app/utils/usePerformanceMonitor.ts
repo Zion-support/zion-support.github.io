@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-""94a""7
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -13,7 +13,7 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
     metrics, setMetrics,
   ] = useState<PerformanceMetrics>({
     loadTime: 0,
-    renderTime: 0,
+    renderTime: 0
   });
   useEffect(() => {
     const startTime = performance.now();
@@ -23,7 +23,7 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
       setMetrics({
         loadTime,
         renderTime: performance.now() - startTime,
-        memoryUsage,
+        memoryUsage
       });
     };
     // Measure after component mount;
@@ -32,5 +32,5 @@ export const usePerformanceMonitor = (): PerformanceMetrics => {
   }, []);
   return metrics;
 };
-
-export default usePerformanceMonitor
+'
+export default usePerformanceMonitor''

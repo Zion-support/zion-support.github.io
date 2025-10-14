@@ -8,76 +8,75 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
   // Preload critical resources
   useEffect(() => {
-    const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
+    const preloadCriticalResources = () => {'
+      // Preload critical fonts''
+      const fontLink = document.createElement('link');''
+      fontLink.rel = 'preload';''
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';''
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
-
-      // Preload critical images
-      const criticalImages = [
-        '/logo.svg',
-        '/og-image.svg',
-        '/api/placeholder/1200/630', // Hero image
+}
+      // Preload critical images'
+      const criticalImages = [''
+        '/logo.svg',/og-image.svg',''
+        '/api/placeholder/1200/630', // Hero image''
         '/api/placeholder/800/600',  // Service images
       ];
-
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = src;
+'
+      criticalImages.forEach(src => {''
+        const link = document.createElement('link');''
+        link.rel = 'preload';'
+        link.href = src;''
         link.as = 'image';
         document.head.appendChild(link);
       });
     };
 
-    // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
-      images.forEach((img) => {'
-        if (!img.hasAttribute('loading')) {';
-          img.setAttribute('loading', 'lazy');}
+    // Optimize images'
+    const optimizeImages = () => {''
+      const images = document.querySelectorAll('img');''
+      images.forEach((img) => {'''
+        if (!img.hasAttribute('loading')) {';''
+          img.setAttribute('loading',lazy');}
         }
       });
-    };
-
-        if (!img.hasAttribute('loading')) {';
-          img.setAttribute('loading', 'lazy')
+    };'
+''
+        if (!img.hasAttribute('loading')) {';''
+          img.setAttribute('loading',lazy')''
 { useEffect, Node } from 'react';
 interface PerformanceOptimizerProps {
-  children: Node,}
-ursor/fix-errors-and-merge-to-main-94a7
+  children: Node}
+ursor/fix-errors-and-merge-to-main-""94a""7
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
-    // Performance optimization code;
-    const optimizeImages = () => {;
-      const images = document.querySelectorAll('img')
-      images.forEach((img) => {;
-        if (!img.hasAttribute('loading')) {;
-img.setAttribute('loading', 'lazy')}
-      });
-    const optimizeFonts = () => {
-      // Preload critical fonts;'
-      const link = document.createElement('link');'
-      link.rel = 'preload';
-      link.href = '/fonts/inter.woff2';
-      link.as = 'font';
-      link.type = 'font/woff2';
+    // Performance optimization code;'
+    const optimizeImages = () => {;''
+      const images = document.querySelectorAll('img')'
+      images.forEach((img) => {;''
+        if (!img.hasAttribute('loading')) {;''
+img.setAttribute('loading',lazy')}
+      });'
+    const optimizeFonts = () => {''
+      // Preload critical fonts;'''
+      const link = document.createElement('link');'''
+      link.rel = 'preload';''
+      link.href = '/fonts/inter.woff2';''
+      link.as = 'font';''
+      link.type = 'font/woff2';''
       link.crossOrigin = 'anonymous';
       document.head.appendChild(link)};
-
-    const optimizeResources = () => {
-      // Preload critical resources;'
-      const criticalResources = ['/css/critical.css',';
+'
+    const optimizeResources = () => {''
+      // Preload critical resources;'''
+      const criticalResources = ['/css/critical.css',;''
         '/js/critical.js'';
       ];
-
-      criticalResources.forEach((resource) => {
-        const link = document.createElement('link');
-        link.rel = 'preload'
-        link.href = resource;
+'
+      criticalResources.forEach((resource) => {''
+        const link = document.createElement('link');''
+        link.rel = 'preload''
+        link.href = resource;''
         link.as = resource.endsWith('.css') ? 'style' : 'script';
         document.head.appendChild(link)})};
 
@@ -106,9 +105,9 @@ img.setAttribute('loading', 'lazy')}
 
   // Optimize scroll performance
   const handleScroll = useCallback(() => {
-    // Throttle scroll events
+  // Throttle scroll events
     let ticking = false;
-    
+}
     const updateScrollPosition = () => {
       // Add scroll-based optimizations here
       ticking = false;
@@ -119,16 +118,16 @@ img.setAttribute('loading', 'lazy')}
       ticking = true;
     }
   }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
+'
+  useEffect(() => {''
+    window.addEventListener('scroll', handleScroll, { passive: true });''
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
   // Optimize resize performance
   const handleResize = useCallback(() => {
-    let ticking = false;
-    
+  let ticking = false;
+}
     const updateLayout = () => {
       // Add resize-based optimizations here
       ticking = false;
@@ -139,37 +138,37 @@ img.setAttribute('loading', 'lazy')}
       ticking = true;
     }
   }, []);
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize, { passive: true });
+'
+  useEffect(() => {''
+    window.addEventListener('resize', handleResize, { passive: true });''
     return () => window.removeEventListener('resize', handleResize);
   }, [handleResize]);
 
   // Intersection Observer for lazy loading
   useEffect(() => {
-    if (!isOptimized) return;
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '50px',
+  if (!isOptimized) return;
+}
+    const observerOptions = {'
+      root: null,''
+      rootMargin: '""50px""',
       threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+  entries.forEach(entry => {
         if (entry.isIntersecting) {
           const element = entry.target as HTMLElement;
-          
-          // Add animation classes when element comes into view
+          '
+          // Add animation classes when element comes into view''
           element.classList.add('animate-fade-in');
-          
+}
           // Unobserve after animation
           observer.unobserve(element);
         }
       });
     }, observerOptions);
-
-    // Observe elements with data-lazy attribute
+'
+    // Observe elements with data-lazy attribute''
     const lazyElements = document.querySelectorAll('[data-lazy]');
     lazyElements.forEach(el => observer.observe(el));
 
@@ -178,30 +177,28 @@ img.setAttribute('loading', 'lazy')}
 
   // Resource hints for better performance
   useEffect(() => {
-    if (!isOptimized) return;
-
-    // DNS prefetch for external resources
-    const dnsPrefetchDomains = [
-      '//fonts.googleapis.com',
-      '//fonts.gstatic.com',
+  if (!isOptimized) return;
+}
+    // DNS prefetch for external resources'
+    const dnsPrefetchDomains = [''
+      '//fonts.googleapis.com',//fonts.gstatic.com',''
       '//www.google-analytics.com'
     ];
-
-    dnsPrefetchDomains.forEach(domain => {
-      const link = document.createElement('link');
+'
+    dnsPrefetchDomains.forEach(domain => {''
+      const link = document.createElement('link');''
       link.rel = 'dns-prefetch';
       link.href = domain;
       document.head.appendChild(link);
     });
 
-    // Module preload for critical JavaScript
-    const criticalModules = [
-      '/assets/react-vendor',
-      '/assets/main-pages'
+    // Module preload for critical JavaScript'
+    const criticalModules = [''
+      '/assets/react-vendor',/assets/main-pages'
     ];
-
-    criticalModules.forEach(module => {
-      const link = document.createElement('link');
+'
+    criticalModules.forEach(module => {''
+      const link = document.createElement('link');''
       link.rel = 'modulepreload';
       link.href = `${module}.js`;
       document.head.appendChild(link);
@@ -212,12 +209,12 @@ img.setAttribute('loading', 'lazy')}
     <>
       {children}
       
-      {/* Performance monitoring styles */}
+      {/* Performance monitoring styles */}`
       <style jsx>{`
         @keyframes fade-in {
           from {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(""20px"");
           }
           to {
             opacity: 1;
@@ -226,16 +223,16 @@ img.setAttribute('loading', 'lazy')}
         }
         
         .animate-fade-in {
-          animation: fade-in 0.6s ease-out forwards;
+          animation: fade-in 0.""6s"" ease-out forwards;
         }
         
-        /* Optimize font loading */
-        @font-face {
+        /* Optimize font loading */'
+        @font-face {''
           font-family: 'Inter';
           font-style: normal;
-          font-weight: 400;
-          font-display: swap;
-          src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
+          font-weight: 400;'
+          font-display: swap;''
+          src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO""3FwrK""""3iLTeHuS""_fvQtMwCp""50KnMw""""2boKoduKmMEVuLyfAZ""""9hiJ""-Ek-_EeA.woff2') format('woff2');
         }
         
         /* Critical CSS for above-the-fold content */
@@ -259,14 +256,14 @@ img.setAttribute('loading', 'lazy')}
         /* Reduce motion for users who prefer it */
         @media (prefers-reduced-motion: reduce) {
           * {
-            animation-duration: 0.01ms !important;
+            animation-duration: 0.""01ms"" !important;
             animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
+            transition-duration: 0.""01ms"" !important;
           }
-        }
+        }`
       `}</style>
-    </>
+</>
   );
 };
-
-export default PerformanceOptimizer;
+'
+export default PerformanceOptimizer;''`

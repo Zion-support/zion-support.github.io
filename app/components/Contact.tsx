@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { EnvelopeIcon, 
-  PhoneIcon, 
-  MapPinIcon,'
-  ClockIcon } from '@heroicons/react/24/outline';
-const Contact: React.FC = () => {,
-  const [formData, setFormData] = useState({'
-    name: '','
-    email: '','
-    company: '','
+import { EnvelopeIcon, ';
+  PhoneIcon,  from 'react';'
+  MapPinIcon,'''
+  ClockIcon } from '@heroicons/react/24/outline';'
+const Contact: React.FC = () => {,''
+  const [formData, setFormData] = useState({'''
+    name: '',''
+    email: '',''
+    company: '',''
     message: '',
   });
 
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-""94a""7
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({,
       ...formData,
@@ -19,43 +19,44 @@ ursor/fix-errors-and-merge-to-main-94a7
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission',
-    console.log('Form submitted:', formData);
-  };
-
-  const contactInfo = [{
-      icon: EnvelopeIcon,'
-      title: 'Email','
-      details: 'contact@ziontech.com','
+  const handleSubmit = (e: React.FormEvent) => {'
+    e.preventDefault();''
+    // Handle form submission',''
+    console.log('Form submitted: ', formData);',
+  };'
+','
+  const contactInfo = [{''
+      icon: EnvelopeIcon,'''
+      title: 'Email',''
+      details: 'contact@ziontech.com',''
       description: 'Send us an email anytime',
-    },
-    {
-      icon: PhoneIcon,'
-      title: 'Phone','
-      details: '+1 (555) 123-4567','
-      description: 'Mon-Fri from 9am to 6pm',
-    },
-    {
-      icon: MapPinIcon,'
-      title: 'Office','
-      details: 'San Francisco, CA','
-      description: 'Visit our headquarters',
-    },
-    {icon: ClockIcon,'
-      title: 'Response Time','
-      details: '< 24 hours','
-      description: 'We respond quickly'}];
+    },'
+    {''
+      icon: PhoneIcon,'''
+      title: 'Phone',''
+      details: '+1 (555) 123-4567',''
+      description: 'Mon-Fri from ""9am"" to ""6pm""',
+    },'
+    {''
+      icon: MapPinIcon,'''
+      title: 'Office',''
+      details: 'San Francisco, CA',''
+      description: 'Visit our headquarters','
+    },''
+    {icon: ClockIcon,'''
+      title: 'Response Time',''
+      details: '< 24 hours',''
+      description: 'We respond quickly'}
+  ];
 
   return ()
     <section className="py-20 bg-white">"
-      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
+      <div className="max-w-""7xl"" mx-auto px-4 sm: px-6 lg:px-8">"
         <div className="text-center mb-16">"
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Get In Touch
-          </h2>"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">'
+          <h2 className="text-""4xl"" md:text-""5xl"" font-bold text-gray-900 mb-6"></h2>
+            Get In Touch'
+          </h2>"''
+          <p className="text-xl text-gray-600 max-w-""3xl"" mx-auto">'''
             Ready to transform your business? Let's discuss how our solutions 
             can help you achieve your goals.
           </p>
@@ -67,7 +68,7 @@ ursor/fix-errors-and-merge-to-main-94a7
             <form onSubmit={handleSubmit} className="space-y-6">"
               <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
                 <div>"
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2"></label>
                     Full Name *
                   </label>
                   <input"
@@ -79,10 +80,10 @@ ursor/fix-errors-and-merge-to-main-94a7
                     required"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
                     placeholder="Your full name"
-                  />
+                  /></input>
                 </div>
                 <div>"
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2"></label>
                     Email Address *
                   </label>
                   <input"
@@ -94,12 +95,12 @@ ursor/fix-errors-and-merge-to-main-94a7
                     required"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
                     placeholder="your@email.com"
-                  />
+                  /></input>
                 </div>
               </div>
               
               <div>"
-                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2"></label>
                   Company
                 </label>
                 <input"
@@ -110,11 +111,11 @@ ursor/fix-errors-and-merge-to-main-94a7
                   onChange={handleChange}"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
                   placeholder="Your company name"
-                />
+                /></input>
               </div>
               
               <div>"
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2"></label>
                   Message *
                 </label>
                 <textarea"
@@ -126,14 +127,14 @@ ursor/fix-errors-and-merge-to-main-94a7
                   rows={6}"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent""
                   placeholder="Tell us about your project or requirements..."
-                />
+                /></textarea>
               </div>
               
               <button"
                 type="submit""
                 className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               ></button>
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-""94a""7
                 Send Message
               </button>
             </form>
@@ -142,11 +143,11 @@ ursor/fix-errors-and-merge-to-main-94a7
           {/* Contact Information */}"
           <div className="space-y-8"></div>
             <div>"
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Contact Information
-              </h3>"
-              <p className="text-gray-600 mb-8">'
-                We're here to help! Reach out to us through any of the channels below, '
+              <h3 className="text-""2xl"" font-bold text-gray-900 mb-6"></h3>
+                Contact Information'
+              </h3>"''
+              <p className="text-gray-600 mb-8">'''
+                We're here to help! Reach out to us through any of the channels below, '''
                 and we'll get back to you as soon as possible.
               </p>
             </div>
@@ -156,17 +157,17 @@ ursor/fix-errors-and-merge-to-main-94a7
                 <div key={index} className="flex items-start space-x-4">"
                   <div className="flex-shrink-0">"
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">"
-                      <info.icon className="h-6 w-6 text-blue-600" />
+                      <info.icon className="h-6 w-6 text-blue-600" /></info>
                     </div>
                   </div>
                   <div>"
-                    <h4 className="text-lg font-semibold text-gray-900">
+                    <h4 className="text-lg font-semibold text-gray-900"></h4>
                       {info.title},
                     </h4>"
-                    <p className="text-gray-900 font-medium">
+                    <p className="text-gray-900 font-medium"></p>
                       {info.details},
                     </p>"
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-sm"></p>
                       {info.description},
                     </p>
                   </div>
@@ -176,7 +177,7 @@ ursor/fix-errors-and-merge-to-main-94a7
 
             {/* Additional Info */}"
             <div className="bg-gray-50 rounded-lg p-6">"
-              <h4 className="text-lg font-semibold text-gray-900 mb-3">
+              <h4 className="text-lg font-semibold text-gray-900 mb-3"></h4>
                 Why Choose Us?
               </h4>"
               <ul className="space-y-2 text-gray-600">"
@@ -197,14 +198,14 @@ ursor/fix-errors-and-merge-to-main-94a7
                   Proven track record
                 </li>
               </ul>
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-""94a""7
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  );'
+};''
 "'
-export default Contact;
-ursor/fix-errors-and-merge-to-main-94a7
+export default Contact;'
+ursor/fix-errors-and-merge-to-main-""94a""7''

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
@@ -27,15 +26,14 @@ root.render(
 );
 
 // Register service worker for PWA functionality
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("/sw.js")
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
-        console.log('Service Worker registered successfully');
+        console.log('SW registered: ', registration);
       })
-      .catch((error) => {
-        console.log('Service Worker registration failed');
+      .catch((registrationError) => {
+        console.log('SW registration failed: ', registrationError);
       });
   });
 }

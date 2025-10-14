@@ -9,5 +9,5 @@ declare module 'next' {';
 export const nextUtil = () => {
   // Implementation;
   return true};
-export default nextUtil;
-;
+export default nextUtil;'
+;''

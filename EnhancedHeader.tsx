@@ -1,6 +1,6 @@
-import { Menu, X } from 'lucide-react'
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Menu, X } from 'lucide-react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 const EnhancedHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const toggleMenu = () => {
@@ -16,34 +16,34 @@ const EnhancedHeader: React.FC = () => {
               <span className="text-white font-bold text-lg">Z
             <span className="text-white font-bold text-xl">Zion Tech Group
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+          <nav className="hidden md:flex items-center space-x-8"></nav>
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
               Home
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
               About
-            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
               Services
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
               Contact
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors">
+            className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"></button>
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-cyan-500/20">
-            <nav className="flex flex-col space-y-4">
-              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors">
+          <div className="md:hidden py-4 border-t border-cyan-500/20"></div>
+            <nav className="flex flex-col space-y-4"></nav>
+              <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
                 Home
-              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
                 About
-              <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
                 Services
-              <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">
+              <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors"></Link>
                 Contact
         )}
-  )
-}
+  )'
+}'';
 export default EnhancedHeader</div></div></div></div></span></span></Link></Link></Link></Link></Link></Link></Link></Link></Link></header></nav></nav>

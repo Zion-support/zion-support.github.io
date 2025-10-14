@@ -1,58 +1,58 @@
-import React from 'react';
-import { Helmet ,   } from 'lucide-react';
-import { Circle, Right,  } from 'lucide-react';
-const PartnersPage: React.FC = () => {
-  const partners = [{'
-      name: 'Microsoft',';
-      logo: '🏢',';
-      description: 'Strategic partnership for cloud and AI solutions',';
-      category: 'Technology'';}
-    },
-    {'
-      name: 'Amazon Web Services',';
-      logo: '☁️',';
-      description: 'infrastructure and AI services collaboration',';
+import React from 'react';''
+import { Helmet    } from 'lucide-react';''
+import { Circle, Right  } from 'lucide-react';'
+const PartnersPage: React.FC = () => {''
+  const partners = [{'''
+      name: 'Microsoft',''
+      logo: '🏢',''
+      description: 'Strategic partnership for cloud and AI solutions',''
+      category: 'Technology'';}'
+    },''
+    {'''
+      name: 'Amazon Web Services',''
+      logo: '☁️',''
+      description: 'infrastructure and AI services collaboration',''
+      category: ''';}'
+    },''
+    {'''
+      name: 'Google ',''
+      logo: '🔍',''
+      description: 'AI and machine learning platform integration',''
+      category: 'AI/ML'';}'
+    },''
+    {'''
+      name: 'IBM',''
+      logo: '💼',''
+      description: 'Enterprise AI solutions and consulting',''
+      category: 'Enterprise'';}'
+    },''
+    {'''
+      name: 'Salesforce',''
+      logo: '📊',''
+      description: 'CRM and business intelligence integration',''
+      category: 'CRM'';}'
+    },''
+    {'''
+      name: 'Oracle',''
+      logo: '🗄️',''
+      description: 'and enterprise application solutions',''
       category: ''';}
-    },
-    {'
-      name: 'Google ',';
-      logo: '🔍',';
-      description: 'AI and machine learning platform integration',';
-      category: 'AI/ML'';}
-    },
-    {'
-      name: 'IBM',';
-      logo: '💼',';
-      description: 'Enterprise AI solutions and consulting',';
-      category: 'Enterprise'';}
-    },
-    {'
-      name: 'Salesforce',';
-      logo: '📊',';
-      description: 'CRM and business intelligence integration',';
-      category: 'CRM'';}
-    },
-    {'
-      name: 'Oracle',';
-      logo: '🗄️',';
-      description: 'and enterprise application solutions',';
-      category: ''';}
-    }
-  ];
-'
-  const benefits = ['Access to cutting-edge technology',';
-    'Joint go-to-market opportunities',';
-    'Technical support and training',';
-    'Co-marketing and co-selling programs',';
-    'Priority access to new features',';
+    }'
+  ];''
+'''
+  const benefits = ['Access to cutting-edge technology',;''
+    'Joint go-to-market opportunities',;''
+    'Technical support and training',;''
+    'Co-marketing and co-selling programs',;''
+    'Priority access to new features',;''
     'Dedicated partner success manager'';
-  ];
-
-  const benefits = ['Access to cutting-edge technology',';
-    'Joint go-to-market opportunities',';
-    'Technical support and training',';
-    'Co-marketing and co-selling programs',';
-    'Priority access to new features',';
+  ];'
+''
+  const benefits = ['Access to cutting-edge technology',;''
+    'Joint go-to-market opportunities',;''
+    'Technical support and training',;''
+    'Co-marketing and co-selling programs',;''
+    'Priority access to new features',;''
     'Dedicated partner success manager''];
 
   return (
@@ -61,19 +61,18 @@ const PartnersPage: React.FC = () => {
         title="Page - Zion Tech Group"
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      /></EnhancedSEO>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
-          <div className="max-w-7xl mx-auto text-center">;
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
+          <div className="max-w-""7xl"" mx-auto text-center">;
+            <h1 className="text-""5xl"" md:text-""7xl"" font-bold text-white mb-6">;
               Our;
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
                 Partners;
               </span>;
             </h1>;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+            <p className="text-xl text-gray-300 mb-8 max-w-""3xl"" mx-auto">;
               Join our growing ecosystem of strategic partners and unlock new opportunities;
               for growth and innovation.;
             </p>;
@@ -90,15 +89,15 @@ const PartnersPage: React.FC = () => {
         </section>;
         {/* Partners Grid */}
         <section className="py-20 px-4">;
-          <div className="max-w-7xl mx-auto">;
-            <h2 className="text-4xl font-bold text-white text-center mb-16">;
+          <div className="max-w-""7xl"" mx-auto">;
+            <h2 className="text-""4xl"" font-bold text-white text-center mb-16">;
               Strategic Partners;
             </h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {partners.map((partner, _index) => (
-                <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">;
+                <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-""2xl"" p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">;
                   <div className="text-center">;
-                    <div className="text-4xl mb-4">{partner.logo}</div>
+                    <div className="text-""4xl"" mb-4">{partner.logo}</div>
                     <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>;
                     <p className="text-cyan-400 text-sm mb-3">{partner.category}</p>;
                     <p className="text-gray-300 text-sm">{partner.description}</p>;
@@ -110,8 +109,8 @@ const PartnersPage: React.FC = () => {
         </section>;
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-slate-800/30">;
-          <div className="max-w-7xl mx-auto">;
-            <h2 className="text-4xl font-bold text-white text-center mb-16">;
+          <div className="max-w-""7xl"" mx-auto">;
+            <h2 className="text-""4xl"" font-bold text-white text-center mb-16">;
               Partner Benefits;
             </h2>;
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -128,8 +127,8 @@ const PartnersPage: React.FC = () => {
         </section>;
         {/* CTA Section */}
         <section className="py-20 px-4">;
-          <div className="max-w-4xl mx-auto text-center">;
-            <h2 className="text-4xl font-bold text-white mb-6">;
+          <div className="max-w-""4xl"" mx-auto text-center">;
+            <h2 className="text-""4xl"" font-bold text-white mb-6">;
               Ready to Partner with Us?;
             </h2>;
             <p className="text-xl text-gray-300 mb-8">;
@@ -147,9 +146,9 @@ const PartnersPage: React.FC = () => {
           </div>
         </section>;
       </div>
-    </>
-  )};
-
+</>
+  )};'
+''
 const page = React.lazy(() => import('./page'));
-export default page;
-ursor/fix-errors-and-merge-to-main-94a7
+export default page;'
+ursor/fix-errors-and-merge-to-main-""94a""7''
