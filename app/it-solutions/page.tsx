@@ -141,7 +141,7 @@ export default function ITSolutionsPage() {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Comprehensive IT solutions to keep your business running smoothly and securely. 
-            From infrastructure to cloud, we've got you covered.
+            From infrastructure to cloud, we&apos;ve got you covered.
           </p>
         </div>
       </section>

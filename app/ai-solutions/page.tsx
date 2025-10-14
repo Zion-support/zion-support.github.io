@@ -166,7 +166,6 @@ export default function AISolutionsPage() {
         <title>AI Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions for your business needs" />
       </Helmet>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -231,7 +230,7 @@ export default function AISolutionsPage() {
             Ready to Harness the Power of AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI solutions can transform your business and give you a competitive edge.
+            Let&apos;s discuss how our AI solutions can transform your business and give you a competitive edge.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -249,53 +248,6 @@ export default function AISolutionsPage() {
           </div>
         </div>
       </section>
-    </div>
-  );
-}
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              AI Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Transform your business with cutting-edge artificial intelligence
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-purple-500 transition-all duration-300">
-                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} p-3 mb-4`}>
-                  <service.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <div className="space-y-2 mb-4">
-                  {service.features.slice(0, 3).map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircleIcon className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
-                    </div>
-                  ))}
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-purple-400 font-semibold">{service.price}</span>
-                  <Link
-                    to={service.href}
-                    className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
-                  >
-                    Learn more
-                    <ArrowRightIcon className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

@@ -1,23 +1,23 @@
 import React, { Suspense } from 'react';
-import EnhancedSEO from '../components/EnhancedSEO'
+import EnhancedSEO from '../components/EnhancedSEO';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const FiveGMaintenancePage = () => {
   const services = [
     {
-      title: '5G Network Maintenance';,
-      description: 'Ongoing maintenance and optimization of 5G network infrastructure.';
+      title: '5G Network Maintenance',
+      description: 'Ongoing maintenance and optimization of 5G network infrastructure.'
     },
     {
-      title: 'Security Monitoring';,
-      description: 'Continuous security monitoring and threat detection for 5G networks.';
+      title: 'Security Monitoring',
+      description: 'Continuous security monitoring and threat detection for 5G networks.'
     },
     {
-      title: 'Team Training';,
-      description: 'Comprehensive training for 5G network maintenance and troubleshooting.';
+      title: 'Team Training',
+      description: 'Comprehensive training for 5G network maintenance and troubleshooting.'
     }
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -50,7 +50,7 @@ title="5G Maintenance Services - Zion Tech Group"
               </p>
               <Link 
                 to="/contact" 
-                className="inline-flex items-center text-blue-600 hover: text-blue-800 font-medium";
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
               >
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -62,7 +62,7 @@ title="5G Maintenance Services - Zion Tech Group"
         <div className="text-center">
           <Link 
             to="/contact"
-            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700";
+            className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
           >
             Get Started Today
             <ArrowRight className="ml-2 h-5 w-5" />
