@@ -1,6 +1,15 @@
 import React from 'react';
+
+
+
 import { Helmet } from 'react-helmet-async';
+
+
+
 import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
+
+
+
 
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
@@ -135,19 +144,19 @@ const BlockchainPage: React.FC = () => {
       marketPrice: '$500-1,500/hour',
       category: 'Consulting',
       technologies: ['Strategic Planning', 'Technology Evaluation', 'Risk Assessment', 'ROI Analysis']
-    }
+    };
   ];
 
   const categories = [...new Set(blockchainServices.map(service => service.category))];
 
   return (
-    <>
-      <Helmet>
+    ><Helmet>
+  );
+  );
         <title>Blockchain Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." />
+        <meta name="description"content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." />
         <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, enterprise blockchain, Web3" />
-      </Helmet>
-
+      </Helmet>;
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}</div>
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
@@ -173,7 +182,7 @@ const BlockchainPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Key Benefits */}
+        {/* Key Benefits */};
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -187,28 +196,28 @@ const BlockchainPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               <div className="text-center"></div>
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Link className="w-8 h-8 text-blue-600" />
+                  <Link className="w-8 h-8 text-blue-600"/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Experts</h3>
                 <p className="text-gray-600">Certified blockchain developers and architects</p>
               </div>
               <div className="text-center"></div>
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Shield className="w-8 h-8 text-green-600" />
+                  </Link><Shield className="w-8 h-8 text-green-600"/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Security First</h3>
                 <p className="text-gray-600">Comprehensive security audits and best practices</p>
               </div>
               <div className="text-center"></div>
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Zap className="w-8 h-8 text-purple-600" />
+                  </Shield><Zap className="w-8 h-8 text-purple-600"/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Development</h3>
                 <p className="text-gray-600">Fast delivery with proven development frameworks</p>
               </div>
               <div className="text-center"></div>
                 <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-                  <Target className="w-8 h-8 text-orange-600" />
+                  </Zap><Target className="w-8 h-8 text-orange-600"/>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom Solutions</h3>
                 <p className="text-gray-600">Tailored blockchain solutions for your specific needs</p>
@@ -217,7 +226,7 @@ const BlockchainPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Services by Category */}
+        {/* Services by Category */};
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
@@ -253,10 +262,10 @@ const BlockchainPage: React.FC = () => {
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                              {feature}
+                              </Target><CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
+                              {feature};
                             </li>
-                          ))}
+  ))};
                         </ul>
                       </div>
 
@@ -265,9 +274,9 @@ const BlockchainPage: React.FC = () => {
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.map((tech, techIndex) => (</div>
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                              {tech}
+                              {tech};
                             </span>
-                          ))}
+                          ))};
                         </div>
                       </div>
 
@@ -276,10 +285,10 @@ const BlockchainPage: React.FC = () => {
                         <ul className="space-y-1">
                           {service.benefits.map((benefit, benefitIndex) => (
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                              <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
-                              {benefit}
+                              </CheckCircle><Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0"/>
+                              {benefit};
                             </li>
-                          ))}
+                          ))};
                         </ul>
                       </div>
 
@@ -287,13 +296,12 @@ const BlockchainPage: React.FC = () => {
                         Get Blockchain Quote
                       </button>
                     </div>
-                  ))}
+                  ))};
               </div>
             </div>
           </section>
-        ))}
-
-        {/* Blockchain Capabilities Showcase */}
+        ))};
+        {/* Blockchain Capabilities Showcase */};
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
             <div className="text-center mb-12"></div>
@@ -306,32 +314,32 @@ const BlockchainPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg"></div>
-                <Link className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                </Star><Link className="w-12 h-12 text-blue-600 mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Contracts</h3>
                 <p className="text-gray-600">Automated contract execution with transparency and security</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
-                <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                </Link><Shield className="w-12 h-12 text-green-600 mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">DeFi Protocols</h3>
                 <p className="text-gray-600">Decentralized finance solutions for modern financial services</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg"></div>
-                <Cpu className="w-12 h-12 text-purple-600 mx-auto mb-4" />
+                </Shield><Cpu className="w-12 h-12 text-purple-600 mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">NFT Marketplaces</h3>
                 <p className="text-gray-600">Digital asset trading and ownership verification platforms</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg"></div>
-                <Target className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                </Cpu><Target className="w-12 h-12 text-orange-600 mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Solutions</h3>
                 <p className="text-gray-600">Private and consortium blockchains for business applications</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg"></div>
-                <Sparkles className="w-12 h-12 text-pink-600 mx-auto mb-4" />
+                </Target><Sparkles className="w-12 h-12 text-pink-600 mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Web3 Applications</h3>
                 <p className="text-gray-600">Decentralized applications with user-friendly interfaces</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg"></div>
-                <BarChart className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
+                </Sparkles><BarChart className="w-12 h-12 text-indigo-600 mx-auto mb-4"/>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Analytics</h3>
                 <p className="text-gray-600">Comprehensive data analysis and visualization tools</p>
               </div>
@@ -339,7 +347,7 @@ const BlockchainPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Contact Section */};
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -351,14 +359,12 @@ const BlockchainPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a 
                 href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-              >
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center">
                 📞 +1 302 464 0950
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 ✉️ kleber@ziontechgroup.com
               </a>
             </div>
@@ -367,9 +373,8 @@ const BlockchainPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </div></>
   );
 };
 
-export default BlockchainPage;
+export default BlockchainPage;</BarChart>

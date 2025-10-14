@@ -1,14 +1,17 @@
-import React from 'react';const FuturisticCard = () => {
+import React from 'react';
+
+
+const FuturisticCard = () => {
 
   return (
-
-    <div>
+    div>
       <h2>FuturisticCard</h2>
+  );
+  );
       <p className="text-gray-300 text-lg">This component is under construction.</p>
   
   );
-}
-
+};
 export default FuturisticCard;
 
 

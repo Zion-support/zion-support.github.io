@@ -1,7 +1,11 @@
-"use client;"import React from react;"export default function Page() {
-  return (
+"use client;";
+import React from react;
 
-    <div>Page content</div>
+
+"export default function Page() {
+  return (
+    div>
+  );Page content</div>
   );
 
     <div>Page content</div>
@@ -15,7 +19,7 @@
   );
 
         </p></div></div>
-  )}
-
-
-
+}
+};
+};
+  )};

@@ -1,6 +1,12 @@
 'use client';
 import React from 'react';
+
+
+
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
+
+
+
 
 const ContentPromotionBanner: React.FC = () => {
   const features = [
@@ -23,7 +29,7 @@ const ContentPromotionBanner: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment with local support and compliance'
-    }
+    };
   ];
 
   const benefits = [
@@ -38,8 +44,10 @@ const ContentPromotionBanner: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
+    div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto text-center">
+  );
+  );
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Transform Your Business with AI
         </h2>

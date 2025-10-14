@@ -1,6 +1,6 @@
-import React from "react";"use client";'export default function ServiceCard() {'  return (
-
-    <div>Page content</div>
+import React from "reactuse client";'export default function ServiceCard() {'  return (
+    div>
+  );Page content</div>
   );
 
     <div>Page content</div>
@@ -14,8 +14,7 @@ import React from "react";"use client";'export default function ServiceCard() {'
   );
 
         </p></div></div>
-  )}
-
-
-
-
+}
+};
+};
+  )};

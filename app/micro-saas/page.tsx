@@ -1,8 +1,17 @@
 'use client';
 
 import React from 'react';
+
+
+
 import { Helmet } from 'react-helmet-async';
+
+
+
 import { Link } from 'react-router-dom';
+
+
+
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
@@ -37,7 +46,7 @@ const MicroSaasPage: React.FC = () => {
       features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support'],
       price: '$299/month',
       users: 'Unlimited users',
-    }
+    };
   ];
 
   const benefits = [
@@ -51,15 +60,15 @@ const MicroSaasPage: React.FC = () => {
 
 
   return (
-    <>
-      <Helmet>
+    ><Helmet>
+  );
+  );
         <title>Micro SaaS Solutions | Zion Tech Group</title>
-        <meta name="description" content="Discover our micro SaaS solutions designed for small to medium businesses. AI-powered tools that scale with your growth." />
+        <meta name="description"content="Discover our micro SaaS solutions designed for small to medium businesses. AI-powered tools that scale with your growth." />
         <meta name="keywords" content="micro SaaS, small business software, AI tools, business automation, Zion Tech Group" />
-      </Helmet>
-
+      </Helmet>;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* CTA Section */}
+        {/* CTA Section */};
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
@@ -73,24 +82,22 @@ const MicroSaasPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
-                >
-                  <Zap className="w-5 h-5" />
+                  className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
+                  </Link
+><Zap className="w-5 h-5"/>
                   <span>Start Free Trial</span>
-                </Link>
-                <Link
-                  to="/pricing"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200"
-                >
+                </Link>;
+<ink
+                  to="/pricing"className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                   View All Plans
-                </Link>
+                </Link>;
               </div>
             </div>
           </div>
         </section>
-      </div>
-    </>
+      </div></>
   );
 };
 
 export default MicroSaasPage;
+</Zap>

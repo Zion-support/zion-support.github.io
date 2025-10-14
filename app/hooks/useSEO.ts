@@ -1,5 +1,8 @@
 import { useEffect } from 'react';
 
+
+
+
 export const useSEO = (structuredData?: unknown) => {
   useEffect(() => {
     // Add structured data to the page
@@ -11,9 +14,9 @@ export const useSEO = (structuredData?: unknown) => {
       return () => {
         if (document.head.contains(script)) {
           document.head.removeChild(script);
-        }
+        };
       };
-    }
+    };
     return undefined;
   }, [structuredData]);
 };

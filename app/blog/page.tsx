@@ -1,7 +1,16 @@
 'use client';
 import React from 'react';
+
+
+
 import { Helmet } from 'react-helmet-async';
+
+
+
 import { User, Calendar, Clock } from 'lucide-react';
+
+
+
 
 const BlogPage = () => {
   const posts = [
@@ -31,18 +40,19 @@ const BlogPage = () => {
       date: '2024-01-05',
       readTime: '6 min read',
       image: '/api/placeholder/400/250'
-    }
+    };
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+  );
+  );
         <title>Blog | Zion Tech Group</title>
-        <meta name="description" content="Latest insights on AI, IT solutions, and technology trends from Zion Tech Group." />
+        <meta name="description"content="Latest insights on AI, IT solutions, and technology trends from Zion Tech Group." />
         <meta name="keywords" content="tech blog, AI insights, IT solutions, technology trends, Zion Tech Group" />
-      </Helmet>
-
-      {/* Hero Section */}
+      </Helmet>;
+      {/* Hero Section */};
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
@@ -54,7 +64,7 @@ const BlogPage = () => {
         </div>
       </section>
 
-      {/* Blog Posts */}
+      {/* Blog Posts */};
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -64,11 +74,11 @@ const BlogPage = () => {
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <div className="flex items-center space-x-4">
                       <div className="flex items-center space-x-1">
-                        <User className="w-4 h-4" />
+                        <User className="w-4 h-4"/>
                         <span>{post.author}</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <Calendar className="w-4 h-4" />
+                        </User><Calendar className="w-4 h-4"/>
                         <span>{post.date}</span>
                       </div>
                     </div>
@@ -81,7 +91,7 @@ const BlogPage = () => {
                   </button>
                 </div>
               </article>
-            ))}
+  ))};
           </div>
         </div>
       </section>
@@ -91,3 +101,4 @@ const BlogPage = () => {
 
 export default BlogPage;
 
+</Calendar>
