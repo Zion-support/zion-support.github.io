@@ -1,81 +1,53 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const Main: React.FC = () => {
-  return (<div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Main - Zion Tech Group</title><meta name="description" content="Professional main services by Zion Tech Group." /></Helmet>
-      {/* Hero Section */}
+        <title>Main - Zion Tech Group</title>
+        <meta name="description" content="Professional main services by Zion Tech Group." />
+      </Helmet>
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Main
+            Welcome to Zion Tech Group
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional main services designed to help your business grow and succeed.
+            Your trusted partner for innovative technology solutions and digital transformation.
           </p>
         </div>
       </section>
-
-      {/* Content Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Leading Technology Solutions
+              </h2>
               <p className="text-lg text-gray-600 mb-6">
-                We provide comprehensive main solutions tailored to your specific needs and requirements.
+                We provide cutting-edge AI, cloud, and IT solutions to help businesses 
+                transform and grow in the digital age.
               </p>
-              <ul className="space-y-3">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Custom solutions
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Expert consultation
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
-                  Ongoing support
-                </li>
-              </ul>
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Learn More
+              </button>
             </div>
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>
-              <p className="mb-6">
-                Ready to transform your business with our main services?
-              </p>
-              <a
-                href="/contact"
-                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                Contact Us
-              </a>
+            <div className="bg-gray-100 p-8 rounded-lg">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Our Services</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• AI & Machine Learning Solutions</li>
+                <li>• Cloud Infrastructure & Migration</li>
+                <li>• Custom Software Development</li>
+                <li>• Cybersecurity & Compliance</li>
+                <li>• Data Analytics & Business Intelligence</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our main services can help you achieve your goals.
-          </p>
-          <a
-            href="/contact"
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            Get Started Today
-          </a>
-        </div>
-      </section>
-    </div>);
+    </div>
+  );
 };
 
 export default Main;

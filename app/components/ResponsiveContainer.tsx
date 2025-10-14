@@ -15,8 +15,7 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ children, cla
     <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}></div>;
       { children }
 
-    </div>)
-  );
+    </div>);
 export default ResponsiveContainer;
 
     <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}></div>{ children }

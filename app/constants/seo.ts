@@ -12,20 +12,20 @@ export const META_TAGS = {
   VIEWPORT: 'width=device-width, initial-scale=1.0',
 } as const;
 export const defaultStructuredData = {
-  "@context": "https://schema.org"
+      title: "@context": "https: //schema.org"
   "@type": "Organization"
   "name": "Zion Tech Group"
   "description": "Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
-  "url": "https://ziontechgroup.com"
-  "logo": "https://ziontechgroup.com/images/logo.png"
-  "contactPoint": {"
+  "url": "https: //ziontechgroup.com"
+  "logo": "https: //ziontechgroup.com/images/logo.png"
+  "contactPoint": {
+      title: "
     "@type": "ContactPoint"
     "telephone": "+1-555-0123"
     "contactType": "customer service"
     "availableLanguage": "English"
-  }sameAs": ["
+    
+    }sameAs": ["
     "https://www.linkedin.com/company/zion-tech-group"
     "https://twitter.com/ziontechgroup"
     "https://www.facebook.com/ziontechgroup"
-  ]
-}

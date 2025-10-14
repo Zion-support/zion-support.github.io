@@ -1,53 +1,52 @@
-import { Helmet } from "react-helmet-async
-import { Link } from "react-router-dom
-import { ArrowRight, BarChart3, Brain, CheckCircle, Star, Globe, Mail, Phone, Database, Settings, Monitor, Sparkles, Lightbulb }    from "lucide-react
-const AIAnalyticsPage: React.FC = () => {"
-  const features = ["
-    {"
+import React from "react"
+import { Helmet } from "react-helmet-async"
+import { Link } from "react-router-dom"
+import { ArrowRight, BarChart3, Brain, CheckCircle, Star, Globe, Mail, Phone, Database, Settings, Monitor, Sparkles, Lightbulb } from "lucide-react"
       icon: <BarChart3 className="w-8 h-8 text-blue-500"
-      title: 'Real-time Analytics'
-      description: 'Monitor your data in real-time with advanced visualization tools and interactive dashboards.'
-    },
-    {
       icon: <Brain className="w-8 h-8 text-purple-500"
-      title: 'AI-Powered Insights'
-      description: 'Get intelligent recommendations and predictions based on your data patterns and trends.'
-    },
-    {
       icon: <Database className="w-8 h-8 text-green-500"
-      title: 'Data Integration'
-      description: 'Connect multiple data sources and create unified views of your business metrics.'
-    },
-    {
       icon: <Settings className="w-8 h-8 text-yellow-500"
-      title: 'Custom Dashboards'
-      description: 'Build personalized dashboards tailored to your specific business needs and KPIs.'
-    },
-    {
       icon: <Monitor className="w-8 h-8 text-red-500"
-      title: 'Performance Monitoring'
-      description: 'Track system performance and identify bottlenecks with comprehensive monitoring tools.'
-    },
-    {
       icon: <Sparkles className="w-8 h-8 text-indigo-500"
-      title: 'Automated Reports'
-      description: 'Generate detailed reports automatically and schedule them for regular delivery.'
-    }
-  ];
-
-  const benefits = [
-    'Increase data-driven decision making by 85%'
-    'Reduce reporting time by 70%'
-    'Improve operational efficiency by 60%'
-    'Enhance customer insights and satisfaction'
-    'Streamline business processes'
-    'Gain competitive advantage through data'
-  ];
-
->>>>>>> origin/main
-const HomePage = () => {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
-      <Helmet></Helmet>
-        <meta name="description" content="Professional services by Zion Tech Group."  />
-}
+        <meta name="description" content="Advanced AI-powered analytics solutions for data-driven business insights."
+      <section className="py-20 px-4"
+        <div className="container mx-auto text-center"
+          <h1 className="text-5xl font-bold text-white mb-6"
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+              <ArrowRight className="ml-2 w-5 h-5"
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+      <section className="py-20 px-4"
+        <div className="container mx-auto"
+          <div className="text-center mb-16"
+            <h2 className="text-4xl font-bold text-white mb-4"
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto"
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 hover:bg-slate-800/70 transition-all duration-300"
+                <div className="mb-6"
+                <h3 className="text-xl font-semibold text-white mb-4"
+                <p className="text-gray-300"
+      <section className="py-20 px-4"
+        <div className="container mx-auto"
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-12"
+            <div className="text-center mb-12"
+              <h2 className="text-4xl font-bold text-white mb-4"
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto"
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                <div key={index} className="flex items-center text-gray-300"
+                  <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0"
+      <section className="py-20 px-4"
+        <div className="container mx-auto text-center"
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12"
+            <h2 className="text-4xl font-bold text-white mb-6"
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                <ArrowRight className="ml-2 w-5 h-5"
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"

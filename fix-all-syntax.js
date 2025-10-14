@@ -1,162 +1,125 @@
-import React from 'react'
-#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename)
-// Function to fix syntax errors in a file;
-function fixSyntaxErrors(filePath) {
-  try }
-    let content = fs.readFileSync(filePath, 'utf8');'
-    let modified = false
-    // Remove extra quotes and semicolons that were incorrectly added
-    content = content.replace(/'/g'")
-    content = content.replace(/"/g, '"');'
-    content = content.replace(/`/g, '`');'`
-    content = content.replace(/'/g'")
-    content = content.replace(/"/g, '"');'
-    content = content.replace(/`/g, '`');'`
-    // Fix unterminated string literals
-    content = content.replace(/(['"`])([^'"`]*?)(?=\n|$)/g, (match, quote, text) => {`}`
-      if (!text.includes(quote) && text.trim() !== '') {'}'
-        modified = true
-        return match + quote
-}
-      return match
-    })
-    // Fix missing closing braces;
-const openBraces = (content.match(/\{/g) || []).length;}
-    const closeBraces = (content.match(/\}/g) || []).length
-    if (openBraces > closeBraces) {;
-const missingBraces = openBraces - closeBraces;}
-      content += '\n' + '}'.repeat(missingBraces);'
-      modified = true
-}
-    // Fix missing closing parentheses;
-const openParens = (content.match(/\(/g) || []).length;
-const closeParens = (content.match(/\)/g) || []).length
-    if (openParens > closeParens) {;
-const missingParens = openParens - closeParens;}
-      content += ')'.repeat(missingParens);'
-      modified = true
-}
-    // Fix missing closing square brackets;
-const openBrackets = (content.match(/\[/g) || []).length;
-const closeBrackets = (content.match(/\]/g) || []).length
-    if (openBrackets > closeBrackets) {;
-const missingBrackets = openBrackets - closeBrackets;}
-      content += ']'.repeat(missingBrackets);'
-      modified = true
-}
-    // Fix JSX syntax
-    content = content.replace(/(<[^>]*?)([^>]*?)(?=\n|$)/g, (match, tag, rest) => {
-      if (rest && !rest.includes('>') && !rest.includes('/>') && rest.trim() !== '') {'}'
-        modified = true
-        return tag + rest + '>'
-}
-      return match
-    })
-    // Fix function declarations
-    content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\([^)]*\)\s*(?=\n|$)/g, (match) => {
-      if (!match.includes('{')) {'}'
-        modified = true
-        return match + ' '
-}
-      return match
-    })
-    // Fix arrow functions
-    content = content.replace(/=>\s*(?=\n|$)/g, '=> ');'
-    // Fix object literals
-    content = content.replace(/\{\s*([^}]*?)\s*(?=\n|$)/g, (match, objContent) => {
-      if (objContent && !objContent.includes('}') && objContent.trim() !== '') {'}'
-        modified = true
-        return match + '}'
-}
-      return match
-    })
-    // Fix array literals
-    content = content.replace(/\[\s*([^\]]*?)\s*(?=\n|$)/g, (match, arrContent) => {
-      if (arrContent && !arrContent.includes(']') && arrContent.trim() !== '') {'}'
-        modified = true
-        return match + ']'
-}
-      return match
-    })
-    // Fix template literals
-    content = content.replace(/`([^`]*?)(?=\n|$)/g, (match, templateContent) => {`}`
-      if (templateContent && !templateContent.includes('`') && templateContent.trim() !== '') {'}`
-        modified = true
-        return match + '`'`
-}
-      return match
-    })
-    // Fix import statements
-    content = content.replace(/import\s+([^;]+?)(?=\n|$)/g, (match, importPart) => {
-      if (!importPart.includes(') && !importPart.includes('from')) {'}'
-        modified = true
-        return match + '
-}
-      return match
-    })
-    // Fix export statements
-    content = content.replace(/export\s+([^;]+?)(?=\n|$)/g, (match, exportPart) => {
-      if (!exportPart.includes(') && !exportPart.includes('=') && !exportPart.includes('{') && !exportPart.includes('default')) {'}'
-        modified = true
-        return match + '
-}
-      return match
-    })
-    // Fix variable declarations
-    content = content.replace(/(const|let|var)\s+([^=]+?)(?=\n|$)/g, (match, keyword, varName) => {
-      if (!varName.includes('=') && !varName.includes(')) {'}'
-        modified = true
-        return match + '
-}
-      return match
-    })
-    // Fix return statements
-    content = content.replace(/return\s+([^;]+?)(?=\n|$)/g, (match, returnValue) => {
-      if (!returnValue.includes(') && !returnValue.includes('{') && !returnValue.includes('(')) {'}'
-        modified = true
-        return match + '
-}
-      return match
-    })
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');'}'
-      return true
-}
-    return false
+const __dirname = path.dirname(__filename);
 
+// Function to clean up merge conflicts and malformed syntax
+function cleanFile(content) {
+  // Remove merge conflict markers
+  content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
+  content = content.replace(/<<<<<<< [^\n]*[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g, '');
+  
+  // Fix malformed imports
+  content = content.replace(/import\s+([^"']*)\s+from\s+"([^"]*)$/gm, (match, imports, module) => {
+    return `import ${imports.trim()} from "${module}";`;
+  });
+  
+  // Fix imports with missing semicolons
+  content = content.replace(/import\s+([^"']*)\s+from\s+"([^"]*)"(?!;)/gm, 'import $1 from "$2";');
+  
+  // Fix React imports
+  content = content.replace(/import\s+React\s+from\s+"react"(?!;)/gm, 'import React from "react";');
+  
+  // Fix component declarations
+  content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*\{"/gm, 'const $1: React.FC = () => {');
+  content = content.replace(/export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*\{;/gm, 'export default function $1() {');
+  
+  // Fix malformed object literals in arrays
+  content = content.replace(/const\s+(\w+)\s*=\s*\[\s*"([^"]*)"\s*\{/gm, 'const $1 = [\n    {');
+  content = content.replace(/\{\s*"([^"]*)"\s*([^}]*)\s*\}/gm, (match, title, rest) => {
+    const cleanRest = rest.replace(/\s*:\s*/g, ': ').replace(/\s*,\s*/g, ', ');
+    return `{\n      title: "${title}"${cleanRest}\n    }`;
+  });
+  
+  // Fix JSX syntax issues
+  content = content.replace(/<(\w+)\s+className="([^"]*)"\s*\/>/gm, '<$1 className="$2" />');
+  content = content.replace(/<(\w+)\s+className="([^"]*)"\s*>\s*<\/\1>/gm, '<$1 className="$2" />');
+  
+  // Remove duplicate imports
+  const lines = content.split('\n');
+  const seenImports = new Set();
+  const cleanedLines = [];
+  
+  for (const line of lines) {
+    if (line.trim().startsWith('import ')) {
+      const importKey = line.trim();
+      if (!seenImports.has(importKey)) {
+        seenImports.add(importKey);
+        cleanedLines.push(line);
+      }
+    } else {
+      cleanedLines.push(line);
+    }
+  }
+  
+  content = cleanedLines.join('\n');
+  
+  // Fix malformed JSX returns
+  content = content.replace(/return\s*\(\s*<div[^>]*>[\s\S]*?<\/div>\s*\)\s*\)\s*;/gm, (match) => {
+    return match.replace(/\)\s*\)\s*;/, ');');
+  });
+  
+  return content;
+}
+
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = cleanFile(content);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);`
-    return false
-}
-// Function to recursively fix syntax errors;
-function fixAllSyntaxErrors(dir) {;
-const files = fs.readdirSync(dir);}
-  let fixedCount = 0
-  for (const file of files) {;}
-    const filePath = path.join(dir, file);}
-    const stat = fs.statSync(filePath)
-    if (stat.isDirectory()) {
-      // Skip node_modules and other build directories}
-      if (file === 'node_modules' || file === 'dist' || file === '.next' || file === 'out') {'}'
-        continue
-}
-      fixedCount += fixAllSyntaxErrors(filePath)
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {'}'
-      if (fixSyntaxErrors(filePath)) {
-        fixedCount++;}
-        console.log(`Fixed syntax errors in: ${filePath}`);`
-}
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
 }
 
-  return fixedCount
-
+// Function to find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        const stat = fs.statSync(fullPath);
+        
+        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+          traverse(fullPath);
+        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+          files.push(fullPath);
+        }
+      }
+    } catch (error) {
+      console.error(`Error reading directory ${currentDir}:`, error.message);
+    }
+  }
+  
+  traverse(dir);
+  return files;
 }
+
 // Main execution
-console.log('Starting comprehensive syntax error resolution...');';
-const fixedCount = fixAllSyntaxErrors(process.cwd())
-console.log(`Fixed syntax errors in ${fixedCount} files.`);`
+const appDir = path.join(__dirname, 'app');
+const files = findFiles(appDir);
+
+console.log(`Found ${files.length} files to process...`);
+
+let fixedCount = 0;
+for (const file of files) {
+  if (processFile(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files out of ${files.length} total files.`);

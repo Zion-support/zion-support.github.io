@@ -8,83 +8,47 @@ const tutorials = [{
       duration: "2 hours"
       level: "Beginner"
       instructor: "Dr. Sarah Johnson"
-      rating: 4.8,
-      students: 1250
-      thumbnail: "🤖" }
-      thumbnail: "🤖";}
-    },
-    {
-      id: 2
+      thumbnail: "🤖"
+      thumbnail: "🤖"
       title: "Infrastructure Setup"
       description: "Complete guide to setting up cloud infrastructure on AWS and Azure."
       duration: "3 hours"
       level: "Intermediate"
       instructor: "Michael Chen"
-      rating: 4.9,
-      students: 980
-      thumbnail: "☁️" }
-      thumbnail: "☁️";}
-    },
-    {
-      id: 3
+      thumbnail: "☁️"
+      thumbnail: "☁️"
       title: "Cybersecurity Fundamentals"
       description: "Essential cybersecurity practices and threat protection strategies."
       duration: "4 hours"
       level: "Beginner"
       instructor: "Emily Rodriguez"
-      rating: 4.7,
-      students: 2100
-      thumbnail: "🔒" }
-      thumbnail: "🔒";}
-    },
-    {
-      id: 4
+      thumbnail: "🔒"
+      thumbnail: "🔒"
       title: "Advanced Machine Learning"
       description: "Deep dive into advanced ML algorithms and neural networks."
       duration: "6 hours"
       level: "Advanced"
       instructor: "Dr. David Kim"
-      rating: 4.9,
-      students: 750
-      thumbnail: "🧠" }
-      thumbnail: "🧠";}
-    },
-    {
-      id: 5
+      thumbnail: "🧠"
+      thumbnail: "🧠"
       title: "DevOps Best Practices"
       description: "Learn modern DevOps practices and CI/CD pipeline implementation."
       duration: "5 hours"
       level: "Intermediate"
       instructor: "Lisa Wang"
-      rating: 4.8,
-      students: 1100
-      thumbnail: "⚙️" }
-      thumbnail: "⚙️";}
-    },
-    { id: 6
+      thumbnail: "⚙️"
+      thumbnail: "⚙️"
       title: "Data Analytics with Python"
       description: "Master data analysis and visualization using Python and popular libraries."
       duration: "4 hours"
       level: "Intermediate"
       instructor: "James Wilson"
-      rating: 4.6,
-      students: 1650
-      thumbnail: "📊" }
-  ]
-      thumbnail: "📊";}
-    }
-  ]
-const categories = [{ name: "All", count: 24 }
-    { name: "AI & ML", count: 8 }
-    { name: "Computing", count: 6 }
-    { name: "Cybersecurity", count: 4 }
-    { name: "DevOps", count: 3 }
-    { name: "Data Science", count: 3 }
-  ]
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Helmet><title>Home - Zion Tech Group</title><meta name="description" content="Home - Zion Tech Group" /></Helmet>
-      </div>
-
-    </div>)
-  )
+      thumbnail: "📊"
+      thumbnail: "📊"
+const categories = [{ name: "All"
+    { name: "AI & ML"
+    { name: "Computing"
+    { name: "Cybersecurity"
+    { name: "DevOps"
+    { name: "Data Science"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Helmet><title>Home - Zion Tech Group</title><meta name="description" content="Home - Zion Tech Group"

@@ -118,38 +118,18 @@ const PerformanceMonitor: React.FC = () => {
   if (!isVisible) return null;
 
       {isVisible && (
-        <div className="absolute bottom-12 left-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80">
-          <h3 className="text-lg font-semibold mb-4 text-gray-800">Performance Metrics</h3>
-          <div className="space-y-3 text-sm">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">Load Time:</span>
-              <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">FCP:</span>
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">LCP:</span>
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">FID:</span>
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">CLS:</span>
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">TTFB:</span>);
-};
-
-export default PerformanceMonitor;
+        <div className="absolute bottom-12 left-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80"
+          <h3 className="text-lg font-semibold mb-4 text-gray-800"
+          <div className="space-y-3 text-sm"
+            <div className="flex justify-between items-center"
+              <span className="text-gray-600"
+            <div className="flex justify-between items-center"
+              <span className="text-gray-600"
+            <div className="flex justify-between items-center"
+              <span className="text-gray-600"
+            <div className="flex justify-between items-center"
+              <span className="text-gray-600"
+            <div className="flex justify-between items-center"
+              <span className="text-gray-600"
+            <div className="flex justify-between items-center"
+              <span className="text-gray-600"
