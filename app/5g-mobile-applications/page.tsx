@@ -32,10 +32,12 @@ const FiveGMobileApplicationsPage: React.FC = () => {
                 <p className="text-green-70 0">
                   Tailored implementations for your specific requirements.
               </p><div className="bg-purple-50 border border-purple-20 0rounded-lgp-6">
-                <h3 className="text-lg font-semiboldtext-purple-90 0mb-2">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
                   24/7 Support
-                <p className="text-purple-70 0">
+                </h3>
+                <p className="text-purple-700">
                   Round-the-clock support for all your needs.
+                </p>
               </div>
         </div>
             </div>

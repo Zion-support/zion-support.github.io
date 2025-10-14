@@ -2,18 +2,20 @@ import React, { Suspense } from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
-import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const FiveGModernizationPage = () => {
-  const services = []
+  const services = [
     {
       title: '5G Network Modernization',
-      description: 'Complete modernization of legacy networks to 5G technology.',;
+      description: 'Complete modernization of legacy networks to 5G technology.',
     },
+    {
       title: 'Security Modernization',
-      description: 'Upgrade security infrastructure to support 5G requirements.',;
+      description: 'Upgrade security infrastructure to support 5G requirements.',
+    },
+    {
       title: 'Team Training',
-      description: 'Comprehensive training for modernized 5G network operations.',;
+      description: 'Comprehensive training for modernized 5G network operations.',
     }
   ]
   return (
