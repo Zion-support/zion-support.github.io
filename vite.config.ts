@@ -35,18 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-<<<<<<< HEAD
-<<<<<<< HEAD
-    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
-    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
-=======
-    chunkSizeWarningLimit: 500, // Increased threshold for better chunking
-    assetsInlineLimit: 1024, // Optimized for better caching and faster initial load
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
     chunkSizeWarningLimit: 150, // Balanced threshold for better performance
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -163,11 +153,6 @@ export default defineConfig({
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
-<<<<<<< HEAD
-          // Main pages
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
-=======
           // IT service pages - group together
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
@@ -188,7 +173,6 @@ export default defineConfig({
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               (id.includes('about') || id.includes('contact') || id.includes('services') || 
                id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
             return 'main-pages'
           }
           // Default chunk for other modules

@@ -1,236 +1,285 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Languages, Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
-import Layout from '../layout';
+import { Helmet } from 'react-helmet-async';
+import { Languages, Brain, FileText, Clock, Target, CheckCircle, Globe, Zap } from 'lucide-react';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+
+export default function AITranslationServicePage() {
+  const features = [
     {
-      icon: <Target className="w-6 h-6 text-green-400" />,
-      title: 'Industry-Specific Translation',
-      description: 'Specialized translation models for legal, medical, technical, and business content'
+      icon: <Languages className="w-6 h-6 text-blue-400" />,
+      title: '100+ Languages',
+      description: 'Support for over 100 languages with high accuracy translation'
+    },
+    {
+      icon: <Brain className="w-6 h-6 text-purple-400" />,
+      title: 'AI-Powered',
+      description: 'Advanced neural machine translation with context understanding'
+    },
+    {
+      icon: <FileText className="w-6 h-6 text-green-400" />,
+      title: 'Document Translation',
+      description: 'Translate documents while preserving original formatting'
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-orange-400" />,
+      title: 'Real-time Translation',
+      description: 'Instant translation for live conversations and content'
     }
   ];
 
-  const translationFeatures = [
+  const translationTypes = [
     {
       category: 'Translation Types',
       items: ['Text Translation', 'Document Translation', 'Website Translation', 'Audio Translation', 'Video Subtitles', 'Live Translation']
     },
     {
       category: 'Languages',
-      items: ['100+ Languages', 'Regional Dialects', 'Rare Languages', 'Sign Language', 'Technical Jargon', 'Cultural Adaptation']
+      items: ['English', 'Spanish', 'French', 'German', 'Chinese', 'Japanese', 'Arabic', 'Portuguese', 'Russian', 'Italian']
     },
     {
-      category: 'Quality Assurance',
-      items: ['Human Review', 'Quality Scoring', 'Consistency Checks', 'Terminology Management', 'Style Guides', 'Proofreading']
+      category: 'Industries',
+      items: ['Legal', 'Medical', 'Technical', 'Business', 'Marketing', 'E-commerce', 'Education', 'Entertainment']
     },
     {
-      category: 'Integration',
-      items: ['API Access', 'CMS Integration', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
-    }
-        'Up to 10,000 words/month',
-        '50+ languages',
-        'Basic document translation',
-        'Email support',
-        'API access',
-        'Web interface'
-        'Up to 100,000 words/month',
-        '100+ languages',
-        'Advanced document processing',
-        'Priority support',
-        'Custom terminology',
-        'Quality assurance',
-        'Advanced document translation',
-        'API access',
-        'Priority support',
-        'Custom terminology'
-      popular: false
-    }
-      name: 'Sarah Johnson',
-      company: 'Global Marketing Agency',
-      content: 'The AI translation service has revolutionized our international campaigns. The quality is incredible and saves us weeks of work.',
-      rating: 5
-
-  const testimonials = [
-    {
-      name: 'Dr. Michael Chen',
-      company: 'Medical Research Institute',
-      content: 'Translating complex medical documents has never been easier. The specialized terminology handling is outstanding.',
-      rating: 5
-    },
-    {
-      name: 'Elena Rodriguez',
-      company: 'E-commerce Platform',
-      content: 'Our product descriptions are now available in 20+ languages with perfect accuracy. Customer engagement has increased significantly.',
-      rating: 5
+      category: 'Features',
+      items: ['Context Awareness', 'Industry-Specific Models', 'Quality Assurance', 'Human Review', 'API Integration', 'Batch Processing']
     }
   ];
 
-  const testimonials = [
+  const pricingPlans = [
     {
-      name: 'Anna Kowalski',
-      company: 'Global Marketing Inc',
-      content: 'The translation quality is exceptional. Our international campaigns now reach customers in their native languages perfectly.',
-      rating: 5
+      name: 'Basic',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for individuals and small projects',
+      features: [
+        'Up to 100,000 words/month',
+        '50+ languages',
+        'Basic document translation',
+        'Email support',
+        'Standard accuracy'
+      ]
     },
     {
-      name: 'Carlos Mendez',
-      company: 'Tech Solutions Ltd',
-      content: 'Real-time translation during client meetings has been a game-changer. Communication barriers are completely eliminated.',
-      rating: 5
+      name: 'Professional',
+      price: '$99',
+      period: '/month',
+      description: 'Ideal for businesses and teams',
+      features: [
+        'Up to 500,000 words/month',
+        '100+ languages',
+        'All document types',
+        'Priority support',
+        'API access',
+        'Custom glossaries'
+      ],
+      popular: true
     },
     {
-      name: 'Yuki Tanaka',
-      company: 'E-commerce Plus',
-      content: 'Document translation with formatting preservation saved us countless hours. The AI understands context beautifully.',
-      rating: 5
+      name: 'Enterprise',
+      price: '$299',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited words',
+        'All languages',
+        'Custom models',
+        '24/7 support',
+        'Dedicated account manager',
+        'SLA guarantee'
+      ]
     }
-  ]
-            <p className="text-gray-300 text-center mb-8">
-              Break down language barriers with our advanced AI translation service. 
-              Translate documents, websites, and conversations in real-time with 99% accuracy.
-            </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all">
-              Start Free Trial
-            </button>
-            <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              Watch Demo
-            <p className="text-gray-300 text-lg">
-              Powered by state-of-the-art AI for accurate, context-aware translations
-              <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-500 transition-colors">
-                <div className="text-cyan-400 mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300">
-                  {feature.description}
-                </p>
+  ];
+
+  const benefits = [
+    {
+      icon: <Target className="w-6 h-6 text-green-400" />,
+      title: 'Industry-Specific Translation',
+      description: 'Specialized translation models for legal, medical, technical, and business content'
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-blue-400" />,
+      title: 'Lightning Fast',
+      description: 'Get translations in seconds with our optimized AI models'
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-purple-400" />,
+      title: 'Global Reach',
+      description: 'Expand your business to new markets with accurate translations'
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Translation Service - Zion Tech Group</title>
+        <meta name="description" content="Professional AI-powered translation services supporting 100+ languages with industry-specific models and real-time translation." />
+        <meta name="keywords" content="AI translation, machine translation, document translation, multilingual, language services" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <ResponsiveContainer>
+            <div className="relative z-10 text-center">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-6">
+                AI Translation Service
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Break language barriers with our advanced AI-powered translation service supporting 100+ languages.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton className="bg-blue-600 hover:bg-blue-700">
+                  Start Translating
+                </FuturisticButton>
+                <FuturisticButton variant="outline">
+                  View Demo
+                </FuturisticButton>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
+          </ResponsiveContainer>
+        </section>
 
-      {/* Translation Features Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
-            Advanced Translation Capabilities
-          </h2>
-          <p className="text-gray-300 text-center mb-12">
-            Powered by cutting-edge AI to deliver accurate, context-aware translations
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-blue-400 transition-colors">
-                <div className="flex items-center mb-4">
-                  {feature.icon}
-                  <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
-                </div>
-                <p className="text-gray-300">{feature.description}</p>
+        {/* Features Section */}
+        <section className="py-20">
+          <ResponsiveContainer>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Powerful Translation Features</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our AI translation service provides comprehensive language solutions for all your needs.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <FuturisticCard key={index} className="text-center">
+                  <div className="mb-4 flex justify-center">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </FuturisticCard>
+              ))}
+            </div>
+          </ResponsiveContainer>
+        </section>
+
+        {/* Translation Types Section */}
+        <section className="py-20 bg-white/5">
+          <ResponsiveContainer>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Translation Capabilities</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive translation services for every type of content and industry.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {translationTypes.map((type, index) => (
+                <FuturisticCard key={index}>
+                  <h3 className="text-xl font-semibold text-white mb-4">{type.category}</h3>
+                  <ul className="space-y-2">
+                    {type.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </FuturisticCard>
+              ))}
+            </div>
+          </ResponsiveContainer>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20">
+          <ResponsiveContainer>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Translation Service?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of AI-powered translation technology.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <FuturisticCard key={index} className="text-center">
+                  <div className="mb-4 flex justify-center">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </FuturisticCard>
+              ))}
+            </div>
+          </ResponsiveContainer>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 bg-white/5">
+          <ResponsiveContainer>
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Pricing Plans</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the perfect plan for your translation needs.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <FuturisticCard key={index} className={`${plan.popular ? 'ring-2 ring-blue-400' : ''}`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="text-4xl font-bold text-blue-400 mb-2">
+                      {plan.price}
+                      <span className="text-lg text-gray-400">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <FuturisticButton className="w-full justify-center">
+                    Get Started
+                  </FuturisticButton>
+                </FuturisticCard>
+              ))}
+            </div>
+          </ResponsiveContainer>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <ResponsiveContainer>
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Break Language Barriers?</h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                Start translating your content today with our advanced AI translation service.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton className="bg-white text-blue-600 hover:bg-gray-100">
+                  Start Free Trial
+                </FuturisticButton>
+                <FuturisticButton variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                  Contact Sales
+                </FuturisticButton>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Translation Features Section */}
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800 p-6 rounded-lg">
-                <div className="flex items-center mb-4">
-                  {feature.icon}
-                  <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
-                </div>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Translation Features Grid */}
-      <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Comprehensive Translation Solutions
-            </h2>
-            <p className="text-gray-300 text-lg">
-              Everything you need for professional translation services
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Translation Features Grid */}
-      <div className="py-20 bg-slate-900">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
-            Comprehensive Translation Solutions
-          </h2>
-          <p className="text-gray-300 text-center mb-12">
-            Everything you need for professional translation services
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {translationFeatures.map((category, index) => (
-              <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700">
-                <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
-                <ul className="space-y-2">
-                  {category.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="text-gray-300 flex items-center">
-                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Translation Features Grid */}
-      <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {translationFeatures.map((category, index) => (
-              <div key={index} className="bg-gray-900 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
-                <ul className="space-y-2">
-                  {category.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-      {/* CTA Section */}
-      <div className="py-20 bg-gray-900">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Break Language Barriers?
-          </h2>
-          <p className="text-gray-300 mb-8">
-            Join thousands of companies using AI translation to reach global audiences
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
-              Start Your Free Trial
-            </Link>
-            <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-              Learn More
-            </Link>
-          </div>
-        </div>
+            </div>
+          </ResponsiveContainer>
+        </section>
       </div>
-      </section>
-    </Layout>
+    </>
   );
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
