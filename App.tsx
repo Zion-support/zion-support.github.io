@@ -58,6 +58,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 }
 
 const App: React.FC = () => {
+  const [isLoading, setIsLoading] = useState(true);
   // Sidebar state management (currently unused)
   // const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -104,7 +105,18 @@ const App: React.FC = () => {
     if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
       console.warn('Zion Tech Group App initialized');
     }
+
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
 
   return (
     <ErrorBoundary>
