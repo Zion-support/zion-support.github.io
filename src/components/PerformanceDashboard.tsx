@@ -3,11 +3,12 @@ import { Helmet } from 'react-helmet-async';
 'use client';
 const PerformanceDashboard: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
+  <div className="min-h-screen bg-white">
+      <Helmet></Helmet>
         <title>Performance Dashboard - Zion Tech Group</title>
         <meta name="description" content="Professional performance dashboard services by Zion Tech Group." />
       </Helmet>
+}
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
@@ -52,7 +53,7 @@ const PerformanceDashboard: React.FC = () => {
               </p>
               <a;
                 href="$1"
-                className="$1"
+                className="service-card"
               >
                 Contact Us;
               </a>
@@ -72,13 +73,14 @@ const PerformanceDashboard: React.FC = () => {
           </p>
           <a;
             href="$1"
-            className="$1"
+            className="service-card"
           >
             Get Started Today;
           </a>
         </div>
       </section>
-    </div>
+)
+    </div>)
   );
 }
-export default PerformanceDashboard;
+export default PerformanceDashboar;d;

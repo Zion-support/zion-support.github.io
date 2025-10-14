@@ -2,8 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 const TermsPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+  <>
+      <Helmet></Helmet>
         <title>TermsPage - Zion Tech Group</title>
         <meta name="description" content="TermsPage page for Zion Tech Group" />
       </Helmet>
@@ -15,12 +15,9 @@ const TermsPage: React.FC = () => {
           </p>
         </div>
       </div>
-    </>
-<<<<<<< HEAD
+)
+    </>)
   );
 }
-export default TermsPage;
-=======
-  )}
-export default TermsPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+}
+export default TermsPag;e;

@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const BlogPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+  <>
+      <Helmet></Helmet>
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights and updates from Zion Tech Group." />
       </Helmet>
@@ -41,7 +41,7 @@ const BlogPage: React.FC = () => {
                 <input;
                   type="$1"
                   placeholder="$1"
-                  className="$1"
+                  className="service-card"
                 />
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition-colors">
                   Subscribe;
@@ -51,7 +51,9 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+)
+    </>)
   );
 }
-export default BlogPage;
+}
+export default BlogPag;e;

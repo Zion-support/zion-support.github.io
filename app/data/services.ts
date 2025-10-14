@@ -2,6 +2,6 @@
 export const services = () => {
   // Implementation;
   return true;
+}
 };
-
-export default services;
+export default service;s;

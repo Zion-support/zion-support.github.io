@@ -41,48 +41,49 @@ const contractions = {
   "this's": "this&apos;s",';
   "these's": "these&apos;s",';
   "those's": "those&apos;s"';
+}
 };
-
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let _modified = false;
-    
     // Fix contractions;
     for (const [contraction, escaped] of Object.entries(contractions)) {
+}
       const regex = new RegExp(`\\b${contraction.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'g');
       if (content.includes(contraction)) {
-        content = content.replace(regex, escaped);
+  content = content.replace(regex, escaped);
         _modified = true;
+}
       }
     }
-    
     // Fix standalone apostrophes in text content;
     content = content.replace(/(\w)'(\w)/g, '$1&apos;$2');
     if (_modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+  fs.writeFileSync(filePath, content, 'utf8');
+}
       console.log(`Fixed apostrophes in: ${filePath}`);
     }
   } catch (_error) {
+}
     console._error(`Error processing ${filePath}:`, _error.message);
   }
 }
-
 function processDirectory(dir) {
   const _files = fs.readdirSync(dir);
-  
   for (const file of _files) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {';
       processDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {';
+}
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+  ';
       fixFile(filePath);
+}
     }
   }
 }
-
 // Process the workspace;
 processDirectory('/workspace');
 console.log('Apostrophe fixing complete!');

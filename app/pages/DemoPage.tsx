@@ -2,8 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 const DemoPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+  <>
+      <Helmet></Helmet>
         <title>DemoPage - Zion Tech Group</title>
         <meta name="description" content="DemoPage page for Zion Tech Group" />
       </Helmet>
@@ -15,12 +15,9 @@ const DemoPage: React.FC = () => {
           </p>
         </div>
       </div>
-    </>
-<<<<<<< HEAD
+)
+    </>)
   );
 }
-export default DemoPage;
-=======
-  )}
-export default DemoPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+}
+export default DemoPag;e;

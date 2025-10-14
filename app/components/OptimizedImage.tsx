@@ -1,152 +1,62 @@
-import React, { useState, useRef, useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
-interface OptimizedImageProps {
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  placeholder?: string
-  sizes?: string
-  quality?: number
-  loading?: 'lazy' | 'eager'
-  onLoad?: () => void
-  onError?: () => void}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+',
-  sizes = '100vw',
-  quality = 85,
-  loading = 'lazy',
-  onLoad,
-  onError
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isError, setIsError] = useState(false)
-  const [isInView, setIsInView] = useState(priority)
-  const imgRef = useRef<HTMLImageElement>(null)
-  useEffect(() => {
-    if (priority) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true)
-          observer.disconnect()}
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '50px'
-      }
-    )
-    if (imgRef.current) {
-      observer.observe(imgRef.current)}
-
-    return () => observer.disconnect()}, [priority])
-  const handleLoad = () => {
-<<<<<<< HEAD
-    setIsLoaded(true);
-    onLoad?.();
-  }
-  const handleError = () => {
-    setIsError(true);
-    onError?.();
-  }
-=======
-    setIsLoaded(true)
-    onLoad?.()}
-  const handleError = () => {
-    setIsError(true)
-    onError?.()}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-  // Generate WebP src if supported
-  const getOptimizedSrc = (originalSrc: string) => {
-    if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
-      return originalSrc}
-    
-    // For external images, return as-is
-    if (originalSrc.startsWith('http')) {
-      return originalSrc}
-    
-    // For local images, you could implement WebP conversion here
-<<<<<<< HEAD
-    return originalSrc;
-  }
-  const optimizedSrc = getOptimizedSrc(src);
-
-=======
-    return originalSrc}
-  const optimizedSrc = getOptimizedSrc(src)
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+export default function OptimizedImage() {
   return (
     <>
-      {priority && (
-        <Helmet>
-          <link rel="preload" as="image" href={optimizedSrc} />
-        </Helmet>
-      )}
-      <div
-        ref={imgRef}
-        className={`relative overflow-hidden ${className}`}
-        style={{ width, height }}
-      >
-        {/* Placeholder */}
-        {!isLoaded && !isError && (
-          <div
-            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
-            style={{ width, height }}
-          >
-            <div className="text-gray-400 text-sm">Loading...</div>
+      <Helmet>
+        <title>OptimizedImage - Zion Tech Group</title>
+        <meta name="description" content="Professional optimizedimage services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              OptimizedImage
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional optimizedimage services by Zion Tech Group.
+            </p>
           </div>
-        )}
+        </section>
 
-        {/* Error state */}
-        {isError && (
-          <div
-            className="absolute inset-0 bg-gray-100 flex items-center justify-center"
-            style={{ width, height }}
-          >
-            <div className="text-gray-400 text-sm text-center">
-              <div className="text-2xl mb-2">📷</div>
-              <div>Image not available</div>
+        {/* Content Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>
+                <p className="text-gray-600">High-quality professional services tailored to your needs.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>
+                <p className="text-gray-600">Experienced professionals with deep industry knowledge.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>
+                <p className="text-gray-600">Round-the-clock support to ensure your success.</p>
+              </div>
             </div>
           </div>
-        )}
+        </section>
 
-        {/* Actual image */}
-        {isInView && !isError && (
-          <img
-            src={optimizedSrc}
-            alt={alt}
-            width={width}
-            height={height}
-            loading={loading}
-            sizes={sizes}
-            onLoad={handleLoad}
-            onError={handleError}
-            className={`transition-opacity duration-300 ${
-              isLoaded ? 'opacity-100' : 'opacity-0'
-            }`}
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover'
-            }}
-          />
-        )}
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our services and how they can benefit your organization.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
       </div>
     </>
-<<<<<<< HEAD
   );
 }
-export default OptimizedImage;
-=======
-  )}
-export default OptimizedImage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

@@ -2,6 +2,6 @@
 export const errorHandler = () => {
   // Implementation;
   return true;
+}
 };
-
-export default errorHandler;
+export default errorHandle;r;

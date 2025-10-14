@@ -1,69 +1,62 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-interface NeonButtonProps {
-  children: React.ReactNode
-  to?: string
-  href?: string
-  onClick?: () => void
-  variant?: 'primary' | 'secondary' | 'accent'
-  size?: 'sm' | 'md' | 'lg'
-  className?: string}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const NeonButton: React.FC<NeonButtonProps> = ({
-  children,
-  to,
-  href,
-  onClick,
-  variant = 'primary',
-  size = 'md',
-  className = ''
-}) => {
-  const baseClasses = "relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2"
-  const variantClasses = {
-    primary: "bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:from-purple-700 hover:to-cyan-700 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40",
-    secondary: "bg-transparent border-2 border-purple-400 text-purple-300 hover:bg-purple-400 hover:text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40",
-    accent: "bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
-  }
-  const sizeClasses = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-lg"
-  }
-<<<<<<< HEAD
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-
-=======
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-  const content = (
-    <>
-      <span className="relative z-10">{children}</span>
-      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-    </>
-  )
-  if (to) {
-    return (
-      <Link to={to} className={`${classes} group`}>
-        {content}
-      </Link>
-    )}
-
-  if (href) {
-    return (
-      <a href={href} className={`${classes} group`} target="_blank" rel="noopener noreferrer">
-        {content}
-      </a>
-    )}
-
+export default function NeonButton() {
   return (
-    <button onClick={onClick} className={`${classes} group`}>
-      {content}
-    </button>
-<<<<<<< HEAD
+    <>
+      <Helmet>
+        <title>NeonButton - Zion Tech Group</title>
+        <meta name="description" content="Professional neonbutton services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              NeonButton
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional neonbutton services by Zion Tech Group.
+            </p>
+          </div>
+        </section>
+
+        {/* Content Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>
+                <p className="text-gray-600">High-quality professional services tailored to your needs.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>
+                <p className="text-gray-600">Experienced professionals with deep industry knowledge.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>
+                <p className="text-gray-600">Round-the-clock support to ensure your success.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our services and how they can benefit your organization.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
-export default NeonButton;
-=======
-  )}
-export default NeonButton
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

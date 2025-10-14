@@ -7,16 +7,19 @@ interface SEOHeadProps {
   image?: string
   url?: string
   type?: 'website' | 'article' | 'product'
+}
   structuredData?: any}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
+const SEOHead: React.FC<SEOHeadProps></SEOHeadProps> = (
+  {
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.',
   keywords = 'AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group',
   image = '/og-image.svg',
   url = 'https://ziontechgroup.com',
   type = 'website',
-  structuredData
+)
+  structuredData)
+}
 }) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -29,48 +32,50 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US"
+}
     },
     "contactPoint": {
-      "@type": "ContactPoint",
+  "@type": "ContactPoint",
       "telephone": "+1-555-0123",
       "contactType": "customer service",
       "email": "info@ziontechgroup.com"
+}
     },
     "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
+  "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
       "https://github.com/ziontechgroup"
+]
     ],
     "offers": {
-      "@type": "AggregateOffer",
+  "@type": "AggregateOffer",
       "offerCount": "50+",
       "offers": [
-        {
+  {
           "@type": "Offer",
           "name": "AI Solutions",
           "description": "Advanced artificial intelligence solutions for businesses"
+}
         },
         {
-          "@type": "Offer",
+  "@type": "Offer",
           "name": "Cybersecurity Services",
           "description": "Comprehensive cybersecurity solutions and consulting"
+}
         },
         {
-          "@type": "Offer",
+  "@type": "Offer",
           "name": "Cloud Infrastructure",
           "description": "Scalable cloud infrastructure and migration services"
+}
         }
+]
       ]
     }
   }
-<<<<<<< HEAD
   const finalStructuredData = structuredData || defaultStructuredData;
-
-=======
-  const finalStructuredData = structuredData || defaultStructuredData
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
   return (
-    <Helmet>
+  <Helmet></Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -80,10 +85,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       <meta name="theme-color" content="#8b5cf6" />
       <meta name="color-scheme" content="dark light" />
-      
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
-      
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
@@ -94,7 +97,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={url} />
@@ -103,36 +105,27 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="twitter:image" content={image} />
       <meta property="twitter:site" content="@ziontechgroup" />
       <meta property="twitter:creator" content="@ziontechgroup" />
-      
       {/* Additional SEO Meta Tags */}
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="referrer" content="origin-when-cross-origin" />
-      
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
-      
       {/* Favicon and Icons */}
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="apple-touch-icon" href="/logo192.png" />
       <link rel="manifest" href="/manifest.json" />
-      
       {/* Structured Data */}
-      <script type="application/ld+json">
+)
+      <script type="application/ld+json">)
         {JSON.stringify(finalStructuredData)}
       </script>
-      
       {/* Additional Performance Hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </Helmet>
-<<<<<<< HEAD
   );
 }
-export default SEOHead;
-=======
-  )}
-export default SEOHead
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+export default SEOHea;d;

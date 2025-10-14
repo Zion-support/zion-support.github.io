@@ -1,233 +1,62 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { Helmet } from 'react-helmet-async'
-interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface State {
-  hasError: boolean
-  error: Error | null
-  errorInfo: ErrorInfo | null
-  errorId: string}
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-<<<<<<< HEAD
-    }
-  }
-=======
-    }}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-<<<<<<< HEAD
-    }
-  }
-=======
-    }}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    })
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo)}
-
-    // Call custom error handler
-    this.props.onError?.(error, errorInfo)
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo)}
-  }
-
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to an error tracking service
-    // like Sentry, LogRocket, or Bugsnag
-    try {
-      const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        errorId: this.state.errorId,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-      }
-      // Example: Send to error tracking service
-<<<<<<< HEAD
-      // errorTrackingService.captureException(error, { extra: errorData });
+export default function EnhancedErrorBoundary() {
+  return (
+    <>
+      <Helmet>
+        <title>EnhancedErrorBoundary - Zion Tech Group</title>
+        <meta name="description" content="Professional enhancederrorboundary services by Zion Tech Group." />
+      </Helmet>
       
-      console.error('Error logged to service:', errorData);
-    } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
-    }
-=======
-      // errorTrackingService.captureException(error, { extra: errorData })
-      console.error('Error logged to service:', errorData)} catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError)}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-  }
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: ''
-<<<<<<< HEAD
-    });
-  }
-  private handleReload = () => {
-    window.location.reload();
-  }
-  private handleGoHome = () => {
-    window.location.href = '/';
-  }
-=======
-    })}
-  private handleReload = () => {
-    window.location.reload()}
-  private handleGoHome = () => {
-    window.location.href = '/'}
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-  render() {
-    if (this.state.hasError) {
-      // Custom fallback UI
-      if (this.props.fallback) {
-        return this.props.fallback}
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              EnhancedErrorBoundary
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional enhancederrorboundary services by Zion Tech Group.
+            </p>
+          </div>
+        </section>
 
-      // Default error UI
-      return (
-        <>
-          <Helmet>
-            <title>Error - Zion Tech Group</title>
-            <meta name="robots" content="noindex, nofollow" />
-          </Helmet>
-          
-          <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
-            <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
-              {/* Error Icon */}
-              <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
-                <svg 
-                  className="w-8 h-8 text-red-400" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" 
-                  />
-                </svg>
+        {/* Content Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>
+                <p className="text-gray-600">High-quality professional services tailored to your needs.</p>
               </div>
-
-              {/* Error Title */}
-              <h1 className="text-2xl font-bold text-white mb-4">
-                Oops! Something went wrong
-              </h1>
-
-              {/* Error Message */}
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                We're sorry, but something unexpected happened. Our team has been notified 
-                and is working to fix this issue.
-              </p>
-
-              {/* Error ID for support */}
-              {this.state.errorId && (
-                <div className="bg-slate-700 rounded-lg p-3 mb-6">
-                  <p className="text-sm text-gray-400 mb-1">Error ID:</p>
-                  <code className="text-xs text-cyan-400 font-mono break-all">
-                    {this.state.errorId}
-                  </code>
-                </div>
-              )}
-
-              {/* Action Buttons */}
-              <div className="space-y-3">
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                >
-                  Try Again
-                </button>
-                
-                <div className="flex space-x-3">
-                  <button
-                    onClick={this.handleGoHome}
-                    className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                  >
-                    Go Home
-                  </button>
-                  
-                  <button
-                    onClick={this.handleReload}
-                    className="flex-1 border border-slate-600 text-gray-300 px-4 py-2 rounded-lg font-semibold hover:bg-slate-700 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                  >
-                    Reload Page
-                  </button>
-                </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>
+                <p className="text-gray-600">Experienced professionals with deep industry knowledge.</p>
               </div>
-
-              {/* Support Information */}
-              <div className="mt-8 pt-6 border-t border-slate-700">
-                <p className="text-sm text-gray-400 mb-2">
-                  Still having trouble? Contact our support team:
-                </p>
-                <div className="text-sm text-cyan-400">
-                  <p>Email: kleber@ziontechgroup.com</p>
-                  <p>Phone: +1-302-464-0950</p>
-                </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>
+                <p className="text-gray-600">Round-the-clock support to ensure your success.</p>
               </div>
-
-              {/* Development Error Details */}
-              {process.env.NODE_ENV === 'development' && this.state.error && (
-                <details className="mt-6 text-left">
-                  <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-                    Error Details (Development)
-                  </summary>
-                  <div className="mt-2 p-3 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto max-h-40">
-                    <div className="mb-2">
-                      <strong>Error:</strong> {this.state.error.message}
-                    </div>
-                    <div className="mb-2">
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
-                        {this.state.error.stack}
-                      </pre>
-                    </div>
-                    {this.state.errorInfo && (
-                      <div>
-                        <strong>Component Stack:</strong>
-                        <pre className="whitespace-pre-wrap mt-1">
-                          {this.state.errorInfo.componentStack}
-                        </pre>
-                      </div>
-                    )}
-                  </div>
-                </details>
-              )}
             </div>
           </div>
-        </>
-      )}
+        </section>
 
-    return this.props.children}
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our services and how they can benefit your organization.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
+      </div>
+    </>
+  );
 }
-
-export default EnhancedErrorBoundary

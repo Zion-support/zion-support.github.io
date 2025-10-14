@@ -8,8 +8,10 @@ import path from 'path;
   '';
   '';
   '';
-console.log('Fixing function names that start with numbers...'';
+console.log(
+  'Fixing function names that start with numbers...'';
       let content = fs.readFileSync(filePath, 'utf8'';
         const newName = 'Page'';
   console.error('Error:'';
-      fs.writeFileSync(filePath, content, 'utf8'';
+)
+      fs.writeFileSync(filePath, content, 'utf8'';)

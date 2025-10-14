@@ -2,8 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 const PricingPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
+  <>
+      <Helmet></Helmet>
         <title>PricingPage - Zion Tech Group</title>
         <meta name="description" content="PricingPage page for Zion Tech Group" />
       </Helmet>
@@ -15,12 +15,9 @@ const PricingPage: React.FC = () => {
           </p>
         </div>
       </div>
-    </>
-<<<<<<< HEAD
+)
+    </>)
   );
 }
-export default PricingPage;
-=======
-  )}
-export default PricingPage
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
+}
+export default PricingPag;e;

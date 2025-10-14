@@ -1,57 +1,62 @@
-import React from 'react'
-interface AnimatedCardProps {
-  children: React.ReactNode
-  className?: string
-  glowColor?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow'
-  hoverEffect?: boolean}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const AnimatedCard: React.FC<AnimatedCardProps> = ({
-  children,
-  className = '',
-  glowColor = 'purple',
-  hoverEffect = true
-}) => {
-  const glowColors = {
-    purple: 'shadow-purple-500/25 hover:shadow-purple-500/40',
-    cyan: 'shadow-cyan-500/25 hover:shadow-cyan-500/40',
-    pink: 'shadow-pink-500/25 hover:shadow-pink-500/40',
-    green: 'shadow-green-500/25 hover:shadow-green-500/40',
-    blue: 'shadow-blue-500/25 hover:shadow-blue-500/40',
-    yellow: 'shadow-yellow-500/25 hover:shadow-yellow-500/40'
-  }
-  const borderColors = {
-    purple: 'border-purple-500/30 hover:border-purple-500/60',
-    cyan: 'border-cyan-500/30 hover:border-cyan-500/60',
-    pink: 'border-pink-500/30 hover:border-pink-500/60',
-    green: 'border-green-500/30 hover:border-green-500/60',
-    blue: 'border-blue-500/30 hover:border-blue-500/60',
-    yellow: 'border-yellow-500/30 hover:border-yellow-500/60'
-  }
+export default function AnimatedCard() {
   return (
-    <div
-      className={`
-        relative bg-gradient-to-br from-slate-800/80 to-slate-700/80 
-        backdrop-blur-sm border border-slate-600/50 
-        rounded-xl p-6 transition-all duration-300
-        ${hoverEffect ? 'hover:transform hover:scale-105 hover:-translate-y-1' : ''}
-        ${glowColors[glowColor]}
-        ${borderColors[glowColor]}
-        ${className}
-      `}
-    >
-      {/* Animated border gradient */}
-      <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/20 via-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <>
+      <Helmet>
+        <title>AnimatedCard - Zion Tech Group</title>
+        <meta name="description" content="Professional animatedcard services by Zion Tech Group." />
+      </Helmet>
       
-      {/* Content */}
-      <div className="relative z-10">
-        {children}
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              AnimatedCard
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional animatedcard services by Zion Tech Group.
+            </p>
+          </div>
+        </section>
+
+        {/* Content Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>
+                <p className="text-gray-600">High-quality professional services tailored to your needs.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>
+                <p className="text-gray-600">Experienced professionals with deep industry knowledge.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>
+                <p className="text-gray-600">Round-the-clock support to ensure your success.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our services and how they can benefit your organization.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
       </div>
-    </div>
-<<<<<<< HEAD
+    </>
   );
 }
-export default AnimatedCard;
-=======
-  )}
-export default AnimatedCard
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7

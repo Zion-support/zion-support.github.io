@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
-      <Helmet>
+      <Helmet></Helmet>
         <title>AiMarketing - Zion Tech Group</title>
         <meta name="description" content="Advanced aimarketing solutions" />
       </Helmet>

@@ -1,12 +1,14 @@
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {Circle, Right, }}from 'lucide-react';
-const BlockchainPage: React.FC = () => {,
+const BlockchainPage: React.FC = () => {
+  ,
   </>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Blockchain Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." />
         <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, enterprise blockchain, Web3" />
+}
               <p className="text-gray-300">{feature.description</p>}</p>;
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">;
         {/* Hero Section */}</div>;

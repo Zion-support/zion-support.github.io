@@ -1,63 +1,62 @@
-import fs from 'fs';
-import path from 'path';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const dir = path.join(process.cwd(), 'data');
-const file = path.join(dir, 'shipping-rates.json');
+export default function ShippingRates.js() {
+  return (
+    <>
+      <Helmet>
+        <title>Shipping Rates.js - Zion Tech Group</title>
+        <meta name="description" content="Professional shipping rates.js services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+              Shipping Rates.js
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional shipping rates.js services by Zion Tech Group.
+            </p>
+          </div>
+        </section>
 
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
-  }
+        {/* Content Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>
+                <p className="text-gray-600">High-quality professional services tailored to your needs.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>
+                <p className="text-gray-600">Experienced professionals with deep industry knowledge.</p>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>
+                <p className="text-gray-600">Round-the-clock support to ensure your success.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  const { destination, weight } = req.body;
-  if (!destination || !weight) {
-    return res.status(400).json({ error: 'Destination and weight are required' });
-  }
-
-<<<<<<< HEAD
-  let rates = [];  try {
-=======
-  let rates = [];
-  try {
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-    const data = fs.readFileSync(file, 'utf8');
-    rates = JSON.parse(data);
-  } catch (error) {
-    console.error('Error:', error);
-    console.error('Error reading existing rates:', error);
-  }
-
-  const distanceMultiplier = destination === 'US' ? 1 : 2;
-  const baseRate = 10;
-  const rate = baseRate + (weight * 0.5 * distanceMultiplier);
-
-  try {
-    const newRate = {
-      id: Date.now().toString(),
-      destination,
-      weight,
-      rate,
-      createdAt: new Date().toISOString()
-    };
-
-    rates.push(newRate);
-    fs.writeFileSync(file, JSON.stringify(rates, null, 2));
-
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true,
-      rate: rate,
-      message: 'Shipping rate calculated successfully' 
-    }));
-  } catch (error) {
-    console.error('Error:', error);
-    res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5bf7
-    res.end(JSON.stringify({ error: 'Failed to save rate' }));
-  }
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Contact us today to learn more about our services and how they can benefit your organization.
+            </p>
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+              Get Started
+            </button>
+          </div>
+        </section>
+      </div>
+    </>
+  );
 }

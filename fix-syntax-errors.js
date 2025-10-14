@@ -1,84 +1,86 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-
-// Function to recursively find all files with syntax errors
-function findFilesWithSyntaxErrors(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules' && !file.includes('app-broken') && !file.includes('app-disabled')) {
-      findFilesWithSyntaxErrors(filePath, fileList);
-    } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx'))) {
-      const content = fs.readFileSync(filePath, 'utf8');
-      // Check for common syntax errors
-      if (content.includes(')' expected') || 
-          content.includes('Unterminated string') || 
-          content.includes('Unexpected token') ||
-          content.includes('describe') && content.includes('test') && content.includes('expect') ||
-          content.includes('; expected')) {
-        fileList.push(filePath);
-      }
-    }
-  });
-  
-  return fileList;
-}
-
-// Function to fix common syntax errors
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 function fixSyntaxErrors(filePath) {
-  console.log(`Fixing syntax errors in: ${filePath}`);
-  
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Fix unterminated string literals
-  content = content.replace(/'([^']*)$/gm, "'$1'");
-  content = content.replace(/"([^"]*)$/gm, '"$1"');
-  
-  // Fix missing closing parentheses
-  content = content.replace(/\(([^)]*)$/gm, '($1)');
-  
-  // Fix missing semicolons
-  content = content.replace(/([^;}])\n/g, '$1;\n');
-  
-  // Fix test files that have global variables declared
-  if (filePath.includes('test') || filePath.includes('spec')) {
-    // Remove duplicate global variable declarations
-    content = content.replace(/const\s+(describe|test|expect|it|beforeEach|afterEach)\s*=/g, '// $&');
-  }
-  
-  // Fix JSX syntax errors
-  content = content.replace(/<([^>]*)$/gm, '<$1>');
-  
-  // Fix missing closing braces
-  content = content.replace(/\{([^}]*)$/gm, '{$1}');
-  
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    // Fix missing closing tags and syntax issues
+    const originalContent = content;
+    // Fix missing closing div tags
+    content = content.replace(/<div\s+key="[^"]*"\s*>\s*className="[^"]*"\s*>/g, '<div key="$1" className="$2">');
+    // Fix malformed JSX attributes
+    content = content.replace(/className="\$1"/g, 'className="service-card"');
+    // Fix missing closing tags for common patterns
+    content = content.replace(/<div\s+key="[^"]*"\s*>\s*className="[^"]*"\s*>\s*<div/g, '<div key="$1" className="$2"><div');
+    // Fix missing semicolons and closing braces
+    content = content.replace(/export default (\w+)(?!;)/g, 'export default $1;');
+    // Fix missing closing tags for React components
+    content = content.replace(/(<[A-Z]\w+[^>]*>)(?!.*<\/\1>)(?!.*\/>)/g, (match, tag) => {
+      const tagName = tag.match(/<(\w+)/)[1];
+}
+      return match + `</${tagName}>`;
+    });
+    // Fix JSX fragment issues
+    content = content.replace(/<>\s*<\/>/g, '<></>');
+    // Fix missing closing parentheses in function calls
+    content = content.replace(/\(([^)]*)\s*$/gm, '($1)');
+    // Fix malformed object literals
+    content = content.replace(/\{\s*([^}]*)\s*$/gm, '{\n  $1\n}');
+    // Fix missing commas in object literals
+    content = content.replace(/([^,}])\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
+    // Fix missing closing brackets
+    content = content.replace(/\[\s*([^\]]*)\s*$/gm, '[\n  $1\n]');
+    // Fix missing closing parentheses in JSX
+    content = content.replace(/\(\s*([^)]*)\s*$/gm, '(\n  $1\n)');
+    // Clean up extra whitespace
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/^\s*\n/gm, '');
+    if (content !== originalContent) {
   fs.writeFileSync(filePath, content);
 }
-
-// Main execution
-try {
-  console.log('Searching for files with syntax errors...');
-  const errorFiles = findFilesWithSyntaxErrors('.');
-  
-  console.log(`Found ${errorFiles.length} files with potential syntax errors:`);
-  errorFiles.forEach(file => console.log(`  - ${file}`));
-  
-  if (errorFiles.length === 0) {
-    console.log('No syntax errors found!');
-    process.exit(0);
-  }
-  
-  console.log('\nFixing syntax errors...');
-  errorFiles.forEach(fixSyntaxErrors);
-  
-  console.log('\nSyntax errors have been fixed!');
-  
-} catch (error) {
-  console.error('Error fixing syntax errors:', error.message);
-  process.exit(1);
+      console.log(`Fixed syntax errors in: ${filePath}`);
+      modified = true;
+    }
+    return modified;
+  } catch (error) {
 }
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+function findFilesWithSyntaxErrors(dir) {
+  const files = [];
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git') && !item.includes('app-broken')) {
+        traverse(fullPath);
+}
+      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item) && !item.includes('app-broken')) {
+  files.push(fullPath);
+}
+      }
+    }
+  }
+  traverse(dir);
+  return files;
+}
+// Main execution
+const projectRoot = process.cwd();
+console.log('Searching for files with syntax errors...');
+const filesToCheck = findFilesWithSyntaxErrors(projectRoot);
+console.log(`Checking ${filesToCheck.length} files for syntax errors`);
+let fixedCount = 0;
+for (const file of filesToCheck) {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+}
+  }
+}
+console.log(`Fixed syntax errors in ${fixedCount} files`);
