@@ -40,3 +40,4 @@ import React from "react";"import { Link } from react-router-dom";"import { Mail
 }
 
 export default Footer;
+

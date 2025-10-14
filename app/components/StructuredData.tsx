@@ -4,8 +4,8 @@ import React from 'react';const StructuredData = () => {
 
     <div>
       <h2>StructuredData</h2>
-      <p>This component is under construction.</p>
-    </div>
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
   );
 }
 

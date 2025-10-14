@@ -9,28 +9,37 @@ function fixSyntaxErrors(content) {
   
   // Fix malformed import statements with concatenated strings
   fixed = fixed.replace(/import\s+React\s+from\s+"react";"import\s+{([^}]+)}\s+from\s+"([^"]+)";"/g, 
-    'import React from "react";\nimport { $1 } from "$2";');
+    'import React from "react";
+import { $1 } from "$2";');
   
   // Fix missing quotes in import statements
   fixed = fixed.replace(/from\s+'([^']*);'/g, "from '$1';");
   fixed = fixed.replace(/from\s+"([^"]*);"/g, 'from "$1";');
   
   // Fix missing semicolons after import statements
-  fixed = fixed.replace(/from\s+['"]([^'"]+)['"]\s*([^;])/g, 'from "$1";\n$2');
+  fixed = fixed.replace(/from\s+['"]([^'"]+)['"]\s*([^;])/g, 'from "$1";
+$2');
   
   // Fix malformed React imports
-  fixed = fixed.replace(/import\s+React\s+from\s+'react;'const/g, "import React from 'react';\n\nconst");
-  fixed = fixed.replace(/import\s+React\s+from\s+"react;"const/g, 'import React from "react";\n\nconst');
+  fixed = fixed.replace(/import\s+React\s+from\s+'react;'const/g, "import React from 'react';
+
+const");
+  fixed = fixed.replace(/import\s+React\s+from\s+"react;"const/g, 'import React from "react";
+
+const');
   
   // Fix missing quotes in JSX attributes
   fixed = fixed.replace(/className=\s*{([^}]+)}/g, 'className="$1"');
   
   // Fix missing semicolons in variable declarations
-  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{/g, 'const $1 = () => {\n');
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{/g, 'const $1 = () => {
+');
   
   // Fix malformed export statements
   fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\(\)\s*{\s*return\s+null;\s*}/g, 
-    'export default function $1() {\n  return null;\n}');
+    'export default function $1() {
+  return null;
+}');
   
   return fixed;
 }
@@ -83,4 +92,5 @@ function processDirectory(dirPath) {
 // Main execution
 console.log('Starting syntax error fixes...');
 const { filesProcessed, filesFixed } = processDirectory('./app');
-console.log(`\nCompleted! Processed ${filesProcessed} files, fixed ${filesFixed} files.`);
+console.log(`
+Completed! Processed ${filesProcessed} files, fixed ${filesFixed} files.`);

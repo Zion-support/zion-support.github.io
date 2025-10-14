@@ -4,8 +4,8 @@ import React from 'react';const AdvancedSEOOptimizer_new = () => {
 
     <div>
       <h2>AdvancedSEOOptimizer_new</h2>
-      <p>This component is under construction.</p>
-    </div>
+      <p className="text-gray-300 text-lg">This component is under construction.</p>
+  
   );
 }
 
