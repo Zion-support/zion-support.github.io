@@ -33,6 +33,9 @@ export default [
   },
   js.configs.recommended,
   {
+    ignores: ['dist/**', 'node_modules/**', 'build/**', 'out/**'],
+  },
+  {
     files: ['**/*.{ts,tsx,js,jsx}'],
     languageOptions: {
       parser: typescriptParser,
@@ -73,7 +76,8 @@ export default [
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': ['warn', { 'argsIgnorePattern': '^_' }],
+      'no-unused-vars': ['warn', { 'argsIgnorePattern': '^_' }],
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'no-undef': 'off',
