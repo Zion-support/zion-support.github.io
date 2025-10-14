@@ -1,10 +1,8 @@
-import React from 'react'
-import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
-      title: '5G Strategy Development'
-      description: 'Comprehensive 5G implementation strategies tailored to your business needs.'
-      title: 'Security Assessment'
-      description: 'Complete security evaluation for 5G network implementation.'
-      title: 'Team Training'
-      description: 'Expert training for your team on 5G technologies and best practices.'
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
+
+function FiveGConsultingPage() {
+  const features = [
+    

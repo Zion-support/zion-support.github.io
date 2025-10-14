@@ -1,10 +1,8 @@
-import React from 'react'
-import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import EnhancedSEO from '../components/EnhancedSEO'
-      title: '5G Support Strategy'
-      description: 'Comprehensive 5G support strategies tailored to your business needs.'
-      title: 'Security Assessment'
-      description: 'Complete security evaluation for 5G support implementation.'
-      title: 'Expert Support'
-      description: 'Professional support for your 5G support journey.'
+import React from 'react';
+import { ArrowRight, CheckCircle, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import EnhancedSEO from '../components/EnhancedSEO';
+
+function FiveGSupportPage() {
+  const features = [
+    
