@@ -14,11 +14,12 @@ export const advancedAnalytics = {
   },
   
   trackConversion: (conversionId: string, value?: number, currency?: string) => {
+    if (typeof window !== 'undefined') {
       window.gtag('event', 'conversion', {
         send_to: conversionId,
         value: value,
         currency: currency
-      })
+      });
     }
   },
   

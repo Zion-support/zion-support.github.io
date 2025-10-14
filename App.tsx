@@ -83,38 +83,20 @@ const App: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return <AdvancedLoadingStates />;
+    return <AdvancedLoadingStates><div>Loading...</div></AdvancedLoadingStates>;
   }
 
   return (
     <HelmetProvider>
       <AnalyticsProvider>
-        <PerformanceMonitor>
-          <MetaManager
-              title="Zion Tech Group - Advanced AI and IT Solutions"
-              description="Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation."
-              keywords={['AI', 'IT solutions', 'automation', 'digital transformation', 'cybersecurity', 'cloud infrastructure']}
-              type="website"
-              structuredData={{
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                "name": "Zion Tech Group",
-                "description": "Leading provider of AI and IT solutions",
-                "url": "https://ziontechgroup.com",
-                "logo": "https://ziontechgroup.com/images/logo.png",
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "telephone": "+1-555-0123",
-                  "contactType": "customer service"
-                }
-              }}
-            />
-            <EnhancedAnalytics />
+        <PerformanceMonitor />
+        <MetaManager>
+          <EnhancedAnalytics>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <Navigation />
                 <main className="relative z-10" id="main-content" role="main">
-                  <Suspense fallback={<AdvancedLoadingStates type="skeleton" fullScreen message="Loading application..." />}>
+                  <Suspense fallback={<div>Loading application...</div>}>
                     <Routes>
                       <Route path="/" element={<HomePage />} />
                       <Route path="/about" element={<AboutPage />} />
@@ -126,9 +108,10 @@ const App: React.FC = () => {
                 <Footer />
               </div>
             </Router>
-          </PerformanceMonitor>
-        </AnalyticsProvider>
-      </HelmetProvider>
+          </EnhancedAnalytics>
+        </MetaManager>
+      </AnalyticsProvider>
+    </HelmetProvider>
   );
 };
 

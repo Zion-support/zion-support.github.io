@@ -3,13 +3,15 @@ export const errorHandler = {
     // Log to external service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
-
+        description: _error.message,
+        fatal: false,
+        custom_map: context ? { context } : undefined
       });
     }
     
     return {
       message: 'Something went wrong. Please try again.',
-      code: 'GENERIC_ERROR';
+      code: 'GENERIC_ERROR'
     };
   },
   
@@ -19,21 +21,27 @@ export const errorHandler = {
     
     switch (status) {
       case 400:
-        return { message: 'Invalid request', code: 'BAD_REQUEST' ;};
+        return { message: 'Invalid request', code: 'BAD_REQUEST' };
       case 401:
-        return { message: 'Unauthorized', code: 'UNAUTHORIZED' ;};
+        return { message: 'Unauthorized', code: 'UNAUTHORIZED' };
       case 403:
-        return { message: 'Forbidden', code: 'FORBIDDEN' ;};
+        return { message: 'Forbidden', code: 'FORBIDDEN' };
       case 404:
-        return { message: 'Not found', code: 'NOT_FOUND' ;};
+        return { message: 'Not found', code: 'NOT_FOUND' };
       case 500:
-        return { message: 'Server error', code: 'SERVER_ERROR' ;};
+        return { message: 'Server error', code: 'SERVER_ERROR' };
       default:
-        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' ;};
-  log: () => {
-    // Error logging logic
-  report: () => {
+        return { message: message || 'Unknown error', code: 'UNKNOWN_ERROR' };
+    }
+  },
+  
   log: (_error: Error, _context?: Record<string, unknown>) => {
+    // Error logging logic
+    console.error('Error logged:', _error, _context);
+  },
+  
   report: (_error: Error, _context?: Record<string, unknown>) => {
     // Error reporting logic
-}}
+    console.error('Error reported:', _error, _context);
+  }
+};
