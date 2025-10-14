@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export const useSEO = (structuredData?: Record<string, unknown>) => {
+export const useSEO = (structuredData?: unknown) => {
   useEffect(() => {
     // Add structured data to the page
     if (structuredData) {

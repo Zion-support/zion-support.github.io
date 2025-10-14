@@ -1,2 +1,1 @@
-// TypeScript file
-export const example = 'example';
+/// <reference types="vite/client" />
