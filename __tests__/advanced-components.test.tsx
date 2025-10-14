@@ -1,35 +1,49 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import ErrorBoundary from '../app/components/ErrorBoundary';
+import AdvancedErrorBoundary from '../src/components/AdvancedErrorBoundary';
+
 // Mock components for testing
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error("Test error");
+    throw new Error('Test error');
   }
   return <div>Test content</div>;
 };
 
 const TestComponent = () => <div>Test component</div>;
 
-describe('ErrorBoundary', () => {
+// Suppress console.error for this test file
+const originalError = console.error;
+beforeAll(() => {
+  console.error = jest.fn();
+});
+
+afterAll(() => {
+  console.error = originalError;
+});
+
+describe('AdvancedErrorBoundary', () => {
   it('should catch errors and display fallback UI', () => {
     const { getByText } = render(
-      <ErrorBoundary>
+      <AdvancedErrorBoundary>
         <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      </AdvancedErrorBoundary>
     );
+    
     expect(getByText(/Something went wrong/)).toBeInTheDocument();
   });
-  it("renders children when there is no error", () => {
+
+  it('renders children when there is no error', () => {
     render(
       <MemoryRouter>
         <TestComponent />
-      </MemoryRouter>,
+      </MemoryRouter>
     );
-    expect(screen.getByText("Test component")).toBeInTheDocument();
+    expect(screen.getByText('Test component')).toBeInTheDocument();
   });
-  it("handles errors gracefully", () => {
+
+  it('handles errors gracefully', () => {
     // This test would require an actual ErrorBoundary component
     expect(true).toBe(true);
   });
