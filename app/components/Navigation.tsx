@@ -50,13 +50,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+1234567890" className="flex items-center text-gray-300 hover:text-white transition-colors">
+            <a href="tel:+13024640950" className="flex items-center text-gray-300 hover:text-white transition-colors">
               <Phone className="w-4 h-4 mr-2" />
-              <span className="text-sm">+1 (234) 567-890</span>
+              <span className="text-sm">+1 302 464 0950</span>
             </a>
-            <a href="mailto:info@ziontechgroup.com" className="flex items-center text-gray-300 hover:text-white transition-colors">
+            <a href="mailto:kleber@ziontechgroup.com" className="flex items-center text-gray-300 hover:text-white transition-colors">
               <Mail className="w-4 h-4 mr-2" />
-              <span className="text-sm">info@ziontechgroup.com</span>
+              <span className="text-sm">kleber@ziontechgroup.com</span>
             </a>
           </div>
 
@@ -95,13 +95,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 Contact
               </a>
               <div className="border-t border-white/10 pt-4 mt-4">
-                <a href="tel:+1234567890" className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">
+                <a href="tel:+13024640950" className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">
                   <Phone className="w-4 h-4 mr-2" />
-                  +1 (234) 567-890
+                  +1 302 464 0950
                 </a>
-                <a href="mailto:info@ziontechgroup.com" className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">
+                <a href="mailto:kleber@ziontechgroup.com" className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium">
                   <Mail className="w-4 h-4 mr-2" />
-                  info@ziontechgroup.com
+                  kleber@ziontechgroup.com
                 </a>
               </div>
             </div>

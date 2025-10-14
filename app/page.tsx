@@ -118,7 +118,7 @@ const HomePage: React.FC = () => {
                     <Phone className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-gray-300">+1 302 464 0950</p>
                 </div>
                 
                 <div className="flex flex-col items-center">
@@ -126,7 +126,7 @@ const HomePage: React.FC = () => {
                     <Mail className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-                  <p className="text-gray-300">info@ziontech.com</p>
+                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
                 </div>
                 
                 <div className="flex flex-col items-center">
@@ -134,7 +134,7 @@ const HomePage: React.FC = () => {
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-                  <p className="text-gray-300">123 Tech Street, Innovation City</p>
+                  <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
             </div>
