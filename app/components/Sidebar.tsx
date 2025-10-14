@@ -1,46 +1,81 @@
-import React, { Suspense } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
+import { X } from 'lucide-react';
+import { Home } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const ComponentsPage: React.FC = () => {
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const navigationItems = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Services', href: '/services', icon: Settings },
+    { name: 'Contact', href: '/contact', icon: Mail }
+  ];
   return (
     <>
-      <Helmet>
-        <title>Components</title>
-        <meta name="description" content="Professional components solutions and services" />
-        <meta name="keywords" content="components" />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8">Components</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              Professional components solutions and services
-            </p>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Expert Solutions
-                </h3>
-                <p className="text-blue-700">
-                  Our team of experts delivers cutting-edge solutions.
-                </p>
-              </div>
-              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Custom Implementation
-                </h3>
-                <p className="text-green-700">
-                  Tailored implementations for your specific requirements.
-                </p>
-              </div>
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  24/7 Support
-                </h3>
-                <p className="text-purple-700">
-                  Round-the-clock support for all your needs.
-                </p>
-              </div>
+      {/* Overlay */}
+      {isOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          onClick={onClose}
+        />
+      )}
+      {/* Sidebar */}
+      <div className={`
+        fixed top-0 left-0 h-full w-64 bg-slate-800 transform transition-transform duration-300 ease-in-out z-50
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+        lg:translate-x-0 lg:static lg:inset-0
+      `}>
+        <div className="flex items-center justify-between p-4 border-b border-slate-700">
+          <h2 className="text-xl font-bold text-white">Zion Tech Group</h2>
+          <button
+            onClick={onClose}
+            className="lg:hidden text-gray-300 hover:text-white"
+          >
+            <X className="w-6 h-6" />
+          </button>
+        </div>
+        <nav className="mt-6">
+          <ul className="space-y-2 px-4">
+            {navigationItems.map((item) => {
+              const Icon = item.icon;
+              return (
+                <li key={item.name}>
+                  <Link
+                    to={item.href}
+                    onClick={onClose}
+                    className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md"
+                  >
+                    <Icon className="w-5 h-5 mr-3" />
+                    {item.name}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+        <div className="absolute bottom-4 left-4 right-4">
+          <div className="bg-slate-700 rounded-lg p-4">
+            <div className="flex items-center text-sm text-gray-300 mb-2">
+              <MapPin className="w-4 h-4 mr-2" />
+              <span>Contact Info</span>
+            </div>
+            <div className="flex items-center text-sm text-gray-300 mb-1">
+              <Phone className="w-4 h-4 mr-2" />
+              <span>+1 (555) 123-4567</span>
+            </div>
+            <div className="flex items-center text-sm text-gray-300">
+              <Mail className="w-4 h-4 mr-2" />
+              <span>info@ziontechgroup.com</span>
             </div>
           </div>
         </div>
@@ -48,5 +83,4 @@ const ComponentsPage: React.FC = () => {
     </>
   );
 };
-
-export default ComponentsPage;
+export default Sidebar;

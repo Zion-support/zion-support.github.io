@@ -14,8 +14,8 @@ const ContentStatistics: React.FC = () => {
   });
 
   const targetCounters = {
-    clients: 10-00-0,
-    projects: 5-00-0,
+    clients: 10000,
+    projects: 5000,
     satisfaction: 99,
     years: 15,
     countries: 50,
@@ -115,7 +115,7 @@ const ContentStatistics: React.FC = () => {
     {
       icon: Star,
       title: 'Industry Recognition',
-      description: 'Awarded Best AI Solutions Provider 2-02-4',
+      description: 'Awarded Best AI Solutions Provider 2024',
       value: '25+'
     },
     {
@@ -133,7 +133,7 @@ const ContentStatistics: React.FC = () => {
   ];
 
   useEffect(() => {
-    const duration = 3-00-0; // 3 seconds
+    const duration = 3000; // 3 seconds
     const steps = 60;
     const stepDuration = duration / steps;
 
@@ -160,59 +160,57 @@ const ContentStatistics: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <div className="bg-gradient-to-br from-slate-900via-purple-900to-slate-900py-20px-4"></div>
-      <div className="max-w-7xl mx-auto"></div>
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16"></div>
-          <h2 className="text-3xl md:text-4xlfont-boldtext-whitemb-6">
-            Our <span className="text-transparent bg-clip-textbg-gradient-to-rfrom-blue-400to-purple-400">Impact</span> in Numbers
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers
           </h2>
-          <p className="text-xl text-gray-300max-w-3xlmx-auto">
-            Discover the measurable impact we've made for businesses worldwide through our innovative AI and IT solutions.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover the measurable impact we&apos;ve made for businesses worldwide through our innovative AI and IT solutions.
           </p>
         </div>
 
         {/* Statistics Grid */}
-        <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-3gap-8mb-16"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {statistics.map((stat, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-lgrounded-2xlp-8borderborder-white/20hover:border-purple-400transition-allduration-300text-centergroup"></div>
-              <div className={`w-16 h-16 ${stat.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}></div>
+            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 text-center group">
+              <div className={`w-16 h-16 ${stat.color} bg-white/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                 <stat.icon className="w-8 h-8" />
               </div>
               <div className={`text-4xl font-bold ${stat.color} mb-2`}>
-                {stat.value.toLocaleString()},
-    {stat.suffix}
+                {stat.value.toLocaleString()}{stat.suffix}
               </div>
-              <div className="text-lg font-semiboldtext-whitemb-2">{stat.label}</div>
+              <div className="text-lg font-semibold text-white mb-2">{stat.label}</div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
             </div>
           ))}
         </div>
 
         {/* Features Section */}
-        <div className="mb-16"></div>
-          <div className="text-center mb-12"></div>
-            <h3 className="text-2xl font-boldtext-whitemb-4">Why We're the Right Choice</h3>
-            <p className="text-gray-300 max-w-3xlmx-auto">
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-white mb-4">Why We&apos;re the Right Choice</h3>
+            <p className="text-gray-300 max-w-3xl mx-auto">
               Our comprehensive solutions deliver measurable results across all key business metrics.
             </p>
           </div>
 
-          <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lgrounded-2xlp-6borderborder-white/20hover:border-purple-400transition-allduration-300group"></div>
-                <div className="w-12 h-12bg-gradient-to-rfrom-purple-500to-blue-500rounded-lgmb-4flexitems-centerjustify-centergroup-hover:scale-110transition-transformduration-300"></div>
-                  <feature.icon className="w-6 h-6text-white" />
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h4 className="text-lg font-boldtext-whitemb-3group-hover:text-purple-400transition-colors">
+                <h4 className="text-lg font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   {feature.title}
                 </h4>
-                <p className="text-gray-300 text-smmb-4">{feature.description}</p>
-                <div className="space-y-2"></div>
+                <p className="text-gray-300 text-sm mb-4">{feature.description}</p>
+                <div className="space-y-2">
                   {feature.stats.map((stat, statIndex) => (
-                    <div key={statIndex} className="flex items-centertext-xstext-gray-400"></div>
-                      <CheckCircle className="w-3 h-3text-green-400mr-2flex-shrink-0" />
+                    <div key={statIndex} className="flex items-center text-xs text-gray-400">
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {stat}
                     </div>
                   ))}
@@ -223,22 +221,22 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         {/* Achievements Section */}
-        <div className="mb-16"></div>
-          <div className="text-center mb-12"></div>
-            <h3 className="text-2xl font-boldtext-whitemb-4">Key Achievements</h3>
-            <p className="text-gray-300 max-w-3xlmx-auto">
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-white mb-4">Key Achievements</h3>
+            <p className="text-gray-300 max-w-3xl mx-auto">
               Recognition and awards that validate our commitment to excellence and innovation.
             </p>
           </div>
 
-          <div className="grid grid-cols-1md:grid-cols-3gap-8"></div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {achievements.map((achievement, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lgrounded-2xlp-8borderborder-white/20text-centerhover:border-purple-400transition-allduration-300"></div>
-                <div className="w-16 h-16bg-gradient-to-rfrom-purple-500to-blue-500rounded-fullmx-automb-6flexitems-centerjustify-center"></div>
-                  <achievement.icon className="w-8 h-8text-white" />
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:border-purple-400 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <achievement.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-boldtext-whitemb-2">{achievement.value}</div>
-                <div className="text-lg font-semiboldtext-whitemb-2">{achievement.title}</div>
+                <div className="text-3xl font-bold text-white mb-2">{achievement.value}</div>
+                <div className="text-lg font-semibold text-white mb-2">{achievement.title}</div>
                 <div className="text-gray-400 text-sm">{achievement.description}</div>
               </div>
             ))}
@@ -246,18 +244,18 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="bg-white/10 backdrop-blur-lgrounded-2xlp-8borderborder-white/20mb-16"></div>
-          <div className="text-center mb-8"></div>
-            <h3 className="text-2xl font-boldtext-whitemb-4">Comprehensive Benefits</h3>
-            <p className="text-gray-300 max-w-3xlmx-auto">
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Comprehensive Benefits</h3>
+            <p className="text-gray-300 max-w-3xl mx-auto">
               Our solutions provide a complete package of benefits designed to accelerate your business growth.
             </p>
           </div>
           
-          <div className="grid grid-cols-1md:grid-cols-2lg:grid-cols-4gap-6"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-startspace-x-3"></div>
-                <CheckCircle className="w-5 h-5text-green-400flex-shrink-0mt-1" />
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
             ))}
@@ -265,20 +263,20 @@ const ContentStatistics: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600to-blue-600rounded-2xlp-12"></div>
-            <h3 className="text-3xl font-boldtext-whitemb-4">
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
+            <h3 className="text-3xl font-bold text-white mb-4">
               Ready to Join Our Success Stories?
             </h3>
-            <p className="text-xl text-white/90mb-8max-w-2xlmx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Be part of our growing community of successful businesses. Start your transformation journey today.
             </p>
-            <div className="flex flex-colsm:flex-rowgap-4justify-center"></div>
-              <button className="bg-white text-purple-600px-8py-4rounded-lgfont-semiboldhover:bg-gray-100transition-colorsduration-200flexitems-centerjustify-centerspace-x-2">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Zap className="w-5 h-5" />
                 <span>Get Started</span>
               </button>
-              <button className="border-2 border-whitetext-whitepx-8py-4rounded-lgfont-semiboldhover:bg-white/10transition-colorsduration-200">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 View Case Studies
               </button>
             </div>

@@ -43,33 +43,33 @@ const App: React.FC = () => {
         <Router>
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
-                <PerformanceMonitor />
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                  <Navigation />
-                  <main id="main-content" className="flex-1">
-                    <Suspense fallback={<div>Loading...</div>}>
-                          <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/about" element={<AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />} />
-                            <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/pricing" element={<PricingPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/careers" element={<CareersPage />} />
-                            <Route path="/partners" element={<PartnersPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/faq" element={<FAQPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/consultation" element={<ConsultationPage />} />
-                            <Route path="/micro-saas" element={<MicroSaasPage />} />
-                            <Route path="/ai-services" element={<AiServicesPage />} />
-                            <Route path="/it-services" element={<ItServicesPage />} />
-                          </Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
-                </div>
+              <PerformanceMonitor />
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                <Navigation />
+                <main id="main-content" className="flex-1">
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/about" element={<AboutPage />} />
+                      <Route path="/contact" element={<ContactPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/pricing" element={<PricingPage />} />
+                      <Route path="/blog" element={<BlogPage />} />
+                      <Route path="/case-studies" element={<CaseStudiesPage />} />
+                      <Route path="/careers" element={<CareersPage />} />
+                      <Route path="/partners" element={<PartnersPage />} />
+                      <Route path="/support" element={<SupportPage />} />
+                      <Route path="/faq" element={<FAQPage />} />
+                      <Route path="/demo" element={<DemoPage />} />
+                      <Route path="/consultation" element={<ConsultationPage />} />
+                      <Route path="/micro-saas" element={<MicroSaasPage />} />
+                      <Route path="/ai-services" element={<AiServicesPage />} />
+                      <Route path="/it-services" element={<ItServicesPage />} />
+                    </Routes>
+                  </Suspense>
+                </main>
+                <Footer />
+              </div>
             </AnalyticsProvider>
           </AppWithPerformanceMonitoring>
         </Router>
