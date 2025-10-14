@@ -1,4 +1,4 @@
-'use client';'
+'use client';
 import React from "react";
 
 interface AnalyticsProps {
@@ -6,7 +6,11 @@ interface AnalyticsProps {
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({ children }) => {
-  return <>{children}</>;
+  return (
+    <div className="analytics-container">
+      {children}
+    </div>
+  );
 };
 
 export default Analytics;

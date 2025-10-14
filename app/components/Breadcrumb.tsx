@@ -1,33 +1,43 @@
+import React from 'react';
+import { ChevronRightIcon, HomeIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
-  const getBreadcrumbName = (pathname: string) => {
-    const nameMap: Record<string, string> = {
-      'ai-services': 'AI Services','
-      'ai-analytics': 'AI Analytics','
-      'ai-automation-platform': 'AI Automation Platform','
-      'ai-content-generation': 'AI Content Generation','
-      'ai-customer-support': 'AI Customer Support','
-      'ai-cybersecurity': 'AI Cybersecurity','
-      'ai-data-analytics': 'AI Data Analytics','
-      'ai-document-processing': 'AI Document Processing','
-      'ai-marketing-automation': 'AI Marketing Automation','
-      'ai-predictive-analytics': 'AI Predictive Analytics','
-      'ai-voice-assistant': 'AI Voice Assistant','
-      'ai-workflow-automation': 'AI Workflow Automation','
-      'services': 'IT Services','
-      'cloud-migration': 'Cloud Migration','
-      'devops-services': 'DevOps Services','
-      'it-consulting': 'IT Consulting','
-      'network-security': 'Network Security','
-      'software-development': 'Software Development','
-      'web-development': 'Web Development','
-      'micro-saas': 'Micro SAAS','
-      '5g-solutions': '5G Solutions','
-      'about': 'About Us','
-      'contact': 'Contact','
-      'blog': 'Blog','
-      'privacy': 'Privacy Policy','
-      'terms': 'Terms of Service
-    }
-    return nameMap[pathname] || pathname.charAt(0).toUpperCase() + pathname.slice(1)
-  }
+interface BreadcrumbProps {
+  items?: Array<{
+    name: string;
+    href: string;
+  }>;
+  className?: string;
+}
+
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ items = [], className = '' }) => {
+
+  const breadcrumbItems = [
+    { name: 'Home', href: '/' },
+    ...items
+  ];
+
   return (
+    <nav className={`flex items-center space-x-2 text-sm text-gray-500 ${className}`}>
+      {breadcrumbItems.map((item, index) => (
+        <React.Fragment key={item.href}>
+          {index === 0 ? (
+            <Link href={item.href} className="flex items-center hover:text-gray-700">
+              <HomeIcon className="w-4 h-4 mr-1" />
+              {item.name}
+            </Link>
+          ) : (
+            <Link href={item.href} className="hover:text-gray-700">
+              {item.name}
+            </Link>
+          )}
+          {index < breadcrumbItems.length - 1 && (
+            <ChevronRightIcon className="w-4 h-4 text-gray-400" />
+          )}
+        </React.Fragment>
+      ))}
+    </nav>
+  );
+};
+
+export default Breadcrumb;

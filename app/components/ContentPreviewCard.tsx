@@ -41,25 +41,28 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
           <span>
             {category}
           </span>
-          <span className="text-sm text-gray-500">{readTime}</div>
+          <span className="text-sm text-gray-500">{readTime}</span>
+        </div>
         
         <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
           <Link href={`/blog/${slug}`} className="hover:text-blue-600 transition-colors">
             {title}
-          </h3>
+          </Link>
+        </h3>
         
-        <p>{excerpt}</p>
-        </p>
+        <p className="text-gray-600 mb-4">{excerpt}</p>
         
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center mr-3">
-              <span className="text-sm font-medium text-gray-700">
-                {author.charAt(0).toUpperCase()}
+              <div className="w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center mr-3">
+                <span className="text-sm font-medium text-gray-700">
+                  {author.charAt(0).toUpperCase()}
+                </span>
               </div>
             <div>
-              <p>{author}</p>
-              <p className="text-sm text-gray-500">{publishedAt}</div>
+              <p className="text-sm font-medium text-gray-900">{author}</p>
+              <p className="text-sm text-gray-500">{publishedAt}</p>
+            </div>
           
           <Link
             href={`/blog/${slug}`}
@@ -68,8 +71,10 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
             Read more
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </Link>
+            </svg>
+          </Link>
         </div>
+      </div>
     </article>
   );
 };
