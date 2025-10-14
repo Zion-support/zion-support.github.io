@@ -8,6 +8,11 @@ interface PerformanceMetrics {
   ttfb?: number; // Time to First Byte
 }
 
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+}
+
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   reportInterval?: number;
@@ -54,9 +59,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const measureFID = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry & { processingStart?: number }) => {
-          if (entry.processingStart && entry.startTime) {
-            metrics.fid = entry.processingStart - entry.startTime;
+        entries.forEach((entry) => {
+          const eventEntry = entry as PerformanceEventTiming;
+          if (eventEntry.processingStart && eventEntry.startTime) {
+            metrics.fid = eventEntry.processingStart - eventEntry.startTime;
             onMetricsUpdate?.(metrics);
           }
         });
@@ -69,9 +75,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const measureCLS = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry & { hadRecentInput?: boolean; value?: number }) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value || 0;
+        entries.forEach((entry) => {
+          const layoutShiftEntry = entry as LayoutShift;
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value;
             metrics.cls = clsValue;
             onMetricsUpdate?.(metrics);
           }
