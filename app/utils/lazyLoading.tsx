@@ -1,33 +1,13 @@
-import { lazy, ComponentType, Suspense } from 'react';
-import LazyWrapper from '../components/LazyWrapper';
+'use client';
+import React from 'react';
 
-// Higher-order component for lazy loading
-export const withLazyLoading = <P extends object>(
-  Component: ComponentType<P>,
-  fallback?: React.ReactNode
-) => {
-  const LazyComponent = lazy(() => Promise.resolve({ default: Component }))
-  return (props: P) => (
-    <></P><LazyWrapper fallback={fallback}>
-      </LazyWrapper><Suspense fallback={fallback}>
-        {/* @ts-expect-error - Complex generic type inference issue with lazy components */}
-<azyComponent {...props} />
-      
-    </LazyWrapper></>
-  )
-}
-// Utility function to create lazy-loaded components
-export const createLazyComponent = <P extends object>(
-  importFunction: () => Promise<{ default: ComponentType<P> }>,
-  fallback?: React.ReactNode
-) => {
-  const LazyComponent = lazy(importFunction)
-  return (props: P) => (
-    <></P><LazyWrapper fallback={fallback}>
-      </LazyWrapper><Suspense fallback={fallback}>
-        {/* @ts-expect-error - Complex generic type inference issue with lazy components */}
-<azyComponent {...props} />
-      
-    </LazyWrapper></>
+export default function LazyLoading() {
+  return (
+    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+      <div>
+        <h1 className="text-4xl font-bold mb-4">LazyLoading</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
+    </div>
   );
 }

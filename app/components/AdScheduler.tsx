@@ -1,10 +1,13 @@
-import React from 'react;'
-const AdScheduler = () => {
+'use client';
+import React from 'react';
+
+export default function AdScheduler() {
   return (
-    <div>
-      <h1>AdScheduler</h1>
-      <p>This component is under development.</p>
+    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+      <div>
+        <h1 className="text-4xl font-bold mb-4">AdScheduler</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
     </div>
   );
-};
-export default AdScheduler
+}

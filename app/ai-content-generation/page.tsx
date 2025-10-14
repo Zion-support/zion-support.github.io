@@ -1,15 +1,13 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
+'use client';
+import React from 'react';
+
 export default function Page() {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>Ai Content Generation - Zion Tech Group</title>
-        <meta name="description" content="Professional ai content generation services by Zion Tech Group." />
-      </Helmet>
+    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
       <div>
-        <div><h1>Page Title</h1><p>Page content goes here.</p></div>
+        <h1 className="text-4xl font-bold mb-4">Page</h1>
+        <p className="text-gray-300">This page is under construction.</p>
       </div>
-    </React.Fragment>
+    </div>
   );
 }

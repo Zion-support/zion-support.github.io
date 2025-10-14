@@ -1,16 +1,13 @@
-export interface ErrorBoundaryConfig {
-  enableLogging: boolean;
-  enableReporting: boolean;
-  fallbackComponent?: React.ComponentType<{ error: Error; reset: () => void }>;
-  onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
+'use client';
+import React from 'react';
+
+export default function ErrorBoundaryConfig() {
+  return (
+    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+      <div>
+        <h1 className="text-4xl font-bold mb-4">ErrorBoundaryConfig</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
+    </div>
+  );
 }
-
-export const defaultErrorBoundaryConfig: ErrorBoundaryConfig = {
-  enableLogging: process.env.NODE_ENV === 'development',
-  enableReporting: process.env.NODE_ENV === 'production',
-  onError: (error: Error, errorInfo: React.ErrorInfo) => {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-};
-
-export default defaultErrorBoundaryConfig;

@@ -23,7 +23,14 @@ import ContactPage from './app/contact/page';
 
 const App = () => {
   return (
-    <ErrorBoundary>
+    <ErrorBoundary fallbackRender={({ error }) => (
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Something went wrong</h1>
+          <p className="text-gray-300">Please refresh the page or try again later.</p>
+        </div>
+      </div>
+    )}>
       <HelmetProvider>
         <AnalyticsProvider>
           <PerformanceOptimizer />

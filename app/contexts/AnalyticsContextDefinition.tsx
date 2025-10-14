@@ -1,13 +1,13 @@
-import { createContext } from 'react';
+'use client';
+import React from 'react';
 
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-  isEnabled: boolean;
+export default function AnalyticsContextDefinition() {
+  return (
+    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+      <div>
+        <h1 className="text-4xl font-bold mb-4">AnalyticsContextDefinition</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
+    </div>
+  );
 }
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export type { AnalyticsContextType };
-export { AnalyticsContext };

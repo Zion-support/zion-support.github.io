@@ -1,4 +1,4 @@
-// next.d - Basic implementation
-export default function next.d() {
+// Next.d - Basic implementation
+export default function NextD() {
   return null;
 }

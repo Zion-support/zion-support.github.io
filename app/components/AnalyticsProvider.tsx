@@ -1,50 +1,33 @@
+'use client';
 import React, { createContext, useContext, ReactNode } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string) => void;
+  trackEvent: (event: string, properties?: any) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-    // Basic analytics tracking
-    console.log('Analytics Event:', eventName, properties);
-    
-    // In a real implementation, you would send this to your analytics service
-    // Example: gtag('event', eventName, properties);
-  };
-
-  const trackPageView = (pageName: string) => {
-    console.log('Page View:', pageName);
-    
-    // In a real implementation, you would send this to your analytics service
-    // Example: gtag('config', 'GA_MEASUREMENT_ID', { page_title: pageName });
-  };
-
-  const value = {
-    trackEvent,
-    trackPageView,
-  };
-
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-};
-
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
 };
 
-export default AnalyticsProvider;
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  const trackEvent = (event: string, properties?: any) => {
+    // Basic analytics tracking implementation
+    console.log('Analytics event:', event, properties);
+  };
+
+  return (
+    <AnalyticsContext.Provider value={{ trackEvent }}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+}

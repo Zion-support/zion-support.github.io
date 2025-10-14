@@ -1,20 +1,13 @@
-'use client;'
-import React from 'react;'
-export default function Component() {
-  return (
-    <div>Page content</div>
-  )
-    <div>
-      </div>
-      <div>
-      </div>
-        <h1 className="text-4xl font-bold mb-8">Utils</h1>
-        <p className="text-gray-30o0 text-lg">
-          This page is under development.
-        </p>
+'use client';
+import React from 'react';
 
+export default function Dynamic() {
+  return (
+    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+      <div>
+        <h1 className="text-4xl font-bold mb-4">Dynamic</h1>
+        <p className="text-gray-300">This page is under construction.</p>
       </div>
-    </>
-  )
-        </p></div></div>
-  );};
+    </div>
+  );
+}

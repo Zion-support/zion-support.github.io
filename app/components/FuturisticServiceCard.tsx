@@ -1,11 +1,13 @@
-import React from 'react;'
-const FuturisticServiceCard = () => {
+'use client';
+import React from 'react';
+
+export default function FuturisticServiceCard() {
   return (
-    <div className="bg-gray-800 p-6 rounded-lg">
-      {icon && <div className="mb-4">{icon}</div>}
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-gray-300">{description}</p>
+    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+      <div>
+        <h1 className="text-4xl font-bold mb-4">FuturisticServiceCard</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
     </div>
   );
-};
-export default FuturisticServiceCard
+}

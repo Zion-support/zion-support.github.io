@@ -1,10 +1,13 @@
-import React from 'react;'
-const AnimatedCard = () => {
+'use client';
+import React from 'react';
+
+export default function AnimatedCard() {
   return (
-    <div>
-      <h1>AnimatedCard</h1>
-      <p>This component is under development.</p>
+    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+      <div>
+        <h1 className="text-4xl font-bold mb-4">AnimatedCard</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
     </div>
   );
-};
-export default AnimatedCard
+}

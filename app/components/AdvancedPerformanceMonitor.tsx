@@ -1,10 +1,13 @@
-import React from 'react;'
-const AdvancedPerformanceMonitor = () => {
+'use client';
+import React from 'react';
+
+export default function AdvancedPerformanceMonitor() {
   return (
-    <div>
-      <h2>AdvancedPerformanceMonitor</h2>
-      <p>This component is under construction.</p>
+    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+      <div>
+        <h1 className="text-4xl font-bold mb-4">AdvancedPerformanceMonitor</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
     </div>
   );
-};
-export default AdvancedPerformanceMonitor
+}

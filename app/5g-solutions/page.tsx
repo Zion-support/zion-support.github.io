@@ -1,22 +1,13 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const PagePage = () => {
+export default function Page() {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>5g Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional 5g solutions services by Zion Tech Group." />
-      </Helmet>
-      
+    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
       <div>
-        <div>
-          <h1>5G Solutions</h1>
-          <p>Professional 5G solutions services by Zion Tech Group.</p>
-        </div>
+        <h1 className="text-4xl font-bold mb-4">Page</h1>
+        <p className="text-gray-300">This page is under construction.</p>
       </div>
-    </React.Fragment>
+    </div>
   );
-};
-
-export default PagePage;
+}

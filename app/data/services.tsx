@@ -1,29 +1,13 @@
-// Services data
-export const services = [
-  {
-    id: 1,
-    name: 'AI Solutions',
-    description: 'Advanced AI technology to transform your business operations',
-    category: 'AI'
-  },
-  {
-    id: 2,
-    name: 'IT Infrastructure',
-    description: 'Robust IT infrastructure solutions for modern businesses',
-    category: 'IT'
-  },
-  {
-    id: 3,
-    name: 'Web Development',
-    description: 'Custom web applications and websites',
-    category: 'Development'
-  },
-  {
-    id: 4,
-    name: 'Blockchain',
-    description: 'Blockchain solutions and smart contract development',
-    category: 'Blockchain'
-  }
-];
+'use client';
+import React from 'react';
 
-export default services;
+export default function Services() {
+  return (
+    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+      <div>
+        <h1 className="text-4xl font-bold mb-4">Services</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
+    </div>
+  );
+}

@@ -1,22 +1,13 @@
 'use client';
+import React from 'react';
 
-interface ServiceCardProps {
-  title: string;
-  description: string;
-  icon?: React.ReactNode;
-  className?: string;
-}
-
-export default function ServiceCard({ title, description, icon, className = '' }: ServiceCardProps) {
+export default function ServiceCard() {
   return (
-    <div className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${className}`}>
-      {icon && (
-        <div className="mb-4">
-          {icon}
-        </div>
-      )}
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
+      <div>
+        <h1 className="text-4xl font-bold mb-4">ServiceCard</h1>
+        <p className="text-gray-300">This page is under construction.</p>
+      </div>
     </div>
   );
 }
