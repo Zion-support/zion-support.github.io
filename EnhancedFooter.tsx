@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
 'use client';
 const EnhancedFooter: React.FC = () => {
   return (
@@ -9,8 +7,8 @@ const EnhancedFooter: React.FC = () => {
       <Helmet>
         <title>Enhanced Footer - Zion Tech Group</title>
         <meta name="description" content="Professional enhanced footer services by Zion Tech Group." />
-      </Helmet>}
-      {/* Hero Section */}
+      </Helmet>
+      { /* Hero Section */ }
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -24,14 +22,8 @@ const EnhancedFooter: React.FC = () => {
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
 };
 export default EnhancedFooter;
 export default EnhancedFooter;
 '
-=======
-};
-
-export default EnhancedFooter;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1

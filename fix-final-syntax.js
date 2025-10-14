@@ -40,11 +40,9 @@ function fixFile(filePath) {
       }
       return match;
     });
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-  '
+    if (content !== fs.readFileSync(filePath, 'utf8')) { '
       fs.writeFileSync(filePath, content);
-      return true;
-}
+      return true; }
     }
     return false;
   } catch (error) {
@@ -63,10 +61,8 @@ function findFilesToFix(dir) {
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {'
         traverse(fullPath);
 }
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-  '
-        files.push(fullPath);
-}
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) { '
+        files.push(fullPath); }
       }
     }
   }

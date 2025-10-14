@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-const BlogPage: React.FC = () => {
-  return (
+const BlogPage: React.FC = () => { return (
   <>
       <Helmet></Helmet>
         <title>Blog - Zion Tech Group</title>
@@ -53,7 +52,6 @@ const BlogPage: React.FC = () => {
       </div>
 )
     </>)
-  );
-}
+  ); }
 }
 export default BlogPag;e;

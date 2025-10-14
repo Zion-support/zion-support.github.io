@@ -53,8 +53,7 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
-}
+  ); }
             EnhancedPerformanceMonitor</h1>
           <p className="text-xl text-gray-600 mb-8">
             Professional enhancedperformancemonitor solutions tailored to your business needs.</p>
@@ -79,9 +78,9 @@ export default function Page() {
               Get Started Today</button></div></div></div></div>
   )}
             </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+          </div>
+        </div>
+      </div>
+    </div>
   );}
 }'

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-const PrivacyPage: React.FC = () => {
-  return (
+const PrivacyPage: React.FC = () => { return (
   <>
       <Helmet></Helmet>
         <title>PrivacyPage - Zion Tech Group</title>
@@ -16,7 +15,6 @@ const PrivacyPage: React.FC = () => {
       </div>
 )
     </>)
-  );
-}
+  ); }
 }
 export default PrivacyPag;e;

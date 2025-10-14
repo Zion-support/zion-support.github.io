@@ -4,40 +4,38 @@ import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lu
 const DigitalTransformationPage: React.FC = () => {
   const services = [{
       icon: RefreshCw,
-      title: 'Process Automation',';
-      description: 'Streamline and automate business processes to improve efficiency and reduce manual errors.',';
+      title: "Process Automation",';
+      description: "Streamline and automate business processes to improve efficiency and reduce manual errors.",';
       features: ['Workflow Analysis', 'Process Mapping', 'Automation Implementation', 'Performance Monitoring']';
     },
     {
       icon: Users,
-      title: 'Change Management',';
-      description: 'Guide your team through digital transformation with effective change management strategies.',';
+      title: "Change Management",';
+      description: "Guide your team through digital transformation with effective change management strategies.",';
       features: ['Training Programs', 'Communication Plans', 'Resistance Management', 'Success Metrics']';
     },
     {
       icon: Target,
-      title: 'Digital Strategy',';
-      description: 'Develop comprehensive digital strategies aligned with your business objectives.',';
+      title: "Digital Strategy",';
+      description: "Develop comprehensive digital strategies aligned with your business objectives.",';
       features: ['Digital Assessment', 'Technology Roadmap', 'Implementation Planning', 'ROI Analysis']';
     },
     {
       icon: TrendingUp,
-      title: 'Data Analytics',';
-      description: 'Transform data into actionable insights to drive better business decisions.',';
+      title: "Data Analytics",';
+      description: "Transform data into actionable insights to drive better business decisions.",';
       features: ['Data Collection', 'Analytics Platforms', 'Dashboard Development', 'Insight Generation']';
     },
     {
       icon: Lightbulb,
-      title: 'Innovation Consulting',';
-      description: 'Identify and implement innovative technologies to stay competitive in the digital age.',';
+      title: "Innovation Consulting",';
+      description: "Identify and implement innovative technologies to stay competitive in the digital age.",';
       features: ['Technology Research', 'Innovation Workshops', 'Pilot Programs', 'Scalability Planning']';
     },
-    {
-      icon: CheckCircle,
-      title: 'Digital Maturity',';
+    { icon: CheckCircle,
+      title: "Digital Maturity",';
       description: 'Assess and improve your organization\'s digital maturity across all business functions.',';
-      features: ['Maturity Assessment', 'Gap Analysis', 'Improvement Plans', 'Progress Tracking']';
-    }
+      features: ['Maturity Assessment', 'Gap Analysis', 'Improvement Plans', 'Progress Tracking']'; }
   ];
 const DigitalTransformationPage: React.FC = () => {
   return (
@@ -58,7 +56,7 @@ const DigitalTransformationPage: React.FC = () => {
             modern technologies, and innovative solutions.;
           </p>
         </div>
-        {/* Services Grid */}
+        { /* Services Grid */ }
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, _index) => {
             const Icon = service.icon;
@@ -75,7 +73,7 @@ const DigitalTransformationPage: React.FC = () => {
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
                       <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                      {feature}
+                      { feature }
                     </li>
                   ))}
                 </ul>
@@ -83,7 +81,7 @@ const DigitalTransformationPage: React.FC = () => {
             );
           })}
         </div>
-        {/* CTA Section */}
+        { /* CTA Section */ }
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>

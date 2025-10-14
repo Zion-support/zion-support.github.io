@@ -1,7 +1,6 @@
 import React from 'react'
 import { useEffect, Node } from 'react
-interface PerformanceOptimizerProps {
-  children: Node}
+interface PerformanceOptimizerProps { children: Node }
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Performance optimization code'
@@ -12,8 +11,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           img.setAttribute('loading', 'lazy');
 import React from 'react';'
 { useEffect, Node } from 'react';
-interface PerformanceOptimizerProps {
-  children: Node;}
+interface PerformanceOptimizerProps { children: Node; }
 }
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
@@ -26,28 +24,25 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         }
       });
     }
-    const optimizeFonts = () => {
-      // Preload critical fonts;'
+    const optimizeFonts = () => { // Preload critical fonts;'
       const link = document.createElement('link');'
       link.rel = 'preload';'
       link.href = '/fonts/inter.woff2';'
       link.as = 'font';'
       link.type = 'font/woff2';'
       link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    }
-        if (!img.hasAttribute('loading')) {'
-          img.setAttribute('loading', 'lazy')}
+      document.head.appendChild(link); }
+        if (!img.hasAttribute('loading')) { '
+          img.setAttribute('loading', 'lazy') }
       })}
-    const optimizeFonts = () => {
-      // Preload critical fonts
+    const optimizeFonts = () => { // Preload critical fonts
       const link = document.createElement('link')
       link.rel = 'preload'
       link.href = '/fonts/inter.woff2'
       link.as = 'font'
       link.type = 'font/woff2'
       link.crossOrigin = 'anonymous'
-      document.head.appendChild(link)}
+      document.head.appendChild(link) }
     const optimizeResources = () => {
       // Preload critical resources
       const criticalResources = ['/css/critical.css','
@@ -75,9 +70,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     optimizeFonts();
     optimizeResources();
     // Cleanup function;
-    return () => {
-      // Cleanup if needed;
-    }
+    return () => { // Cleanup if needed; }
   }, []);
   return <>{children}</>
 }

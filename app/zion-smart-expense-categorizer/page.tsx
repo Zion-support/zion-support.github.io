@@ -4,13 +4,11 @@ import { Helmet } from 'react-helmet-async'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 'use client';
-<<<<<<< HEAD
-export default function ZionSmartExpenseCategorizer() {
-  return (
+export default function ZionSmartExpenseCategorizer() { return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Zion Smart Expense Categorizer | Zion Tech Group</title>
-        <meta name="description" content="Professional Smart Expense Categorizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="description" content="Professional services by Zion Tech Group." />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -93,45 +91,16 @@ export default function ZionSmartExpenseCategorizer() {
         </div>
       </div>
     </div>
-  );
-}
+  ); }
               Our AI experts are ready to help you implement cutting-edge solutions.</p>
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
               Get Started Today</button></div></div></div></div>
   )}
             </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );}
-}
-'
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const ZionSmartExpenseCategorizerPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>Zion Smart Expense Categorizer - Zion Tech Group</title>
-        <meta name="description" content="Professional AI expense categorization services by Zion Tech Group." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Zion Smart Expense Categorizer
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            AI-powered expense categorization and financial management.
-          </p>
+          </div>
         </div>
       </div>
     </div>
-  );
-};
-
-export default ZionSmartExpenseCategorizerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
+  );}
+}
+'

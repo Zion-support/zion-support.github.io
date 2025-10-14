@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-const ContactPage: React.FC = () => {
-  return (
+const ContactPage: React.FC = () => { return (
   <>
       <Helmet></Helmet>
         <title>Contact Us - Zion Tech Group</title>
@@ -63,9 +62,8 @@ const ContactPage: React.FC = () => {
                     </label>
                     <textarea;
                       id="$1"
-                      name="$1"
-}
-                      rows={4}
+                      name="$1" }
+                      rows={ 4 }
                       className="service-card"
                       required;
                     ></textarea>

@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
-console.log('🔧 Fixing JSX syntax and remaining parsing errors...');
+console.log('🔧 Fixing unterminated string literals and syntax errors...');
 // Function to recursively find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   let files = [];
@@ -18,26 +18,22 @@ function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   return files;
 }
 
-// Function to fix JSX syntax errors
-function fixJSXSyntax(content) {
+// Function to fix unterminated string literals
+function fixStringLiterals(content) {
   let fixed = content;
-  // Fix malformed JSX elements with extra slashes
-  fixed = fixed.replace(/<(\w+)\s*\/\s*\/\s*\/>/g, '<$1 />');
-  fixed = fixed.replace(/<(\w+)\s*\/\s*\/>/g, '<$1 />');
-  // Fix duplicate imports
-  fixed = fixed.replace(/import\s+React\s+from\s+['"]react['"];\s*import\s+React\s+from\s+['"]react['"];/g, 
-    "import React from 'react';");
+  // Fix unterminated single quotes at end of lines
+  fixed = fixed.replace(/';\s*$/gm, "';");
+  fixed = fixed.replace(/';\s*$/gm, "';");
+  // Fix unterminated double quotes at end of lines
+  fixed = fixed.replace(/";\s*$/gm, '";');
+  fixed = fixed.replace(/";\s*$/gm, '";');
   // Fix malformed import statements
   fixed = fixed.replace(/import\s+React\s+from\s+['"]react['"];\s*['"]use client['"];?/g, 
     "import React from 'react';\n'use client';");
-  // Fix unterminated string literals
-  fixed = fixed.replace(/';\s*$/gm, "';");
-  fixed = fixed.replace(/";\s*$/gm, '";');
-  // Fix malformed function declarations
-  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\.js\(\)/g, 'export default function $1()');
-  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\.tsx\(\)/g, 'export default function $1()');
-  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\.ts\(\)/g, 'export default function $1()');
-  // Fix malformed JSX attributes
+  // Fix duplicate React imports
+  fixed = fixed.replace(/import\s+React\s+from\s+['"]react['"];\s*import\s+React\s+from\s+['"]react['"];/g, 
+    "import React from 'react';");
+  // Fix malformed JSX attributes with unterminated strings
   fixed = fixed.replace(/(\w+):\s*['"]([^'"]*?)['"]\s*,/g, '$1: "$2",');
   // Fix unterminated object properties
   fixed = fixed.replace(/(\w+):\s*['"]([^'"]*?)['"]\s*}/g, '$1: "$2" }');
@@ -68,15 +64,6 @@ function fixJSXSyntax(content) {
     }
     return match;
   });
-  // Fix try-catch blocks
-  fixed = fixed.replace(/try\s*{\s*([^}]*?)\s*}\s*catch\s*\(\s*error\s*\)\s*{\s*([^}]*?)\s*}/g, 
-    'try {
-    \n    $1\n
-  } catch (error) {
-    \n    $2\n
-  }');
-  // Fix malformed API functions
-  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\.js\(\)/g, 'export default function $1()');
   return fixed;
 }
 
@@ -116,10 +103,6 @@ function fixSpecificPatterns(filePath, content) {
     fixed = fixed.replace(/<\s*\/\s*div\s*>\s*;\s*$/gm, '</div>');
   }
   
-  // Fix API files
-  if (filePath.includes('/api/')) { // Fix malformed API functions
-    fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\.js\(\)/g, 'export default function $1()');
-    fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\.ts\(\)/g, 'export default function $1()'); }
   return fixed;
 }
 
@@ -134,7 +117,7 @@ function processFiles() {
       const content = fs.readFileSync(filePath, 'utf8');
       let fixed = content;
       // Apply fixes
-      fixed = fixJSXSyntax(fixed);
+      fixed = fixStringLiterals(fixed);
       fixed = fixSpecificPatterns(filePath, fixed);
       // Only write if content changed
       if (fixed !== content) {
@@ -156,4 +139,4 @@ function processFiles() {
 
 // Run the fix
 processFiles();
-console.log('\n🎉 JSX syntax fixing completed!');
+console.log('\n🎉 String literal fixing completed!');

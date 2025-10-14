@@ -1,5 +1,4 @@
-export default function Component; AiSalesAutomation() {
-  return (
+export default function Component; AiSalesAutomation() { return (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       <Helmet></Helmet>
         <title>AiSalesAutomation - Zion Tech Group</title>
@@ -13,11 +12,10 @@ export default function Component; AiSalesAutomation() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             Discover our comprehensive aisalesautomation solutions designed to transform your business;
           </p>;
-      </div>;
+      </div>
 )
 )
     </div>;)
-  );
-}
+  ); }
 }
 }

@@ -2,8 +2,7 @@ import React from 'react'
 'use client'
 import React from 'react';'
 'use client';
-export default function ZionAiLeadScoringPage() {
-  return (
+export default function ZionAiLeadScoringPage() { return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8">Zion Ai Lead Scoring</h1>
@@ -12,13 +11,12 @@ export default function ZionAiLeadScoringPage() {
         </p>
       </div>
     </div>
-  );
-}
+  ); }
           This page is under development.</p></div></div>
   )}
         </p>;
-      </div>;
-    </div>;
+      </div>
+    </div>
   );}
 }
 '

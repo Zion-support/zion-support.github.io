@@ -41,9 +41,7 @@ function findFilesWithMergeMarkers(dir) {
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             files.push(fullPath);
           }
-        } catch (error) {
-          // Skip files that can't be read
-        }
+        } catch (error) { // Skip files that can't be read }
       }
     }
   }

@@ -2,8 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';
-const PrivacyPage: React.FC = () => {
-  return (
+const PrivacyPage: React.FC = () => { return (
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
@@ -11,8 +10,8 @@ const PrivacyPage: React.FC = () => {
         <meta name="keywords" content="privacy policy, data protection, personal information, GDPR, privacy rights" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;}
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">; }
+        { /* Hero Section */ }
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -26,8 +25,8 @@ const PrivacyPage: React.FC = () => {
             </p>
           </div>
         </section>
-        {/* Content Section */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}
+        { /* Content Section */ }
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{ /* Hero Section */ }
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -35,7 +34,7 @@ const PrivacyPage: React.FC = () => {
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Policy</span></h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Your privacy is important to us. Learn how we collect, use, and protect your information.</p></div></section>{/* Content Section */}
+              Your privacy is important to us. Learn how we collect, use, and protect your information.</p></div></section>{ /* Content Section */ }
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
@@ -74,7 +73,7 @@ const PrivacyPage: React.FC = () => {
                   </a>.;
                 </p>
                 <p className="text-gray-400 text-sm mt-8">
-                  Last updated: {new Date().toLocaleDateString()}
+                  Last updated: { new Date().toLocaleDateString() }
                 </p>
               </div>
             </div>
@@ -108,7 +107,7 @@ export default PrivacyPage;
                   <a href="mailto:privacy@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
                     privacy@ziontechgroup.com</a>.</p>
                 <p className="text-gray-400 text-sm mt-8">
-                  Last updated: {new Date().toLocaleDateString()}
+                  Last updated: { new Date().toLocaleDateString() }
                 </p></div></div></div></section></div></>
   )}
 export default PrivacyPage

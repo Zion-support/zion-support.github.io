@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 import React, { useState, useEffect } from 'react';
-interface PerformanceMetrics {
-  loadTime: number;
+interface PerformanceMetrics { loadTime: number;
   renderTime: number;
   memoryUsage: number;
-  networkLatency: number;
-}
+  networkLatency: number; }
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -78,9 +76,7 @@ const PerformanceMonitor: React.FC = () => {
     // Wait for page load
     if (document.readyState === 'complete') {
       getPerformanceMetrics();
-    } else {
-      window.addEventListener('load', getPerformanceMetrics);
-    }
+    } else { window.addEventListener('load', getPerformanceMetrics); }
     return () => {
       window.removeEventListener('load', getPerformanceMetrics);
     };
@@ -92,13 +88,11 @@ const PerformanceMonitor: React.FC = () => {
     return 'text-red-500';
   };
   // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
+  if (process.env.NODE_ENV !== 'development') { return null; }
   return (
     <div className="fixed bottom-4 right-4 z-50">
       <button
-        onClick={() => setIsVisible(!isVisible)}
+        onClick={ () => setIsVisible(!isVisible) }
         className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
       >
         Performance
@@ -149,18 +143,14 @@ const PerformanceMonitor: React.FC = () => {
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [isVisible]);
   // Don't render in production
-  if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
-  if (!isVisible) {
-    return null;
-  }
+  if (process.env.NODE_ENV === 'production') { return null; }
+  if (!isVisible) { return null; }
   return (
     <div className="fixed bottom-4 right-4 bg-slate-800/95 backdrop-blur-sm border border-slate-700 rounded-lg p-4 shadow-lg z-50 max-w-xs">
       <div className="flex items-center justify-between mb-3">
         <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
         <button
-          onClick={() => setIsVisible(false)}
+          onClick={ () => setIsVisible(false) }
           className="text-gray-400 hover:text-white text-xs"
         >
           ✕
@@ -198,9 +188,7 @@ const PerformanceMonitor: React.FC = () => {
     </div>
   );
 import React from 'react';
-const PerformanceMonitor: React.FC = () => {
-  return null;
-}
+const PerformanceMonitor: React.FC = () => { return null; }
 export default PerformanceMonitor;
       )}
     </div>

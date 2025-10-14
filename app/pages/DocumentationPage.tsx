@@ -15,54 +15,54 @@ export default function DocumentationPage() {
   const sections = [
     {
       icon: CodeBracketIcon,
-      title: 'API Documentation',
-      description: 'Comprehensive API reference for all our services and integrations.',
+      title: "API Documentation",
+      description: "Comprehensive API reference for all our services and integrations.",
       links: [
-        { name: 'Authentication', href: '/docs/api/authentication' },
-        { name: 'AI Services API', href: '/docs/api/ai-services' },
-        { name: 'Cloud Management API', href: '/docs/api/cloud-management' },
-        { name: 'Webhooks', href: '/docs/api/webhooks' }
+        { name: "Authentication", href: "/docs/api/authentication" },
+        { name: "AI Services API", href: "/docs/api/ai-services" },
+        { name: "Cloud Management API", href: "/docs/api/cloud-management" },
+        { name: "Webhooks", href: "/docs/api/webhooks" }
       ]
     },
     {
       icon: CogIcon,
-      title: 'Integration Guides',
-      description: 'Step-by-step guides for integrating our solutions with your systems.',
+      title: "Integration Guides",
+      description: "Step-by-step guides for integrating our solutions with your systems.",
       links: [
-        { name: 'Getting Started', href: '/docs/integration/getting-started' },
-        { name: 'SDK Installation', href: '/docs/integration/sdk' },
-        { name: 'Configuration', href: '/docs/integration/configuration' },
-        { name: 'Best Practices', href: '/docs/integration/best-practices' }
+        { name: "Getting Started", href: "/docs/integration/getting-started" },
+        { name: "SDK Installation", href: "/docs/integration/sdk" },
+        { name: "Configuration", href: "/docs/integration/configuration" },
+        { name: "Best Practices", href: "/docs/integration/best-practices" }
       ]
     },
     {
       icon: DocumentTextIcon,
-      title: 'User Guides',
-      description: 'Detailed user guides for all our products and services.',
+      title: "User Guides",
+      description: "Detailed user guides for all our products and services.",
       links: [
-        { name: 'AI Solutions Guide', href: '/docs/guides/ai-solutions' },
-        { name: 'Cloud Infrastructure', href: '/docs/guides/cloud-infrastructure' },
-        { name: 'Cybersecurity Setup', href: '/docs/guides/cybersecurity' },
-        { name: 'Micro SaaS Development', href: '/docs/guides/micro-saas' }
+        { name: "AI Solutions Guide", href: "/docs/guides/ai-solutions" },
+        { name: "Cloud Infrastructure", href: "/docs/guides/cloud-infrastructure" },
+        { name: "Cybersecurity Setup", href: "/docs/guides/cybersecurity" },
+        { name: "Micro SaaS Development", href: "/docs/guides/micro-saas" }
       ]
     },
     {
       icon: QuestionMarkCircleIcon,
-      title: 'Troubleshooting',
-      description: 'Common issues and solutions to help you resolve problems quickly.',
+      title: "Troubleshooting",
+      description: "Common issues and solutions to help you resolve problems quickly.",
       links: [
-        { name: 'FAQ', href: '/docs/troubleshooting/faq' },
-        { name: 'Error Codes', href: '/docs/troubleshooting/error-codes' },
-        { name: 'Performance Issues', href: '/docs/troubleshooting/performance' },
-        { name: 'Contact Support', href: '/support' }
+        { name: "FAQ", href: "/docs/troubleshooting/faq" },
+        { name: "Error Codes", href: "/docs/troubleshooting/error-codes" },
+        { name: "Performance Issues", href: "/docs/troubleshooting/performance" },
+        { name: "Contact Support", href: "/support" }
       ]
     }
   ]
   const quickStart = [
-    { step: 1, title: 'Sign Up', description: 'Create your account and get API credentials' },
-    { step: 2, title: 'Install SDK', description: 'Install our SDK for your preferred language' },
-    { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },
-    { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }
+    { step: 1, title: "Sign Up", description: "Create your account and get API credentials" },
+    { step: 2, title: "Install SDK", description: "Install our SDK for your preferred language" },
+    { step: 3, title: "Configure", description: "Set up your environment and configuration" },
+    { step: 4, title: "Make API Call", description: "Start making API calls to our services" }
   ]
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -138,7 +138,7 @@ const DocumentationPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Documentation Sections */}
+      { /* Documentation Sections */ }
       <section className="py-20 bg-gradient-to-r from-slate-900 to-green-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -165,11 +165,11 @@ const DocumentationPage: React.FC = () => {
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
                       <Link 
-                        to={link.href} 
+                        to={ link.href }
                         className="text-green-400 hover:text-green-300 flex items-center group"
                       >
                         <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-                        {link.name}
+                        { link.name }
                       </Link>
                     </li>
                   ))}
@@ -179,7 +179,7 @@ const DocumentationPage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* Code Examples Section */}
+      { /* Code Examples Section */ }
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -194,12 +194,11 @@ const DocumentationPage: React.FC = () => {
               <pre className="text-left text-green-400 overflow-x-auto">
                 <code>{`// Initialize the client
 const client = new ZionTechClient({
-  apiKey: 'your-api-key',
-  environment: 'production'
-})
+  apiKey: "your-api-key",
+  environment: "production" })
 // Make an API call
 const response = await client.ai.generateText({
-  prompt: 'Hello, world!',
+  prompt: "Hello, world!",
   maxTokens: 100
 })
 console.log(response.data);`}</code>
@@ -231,7 +230,7 @@ console.log(response.data);`}</code>
           </div>
         </div>
       </section>
-      {/* Contact Section */}
+      { /* Contact Section */ }
       <section className="py-20 bg-gradient-to-r from-slate-900 to-green-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

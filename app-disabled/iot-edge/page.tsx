@@ -1,9 +1,7 @@
 import {Helmet}}from 'react-helmet-async';
 import {Circle, Right, }}from 'lucide-react';
-const PagePage: React.FC = () => {
-  ,
-}
-      description: 'Worldwide deployment and support for international businesses',}}
+const PagePage: React.FC = () => { , }
+      description: "Worldwide deployment and support for international businesses",}}
   ]
   ];];];
 const benefits = [

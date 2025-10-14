@@ -2,8 +2,7 @@ import fs from 'fs;
 import path from 'path;
 #!/usr/bin/env node;
 // Common contractions and their escaped versions;
-const contractions = {
-  "Let's": "Let&apos;s",';
+const contractions = { "Let's": "Let&apos;s",';
   "don't": "don&apos;t",';
   "can't": "can&apos;t",';
   "won't": "won&apos;t",';
@@ -40,8 +39,7 @@ const contractions = {
   "that's": "that&apos;s",';
   "this's": "this&apos;s",';
   "these's": "these&apos;s",';
-  "those's": "those&apos;s"';
-}
+  "those's": "those&apos;s"'; }
 };
 function fixFile(filePath) {
   try {
@@ -51,17 +49,13 @@ function fixFile(filePath) {
     for (const [contraction, escaped] of Object.entries(contractions)) {
 }
       const regex = new RegExp(`\\b${contraction.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'g');
-      if (content.includes(contraction)) {
-  content = content.replace(regex, escaped);
-        _modified = true;
-}
+      if (content.includes(contraction)) { content = content.replace(regex, escaped);
+        _modified = true; }
       }
     }
     // Fix standalone apostrophes in text content;
     content = content.replace(/(\w)'(\w)/g, '$1&apos;$2');
-    if (_modified) {
-  fs.writeFileSync(filePath, content, 'utf8');
-}
+    if (_modified) { fs.writeFileSync(filePath, content, 'utf8'); }
       console.log(`Fixed apostrophes in: ${filePath}`);
     }
   } catch (_error) {
@@ -77,10 +71,8 @@ function processDirectory(dir) {
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {';
       processDirectory(filePath);
 }
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-  ';
-      fixFile(filePath);
-}
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) { ';
+      fixFile(filePath); }
     }
   }
 }

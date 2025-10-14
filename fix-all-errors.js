@@ -1,203 +1,141 @@
 #!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-console.log('🔧 Starting comprehensive error fixing process...');
-// Function to find all files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
-  function searchDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
-        // Skip node_modules, .git, dist, etc.
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-          searchDirectory(fullPath);
-}
-}
-        }
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-  try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('') || content.includes('      // For most cases, prefer the HEAD content (current branch)
-      return headContent.trim();
-}
-}
-    });
-    // Fix unterminated string literals
-    content = content.replace(/import React from 'react';']*)/g, "import React from 'react';");
-    content = content.replace(/import { Helmet } from 'react-helmet-async';']*)/g, "import { Helmet } from 'react-helmet-async';");
-    content = content.replace(/'use client';/g, "'use client';");
-    // Fix malformed JSX
-    content = content.replace(/<>/g, '<>');
-    content = content.replace(/<\/>;/g, '</>');
-    content = content.replace(/<Helmet></Helmet>/g, '<Helmet></Helmet>');
-    content = content.replace(/<\/Helmet>;/g, '</Helmet>');
-    content = content.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
-    content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
-    // Fix common syntax errors
-    content = content.replace(
-  /export default functio;n; ([
-  ^   {
-  ]
-)
-)
-  ]+)\s*{/g, 'export default functio;n; $1    {');
-    content = content.replace(/return \(\s*<>/g, 'return (\n    <>');
-    content = content.replace(/;\s*<\/>;/g, '\n    </>');
-    content = content.replace(/;\s*\);/g, '\n  );');
-    // Remove duplicate React imports
-    const lines = content.split('\n');
-    const reactImportLines = lines.filter(line => line.trim().startsWith('import React'));
-    if (reactImportLines.length > 1) {
-      const firstReactImport = reactImportLines[0];
-      content = content.replace(/import React[^;]+;/g, '');
-      content = firstReactImport + '\n' + content;
-}
-}
-    }
-    // Fix test file issues
-    if (filePath.includes('.test.') || filePath.includes('__tests__')) {
-  content = content.replace(/describe\(/g, '// describe(');
-      content = content.replace(/test\(/g, '// test(');
-      content = content.replace(/it\(/g, '// it(');
-      content = content.replace(/expect\(/g, '// expect(');
-      content = content.replace(/beforeEach\(/g, '// beforeEach(');
-}
-}
-    }
-    if (content !== originalContent) {
-  fs.writeFileSync(filePath, content, 'utf8');
-}
-}
-      console.log(`✅ Fixed merge conflicts in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-}
-}
-    console.error(`❌ Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-// Function to fix unterminated string literals
-function fixUnterminatedStrings(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    // Fix common unterminated string patterns
-    const lines = content.split('\n');
-    const fixedLines = [];
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
-      // Fix unterminated string literals
-      if (line.includes("import React from 'react';'react;/, "import React from 'react';");
-}
-}
-      }
-      if (line.includes("import { Helmet } from 'react-helmet-async';'react-helmet-async;/, "import { Helmet } from 'react-helmet-async';");
-      }
-      if (line.includes("'use client';")) {
-  line = line.replace(/'use client';/, "'use client';");
-}
-}
-      }
-      // Fix malformed JSX syntax
-      line = line.replace(/<>/g, '<>');
-      line = line.replace(/<\/>;/g, '</>');
-      line = line.replace(/<Helmet></Helmet>/g, '<Helmet></Helmet>');
-      line = line.replace(/<\/Helmet>;/g, '</Helmet>');
-      line = line.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
-      line = line.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
-      fixedLines.push(line);
-    }
-    const fixedContent = fixedLines.join('\n');
-    if (fixedContent !== originalContent) {
-  fs.writeFileSync(filePath, fixedContent, 'utf8');
-}
-}
-      console.log(`✅ Fixed unterminated strings in: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-}
-}
-    console.error(`❌ Error fixing strings in ${filePath}:`, error.message);
-    return false;
-  }
-}
-// Main execution
-async function main() {
-  console.log('🔍 Searching for files with merge conflicts...');
-  const conflictFiles = findFilesWithConflicts('.');
-}
-}
-  console.log(`Found ${conflictFiles.length} files with merge conflicts`);
-  let fixedCount = 0;
-  // Fix merge conflicts
-  for (const file of conflictFiles) {
-  if (fixMergeConflicts(file)) {
-      fixedCount++;
-}
-}
-    }
-  }
-  // Also check for unterminated strings in all TypeScript/JavaScript files
-  console.log('🔍 Checking for unterminated strings...');
-  const allTsFiles = [];
-  function findTsFiles(dir) {
+console.log('🔧 Starting comprehensive error fix...');
+// Function to recursively find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
   const items = fs.readdirSync(dir);
-    for (const item of items) {
-      const fullPath = path.join(dir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory() && !['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(item)) {
-        findTsFiles(fullPath);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {
+      files = files.concat(findFiles(fullPath, extensions));
+    } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) { files.push(fullPath); }
+  }
+  
+  return files;
 }
+
+// Function to fix merge conflicts
+function fixMergeConflicts(content) {
+  // Remove merge conflict markers and keep the HEAD version
+  const lines = content.split('\n');
+  const fixedLines = [];
+  let inConflict = false;
+  let keepHead = true;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (line.startsWith('<<<<<<< HEAD')) {
+      inConflict = true;
+      keepHead = true;
+      continue;
+    } else if (line.startsWith('=======')) {
+      keepHead = false;
+      continue;
+    } else if (line.startsWith('>>>>>>>')) { inConflict = false;
+      continue; }
+    if (!inConflict || keepHead) { fixedLines.push(line); }
+  }
+  
+  return fixedLines.join('\n');
 }
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
-  allTsFiles.push(fullPath);
+
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  let fixed = content;
+  // Fix unterminated strings (common pattern: single quote at end of line)
+  fixed = fixed.replace(/';\s*$/gm, "';");
+  fixed = fixed.replace(/";\s*$/gm, '";');
+  // Fix malformed imports
+  fixed = fixed.replace(/import\s+React\s+from\s+['"]react['"];\s*['"]use client['"];?/g, 
+    "import React from 'react';\n'use client';");
+  // Fix duplicate imports
+  fixed = fixed.replace(/import\s+React\s+from\s+['"]react['"];\s*import\s+React\s+from\s+['"]react['"];/g, 
+    "import React from 'react';");
+  // Fix malformed JSX attributes
+  fixed = fixed.replace(/(\w+):\s*['"]([^'"]*?)['"]\s*,/g, '$1: "$2",');
+  // Fix unterminated object properties
+  fixed = fixed.replace(/(\w+):\s*['"]([^'"]*?)['"]\s*}/g, '$1: "$2" }');
+  // Fix semicolon issues in JSX
+  fixed = fixed.replace(/;\s*$/gm, ';');
+  // Fix malformed function declarations
+  fixed = fixed.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1: React.FC = () => {');
+  // Fix broken JSX closing tags
+  fixed = fixed.replace(/<\s*\/\s*div\s*>\s*;\s*$/gm, '</div>');
+  // Fix malformed export statements
+  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*\(/g, 
+    'export default function $1() {\n  return (');
+  return fixed;
 }
+
+// Function to fix specific file patterns
+function fixSpecificFiles(filePath, content) {
+  let fixed = content;
+  // Fix App.tsx specific issues
+  if (filePath.includes('App.tsx')) {
+    // Remove duplicate imports and fix structure
+    fixed = fixed.replace(/import\s+React[^;]*;[\s\S]*?import\s+React[^;]*;/g, 
+      'import React from "react";');
+    // Fix route structure
+    fixed = fixed.replace(/<Route\s+path="[^"]*"\s+element={<[^>]*>}\s*\/>/g, 
+      (match) => {
+        const pathMatch = match.match(/path="([^"]*)"/);
+        const elementMatch = match.match(/element={<([^>]*)>}/);
+        if (pathMatch && elementMatch) {
+          return `<Route path="${pathMatch[1]}" element={<${elementMatch[1]} />} />`;
+        }
+        return match;
+      });
+  }
+  
+  // Fix page.tsx files
+  if (filePath.includes('/page.tsx')) {
+    // Fix common page structure issues
+    fixed = fixed.replace(/export\s+default\s+function\s+Page\s*\(\s*\)\s*{\s*return\s*\(/g, 
+      'export default function Page() {\n  return (');
+    // Fix Helmet usage
+    fixed = fixed.replace(/<Helmet>\s*<title>([^<]*)<\/title>\s*<meta[^>]*\/>\s*<\/Helmet>/g, 
+      '<Helmet>\n        <title>$1</title>\n        <meta name="description" content="Professional services by Zion Tech Group." />\n      </Helmet>');
+  }
+  
+  return fixed;
 }
+
+// Main function to process all files
+function processFiles() {
+  const files = findFiles('/workspace');
+  let processedCount = 0;
+  let errorCount = 0;
+  console.log(`Found ${files.length} files to process...`);
+  for (const filePath of files) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      let fixed = content;
+      // Apply fixes
+      fixed = fixMergeConflicts(fixed);
+      fixed = fixSyntaxErrors(fixed);
+      fixed = fixSpecificFiles(filePath, fixed);
+      // Only write if content changed
+      if (fixed !== content) {
+        fs.writeFileSync(filePath, fixed, 'utf8');
+        processedCount++;
+        console.log(`✅ Fixed: ${filePath}`);
       }
+    } catch (error) {
+      console.error(`❌ Error processing ${filePath}:`, error.message);
+      errorCount++;
     }
   }
-  findTsFiles('.');
-  for (const file of allTsFiles) {
-  if (fixUnterminatedStrings(file)) {
-      fixedCount++;
+  
+  console.log(`\n📊 Summary:`);
+  console.log(`   Files processed: ${processedCount}`);
+  console.log(`   Errors encountered: ${errorCount}`);
+  console.log(`   Total files checked: ${files.length}`);
 }
-}
-    }
-  }
-  console.log(`✅ Fixed ${fixedCount} files`);
-  // Run linting to check remaining issues
-  console.log('🔍 Running linting to check remaining issues...');
-  try {
-}
-}
-    execSync('pnpm run lint', { stdio: 'inherit' });
-    console.log('✅ Linting passed!');
-  } catch (error) {
-  console.log('⚠️  Some linting issues remain, but major conflicts should be resolved');
-}
-}
-  }
-  // Run type checking
-  console.log('🔍 Running type checking...');
-  try {
-}
-}
-    execSync('pnpm run type-check', { stdio: 'inherit' });
-    console.log('✅ Type checking passed!');
-  } catch (error) {
-  console.log('⚠️  Some type issues remain, but major conflicts should be resolved');
-}
-}
-  }
-  console.log('🎉 Error fixing process completed!');
-}
-main().catch(console.error);
+
+// Run the fix
+processFiles();
+console.log('\n🎉 Error fixing completed!');

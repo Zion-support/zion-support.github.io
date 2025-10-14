@@ -1,20 +1,13 @@
 import { useEffect, useCallback, useRef } from 'react';
-
-interface PerformanceMetrics {
-  lcp: number;
+interface PerformanceMetrics { lcp: number;
   fid: number;
   cls: number;
   fcp: number;
-  ttfb: number;
-}
-
-interface UsePerformanceOptimizationOptions {
-  enablePreloading?: boolean;
+  ttfb: number; }
+interface UsePerformanceOptimizationOptions { enablePreloading?: boolean;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
-  enableCodeSplitting?: boolean;
-}
-
+  enableCodeSplitting?: boolean; }
 export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
   const {
     enablePreloading = true,
@@ -22,20 +15,16 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     enableLazyLoading = true,
     enableCodeSplitting = true,
   } = options;
-
   const metricsRef = useRef<PerformanceMetrics | null>(null);
   const observerRef = useRef<PerformanceObserver | null>(null);
-
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
     if (!enablePreloading) return;
-
     const criticalResources = [
       '/fonts/inter-var.woff2',
       '/images/hero-bg.jpg',
       '/images/logo.svg',
     ];
-
     criticalResources.forEach((resource) => {
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -47,11 +36,9 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       document.head.appendChild(link);
     });
   }, [enablePreloading]);
-
   // Optimize images
   const optimizeImages = useCallback(() => {
     if (!enableImageOptimization) return;
-
     const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -63,14 +50,11 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
         }
       });
     });
-
     images.forEach((img) => imageObserver.observe(img));
   }, [enableImageOptimization]);
-
   // Lazy load components
   const setupLazyLoading = useCallback(() => {
     if (!enableLazyLoading) return;
-
     const lazyElements = document.querySelectorAll('[data-lazy]');
     const lazyObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -81,14 +65,11 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
         }
       });
     });
-
     lazyElements.forEach((element) => lazyObserver.observe(element));
   }, [enableLazyLoading]);
-
   // Measure performance metrics
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
-
     try {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
@@ -101,18 +82,13 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
           }
         });
       });
-
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       observerRef.current = observer;
-    } catch (error) {
-      // Silently handle performance measurement errors
-    }
+    } catch (error) { // Silently handle performance measurement errors }
   }, []);
-
   // Optimize bundle loading
   const optimizeBundleLoading = useCallback(() => {
     if (!enableCodeSplitting) return;
-
     // Preload next likely routes
     const preloadRoute = (route: string) => {
       const link = document.createElement('link');
@@ -120,19 +96,16 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       link.href = route;
       document.head.appendChild(link);
     };
-
     // Preload common routes based on user behavior
     const commonRoutes = ['/about', '/services', '/contact'];
     commonRoutes.forEach(preloadRoute);
   }, [enableCodeSplitting]);
-
   // Cleanup function
   const cleanup = useCallback(() => {
     if (observerRef.current) {
       observerRef.current.disconnect();
     }
   }, []);
-
   useEffect(() => {
     // Initialize performance optimizations
     preloadCriticalResources();
@@ -140,7 +113,6 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     setupLazyLoading();
     measurePerformance();
     optimizeBundleLoading();
-
     // Cleanup on unmount
     return cleanup;
   }, [
@@ -151,7 +123,6 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     optimizeBundleLoading,
     cleanup,
   ]);
-
   return {
     metrics: metricsRef.current,
     preloadCriticalResources,

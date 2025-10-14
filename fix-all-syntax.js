@@ -35,14 +35,10 @@ function fixFile(filePath) {
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     content = content.replace(/^\s*\n/gm, '');
     // Fix specific patterns for React components
-    if (content.includes('export default function Component;') && !content.includes('export default function Component; ')) {
-  content = content.replace(/export default function Component;/g, 'export default function Component; Component');
-}
+    if (content.includes('export default function Component;') && !content.includes('export default function Component; ')) { content = content.replace(/export default function Component;/g, 'export default function Component; Component'); }
     }
-    if (content !== originalContent) {
-  fs.writeFileSync(filePath, content);
-      return true;
-}
+    if (content !== originalContent) { fs.writeFileSync(filePath, content);
+      return true; }
     }
     return false;
   } catch (error) {
@@ -71,9 +67,7 @@ function findCorruptedFiles(dir) {
             files.push(fullPath);
 }
           }
-        } catch (error) {
-  // Skip files that can't be read
-}
+        } catch (error) { // Skip files that can't be read }
         }
       }
     }

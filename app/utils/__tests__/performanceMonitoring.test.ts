@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import { describe, it, expect, _beforeEach } from '@jest/globals;
 import { usePerformanceMonitor } from '../usePerformanceMonitor;
 /* global describe, test, expect, it, beforeEach */
-=======
-import { describe, it, expect } from '@jest/globals';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
 describe('Performance Monitoring', () => {
   ';
   it('should be implemented', () => {';
@@ -13,7 +8,6 @@ describe('Performance Monitoring', () => {
 }
   });
 });
-<<<<<<< HEAD
 describe('Performance Monitoring', () => {
   ';
   it('should be defined', () => {';
@@ -21,5 +15,3 @@ describe('Performance Monitoring', () => {
 }
   });
 });
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1

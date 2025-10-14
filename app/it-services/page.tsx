@@ -9,7 +9,7 @@ export default function Page() {
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <meta name="description" content="Professional services by Zion Tech Group." />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -53,8 +53,7 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
-}
+  ); }
             Page</h1>
           <p className="text-xl text-gray-600 mb-8">
             Professional page solutions tailored to your business needs.</p>
@@ -79,9 +78,9 @@ export default function Page() {
               Get Started Today</button></div></div></div></div>
   )}
             </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+          </div>
+        </div>
+      </div>
+    </div>
   );}
 }'

@@ -4,23 +4,12 @@ import { Helmet } from 'react-helmet-async'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 'use client';
-<<<<<<< HEAD
-export default function ZionAIEmailAnalyzer() {
-  return (
+export default function ZionAIEmailAnalyzer() { return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const ZionAIEmailAnalyzerPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-white">
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
       <Helmet>
         <title>Zion AI Email Analyzer | Zion Tech Group</title>
-        <meta name="description" content="Professional AI Email Analyzer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="description" content="Professional services by Zion Tech Group." />
       </Helmet>
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -102,35 +91,16 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-}
+  ); }
               Our AI email analyzer experts are ready to help you optimize your email workflow.</p>
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
               Get Started Today</button></div></div></div></div>
   )}
             </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  );}
-}
-'
-=======
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Zion AI Email Analyzer
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI-powered email analysis and optimization solutions.
-          </p>
+          </div>
         </div>
       </div>
     </div>
-  );
-};
-
-export default ZionAIEmailAnalyzerPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
+  );}
+}
+'

@@ -15,14 +15,14 @@ import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circl
             <p className="text-gray-300 text-sm leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
               and digital transformation services. Transform your business with cutting-edge technology.;
-                  <to={service.url}
+                  <to={ service.url }
                     className="service-card"
                   >
                 <to="$1"
                   className="service-card"
                 >
                   View All AI Services →;
-                  <to={service.url}
+                  <to={ service.url }
                     className="service-card"
                   >
                 <to="$1"
@@ -33,12 +33,12 @@ import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circl
               >
                 View All Solutions;
                 <Right className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" /></Right>
-                <div className="text-white font-medium">{contactInfo.hours}
+                <div className="text-white font-medium">{ contactInfo.hours }
                 <div className="text-gray-400 text-sm">Business hours;
-                  <to={link.url}
+                  <to={ link.url }
                     className="service-card"
                   >
-                  <to={link.url}
+                  <to={ link.url }
                     className="service-card"
                   >
               <li><to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</>

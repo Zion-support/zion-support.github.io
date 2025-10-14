@@ -19,7 +19,7 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
             Work on cutting-edge projects and make a real impact.;
           </p>
         </div>
-        {/* Why Work With Us */}
+        { /* Why Work With Us */ }
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -37,7 +37,7 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
             })}
           </div>
         </div>
-        {/* Open Positions */}
+        { /* Open Positions */ }
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Open Positions</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -46,7 +46,7 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-xl font-semibold text-white">{position.title}</h3>
                   <span className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-3 py-1 rounded-full text-sm">
-                    {position.type}
+                    { position.type }
                   </span>
                 </div>
                 <div className="flex items-center text-gray-400 mb-3">
@@ -63,7 +63,7 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
             ))}
           </div>
         </div>
-        {/* Company Culture */}
+        { /* Company Culture */ }
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">Our Culture</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -90,7 +90,7 @@ import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;const Car
             </div>
           </div>
         </div>
-        {/* CTA Section */}
+        { /* CTA Section */ }
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Don't See Your Perfect Role?</h2>';

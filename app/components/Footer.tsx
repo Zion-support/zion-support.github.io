@@ -21,100 +21,100 @@ import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const services = [
-    { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'IT Solutions', href: '/it-solutions' },
-    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: '5G Solutions', href: '/5g-solutions' }
+    { name: "AI Solutions", href: "/ai-solutions" },
+    { name: "IT Solutions", href: "/it-solutions" },
+    { name: "Micro SaaS Solutions", href: "/micro-saas-solutions" },
+    { name: "Cybersecurity", href: "/cybersecurity" },
+    { name: "Cloud Infrastructure", href: "/cloud-solutions" },
+    { name: "Digital Transformation", href: "/digital-transformation" },
+    { name: "5G Solutions", href: "/5g-solutions" }
   ];
   const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' }
+    { name: "About Us", href: "/about" },
+    { name: "Solutions", href: "/solutions" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Blog", href: "/blog" },
+    { name: "Careers", href: "/careers" },
+    { name: "Case Studies", href: "/case-studies" }
   ];
   const support = [
-    { name: 'Contact', href: '/contact' },
-    { name: 'Support', href: '/support' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Demo', href: '/demo' },
-    { name: 'Documentation', href: '/docs' }
+    { name: "Contact", href: "/contact" },
+    { name: "Support", href: "/support" },
+    { name: "Tutorials", href: "/tutorials" },
+    { name: "Demo", href: "/demo" },
+    { name: "Documentation", href: "/docs" }
   ];
   const legal = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'GDPR', href: '/gdpr' },
-    { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' }
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
+    { name: "GDPR", href: "/gdpr" },
+    { name: "Security", href: "/security" },
+    { name: "Compliance", href: "/compliance" }
   ];
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: 'linkedin' },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: 'twitter' },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: 'github' }
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: "linkedin" },
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: "twitter" },
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: "github" }
   const footerLinks = {
     services: [
-      { name: 'AI Solutions', href: '/ai-solutions' },
-      { name: 'IT Solutions', href: '/it-solutions' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Cloud Solutions', href: '/cloud-solutions' },
-      { name: 'Digital Transformation', href: '/digital-transformation' },
-      { name: 'Micro SaaS', href: '/micro-saas-solutions' },
-      { name: '5G Solutions', href: '/5g-solutions' },
+      { name: "AI Solutions", href: "/ai-solutions" },
+      { name: "IT Solutions", href: "/it-solutions" },
+      { name: "Cybersecurity", href: "/cybersecurity" },
+      { name: "Cloud Solutions", href: "/cloud-solutions" },
+      { name: "Digital Transformation", href: "/digital-transformation" },
+      { name: "Micro SaaS", href: "/micro-saas-solutions" },
+      { name: "5G Solutions", href: "/5g-solutions" },
     ],
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'Contact', href: '/contact' },
+      { name: "About Us", href: "/about" },
+      { name: "Our Team", href: "/team" },
+      { name: "Careers", href: "/careers" },
+      { name: "Case Studies", href: "/case-studies" },
+      { name: "Contact", href: "/contact" },
     ],
     resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Tutorials', href: '/tutorials' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Support', href: '/support' },
-      { name: 'Demo', href: '/demo' },
+      { name: "Blog", href: "/blog" },
+      { name: "Tutorials", href: "/tutorials" },
+      { name: "Documentation", href: "/docs" },
+      { name: "Support", href: "/support" },
+      { name: "Demo", href: "/demo" },
     ],
     legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms of Service", href: "/terms" },
+      { name: "Cookie Policy", href: "/cookies" },
     ]
   };
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: GlobeAltIcon },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: GlobeAltIcon },
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: GlobeAltIcon },
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: GlobeAltIcon },
   ];
   const footerLinks = {
     services: [
-      { name: 'AI Solutions', href: '/ai-solutions' },
-      { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Digital Transformation', href: '/digital-transformation' }
+      { name: "AI Solutions", href: "/ai-solutions" },
+      { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },
+      { name: "Cybersecurity", href: "/cybersecurity" },
+      { name: "Digital Transformation", href: "/digital-transformation" }
     ],
     company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Contact', href: '/contact' }
+      { name: "About Us", href: "/about" },
+      { name: "Our Team", href: "/team" },
+      { name: "Careers", href: "/careers" },
+      { name: "Contact", href: "/contact" }
     ],
     resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Support', href: '/support' },
-      { name: 'FAQ', href: '/faq' }
+      { name: "Blog", href: "/blog" },
+      { name: "Documentation", href: "/docs" },
+      { name: "Support", href: "/support" },
+      { name: "FAQ", href: "/faq" }
     ]
   };
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
+          { /* Company Info */ }
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center space-x-3 mb-6 group">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -126,7 +126,7 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-900 border-t border-slate-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
+          { /* Company Info */ }
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
@@ -139,11 +139,11 @@ const Footer: React.FC = () => {
               and digital transformation services for businesses worldwide.
             </p>
             {/* Contact Info */}            <div className="space-y-3 mb-6">
-            {/* Contact Info */}
+            { /* Contact Info */ }
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-300">
                 <PhoneIcon className="w-5 h-5 text-purple-400" />
-            {/* Contact Info */}
+            { /* Contact Info */ }
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-400">
                 <PhoneIcon className="w-4 h-4" />
@@ -162,16 +162,16 @@ const Footer: React.FC = () => {
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
-                  href={social.href}
+                  href={ social.href }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
-                  aria-label={social.name}
+                  aria-label={ social.name }
                 >
-                  {social.icon === 'facebook' && '📘'}
-                  {social.icon === 'twitter' && '🐦'}
-                  {social.icon === 'linkedin' && '💼'}
-                  {social.icon === 'github' && '🐙'}
+                  { social.icon === 'facebook' && '📘' }
+                  { social.icon === 'twitter' && '🐦' }
+                  { social.icon === 'linkedin' && '💼' }
+                  { social.icon === 'github' && '🐙' }
                 </a>
               ))}            <div className="flex space-x-4">
               <a href="https://facebook.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
@@ -184,7 +184,7 @@ const Footer: React.FC = () => {
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
-            {/* Social Links */}
+            { /* Social Links */ }
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
@@ -200,9 +200,9 @@ const Footer: React.FC = () => {
               </a>
                   <span className="sr-only">{social.name}</span>
                   <div className="w-6 h-6 bg-gray-600 rounded flex items-center justify-center">
-                    {social.icon === 'linkedin' && <span className="text-xs">in</span>}
-                    {social.icon === 'twitter' && <span className="text-xs">t</span>}
-                    {social.icon === 'github' && <span className="text-xs">g</span>}
+                    { social.icon === 'linkedin' && <span className="text-xs">in</span> }
+                    { social.icon === 'twitter' && <span className="text-xs">t</span> }
+                    { social.icon === 'github' && <span className="text-xs">g</span> }
                   </div>
                 </a>
               ))}
@@ -211,7 +211,7 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
-          {/* Services */}
+          { /* Services */ }
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>
             <ul className="space-y-3">
@@ -220,34 +220,34 @@ const Footer: React.FC = () => {
               {services.map((service) => (
                 <li key={service.name}>
                   <Link 
-                    to={service.href} 
+                    to={ service.href }
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
             <h3 className="text-white font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
-                    to={service.href}
+                    to={ service.href }
                     className="text-gray-300 hover:text-white text-sm transition-colors"
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
               {footerLinks.services.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    to={link.href} 
+                    to={ link.href }
                     className="text-gray-300 hover:text-white transition-colors flex items-center"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2" />
-                    to={link.href}
+                    to={ link.href }
                     className="text-gray-400 hover:text-purple-400 transition-colors"
                   >
-                    {link.name}
+                    { link.name }
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          {/* Company */}
+          { /* Company */ }
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>
             <ul className="space-y-3">
@@ -256,34 +256,34 @@ const Footer: React.FC = () => {
               {company.map((item) => (
                 <li key={item.name}>
                   <Link 
-                    to={item.href} 
+                    to={ item.href }
                     className="text-gray-400 hover:text-white transition-colors flex items-center group"
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
-                    to={item.href}
+                    to={ item.href }
                     className="text-gray-300 hover:text-white text-sm transition-colors"
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    to={link.href} 
+                    to={ link.href }
                     className="text-gray-300 hover:text-white transition-colors flex items-center"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2" />
-                    to={link.href}
+                    to={ link.href }
                     className="text-gray-400 hover:text-purple-400 transition-colors"
                   >
-                    {link.name}
+                    { link.name }
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-          {/* Resources */}
+          { /* Resources */ }
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
             <ul className="space-y-3 mb-8">
@@ -293,50 +293,50 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {support.map((item) => (
                 <li key={item.name}>
-          {/* Resources */}
+          { /* Resources */ }
           <div>
             <h4 className="text-lg font-semibold mb-4">Resources</h4>
             <ul className="space-y-2">
               {footerLinks.resources.map((link, index) => (
                 <li key={index}>
                   <Link 
-                    to={link.href} 
+                    to={ link.href }
                     className="text-gray-300 hover:text-white transition-colors flex items-center"
                   >
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                   <Link
-                    to={item.href}
+                    to={ item.href }
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
-                    {item.name}
+                    { item.name }
                   </Link>
                 </li>
               ))}
               {legal.map((item) => (
                 <li key={item.name}>
                   <Link
-                    to={item.href}
+                    to={ item.href }
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
-                    {item.name}
+                    { item.name }
                     <ArrowRightIcon className="w-4 h-4 mr-2" />
-                    {link.name}
+                    { link.name }
             <h3 className="text-white font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
-                    to={link.href}
+                    to={ link.href }
                     className="text-gray-400 hover:text-purple-400 transition-colors"
                   >
-                    {link.name}
+                    { link.name }
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-        {/* Newsletter Signup */}
+        { /* Newsletter Signup */ }
         <div className="mt-16 pt-8 border-t border-slate-700/50">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-white mb-4 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Stay Updated</h3>
@@ -353,7 +353,7 @@ const Footer: React.FC = () => {
                 Subscribe
                 <ArrowRightIcon className="w-4 h-4 ml-2" />
               </button>
-        {/* Contact Info */}
+        { /* Contact Info */ }
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="flex items-center">
@@ -367,7 +367,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-3 text-gray-400">
               <MapPinIcon className="w-5 h-5 text-purple-400" />
               <span>Middletown, DE 19709</span>
-        {/* Contact Info */}
+        { /* Contact Info */ }
         <div className="mt-8 pt-8 border-t border-slate-700">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-300">
             <div className="flex items-center space-x-2">
@@ -387,31 +387,31 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* Bottom Bar */}
+        { /* Bottom Bar */ }
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
             <span>Made with</span>
             <HeartIcon className="w-4 h-4 text-red-400" />
             <span>by Zion Tech Group</span>
           </div>
-          {/* Copyright */}
+          { /* Copyright */ }
           <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
             <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
-        {/* Bottom Section */}
+        { /* Bottom Section */ }
         <div className="mt-12 pt-8 border-t border-slate-700/50">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-            {/* Legal Links */}
+            { /* Legal Links */ }
             <div className="flex space-x-6 mt-4 md:mt-0">
               {footerLinks.legal.map((link) => (
                 <Link
                   key={link.name}
-                  to={link.href}
+                  to={ link.href }
                   className="text-gray-400 hover:text-purple-400 text-sm transition-colors"
                 >
-                  {link.name}
+                  { link.name }
                 </Link>
               ))}
             </div>
@@ -427,10 +427,10 @@ const Footer: React.FC = () => {
             <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
-        {/* Copyright */}
+        { /* Copyright */ }
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © {currentYear} Zion Tech Group. All rights reserved. Made with{' '}
+            © {currentYear} Zion Tech Group. All rights reserved. Made with{ ' ' }
             <HeartIcon className="w-4 h-4 inline text-red-500" /> for our clients.
           </p>
         </div>

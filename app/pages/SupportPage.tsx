@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-const SupportPage: React.FC = () => {
-  return (
+const SupportPage: React.FC = () => { return (
   <>
       <Helmet></Helmet>
         <title>SupportPage - Zion Tech Group</title>
@@ -16,7 +15,6 @@ const SupportPage: React.FC = () => {
       </div>
 )
     </>)
-  );
-}
+  ); }
 }
 export default SupportPag;e;

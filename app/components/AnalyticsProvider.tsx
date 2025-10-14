@@ -1,14 +1,12 @@
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 import React from 'react';'
 { createContext, useContext, useEffect, ReactNode } from 'react';
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
+interface AnalyticsContextType { track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;}
+  page: (name: string, properties?: Record<string, any>) => void; }
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-interface AnalyticsProviderProps {
-  children: ReactNode;}
+interface AnalyticsProviderProps { children: ReactNode; }
 }
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const track = (event: string, properties?: Record<string, any>) => {
@@ -72,17 +70,15 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       console.log('Analytics initialized');}
     }
   }, []);
-  const value: AnalyticsContextType = {
-    track,
+  const value: AnalyticsContextType = { track,
     identify,
-    page;
-  }
+    page; }
     page
     page;}
   };
   return (
     <AnalyticsContext.Provider value={value}>
-      {children}
+      { children }
     </AnalyticsContext.Provider>
   );
 }

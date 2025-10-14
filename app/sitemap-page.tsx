@@ -4,8 +4,7 @@ import { Helmet } from 'react-helmet-async'
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 'use client';
-export default function Page() {
-  return (
+export default function Page() { return (
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Sitemap page - Zion Tech Group</title>
@@ -53,8 +52,7 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
-}
+  ); }
             Sitemap page</h1>
           <p className="text-xl text-gray-600 mb-8">
             Professional sitemap page solutions tailored to your business needs.</p>
@@ -79,9 +77,9 @@ export default function Page() {
               Get Started Today</button></div></div></div></div>
   )}
             </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+          </div>
+        </div>
+      </div>
+    </div>
   );}
 }'

@@ -3,19 +3,15 @@
 export function createAdvancedMonitoring() {
   const monitoringFiles = {
     'monitoring/health-check.js': {
-}
-      healthCheck: () => ({ status: 'ok' })
+      healthCheck: () => ({ status: "ok" })
     },
     'monitoring/performance-monitor.js': {
-}
-      monitor: () => ({ performance: 'good' })
+      monitor: () => ({ performance: "good" })
     },
     'caching/cache-manager.js': {
-}
-      cacheManager: () => ({ status: 'ready' })
+      cacheManager: () => ({ status: "ready" })
     },
     'caching/redis-client.js': {
-}
       redisClient: () => ({ connected: true })
     }
   };

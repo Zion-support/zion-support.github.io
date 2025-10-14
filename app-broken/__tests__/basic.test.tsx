@@ -7,7 +7,7 @@ describe('Basic Tests', () => {';
     expect(true).toBe(true);
   });
   it('should render a simple component', () => {';
-    const TestComponent = () => <div>Test</div>;
+    const TestComponent = () => <div>Test</div>
     render(<TestComponent />);
     expect(screen.getByText('Test')).toBeInTheDocument();
   });

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-export default function FixAllRemainingCorrupted.js() {
+export default function FixAllRemainingCorrupted() {
   return (
     <>
       <Helmet>
@@ -22,7 +21,7 @@ export default function FixAllRemainingCorrupted.js() {
           </div>
         </section>
 
-        {/* Content Section */}
+        { /* Content Section */ }
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -42,7 +41,7 @@ export default function FixAllRemainingCorrupted.js() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        { /* CTA Section */ }
         <section className="py-20 px-4 bg-gray-900">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">

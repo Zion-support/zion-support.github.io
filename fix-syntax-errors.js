@@ -39,9 +39,7 @@ function fixSyntaxErrors(filePath) {
     // Clean up extra whitespace
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     content = content.replace(/^\s*\n/gm, '');
-    if (content !== originalContent) {
-  fs.writeFileSync(filePath, content);
-}
+    if (content !== originalContent) { fs.writeFileSync(filePath, content); }
       console.log(`Fixed syntax errors in: ${filePath}`);
       modified = true;
     }
@@ -62,9 +60,7 @@ function findFilesWithSyntaxErrors(dir) {
       if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git') && !item.includes('app-broken')) {
         traverse(fullPath);
 }
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item) && !item.includes('app-broken')) {
-  files.push(fullPath);
-}
+      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item) && !item.includes('app-broken')) { files.push(fullPath); }
       }
     }
   }

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-interface SEOProps {
-  title: string
+interface SEOProps { title: string
   description: string
   keywords?: string
   canonicalUrl?: string
@@ -11,11 +9,10 @@ interface SEOProps {
   twitterCard?: string
   structuredData?: object
   noIndex?: boolean
-  noFollow?: boolean}
+  noFollow?: boolean }
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';
-interface SEOProps {
-  title: string;
+interface SEOProps { title: string;
   description: string;
   keywords?: string;
   canonicalUrl?: string;
@@ -24,7 +21,7 @@ interface SEOProps {
   twitterCard?: string;
   structuredData?: object;
   noIndex?: boolean;
-  noFollow?: boolean;}
+  noFollow?: boolean; }
 }
 const EnhancedSEO: React.FC<SEOProps> = ({
   title,
@@ -42,32 +39,31 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   const siteUrl = 'https://ziontechgroup.com'
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`
-  const defaultStructuredData = {
-    '@context': 'https://schema.org',
-  noFollow = false}
-}) => {'
+  const defaultStructuredData = { '@context': 'https://schema.org',
+  noFollow = false }
+}) => { '
   const siteName = 'Zion Tech Group';'
-  const siteUrl = 'https://ziontechgroup.com';}
+  const siteUrl = 'https://ziontechgroup.com'; }
   const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;'
   const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
-  const defaultStructuredData = {'
+  const defaultStructuredData = { '
     '@context': 'https://schema.org','
     '@type': 'Organization',
     name: siteName,
-    url: siteUrl,}
+    url: siteUrl, }
     logo: `${siteUrl}/logo.png`,'
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
-    address: {'
+    description: "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
+    address: { '
       '@type': 'PostalAddress','
-      addressLocality: 'Middletown','
-      addressRegion: 'DE','
-      addressCountry: 'US'}
+      addressLocality: "Middletown",'
+      addressRegion: "DE",'
+      addressCountry: "US" }
     },
-    contactPoint: {'
+    contactPoint: { '
       '@type': 'ContactPoint','
-      telephone: '+1-302-464-0950','
-      contactType: 'customer service','
-      email: 'kleber@ziontechgroup.com'}
+      telephone: "+1-302-464-0950",'
+      contactType: "customer service",'
+      email: "kleber@ziontechgroup.com" }
     },
     sameAs: ['
       'https://www.linkedin.com/company/zion-tech-group','
@@ -79,14 +75,14 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   const mergedStructuredData = structuredData || defaultStructuredData
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
+      { /* Basic Meta Tags */ }
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullCanonicalUrl} />
       {/* Robots */}'
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
-      {/* Open Graph */}
+      { /* Open Graph */ }
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -94,14 +90,14 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:url" content={fullCanonicalUrl} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content="en_US" />
-      {/* Twitter Card */}
+      { /* Twitter Card */ }
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullOgImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      {/* Additional SEO Meta Tags */}
+      { /* Additional SEO Meta Tags */ }
       <meta name="author" content="Zion Tech Group" />
       <meta name="publisher" content="Zion Tech Group" />
       <meta name="copyright" content="Zion Tech Group" />
@@ -109,18 +105,18 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="revisit-after" content="7 days" />
       <meta name="rating" content="general" />
       <meta name="distribution" content="global" />
-      {/* Mobile Optimization */}
+      { /* Mobile Optimization */ }
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
       <meta name="theme-color" content="#1e293b" />
       <meta name="msapplication-TileColor" content="#1e293b" />
-      {/* Performance Hints */}
+      { /* Performance Hints */ }
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      {/* Structured Data */}
+      { /* Structured Data */ }
       <script type="application/ld+json">
-        {JSON.stringify(mergedStructuredData)}
+        { JSON.stringify(mergedStructuredData) }
       </script>
     </Helmet>
   );
@@ -130,27 +126,3 @@ export default EnhancedSEO;
 export default EnhancedSEO
 };
 export default EnhancedSEO;'
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface EnhancedSEOProps {
-  title: string;
-  description: string;
-  keywords: string;
-  children?: React.ReactNode;
-}
-
-export default function EnhancedSEO({ title, description, keywords, children }: EnhancedSEOProps) {
-  return (
-    <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords} />
-      </Helmet>
-      {children}
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1

@@ -23,35 +23,23 @@ function fixFile(filePath) {
         return '_index';
 }
       }
-      if (p1 === '_error' && content.includes('catch (_error)')) {
-  ';
-        return '_error';
-}
+      if (p1 === '_error' && content.includes('catch (_error)')) { ';
+        return '_error'; }
       }
-      if (p1 === '_path' && content.includes('const _path =')) {
-  ';
-        return '_path';
-}
+      if (p1 === '_path' && content.includes('const _path =')) { ';
+        return '_path'; }
       }
-      if (p1 === '_files' && content.includes('const _files =')) {
-  ';
-        return '_files';
-}
+      if (p1 === '_files' && content.includes('const _files =')) { ';
+        return '_files'; }
       }
-      if (p1 === '_modified' && content.includes('let _modified =')) {
-  ';
-        return '_modified';
-}
+      if (p1 === '_modified' && content.includes('let _modified =')) { ';
+        return '_modified'; }
       }
-      if (p1 === '_existingPages' && content.includes('const _existingPages =')) {
-  ';
-        return '_existingPages';
-}
+      if (p1 === '_existingPages' && content.includes('const _existingPages =')) { ';
+        return '_existingPages'; }
       }
-      if (p1 === '_beforeEach' && content.includes('_beforeEach')) {
-  ';
-        return '_beforeEach';
-}
+      if (p1 === '_beforeEach' && content.includes('_beforeEach')) { ';
+        return '_beforeEach'; }
       }
       return match;
     });
@@ -86,29 +74,21 @@ function fixFile(filePath) {
     // Fix missing semicolons;
     content = content.replace(/([^;}])\s*$/gm, (match, char) => {
 }
-      if (char && !char.match(/[{}();,\s]/)) {
-  return char + ';
-}
+      if (char && !char.match(/[{}();,\s]/)) { return char + '; }
       }
       return match;
     });
     // Fix globalThis.URLSearchParams issue;
-    if (content.includes('globalThis.URLSearchParams is not defined')) {
-  ';
-      content = content.replace(/globalThis.URLSearchParams/g, 'globalThis.globalThis.URLSearchParams');
-}
+    if (content.includes('globalThis.URLSearchParams is not defined')) { ';
+      content = content.replace(/globalThis.URLSearchParams/g, 'globalThis.globalThis.URLSearchParams'); }
     }
     // Fix console issues in .cjs _files;
-    if (filePath.endsWith('.cjs')) {
-  ';
-      content = content.replace(/console\./g, 'global.console.');
-}
+    if (filePath.endsWith('.cjs')) { ';
+      content = content.replace(/console\./g, 'global.console.'); }
     }
     // Fix require issues in .js _files;
-    if (filePath.endsWith('.js') && content.includes('require is not defined')) {
-  ';
-      content = content.replace(/require\(/g, 'global.global.require(');
-}
+    if (filePath.endsWith('.js') && content.includes('require is not defined')) { ';
+      content = content.replace(/require\(/g, 'global.global.require('); }
     }
     // Fix Jest globals;
     if (filePath.includes('test') || filePath.includes('__tests__')) {
@@ -119,11 +99,9 @@ function fixFile(filePath) {
 }
       }
     }
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-  ';
+    if (content !== fs.readFileSync(filePath, 'utf8')) { ';
       fs.writeFileSync(filePath, content);
-      return true;
-}
+      return true; }
     }
     return false;
   } catch (_error) {
@@ -142,10 +120,8 @@ function findFilesToFix(dir) {
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {';
         traverse(fullPath);
 }
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.cjs'))) {
-  ';
-        _files.push(fullPath);
-}
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.cjs'))) { ';
+        _files.push(fullPath); }
       }
     }
   }

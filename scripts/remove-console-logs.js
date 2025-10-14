@@ -1,3 +1,1 @@
-const removeConsoleLogs = () => {
-  console.log('Console logs removal completed'';)
-}
+const removeConsoleLogs = () => { console.log('Console logs removal completed'';) }

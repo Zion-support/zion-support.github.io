@@ -1,14 +1,13 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-
 export default defineConfig({
   plugins: [
     react({
       // Enable React Fast Refresh
       fastRefresh: true,
       // Optimize JSX runtime
-      jsxRuntime: 'automatic',
+      jsxRuntime: "automatic",
     })
   ],
   resolve: {
@@ -20,9 +19,9 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist',
-    target: 'esnext',
-    minify: 'esbuild',
+    outDir: "dist",
+    target: "esnext",
+    minify: "esbuild",
     sourcemap: process.env.NODE_ENV === 'development',
     cssCodeSplit: true,
     rollupOptions: {
@@ -33,28 +32,16 @@ export default defineConfig({
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
             }
-            if (id.includes('react-router')) {
-              return 'vendor-router';
-            }
-            if (id.includes('@heroicons') || id.includes('lucide-react')) {
-              return 'vendor-icons';
-            }
-            if (id.includes('framer-motion')) {
-              return 'vendor-motion';
-            }
-            if (id.includes('react-helmet')) {
-              return 'vendor-helmet';
-            }
+            if (id.includes('react-router')) { return 'vendor-router'; }
+            if (id.includes('@heroicons') || id.includes('lucide-react')) { return 'vendor-icons'; }
+            if (id.includes('framer-motion')) { return 'vendor-motion'; }
+            if (id.includes('react-helmet')) { return 'vendor-helmet'; }
             return 'vendor-other';
           }
           
           // Page chunks for better code splitting
-          if (id.includes('/app/pages/')) {
-            return 'pages';
-          }
-          if (id.includes('/app/components/')) {
-            return 'components';
-          }
+          if (id.includes('/app/pages/')) { return 'pages'; }
+          if (id.includes('/app/components/')) { return 'components'; }
         },
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
@@ -62,13 +49,11 @@ export default defineConfig({
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
             return `assets/images/[name]-[hash][extname]`;
           }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) {
-            return `assets/fonts/[name]-[hash][extname]`;
-          }
+          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name)) { return `assets/fonts/[name]-[hash][extname]`; }
           return `assets/[name]-[hash][extname]`;
         },
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/[name]-[hash].js',
+        chunkFileNames: "assets/js/[name]-[hash].js",
+        entryFileNames: "assets/js/[name]-[hash].js",
       },
     },
     chunkSizeWarningLimit: 500,
@@ -102,7 +87,7 @@ export default defineConfig({
   },
   esbuild: {
     drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-    target: 'esnext',
+    target: "esnext",
   },
   // Performance optimizations
   define: {

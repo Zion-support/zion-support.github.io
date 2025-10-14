@@ -3,10 +3,8 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 function fixAppTsx() {
   const content = `import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -15,17 +13,14 @@ import ErrorBoundary from './app/components/ErrorBoundary';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import Navigation from './app/components/Navigation';
 import Sidebar from './app/components/Sidebar';
-
 // Import pages
 import HomePage from './app/pages/HomePage';
 import AboutPage from './app/pages/AboutPage';
 import ServicesPage from './app/pages/ServicesPage';
 import ContactPage from './app/pages/ContactPage';
 import NotFoundPage from './app/404';
-
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
-  
   return (
     <ErrorBoundary>
       <HelmetProvider>
@@ -56,7 +51,6 @@ function App() {
 }
 
 export default App;`;
-  
   fs.writeFileSync('/workspace/App.tsx', content);
   console.log('Fixed App.tsx');
 }
@@ -64,7 +58,6 @@ export default App;`;
 function fix404Page() {
   const content = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function NotFoundPage() {
   return (
     <>
@@ -91,7 +84,6 @@ export default function NotFoundPage() {
     </>
   );
 }`;
-  
   fs.writeFileSync('/workspace/app/404.tsx', content);
   console.log('Fixed 404.tsx');
 }
@@ -99,7 +91,6 @@ export default function NotFoundPage() {
 function fix5gImplementationPage() {
   const content = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function FiveGImplementationPage() {
   return (
     <>
@@ -120,16 +111,13 @@ export default function FiveGImplementationPage() {
     </>
   );
 }`;
-  
   fs.writeFileSync('/workspace/app/5g-implementation/page.tsx', content);
   console.log('Fixed 5g-implementation/page.tsx');
 }
 
 // Main execution
 console.log('Fixing critical files...');
-
 fixAppTsx();
 fix404Page();
 fix5gImplementationPage();
-
 console.log('Critical files fixed!');

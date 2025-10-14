@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-export default function Component; AiContentGeneration() {
-  return (
+export default function Component; AiContentGeneration() { return (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       <Helmet></Helmet>
         <title>AiContentGeneration - Zion Tech Group</title>
@@ -15,7 +14,7 @@ export default function Component; AiContentGeneration() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             Discover our comprehensive aicontentgeneration solutions designed to transform your business;
           </p>;
-        </div>;
+        </div>
         <div className="text-center">;
           <p className="text-gray-300">Coming Soon - AiContentGeneration Solutions</p>;
   </>
@@ -25,6 +24,5 @@ export default function Component; AiContentGeneration() {
         <meta name="keywords" content="AI ai content generation, artificial intelligence, ai content generation, AI solutions, intelligent automation" />
 )
 )
-      </Helmet>)
-}
+      </Helmet>) }
 }

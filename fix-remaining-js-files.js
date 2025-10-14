@@ -9,9 +9,7 @@ import path from 'path;
 )
       res.end(JSON.stringify({ error: 'Internal server error'';)
 }
-  content = content.replace(/const \{ ([^}]+) \s*\n\} catch \(error\) \{
-  \s*console\.error\(
+  content = content.replace(/const \{ ([^}]+) \s*\n\} catch \(error\) \{ \s*console\.error\(
   'Error:'';
 )
-  content = content.replace(/\/[^\/\n]*$/gm, '';)
-}
+  content = content.replace(/\/[^\/\n]*$/gm, '';) }

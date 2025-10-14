@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-interface SEOProps {
-  title?: string
+interface SEOProps { title?: string
   description?: string
   keywords?: string
   image?: string
@@ -11,7 +10,7 @@ interface SEOProps {
   publishedTime?: string
   modifiedTime?: string
   section?: string
-  tags?: string[]}
+  tags?: string[] }
   title?: string;
   description?: string;
   keywords?: string;
@@ -33,22 +32,20 @@ const SEO: React.FC<SEOProps> = ({
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.svg',
-    description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
+    name: "Zion Tech Group",
+    url: "https://ziontechgroup.com",
+    logo: "https://ziontechgroup.com/logo.svg",
+    description: "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      addressCountry: 'US'
-    },
+      addressLocality: "Middletown",
+      addressRegion: "DE",
+      addressCountry: "US" },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com'
-    },
+      telephone: "+1-302-464-0950",
+      contactType: "customer service",
+      email: "kleber@ziontechgroup.com" },
     sameAs: [
       'https://www.linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',
@@ -60,18 +57,18 @@ const SEO: React.FC<SEOProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      {/* Open Graph */}
+      { /* Open Graph */ }
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
-      {/* Twitter */}
+      { /* Twitter */ }
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      {/* Canonical URL */}
+      { /* Canonical URL */ }
       <link rel="canonical" href={url} />
     </Helmet>
   );

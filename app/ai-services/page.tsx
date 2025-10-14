@@ -9,38 +9,34 @@ FuturisticBackground from '../components/FuturisticBackground';
 const AiServicesPage: React.FC = () => {
   const services = [{
       icon: Brain,'
-      title: 'AI Consulting',';'
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',';'
+      title: "AI Consulting",';'
+      description: "Strategic AI consulting to help you identify opportunities and develop AI roadmaps.",';'
       color: 'from-purple-500 to-pink-500'';}
     },
-    {
-      icon: BarChart3,'
-      title: 'AI Analytics',';'
-      description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',';'
-      color: 'from-blue-500 to-cyan-500'';}
+    { icon: BarChart3,'
+      title: "AI Analytics",';'
+      description: "Advanced analytics solutions powered by machine learning and AI algorithms.",';'
+      color: 'from-blue-500 to-cyan-500''; }
     },
-    {
-      icon: Zap,'
-      title: 'AI Automation',';'
-      description: 'Intelligent automation solutions to streamline your business processes.',';'
-      color: 'from-green-500 to-emerald-500'';}
+    { icon: Zap,'
+      title: "AI Automation",';'
+      description: "Intelligent automation solutions to streamline your business processes.",';'
+      color: 'from-green-500 to-emerald-500''; }
     },
-    {
-      icon: FileText,'
-      title: 'AI Content Generation',';'
-      description: 'AI-powered content creation for marketing, documentation, and communication.',';'
-      color: 'from-orange-500 to-red-500'';}
+    { icon: FileText,'
+      title: "AI Content Generation",';'
+      description: "AI-powered content creation for marketing, documentation, and communication.",';'
+      color: 'from-orange-500 to-red-500''; }
     },
-    {
-      icon: MessageSquare,'
-      title: 'AI Customer Service',';'
-      description: 'Intelligent chatbots and customer service solutions powered by AI.',';'
-      color: 'from-indigo-500 to-purple-500'';}
+    { icon: MessageSquare,'
+      title: "AI Customer Service",';'
+      description: "Intelligent chatbots and customer service solutions powered by AI.",';'
+      color: 'from-indigo-500 to-purple-500''; }
     },
     {
       icon: icon: Shield,
-      title: 'AI Security',';
-      description: 'AI-powered security solutions to protect your business and data.',';
+      title: "AI Security",';
+      description: "AI-powered security solutions to protect your business and data.",';
       color: 'from-cyan-500 to-blue-500'';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -54,92 +50,78 @@ const AiServicesPage: React.FC = () => {
   const services = [
     {
       icon: Brain,
-      title: 'AI Consulting',
-      description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
-      color: 'from-purple-500 to-pink-500'
-    },
+      title: "AI Consulting",
+      description: "Strategic AI consulting to help you identify opportunities and develop AI roadmaps.",
+      color: "from-purple-500 to-pink-500" },
     {
       icon: BarChart3,
-      title: 'AI Analytics',
-      description: 'Advanced analytics solutions powered by AI to extract insights from your data.',
-      color: 'from-blue-500 to-cyan-500'
-    },
+      title: "AI Analytics",
+      description: "Advanced analytics solutions powered by AI to extract insights from your data.",
+      color: "from-blue-500 to-cyan-500" },
     {
       icon: Zap,
-      title: 'AI Automation',
-      description: 'Automate repetitive tasks and processes with intelligent AI solutions.',
-      color: 'from-green-500 to-emerald-500'
-    },
+      title: "AI Automation",
+      description: "Automate repetitive tasks and processes with intelligent AI solutions.",
+      color: "from-green-500 to-emerald-500" },
     {
       icon: FileText,
-      title: 'AI Content Generation',
-      description: 'Generate high-quality content at scale using advanced AI models.',
-      color: 'from-orange-500 to-red-500'
-    },
+      title: "AI Content Generation",
+      description: "Generate high-quality content at scale using advanced AI models.",
+      color: "from-orange-500 to-red-500" },
     {
       icon: MessageSquare,
-      title: 'AI Chatbots',
-      description: 'Intelligent chatbots and virtual assistants for customer support.',
+      title: "AI Chatbots",
+      description: "Intelligent chatbots and virtual assistants for customer support.",
       icon: MessageCircle,
-      title: 'AI Customer Service',
-      description: 'Intelligent chatbots and customer service solutions powered by AI.',
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      icon: Shield,
-      title: 'AI Security',
-      description: 'AI-powered security solutions to protect your business from threats.',
+      title: "AI Customer Service",
+      description: "Intelligent chatbots and customer service solutions powered by AI.",
+      color: "from-indigo-500 to-purple-500" },
+    { icon: Shield,
+      title: "AI Security",
+      description: "AI-powered security solutions to protect your business from threats.",
       color: 'from-red-500 to-pink-500'
-      description: 'AI-powered security solutions to protect your business and data.',
-      color: 'from-cyan-500 to-blue-500'
-    }
+      description: "AI-powered security solutions to protect your business and data.",
+      color: "from-cyan-500 to-blue-500" }
   ]
   const features = [
     {
-      title: 'Custom AI Solutions',
-      description: 'Tailored AI implementations designed specifically for your business needs.',
-      icon: '🤖'
-    },
+      title: "Custom AI Solutions",
+      description: "Tailored AI implementations designed specifically for your business needs.",
+      icon: "🤖" },
     {
-      title: 'Machine Learning Models',
-      description: 'Advanced ML models trained on your data for optimal performance.',
-      icon: '🧠'
-    },
+      title: "Machine Learning Models",
+      description: "Advanced ML models trained on your data for optimal performance.",
+      icon: "🧠" },
     {
-      title: 'Real-time Processing',
-      description: 'High-performance AI systems that process data in real-time.',
-      icon: '⚡'
-    },
-    {
-      title: 'Scalable Architecture',
-      description: 'AI solutions that grow with your business and handle increasing loads.',
+      title: "Real-time Processing",
+      description: "High-performance AI systems that process data in real-time.",
+      icon: "⚡" },
+    { title: "Scalable Architecture",
+      description: "AI solutions that grow with your business and handle increasing loads.",
       icon: '📈'
       icon: Shield,'
-      title: 'AI Security',';'
-      description: 'AI-powered security solutions to protect your business and data.',';'
-      color: 'from-cyan-500 to-blue-500'';}
+      title: "AI Security",';'
+      description: "AI-powered security solutions to protect your business and data.",';'
+      color: 'from-cyan-500 to-blue-500''; }
     }
   ];
-  const testimonials = [{
-      name: "Dr. Sarah Johnson",
+  const testimonials = [{ name: "Dr. Sarah Johnson",
       company: "MedTech Solutions",
       role: "CTO",'
       content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",';
-      rating: 5;}
+      rating: 5; }
     },
-    {
-      name: "Michael Chen",
+    { name: "Michael Chen",
       company: "E-commerce Plus",
       role: "CEO",'
       content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",';
-      rating: 5;}
+      rating: 5; }
     },
-    {
-      name: "Emily Rodriguez",
+    { name: "Emily Rodriguez",
       company: "FinanceFlow",
       role: "Head of Analytics",
       content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
-      rating: 5;}
+      rating: 5; }
     }
   ]
   return (
@@ -152,7 +134,7 @@ const AiServicesPage: React.FC = () => {
       </Helmet>
       <FuturisticBackground />
       <div className="relative z-10">
-        {/* Hero Section */}
+        { /* Hero Section */ }
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-white mb-6">
@@ -163,7 +145,7 @@ const AiServicesPage: React.FC = () => {
             </p>
           </div>
         </section>
-        {/* Services Grid */}
+        { /* Services Grid */ }
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -176,10 +158,10 @@ const AiServicesPage: React.FC = () => {
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
-                    {service.title}
+                    { service.title }
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    {service.description}
+                    { service.description }
                   </p>
                   <button className="flex items-center text-white hover:text-gray-300 transition-colors">
                     Learn More
@@ -190,7 +172,7 @@ const AiServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* CTA Section */}
+        { /* CTA Section */ }
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -205,7 +187,7 @@ const AiServicesPage: React.FC = () => {
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-all duration-300">
       <div className="relative z-10 min-h-screen bg-slate-900">
-        {/* Hero Section */}
+        { /* Hero Section */ }
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -229,7 +211,7 @@ const AiServicesPage: React.FC = () => {
     </div>
       <FuturisticBackground>;
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
-          {/* Hero Section */}
+          { /* Hero Section */ }
           <section className="relative py-20 px-4">;
             <div className="max-w-7xl mx-auto text-center">;
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">;
@@ -250,55 +232,55 @@ const AiServicesPage: React.FC = () => {
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
                   Learn More;
                 </button>;
-              </div>;
-            </div>;
+              </div>
+            </div>
           </section>;
-          {/* Services Grid */}
+          { /* Services Grid */ }
           <section className="py-20 px-4">;
             <div className="max-w-7xl mx-auto">;
               <h2 className="text-4xl font-bold text-white text-center mb-16">;
                 Our AI Services;
               </h2>;
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                {services.map((service, _index) => (}
+                { services.map((service, _index) => ( }
                   <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">;
                     <div className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>;
                       aria-hidden="true";
                     >;
                       <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />;
-                    </div>;
+                    </div>
                     <h3 className="text-lg font-semibold text-white mb-2 text-center">{service.title}</h3>;
                     <p className="text-gray-300 text-sm text-center">{service.description}</p>;
-                  </div>;
+                  </div>
                 ))}
-              </div>;
-            </div>;
+              </div>
+            </div>
           </section>;
-          {/* Testimonials Section */}
+          { /* Testimonials Section */ }
           <section className="py-20 px-4 bg-slate-800/30">;
             <div className="max-w-7xl mx-auto">;
               <h2 className="text-4xl font-bold text-white text-center mb-16">;
                 What Our Clients Say;
               </h2>;
               <div className="grid md:grid-cols-3 gap-8">;
-                {testimonials.map((testimonial, _index) => (}
+                { testimonials.map((testimonial, _index) => ( }
                   <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">;
                     <div className="flex items-center mb-4">;
-                      {[...Array(testimonial.rating)].map((_, i) => (}
+                      { [...Array(testimonial.rating)].map((_, i) => ( }
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
                       ))}
-                    </div>;
+                    </div>
                     <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>;
                     <div>;
                       <p className="text-white font-semibold">{testimonial.name}</p>;
                       <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>;
-                    </div>;
-                  </div>;
+                    </div>
+                  </div>
                 ))}
-              </div>;
-            </div>;
+              </div>
+            </div>
           </section>;
-          {/* CTA Section */}
+          { /* CTA Section */ }
           <section className="py-20 px-4">;
             <div className="max-w-4xl mx-auto text-center">;
               <h2 className="text-4xl font-bold text-white mb-6">;
@@ -315,15 +297,15 @@ const AiServicesPage: React.FC = () => {
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">;
                   Schedule Consultation;
                 </button>;
-              </div>;
-            </div>;
+              </div>
+            </div>
           </section>;
-        </div>;
+        </div>
       </FuturisticBackground>;
     </>
   );
 };
-        {/* Services Grid */}
+        { /* Services Grid */ }
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -345,7 +327,7 @@ const AiServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* Features Section */}
+        { /* Features Section */ }
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -362,7 +344,7 @@ const AiServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-        {/* CTA Section */}
+        { /* CTA Section */ }
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

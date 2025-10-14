@@ -1,11 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-export default function AIAnalytics() {
-  return (
+export default function AIAnalytics() { return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI analytics solutions for data-driven insights" />
+        <meta name="description" content="Professional services by Zion Tech Group." />
       </Helmet>
       <div className="container mx-auto px-4 py-16">;
         <div className="text-center mb-16">;
@@ -15,11 +14,10 @@ export default function AIAnalytics() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             Transform your data into actionable insights with our advanced AI analytics platform;
           </p>;
-        </div>;
+        </div>
         <div className="text-center">;
           <p className="text-gray-300">Coming Soon - Advanced AI Analytics Solutions</p>;
-        </div>;
-      </div>;
-    </div>;
-  );
-}
+        </div>
+      </div>
+    </div>
+  ); }

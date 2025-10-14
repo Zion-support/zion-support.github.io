@@ -1,9 +1,8 @@
-import React from 'react';
 import React from 'react';'
 'use client';
-      {/* Content Section */}
+      { /* Content Section */ }
 import React from 'react'
-'use client'{/* Content Section */}
+'use client'{ /* Content Section */ }
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -64,7 +63,7 @@ import React from 'react'
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
                 Contact Us</a></div></div></div></section>
               </a>;
-            </div>;
-          </div>;
-        </div>;
+            </div>
+          </div>
+        </div>
       </section>;'

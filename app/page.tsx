@@ -45,28 +45,23 @@ export default function HomePage() {
   const services = [
     {
       icon: CpuChipIcon,
-      title: 'AI Solutions',
-      description: 'Cutting-edge artificial intelligence solutions to transform your business.',
-      href: '/ai-solutions'
-    },
+      title: "AI Solutions",
+      description: "Cutting-edge artificial intelligence solutions to transform your business.",
+      href: "/ai-solutions" },
     {
       icon: CloudIcon,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud infrastructure solutions for modern businesses.',
-      href: '/cloud-infrastructure'
-    },
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud infrastructure solutions for modern businesses.",
+      href: "/cloud-infrastructure" },
     {
       icon: ShieldCheckIcon,
-      title: 'Cybersecurity',
-      description: 'Comprehensive cybersecurity solutions to protect your digital assets.',
-      href: '/cybersecurity'
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation services to modernize your business.',
-      href: '/digital-transformation'
-    }
+      title: "Cybersecurity",
+      description: "Comprehensive cybersecurity solutions to protect your digital assets.",
+      href: "/cybersecurity" },
+    { icon: RocketLaunchIcon,
+      title: "Digital Transformation",
+      description: "Complete digital transformation services to modernize your business.",
+      href: "/digital-transformation" }
   ];
   const features = [
     '24/7 Expert Support',
@@ -84,7 +79,7 @@ export default function HomePage() {
         <meta name="keywords" content="AI solutions, IT services, cloud infrastructure, cybersecurity, digital transformation" />
       </Helmet>
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
+        { /* Hero Section */ }
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -104,17 +99,17 @@ export default function HomePage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Helmet>
-      {/* Hero Section */}
+      { /* Hero Section */ }
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
+        { /* Animated Background */ }
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
         </div>
-        {/* Floating Elements with Neon Effects */}
+        { /* Floating Elements with Neon Effects */ }
         <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating" style={{animationDelay: '3s'}}></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: "1s" }}></div>
+        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: "2s" }}></div>
+        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating" style={{animationDelay: "3s" }}></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">
@@ -140,7 +135,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        {/* Services Section */}
+        { /* Services Section */ }
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -150,14 +145,14 @@ export default function HomePage() {
               {services.map((service, index) => (
                 <Link 
                   key={index} 
-                  to={service.href}
+                  to={ service.href }
                   className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
                 >
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <service.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {service.title}
+                    { service.title }
                   </h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
                   <div className="flex items-center text-blue-600 font-medium">
@@ -168,7 +163,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        {/* Features Section */}
+        { /* Features Section */ }
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -184,7 +179,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        {/* CTA Section */}
+        { /* CTA Section */ }
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -209,7 +204,7 @@ export default function HomePage() {
             </div>
         </div>
       </section>
-      {/* Services Section */}
+      { /* Services Section */ }
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -228,7 +223,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
                 <p className="text-gray-300 mb-6">
-                  {service.description}
+                  { service.description }
                 </p>
                 <Link to={service.href} className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all glow-effect">
                   Learn More <ArrowRightIcon className="w-4 h-4" />
@@ -238,7 +233,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Features Section */}
+      { /* Features Section */ }
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -259,7 +254,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* Stats Section */}
+      { /* Stats Section */ }
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -274,17 +269,17 @@ export default function HomePage() {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl lg:text-5xl font-bold text-purple-400 mb-2">
-                  {stat.number}
+                  { stat.number }
                 </div>
                 <div className="text-gray-300 text-sm lg:text-base">
-                  {stat.label}
+                  { stat.label }
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      { /* CTA Section */ }
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">

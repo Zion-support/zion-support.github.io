@@ -42,12 +42,10 @@ function fixFile(filePath) {
     // Fix duplicate React imports
     const lines = content.split('\n');
     const reactImports = lines.filter(line => line.trim().startsWith('import React'));
-    if (reactImports.length > 1) {
-  // Keep only the first React import
+    if (reactImports.length > 1) { // Keep only the first React import
       const firstReactImport = reactImports[0];
       content = content.replace(/import React[^;]+;/g, '');
-      content = firstReactImport + '\n' + content;
-}
+      content = firstReactImport + '\n' + content; }
 }
     }
     // Fix merge conflict markers
@@ -66,9 +64,7 @@ function fixFile(filePath) {
         content = `import React from 'react';\n\nexport default function Component; Page()   {\n  return (\n    <div>\n      <h1>Page Under Construction</h1>\n      <p>This page is currently being updated.</p>\n    </div>\n  );\n}`;
       }
     }
-    if (content !== originalContent) {
-  fs.writeFileSync(filePath, content, 'utf8');
-}
+    if (content !== originalContent) { fs.writeFileSync(filePath, content, 'utf8'); }
 }
       console.log(`✅ Fixed: ${filePath}`);
       return true;
@@ -106,14 +102,10 @@ function findProblematicFiles(dir) {
               content.includes('</>') ||
               content.includes('') ||
               content.includes('') ||
-              content.includes('>>>>>>>')) {
-  files.push(fullPath);
-}
+              content.includes('>>>>>>>')) { files.push(fullPath); }
 }
           }
-        } catch (err) {
-  // Skip files that can't be read
-}
+        } catch (err) { // Skip files that can't be read }
 }
         }
       }
@@ -123,10 +115,8 @@ function findProblematicFiles(dir) {
   return files;
 }
 // Main execution
-async function main() {
-  console.log('🔍 Finding problematic files...');
-  const problematicFiles = findProblematicFiles('.');
-}
+async function main() { console.log('🔍 Finding problematic files...');
+  const problematicFiles = findProblematicFiles('.'); }
 }
   console.log(`Found ${problematicFiles.length} problematic files`);
   let fixedCount = 0;
@@ -143,11 +133,9 @@ async function main() {
   try {
 }
 }
-    execSync('pnpm run lint --max-warnings 10', { stdio: 'pipe' });
+    execSync('pnpm run lint --max-warnings 10', { stdio: "pipe" });
     console.log('✅ Linting improved!');
-  } catch (error) {
-  console.log('⚠️  Some linting issues remain, but major problems should be resolved');
-}
+  } catch (error) { console.log('⚠️  Some linting issues remain, but major problems should be resolved'); }
 }
   }
   console.log('🎉 Remaining error fixing process completed!');

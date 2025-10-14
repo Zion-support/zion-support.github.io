@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React from 'react'
 import React, { useEffect, useState } from 'react';
-interface PerformanceMetrics {
-  loadTime: number;
+interface PerformanceMetrics { loadTime: number;
   renderTime: number;
   memoryUsage: number;
   networkLatency: number;
@@ -10,8 +8,7 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-  totalBlockingTime: number;
-}
+  totalBlockingTime: number; }
 const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -88,30 +85,19 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       if (event.ctrlKey && event.shiftKey && event.key === 'P') {
         setIsVisible(!isVisible);
       }
-      if (event.ctrlKey && event.shiftKey && event.key === 'R') {
-        setIsRecording(!isRecording);
-      }
+      if (event.ctrlKey && event.shiftKey && event.key === 'R') { setIsRecording(!isRecording); }
     };
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [isVisible, isRecording]);
   // Don't render in production
-  if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
-  if (!isVisible) {
-    return null;
-  }
+  if (process.env.NODE_ENV === 'production') { return null; }
+  if (!isVisible) { return null; }
   const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
     return 'text-red-400';
   };
-=======
-import React from 'react';
-
-export default function AdvancedPerformanceMonitor() {
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -122,22 +108,21 @@ export default function AdvancedPerformanceMonitor() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
     <div className="fixed bottom-4 right-4 bg-slate-800/95 backdrop-blur-sm border border-slate-700 rounded-lg p-4 shadow-lg z-50 max-w-sm">
       <div className="flex items-center justify-between mb-3">
         <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
         <div className="flex space-x-2">
           <button
-            onClick={() => setIsRecording(!isRecording)}
+            onClick={ () => setIsRecording(!isRecording) }
             className={`text-xs px-2 py-1 rounded ${
               isRecording ? 'bg-red-600 text-white' : 'bg-slate-600 text-gray-300'
             }`}
           >
-            {isRecording ? 'Recording' : 'Record'}
+            { isRecording ? 'Recording' : 'Record' }
           </button>
           <button
-            onClick={() => setIsVisible(false)}
+            onClick={ () => setIsVisible(false) }
             className="text-gray-400 hover:text-white text-xs"
           >
             ✕
@@ -166,7 +151,7 @@ export default function AdvancedPerformanceMonitor() {
         <div className="flex justify-between">
           <span className="text-gray-400">CLS:</span>
           <span className={`font-mono ${getScoreColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}`}>
-            {metrics.cumulativeLayoutShift.toFixed(3)}
+            { metrics.cumulativeLayoutShift.toFixed(3) }
           </span>
         </div>
         <div className="flex justify-between">
@@ -199,6 +184,3 @@ export default AdvancedPerformanceMonitor;
           This component is under development.</p></div></div>
   )}
 export default AdvancedPerformanceMonitor
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1

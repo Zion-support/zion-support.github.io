@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react'
 import EnhancedSEO from '../components/EnhancedSEO'
 import ResponsiveContainer from '../components/ResponsiveContainer'
@@ -8,12 +7,6 @@ import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-reac
 import EnhancedSEO from '../components/EnhancedSEO';'
 import ResponsiveContainer from '../components/ResponsiveContainer';'
 import FuturisticCard from '../components/FuturisticCard';'
-=======
-import { ArrowRight, Zap, Brain, CheckCircle, TrendingUp, Settings, Workflow } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1
 import FuturisticButton from '../components/FuturisticButton';
 const AIAutomationPlatform = () => {
   const features = [
@@ -21,28 +14,25 @@ const AIAutomationPlatform = () => {
       title: "Workflow Automation",
       description: "Automate complex business processes with AI-powered workflows",
       icon: <Workflow className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"}
+      color: "from-blue-500 to-cyan-500" }
     },
-    {
-      title: "Smart Decision Making",
+    { title: "Smart Decision Making",
       description: "AI-driven decision making for automated business processes",
       icon: <Brain className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
-      color: "from-green-500 to-emerald-500"}
+      color: "from-green-500 to-emerald-500" }
     },
-    {
-      title: "Process Optimization",
+    { title: "Process Optimization",
       description: "Continuously optimize processes using machine learning",
       icon: <Settings className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
-      color: "from-purple-500 to-pink-500"}
+      color: "from-purple-500 to-pink-500" }
     },
-    {
-      title: "Integration Hub",
+    { title: "Integration Hub",
       description: "Connect and automate across all your business systems",
       icon: <Zap className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
-      color: "from-orange-500 to-red-500"}
+      color: "from-orange-500 to-red-500" }
     }
   ]
   const benefits = [
@@ -61,7 +51,7 @@ const AIAutomationPlatform = () => {
         keywords="AI automation, workflow automation, process optimization, business automation, intelligent automation, RPA"
       />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Hero Section */}
+        { /* Hero Section */ }
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
           <ResponsiveContainer>
@@ -79,13 +69,13 @@ const AIAutomationPlatform = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <FuturisticButton
-                  icon={<Right className="w-5 h-5" />}
+                  icon={ <Right className="w-5 h-5" /> }
                 >
                   Get Started Today
                 </FuturisticButton>
                 <FuturisticButton
                   variant="outline"
-                  icon={<Play className="w-5 h-5" />}
+                  icon={ <Play className="w-5 h-5" /> }
                 >
                   View Demo
                 </FuturisticButton>
@@ -93,7 +83,7 @@ const AIAutomationPlatform = () => {
             </div>
           </ResponsiveContainer>
         </section>
-        {/* Features Section */}
+        { /* Features Section */ }
         <section className="py-20">
           <ResponsiveContainer>
             <div className="text-center mb-16">
@@ -105,23 +95,23 @@ const AIAutomationPlatform = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (}
+              { features.map((feature, index) => ( }
                 <FuturisticCard key={index} className="text-center">
                   <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center`}>
-                    {feature.icon}
+                    { feature.icon }
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">
-                    {feature.title}
+                    { feature.title }
                   </h3>
                   <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
-                    {feature.description}
+                    { feature.description }
                   </p>
                 </FuturisticCard>
               ))}
             </div>
           </ResponsiveContainer>
         </section>
-        {/* Benefits Section */}
+        { /* Benefits Section */ }
         <section className="py-20 bg-gradient-to-r from-cyan-500/5 to-purple-500/5">
           <ResponsiveContainer>
             <div className="text-center mb-16">
@@ -133,7 +123,7 @@ const AIAutomationPlatform = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (}
+              { benefits.map((benefit, index) => ( }
                 <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
                   <Circle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-white font-medium">{benefit}</span>
@@ -142,7 +132,7 @@ const AIAutomationPlatform = () => {
             </div>
           </ResponsiveContainer>
         </section>
-        {/* CTA Section */}
+        { /* CTA Section */ }
         <section className="py-20">
           <ResponsiveContainer>
             <div className="text-center">
@@ -154,7 +144,7 @@ const AIAutomationPlatform = () => {
               </p>
               <FuturisticButton
                 size="lg"
-                icon={<Zap className="w-6 h-6" />}
+                icon={ <Zap className="w-6 h-6" /> }
               >
                 Start Your Automation Journey
               </FuturisticButton>

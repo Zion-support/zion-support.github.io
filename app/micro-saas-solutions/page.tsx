@@ -44,8 +44,7 @@ export default function MicroSaaSSolutionsPage() {
       price: "Starting at $99/month",
       benefits: ["Increased efficiency", "Better decision making", "Cost savings"],
       useCases: ["Business intelligence", "Performance tracking", "Data analysis"],
-      href: "/micro-saas/analytics-dashboard"
-    },
+      href: "/micro-saas/analytics-dashboard" },
     {
       title: "AI Content Generator",
       description: "Advanced content creation tool powered by artificial intelligence for blogs, social media, and marketing.",
@@ -62,8 +61,7 @@ export default function MicroSaaSSolutionsPage() {
       price: "Starting at $79/month",
       benefits: ["Time savings", "Consistent quality", "SEO optimization"],
       useCases: ["Content marketing", "Social media", "Blog management"],
-      href: "/micro-saas/content-generator"
-    },
+      href: "/micro-saas/content-generator" },
     {
       title: "AI Customer Support Chatbot",
       description: "Intelligent chatbot solution that provides 24/7 customer support with natural language processing.",
@@ -80,8 +78,7 @@ export default function MicroSaaSSolutionsPage() {
       price: "Starting at $149/month",
       benefits: ["24/7 support", "Reduced costs", "Improved satisfaction"],
       useCases: ["Customer service", "Lead qualification", "FAQ automation"],
-      href: "/micro-saas/ai-customer-support-chatbot"
-    },
+      href: "/micro-saas/ai-customer-support-chatbot" },
     {
       title: "AI Project Manager",
       description: "Intelligent project management tool with AI-powered task optimization and team collaboration features.",
@@ -98,8 +95,7 @@ export default function MicroSaaSSolutionsPage() {
       price: "Starting at $129/month",
       benefits: ["Better organization", "Improved productivity", "Resource optimization"],
       useCases: ["Project management", "Team coordination", "Task automation"],
-      href: "/micro-saas/ai-project-manager"
-    },
+      href: "/micro-saas/ai-project-manager" },
     {
       title: "AI Inventory Manager",
       description: "Smart inventory management system with predictive analytics and automated reordering capabilities.",
@@ -116,10 +112,8 @@ export default function MicroSaaSSolutionsPage() {
       price: "Starting at $199/month",
       benefits: ["Reduced waste", "Optimized stock", "Cost savings"],
       useCases: ["Inventory management", "Supply chain", "Retail operations"],
-      href: "/micro-saas/ai-inventory-manager"
-    },
-    {
-      title: "AI Expense Tracker",
+      href: "/micro-saas/ai-inventory-manager" },
+    { title: "AI Expense Tracker",
       description: "Intelligent expense tracking and categorization system with automated receipt processing and reporting.",
       icon: CurrencyDollarIcon,
       features: [
@@ -134,8 +128,7 @@ export default function MicroSaaSSolutionsPage() {
       price: "Starting at $59/month",
       benefits: ["Time savings", "Better tracking", "Tax compliance"],
       useCases: ["Expense management", "Financial tracking", "Tax preparation"],
-      href: "/micro-saas/ai-expense-tracker"
-    }
+      href: "/micro-saas/ai-expense-tracker" }
   ];
   const features = [
     {
@@ -153,11 +146,9 @@ export default function MicroSaaSSolutionsPage() {
       description: "Seamlessly integrate with your existing tools and workflows.",
       icon: CogIcon
     },
-    {
-      title: "24/7 Support",
+    { title: "24/7 Support",
       description: "Round-the-clock support to ensure your success.",
-      icon: UserGroupIcon
-    }
+      icon: UserGroupIcon }
   ];
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -171,7 +162,7 @@ import { Helmet } from 'react-helmet-async';
         <meta name="keywords" content="micro SaaS, AI solutions, business automation, productivity tools" />
       </Helmet>
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
+        { /* Hero Section */ }
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -197,7 +188,7 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-        {/* Solutions Grid */}
+        { /* Solutions Grid */ }
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -215,7 +206,7 @@ import { Helmet } from 'react-helmet-async';
                     <p className="text-blue-600 font-semibold">{solution.price}</p>
                   </div>
                   <Link 
-                    to={solution.href}
+                    to={ solution.href }
                     className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
                   >
                     Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />
@@ -225,7 +216,7 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-        {/* Features Section */}
+        { /* Features Section */ }
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -244,7 +235,7 @@ import { Helmet } from 'react-helmet-async';
             </div>
           </div>
         </section>
-        {/* CTA Section */}
+        { /* CTA Section */ }
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -298,7 +289,7 @@ import { Helmet } from 'react-helmet-async';
         <meta name="description" content="Comprehensive micro SaaS solutions including AI-powered analytics, content management, customer support, and more. Transform your business with our innovative software solutions." />
         <meta name="keywords" content="micro SaaS, software solutions, AI analytics, content management, customer support, business automation" />
       </Helmet>
-      {/* Hero Section */}
+      { /* Hero Section */ }
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -315,7 +306,7 @@ import { Helmet } from 'react-helmet-async';
           </div>
         </div>
       </section>
-      {/* Micro SaaS Products Grid */}
+      { /* Micro SaaS Products Grid */ }
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
@@ -328,19 +319,19 @@ import { Helmet } from 'react-helmet-async';
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{product.title}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">
-                    {product.description}
+                    { product.description }
                   </p>
-                  {/* Pricing */}
+                  { /* Pricing */ }
                   <div className="mb-6">
                     <div className="flex items-baseline gap-2">
                       <span className="text-3xl font-bold text-green-400">{product.price}</span>
                       <span className="text-gray-400">/month</span>
                     </div>
                     <div className="text-sm text-gray-400">
-                      Setup fee: {product.setupFee}
+                      Setup fee: { product.setupFee }
                     </div>
                   </div>
-                  {/* Features */}
+                  { /* Features */ }
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-3">Key Features:</h4>
                     <ul className="space-y-2">
@@ -352,31 +343,31 @@ import { Helmet } from 'react-helmet-async';
                       ))}
                     </ul>
                   </div>
-                  {/* Benefits */}
+                  { /* Benefits */ }
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>
                     <div className="flex flex-wrap gap-2">
                       {product.benefits.map((benefit, benefitIndex) => (
                         <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
-                          {benefit}
+                          { benefit }
                         </span>
                       ))}
                     </div>
                   </div>
-                  {/* Use Cases */}
+                  { /* Use Cases */ }
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
                     <div className="flex flex-wrap gap-2">
                       {product.useCases.map((useCase, useCaseIndex) => (
                         <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
-                          {useCase}
+                          { useCase }
                         </span>
                       ))}
                     </div>
                   </div>
                   <div className="flex gap-2">
                     <Link
-                      to={product.href}
+                      to={ product.href }
                       className="flex-1 inline-flex items-center justify-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg hover:bg-purple-400/10"
                     >
                       Learn More <ArrowRightIcon className="w-4 h-4" />
@@ -394,7 +385,7 @@ import { Helmet } from 'react-helmet-async';
           </div>
         </div>
       </section>
-      {/* Why Choose Our Micro SaaS */}
+      { /* Why Choose Our Micro SaaS */ }
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -445,7 +436,7 @@ import { Helmet } from 'react-helmet-async';
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      { /* CTA Section */ }
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">

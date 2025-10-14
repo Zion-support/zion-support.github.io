@@ -12,7 +12,7 @@ import { Helmet } from 'react-helmet-async';
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
             Discover our comprehensive aihealthcare solutions designed to transform your business;
           </p>;
-        </div>;
+        </div>
         <div className="text-center">;
           <p className="text-gray-300">Coming Soon - AiHealthcare Solutions</p>;
 }

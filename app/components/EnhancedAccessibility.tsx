@@ -1,10 +1,9 @@
 import React from 'react';'react
-interface EnhancedAccessibilityProps {
-  children: Node}
+interface EnhancedAccessibilityProps { children: Node }
 const EnhancedAccessibility: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
-    fontSize: 'normal',
+    fontSize: "normal",
     reducedMotion: false,
     screenReader: false
   })
@@ -64,19 +63,14 @@ const EnhancedAccessibility: React.FC = () => {
           outline-offset: 2px !important}
       // Add ARIA landmarks
       const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-        main.setAttribute('aria-label', 'Main content');
-      }
+      if (main && !main.getAttribute('role')) { main.setAttribute('role', 'main');
+        main.setAttribute('aria-label', 'Main content'); }
       // Add focus indicators
       const style = document.createElement('style');
       style.textContent = `
-        *:focus {
-          outline: 2px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
-        }
-        .sr-only {
-          position: absolute;
+        *:focus { outline: 2px solid #8b5cf6 !important;
+          outline-offset: 2px !important; }
+        .sr-only { position: absolute;
           width: 1px;
           height: 1px;
           padding: 0;
@@ -84,18 +78,15 @@ const EnhancedAccessibility: React.FC = () => {
           overflow: hidden;
           clip: rect(0, 0, 0, 0);
           white-space: nowrap;
-          border: 0;
-        }
-        .focus\\:not-sr-only:focus {
-          position: static;
+          border: 0; }
+        .focus\\:not-sr-only:focus { position: static;
           width: auto;
           height: auto;
           padding: 8px;
           margin: 0;
           overflow: visible;
           clip: auto;
-          white-space: normal;
-        }
+          white-space: normal; }
       `;
       document.head.appendChild(style);
     }
@@ -154,9 +145,7 @@ const EnhancedAccessibility: React.FC = () => {
     };
     motionMediaQuery.addEventListener('change', handleMotionChange);
     contrastMediaQuery.addEventListener('change', handleContrastChange);
-    return () => {
-      // Cleanup if needed;
-    }
+    return () => { // Cleanup if needed; }
       motionMediaQuery.removeEventListener('change', handleMotionChange);
       contrastMediaQuery.removeEventListener('change', handleContrastChange);
     };
@@ -186,8 +175,7 @@ const EnhancedAccessibility: React.FC = () => {
     const root = document.documentElement
     // Apply high contrast
     if (settings.highContrast) {
-      root.classList.add('high-contrast')} else {
-      root.classList.remove('high-contrast')}
+      root.classList.add('high-contrast')} else { root.classList.remove('high-contrast') }
     // Apply font size
     root.classList.remove('font-size-small', 'font-size-large', 'font-size-extra-large')
     if (settings.fontSize !== 'normal') {
@@ -195,9 +183,7 @@ const EnhancedAccessibility: React.FC = () => {
     // Apply reduced motion
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+    } else { root.classList.remove('reduced-motion'); }
   }
   const toggleHighContrast = () => {
     setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }));
@@ -205,18 +191,14 @@ const EnhancedAccessibility: React.FC = () => {
   const setFontSize = (size: AccessibilitySettings['fontSize']) => {
     setSettings(prev => ({ ...prev, fontSize: size }));
   }
-  const toggleVisibility = () => {
-    setIsVisible(prev => !prev);
-  }
-      root.classList.add('reduced-motion')} else {
-      root.classList.remove('reduced-motion')}
+  const toggleVisibility = () => { setIsVisible(prev => !prev); }
+      root.classList.add('reduced-motion')} else { root.classList.remove('reduced-motion') }
   }
   const toggleHighContrast = () => {
     setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }))}
   const setFontSize = (size: AccessibilitySettings['fontSize']) => {
     setSettings(prev => ({ ...prev, fontSize: size }))}
-  const toggleVisibility = () => {
-    setIsVisible(prev => !prev)}
+  const toggleVisibility = () => { setIsVisible(prev => !prev) }
   // Add CSS for accessibility features
   useEffect(() => {
     const style = document.createElement('style')
@@ -224,18 +206,13 @@ const EnhancedAccessibility: React.FC = () => {
     style.textContent = `
       .high-contrast {
         filter: contrast(150%) brightness(110%)}
-      .font-size-small {
-        font-size: 0.875rem}
-      .font-size-large {
-        font-size: 1.125rem}
-      .font-size-extra-large {
-        font-size: 1.25rem}
-      .reduced-motion * {
-        animation-duration: 0.01ms !important
+      .font-size-small { font-size: 0.875rem }
+      .font-size-large { font-size: 1.125rem }
+      .font-size-extra-large { font-size: 1.25rem }
+      .reduced-motion * { animation-duration: 0.01ms !important
         animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important}
-      .accessibility-panel {
-        position: fixed
+        transition-duration: 0.01ms !important }
+      .accessibility-panel { position: fixed
         top: 50%
         right: -300px
         transform: translateY(-50%)
@@ -246,11 +223,9 @@ const EnhancedAccessibility: React.FC = () => {
         padding: 1rem
         z-index: 1000
         transition: right 0.3s ease
-        color: white}
-      .accessibility-panel.visible {
-        right: 0}
-      .accessibility-toggle {
-        position: fixed
+        color: white }
+      .accessibility-panel.visible { right: 0 }
+      .accessibility-toggle { position: fixed
         top: 50%
         right: 0
         transform: translateY(-50%)
@@ -263,9 +238,8 @@ const EnhancedAccessibility: React.FC = () => {
         z-index: 1001
         font-size: 0.875rem
         writing-mode: vertical-rl
-        text-orientation: mixed}
-      .accessibility-toggle:hover {
-        background: #7c3aed}
+        text-orientation: mixed }
+      .accessibility-toggle:hover { background: #7c3aed }
     `
     document.head.appendChild(style)
     return () => {
@@ -281,7 +255,7 @@ const EnhancedAccessibility: React.FC = () => {
     <>
       <button
         className="accessibility-toggle"
-        onClick={toggleVisibility}
+        onClick={ toggleVisibility }
         aria-label="Toggle accessibility options"
         title="Accessibility Options"
       >
@@ -294,8 +268,8 @@ const EnhancedAccessibility: React.FC = () => {
             <label className="flex items-center space-x-2">
               <input
                 type="checkbox"
-                checked={settings.highContrast}
-                onChange={toggleHighContrast}
+                checked={ settings.highContrast }
+                onChange={ toggleHighContrast }
                 className="rounded"
               />
               <span>High Contrast</span>
@@ -309,9 +283,9 @@ const EnhancedAccessibility: React.FC = () => {
                   <input
                     type="radio"
                     name="fontSize"
-                    value={size}
-                    checked={settings.fontSize === size}
-                    onChange={() => setFontSize(size)}
+                    value={ size }
+                    checked={ settings.fontSize === size }
+                    onChange={ () => setFontSize(size) }
                     className="rounded"
                   />
                   <span className="capitalize">{size}</span>
@@ -321,14 +295,14 @@ const EnhancedAccessibility: React.FC = () => {
           </div>
           <div>
             <p className="text-sm text-gray-300">
-              Screen Reader: {settings.screenReader ? 'Detected' : 'Not detected'}
+              Screen Reader: { settings.screenReader ? 'Detected' : 'Not detected' }
             </p>
             <p className="text-sm text-gray-300">
-              Reduced Motion: {settings.reducedMotion ? 'Enabled' : 'Disabled'}
+              Reduced Motion: { settings.reducedMotion ? 'Enabled' : 'Disabled' }
             </p>
           </div>
           <button
-            onClick={toggleVisibility}
+            onClick={ toggleVisibility }
             className="w-full bg-purple-600 text-white py-2 px-4 rounded hover:bg-purple-700 transition-colors"
           >
             Close
@@ -342,15 +316,11 @@ export default EnhancedAccessibility;
   )}
 export default EnhancedAccessibility
     // Apply high contrast mode
-    if (isHighContrast) {
-      document.documentElement.style.setProperty('--tw-bg-opacity', '1');
-      document.documentElement.style.setProperty('--tw-text-opacity', '1');
-    }
+    if (isHighContrast) { document.documentElement.style.setProperty('--tw-bg-opacity', '1');
+      document.documentElement.style.setProperty('--tw-text-opacity', '1'); }
     // Apply reduced motion
-    if (isReducedMotion) {
-      document.documentElement.style.setProperty('--tw-transition-duration', '0ms');
-      document.documentElement.style.setProperty('--tw-animate-duration', '0ms');
-    }
+    if (isReducedMotion) { document.documentElement.style.setProperty('--tw-transition-duration', '0ms');
+      document.documentElement.style.setProperty('--tw-animate-duration', '0ms'); }
   }, [isHighContrast, isReducedMotion]);
   useEffect(() => {
     // Apply font size changes
@@ -365,39 +335,27 @@ export default EnhancedAccessibility
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
           mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' });
+          mainContent.scrollIntoView({ behavior: "smooth" });
         }
       }
       // Alt + H: Go to home
-      if (event.altKey && event.key === 'h') {
-        event.preventDefault();
-        window.location.href = '/';
-      }
+      if (event.altKey && event.key === 'h') { event.preventDefault();
+        window.location.href = '/'; }
       // Alt + C: Go to contact
-      if (event.altKey && event.key === 'c') {
-        event.preventDefault();
-        window.location.href = '/contact';
-      }
+      if (event.altKey && event.key === 'c') { event.preventDefault();
+        window.location.href = '/contact'; }
       // Alt + S: Go to services
-      if (event.altKey && event.key === 's') {
-        event.preventDefault();
-        window.location.href = '/services';
-      }
+      if (event.altKey && event.key === 's') { event.preventDefault();
+        window.location.href = '/services'; }
       // Ctrl + Plus: Increase font size
-      if (event.ctrlKey && event.key === '=') {
-        event.preventDefault();
-        setFontSize(prev => Math.min(prev + 2, 24));
-      }
+      if (event.ctrlKey && event.key === '=') { event.preventDefault();
+        setFontSize(prev => Math.min(prev + 2, 24)); }
       // Ctrl + Minus: Decrease font size
-      if (event.ctrlKey && event.key === '-') {
-        event.preventDefault();
-        setFontSize(prev => Math.max(prev - 2, 12));
-      }
+      if (event.ctrlKey && event.key === '-') { event.preventDefault();
+        setFontSize(prev => Math.max(prev - 2, 12)); }
       // Ctrl + 0: Reset font size
-      if (event.ctrlKey && event.key === '0') {
-        event.preventDefault();
-        setFontSize(16);
-      }
+      if (event.ctrlKey && event.key === '0') { event.preventDefault();
+        setFontSize(16); }
     };
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);

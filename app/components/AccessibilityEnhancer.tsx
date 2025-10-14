@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -19,13 +18,11 @@ const AccessibilityEnhancer: React.FC = () => {
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
           mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' });
+          mainContent.scrollIntoView({ behavior: "smooth" });
         }
       }
     }
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    }
+    const handleMouseDown = () => { document.body.classList.remove('keyboard-navigation'); }
     // Add focus indicators for keyboard navigation
     };
     // Add focus styles
@@ -55,9 +52,7 @@ const AccessibilityEnhancer: React.FC = () => {
     // Reduced motion mode
     if (isReducedMotion) {
       root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+    } else { root.classList.remove('reduced-motion'); }
     // Font size adjustment
     root.style.setProperty('--font-size-multiplier', 
       fontSize === 'large' ? '1.2' : 
@@ -113,9 +108,7 @@ const AccessibilityEnhancer: React.FC = () => {
         nav.setAttribute('role', 'navigation');
       }
       const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
+      if (footer && !footer.getAttribute('role')) { footer.setAttribute('role', 'contentinfo'); }
     }
     // Add alt text to images without alt attributes
     const addAltText = () => {
@@ -134,16 +127,12 @@ const AccessibilityEnhancer: React.FC = () => {
     };
     document.addEventListener('keydown', handleKeyDown);
     addFocusStyles();
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    }
+    return () => { document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown); }
   }, []);
 return null;
 import React from 'react';
-const AccessibilityEnhancer: React.FC = () => {
-  return null;
-}
+const AccessibilityEnhancer: React.FC = () => { return null; }
 export default AccessibilityEnhancer;
   }, []);
   return null;
@@ -152,18 +141,3 @@ export default AccessibilityEnhancer;
   return null;
 };
 export default AccessibilityEnhancer;
-=======
-import React from 'react';
-
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-export default function AccessibilityEnhancer({ children }: AccessibilityEnhancerProps) {
-  return (
-    <div className="accessibility-enhanced">
-      {children}
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6ac1

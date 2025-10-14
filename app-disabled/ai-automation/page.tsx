@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-export default function Component; AIAutomation() {
-  return (
+export default function Component; AIAutomation() { return (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet></Helmet>
         <title>AI Automation - Zion Tech Group</title>
@@ -17,8 +16,7 @@ export default function Component; AIAutomation() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - AI Automation Solutions</p>
-  return (</div>
-}
+  return (</div> }
 }
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
@@ -26,5 +24,5 @@ export default function Component; AIAutomation() {
 )
   ])
 return(<>)
-      <Helmet / />
+      <Helmet />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">

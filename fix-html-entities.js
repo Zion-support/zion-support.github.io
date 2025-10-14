@@ -12,10 +12,10 @@ function fixHtmlEntities(filePath) {
   }
       { from: /&apos;/g, to: "'" },
       { from: /&quot;/g, to: '"' },
-      { from: /&lt;/g, to: '<' },
-      { from: /&gt;/g, to: '>' },
-      { from: /&amp;/g, to: '&' },
-      { from: /&rbrace;/g, to: '}' },      { from: /&lbrace;/g, to: '{' }
+      { from: /&lt;/g, to: "<" },
+      { from: /&gt;/g, to: ">" },
+      { from: /&amp;/g, to: "&" },
+      { from: /&rbrace;/g, to: "}" },      { from: /&lbrace;/g, to: "{" }
 ]
     ];
     let hasChanges = false;
@@ -29,9 +29,7 @@ function fixHtmlEntities(filePath) {
 }
       }
     });
-    if (hasChanges) {
-  fs.writeFileSync(filePath, content, 'utf8');
-}
+    if (hasChanges) { fs.writeFileSync(filePath, content, 'utf8'); }
       console.log(`Fixed HTML entities in: ${filePath}`);
       return true;
     }
@@ -52,9 +50,7 @@ function findTsxFiles(dir) {
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         traverse(fullPath);
 }
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-  files.push(fullPath);
-}
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) { files.push(fullPath); }
       }
     }
   }

@@ -20,11 +20,11 @@ const LazyImage: React.FC = () => {
           </p>
         </div>
       </section>
-      {/* Content Section */}
+      { /* Content Section */ }
             Lazy Image</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional lazy image services
-            designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
+            designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -64,7 +64,7 @@ const LazyImage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      { /* CTA Section */ }
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -105,7 +105,7 @@ export default LazyImage;
               <a
                 href="/contact"
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
-                Contact Us</a></div></div></div></section>{/* CTA Section */}
+                Contact Us</a></div></div></div></section>{ /* CTA Section */ }
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -120,14 +120,12 @@ export default LazyImage;
   )}
 export default LazyImage
 import React, { useState, useRef, useEffect } from 'react';
-interface LazyImageProps {
-  src: string;
+interface LazyImageProps { src: string;
   alt: string;
   className?: string;
   placeholder?: string;
   onLoad?: () => void;
-  onError?: () => void;
-}
+  onError?: () => void; }
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
@@ -149,9 +147,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
       },
       { threshold: 0.1 }
     );
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
+    if (imgRef.current) { observer.observe(imgRef.current); }
     return () => observer.disconnect();
   }, []);
   const handleLoad = () => {
@@ -166,9 +162,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {isInView && (
         <img
           src={src}
-          alt={alt}
-          onLoad={handleLoad}
-          onError={handleError}
+          alt={ alt }
+          onLoad={ handleLoad }
+          onError={ handleError }
           className={`transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
@@ -180,9 +176,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
           className="absolute inset-0 bg-gray-200 animate-pulse"
           style={{
             backgroundImage: `url(${placeholder})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
+            backgroundSize: "cover",
+            backgroundPosition: "center" }}
         />
       )}
     </div>

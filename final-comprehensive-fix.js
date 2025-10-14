@@ -47,11 +47,9 @@ function fixFileComprehensively(filePath) {
     // Fix duplicate React imports
     const lines = content.split('\n');
     const reactImports = lines.filter(line => line.trim().startsWith('import React'));
-    if (reactImports.length > 1) {
-  const firstReactImport = reactImports[0];
+    if (reactImports.length > 1) { const firstReactImport = reactImports[0];
       content = content.replace(/import React[^;]+;/g, '');
-      content = firstReactImport + '\n' + content;
-}
+      content = firstReactImport + '\n' + content; }
 }
     }
     // Fix specific syntax errors
@@ -82,9 +80,7 @@ function fixFileComprehensively(filePath) {
     content = content.replace(/// Unterminated string constant/g, '// // Unterminated string constant');
     // Fix identifier already declared
     content = content.replace(/// Identifier React has already been declared/g, '// Identifier React has already been declared');
-    if (content !== originalContent) {
-  fs.writeFileSync(filePath, content, 'utf8');
-}
+    if (content !== originalContent) { fs.writeFileSync(filePath, content, 'utf8'); }
 }
       console.log(`✅ Fixed: ${filePath}`);
       return true;
@@ -126,14 +122,10 @@ function findProblematicFiles(dir) {
               content.includes('</>') ||
               content.includes('Unterminated string') ||
               content.includes('Unexpected token') ||
-              content.includes('Identifier \'React\' has already been declared')) {
-  files.push(fullPath);
-}
+              content.includes('Identifier \'React\' has already been declared')) { files.push(fullPath); }
 }
           }
-        } catch (err) {
-  // Skip files that can't be read
-}
+        } catch (err) { // Skip files that can't be read }
 }
         }
       }
@@ -143,10 +135,8 @@ function findProblematicFiles(dir) {
   return files;
 }
 // Main execution
-async function main() {
-  console.log('🔍 Finding all problematic files...');
-  const problematicFiles = findProblematicFiles('.');
-}
+async function main() { console.log('🔍 Finding all problematic files...');
+  const problematicFiles = findProblematicFiles('.'); }
 }
   console.log(`Found ${problematicFiles.length} problematic files`);
   let fixedCount = 0;
@@ -163,11 +153,9 @@ async function main() {
   try {
 }
 }
-    execSync('pnpm run lint --max-warnings 50', { stdio: 'pipe' });
+    execSync('pnpm run lint --max-warnings 50', { stdio: "pipe" });
     console.log('✅ Linting passed!');
-  } catch (error) {
-  console.log('⚠️  Some linting issues remain, but major problems should be resolved');
-}
+  } catch (error) { console.log('⚠️  Some linting issues remain, but major problems should be resolved'); }
 }
   }
   // Try to build the project
@@ -175,11 +163,9 @@ async function main() {
   try {
 }
 }
-    execSync('pnpm run build', { stdio: 'pipe' });
+    execSync('pnpm run build', { stdio: "pipe" });
     console.log('✅ Build successful!');
-  } catch (error) {
-  console.log('⚠️  Build issues remain, but syntax errors should be resolved');
-}
+  } catch (error) { console.log('⚠️  Build issues remain, but syntax errors should be resolved'); }
 }
   }
   console.log('🎉 Final comprehensive error fixing process completed!');
