@@ -1,13 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import React, { Suspense } from 'react';
 import { Target, Rocket } from 'lucide-react';
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 const MicroSaasSolutionsPage: React.FC = () => {
-
-import React, { Suspense } from 'react';
   return (
     <>
       <Helmet>
@@ -46,13 +41,6 @@ import React, { Suspense } from 'react';
       </div>
     </>
   );
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 };
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 export default MicroSaasSolutionsPage;

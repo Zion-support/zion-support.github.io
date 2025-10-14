@@ -1,15 +1,8 @@
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import React, { Suspense } from 'react';
 import EnhancedSEO from '../components/EnhancedSEO'
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 const FiveGIntegrationPage = () => {
   const services = [
     {
@@ -29,7 +22,6 @@ const FiveGIntegrationPage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <EnhancedSEO 
-import React, { Suspense } from 'react';
         title="5G Integration Services - Zion Tech Group"
         description="Professional 5G integration services to connect your business with next-generation wireless technology."
       />
@@ -77,12 +69,8 @@ import React, { Suspense } from 'react';
           </Link>
         </div>
       </div>
-import React, { Suspense } from 'react';
     </div>
   )
 }
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 export default FiveGIntegrationPage

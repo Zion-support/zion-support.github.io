@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import React, { Suspense } from 'react';
 const ZionAiPerformanceOptimizerPage: React.FC = () => {
   return (
     <>
@@ -50,6 +49,4 @@ const ZionAiPerformanceOptimizerPage: React.FC = () => {
   );
 }
 
-import React, { Suspense } from 'react';
-import React, { Suspense } from 'react';
 export default ZionAiPerformanceOptimizerPage;

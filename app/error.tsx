@@ -1,4 +1,3 @@
-import React, { Suspense } from 'react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -6,7 +5,6 @@ const ErrorPage: React.FC = () => {
   return (
     <>
       <Helmet>
-import React, { Suspense } from 'react';
         <title>Error - Zion Tech Group</title>
         <meta name="description" content="An error occurred" />
       </Helmet>
