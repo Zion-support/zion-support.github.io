@@ -1,7 +1,67 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Wifi, Zap, Globe, Smartphone } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Wifi,
+      title: 'Ultra-Fast Connectivity',
+      description: 'Lightning-fast 5G speeds for seamless operations'
+    },
+    {
+      icon: Zap,
+      title: 'Low Latency',
+      description: 'Minimal delay for real-time applications'
+    },
+    {
+      icon: Globe,
+      title: 'Global Coverage',
+      description: 'Worldwide 5G network implementation'
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile Integration',
+      description: 'Seamless mobile device connectivity'
+    }
+  ];
+
+  const solutions = [
+    {
+      title: 'Enterprise 5G',
+      description: 'Complete 5G infrastructure for large enterprises',
+      price: 'Starting at $50,000',
+      features: [
+        'Custom 5G network design',
+        'Hardware installation',
+        '24/7 monitoring',
+        'Dedicated support team'
+      ]
+    },
+    {
+      title: 'SMB 5G Solutions',
+      description: 'Scalable 5G solutions for small to medium businesses',
+      price: 'Starting at $15,000',
+      features: [
+        'Pre-configured 5G setup',
+        'Basic monitoring',
+        'Standard support',
+        'Scalable architecture'
+      ]
+    },
+    {
+      title: '5G Consulting',
+      description: 'Expert guidance for 5G implementation strategy',
+      price: 'Starting at $5,000',
+      features: [
+        'Strategic planning',
+        'Technology assessment',
+        'Implementation roadmap',
+        'Ongoing consultation'
+      ]
+    }
+  ];
+
   return (
     <React.Fragment>
       <Helmet>
@@ -11,9 +71,42 @@ const FiveGSolutionsPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <h1 className="text-4xl font-bold text-white mb-8">5G Solutions</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
+          <p className="text-gray-300 text-lg mb-12">
+            Professional 5G implementation solutions tailored to your business needs.
           </p>
+          
+          {/* Features Section */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <Icon className="h-8 w-8 text-blue-400 mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-gray-300 text-sm">{feature.description}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Solutions Section */}
+          <div className="grid md:grid-cols-3 gap-8">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10">
+                <h3 className="text-xl font-semibold text-white mb-2">{solution.title}</h3>
+                <p className="text-gray-300 mb-4">{solution.description}</p>
+                <div className="text-blue-400 font-semibold mb-4">{solution.price}</div>
+                <ul className="space-y-2">
+                  {solution.features.map((feature, idx) => (
+                    <li key={idx} className="text-gray-300 text-sm flex items-center">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </React.Fragment>
