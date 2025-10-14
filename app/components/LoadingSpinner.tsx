@@ -1,10 +1,56 @@
 import React from 'react';
-const LoadingSpinner = () => {
-  return (
-    <div className="loadingspinner-component">
-      <h2>LoadingSpinner</h2>
-      <p>This component is under construction.</p>
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  fullScreen?: boolean;
+  className?: string;
+  color?: 'primary' | 'secondary' | 'white';
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  text = 'Loading...',
+  fullScreen = false,
+  className = '',
+  color = 'primary'
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  const colorClasses = {
+    primary: 'border-purple-500',
+    secondary: 'border-cyan-500',
+    white: 'border-white'
+  };
+
+  const spinner = (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div
+        className={`${sizeClasses[size]} border-2 border-gray-300 border-t-2 border-t-current rounded-full animate-spin ${colorClasses[color]}`}
+      />
+      {text && (
+        <p className="mt-2 text-sm text-gray-300">
+          {text}
+        </p>
+      )}
     </div>
   );
+
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
+        <div className="bg-slate-800 rounded-lg p-8 shadow-xl">
+          {spinner}
+        </div>
+      </div>
+    );
+  }
+
+  return spinner;
 };
+
 export default LoadingSpinner;

@@ -1,146 +1,128 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  skipToContent?: boolean;
-  focusManagement?: boolean;
-  reducedMotion?: boolean;
-}
+const AccessibilityEnhancer: React.FC = () => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal');
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
-  children,
-  skipToContent = true,
-  focusManagement = true,
-  reducedMotion = true
-}) => {
   useEffect(() => {
-    // Skip to content functionality
-    if (skipToContent) {
-      const handleSkipToContent = (e: KeyboardEvent) => {
-        if (e.key === 'Tab' && !e.shiftKey) {
-          const skipLink = document.getElementById('skip-to-content');
-          if (skipLink) {
-            skipLink.focus();
-          }
-        }
-      };
+    const root = document.documentElement;
 
-      document.addEventListener('keydown', handleSkipToContent);
-      return () => document.removeEventListener('keydown', handleSkipToContent);
+    // High contrast mode
+    if (isHighContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
     }
-    return undefined;
-  }, [skipToContent]);
 
-  useEffect(() => {
-    // Focus management for modals and dynamic content
-    if (focusManagement) {
-      const handleFocusTrap = (e: KeyboardEvent) => {
-        if (e.key === 'Escape') {
-          const activeElement = document.activeElement as HTMLElement;
-          if (activeElement && activeElement.blur) {
-            activeElement.blur();
-          }
-        }
-      };
-
-      document.addEventListener('keydown', handleFocusTrap);
-      return () => document.removeEventListener('keydown', handleFocusTrap);
+    // Reduced motion mode
+    if (isReducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
     }
-    return undefined;
-  }, [focusManagement]);
 
+    // Font size adjustment
+    root.style.setProperty('--font-size-multiplier', 
+      fontSize === 'large' ? '1.2' : 
+      fontSize === 'extra-large' ? '1.4' : 
+      fontSize === 'small' ? '0.9' : '1'
+    );
+  }, [isHighContrast, isReducedMotion, fontSize]);
+
+  // Keyboard navigation enhancement
   useEffect(() => {
-    // Respect user's motion preferences
-    if (reducedMotion) {
-      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      
-      const handleMotionChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.style.setProperty('--animation-duration', '0.01ms');
-          document.documentElement.style.setProperty('--animation-iteration-count', '1');
-        } else {
-          document.documentElement.style.removeProperty('--animation-duration');
-          document.documentElement.style.removeProperty('--animation-iteration-count');
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Skip to main content
+      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
+        e.preventDefault();
+        const main = document.querySelector('main');
+        if (main) {
+          (main as HTMLElement).focus();
         }
-      };
-
-      // Initial check
-      if (mediaQuery.matches) {
-        document.documentElement.style.setProperty('--animation-duration', '0.01ms');
-        document.documentElement.style.setProperty('--animation-iteration-count', '1');
       }
-      
-      mediaQuery.addEventListener('change', handleMotionChange);
-      
-      return () => mediaQuery.removeEventListener('change', handleMotionChange);
-    }
-    return undefined;
-  }, [reducedMotion]);
-
-  useEffect(() => {
-    // Improve focus management
-    const improveFocusManagement = () => {
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #3b82f6;
-          outline-offset: 2px;
-        }
-        
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-        
-        .focus:not-sr-only:focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: 0.5rem 1rem;
-          margin: 0;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-      `;
-      document.head.appendChild(style);
     };
 
-    improveFocusManagement();
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
-    const nav = document.querySelector('nav');
-    if (nav && !nav.getAttribute('role')) {
-      nav.setAttribute('role', 'navigation');
-    }
+  // Add ARIA landmarks
+  useEffect(() => {
+    const addAriaLandmarks = () => {
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+      }
 
-    const footer = document.querySelector('footer');
-    if (footer && !footer.getAttribute('role')) {
-      footer.setAttribute('role', 'contentinfo');
-    }
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+      }
+
+      const footer = document.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo');
+      }
+    };
+
+    addAriaLandmarks();
+  }, []);
+
+  // Add alt text to images without alt attributes
+  useEffect(() => {
+    const addAltText = () => {
+      const images = document.querySelectorAll('img:not([alt])');
+      images.forEach((img, index) => {
+        if (!img.getAttribute('alt')) {
+          img.setAttribute('alt', `Image ${index + 1}`);
+        }
+      });
+    };
+
+    addAltText();
   }, []);
 
   return (
-    <>
-      {skipToContent && (
-        <a
-          id="skip-to-content"
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
-          tabIndex={1}
-        >
-          Skip to main content
-        </a>
-      )}
-      {children}
-    </>
+    <div className="accessibility-controls fixed bottom-4 left-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
+      <h3 className="text-white font-semibold mb-3">Accessibility</h3>
+      
+      <div className="space-y-3">
+        <label className="flex items-center space-x-2 text-white text-sm">
+          <input
+            type="checkbox"
+            checked={isHighContrast}
+            onChange={(e) => setIsHighContrast(e.target.checked)}
+            className="rounded"
+          />
+          <span>High Contrast</span>
+        </label>
+
+        <label className="flex items-center space-x-2 text-white text-sm">
+          <input
+            type="checkbox"
+            checked={isReducedMotion}
+            onChange={(e) => setIsReducedMotion(e.target.checked)}
+            className="rounded"
+          />
+          <span>Reduce Motion</span>
+        </label>
+
+        <div className="space-y-1">
+          <label className="text-white text-sm">Font Size</label>
+          <select
+            value={fontSize}
+            onChange={(e) => setFontSize(e.target.value as any)}
+            className="w-full bg-slate-700 text-white rounded px-2 py-1 text-sm"
+          >
+            <option value="small">Small</option>
+            <option value="normal">Normal</option>
+            <option value="large">Large</option>
+            <option value="extra-large">Extra Large</option>
+          </select>
+        </div>
+      </div>
+    </div>
   );
 };
 
