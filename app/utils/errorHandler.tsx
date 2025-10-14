@@ -1,5 +1,4 @@
-// errorHandler - Basic implementation
-export default function errorHandler() {
-  return null;
-}
-
+// errorHandler.tsx utility
+export const errorHandler = () => {
+  // Utility implementation
+};

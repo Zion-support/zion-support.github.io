@@ -1,19 +1,10 @@
 import React from 'react';
 
-interface FuturisticTextEnhancedProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({ className = '', children }) => {
+const FuturisticTextEnhanced: React.FC = () => {
   return (
-    <div className={`futuristictextenhanced-component ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold mb-2">FuturisticTextEnhanced</h3>
-          <p className="text-gray-600">This is the FuturisticTextEnhanced component.</p>
-        </div>
-      )}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">Futuristic Text Enhanced</h2>
+      <p className="text-gray-600">Futuristic Text Enhanced component is under development.</p>
     </div>
   );
 };

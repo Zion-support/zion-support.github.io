@@ -1,20 +1,14 @@
-import React from 'react';';';
-import { Helmet } from 'react-helmet-async';';';
+import React from 'react';
 
-export default function Page() {
+export default function ApiDocsPage() {
   return (
-    <React.Fragment>
-      <Helmet>
-        <title>Api Docs - Zion Tech Group</title>
-        <meta name="description" content="Professional api docs services by Zion Tech Group." />";";
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">";";
-        <div className="text-center">";";
-          <h1 className="text-4xl font-bold text-white mb-4">Api Docs</h1>";";
-          <p className="text-gray-300">Coming soon...</p>";";
-        </div>
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">API Documentation</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
       </div>
-    </React.Fragment>
-
+    </div>
   );
 }

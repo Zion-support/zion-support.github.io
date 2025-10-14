@@ -1,21 +1,24 @@
 import React from 'react';
 
-interface LoadingStatesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const LoadingStates: React.FC<LoadingStatesProps> = ({ className = '', children }) => {
-  return (
-    <div className={`loadingstates-component ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold mb-2">LoadingStates</h3>
-          <p className="text-gray-600">This is the LoadingStates component.</p>
-        </div>
-      )}
+export const LoadingPage = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gray-900">
+    <div className="text-center">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
+      <p className="text-white">Loading...</p>
     </div>
+  </div>
+);
+
+export const LoadingSpinner = ({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) => {
+  const sizes: Record<'sm' | 'md' | 'lg', string> = {
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12'
+  };
+
+  return (
+    <div className={`animate-spin rounded-full border-b-2 border-blue-500 ${sizes[size]}`}></div>
   );
 };
 
-export default LoadingStates;
+export default LoadingSpinner;

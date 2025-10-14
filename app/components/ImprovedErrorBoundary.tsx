@@ -1,19 +1,10 @@
 import React from 'react';
 
-interface ImprovedErrorBoundaryProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ImprovedErrorBoundary: React.FC<ImprovedErrorBoundaryProps> = ({ className = '', children }) => {
+const ImprovedErrorBoundary: React.FC = () => {
   return (
-    <div className={`improvederrorboundary-component ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold mb-2">ImprovedErrorBoundary</h3>
-          <p className="text-gray-600">This is the ImprovedErrorBoundary component.</p>
-        </div>
-      )}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">Improved Error Boundary</h2>
+      <p className="text-gray-600">Improved Error Boundary component is under development.</p>
     </div>
   );
 };

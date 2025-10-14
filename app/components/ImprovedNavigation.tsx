@@ -1,19 +1,10 @@
 import React from 'react';
 
-interface ImprovedNavigationProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const ImprovedNavigation: React.FC<ImprovedNavigationProps> = ({ className = '', children }) => {
+const ImprovedNavigation: React.FC = () => {
   return (
-    <div className={`improvednavigation-component ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold mb-2">ImprovedNavigation</h3>
-          <p className="text-gray-600">This is the ImprovedNavigation component.</p>
-        </div>
-      )}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">Improved Navigation</h2>
+      <p className="text-gray-600">Improved Navigation component is under development.</p>
     </div>
   );
 };

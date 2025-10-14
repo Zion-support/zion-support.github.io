@@ -1,19 +1,10 @@
 import React from 'react';
 
-interface EnhancedLoadingStatesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-const EnhancedLoadingStates: React.FC<EnhancedLoadingStatesProps> = ({ className = '', children }) => {
+const EnhancedLoadingStates: React.FC = () => {
   return (
-    <div className={`enhancedloadingstates-component ${className}`}>
-      {children || (
-        <div className="p-4">
-          <h3 className="text-lg font-semibold mb-2">EnhancedLoadingStates</h3>
-          <p className="text-gray-600">This is the EnhancedLoadingStates component.</p>
-        </div>
-      )}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">Enhanced Loading States</h2>
+      <p className="text-gray-600">Enhanced Loading States component is under development.</p>
     </div>
   );
 };

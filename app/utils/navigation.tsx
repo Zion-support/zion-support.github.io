@@ -1,5 +1,4 @@
-// navigation - Basic implementation
-export default function navigation() {
-  return null;
-
-}
+// navigation.tsx utility
+export const navigation = () => {
+  // Utility implementation
+};

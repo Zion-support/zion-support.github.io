@@ -1,5 +1,4 @@
-// link - Basic implementation
-export default function link() {
-  return null;
-}
-
+// link.tsx utility
+export const link = () => {
+  // Utility implementation
+};
