@@ -68,13 +68,13 @@ const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     // Only run in browser;
-    if (typeof window === 'undefined') return";"'"
+    if (typeof window === 'undefined') return"'"
     // Get performance metrics;
     const getPerformanceMetrics = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming";"'"
-      const paintEntries = performance.getEntriesByType('paint')";"'"
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')";"'"
-      const lcp = performance.getEntriesByType('largest-contentful-paint')";"'"
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming"'"
+      const paintEntries = performance.getEntriesByType('paint')"'"
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint')"'"
+      const lcp = performance.getEntriesByType('largest-contentful-paint')"'"
       setMetrics({
         cls: 0, // Would need to be calculated with observer;
         inp: 0, // Would need to be calculated with observer;
@@ -85,41 +85,35 @@ const PerformanceMonitor: React.FC = () => {
       }
     // Wait for page load;
   return (
-<>    <div className="fixed bottom-4 right-4 z-50">"""
+<>    <div>"""</div>
       <button></button>
         Performance;
       </button>
       {isVisible && (
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">"""
-          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>"""
-          <div className="space-y-2 text-xs">"""
-            <div className="flex justify-between">"""
+        <div>"""</div>
+          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
+          <div>"""</div>
+            <div>"""</div>
               <span>FCP:</span>
               <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}></span>
                 {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'N/A'}"`"`'"``'"`
-              </span>
-            </div>
+              </div>
     </>
-            <div className="flex justify-between">"""
+            <div>"""</div>
               <span>LCP:</span>
               <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}></span>
                 {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}"`"`'"``'"`
-              </span>
-            </div>
-            <div className="flex justify-between">"""
+              </div>
+            <div>"""</div>
               <span>TTFB:</span>
               <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}></span>
                 {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}"`"`'"``'"`
-              </span>
-            </div>
-            <div className="flex justify-between">"""
+              </div>
+            <div>"""</div>
               <span>Load Time:</span>
               <span className={getScoreColor(metrics.loadTime, { good: 3000, poor: 5000 })}></span>
                 {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}"`"`'"``'"`
-              </span>
-            </div>
-          </div>
-        </div>
+              </div>
     }
     // Measure after initial load;
     const timer = setTimeout(measurePerformance, 1000)
@@ -142,14 +136,13 @@ const PerformanceMonitor: React.FC = () => {
     window.addEventListener('keydown', handleKeyPress);'
     return () => window.removeEventListener('keydown', handleKeyPress);'
   return (
-<>    <div className="fixed top-4 right-4 bg-black/90 backdrop-blur-sm text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"></div>""
-      <div className="flex items-center justify-between mb-4"></div>""
-        <h3 className="text-lg font-semibold">Performance Monitor</h3>""
+<>
+      <div</div>
+        <h3 className="text-lg font-semibold">Performance Monitor</h3>
         <button></button>
           ×
-        </button>
-      </div>
-import React from "react";"
+        </div>
+import React from "react";
 const PerformanceMonitor: React.FC = () => { return null; }
 export default PerformanceMonitor;
       )}

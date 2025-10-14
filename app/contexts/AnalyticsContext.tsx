@@ -21,6 +21,5 @@ const  ({ children }) => {
     <AnalyticsContext.Provider value={value}></AnalyticsContext>
       { children }
     </AnalyticsContext.Provider>
-    </AnalyticsContext.Provider>
   )
 export { AnalyticsContext }

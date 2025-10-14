@@ -14,7 +14,7 @@ export default FuturisticButton;
     </button>
   );
 export default FuturisticButton;
-import React from "react";"
+import React from "react";
 
 interface FuturisticButtonProps {
   children: React.ReactNode;
@@ -30,7 +30,6 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   );
 };
 
-export default FuturisticButton;
-"""
+export default FuturisticButton"
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-54ad;

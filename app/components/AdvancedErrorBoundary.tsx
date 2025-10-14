@@ -190,16 +190,13 @@ class AdvancedErrorBoundary extends Component<
                       strokeWidth={2}
                       d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
                     />
-                  </svg>
-                </div>
+                  </div>
                 <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
                   Oops! Something went wrong
                 </h2>
-                <p className='mt-2 text-sm text-gray-600'>
-                  We&apos;re sorry, but something unexpected happened. Our team
-                  has been notified.
-                </p>
-              </div>
+                <p>We&apos;re sorry, but something unexpected happened. Our team
+                  has been notified.</p>
+                </div>
 
               {process.env.NODE_ENV === 'development' && (
                 <div className='mt-6 bg-red-50 border border-red-200 rounded-md p-4'>
@@ -217,24 +214,18 @@ class AdvancedErrorBoundary extends Component<
                       <summary className='cursor-pointer font-medium'>
                         Stack Trace
                       </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>
-                        {this.state.error?.stack}
-                      </pre>
-                    </details>
+                      <p>{this.state.error?.stack}</p>
+                      </details>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
                         Component Stack
                       </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>
-                        {this.state.errorInfo?.componentStack}
-                      </pre>
-                    </details>
+                      <p>{this.state.errorInfo?.componentStack}</p>
+                      </details>
                   </div>
-                </div>
               )}
 
-              <div className='mt-6 space-y-3'>
-                {this.props.enableRetry &&
+              <div>{this.props.enableRetry &&</div>
                   this.retryCount < this.maxRetries && (
                     <button
                       onClick={this.handleRetry}
@@ -257,24 +248,18 @@ class AdvancedErrorBoundary extends Component<
                   className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
                   Go to Homepage
-                </button>
-              </div>
+                </div>
 
               <div className='mt-6 text-center'>
-                <p className='text-xs text-gray-500'>
-                  If this problem persists, please contact our support team
-                  at&nbsp;
+                <p>If this problem persists, please contact our support team
+                  at&nbsp;</p>
                   <a
                     href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
                   >
                     kleber@ziontechgroup.com
-                  </a>
-                </p>
+                  </p>
               </div>
-            </div>
-          </div>
-        </div>
       );
     }
 

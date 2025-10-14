@@ -1,4 +1,4 @@
-import React from "react";"
+import React from "react";
 
 interface AdvancedLoadingStatesProps {
   className?: string;
@@ -11,7 +11,7 @@ const AdvancedLoadingStates: React.FC<AdvancedLoadingStatesProps> = ({ className
       {children}
     </div>
     </>
-  )};
+  );
 };
 ;
-export default AdvancedLoadingStates;""
+export default AdvancedLoadingStates

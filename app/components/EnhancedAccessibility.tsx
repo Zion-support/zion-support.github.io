@@ -5,20 +5,20 @@
   useEffect(() => {
     // Enhanced accessibility features;
     const addSkipLinks = () => {
-import React, { useEffect, useState } from "react";""
+import React, { useEffect, useState } from "react";
 const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighContrast] = useState(false)
   const [isReducedMotion, setIsReducedMotion] = useState(false)
   const [fontSize, setFontSize] = useState(16)
   useEffect(() => {
     // Check for user preferences;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches";"'"
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches";"'"
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches"'"
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches"'"
     setIsReducedMotion(prefersReducedMotion)
     setIsHighContrast(prefersHighContrast)
     // Apply accessibility enhancements;
     const applyAccessibilityEnhancements = () => {
       // Add skip links;
-      const skipLink = document.createElement('a')";"'"
+      const skipLink = document.createElement('a')"'"
       skipLink.href = "#main-content"""
       skipLink.textContent = "Skip to main content"""
       skipLink.className = "sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50"""
@@ -89,7 +89,7 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')'''
     const handleChange = () => {
       setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }))
-    mediaQuery.addEventListener('change', handleChange)";"'"
+    mediaQuery.addEventListener('change', handleChange)"'"
     const setupKeyboardNavigation = () => {// Enhanced keyboard navigation;
       document.addEventListener('keydown", (e) => {"'"'"
         if (e.key === 'Tab") {"'"'"
@@ -105,8 +105,8 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
     setupKeyboardNavigation()
     applyAccessibilityEnhancements()
     // Listen for preference changes;
-    const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')";"'"
-    const contrastMediaQuery = window.matchMedia('(prefers-contrast: high)')";"'"
+    const motionMediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')"'"
+    const contrastMediaQuery = window.matchMedia('(prefers-contrast: high)')"'"
     const handleMotionChange = (e: MediaQueryListEvent) => {
       setIsReducedMotion(e.matches)
     const handleContrastChange = (e: MediaQueryListEvent) => {
@@ -181,40 +181,34 @@ const EnhancedAccessibility: React.FC = () => {const [isHighContrast, setIsHighC
         existingStyle.remove()
     }}, [])
   return (
-<>    <div></div>
+<>
       <button></button>
         ♿ A11y;
       </button>
-      <div className={`accessibility-panel ${isVisible ? 'visible' : ''}`}>"`"`'"``'"`
-        <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>"""
-        <div className="space-y-4">"""
+      <div>"`"`'"``'"`</div>
+        <h3 className="text-lg font-semibold mb-4">Accessibility Options</h3>
+        <div>"""</div>
           <div></div>
     </>
             <label className="flex items-center space-x-2">"""
               <input;
               /></input>
-              <span>High Contrast</span>
-            </label>
+              <span>High Contrast</label>
           </div>
           <div></div>
-            <label className="block text-sm font-medium mb-2">Font Size</label>"""
-            <div className="space-y-2">"""
-              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('''
+            <label className="block text-sm font-medium mb-2">Font Size</label>
+            <div>"""
+              {(['small', 'normal', 'large', 'extra-large'] as const).map((size) => ('''</div>
                 <label key={size} className="flex items-center space-x-2">"""
                   <input;
                   /></input>
-                  <span className="capitalize">{size}</span>"""
-                </label>
+                  <span className="capitalize">{size}</label>
               )})
             </div>
-          </div>
           <div></div>
           >
             Close;
-          </button>
-        </div>
-      </div>
-    </div>
+          </div>
   )
 export default EnhancedAccessibility;
   )
@@ -230,7 +224,7 @@ export default EnhancedAccessibility;
       // Alt + M: Skip to main content;
       if (event.altKey && event.key === 'm') {'''
         event.preventDefault()
-        const mainContent = document.getElementById('main-content')";"'"
+        const mainContent = document.getElementById('main-content')"'"
         if (mainContent) {}
       // Alt + H: Go to home;
 export default EnhancedAccessibility;

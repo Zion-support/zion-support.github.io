@@ -91,9 +91,9 @@ export const SEO: React.FC<SEOProps> = ({
 
 >>>>>>> 81be860c1fc3 (Fix all linting errors and merge conflicts)
   return (
-<>    <Helmet></Helmet>
+<>    <Helmet>
       <title>{title}</title>
-  )};
+  );
 };
 
 export default SEO;

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";"
+import React, { useEffect } from "react";
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -196,8 +196,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
   return (
-    <div className="accessibility-enhanced">
-      {children}
+    <div>{children}</div>
       <style>{````
         
         .keyboard-navigation *:focus {

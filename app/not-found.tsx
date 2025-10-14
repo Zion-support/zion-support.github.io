@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-            Not Found;
-          </h1>"""
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"""
-            Professional not found services;
-            designed to help your business grow and succeed.;
-=======
-
+'use client';
+import React from 'react';
 import Link from 'next/link';
 import { Home, Phone } from 'lucide-react';
 
@@ -60,92 +54,44 @@ export default function NotFound() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             The page you are looking for does not exist or has been moved. 
             Let us get you back on track!
->>>>>>> 81be860c1fc3 (Fix all linting errors and merge conflicts)
           </p>
         </div>
-      </section>
-      { /* Content Section */ }
-            Not Found</h1>"""
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">"""
-            Professional not found services;
-            <div></div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>"""
-              <p className="text-lg text-gray-600 mb-6">"""
-                We provide comprehensive not found;
-                solutions tailored to your specific needs and requirements.;
-              </p>"""
-              <ul className="space-y-3">""""
-                <li className="flex items-center">""""
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
-                  Custom solutions;
-                </li>"""
-                <li className="flex items-center">""""
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
-                  Expert consultation;
-                </li>"""
-                <li className="flex items-center">""""
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
-                  Ongoing support;
-                </li>
-              </ul>
-            </div>"""
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>""""
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>""""
-              <p className="mb-6">"""
-                Ready to transform your business with our not found services?;
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {popularPages.map((page, index) => (
+            <Link
+              key={index}
+              href={page.href}
+              className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+            >
+              <div className="text-3xl mb-3">{page.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {page.title}
+              </h3>
+              <p className="text-gray-600 text-sm">
+                {page.description}
               </p>
-              <a;""
-                href="$1"""""
-                className="$1""></a>""
-                Contact Us;
-              </a>
-            </div>
-          </div>
+            </Link>
+          ))}
         </div>
-      </section>
-            Ready to Get Started?;
-          </h2>"""
-          <p className="text-xl text-blue-100 mb-8">"""
-          </h2>"""
-          <p className="text-xl text-blue-100 mb-8">"""
-            Let"s discuss how our not found"""
-            services can help you achieve your goals.;
-          </p>
-          <a;""
-            href="$1"""""
-            className="$1""></a>""
-            Get Started Today;
-          </a>
+
+        <div className="text-center">
+          <Link
+            href="/"
+            className="inline-flex items-center bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors duration-300 mr-4"
+          >
+            <Home className="w-5 h-5 mr-2" />
+            Go Home
+          </Link>
+          <Link
+            href="/contact"
+            className="inline-flex items-center bg-gray-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors duration-300"
+          >
+            <Phone className="w-5 h-5 mr-2" />
+            Contact Us
+          </Link>
         </div>
-      </section>
-    </div>)
+      </div>
+    </div>
   );
-export default NotFound;
-                We provide comprehensive not found;
-                solutions tailored to your specific needs and requirements.</p>"""
-              <ul className="space-y-3">""""
-                <li className="flex items-center">""""
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
-                  Custom solutions</li>"""
-                <li className="flex items-center">""""
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
-                  Expert consultation</li>"""
-                <li className="flex items-center">""""
-                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>"""
-                  Ongoing support</li></ul></div>"""
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white"></div>""""
-              <h3 className="text-2xl font-bold mb-4">Get Started</h3>""""
-              <p className="mb-6">"""
-                Ready to transform your business with our not found services?</p>
-              <a;
-            Ready to Get Started?</h2></a>
-          <p className="text-xl text-blue-100 mb-8">"""
-            Let's discuss how our not found''''
-            services can help you achieve your goals.</p>
-          <a"""
-            href="/contact"""""
-            className="inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors">"""
-            Get Started Today</a></div></section></div>
-  );
-export default NotFound;
-;
+}
