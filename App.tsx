@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect, Suspense, useCallback } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Navigation from './app/components/Navigation';
@@ -49,7 +49,6 @@ import CareersPage from './app/pages/CareersPage';
 
 // Additional Pages
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
-import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
 import TeamPage from './app/pages/TeamPage';
 import DocumentationPage from './app/pages/DocumentationPage';
 
@@ -76,7 +75,7 @@ const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-sche
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
 
 // 5G Solutions Pages
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
+const FiveGSolutionsPageLazy = React.lazy(() => import("./app/5g-solutions/page"));
 const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
@@ -119,6 +118,28 @@ function App() {
   }, []);
 
   useEffect(() => {
+// Performance monitoring
+if (typeof window !== 'undefined') {
+  // Monitor Core Web Vitals
+  import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    getCLS(console.log);
+    getFID(console.log);
+    getFCP(console.log);
+    getLCP(console.log);
+    getTTFB(console.log);
+  });
+
+  // Monitor bundle size
+  const observer = new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) {
+      if (entry.entryType === 'navigation') {
+        console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart, 'ms');
+      }
+    }
+  });
+  observer.observe({ entryTypes: ['navigation'] });
+}
+
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
       console.log('Zion Tech Group App initialized');
