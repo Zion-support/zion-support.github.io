@@ -1,6 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal');
+
   useEffect(() => {
     // Skip to main content functionality
     const addSkipLink = () => {
@@ -10,16 +14,19 @@ const AccessibilityEnhancer: React.FC = () => {
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';
       skipLink.style.zIndex = '9999';
       document.body.insertBefore(skipLink, document.body.firstChild);
-    }
-// Focus management for keyboard navigation
+    };
+
+    // Focus management for keyboard navigation
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
-    }
+    };
+
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
-    }
+    };
+
     // Add focus indicators for keyboard navigation
     const addFocusStyles = () => {
       const style = document.createElement('style');
@@ -38,13 +45,41 @@ const AccessibilityEnhancer: React.FC = () => {
         }
       `;
       document.head.appendChild(style);
-    }
+    };
+
     // Add ARIA landmarks
     const addAriaLandmarks = () => {
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
       }
+    };
+
+    // Initialize accessibility features
+    addSkipLink();
+    addFocusStyles();
+    addAriaLandmarks();
+
+    // Add event listeners
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, []);
+
+  useEffect(() => {
+    const root = document.documentElement;
+
+    // High contrast mode
+    if (isHighContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
 
     // Reduced motion mode
     if (isReducedMotion) {
@@ -70,6 +105,55 @@ const AccessibilityEnhancer: React.FC = () => {
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
           mainContent.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  return (
+    <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg">
+      <h3 className="text-white text-sm font-semibold mb-2">Accessibility</h3>
+      <div className="space-y-2">
+        <label className="flex items-center text-white text-xs">
+          <input
+            type="checkbox"
+            checked={isHighContrast}
+            onChange={(e) => setIsHighContrast(e.target.checked)}
+            className="mr-2"
+          />
+          High Contrast
+        </label>
+        <label className="flex items-center text-white text-xs">
+          <input
+            type="checkbox"
+            checked={isReducedMotion}
+            onChange={(e) => setIsReducedMotion(e.target.checked)}
+            className="mr-2"
+          />
+          Reduced Motion
+        </label>
+        <div className="text-white text-xs">
+          <label>Font Size:</label>
+          <select
+            value={fontSize}
+            onChange={(e) => setFontSize(e.target.value as any)}
+            className="ml-2 bg-slate-700 text-white text-xs px-1 py-1 rounded"
+          >
+            <option value="small">Small</option>
+            <option value="normal">Normal</option>
+            <option value="large">Large</option>
+            <option value="extra-large">Extra Large</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AccessibilityEnhancer;
         }
       }
 
