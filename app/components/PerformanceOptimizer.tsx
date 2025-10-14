@@ -27,3 +27,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
 export default PerformanceOptimizer;
 
+

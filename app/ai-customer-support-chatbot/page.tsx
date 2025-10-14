@@ -8,3 +8,4 @@ import { Helmet } from "react-helmet-async";export default function Page() {'  r
           <h1 className="text-4xl font-bold text-white mb-4">Ai Customer Support Chatbot</h1>          <p className="text-gray-300">Coming soon...</p>        </div>      </div>    </React.Fragment>
   );
 }
+

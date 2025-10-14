@@ -1,115 +1,119 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { glob } from 'glob';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Function to fix all remaining syntax errors
+function fixAllRemaining(content) {
+  let fixed = content;
 
-// Function to fix all remaining syntax issues
-function fixFile(filePath) {
+  // Fix 1: Fix malformed return statements
+  // Pattern: return ('    <div> -> return (\n    <div>
+  fixed = fixed.replace(/return\s*\(\s*'(\s*)(<[^>]+>)/g, 'return (\n$1$2');
+  fixed = fixed.replace(/return\s*\(\s*"(\s*)(<[^>]+>)/g, 'return (\n$1$2');
+  
+  // Fix 2: Fix malformed function declarations
+  // Pattern: const PagePage = () => {"  const [isOpen, setIsOpen] -> const PagePage = () => {\n  const [isOpen, setIsOpen]
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\{'(\s*)/g, 'const $1 = () => {\n$2');
+  
+  // Fix 3: Fix malformed object syntax
+  // Pattern: { name="AI Solutions, href: "/ai-solutions" } -> { name: "AI Solutions", href: "/ai-solutions" }
+  fixed = fixed.replace(/(\w+)=([^,}]+),/g, '$1: $2,');
+  fixed = fixed.replace(/(\w+)=([^,}]+)}/g, '$1: $2}');
+  
+  // Fix 4: Fix missing quotes in object properties
+  fixed = fixed.replace(/(\w+):\s*([^"',}]+),/g, '$1: "$2",');
+  fixed = fixed.replace(/(\w+):\s*([^"',}]+)}/g, '$1: "$2"}');
+  
+  // Fix 5: Fix malformed JSX attributes
+  // Pattern: className: "text-white" -> className="text-white"
+  fixed = fixed.replace(/(\w+):\s*"([^"]*)"/g, '$1="$2"');
+  fixed = fixed.replace(/(\w+):\s*'([^']*)'/g, "$1='$2'");
+  
+  // Fix 6: Fix malformed JSX structure
+  // Pattern: <div>          <h1 -> <div>\n          <h1
+  fixed = fixed.replace(/>(\s*)(<[^>]+>)/g, '>\n$1$2');
+  
+  // Fix 7: Fix malformed JSX closing tags
+  // Pattern: </Helmet>"      <div> -> </Helmet>\n      <div>
+  fixed = fixed.replace(/>"(\s*)</g, '>\n$1<');
+  
+  // Fix 8: Fix missing closing quotes in JSX
+  fixed = fixed.replace(/(\w+)="([^"]*)"(\s*)([^"<])/g, '$1="$2"$3$4');
+  
+  // Fix 9: Fix malformed JSX closing tags
+  fixed = fixed.replace(/>"(\s*)(<\/[^>]+>)/g, '>\n$1$2');
+  
+  // Fix 10: Fix missing closing brackets
+  fixed = fixed.replace(/}\s*"(\s*)([^}])/g, '}\n$1$2');
+  
+  // Fix 11: Clean up extra quotes and malformed strings
+  fixed = fixed.replace(/"\s*"/g, '"');
+  fixed = fixed.replace(/""/g, '"');
+  
+  // Fix 12: Fix malformed JSX structure
+  fixed = fixed.replace(/(<[^>]+>)(\s*)([^<]+)(\s*)(<\/[^>]+>)/g, '$1\n$2$3$4\n$5');
+  
+  // Fix 13: Fix malformed export statements
+  // Pattern: export default PagePage;</div> -> export default PagePage;
+  fixed = fixed.replace(/export default (\w+);<\/div>/g, 'export default $1;');
+  
+  // Fix 14: Fix malformed function declarations
+  fixed = fixed.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*\{'(\s*)/g, 'const $1 = () => {\n$2');
+  
+  // Fix 15: Fix malformed JSX structure
+  fixed = fixed.replace(/(<[^>]+>)(\s*)([^<]+)(\s*)(<\/[^>]+>)/g, '$1\n$2$3$4\n$5');
+  
+  return fixed;
+}
+
+// Function to process a single file
+function processFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixAllRemaining(content);
     
-    // Fix common patterns
-    content = content
-      // Fix unterminated string literals in 'use client' directives
-      .replace(/^'use client$/gm, "'use client';")
-      .replace(/^"use client"$/gm, '"use client";')
-      // Fix unterminated string literals in imports
-      .replace(/import React from 'react$/gm, "import React from 'react';")
-      .replace(/import { Helmet } from 'react-helmet-async$/gm, "import { Helmet } from 'react-helmet-async';")
-      .replace(/import { useEffect } from 'react$/gm, "import { useEffect } from 'react';")
-      .replace(/import { useState } from 'react$/gm, "import { useState } from 'react';")
-      .replace(/import { useCallback } from 'react$/gm, "import { useCallback } from 'react';")
-      .replace(/import { useMemo } from 'react$/gm, "import { useMemo } from 'react';")
-      .replace(/import { useRef } from 'react$/gm, "import { useRef } from 'react';")
-      .replace(/import { useReducer } from 'react$/gm, "import { useReducer } from 'react';")
-      .replace(/import { useContext } from 'react$/gm, "import { useContext } from 'react';")
-      .replace(/import { createContext } from 'react$/gm, "import { createContext } from 'react';")
-      .replace(/import { Fragment } from 'react$/gm, "import { Fragment } from 'react';")
-      .replace(/import { Suspense } from 'react$/gm, "import { Suspense } from 'react';")
-      .replace(/import { lazy } from 'react$/gm, "import { lazy } from 'react';")
-      .replace(/import { memo } from 'react$/gm, "import { memo } from 'react';")
-      .replace(/import { forwardRef } from 'react$/gm, "import { forwardRef } from 'react';")
-      .replace(/import { useImperativeHandle } from 'react$/gm, "import { useImperativeHandle } from 'react';")
-      .replace(/import { useLayoutEffect } from 'react$/gm, "import { useLayoutEffect } from 'react';")
-      .replace(/import { useDebugValue } from 'react$/gm, "import { useDebugValue } from 'react';")
-      .replace(/import { useDeferredValue } from 'react$/gm, "import { useDeferredValue } from 'react';")
-      .replace(/import { useId } from 'react$/gm, "import { useId } from 'react';")
-      .replace(/import { useInsertionEffect } from 'react$/gm, "import { useInsertionEffect } from 'react';")
-      .replace(/import { useSyncExternalStore } from 'react$/gm, "import { useSyncExternalStore } from 'react';")
-      .replace(/import { useTransition } from 'react$/gm, "import { useTransition } from 'react';")
-      .replace(/import { startTransition } from 'react$/gm, "import { startTransition } from 'react';")
-      .replace(/import { use } from 'react$/gm, "import { use } from 'react';")
-      .replace(/import { useActionState } from 'react$/gm, "import { useActionState } from 'react';")
-      .replace(/import { useFormState } from 'react$/gm, "import { useFormState } from 'react';")
-      .replace(/import { useFormStatus } from 'react$/gm, "import { useFormStatus } from 'react';")
-      .replace(/import { useOptimistic } from 'react$/gm, "import { useOptimistic } from 'react';")
-      // Fix other common imports
-      .replace(/from '([^']+)$/gm, "from '$1';")
-      .replace(/from "([^"]+)$/gm, 'from "$1";')
-      // Fix function declarations
-      .replace(/export default function (\w+)\(\) \{\}$/gm, 'export default function $1() {\n  return (\n    <div>Page content</div>\n  );\n}')
-      .replace(/export default function (\w+)\(\) \{\}$/gm, 'export default function $1() {\n  return (\n    <div>Page content</div>\n  );\n}')
-      // Fix malformed JSX
-      .replace(/<div>Page content<\/div>$/gm, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">\n      <div className="container mx-auto px-4">\n        <div className="text-center">\n          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>\n          <p className="text-gray-300 text-lg">This page is under development.</p>\n        </div>\n      </div>\n    </div>')
-      // Clean up extra whitespace
-      .replace(/\n\s*\n\s*\n/g, '\n\n')
-      .replace(/\s+$/gm, '')
-      .trim();
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-    return true;
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all files with issues
-function findProblemFiles(dir) {
-  const files = [];
+// Main function
+async function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'app/**/*.jsx',
+    'app/**/*.js'
+  ];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        traverse(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js')) {
-        files.push(fullPath);
+    for (const file of files) {
+      totalFiles++;
+      if (processFile(file)) {
+        fixedFiles++;
       }
     }
   }
   
-  traverse(dir);
-  return files;
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
 }
 
-// Main execution
-const appDir = path.join(__dirname, 'app');
-const srcDir = path.join(__dirname, 'src');
-const publicDir = path.join(__dirname, 'public');
-const tempDir = path.join(__dirname, 'temp-broken');
-
-const allFiles = [
-  ...findProblemFiles(appDir),
-  ...findProblemFiles(srcDir),
-  ...findProblemFiles(publicDir),
-  ...findProblemFiles(tempDir)
-];
-
-console.log(`Found ${allFiles.length} files to check`);
-
-let fixedCount = 0;
-for (const file of allFiles) {
-  if (fixFile(file)) {
-    fixedCount++;
-  }
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
 }
 
-console.log(`Fixed ${fixedCount} out of ${allFiles.length} files`);
+export { fixAllRemaining, processFile };
