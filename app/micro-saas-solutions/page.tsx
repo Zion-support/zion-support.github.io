@@ -1,32 +1,24 @@
-
-
-
-import React from 'react';
-
-
-
-
+import React from "react";
+import { Helmet    } from "react-helmet-async";
+;
+const PagePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive micro SaaS solutions for modern businesses. AI-powered tools, automation platforms, and specialized software services with competitive pricing." />
-        <meta name="keywords" content="micro SaaS, AI tools, business automation, software solutions, SaaS pricing, business software" />
-        <meta property="og:title" content="Micro SaaS Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Comprehensive micro SaaS solutions for modern businesses. AI-powered tools, automation platforms, and specialized software services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/micro-saas-solutions" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+<>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
+      <Helmet></Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page - Zion Tech Group" /></meta>""
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
+      <div className="container mx-auto px-4 py-16"></div>""
+    </>
+        <div className="text-center"></div>""
+          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>""
+          <p className="text-gray-300 text-lg"></p>
+            This page is under construction. Please check back later.
+          </p>
         </div>
-
-
+      </div>
+    </div>
+  )};
+};
+export default PagePage;
+;

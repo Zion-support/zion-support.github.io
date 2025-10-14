@@ -1,214 +1,134 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  ServerIcon,
-  CloudIcon,
-  ShieldCheckIcon,
-  CpuChipIcon,
-  ArrowRightIcon,
-  CheckIcon,
-  PhoneIcon,
-  EnvelopeIcon
-} from '@heroicons/react/24/outline';
-
+  ];
 const ITServicesPage: React.FC = () => {
-  const services = [
-    {
-      icon: ServerIcon,
-      title: 'Infrastructure Management',
-      description: 'Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance.',
-      features: [
-        'Server Configuration',
-        'Network Setup',
-        'Hardware Maintenance',
-        'Performance Monitoring'
-      ]
-    },
-    {
-      icon: CloudIcon,
-      title: 'Cloud Solutions',
-      description: 'Complete cloud migration and management services for scalable, secure, and cost-effective solutions.',
-      features: [
-        'Cloud Migration',
-        'Multi-cloud Strategy',
-        'Cost Optimization',
-        'Security Compliance'
-      ]
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity Services',
-      description: 'Advanced security solutions to protect your IT infrastructure from threats and vulnerabilities.',
-      features: [
-        'Threat Detection',
-        'Vulnerability Assessment',
-        'Security Monitoring',
-        'Incident Response'
-      ]
-    },
-    {
-      icon: CpuChipIcon,
-      title: 'AI Integration',
-      description: 'Integrate artificial intelligence into your existing IT infrastructure for enhanced capabilities.',
-      features: [
-        'Machine Learning',
-        'Process Automation',
-        'Data Analytics',
-        'Predictive Maintenance'
-      ]
-    }
-  ];
-
-  const benefits = [
-    '24/7 Expert Support',
-    'Proactive Monitoring',
-    'Scalable Solutions',
-    'Cost Optimization',
-    'Security Compliance',
-    'Performance Optimization'
-  ];
-
+  return (
+  <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">""
+      <Helmet></Helmet>
+        <title>IT Services | Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including infrastructure management, cloud solutions, cybersecurity, and technical support." />""
+        <meta name="keywords" content="IT services, infrastructure, cloud computing, cybersecurity, technical support, system integration" />""
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">""
+        {/* Hero Section */}
+        <div className="text-center mb-16">""
+          <h1 className="text-5xl font-bold text-white mb-6">
+            IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Services</span>""
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive IT solutions to keep your business running efficiently and securely.;
+            From infrastructure to support, we"ve got you covered.""
+          </p>
+        </div>
+          {services.map((service, _index
+  </>
+); => {
+            const Icon = service.icon;
+            return (
+  <>
+    <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">""
+                <div className="flex items-center mb-4">""
+                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg mr-4">""
+                    <Icon className="w-6 h-6 text-white" />""
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{service.title}</h3>""
+                </div>
+                <p className="text-gray-300 mb-4">{service.description}</p>""
+                <ul className="space-y-2">""
+                  {service.features.map((feature, featureIndex
+  </>;
+); => (
+                    </li>
+                  ))
+                </ul>
+              </div>
+            )
+          }
+        </div>;
+              Our IT experts are ready to help you maintain, secure, and optimize your technology infrastructure.;
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
+                Get Support;
+              </button>
+              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                Request Quote;
+const ITServicesPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      <Helmet></Helmet>
         <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including infrastructure management, cloud solutions, cybersecurity, and AI integration for modern businesses." />
-        <meta name="keywords" content="IT services, infrastructure management, cloud solutions, cybersecurity, AI integration, IT support" />
+        <meta name="description" content="Professional IT services by Zion Tech Group." />""
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Services
+      <div className="min-h-screen bg-white">""
+        <div className="container mx-auto px-4 py-16">""
+          <div className="text-center">""
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              IT Services;
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive IT Solutions for Modern Businesses
+            <p className="text-xl text-gray-600 mb-8">
+              Professional IT services tailored to your business needs.
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              From infrastructure management to AI integration, we provide end-to-end IT services 
-              that keep your business running smoothly and securely.
-            </p>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 inline-flex items-center gap-2"
-            >
-              Get Started
-              <ArrowRightIcon className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our IT Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed to meet your business needs
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-slate-800 rounded-xl p-8 hover:bg-slate-700 transition-all duration-300 group">
-                <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                </div>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <ul className="space-y-3 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckIcon className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-2 transition-all"
-                >
-                  Learn More
-                  <ArrowRightIcon className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Our IT Services?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We provide comprehensive IT solutions that keep your business running smoothly
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <CheckIcon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">{benefit}</h3>
-                <p className="text-gray-300">
-                  Professional IT services that ensure your systems are always running at peak performance.
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">""
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">""
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions;
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge IT solutions.
                 </p>
               </div>
-            ))}
-          </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">""
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation;
+                </h3>
+                <p className="text-green-700">
+                  Tailored IT implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">""
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">""
+                  24/7 Support;
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your IT needs.
+                </p>
+              </div>
+            </div>
+            <div className="mt-12">""
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Get Started Today;
+              </button>
+            </div>
+          </div>;
+const ITServicesPage: React.FC = () => {
+  return (
+    <>
+      <Helmet></Helmet>
+        <title>ITServicesPage - Zion Tech Group</title>
+        <meta name="description" content="ITServicesPage - Zion Tech Group" />""
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">""
+        <div className="text-center">""
+          <h1 className="text-4xl font-bold mb-4">ITServicesPage</h1>""
+          <p className="text-gray-300">This page is under construction.</p>""
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900 to-cyan-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Optimize Your IT Infrastructure?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let our experts help you build a robust, secure, and scalable IT environment
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              to="/demo"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-all duration-300"
-            >
-              Schedule Demo
-            </Link>
-          </div>
-        </div>
-      </section>
+      </div>;
+    </div>;  );
+export default ITServicesPage;
     </>
   );
-};
-
 export default ITServicesPage;
+"use client";";
+
+import React from "react";";
+
+const ITServicesPage = () => {
+  return (
+  <>
+    <div></div>
+      <h1 className="text-4xl font-bold mb-8">ITServicesPage</h1>"
+      <p className="text-gray-300 text-lg">This page is under development.</p>"
+    </div>
+  </>
+);
+}

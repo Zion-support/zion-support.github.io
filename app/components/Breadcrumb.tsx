@@ -1,44 +1,36 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
 
-const Breadcrumb: React.FC = () => {
-  const location = useLocation();
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
-
-const Breadcrumb: React.FC = () => {
-  const location = useLocation();    return null;
-  }
-
-  const getBreadcrumbName = (pathname: string) => {
-    const nameMap: Record<string, string> = {
-      'about': 'About',
-      'services': 'Services',
-      'ai-services': 'AI Services',
-      'micro-saas': 'Micro SAAS',
-      '5g-solutions': '5G Solutions',
-      'blog': 'Blog',
-      'contact': 'Contact',
-      'privacy': 'Privacy Policy',
-      'terms': 'Terms of Service',
-      'tutorials': 'Tutorials',
-      'demo': 'Demo',
-      'support': 'Support'
+  const getBreadcrumbName = () => {
+const nameMap: Record<string, string> = {,
+'ai-services': 'AI Services','',
+'ai-analytics': 'AI Analytics','',
+'ai-automation-platform': 'AI Automation Platform','',
+'ai-content-generation': 'AI Content Generation','',
+'ai-customer-support': 'AI Customer Support','',
+'ai-cybersecurity': 'AI Cybersecurity','',
+'ai-data-analytics': 'AI Data Analytics','',
+'ai-document-processing': 'AI Document Processing','',
+'ai-marketing-automation': 'AI Marketing Automation','',
+'ai-predictive-analytics': 'AI Predictive Analytics','',
+'ai-voice-assistant': 'AI Voice Assistant','',
+'ai-workflow-automation': 'AI Workflow Automation','',
+'services': 'IT Services','',
+'cloud-migration': 'Cloud Migration','',
+'devops-services': 'DevOps Services','',
+'it-consulting': 'IT Consulting','',
+'network-security': 'Network Security','',
+'software-development': 'Software Development','',
+'web-development': 'Web Development','',
+'micro-saas': 'Micro SAAS','',
+'5g-solutions': '5G Solutions','',
+'about': 'About Us','',
+'contact': 'Contact','',
+'blog': 'Blog','',
+'privacy': 'Privacy Policy','',
+'terms': 'Terms of Service''',
     };
-
+;
     return nameMap[pathname] || pathname.charAt(0).toUpperCase() + pathname.slice(1);
   };
 
   return (
-    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 py-2" aria-label="Breadcrumb">
-    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20 py-3">              <Home className="w-4 h-4" />
-              <span className="sr-only">Home</span>
-            </Link>
-          </li> cursor/analyze-improve-and-deploy-application-30da
-          {pathSegments.map((segment, index) => (
-            <li key={segment.path} className="flex items-center">
-              <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />
-              {segment.isLast ? (
-                <span className="text-cyan-400 font-medium"
+;

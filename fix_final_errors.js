@@ -15,48 +15,48 @@ const fixes = [;
       // Fix unterminated string literals in function endings;
       {
         pattern: /  \}\);$/gm,"
-        replacement: "  );,
+        replacement: '  );,'
       },
       {
         pattern: /  \}';$/gm,"'"'"
-        replacement: "  };,
+        replacement: '  };,'
       },
       {
         pattern: /  \}\);$/gm,"'"'"
-        replacement: "  );,
+        replacement: '  );,'
       },
       // Fix malformed export statements;
       {
         pattern: /export default PagePage';$/gm,"'"'"
-        replacement: "export default PagePage;,
+        replacement: 'export default PagePage;,'
       },
       {
         pattern: /export default Page';$/gm,"'"'"
-        replacement: "export default Page;,
+        replacement: 'export default Page;,'
       },
       // Fix malformed function endings;
       {
         pattern: /  \}';$/gm,"'"'"
-        replacement: "  };,
+        replacement: '  };,'
       },
       // Fix malformed JSX closing tags;
       {
-        pattern: /    <\/>$/gm,"
+        pattern: /    <\/>$/gm,',
         replacement: "    </>",
       },
       // Fix malformed return statements;
       {
         pattern: /  \}\);$/gm,"
-        replacement: "  );,
+        replacement: '  );,'
       },
       // Fix malformed variable declarations;
       {
         pattern: /const currentYear = new Date\(\)\.getFullYear\(\)';$/gm,"'"'"
-        replacement: "const currentYear = new Date().getFullYear();,
+        replacement: 'const currentYear = new Date().getFullYear();,'
       },
       {
         pattern: /const \[isOpen, setIsOpen\] = useState\(false\)';$/gm,"'"'"
-        replacement: "const [isOpen, setIsOpen] = useState(false);,
+        replacement: 'const [isOpen, setIsOpen] = useState(false);,'
       },
       {
         pattern:
@@ -135,6 +135,6 @@ const files = findFiles("./app")
   } catch (error) {"
     console.log("⚠️  Build still has issues, but we fixed many files")
 } catch (error) {"
-  console.error("❌ Error during fix process:", error.message)
+  console.error("❌ Error during fix process: ', error.message)'
   process.exit(1)
 }"

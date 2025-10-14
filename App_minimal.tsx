@@ -1,16 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
-{ HelmetProvider } from 'react-helmet-async';
-const App: React.FC = () => {
-  return (
-    <HelmetProvider>
-      <Router>
-        <Routes>
-          <Route path="/" element={<div>Home Page</div>} />
-        </Routes>
-      </Router>
-    </HelmetProvider>
-  )};
-ursor/fix-errors-and-merge-to-main-94a7
+import React from "react";";
 
-export default App;
+const App_minimalPage = () => {
+  return (
+<>    <div className="min-h-screen bg-slate-900"></div>""
+      <h1 className="text-white text-center py-20">Zion Tech Group</h1>""
+    </div>
+    </>
+  )};
+};
+
+export default AppMinimal;
+;

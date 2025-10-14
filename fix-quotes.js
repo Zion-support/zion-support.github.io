@@ -31,9 +31,9 @@ const fixes = [
       { pattern: /(\s*\));\s*'$/gm, replacement: "$1" },'"'"
       // Fix stray quotes in JSX elements"
       { pattern: /(\s*<[^>]+>);\s*'$/gm, replacement: "$1" },'"'"
-      // Fix specific pattern: <p>text</p>'; -> <p>text</p>"'"'"
+      // Fix specific pattern: '<p>text</p>'; -> <p>text</p>"'"'"',
       { pattern: /(\s*<[^>]+>[^<]*<\/[^>>]+>);\s*'$/gm, replacement: "$1" },'"'"
-      // Fix specific pattern: ); -> )"'"'"
+      // Fix specific pattern: '); -> )"'"'"',
       { pattern: /(\s*\));\s*'$/gm, replacement: "$1" },'"'"
     ]
     fixes.forEach((fix) => {;
@@ -48,16 +48,16 @@ const newContent = content.replace(fix.pattern, fix.replacement)
       return true;
 }
 
-// Function to fix common import issues
+// Function to fix common import issues;
 function fixImportIssues(content) {
-  // Fix missing imports for common icons
+  // Fix missing imports for common icons;
   if (content.includes('Brain') || content.includes('Shield') || content.includes('Zap') || 
       content.includes('Users') || content.includes('Target') || content.includes('BarChart3') ||
       content.includes('ArrowRight') || content.includes('CheckCircle')) {
     
-    // Check if lucide-react is already imported
+    // Check if lucide-react is already imported;
     if (!content.includes('from "lucide-react"') && !content.includes("from 'lucide-react'")) {
-      // Add import at the top
+      // Add import at the top;
       const imports = [];
       if (content.includes('Brain')) imports.push('Brain');
       if (content.includes('Shield')) imports.push('Shield');

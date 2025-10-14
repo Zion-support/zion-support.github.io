@@ -1,107 +1,70 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain } from 'lucide-react';
-
+import { BookOpen, Code, Database, Cloud, Shield, Zap, Brain, Target } from 'lucide-react';
+;
 const GuidesPage: React.FC = () => {
-  const guides = [
-    {
-      title: 'AI 2026 Implementation Roadmap',
-      description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026',
-      url: '/guides/ai-2026-implementation-roadmap',
-      category: 'AI Implementation',
-      icon: Brain,
-      difficulty: 'Intermediate',
-      duration: '45 min read'
-    ,
-  },
-    {
-    title: 'AI 2027 Implementation Roadmap',
-      description: 'Advanced roadmap for AI implementation strategies in 2027',
-      url: '/guides/ai-2027-implementation-roadmap',
-      category: 'AI Implementation',
-      icon: Brain,
-      difficulty: 'Advanced',
-      duration: '60 min read'
-    ,
-  },
-    {
-    title: 'Autonomous Business Processes Implementation Guide 2026',
-      description: 'Step-by-step guide to implementing autonomous business processes',
-      url: '/guides/autonomous-business-processes-implementation-guide-2026',
-      category: 'Process Automation',
-      icon: Zap,
-      difficulty: 'Expert',
-      duration: '90 min read'
-    ,
-  }
-  ,
-  ];
-
-  const categories = [
-    {
-    name: 'AI Implementation', icon: Brain, color: 'text-purple-400' ,
-  },
-    {
-    name: 'Process Automation', icon: Zap, color: 'text-blue-400' ,
-  },
-    {
-    name: 'Security', icon: Shield, color: 'text-red-400' ,
-  },
-    {
-    name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400' ,
-  },
-    {
-    name: 'Data Management', icon: Database, color: 'text-green-400' ,
-  },
-    {
-    name: 'Development', icon: Code, color: 'text-orange-400' ,
-  }
-  ,
-  ];
-
-  const getDifficultyColor = (difficulty: string) => {
+  const guides = [{
+      title: 'AI 2026 Implementation Roadmap', description: 'Comprehensive guide to implementing AI solutions in your enterprise for 2026', url: '/guides/ai-2026-implementation-roadmap', category: 'AI Implementation', icon: Brain, difficulty: 'Intermediate', duration: '45 min read', }, {
+      title: 'AI 2027 Implementation Roadmap', description: 'Advanced roadmap for AI implementation strategies in 2027', url: '/guides/ai-2027-implementation-roadmap', category: 'AI Implementation', icon: Brain, difficulty: 'Advanced', duration: '60 min read', }, {
+      title: 'Autonomous Business Processes Implementation Guide 2026', description: 'Step-by-step guide to implementing autonomous business processes', url: '/guides/autonomous-business-processes-implementation-guide-2026', category: 'Process Automation', icon: Zap, difficulty: 'Expert', duration: '90 min read', }];
+;
+  const categories = [{name: 'AI Implementation', icon: Brain, color: 'text-purple-400', }, {name: 'Process Automation', icon: Zap, color: 'text-blue-400', }, {name: 'Security', icon: Shield, color: 'text-red-400', }, {name: 'Cloud Infrastructure', icon: Cloud, color: 'text-cyan-400', }, {name: 'Data Management', icon: Database, color: 'text-green-400', }, {name: 'Development', icon: Code, color: 'text-orange-400', }];
+;
+  const getDifficultyColor = () => {
     switch (difficulty) {
       case 'Beginner': return 'text-green-400 bg-green-400/20';
       case 'Intermediate': return 'text-yellow-400 bg-yellow-400/20';
       case 'Advanced': return 'text-orange-400 bg-orange-400/20';
       case 'Expert': return 'text-red-400 bg-red-400/20';
       default: return 'text-gray-400 bg-gray-400/20';
-    ,
-  }
+    }
   };
 
-const Page = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content=" - Zion Tech Group" />
+        <title>Implementation Guides - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive guides for implementing AI, automation, and digital transformation solutions in your enterprise." />
+        <meta name="keywords" content="AI implementation, automation guides, digital transformation, enterprise solutions, technical guides" />
       </Helmet>
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-8"></h1>
-            <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
+        {/* Navigation */}
+        <nav className="bg-slate-900/90 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-cyan-500/20">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-between h-16">
+              <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-cyan-400">
+                <span className="text-3xl">⚡</span>
+                <span>Zion Tech Group</span>
+              </Link>
+              <div className="hidden lg:flex items-center space-x-8">
+                <Link to="/" className="text-white hover:text-cyan-400 transition-colors">Home</Link>
+                <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">About</Link>
+                <Link to="/services" className="text-white hover:text-cyan-400 transition-colors">Services</Link>
+                <Link to="/guides" className="text-cyan-400 font-semibold">Guides</Link>
+                <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">Contact</Link>
+              </div>
+            </div>
           </div>
         </nav>
 
         <main className="container mx-auto px-4 py-16">
-          {/* Header  */}
+          {/* Header */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center space-x-4 mb-6">
               <BookOpen className="w-16 h-16 text-cyan-400" />
-              <h1 className="text-4xl md:text-6xl font-bold text-white">
+              <h1 className="text-4xl md:text-6xl font-bold text-white">;
                 Implementation <span className="text-cyan-400">Guides</span>
               </h1>
             </div>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Step-by-step guides to help you implement AI, automation, and digital transformation 
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+              Step-by-step guides to help you implement AI, automation, and digital transformation ;
               solutions in your enterprise with confidence.
             </p>
           </div>
 
-          {/* Categories  */}
+          {/* Categories */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Guide Categories</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -114,7 +77,7 @@ const Page = () => {
             </div>
           </section>
 
-          {/* Guides Grid  */}
+          {/* Guides Grid */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Available Guides</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -139,10 +102,10 @@ const Page = () => {
                   
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm">{guide.duration}</span>
-                    <Link
+                    <Link;
                       to={guide.url}
                       className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                    >
+                    >;
                       Read Guide →
                     </Link>
                   </div>
@@ -151,15 +114,15 @@ const Page = () => {
             </div>
           </section>
 
-          {/* Getting Started  */}
+          {/* Getting Started */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
             <div className="bg-slate-800 rounded-lg p-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">New to AI Implementation?</h3>
-                  <p className="text-gray-300 mb-4">
-                    Start with our comprehensive AI 2026 Implementation Roadmap to understand 
+                  <p className="text-gray-300 mb-4">;
+                    Start with our comprehensive AI 2026 Implementation Roadmap to understand ;
                     the fundamentals and plan your AI transformation journey.
                   </p>
                   <ul className="space-y-2 text-gray-300">
@@ -171,8 +134,8 @@ const Page = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-4">Ready for Advanced Topics?</h3>
-                  <p className="text-gray-300 mb-4">
-                    Explore our advanced guides for autonomous systems, process automation, 
+                  <p className="text-gray-300 mb-4">;
+                    Explore our advanced guides for autonomous systems, process automation, ;
                     and cutting-edge AI implementations.
                   </p>
                   <ul className="space-y-2 text-gray-300">
@@ -186,33 +149,34 @@ const Page = () => {
             </div>
           </section>
 
-          {/* Call to Action  */}
+          {/* Call to Action */}
           <section className="text-center bg-gradient-to-r from-slate-800 to-purple-900 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
+            <h2 className="text-3xl font-bold text-white mb-4">;
               Need Personalized Guidance?
             </h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our experts are available to provide personalized implementation guidance 
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">;
+              Our experts are available to provide personalized implementation guidance ;
               tailored to your specific business needs and requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+              >;
                 Get Expert Consultation
               </Link>
-              <Link
+              <Link;
                 to="/services"
                 className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
-              >
+              >;
                 View Our Services
               </Link>
             </div>
           </section>
         </main>
-      </>
+      </div>
+    </>
   );
 };
 
-export default Page;
+export default GuidesPage;
