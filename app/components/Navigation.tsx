@@ -1,4 +1,6 @@
-import { ;
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import {
   HomeIcon,
   InformationCircleIcon,
   BriefcaseIcon,
@@ -15,33 +17,46 @@ import { ;
   CloudIcon,
   CpuChipIcon,
   SignalIcon,
-  UserGroupIcon;
-  const isActive = () => {
-    if (href === '/') {''';
-      return location.pathname === '/'"}"'"'";
+  UserGroupIcon
+} from '@heroicons/react/24/outline';
+
+const Navigation = () => {
+  const [expandedItems, setExpandedItems] = useState<string[]>([]);
+  const location = useLocation();
+
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
     return location.pathname.startsWith(href);
-  const toggleExpanded = () => {
-    setExpandedItems(prev => ;
+  };
+
+  const toggleExpanded = (item: string) => {
+    setExpandedItems(prev => 
       prev.includes(item) 
         ? prev.filter(i => i !== item)
-        : [...prev, item];
-interface NavigationProps {
-  onSidebarToggle?: () => void;
-}
+        : [...prev, item]
+    );
+  };
 
-const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const location = useLocation();
-;
-  const navigation = [{ name: "Home", href: "/", icon: HomeIcon }, ""
-    {name: "About", href: "/about", icon: InformationCircleIcon, }, ""
-    {]
-    },
-    { ;
-      name: 'Solutions','';
-      href: '/solutions','';
-      icon: CogIcon,
+  return (
+    <nav className="bg-slate-900 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex">
+            <div className="flex-shrink-0 flex items-center">
+              <Link to="/" className="text-white text-xl font-bold">
+                Zion Tech Group
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
       submenu: [{ name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon }, ''
         {name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon, }'']
     },
