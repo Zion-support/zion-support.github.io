@@ -1,9 +1,8 @@
 import React from "react";
 
 interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-}
-
+  children: React.ReactNode;,
+},
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen">
@@ -11,12 +10,12 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
         <div className="absolute inset-0 opacity-20">
           <div className="w-full h-full bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
         </div>
-      </div>
-      <div className="relative z-10">
-        {children}
+      </div>"
+      <div className="relative z-10"></div>
+        {children},
       </div>
     </div>
-  );
+);
 };
 
 export default FuturisticBackground;

@@ -231,7 +231,7 @@ const ServicesPage = () => {
         </div>
       </section>
     </div>
-  );
+  );,
 };
 
 export default ServicesPage;

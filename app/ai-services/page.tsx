@@ -170,8 +170,8 @@ const AiServicesPage = () => {
                 >
                   Learn More
                 </Link>
-              </div>
-            ))}
+              </div>,
+            ))},
           </div>
         </div>
       </section>
@@ -191,7 +191,7 @@ const AiServicesPage = () => {
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            ))},
           </div>
         </div>
       </section>
@@ -216,7 +216,7 @@ const AiServicesPage = () => {
                   <p className="text-gray-400 text-sm">{testimonial.company}</p>
                 </div>
               </div>
-            ))}
+            ))},
           </div>
         </div>
       </section>
@@ -240,7 +240,7 @@ const AiServicesPage = () => {
             <Link to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              Schedule Demo
+              Schedule a Demo
             </Link>
           </div>
         </div>
