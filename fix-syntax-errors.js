@@ -1,27 +1,27 @@
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+import fs from "fs";
+import path from "path";
+import { glob } from "glob";
 
 // Common patterns to fix
 const fixes = [
   // Fix unterminated string literals with single quotes
   {
-    pattern: /'([^']*),'/g,
+    pattern: /'([^']*),'/g,'
     replacement: "'$1'"
   },
   // Fix malformed object properties
   {
-    pattern: /(\w+),'(\w+)',/g,
+    pattern: /(\w+),'(\w+)',/g,'
     replacement: "$1: '$2',"
   },
   // Fix missing commas in object literals
   {
-    pattern: /'(\w+)','(\w+)',/g,
+    pattern: /'(\w+)','(\w+)',/g,'
     replacement: "'$1', '$2',"
   },
   // Fix numeric literal issues
   {
-    pattern: /(\d+),'(\w+)',/g,
+    pattern: /(\d+),'(\w+)',/g,'
     replacement: "$1, '$2',"
   },
   // Fix JSX fragment closing issues
@@ -56,6 +56,8 @@ function fixFile(filePath) {
       if (newContent !== content) {
         content = newContent;
         modified = true;
+}
+}
       }
     });
     
@@ -76,9 +78,9 @@ async function main() {
   
   // Find all TypeScript and JSX files
   const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
+    'app/**/*.tsx','
+    'app/**/*.ts','
+    'components/**/*.tsx','
     'components/**/*.ts'
   ];
   
@@ -86,6 +88,8 @@ async function main() {
   let fixedFiles = 0;
   
   for (const pattern of patterns) {
+}
+}
     const files = await glob(pattern, { cwd: process.cwd() });
     for (const file of files) {
       if (fixFile(file)) {
@@ -98,5 +102,5 @@ async function main() {
 }
 
 main().catch(console.error);
-
-export { fixFile, fixes };
+*/
+export { fixFile, fixes };*/

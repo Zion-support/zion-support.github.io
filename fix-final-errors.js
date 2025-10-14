@@ -1,5 +1,5 @@
-import fs from 'fs';
-import { glob } from 'glob';
+import fs from "fs";
+import { glob } from "glob";
 
 // Function to fix common JSX and syntax errors
 function fixFinalErrors(content) {
@@ -9,10 +9,12 @@ function fixFinalErrors(content) {
   fixed = fixed.replace(/<\/section>\s*<\/div>\s*<\/section>/g, '</div>\n        </section>');
   
   // Fix malformed JSX attributes
+}
+}
   fixed = fixed.replace(/onClick=\{([^}]+);/g, 'onClick={$1}');
   
   // Fix missing semicolons in imports
-  fixed = fixed.replace(/import React from 'react'$/gm, "import React from 'react';");
+  fixed = fixed.replace(/import React from "react";);
   
   // Fix missing closing braces in objects
   fixed = fixed.replace(/(\w+):\s*<(\w+)\s+className="[^"]*"\s*\/>,\s*$/gm, '$1: <$2 className="w-6 h-6" />,');
@@ -23,7 +25,7 @@ function fixFinalErrors(content) {
   
   // Fix missing closing parentheses in function calls
   fixed = fixed.replace(/(\w+)\s*\(\s*([^)]*)\s*$/gm, (match, func, args) => {
-    if (args.trim().endsWith(',')) {
+    if (args.trim().endsWith(',')) {'
       return `${func}(${args.trim().slice(0, -1)})`;
     }
     return match;
@@ -44,6 +46,8 @@ function processFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
+}
+}
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -57,9 +61,9 @@ function processFile(filePath) {
 // Main function
 async function main() {
   const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    '*.tsx',
+    'app/**/*.tsx','
+    'app/**/*.ts','
+    '*.tsx','
     '*.ts'
   ];
   
@@ -67,6 +71,8 @@ async function main() {
   let fixedFiles = 0;
   
   for (const pattern of patterns) {
+}
+}
     const files = await glob(pattern, { cwd: process.cwd() });
     for (const file of files) {
       totalFiles++;
@@ -82,5 +88,5 @@ async function main() {
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
-
-export { fixFinalErrors, processFile };
+*/
+export { fixFinalErrors, processFile };*/

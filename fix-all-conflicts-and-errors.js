@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
+import fs from "fs";
+import path from "path";
+import { execSync } from "child_process";
 
 console.log('🔧 Starting comprehensive error fixing...');
 
 // Function to recursively find all files;
-function getAllFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
+function getAllFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {'
   let files = [];
   const items = fs.readdirSync(dir);
   
@@ -14,8 +14,10 @@ function getAllFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
       files = files.concat(getAllFiles(fullPath, extensions));
+}
+}
     } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath);
     }
@@ -33,21 +35,25 @@ function fixMergeConflicts(content) {
   content = content.replace(/^<<<<<<< [^\n]+[\s\S]*?=======$/gm, '');
   
   return content;
+}
+}
 };
 
 // Function to fix common syntax errors;
 function fixSyntaxErrors(content) {
   // Fix unterminated string literals;
-  content = content.replace(/import\s+.*?from\s+['"]([^'"]*?)$/gm, (match, p1) => {
-    if (!p1.includes("'") && !p1.includes('"')) {
+  content = content.replace(/import\s+.*?from\s+['"]([^'"]*?)$/gm, (match, p1) => {"
+    if (!p1.includes("'") && !p1.includes('"')) {'
       return match + '"';
+}
+}
     };
     return match;
   });
   
   // Fix missing closing quotes in JSX;
-  content = content.replace(/className=['"]([^'"]*?)$/gm, (match, p1) => {
-    if (!p1.includes("'") && !p1.includes('"')) {
+  content = content.replace(/className=['"]([^'"]*?)$/gm, (match, p1) => {"
+    if (!p1.includes("'") && !p1.includes('"')) {'
       return `className="${p1}"`;
     }
     return match;
@@ -55,7 +61,7 @@ function fixSyntaxErrors(content) {
   
   // Fix missing closing tags;
   content = content.replace(/<div([^>]*?)(?<!>)$/gm, (match, p1) => {
-    if (!match.endsWith('>')) {
+    if (!match.endsWith('>')) {'
       return match + '>';
     }
     return match;
@@ -71,7 +77,7 @@ function fixSyntaxErrors(content) {
   
   // Fix missing semicolons;
   content = content.replace(/([^;}])\s*$/gm, (match, p1) => {
-    if (p1.trim() && !p1.includes('{') && !p1.includes('}') && !p1.includes(';')) {
+    if (p1.trim() && !p1.includes('{') && !p1.includes('}') && !p1.includes(';')) {'
       return p1 + ';';
     }
     return match;
@@ -85,13 +91,15 @@ function fixFileIssues(filePath, content) {
   const fileName = path.basename(filePath);
   
   // Fix specific known issues;
-  if (fileName.includes('App.tsx')) {
+  if (fileName.includes('App.tsx')) {'
     // Fix App.tsx specific issues;
     content = content.replace(/^<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+$/gm, '');
     content = content.replace(/^<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+$/gm, '');
+}
+}
   };
   
-  if (fileName.includes('page.tsx')) {
+  if (fileName.includes('page.tsx')) {'
     // Fix page.tsx specific issues;
     content = content.replace(/^<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+$/gm, '');
     content = content.replace(/^<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+$/gm, '');
@@ -107,6 +115,8 @@ function main() {
     let fixedCount = 0;
     let errorCount = 0;
     
+}
+}
     console.log(`📁 Found ${files.length} files to process...`);
     
     for (const filePath of files) {
@@ -150,7 +160,7 @@ function main() {
     }
     
   } catch (error) {
-    console.error('❌ Fatal error: ', error.message);'
+    console.error('❌ Fatal error: ', error.message);
     process.exit(1);
   }
 }

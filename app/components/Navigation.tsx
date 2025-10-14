@@ -1,5 +1,5 @@
-import React, { useState } from 'react''
-import { Link, useLocation } from 'react-router-dom;
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import { 
   Menu, 
@@ -8,8 +8,8 @@ import {
   Shield, 
   Zap, 
   Globe,
-  ChevronDown'
-} from 'lucide-react;
+  ChevronDown";
+} from "lucide-react;";
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
@@ -25,10 +25,10 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
 
   const navigation = ['
     { name: 'Home', href: '/', icon: HomeIcon },'
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    { name: 'About', href: '/about', icon: InformationCircleIcon },'
     { '
       name: 'Services', '
-      href: '/services', 
+      href: '/services', '
       icon: BriefcaseIcon,
       submenu: ['
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },'
@@ -36,18 +36,18 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
         { name: 'Micro SaaS', href: '/micro-saas-solutions', icon: GlobeAltIcon },'
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },'
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },'
-        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }
+        { name: '5G Solutions', href: '/5g-solutions', icon: SignalIcon }'
       ]
     },
     { '
       name: 'Solutions', '
-      href: '/solutions', 
+      href: '/solutions', '
       icon: CogIcon,
       submenu: ['
         { name: 'AI Services', href: '/ai-services', icon: CpuChipIcon },'
         { name: 'IT Services', href: '/it-services', icon: BriefcaseIcon },'
         { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: CloudIcon },'
-        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
+        { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }'
       ]
     },'
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },'
@@ -55,7 +55,7 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },'
     { name: 'Demo', href: '/demo', icon: PlayIcon },'
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },'
-    { name: 'Contact', href: '/contact', icon: PhoneIcon }
+    { name: 'Contact', href: '/contact', icon: PhoneIcon }'
   ];
 
   const isActive = (path: string) => {
@@ -68,43 +68,43 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
     { name: 'Web Development', href: '/web-development', icon: <Globe className="w-4 h-4" /> },'
     { name: 'Mobile Development', href: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },'
     { name: 'Database Management', href: '/database-management', icon: <Database className="w-4 h-4" /> },'
-    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: <Network className="w-4 h-4" /> }
+    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: <Network className="w-4 h-4" /> }"
   ];
 
   const microSaasServices = ['
     { name: 'Zion Analytics Pro', href: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> },'
     { name: 'Zion Security Shield', href: '/zion-security-shield', icon: <Shield className="w-4 h-4" /> },'
     { name: 'Zion Cloud Vault', href: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" /> },'
-    { name: 'Zion Content Studio', href: '/zion-content-studio', icon: <FileText className="w-4 h-4" /> }
+    { name: 'Zion Content Studio', href: '/zion-content-studio', icon: <FileText className="w-4 h-4" /> }"
   ];
 
   const fiveGServices = ['
     { name: '5G Implementation', href: '/5g-implementation', icon: <Cpu className="w-4 h-4" /> },'
     { name: '5G Edge Computing', href: '/5g-edge-computing', icon: <Zap className="w-4 h-4" /> },'
     { name: '5G IoT Solutions', href: '/5g-iot-solutions', icon: <Wifi className="w-4 h-4" /> },'
-    { name: '5G Smart City', href: '/5g-smart-city-solutions', icon: <Building2 className="w-4 h-4" /> }
+    { name: '5G Smart City', href: '/5g-smart-city-solutions', icon: <Building2 className="w-4 h-4" /> }"
   ];
 
   return (
-    <nav className="bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 sticky top-0 z-50"></nav>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-        <div className="flex justify-between items-center h-16"></div>
+    <nav className="bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 sticky top-0 z-50"></nav>"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>"
+        <div className="flex justify-between items-center h-16"></div>"
           {/* Logo */}
-          <div className="flex items-center"></div>
-            <Link to="/" className="flex items-center space-x-2"></Link>
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center"></div>
-                <span className="text-white font-bold text-lg">Z</span>
+          <div className="flex items-center"></div>"
+            <Link to="/" className="flex items-center space-x-2"></Link>"
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center"></div>"
+                <span className="text-white font-bold text-lg">Z</span>"
               </div>
-              <span className="text-white font-bold text-xl">Zion Tech Group</span>
+              <span className="text-white font-bold text-xl">Zion Tech Group</span>"
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1"></div>
+          <div className="hidden lg:flex items-center space-x-1"></div>"
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.name} className="relative group"></div>
+                <div key={item.name} className="relative group"></div>"
                   <Link
                     to={item.href;
                     className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -115,14 +115,14 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >
-                    <Icon className="w-4 h-4" /></Icon>
+                    <Icon className="w-4 h-4" /></Icon>"
                     <span>{item.name}</span>
-                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}
+                    {item.submenu && <ChevronDownIcon className="w-4 h-4 ml-1" />}"
                   </Link>
                   
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50"></div>
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50"></div>"
                       {item.submenu.map((subItem) => (
                         <Link key={subItem.name;
                           to={subItem.href;
@@ -139,7 +139,7 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4"></div>
+          <div className="hidden lg:flex items-center space-x-4"></div>"
             <Link
               to="/contact"
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
@@ -149,13 +149,13 @@ const [isAIServicesOpen, setIsAIServicesOpen] = useState(false);
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2"></div>
+          <div className="md:hidden flex items-center space-x-2"></div>"
             <button
               onClick={onSidebarToggle}
               className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
             ></button>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></path>
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>"
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></path>"
               </svg>
             </button>
           </div>

@@ -1,22 +1,24 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import { execSync } from 'child_process';
+import fs from "fs";
+import { execSync } from "child_process";
 
-// Strategy: Use our fixes (HEAD) for all conflicts since we've fixed syntax errors
+// Strategy: Use our fixes (HEAD) for all conflicts since we've fixed syntax errors'
 function resolveConflicts() {
   try {
     console.log('Starting merge with conflict resolution...');
     
     // Start the merge
+}
+}
     execSync('git merge origin/main --no-commit', { stdio: 'inherit' });
     
     console.log('Merge conflicts detected. Resolving automatically...');
     
     // Get list of conflicted files
-    const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+    const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })'
       .trim()
-      .split('\n')
+      .split('\n')'
       .filter(file => file.length > 0);
     
     console.log(`Found ${conflictedFiles.length} conflicted files`);
@@ -56,6 +58,8 @@ function resolveWithStrategy() {
     console.log('Attempting merge with strategy to prefer our changes...');
     
     // Use merge strategy to prefer our changes
+}
+}
     execSync('git merge origin/main -X ours --no-commit', { stdio: 'inherit' });
     
     // Commit the merge
@@ -77,6 +81,8 @@ async function main() {
   if (resolveWithStrategy()) {
     console.log('Merge completed successfully using strategy approach');
     return;
+}
+}
   }
   
   // If strategy fails, try manual conflict resolution

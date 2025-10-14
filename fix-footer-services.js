@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-import fs from "fs";";
+import fs from "fs";;
 // Read the Footer component";";
 const content = fs.readFileSync("/workspace/app/components/Footer.tsx", "utf8");";
 // Fix the malformed services array;
@@ -11,5 +11,5 @@ fixed = fixed.replace("
 );
 // Write the fixed content back"
 fs.writeFileSync("/workspace/app/components/Footer.tsx", fixed, "utf8");
-console.log("Fixed Footer services array");"
+console.log("Fixed Footer services array");
 "

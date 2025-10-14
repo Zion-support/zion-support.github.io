@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
-import fs from "fs";";
-import path from "path";";
-import { fileURLToPath   } from "url";";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath   } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -15,6 +15,8 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
       // Skip node_modules and other common directories;
       if (!['node_modules', '.git', '.next', 'dist', 'out', 'build'].includes(file)) {';
         getAllFiles(fullPath, arrayOfFiles);
+}
+}
       };
     } else {
       // Only process TypeScript, JavaScript, and JSX files;
@@ -51,6 +53,8 @@ function fixHtmlEntities(content) {
     '©': '©',';
     '®': '®',';
     '™': '™',';
+}
+}
   };
 
   // Fix HTML entities;
@@ -92,6 +96,8 @@ function main() {
   allFiles.forEach(file => {
     try {
       const originalContent = fs.readFileSync(file, 'utf8');';
+}
+}
       const { content: fixedContent, fixesApplied } = fixHtmlEntities(originalContent);
       
       if (fixesApplied > 0) {
@@ -105,7 +111,7 @@ function main() {
     }
   });
 
-  console.log(`\n🎉 Summary: '`);`;',
+  console.log(`\n🎉 Summary: '`);`;','
   console.log(`   Files processed: ${filesProcessed}`);`;
   console.log(`   Total fixes applied: ${totalFixes}`);`;
   if (totalFixes > 0) {

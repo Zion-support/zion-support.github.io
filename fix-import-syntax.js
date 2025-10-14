@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 // Function to fix import syntax issues;
 function fixImportSyntax(filePath) {
@@ -10,6 +10,8 @@ function fixImportSyntax(filePath) {
     let modified = false;
     
     // Fix unterminated string literals in import statements;
+}
+}
     const importRegex = /import\s+{[^}]*}\s+from\s+'[^']*;([^']*)/g;
     content = content.replace(importRegex, (match, afterSemicolon) => {
       // Find the actual end of the import statement;
@@ -30,7 +32,7 @@ function fixImportSyntax(filePath) {
     });
     
     // Fix missing closing quotes in import statements;
-    content = content.replace(/from\s+'([^']*);([^']*)/g, (match, beforeSemicolon, afterSemicolon) => {
+    content = content.replace(/from\s+'([^']*);([^']*)/g, (match, beforeSemicolon, afterSemicolon) => {'
       if (afterSemicolon.trim()) {
         return `from '${beforeSemicolon}';`;
       }
@@ -38,16 +40,16 @@ function fixImportSyntax(filePath) {
     });
     
     // Fix missing newlines after import statements;
-    content = content.replace(/from\s+'[^']*';([a-zA-Z])/g, (match, nextChar) => {
+    content = content.replace(/from\s+'[^']*';([a-zA-Z])/g, (match, nextChar) => {'
       return match.replace(nextChar, '\n' + nextChar);
     });
     
     // Fix missing closing quotes and add newlines;
-    content = content.replace(/from\s+'([^']*);([a-zA-Z])/g, (match, moduleName, nextChar) => {
+    content = content.replace(/from\s+'([^']*);([a-zA-Z])/g, (match, moduleName, nextChar) => {'
       return `from '${moduleName}';\n${nextChar}`;
     });
     
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
+    if (content !== fs.readFileSync(filePath, 'utf8')) {'
       fs.writeFileSync(filePath, content, 'utf8');
       return true;
     }
@@ -70,9 +72,11 @@ function findSourceFiles(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
         traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+}
+}
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {'
         files.push(fullPath);
       }
     }
@@ -103,7 +107,7 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`\n📊 Summary: '`);',
+console.log(`\n📊 Summary: '`);','
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 

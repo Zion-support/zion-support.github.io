@@ -1,10 +1,10 @@
 /**
- * Application Types
- * Core type definitions for the Zion Tech Group website
+ * Application Types*/
+ * Core type definitions for the Zion Tech Group website*/
  */
 /**
- * Performance Metrics Interface
- * Web Vitals and performance measurement types
+ * Performance Metrics Interface*/
+ * Web Vitals and performance measurement types*/
  */;
 export interface PerformanceMetrics {;
   fcp?: number; // First Contentful Paint;
@@ -14,7 +14,7 @@ export interface PerformanceMetrics {;
   ttfb?: number; // Time to First Byte
 }
 /**
- * Performance Report Interface
+ * Performance Report Interface*/
  */;
 export interface PerformanceReport {
   webVitals: Partial<PerformanceMetrics>;
@@ -23,7 +23,7 @@ export interface PerformanceReport {
   timestamp: number;
 }
 /**
- * Resource Statistics Interface
+ * Resource Statistics Interface*/
  */;
 export interface ResourceStats {
   total: number;
@@ -33,7 +33,7 @@ export interface ResourceStats {
   fonts: number;
 }
 /**
- * Memory Statistics Interface
+ * Memory Statistics Interface*/
  */;
 export interface MemoryStats {
   usedJSHeapSize: number;
@@ -41,14 +41,14 @@ export interface MemoryStats {
   jsHeapSizeLimit: number;
 }
 /**
- * Layout Shift Interface
+ * Layout Shift Interface*/
  */;
 export interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
 }
 /**
- * Performance with Memory Interface
+ * Performance with Memory Interface*/
  */;
 export interface PerformanceWithMemory extends Performance {
   memory: {
@@ -58,7 +58,7 @@ export interface PerformanceWithMemory extends Performance {
   };
 }
 /**
- * Service Configuration Interface
+ * Service Configuration Interface*/
  */;
 export interface ServiceConfig {
   id: string;
@@ -73,7 +73,7 @@ export interface ServiceConfig {
   };
 }
 /**
- * Blog Post Interface
+ * Blog Post Interface*/
  */;
 export interface BlogPost {
   id: string;
@@ -95,7 +95,7 @@ export interface BlogPost {
   };
 }
 /**
- * Contact Form Interface
+ * Contact Form Interface*/
  */;
 export interface ContactForm {
   name: string;
@@ -109,7 +109,7 @@ export interface ContactForm {
   consent: boolean;
 }
 /**
- * API Response Interface
+ * API Response Interface*/
  */;
 export interface ApiResponse<T = any> {
   success: boolean;
@@ -119,7 +119,7 @@ export interface ApiResponse<T = any> {
   timestamp: number;
 }
 /**
- * SEO Metadata Interface
+ * SEO Metadata Interface*/
  */;
 export interface SEOMetadata {
   title: string;
@@ -133,7 +133,7 @@ export interface SEOMetadata {
   nofollow?: boolean;
 }
 /**
- * Navigation Item Interface
+ * Navigation Item Interface*/
  */;
 export interface NavigationItem {
   label: string;
@@ -142,7 +142,7 @@ export interface NavigationItem {
   children?: NavigationItem[];
 }
 /**
- * Testimonial Interface
+ * Testimonial Interface*/
  */;
 export interface Testimonial {
   id: string;
@@ -155,7 +155,7 @@ export interface Testimonial {
   featured: boolean;
 }
 /**
- * Case Study Interface
+ * Case Study Interface*/
  */;
 export interface CaseStudy {
   id: string;
@@ -178,7 +178,7 @@ export interface CaseStudy {
   publishedAt: string;
 }
 /**
- * Team Member Interface
+ * Team Member Interface*/
  */;
 export interface TeamMember {
   id: string;
@@ -195,7 +195,7 @@ export interface TeamMember {
   featured: boolean;
 }
 /**
- * FAQ Item Interface
+ * FAQ Item Interface*/
  */;
 export interface FAQItem {
   id: string;
@@ -205,7 +205,7 @@ export interface FAQItem {
   order: number;
 }
 /**
- * Newsletter Subscription Interface
+ * Newsletter Subscription Interface*/
  */;
 export interface NewsletterSubscription {
   email: string;
@@ -215,7 +215,7 @@ export interface NewsletterSubscription {
   active: boolean;
 }
 /**
- * Error Boundary Props Interface
+ * Error Boundary Props Interface*/
  */;
 export interface ErrorBoundaryProps {
   children: React.ReactNode;
@@ -223,14 +223,14 @@ export interface ErrorBoundaryProps {
   onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
 }
 /**
- * Error Boundary State Interface
+ * Error Boundary State Interface*/
  */;
 export interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
 }
 /**
- * Theme Configuration Interface
+ * Theme Configuration Interface*/
  */;
 export interface ThemeConfig {
   mode: 'light' | 'dark' | 'system';
@@ -241,7 +241,7 @@ export interface ThemeConfig {
   borderRadius: number;
 }
 /**
- * Analytics Event Interface
+ * Analytics Event Interface*/
  */;
 export interface AnalyticsEvent {
   action: string;
@@ -251,7 +251,7 @@ export interface AnalyticsEvent {
   custom_parameters?: Record<string, any>;
 }
 /**
- * User Preferences Interface
+ * User Preferences Interface*/
  */;
 export interface UserPreferences {
   theme: ThemeConfig;
@@ -268,7 +268,7 @@ export interface UserPreferences {
   };
 }
 /**
- * Utility Types
+ * Utility Types*/
  */;
 export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
@@ -276,7 +276,7 @@ export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
 /**
- * API Endpoint Types
+ * API Endpoint Types*/
  */;
 export type ApiEndpoint =
   | '/api/contact'
@@ -285,11 +285,11 @@ export type ApiEndpoint =
   | '/api/performance'
   | '/api/health';
 /**
- * HTTP Method Types
+ * HTTP Method Types*/
  */;
 export type HttpMethod="GET" Environment = 'development' | 'staging' | 'production';
 /**
- * Build Configuration Interface
+ * Build Configuration Interface*/
  */;
 export interface BuildConfig {
   environment: Environment;

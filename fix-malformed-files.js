@@ -1,26 +1,28 @@
-import React from "react;";";
-import fs from "fs;";";
-import path from "path;";";
+import React from "react;;
+import fs from "fs;;
+import path from "path;;
 // Function to fix malformed files;
 function fixMalformedFiles(content) {
   // Remove malformed closing tags at the end;
-  content = content.replace(")
+  content = content.replace(")"
+}
+}
     /\n\s*<\/button><\/div><\/div><\/div><\/div>\s*\n\s*\);\}\s*\n\s*\}\s*\s*$/g,"
     ,
   )
   // Fix malformed export statements;
   content = content.replace(
     /export default \w+;\n\};/g,"
-    "export default Page\n}",)
+    "export default Page\n}",)"
   )"
-  content = content.replace(/export default \w+;/g, "export default Page")
+  content = content.replace(/export default \w+;/g, "export default Page")"
   // Fix malformed closing tags"
   content = content.replace(/<\/div>;<\/div>;<\/div>;<\/div>;/g, "</div>")"
-  content = content.replace(/<\/section>;<\/section>;/g, "</section>")
+  content = content.replace(/<\/section>;<\/section>;/g, "</section>")"
   // Fix malformed return statements"
-  content = content.replace(/  \);\n\}/g, "  )\n}")
+  content = content.replace(/  \);\n\}/g, "  )\n}")"
   // Remove duplicate closing braces"
-  content = content.replace(/\}\s*\n\s*\}\s*$/g, "\n}")
+  content = content.replace(/\}\s*\n\s*\}\s*$/g, "\n}")"
   // Fix malformed JSX"
   content = content.replace(/<\/button><\/div><\/div><\/div><\/div>/g, )
   return content;
@@ -33,14 +35,16 @@ const filePath = path.join(dir, file);
 const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {
       processFiles(filePath)"
-    } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
+}
+}
+    } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {"
       try {
-        console.log(`Processing: ${filePath}`)``"`
+        console.log(`Processing: ${filePath}`)``"`"
         let content = fs.readFileSync(filePath, "utf8");
 const originalContent = content;
         content = fixMalformedFiles(content)
         if (content !== originalContent) {"
-          fs.writeFileSync(filePath, content, "utf8")
+          fs.writeFileSync(filePath, content, "utf8")"
           console.log(`Fixed: ${filePath}`)```
 } catch (error) {
         console.error(`Error processing ${filePath}:`, error.message)```;
@@ -52,6 +56,8 @@ async function main() {
   console.log('Starting fix for malformed files...');
 
   // Get all TypeScript/TSX files in the app directory
+}
+}
   const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
 
   let totalFixed = 0;
@@ -71,4 +77,5 @@ async function main() {
 console.log("Starting malformed file fixes...")"
 processFiles("./app")"
 console.log("Malformed file fixes completed!")"
-ursor/fix-errors-and-merge-to-main-94a7
+ursor/fix-errors-and-merge-to-main-94a7*/
+*/

@@ -1,8 +1,8 @@
-import React from "react";";
+import React from "react";
 #!/usr/bin/env node;
-import fs from "fs";";
-import path from "path";";
-import { execSync     } from "child_process";";
+import fs from "fs";
+import path from "path";
+import { execSync     } from "child_process";
 ''';
 console.log('🔧 Fixing critical build errors...\n')'';
 // Function to fix critical build errors;
@@ -17,6 +17,8 @@ const fixes = [;
       {''';
         pattern: /children:\s*ReactNode';/g,''';
         replacement: 'children: ReactNode;'';
+}
+}
       },;
       {''';
         pattern: /children:\s*React\.ReactNode';/g,''';
@@ -44,7 +46,7 @@ const fixes = [;
       // Fix malformed return statements;
       {
         pattern: /return\s*\(\s*<div\s+className=\`max-w-7xl\s+mx-auto\s+px-4\s+sm:\s*"px-6\s+l,g:px-8\s+\$\{className"\}\`></div>/g,''"``'"`;
-        replacement: 'return (\n    <//div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>''``'`)
+        replacement: 'return (\n    <//div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>''``'`)'
       },;
       // Fix malformed closing tags;
       {);
@@ -54,7 +56,9 @@ const fixes = [;
       // Fix malformed export statements;
       {
         pattern: /export\s+default\s+function\s+Page\(\)\s*\{\s*return\s*\(\s*<//React\.Fragment>\s*";/g,''"'";
-        replacement: 'export default function Page() {\n  return (\n    <//React.Fragment>''')
+        replacement: 'export default function Page() {\n  return (\n    <//React.Fragment>''')'
+}
+}
       },;
       // Fix malformed JSX elements;
       {
@@ -113,6 +117,8 @@ const stat = fs.statSync(fullPath);
       ''';
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'';
         traverse(fullPath);
+}
+}
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
 }

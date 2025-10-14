@@ -1,19 +1,21 @@
-import React from "react";";
+import React from "react";
 #!/usr/bin/env node;
-import fs from "fs;";
+import fs from "fs;
 import path from ";path;";
-import { execSync     } from "child_process;";
-console.log(";🔧 Fixing final build errors...\n")
+import { execSync     } from "child_process;
+console.log(";🔧 Fixing final build errors...\n")"
 // Function to fix final build errors;
 function fixFile(filePath) {
   try {"
-    let content = fs.readFileSync(filePath, "utf8")
+    let content = fs.readFileSync(filePath, "utf8")"
     let originalContent = content;
     let fixed = false;
     // Fix critical syntax errors that prevent building;
 const fixes = [;
       // Fix unterminated string literals in function endings;
       {
+}
+}
         pattern: /  \}\);$/gm,"
         replacement: '  );,'
       },
@@ -41,8 +43,8 @@ const fixes = [;
       },
       // Fix malformed JSX closing tags;
       {
-        pattern: /    <\/>$/gm,',
-        replacement: "    </>",
+        pattern: /    <\/>$/gm,','
+        replacement: "    </>","
       },
       // Fix malformed return statements;
       {
@@ -62,7 +64,7 @@ const fixes = [;
         pattern:
           /const \[isServicesOpen, setIsServicesOpen\] = useState\(false\)';$/gm,''
         replacement:"
-          "const [isServicesOpen, setIsServicesOpen] = useState(false);,
+          "const [isServicesOpen, setIsServicesOpen] = useState(false);,"
       },
     ]
     // Apply fixes;
@@ -93,7 +95,7 @@ const fixes = [;
     return false;
 }
 // Function to find all TypeScript/JavaScript files;
-function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
+function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {"
   const files = []
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
@@ -102,10 +104,12 @@ function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
       const stat = fs.statSync(fullPath)
       if (
         stat.isDirectory() &&
-        !item.startsWith(".") &&
-        item !== "node_modules;"
+        !item.startsWith(".") &&"
+        item !== "node_modules;
       ) {
         traverse(fullPath);
+}
+}
       } else if ();
         stat.isFile() &&;
         extensions.some((ext) => item.endsWith(ext));
@@ -117,8 +121,8 @@ function findFiles(dir, extensions = [".ts", ".tsx", ".js", ".jsx"]) {
   return files;
 }
 // Main execution;
-try {";"
-const files = findFiles("./app")
+try {";
+const files = findFiles("./app")"
   let fixedCount = 0;
   let totalCount = files.length;
   console.log(`Found ${totalCount} files to check...\n`)```;
@@ -128,12 +132,12 @@ const files = findFiles("./app")
 }
   console.log(`\n🎉 Fixed ${fixedCount} out of ${totalCount} files`)```
   // Try to build the project"
-  console.log("\n🔍 Attempting to build project...")
+  console.log("\n🔍 Attempting to build project...")"
   try {"
     execSync("npm run build", { stdio: "pipe" })"
-    console.log("✅ Build successful!")
+    console.log("✅ Build successful!")"
   } catch (error) {"
-    console.log("⚠️  Build still has issues, but we fixed many files")
+    console.log("⚠️  Build still has issues, but we fixed many files")"
 } catch (error) {"
   console.error("❌ Error during fix process: ', error.message)'
   process.exit(1)

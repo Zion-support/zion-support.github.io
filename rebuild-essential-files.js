@@ -1,46 +1,46 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+import fs from "fs";
+import path from "path";
+import { glob } from "glob";
 
 // Essential pages to recreate;
 const essentialPages = [
-  'app/page.tsx',
-  'app/about/page.tsx',
-  'app/services/page.tsx',
-  'app/contact/page.tsx',
-  'app/pricing/page.tsx',
-  'app/careers/page.tsx',
-  'app/blog/page.tsx',
-  'app/solutions/page.tsx',
-  'app/ai-services/page.tsx',
-  'app/it-services/page.tsx',
-  'app/cloud-services/page.tsx',
-  'app/cybersecurity/page.tsx',
-  'app/micro-saas/page.tsx',
-  'app/5g-solutions/page.tsx',
-  'app/blockchain/page.tsx',
-  'app/quantum-computing/page.tsx',
-  'app/iot-edge/page.tsx',
-  'app/autonomous-systems/page.tsx',
-  'app/digital-transformation/page.tsx',
-  'app/case-studies/page.tsx',
-  'app/api-docs/page.tsx',
-  'app/tutorials/page.tsx',
-  'app/support/page.tsx',
-  'app/privacy/page.tsx',
-  'app/terms/page.tsx',
-  'app/cookies/page.tsx',
-  'app/gdpr/page.tsx',
-  'app/team/page.tsx',
-  'app/partners/page.tsx',
-  'app/news/page.tsx',
-  'app/demo/page.tsx',
-  'app/not-found.tsx',
-  'app/404.tsx',
-  'app/error.tsx',
-  'app/loading.tsx',
+  'app/page.tsx','
+  'app/about/page.tsx','
+  'app/services/page.tsx','
+  'app/contact/page.tsx','
+  'app/pricing/page.tsx','
+  'app/careers/page.tsx','
+  'app/blog/page.tsx','
+  'app/solutions/page.tsx','
+  'app/ai-services/page.tsx','
+  'app/it-services/page.tsx','
+  'app/cloud-services/page.tsx','
+  'app/cybersecurity/page.tsx','
+  'app/micro-saas/page.tsx','
+  'app/5g-solutions/page.tsx','
+  'app/blockchain/page.tsx','
+  'app/quantum-computing/page.tsx','
+  'app/iot-edge/page.tsx','
+  'app/autonomous-systems/page.tsx','
+  'app/digital-transformation/page.tsx','
+  'app/case-studies/page.tsx','
+  'app/api-docs/page.tsx','
+  'app/tutorials/page.tsx','
+  'app/support/page.tsx','
+  'app/privacy/page.tsx','
+  'app/terms/page.tsx','
+  'app/cookies/page.tsx','
+  'app/gdpr/page.tsx','
+  'app/team/page.tsx','
+  'app/partners/page.tsx','
+  'app/news/page.tsx','
+  'app/demo/page.tsx','
+  'app/not-found.tsx','
+  'app/404.tsx','
+  'app/error.tsx','
+  'app/loading.tsx','
   'app/global-error.tsx'
 ];
 
@@ -51,16 +51,18 @@ import { Helmet } from "react-helmet-async";
 export default function Page() {
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet />
+}
+}
         <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
+        <meta name="description" content="${description}" />"
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl font-bold text-white mb-8">${title}</h1>
-            <p className="text-gray-300 text-lg mb-8"></p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+        <div className="container mx-auto px-4 py-16"></div>"
+          <div className="text-center"></div>"
+            <h1 className="text-4xl font-bold text-white mb-8">${title}</h1>"
+            <p className="text-gray-300 text-lg mb-8"></p>"
               ${description}
             </p>
             ${content}
@@ -79,52 +81,54 @@ import { ArrowRight, CheckCircle, Star, Globe, Mail, Phone } from "lucide-react"
 export default function HomePage() {
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet />
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI solutions, IT services, and digital transformation for businesses worldwide." />
+        <meta name="description" content="Leading provider of AI solutions, IT services, and digital transformation for businesses worldwide." />"
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+}
+}
         {/* Hero Section */}
-        <section className="py-20 px-4"></section>
-          <div className="container mx-auto text-center"></div>
-            <h1 className="text-6xl font-bold text-white mb-6"></h1>
+        <section className="py-20 px-4"></section>"
+          <div className="container mx-auto text-center"></div>"
+            <h1 className="text-6xl font-bold text-white mb-6"></h1>"
               Welcome to Zion Tech Group;
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>"
               Leading provider of AI solutions, IT services, and digital transformation ;
               for businesses worldwide.
             </p>
-            <button className="bg-purple-600 hover: 'bg-purple-700 text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">',
+            <button className="bg-purple-600 hover: 'bg-purple-700 text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">','
               Get Started;
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />"
             </button>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4"></section>
-          <div className="container mx-auto"></div>
-            <h2 className="text-4xl font-bold text-white text-center mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 md: 'grid-cols-3 gap-8">',
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center"></div>
-                <Globe className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>
-                <p className="text-gray-300"></p>
+        <section className="py-20 px-4"></section>"
+          <div className="container mx-auto"></div>"
+            <h2 className="text-4xl font-bold text-white text-center mb-12">Our Services</h2>"
+            <div className="grid grid-cols-1 md: 'grid-cols-3 gap-8">','
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center"></div>"
+                <Globe className="w-12 h-12 text-purple-400 mx-auto mb-4" />"
+                <h3 className="text-2xl font-bold text-white mb-4">AI Solutions</h3>"
+                <p className="text-gray-300"></p>"
                   Cutting-edge artificial intelligence solutions to transform your business.
                 </p>
               </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center"></div>
-                <CheckCircle className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-4">IT Services</h3>
-                <p className="text-gray-300"></p>
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center"></div>"
+                <CheckCircle className="w-12 h-12 text-purple-400 mx-auto mb-4" />"
+                <h3 className="text-2xl font-bold text-white mb-4">IT Services</h3>"
+                <p className="text-gray-300"></p>"
                   Comprehensive IT services to keep your business running smoothly.
                 </p>
               </div>
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center"></div>
-                <Star className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-4">Digital Transformation</h3>
-                <p className="text-gray-300"></p>
+              <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 text-center"></div>"
+                <Star className="w-12 h-12 text-purple-400 mx-auto mb-4" />"
+                <h3 className="text-2xl font-bold text-white mb-4">Digital Transformation</h3>"
+                <p className="text-gray-300"></p>"
                   Transform your business with our digital solutions and strategies.
                 </p>
               </div>
@@ -133,21 +137,21 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4"></section>
-          <div className="container mx-auto text-center"></div>
-            <h2 className="text-4xl font-bold text-white mb-6"></h2>
+        <section className="py-20 px-4"></section>"
+          <div className="container mx-auto text-center"></div>"
+            <h2 className="text-4xl font-bold text-white mb-6"></h2>"
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8"></p>
+            <p className="text-xl text-gray-300 mb-8"></p>"
               Contact us today to learn how we can help you achieve your goals.
             </p>
-            <div className="flex flex-col sm: 'flex-row gap-4 justify-center">',
-              <button className="bg-purple-600 hover: 'bg-purple-700 text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">',
-                <Mail className="w-5 h-5 mr-2" />
+            <div className="flex flex-col sm: 'flex-row gap-4 justify-center">','
+              <button className="bg-purple-600 hover: 'bg-purple-700 text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">','
+                <Mail className="w-5 h-5 mr-2" />"
                 Contact Us;
               </button>
-              <button className="border border-purple-400 text-purple-400 hover: 'bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">',
-                <Phone className="w-5 h-5 mr-2" />
+              <button className="border border-purple-400 text-purple-400 hover: 'bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">','
+                <Phone className="w-5 h-5 mr-2" />"
                 Call Now;
               </button>
             </div>
@@ -166,24 +170,26 @@ import { Home, ArrowLeft } from "lucide-react";
 export default function ErrorPage() {
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet />
+}
+}
         <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
+        <meta name="description" content="${description}" />"
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-6xl font-bold text-white mb-6">${title}</h1>
-          <p className="text-xl text-gray-300 mb-8"></p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-6xl font-bold text-white mb-6">${title}</h1>"
+          <p className="text-xl text-gray-300 mb-8"></p>"
             ${description}
           </p>
-          <div className="flex flex-col sm: 'flex-row gap-4 justify-center">',
-            <button className="bg-purple-600 hover: 'bg-purple-700 text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">',
-              <Home className="w-5 h-5 mr-2" />
+          <div className="flex flex-col sm: 'flex-row gap-4 justify-center">','
+            <button className="bg-purple-600 hover: 'bg-purple-700 text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">','
+              <Home className="w-5 h-5 mr-2" />"
               Go Home;
             </button>
-            <button className="border border-purple-400 text-purple-400 hover: 'bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">',
-              <ArrowLeft className="w-5 h-5 mr-2" />
+            <button className="border border-purple-400 text-purple-400 hover: 'bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg inline-flex items-center">','
+              <ArrowLeft className="w-5 h-5 mr-2" />"
               Go Back;
             </button>
           </div>
@@ -196,6 +202,8 @@ export default function ErrorPage() {
 // Function to create directory if it doesn't exist;
 function ensureDir(dirPath) {
   if (!fs.existsSync(dirPath)) {
+}
+}
     fs.mkdirSync(dirPath, { recursive: true });
   }
 }
@@ -205,6 +213,8 @@ function createPage(filePath, content) {
   const dir = path.dirname(filePath);
   ensureDir(dir);
   fs.writeFileSync(filePath, content, 'utf8');
+}
+}
   console.log(`Created: ${filePath}`);
 }
 
@@ -257,6 +267,8 @@ async function main() {
   createPage('app/global-error.tsx', errorPageTemplate('Global Error', 'A global error occurred. Please refresh the page.'));
   
   console.log('Essential files rebuilt successfully!');
+}
+}
 }
 
 main().catch(console.error);

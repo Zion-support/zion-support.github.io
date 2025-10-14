@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,3 +13,5 @@ function fixFile(filePath) {
 
     // Remove any remaining merge conflict markers;
     if (content.includes('<<<<<<<') || content.includes('
+}
+}

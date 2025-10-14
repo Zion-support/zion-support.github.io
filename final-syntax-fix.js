@@ -1,19 +1,19 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import { glob } from 'glob';
+import fs from "fs";
+import { glob } from "glob";
 
 // Final comprehensive fixes
 const finalFixes = [
   // Fix unterminated string literals
   {
-    pattern: /'([^']*);'/g,
+    pattern: /'([^']*);'/g,'
     replacement: "'$1'"
   },
   // Fix malformed import statements
   {
-    pattern: /import\s+([^;]+);'/g,
-    replacement: "import $1;"
+    pattern: /import\s+([^;]+);'/g,'
+    replacement: "import $1;
   },
   // Fix JSX expressions without parent element
   {
@@ -22,13 +22,13 @@ const finalFixes = [
   },
   // Fix missing semicolons in imports
   {
-    pattern: /import\s+([^;]+)';/g,
-    replacement: "import $1;"
+    pattern: /import\s+([^;]+)';/g,'
+    replacement: "import $1;
   },
   // Fix malformed object destructuring
   {
-    pattern: /\{\s*([^}]+)\s*\}\s*from\s*'([^']+)';'/g,
-    replacement: "{ $1 } from '$2';"
+    pattern: /\{\s*([^}]+)\s*\}\s*from\s*'([^']+)';'/g,'
+    replacement: "{ $1 } from '$2';
   },
   // Fix JSX fragments
   {
@@ -52,6 +52,8 @@ function fixFile(filePath) {
       if (newContent !== content) {
         content = newContent;
         modified = true;
+}
+}
       }
     });
     
@@ -69,17 +71,19 @@ function fixFile(filePath) {
 
 async function main() {
   const patterns = [
-    '*.tsx',
-    '*.ts',
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
+    '*.tsx','
+    '*.ts','
+    'app/**/*.tsx','
+    'app/**/*.ts','
+    'components/**/*.tsx','
     'components/**/*.ts'
   ];
   
   let totalFixed = 0;
   
   for (const pattern of patterns) {
+}
+}
     const files = await glob(pattern, { cwd: process.cwd() });
     for (const file of files) {
       if (fixFile(file)) {
@@ -90,5 +94,5 @@ async function main() {
   
   console.log(`\nFixed ${totalFixed} files with final syntax corrections`);
 }
-
-main().catch(console.error);
+*/
+main().catch(console.error);*/

@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
+import fs from "fs";
 
 console.log('🔧 Fixing config files...');
 
@@ -12,28 +12,28 @@ import path from "path";
 const resolve = path.resolve;
 
 export default defineConfig({
-  plugins: '[',
+  plugins: '[','
     react({
       // Enable JSX runtime;
-      jsxRuntime: "automatic",
+      jsxRuntime: "automatic","
     }),
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '@app': resolve(__dirname, './app'),
+      '@': resolve(__dirname, './src'),'
+      '@app': resolve(__dirname, './app'),'
     },
   },
   build: {
-    outDir: "dist",
+    outDir: "dist","
     sourcemap: false,
-    minify: "esbuild",
+    minify: "esbuild","
     cssCodeSplit: true,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
           // Vendor chunks;
-          if (id.includes('node_modules')) {
+          if (id.includes('node_modules')) {'
             return 'vendor';
           }
         },
@@ -46,8 +46,8 @@ export default defineConfig({
           }
           return \`assets/[name]-[hash][extname]\`;
         },
-        chunkFileNames: "assets/js/[name]-[hash].js",
-        entryFileNames: "assets/js/[name]-[hash].js",
+        chunkFileNames: "assets/js/[name]-[hash].js","
+        entryFileNames: "assets/js/[name]-[hash].js","
       },
     },
   },
@@ -60,10 +60,10 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: '[',
-      'react',
-      'react-dom',
-      'react-router-dom',
+    include: '[','
+      'react','
+      'react-dom','
+      'react-router-dom','
     ],
   },
 });
@@ -75,65 +75,65 @@ import { CheckIcon, UsersIcon, TrophyIcon, LightBulbIcon } from "@heroicons/reac
 
 const About: React.FC = () => {
   const stats = [
-    { icon: UsersIcon, value: '500+', label: 'Happy Clients' },
-    { icon: TrophyIcon, value: '50+', label: 'Awards Won' },
-    { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }
+    { icon: UsersIcon, value: '500+', label: 'Happy Clients' },'
+    { icon: TrophyIcon, value: '50+', label: 'Awards Won' },'
+    { icon: LightBulbIcon, value: '1000+', label: 'Projects Completed' }'
   ];
 
   const values = [
     {
-      title: 'Innovation',
-      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.',
+      title: 'Innovation','
+      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.','
     },
     {
-      title: 'Excellence',
-      description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.',
+      title: 'Excellence','
+      description: 'We are committed to delivering the highest quality solutions and services, ensuring every project exceeds expectations.','
     },
     {
-      title: 'Partnership',
-      description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.',
+      title: 'Partnership','
+      description: 'We work closely with our clients as trusted partners, understanding their unique needs and goals.','
     },
     {
-      title: 'Integrity',
-      description: 'We conduct business with the highest ethical standards, building trust through transparency and honesty.',
+      title: 'Integrity','
+      description: 'We conduct business with the highest ethical standards, building trust through transparency and honesty.','
     }
   ];
 
   return (
-    <div className="bg-white py-24"></div>
-      <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">',
-        <div className="text-center"></div>
-          <h2 className="text-3xl font-extrabold text-gray-900 sm: 'text-4xl">',
+    <div className="bg-white py-24"></div>"
+      <div className="max-w-7xl mx-auto px-4 sm: 'px-6 lg:px-8">','
+        <div className="text-center"></div>"
+          <h2 className="text-3xl font-extrabold text-gray-900 sm: 'text-4xl">','
             About Zion Tech Group;
           </h2>
-          <p className="mt-4 text-lg text-gray-600"></p>
+          <p className="mt-4 text-lg text-gray-600"></p>"
             We are a leading technology company specializing in AI and IT solutions.
           </p>
         </div>
 
-        <div className="mt-20"></div>
-          <div className="grid grid-cols-1 gap-8 sm: 'grid-cols-2 lg:grid-cols-4">',
+        <div className="mt-20"></div>"
+          <div className="grid grid-cols-1 gap-8 sm: 'grid-cols-2 lg:grid-cols-4">','
             {stats.map((stat, index) => (
-              <div key={index} className="text-center"></div>
-                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto"></div>
-                  <stat.icon className="h-6 w-6" />
+              <div key={index} className="text-center"></div>"
+                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mx-auto"></div>"
+                  <stat.icon className="h-6 w-6" />"
                 </div>
-                <p className="mt-2 text-3xl font-bold text-gray-900">{stat.value}</p>
-                <p className="text-gray-600">{stat.label}</p>
+                <p className="mt-2 text-3xl font-bold text-gray-900">{stat.value}</p>"
+                <p className="text-gray-600">{stat.label}</p>"
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-20"></div>
-          <div className="text-center"></div>
-            <h3 className="text-2xl font-bold text-gray-900">Our Values</h3>
+        <div className="mt-20"></div>"
+          <div className="text-center"></div>"
+            <h3 className="text-2xl font-bold text-gray-900">Our Values</h3>"
           </div>
-          <div className="mt-10 grid grid-cols-1 gap-8 sm: 'grid-cols-2 lg:grid-cols-4">',
+          <div className="mt-10 grid grid-cols-1 gap-8 sm: 'grid-cols-2 lg:grid-cols-4">','
             {values.map((value, index) => (
-              <div key={index} className="text-center"></div>
-                <h4 className="text-lg font-semibold text-gray-900">{value.title}</h4>
-                <p className="mt-2 text-gray-600">{value.description}</p>
+              <div key={index} className="text-center"></div>"
+                <h4 className="text-lg font-semibold text-gray-900">{value.title}</h4>"
+                <p className="mt-2 text-gray-600">{value.description}</p>"
               </div>
             ))}
           </div>
@@ -155,5 +155,5 @@ try {
   
   console.log('🎉 Config files fixed!');
 } catch (error) {
-  console.error('❌ Error fixing config files: ', error.message);'
+  console.error('❌ Error fixing config files: ', error.message);
 }

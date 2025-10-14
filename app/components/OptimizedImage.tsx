@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect } from 'react''
-import { Helmet } from 'react-helmet-async;
+import React, { useState, useRef, useEffect } from "react";
+import { Helmet } from "react-helmet-async;;
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -9,8 +9,7 @@ interface OptimizedImageProps {
   priority?: boolean;
   placeholder?: string;
   sizes?: string;
-  quality?: number'
-  loading?: 'lazy' | 'eager'
+  quality?: number";
   onLoad?: () => void;
   onError?: () => void}
 
@@ -41,7 +40,7 @@ const observer = new IntersectionObserver()
       },
       {
         threshold: 0.1,'
-        rootMargin: '50px'}
+        rootMargin: '50px'}'
       });
     if (imgRef.current) {
       observer.observe(imgRef.current)}
@@ -58,11 +57,11 @@ const observer = new IntersectionObserver()
 
   // Generate WebP src if supported
   const getOptimizedSrc = (originalSrc: string) => {'
-    if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
+    if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {'
       return originalSrc}
     
     // For external images, return as-is'
-    if (originalSrc.startsWith('http')) {
+    if (originalSrc.startsWith('http')) {'
       return originalSrc;
     // For local images, you could implement WebP conversion here
     return originalSrc};
@@ -75,7 +74,7 @@ const observer = new IntersectionObserver()
     <></>
       {priority && (
         <Helmet>}
-          <link rel="preload" as="image" href={optimizedSrc} /></link>
+          <link rel="preload" as="image" href={optimizedSrc} /></link>"
         </Helmet>
 )}
       <div
@@ -87,20 +86,20 @@ const observer = new IntersectionObserver()
         {/* Placeholder */}
         {!isLoaded && !isError && (
           <div
-            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"}
+            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"}"
             style={{ width, height }
           ></div>
-            <div className="text-gray-400 text-sm">Loading...</div>
+            <div className="text-gray-400 text-sm">Loading...</div>"
           </div>
 )}
         {/* Error state */}
         {isError && (
           <div
-            className="absolute inset-0 bg-gray-100 flex items-center justify-center"}
+            className="absolute inset-0 bg-gray-100 flex items-center justify-center"}"
             style={{ width, height }
           ></div>
-            <div className="text-gray-400 text-sm text-center"></div>
-              <div className="text-2xl mb-2">📷</div>
+            <div className="text-gray-400 text-sm text-center"></div>"
+              <div className="text-2xl mb-2">📷</div>"
               <div>Image not available</div>
             </div>
           </div>
@@ -118,7 +117,7 @@ const observer = new IntersectionObserver()
             onLoad={handleLoad}
             onError={handleError}
             className={`transition-opacity duration-300 ${'
-              isLoaded ? 'opacity-100' : 'opacity-0'}
+              isLoaded ? 'opacity-100' : 'opacity-0'}'
             }`}
             style={{'
               width: '100%''
@@ -131,6 +130,6 @@ const observer = new IntersectionObserver()
     </>
   )};
 
-export default OptimizedImage
+export default OptimizedImage;
 
 '

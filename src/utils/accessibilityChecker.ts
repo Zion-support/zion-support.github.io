@@ -86,7 +86,7 @@ const alt = img.getAttribute('alt');';
           wcagLevel: WCAGLevel.A,
           wcagCriterion: '1.1.1',"'"'";
           message: `Image ${index + 1} has empty alt without role="presentation"`,""``"`;
-          element: `img[src="${img[" role="presentation" to decorative images',"'"'";
+          element: `img[src="${img[ role="presentation" to decorative images',"'"'";
           codeExample: '<img src="..." alt="" role="presentation" />')'"'"
         });
       }

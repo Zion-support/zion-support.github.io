@@ -1,13 +1,15 @@
-import fs from "fs;";
+import fs from "fs;
 import { glob     } from ";glob;";
 // Fix broken import statements;
 function fixImports(content) {
-  // Fix malformed import statements where quotes are missing";"
+  // Fix malformed import statements where quotes are missing";
   content = content.replace(/from\s+([a-zA-Z-]+)import/g, 'from "$1";\nimport')'"'"
   // Fix missing quotes around module names"
-  content = content.replace(/from\s+([a-zA-Z-]+)"/g, 'from "$1"')'"'"
+  content = content.replace(/from\s+([a-zA-Z-]+)"/g, 'from "$1";)'"'"
   // Fix broken import statements with missing semicolons;
-  content = content.replace(")
+  content = content.replace(")"
+}
+}
     /import\s+{\s*([^}]+)\s*}\s+from\s+"([^"]+)"\s*import/g,"
     'import { $1     } from "$2";\nimport','"'"
   )
@@ -22,8 +24,8 @@ function fixImports(content) {
   content = content.replace(/from\s+"([^"]+)"\s*import/g, 'from "$1";\nimport')'"'"
   return content;
 }
-// Find all TypeScript/TSX files in the app directory";"
-const files = glob.sync("app/**/*.{ts,tsx}", { cwd: process.cwd() })
+// Find all TypeScript/TSX files in the app directory";
+const files = glob.sync("app/**/*.{ts,tsx}", { cwd: process.cwd() })"
 console.log(`Found ${files.length} files to process...`)```
 let fixedCount = 0;
 files.forEach((file) => {
@@ -37,5 +39,6 @@ const fixedContent = fixImports(content);
 } catch (error) {
     console.error(`Error processing ${file}:`, error.message)```
 })
-console.log(`Fixed ${fixedCount} files.`)``"`
-}
+console.log(`Fixed ${fixedCount} files.`)``"`"
+}*/
+*/

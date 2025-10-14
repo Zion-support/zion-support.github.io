@@ -1,14 +1,8 @@
-import React from 'react;
+import React from "react;;
 import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";
 
 interface FormData {
-  name: 'string','
-  email: 'string','
-  phone: 'string','
-  company: 'string','
-  message: 'string','
-  service: 'string','
-  budget: 'string','
+  name: ";
   timeline: string;
 }
 interface FormErrors {
@@ -143,13 +137,13 @@ const ImprovedContactForm: React.FC = () => {
   };
   if (isSubmitted) {
     return (
-      <div className="bg-white/5 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 text-center"></div>
-        <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-          <CheckCircle className="w-8 h-8 text-green-400" /></CheckCircle>
+      <div className="bg-white/5 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 text-center"></div>"
+        <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
+          <CheckCircle className="w-8 h-8 text-green-400" /></CheckCircle>"
         </div>
-        <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
+        <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>"
         <p className="text-gray-300 mb-6"></p>'
-          Your message has been sent successfully. We'll get back to you within 24 hours.
+          Your message has been sent successfully. We'll get back to you within 24 hours.'
         </p>
         <button;
           onClick={() => setIsSubmitted(false)}
@@ -161,23 +155,23 @@ const ImprovedContactForm: React.FC = () => {
     );
   }
   return (
-    <div className="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8"></div>
-      <div className="flex items-center gap-3 mb-6"></div>
-        <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center"></div>
-          <MessageSquare className="w-6 h-6 text-cyan-400" /></MessageSquare>
+    <div className="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8"></div>"
+      <div className="flex items-center gap-3 mb-6"></div>"
+        <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center"></div>"
+          <MessageSquare className="w-6 h-6 text-cyan-400" /></MessageSquare>"
         </div>
-        <div></div>
+        <div />
           <h3 className="text-2xl font-bold text-white">Get In Touch</h3>'
-          <p className="text-gray-300">We'd love to hear from you. Send us a message!</p>
+          <p className="text-gray-300">We'd love to hear from you. Send us a message!</p>'
         </div>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6"></form>
+      <form onSubmit={handleSubmit} className="space-y-6"></form>"
         {/* Name and Email Row */}
-        <div className="grid md:grid-cols-2 gap-4"></div>
-          <div></div>
-            <label htmlFor="name" className="block text-sm font-medium text-white mb-2"></label>
-              <User className="w-4 h-4 inline mr-2" /></User>
+        <div className="grid md:grid-cols-2 gap-4"></div>"
+          <div />
+            <label htmlFor="name" className="block text-sm font-medium text-white mb-2"></label>"
+              <User className="w-4 h-4 inline mr-2" /></User>"
               Full Name *
             </label>
             <input;
@@ -192,16 +186,16 @@ const ImprovedContactForm: React.FC = () => {
               placeholder="Your full name"
             /></input>
             {errors.name && (
-              <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>
-                <AlertCircle className="w-4 h-4" /></AlertCircle>
+              <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>"
+                <AlertCircle className="w-4 h-4" /></AlertCircle>"
                 {errors.name}
               </p>
             )}
           </div>
 
-          <div></div>
-            <label htmlFor="email" className="block text-sm font-medium text-white mb-2"></label>
-              <Mail className="w-4 h-4 inline mr-2" /></Mail>
+          <div />
+            <label htmlFor="email" className="block text-sm font-medium text-white mb-2"></label>"
+              <Mail className="w-4 h-4 inline mr-2" /></Mail>"
               Email Address *
             </label>
             <input
@@ -216,18 +210,18 @@ const ImprovedContactForm: React.FC = () => {
               placeholder="your.email@example.com"
             /></input>
             {errors.email && (
-              <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>
-                <AlertCircle className="w-4 h-4" /></AlertCircle>
+              <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>"
+                <AlertCircle className="w-4 h-4" /></AlertCircle>"
                 {errors.email}
               </p>
             )}
           </div>
         </div>
         {/* Phone and Company Row */}
-        <div className="grid md:grid-cols-2 gap-4"></div>
-          <div></div>
-            <label htmlFor="phone" className="block text-sm font-medium text-white mb-2"></label>
-              <Phone className="w-4 h-4 inline mr-2" /></Phone>
+        <div className="grid md:grid-cols-2 gap-4"></div>"
+          <div />
+            <label htmlFor="phone" className="block text-sm font-medium text-white mb-2"></label>"
+              <Phone className="w-4 h-4 inline mr-2" /></Phone>"
               Phone Number
             </label>
             <input
@@ -242,16 +236,16 @@ const ImprovedContactForm: React.FC = () => {
               placeholder="+1 (555) 123-4567"
             /></input>
             {errors.phone && (
-              <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>
-                <AlertCircle className="w-4 h-4" /></AlertCircle>
+              <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>"
+                <AlertCircle className="w-4 h-4" /></AlertCircle>"
                 {errors.phone}
               </p>
             )}
           </div>
 
-          <div></div>
-            <label htmlFor="company" className="block text-sm font-medium text-white mb-2"></label>
-              <Building className="w-4 h-4 inline mr-2" /></Building>
+          <div />
+            <label htmlFor="company" className="block text-sm font-medium text-white mb-2"></label>"
+              <Building className="w-4 h-4 inline mr-2" /></Building>"
               Company
             </label>
             <input;
@@ -267,11 +261,11 @@ value={formData.company;
         </div>
 
         {/* Service Selection */}
-        <div></div>
-          <label className="block text-sm font-medium text-white mb-2"></label>
+        <div />
+          <label className="block text-sm font-medium text-white mb-2"></label>"
             Service Interest *
           </label>
-          <div className="relative"></div>
+          <div className="relative"></div>"
             <button
               type="button"
               onClick={() => setIsServiceDropdownOpen(!isServiceDropdownOpen)}
@@ -280,12 +274,12 @@ value={formData.company;
               }`}
             >'
               <span className={formData.service ? 'text-white' : 'text-gray-400'}></span>'
-                {formData.service || 'Select a service'}
+                {formData.service || 'Select a service'}'
               </span>'
-              <ChevronDown className={`w-5 h-5 transition-transform ${isServiceDropdownOpen ? 'rotate-180' : ''}`} /></ChevronDown>
+              <ChevronDown className={`w-5 h-5 transition-transform ${isServiceDropdownOpen ? 'rotate-180' : ''}`} /></ChevronDown>'
             </button>
             {isServiceDropdownOpen && (
-              <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto"></div>
+              <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto"></div>"
                 {services.map((service) => (
 <button
                     key={service;
@@ -300,16 +294,16 @@ value={formData.company;
             )}
           </div>
           {errors.service && (
-            <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>
-              <AlertCircle className="w-4 h-4" /></AlertCircle>
+            <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>"
+              <AlertCircle className="w-4 h-4" /></AlertCircle>"
               {errors.service}
             </p>
           )}
         </div>
         {/* Budget and Timeline Row */}
-        <div className="grid md:grid-cols-2 gap-4"></div>
-          <div></div>
-            <label htmlFor="budget" className="block text-sm font-medium text-white mb-2"></label>
+        <div className="grid md:grid-cols-2 gap-4"></div>"
+          <div />
+            <label htmlFor="budget" className="block text-sm font-medium text-white mb-2"></label>"
               Budget Range
             </label>
             <select;
@@ -319,17 +313,17 @@ value={formData.budget;
               onChange={handleChange;
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
             ></select>
-              <option value="">Select budget range</option>
+              <option value="">Select budget range</option>"
               {budgets.map((budget) => (
-                <option key={budget} value={budget} className="bg-slate-800"></option>
+                <option key={budget} value={budget} className="bg-slate-800"></option>"
                   {budget}
                 </option>
               ))}
             </select>
           </div>
 
-          <div></div>
-            <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2"></label>
+          <div />
+            <label htmlFor="timeline" className="block text-sm font-medium text-white mb-2"></label>"
               Project Timeline
             </label>
             <select;
@@ -339,9 +333,9 @@ value={formData.timeline;
               onChange={handleChange;
               className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
             ></select>
-              <option value="">Select timeline</option>
+              <option value="">Select timeline</option>"
               {timelines.map((timeline) => (
-                <option key={timeline} value={timeline} className="bg-slate-800"></option>
+                <option key={timeline} value={timeline} className="bg-slate-800"></option>"
                   {timeline}
                 </option>
               ))}
@@ -349,9 +343,9 @@ value={formData.timeline;
           </div>
         </div>
         {/* Message */}
-        <div></div>
-          <label htmlFor="message" className="block text-sm font-medium text-white mb-2"></label>
-            <FileText className="w-4 h-4 inline mr-2" /></FileText>
+        <div />
+          <label htmlFor="message" className="block text-sm font-medium text-white mb-2"></label>"
+            <FileText className="w-4 h-4 inline mr-2" /></FileText>"
             Message *
           </label>
           <textarea
@@ -366,8 +360,8 @@ value={formData.timeline;
             placeholder="Tell us about your project, requirements, or any questions you have..."
           /></textarea>
           {errors.message && (
-            <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>
-              <AlertCircle className="w-4 h-4" /></AlertCircle>
+            <p className="mt-1 text-sm text-red-400 flex items-center gap-1"></p>"
+              <AlertCircle className="w-4 h-4" /></AlertCircle>"
               {errors.message}
             </p>
           )}
@@ -380,12 +374,12 @@ disabled={isSubmitting;
         ></button>
           {isSubmitting ? (
             <></>
-              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" /></div>
+              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" /></div>"
               Sending...
             </>
           ) : (
             <></>
-              <Send className="w-5 h-5" /></Send>
+              <Send className="w-5 h-5" /></Send>"
               Send Message
             </>
           )}

@@ -1,4 +1,4 @@
-import React, { lazy, ComponentType, ComponentProps, Suspense } from 'react;
+import React, { lazy, ComponentType, ComponentProps, Suspense } from "react;;
 
 // Higher-order component for lazy loading;
 // eslint-disable-next-line @;
@@ -45,6 +45,4 @@ export function createLazyComponent<T extends ComponentType<any>>()
       {/* eslint-disable-next-line @ */},
       <LazyComponent {...(props as any)} /></LazyComponent>
     </Suspense>
-  );,'
-}'
-'
+  );,";

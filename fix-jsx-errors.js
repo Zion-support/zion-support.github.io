@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import { glob } from 'glob';
+import fs from "fs";
+import { glob } from "glob";
 
 // JSX-specific fixes
 const jsxFixes = [
@@ -17,7 +17,7 @@ const jsxFixes = [
   },
   // Fix unterminated string literals in JSX
   {
-    pattern: /'([^']*)\s*$/gm,
+    pattern: /'([^']*)\s*$/gm,'
     replacement: "'$1'"
   },
   // Fix missing closing tags
@@ -27,7 +27,7 @@ const jsxFixes = [
   },
   // Fix malformed JSX attributes
   {
-    pattern: /(\w+),'(\w+)',/g,
+    pattern: /(\w+),'(\w+)',/g,'
     replacement: "$1: '$2',"
   },
   // Fix empty JSX elements
@@ -47,7 +47,7 @@ function fixJSXFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // First, let's try to fix common patterns
+    // First, let's try to fix common patterns'
     const originalContent = content;
     
     jsxFixes.forEach(fix => {
@@ -55,12 +55,14 @@ function fixJSXFile(filePath) {
       if (newContent !== content) {
         content = newContent;
         modified = true;
+}
+}
       }
     });
     
     // Additional specific fixes for common issues
     // Fix missing imports
-    if (content.includes('React') && !content.includes("import React")) {
+    if (content.includes('React') && !content.includes("import React")) {"
       content = "import React from 'react';\n" + content;
       modified = true;
     }
@@ -89,14 +91,16 @@ function fixJSXFile(filePath) {
 
 async function main() {
   const patterns = [
-    'app/**/*.tsx',
-    'components/**/*.tsx',
+    'app/**/*.tsx','
+    'components/**/*.tsx','
     '*.tsx'
   ];
   
   let totalFixed = 0;
   
   for (const pattern of patterns) {
+}
+}
     const files = await glob(pattern, { cwd: process.cwd() });
     for (const file of files) {
       if (fixJSXFile(file)) {
@@ -107,5 +111,5 @@ async function main() {
   
   console.log(`\nFixed ${totalFixed} JSX files`);
 }
-
-main().catch(console.error);
+*/
+main().catch(console.error);*/

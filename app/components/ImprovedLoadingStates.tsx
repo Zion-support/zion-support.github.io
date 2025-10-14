@@ -1,14 +1,14 @@
-import React from 'react;
-import { Loader2, Brain, Zap, Shield } from 'lucide-react;
+import React from "react;;
+import { Loader2, Brain, Zap, Shield } from "lucide-react";
 
-interface LoadingSpinnerProps {'
+interface LoadingSpinnerProps {";
   size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ '
   size = 'md', '
-  className = '' 
+  className = '' '
 }) => {
   const sizeClasses = {'
     sm: 'w-4 h-4','
@@ -27,21 +27,21 @@ interface LoadingPageProps {
 }
 
 export const LoadingPage: React.FC<LoadingPageProps> = ({ '
-  message = 'Loading...', 
+  message = 'Loading...', '
   showIcon = true 
 }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
-      <div className="text-center"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
+      <div className="text-center"></div>"
         {showIcon && (
-          <div className="mb-6"></div>
-            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
-              <Brain className="w-8 h-8 text-white animate-pulse" /></Brain>
+          <div className="mb-6"></div>"
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
+              <Brain className="w-8 h-8 text-white animate-pulse" /></Brain>"
             </div>
           </div>
         )}
-        <LoadingSpinner size="lg" /></LoadingSpinner>
-        <p className="mt-4 text-white text-lg">{message}</p>
+        <LoadingSpinner size="lg" /></LoadingSpinner>"
+        <p className="mt-4 text-white text-lg">{message}</p>"
       </div>
     </div>
   );
@@ -54,19 +54,19 @@ interface LoadingCardProps {
 
 export const LoadingCard: React.FC<LoadingCardProps> = ({ '
   title = 'Loading...','
-  description = 'Please wait while we load the content.',
+  description = 'Please wait while we load the content.','
   icon
 }) => {
   return (
-    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center"></div>
+    <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center"></div>"
       {icon && (
-        <div className="mb-4"></div>
+        <div className="mb-4"></div>"
           {icon}
         </div>
       )}
-      <LoadingSpinner size="md" className="mb-4" /></LoadingSpinner>
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-gray-300">{description}</p>
+      <LoadingSpinner size="md" className="mb-4" /></LoadingSpinner>"
+      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>"
+      <p className="text-gray-300">{description}</p>"
     </div>
 );
 };
@@ -78,7 +78,7 @@ interface SkeletonLoaderProps {
 
 export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ 
   lines = 3, '
-  className = '' 
+  className = '' '
 }) => {
   return (
     <div className={`animate-pulse ${className}`}></div>
@@ -103,16 +103,16 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
     return <Zap className="w-8 h-8 text-blue-400" />;
   };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
-      <div className="text-center max-w-md mx-auto px-6"></div>
-        <div className="mb-6"></div>
-          <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>"
+      <div className="text-center max-w-md mx-auto px-6"></div>"
+        <div className="mb-6"></div>"
+          <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
             {getServiceIcon(serviceName)}
           </div>
         </div>
-        <LoadingSpinner size="lg" /></LoadingSpinner>
-        <h2 className="text-2xl font-bold text-white mb-2 mt-4">Loading {serviceName}</h2>
-        <p className="text-gray-300">Preparing your personalized experience...</p>
+        <LoadingSpinner size="lg" /></LoadingSpinner>"
+        <h2 className="text-2xl font-bold text-white mb-2 mt-4">Loading {serviceName}</h2>"
+        <p className="text-gray-300">Preparing your personalized experience...</p>"
       </div>
     </div>
   );

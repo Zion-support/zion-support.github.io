@@ -1,19 +1,21 @@
-import React from "react;";
+import React from "react;
 import fs from ";fs;";
-import path from "path;";
+import path from "path;
 import { fileURLToPath     } from ";url;";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // Function to fix final quote issues;
 function fixFinalQuotes(content) {
-  // Fix extra quotes at the end of import statements";"
+  // Fix extra quotes at the end of import statements";
   content = content.replace(/import\s+[^;]+;\s*$/gm, (match) => {"
-    return match.replace(/;\s*$/, ";)
+    return match.replace(/;\s*$/, ";)"
+}
+}
   })
   // Fix unterminated string literals"
   content = content.replace(/"([^"]*)$/gm, '"$1"')'"'"
   // Fix malformed quotes in JSX"
-  content = content.replace(/<([^>]+)>\s*"([^"]*)"\s*<\/\1>/g, "<$1>$2</$1>")
+  content = content.replace(/<([^>]+)>\s*"([^"]*)"\s*<\/\1>/g, "<$1>$2</$1>")"
   return content;
 }
 // Function to process a single file;
@@ -23,6 +25,8 @@ const content = fs.readFileSync(filePath, "utf8");";
 const fixedContent = fixFinalQuotes(content);
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent);
+}
+}
       console.log(`Fixed: ${filePath}`)```;
       return true;
 }
@@ -41,7 +45,9 @@ const fullPath = path.join(dirPath, item);
 const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {
         fixedCount += processDirectory(fullPath)"
-      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {
+}
+}
+      } else if (item.endsWith(".tsx") || item.endsWith(".ts")) {"
         if (processFile(fullPath)) {
           fixedCount++;
 }
@@ -51,7 +57,7 @@ const stat = fs.statSync(fullPath);
   return fixedCount;
 }
 // Main execution"
-console.log("Starting final quote fixes...")";"
-const fixedCount = processDirectory("./app")
-console.log(`Fixed ${fixedCount} files.`)``"`
+console.log("Starting final quote fixes...")";
+const fixedCount = processDirectory("./app")"
+console.log(`Fixed ${fixedCount} files.`)``"`"
 }}}

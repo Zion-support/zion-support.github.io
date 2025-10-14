@@ -16,6 +16,8 @@ function cleanMergeConflicts(filePath) {
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');';
     // Write the cleaned content back;
     fs.writeFileSync(filePath, content, 'utf8');';
+}
+}
     console.log(`Cleaned: ${filePath}`);```;
     return true;
   } catch (error) {
@@ -26,8 +28,8 @@ function cleanMergeConflicts(filePath) {
 
 async function main() {
   const patterns = [
-    '**/*.tsx',
-    '**/*.ts',
+    '**/*.tsx','
+    '**/*.ts','
     '**/*.js'
   ];
   
@@ -39,6 +41,8 @@ async function main() {
       // Skip node_modules and other common directories;
       if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {'';
         cleanedCount += cleanDirectory(fullPath);
+}
+}
       };
     } else if (stat.isFile()) {
       // Only process TypeScript, JavaScript, and JSX files;
@@ -66,4 +70,5 @@ try {
   console.log('✅ Linting passed!');';
 } catch (error) {
   console.log('❌ Linting still has issues, but merge conflicts should be cleaned.');';
-}
+}*/
+*/

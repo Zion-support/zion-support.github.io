@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react;
+import React, { useEffect, useState, useCallback } from "react;;
 
 interface PerformanceOptimizerProps {
   children: Node}
@@ -9,9 +9,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
-      // Preload critical fonts'
-      const fontLink = document.createElement('link')'
-      fontLink.rel = 'preload''
+      // Preload critical fonts";
       fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap''
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
@@ -21,7 +19,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         '/logo.svg','
         '/og-image.svg','
         '/api/placeholder/1200/630', // Hero image'
-        '/api/placeholder/800/600',  // Service images
+        '/api/placeholder/800/600',  // Service images'
       ];
 
       criticalImages.forEach(src => {'
@@ -38,7 +36,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const images = document.querySelectorAll('img')'
       images.forEach((img) => {''
         if (!img.hasAttribute('loading')) {''
-          img.setAttribute('loading', 'lazy');}
+          img.setAttribute('loading', 'lazy');}'
         }
       });
     };
@@ -53,10 +51,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   useEffect(() => {
     // Performance optimization code;
     const optimizeImages = () => {'
-      const images = document.querySelectorAll('img')
+      const images = document.querySelectorAll('img')'
       images.forEach((img) => {'
         if (!img.hasAttribute('loading')) {'
-img.setAttribute('loading', 'lazy')}
+img.setAttribute('loading', 'lazy')}'
       });
     const optimizeFonts = () => {'
       // Preload critical fonts''
@@ -151,7 +149,7 @@ img.setAttribute('loading', 'lazy')}
 
     const observerOptions = {
       root: null,'
-      rootMargin: '50px',
+      rootMargin: '50px','
       threshold: 0.1
     };
 

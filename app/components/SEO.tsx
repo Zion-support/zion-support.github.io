@@ -1,11 +1,10 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async;
+import React from "react";
+import { Helmet } from "react-helmet-async;;
 interface SEOProps {
   title?: string
   description?: string
   keywords?: string
-  image?: string'
-  url?: string''
+  image?: string";
   type?: 'website' | 'article' | 'profile;
   author?: string
   publishedTime?: string
@@ -41,7 +40,7 @@ const SEO: React.FC<SEOProps> = ({'
 }) => {'
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`'
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`'
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
+  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`'
   const structuredData = {'
     '@context': 'https://schema.org''
     '@type': 'Organization''
@@ -68,7 +67,7 @@ const SEO: React.FC<SEOProps> = ({'
     ]
   }
   return (
-    <Helmet></Helmet>
+    <Helmet />
       <title>{title}</title>
 """
       <meta name=description content={description} />""

@@ -1,4 +1,4 @@
-import fs from "fs";";
+import fs from "fs";;
 ;
 const filePath = 'app/ai-automation-platform/page.tsx';';
 let content = fs.readFileSync(filePath, 'utf8');';
@@ -32,5 +32,5 @@ if (modified) {
   fs.writeFileSync(filePath, content, 'utf8');';
   console.log('Fixed ai-automation-platform page');';
 } else {
-  console.log('No changes needed');'
+  console.log('No changes needed');
 }"

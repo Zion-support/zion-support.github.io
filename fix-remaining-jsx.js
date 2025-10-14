@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import { glob } from 'glob';
+import fs from "fs";
+import { glob } from "glob";
 
 // Function to fix remaining JSX errors
 function fixRemainingJSX(content, filePath) {
@@ -13,6 +13,8 @@ function fixRemainingJSX(content, filePath) {
   if (duplicateHelmetPattern.test(fixed)) {
     fixed = fixed.replace(duplicateHelmetPattern, '</Helmet>');
     changes++;
+}
+}
   }
 
   // Fix malformed Helmet structure
@@ -21,8 +23,8 @@ function fixRemainingJSX(content, filePath) {
     fixed = fixed.replace(malformedHelmetPattern, (match, title) => {
       return `<Helmet>
         <title>${title}</title>
-        <meta name="description" content="${title} - Zion Tech Group" />
-        <meta name="keywords" content="${title.toLowerCase().replace(/\s+/g, ', ')}, AI solutions, IT services" />
+        <meta name="description" content="${title} - Zion Tech Group" />"
+        <meta name="keywords" content="${title.toLowerCase().replace(/\s+/g, ', ')}, AI solutions, IT services" />"
       </Helmet>`;
     });
     changes++;
@@ -30,7 +32,7 @@ function fixRemainingJSX(content, filePath) {
 
   // Fix missing closing JSX fragments
   const missingFragmentPattern = /<>\s*<div[^>]*>[\s\S]*?<\/div>\s*$/gm;
-  if (missingFragmentPattern.test(fixed) && !fixed.includes('</>')) {
+  if (missingFragmentPattern.test(fixed) && !fixed.includes('</>')) {'
     fixed = fixed.replace(missingFragmentPattern, (match) => {
       return match + '\n    </>';
     });
@@ -48,7 +50,7 @@ function fixRemainingJSX(content, filePath) {
 
   // Fix incomplete JSX structure
   const incompleteJSXPattern = /<>\s*<div[^>]*>[\s\S]*?<\/div>\s*$/gm;
-  if (incompleteJSXPattern.test(fixed) && !fixed.includes('</>')) {
+  if (incompleteJSXPattern.test(fixed) && !fixed.includes('</>')) {'
     fixed = fixed.replace(incompleteJSXPattern, (match) => {
       return match + '\n    </>';
     });
@@ -80,6 +82,8 @@ function processFile(filePath) {
     
     if (result.changes > 0) {
       fs.writeFileSync(filePath, result.content);
+}
+}
       console.log(`Fixed ${result.changes} issues in ${filePath}`);
       return true;
     }
@@ -95,6 +99,8 @@ async function main() {
   console.log('Starting remaining JSX error fixes...');
 
   // Get all TypeScript/TSX files in the app directory
+}
+}
   const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() });
 
   let totalFixed = 0;
@@ -110,5 +116,5 @@ async function main() {
   console.log(`\nProcessed ${filesProcessed} files, fixed ${totalFixed} files`);
   console.log('Remaining JSX error fixes completed!');
 }
-
-main().catch(console.error);
+*/
+main().catch(console.error);*/

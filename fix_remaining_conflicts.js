@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
-import fs from "fs";";
-import { execSync    } from "child_process";";
+import fs from "fs";;
+import { execSync    } from "child_process";;
 console.log('🔧 Fixing remaining merge conflict markers...');';
 // Get list of files with merge conflicts;
 const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });';
@@ -65,8 +65,8 @@ for (const file of filesWithConflicts) {
 console.log(`\n🎉 Fixed ${resolvedCount} files with conflict markers`);```;
 if (resolvedCount > 0) {
   console.log('\n📋 Next steps:');';
-  console.log('1. Run: 'git add .');"'";',
-  console.log('2. Run: 'git commit -m "Fix remaining conflict markers"');"'";',
+  console.log('1. Run: 'git add .');"'";','
+  console.log('2. Run: 'git commit -m "Fix remaining conflict markers"');"'";','
   console.log('3. Run: npm run health-check');';
 }
 "

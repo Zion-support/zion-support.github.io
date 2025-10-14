@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import { glob } from 'glob';
+import fs from "fs";
+import { glob } from "glob";
 
 // Function to fix remaining JSX syntax errors;
 function fixRemainingJsxErrors(content, filePath) {
@@ -15,6 +15,8 @@ function fixRemainingJsxErrors(content, filePath) {
   if (fragmentOpenCount > fragmentCloseCount) {
     const missingFragments = fragmentOpenCount - fragmentCloseCount;
     // Find the last closing brace and add missing fragments before it;
+}
+}
     const lastBraceIndex = fixed.lastIndexOf('}');
     if (lastBraceIndex !== -1) {
       const beforeLastBrace = fixed.substring(0, lastBraceIndex);
@@ -158,11 +160,11 @@ function fixRemainingJsxErrors(content, filePath) {
   changes += (content.match(/"([^"]*)$/gm) || []).length;
 
   // Fix missing commas in object literals;
-  fixed = fixed.replace(/(\w+):\s*(\w+)\s*(\w+):/g, '$1: $2,\n    $3: ');'
+  fixed = fixed.replace(/(\w+):\s*(\w+)\s*(\w+):/g, '$1: $2,\n    $3: ');
   changes += (content.match(/(\w+):\s*(\w+)\s*(\w+):/g) || []).length;
 
   // Fix missing semicolons after property assignments;
-  fixed = fixed.replace(/(\w+):\s*([^,}]+)\s*(\w+):/g, '$1: $2,\n    $3: ');'
+  fixed = fixed.replace(/(\w+):\s*([^,}]+)\s*(\w+):/g, '$1: $2,\n    $3: ');
   changes += (content.match(/(\w+):\s*([^,}]+)\s*(\w+):/g) || []).length;
 
   // Fix malformed JSX with unexpected tokens;
@@ -200,6 +202,8 @@ function fixRemainingJsxErrors(content, filePath) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
+}
+}
     const { content: fixed, changes } = fixRemainingJsxErrors(content, filePath);
     
     if (changes > 0) {
@@ -219,6 +223,8 @@ async function main() {
   console.log('Starting remaining JSX syntax error fixes...');
   
   // Find all TypeScript/JavaScript files in the app directory;
+}
+}
   const pattern = 'app/**/*.{ts,tsx,js,jsx}';
   const files = await glob(pattern);
   
@@ -236,5 +242,5 @@ async function main() {
   console.log(`\nCompleted! Fixed ${totalChanges} issues across ${filesProcessed} files.`);
 }
 
-// Run the script;
-main().catch(console.error);
+// Run the script;*/
+main().catch(console.error);*/

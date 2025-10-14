@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 console.log('🔧 Fixing page files...');
 
@@ -14,9 +14,11 @@ function getAllPageFiles(dir) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {'
       files = files.concat(getAllPageFiles(fullPath));
-    } else if (stat.isFile() && item === 'page.tsx') {
+}
+}
+    } else if (stat.isFile() && item === 'page.tsx') {'
       files.push(fullPath);
     }
   }
@@ -31,19 +33,23 @@ function createPageTemplate(filePath) {
   
   return `'use client';
 import React from "react";
+}
+}
 import { Helmet } from "react-helmet-async";
 
 export default function Page() {
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet />
+}
+}
         <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${title} services and solutions from Zion Tech Group" />
+        <meta name="description" content="${title} services and solutions from Zion Tech Group" />"
       </Helmet>
-      <div className="min-h-screen bg-white"></div>
-        <div className="container mx-auto px-4 py-20"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">${title}</h1>
-          <p className="text-xl text-gray-600"></p>
+      <div className="min-h-screen bg-white"></div>"
+        <div className="container mx-auto px-4 py-20"></div>"
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">${title}</h1>"
+          <p className="text-xl text-gray-600"></p>"
             This page is under development. Please check back soon for more information about our ${title.toLowerCase()} services.
           </p>
         </div>
@@ -61,6 +67,8 @@ function main() {
     let fixedCount = 0;
     let errorCount = 0;
     
+}
+}
     console.log(`📁 Found ${files.length} page files to process...`);
     
     for (const filePath of files) {
@@ -80,7 +88,7 @@ function main() {
     console.log(`❌ Errors: ${errorCount} files`);
     
   } catch (error) {
-    console.error('❌ Fatal error: ', error.message);'
+    console.error('❌ Fatal error: ', error.message);
     process.exit(1);
   }
 }

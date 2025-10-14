@@ -1,5 +1,5 @@
-import React from 'react;
-import Link from 'next/link;
+import React from "react;;
+import Link from "next/link;;
 interface ContentPreviewCardProps {
   id: string;
   title: string;
@@ -23,8 +23,8 @@ const ContentPreviewCard: React.FC<ContentPreviewCardProps> = ({
   slug
 }) => {
   return (
-    <div className="p-4"></div>
-      <h2 className="text-2xl font-bold mb-4">ContentPreviewCard</h2>
+    <div className="p-4"></div>"
+      <h2 className="text-2xl font-bold mb-4">ContentPreviewCard</h2>"
       <p>This component is under development.</p>
     </div>
 

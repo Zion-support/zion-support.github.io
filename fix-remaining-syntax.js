@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 // Function to fix remaining syntax errors;
 function fixRemainingSyntax(filePath) {
@@ -10,7 +10,9 @@ function fixRemainingSyntax(filePath) {
     let modified = false;
     
     // Fix unterminated string literals in import statements;
-    content = content.replace(/import\s+{[^}]*}\s+from\s+'[^']*;';'[^']*',/g, (match) => {
+}
+}
+    content = content.replace(/import\s+{[^}]*}\s+from\s+'[^']*;';'[^']*',/g, (match) => {'
       const importMatch = match.match(/import\s+{([^}]*)}\s+from\s+'([^']*);';'([^']*)',/);
       if (importMatch) {
         return `import { ${importMatch[1]} } from '${importMatch[2]}';\n\nconst ComponentName = () => {\n  const data = [\n    '${importMatch[3]}',`;
@@ -19,7 +21,7 @@ function fixRemainingSyntax(filePath) {
     });
     
     // Fix malformed import statements with stray characters;
-    content = content.replace(/import\s+{[^}]*}\s+from\s+'[^']*;';'[^']*',/g, (match) => {
+    content = content.replace(/import\s+{[^}]*}\s+from\s+'[^']*;';'[^']*',/g, (match) => {'
       const importMatch = match.match(/import\s+{([^}]*)}\s+from\s+'([^']*);';'([^']*)',/);
       if (importMatch) {
         return `import { ${importMatch[1]} } from '${importMatch[2]}';\n\nconst ComponentName = () => {\n  const data = [\n    '${importMatch[3]}',`;
@@ -28,7 +30,7 @@ function fixRemainingSyntax(filePath) {
     });
     
     // Fix stray semicolons and quotes in the middle of code;
-    content = content.replace(/';'[^']*',/g, (match) => {
+    content = content.replace(/';'[^']*',/g, (match) => {'
       const cleanMatch = match.replace(/';'([^']*)',/, '$1');
       return `'${cleanMatch}',`;
     });
@@ -56,7 +58,7 @@ function fixRemainingSyntax(filePath) {
     // Ensure file ends with single newline;
     content = content.trim() + '\n';
     
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
+    if (content !== fs.readFileSync(filePath, 'utf8')) {'
       fs.writeFileSync(filePath, content, 'utf8');
       return true;
     }
@@ -79,9 +81,11 @@ function findSourceFiles(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
         traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+}
+}
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {'
         files.push(fullPath);
       }
     }
@@ -112,7 +116,7 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`\n📊 Summary: '`);',
+console.log(`\n📊 Summary: '`);','
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 

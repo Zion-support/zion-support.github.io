@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 // Function to fix final syntax errors;
 function fixFinalSyntaxErrors(filePath) {
@@ -10,24 +10,26 @@ function fixFinalSyntaxErrors(filePath) {
     let modified = false;
     
     // Fix malformed array declarations;
-    content = content.replace(/const\s+data\s*=\s*\[\s*'[^']*',\s*;\s*client:\s*'[^']*',\s*;\s*industry:\s*'[^']*',/g, (match) => {
+    content = content.replace(/const\s+data\s*=\s*\[\s*'[^']*',\s*;\s*client:\s*'[^']*',\s*;\s*industry:\s*'[^']*',/g, (match) => {'
       const titleMatch = match.match(/'([^']*)',\s*;\s*client:\s*'([^']*)',\s*;\s*industry:\s*'([^']*)',/);
       if (titleMatch) {
         return `const data = [
       {
-        title: '${titleMatch[1]}',
-        client: '${titleMatch[2]}',
+}
+}
+        title: '${titleMatch[1]}','
+        client: '${titleMatch[2]}','
         industry: '${titleMatch[3]}'`;
       }
       return match;
     });
     
     // Fix malformed object properties;
-    content = content.replace(/title:\s*'[^']*',\s*;\s*client:\s*'[^']*',\s*;\s*industry:\s*'[^']*',/g, (match) => {
+    content = content.replace(/title:\s*'[^']*',\s*;\s*client:\s*'[^']*',\s*;\s*industry:\s*'[^']*',/g, (match) => {'
       const titleMatch = match.match(/title:\s*'([^']*)',\s*;\s*client:\s*'([^']*)',\s*;\s*industry:\s*'([^']*)',/);
       if (titleMatch) {
-        return `title: '${titleMatch[1]}',
-        client: '${titleMatch[2]}',
+        return `title: '${titleMatch[1]}','
+        client: '${titleMatch[2]}','
         industry: '${titleMatch[3]}'`;
       }
       return match;
@@ -43,13 +45,13 @@ function fixFinalSyntaxErrors(filePath) {
     content = content.replace(/<\/>\s*\)\s*;\s*}\s*export\s+default/g, '</>\n  );\n};\n\nexport default');
     
     // Fix stray semicolons in object properties;
-    content = content.replace(/;\s*client:/g, ',\n        client: ');'
-    content = content.replace(/;\s*industry:/g, ',\n        industry: ');'
-    content = content.replace(/;\s*description:/g, ',\n        description: ');'
-    content = content.replace(/;\s*results:/g, ',\n        results: ');'
+    content = content.replace(/;\s*client:/g, ',\n        client: ');
+    content = content.replace(/;\s*industry:/g, ',\n        industry: ');
+    content = content.replace(/;\s*description:/g, ',\n        description: ');
+    content = content.replace(/;\s*results:/g, ',\n        results: ');
     
     // Fix malformed array syntax;
-    content = content.replace(/\[\s*'[^']*',\s*;\s*client:/g, '[\n      {\n        title: \'$1\',\n        client: ');'
+    content = content.replace(/\[\s*'[^']*',\s*;\s*client:/g, '[\n      {\n        title: \'$1\',\n        client: ');
     
     // Clean up multiple consecutive empty lines;
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -57,7 +59,7 @@ function fixFinalSyntaxErrors(filePath) {
     // Ensure file ends with single newline;
     content = content.trim() + '\n';
     
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
+    if (content !== fs.readFileSync(filePath, 'utf8')) {'
       fs.writeFileSync(filePath, content, 'utf8');
       return true;
     }
@@ -80,9 +82,11 @@ function findSourceFiles(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
         traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+}
+}
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {'
         files.push(fullPath);
       }
     }
@@ -113,7 +117,7 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`\n📊 Summary: '`);',
+console.log(`\n📊 Summary: '`);','
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 

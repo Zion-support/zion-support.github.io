@@ -1,130 +1,150 @@
-#!/usr/bin/env node;
-;
-import fs from 'fs';
-import path from 'path';
+#!/usr/bin/env node
 
-// Function to fix common syntax errors;
-function fixSyntaxErrors(filePath) {
+import fs from "fs";
+import path from "path";
+import { glob } from "glob";
+
+// Function to fix unterminated string literals and malformed imports
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
+
+    // Fix unterminated string literals in import statements
+    const importFixRegex = /import\s+.*?\s+from\s+['"]([^'"]*?)['"]?;?$/gm;
+    content = content.replace(importFixRegex, (match, importPath) => {
+      if (!match.endsWith(';')) {'
+        modified = true;
+        return match + ';';
+}
+}
+      }
+      return match;
+    });
+
+    // Fix unterminated string literals in import statements (more comprehensive)
+    const importFixRegex2 = /import\s+.*?\s+from\s+['"]([^'"]*?)['"]?$/gm;
+    content = content.replace(importFixRegex2, (match) => {
+      if (!match.endsWith(';')) {'
+        modified = true;
+        return match + ';';
+      }
+      return match;
+    });
+
+    // Fix single quotes that should be double quotes in import statements
+    content = content.replace(/import\s+.*?\s+from\s+'([^']*?)'([^;]*)$/gm, (match, importPath, suffix) => {'
+      if (!match.endsWith(';')) {'
+        modified = true;
+        return `import ${match.split('from')[0].split('import')[1].trim()} from "${importPath}";`;
+      }
+      return match;
+    });
+
+    // Fix malformed JSX closing tags
+    content = content.replace(/<(\w+)><\/\1>/g, '<$1 />');
     
-    // Fix duplicate export statements;
-    const exportRegex = /export\s+default\s+\w+;\s*export\s+default\s+\w+/g;
-    if (exportRegex.test(content)) {
-      content = content.replace(exportRegex, (match) => {
-        const parts = match.split('export default');
-        return `export default${parts[1]}`;
-      });
+    // Fix unterminated string literals in general
+    content = content.replace(/(['"])([^'"]*?)\1?$/gm, (match, quote, content) => {"
+      if (!match.endsWith(quote)) {
+        modified = true;
+        return match + quote;
+      }
+      return match;
+    });
+
+    // Fix specific patterns found in the codebase
+    content = content.replace(/from\s+['"]([^'"]*?)['"]?$/gm, (match, importPath) => {"
+      if (!match.endsWith(';')) {'
+        modified = true;
+        return `from "${importPath}";`;
+      }
+      return match;
+    });
+
+    // Fix malformed JSX structure
+    content = content.replace(/<(\w+)><\/\1>/g, '<$1 />');
+    
+    // Fix JSX expressions that should have one parent element
+    content = content.replace(/return\s*\(\s*<(\w+)><\/\1>\s*<(\w+)><\/\2>/g, 'return (\n    <>\n      <$1 />\n      <$2 />\n    </>\n  )');
+
+    // Fix specific patterns for React components
+    content = content.replace(/export\s+default\s+(\w+);?$/gm, (match, componentName) => {
+      if (!match.endsWith(';')) {'
+        modified = true;
+        return match + ';';
+      }
+      return match;
+    });
+
+    // Fix 'use client' directive'
+    content = content.replace(/'use client;?$/gm, '"use client";');
+
+    // Fix malformed JSX attributes
+    content = content.replace(/className="([^"]*?)"([^>]*?)>/g, (match, className, rest) => {"
+      if (rest.includes('>') && !rest.includes('/>')) {'
+        return match;
+      }
+      return match;
+    });
+
+    // Fix unterminated comments
+    content = content.replace(/\/\*([^*]|\*[^/])*$/gm, (match) => {
       modified = true;
-    }
-    
-    // Fix stray closing parentheses and braces;
-    content = content.replace(/\s*\)\s*\}\s*export\s+default/g, '\nexport default');
-    content = content.replace(/\s*\)\s*\}\s*export\s+default\s+\w+\s*$/gm, '\nexport default');
-    
-    // Fix malformed JSX closing tags;
-    content = content.replace(/\s*\)\s*\}\s*export\s+default\s+\w+\s*$/gm, '\n};\n\nexport default');
-    
-    // Fix duplicate closing braces;
-    content = content.replace(/\}\s*\}\s*export\s+default/g, '\n};\n\nexport default');
-    
-    // Fix stray closing parentheses;
-    content = content.replace(/\s*\)\s*\}\s*export\s+default\s+\w+\s*$/gm, '\n};\n\nexport default');
-    
-    // Fix missing semicolons after function declarations;
-    content = content.replace(/(\w+)\s*\{\s*return\s*\([^}]*\)\s*\}\s*export\s+default/g, '$1 {\n  return (\n    <div>Content</div>\n  );\n}\n\nexport default');
-    
-    // Fix malformed function declarations;
-    content = content.replace(/(\w+)\s*\{\s*return\s*\([^}]*\)\s*\}\s*export\s+default\s+\w+/g, '$1 {\n  return (\n    <div>Content</div>\n  );\n}\n\nexport default');
-    
-    // Remove duplicate export statements at the end;
-    const lines = content.split('\n');
-    const exportLines = lines.filter(line => line.trim().startsWith('export default'));
-    if (exportLines.length > 1) {
-      // Keep only the last export statement;
-      const lastExportIndex = lines.lastIndexOf(exportLines[exportLines.length - 1]);
-      const filteredLines = lines.filter((line, index) => {
-        if (line.trim().startsWith('export default') && index !== lastExportIndex) {
-          return false;
-        }
-        return true;
-      });
-      content = filteredLines.join('\n');
-      modified = true;
-    }
-    
-    // Fix missing closing braces in function declarations;
-    content = content.replace(/(\w+)\s*\{\s*return\s*\([^}]*\)\s*\}\s*export\s+default\s+\w+\s*$/gm, '$1 {\n  return (\n    <div>Content</div>\n  );\n}\n\nexport default');
-    
-    // Clean up multiple consecutive empty lines;
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    // Ensure file ends with single newline;
-    content = content.trim() + '\n';
-    
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      return match + '*/';
+    });
+
+    // Fix malformed function declarations
+    content = content.replace(/function\s+(\w+)\s*\([^)]*\)\s*\{[^}]*$/gm, (match) => {
+      if (!match.includes('}')) {'
+        modified = true;
+        return match + '\n}';
+      }
+      return match;
+    });
+
+    if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all TypeScript/JavaScript files;
-function findSourceFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+// Main function to process all files
+async function main() {
+  const patterns = [
+}
+}
+    './app/**/*.{ts,tsx,js,jsx}','
+    './*.{ts,tsx,js,jsx}','
+    './scripts/**/*.{ts,tsx,js,jsx}'
+  ];
+
+  let totalFiles = 0;
+  let fixedFiles = 0;
+
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { ignore: ['node_modules/**', 'dist/**', '.next/**'] });
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-        files.push(fullPath);
+    for (const file of files) {
+      totalFiles++;
+      if (fixFile(file)) {
+        fixedFiles++;
       }
     }
   }
-  
-  traverse(dir);
-  return files;
+
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
 }
 
-// Main execution;
-console.log('🔍 Searching for files with syntax errors...');
-const sourceFiles = findSourceFiles('./app');
-
-console.log(`Found ${sourceFiles.length} source files`);
-
-let fixedCount = 0;
-let errorCount = 0;
-
-for (const file of sourceFiles) {
-  try {
-    if (fixSyntaxErrors(file)) {
-      fixedCount++;
-      console.log(`✅ Fixed: ${file}`);
-    }
-  } catch (error) {
-    errorCount++;
-    console.error(`❌ Error fixing ${file}:`, error.message);
-  }
+// Run if this is the main module
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
 }
-
-console.log(`\n📊 Summary: '`);',
-console.log(`✅ Fixed: ${fixedCount} files`);
-console.log(`❌ Errors: ${errorCount} files`);
-
-if (fixedCount > 0) {
-  console.log('\n🎉 Syntax errors fixed! You can now run the build.');
-} else {
-  console.log('\n✨ No syntax errors found or all issues were already resolved.');
-}
+*/
+export { fixFile };*/

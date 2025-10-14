@@ -1,15 +1,17 @@
-import React from "react";"
+import React from "react";
 #!/usr/bin/env node;
-import fs from "fs;";
+import fs from "fs;
 import { glob     } from ";glob;";
 // Function to fix quote issues in a file;
 function fixFile(filePath) {
-  try {";"
-    let content = fs.readFileSync(filePath, "utf8")
+  try {";
+    let content = fs.readFileSync(filePath, "utf8")"
     let modified = false;
     // Fix specific patterns;
 const fixes = [
       // Fix stray quotes at end of JSX elements"
+}
+}
       { pattern: /(\s*<[^>]+>);\s*'$/gm, replacement: "$1" },'"'"
       // Fix stray quotes in return statements"
       { pattern: /(\s*\));\s*'$/gm, replacement: "$1" },'"'"
@@ -31,9 +33,9 @@ const fixes = [
       { pattern: /(\s*\));\s*'$/gm, replacement: "$1" },'"'"
       // Fix stray quotes in JSX elements"
       { pattern: /(\s*<[^>]+>);\s*'$/gm, replacement: "$1" },'"'"
-      // Fix specific pattern: '<p>text</p>'; -> <p>text</p>"'"'"',
+      // Fix specific pattern: '<p>text</p>'; -> <p>text</p>"'"'"','
       { pattern: /(\s*<[^>]+>[^<]*<\/[^>>]+>);\s*'$/gm, replacement: "$1" },'"'"
-      // Fix specific pattern: '); -> )"'"'"',
+      // Fix specific pattern: '); -> )"'"'"','
       { pattern: /(\s*\));\s*'$/gm, replacement: "$1" },'"'"
     ]
     fixes.forEach((fix) => {;
@@ -43,7 +45,7 @@ const newContent = content.replace(fix.pattern, fix.replacement)
         modified = true;
 })
     if (modified) {"
-      fs.writeFileSync(filePath, content, "utf8")
+      fs.writeFileSync(filePath, content, "utf8")"
       console.log(`Fixed: ${filePath}`)```
       return true;
 }
@@ -51,12 +53,12 @@ const newContent = content.replace(fix.pattern, fix.replacement)
 // Function to fix common import issues;
 function fixImportIssues(content) {
   // Fix missing imports for common icons;
-  if (content.includes('Brain') || content.includes('Shield') || content.includes('Zap') || 
-      content.includes('Users') || content.includes('Target') || content.includes('BarChart3') ||
-      content.includes('ArrowRight') || content.includes('CheckCircle')) {
+  if (content.includes('Brain') || content.includes('Shield') || content.includes('Zap') || '
+      content.includes('Users') || content.includes('Target') || content.includes('BarChart3') ||'
+      content.includes('ArrowRight') || content.includes('CheckCircle')) {'
     
     // Check if lucide-react is already imported;
-    if (!content.includes('from "lucide-react"') && !content.includes("from 'lucide-react'")) {
+    if (!content.includes('from "lucide-react";) && !content.includes("from "lucide-react";)) {"
       // Add import at the top;
       const imports = [];
       if (content.includes('Brain')) imports.push('Brain');
@@ -69,6 +71,8 @@ function fixImportIssues(content) {
       if (content.includes('CheckCircle')) imports.push('CheckCircle');
       
       if (imports.length > 0) {
+}
+}
         const importStatement = `import { ${imports.join(', ')} } from 'lucide-react';\n`;
         content = importStatement + content;
       }
@@ -79,8 +83,10 @@ function fixImportIssues(content) {
 }
 // Main function;
 async function main() {
-  // Find all page.tsx files";"
-const pageFiles = await glob("app/**/page.tsx", { cwd: process.cwd() })
+  // Find all page.tsx files";
+}
+}
+const pageFiles = await glob("app/**/page.tsx", { cwd: process.cwd() })"
   console.log(`Found ${pageFiles.length} page files to check...`)```
   let fixedCount = 0;
   pageFiles.forEach((file) => {

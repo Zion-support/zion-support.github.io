@@ -1,42 +1,37 @@
-import React from 'react''
-import { Helmet ,   } from 'lucide-react''
-import { Circle, Right,  } from 'lucide-react;
-const PartnersPage: React.FC = () => {'
-  const partners = [{''
-      name: 'Microsoft'''
-      logo: '🏢'''
-      description: 'Strategic partnership for cloud and AI solutions'''
-      category: 'Technology'';}
+import React from "react";
+import { Circle, Right,  } from "lucide-react";
+const PartnersPage: React.FC = () => {";
+      category: 'Technology'';}'
     },'
     {''
       name: 'Amazon Web Services'''
       logo: '☁️'''
       description: 'infrastructure and AI services collaboration'''
-      category: ''';}
+      category: ''';}'
     },'
     {''
       name: 'Google '''
       logo: '🔍'''
       description: 'AI and machine learning platform integration'''
-      category: 'AI/ML'';}
+      category: 'AI/ML'';}'
     },'
     {''
       name: 'IBM'''
       logo: '💼'''
       description: 'Enterprise AI solutions and consulting'''
-      category: 'Enterprise'';}
+      category: 'Enterprise'';}'
     },'
     {''
       name: 'Salesforce'''
       logo: '📊'''
       description: 'CRM and business intelligence integration'''
-      category: 'CRM'';}
+      category: 'CRM'';}'
     },'
     {''
       name: 'Oracle'''
       logo: '🗄️'''
       description: 'and enterprise application solutions'''
-      category: ''';}
+      category: ''';}'
     }
   ]'
 ''
@@ -62,7 +57,7 @@ const PartnersPage: React.FC = () => {'
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
       /></EnhancedSEO>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -76,7 +71,7 @@ const PartnersPage: React.FC = () => {'
               Join our growing ecosystem of strategic partners and unlock new opportunities;
               for growth and innovation.;
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
                 Become a Partner
                 <Right className="w-5 h-5 ml-2 inline" />"
@@ -90,10 +85,10 @@ const PartnersPage: React.FC = () => {'
         { /* Partners Grid */ }"
         <section className="py-20 px-4">"
           <div className="max-w-7xl mx-auto"></div>"
-            <h2 className="text-4xl font-bold text-white text-center mb-16"></h2>
+            <h2 className="text-4xl font-bold text-white text-center mb-16"></h2>"
               Strategic Partners;
             </h2>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>")}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>")}"
               {partners.map((partner, _index) => (
 "
                 <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>"
@@ -106,29 +101,29 @@ const PartnersPage: React.FC = () => {'
                 </div>;
               Partner Benefits;
             </h2>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>")
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>")"
               {benefits.map((benefit, _index) => ("
-                <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30"></div>
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0"></div>
+                <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30"></div>"
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0"></div>"
                     <Circle className="w-4 h-4 text-white" />"
                   </div>"
                   <span className="text-gray-300 font-medium">{benefit}</span>"
                 </div>
             </h2>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>)"
               {benefits.map((benefit, _index) => (}"
                 <div key={_index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30"></div>"
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0"></div>"
-                    <Circle className="w-4 h-4 text-white" /></Circle>
+                    <Circle className="w-4 h-4 text-white" /></Circle>"
                   </div>"
-                  <span className="text-gray-300 font-medium">{benefit}</span>
+                  <span className="text-gray-300 font-medium">{benefit}</span>"
                 </div>;
               Ready to Partner with Us?;
             </h2>"
             <p>"
               Join our partner ecosystem and unlock new opportunities for growth and innovation.;
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">"
                 Apply Now
                 <Right className="w-5 h-5 ml-2 inline" />"

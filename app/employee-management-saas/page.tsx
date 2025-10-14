@@ -1,26 +1,26 @@
-import ResponsiveContainer from '../components/ResponsiveContainer;
+import ResponsiveContainer from "../components/ResponsiveContainer;;
 const EmployeeManagementSAAS = () => {
   return (
     <></>
-      <Helmet></Helmet>
+      <Helmet />
         <title>Employee Management SAAS - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive HR and employee management platform." /></meta>
+        <meta name="description" content="Comprehensive HR and employee management platform." /></meta>"
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <section className="py-20"></section>
-          <ResponsiveContainer></ResponsiveContainer>
-            <div className="text-center"></div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+        <section className="py-20"></section>"
+          <ResponsiveContainer />
+            <div className="text-center"></div>"
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>"
                 Employee Management SAAS
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>"
                 Comprehensive HR and employee management platform.
               </p>
-              <Link to="/contact"></Link>
-                <FuturisticButton size="lg"></FuturisticButton>
+              <Link to="/contact"></Link>"
+                <FuturisticButton size="lg"></FuturisticButton>"
                   Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
+                  <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>"
                 </FuturisticButton>
               </Link>
             </div>
@@ -32,4 +32,4 @@ const EmployeeManagementSAAS = () => {
 };
 
 export default EmployeeManagementSAAS;
-'
+";

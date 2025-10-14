@@ -1,12 +1,11 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from "react";
 'use client;
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-white"></div>"
+      <Helmet />
         <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." /></meta>
+        <meta name="description" content="Professional page services by Zion Tech Group." /></meta>"
       </Helmet>
       <div className="container mx-auto px-4 py-16">;
         <div className="text-center">;
@@ -52,6 +51,8 @@ export default function Page() {
       </div>
     </div>
   );
+}
+}
 };
 
 export default MicroSaasPage;

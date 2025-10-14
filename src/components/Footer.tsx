@@ -1,22 +1,22 @@
 
     {name: "Cybersecurity", url: "/cybersecurity",}""
   ];
-const solutions = ["""
+const solutions = [""
     {name: "Quantum Computing", url: "/quantum-computing", }, """
     {name: "Autonomous Systems", url: "/autonomous-systems", }, """
     {name: "Blockchain Web3", url: "/blockchain-web3", }, """
     {name: "IoT Edge Computing", url: "/iot-edge-computing", }""];
-const company = ["""
+const company = [""
     {name: "About Us", url: "/about", }, """
     {name: "Team", url: "/team", }, """
     {name: "Careers", url: "/careers", }, """
     {name: "News", url: "/news", }""];
-const support = ["""
+const support = [""
     {name: "Documentation", url: "/documentation", }, """
     {name: "Support", url: "/support", }, """
     {name: "FAQ", url: "/faq", }, """
     {name: "Contact", url: "/contact", }""];
-const socialLinks = ["""
+const socialLinks = [""
     {name: "Facebook", icon: Facebook, url: "#", }, """
     {name: "Twitter", icon: Twitter, url: "#", }, """
     {name: "LinkedIn", icon: Linkedin, url: "#", }, """

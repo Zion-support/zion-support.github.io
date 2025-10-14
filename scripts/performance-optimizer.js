@@ -3,22 +3,22 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
         { /* CTA Section */ }
-        <section className="py-20 px-4 bg-gray-900">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
+        <section className="py-20 px-4 bg-gray-900">"
+          <div className="max-w-4xl mx-auto text-center">"
+            <h2 className="text-4xl font-bold text-white mb-6">"
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-300 mb-8">"
               Contact us today to learn more about our services and how they can benefit your organization.
             </p>
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">"
               Get Started
             </button>
           </div>
         </section>
       </div>
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React from "react";
+import { Helmet } from "react-helmet-async";
 export default function performance-optimizer.js() {
   return (}
     <>
@@ -55,8 +55,8 @@ const fs = require('fs');
 const path = require('path');
 
 /**
- * Performance Optimization Script
- * Optimizes the application for better performance
+ * Performance Optimization Script*/
+ * Optimizes the application for better performance*/
  */
 
 console.log('Running performance optimizations...');
@@ -69,45 +69,45 @@ let viteConfig = fs.readFileSync(viteConfigPath, 'utf8');
 const optimizedChunkConfig = `
         manualChunks: (id) => {
           // Vendor chunks - more granular splitting
-          if (id.includes('node_modules')) {
-            if (id.includes('react') || id.includes('react-dom')) {
+          if (id.includes('node_modules')) {'
+            if (id.includes('react') || id.includes('react-dom')) {'
               return 'vendor-react';
             }
-            if (id.includes('react-router')) {
+            if (id.includes('react-router')) {'
               return 'vendor-router';
             }
-            if (id.includes('framer-motion')) {
+            if (id.includes('framer-motion')) {'
               return 'vendor-animations';
             }
-            if (id.includes('lucide-react') || id.includes('@heroicons')) {
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {'
               return 'vendor-icons';
             }
-            if (id.includes('recharts')) {
+            if (id.includes('recharts')) {'
               return 'vendor-charts';
             }
-            if (id.includes('web-vitals')) {
+            if (id.includes('web-vitals')) {'
               return 'vendor-analytics';
             }
-            if (id.includes('tailwindcss')) {
+            if (id.includes('tailwindcss')) {'
               return 'vendor-styles';
             }
             return 'vendor-misc';
           }
           
           // App chunks - more specific splitting
-          if (id.includes('/app/ai-')) {
+          if (id.includes('/app/ai-')) {'
             return 'ai-services';
           }
-          if (id.includes('/app/it-')) {
+          if (id.includes('/app/it-')) {'
             return 'it-services';
           }
-          if (id.includes('/app/components/')) {
+          if (id.includes('/app/components/')) {'
             return 'components';
           }
-          if (id.includes('/app/utils/')) {
+          if (id.includes('/app/utils/')) {'
             return 'utils';
           }
-          if (id.includes('/app/hooks/')) {
+          if (id.includes('/app/hooks/')) {'
             return 'hooks';
           }
           return 'app';
@@ -123,12 +123,12 @@ viteConfig = viteConfig.replace(
 const performanceOptimizations = `
   // Performance optimizations
   build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
+    outDir: 'dist','
+    assetsDir: 'assets','
     sourcemap: false,
-    minify: 'terser',
-    target: 'es2020',
-    cssTarget: 'chrome80',
+    minify: 'terser','
+    target: 'es2020','
+    cssTarget: 'chrome80','
     reportCompressedSize: true,
     chunkSizeWarningLimit: 500,
     cssCodeSplit: true,
@@ -136,17 +136,17 @@ const performanceOptimizations = `
     rollupOptions: {
       output: {
         ${optimizedChunkConfig}
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/[name]-[hash].js','
+        entryFileNames: 'assets/[name]-[hash].js','
         assetFileNames: (assetInfo) => {
           const ext = assetInfo.name?.split('.').pop();
-          if (/\.(css)$/i.test(assetInfo.name || '')) {
+          if (/\.(css)$/i.test(assetInfo.name || '')) {'
             return \`assets/css/[name]-[hash].\${ext}\`;
           }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {'
             return \`assets/images/[name]-[hash].\${ext}\`;
           }
-          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
+          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {'
             return \`assets/fonts/[name]-[hash].\${ext}\`;
           }
           return \`assets/[name]-[hash].\${ext}\`;
@@ -157,7 +157,7 @@ const performanceOptimizations = `
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],'
         passes: 2,
       },
       mangle: {
@@ -179,8 +179,8 @@ fs.writeFileSync(viteConfigPath, viteConfig);
 // 2. Create a performance monitoring component
 const performanceMonitorPath = path.join(__dirname, '../app/components/PerformanceMonitor.tsx');
 const performanceMonitorContent = `'use client';
-import { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { useEffect } from "react";
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from "web-vitals";
 
 interface PerformanceMetrics {
   name: string;
@@ -196,11 +196,11 @@ const PerformanceMonitor: React.FC = () => {
       console.log('Performance metric:', metric);
       
       // Example: Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', metric.name, {
-          event_category: 'Web Vitals',
+      if (typeof window !== 'undefined' && (window as any).gtag) {'
+        (window as any).gtag('event', metric.name, {'
+          event_category: 'Web Vitals','
           event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),'
           non_interaction: true,
         });
       }
@@ -214,13 +214,13 @@ const PerformanceMonitor: React.FC = () => {
     getTTFB(sendToAnalytics);
 
     // Measure additional performance metrics
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined') {'
       // First Contentful Paint
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.name === 'first-contentful-paint') {
+          if (entry.name === 'first-contentful-paint') {'
             sendToAnalytics({
-              name: 'FCP',
+              name: 'FCP','
               value: entry.startTime,
               delta: entry.startTime,
               id: 'fcp-custom'
@@ -246,8 +246,8 @@ const bundleAnalyzerContent = `const fs = require('fs');
 const path = require('path');
 
 /**
- * Bundle Analysis Script
- * Analyzes the built bundle for optimization opportunities
+ * Bundle Analysis Script*/
+ * Analyzes the built bundle for optimization opportunities*/
  */
 
 function analyzeBundle() {
@@ -256,6 +256,8 @@ function analyzeBundle() {
   if (!fs.existsSync(distPath)) {
     console.log('❌ Dist folder not found. Run npm run build first.');
     return;
+}
+}
   }
 
   const assetsPath = path.join(distPath, 'assets');
@@ -379,24 +381,24 @@ img {
   // Write optimized CSS
   const cssPath = path.join(__dirname, '..', 'public', 'performance.css');
   fs.writeFileSync(cssPath, cssOptimizations);
-  console.log('✅ Performance CSS created')
+  console.log('✅ Performance CSS created')'
 
   // Create preload hints
   const preloadHints = `
 <!-- Preload critical resources -->
-<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/css/critical.css" as="style">
-<link rel="preload" href="/assets/js/vendor.js" as="script">
-<link rel="preload" href="/assets/js/main.js" as="script">
+<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>"
+<link rel="preload" href="/assets/css/critical.css" as="style">"
+<link rel="preload" href="/assets/js/vendor.js" as="script">"
+<link rel="preload" href="/assets/js/main.js" as="script">"
 
 <!-- DNS prefetch for external resources -->
-<link rel="dns-prefetch" href="//fonts.googleapis.com">
-<link rel="dns-prefetch" href="//fonts.gstatic.com">
-<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">"
+<link rel="dns-prefetch" href="//fonts.gstatic.com">"
+<link rel="dns-prefetch" href="//www.google-analytics.com">"
 
 <!-- Preconnect to external domains -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">"
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>"
 `;
 
   const preloadPath = path.join(__dirname, '..', 'public', 'preload-hints.html');
@@ -407,13 +409,13 @@ img {
   const serviceWorkerContent = `
 const CACHE_NAME = 'zion-tech-group-v2';
 const urlsToCache = [
-  '/',
-  '/static/css/main.css',
-  '/static/js/main.js',
+  '/','
+  '/static/css/main.css','
+  '/static/js/main.js','
   '/manifest.json'
 ];
 
-self.addEventListener('install', (event) => {
+self.addEventListener('install', (event) => {'
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))

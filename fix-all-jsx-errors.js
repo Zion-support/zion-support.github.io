@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import { glob } from 'glob';
+import fs from "fs";
+import { glob } from "glob";
 
 // Function to fix JSX errors in a file;
 function fixJSXErrors(filePath) {
@@ -10,6 +10,8 @@ function fixJSXErrors(filePath) {
     let modified = false;
 
     // Remove extra closing divs;
+}
+}
     const extraClosingDivsRegex = /<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/g;
     if (extraClosingDivsRegex.test(content)) {
       content = content.replace(extraClosingDivsRegex, '</div>\n        </div>\n      </div>\n    </>\n  );\n};');
@@ -45,7 +47,7 @@ function fixJSXErrors(filePath) {
     if (containerPatternRegex.test(content)) {
       content = content.replace(containerPatternRegex, (match) => {
         return match.replace(
-          /<div className="container mx-auto px-4 py-16">/,
+          /<div className="container mx-auto px-4 py-16">/,"
           '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n        <div className="container mx-auto px-4 py-16">'
         ).replace(
           /<\/div>\s*<\/div>\s*<\/>/,
@@ -157,6 +159,8 @@ async function main() {
   console.log('Starting comprehensive JSX error fixes...');
   
   // Find all page.tsx files;
+}
+}
   const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
   
   let fixedCount = 0;
@@ -170,7 +174,7 @@ async function main() {
   console.log(`Fixed JSX errors in ${fixedCount} files`);
   
   // Also fix the main App.tsx file;
-  if (fixJSXErrors('app/App.tsx')) {
+  if (fixJSXErrors('app/App.tsx')) {'
     fixedCount++;
     console.log('Fixed App.tsx');
   }

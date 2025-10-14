@@ -1,9 +1,9 @@
-import React from 'react''
-import { Link } from 'react-router-dom;
+import React from "react";
+import { Link } from "react-router-dom";
 interface NeonButtonProps {
   children: React.ReactNode;
   to?: string;
-  href?: string'
+  href?: string";
   onClick?: () => void;''
   variant?: 'primary' | 'secondary' | 'accent''
   size?: 'sm' | 'md' | 'lg';
@@ -37,8 +37,8 @@ const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
   const content = (
     <></>
-      <span className="relative z-10">{children}</span>
-      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+      <span className="relative z-10">{children}</span>"
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>"
     </>
   )
   if (to) {

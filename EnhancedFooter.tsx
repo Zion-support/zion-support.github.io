@@ -1,10 +1,10 @@
-import React from 'react;
+import React from "react;;
 const EnhancedFooter = () => {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-white"></div>"
+      <Helmet />
         <title>Enhanced Footer - Zion Tech Group</title>
-        <meta name="description" content="Professional enhanced footer services by Zion Tech Group." />
+        <meta name="description" content="Professional enhanced footer services by Zion Tech Group." />"
       </Helmet>
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">;
@@ -23,4 +23,4 @@ const EnhancedFooter = () => {
 };
 
 export default EnhancedFooter;
-'
+";

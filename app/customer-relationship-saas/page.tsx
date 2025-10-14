@@ -1,26 +1,26 @@
-import ResponsiveContainer from '../components/ResponsiveContainer;
+import ResponsiveContainer from "../components/ResponsiveContainer;;
 const CustomerRelationshipSAAS = () => {
   return (
     <></>
-      <Helmet></Helmet>
+      <Helmet />
         <title>Customer Relationship SAAS - Zion Tech Group</title>
-        <meta name="description" content="Advanced CRM solution for managing customer relationships and sales." /></meta>
+        <meta name="description" content="Advanced CRM solution for managing customer relationships and sales." /></meta>"
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <section className="py-20"></section>
-          <ResponsiveContainer></ResponsiveContainer>
-            <div className="text-center"></div>
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+        <section className="py-20"></section>"
+          <ResponsiveContainer />
+            <div className="text-center"></div>"
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>"
                 Customer Relationship SAAS
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>"
                 Advanced CRM solution for managing customer relationships and sales.
               </p>
-              <Link to="/contact"></Link>
-                <FuturisticButton size="lg"></FuturisticButton>
+              <Link to="/contact"></Link>"
+                <FuturisticButton size="lg"></FuturisticButton>"
                   Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>
+                  <ArrowRight className="w-5 h-5 ml-2" /></ArrowRight>"
                 </FuturisticButton>
               </Link>
             </div>
@@ -32,4 +32,4 @@ const CustomerRelationshipSAAS = () => {
 };
 
 export default CustomerRelationshipSAAS;
-'
+";

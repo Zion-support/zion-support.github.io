@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 // Function to fix duplicate import statements;
 function fixDuplicateImports(filePath) {
@@ -18,12 +18,14 @@ function fixDuplicateImports(filePath) {
       const line = lines[i];
       
       // Check if this is an import statement;
-      if (line.trim().startsWith('import ')) {
+      if (line.trim().startsWith('import ')) {'
         // Check if we've seen this exact import before;
         if (seenImports.has(line.trim())) {
           // Skip duplicate import;
           modified = true;
           continue;
+}
+}
         } else {
           seenImports.add(line.trim());
           fixedLines.push(line);
@@ -57,9 +59,11 @@ function findSourceFiles(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
         traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+}
+}
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {'
         files.push(fullPath);
       }
     }
@@ -90,7 +94,7 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`\n📊 Summary: '`);',
+console.log(`\n📊 Summary: '`);','
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 

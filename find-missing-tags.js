@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
+import fs from "fs";
 
 const filePath = '/workspace/app/page.tsx';
 const content = fs.readFileSync(filePath, 'utf8');
@@ -55,11 +55,11 @@ for (let i = 0; i < lines.length; i++) {
   }
 }
 
-console.log('Issues found: ');'
+console.log('Issues found: ');
 issues.forEach(issue => console.log(issue));
 
-console.log('\nUnclosed div tags: ');'
+console.log('\nUnclosed div tags: ');
 divStack.forEach(tag => console.log(`Line ${tag.line}: ${tag.content}`));
 
-console.log('\nUnclosed section tags: ');'
+console.log('\nUnclosed section tags: ');
 sectionStack.forEach(tag => console.log(`Line ${tag.line}: ${tag.content}`));

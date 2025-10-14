@@ -1,8 +1,8 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
+import fs from "fs";
+import path from "path";
+import { execSync } from "child_process";
 
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {
@@ -13,8 +13,10 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?/g, '');
     
     // Fix common syntax errors;
-    content = content.replace(/import React from "react";";/g, 'import React from "react";');
-    content = content.replace(/import { Helmet } from "react-helmet-async";";/g, 'import { Helmet } from "react-helmet-async";');
+    content = content.replace(/import React from "react";/g, 'import React from "react";);
+}
+}
+    content = content.replace(/import { Helmet } from "react-helmet-async";/g, 'import { Helmet } from "react-helmet-async";);
     content = content.replace(/return \("/g, 'return (');
     content = content.replace(/<Helmet><\/Helmet>/g, '<Helmet>');
     content = content.replace(/<\/Helmet>"/g, '</Helmet>');
@@ -29,11 +31,11 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/"([^"]*?)\n/g, '"$1"\n');
     
     // Fix extra semicolons;
-    content = content.replace(/;;+/g, ';');
+    content = content.replace(/;+/g, ';');
     content = content.replace(/;\s*;/g, ';');
     
     // Fix malformed JSX;
-    content = content.replace(/<div className="[^"]*"><\/div>"/g, (match) => {
+    content = content.replace(/<div className="[^"]*"><\/div>"/g, (match) => {"
       const className = match.match(/className="([^"]*)"/)?.[1] || '';
       return `<div className="${className}">`;
     });
@@ -48,11 +50,13 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     fs.writeFileSync(filePath, content);
+}
+}
     console.log(`Fixed merge conflicts in: ${filePath}`);
     return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -67,8 +71,10 @@ function fixFileContent(content) {
   fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?  fixed = fixed.replace(/[\s\S]*?/g, '');
   
   // Fix common syntax errors;
-  fixed = fixed.replace(/import React from "react";";/g, 'import React from "react";');
-  fixed = fixed.replace(/import { Helmet } from "react-helmet-async";\s*;/g, 'import { Helmet } from "react-helmet-async";');
+  fixed = fixed.replace(/import React from "react";/g, 'import React from "react";);
+}
+}
+  fixed = fixed.replace(/import { Helmet } from "react-helmet-async";);
   fixed = fixed.replace(/const \w+Page = \(\) => {\s*return \("/g, 'const $&Page = () => {\n  return (');
   fixed = fixed.replace(/return \("\s*<div/g, 'return (\n    <div');
   fixed = fixed.replace(/<div className="[^"]*"><\/div>\s*<Helmet><\/Helmet>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n      <Helmet>');
@@ -106,6 +112,8 @@ function processFile(filePath) {
     
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed);
+}
+}
       console.log(`✅ Fixed: ${filePath}`);
       return true;
     }
@@ -125,9 +133,11 @@ function findTSFiles(dir) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
       files.push(...findTSFiles(fullPath));
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
+}
+}
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {'
       files.push(fullPath);
     }
   }

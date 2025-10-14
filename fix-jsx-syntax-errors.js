@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 console.log('🔧 Fixing JSX syntax errors...');
 
 // Function to recursively find all files;
-function getAllFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
+function getAllFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {'
   let files = [];
   const items = fs.readdirSync(dir);
   
@@ -14,8 +14,10 @@ function getAllFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
     
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {'
       files = files.concat(getAllFiles(fullPath, extensions));
+}
+}
     } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath);
     }
@@ -28,6 +30,8 @@ function getAllFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
 function fixJSXSyntax(content) {
   // Fix missing closing tags for Helmet;
   content = content.replace(/<Helmet([^>]*?)>(?![\s\S]*?<\/Helmet>)/g, (match, attrs) => {
+}
+}
     return `<Helmet${attrs}></Helmet>`;
   });
   
@@ -38,7 +42,7 @@ function fixJSXSyntax(content) {
   
   // Fix JSX fragments;
   content = content.replace(/<>([^<//////]*?)<([^>]*?)>/g, (match, p1, p2) => {
-    if (p1.trim() && !p1.includes('</')) {
+    if (p1.trim() && !p1.includes('</')) {'
       return `<>${p1}<///////${p2}>`;
     }
     return match;
@@ -61,15 +65,15 @@ function fixJSXSyntax(content) {
   
   // Fix malformed JSX expressions;
   content = content.replace(/<([^>]*?)>([^<]*?)<([^>]*?)>/g, (match, p1, p2, p3) => {
-    if (p2.trim() && !p2.includes('<') && !p2.includes('>')) {
+    if (p2.trim() && !p2.includes('<') && !p2.includes('>')) {'
       return `<////${p1}>${p2}</${p3}>`;
     }
     return match;
   });
   
   // Fix missing semicolons after imports;
-  content = content.replace(/import\s+.*?from\s+['"][^'"]*['"]\s*$/gm, (match) => {
-    if (!match.endsWith(';')) {
+  content = content.replace(/import\s+.*?from\s+['"][^'"]*['"]\s*$/gm, (match) => {"
+    if (!match.endsWith(';')) {'
       return match + ';';
     }
     return match;
@@ -77,7 +81,7 @@ function fixJSXSyntax(content) {
   
   // Fix missing semicolons after variable declarations;
   content = content.replace(/const\s+\w+\s*=.*?$/gm, (match) => {
-    if (!match.endsWith(';') && !match.includes('{') && !match.includes('}')) {
+    if (!match.endsWith(';') && !match.includes('{') && !match.includes('}')) {'
       return match + ';';
     }
     return match;
@@ -85,7 +89,7 @@ function fixJSXSyntax(content) {
   
   // Fix missing semicolons after function declarations;
   content = content.replace(/function\s+\w+\([^)]*\)\s*{[^}]*}$/gm, (match) => {
-    if (!match.endsWith(';')) {
+    if (!match.endsWith(';')) {'
       return match + ';';
     }
     return match;
@@ -99,9 +103,11 @@ function fixFileSpecificIssues(filePath, content) {
   const fileName = path.basename(filePath);
   
   // Fix App.tsx specific issues;
-  if (fileName === 'App.tsx') {
+  if (fileName === 'App.tsx') {'
     // Fix missing closing tags;
     content = content.replace(/<Suspense([^>]*?)>(?![\s\S]*?<\/Suspense>)/g, (match, attrs) => {
+}
+}
       return `<Suspense${attrs}></Suspense>`;
     });
     
@@ -115,7 +121,7 @@ function fixFileSpecificIssues(filePath, content) {
   }
   
   // Fix page.tsx files;
-  if (fileName.endsWith('page.tsx')) {
+  if (fileName.endsWith('page.tsx')) {'
     // Fix missing Helmet closing tags;
     content = content.replace(/<////Helmet([^>]*?)>(?![\s\S]*?<\/Helmet>)/g, (match, attrs) => {
       return `<Helmet${attrs}></Helmet>`;
@@ -137,6 +143,8 @@ function main() {
     let fixedCount = 0;
     let errorCount = 0;
     
+}
+}
     console.log(`📁 Found ${files.length} files to process...`);
     
     for (const filePath of files) {
@@ -168,7 +176,7 @@ function main() {
     console.log(`❌ Errors: ${errorCount} files`);
     
   } catch (error) {
-    console.error('❌ Fatal error: ', error.message);'
+    console.error('❌ Fatal error: ', error.message);
     process.exit(1);
   }
 }

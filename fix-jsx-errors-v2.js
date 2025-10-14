@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import { glob } from 'glob';
+import fs from "fs";
+import { glob } from "glob";
 
 // Function to fix JSX errors in a file;
 function fixJSXErrors(filePath) {
@@ -14,6 +14,8 @@ function fixJSXErrors(filePath) {
     if (duplicateWrapperRegex.test(content)) {
       content = content.replace(duplicateWrapperRegex, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">');
       modified = true;
+}
+}
     }
 
     // Fix missing closing div tags;
@@ -52,7 +54,7 @@ function fixJSXErrors(filePath) {
       modified = true;
     }
 
-    // Fix specific pattern: 'missing closing div for min-h-screen wrapper',
+    // Fix specific pattern: 'missing closing div for min-h-screen wrapper','
     const missingMinHeightClosingRegex = /<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\s*<div className="container mx-auto px-4 py-16">\s*<div className="text-center">\s*<h1[^>]*>.*?<\/h1>\s*<p[^>]*>.*?<\/p>\s*<\/div>\s*<\/div>\s*<\/>\s*\);\s*};/gs;
     if (missingMinHeightClosingRegex.test(content)) {
       content = content.replace(missingMinHeightClosingRegex, (match) => {
@@ -76,7 +78,7 @@ function fixJSXErrors(filePath) {
     if (containerPatternRegex.test(content)) {
       content = content.replace(containerPatternRegex, (match) => {
         return match.replace(
-          /<div className="container mx-auto px-4 py-16">/,
+          /<div className="container mx-auto px-4 py-16">/,"
           '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">\n        <div className="container mx-auto px-4 py-16">'
         ).replace(
           /<\/div>\s*<\/div>\s*<\/>/,
@@ -111,6 +113,8 @@ async function main() {
   console.log('Starting JSX error fixes v2...');
   
   // Find all page.tsx files;
+}
+}
   const pageFiles = await glob('app/**/page.tsx', { cwd: process.cwd() });
   
   let fixedCount = 0;
@@ -124,7 +128,7 @@ async function main() {
   console.log(`Fixed JSX errors in ${fixedCount} files`);
   
   // Also fix the main App.tsx file;
-  if (fixJSXErrors('app/App.tsx')) {
+  if (fixJSXErrors('app/App.tsx')) {'
     fixedCount++;
     console.log('Fixed App.tsx');
   }

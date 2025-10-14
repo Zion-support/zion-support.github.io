@@ -1,12 +1,11 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from "react";
 'use client;
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-white"></div>"
+      <Helmet />
         <title>LoadingStates - Zion Tech Group</title>
-        <meta name="description" content="Professional loadingstates services by Zion Tech Group." /></meta>
+        <meta name="description" content="Professional loadingstates services by Zion Tech Group." /></meta>"
       </Helmet>
       <div className="container mx-auto px-4 py-16">;
         <div className="text-center">;
@@ -41,11 +40,13 @@ export default function Page() {
                 Round-the-clock support for all your loadingstates needs.;
               </p>;
             </div>
-            <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div></div>
+            <div className="absolute inset-0 w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto animate-ping opacity-20"></div></div>"
  cursor/fix-errors-and-merge-to-main-54ad;
           </div>
 "
           <h2 className="text-2xl font-bold text-white mb-2">Zion Tech Group</h2>"
+}
+}
           <p>{message || getDefaultMessage()}</p>"
           <div className="flex justify-center space-x-2"></div>"
             <div className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"></div></div>"

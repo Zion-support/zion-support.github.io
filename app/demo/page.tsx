@@ -1,23 +1,20 @@
-import React from 'react;
+import React from "react;;
 
 const DemoPage: React.FC = () => {
-  const features = [{''
-      icon: 'Analytics'''
-      title: 'AI-Powered Analytics'''
-      description: 'See how our AI analyzes your data in real-time'''
-      demo: 'Live Demo'';}
+  const features = [{";
+      demo: 'Live Demo'';}'
     },'
     {''
       icon: 'Security'''
       title: 'Advanced Security'''
       description: 'Experience our enterprise-grade security features'''
-      demo: 'Demo'';}
+      demo: 'Demo'';}'
     },'
     {''
       icon: 'Intelligence'''
       title: 'Business Intelligence'''
       description: 'Explore our comprehensive BI dashboard'''
-      demo: 'BI Demo'';}
+      demo: 'BI Demo'';}'
     },
 
 
@@ -25,19 +22,19 @@ const DemoPage: React.FC = () => {
   ];
 
   const testimonials = [{
-      name: "Sarah Johnson",
-      company: "TechCorp Inc.",
-      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
+      name: "Sarah Johnson","
+      company: "TechCorp Inc.","
+      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.","
       rating: 5},
     {
-      name: "Michael Chen",
-      company: "DataFlow Systems",
-      content: "The live demonstration helped us understand the full potential of the AI solutions.",
+      name: "Michael Chen","
+      company: "DataFlow Systems","
+      content: "The live demonstration helped us understand the full potential of the AI solutions.","
       rating: 5},
     {
-      name: "Emily Rodriguez",
-      company: "InnovateLabs",
-      content: "The demo team was knowledgeable and answered all our questions thoroughly.",
+      name: "Emily Rodriguez","
+      company: "InnovateLabs","
+      content: "The demo team was knowledgeable and answered all our questions thoroughly.","
       rating: 5;
   ];
 
@@ -48,7 +45,7 @@ const DemoPage: React.FC = () => {
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
       /></EnhancedSEO>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -165,9 +162,9 @@ const DemoPage: React.FC = () => {
         </section>;
       </div>
     </>
-        <div className="text-center"></div>
+        <div className="text-center"></div>"
           <h1>Page</h1>
-          <p className="text-gray-300 text-lg"></p>
+          <p className="text-gray-300 text-lg"></p>"
             This page is under construction. Please check back later.
           </p>
         </div>

@@ -1,13 +1,13 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /**;
- * SEO audit script for Zion Tech Group website;
- * This script checks for SEO best practices and generates recommendations;
+ * SEO audit script for Zion Tech Group website;*/
+ * This script checks for SEO best practices and generates recommendations;*/
  */;
 console.log('🔍 Starting SEO audit...');
 
@@ -22,6 +22,8 @@ function auditHTMLStructure() {
   const indexPath = path.join(__dirname, '../dist/index.html');
   if (!fs.existsSync(indexPath)) {
     issues.push('Main index.html file not found');
+}
+}
     return { issues, recommendations };
   }
   
@@ -37,9 +39,9 @@ function auditHTMLStructure() {
   ];
   
   metaTags.forEach(tag => {
-    if (!html.includes(`<meta name="${tag}"`) && !html.includes(`<title>`) && tag === 'title') {
-      if (tag === 'title') {
-        if (!html.includes('<////title>')) {
+    if (!html.includes(`<meta name="${tag}"`) && !html.includes(`<title>`) && tag === 'title') {'
+      if (tag === 'title') {'
+        if (!html.includes('<////title>')) {'
           issues.push(`Missing ${tag} tag`);
         }
       } else {
@@ -51,7 +53,7 @@ function auditHTMLStructure() {
   // Check for Open Graph tags;
   const ogTags = ['og:title', 'og:description', 'og:image', 'og:url'];
   ogTags.forEach(tag => {
-    if (!html.includes(`property="${tag}"`)) {
+    if (!html.includes(`property="${tag}"`)) {"
       issues.push(`Missing Open Graph ${tag} tag`);
     }
   });
@@ -59,20 +61,20 @@ function auditHTMLStructure() {
   // Check for Twitter Card tags;
   const twitterTags = ['twitter:card', 'twitter:title', 'twitter:description', 'twitter:image'];
   twitterTags.forEach(tag => {
-    if (!html.includes(`name="${tag}"`)) {
+    if (!html.includes(`name="${tag}"`)) {"
       issues.push(`Missing Twitter Card ${tag} tag`);
     }
   });
   
   // Check for structured data;
-  if (!html.includes('application/ld+json')) {
+  if (!html.includes('application/ld+json')) {'
     issues.push('Missing structured data (JSON-LD)');
   }
   
   // Check for alt attributes on images;
   const imgTags = html.match(/<img[^>]*>/g) || [];
   imgTags.forEach(img => {
-    if (!img.includes('alt=')) {
+    if (!img.includes('alt=')) {'
       issues.push('Image missing alt attribute');
     }
   });
@@ -108,17 +110,19 @@ function auditSitemap() {
   const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
   if (!fs.existsSync(sitemapPath)) {
     issues.push('Sitemap.xml not found');
+}
+}
     return { issues, recommendations };
   }
   
   const sitemap = fs.readFileSync(sitemapPath, 'utf8');
   
   // Check for essential sitemap elements;
-  if (!sitemap.includes('<urlset')) {
+  if (!sitemap.includes('<urlset')) {'
     issues.push('Sitemap missing urlset element');
   }
   
-  if (!sitemap.includes('<url>')) {
+  if (!sitemap.includes('<url>')) {'
     issues.push('Sitemap missing url elements');
   }
   
@@ -143,20 +147,22 @@ function auditRobots() {
   const robotsPath = path.join(__dirname, '../public/robots.txt');
   if (!fs.existsSync(robotsPath)) {
     issues.push('robots.txt not found');
+}
+}
     return { issues, recommendations };
   }
   
   const robots = fs.readFileSync(robotsPath, 'utf8');
   
-  if (!robots.includes('User-agent: *')) {
+  if (!robots.includes('User-agent: *')) {'
     issues.push('robots.txt missing User-agent directive');
   }
   
-  if (!robots.includes('Allow: /')) {
+  if (!robots.includes('Allow: /')) {'
     issues.push('robots.txt missing Allow directive');
   }
   
-  if (!robots.includes('Sitemap:')) {
+  if (!robots.includes('Sitemap:')) {'
     issues.push('robots.txt missing Sitemap reference');
   }
   
@@ -185,6 +191,8 @@ function auditPerformance() {
       totalSize += stats.size;
       
       if (sizeKB > 100) { // Files larger than 100KB;
+}
+}
         largeFiles.push({ file, sizeKB: Math.round(sizeKB) });
       }
     }
@@ -227,6 +235,8 @@ function generateSEOReport(htmlAudit, sitemapAudit, robotsAudit, performanceAudi
       totalIssues: allIssues.length,;
       totalRecommendations: allRecommendations.length,;
       score: Math.max(0, 100 - (allIssues.length * 10));
+}
+}
     },;
     audits: {
       html: htmlAudit,;
@@ -266,6 +276,8 @@ async function audit() {
     
     if (report.summary.totalIssues > 0) {
       console.log('\n❌ Issues to fix:');
+}
+}
       report.issues.forEach(issue => console.log(`   - ${issue}`));
     }
     

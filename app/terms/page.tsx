@@ -1,5 +1,5 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async;
+import React from "react";
+import { Helmet } from "react-helmet-async;;
 const TermsPage: React.FC = () => {
   return (
     <></>
@@ -8,7 +8,7 @@ const TermsPage: React.FC = () => {
         description="Professional page services by Zion Tech Group. Expert solutions for your business needs."
         keywords="page, business solutions, technology services, professional services"
       /></EnhancedSEO>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
         {/* Hero Section */}
         <section className="relative py-20 px-4">;
           <div className="max-w-7xl mx-auto text-center">;
@@ -38,7 +38,7 @@ const TermsPage: React.FC = () => {
                   Permission is granted to temporarily download one copy of our materials for personal, 
                   non-commercial transitory viewing only.;
                 </p>;
-                <h2 className="text-2xl font-semibold text-white mb-4">Disclaimer</h2>'
+                <h2 className="text-2xl font-semibold text-white mb-4">Disclaimer</h2>";
                 <p className="text-gray-300 mb-6">;''
                   The materials on our website are provided on an 'as is' basis. Zion Tech Group makes';
                   no warranties, expressed or implied, and hereby disclaims and negates all other warranties.;
@@ -85,25 +85,25 @@ const TermsPage: React.FC = () => {
 };
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>"
+          <div className="max-w-7xl mx-auto"></div>"
+            <div className="text-center mb-16"></div>"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>"
                 Why Choose Our Page Services?
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>"
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>"
               {features.map((feature, index) => (
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                <div key={index} className="text-center"></div>"
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
+                  <p className="text-gray-300">{feature.description}</p>"
                 </div>
               ))}
             </div>
@@ -111,21 +111,21 @@ const TermsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30"></section>"
+          <div className="max-w-4xl mx-auto text-center"></div>"
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>"
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8"></p>'
-              Let's discuss how our page services can help your business succeed.
+              Let's discuss how our page services can help your business succeed.'
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
               ></Link>
                 Contact Us
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></ArrowRight>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></ArrowRight>"
               </Link>
               <Link
                 to="/services"
@@ -138,9 +138,9 @@ const TermsPage: React.FC = () => {
         </section>
       </div>
     </>
-        <div className="container mx-auto px-4 py-20"></div>
+        <div className="container mx-auto px-4 py-20"></div>"
           <h1>Terms</h1>
-          <p className="text-xl text-gray-600"></p>
+          <p className="text-xl text-gray-600"></p>"
             This page is under development. Please check back soon for more information about our terms services.
           </p>;
         </div>;

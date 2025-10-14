@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 // Function to fix all remaining issues;
 function fixAllRemainingIssues(filePath) {
@@ -19,6 +19,8 @@ function fixAllRemainingIssues(filePath) {
     content = content.replace(/\s*\]\s*const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{/g, '\nconst $1: React.FC = () => {');
     
     // Fix duplicate closing braces;
+}
+}
     content = content.replace(/\}\s*;\s*\}\s*;\s*export\s+default/g, '};\n\nexport default');
     
     // Fix malformed export statements;
@@ -36,7 +38,7 @@ function fixAllRemainingIssues(filePath) {
     // Ensure file ends with single newline;
     content = content.trim() + '\n';
     
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
+    if (content !== fs.readFileSync(filePath, 'utf8')) {'
       fs.writeFileSync(filePath, content, 'utf8');
       return true;
     }
@@ -59,9 +61,11 @@ function findSourceFiles(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
         traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+}
+}
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {'
         files.push(fullPath);
       }
     }
@@ -92,7 +96,7 @@ for (const file of sourceFiles) {
   }
 }
 
-console.log(`\n📊 Summary: '`);',
+console.log(`\n📊 Summary: '`);','
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 

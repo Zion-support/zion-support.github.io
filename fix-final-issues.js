@@ -1,8 +1,8 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+import fs from "fs";
+import path from "path";
+import { glob } from "glob";
 
 // Function to fix over-escaped quotes in JSX content;
 function fixOverEscapedQuotes(content) {
@@ -21,11 +21,15 @@ function fixOverEscapedQuotes(content) {
   
   return content;
 }
+}
+}
 
 // Function to fix parsing errors;
 function fixParsingErrors(content) {
   // Fix common parsing issues;
   content = content.replace(/,\s*\)/g, ')');
+}
+}
   content = content.replace(/,\s*}/g, '}');
   
   // Fix numeric literal issues;
@@ -46,8 +50,10 @@ function removeUnusedImports(content) {
     const line = lines[i];
     
     // Check if this is an import line;
-    if (line.includes('import') && line.includes('from')) {
+    if (line.includes('import') && line.includes('from')) {'
       // Check if any imported items are actually used;
+}
+}
       const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/);
       if (importMatch) {
         const importedItems = importMatch[1].split(',').map(item => item.trim());
@@ -64,7 +70,7 @@ function removeUnusedImports(content) {
           // Update the import to only include used items;
           const newImport = line.replace(
             /{\s*[^}]+\s*}/,
-            `{ ${usedItems.join(', ')} }`
+            `{ ${usedItems.join(', ')} }`'
           );
           newLines.push(newImport);
           continue;
@@ -86,12 +92,14 @@ function fixUnusedVariables(content) {
   
   return content;
 }
+}
+}
 
 // Main function to process files;
 async function processFiles() {
   const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
+    'app/**/*.tsx','
+    'app/**/*.ts','
     'api/**/*.js'
   ];
   
@@ -99,6 +107,8 @@ async function processFiles() {
   let errorCount = 0;
   
   for (const pattern of patterns) {
+}
+}
     const files = await glob(pattern, { cwd: process.cwd() });
     
     for (const file of files) {
@@ -130,4 +140,5 @@ async function processFiles() {
 }
 
 // Run the script;
-processFiles().catch(console.error);
+processFiles().catch(console.error);*/
+*/

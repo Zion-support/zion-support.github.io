@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
+import fs from "fs";
+import path from "path";
+import { execSync } from "child_process";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,6 +12,8 @@ function fixFile(filePath) {
     
     // Check if file has merge conflict markers;
     if (!content.includes('') && !content.includes('      return false; // No conflicts to fix;
+}
+}
     }
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
@@ -25,11 +27,11 @@ function fixFile(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.trim().startsWith('')) {
+      if (line.trim().startsWith('')) {'
         inConflict = true;
         conflictDepth++;
         continue; // Skip the conflict marker;
-      } else if (line.trim().startsWith('')) {
+      } else if (line.trim().startsWith('')) {'
         continue; // Skip the separator;
       } else if (line.trim().startsWith('        inConflict = false;
         conflictDepth--;
@@ -58,7 +60,7 @@ function fixFile(filePath) {
     let modified = false;
 
     // Remove merge conflict markers;
-    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
+    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {'
       // Keep the HEAD version (first part before )
       content = content.replace(/\n([\s\S]*?)\n([\s\S]*?)\n>>>>>>>.*?\n/g, '$1');
       modified = true;
@@ -66,12 +68,12 @@ function fixFile(filePath) {
 
     // Fix common syntax errors;
     // Remove extra quotes and semicolons;
-    content = content.replace(/import\s+.*?from\s+["'][^"']*["'];";/g, (match) => {
+    content = content.replace(/import\s+.*?from\s+["'][^"']*["'];";/g, (match) => {"
       return match.replace(/";$/, ';');
     });
 
     // Fix JSX syntax errors;
-    content = content.replace(/return\s*\(\s*"([\s\S]*?)"\s*\)/g, (match, jsxContent) => {
+    content = content.replace(/return\s*\(\s*"([\s\S]*?)"\s*\)/g, (match, jsxContent) => {"
       return `return (\n${jsxContent}\n)`;
     });
 
@@ -83,7 +85,7 @@ function fixFile(filePath) {
     content = content.replace(/([^\\])"([^"]*?)\n([^"]*?)"/g, '$1"$2$3"');
 
     // Remove extra semicolons;
-    content = content.replace(/;;+/g, ';');
+    content = content.replace(/;+/g, ';');
     content = content.replace(/;\s*$/gm, ';');
 
     // Fix JSX structure;
@@ -93,11 +95,11 @@ function fixFile(filePath) {
     content = content.replace(/^\s*"\s*$/gm, '');
 
     // Fix function declarations;
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{\s*return\s*\(\s*"([\s\S]*?)"\s*\)\s*};/g, (match, funcName, jsxContent) => {
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{\s*return\s*\(\s*"([\s\S]*?)"\s*\)\s*};/g, (match, funcName, jsxContent) => {"
       return `const ${funcName} = () => {\n  return (\n${jsxContent}\n  );\n};`;
     });
 
-    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {
+    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {'
       fs.writeFileSync(filePath, content);
       console.log(`Fixed: ${filePath}`);
       return true;
@@ -119,9 +121,11 @@ function findFilesWithConflicts(dir) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
         traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+}
+}
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {'
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('') || content.includes('            files.push(fullPath);
@@ -158,7 +162,7 @@ for (const file of conflictedFiles) {
   }
 }
 
-console.log(`\n📊 Summary: '`);',
+console.log(`\n📊 Summary: '`);','
 console.log(`✅ Fixed: ${fixedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 
@@ -176,9 +180,11 @@ function fixDirectory(dirPath) {
     const fullPath = path.join(dirPath, item);
     const stat = fs.statSync(fullPath);
 
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
       fixedCount += fixDirectory(fullPath);
-    } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {
+}
+}
+    } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js'))) {'
       if (fixFile(fullPath)) {
         fixedCount++;
       }

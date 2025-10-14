@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from "fs";
 
 const blogFiles = [;
   'app/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx',;
@@ -12,10 +12,12 @@ function fixBlogHelmet(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove react-helmet-async import;
+}
+}
     content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];\s*\n?/g, '');
     
     // Remove Helmet wrapper;
-    content = content.replace(/<div></div>\s*<Helmet></Helmet>[\s\S]*?<\/Helmet>\s*/g, '');
+    content = content.replace(/<div />\s*<Helmet />[\s\S]*?<\/Helmet>\s*/g, '');
     
     // Remove closing fragment;
     content = content.replace(/\s*<////\/>\s*$/gm, '');

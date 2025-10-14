@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import { glob } from 'glob';
+import fs from "fs";
+import { glob } from "glob";
 
 async function fixJSXFile(filePath) {
   try {
@@ -12,12 +12,14 @@ async function fixJSXFile(filePath) {
     const fixes = [
       // Fix unclosed Helmet tags;
       {
-        pattern: /<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/>\s*$/gm,
+        pattern: /<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/>\s*$/gm,"
         replacement: '<Helmet>\n        <title>$1</title>\n        <meta name="description" content="$2" />\n      </Helmet>'
+}
+}
       },
       // Fix unclosed JSX fragments;
       {
-        pattern: /<>\s*<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/>\s*<\/Helmet>\s*$/gm,
+        pattern: /<>\s*<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/>\s*<\/Helmet>\s*$/gm,"
         replacement: '<>\n      <Helmet>\n        <title>$1</title>\n        <meta name="description" content="$2" />\n      </Helmet>'
       },
       // Fix malformed JSX structure;
@@ -49,8 +51,8 @@ async function fixJSXFile(filePath) {
 
 async function main() {
   const patterns = [
-    'app/**/*.tsx',
-    'src/**/*.tsx',
+    'app/**/*.tsx','
+    'src/**/*.tsx','
     '*.tsx'
   ];
   
@@ -59,7 +61,9 @@ async function main() {
   for (const pattern of patterns) {
     const files = await glob(pattern, { 
       cwd: process.cwd(),
-      ignore: ['node_modules/**']
+      ignore: ['node_modules/**']'
+}
+}
     });
     for (const file of files) {
       if (await fixJSXFile(file)) {
@@ -70,5 +74,5 @@ async function main() {
   
   console.log(`\nTotal JSX files fixed: ${totalFixed}`);
 }
-
-main().catch(console.error);
+*/
+main().catch(console.error);*/

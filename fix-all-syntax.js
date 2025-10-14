@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import { execSync } from 'child_process';
+import fs from "fs";
+import { execSync } from "child_process";
 
 // Get all TypeScript/JavaScript files that might have syntax errors;
-const filesToCheck = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v app-broken | grep -v app-disabled | grep -v temp-broken | grep -v src', { encoding: 'utf8' })
+const filesToCheck = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v app-broken | grep -v app-disabled | grep -v temp-broken | grep -v src', { encoding: 'utf8' })'
   .trim()
-  .split('\n')
+  .split('\n')'
   .filter(file => file.trim());
 
 console.log(`Checking ${filesToCheck.length} files for all syntax errors`);
@@ -22,12 +22,12 @@ filesToCheck.forEach(filePath => {
     // Fix common syntax errors;
     ;
     // 1. Fix malformed imports;
-    content = content.replace(/import React from 'react';/g, "import React from 'react';");
-    content = content.replace(/import React from 'react';-dom/g, "import React from 'react';\nimport ReactDOM from 'react-dom';");
+    content = content.replace(/import React from "react";);
+    content = content.replace(/import React from "react-dom";);
     
     // 2. Fix duplicate imports;
-    content = content.replace(/} from '@heroicons\/react\/24\/outline';\s*ArrowRightIcon\s*} from '@heroicons\/react\/24\/outline';/g, "} from '@heroicons/react/24/outline';");
-    content = content.replace(/} from '@heroicons\/react\/24\/outline';\s*import {[^}]+} from 'lucide-react';\s*HeartIcon\s*} from '@heroicons\/react\/24\/outline';/g, "} from '@heroicons/react/24/outline';\nimport { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';");
+    content = content.replace(/} from '@heroicons\/react\/24\/outline';\s*ArrowRightIcon\s*} from '@heroicons\/react\/24\/outline';/g, "} from "@heroicons/react/24/outline";);
+    content = content.replace(/} from '@heroicons\/react\/24\/outline';\s*import {[^}]+} from "lucide-react";);
     
     // 3. Fix malformed interfaces;
     content = content.replace(/interface (\w+)Props \{\s*children: Node\}/g, 'interface $1Props {\n  children: React.ReactNode;\n}');
@@ -60,9 +60,9 @@ filesToCheck.forEach(filePath => {
     content = content.replace(/\}\s*\{/g, '},\n    {');
     
     // 12. Fix malformed string literals;
-    content = content.replace(/import { createRoot } from 'react-dom\/client;/g, "import { createRoot } from 'react-dom/client';");
-    content = content.replace(/import App from '\.\/App;/g, "import App from './App';");
-    content = content.replace(/import '\.\/index\.css;/g, "import './index.css';");
+    content = content.replace(/import { createRoot } from "react-dom/client";);
+    content = content.replace(/import App from "./App";);
+    content = content.replace(/import '\.\/index\.css;/g, "import './index.css';);
     
     // 13. Fix malformed comments;
     content = content.replace(/\/\/ Ensure scheduler is properly initialized;/g, '// Ensure scheduler is properly initialized');

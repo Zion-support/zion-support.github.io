@@ -1,15 +1,14 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
-import SEO from '../components/SEO;
+import React from "react;
+import { Link } from "react-router-dom;
+import SEO from "../components/SEO;
 import { UserGroupIcon,
   AcademicCapIcon,
   BriefcaseIcon,
   StarIcon,
   ArrowRightIcon,
   PhoneIcon,
-  EnvelopeIcon,'
-  MapPinIcon''
-} from '@heroicons/react/24/outline;
+  EnvelopeIcon,";
+} from "@heroicons/react/24/outline;";
 export default function TeamPage() {
   const team = [
     {'
@@ -19,6 +18,8 @@ export default function TeamPage() {
       image: '/images/.jpg','
       linkedin: 'https://linkedin.com/','
       twitter: 'https://twitter.com/kleber_santos;
+}
+}
     },
     {'
       name: 'Sarah Johnson','
@@ -83,20 +84,20 @@ export default function TeamPage() {
       description: 'We maintain the highest ethical standards in all our business practices.;
     }
   ]'
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from "react-helmet-async;
 const TeamPage: React.FC = () => {
   return (
     <></>
-      <Helmet></Helmet>
+      <Helmet />
         <title>TeamPage - Zion Tech Group</title>
-        <meta name="description" content="TeamPage - Zion Tech Group" /></meta>
+        <meta name="description" content="TeamPage - Zion Tech Group" /></meta>"
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold mb-4">TeamPage</h1>
-          <p className="text-gray-300">This page is under construction.</p>
+      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold mb-4">TeamPage</h1>"
+          <p className="text-gray-300">This page is under construction.</p>"
         </div>
       </div>
     </>
   )}
-'
+";

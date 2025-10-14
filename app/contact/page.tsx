@@ -1,14 +1,10 @@
-import React, { useState } from 'react''
-import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from 'lucide-react;
+import React, { useState } from "react";
+import { Helmet , Circle,  Send,  Phone,  Mail,  MapPin,  Clock  } from "lucide-react;
 
 export default function ContactPage()    {
-  const [formData, setFormData] = useState({'
-    name: '','
-    email: '','
-    company: '','
-    phone: '','
-    subject: '','
-    message: ''
+  const [formData, setFormData] = useState({";
+}
+}
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -42,20 +38,20 @@ export default function ContactPage()    {
       icon: 'Email'''
       title: 'Email'''
       value: 'contact@ziontechgroup.com'''
-      description: 'We respond within 24 hours'}
+      description: 'We respond within 24 hours'}'
     },'
     {''
       icon: 'Location'''
       title: 'Address'''
       value: '123 Tech Street, Suite 100'''
-      description: 'San Francisco, CA 94105'}
+      description: 'San Francisco, CA 94105'}'
     },'
     {''
-      icon: 'Clock',
+      icon: 'Clock','
 '
       description: '9:00 AM - 6:00 PM EST'
 '
-      description: '9:00 AM - 6:00 PM EST'}
+      description: '9:00 AM - 6:00 PM EST'}'
 
     }
   ]
@@ -76,15 +72,15 @@ export default function ContactPage()    {
         keywords="page, business solutions, technology services, professional services"
       /></EnhancedSEO>
       {/* Hero Section */}
-      <section className="relative py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>
+      <section className="relative py-20 px-4"></section>"
+        <div className="max-w-7xl mx-auto text-center"></div>"
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6"></h1>"
             Contact
-            <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></span>
+            <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"></span>"
               Us
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>"
             Ready to transform your business with AI and IT solutions? 
             Get in touch with our experts today.
           </p>
@@ -92,22 +88,22 @@ export default function ContactPage()    {
 </section>
 
       {/* Contact Info */}
-      <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <h2 className="text-4xl font-bold text-white text-center mb-16"></h2>
+      <section className="py-20 px-4"></section>"
+        <div className="max-w-7xl mx-auto"></div>"
+          <h2 className="text-4xl font-bold text-white text-center mb-16"></h2>"
             Get in Touch
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"></div>"
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center"></div>
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4"></div>
-                    <Icon className="w-6 h-6 text-white" /></Icon>
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center"></div>"
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4"></div>"
+                    <Icon className="w-6 h-6 text-white" /></Icon>"
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
-                  <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
-                  <p className="text-gray-400 text-sm">{info.description}</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>"
+                  <p className="text-cyan-400 font-medium mb-1">{info.value}</p>"
+                  <p className="text-gray-400 text-sm">{info.description}</p>"
                 </div>
               )})}
           </div>
@@ -115,20 +111,20 @@ export default function ContactPage()    {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20 px-4 bg-slate-800/30"></section>
-        <div className="max-w-4xl mx-auto"></div>
-          <h2 className="text-4xl font-bold text-white text-center mb-16"></h2>
+      <section className="py-20 px-4 bg-slate-800/30"></section>"
+        <div className="max-w-4xl mx-auto"></div>"
+          <h2 className="text-4xl font-bold text-white text-center mb-16"></h2>"
             Send us a Message
           </h2>
           
           {isSubmitted ? (
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center"></div>
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6"></div>
-                <Circle className="w-8 h-8 text-white" /></Circle>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center"></div>"
+              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6"></div>"
+                <Circle className="w-8 h-8 text-white" /></Circle>"
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>"
               <p className="text-gray-300 mb-6"></p>'
-                Thank you for contacting us. We'll get back to you within 24 hours.
+                Thank you for contacting us. We'll get back to you within 24 hours.'
               </p>
               <button
                 onClick={() => {
@@ -144,7 +140,7 @@ export default function ContactPage()    {
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></ArrowRight>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></ArrowRight>"
               </Link>
               <Link
                 to="/demo"
@@ -157,31 +153,31 @@ export default function ContactPage()    {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
+        <section className="py-20 px-4 sm:px-6 lg:px-8"></section>"
+          <div className="max-w-7xl mx-auto"></div>"
+            <div className="text-center mb-16"></div>"
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>"
                 Why Choose Our Page Services?
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto"></p>"
                 We deliver exceptional results with cutting-edge technology and expert knowledge.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>"
               {features.map((feature, index) => (
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+                <div key={index} className="text-center"></div>"
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"></div>"
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
+                  <p className="text-gray-300">{feature.description}</p>"
                 </div>
               ))}
             </div>
 
-              <div className="mb-6"></div>
-                <label htmlFor="subject" className="block text-white font-medium mb-2"></label>
+              <div className="mb-6"></div>"
+                <label htmlFor="subject" className="block text-white font-medium mb-2"></label>"
                   Subject *
                 </label>
                 <select
@@ -192,7 +188,7 @@ export default function ContactPage()    {
                   required
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 ></select>
-                  <option value="">Select a subject</option>
+                  <option value="">Select a subject</option>"
                   {subjects.map((subject, index) => (
                     <option key={index} value={subject}></option>
                       {subject}
@@ -201,8 +197,8 @@ export default function ContactPage()    {
                 </select>
               </div>
 
-              <div className="mb-8"></div>
-                <label htmlFor="message" className="block text-white font-medium mb-2"></label>
+              <div className="mb-8"></div>"
+                <label htmlFor="message" className="block text-white font-medium mb-2"></label>"
                   Message *
                 </label>
                 <textarea
@@ -217,7 +213,7 @@ export default function ContactPage()    {
                 /></textarea>
               </div>
 
-              <div className="text-center"></div>
+              <div className="text-center"></div>"
                 <button
                   type="submit"
                   disabled={isSubmitting;
@@ -225,13 +221,13 @@ export default function ContactPage()    {
                 ></button>
                   {isSubmitting ? (
                     <></>
-                      <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                      <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>"
                       Sending...
                     </>
                   ) : (
                     <></>
                       Send Message
-                      <Send className="w-5 h-5 ml-2 inline" /></Send>
+                      <Send className="w-5 h-5 ml-2 inline" /></Send>"
                     </>
                   )}
                 </button>

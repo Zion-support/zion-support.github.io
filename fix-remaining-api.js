@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
-import fs from "fs";";
-import { glob     } from "glob";";
+import fs from "fs";
+import { glob     } from "glob";
 // Function to fix remaining API file issues;
 function fixApiFile(content)   {};
   let fixed = content;
@@ -50,4 +50,5 @@ const files = await glob(pattern, { cwd: process.cwd() });
 if (import.meta.url === `file://${process.argv[1]}`) ````;
   main();
 }
-export { fixApiFile, processFile }"
+export { fixApiFile, processFile }"*/
+*/

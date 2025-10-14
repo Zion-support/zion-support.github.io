@@ -1,16 +1,15 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
+import React from "react";
 'use client;
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-white"></div>"
+      <Helmet />
         <title>EnhancedPerformanceOptimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional enhancedperformanceoptimizer services by Zion Tech Group." /></meta>
+        <meta name="description" content="Professional enhancedperformanceoptimizer services by Zion Tech Group." /></meta>"
       </Helmet>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>
+      <div className="container mx-auto px-4 py-16"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>"
             EnhancedPerformanceOptimizer;
           </h1>;
           <p className="text-xl text-gray-600 mb-8">;
@@ -50,6 +49,8 @@ export default function Page() {
         </div>
       </div>
     </div>
+}
+}
   );}'
 }'
 '

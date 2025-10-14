@@ -1,8 +1,8 @@
 #!/usr/bin/env node;
 ;
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+import fs from "fs";
+import path from "path";
+import { glob } from "glob";
 
 // Function to add missing icon imports;
 function addMissingIconImports(content, filePath) {
@@ -10,12 +10,14 @@ function addMissingIconImports(content, filePath) {
   
   // Check for common icons;
   const iconPatterns = [
-    'Brain', 'Shield', 'Zap', 'Users', 'Target', 'BarChart3', 'ArrowRight', 
-    'CheckCircle', 'Globe', 'TrendingUp', 'FileText', 'Database', 'PieChart',
+    'Brain', 'Shield', 'Zap', 'Users', 'Target', 'BarChart3', 'ArrowRight', '
+    'CheckCircle', 'Globe', 'TrendingUp', 'FileText', 'Database', 'PieChart','
     'Bell', 'Clock', 'Play', 'Star', 'Mail', 'Phone', 'MapPin', 'Cpu'
   ];
   
   iconPatterns.forEach(icon => {
+}
+}
     if (content.includes(icon) && !content.includes(`import { ${icon}`)) {
       icons.add(icon);
     }
@@ -23,15 +25,15 @@ function addMissingIconImports(content, filePath) {
   
   if (icons.size > 0) {
     // Check if lucide-react is already imported;
-    if (content.includes('from "lucide-react"') || content.includes("from 'lucide-react'")) {
+    if (content.includes('from "lucide-react";) || content.includes("from "lucide-react";)) {"
       // Add to existing import;
       const existingImport = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"]/);
       if (existingImport) {
         const existingIcons = existingImport[1].split(',').map(i => i.trim());
         const allIcons = [...new Set([...existingIcons, ...icons])];
         content = content.replace(
-          /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"]/,
-          `import { ${allIcons.join(', ')} } from 'lucide-react'`
+          /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"]/,"
+          `import { ${allIcons.join(', ')} } from "lucide-react";
         );
       }
     } else {
@@ -47,8 +49,10 @@ function addMissingIconImports(content, filePath) {
 // Function to fix unescaped entities;
 function fixUnescapedEntities(content) {
   // Fix single quotes in JSX text content;
-  content = content.replace(/(?<=>)[^<]*'[^<]*(?=<)/g, (match) => {
+  content = content.replace(/(?<=>)[^<]*'[^<]*(?=<)/g, (match) => {'
     return match.replace(/'/g, '&apos;');
+}
+}
   });
   
   return content;
@@ -58,6 +62,8 @@ function fixUnescapedEntities(content) {
 function fixParsingErrors(content) {
   // Fix common parsing issues;
   content = content.replace(/,\s*\)/g, ')');
+}
+}
   content = content.replace(/,\s*}/g, '}');
   
   // Fix numeric literal issues;
@@ -73,6 +79,8 @@ function fixMergeConflictMarkers(content) {
   content = content.replace(/  
   return content;
 }
+}
+}
 
 // Function to fix unused variables;
 function fixUnusedVariables(content) {
@@ -86,6 +94,8 @@ function fixUnusedVariables(content) {
   
   return content;
 }
+}
+}
 
 // Function to fix TypeScript any types;
 function fixTypeScriptAny(content) {
@@ -94,6 +104,8 @@ function fixTypeScriptAny(content) {
   content = content.replace(/as\s+any\b/g, 'as unknown');
   
   return content;
+}
+}
 }
 
 // Function to remove unused imports;
@@ -106,8 +118,10 @@ function removeUnusedImports(content) {
     const line = lines[i];
     
     // Check if this is an import line;
-    if (line.includes('import') && line.includes('from')) {
+    if (line.includes('import') && line.includes('from')) {'
       // Check if any imported items are actually used;
+}
+}
       const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/);
       if (importMatch) {
         const importedItems = importMatch[1].split(',').map(item => item.trim());
@@ -124,7 +138,7 @@ function removeUnusedImports(content) {
           // Update the import to only include used items;
           const newImport = line.replace(
             /{\s*[^}]+\s*}/,
-            `{ ${usedItems.join(', ')} }`
+            `{ ${usedItems.join(', ')} }`'
           );
           newLines.push(newImport);
           continue;
@@ -141,8 +155,8 @@ function removeUnusedImports(content) {
 // Main function to process files;
 async function processFiles() {
   const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
+    'app/**/*.tsx','
+    'app/**/*.ts','
     'api/**/*.js'
   ];
   
@@ -150,6 +164,8 @@ async function processFiles() {
   let errorCount = 0;
   
   for (const pattern of patterns) {
+}
+}
     const files = await glob(pattern, { cwd: process.cwd() });
     
     for (const file of files) {
@@ -174,9 +190,9 @@ async function processFiles() {
         console.error(`Error processing ${file}:`, error.message);
         errorCount++;
 #!/usr/bin/env node;
-import fs from "fs";";
-import path from "path";";
-import { execSync    } from "child_process";";
+import fs from "fs";
+import path from "path";
+import { execSync    } from "child_process";
 console.log('🔧 Fixing remaining TypeScript and linting issues...');';
 // Function to fix duplicate default exports and other issues;
 function fixFileIssues(filePath) {
@@ -187,6 +203,8 @@ function fixFileIssues(filePath) {
     // Check if file has issues;
     if (!content.includes('export default') || content.split('export default').length <= 2) {'';
       return false; // No issues to fix;
+}
+}
     };
     
     console.log(`📝 Fixing issues in: ${filePath}`);```;
@@ -254,6 +272,8 @@ function fixUnusedImports(filePath) {
     // Remove unused imports from specific files;
     if (filePath.includes('App-minimal.tsx')) {'';
       // Remove unused 'App' import'';
+}
+}
       content = content.replace(/import\s+{\s*App\s*}\s+from\s+['"][^'"]+['"];?\s*\n/, '');"'";
       modified = true;
     }
@@ -289,6 +309,8 @@ const fullPath = path.join(currentDir, item);
       
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'';
         scanDirectory(fullPath);
+}
+}
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {'';
         try {;
 const content = fs.readFileSync(fullPath, 'utf8');';
@@ -344,21 +366,22 @@ const filesToFixImports = [;
   }
   
   // Run type check to verify fixes;
-  console.log('🔍 Running type check verification...');'
+  console.log('🔍 Running type check verification...');
   try {
-    execSync('npm run type-check', { stdio: 'inherit' });'
-    console.log('✅ Type check passed! All issues resolved.');'
+    execSync('npm run type-check', { stdio: 'inherit' });
+    console.log('✅ Type check passed! All issues resolved.');
   } catch (error) {
-    console.log('⚠️  Type check still has issues. Running lint check...');'
+    console.log('⚠️  Type check still has issues. Running lint check...');
     try {
-      execSync('npm run lint', { stdio: 'inherit' });'
-      console.log('✅ Lint check passed!');'
+      execSync('npm run lint', { stdio: 'inherit' });
+      console.log('✅ Lint check passed!');
     } catch (lintError) {
-      console.log('⚠️  Some linting issues remain, but build should work.');'
+      console.log('⚠️  Some linting issues remain, but build should work.');
     }
   }
   
 } catch (error) {
-  console.error('💥 Fatal error during issue resolution: ', error.message);',
+  console.error('💥 Fatal error during issue resolution: ', error.message);','
   process.exit(1);
-}"
+}"*/
+*/

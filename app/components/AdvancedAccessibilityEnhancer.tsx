@@ -1,13 +1,5 @@
-import React from 'react''
-import { Helmet } from 'react-helmet-async''
-'use client''
-import React, { useEffect, useState } from 'react''
-import { Eye } from 'lucide-react''
-import { Volume2 } from 'lucide-react''
-import { MousePointer } from 'lucide-react''
-import { Keyboard } from 'lucide-react''
-import { Contrast } from 'lucide-react''
-import { ZoomIn } from 'lucide-react;
+import React from "react";
+import { ZoomIn } from "lucide-react";
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -30,7 +22,7 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Load saved settings from localStorage'
+    // Load saved settings from localStorage";
     const savedSettings = localStorage.getItem('accessibilitySettings');
     if (savedSettings) {
       setSettings(JSON.parse(savedSettings));
@@ -82,37 +74,37 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
 
   const accessibilityFeatures = [
     {'
-      key: 'highContrast' as keyof AccessibilitySettings,
+      key: 'highContrast' as keyof AccessibilitySettings,'
       icon: Contrast,'
       title: 'High Contrast','
       description: 'Increase color contrast for better visibility'
     },
     {'
-      key: 'largeText' as keyof AccessibilitySettings,
+      key: 'largeText' as keyof AccessibilitySettings,'
       icon: ZoomIn,'
       title: 'Large Text','
       description: 'Increase text size for better readability'
     },
     {'
-      key: 'screenReader' as keyof AccessibilitySettings,
+      key: 'screenReader' as keyof AccessibilitySettings,'
       icon: Volume2,'
       title: 'Screen Reader','
       description: 'Optimize content for screen readers'
     },
     {'
-      key: 'keyboardNavigation' as keyof AccessibilitySettings,
+      key: 'keyboardNavigation' as keyof AccessibilitySettings,'
       icon: Keyboard,'
       title: 'Keyboard Navigation','
       description: 'Enable full keyboard navigation support'
     },
     {'
-      key: 'reducedMotion' as keyof AccessibilitySettings,
+      key: 'reducedMotion' as keyof AccessibilitySettings,'
       icon: Eye,'
       title: 'Reduced Motion','
       description: 'Reduce animations and motion effects'
     },
     {'
-      key: 'focusIndicator' as keyof AccessibilitySettings,
+      key: 'focusIndicator' as keyof AccessibilitySettings,'
       icon: MousePointer,'
       title: 'Focus Indicator','
       description: 'Enhanced focus indicators for navigation'
@@ -126,27 +118,27 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
         className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
         aria-label="Open accessibility settings"
       >
-        <Eye className="w-6 h-6" /></Eye>
+        <Eye className="w-6 h-6" /></Eye>"
       </button>
     );
   }
 
   return (
-    <div className="min-h-screen bg-white"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-white"></div>"
+      <Helmet />
         <title>AdvancedAccessibilityEnhancer - Zion Tech Group</title>
-        <meta name="description" content="Professional advancedaccessibilityenhancer services by Zion Tech Group." /></meta>
+        <meta name="description" content="Professional advancedaccessibilityenhancer services by Zion Tech Group." /></meta>"
       </Helmet>
-      <div className="container mx-auto px-4 py-16"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>
+      <div className="container mx-auto px-4 py-16"></div>"
+        <div className="text-center"></div>"
+          <h1 className="text-4xl font-bold text-gray-900 mb-8"></h1>"
             AdvancedAccessibilityEnhancer;
           </h1>
-          <p className="text-xl text-gray-600 mb-8"></p>
+          <p className="text-xl text-gray-600 mb-8"></p>"
             Professional advancedaccessibilityenhancer solutions tailored to your business needs.</p>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
-              <h3 className="text-lg font-semibold text-blue-900 mb-2"></h3>
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mt-12"></div>"
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>"
+              <h3 className="text-lg font-semibold text-blue-900 mb-2"></h3>"
                 Expert Solutions;
               </h3>;
               <p className="text-blue-700">;

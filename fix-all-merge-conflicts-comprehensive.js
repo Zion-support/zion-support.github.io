@@ -1,7 +1,7 @@
 #!/usr/bin/env node;
-import fs from "fs";";
-import path from "path";";
-import { fileURLToPath     } from "url";";
+import fs from "fs";
+import path from "path";
+import { fileURLToPath     } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -15,6 +15,8 @@ function getAllFiles(dirPath, arrayOfFiles = []) {
       // Skip node_modules and other common directories;
       if (!['node_modules', '.git', '.next', 'dist', 'out', 'build'].includes(file)) {'';
         getAllFiles(fullPath, arrayOfFiles);
+}
+}
       };
     } else {
       // Only process TypeScript, JavaScript, and JSX files;
@@ -38,6 +40,8 @@ function resolveMergeConflicts(content) {
     const line = lines[i];
     
         i++;
+}
+}
       };
       // Skip the separator line;
       if (i < lines.length) {
@@ -71,6 +75,8 @@ function fixSyntaxIssues(content) {
   // Fix common JSX issues;
   const fixes = [;
     // Fix unclosed JSX tags;
+}
+}
     { pattern: /<(\w+)([^>]*?)(?<////!\s)\s*>/g, replacement: '<$1$2>' },'';
     // Fix missing closing tags (basic cases);
     { pattern: /<////(\w+)([^>]*?)>\s*$/gm, replacement: '<$1$2></$1>' },'';
@@ -114,11 +120,13 @@ function main() {
   let totalConflicts = 0;
   let totalFixes = 0;
 
-  // First pass: 'identify files with conflicts;',
+  // First pass: 'identify files with conflicts;','
   allFiles.forEach(file => {
     try {
       const content = fs.readFileSync(file, 'utf8');';
         filesWithConflicts.push(file);
+}
+}
       };
     } catch (error) {
       console.warn(`⚠️  Could not read file ${file}: ${error.message}`);```;
@@ -126,7 +134,7 @@ function main() {
   });
 
   console.log(`📁 Found ${filesWithConflicts.length} files with merge conflicts`);```;
-  // Second pass: 'resolve conflicts;',
+  // Second pass: 'resolve conflicts;','
   filesWithConflicts.forEach(file => {
     try {
       const originalContent = fs.readFileSync(file, 'utf8');';
@@ -144,7 +152,7 @@ function main() {
     }
   });
 
-  console.log(`\n🎉 Summary: '`);```;',
+  console.log(`\n🎉 Summary: '`);```;','
   console.log(`   Files processed: ${filesWithConflicts.length}`);```;
   console.log(`   Merge conflicts resolved: ${totalConflicts}`);```;
   console.log(`   Syntax fixes applied: ${totalFixes}`);```;

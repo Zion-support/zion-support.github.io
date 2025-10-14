@@ -1,4 +1,4 @@
-import fs from 'fs';
+import fs from "fs";
 
 const filesToFix = [;
   {
@@ -28,6 +28,8 @@ function fixImports(filePath, imports) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Find the existing lucide-react import;
+}
+}
     const importMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];/);
     
     if (importMatch) {

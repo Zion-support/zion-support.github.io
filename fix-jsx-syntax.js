@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+import fs from "fs";
+import path from "path";
+import { glob } from "glob";
 
 // Function to fix common JSX syntax errors;
 function fixJSXSyntax(content, filename) {
@@ -19,30 +19,32 @@ function fixJSXSyntax(content, filename) {
   
   // Fix semicolons after JSX elements;
   content = content.replace(/>\s*;\s*\n/g, '>\n');
-  content = content.replace(/>\s*;\s*$/gm, '>')
+  content = content.replace(/>\s*;\s*$/gm, '>')'
   
   // Fix semicolons after closing JSX tags;
-  content = content.replace(/<\/[^>]+>\s*\s*\n/g, '</$1>1284\n')
+  content = content.replace(/<\/[^>]+>\s*\s*\n/g, '</$1>1284\n')'
   content = content.replace(/<\/[^>]+>\s*\s*$/gm, '</$1>1347');
   
   // Fix component structure - ensure proper JSX return;
-  if (fixed.includes('return (') && !fixed.includes('return (')) {
+  if (fixed.includes('return (') && !fixed.includes('return (')) {'
     fixed = fixed.replace(/return \(\s*<>/g, 'return (\n    <>\n      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">');
+}
+}
   }
   
   // Fix missing container div;
-  if (fixed.includes('<div className="container mx-auto px-4 py-16"></div>') && !fixed.includes('min-h-screen')) {
+  if (fixed.includes('<div className="container mx-auto px-4 py-16"></div>') && !fixed.includes('min-h-screen')) {'
     fixed = fixed.replace(
-      /<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*<div className="container mx-auto px-4 py-16"><\/div>\s*<\/>/g,
-      `<>      <Helmet></Helmet>
+      /<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*<div className="container mx-auto px-4 py-16"><\/div>\s*<\/>/g,"
+      `<>      <Helmet />
         <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Page - Zion Tech Group" />
+        <meta name="description" content="Page - Zion Tech Group" />"
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-            <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+        <div className="container mx-auto px-4 py-16"></div>"
+          <div className="text-center"></div>"
+            <h1 className="text-4xl font-bold text-white mb-8">Page</h1>"
+            <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>"
           </div>
         </div>
       </div>
@@ -60,8 +62,10 @@ function fixPageFile(filePath) {
     const filename = path.basename(filePath);
     
     // Skip if it's already properly formatted;
-    if (content.includes('min-h-screen') && content.includes('container mx-auto')) {
+    if (content.includes('min-h-screen') && content.includes('container mx-auto')) {'
       return;
+}
+}
     }
     
     let fixed = content;
@@ -73,18 +77,18 @@ function fixPageFile(filePath) {
     const properStructure = `import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const ${pageName.replace(/\s+/g, '')}Page = () => {
+const ${pageName.replace(/\s+/g, '')}Page = () => {'
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet />
         <title>${pageName} - Zion Tech Group</title>
-        <meta name="description" content="${pageName} - Zion Tech Group" />
+        <meta name="description" content="${pageName} - Zion Tech Group" />"
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="container mx-auto px-4 py-16"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl font-bold text-white mb-8">${pageName}</h1>
-            <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+        <div className="container mx-auto px-4 py-16"></div>"
+          <div className="text-center"></div>"
+            <h1 className="text-4xl font-bold text-white mb-8">${pageName}</h1>"
+            <p className="text-gray-300 text-lg">This page is under construction. Please check back later.</p>"
           </div>
         </div>
       </div>
@@ -95,7 +99,7 @@ const ${pageName.replace(/\s+/g, '')}Page = () => {
 export default ${pageName.replace(/\s+/g, '')}Page;`;
 
     // Only replace if the file has malformed structure;
-    if (content.includes('</>') && content.includes('</>') && content.split('</>').length > 2) {
+    if (content.includes('</>') && content.includes('</>') && content.split('</>').length > 2) {'
       fs.writeFileSync(filePath, properStructure);
       console.log(`Fixed: ${filePath}`);
     }
@@ -109,6 +113,8 @@ async function main() {
   // Find all page.tsx files in the app directory;
   const pageFiles = await glob('app/**/page.tsx');
 
+}
+}
   console.log(`Found ${pageFiles.length} page files to check...`);
 
   pageFiles.forEach(fixPageFile);
