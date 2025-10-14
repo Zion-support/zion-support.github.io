@@ -1,5 +1,12 @@
 import { useContext } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
+
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
+  trackPageView: (pageName: string) => void;
+}
+
+// This will be imported from the AnalyticsProvider component
+declare const AnalyticsContext: React.Context<AnalyticsContextType | undefined>;
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
