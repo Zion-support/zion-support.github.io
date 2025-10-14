@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
-const ContentStatistics = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">ContentStatistics</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for ContentStatistics.
-      </p>
-    </div>
-  );
-};
-export default ContentStatistics;
-=======
+
 import React from 'react';
 
 const ContentStatistics: React.FC = () => {
@@ -64,4 +51,3 @@ const ContentStatistics: React.FC = () => {
 };
 
 export default ContentStatistics;
->>>>>>> origin/cursor/resolve-all-prs-and-merge

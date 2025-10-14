@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
 
-const SEO = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">SEO</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for SEO.
-      </p>
-    </div>
-  );
-};
-
-export default SEO;
-=======
 'use client';
 
 /**
@@ -22,6 +7,7 @@ export default SEO;
  */
 
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export interface SEOProps {
   title?: string;
@@ -121,8 +107,31 @@ export const SEO: React.FC<SEOProps> = ({
   };
 
   return (
-    );
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords.join(', ')} />}
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Open Graph tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      {image && <meta property="og:image" content={image} />}
+      {url && <meta property="og:url" content={url} />}
+      
+      {/* Twitter Card tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      {image && <meta name="twitter:image" content={image} />}
+      
+      {/* Structured data */}
+      <script type="application/ld+json">
+        {JSON.stringify(generateStructuredData())}
+      </script>
+    </Helmet>
+  );
 };
 
 export default SEO;
->>>>>>> origin/cursor/resolve-all-prs-and-merge

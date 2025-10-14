@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
-const ContentCarousel = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">ContentCarousel</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for ContentCarousel.
-      </p>
-    </div>
-  );
-};
-export default ContentCarousel;
-=======
+
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -117,4 +104,3 @@ const ContentCarousel: React.FC = () => {
 };
 
 export default ContentCarousel;
->>>>>>> origin/cursor/resolve-all-prs-and-merge

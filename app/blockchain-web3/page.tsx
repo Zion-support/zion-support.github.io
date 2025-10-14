@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
 
-const Page = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for Page.
-      </p>
-    </div>
-  );
-};
-
-export default Page;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Zap, Database, Brain, Link, Shield, Globe, Star, Coins } from 'lucide-react';;
@@ -388,4 +373,3 @@ const BlockchainWeb3Page: React.FC = () => {
 };
 
 export default BlockchainWeb3Page;
->>>>>>> origin/cursor/resolve-all-prs-and-merge

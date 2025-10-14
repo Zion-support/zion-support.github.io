@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
 
-const Page = () => {
-  return (
-    <div className="p-4">
-      <h2 className="text-2xl font-bold text-white mb-4">Page</h2>
-      <p className="text-gray-300">
-        This is a placeholder component for Page.
-      </p>
-    </div>
-  );
-};
-
-export default Page;
-=======
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
@@ -217,7 +202,15 @@ export default function BlogPage() {
               {featuredPosts.map((post) => (
                 <ContentPreviewCard
                   key={post.id}
-                  {...post}
+                  id={post.id}
+                  title={post.title}
+                  excerpt={post.description}
+                  author="Zion Tech Group"
+                  publishedAt={post.date}
+                  readTime={post.readTime}
+                  category={post.category}
+                  imageUrl={post.image}
+                  slug={post.path.replace('/blog/', '')}
                 />
               ))}
             </div>
@@ -233,7 +226,15 @@ export default function BlogPage() {
             {filteredPosts.map((post) => (
               <ContentPreviewCard
                 key={post.id}
-                {...post}
+                id={post.id}
+                title={post.title}
+                excerpt={post.description}
+                author="Zion Tech Group"
+                publishedAt={post.date}
+                readTime={post.readTime}
+                category={post.category}
+                imageUrl={post.image}
+                slug={post.path.replace('/blog/', '')}
               />
             ))}
           </div>
@@ -261,4 +262,3 @@ export default function BlogPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/resolve-all-prs-and-merge
