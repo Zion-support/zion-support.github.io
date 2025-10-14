@@ -1,69 +1,50 @@
-          This page is under development.</p></div></div>
-  )
-        </p>
-      </div>
-    );
-  }
-  if (variant === 'cyber') {
-    return (
-      <div className="flex flex-col items-center justify-center p-8 min-h-[200px]">
-        {/* Cyber-style loading animation */}
-        <div className="relative">
-          {/* Outer ring */}
-          <div className={`${sizeClasses[size]} border-2 border-transparent border-t-cyan-400 border-r-purple-500 rounded-full animate-spin`}></div>``````````
-          {/* Inner ring */}```````````
-          <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm'],} border-2 border-transparent border-b-pink-500 border-l-green-400 rounded-full animate-spin`} style={{ animationDirection: 'reverse', animationDuration: '1.5s',}}></div>``````
-          {/* Center dot */}```````
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>````````
-        </div>`````````
-        {/* Loading text with cyber effect */}``````````
-        <div className="mt-6 text-center">`
-          <p>
-            {message}
-          </p>
-          {/* Animated dots */}
-          <div className="flex justify-center mt-2 space-x-1">
-            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style={{ animationDelay: '0ms',}}></div>`
-            <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '150ms',}}></div>``
-            <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: '300ms',}}></div>```
-          </div>````
-        </div>`````
-        {/* Progress bar */}``````
-        {showProgress && (```````
-          <div className="w-64 mt-6">````````
-            <div className="bg-gray-800 rounded-full h-2 overflow-hidden">`````````
-              <div ;``````````
-                className="h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-full transition-all duration-500 ease-out relative"```````````
-                style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 animate-pulse"></div>
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>EnhancedLoadingSpinner - Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedLoadingSpinner solutions and services" />
+        <meta name="keywords" content="enhancedloadingspinner" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">EnhancedLoadingSpinner</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional EnhancedLoadingSpinner solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
               </div>
             </div>
-            <div className="text-center mt-2 text-sm text-gray-400">`
-              {Math.round(progress)}% Complete``
-            </div>```
-          </div>````
-        )}`````
-      </div>``````
-    );```````
-  }````````
-  // Default variant;`````````
-  return (``````````
-    <div className="flex flex-col items-center justify-center p-8">```````````
-      <div className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin`}></div>``````````
-      {message && (````
-        <p>````
-          {message}`````
-        </p>``````
-      )}```````
-      {showProgress && (````````
-        <div className="w-48 bg-gray-200 rounded-full h-2 mt-4">`````````
-          <div ;``````````
-            className="bg-blue-600 h-2 rounded-full transition-all duration-300 ease-out"```````````
-            style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}`````
-          ></div>``````
-        </div>```````
-      )}````````
-    </div>`````````
-  )}``````````
-```````````
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

@@ -1,147 +1,50 @@
-      <Helmet></Helmet>
-        <title>Careers | Zion Tech Group</title>
-        <meta name="description" content="Join our team of AI and IT experts. Explore career opportunities at Zion Tech Group and be part of the future of technology." />
-        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, technology careers" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-400">Team</span>
-          </h1>
-          <p>
-            Be part of a team that"s shaping the future of AI and IT solutions.
-            Work on cutting-edge projects and make a real impact.;
-          </p>
-        </div>
-            {benefits.map((benefit, _index) => {
-              const Icon = benefit.icon;
-              return (
-  <>
-    <div key={_index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
-                  <div className="p-3 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg w-fit mx-auto mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                  <p>{benefit.description}</p>
-                </div>
-  </>
-);
-            }
-          </div>
-        </div>
-                  </span>
-                </div>
-                <div className="flex items-center text-gray-400 mb-3">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  <span className="text-sm">{position.location}</span>
-                  <span className="mx-2">•</span>
-                  <span className="text-sm">{position.department}</span>
-                </div>
-                <p>{position.description}</p>
-                <button className="w-full bg-gradient-to-r from-rose-500 to-pink-500 text-white py-2 px-4 rounded-lg font-medium hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
-                  Apply Now;
-                </button>
-              </div>
-            ))
-          </div>
-        </div>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Collaborative</h3>
-              <p>We believe in the power of teamwork and open communication to achieve great things.</p>
-            </div>
-            <div className="text-center">
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Innovative</h3>
-              <p>We encourage creative thinking and embrace new technologies to solve complex problems.</p>
-            </div>
-            <div className="text-center">
-              <div className="p-4 bg-gradient-to-r from-rose-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Impact-Driven</h3>
-              <p>We focus on delivering real value to our clients and making a positive impact.</p>
-            </div>
-          </div>
-        </div>
-            </p>
-            <button className="bg-gradient-to-r from-rose-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-rose-600 hover:to-pink-600 transition-all duration-300">
-              Send Resume;
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>;  );
-export default CareersPage;
-const CareersPage: React.FC = () => {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function Page() {
   return (
     <>
-      <Helmet></Helmet>
-        <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team at Zion Tech Group. Explore career opportunities in AI and IT." />
+      <Helmet>
+        <title>CareersPage - Zion Tech Group</title>
+        <meta name="description" content="Professional CareersPage solutions and services" />
+        <meta name="keywords" content="careerspage" />
       </Helmet>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
-            <h1>
-              Careers;
-            </h1>
-            <p>
-              Join our team and help us build the future of technology.
+            <h1 className="text-4xl font-bold text-white mb-8">CareersPage</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional CareersPage solutions and services
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                  Open Positions;
+                  Expert Solutions
                 </h3>
-                <p>
-                  Explore our current job openings and find your perfect role.
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
                 </p>
               </div>
               <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-green-900 mb-2">
-                  Benefits;
+                  Custom Implementation
                 </h3>
-                <p>
-                  Competitive salary, health insurance, and professional development.
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
                 </p>
               </div>
               <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                  Culture;
+                  24/7 Support
                 </h3>
-                <p>
-                  Collaborative, innovative, and inclusive work environment.
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
                 </p>
               </div>
             </div>
-            <div className="mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                View Open Positions;
-              </button>
-            </div>
-          </div>;
-const CareersPage: React.FC = () => {
-  return (
-    <>
-      <Helmet></Helmet>
-        <title>CareersPage - Zion Tech Group</title>
-        <meta name="description" content="CareersPage - Zion Tech Group" />
-      </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <h1>CareersPage</h1>
-          <p>This page is under construction.</p>
+          </div>
         </div>
       </div>
     </>
-  );
-export default CareersPage;
-    <div></div>
-      <h1>CareersPage</h1>"
-      <p>This page is under development.</p>"
-    </div>
   );
 }

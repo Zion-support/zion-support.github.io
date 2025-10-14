@@ -1,21 +1,22 @@
-import React from 'react';
-import react-helmet-async from 'react-helmet-async';
-const StructuredDataPage = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      <Helmet></Helmet>
-        <title>StructuredData - Zion Tech Group</title>
-        <meta name="description" content="StructuredData - Zion Tech Group" />"
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">"
-        <div className="text-center">"
-          <h1>StructuredData</h1>"
-          <p>"
-            This page is under construction. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
+export const structuredData = {
+  organization: {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    description: 'Leading technology solutions provider'
+  },
+  
+  website: {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    description: 'Leading technology solutions provider'
+  },
+  
+  generate: (type: 'organization' | 'website') => {
+    return this[type];
+  }
 };
-export default structureddata;

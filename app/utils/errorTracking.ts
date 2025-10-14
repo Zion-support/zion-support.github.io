@@ -1,13 +1,24 @@
-export const reportError = (;
-  error: Error,
-  context?: Record<string, unknown>,)
-) => {
-  console.error("Error reported:", error, context)
-  // In a real application, you would send this to an error tracking service;
-  // like Sentry, LogRocket, or Bugsnag;
+export const errorTracking = {
+  track: (error: Error, context?: Record<string, any>) => {
+    const errorInfo = {
+      message: error.message,
+      stack: error.stack,
+      timestamp: new Date().toISOString(),
+      context: context || {}
+    };
+    
+    // Log to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error tracked:', errorInfo);
+    }
+    
+    // Send to analytics
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        custom_parameters: context
+      });
+    }
+  }
 };
-export const initErrorReporting = () => {
-  // Initialize error reporting service"
-  console.log("Error reporting initialized")
-}"
-;

@@ -1,67 +1,50 @@
 import React from 'react';
-import ../utils/cn from '../utils/cn';
-interface FuturisticTextProps {
-  children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'accent' | 'muted;
-  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl;
-  weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold' | 'extrabold' | 'black;
-  glow?: boolean;
-  animate?: boolean;
-}
-const FuturisticText: React.FC<FuturisticTextProps> = ({
-  as: Component="p"
-  className=
-  variant="primary"
-  size="base"
-  weight="normal"
-  glow = false,
-  animate = false,
-  ...props;
-}) => {
-  const baseClasses="font-sans" variantClasses = {
-    primary: 'text-white',;
-    secondary: 'text-gray-300',;
-    accent: 'bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent',;
-    muted: 'text-gray-400'
-  };
-  const sizeClasses = {
-    xs: 'text-xs',;
-    sm: 'text-sm',;
-    base: 'text-base',;
-    lg: 'text-lg',;
-    xl: 'text-xl',
-    '2xl': 'text-2xl',
-    '3xl': 'text-3xl',
-    '4xl': 'text-4xl',
-    '5xl': 'text-5xl',
-    '6xl': 'text-6xl',
-    '7xl': 'text-7xl',
-    '8xl': 'text-8xl',
-    '9xl': 'text-9xl'
-  };
-  const weightClasses = {
-    light: 'font-light',;
-    normal: 'font-normal',;
-    medium: 'font-medium',;
-    semibold: 'font-semibold',;
-    bold: 'font-bold',;
-    extrabold: 'font-extrabold',;
-    black: 'font-black'
-  };
-  const glowClasses = glow ? 'drop-shadow-[0_0_20px_rgba(0, 255, 255, 0.5)]' : ;';
-  const animateClasses = animate ? 'animate-pulse' : ;';
-  const combinedClasses = cn(;
-    baseClasses,
-    variantClasses[variant],
-    sizeClasses[size],
-    weightClasses[weight],
-    glowClasses,
-    animateClasses,
-    className;
+import { Helmet } from 'react-helmet-async';
+
+export default function Page() {
+  return (
+    <>
+      <Helmet>
+        <title>FuturisticText - Zion Tech Group</title>
+        <meta name="description" content="Professional FuturisticText solutions and services" />
+        <meta name="keywords" content="futuristictext" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">FuturisticText</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional FuturisticText solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-  return React.createElement(Component, {
-    className: combinedClasses,
-    ...props;
-  }, children);
-};
-export default FuturisticText;
+}

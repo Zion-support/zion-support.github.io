@@ -1,11 +1,18 @@
-import React from 'react';
-const AppMinimal = () => {
+import React from 'react;
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom;
+import { HelmetProvider } from 'react-helmet-async;
+const App: React.FC = () => {
   return (
-    <>
-      <div className="min-h-screen bg-slate-900">
-        <h1>Zion Tech Group</h1>
-      </div>
-    </>
+    
+    <HelmetProvider />
+      <Router />
+        <Routes />
+          <Route path="/" element={<div>Home Page</div>} />
+        </Routes>
+      </Router>
+    </HelmetProvider>
   );
 };
-export default AppMinimal;
+
+export default App;
+'

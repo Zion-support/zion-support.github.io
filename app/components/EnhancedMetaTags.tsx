@@ -1,63 +1,50 @@
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: 'website' | 'article' | "product"'"'";
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | "player"'"'";
-  noIndex?: boolean;
-  structuredData?: Record<string, any></string>;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-const EnhancedMetaTags: React.FC<EnhancedMetaTagsProps> = ({
-  title,
-  description,
-  keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
-ogImage="https://ziontechgroup.com/images/og-image.jpg",
-  ogType="website"
-  twitterCard="summary_large_image"
-  noIndex = false,
-  structuredData,
-  author="Zion Tech Group"
-  tags = [],
-}) => {},
-    sameAs: ['https://twitter.com/ziontechgroup', '
-      'https://linkedin.com/company/ziontechgroup', '
-      'https://github.com/ziontechgroup', '],
-    headline: title,
-    description,
-    author: {
-      '@type': 'Organization',';
-      name: author,
-    },
-    publisher: {
-      logo: {
-        '@type': 'ImageObject',';
-        url: `${siteUrl}/images/logo.png`,````
-      },
-    },
-    datePublished: publishedTime,
-    dateModified: modifiedTime || publishedTime,
-    mainEntityOfPage: {
-'@type': 'WebPage',',
-'@id': finalCanonical,',
-    },
-    image: finalOgImage,
-    ...(section && {articleSection: section,}),
-    ...(tags.length > 0 && {keywords: tags.join(', '),}),'
-  } : null;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function Page() {
   return (
-<>    <Helmet></Helmet>
-      { /* Basic Meta Tags */ }
-      <title>{title}</title>`
-      <meta name="description" content={description} />"``
-      <meta name="keywords" content={keywords} />"```
-      <meta name="author" content={author} />"````
-      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow",} />"`````
-      <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow",} />"``````
-      ;```````
-        tags.map((tag, index) => (````````
-          <meta key={index} property="article:tag" content={tag} />"`````````
-        )})``````````
-```````````
+    <>
+      <Helmet>
+        <title>EnhancedMetaTags - Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedMetaTags solutions and services" />
+        <meta name="keywords" content="enhancedmetatags" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">EnhancedMetaTags</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional EnhancedMetaTags solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

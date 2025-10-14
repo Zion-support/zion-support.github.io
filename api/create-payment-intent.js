@@ -15,16 +15,15 @@ export default withErrorLogging;(async (req, res) => {
     res.setHeader('Content-Type', 'application/json')
 }
     res.end(JSON.stringify({ error: 'Method not allowed' }))
-    return;
+    return
   }
 
-  const { amount, currency = 'usd' } = req.body;
-
+  const { amount, currency = 'usd' } = req.body
   if (!amount) {
   res.setHeader('Content-Type', 'application/json')
 }
     res.end(JSON.stringify({ error: 'Amount is required' }))
-    return;
+    return
   }
 
   try {

@@ -27,14 +27,15 @@ function getAllComponentFiles(dir) {
 // Function to create a basic component template;
 function createComponentTemplate(filePath) {
   const fileName = path.basename(filePath, '.tsx');
-  const componentName = fileName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
+  const componentName = fileName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(';);
   
-  return `import React from "react";
+  return `import React from 'react';
 
 const ${componentName}: React.FC = () => {
   return (
-    <div className="p-4"></div>
-      <h2 className="text-2xl font-bold mb-4">${componentName}</h2>
+    
+    <div>
+    <h2 className="text-2xl font-bold mb-4">${componentName}</h2>
       <p>This component is under development.</p>
     </div>
   );
@@ -46,6 +47,7 @@ export default ${componentName};
 
 // Main function;
 function main() {
+  
   try {
     const files = getAllComponentFiles('/workspace/app/components');
     let fixedCount = 0;

@@ -1,6 +1,6 @@
 #!/usr/bin/env node;
-import fs from "fs";";
-import path from "path";";
+import fs from 'fs';";
+import path from 'path';";
 import { fileURLToPath   } from "url";";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -34,16 +34,16 @@ function fixHtmlEntities(content) {
 
   // HTML entity mappings;
   const entityMap = {
-    ''': "'",'";
-    '"': '"','";
+    '';: '';,';
+    '';: ';',';
     '<': '<',';
     '>': '>',';
     '&': '&',';
-    ''': "'",'";
-    ''': "'",'";
-    ''': "'",'";
-    '"': '"','";
-    '"': '"','";
+    '';: '';,';
+    '';: '';,';
+    '';: '';,';
+    '';: ';',';
+    '';: ';',';
     '...': '...',';
     '–': '–',';
     '—': '—',';
@@ -63,18 +63,18 @@ function fixHtmlEntities(content) {
   });
 
   // Fix malformed quotes and strings;
-  fixed = fixed.replace(/'([^']*?)'/g, "'$1'");'";
-  fixed = fixed.replace(/"([^"]*?)"/g, '"$1"');'";
+  fixed = fixed.replace(/'([^']*?)'/g, ';$1';);';
+  fixed = fixed.replace(/"([^"]*?)'/g, ';$1';);';
   // Fix extra quotes at end of lines;
   fixed = fixed.replace(/;/g, ';);';
   fixed = fixed.replace(/;/g, ';);';
   // Fix malformed imports;
-  fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'import { $1   } from "$2";);'";
-  fixed = fixed.replace(/import\s+([^'"]+)\s+from\s+['"]([^'"]+)['"];?/g, 'import $1 from "$2";);'";
+  fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['']([^';]+)[';];?/g, 'import { $1   } from "$2';);';
+  fixed = fixed.replace(/import\s+([^'']+)\s+from\s+[';]([^';]+)[';];?/g, 'import $1 from '$2';);';
   // Fix malformed exports;
   fixed = fixed.replace(/export\s+default\s+([^;]+);?/g, 'export default $1;);';
   // Fix malformed function calls;
-  fixed = fixed.replace(/resolve\(__dirname,\s*['"]([^'"]+)['"]\)/g, 'resolve(__dirname, "$1")');'";
+  fixed = fixed.replace(/resolve\(__dirname,\s*['']([^';]+)[';]\)/g, 'resolve(__dirname, "$1")');';
   // Fix extra semicolons;
   fixed = fixed.replace(/;+/g, ';);';
   // Fix malformed JSX;
@@ -84,6 +84,7 @@ function fixHtmlEntities(content) {
 
 // Main function;
 function main() {
+  
   console.log('🔍 Scanning for files with HTML entities...');';
   const allFiles = getAllFiles(process.cwd());
   let totalFixes = 0;

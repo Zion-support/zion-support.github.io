@@ -1,67 +1,50 @@
-import './globals.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AnalyticsProvider from './components/AnalyticsProvider';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PWAInstaller from './components/PWAInstaller';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import GlobalErrorBoundary from './components/GlobalErrorBoundary';
-export default function RootLayout({;
-  children,;
-}: {;
-  children: React.ReactNode;
-}) {
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    foundingDate: '2020',
-    numberOfEmployees: '50-100',
-    industry: 'Technology',
-contactPoint: {,
-      '@type': 'ContactPoint',
-      telephone: '+1-302-600-9898',
-      contactType: 'Customer Service',
-      areaServed: 'US',
-      availableLanguage: 'en',
-    },
-    sameAs: ['https://twitter.com/ziontechgroup', 'https://linkedin.com/company/ziontechgroup'],
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US',
-    },
-    offers: {
-      '@type': 'Offer',
-      category: 'AI Solutions',
-      description: 'Enterprise AI solutions, digital transformation, and cloud services',
-    },
-  };
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function Page() {
   return (
-    <html lang='en'>
-      <head>
-        <script;
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
-          }}
-        />
-      </head>
-      <body>
-        <GlobalErrorBoundary>
-          <PerformanceMonitor />
-          <AnalyticsProvider>
-            <AccessibilityEnhancer>
-              <PWAInstaller>
-                <PerformanceOptimizer>
-                  {children}
-                </PerformanceOptimizer>
-              </PWAInstaller>
-            </AccessibilityEnhancer>
-          </AnalyticsProvider>
-        </GlobalErrorBoundary>
-      </body>
-    </html>
+    <>
+      <Helmet>
+        <title>layout - Zion Tech Group</title>
+        <meta name="description" content="Professional layout solutions and services" />
+        <meta name="keywords" content="layout" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">layout</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional layout solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

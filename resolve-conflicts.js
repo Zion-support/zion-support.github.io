@@ -1,22 +1,48 @@
-import { execSync    } from "child_process";";
-import { readFileSync, writeFileSync, existsSync    } from "fs";";
-// Get list of conflicted files;
-const conflictedFiles = execSync('git status --porcelain | grep "^DU\\|^UD\\|^AU\\|^UA"', { encoding: 'utf8' })'"'";
-  .split('\n')'';
-  .filter(line => line.trim());
-  .map(line => line.split(' ').pop())'';
-  .filter(file => file);
+import fs from 'fs';
+import { glob } from 'glob';
 
-console.log('Conflicted files:', conflictedFiles.length);';
-// For modify/delete conflicts, remove the files that were deleted in main;
-for (const file of conflictedFiles) {
-  if (existsSync(file)) {
-    console.log(`Removing conflicted file: ${file}`);"``"`;
-    execSync(`git rm "${file}"`);``"`;
+// Function to resolve merge conflicts by choosing our version (HEAD)
+function resolveConflicts(content) {
+  // Remove conflict markers and keep only our version (between <<<<<<< HEAD and =======)
+  let resolved = content;
+  
+  // Pattern to match conflict blocks and keep only our version
+  const conflictPattern = /<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [^\n]+/gs;
+  
+  resolved = resolved.replace(conflictPattern, (match, ourVersion) => {
+    return ourVersion.trim();
+  });
+  
+  // Also handle cases where there might be multiple conflict markers in one block
+  const multiConflictPattern = /<<<<<<< HEAD\n(.*?)\n=======\n.*?\n>>>>>>> [^\n]+/gs;
+  resolved = resolved.replace(multiConflictPattern, (match, ourVersion) => {
+    return ourVersion.trim();
+  });
+  
+  return resolved;
+}
+
+// Function to process a single file
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has conflict markers
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+      const resolved = resolveConflicts(content);
+      fs.writeFileSync(filePath, resolved, 'utf8');
+      console.log(`Resolved conflicts in: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Add and commit the resolution;
-execSync('git add .');"'";
-execSync('git commit -m "Resolve merge conflicts by accepting main branch deletions"');"'";
-console.log('Merge conflicts resolved successfully');"'";
+// Main function
+async function main() {
+  
+  const patterns = [
+    '**

@@ -1,46 +1,50 @@
-import { Helmet    } from 'react-helmet-async';
-import { ;
-  CheckCircleIcon,
-  UserGroupIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
-  RocketLaunchIcon,
-  HeartIcon,
-  ArrowRightIcon,
-  StarIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon;
-const AboutPage: React.FC = () => {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function Page() {
   return (
     <>
-      <Helmet></Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions, cybersecurity, and digital transformation services." />"
+      <Helmet>
+        <title>AboutPage - Zion Tech Group</title>
+        <meta name="description" content="Professional AboutPage solutions and services" />
+        <meta name="keywords" content="aboutpage" />
       </Helmet>
-        {/* Hero Section */}
-        <div className="relative overflow-hidden">"
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">"
-            <div className="text-center">"
-              <h1>"
-                About Zion Tech Group;
-              </h1>
-              <p>"
-                Empowering businesses with cutting-edge AI and IT solutions for the digital age;
-              </p>
-              <div className="space-y-4"></div>
-    </>
-                <div className="flex items-start"></div>
-                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" /></CheckCircleIcon>
-                  <span className="text-gray-300">Innovation-driven approach</span>
-                </div>"
-                <div className="flex items-start"></div>"
-                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />"
-                  <span className="text-gray-300">Client-focused solutions</span>
-                </div>"
-                <div className="flex items-start"></div>"
-                  <CheckCircleIcon className="w-6 h-6 text-green-400 mr-3 mt-1" />"
-                  <span className="text-gray-300">Cutting-edge technology</span>
-                </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-8">AboutPage</h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Professional AboutPage solutions and services
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                  Expert Solutions
+                </h3>
+                <p className="text-blue-700">
+                  Our team of experts delivers cutting-edge solutions.
+                </p>
+              </div>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-green-900 mb-2">
+                  Custom Implementation
+                </h3>
+                <p className="text-green-700">
+                  Tailored implementations for your specific requirements.
+                </p>
+              </div>
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                  24/7 Support
+                </h3>
+                <p className="text-purple-700">
+                  Round-the-clock support for all your needs.
+                </p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

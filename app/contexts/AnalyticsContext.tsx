@@ -1,43 +1,45 @@
-{ createContext, useContext, useState, useEffect } from 'react;
-'use client;
+import React, { createContext, useContext, ReactNode } from 'react';
+
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void,
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-  isEnabled: boolean}
+  trackPageView: (pageName: string, properties?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+}
+
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-const  ({ children }) => {
-  const [
-    isEnabled, setIsEnabled,
-  ] = useState(false)
-  const [
-    userId, setUserId,
-  ] = useState<string | null>(null)
-  useEffect(() => {
-    // if analytics is enabled;
-setIsEnabled(true)}, [])
-    // if analytics is enabled;
-    setIsEnabled(true)}, []);
+
+interface AnalyticsProviderProps {
+  children: ReactNode;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (!isEnabled) return;
-    // Track event logic here;
-    console.log('Analytics Event: ', eventName, properties)};','
-  const trackPageView = (pageName: string) => {
-    if (!isEnabled) return;
-    // Track page view logic here;
-    console.log('Page View: ', pageName)};','
-  const setUser = (newUserId: string, properties?: Record<string, any>) => {
-    setUserId(newUserId);
-    console.log('User Set: ', newUserId, properties)};','
+    // Analytics tracking implementation
+    console.log('Event tracked:', eventName, properties);
+  };
+
+  const trackPageView = (pageName: string, properties?: Record<string, any>) => {
+    // Page view tracking implementation
+    console.log('Page view tracked:', pageName, properties);
+  };
+
+  const identify = (userId: string, traits?: Record<string, any>) => {
+    // User identification implementation
+    console.log('User identified:', userId, traits);
+  };
+
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-    setUser,
-    isEnabled,
-  }
-    isEnabled,}
+    identify,
+  };
+
   return (
-    <AnalyticsContext.Provider value={value}></AnalyticsContext>
+    <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>)};
+    </AnalyticsContext.Provider>
+  );
+};
+
 export { AnalyticsContext };
+export default AnalyticsProvider;
