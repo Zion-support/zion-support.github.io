@@ -37,7 +37,7 @@ if ("serviceWorker" in navigator) {
       })
       .catch((_error) => {
         if (process.env.NODE_ENV === 'development') {
-          console.error('Service Worker registration failed');
+          console.warn('Service Worker registration failed');
         }
       });
   });
