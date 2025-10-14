@@ -10,6 +10,7 @@ export const withLazyLoading = <P extends object>(
   
   return (props: P) => (
     <LazyWrapper fallback={fallback}>
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <LazyComponent {...(props as any)} />
     </LazyWrapper>
   );
@@ -24,6 +25,7 @@ export const createLazyComponent = <P extends object>(
   
   return (props: P) => (
     <LazyWrapper fallback={fallback}>
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       <LazyComponent {...(props as any)} />
     </LazyWrapper>
   );
