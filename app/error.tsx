@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 'use client''
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 "use client"
 export default function Page() {return (
     <div className="min-h-screen bg-white">"
+=======
+'use client'
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+'use client';
+export default function Page() { return (
+    <div className="min-h-screen bg-white">
+>>>>>>> origin/main
       <Helmet>
         <title>Error - Zion Tech Group</title>
         <meta name="description" content="Professional error services by Zion Tech Group." />"
@@ -52,7 +62,11 @@ export default function Page() {return (
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
+=======
+  ); }
+>>>>>>> origin/main
             Error</h1>
           <p className="text-xl text-gray-600 mb-8">"
             Professional error solutions tailored to your business needs.</p>
@@ -82,4 +96,20 @@ export default function Page() {return (
       </div>
     </div>
   )}
+<<<<<<< HEAD
 }''
+=======
+            </button>;
+          </div>
+        </div>
+      </div>
+    </div>
+  );}
+}'
+=======
+// error - Basic implementation
+export default function error() {
+  return null;
+}
+>>>>>>> origin/main
+>>>>>>> origin/main

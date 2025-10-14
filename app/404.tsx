@@ -1,8 +1,7 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-export default function NotFoundPage() {
-  return (
+export default function NotFoundPage() { return (
     <>
       <Helmet>
         <title>404 - Zion Tech Group</title>
@@ -25,5 +24,16 @@ export default function NotFoundPage() {
         </div>
       </div>
     </>
+  ); }
+=======
+import React from "react";
+
+export default function NotFound() {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold text-white">404</h2>
+      <p className="text-gray-300">This is the 404 component.</p>
+    </div>
   );
 }
+>>>>>>> origin/main

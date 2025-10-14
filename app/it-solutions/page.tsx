@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 "use client"
 import React from 'react";
 import { Helmet } from 'react-helmet-async";
 import { Link } from 'react-router-dom";
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+<<<<<<< HEAD
+'use client';'
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+import { Link } from 'react-router-dom';'
+>>>>>>> origin/main
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -21,11 +32,13 @@ import {
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
   LightBulbIcon
+<<<<<<< HEAD
 } from '@heroicons/react/24/outline";
+=======
+} from '@heroicons/react/24/outline';'
+>>>>>>> origin/main
 const ITSolutionsPage: React.FC = () => {
   const solutions = [
-export default function ITSolutionsPage() {
-  const itServices = [
     {
       title: "Cloud Infrastructure","
       description: "Scalable and secure cloud infrastructure solutions for modern businesses.","
@@ -36,14 +49,31 @@ export default function ITSolutionsPage() {
         "Security compliance","
         "Cost optimization","
         "24/7 monitoring","
+<<<<<<< HEAD
         "Disaster recovery""
       ],
+=======
+        "Disaster recovery"
+      ],
+<<<<<<< HEAD
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $1,500/month",
+      benefits: ["Scalability", "Reliability", "Cost efficiency"],
+      useCases: ["Web hosting", "Data storage", "Application hosting"],
+      href: "/cloud-infrastructure" },
+=======
+>>>>>>> origin/main
       color: "from-blue-500 to-cyan-500","
       price: "Starting at $1,500/month","
       benefits: ["Scalability", "Reliability", "Cost efficiency"],"
       useCases: ["Web hosting", "Data storage", "Application hosting"],"
+<<<<<<< HEAD
       href: "/cloud-infrastructure""
+=======
+      href: "/cloud-infrastructure"
+>>>>>>> origin/main
     },
+>>>>>>> origin/main
     {
       title: "Cybersecurity Solutions","
       description: "Comprehensive cybersecurity solutions to protect your digital assets and data.","
@@ -54,14 +84,31 @@ export default function ITSolutionsPage() {
         "Security monitoring","
         "Incident response","
         "Compliance management","
+<<<<<<< HEAD
         "Security training""
       ],
+=======
+        "Security training"
+      ],
+<<<<<<< HEAD
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $2,200/month",
+      benefits: ["Enhanced security", "Risk mitigation", "Compliance"],
+      useCases: ["Data protection", "Network security", "Compliance"],
+      href: "/cybersecurity" },
+=======
+>>>>>>> origin/main
       color: "from-red-500 to-pink-500","
       price: "Starting at $2,200/month","
       benefits: ["Enhanced security", "Risk mitigation", "Compliance"],"
       useCases: ["Data protection", "Network security", "Compliance"],"
+<<<<<<< HEAD
       href: "/cybersecurity""
+=======
+      href: "/cybersecurity"
+>>>>>>> origin/main
     },
+>>>>>>> origin/main
     {
       title: "IT Consulting","
       description: "Strategic IT consulting to help you make informed technology decisions.","
@@ -72,14 +119,31 @@ export default function ITSolutionsPage() {
         "Vendor selection","
         "Implementation guidance","
         "Change management","
+<<<<<<< HEAD
         "Training and support""
       ],
+=======
+        "Training and support"
+      ],
+<<<<<<< HEAD
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $1,200/month",
+      benefits: ["Expert guidance", "Cost savings", "Risk reduction"],
+      useCases: ["Technology planning", "Digital transformation", "System integration"],
+      href: "/it-consulting" },
+=======
+>>>>>>> origin/main
       color: "from-green-500 to-emerald-500","
       price: "Starting at $1,200/month","
       benefits: ["Expert guidance", "Cost savings", "Risk reduction"],"
       useCases: ["Technology planning", "Digital transformation", "System integration"],"
+<<<<<<< HEAD
       href: "/it-consulting""
+=======
+      href: "/it-consulting"
+>>>>>>> origin/main
     },
+>>>>>>> origin/main
     {
       title: "Network Solutions","
       description: "Advanced networking solutions for reliable and secure connectivity.","
@@ -90,14 +154,31 @@ export default function ITSolutionsPage() {
         "Performance optimization","
         "Monitoring and maintenance","
         "Disaster recovery","
+<<<<<<< HEAD
         "Remote access""
       ],
+=======
+        "Remote access"
+      ],
+<<<<<<< HEAD
+      color: "from-purple-500 to-indigo-500",
+      price: "Starting at $1,800/month",
+      benefits: ["Reliable connectivity", "Enhanced security", "Performance"],
+      useCases: ["Office networking", "Remote work", "Data centers"],
+      href: "/network-solutions" },
+=======
+>>>>>>> origin/main
       color: "from-purple-500 to-indigo-500","
       price: "Starting at $1,800/month","
       benefits: ["Reliable connectivity", "Enhanced security", "Performance"],"
       useCases: ["Office networking", "Remote work", "Data centers"],"
+<<<<<<< HEAD
       href: "/network-solutions""
+=======
+      href: "/network-solutions"
+>>>>>>> origin/main
     },
+>>>>>>> origin/main
     {
       title: "Data Management","
       description: "Comprehensive data management solutions for storage, processing, and analytics.","
@@ -108,17 +189,39 @@ export default function ITSolutionsPage() {
         "Analytics and reporting","
         "Data security","
         "Backup and recovery","
+<<<<<<< HEAD
         "Data governance""
       ],
+=======
+        "Data governance"
+      ],
+<<<<<<< HEAD
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $2,000/month",
+      benefits: ["Better insights", "Data security", "Compliance"],
+      useCases: ["Business intelligence", "Data analytics", "Compliance"],
+      href: "/data-management" },
+    { title: "IT Support",
+      description: "Comprehensive IT support services to keep your systems running smoothly.",
+=======
+>>>>>>> origin/main
       color: "from-orange-500 to-red-500","
       price: "Starting at $2,000/month","
       benefits: ["Better insights", "Data security", "Compliance"],"
       useCases: ["Business intelligence", "Data analytics", "Compliance"],"
+<<<<<<< HEAD
       href: "/data-management""
+=======
+      href: "/data-management"
+>>>>>>> origin/main
     },
     {
       title: "IT Support","
       description: "Comprehensive IT support services to keep your systems running smoothly.","
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
       icon: UserGroupIcon,
       features: [
         "24/7 support","
@@ -126,15 +229,33 @@ export default function ITSolutionsPage() {
         "System maintenance","
         "Software updates","
         "Hardware support","
+<<<<<<< HEAD
         "User training""
       ],
+=======
+        "User training"
+      ],
+<<<<<<< HEAD
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $1,000/month",
+      benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],
+      useCases: ["Help desk", "System maintenance", "User support"],
+      href: "/it-support" }
+=======
+>>>>>>> origin/main
       color: "from-cyan-500 to-blue-500","
       price: "Starting at $1,000/month","
       benefits: ["Reduced downtime", "Expert support", "Cost efficiency"],"
       useCases: ["Help desk", "System maintenance", "User support"],"
+<<<<<<< HEAD
       href: "/it-support""
+=======
+      href: "/it-support"
+>>>>>>> origin/main
     }
+>>>>>>> origin/main
   ];
+
   const features = [
     {
       title: "Expert Solutions","
@@ -151,15 +272,35 @@ export default function ITSolutionsPage() {
       description: "Round-the-clock support to ensure your systems are always running.","
       icon: UserGroupIcon
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    { title: "Security First",
+      description: "Security is built into every solution we deliver.",
+      icon: ShieldCheckIcon }
+=======
+>>>>>>> origin/main
     {
       title: "Security First","
       description: "Security is built into every solution we deliver.","
       icon: ShieldCheckIcon
     }
+>>>>>>> origin/main
   ];
+<<<<<<< HEAD
+=======
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+=======
+const HomePage = () => {
+>>>>>>> origin/main
+>>>>>>> origin/main
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+<<<<<<< HEAD
         <title>IT Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT solutions including cloud infrastructure, cybersecurity, and consulting services." />"
         <meta name="keywords" content="IT solutions, cloud infrastructure, cybersecurity, IT consulting, network solutions" />"
@@ -169,6 +310,18 @@ export default function ITSolutionsPage() {
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
           <div className="max-w-6xl mx-auto text-center">"
             <h1 className="text-5xl font-bold text-gray-900 mb-6">"
+=======
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
+      </Helmet>
+<<<<<<< HEAD
+      
+      <div className="min-h-screen bg-white">
+        { /* Hero Section */ }
+        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+>>>>>>> origin/main
               IT Solutions
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">"
@@ -177,24 +330,45 @@ export default function ITSolutionsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
+<<<<<<< HEAD
                 to="/contact" "
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors""
+=======
+                to="/contact"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+>>>>>>> origin/main
               >
                 Get Started
               </Link>
               <Link 
+<<<<<<< HEAD
                 to="/demo" "
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors""
+=======
+                to="/demo"
+                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+>>>>>>> origin/main
               >
                 View Demo
               </Link>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        { /* Solutions Grid */ }
+=======
+
         {/* Solutions Grid */}
+<<<<<<< HEAD
         <section className="py-20 px-4">"
           <div className="max-w-6xl mx-auto">"
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">"
+=======
+>>>>>>> origin/main
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+>>>>>>> origin/main
               Our IT Solutions
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
@@ -209,8 +383,13 @@ export default function ITSolutionsPage() {
                     <p className="text-blue-600 font-semibold">{solution.price}</p>"
                   </div>
                   <Link 
+<<<<<<< HEAD
                     to={solution.href}
                     className="text-blue-600 hover:text-blue-700 font-medium flex items-center""
+=======
+                    to={ solution.href }
+                    className="text-blue-600 hover:text-blue-700 font-medium flex items-center"
+>>>>>>> origin/main
                   >
                     Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />"
                   </Link>
@@ -219,10 +398,21 @@ export default function ITSolutionsPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        { /* Features Section */ }
+=======
+
         {/* Features Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 bg-gray-50">"
           <div className="max-w-6xl mx-auto">"
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">"
+=======
+>>>>>>> origin/main
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+>>>>>>> origin/main
               Why Choose Our IT Solutions?
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">"
@@ -238,31 +428,56 @@ export default function ITSolutionsPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        { /* CTA Section */ }
+=======
+
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4">"
           <div className="max-w-4xl mx-auto text-center">"
             <h2 className="text-3xl font-bold text-gray-900 mb-6">"
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="text-lg text-gray-600 mb-8">"
+=======
+>>>>>>> origin/main
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Ready to Transform Your IT Infrastructure?
+            </h2>
+            <p className="text-lg text-gray-600 mb-8">
+>>>>>>> origin/main
               Let's discuss how our IT solutions can help you achieve your business goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
+<<<<<<< HEAD
                 to="/contact" "
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors""
+=======
+                to="/contact"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+>>>>>>> origin/main
               >
                 Contact Us
               </Link>
               <Link 
+<<<<<<< HEAD
                 to="/demo" "
                 className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors""
+=======
+                to="/demo"
+                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"
+>>>>>>> origin/main
               >
                 Schedule Demo
               </Link>
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         <meta name="description" content="Comprehensive IT solutions including infrastructure management, system integration, and technical support." />"
       </Helmet>
       <div className="min-h-screen bg-slate-900 text-white">"
@@ -288,15 +503,29 @@ export default function ITSolutionsPage() {
             </div>
           </div>
         </div>
+=======
+>>>>>>> origin/main
       </div>
         <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud migration, cybersecurity, database management, and more. Expert IT services for modern businesses." />"
         <meta name="keywords" content="IT solutions, infrastructure management, cloud migration, cybersecurity, database management, IT support, network security" />"
       </Helmet>
+<<<<<<< HEAD
+      { /* Hero Section */ }
+=======
+      
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
         <div className="container mx-auto px-4">"
           <div className="max-w-4xl mx-auto text-center">"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">"
+=======
+>>>>>>> origin/main
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
+>>>>>>> origin/main
               IT Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">"
@@ -309,10 +538,21 @@ export default function ITSolutionsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      { /* IT Services Grid */ }
+=======
+
       {/* IT Services Grid */}
+<<<<<<< HEAD
       <section className="py-20 bg-slate-900">"
         <div className="container mx-auto px-4">"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">"
+=======
+>>>>>>> origin/main
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+>>>>>>> origin/main
             {itServices.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -320,18 +560,40 @@ export default function ITSolutionsPage() {
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating`}>`
                     <Icon className="w-8 h-8 text-white" />"
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>"
                   <p className="text-gray-300 mb-6 leading-relaxed">"
                     {service.description}
+=======
+                  <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    { service.description }
+>>>>>>> origin/main
                   </p>
+<<<<<<< HEAD
+                  { /* Pricing */ }
+                  <div className="mb-6">
+                    <span className="text-3xl font-bold text-green-400">{service.price}</span>
+                  </div>
+                  { /* Features */ }
+=======
+                  
                   {/* Pricing */}
                   <div className="mb-6">"
                     <span className="text-3xl font-bold text-green-400">{service.price}</span>"
                   </div>
+
                   {/* Features */}
+<<<<<<< HEAD
                   <div className="mb-6">"
                     <h4 className="text-sm font-semibold text-gray-400 mb-3">Key Features:</h4>"
                     <ul className="space-y-2">"
+=======
+>>>>>>> origin/main
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+>>>>>>> origin/main
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">"
                           <CheckCircleIcon className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />"
@@ -340,32 +602,68 @@ export default function ITSolutionsPage() {
                       ))
                     </ul>
                   </div>
+<<<<<<< HEAD
+                  { /* Benefits */ }
+=======
+
                   {/* Benefits */}
+<<<<<<< HEAD
                   <div className="mb-6">"
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>"
                     <div className="flex flex-wrap gap-2">"
                       {service.benefits.map((benefit, benefitIndex) => (
                         <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">"
                           {benefit}
+=======
+>>>>>>> origin/main
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
+                          { benefit }
+>>>>>>> origin/main
                         </span>
                       ))
                     </div>
                   </div>
+<<<<<<< HEAD
+                  { /* Use Cases */ }
+=======
+
                   {/* Use Cases */}
+<<<<<<< HEAD
                   <div className="mb-6">"
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>"
                     <div className="flex flex-wrap gap-2">"
                       {service.useCases.map((useCase, useCaseIndex) => (
                         <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">"
                           {useCase}
+=======
+>>>>>>> origin/main
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.useCases.map((useCase, useCaseIndex) => (
+                        <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
+                          { useCase }
+>>>>>>> origin/main
                         </span>
                       ))
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div className="flex gap-2">"
                     <Link
                       to={service.href}
                       className="flex-1 inline-flex items-center justify-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg hover:bg-purple-400/10""
+=======
+
+                  <div className="flex gap-2">
+                    <Link
+                      to={ service.href }
+                      className="flex-1 inline-flex items-center justify-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg hover:bg-purple-400/10"
+>>>>>>> origin/main
                     >
                       Learn More <ArrowRightIcon className="w-4 h-4" />"
                     </Link>
@@ -382,11 +680,23 @@ export default function ITSolutionsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      { /* Why Choose Our IT Solutions */ }
+=======
+
       {/* Why Choose Our IT Solutions */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
+=======
+>>>>>>> origin/main
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+>>>>>>> origin/main
               Why Choose Our IT Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
@@ -433,11 +743,23 @@ export default function ITSolutionsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      { /* IT Implementation Process */ }
+=======
+
       {/* IT Implementation Process */}
+<<<<<<< HEAD
       <section className="py-20 bg-slate-900">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
+=======
+>>>>>>> origin/main
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+>>>>>>> origin/main
               Our IT Implementation Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
@@ -484,7 +806,12 @@ export default function ITSolutionsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      { /* CTA Section */ }
+=======
+
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">"
         <div className="container mx-auto px-4">"
           <div className="max-w-4xl mx-auto text-center">"
@@ -492,6 +819,16 @@ export default function ITSolutionsPage() {
               Ready to Optimize Your IT Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-12">"
+=======
+>>>>>>> origin/main
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              Ready to Optimize Your IT Infrastructure?
+            </h2>
+            <p className="text-xl text-gray-300 mb-12">
+>>>>>>> origin/main
               Let's discuss how our IT solutions can enhance your business operations and security'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
@@ -524,7 +861,29 @@ export default function ITSolutionsPage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
   )
 export default ITSolutionsPage;
 }
 export default ITSolutionsPage;
+=======
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/main
+  );
+};
+<<<<<<< HEAD
+export default ITSolutionsPage;
+=======
+
+export default HomePage;
+>>>>>>> origin/main
+>>>>>>> origin/main

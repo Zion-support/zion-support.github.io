@@ -1,28 +1,35 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React from "react"
+import { Helmet } from "react-helmet-async"
 
+>>>>>>> origin/main
 export default function SEOEnhancer() {
   return (
-    <>
+    <div>
       <Helmet>
-        <title>SEOEnhancer - Zion Tech Group</title>
-        <meta name="description" content="Professional seoenhancer services by Zion Tech Group." />
+        <title>SEO Enhancer - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Professional SEO enhancement services by Zion Tech Group."
+        />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
-        {/* Hero Section */}
         <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              SEOEnhancer
+              SEO Enhancer
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional seoenhancer services by Zion Tech Group.
+              Professional SEO enhancement services by Zion Tech Group.
             </p>
           </div>
         </section>
+<<<<<<< HEAD
 
-        {/* Content Section */}
+        { /* Content Section */ }
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -42,7 +49,7 @@ export default function SEOEnhancer() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        { /* CTA Section */ }
         <section className="py-20 px-4 bg-gray-900">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -56,7 +63,9 @@ export default function SEOEnhancer() {
             </button>
           </div>
         </section>
+=======
+>>>>>>> origin/main
       </div>
-    </>
-  );
+    </div>
+  )
 }

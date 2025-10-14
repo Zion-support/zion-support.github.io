@@ -1,7 +1,7 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
-interface OptimizedImageProps {
-  src: string
+interface OptimizedImageProps { src: string
   alt: string
   width?: number
   height?: number
@@ -12,10 +12,17 @@ interface OptimizedImageProps {
   quality?: number
   loading?: 'lazy' | 'eager''
   onLoad?: () => void
+<<<<<<< HEAD
   onError?: () => void}
 import React, { useState, useRef, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async";
 interface OptimizedImageProps {src: string;
+=======
+  onError?: () => void }
+import React, { useState, useRef, useEffect } from 'react';'
+import { Helmet } from 'react-helmet-async';
+interface OptimizedImageProps { src: string;
+>>>>>>> origin/main
   alt: string;
   width?: number;
   height?: number;
@@ -26,9 +33,15 @@ interface OptimizedImageProps {src: string;
   quality?: number';
   loading?: 'lazy' | "eager"
   onLoad?: () => void;
+<<<<<<< HEAD
   onError?: () => void}
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
+=======
+  onError?: () => void; }
+}
+const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,
+>>>>>>> origin/main
   alt,
   width,
   height,''
@@ -39,8 +52,14 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 85,''
   loading = 'lazy','
   onLoad,
+<<<<<<< HEAD
   onError}
 }) => {const [isLoaded, setIsLoaded] = useState(false)
+=======
+  onError }
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false)
+>>>>>>> origin/main
   const [isError, setIsError] = useState(false)
   const [isInView, setIsInView] = useState(priority)
   const imgRef = useRef<HTMLImageElement>(null)
@@ -54,6 +73,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           setIsInView(true)
           observer.disconnect()}
       },
+<<<<<<< HEAD
       {
         threshold: 0.1,''
         rootMargin: '50px'}'
@@ -76,14 +96,45 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     onLoad?.()}
   const handleError = () => {setIsError(true)
     onError?.()
+=======
+      { threshold: 0.1,'
+        rootMargin: "50px" }
+      }
+    )
+    if (imgRef.current) { observer.observe(imgRef.current) }
+      observer.observe(imgRef.current);}
+    }
+    return () => observer.disconnect();
+  }, [priority]);
+    return () => observer.disconnect()}, [priority])
+  const handleLoad = () => { setIsLoaded(true);
+    onLoad?.(); }
+  const handleError = () => { setIsError(true);
+    onError?.(); }
+    setIsLoaded(true)
+    onLoad?.()}
+  const handleError = () => { setIsError(true)
+    onError?.() }
+    onLoad?.();}
+  };
+  const handleError = () => { setIsError(true);
+    onError?.(); }
+  };
+>>>>>>> origin/main
   // Generate WebP src if supported
   const getOptimizedSrc = (originalSrc: string) => {''
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {'
       return originalSrc}
       return originalSrc;}
+<<<<<<< HEAD
     // For external images, return as-is''
     if (originalSrc.startsWith('http')) {'
       return originalSrc}
+=======
+    }
+    // For external images, return as-is'
+    if (originalSrc.startsWith('http')) { return originalSrc }
+>>>>>>> origin/main
       return originalSrc;}
     // For local images, you could implement WebP conversion here
     return originalSrc;
@@ -93,36 +144,63 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const optimizedSrc = getOptimizedSrc(src)
   return (
     <>
+<<<<<<< HEAD
       {priority && (
         <Helmet>}
           <link rel="preload" as="image" href={optimizedSrc} />"
+=======
+      { priority && (
+        <Helmet> }
+          <link rel="preload" as="image" href={optimizedSrc} />
+>>>>>>> origin/main
         </Helmet>
       )
       <div
+<<<<<<< HEAD
         ref={imgRef}
         className={`relative overflow-hidden ${className}`}`
         style={{ width, height }
+=======
+        ref={ imgRef }
+        className={`relative overflow-hidden ${className}`}
+        style={{ width, height }}
+>>>>>>> origin/main
       >
-        {/* Placeholder */}
-        {!isLoaded && !isError && (
+        { /* Placeholder */ }
+        { !isLoaded && !isError && (
           <div
+<<<<<<< HEAD
             className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"}"
             style={{ width, height }
+=======
+            className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center" }
+            style={{ width, height }}
+>>>>>>> origin/main
           >
             <div className="text-gray-400 text-sm">Loading...</div>"
           </div>
+<<<<<<< HEAD
         )
         {/* Error state */}
         {isError && (
           <div
             className="absolute inset-0 bg-gray-100 flex items-center justify-center"}"
             style={{ width, height }
+=======
+        )}
+        { /* Error state */ }
+        { isError && (
+          <div
+            className="absolute inset-0 bg-gray-100 flex items-center justify-center" }
+            style={{ width, height }}
+>>>>>>> origin/main
           >
             <div className="text-gray-400 text-sm text-center">"
               <div className="text-2xl mb-2">📷</div>"
               <div>Image not available</div>
             </div>
           </div>
+<<<<<<< HEAD
         )
         {/* Actual image */}
         {isInView && !isError && (
@@ -143,13 +221,52 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
               height: '100%',''
               objectFit: 'cover'}'
             }
+=======
+        )}
+        { /* Actual image */ }
+        { isInView && !isError && (
+          <img }
+            src={ optimizedSrc }
+            alt={ alt }
+            width={ width }
+            height={ height }
+            loading={ loading }
+            sizes={ sizes }
+            onLoad={ handleLoad }
+            onError={ handleError }
+            className={`transition-opacity duration-300 ${'
+              isLoaded ? 'opacity-100' : 'opacity-0'}
+            }`}
+            style={{'
+              width: "100%",'
+              height: "100%",'
+              objectFit: "cover" }
+            }}
+>>>>>>> origin/main
           />
         )
       </div>
     </>
+<<<<<<< HEAD
   )
 export default OptimizedImage;
   )
 export default OptimizedImage
 }
 export default OptimizedImage';
+=======
+=======
+import React from "react";
+
+const OptimizedImage = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">OptimizedImage</h2>
+      <p>This component is under construction.</p>
+    </div>
+>>>>>>> origin/main
+  );
+};
+
+export default OptimizedImage;
+>>>>>>> origin/main

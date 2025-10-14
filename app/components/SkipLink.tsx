@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react";
 import React from 'react';
 "use client"
@@ -7,6 +8,17 @@ import React from 'react'
       <section className="py-16 px-4">"
         <div className="max-w-6xl mx-auto">"
           <div className="grid md:grid-cols-2 gap-12 items-center">"
+=======
+<<<<<<< HEAD
+import React from 'react';'
+'use client';
+      { /* Content Section */ }
+import React from 'react'
+'use client'{ /* Content Section */ }
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+>>>>>>> origin/main
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>"
               <p className="text-lg text-gray-600 mb-6">"
@@ -63,8 +75,30 @@ import React from 'react'
                 href="/contact""
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">"
                 Contact Us</a></div></div></div></section>
+<<<<<<< HEAD
               </a>
             </div>
           </div>
         </div>
       </section>
+=======
+              </a>;
+            </div>
+          </div>
+        </div>
+      </section>;'
+=======
+import React from "react";
+
+const SkipLink = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">SkipLink</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+export default SkipLink;
+>>>>>>> origin/main
+>>>>>>> origin/main

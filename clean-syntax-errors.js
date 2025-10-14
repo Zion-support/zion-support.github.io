@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from 'fs;
 import path from 'path;
@@ -11,9 +12,7 @@ function cleanFile(filePath) {
 }
     });
     // Remove extra semicolons from object properties
-    content = content.replace(/:\s*[^,}]*?;+/g, (match) => {
-  return match.replace(/;+/g, ';);
-}
+    content = content.replace(/:\s*[^,}]*?;+/g, (match) => { return match.replace(/;+/g, ';); }
     });
     // Fix unterminated strings
     content = content.replace(/'([^']*?)\s*$/gm, (match, str) => {
@@ -42,11 +41,9 @@ function cleanFile(filePath) {
 }
     content = content.replace(/,\s*;\s*}/g, '}');
     content = content.replace(/,\s*;\s*,/g, ',');
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
-  '
+    if (content !== fs.readFileSync(filePath, 'utf8')) { '
       fs.writeFileSync(filePath, content);
-      return true;
-}
+      return true; }
     }
     return false;
   } catch (error) {
@@ -65,10 +62,8 @@ function findFilesToClean(dir) {
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== 'dist') {'
         traverse(fullPath);
 }
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
-  '
-        files.push(fullPath);
-}
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) { '
+        files.push(fullPath); }
       }
     }
   }
@@ -89,3 +84,9 @@ for (const file of filesToClean) {
   }
 }
 console.log(`Cleaned ${cleanedCount} files`);
+=======
+// clean-syntax-errors - Basic implementation
+export default function clean-syntax-errors() {
+  return null;
+}
+>>>>>>> origin/main

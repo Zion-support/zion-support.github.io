@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -9,10 +10,10 @@ export default {
     extend: {
       colors: {
         primary: {
-          50: '#eff6ff',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
+          50: "#eff6ff",
+          500: "#3b82f6",
+          600: "#2563eb",
+          700: "#1d4ed8",
         },
       },
       fontFamily: {
@@ -21,4 +22,9 @@ export default {
     },
   },
   plugins: [],
+=======
+// tailwind.config - Basic implementation
+export default function tailwind.config() {
+  return null;
+>>>>>>> origin/main
 }

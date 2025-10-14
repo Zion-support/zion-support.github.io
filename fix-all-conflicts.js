@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -42,9 +43,7 @@ function findFilesWithConflicts(dir) {
             files.push(fullPath);
 }
           }
-        } catch (error) {
-  // Skip files that can't be read
-}
+        } catch (error) { // Skip files that can't be read }
         }
       }
     }
@@ -65,3 +64,9 @@ for (const file of conflictedFiles) {
 }
 console.log(`✅ Fixed merge conflicts in ${fixedCount} files`);
 console.log('🎉 All merge conflicts resolved!');
+=======
+// fix-all-conflicts - Basic implementation
+export default function fix-all-conflicts() {
+  return null;
+}
+>>>>>>> origin/main

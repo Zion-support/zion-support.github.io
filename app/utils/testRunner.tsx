@@ -1,6 +1,8 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 /* global describe, test, expect, it, beforeEach */
+<<<<<<< HEAD
 'use client''
 import React from 'react';
 import { Helmet } from 'react-helmet-async";
@@ -8,6 +10,15 @@ import { Helmet } from 'react-helmet-async";
 "use client"
 export default function Page() {return (
     <div className="min-h-screen bg-white">"
+=======
+'use client'
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';
+/* global describe, test, expect, it, beforeEach */'
+'use client';
+export default function Page() { return (
+    <div className="min-h-screen bg-white">
+>>>>>>> origin/main
       <Helmet>
         <title>TestRunner - Zion Tech Group</title>
         <meta name="description" content="Professional testrunner services by Zion Tech Group." />"
@@ -54,7 +65,11 @@ export default function Page() {return (
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
+=======
+  ); }
+>>>>>>> origin/main
             TestRunner</h1>
           <p className="text-xl text-gray-600 mb-8">"
             Professional testrunner solutions tailored to your business needs.</p>
@@ -84,4 +99,26 @@ export default function Page() {return (
       </div>
     </div>
   )}
+<<<<<<< HEAD
 }''
+=======
+            </button>;
+          </div>
+        </div>
+      </div>
+    </div>
+  );}
+}'
+=======
+import React from 'react';
+
+export default function TestRunner() {
+  return (
+    <div>
+      <h1>TestRunner</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+}
+>>>>>>> origin/main
+>>>>>>> origin/main

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
@@ -41,9 +42,7 @@ function findFilesWithMergeMarkers(dir) {
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             files.push(fullPath);
           }
-        } catch (error) {
-          // Skip files that can't be read
-        }
+        } catch (error) { // Skip files that can't be read }
       }
     }
   }
@@ -62,3 +61,9 @@ for (const file of filesWithMarkers) {
   }
 }
 console.log(`Cleaned merge markers from ${cleanedCount} files`);
+=======
+// cleanup-merge-markers - Basic implementation
+export default function cleanup-merge-markers() {
+  return null;
+}
+>>>>>>> origin/main

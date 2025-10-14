@@ -1,6 +1,6 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function Jest.setup.js() {
   return (
     <>
@@ -22,7 +22,7 @@ export default function Jest.setup.js() {
           </div>
         </section>
 
-        {/* Content Section */}
+        { /* Content Section */ }
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -42,7 +42,7 @@ export default function Jest.setup.js() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        { /* CTA Section */ }
         <section className="py-20 px-4 bg-gray-900">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -60,3 +60,57 @@ export default function Jest.setup.js() {
     </>
   );
 }
+=======
+// Learn more: https://github.com/testing-library/jest-dom
+require("@testing-library/jest-dom");
+
+// Polyfills for Node.js environment
+const { TextEncoder, TextDecoder } = require("util");
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+// Mock window.matchMedia
+Object.defineProperty(window, "matchMedia", {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  takeRecords() {
+    return [];
+  }
+  unobserve() {}
+};
+
+// Suppress console errors in tests
+const originalError = console.error;
+beforeAll(() => {
+  console.error = jest.fn((...args) => {
+    if (
+      typeof args[0] === "string" &&
+      (args[0].includes("Warning: ReactDOM.render") ||
+        args[0].includes("Not implemented: HTMLFormElement.prototype.submit"))
+    ) {
+      return;
+    }
+    originalError.call(console, ...args);
+  });
+});
+
+afterAll(() => {
+  console.error = originalError;
+});
+>>>>>>> origin/main

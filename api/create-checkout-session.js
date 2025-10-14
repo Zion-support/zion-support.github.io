@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from 'react";
 import { Helmet } from 'react-helmet-async";
 export default function CreateCheckoutSession.js() {
+=======
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+export default function CreateCheckoutSession() {
+>>>>>>> origin/main
   return (
     <>
       <Helmet>
@@ -21,6 +28,7 @@ export default function CreateCheckoutSession.js() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Content Section */}
         <section className="py-20 px-4">"
           <div className="max-w-6xl mx-auto">"
@@ -28,6 +36,15 @@ export default function CreateCheckoutSession.js() {
               <div className="bg-white p-6 rounded-lg shadow-lg">"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>"
                 <p className="text-gray-600">High-quality professional services tailored to your needs.</p>"
+=======
+        { /* Content Section */ }
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional Service</h3>
+                <p className="text-gray-600">High-quality professional services tailored to your needs.</p>
+>>>>>>> origin/main
               </div>
               <div className="bg-white p-6 rounded-lg shadow-lg">"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Expert Team</h3>"
@@ -41,10 +58,17 @@ export default function CreateCheckoutSession.js() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gray-900">"
           <div className="max-w-4xl mx-auto text-center">"
             <h2 className="text-4xl font-bold text-white mb-6">"
+=======
+        { /* CTA Section */ }
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+>>>>>>> origin/main
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">"
@@ -57,4 +81,23 @@ export default function CreateCheckoutSession.js() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
   )
+=======
+  );
+}
+=======
+export default function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+  try {
+    // Add your API logic here
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error("API Error:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> origin/main
+>>>>>>> origin/main

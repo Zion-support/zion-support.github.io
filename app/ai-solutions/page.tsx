@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react";
 import { Helmet } from 'react-helmet-async";
 import { Link } from 'react-router-dom";
@@ -26,6 +27,12 @@ import {
 } from '@heroicons/react/24/outline'
 } from '@heroicons/react/24/outline";
 export default function AISolutionsPage() {
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+<<<<<<< HEAD
+>>>>>>> origin/main
   const aiServices = [
     {
       title: "Machine Learning Models","
@@ -37,14 +44,31 @@ export default function AISolutionsPage() {
         "A/B testing framework","
         "Model performance monitoring","
         "Automated retraining","
+<<<<<<< HEAD
         "Edge deployment""
       ],
+=======
+        "Edge deployment"
+      ],
+<<<<<<< HEAD
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $3,500/month",
+      benefits: ["95% accuracy", "Real-time processing", "Custom algorithms"],
+      useCases: ["Predictive analytics", "Recommendation engines", "Fraud detection"],
+      href: "/ai-machine-learning" },
+=======
+>>>>>>> origin/main
       color: "from-purple-500 to-pink-500","
       price: "Starting at $3,500/month","
       benefits: ["95% accuracy", "Real-time processing", "Custom algorithms"],"
       useCases: ["Predictive analytics", "Recommendation engines", "Fraud detection"],"
+<<<<<<< HEAD
       href: "/ai-machine-learning""
+=======
+      href: "/ai-machine-learning"
+>>>>>>> origin/main
     },
+>>>>>>> origin/main
     {
       title: "Natural Language Processing","
       description: "Advanced NLP solutions for text analysis, sentiment analysis, language translation, and conversational AI.","
@@ -55,29 +79,54 @@ export default function AISolutionsPage() {
         "Language translation","
         "Named entity recognition","
         "Text summarization","
+<<<<<<< HEAD
         "Conversational AI""
       ],
+=======
+        "Conversational AI"
+      ],
+<<<<<<< HEAD
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $2,800/month",
+      benefits: ["Multi-language support", "Real-time processing", "High accuracy"],
+      useCases: ["Customer support", "Content analysis", "Language translation"],
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $2,200/month",
+      benefits: ["Multi-language support", "Real-time analysis", "High accuracy"],
+      useCases: ["Customer feedback analysis", "Content moderation", "Chatbots"],
+      href: "/ai-nlp" },
+=======
+>>>>>>> origin/main
       color: "from-blue-500 to-cyan-500","
       price: "Starting at $2,800/month","
       benefits: ["Multi-language support", "Real-time processing", "High accuracy"],"
       useCases: ["Customer support", "Content analysis", "Language translation"],"
+<<<<<<< HEAD
       color: "from-blue-500 to-indigo-500","
       price: "Starting at $2,200/month","
       benefits: ["Multi-language support", "Real-time analysis", "High accuracy"],"
       useCases: ["Customer feedback analysis", "Content moderation", "Chatbots"],"
       href: "/ai-nlp""
+=======
+      href: "/ai-nlp"
+>>>>>>> origin/main
     },
+>>>>>>> origin/main
     {
       title: "Computer Vision","
       description: "Advanced computer vision solutions for image recognition, object detection, and visual analytics.","
       icon: EyeIcon,
       features: [
+<<<<<<< HEAD
         "Object detection","
+=======
+>>>>>>> origin/main
         "Image classification","
         "Object detection","
         "Facial recognition","
         "OCR (Optical Character Recognition)","
         "Video analysis","
+<<<<<<< HEAD
         "Real-time processing""
       ],
       color: "from-green-500 to-emerald-500","
@@ -91,7 +140,30 @@ export default function AISolutionsPage() {
       benefits: ["99.5% accuracy", "Real-time processing", "Multi-format support"],"
       useCases: ["Quality control", "Security monitoring", "Medical imaging"],"
       href: "/ai-computer-vision""
+=======
+        "Real-time processing"
+      ],
+<<<<<<< HEAD
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $4,200/month",
+      benefits: ["High accuracy", "Real-time processing", "Custom models"],
+      useCases: ["Quality control", "Security systems", "Medical imaging"],
+        "Quality inspection"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $2,800/month",
+      benefits: ["99.5% accuracy", "Real-time processing", "Multi-format support"],
+      useCases: ["Quality control", "Security monitoring", "Medical imaging"],
+      href: "/ai-computer-vision" },
+=======
+      color: "from-green-500 to-emerald-500","
+      price: "Starting at $4,200/month","
+      benefits: ["High accuracy", "Real-time processing", "Custom models"],"
+      useCases: ["Quality control", "Security systems", "Medical imaging"],"
+      href: "/ai-computer-vision"
+>>>>>>> origin/main
     },
+>>>>>>> origin/main
     {
       title: "Predictive Analytics","
       description: "Data-driven predictions and forecasting using advanced machine learning algorithms and statistical models.","
@@ -102,14 +174,31 @@ export default function AISolutionsPage() {
         "Risk assessment","
         "Trend analysis","
         "Anomaly detection","
+<<<<<<< HEAD
         "Performance optimization""
       ],
+=======
+        "Performance optimization"
+      ],
+<<<<<<< HEAD
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $3,000/month",
+      benefits: ["Accurate forecasts", "Real-time insights", "Custom models"],
+      useCases: ["Sales forecasting", "Risk management", "Inventory optimization"],
+      href: "/ai-predictive-analytics" },
+=======
+>>>>>>> origin/main
       color: "from-orange-500 to-red-500","
       price: "Starting at $3,000/month","
       benefits: ["Accurate forecasts", "Real-time insights", "Custom models"],"
       useCases: ["Sales forecasting", "Risk management", "Inventory optimization"],"
+<<<<<<< HEAD
       href: "/ai-predictive-analytics""
+=======
+      href: "/ai-predictive-analytics"
+>>>>>>> origin/main
     },
+>>>>>>> origin/main
     {
       title: "AI Automation","
       description: "Intelligent automation solutions that streamline business processes and reduce manual work.","
@@ -120,14 +209,31 @@ export default function AISolutionsPage() {
         "Intelligent routing","
         "Decision automation","
         "Resource optimization","
+<<<<<<< HEAD
         "Performance monitoring""
       ],
+=======
+        "Performance monitoring"
+      ],
+<<<<<<< HEAD
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $2,500/month",
+      benefits: ["Increased efficiency", "Cost reduction", "Error reduction"],
+      useCases: ["Business processes", "Customer service", "Data processing"],
+      href: "/ai-automation" },
+=======
+>>>>>>> origin/main
       color: "from-indigo-500 to-purple-500","
       price: "Starting at $2,500/month","
       benefits: ["Increased efficiency", "Cost reduction", "Error reduction"],"
       useCases: ["Business processes", "Customer service", "Data processing"],"
+<<<<<<< HEAD
       href: "/ai-automation""
+=======
+      href: "/ai-automation"
+>>>>>>> origin/main
     },
+>>>>>>> origin/main
     {
       title: "AI Consulting","
       description: "Strategic AI consulting to help you identify opportunities, develop roadmaps, and implement AI solutions.","
@@ -138,12 +244,17 @@ export default function AISolutionsPage() {
         "Implementation planning","
         "ROI analysis","
         "Change management","
+<<<<<<< HEAD
         "Training and support""
+=======
+        "Training and support"
+>>>>>>> origin/main
       ],
       color: "from-cyan-500 to-blue-500","
       price: "Starting at $1,500/month","
       benefits: ["Expert guidance", "Strategic planning", "Risk mitigation"],"
       useCases: ["AI transformation", "Technology adoption", "Process improvement"],"
+<<<<<<< HEAD
       href: "/ai-consulting""
         "Demand forecasting","
         "Customer churn prediction","
@@ -158,6 +269,22 @@ export default function AISolutionsPage() {
       useCases: ["Sales forecasting", "Inventory management", "Risk management"],"
       href: "/ai-predictive-analytics""
     },
+=======
+      href: "/ai-consulting"
+<<<<<<< HEAD
+        "Demand forecasting",
+        "Customer churn prediction",
+        "Sales forecasting",
+        "Risk assessment",
+        "Market trend analysis",
+        "Anomaly detection"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $2,500/month",
+      benefits: ["90% forecast accuracy", "Real-time insights", "Automated alerts"],
+      useCases: ["Sales forecasting", "Inventory management", "Risk management"],
+      href: "/ai-predictive-analytics" },
+>>>>>>> origin/main
     {
       title: "AI Chatbots & Virtual Assistants","
       description: "Intelligent conversational AI solutions for customer service, sales, and internal operations.","
@@ -170,12 +297,20 @@ export default function AISolutionsPage() {
         "Analytics dashboard","
         "Custom training""
       ],
+<<<<<<< HEAD
       color: "from-cyan-500 to-blue-500","
       price: "Starting at $1,800/month","
       benefits: ["24/7 availability", "Instant responses", "95% satisfaction"],"
       useCases: ["Customer support", "Lead qualification", "Internal helpdesk"],"
       href: "/ai-chatbots""
     },
+=======
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $1,800/month",
+      benefits: ["24/7 availability", "Instant responses", "95% satisfaction"],
+      useCases: ["Customer support", "Lead qualification", "Internal helpdesk"],
+      href: "/ai-chatbots" },
+>>>>>>> origin/main
     {
       title: "AI Content Generation","
       description: "AI-powered content creation tools for automated writing, optimization, and personalization.","
@@ -188,12 +323,20 @@ export default function AISolutionsPage() {
         "Content personalization","
         "Performance analytics""
       ],
+<<<<<<< HEAD
       color: "from-rose-500 to-pink-500","
       price: "Starting at $1,200/month","
       benefits: ["80% time savings", "SEO optimized", "Consistent quality"],"
       useCases: ["Blog content", "Marketing copy", "Product descriptions"],"
       href: "/ai-content-generation""
     },
+=======
+      color: "from-rose-500 to-pink-500",
+      price: "Starting at $1,200/month",
+      benefits: ["80% time savings", "SEO optimized", "Consistent quality"],
+      useCases: ["Blog content", "Marketing copy", "Product descriptions"],
+      href: "/ai-content-generation" },
+>>>>>>> origin/main
     {
       title: "AI Data Analytics","
       description: "Advanced AI-powered analytics for extracting insights from complex datasets and driving data-driven decisions.","
@@ -206,12 +349,20 @@ export default function AISolutionsPage() {
         "Real-time reporting","
         "Data visualization""
       ],
+<<<<<<< HEAD
       color: "from-teal-500 to-green-500","
       price: "Starting at $2,000/month","
       benefits: ["Real-time insights", "Automated analysis", "Custom dashboards"],"
       useCases: ["Business intelligence", "Market research", "Performance tracking"],"
       href: "/ai-data-analytics""
     },
+=======
+      color: "from-teal-500 to-green-500",
+      price: "Starting at $2,000/month",
+      benefits: ["Real-time insights", "Automated analysis", "Custom dashboards"],
+      useCases: ["Business intelligence", "Market research", "Performance tracking"],
+      href: "/ai-data-analytics" },
+>>>>>>> origin/main
     {
       title: "AI Process Automation","
       description: "Intelligent process automation using AI to streamline workflows and eliminate manual tasks.","
@@ -224,12 +375,20 @@ export default function AISolutionsPage() {
         "Integration management","
         "Performance monitoring""
       ],
+<<<<<<< HEAD
       color: "from-violet-500 to-purple-500","
       price: "Starting at $2,500/month","
       benefits: ["70% efficiency gain", "Error reduction", "Cost savings"],"
       useCases: ["Document processing", "Workflow optimization", "Data entry"],"
       href: "/ai-process-automation""
     },
+=======
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $2,500/month",
+      benefits: ["70% efficiency gain", "Error reduction", "Cost savings"],
+      useCases: ["Document processing", "Workflow optimization", "Data entry"],
+      href: "/ai-process-automation" },
+>>>>>>> origin/main
     {
       title: "AI Recommendation Engines","
       description: "Smart recommendation systems powered by AI to personalize user experiences and increase engagement.","
@@ -242,12 +401,20 @@ export default function AISolutionsPage() {
         "Multi-algorithm support","
         "Scalable architecture""
       ],
+<<<<<<< HEAD
       color: "from-amber-500 to-orange-500","
       price: "Starting at $1,800/month","
       benefits: ["30% engagement increase", "Personalized experience", "Real-time updates"],"
       useCases: ["E-commerce", "Content platforms", "Streaming services"],"
       href: "/ai-recommendation-engines""
     },
+=======
+      color: "from-amber-500 to-orange-500",
+      price: "Starting at $1,800/month",
+      benefits: ["30% engagement increase", "Personalized experience", "Real-time updates"],
+      useCases: ["E-commerce", "Content platforms", "Streaming services"],
+      href: "/ai-recommendation-engines" },
+>>>>>>> origin/main
     {
       title: "AI Fraud Detection","
       description: "Advanced AI-powered fraud detection systems for real-time threat identification and prevention.","
@@ -260,12 +427,20 @@ export default function AISolutionsPage() {
         "False positive reduction","
         "Compliance reporting""
       ],
+<<<<<<< HEAD
       color: "from-red-500 to-pink-500","
       price: "Starting at $3,200/month","
       benefits: ["99.9% accuracy", "Real-time detection", "Zero false positives"],"
       useCases: ["Financial services", "E-commerce", "Insurance"],"
       href: "/ai-fraud-detection""
     },
+=======
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $3,200/month",
+      benefits: ["99.9% accuracy", "Real-time detection", "Zero false positives"],
+      useCases: ["Financial services", "E-commerce", "Insurance"],
+      href: "/ai-fraud-detection" },
+>>>>>>> origin/main
     {
       title: "AI Voice Recognition","
       description: "Advanced voice recognition and speech processing solutions for voice commands and transcription.","
@@ -278,6 +453,7 @@ export default function AISolutionsPage() {
         "Speaker identification","
         "Real-time processing""
       ],
+<<<<<<< HEAD
       color: "from-indigo-500 to-purple-500","
       price: "Starting at $1,500/month","
       benefits: ["95% accuracy", "Multi-language", "Real-time processing"],"
@@ -287,6 +463,15 @@ export default function AISolutionsPage() {
     {
       title: "AI Business Intelligence","
       description: "Comprehensive AI-powered business intelligence solutions for strategic decision making and insights.","
+=======
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $1,500/month",
+      benefits: ["95% accuracy", "Multi-language", "Real-time processing"],
+      useCases: ["Voice assistants", "Transcription services", "Accessibility"],
+      href: "/ai-voice-recognition" },
+    { title: "AI Business Intelligence",
+      description: "Comprehensive AI-powered business intelligence solutions for strategic decision making and insights.",
+>>>>>>> origin/main
       icon: ChartBarIcon,
       features: [
         "Strategic insights","
@@ -296,12 +481,22 @@ export default function AISolutionsPage() {
         "Trend forecasting","
         "Executive dashboards""
       ],
+<<<<<<< HEAD
       color: "from-emerald-500 to-teal-500","
       price: "Starting at $4,000/month","
       benefits: ["Strategic insights", "Market intelligence", "ROI optimization"],"
       useCases: ["Strategic planning", "Market analysis", "Competitive research"],"
       href: "/ai-business-intelligence""
+=======
+      color: "from-emerald-500 to-teal-500",
+      price: "Starting at $4,000/month",
+      benefits: ["Strategic insights", "Market intelligence", "ROI optimization"],
+      useCases: ["Strategic planning", "Market analysis", "Competitive research"],
+      href: "/ai-business-intelligence" }
+=======
+>>>>>>> origin/main
     }
+>>>>>>> origin/main
   ];
 const AISolutionsPage: React.FC = () => {
   ]
@@ -321,16 +516,30 @@ const AISolutionsPage: React.FC = () => {
       description: "High-performance AI systems that process data in real-time for immediate insights and actions.","
       icon: RocketLaunchIcon
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    { title: "Expert Support",
+      description: "Dedicated AI experts who provide ongoing support, monitoring, and optimization of your AI systems.",
+      icon: UserGroupIcon }
+=======
+>>>>>>> origin/main
     {
       title: "Expert Support","
       description: "Dedicated AI experts who provide ongoing support, monitoring, and optimization of your AI systems.","
       icon: UserGroupIcon
     }
+>>>>>>> origin/main
   ]
+=======
+const HomePage = () => {
+>>>>>>> origin/main
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+<<<<<<< HEAD
         <title>AI Solutions - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Explore our advanced AI solutions including machine learning, natural language processing, and predictive analytics." />"
       </Helmet>
       {/* Hero Section */}
@@ -338,6 +547,15 @@ const AISolutionsPage: React.FC = () => {
         <div className="container mx-auto px-4">"
           <div className="max-w-4xl mx-auto text-center">"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">"
+=======
+        <meta name="description" content="Professional services by Zion Tech Group." />
+      </Helmet>
+      { /* Hero Section */ }
+      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 gradient-text neon-text">
+>>>>>>> origin/main
               AI Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">"
@@ -348,12 +566,35 @@ const AISolutionsPage: React.FC = () => {
               help businesses automate processes, gain insights, and deliver exceptional customer experiences.
             </p>
           </div>
+=======
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+>>>>>>> origin/main
         </div>
+<<<<<<< HEAD
       </section>
+<<<<<<< HEAD
+      { /* AI Services Grid */ }
+=======
+
       {/* AI Services Grid */}
+<<<<<<< HEAD
       <section className="py-20 bg-slate-900">"
         <div className="container mx-auto px-4">"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">"
+=======
+>>>>>>> origin/main
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+>>>>>>> origin/main
             {aiServices.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -361,18 +602,40 @@ const AISolutionsPage: React.FC = () => {
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating`}>`
                     <Icon className="w-8 h-8 text-white" />"
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>"
                   <p className="text-gray-300 mb-6 leading-relaxed">"
                     {service.description}
+=======
+                  <h3 className="text-2xl font-bold text-white mb-4 gradient-text">{service.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    { service.description }
+>>>>>>> origin/main
                   </p>
+<<<<<<< HEAD
+                  { /* Pricing */ }
+                  <div className="mb-6">
+                    <span className="text-3xl font-bold text-green-400">{service.price}</span>
+                  </div>
+                  { /* Features */ }
+=======
+                  
                   {/* Pricing */}
                   <div className="mb-6">"
                     <span className="text-3xl font-bold text-green-400">{service.price}</span>"
                   </div>
+
                   {/* Features */}
+<<<<<<< HEAD
                   <div className="mb-6">"
                     <h4 className="text-sm font-semibold text-gray-400 mb-3">Key Features:</h4>"
                     <ul className="space-y-2">"
+=======
+>>>>>>> origin/main
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+>>>>>>> origin/main
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">"
                           <CheckCircleIcon className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />"
@@ -381,32 +644,68 @@ const AISolutionsPage: React.FC = () => {
                       ))
                     </ul>
                   </div>
+<<<<<<< HEAD
+                  { /* Benefits */ }
+=======
+
                   {/* Benefits */}
+<<<<<<< HEAD
                   <div className="mb-6">"
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>"
                     <div className="flex flex-wrap gap-2">"
                       {service.benefits.map((benefit, benefitIndex) => (
                         <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">"
                           {benefit}
+=======
+>>>>>>> origin/main
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Benefits:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
+                          { benefit }
+>>>>>>> origin/main
                         </span>
                       ))
                     </div>
                   </div>
+<<<<<<< HEAD
+                  { /* Use Cases */ }
+=======
+
                   {/* Use Cases */}
+<<<<<<< HEAD
                   <div className="mb-6">"
                     <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>"
                     <div className="flex flex-wrap gap-2">"
                       {service.useCases.map((useCase, useCaseIndex) => (
                         <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">"
                           {useCase}
+=======
+>>>>>>> origin/main
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.useCases.map((useCase, useCaseIndex) => (
+                        <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
+                          { useCase }
+>>>>>>> origin/main
                         </span>
                       ))
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div className="flex gap-2">"
                     <Link
                       to={service.href}
                       className="flex-1 inline-flex items-center justify-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg hover:bg-purple-400/10""
+=======
+
+                  <div className="flex gap-2">
+                    <Link
+                      to={ service.href }
+                      className="flex-1 inline-flex items-center justify-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg hover:bg-purple-400/10"
+>>>>>>> origin/main
                     >
                       Learn More <ArrowRightIcon className="w-4 h-4" />"
                     </Link>
@@ -423,11 +722,23 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      { /* Why Choose Our AI Solutions */ }
+=======
+
       {/* Why Choose Our AI Solutions */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
+=======
+>>>>>>> origin/main
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+>>>>>>> origin/main
               Why Choose Our AI Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
@@ -474,11 +785,23 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      { /* AI Implementation Process */ }
+=======
+
       {/* AI Implementation Process */}
+<<<<<<< HEAD
       <section className="py-20 bg-slate-900">"
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
+=======
+>>>>>>> origin/main
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+>>>>>>> origin/main
               Our AI Implementation Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
@@ -525,7 +848,12 @@ const AISolutionsPage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+      { /* CTA Section */ }
+=======
+
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">"
         <div className="container mx-auto px-4">"
           <div className="max-w-4xl mx-auto text-center">"
@@ -533,6 +861,16 @@ const AISolutionsPage: React.FC = () => {
               Ready to Harness the Power of AI?
             </h2>
             <p className="text-xl text-gray-300 mb-12">"
+=======
+>>>>>>> origin/main
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+              Ready to Harness the Power of AI?
+            </h2>
+            <p className="text-xl text-gray-300 mb-12">
+>>>>>>> origin/main
               Let's discuss how our AI solutions can transform your business and drive innovation'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
@@ -563,6 +901,7 @@ const AISolutionsPage: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </section>;    </>
       <div className="min-h-screen bg-slate-900 text-white">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">"
@@ -589,6 +928,9 @@ const AISolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
+=======
+      </section></>
+>>>>>>> origin/main
       </section>
     </>
   )
@@ -596,11 +938,20 @@ export default AISolutionsPage;
         <meta name="description" content="Comprehensive AI solutions including machine learning, NLP, computer vision, and predictive analytics." />"
         <meta name="keywords" content="AI solutions, machine learning, NLP, computer vision, predictive analytics, AI consulting" />"
       </Helmet>
+<<<<<<< HEAD
       <div className="min-h-screen bg-slate-900">"
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-7xl mx-auto text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
+=======
+      
+      <div className="min-h-screen bg-slate-900">
+        { /* Hero Section */ }
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+>>>>>>> origin/main
               AI Solutions
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
@@ -617,10 +968,21 @@ export default AISolutionsPage;
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        { /* Services Grid */ }
+=======
+
         {/* Services Grid */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-7xl mx-auto">"
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">"
+=======
+>>>>>>> origin/main
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+>>>>>>> origin/main
               Our AI Solutions
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
@@ -635,8 +997,13 @@ export default AISolutionsPage;
                     <p className="text-purple-400 font-semibold">{service.price}</p>"
                   </div>
                   <Link 
+<<<<<<< HEAD
                     to={service.href}
                     className="text-purple-400 hover:text-purple-300 font-medium flex items-center""
+=======
+                    to={ service.href }
+                    className="text-purple-400 hover:text-purple-300 font-medium flex items-center"
+>>>>>>> origin/main
                   >
                     Learn More <ArrowRightIcon className="w-4 h-4 ml-1" />"
                   </Link>
@@ -645,10 +1012,21 @@ export default AISolutionsPage;
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        { /* Features Section */ }
+=======
+
         {/* Features Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">"
           <div className="max-w-7xl mx-auto">"
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">"
+=======
+>>>>>>> origin/main
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+>>>>>>> origin/main
               Why Choose Our AI Solutions?
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
@@ -664,13 +1042,27 @@ export default AISolutionsPage;
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+        { /* CTA Section */ }
+=======
+
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">"
           <div className="max-w-4xl mx-auto text-center">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">"
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8">"
+=======
+>>>>>>> origin/main
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+>>>>>>> origin/main
               Let's discuss how our AI solutions can help you achieve your goals.'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -683,6 +1075,16 @@ export default AISolutionsPage;
             </div>
           </div>
         </section>
+=======
+>>>>>>> origin/main
       </div>
+<<<<<<< HEAD
     </>
   )
+=======
+    </div>
+  );
+};
+
+export default HomePage;
+>>>>>>> origin/main

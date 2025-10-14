@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client''
@@ -53,6 +54,18 @@ export default function Page() {return (
       </div>
     </div>
   )
+=======
+import React from "react";
+
+const AdAnalytics = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">AdAnalytics</h2>
+      <p>This component is under construction.</p>
+    </div>
+<<<<<<< HEAD
+  ); }
+>>>>>>> origin/main
             AdAnalytics</h1>
           <p className="text-xl text-gray-600 mb-8">"
             Professional adanalytics solutions tailored to your business needs.</p>
@@ -82,4 +95,20 @@ export default function Page() {return (
       </div>
     </div>
   )}
+<<<<<<< HEAD
 }''
+=======
+            </button>;
+          </div>
+        </div>
+      </div>
+    </div>
+  );}
+}'
+=======
+  );
+};
+
+export default AdAnalytics;
+>>>>>>> origin/main
+>>>>>>> origin/main

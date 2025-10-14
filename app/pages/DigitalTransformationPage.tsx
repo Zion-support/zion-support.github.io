@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react";
 import { Helmet } from 'react-helmet-async";
 import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react";
@@ -26,6 +27,47 @@ const DigitalTransformationPage: React.FC = () => {const services = [{
       title: 'Digital Maturity","
       description: 'Assess and improve your organization\'s digital maturity across all business functions.","
       features: ['Maturity Assessment', 'Gap Analysis', 'Improvement Plans', 'Progress Tracking']'"}"
+=======
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react;
+const DigitalTransformationPage: React.FC = () => {
+  const services = [{
+      icon: RefreshCw,
+      title: "Process Automation",';
+      description: "Streamline and automate business processes to improve efficiency and reduce manual errors.",';
+      features: ['Workflow Analysis', 'Process Mapping', 'Automation Implementation', 'Performance Monitoring']';
+    },
+    {
+      icon: Users,
+      title: "Change Management",';
+      description: "Guide your team through digital transformation with effective change management strategies.",';
+      features: ['Training Programs', 'Communication Plans', 'Resistance Management', 'Success Metrics']';
+    },
+    {
+      icon: Target,
+      title: "Digital Strategy",';
+      description: "Develop comprehensive digital strategies aligned with your business objectives.",';
+      features: ['Digital Assessment', 'Technology Roadmap', 'Implementation Planning', 'ROI Analysis']';
+    },
+    {
+      icon: TrendingUp,
+      title: "Data Analytics",';
+      description: "Transform data into actionable insights to drive better business decisions.",';
+      features: ['Data Collection', 'Analytics Platforms', 'Dashboard Development', 'Insight Generation']';
+    },
+    {
+      icon: Lightbulb,
+      title: "Innovation Consulting",';
+      description: "Identify and implement innovative technologies to stay competitive in the digital age.",';
+      features: ['Technology Research', 'Innovation Workshops', 'Pilot Programs', 'Scalability Planning']';
+    },
+    { icon: CheckCircle,
+      title: "Digital Maturity",';
+      description: 'Assess and improve your organization\'s digital maturity across all business functions.',';
+      features: ['Maturity Assessment', 'Gap Analysis', 'Improvement Plans', 'Progress Tracking']'; }
+>>>>>>> origin/main
   ];
 const DigitalTransformationPage: React.FC = () => {
   return (
@@ -46,8 +88,13 @@ const DigitalTransformationPage: React.FC = () => {
             modern technologies, and innovative solutions.;
           </p>
         </div>
+<<<<<<< HEAD
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
+=======
+        { /* Services Grid */ }
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+>>>>>>> origin/main
           {services.map((service, _index) => {
             const Icon = service.icon;
             return (
@@ -61,9 +108,15 @@ const DigitalTransformationPage: React.FC = () => {
                 <p className="text-gray-300 mb-4">{service.description}</p>"
                 <ul className="space-y-2">"
                   {service.features.map((feature, featureIndex) => (
+<<<<<<< HEAD
                     <li key={featureIndex} className="text-sm text-gray-400 flex items-center">"
                       <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>"
                       {feature}
+=======
+                    <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+                      <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
+                      { feature }
+>>>>>>> origin/main
                     </li>
                   ))
                 </ul>
@@ -71,11 +124,19 @@ const DigitalTransformationPage: React.FC = () => {
             )
           }
         </div>
+<<<<<<< HEAD
         {/* CTA Section */}
         <div className="text-center">"
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">"
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>"
             <p className="text-gray-300 mb-6">"
+=======
+        { /* CTA Section */ }
+        <div className="text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-gray-300 mb-6">
+>>>>>>> origin/main
               Our digital transformation experts can help you modernize your operations and stay competitive.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -150,3 +211,17 @@ export default DigitalTransformationPage;
     </>
   )
 export default DigitalTransformationPage;
+=======
+"use client";
+
+import React from "react";
+
+export default function DigitalTransformationPage() {
+  return (
+    <div>
+      <h1 className="text-4xl font-bold mb-8">DigitalTransformationPage</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+    </div>
+  );
+}
+>>>>>>> origin/main

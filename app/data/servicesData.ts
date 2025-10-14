@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 export interface Service {id: string;
+=======
+<<<<<<< HEAD
+export interface Service {
+  id: string;
+>>>>>>> origin/main
   title: string;
   description: string;
   shortDescription: string;
@@ -40,6 +46,7 @@ export const services: Service[] = [
       enterprise: 50000
     },
     benefits: [
+<<<<<<< HEAD
       'Increased Efficiency','
       'Cost Reduction','
       'Better Decision Making','
@@ -68,10 +75,58 @@ export const services: Service[] = [
       phone: '+1-302-464-0950','
       email: 'ai@ziontechgroup.com','
       website: 'https://ziontechgroup.com/ai-solutions''
+=======
+      'Increased Efficiency',
+      'Cost Reduction',
+      'Better Decision Making',
+      'Automated Processes',
+<<<<<<< HEAD
+=======
+      'Improved Customer Experience',
+>>>>>>> origin/main
+      'Competitive Advantage'
+    ],
+    useCases: [
+      'Customer Service Automation',
+      'Predictive Maintenance',
+      'Fraud Detection',
+      'Content Generation',
+<<<<<<< HEAD
+      'Data Analysis'
+=======
+      'Data Analysis',
+      'Process Optimization'
+>>>>>>> origin/main
+    ],
+    technologies: [
+      'TensorFlow',
+      'PyTorch',
+      'OpenAI GPT',
+<<<<<<< HEAD
+      'Computer Vision APIs',
+      'Natural Language Processing'
+    ],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+=======
+      'Hugging Face',
+      'Scikit-learn',
+      'Pandas',
+      'NumPy'
+    ],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'ai@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-solutions'
+>>>>>>> origin/main
+>>>>>>> origin/main
     },
     href: '/ai-solutions''
   },
   {
+<<<<<<< HEAD
     id: 'cybersecurity','
     title: 'Cybersecurity','
     description: 'Enterprise-grade cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management to protect your digital assets.','
@@ -85,6 +140,32 @@ export const services: Service[] = [
       'Compliance Management','
       'Incident Response','
       'Security Training''
+=======
+    id: 'cybersecurity',
+    title: 'Cybersecurity',
+<<<<<<< HEAD
+    description: 'Comprehensive cybersecurity solutions to protect your digital assets, including threat detection, vulnerability assessment, security monitoring, and incident response.',
+    shortDescription: 'Complete cybersecurity protection for your business',
+=======
+    description: 'Enterprise-grade cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management to protect your digital assets.',
+    shortDescription: 'Comprehensive cybersecurity protection',
+>>>>>>> origin/main
+    category: 'Cybersecurity',
+    icon: 'ShieldCheckIcon',
+    features: [
+      'Threat Detection',
+      'Vulnerability Assessment',
+      'Security Monitoring',
+<<<<<<< HEAD
+      'Incident Response',
+      'Security Training',
+      'Compliance Management'
+=======
+      'Compliance Management',
+      'Incident Response',
+      'Security Training'
+>>>>>>> origin/main
+>>>>>>> origin/main
     ],
     pricing: {
       basic: 3000,
@@ -92,6 +173,7 @@ export const services: Service[] = [
       enterprise: 30000
     },
     benefits: [
+<<<<<<< HEAD
       'Enhanced Security','
       'Compliance Assurance','
       'Risk Mitigation','
@@ -106,6 +188,46 @@ export const services: Service[] = [
       'Threat Hunting','
       'Security Awareness','
       'Incident Management''
+=======
+      'Enhanced Security',
+<<<<<<< HEAD
+      'Risk Mitigation',
+      'Compliance Assurance',
+      'Peace of Mind',
+      'Cost Savings'
+=======
+      'Compliance Assurance',
+      'Risk Mitigation',
+      '24/7 Monitoring',
+      'Expert Support',
+      'Peace of Mind'
+>>>>>>> origin/main
+    ],
+    useCases: [
+      'Network Security',
+      'Data Protection',
+<<<<<<< HEAD
+      'Access Control',
+      'Security Audits',
+      'Incident Response'
+    ],
+    technologies: [
+      'SIEM Systems',
+      'Firewall Management',
+      'Intrusion Detection',
+      'Encryption',
+      'Multi-Factor Authentication'
+    ],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+=======
+      'Compliance Auditing',
+      'Threat Hunting',
+      'Security Awareness',
+      'Incident Management'
+>>>>>>> origin/main
     ],
     technologies: [
       'SIEM','
@@ -117,13 +239,21 @@ export const services: Service[] = [
       'DLP''
     ],
     contactInfo: {
+<<<<<<< HEAD
       phone: '+1-302-464-0950','
       email: 'security@ziontechgroup.com','
       website: 'https://ziontechgroup.com/cybersecurity''
+=======
+      phone: '+1-302-464-0950',
+      email: 'security@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/cybersecurity'
+>>>>>>> origin/main
+>>>>>>> origin/main
     },
     href: '/cybersecurity''
   },
   {
+<<<<<<< HEAD
     id: 'cloud-infrastructure','
     title: 'Cloud Infrastructure','
     description: 'Scalable cloud infrastructure solutions including cloud migration, architecture design, DevOps implementation, and cloud management services.','
@@ -137,6 +267,68 @@ export const services: Service[] = [
       'Cloud Management','
       'Auto-scaling','
       'Disaster Recovery''
+=======
+    id: 'cloud-infrastructure',
+    title: 'Cloud Infrastructure',
+<<<<<<< HEAD
+    description: 'Scalable cloud infrastructure solutions including cloud migration, infrastructure management, DevOps automation, and cloud security to support your business growth.',
+    shortDescription: 'Scalable cloud infrastructure for modern businesses',
+=======
+    description: 'Scalable cloud infrastructure solutions including cloud migration, architecture design, DevOps implementation, and cloud management services.',
+    shortDescription: 'Scalable cloud infrastructure solutions',
+>>>>>>> origin/main
+    category: 'Cloud',
+    icon: 'CloudIcon',
+    features: [
+      'Cloud Migration',
+<<<<<<< HEAD
+      'Infrastructure Management',
+      'DevOps Automation',
+      'Cloud Security',
+      'Scalability Solutions',
+      'Cost Optimization'
+    ],
+    pricing: {
+      basic: 2000,
+      pro: 8000,
+      enterprise: 25000
+    },
+    benefits: [
+      'Scalability',
+      'Cost Efficiency',
+      'Reliability',
+      'Flexibility',
+      'Global Reach'
+    ],
+    useCases: [
+      'Application Hosting',
+      'Data Storage',
+      'Backup Solutions',
+      'Disaster Recovery',
+      'Development Environments'
+    ],
+    technologies: [
+      'AWS',
+      'Azure',
+      'Google Cloud',
+      'Docker',
+      'Kubernetes'
+    ],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com'
+    },
+    href: '/cloud-infrastructure'
+  }
+];
+=======
+      'Architecture Design',
+      'DevOps Implementation',
+      'Cloud Management',
+      'Auto-scaling',
+      'Disaster Recovery'
+>>>>>>> origin/main
     ],
     pricing: {
       basic: 2000,
@@ -332,3 +524,11 @@ export const services: Service[] = [
     href: '/micro-saas-solutions''
   }
 ];
+=======
+// servicesData - Basic implementation;
+export default function servicesData() {;
+  return null;
+}
+;
+>>>>>>> origin/main
+>>>>>>> origin/main

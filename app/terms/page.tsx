@@ -1,11 +1,27 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async";
 const TermsPage: React.FC = () => {
   return (
+=======
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';
+const TermsPage: React.FC = () => { return (
+>>>>>>> origin/main
     <>
+=======
+
+import { Helmet } from "react-helmet-async";
+
+const HomePage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+>>>>>>> origin/main
       <Helmet>
+<<<<<<< HEAD
         <title>Terms of Service - Zion Tech Group</title>
         <meta name="description" content="Read the terms of service for using Zion Tech Group's AI and IT solutions. Understand your rights and responsibilities." />''
         <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />"
@@ -20,6 +36,22 @@ const TermsPage: React.FC = () => {
         <section className="relative py-20 px-4">"
           <div className="max-w-7xl mx-auto text-center">"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">"
+=======
+        <title>Home - Zion Tech Group</title>
+        <meta name="description" content="Home - Zion Tech Group" />
+      </Helmet>
+<<<<<<< HEAD
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <title>Terms of Service - Zion Tech Group</title>'
+        <meta name="description" content="Read the terms of service for using Zion Tech Group's AI and IT solutions. Understand your rights and responsibilities." />';
+        <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">; }
+        { /* Hero Section */ }
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+>>>>>>> origin/main
               Terms of;
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">"
                 Service;
@@ -30,14 +62,23 @@ const TermsPage: React.FC = () => {
             </p>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Content Section */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}"
         <section className="relative py-20 px-4">"
           <div className="max-w-7xl mx-auto text-center">"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">"
+=======
+        { /* Content Section */ }
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{ /* Hero Section */ }
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+>>>>>>> origin/main
               Terms of
               <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">"
                 Service</span></h1>
+<<<<<<< HEAD
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
               Please read these terms carefully before using our services.</p></div></section>{/* Content Section */}
         <section className="py-20 px-4">"
@@ -46,6 +87,16 @@ const TermsPage: React.FC = () => {
               <div className="prose prose-invert max-w-none">"
                 <h2 className="text-2xl font-semibold text-white mb-4">Acceptance of Terms</h2>"
                 <p className="text-gray-300 mb-6">"
+=======
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Please read these terms carefully before using our services.</p></div></section>{ /* Content Section */ }
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
+              <div className="prose prose-invert max-w-none">
+                <h2 className="text-2xl font-semibold text-white mb-4">Acceptance of Terms</h2>
+                <p className="text-gray-300 mb-6">
+>>>>>>> origin/main
                   By accessing and using our services, you accept and agree to be bound by the terms;
                   and provision of this agreement.;
                 </p>
@@ -90,8 +141,13 @@ const TermsPage: React.FC = () => {
                     legal@ziontechgroup.com;
                   </a>.;
                 </p>
+<<<<<<< HEAD
                 <p className="text-gray-400 text-sm mt-8">"
                   Last updated: {new Date().toLocaleDateString()
+=======
+                <p className="text-gray-400 text-sm mt-8">
+                  Last updated: { new Date().toLocaleDateString() }
+>>>>>>> origin/main
                 </p>
               </div>
             </div>
@@ -133,10 +189,36 @@ export default TermsPage;
                   If you have any questions about these terms of service, please contact us at
                   <a href="mailto:legal@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">"
                     legal@ziontechgroup.com</a>.</p>
+<<<<<<< HEAD
                 <p className="text-gray-400 text-sm mt-8">"
                   Last updated: {new Date().toLocaleDateString()
+=======
+                <p className="text-gray-400 text-sm mt-8">
+                  Last updated: { new Date().toLocaleDateString() }
+>>>>>>> origin/main
                 </p></div></div></div></section></div></>
   )
 export default TermsPage
+<<<<<<< HEAD
 }
 export default TermsPage';
+=======
+=======
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-8">Home</h1>
+          <p className="text-gray-300 text-lg">
+            This page is under construction. Please check back later.
+          </p>
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+export default FiveGSolutionsPage;
+=======
+=======
+>>>>>>> origin/main
+};
+
+export default HomePage;
+>>>>>>> origin/main
+>>>>>>> origin/main

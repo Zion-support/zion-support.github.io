@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client''
@@ -52,7 +53,11 @@ export default function Page() {return (
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
+=======
+  ); }
+>>>>>>> origin/main
             ContentPromotionBanner</h1>
           <p className="text-xl text-gray-600 mb-8">"
             Professional contentpromotionbanner solutions tailored to your business needs.</p>
@@ -82,4 +87,17 @@ export default function Page() {return (
       </div>
     </div>
   )}
+<<<<<<< HEAD
 }''
+=======
+            </button>;
+          </div>
+        </div>
+      </div>
+    </div>
+  );}
+}'
+=======
+
+>>>>>>> origin/main
+>>>>>>> origin/main

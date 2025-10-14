@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 'use client''
 const LazyImage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">"
+=======
+import React from "react";
+
+const LazyImage = () => {
+  return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-white">
+>>>>>>> origin/main
       <Helmet>
         <title>Lazy Image - Zion Tech Group</title>
         <meta name="description" content="Professional lazy image services by Zion Tech Group." />"
@@ -20,14 +29,21 @@ const LazyImage: React.FC = () => {
           </p>
         </div>
       </section>
-      {/* Content Section */}
+      { /* Content Section */ }
             Lazy Image</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">"
             Professional lazy image services
+<<<<<<< HEAD
             designed to help your business grow and succeed.</p></div></section>{/* Content Section */}
       <section className="py-16 px-4">"
         <div className="max-w-6xl mx-auto">"
           <div className="grid md:grid-cols-2 gap-12 items-center">"
+=======
+            designed to help your business grow and succeed.</p></div></section>{ /* Content Section */ }
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+>>>>>>> origin/main
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>"
               <p className="text-lg text-gray-600 mb-6">"
@@ -64,10 +80,17 @@ const LazyImage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">"
         <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl font-bold text-white mb-6">"
+=======
+      { /* CTA Section */ }
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+>>>>>>> origin/main
             Ready to Get Started?;
           </h2>
           <p className="text-xl text-blue-100 mb-8">"
@@ -102,12 +125,21 @@ export default LazyImage;
               <p className="mb-6">"
                 Ready to transform your business with our lazy image services?</p>
               <a
+<<<<<<< HEAD
                 href="/contact""
                 className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">"
                 Contact Us</a></div></div></div></section>{/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">"
         <div className="max-w-4xl mx-auto text-center">"
           <h2 className="text-3xl font-bold text-white mb-6">"
+=======
+                href="/contact"
+                className="inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+                Contact Us</a></div></div></div></section>{ /* CTA Section */ }
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+>>>>>>> origin/main
             Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">"
             Let's discuss how our lazy image''
@@ -118,13 +150,22 @@ export default LazyImage;
             Get Started Today</a></div></section></div>
   )
 export default LazyImage
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react";
 interface LazyImageProps {src: string;
+=======
+import React, { useState, useRef, useEffect } from 'react';
+interface LazyImageProps { src: string;
+>>>>>>> origin/main
   alt: string;
   className?: string;
   placeholder?: string;
   onLoad?: () => void;
+<<<<<<< HEAD
   onError?: () => void}
+=======
+  onError?: () => void; }
+>>>>>>> origin/main
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
@@ -144,10 +185,17 @@ const LazyImage: React.FC<LazyImageProps> = ({
           observer.disconnect()
       },
       { threshold: 0.1 }
+<<<<<<< HEAD
     if (imgRef.current) {
       observer.observe(imgRef.current)
     return () => observer.disconnect()
   }, [])
+=======
+    );
+    if (imgRef.current) { observer.observe(imgRef.current); }
+    return () => observer.disconnect();
+  }, []);
+>>>>>>> origin/main
   const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
@@ -158,6 +206,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {isInView && (
         <img
           src={src}
+<<<<<<< HEAD
           alt={alt}
           onLoad={handleLoad}
           onError={handleError}
@@ -165,18 +214,48 @@ const LazyImage: React.FC<LazyImageProps> = ({
             isLoaded ? 'opacity-100' : 'opacity-0''
           }`}`
           loading="lazy""
+=======
+          alt={ alt }
+          onLoad={ handleLoad }
+          onError={ handleError }
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          loading="lazy"
+>>>>>>> origin/main
         />
       )
       {!isLoaded && (
         <div
           className="absolute inset-0 bg-gray-200 animate-pulse""
           style={{
+<<<<<<< HEAD
             backgroundImage: `url(${placeholder})`,`
             backgroundSize: 'cover','
             backgroundPosition: 'center''
           }
+=======
+            backgroundImage: `url(${placeholder})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center" }}
+>>>>>>> origin/main
         />
       )
     </div>
+<<<<<<< HEAD
   )
 export default LazyImage;
+=======
+  );
+};
+=======
+    <div className="p-4">
+      <h2 className="text-xl font-semibold mb-2">LazyImage</h2>
+      <p>This component is under construction.</p>
+    </div>
+  );
+};
+
+>>>>>>> origin/main
+export default LazyImage;
+>>>>>>> origin/main

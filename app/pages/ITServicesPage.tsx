@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react";
 import { Helmet } from 'react-helmet-async";
 import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react";
@@ -26,6 +27,47 @@ const ITServicesPage: React.FC = () => {const services = [{
       title: 'Data Management","
       description: 'Organize, secure, and optimize your data infrastructure for better insights and compliance.","
       features: ['Database Design', 'Data Backup', 'Data Migration', 'Performance Tuning']'"}"
+=======
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react;
+const ITServicesPage: React.FC = () => {
+  const services = [{
+      icon: Server,
+      title: "Infrastructure Management",';
+      description: "Comprehensive IT infrastructure setup, maintenance, and optimization for maximum performance.",';
+      features: ['Server Configuration', 'Network Setup', 'Hardware Maintenance', 'Performance Monitoring']';
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Solutions",';
+      description: "Migrate to the cloud and optimize your cloud infrastructure for scalability and cost-effectiveness.",';
+      features: ['Cloud Migration', 'Multi-cloud Strategy', 'Cost Optimization', 'Disaster Recovery']';
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity",';
+      description: "Protect your business with comprehensive security solutions and threat monitoring.",';
+      features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response']';
+    },
+    {
+      icon: Wrench,
+      title: "Technical Support",';
+      description: "24/7 technical support and maintenance to keep your systems running smoothly.",';
+      features: ['Help Desk Support', 'Remote Monitoring', 'Preventive Maintenance', 'Emergency Response']';
+    },
+    {
+      icon: Monitor,
+      title: "System Integration",';
+      description: "Seamlessly integrate different systems and applications for improved workflow efficiency.",';
+      features: ['API Integration', 'Data Synchronization', 'Workflow Automation', 'Legacy System Modernization']';
+    },
+    { icon: Database,
+      title: "Data Management",';
+      description: "Organize, secure, and optimize your data infrastructure for better insights and compliance.",';
+      features: ['Database Design', 'Data Backup', 'Data Migration', 'Performance Tuning']'; }
+>>>>>>> origin/main
   ];
 const ITServicesPage: React.FC = () => {
   return (
@@ -46,8 +88,13 @@ const ITServicesPage: React.FC = () => {
             From infrastructure to support, we"ve got you covered."
           </p>
         </div>
+<<<<<<< HEAD
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">"
+=======
+        { /* Services Grid */ }
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+>>>>>>> origin/main
           {services.map((service, _index) => {
             const Icon = service.icon;
             return (
@@ -61,9 +108,15 @@ const ITServicesPage: React.FC = () => {
                 <p className="text-gray-300 mb-4">{service.description}</p>"
                 <ul className="space-y-2">"
                   {service.features.map((feature, featureIndex) => (
+<<<<<<< HEAD
                     <li key={featureIndex} className="text-sm text-gray-400 flex items-center">"
                       <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>"
                       {feature}
+=======
+                    <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                      { feature }
+>>>>>>> origin/main
                     </li>
                   ))
                 </ul>
@@ -71,11 +124,19 @@ const ITServicesPage: React.FC = () => {
             )
           }
         </div>
+<<<<<<< HEAD
         {/* CTA Section */}
         <div className="text-center">"
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">"
             <h2 className="text-2xl font-bold text-white mb-4">Need Reliable IT Support?</h2>"
             <p className="text-gray-300 mb-6">"
+=======
+        { /* CTA Section */ }
+        <div className="text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-4">Need Reliable IT Support?</h2>
+            <p className="text-gray-300 mb-6">
+>>>>>>> origin/main
               Our IT experts are ready to help you maintain, secure, and optimize your technology infrastructure.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -150,3 +211,17 @@ export default ITServicesPage;
     </>
   )
 export default ITServicesPage;
+=======
+"use client";
+
+import React from "react";
+
+export default function ITServicesPage() {
+  return (
+    <div>
+      <h1 className="text-4xl font-bold mb-8">ITServicesPage</h1>
+      <p className="text-gray-300 text-lg">This page is under development.</p>
+    </div>
+  );
+}
+>>>>>>> origin/main

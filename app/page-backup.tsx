@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+<<<<<<< HEAD
 'use client''
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 "use client"
 export default function Page() {return (
     <div className="min-h-screen bg-white">"
+=======
+'use client'
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+'use client';
+export default function Page() { return (
+    <div className="min-h-screen bg-white">
+>>>>>>> origin/main
       <Helmet>
         <title>Page backup - Zion Tech Group</title>
         <meta name="description" content="Professional page backup services by Zion Tech Group." />"
@@ -52,7 +62,11 @@ export default function Page() {return (
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
+=======
+  ); }
+>>>>>>> origin/main
             Page backup</h1>
           <p className="text-xl text-gray-600 mb-8">"
             Professional page backup solutions tailored to your business needs.</p>
@@ -82,4 +96,26 @@ export default function Page() {return (
       </div>
     </div>
   )}
+<<<<<<< HEAD
 }''
+=======
+            </button>;
+          </div>
+        </div>
+      </div>
+    </div>
+  );}
+}'
+=======
+import React from 'react';
+
+export default function PageBackup() {
+  return (
+    <div>
+      <h1>PageBackup</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+}
+>>>>>>> origin/main
+>>>>>>> origin/main
