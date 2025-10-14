@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-const AidataanalyticsPage = () => {
-  return (
-    <div>
-      <Helmet>
-        <title>Ai data analytics Page - Zion Tech Group</title>
-        <meta name="description" content="Ai data analytics Page - Zion Tech Group" />
-      </Helmet>
-      <div>
-        <div>
-          <h1 className="text-4xl font-bold text-white mb-8">Ai data analytics Page</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-=======
 import React from 'react';
 
 export default function AiDataAnalyticsPage() {
@@ -25,11 +7,8 @@ export default function AiDataAnalyticsPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Ai Data Analytics</h1>
           <p className="text-gray-300 text-xl mb-8">Learn more about ai data analytics</p>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
         </div>
       </div>
     </div>
   );
 };
-
-export default AidataanalyticsPage;

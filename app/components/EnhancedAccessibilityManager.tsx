@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const EnhancedAccessibilityManager: React.FC = () => {
-  return (
-    <div>
-      <h2>EnhancedAccessibilityManager</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default EnhancedAccessibilityManager;
-=======
 import React from 'react';
 
 export default function EnhancedAccessibilityManagerPage() {
@@ -26,4 +12,3 @@ export default function EnhancedAccessibilityManagerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

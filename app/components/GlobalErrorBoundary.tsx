@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const GlobalErrorBoundary: React.FC = () => {
-  return (
-    <div>
-      <h2>GlobalErrorBoundary</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default GlobalErrorBoundary;
-=======
 import React from 'react';
 
 export default function GlobalErrorBoundaryPage() {
@@ -26,4 +12,3 @@ export default function GlobalErrorBoundaryPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

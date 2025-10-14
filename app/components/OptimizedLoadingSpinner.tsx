@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const OptimizedLoadingSpinner: React.FC = () => {
-  return (
-    <div>
-      <h2>OptimizedLoadingSpinner</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default OptimizedLoadingSpinner;
-=======
 import React from 'react';
 
 export default function OptimizedLoadingSpinnerPage() {
@@ -26,4 +12,3 @@ export default function OptimizedLoadingSpinnerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const FuturisticTextEnhanced: React.FC = () => {
-  return (
-    <div>
-      <h2>FuturisticTextEnhanced</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default FuturisticTextEnhanced;
-=======
 import React from 'react';
 
 export default function FuturisticTextEnhancedPage() {
@@ -26,4 +12,3 @@ export default function FuturisticTextEnhancedPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

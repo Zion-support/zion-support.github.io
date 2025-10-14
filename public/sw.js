@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-// Service Worker
-console.log('Service Worker loaded');
-=======
 const CACHE_NAME = 'zion-tech-v1';
 const urlsToCache = [
   '/',
@@ -56,4 +52,3 @@ async function doBackgroundSync() {
   // Handle offline form submissions or other background tasks
   console.log('Background sync triggered');
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

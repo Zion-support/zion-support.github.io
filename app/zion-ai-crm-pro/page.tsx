@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-const ZionaicrmproPage = () => {
-  return (
-    <div>
-      <Helmet>
-        <title>Zion ai crm pro Page - Zion Tech Group</title>
-        <meta name="description" content="Zion ai crm pro Page - Zion Tech Group" />
-      </Helmet>
-      <div>
-        <div>
-          <h1 className="text-4xl font-bold text-white mb-8">Zion ai crm pro Page</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-=======
 import React from 'react';
 
 export default function ZionAiCrmProPage() {
@@ -25,15 +7,8 @@ export default function ZionAiCrmProPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Zion Ai Crm Pro</h1>
           <p className="text-gray-300 text-xl mb-8">Learn more about zion ai crm pro</p>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default ZionaicrmproPage;
-=======
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

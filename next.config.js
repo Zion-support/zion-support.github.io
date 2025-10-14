@@ -5,7 +5,6 @@ import withBundleAnalyzer from '; import crypto from ';crypto;,';,enabled: proce
 contentSecurityPolicy: "default-src 'self'; script-src 'none)'""'"'
 }
 ]'""'"'
-=======
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -27,5 +26,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d09f

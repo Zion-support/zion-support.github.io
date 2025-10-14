@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const AdvertisingBanner: React.FC = () => {
-  return (
-    <div>
-      <h2>AdvertisingBanner</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default AdvertisingBanner;
-=======
 import React from 'react';
 
 export default function AdvertisingBannerPage() {
@@ -26,4 +12,3 @@ export default function AdvertisingBannerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

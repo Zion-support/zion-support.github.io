@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const EnhancedLoadingStates: React.FC = () => {
-  return (
-    <div>
-      <h2>EnhancedLoadingStates</h2>
-      <p>Component implementation coming soon.</p>
-=======
 import React from 'react';
 
 export default function EnhancedLoadingStatesPage() {
@@ -18,9 +9,6 @@ export default function EnhancedLoadingStatesPage() {
           <p className="text-gray-300 text-xl mb-8">Learn more about enhancedloadingstates</p>
         </div>
       </div>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
     </div>
   );
 };
-
-export default EnhancedLoadingStates;

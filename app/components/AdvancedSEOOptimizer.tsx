@@ -1,17 +1,5 @@
 import React from "react";
 
-<<<<<<< HEAD
-const AdvancedSEOOptimizer: React.FC = () => {
-  return (
-    <div>
-      <h2>AdvancedSEOOptimizer</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default AdvancedSEOOptimizer;
-=======
 export default function AdvancedSEOOptimizerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -24,4 +12,3 @@ export default function AdvancedSEOOptimizerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-// Image optimizer utility
-export function optimizeImage(src: string) {
-  return src;
-}
-=======
 export interface ImageOptimizationOptions {
   width?: number;
   height?: number;
@@ -41,6 +35,3 @@ export const generateResponsiveImages = (
 };
 
 export default optimizeImage;
-
-
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const PerformanceEnhancer: React.FC = () => {
-  return (
-    <div>
-      <h2>PerformanceEnhancer</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default PerformanceEnhancer;
-=======
 import React from 'react';
 
 export default function PerformanceEnhancerPage() {
@@ -26,4 +12,3 @@ export default function PerformanceEnhancerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

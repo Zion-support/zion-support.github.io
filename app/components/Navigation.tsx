@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const Navigation: React.FC = () => {
-  return (
-    <div>
-      <h2>Navigation</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default Navigation;
-=======
 import React from 'react';
 import Link from 'next/link';
 
@@ -39,4 +25,3 @@ export default function Navigation() {
     </nav>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

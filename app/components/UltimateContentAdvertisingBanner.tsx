@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const UltimateContentAdvertisingBanner: React.FC = () => {
-  return (
-    <div>
-      <h2>UltimateContentAdvertisingBanner</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default UltimateContentAdvertisingBanner;
-=======
 import React from 'react';
 
 export default function UltimateContentAdvertisingBannerPage() {
@@ -26,4 +12,3 @@ export default function UltimateContentAdvertisingBannerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

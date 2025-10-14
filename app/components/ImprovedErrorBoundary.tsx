@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const ImprovedErrorBoundary: React.FC = () => {
-  return (
-    <div>
-      <h2>ImprovedErrorBoundary</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default ImprovedErrorBoundary;
-=======
 import React from 'react';
 
 export default function ImprovedErrorBoundaryPage() {
@@ -26,4 +12,3 @@ export default function ImprovedErrorBoundaryPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

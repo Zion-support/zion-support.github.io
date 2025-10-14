@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const MobileOptimizer: React.FC = () => {
-  return (
-    <div>
-      <h2>MobileOptimizer</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default MobileOptimizer;
-=======
 import React from 'react';
 
 export default function MobileOptimizerPage() {
@@ -26,4 +12,3 @@ export default function MobileOptimizerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

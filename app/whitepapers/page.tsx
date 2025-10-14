@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-const WhitepapersPage = () => {
-  return (
-    <div>
-      <Helmet>
-        <title>Whitepapers Page - Zion Tech Group</title>
-        <meta name="description" content="Whitepapers Page - Zion Tech Group" />
-      </Helmet>
-      <div>
-        <div>
-          <h1 className="text-4xl font-bold text-white mb-8">Whitepapers Page</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-=======
 import React from 'react';
 
 export default function WhitepapersPage() {
@@ -25,15 +7,8 @@ export default function WhitepapersPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">Whitepapers</h1>
           <p className="text-gray-300 text-xl mb-8">Learn more about whitepapers</p>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default WhitepapersPage;
-=======
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

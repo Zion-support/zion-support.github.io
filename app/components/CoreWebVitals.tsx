@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const CoreWebVitals: React.FC = () => {
-  return (
-    <div>
-      <h2>CoreWebVitals</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default CoreWebVitals;
-=======
 import React from 'react';
 
 export default function CoreWebVitalsPage() {
@@ -26,4 +12,3 @@ export default function CoreWebVitalsPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

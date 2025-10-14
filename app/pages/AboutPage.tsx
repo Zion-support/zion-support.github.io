@@ -1,21 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-
-const AboutPage = () => {
-  return (
-    <div>
-      <Helmet>
-        <title>AboutPage - Zion Tech Group</title>
-        <meta name="description" content="AboutPage - Zion Tech Group" />
-      </Helmet>
-      <div>
-        <div>
-          <h1 className="text-4xl font-bold text-white mb-8">AboutPage</h1>
-          <p className="text-gray-300 text-lg">
-            This page is under construction. Please check back later.
-          </p>
-=======
 
 export default function AboutPage() {
   return (
@@ -40,15 +23,8 @@ export default function AboutPage() {
               </p>
             </div>
           </div>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default AboutPage;
-=======
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

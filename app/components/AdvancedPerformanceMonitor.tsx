@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const AdvancedPerformanceMonitor: React.FC = () => {
-  return (
-    <div>
-      <h2>AdvancedPerformanceMonitor</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default AdvancedPerformanceMonitor;
-=======
 import React from 'react';
 
 export default function AdvancedPerformanceMonitorPage() {
@@ -26,4 +12,3 @@ export default function AdvancedPerformanceMonitorPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

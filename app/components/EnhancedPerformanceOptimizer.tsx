@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const EnhancedPerformanceOptimizer: React.FC = () => {
-  return (
-    <div>
-      <h2>EnhancedPerformanceOptimizer</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default EnhancedPerformanceOptimizer;
-=======
 import React from 'react';
 
 export default function EnhancedPerformanceOptimizerPage() {
@@ -26,4 +12,3 @@ export default function EnhancedPerformanceOptimizerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

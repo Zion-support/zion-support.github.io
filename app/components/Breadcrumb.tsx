@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const Breadcrumb: React.FC = () => {
-  return (
-    <div>
-      <h2>Breadcrumb</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default Breadcrumb;
-=======
 import React from 'react';
 
 export default function BreadcrumbPage() {
@@ -26,4 +12,3 @@ export default function BreadcrumbPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

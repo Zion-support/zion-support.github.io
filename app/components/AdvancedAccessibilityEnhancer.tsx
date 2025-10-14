@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const AdvancedAccessibilityEnhancer: React.FC = () => {
-  return (
-    <div>
-      <h2>AdvancedAccessibilityEnhancer</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default AdvancedAccessibilityEnhancer;
-=======
 import React from 'react';
 
 export default function AdvancedAccessibilityEnhancerPage() {
@@ -26,4 +12,3 @@ export default function AdvancedAccessibilityEnhancerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

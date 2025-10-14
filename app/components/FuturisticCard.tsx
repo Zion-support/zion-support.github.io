@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const FuturisticCard: React.FC = () => {
-  return (
-    <div>
-      <h2>FuturisticCard</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default FuturisticCard;
-=======
 import React from 'react';
 
 export default function FuturisticCardPage() {
@@ -26,4 +12,3 @@ export default function FuturisticCardPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

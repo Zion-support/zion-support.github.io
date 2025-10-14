@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const EnhancedLoadingSpinner: React.FC = () => {
-  return (
-    <div>
-      <h2>EnhancedLoadingSpinner</h2>
-      <p>Component implementation coming soon.</p>
-=======
 import React from 'react';
 
 export default function EnhancedLoadingSpinnerPage() {
@@ -18,9 +9,6 @@ export default function EnhancedLoadingSpinnerPage() {
           <p className="text-gray-300 text-xl mb-8">Learn more about enhancedloadingspinner</p>
         </div>
       </div>
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
     </div>
   );
 };
-
-export default EnhancedLoadingSpinner;

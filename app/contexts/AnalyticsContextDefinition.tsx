@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import { createContext } from "react";
-
-const AnalyticsContextDefinition = createContext({});
-
-export default AnalyticsContextDefinition;
-=======
 import React from 'react';
 
 export default function AnalyticsContextDefinitionPage() {
@@ -19,4 +12,3 @@ export default function AnalyticsContextDefinitionPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

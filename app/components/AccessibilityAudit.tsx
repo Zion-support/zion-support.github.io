@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const AccessibilityAudit: React.FC = () => {
-  return (
-    <div>
-      <h2>AccessibilityAudit</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default AccessibilityAudit;
-=======
 import React from 'react';
 
 export default function AccessibilityAuditPage() {
@@ -26,4 +12,3 @@ export default function AccessibilityAuditPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

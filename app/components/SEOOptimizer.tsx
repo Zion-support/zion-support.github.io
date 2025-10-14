@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const SEOOptimizer: React.FC = () => {
-  return (
-    <div>
-      <h2>SEOOptimizer</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default SEOOptimizer;
-=======
 import React from 'react';
 
 export default function SEOOptimizerPage() {
@@ -26,4 +12,3 @@ export default function SEOOptimizerPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

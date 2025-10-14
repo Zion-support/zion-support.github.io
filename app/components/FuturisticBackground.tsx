@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const FuturisticBackground: React.FC = () => {
-  return (
-    <div>
-      <h2>FuturisticBackground</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default FuturisticBackground;
-=======
 import React from 'react';
 
 export default function FuturisticBackgroundPage() {
@@ -26,4 +12,3 @@ export default function FuturisticBackgroundPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

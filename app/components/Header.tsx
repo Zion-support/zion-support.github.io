@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const Header: React.FC = () => {
-  return (
-    <div>
-      <h2>Header</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default Header;
-=======
 import React from 'react';
 
 export default function HeaderPage() {
@@ -26,4 +12,3 @@ export default function HeaderPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13

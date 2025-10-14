@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const ContentCarousel: React.FC = () => {
-  return (
-    <div>
-      <h2>ContentCarousel</h2>
-      <p>Component implementation coming soon.</p>
-    </div>
-  );
-};
-
-export default ContentCarousel;
-=======
 import React from 'react';
 
 export default function ContentCarouselPage() {
@@ -26,4 +12,3 @@ export default function ContentCarouselPage() {
     </div>
   );
 }
->>>>>>> 920b944e8bba511baac66aab500eb63187cbfa13
