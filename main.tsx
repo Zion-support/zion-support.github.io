@@ -30,7 +30,6 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("/sw.js")
-import React, { Suspense } from 'react';
       .then((_registration) => {
         if (process.env.NODE_ENV === 'development') {
           console.warn('Service Worker registered successfully');

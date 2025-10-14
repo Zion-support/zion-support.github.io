@@ -69,54 +69,26 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id: string) => {
-        manualChunks: (id) => {
           // Split vendor chunks for better caching
           if (id.includes('node_modules')) {
             // React ecosystem
             if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
-              return 'react-vendor';
+              return 'react-vendor'
             }
             // UI libraries
             if (id.includes('lucide-react') || id.includes('framer-motion')) {
-              return 'ui-vendor';
+              return 'ui-vendor'
             }
             // Other vendor libraries
-            return 'vendor';
+            return 'vendor'
           }
-          return undefined;
+          // App chunks
+          if (id.includes('/app/')) {
+            return 'app'
+          }
+          return undefined
         }
       }
     }
   }
-          // App chunks
-          if (id.includes('/app/')) {
-            return 'app';
-          }
-          return undefined;
-        },
-        assetFileNames: (assetInfo) => {
-          if (
-            assetInfo.name &&
-            /\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)
-          ) {
-            return `assets/images/[name]-[hash][extname]`;
-          }
-          return `assets/[name]-[hash][extname]`;
-        },
-        chunkFileNames: "assets/js/[name]-[hash].js",
-        entryFileNames: "assets/js/[name]-[hash].js",
-      },
-    },
-  },
-  server: {
-    port: 3000,
-    open: false,
-    cors: true,
-    hmr: {
-      overlay: true,
-    },
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
-  },
-});
+})
