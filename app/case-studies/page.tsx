@@ -331,3 +331,8 @@ const CaseStudiesPage: React.FC = () => {
 };
 
 export default CaseStudiesPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

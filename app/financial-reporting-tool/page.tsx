@@ -55,3 +55,8 @@ const FinancialReportingToolPage: React.FC = () => {
 };
 
 export default FinancialReportingToolPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

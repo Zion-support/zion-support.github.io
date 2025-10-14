@@ -55,3 +55,8 @@ const AiDataMiningProPage: React.FC = () => {
 };
 
 export default AiDataMiningProPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

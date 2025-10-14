@@ -55,3 +55,8 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
 };
 
 export default AiEcommerceOptimizerProPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

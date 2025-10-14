@@ -55,3 +55,8 @@ const ProjectManagementToolPage: React.FC = () => {
 };
 
 export default ProjectManagementToolPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

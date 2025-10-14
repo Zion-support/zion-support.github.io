@@ -53,3 +53,8 @@ const ResourcesPage: React.FC = () => {
 };
 
 export default ResourcesPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

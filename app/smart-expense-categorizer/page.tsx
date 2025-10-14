@@ -55,3 +55,8 @@ const SmartExpenseCategorizerPage: React.FC = () => {
 };
 
 export default SmartExpenseCategorizerPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

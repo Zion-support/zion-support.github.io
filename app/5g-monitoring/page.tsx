@@ -54,4 +54,6 @@ const FiveGMonitoring: React.FC = () => {
   );
 };
 
-export default FiveGMonitoring;
+export default 5gMonitoringPage;
+
+

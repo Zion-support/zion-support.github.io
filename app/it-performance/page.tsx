@@ -55,3 +55,8 @@ const ItPerformancePage: React.FC = () => {
 };
 
 export default ItPerformancePage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

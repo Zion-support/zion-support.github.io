@@ -54,4 +54,6 @@ const FiveGPrivateNetworksPage: React.FC = () => {
   );
 };
 
-export default FiveGPrivateNetworksPage;
+export default 5gPrivateNetworksPage;
+
+

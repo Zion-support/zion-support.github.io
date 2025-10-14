@@ -443,3 +443,8 @@ const MicroSaasPage: React.FC = () => {
 };
 
 export default MicroSaasPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -53,3 +53,8 @@ const AutomationPage: React.FC = () => {
 };
 
 export default AutomationPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

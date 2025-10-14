@@ -55,3 +55,8 @@ const ZionAiSeoOptimizerPage: React.FC = () => {
 };
 
 export default ZionAiSeoOptimizerPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

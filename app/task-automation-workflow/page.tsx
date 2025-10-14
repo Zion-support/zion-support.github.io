@@ -55,3 +55,8 @@ const TaskAutomationWorkflowPage: React.FC = () => {
 };
 
 export default TaskAutomationWorkflowPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

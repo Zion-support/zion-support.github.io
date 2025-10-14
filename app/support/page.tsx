@@ -446,3 +446,8 @@ const SupportPage: React.FC = () => {
 };
 
 export default SupportPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

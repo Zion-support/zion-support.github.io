@@ -55,3 +55,8 @@ const CloudSecurityPage: React.FC = () => {
 };
 
 export default CloudSecurityPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

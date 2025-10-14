@@ -53,3 +53,8 @@ const AnalyticsPage: React.FC = () => {
 };
 
 export default AnalyticsPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -54,4 +54,6 @@ const FiveGDataAnalytics: React.FC = () => {
   );
 };
 
-export default FiveGDataAnalytics;
+export default 5gDataAnalyticsPage;
+
+

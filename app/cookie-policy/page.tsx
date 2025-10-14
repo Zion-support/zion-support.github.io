@@ -55,3 +55,8 @@ const CookiePolicyPage: React.FC = () => {
 };
 
 export default CookiePolicyPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

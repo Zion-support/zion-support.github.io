@@ -55,3 +55,8 @@ const IntelligentDatabaseMigrationPage: React.FC = () => {
 };
 
 export default IntelligentDatabaseMigrationPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

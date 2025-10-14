@@ -55,3 +55,8 @@ const AiClimatePredictionEnginePage: React.FC = () => {
 };
 
 export default AiClimatePredictionEnginePage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,3 +55,8 @@ const AiInvestmentOptimizerPage: React.FC = () => {
 };
 
 export default AiInvestmentOptimizerPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

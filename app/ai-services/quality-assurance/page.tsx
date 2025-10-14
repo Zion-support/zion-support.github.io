@@ -55,3 +55,8 @@ const QualityAssurancePage: React.FC = () => {
 };
 
 export default QualityAssurancePage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

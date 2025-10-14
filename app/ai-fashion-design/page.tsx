@@ -55,3 +55,8 @@ const AiFashionDesignPage: React.FC = () => {
 };
 
 export default AiFashionDesignPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

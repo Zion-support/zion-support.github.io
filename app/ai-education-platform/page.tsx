@@ -55,3 +55,8 @@ const AiEducationPlatformPage: React.FC = () => {
 };
 
 export default AiEducationPlatformPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

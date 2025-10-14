@@ -55,3 +55,8 @@ const AiPoweredEmailAnalyzerPage: React.FC = () => {
 };
 
 export default AiPoweredEmailAnalyzerPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

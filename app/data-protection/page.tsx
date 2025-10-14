@@ -55,3 +55,8 @@ const DataProtectionPage: React.FC = () => {
 };
 
 export default DataProtectionPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -55,3 +55,8 @@ const AiConversationalAiPage: React.FC = () => {
 };
 
 export default AiConversationalAiPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

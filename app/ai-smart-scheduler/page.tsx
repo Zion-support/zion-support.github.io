@@ -55,3 +55,8 @@ const AiSmartSchedulerPage: React.FC = () => {
 };
 
 export default AiSmartSchedulerPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -53,3 +53,8 @@ const GdprPage: React.FC = () => {
 };
 
 export default GdprPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

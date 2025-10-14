@@ -55,3 +55,8 @@ const InnovationLabsPage: React.FC = () => {
 };
 
 export default InnovationLabsPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

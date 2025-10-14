@@ -53,3 +53,8 @@ const TeamPage: React.FC = () => {
 };
 
 export default TeamPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -53,3 +53,8 @@ const HealthPage: React.FC = () => {
 };
 
 export default HealthPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

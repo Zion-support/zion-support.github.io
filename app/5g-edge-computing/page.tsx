@@ -54,4 +54,6 @@ const FiveGEdgeComputingPage: React.FC = () => {
   );
 };
 
-export default FiveGEdgeComputingPage;
+export default 5gEdgeComputingPage;
+
+

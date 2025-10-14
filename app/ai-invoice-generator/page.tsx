@@ -55,3 +55,8 @@ const AiInvoiceGeneratorPage: React.FC = () => {
 };
 
 export default AiInvoiceGeneratorPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

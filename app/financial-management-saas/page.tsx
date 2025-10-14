@@ -55,3 +55,8 @@ const FinancialManagementSaasPage: React.FC = () => {
 };
 
 export default FinancialManagementSaasPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

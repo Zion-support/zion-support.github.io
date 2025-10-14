@@ -53,3 +53,8 @@ const ApiPage: React.FC = () => {
 };
 
 export default ApiPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

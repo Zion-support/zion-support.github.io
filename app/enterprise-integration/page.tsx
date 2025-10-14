@@ -55,3 +55,8 @@ const EnterpriseIntegrationPage: React.FC = () => {
 };
 
 export default EnterpriseIntegrationPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

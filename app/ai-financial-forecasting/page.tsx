@@ -55,3 +55,8 @@ const AiFinancialForecastingPage: React.FC = () => {
 };
 
 export default AiFinancialForecastingPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -53,3 +53,8 @@ const WebinarsPage: React.FC = () => {
 };
 
 export default WebinarsPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

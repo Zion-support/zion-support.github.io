@@ -55,3 +55,8 @@ const AiInventoryManagementPage: React.FC = () => {
 };
 
 export default AiInventoryManagementPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

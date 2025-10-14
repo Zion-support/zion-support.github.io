@@ -55,3 +55,8 @@ const AiClimateSolutionsProPage: React.FC = () => {
 };
 
 export default AiClimateSolutionsProPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

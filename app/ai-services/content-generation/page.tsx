@@ -55,3 +55,8 @@ const ContentGenerationPage: React.FC = () => {
 };
 
 export default ContentGenerationPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

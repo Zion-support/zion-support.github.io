@@ -55,3 +55,8 @@ const AiDevopsAutomationPage: React.FC = () => {
 };
 
 export default AiDevopsAutomationPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

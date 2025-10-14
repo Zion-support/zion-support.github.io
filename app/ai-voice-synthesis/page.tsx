@@ -55,3 +55,8 @@ const AiVoiceSynthesisPage: React.FC = () => {
 };
 
 export default AiVoiceSynthesisPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

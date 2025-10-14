@@ -53,3 +53,8 @@ const ConsultationPage: React.FC = () => {
 };
 
 export default ConsultationPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

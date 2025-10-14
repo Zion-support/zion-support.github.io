@@ -55,3 +55,8 @@ const ZionSmartExpenseTrackerPage: React.FC = () => {
 };
 
 export default ZionSmartExpenseTrackerPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

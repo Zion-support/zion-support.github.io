@@ -55,3 +55,8 @@ const ZionAiTranslatorProPage: React.FC = () => {
 };
 
 export default ZionAiTranslatorProPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

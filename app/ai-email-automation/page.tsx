@@ -55,3 +55,8 @@ const AiEmailAutomationPage: React.FC = () => {
 };
 
 export default AiEmailAutomationPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

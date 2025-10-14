@@ -59,3 +59,8 @@ const AutonomousBusinessProcessesImplementationGuide2026Page: React.FC = () => {
 };
 
 export default AutonomousBusinessProcessesImplementationGuide2026Page;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

@@ -30,3 +30,8 @@ const ItSolutionsPage: React.FC = () => {
 };
 
 export default ItSolutionsPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

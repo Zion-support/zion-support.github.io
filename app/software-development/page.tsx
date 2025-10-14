@@ -55,3 +55,8 @@ const SoftwareDevelopmentPage: React.FC = () => {
 };
 
 export default SoftwareDevelopmentPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

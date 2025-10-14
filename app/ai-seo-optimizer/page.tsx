@@ -55,3 +55,8 @@ const AiSeoOptimizerPage: React.FC = () => {
 };
 
 export default AiSeoOptimizerPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

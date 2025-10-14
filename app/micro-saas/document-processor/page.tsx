@@ -55,3 +55,8 @@ const DocumentProcessorPage: React.FC = () => {
 };
 
 export default DocumentProcessorPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf

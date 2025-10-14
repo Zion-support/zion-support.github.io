@@ -55,3 +55,8 @@ const SecurityMonitoringSuitePage: React.FC = () => {
 };
 
 export default SecurityMonitoringSuitePage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/analyze-improve-and-merge-code-c0cf
