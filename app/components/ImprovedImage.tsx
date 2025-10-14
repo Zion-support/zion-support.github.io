@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const ImprovedImage = () => {
+
+interface ImprovedImageProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function ImprovedImage({ children, className = '' }: ImprovedImageProps) {
   return (
-    <div className="improvedimage-component">
-      <h2>ImprovedImage</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default ImprovedImage;
-=======
-
-export default ImprovedImage;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

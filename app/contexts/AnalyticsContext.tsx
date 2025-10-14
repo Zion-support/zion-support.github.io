@@ -1,73 +1,15 @@
-<<<<<<< HEAD
-import { createContext } from 'react';
+'use client';
+import React from 'react';
 
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string) => void;
+interface AnalyticsContextProps {
+  children?: React.ReactNode;
+  className?: string;
 }
 
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-=======
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-  isEnabled: boolean;
-}
-
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-interface AnalyticsProviderProps {
-  children: ReactNode;
-}
-
-export const AnalyticsProvider = ({ children }: AnalyticsProviderProps) => {
-  const [isEnabled, setIsEnabled] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Check if analytics is enabled
-    setIsEnabled(true);
-  }, []);
-
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (!isEnabled) return;
-    // Track event logic here
-    console.log('Analytics Event:', eventName, properties);
-  };
-
-  const trackPageView = (pageName: string) => {
-    if (!isEnabled) return;
-    // Track page view logic here
-    console.log('Page View:', pageName);
-  };
-
-  const setUser = (newUserId: string, properties?: Record<string, any>) => {
-    setUserId(newUserId);
-    console.log('User Set:', newUserId, properties);
-  };
-
-  const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    setUser,
-    isEnabled
-  };
-
+export default function AnalyticsContext({ children, className = '' }: AnalyticsContextProps) {
   return (
-    <AnalyticsContext.Provider value={value}>
+    <div className={className}>
       {children}
-    </AnalyticsContext.Provider>
+    </div>
   );
-};
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const ImprovedNavigation = () => {
+
+interface ImprovedNavigationProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function ImprovedNavigation({ children, className = '' }: ImprovedNavigationProps) {
   return (
-    <div className="improvednavigation-component">
-      <h2>ImprovedNavigation</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default ImprovedNavigation;
-=======
-
-export default ImprovedNavigation;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

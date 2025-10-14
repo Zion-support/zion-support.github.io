@@ -1,23 +1,15 @@
+'use client';
 import React from 'react';
 
 interface SEOProps {
-  title?: string;
-  description?: string;
+  children?: React.ReactNode;
+  className?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({ title, description }) => {
+export default function SEO({ children, className = '' }: SEOProps) {
   return (
-    <div className="seo-component">
-      <h2>SEO</h2>
-      <p>This component is under construction.</p>
-      {title && <p>Title: {title}</p>}
-      {description && <p>Description: {description}</p>}
+    <div className={className}>
+      {children}
     </div>
   );
-};
-
-<<<<<<< HEAD
-export default SEO;
-=======
-export default SEO;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

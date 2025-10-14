@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const SystemMonitor = () => {
+
+interface SystemMonitorProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function SystemMonitor({ children, className = '' }: SystemMonitorProps) {
   return (
-    <div className="systemmonitor-component">
-      <h2>SystemMonitor</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default SystemMonitor;
-=======
-
-export default SystemMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

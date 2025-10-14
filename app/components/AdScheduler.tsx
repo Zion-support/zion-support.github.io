@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const AdScheduler = () => {
+
+interface AdSchedulerProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function AdScheduler({ children, className = '' }: AdSchedulerProps) {
   return (
-    <div className="adscheduler-component">
-      <h2>AdScheduler</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default AdScheduler;
-=======
-
-export default AdScheduler;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

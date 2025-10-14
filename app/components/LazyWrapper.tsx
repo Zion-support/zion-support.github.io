@@ -1,24 +1,15 @@
-import React, { Suspense } from 'react';
-import LoadingStates from './LoadingStates';
+'use client';
+import React from 'react';
 
 interface LazyWrapperProps {
-  children: React.ReactNode;
-  fallback?: React.ReactNode;
+  children?: React.ReactNode;
+  className?: string;
 }
 
-const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
-  children, 
-  fallback = <LoadingStates /> 
-}) => {
+export default function LazyWrapper({ children, className = '' }: LazyWrapperProps) {
   return (
-    <Suspense fallback={fallback}>
+    <div className={className}>
       {children}
-    </Suspense>
+    </div>
   );
-};
-
-<<<<<<< HEAD
-export default LazyWrapper;
-=======
-export default LazyWrapper;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

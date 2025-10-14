@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const FuturisticTextEnhanced = () => {
+
+interface FuturisticTextEnhancedProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function FuturisticTextEnhanced({ children, className = '' }: FuturisticTextEnhancedProps) {
   return (
-    <div className="futuristictextenhanced-component">
-      <h2>FuturisticTextEnhanced</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default FuturisticTextEnhanced;
-=======
-
-export default FuturisticTextEnhanced;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const OptimizedLoadingSpinner = () => {
+
+interface OptimizedLoadingSpinnerProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function OptimizedLoadingSpinner({ children, className = '' }: OptimizedLoadingSpinnerProps) {
   return (
-    <div className="optimizedloadingspinner-component">
-      <h2>OptimizedLoadingSpinner</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default OptimizedLoadingSpinner;
-=======
-
-export default OptimizedLoadingSpinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

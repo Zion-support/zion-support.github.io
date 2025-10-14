@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const AdAnalytics = () => {
+
+interface AdAnalyticsProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function AdAnalytics({ children, className = '' }: AdAnalyticsProps) {
   return (
-    <div className="adanalytics-component">
-      <h2>AdAnalytics</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default AdAnalytics;
-=======
-
-export default AdAnalytics;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

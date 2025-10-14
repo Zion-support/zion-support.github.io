@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const LazyImage = () => {
+
+interface LazyImageProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function LazyImage({ children, className = '' }: LazyImageProps) {
   return (
-    <div className="lazyimage-component">
-      <h2>LazyImage</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default LazyImage;
-=======
-
-export default LazyImage;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

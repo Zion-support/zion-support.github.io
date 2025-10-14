@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const SecurityEnhancer = () => {
+
+interface SecurityEnhancerProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function SecurityEnhancer({ children, className = '' }: SecurityEnhancerProps) {
   return (
-    <div className="securityenhancer-component">
-      <h2>SecurityEnhancer</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default SecurityEnhancer;
-=======
-
-export default SecurityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

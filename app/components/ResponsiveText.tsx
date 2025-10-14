@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const ResponsiveText = () => {
+
+interface ResponsiveTextProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function ResponsiveText({ children, className = '' }: ResponsiveTextProps) {
   return (
-    <div className="responsivetext-component">
-      <h2>ResponsiveText</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default ResponsiveText;
-=======
-
-export default ResponsiveText;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

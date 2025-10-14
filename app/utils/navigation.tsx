@@ -1,4 +1,6 @@
-// navigation - Basic implementation
-export default function navigation() {
-  return null;
-}
+export const Navigation = () => {
+  // Navigation utility function
+  return true;
+};
+
+export default Navigation;

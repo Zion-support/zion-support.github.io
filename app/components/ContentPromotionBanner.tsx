@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const ContentPromotionBanner = () => {
+
+interface ContentPromotionBannerProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function ContentPromotionBanner({ children, className = '' }: ContentPromotionBannerProps) {
   return (
-    <div className="contentpromotionbanner-component">
-      <h2>ContentPromotionBanner</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default ContentPromotionBanner;
-=======
-
-export default ContentPromotionBanner;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

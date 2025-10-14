@@ -1,4 +1,6 @@
-// testRunner - Basic implementation
-export default function testRunner() {
-  return null;
-}
+export const TestRunner = () => {
+  // TestRunner utility function
+  return true;
+};
+
+export default TestRunner;

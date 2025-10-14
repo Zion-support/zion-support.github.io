@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const PerformanceDashboard = () => {
+
+interface PerformanceDashboardProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function PerformanceDashboard({ children, className = '' }: PerformanceDashboardProps) {
   return (
-    <div className="performancedashboard-component">
-      <h2>PerformanceDashboard</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default PerformanceDashboard;
-=======
-
-export default PerformanceDashboard;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

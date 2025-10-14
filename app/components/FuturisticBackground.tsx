@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const FuturisticBackground = () => {
+
+interface FuturisticBackgroundProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function FuturisticBackground({ children, className = '' }: FuturisticBackgroundProps) {
   return (
-    <div className="futuristicbackground-component">
-      <h2>FuturisticBackground</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default FuturisticBackground;
-=======
-
-export default FuturisticBackground;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const PWAInstaller = () => {
+
+interface PWAInstallerProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function PWAInstaller({ children, className = '' }: PWAInstallerProps) {
   return (
-    <div className="pwainstaller-component">
-      <h2>PWAInstaller</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default PWAInstaller;
-=======
-
-export default PWAInstaller;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const EnhancedErrorBoundary = () => {
+
+interface EnhancedErrorBoundaryProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function EnhancedErrorBoundary({ children, className = '' }: EnhancedErrorBoundaryProps) {
   return (
-    <div className="enhancederrorboundary-component">
-      <h2>EnhancedErrorBoundary</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default EnhancedErrorBoundary;
-=======
-
-export default EnhancedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

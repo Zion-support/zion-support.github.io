@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const AnimatedCard = () => {
+
+interface AnimatedCardProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function AnimatedCard({ children, className = '' }: AnimatedCardProps) {
   return (
-    <div className="animatedcard-component">
-      <h2>AnimatedCard</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default AnimatedCard;
-=======
-
-export default AnimatedCard;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

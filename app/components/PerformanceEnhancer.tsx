@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const PerformanceEnhancer = () => {
+
+interface PerformanceEnhancerProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function PerformanceEnhancer({ children, className = '' }: PerformanceEnhancerProps) {
   return (
-    <div className="performanceenhancer-component">
-      <h2>PerformanceEnhancer</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default PerformanceEnhancer;
-=======
-
-export default PerformanceEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

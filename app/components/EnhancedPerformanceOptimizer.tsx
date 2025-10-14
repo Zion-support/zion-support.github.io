@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const EnhancedPerformanceOptimizer = () => {
+
+interface EnhancedPerformanceOptimizerProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function EnhancedPerformanceOptimizer({ children, className = '' }: EnhancedPerformanceOptimizerProps) {
   return (
-    <div className="enhancedperformanceoptimizer-component">
-      <h2>EnhancedPerformanceOptimizer</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default EnhancedPerformanceOptimizer;
-=======
-
-export default EnhancedPerformanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

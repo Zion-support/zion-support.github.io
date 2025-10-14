@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const Sidebar = () => {
+
+interface SidebarProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function Sidebar({ children, className = '' }: SidebarProps) {
   return (
-    <div className="sidebar-component">
-      <h2>Sidebar</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default Sidebar;
-=======
-
-export default Sidebar;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const EnhancedSkipLink = () => {
+
+interface EnhancedSkipLinkProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function EnhancedSkipLink({ children, className = '' }: EnhancedSkipLinkProps) {
   return (
-    <div className="enhancedskiplink-component">
-      <h2>EnhancedSkipLink</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default EnhancedSkipLink;
-=======
-
-export default EnhancedSkipLink;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

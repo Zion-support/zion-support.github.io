@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const CoreWebVitals = () => {
+
+interface CoreWebVitalsProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function CoreWebVitals({ children, className = '' }: CoreWebVitalsProps) {
   return (
-    <div className="corewebvitals-component">
-      <h2>CoreWebVitals</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default CoreWebVitals;
-=======
-
-export default CoreWebVitals;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

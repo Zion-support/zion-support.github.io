@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const ImprovedFooter = () => {
+
+interface ImprovedFooterProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function ImprovedFooter({ children, className = '' }: ImprovedFooterProps) {
   return (
-    <div className="improvedfooter-component">
-      <h2>ImprovedFooter</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default ImprovedFooter;
-=======
-
-export default ImprovedFooter;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

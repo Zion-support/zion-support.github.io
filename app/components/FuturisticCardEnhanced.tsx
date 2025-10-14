@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const FuturisticCardEnhanced = () => {
+
+interface FuturisticCardEnhancedProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function FuturisticCardEnhanced({ children, className = '' }: FuturisticCardEnhancedProps) {
   return (
-    <div className="futuristiccardenhanced-component">
-      <h2>FuturisticCardEnhanced</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default FuturisticCardEnhanced;
-=======
-
-export default FuturisticCardEnhanced;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

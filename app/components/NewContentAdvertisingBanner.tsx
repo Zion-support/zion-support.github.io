@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const NewContentAdvertisingBanner = () => {
+
+interface NewContentAdvertisingBannerProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function NewContentAdvertisingBanner({ children, className = '' }: NewContentAdvertisingBannerProps) {
   return (
-    <div className="newcontentadvertisingbanner-component">
-      <h2>NewContentAdvertisingBanner</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default NewContentAdvertisingBanner;
-=======
-
-export default NewContentAdvertisingBanner;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

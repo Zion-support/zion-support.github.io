@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const EnhancedServicesShowcase = () => {
+
+interface EnhancedServicesShowcaseProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function EnhancedServicesShowcase({ children, className = '' }: EnhancedServicesShowcaseProps) {
   return (
-    <div className="enhancedservicesshowcase-component">
-      <h2>EnhancedServicesShowcase</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default EnhancedServicesShowcase;
-=======
-
-export default EnhancedServicesShowcase;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

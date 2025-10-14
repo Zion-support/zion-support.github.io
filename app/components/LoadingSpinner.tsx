@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const LoadingSpinner = () => {
+
+interface LoadingSpinnerProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function LoadingSpinner({ children, className = '' }: LoadingSpinnerProps) {
   return (
-    <div className="loadingspinner-component">
-      <h2>LoadingSpinner</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default LoadingSpinner;
-=======
-
-export default LoadingSpinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const AdvancedAccessibilityEnhancer = () => {
+
+interface AdvancedAccessibilityEnhancerProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function AdvancedAccessibilityEnhancer({ children, className = '' }: AdvancedAccessibilityEnhancerProps) {
   return (
-    <div className="advancedaccessibilityenhancer-component">
-      <h2>AdvancedAccessibilityEnhancer</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default AdvancedAccessibilityEnhancer;
-=======
-
-export default AdvancedAccessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

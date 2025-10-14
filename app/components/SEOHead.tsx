@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const SEOHead = () => {
+
+interface SEOHeadProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function SEOHead({ children, className = '' }: SEOHeadProps) {
   return (
-    <div className="seohead-component">
-      <h2>SEOHead</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default SEOHead;
-=======
-
-export default SEOHead;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

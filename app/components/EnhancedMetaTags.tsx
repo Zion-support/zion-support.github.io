@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const EnhancedMetaTags = () => {
+
+interface EnhancedMetaTagsProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function EnhancedMetaTags({ children, className = '' }: EnhancedMetaTagsProps) {
   return (
-    <div className="enhancedmetatags-component">
-      <h2>EnhancedMetaTags</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default EnhancedMetaTags;
-=======
-
-export default EnhancedMetaTags;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

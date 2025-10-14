@@ -1,30 +1,15 @@
+'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
 interface ResponsiveContainerProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
-<<<<<<< HEAD
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
-  children,
-=======
 
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
-  children, 
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
-  className = ''
-}) => {
+export default function ResponsiveContainer({ children, className = '' }: ResponsiveContainerProps) {
   return (
-    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
+    <div className={className}>
       {children}
     </div>
   );
-};
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
-export default ResponsiveContainer;
+}

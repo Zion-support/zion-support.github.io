@@ -1,16 +1,6 @@
-// link - Basic implementation
-export default function link() {
-<<<<<<< HEAD
-  return null;
-}
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-8">link</h1>
-        <p className="text-gray-300 text-lg">This page is under construction.</p>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+export const Link = () => {
+  // Link utility function
+  return true;
+};
+
+export default Link;

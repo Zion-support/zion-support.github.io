@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const SkipLink = () => {
+
+interface SkipLinkProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function SkipLink({ children, className = '' }: SkipLinkProps) {
   return (
-    <div className="skiplink-component">
-      <h2>SkipLink</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default SkipLink;
-=======
-
-export default SkipLink;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

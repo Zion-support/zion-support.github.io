@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const EnhancedLoadingSkeleton = () => {
+
+interface EnhancedLoadingSkeletonProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function EnhancedLoadingSkeleton({ children, className = '' }: EnhancedLoadingSkeletonProps) {
   return (
-    <div className="enhancedloadingskeleton-component">
-      <h2>EnhancedLoadingSkeleton</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default EnhancedLoadingSkeleton;
-=======
-
-export default EnhancedLoadingSkeleton;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}

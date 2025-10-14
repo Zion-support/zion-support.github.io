@@ -1,15 +1,15 @@
+'use client';
 import React from 'react';
-const EnhancedAccessibilityManager = () => {
+
+interface EnhancedAccessibilityManagerProps {
+  children?: React.ReactNode;
+  className?: string;
+}
+
+export default function EnhancedAccessibilityManager({ children, className = '' }: EnhancedAccessibilityManagerProps) {
   return (
-    <div className="enhancedaccessibilitymanager-component">
-      <h2>EnhancedAccessibilityManager</h2>
-      <p>This component is under construction.</p>
+    <div className={className}>
+      {children}
     </div>
   );
-};
-<<<<<<< HEAD
-export default EnhancedAccessibilityManager;
-=======
-
-export default EnhancedAccessibilityManager;
->>>>>>> cursor/fix-errors-and-merge-to-main-32ea
+}
