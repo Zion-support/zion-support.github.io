@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { EnvelopeIcon, 
-  PhoneIcon, 
-  MapPinIcon,
-  ClockIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
+
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,7 +9,7 @@ const Contact: React.FC = () => {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement></HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -43,10 +41,12 @@ const Contact: React.FC = () => {
       details: 'San Francisco, CA',
       description: 'Visit our headquarters'
     },
-    {icon: ClockIcon,
+    {
+      icon: ClockIcon,
       title: 'Response Time',
       details: '< 24 hours',
-      description: 'We respond quickly'}
+      description: 'We respond quickly'
+    }
   ];
 
   return (
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your business? Let's discuss how our solutions 
+            Ready to transform your business? Let&apos;s discuss how our solutions 
             can help you achieve your goals.
           </p>
         </div>
@@ -146,8 +146,8 @@ const Contact: React.FC = () => {
                 Contact Information
               </h3>
               <p className="text-gray-600 mb-8">
-                We're here to help! Reach out to us through any of the channels below, 
-                and we'll get back to you as soon as possible.
+                We&apos;re here to help! Reach out to us through any of the channels below, 
+                and we&apos;ll get back to you as soon as possible.
               </p>
             </div>
 
