@@ -31,20 +31,22 @@ import SolutionsPage from './app/pages/SolutionsPage';
 import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
+import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
 
 // Service Pages'
 import AIServicesPage from './app/pages/AIServicesPage';
 import ITServicesPage from './app/pages/ITServicesPage';
 import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
 import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
+import CybersecurityPage from './app/pages/CybersecurityPage';
 import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
+import TeamPage from './app/pages/TeamPage';
+import DocumentationPage from './app/pages/DocumentationPage';
 
 // Additional Pages
 import MicroSaaSPage from './app/pages/MicroSaaSPage';
 import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
-import TeamPage from './app/pages/TeamPage';
-import DocumentationPage from './app/pages/DocumentationPage';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -95,6 +97,7 @@ function App() {
                   <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
                   <Route path="/ai-solutions" element={<AISolutionsPage />} />
                   <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                   <Route path="/blog" element={<BlogPage />} />
                   <Route path="/tutorials" element={<TutorialsPage />} />
                   <Route path="/demo" element={<DemoPage />} />
@@ -109,8 +112,11 @@ function App() {
                   <Route path="/it-services" element={<ITServicesPage />} />
                   <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                   <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
                   <Route path="/case-studies" element={<CaseStudiesPage />} />
                   <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/documentation" element={<DocumentationPage />} />
                   
 
                   {/* Catch all route */}
