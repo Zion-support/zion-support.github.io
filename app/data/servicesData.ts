@@ -1,12 +1,38 @@
-// servicesData - Basic implementation
-export default function servicesData() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-white mb-8">servicesData</h1>
-        <p className="text-gray-300 text-lg">This page is under construction.</p>
-      </div>
-    </div>
-  );
-}
+import { Service } from './services';
 
+export const servicesData: Service[] = [
+  {
+    id: 'ai-solutions',
+    name: 'AI Solutions',
+    description: 'Advanced artificial intelligence solutions for your business',
+    icon: 'brain',
+    href: '/ai-solutions',
+    category: 'AI'
+  },
+  {
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    description: 'Comprehensive cybersecurity services to protect your business',
+    icon: 'shield',
+    href: '/cybersecurity',
+    category: 'Security'
+  },
+  {
+    id: 'cloud-infrastructure',
+    name: 'Cloud Infrastructure',
+    description: 'Scalable cloud infrastructure solutions',
+    icon: 'cloud',
+    href: '/cloud-infrastructure',
+    category: 'Infrastructure'
+  },
+  {
+    id: 'digital-transformation',
+    name: 'Digital Transformation',
+    description: 'Transform your business with digital solutions',
+    icon: 'refresh-cw',
+    href: '/digital-transformation',
+    category: 'Transformation'
+  }
+];
+
+export default servicesData;

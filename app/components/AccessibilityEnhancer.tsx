@@ -46,7 +46,7 @@ const AccessibilityEnhancer: React.FC = () => {
           border: 0;
         }
         
-        .focus\:not-sr-only:focus {
+        .focus\\:not-sr-only:focus {
           position: static;
           width: auto;
           height: auto;

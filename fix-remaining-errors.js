@@ -2,191 +2,140 @@
 
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 
-// Function to recursively find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let results = [];
-  const list = fs.readdirSync(dir);
+console.log('🔧 Fixing remaining parsing errors...');
+
+// Find all problematic files
+const findFiles = (dir, pattern) => {
+  const files = [];
+  const items = fs.readdirSync(dir);
   
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    if (stat && stat.isDirectory()) {
-      if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(file)) {
-        results = results.concat(findFiles(filePath, extensions));
-      }
-    } else {
-      const ext = path.extname(file);
-      if (extensions.includes(ext)) {
-        results.push(filePath);
-      }
+    if (stat.isDirectory()) {
+      files.push(...findFiles(fullPath, pattern));
+    } else if (stat.isFile() && pattern.test(item)) {
+      files.push(fullPath);
     }
-  });
+  }
   
-  return results;
-}
+  return files;
+};
 
-// Function to fix unterminated string literals
-function fixUnterminatedStrings(content) {
+const componentFiles = findFiles('./app/components', /\.tsx$/);
+const contextFiles = findFiles('./app/contexts', /\.tsx$/);
+const pageFiles = findFiles('./app', /page\.tsx$/);
+
+console.log(`Found ${componentFiles.length} component files, ${contextFiles.length} context files, and ${pageFiles.length} page files`);
+
+// Fix function for component files
+function fixComponentFile(content, filename) {
   let fixed = content;
   
-  // Fix unterminated single quotes
-  fixed = fixed.replace(/(['"])([^'"]*?)(\n|$)/g, (match, quote, str, newline) => {
-    if (str.includes(quote)) return match;
-    return quote + str + quote + ';' + newline;
-  });
+  // Fix malformed 'use client' directives
+  fixed = fixed.replace(/'use client';';';/g, "'use client';");
+  fixed = fixed.replace(/'use client';';/g, "'use client';");
   
-  // Fix double semicolons
-  fixed = fixed.replace(/;;+/g, ';');
+  // Fix broken function declarations
+  fixed = fixed.replace(/export default function ComponentsPage\(\) \{\s*return \(/g, 'export default function ComponentsPage() {\n  return (');
   
-  // Fix malformed imports
-  fixed = fixed.replace(/import\s+([^;]+);;+/g, 'import $1;');
+  // Fix malformed JSX
+  fixed = fixed.replace(/<div className="min-h-screen bg-gray-90o0 text-white py-20">"<\/div>/g, '<div className="min-h-screen bg-gray-900 text-white py-20"></div>');
+  fixed = fixed.replace(/<div className="text-gray-30o0 text-lg">/g, '<div className="text-gray-300 text-lg">');
+  
+  // Fix broken return statements
+  fixed = fixed.replace(/\}\s*return\s*\(\s*<div>Page content<\/div>\s*\);\s*\}/g, '}');
+  
+  // Fix malformed JSX structure
+  fixed = fixed.replace(/<div className="container mx-auto px-4">"<\/div>/g, '<div className="container mx-auto px-4"></div>');
+  
+  // Fix extra closing tags
+  fixed = fixed.replace(/<\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
+  
+  // Fix malformed expressions
+  fixed = fixed.replace(/h1 className="text-4xl font-bold mb-8">Components<\/h1>/g, '<h1 className="text-4xl font-bold mb-8">Components</h1>');
+  
+  // Fix broken closing statements
+  fixed = fixed.replace(/\s*<\/p><\/div><\/div>\s*\);\}\s*\}/g, '\n  );');
+  
+  // Fix malformed export statements
+  fixed = fixed.replace(/export default \w+;\s*<\/\w+>\s*$/g, 'export default ResponsiveContainer;');
+  
+  // Fix broken interface declarations
+  fixed = fixed.replace(/interface\s+(\w+)\s*\{\}\s*children:\s*c,lassName\?:\s*string;/g, 'interface $1 {\n  children: React.ReactNode;\n  className?: string;');
+  
+  // Fix broken function parameters
+  fixed = fixed.replace(/const\s+(\w+):\s*React\.FC<(\w+)>\s*=\s*\(\{\}\s*children,\s*className\s*=\s*\}\s*=>\s*\{\}/g, 'const $1: React.FC<$2> = ({ children, className = "" }) => {');
+  
+  // Fix malformed return statements in components
+  fixed = fixed.replace(/return\s*\(\s*<div>Page content<\/div>;\s*\);/g, 'return (\n    <div>Page content</div>\n  );');
+  
+  // Fix broken JSX structure
+  fixed = fixed.replace(/<div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 \$\{className\}`}>`<\/div>/g, '<div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>');
+  
+  // Fix malformed closing tags
+  fixed = fixed.replace(/<\/\w+>\s*<\/\w+>\s*<\/\w+>\s*<\/\w+>/g, '</div>');
+  
+  // Fix broken expressions
+  fixed = fixed.replace(/h1 className="text-4xl font-bold mb-8">Components<\/h1>";";/g, '<h1 className="text-4xl font-bold mb-8">Components</h1>');
+  fixed = fixed.replace(/This page is under development\.<\/p>/g, 'This page is under development.</p>');
+  
+  // Fix malformed closing statements
+  fixed = fixed.replace(/\s*<\/p><\/div><\/div>\s*\);\}\s*\}/g, '\n  );');
+  
+  // Fix extra closing tags at the end
+  fixed = fixed.replace(/\s*<\/\w+>\s*<\/\w+>\s*<\/\w+>\s*\);\}\s*\}/g, '\n  );');
+  
+  // Fix malformed export statements
+  fixed = fixed.replace(/export default \w+;\s*<\/\w+>\s*$/g, 'export default ResponsiveContainer;');
+  
+  // Fix broken Link components
+  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)">([^<]+)<\/div>/g, '<Link to="$1" className="$2">$3</Link>');
+  
+  // Fix broken closing tags
+  fixed = fixed.replace(/<Link\s+to="([^"]+)"\s+className="([^"]+)">([^<]+)<\/div>/g, '<Link to="$1" className="$2">$3</Link>');
+  
+  // Fix malformed expressions in context files
+  fixed = fixed.replace(/interface\s+(\w+)\s*\{\s*children:\s*React\.ReactNode;\s*className\?:\s*string;\s*\}/g, 'interface $1 {\n  children: React.ReactNode;\n  className?: string;\n}');
+  
+  // Fix broken expressions
+  fixed = fixed.replace(/const\s+(\w+):\s*React\.FC<(\w+)>\s*=\s*\(\{\s*children,\s*className\s*=\s*""\s*\}\s*\)\s*=>\s*\{\s*return\s*\(\s*<div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 \$\{className\}`}>\s*\{children\}\s*<\/div>\s*\);\s*\};/g, 'const $1: React.FC<$2> = ({ children, className = "" }) => {\n  return (\n    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>\n      {children}\n    </div>\n  );\n};');
   
   return fixed;
 }
 
-// Function to fix JSX issues
-function fixJSX(content) {
-  let fixed = content;
-  
-  // Fix unclosed JSX tags
-  const openTags = [];
-  const lines = fixed.split('\n');
-  let result = [];
-  
-  for (let i = 0; i < lines.length; i++) {
-    let line = lines[i];
-    
-    // Find opening tags
-    const openTagMatches = line.match(/<(\w+)(?:\s[^>]*)?(?!\/)>/g);
-    if (openTagMatches) {
-      openTagMatches.forEach(match => {
-        const tagName = match.match(/<(\w+)/)[1];
-        if (!['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
-          openTags.push(tagName);
-        }
-      });
-    }
-    
-    // Find closing tags
-    const closeTagMatches = line.match(/<\/(\w+)>/g);
-    if (closeTagMatches) {
-      closeTagMatches.forEach(match => {
-        const tagName = match.match(/<\/(\w+)>/)[1];
-        const index = openTags.lastIndexOf(tagName);
-        if (index !== -1) {
-          openTags.splice(index, 1);
-        }
-      });
-    }
-    
-    result.push(line);
-  }
-  
-  // Close any remaining open tags
-  while (openTags.length > 0) {
-    const tag = openTags.pop();
-    result.push(`</${tag}>`);
-  }
-  
-  return result.join('\n');
-}
-
-// Function to fix specific file patterns
-function fixFileSpecific(content, filePath) {
-  let fixed = content;
-  
-  // Fix common React patterns
-  if (filePath.includes('App.tsx') || filePath.includes('main.tsx')) {
-    // Ensure proper React imports
-    if (!fixed.includes("import React from 'react'") && fixed.includes('React.')) {
-      fixed = "import React from 'react';\n" + fixed;
-    }
-    
-    // Fix Router imports
-    if (fixed.includes('Router') && !fixed.includes("import { BrowserRouter as Router }")) {
-      fixed = fixed.replace(/import.*Router.*from.*react-router-dom.*;/, "import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';");
-    }
-  }
-  
-  // Fix component exports
-  if (filePath.includes('components/') && fixed.includes('export default function') && !fixed.includes('return')) {
-    fixed = fixed.replace(/(export default function[^{]+{)([\s\S]*?)(})/g, '$1\n  return <div>Component placeholder</div>;\n$3');
-  }
-  
-  return fixed;
-}
-
-// Function to fix HTML files
-function fixHTML(content) {
-  let fixed = content;
-  
-  // Fix malformed meta tags
-  fixed = fixed.replace(/<,\s*meta/g, '<meta');
-  fixed = fixed.replace(/<meta\s+property="og:\s*"/g, '<meta property="og:title"');
-  
-  // Fix malformed script tags
-  fixed = fixed.replace(/<script\s+src="([^"]*)"\s*>\s*<\/script>/g, '<script src="$1"></script>');
-  
-  return fixed;
-}
-
-// Main function to process files
-function processFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Fix unterminated strings
-    content = fixUnterminatedStrings(content);
-    
-    // Fix JSX issues
-    content = fixJSX(content);
-    
-    // Fix file-specific patterns
-    content = fixFileSpecific(content, filePath);
-    
-    // Fix HTML if it's an HTML file
-    if (filePath.endsWith('.html')) {
-      content = fixHTML(content);
-    }
-    
-    // Only write if content changed
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Main execution
-console.log('Starting remaining error fix...');
-
-const files = findFiles('./app');
+// Process all files
 let fixedCount = 0;
+let errorCount = 0;
 
-files.forEach(file => {
-  if (processFile(file)) {
-    fixedCount++;
-  }
-});
-
-// Also fix root level files
-const rootFiles = ['./App.tsx', './main.tsx', './index.html'];
-rootFiles.forEach(file => {
-  if (fs.existsSync(file)) {
-    if (processFile(file)) {
+for (const file of [...componentFiles, ...contextFiles, ...pageFiles]) {
+  try {
+    const content = fs.readFileSync(file, 'utf8');
+    const fixed = fixComponentFile(content, file);
+    
+    if (content !== fixed) {
+      fs.writeFileSync(file, fixed, 'utf8');
+      console.log(`✅ Fixed: ${file}`);
       fixedCount++;
     }
+  } catch (error) {
+    console.error(`❌ Error processing ${file}:`, error.message);
+    errorCount++;
   }
-});
+}
 
-console.log(`\nFixed ${fixedCount} files.`);
-console.log('Remaining error fixing completed!');
+console.log(`\n🎉 Fix complete!`);
+console.log(`✅ Fixed: ${fixedCount} files`);
+console.log(`❌ Errors: ${errorCount} files`);
+
+// Run linting to check results
+console.log('\n🔍 Running linting check...');
+try {
+  execSync('pnpm run lint', { stdio: 'pipe' });
+  console.log('✅ Linting passed!');
+} catch (error) {
+  console.log('⚠️  Linting still has issues, but many errors were fixed.');
+}

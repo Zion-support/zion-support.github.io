@@ -18,10 +18,7 @@ const TermsPage = () => {
             </p>
             <p className="text-gray-300">
               For any legal questions, please contact us at kleber@ziontechgroup.com
-            </p>
-          </div>
-        </div>
-      </div>
+            </div>
     </>
   );
 };

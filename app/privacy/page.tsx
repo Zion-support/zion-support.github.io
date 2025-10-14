@@ -18,10 +18,7 @@ const PrivacyPage = () => {
             </p>
             <p className="text-gray-300">
               For any privacy-related questions, please contact us at kleber@ziontechgroup.com
-            </p>
-          </div>
-        </div>
-      </div>
+            </div>
     </>
   );
 };

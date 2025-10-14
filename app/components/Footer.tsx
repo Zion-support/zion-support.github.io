@@ -54,7 +54,6 @@ const Footer = () => {
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
-
                   </Link>
                 </li>
               ))}
@@ -69,7 +68,6 @@ const Footer = () => {
               <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
               <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
               <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
-
             </ul>
           </div>
 
@@ -88,7 +86,6 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <MapPin size={16} className="text-blue-400" />
                 <span className="text-gray-300">Middletown, DE</span>
-
               </div>
             </div>
           </div>
@@ -99,7 +96,6 @@ const Footer = () => {
           <p className="text-gray-400">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
-
         </div>
       </div>
     </footer>
