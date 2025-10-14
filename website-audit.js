@@ -244,7 +244,6 @@ class WebsiteAuditor {
     
     // Print summary
     console.log('\n📊 AUDIT SUMMARY:');
-    console.log('================');
     console.log(`Total Routes: ${report.summary.totalRoutes}`);
     console.log(`Total Pages: ${report.summary.totalPages}`);
     console.log(`Missing Pages: ${report.summary.missingPages}`);
